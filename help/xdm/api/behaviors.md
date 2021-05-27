@@ -5,10 +5,9 @@ title: Endpoint API per i comportamenti
 description: L’endpoint /Behaviors nell’API del Registro di sistema dello schema consente di recuperare tutti i comportamenti disponibili nel contenitore globale.
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '428'
 ht-degree: 2%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 2%
 In Experience Data Model (XDM), i comportamenti definiscono la natura dei dati descritti da uno schema. Ogni classe XDM deve fare riferimento a un comportamento specifico che tutti gli schemi che utilizzano tale classe erediteranno. Per quasi tutti i casi d’uso in Platform, sono disponibili due comportamenti:
 
 * **[!UICONTROL Record]**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **[!UICONTROL Time-series]**: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
+* **[!UICONTROL Serie]** temporali: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
 
 >[!NOTE]
 >
@@ -89,7 +88,7 @@ curl -X GET \
 }
 ```
 
-## Cerca un comportamento {#lookup}
+## Cercare un comportamento {#lookup}
 
 Puoi cercare un comportamento specifico fornendo il relativo ID nel percorso di una richiesta di GET all’ `/behaviors` endpoint.
 
@@ -102,6 +101,8 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{BEHAVIOR_ID}` | Il `meta:altId` o il codice URL `$id` del comportamento da cercare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
