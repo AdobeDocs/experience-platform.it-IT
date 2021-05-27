@@ -5,11 +5,10 @@ title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire campi XDM nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 3%
+source-wordcount: '1331'
+ht-degree: 4%
 
 ---
 
@@ -41,27 +40,29 @@ Per aggiungere un nuovo campo alla risorsa, seleziona l’icona **più (+)** acc
 
 ## Definire un campo per una risorsa {#define}
 
-Dopo aver selezionato l’icona **più (+)**, nell’area di lavoro viene visualizzato un **[!UICONTROL New field]** all’interno di un oggetto a livello di radice con namespace nell’ID tenant univoco (mostrato come `_tenantId` nell’esempio seguente). Tutti i campi aggiunti a uno schema tramite classi e gruppi di campi personalizzati vengono inseriti automaticamente in questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti da Adobi.
+Dopo aver selezionato l&#39;icona **più (+)**, nell&#39;area di lavoro viene visualizzato un **[!UICONTROL Nuovo campo]**, situato all&#39;interno di un oggetto a livello di radice con namespace nell&#39;ID tenant univoco (mostrato come `_tenantId` nell&#39;esempio seguente). Tutti i campi aggiunti a uno schema tramite classi e gruppi di campi personalizzati vengono inseriti automaticamente in questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti da Adobi.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-Nella barra a destra di **[!UICONTROL Field properties]**, puoi configurare i dettagli dei nuovi campi. Per ogni campo sono necessarie le seguenti informazioni:
+Nella barra a destra in **[!UICONTROL Proprietà campo]**, puoi configurare i dettagli dei nuovi campi. Per ogni campo sono necessarie le seguenti informazioni:
 
 | Proprietà campo | Descrizione |
 | --- | --- |
-| [!UICONTROL Field name] | Nome descrittivo univoco del campo. Il nome del campo non può essere modificato dopo il salvataggio dello schema.<br><br>Il nome dovrebbe idealmente essere scritto in camelCase. Può contenere caratteri alfanumerici, trattini o caratteri di sottolineatura, ma **potrebbe non essere** iniziare con un trattino basso.<ul><li>**Corretto**:  `fieldName`</li><li>**Accettabile:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**Errato**:  `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | Un nome descrittivo per il campo. |
-| [!UICONTROL Type] | Il tipo di dati che il campo conterrà. Da questo menu a discesa, è possibile selezionare uno dei [tipi scalari standard](../../schema/field-constraints.md) supportati da XDM oppure uno dei tipi di dati [a3/> a più campi definiti in precedenza in [!DNL Schema Registry].](../resources/data-types.md)<br><br>Puoi anche selezionare  **[!UICONTROL Advanced type search]** per cercare e filtrare i tipi di dati esistenti e individuare più facilmente il tipo desiderato. |
+| [!UICONTROL Nome campo] | Nome descrittivo univoco del campo. Il nome del campo non può essere modificato dopo il salvataggio dello schema.<br><br>Il nome dovrebbe idealmente essere scritto in camelCase. Può contenere caratteri alfanumerici, trattini o caratteri di sottolineatura, ma **potrebbe non essere** iniziare con un trattino basso.<ul><li>**Corretto**:  `fieldName`</li><li>**Accettabile:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**Errato**:  `_fieldName`</li></ul> |
+| [!UICONTROL Nome visualizzato] | Un nome descrittivo per il campo. |
+| [!UICONTROL Tipo] | Il tipo di dati che il campo conterrà. Da questo menu a discesa, è possibile selezionare uno dei [tipi scalari standard](../../schema/field-constraints.md) supportati da XDM oppure uno dei tipi di dati [a3/> a più campi definiti in precedenza in [!DNL Schema Registry].](../resources/data-types.md)<br><br>È inoltre possibile selezionare  **[!UICONTROL Ricerca tipo avanzata per]** cercare e filtrare i tipi di dati esistenti e individuare più facilmente il tipo desiderato. |
 
-Puoi anche fornire al campo un **[!UICONTROL Description]** leggibile da un utente opzionale per fornire più contesto riguardo al caso d’uso previsto del campo.
+{style=&quot;table-layout:auto&quot;}
+
+È inoltre possibile fornire al campo una **[!UICONTROL Descrizione]** leggibile da un utente opzionale per fornire più contesto riguardo al caso d’uso previsto del campo.
 
 >[!NOTE]
 >
->A seconda del **[!UICONTROL Type]** selezionato per il campo, nella barra a destra possono essere visualizzati controlli di configurazione aggiuntivi. Per ulteriori informazioni su questi controlli, consulta la sezione sulle [proprietà del campo specifiche per i tipi](#type-specific-properties) .
+>A seconda del **[!UICONTROL Tipo]** selezionato per il campo, nella barra a destra possono essere visualizzati controlli di configurazione aggiuntivi. Per ulteriori informazioni su questi controlli, consulta la sezione sulle [proprietà del campo specifiche per i tipi](#type-specific-properties) .
 >
 >La barra a destra fornisce anche delle caselle di controllo per la designazione di tipi di campi speciali. Per ulteriori informazioni, consulta la sezione sui [tipi di campi speciali](#special) .
 
-Al termine della configurazione del campo, seleziona **[!UICONTROL Apply]**.
+Al termine della configurazione del campo, seleziona **[!UICONTROL Applica]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
@@ -77,19 +78,21 @@ Puoi continuare a seguire i passaggi descritti sopra per aggiungere altri campi 
 
 ## Proprietà dei campi specifiche per il tipo {#type-specific-properties}
 
-Durante la definizione di un nuovo campo, nella barra a destra possono essere visualizzate opzioni di configurazione aggiuntive, a seconda del **[!UICONTROL Type]** scelto per il campo. La tabella seguente illustra le proprietà aggiuntive dei campi insieme ai relativi tipi compatibili:
+Quando definisci un nuovo campo, nella barra a destra possono essere visualizzate opzioni di configurazione aggiuntive a seconda del **[!UICONTROL Tipo]** scelto per il campo. La tabella seguente illustra le proprietà aggiuntive dei campi insieme ai relativi tipi compatibili:
 
 | Proprietà campo | Tipi compatibili | Descrizione |
 | --- | --- | --- |
-| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | Un valore predefinito che verrà assegnato a questo campo se durante l’acquisizione non viene fornito alcun altro valore. Questo valore deve essere conforme al tipo selezionato del campo. |
-| [!UICONTROL Pattern] | [!UICONTROL String] | Un&#39; [espressione regolare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) a cui il valore di questo campo deve essere conforme per essere accettato durante l&#39;acquisizione. |
-| [!UICONTROL Format] | [!UICONTROL String] | Selezionare da un elenco di formati predefiniti per le stringhe a cui il valore deve essere conforme. I formati disponibili sono: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL Minimum length] | [!UICONTROL String] | Il numero minimo di caratteri che la stringa deve contenere affinché il valore possa essere accettato durante l’acquisizione. |
-| [!UICONTROL Maximum length] | [!UICONTROL String] | Il numero massimo di caratteri che la stringa deve contenere affinché il valore possa essere accettato durante l’acquisizione. |
-| [!UICONTROL Minimum value] | [!UICONTROL Double] | Il valore minimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, viene accettato il valore . Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Exclusive minimum value]&quot; deve essere lasciato vuoto. |
-| [!UICONTROL Maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, viene accettato il valore . Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Exclusive maximum value]&quot; deve essere lasciato vuoto. |
-| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Minimum value]&quot; (non esclusivo) deve essere lasciato vuoto. |
-| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Maximum value]&quot; (non esclusivo) deve essere lasciato vuoto. |
+| [!UICONTROL Valore predefinito] | [!UICONTROL Stringa],  [!UICONTROL Doppio],  [!UICONTROL Lungo],  [!UICONTROL Intero],  [!UICONTROL Breve],  [!UICONTROL Byte],  [!UICONTROL Booleano] | Un valore predefinito che verrà assegnato a questo campo se durante l’acquisizione non viene fornito alcun altro valore. Questo valore deve essere conforme al tipo selezionato del campo. |
+| [!UICONTROL Pattern] | [!UICONTROL Stringa] | Un&#39; [espressione regolare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) a cui il valore di questo campo deve essere conforme per essere accettato durante l&#39;acquisizione. |
+| [!UICONTROL Formato] | [!UICONTROL Stringa] | Selezionare da un elenco di formati predefiniti per le stringhe a cui il valore deve essere conforme. I formati disponibili sono: <ul><li>[[!UICONTROL ora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL e-mail]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-riferimento]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-puntatore]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Lunghezza minima] | [!UICONTROL Stringa] | Il numero minimo di caratteri che la stringa deve contenere affinché il valore possa essere accettato durante l’acquisizione. |
+| [!UICONTROL Lunghezza massima] | [!UICONTROL Stringa] | Il numero massimo di caratteri che la stringa deve contenere affinché il valore possa essere accettato durante l’acquisizione. |
+| [!UICONTROL Valore minimo] | [!UICONTROL Doppio] | Il valore minimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, viene accettato il valore . Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Valore minimo esclusivo]&quot; deve essere lasciato vuoto. |
+| [!UICONTROL Valore massimo] | [!UICONTROL Doppio] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, viene accettato il valore . Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Valore massimo esclusivo]&quot; deve essere lasciato vuoto. |
+| [!UICONTROL Valore minimo esclusivo] | [!UICONTROL Doppio] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Valore minimo]&quot; (non esclusivo) deve essere lasciato vuoto. |
+| [!UICONTROL Valore massimo esclusivo] | [!UICONTROL Doppio] | Il valore massimo per il valore Double da accettare durante l’acquisizione. Se il valore acquisito corrisponde esattamente a quello inserito qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Valore massimo]&quot; (non esclusivo) deve essere lasciato vuoto. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Tipi di campi speciali {#special}
 
@@ -97,11 +100,11 @@ La barra a destra fornisce diverse caselle di controllo per la designazione di r
 
 Per ulteriori informazioni su questi tipi speciali, consulta la seguente documentazione:
 
-* [[!UICONTROL Required]](./required.md)
+* [[!UICONTROL Obbligatorio]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
-* [[!UICONTROL Identity]](./identity.md) (Disponibile solo per i campi stringa)
-* [[!UICONTROL Relationship]](./relationship.md) (Disponibile solo per i campi stringa)
+* [[!UICONTROL Identità]](./identity.md)  (disponibile solo per i campi stringa)
+* [[!UICONTROL Relazione]](./relationship.md)  (Disponibile solo per i campi stringa)
 
 Sebbene tecnicamente non sia un tipo di campo speciale, si consiglia anche di visitare la guida sulla [definizione dei campi di tipo oggetto](./object.md) per ulteriori informazioni sulla definizione dei campi secondari nidificati nelle strutture dello schema.
 
@@ -109,4 +112,4 @@ Sebbene tecnicamente non sia un tipo di campo speciale, si consiglia anche di vi
 
 Questa guida fornisce una panoramica sulla definizione dei campi XDM nell’interfaccia utente. Tenere presente che i campi possono essere aggiunti solo agli schemi tramite l’uso di classi e gruppi di campi. Per ulteriori informazioni su come gestire queste risorse nell&#39;interfaccia utente, consulta le guide per la creazione e la modifica di [classi](../resources/classes.md) e [gruppi di campi](../resources/field-groups.md).
 
-Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], consulta la [[!UICONTROL Schemas] panoramica dell&#39;area di lavoro](../overview.md).
+Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
