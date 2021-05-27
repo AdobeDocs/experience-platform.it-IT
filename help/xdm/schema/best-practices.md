@@ -5,10 +5,9 @@ title: Best Practice Per La Modellazione Dei Dati
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2524'
 ht-degree: 1%
 
 ---
@@ -55,6 +54,8 @@ Una volta creato un ERD per identificare le entità essenziali che si desidera i
 | Entità di ricerca | Le entità di ricerca rappresentano concetti che possono riferirsi a una singola persona, ma che non possono essere utilizzati direttamente per identificare l’individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su **classi personalizzate**. |
 | Entità evento | Le entità evento rappresentano i concetti relativi alle azioni che un cliente può intraprendere, agli eventi di sistema o a qualsiasi altro concetto in cui desideri tenere traccia dei cambiamenti nel tempo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati sulla classe **[!DNL XDM ExperienceEvent]**. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Considerazioni sull’ordinamento delle entità
 
 Le sezioni seguenti forniscono ulteriori indicazioni su come ordinare le entità nelle categorie sopra elencate.
@@ -75,8 +76,10 @@ Se desideri analizzare in che modo determinati attributi all’interno di un’e
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | Ott 1, 10:32 |
 | 1234567 | Rimuovi | 275098 | 1 | Ott 1, 10:33 |
-| 1234567 | Aggiungi | 486502 | 3 | Ott 1, 10:41 |
+| 1234567 | Aggiungi | 486502 | 1 | Ott 1, 10:41 |
 | 1234567 | Aggiungi | 910482 | 5 | 3 ottobre, 2:15 PM |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Casi di utilizzo della segmentazione
 
@@ -118,6 +121,8 @@ La tabella seguente illustra alcune relazioni di entità comuni e le categorie c
 | Pagamenti per clienti e carrello | Uno a molti | Un singolo cliente può avere molti cart checkout, che sono eventi che possono essere tracciati nel tempo. I clienti sarebbero quindi un’entità di profilo, mentre Carrello Checkout sarebbe un’entità evento. |
 | Clienti e account fedeltà | Uno a uno | Un singolo cliente può avere un solo account fedeltà e viceversa. Poiché la relazione è uno a uno, sia i clienti che i conti fedeltà rappresentano le entità del profilo. |
 | Clienti e abbonamenti | Uno a molti | Un singolo cliente può avere molti abbonamenti. Poiché l’azienda si occupa solo degli abbonamenti correnti di un cliente, Customers è un’entità di profilo, mentre Subscriptions è un’entità di ricerca. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Propri e contro di diverse classi di entità {#pros-and-cons}
 
@@ -202,7 +207,7 @@ Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti p
 * Adobe Campaign
 * Adobe Target
 
-Ad esempio, il gruppo di campi [[!UICONTROL Adobe Analytics ExperienceEvent Template]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) consente di mappare i campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe con cui stai lavorando, devi utilizzare questi gruppi di campi forniti da Adobe nei tuoi schemi.
+Ad esempio, il gruppo di campi [[!UICONTROL Modello di esperienza Adobe Analytics]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) consente di mappare i campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe con cui stai lavorando, devi utilizzare questi gruppi di campi forniti da Adobe nei tuoi schemi.
 
 <img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
