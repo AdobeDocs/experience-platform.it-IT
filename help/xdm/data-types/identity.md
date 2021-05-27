@@ -5,17 +5,16 @@ title: Tipo di dati identità
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM di identità.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '287'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Identity] tipo di dati
+#  Tipo di dati di identità
 
-[!UICONTROL Identity] è un tipo di dati XDM standard utilizzato per distinguere chiaramente le persone che interagiscono con le esperienze digitali. L&#39;identità è stabilita da un provider di identità, a cui si fa riferimento in un attributo `namespace` . All&#39;interno di ogni `namespace`, l&#39;identità è univoca.
+ Identity è un tipo di dati XDM standard utilizzato per distinguere chiaramente le persone che interagiscono con le esperienze digitali. L&#39;identità è stabilita da un provider di identità, a cui si fa riferimento in un attributo `namespace` . All&#39;interno di ogni `namespace`, l&#39;identità è univoca.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
@@ -27,6 +26,8 @@ ht-degree: 3%
 | `primary` | Booleano | Indica se si tratta dell&#39;identità principale dell&#39;individuo. Ogni individuo può avere una sola identità primaria. |
 | `xid` | Stringa | Se presente, questo valore rappresenta un identificatore dello spazio dei nomi incrociato univoco per tutti gli identificatori con ambito dello spazio dei nomi in tutti i namespace. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
@@ -34,7 +35,7 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Identity].
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Identity] .
 
 ## Valori accettati per authenticatedState {#authenticatedState}
 
