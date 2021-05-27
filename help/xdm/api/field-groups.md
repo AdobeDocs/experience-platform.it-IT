@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Endpoint API per gruppi di campi
 description: L’endpoint /fieldgroups nell’API del Registro di sistema dello schema consente di gestire in modo programmatico i gruppi di campi dello schema XDM all’interno dell’applicazione di esperienza.
 topic: guida per sviluppatori
-translation-type: tm+mt
-source-git-commit: b25c545e86c8ffd6b5832893152aef597feaf71f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1217'
 ht-degree: 2%
 
 ---
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Il contenitore da cui si desidera recuperare i gruppi di campi: `global` per gruppi di campi creati da un Adobe o `tenant` per gruppi di campi di proprietà della tua organizzazione. |
 | `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un elenco di gruppi di campi dal contenitore `tenant` utilizzando un parametro di query `orderby` per ordinare i gruppi di campi in base al relativo attributo `title`.
@@ -60,6 +61,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce il gruppo di campi JSON completo per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -107,7 +110,7 @@ La richiesta precedente utilizzava l’intestazione `application/vnd.adobe.xed-i
 }
 ```
 
-## Cerca un gruppo di campi {#lookup}
+## Cercare un gruppo di campi {#lookup}
 
 Puoi cercare un gruppo di campi specifico includendo l’ID del gruppo di campi nel percorso di una richiesta GET.
 
@@ -121,6 +124,8 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{CONTAINER_ID}` | Il contenitore che ospita il gruppo di campi da recuperare: `global` per un gruppo di campi creato da un Adobe o `tenant` per un gruppo di campi di proprietà dell&#39;organizzazione. |
 | `{FIELD_GROUP_ID}` | Il `meta:altId` o l&#39;URL-encoded `$id` del gruppo di campi che si desidera cercare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -145,6 +150,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -398,6 +405,8 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Il `meta:altId` o il codice URL `$id` del gruppo di campi che si desidera riscrivere. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente riscrive un gruppo di campi esistente, aggiungendo un nuovo campo `propertyCountry` .
@@ -581,6 +590,8 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URI con codifica URL `$id` o `meta:altId` del gruppo di campi che si desidera aggiornare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta di esempio riportata di seguito aggiorna il `description` di un gruppo di campi esistente e aggiunge un nuovo campo `propertyCity`.
@@ -717,6 +728,8 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URI con codifica URL `$id` o `meta:altId` del gruppo di campi da eliminare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
