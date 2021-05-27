@@ -5,17 +5,16 @@ title: Tipo di dati Nome persona
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Nome persona.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Person name] tipo di dati
+# [!UICONTROL Tipo di dati ] con nome persona
 
-[!UICONTROL Person name] è un tipo di dati XDM standard che descrive il nome completo di una persona. Poiché le convenzioni per le strutture dei nomi differiscono notevolmente tra lingue e culture, i nomi devono sempre essere modellati utilizzando questo tipo di dati.
+[!UICONTROL Il ] nome della persona è un tipo di dati XDM standard che descrive il nome completo di una persona. Poiché le convenzioni per le strutture dei nomi differiscono notevolmente tra lingue e culture, i nomi devono sempre essere modellati utilizzando questo tipo di dati.
 
 Inoltre, il tipo di dati fornisce una serie di proprietà facoltative che possono essere utilizzate in situazioni che richiedono l’utilizzo di un solo frammento del nome completo, ad esempio la creazione di un saluto formale o informale.
 
@@ -29,6 +28,8 @@ Inoltre, il tipo di dati fornisce una serie di proprietà facoltative che posson
 | `lastName` | Ultimo segmento del nome nell’ordine di scrittura più comunemente accettato nella lingua del nome. |
 | `middleName` | Nomi intermedi, alternativi o aggiuntivi forniti tra il nome e il cognome. |
 | `suffix` | Gruppo di lettere fornito dopo il nome di una persona per fornire informazioni aggiuntive (come `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III` e così via). |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati del nome della persona, consulta l’archivio XDM pubblico:
 
