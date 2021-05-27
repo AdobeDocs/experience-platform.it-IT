@@ -5,10 +5,9 @@ title: Guida introduttiva all’API del Registro di sistema dello schema
 description: Questo documento fornisce un'introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all'API del Registro di sistema dello schema.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -213,11 +212,13 @@ Nella tabella seguente sono elencati i valori di intestazione `Accept` compatibi
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributi e  `allOf` risolti. Nessun titolo o descrizione. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributi e  `allOf` risolti. I descrittori sono inclusi. |
 
+{style=&quot;table-layout:auto&quot;}
+
 >[!NOTE]
 >
 >Platform supporta attualmente una sola versione principale per ogni schema (`1`). Pertanto, il valore per `version` deve sempre essere `1` quando si eseguono richieste di ricerca per restituire la versione secondaria più recente dello schema. Per ulteriori informazioni sul controllo delle versioni dello schema, consulta la sottosezione seguente.
 
-### Controllo delle versioni dello schema {#versioning}
+### Controllo delle versioni di uno schema {#versioning}
 
 Le versioni dello schema sono referenziate dalle intestazioni `Accept` nell’API del Registro di sistema dello schema e nelle proprietà `schemaRef.contentType` nei payload API del servizio Platform a valle.
 
