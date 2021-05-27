@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -416,3 +415,59 @@ Se l’intestazione `Authorization` non è presente o viene inviato un token di 
     }
 }
 ```
+
+### Pubblica i dati non elaborati da acquisire su Platform {#ingest-data}
+
+Dopo aver creato il flusso, puoi inviare il messaggio JSON all’endpoint di streaming creato in precedenza.
+
+**Formato API**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | Il valore `id` della nuova connessione streaming creata. |
+
+**Richiesta**
+
+La richiesta di esempio trasferisce dati non elaborati all’endpoint di streaming creato in precedenza.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle informazioni appena acquisite.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | ID della connessione in streaming creata in precedenza. |
+| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
+| `receivedTimeMs` | Una marca temporale (epoch in millisecondi) che mostra a che ora è stata ricevuta la richiesta. |
