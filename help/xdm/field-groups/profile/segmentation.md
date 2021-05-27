@@ -5,22 +5,21 @@ title: Gruppo di campi schema Dettagli appartenenza segmento
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi di schema Dettagli appartenenza segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '426'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Segment Membership Details] gruppo di campi schema
+# [!UICONTROL Segment Membership ] Dettagli del gruppo di campi dello schema
 
 >[!NOTE]
 >
 >Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
 
-[!UICONTROL Segment Membership Details] è un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che acquisisce informazioni relative all’appartenenza al segmento, compresi i segmenti a cui appartiene l’individuo, l’ultima volta di qualificazione e quando l’iscrizione è valida fino a quando.
+[!UICONTROL Iscrizione al segmento ] Consente di specificare un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che acquisisce informazioni relative all’appartenenza al segmento, compresi i segmenti a cui appartiene l’individuo, l’ultima volta di qualificazione e quando l’iscrizione è valida fino a quando.
 
 >[!WARNING]
 >
@@ -31,6 +30,8 @@ ht-degree: 1%
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `segmentMembership` | Mappa | Un oggetto map che descrive le appartenenze al segmento del singolo utente. La struttura dell&#39;oggetto è descritta in dettaglio di seguito. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Le appartenenze ai segmenti sono ordinate per namespace, come indicato dalle chiavi a livello principale dell’oggetto. A sua volta, le singole chiavi sotto ogni namespace rappresentano gli ID dei segmenti di cui il profilo è membro. Ogni oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull’appartenenza:
 
@@ -78,6 +79,8 @@ Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema h
 | `xdm:validUntil` | Una marca temporale di quando non si deve più presumere che l’appartenenza al segmento sia valida. |
 | `xdm:status` | Indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
 | `xdm:payload` | Alcune appartenenze a segmenti includono un payload che descrive i valori aggiuntivi direttamente correlati all’appartenenza. È possibile fornire un solo payload di un determinato tipo per ogni appartenenza. `xdm:payloadType` indica il tipo di payload (`boolean`,  `number`,  `propensity` o  `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
