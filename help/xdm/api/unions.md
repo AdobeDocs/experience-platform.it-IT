@@ -5,10 +5,9 @@ title: Endpoint API Unions
 description: L’endpoint /sindacati nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi di unione XDM nell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
@@ -35,7 +34,7 @@ L&#39;array `timeSeriesEvents` è un elenco di eventi serie temporali relativi a
 
 La mappa `segmentMembership` memorizza i risultati delle valutazioni dei segmenti. Quando i processi di segmento vengono eseguiti correttamente utilizzando l’ [API di segmentazione](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), la mappa viene aggiornata. `segmentMembership` memorizza anche tutti i segmenti di pubblico valutati in precedenza acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l’esercitazione su [creazione di segmenti utilizzando le API](../../segmentation/tutorials/create-a-segment.md) .
 
-## Recupera un elenco di sindacati {#list}
+## Recupera un elenco di unioni {#list}
 
 Quando imposti il tag `union` su uno schema, il [!DNL Schema Registry] aggiunge automaticamente lo schema all&#39;unione per la classe su cui è basato lo schema. Se non esiste alcuna unione per la classe in questione, viene creata automaticamente una nuova unione. Il `$id` per l&#39;unione è simile allo standard `$id` di altre risorse [!DNL Schema Registry], con l&#39;unica differenza aggiunta da due caratteri di sottolineatura e dalla parola &quot;unione&quot; (`__union`).
 
@@ -66,6 +65,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce la classe JSON completa per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Risposta**
 
 Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice `results` nel corpo della risposta. Se sono state definite unioni, i dettagli di ciascuna unione vengono forniti come oggetti all&#39;interno della matrice. Se non sono state definite unioni, viene comunque restituito lo stato HTTP 200 (OK) ma la matrice `results` sarà vuota.
@@ -89,7 +90,7 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice `results`
 }
 ```
 
-## Cerca un&#39;unione {#lookup}
+## Cercare un sindacato {#lookup}
 
 Puoi visualizzare un&#39;unione specifica eseguendo una richiesta di GET che include `$id` e, a seconda dell&#39;intestazione Accept, alcuni o tutti i dettagli dell&#39;unione.
 
@@ -107,6 +108,8 @@ GET /tenant/schemas/{UNION_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{UNION_ID}` | URI `$id` con codifica URL dell&#39;unione da cercare. Gli URI per gli schemi di unione vengono aggiunti con &quot;__union&quot;. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -128,6 +131,8 @@ Le seguenti intestazioni Accept sono disponibili per le ricerche dello schema di
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Non elaborato con `$ref` e `allOf`. Include titoli e descrizioni. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributi e  `allOf` risolti. Include titoli e descrizioni. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -192,6 +197,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | Il `$id` della classe di cui si desidera elencare gli schemi abilitati per l&#39;unione. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un elenco di tutti gli schemi che fanno parte dell&#39;unione per la classe [!DNL XDM Individual Profile] .
@@ -212,6 +219,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce lo schema JSON completo per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
