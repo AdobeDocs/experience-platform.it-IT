@@ -5,17 +5,16 @@ title: Tipo di dati elemento di pagamento
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Payment Item Experience Data Model).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '164'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Payment Item] tipo di dati
+# [!UICONTROL Tipo di dati ] relativi agli elementi di pagamento
 
-[!UICONTROL Payment Item] è un tipo di dati XDM (Experience Data Model) standard che descrive un pagamento associato a un ordine che definisce il tipo di pagamento, l’importo e la valuta associata.
+[!UICONTROL L&#39;] elemento di pagamento è un tipo di dati XDM (Experience Data Model) standard che descrive un pagamento associato a un ordine che definisce il tipo di pagamento, l&#39;importo e la valuta associata.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
@@ -25,6 +24,8 @@ ht-degree: 3%
 | `paymentAmount` | Doppio | Valore del pagamento. |
 | `paymentType` | Stringa | Modalità di pagamento dell&#39;ordine. I valori enum accettati includono: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Stringa | Identificatore univoco della transazione per l&#39;elemento di pagamento. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
