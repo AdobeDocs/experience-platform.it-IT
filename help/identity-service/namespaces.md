@@ -5,9 +5,9 @@ title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 1%
 
 ---
@@ -73,6 +73,8 @@ I seguenti namespace standard vengono forniti per l’utilizzo da parte di tutte
 | TNTID | Spazio dei nomi che rappresenta Adobe Target. Per ulteriori informazioni, consulta il seguente documento su [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) . |
 | Windows AID | Spazio dei nomi che rappresenta un ID pubblicitario di Windows. Per ulteriori informazioni, consulta il seguente documento su [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) . |
 
+### Visualizzare i namespace delle identità
+
 Per visualizzare i namespace delle identità nell&#39;interfaccia utente, seleziona **[!UICONTROL Identità]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Sfoglia]**.
 
 ![navigare](./images/browse.png)
@@ -89,7 +91,7 @@ Seleziona uno spazio dei nomi di identità dall’elenco per visualizzare le inf
 
 ![select-namespace](./images/select-namespace.png)
 
-## Gestione dei namespace personalizzati {#manage-namespaces}
+## Gestire i namespace personalizzati {#manage-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, è possibile che siano necessari spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando l’ API [[!DNL Identity Service]](./api/create-custom-namespace.md) o tramite l’interfaccia utente.
 
