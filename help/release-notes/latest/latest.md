@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
+source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1355'
 ht-degree: 3%
 
 ---
@@ -112,5 +112,6 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Supporto dell’interfaccia utente per l’acquisizione di file compressi | Ora puoi visualizzare in anteprima e acquisire file JSON compressi o delimitati utilizzando origini di archiviazione cloud nell’interfaccia utente. Per ulteriori informazioni, consulta l’esercitazione su [configurazione di un flusso di dati per una connessione sorgente di archiviazione cloud nell’interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Sorgenti beta che si spostano in GA | Le seguenti origini sono state promosse dalla versione beta a GA: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md).
