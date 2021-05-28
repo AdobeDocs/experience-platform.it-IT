@@ -5,19 +5,14 @@ title: Panoramica del connettore sorgente HubSpot
 topic-legacy: overview
 description: Scopri come collegare HubSpot a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-# (Beta) Connettore [!DNL HubSpot]
-
->[!NOTE]
->
->Il connettore [!DNL HubSpot] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
+# [!DNL HubSpot] connettore
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
