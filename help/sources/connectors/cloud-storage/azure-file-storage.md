@@ -5,19 +5,14 @@ title: Panoramica del connettore origine archiviazione file di Azure
 topic-legacy: overview
 description: Scopri come collegare Azure File Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# (Beta) Connettore Azure File Storage
-
->[!NOTE]
->
->Il connettore Azure File Storage è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
+# Connettore di archiviazione file di Azure
 
 Adobe Experience Platform fornisce connettività nativa per provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di estrarre i dati da questi sistemi.
 
