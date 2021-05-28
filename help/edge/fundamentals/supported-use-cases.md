@@ -2,7 +2,7 @@
 title: Casi d’uso supportati con Adobe Experience Platform Web SDK
 description: Scopri quali casi d’uso sono supportati con Adobe Experience Platform Web SDK.
 keywords: sdk web;casi di utilizzo
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 13%
