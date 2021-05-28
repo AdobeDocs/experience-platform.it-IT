@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente ServiceNow utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -15,10 +14,6 @@ ht-degree: 1%
 ---
 
 # Creare una connessione sorgente [!DNL ServiceNow] nell&#39;interfaccia utente
-
->[!NOTE]
->
->Il connettore [!DNL ServiceNow] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente [!DNL ServiceNow] utilizzando l&#39;interfaccia utente [!DNL Platform] .
 
@@ -49,25 +44,25 @@ Per ulteriori informazioni su come iniziare, consulta [this [!DNL ServiceNow] do
 
 Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo account [!DNL ServiceNow] a [!DNL Platform].
 
-Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse origini per le quali è possibile creare un account.
+Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. La schermata **[!UICONTROL Catalogo]** visualizza una varietà di sorgenti con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
 
-Sotto la categoria **[!UICONTROL Customer Success]**, selezionare **[!UICONTROL ServiceNow]**. Se questa è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configure]**. In caso contrario, seleziona **[!UICONTROL Connect source]** per creare un nuovo connettore [!DNL ServiceNow].
+Sotto la categoria **[!UICONTROL Customer Success]**, selezionare **[!UICONTROL ServiceNow]**. Se è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, selezionare **[!UICONTROL Connetti sorgente]** per creare un nuovo connettore [!DNL ServiceNow].
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connect to ServiceNow]** . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti a ServiceNow]** . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
 
 ### Nuovo account
 
-Se utilizzi nuove credenziali, seleziona **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL ServiceNow]. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per l&#39;impostazione della nuova connessione.
+Se utilizzi nuove credenziali, seleziona **[!UICONTROL Nuovo account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL ServiceNow]. Al termine, selezionare **[!UICONTROL Connetti]**, quindi lasciare che sia necessario un po&#39; di tempo per stabilire la nuova connessione.
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, selezionare l&#39;account [!DNL ServiceNow] con cui si desidera connettersi, quindi selezionare **[!UICONTROL Next]** per continuare.
+Per collegare un account esistente, selezionare l&#39;account [!DNL ServiceNow] con cui si desidera connettersi, quindi selezionare **[!UICONTROL Avanti]** per continuare.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
