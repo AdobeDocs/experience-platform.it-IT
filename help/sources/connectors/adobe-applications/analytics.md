@@ -5,11 +5,10 @@ title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 topic-legacy: overview
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-translation-type: tm+mt
-source-git-commit: af5ad975bbfd6a67fe66c90e33da1365d49c8899
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 2%
+source-wordcount: '511'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +26,7 @@ Questo documento fornisce una panoramica di [!DNL Analytics] e descrive i casi d
 
 Ad alto livello, [!DNL Analytics] raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Dopo che i dati grezzi sono stati sottoposti a questa elaborazione leggera, vengono considerati pronti per il consumo da [!DNL Real-time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono micro-batch e acquisiti nei set di dati Platform per l’utilizzo da parte di [!DNL Data Science Workspace], [!DNL Query Service] e altre applicazioni di rilevamento dati.
 
-Per ulteriori informazioni sulle regole di elaborazione, consulta la [panoramica delle regole di elaborazione](https://docs.adobe.com/content/help/it-IT/analytics/admin/admin-tools/processing-rules/processing-rules.html) .
+Per ulteriori informazioni sulle regole di elaborazione, consulta la [panoramica delle regole di elaborazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) .
 
 ## Experience Data Model (XDM)
 
