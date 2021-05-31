@@ -3,14 +3,13 @@ title: Recuperare gli ID di Experience Cloud tramite l’SDK per web di Adobe Ex
 description: Scopri come recuperare gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 seo-description: Scopri come ottenere l’ID Adobe Experience Cloud.
 keywords: identità;identità di prima parte;servizio Identity;identità di terze parti;migrazione ID;ID visitatore;identità di terze parti;cookie di terze partiabilitati;idMigrationEnabled;getIdentity;identità di sincronizzazione;syncIdentity;sendEvent;identityMap;primario;ecid;spazio dei nomi;ID spazio dei nomi;authenticationState;hashEnabled;
-translation-type: tm+mt
-source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
-
 
 # Recupera ID Adobe Experience Cloud
 
@@ -34,7 +33,7 @@ Durante la migrazione dall’utilizzo dell’API visitatore, puoi anche eseguire
 
 ## Aggiornamento delle caratteristiche per la migrazione
 
-Quando i dati in formato XDM vengono inviati in Audience Manager, questi dovranno essere convertiti in segnali durante la migrazione. Le caratteristiche dovranno essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo viene semplificato utilizzando lo [strumento BAAAM](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) creato dall&#39;Audience Manager.
+Quando i dati in formato XDM vengono inviati in Audience Manager, questi dovranno essere convertiti in segnali durante la migrazione. Le caratteristiche dovranno essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo viene semplificato utilizzando lo [strumento BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) creato dall&#39;Audience Manager.
 
 ## Server Side Forwarding
 
@@ -91,7 +90,7 @@ alloy("sendEvent", {
 });
 ```
 
-Ogni proprietà all&#39;interno di `identityMap` rappresenta le identità appartenenti a un particolare [namespace Identity](../../identity-service/namespaces.md). Il nome della proprietà deve essere il simbolo dello spazio dei nomi identità, che è possibile trovare nell&#39;interfaccia utente di Adobe Experience Platform in &quot;[!UICONTROL Identities]&quot;. Il valore della proprietà deve essere un array di identità relative a tale spazio dei nomi di identità.
+Ogni proprietà all&#39;interno di `identityMap` rappresenta le identità appartenenti a un particolare [namespace Identity](../../identity-service/namespaces.md). Il nome della proprietà deve essere il simbolo dello spazio dei nomi identità, che è possibile trovare nell&#39;interfaccia utente di Adobe Experience Platform in &quot;[!UICONTROL Identità]&quot;. Il valore della proprietà deve essere un array di identità relative a tale spazio dei nomi di identità.
 
 Ciascun oggetto identity nell&#39;array identity è strutturato come segue:
 
