@@ -7,11 +7,10 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
-translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 22%
+source-wordcount: '112'
+ht-degree: 17%
 
 ---
 
@@ -21,10 +20,10 @@ Questo video fornisce una panoramica dell&#39;applicazione e dei servizi intelli
 
 Per ulteriori informazioni, utilizza i collegamenti per consultare la documentazione di ogni singola applicazione:
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/it-IT/analytics-platform/using/cja-landing.html)
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/it-IT/journeys/using/journey-orchestration-home.html)
-* [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/it-IT/offer-decisioning/using/offer-decisioning-home.translate.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html)
+* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=it)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
