@@ -2,18 +2,17 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
 seo-description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 78%
 
 ---
 
-
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento illustra le note sulla versione dell&#39;estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch. Per le ultime note sulla versione dell&#39;SDK stesso, consulta le [Note sulla versione dell&#39;SDK per web della piattaforma](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/release-notes.html).
+Questo documento illustra le note sulla versione dell&#39;estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch. Per le ultime note sulla versione dell&#39;SDK stesso, consulta le [Note sulla versione dell&#39;SDK per web della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## 9 marzo 2020
 
@@ -70,7 +69,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 #### Funzioni
 
 * Modifica necessaria: rimuovi l’azione `syncIdentity` e includi al suo posto il passaggio di tali ID nell’azione `sendEvent`. Prima di aggiornare l’estensione, disattiva eventuali regole esistenti che utilizzano l’azione rimossa.
-* Aggiornamento ad Alloy v2.1.0 ([Note sulla versione](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html)).
+* Aggiornamento ad Alloy v2.1.0 ([Note sulla versione](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)).
 * È supportato lo standard del consenso IAB 2.0 nell’azione `setConsent`.
 * È supportata la possibilità di ignorare l’ID del set di dati nell’azione `sendEvent`.
 * È stato aggiunto un nuovo elemento dati di tipo `IdentityMap` che può essere utilizzato per compilare la voce `identityMap` nell’elemento dati di oggetti XDM che è ora abilitato e nell’azione `setConsent`.
