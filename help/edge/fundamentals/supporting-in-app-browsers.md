@@ -1,11 +1,10 @@
 ---
 title: Supporto dei browser in-app con Adobe Experience Platform Web SDK
-description: Scoprite come supportare i browser in-app con Adobe Experience Platform Web SDK.
+description: Scopri come supportare i browser in-app con Adobe Experience Platform Web SDK.
 keywords: browser in-app;browser;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '110'
 ht-degree: 8%
 
 ---
@@ -17,4 +16,4 @@ ht-degree: 8%
 >
 >Adobe Experience Platform [!DNL Web SDK] è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Nei browser incorporati nelle applicazioni mobili, l&#39;SDK si comporta esattamente come in un normale browser; tuttavia, devi accertarti che l’ID visitatore venga passato dall’applicazione mobile al sito Web tramite l’URL. Questo processo è descritto nella documentazione relativa all&#39; [Experience SDK for Mobile](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
+Nei browser incorporati nelle applicazioni mobili, l&#39;SDK si comporta esattamente come in un normale browser; tuttavia, assicurati che l’ID visitatore venga trasmesso dall’app mobile al sito web tramite l’URL. Questo processo è descritto nella documentazione relativa all&#39; [Experience SDK per dispositivi mobili](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
