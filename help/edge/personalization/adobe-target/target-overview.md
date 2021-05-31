@@ -3,16 +3,16 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 4%
+source-wordcount: '652'
+ht-degree: 3%
 
 ---
 
 # Utilizzo di Adobe Target con Platform Web SDK
 
-Adobe Experience Platform [!DNL Web SDK] può fornire ed eseguire il rendering sul canale web di esperienze personalizzate gestite in Adobe Target. Puoi utilizzare un editor WYSIWYG, denominato [Compositore esperienza visivo](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le tue attività e esperienze di personalizzazione.
+Adobe Experience Platform [!DNL Web SDK] può fornire ed eseguire il rendering sul canale web di esperienze personalizzate gestite in Adobe Target. Puoi utilizzare un editor WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le tue attività e esperienze di personalizzazione.
 
 Le seguenti funzioni sono state testate e sono attualmente supportate in Target:
 
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 ## Tipi di pubblico in XDM
 
-Quando definisci i tipi di pubblico per le attività Target fornite tramite Adobe Experience Platform Web SDK, devi definire e utilizzare [XDM](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html). Dopo aver definito schemi, classi e gruppi di campi di schema XDM, puoi creare una regola di pubblico Target definita dai dati XDM per il targeting. In Target, i dati XDM vengono visualizzati in Audience Builder come parametro personalizzato. L’XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
+Quando definisci i tipi di pubblico per le attività Target fornite tramite Adobe Experience Platform Web SDK, devi definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it). Dopo aver definito schemi, classi e gruppi di campi di schema XDM, puoi creare una regola di pubblico Target definita dai dati XDM per il targeting. In Target, i dati XDM vengono visualizzati in Audience Builder come parametro personalizzato. L’XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
 
 Se disponi di attività Target con tipi di pubblico predefiniti che utilizzano parametri personalizzati o un profilo utente, queste non vengono consegnate correttamente tramite l’SDK. Invece di utilizzare parametri personalizzati o il profilo utente, devi invece utilizzare XDM. Tuttavia, esistono campi di targeting del pubblico preconfigurati supportati tramite Adobe Experience Platform Web SDK che non richiedono XDM. Questi campi sono disponibili nell’interfaccia utente di Target che non richiede XDM:
 
