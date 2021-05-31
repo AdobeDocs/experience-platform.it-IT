@@ -5,11 +5,10 @@ title: Tipi di dati supportati nel servizio di segmentazione
 topic-legacy: overview
 description: Tutti i tipi di dati Experience Data Model (XDM) sono supportati in Adobe Segmentation Service. Le regole che costituiscono una definizione di segmento vengono contestualizzate dai seguenti tipi di dati.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 3%
+source-wordcount: '510'
+ht-degree: 1%
 
 ---
 
@@ -55,11 +54,11 @@ Come illustrato nella tabella seguente, i dati evento vengono sottoposti a rende
 
 I tipi di pubblico esterni possono essere utilizzati anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributo al nuovo segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con origini aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con origini aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Condivisione dei segmenti
 
-I segmenti creati in Platform possono essere utilizzati in altri [servizi core Adobe Experience Cloud](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html). Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
+I segmenti creati in Platform possono essere utilizzati in altri [servizi core Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 
