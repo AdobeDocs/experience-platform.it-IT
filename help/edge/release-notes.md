@@ -3,15 +3,21 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '562'
 ht-degree: 3%
 
 ---
 
 # Note sulla versione
+
+## Versione 2.5.0, giugno 2021
+
+* È stato aggiunto il supporto per le offerte di personalizzazione di reindirizzamento.
+* Le larghezze e le altezze del riquadro di visualizzazione raccolte automaticamente con valori negativi non verranno più inviate al server.
+* Quando un evento viene annullato restituendo `false` da un callback `onBeforeEventSend`, ora viene registrato un messaggio.
+* È stato risolto un problema a causa del quale parti specifiche di dati XDM destinate a un singolo evento venivano incluse in più eventi.
 
 ## Versione 2.4.0, marzo 2021
 
