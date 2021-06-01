@@ -3,7 +3,7 @@ title: Installare Adobe Experience Platform Web SDK
 description: Scopri come installare Experience Platform Web SDK.
 keywords: installazione sdk web;installazione sdk web;internet explorer;promise;pacchetto npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 2%
@@ -31,8 +31,8 @@ Struttura URL: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR a
 Esempio:
 
 
-* Minimizzato: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js)
-* Non minimizzato: [https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
+* Minimizzato: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js)
+* Non minimizzato: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
 ### Aggiunta del codice {#adding-the-code}
@@ -46,7 +46,7 @@ La versione standalone predefinita richiede un &quot;codice base&quot; aggiunto 
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js" async></script>
 ```
 
 Il &quot;codice base&quot; crea una funzione globale denominata `alloy`. Usa questa funzione per interagire con l&#39;SDK. Per assegnare alla funzione globale un nome diverso, modificare il nome `alloy` come segue:
@@ -58,7 +58,7 @@ Il &quot;codice base&quot; crea una funzione globale denominata `alloy`. Usa que
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js" async></script>
 ```
 
 In questo esempio, la funzione globale viene rinominata `mycustomname` anziché `alloy`.
@@ -108,7 +108,7 @@ Per caricare il file in modo sincrono anziché in modo asincrono, rimuovi l’at
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js"></script>
 ```
 
 ## Opzione 3: Utilizzo del pacchetto NPM
