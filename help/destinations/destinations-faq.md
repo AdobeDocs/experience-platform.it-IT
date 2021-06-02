@@ -4,10 +4,10 @@ title: 'Domande frequenti '
 seo-title: 'Domande frequenti '
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 seo-description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 6%
+source-wordcount: '733'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,18 @@ ht-degree: 6%
 ## Panoramica {#overview}
 
 Questo documento fornisce le risposte alle domande frequenti sulle destinazioni Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli riscontrati in tutte le API [!DNL Platform], consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+
+## Domande generali sulle destinazioni {#general}
+
+**Perché vedo conteggi di profilo diversi nell’interfaccia utente di Experience Platform e nei file CSV esportati?**
+
+Si tratta di un comportamento normale dovuto al modo in cui Experience Platform esegue la segmentazione.
+
+La segmentazione in streaming aggiorna il conteggio dei profili per i segmenti in streaming durante il giorno, mentre la segmentazione in batch aggiorna il conteggio dei profili per i segmenti batch una volta ogni 24 ore.
+
+Quando la pianificazione dell’esportazione dei segmenti si differenzia dalla pianificazione della segmentazione, i conteggi dei profili tra l’interfaccia utente e il file [!DNL CSV] esportato saranno diversi, soprattutto quando si tratta di segmenti in streaming.
+
+Per ulteriori informazioni, consulta la [documentazione del servizio di segmentazione](../segmentation/home.md) .
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
