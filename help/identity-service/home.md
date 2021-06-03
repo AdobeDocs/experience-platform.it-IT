@@ -5,10 +5,9 @@ title: Panoramica del servizio Identity
 topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -114,6 +113,10 @@ Gli schemi di record e serie temporali forniscono i mezzi per includere i dati d
 ### Contrassegno dei campi XDM come identità
 
 Qualsiasi campo di tipo `string` negli schemi che implementano classi XDM di record o serie temporali può essere etichettato come campo di identità. Di conseguenza, tutti i dati acquisiti in quel campo saranno considerati dati di identità.
+
+>[!NOTE]
+>
+>I campi tipo matrice e tipo mappa non sono supportati e non possono essere contrassegnati ed etichettati come campi di identità.
 
 I campi di identità consentono anche il collegamento di identità se condividono dati PII comuni.
 Ad esempio, etichettando i campi del numero di telefono come campi di identità, [!DNL Identity Service] esegue automaticamente il grafico delle relazioni con gli altri utenti che utilizzano lo stesso numero di telefono.
