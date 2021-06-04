@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Scopri come creare e modificare i tipi di dati nell’interfaccia utente di Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: bcacf2ebe99c3e397cfd5ceaf418a51bec74e659
+source-git-commit: 14128b247b003a54cb0d91167bb46fccf16ed799
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
 
 # Creare e modificare i tipi di dati tramite l’interfaccia utente
 
-In Experience Data Model (XDM), tipi di dati campi riutilizzabili che contengono più campi secondari. Sebbene siano simili ai gruppi di campi dello schema, in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo a livello principale.
+In Experience Data Model (XDM), i tipi di dati sono campi riutilizzabili che contengono più campi secondari. Sebbene siano simili ai gruppi di campi dello schema, in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo a livello principale.
 
 Adobe Experience Platform fornisce molti tipi di dati standard che possono essere utilizzati per coprire un’ampia varietà di casi d’uso comuni per la gestione dell’esperienza. Tuttavia, puoi anche definire tipi di dati personalizzati per soddisfare le tue esigenze aziendali specifiche.
 
