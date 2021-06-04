@@ -5,10 +5,9 @@ title: Panoramica dei criteri di utilizzo dei dati
 topic-legacy: policies
 description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentita l’esecuzione di dati all’interno di un Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -79,11 +78,12 @@ La tabella seguente descrive le azioni di marketing di base fornite out-of-the-b
 | Azione di marketing | Descrizione |
 | --- | --- |
 | Analytics | Un’azione che utilizza i dati a scopo di analisi, ad esempio per misurare, analizzare e generare rapporti sull’utilizzo dei siti o delle app da parte dei clienti dell’organizzazione. |
-| Combinare con PII | Un’azione che combina qualsiasi informazione identificabile dalla persona (PII) con dati anonimi. I contratti per i dati provenienti da reti di annunci, server di annunci e fornitori di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di tali dati con dati direttamente identificabili. |
+| Combinare con dati direttamente identificabili | Un’azione che combina qualsiasi informazione identificabile dalla persona (PII) con dati anonimi. I contratti per i dati provenienti da reti di annunci, server di annunci e fornitori di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di tali dati con dati direttamente identificabili. |
 | Targeting tra siti | Un’azione che utilizza i dati per il targeting degli annunci tra siti. La combinazione di dati provenienti da più siti, compresa una combinazione di dati in loco e dati fuori sito o una combinazione di dati provenienti da più fonti esterne al sito, è definita dati intersito. I dati intersito vengono in genere raccolti ed elaborati per fare deduzioni sugli interessi degli utenti. |
 | Data Science | Azione che utilizza i dati per i flussi di lavoro di scienza dei dati. Alcuni contratti includono divieti espliciti sull&#39;uso dei dati per la scienza dei dati. A volte tali termini sono formulati in termini che vietano l’uso di dati per l’intelligenza artificiale (AI), l’apprendimento automatico (ML) o la modellazione. |
 | Targeting e-mail | Un’azione che utilizza i dati nelle campagne di targeting e-mail. |
 | Esportazione verso terzi | Un’azione che esporta i dati a processori ed entità che non hanno relazioni dirette con i clienti. Molti fornitori di dati hanno termini nei contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. |
 | Pubblicità on-site | Un’azione che utilizza i dati per gli annunci onsite, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci pubblicitari. |
 | Personalizzazione on-site | Un’azione che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
+| Corrispondenza segmento | Un’azione che utilizza i dati per Adobe Experience Platform Segment Match (Corrispondenza segmento), che consente a due o più utenti di Platform di scambiare i dati dei segmenti. Attivando i criteri che fanno riferimento a questa azione, puoi limitare i dati utilizzati per la corrispondenza dei segmenti. Ad esempio, se il criterio principale &quot;Limita la condivisione dei dati&quot; è abilitato, non è possibile utilizzare dati con un&#39;etichetta [C11](../labels/reference.md#c11) per Segment Match. |
 | Personalizzazione a identità singola | Un’azione che richiede l’utilizzo di una singola identità a scopo di personalizzazione anziché unire identità da più sorgenti. |
