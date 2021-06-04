@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
@@ -108,13 +108,15 @@ Poiché la natura delle esperienze digitali continua ad evolversi, devono evolve
 
 Poiché il mantenimento della compatibilità con le versioni precedenti è fondamentale per l’evoluzione dello schema, [!DNL Experience Platform] applica un principio di controllo delle versioni puramente additivo per garantire che eventuali revisioni allo schema si traducano solo in aggiornamenti e modifiche non distruttivi. In altre parole, le **modifiche di interruzione non sono supportate.**
 
-| Modifiche supportate | Interruzione delle modifiche (non supportata) |
-|------------------------------------|---------------------------------|
-| <ul><li>Aggiunta di nuovi campi a uno schema esistente</li><li>Impostazione di un campo obbligatorio come facoltativo</li></ul> | <ul><li>Rimozione di campi definiti in precedenza</li><li>Introduzione di nuovi campi obbligatori</li><li>Ridenominazione o ridefinizione dei campi esistenti</li><li>Rimozione o limitazione dei valori di campo supportati in precedenza</li><li>Spostamento degli attributi in una posizione diversa nella struttura</li></ul> |
-
 >[!NOTE]
 >
->Se uno schema non è ancora stato utilizzato per acquisire dati in [!DNL Experience Platform], è possibile introdurre una modifica di interruzione allo schema. Tuttavia, una volta che lo schema è stato utilizzato in [!DNL Platform], deve rispettare i criteri di controllo delle versioni aggiuntive.
+>Se uno schema non è ancora stato utilizzato per acquisire i dati in [!DNL Experience Platform] e non è stato abilitato per l’utilizzo in Profilo cliente in tempo reale, puoi introdurre una modifica di interruzione a tale schema. Tuttavia, una volta che lo schema è stato utilizzato in [!DNL Platform], deve rispettare i criteri di controllo delle versioni aggiuntive.
+
+La tabella seguente suddivide le modifiche supportate durante la modifica di schemi, gruppi di campi e tipi di dati:
+
+| Modifiche supportate | Interruzione delle modifiche (non supportata) |
+| --- | --- |
+| <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li></ul> | <ul><li>Rimozione di campi definiti in precedenza</li><li>Introduzione di nuovi campi obbligatori</li><li>Ridenominazione o ridefinizione dei campi esistenti</li><li>Rimozione o limitazione dei valori di campo supportati in precedenza</li><li>Spostamento degli attributi in una posizione diversa nella struttura</li></ul> |
 
 ### Schemi e acquisizione dati
 
