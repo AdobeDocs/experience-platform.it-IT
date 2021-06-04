@@ -5,10 +5,9 @@ title: Glossario delle etichette di utilizzo dei dati
 topic-legacy: labels
 description: Questo documento delinea tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1982'
 ht-degree: 2%
 
 ---
@@ -24,7 +23,7 @@ Questo documento delinea le etichette di utilizzo dei dati di base attualmente f
 Le etichette &quot;C&quot; del contratto vengono utilizzate per classificare i dati che hanno obblighi contrattuali o sono correlati alle politiche di governance dei dati della tua organizzazione.
 
 | Etichetta | Definizione |
-|---|---|
+| --- | --- |
 | **C1** | I dati possono essere esportati solo da Adobe Experience Cloud in forma aggregata senza includere identificatori individuali o di dispositivi. [Ulteriori informazioni...](#c1) |
 | **C2** | I dati non possono essere esportati in terze parti. [Ulteriori informazioni...](#c2) |
 | **C3** | I dati non possono essere combinati o altrimenti utilizzati con informazioni direttamente identificabili. [Ulteriori informazioni...](#c3) |
@@ -35,13 +34,14 @@ Le etichette &quot;C&quot; del contratto vengono utilizzate per classificare i d
 | **C8** | I dati non possono essere utilizzati per la misurazione dei siti web o delle app dell’organizzazione. [Ulteriori informazioni...](#c8) |
 | **C9** | I dati non possono essere utilizzati nei flussi di lavoro Data Science. [Ulteriori informazioni...](#c9) |
 | **C10** | I dati non possono essere utilizzati per l&#39;attivazione di identità unita. [Ulteriori informazioni...](#c10) |
+| **C11** | I dati non possono essere condivisi con i partner di corrispondenza dei segmenti. [Ulteriori informazioni...](#c11) |
 
 ## Etichette di identità
 
 Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati che possono identificare o contattare una persona specifica.
 
 | Etichetta | Definizione |
-|---|---|
+| --- | --- |
 | **I1** | Dati direttamente identificabili che possono identificare o contattare una persona specifica, anziché un dispositivo. |
 | **I2** | Dati indirettamente identificabili che possono essere utilizzati in combinazione con qualsiasi altro dato per identificare o contattare una persona specifica. |
 
@@ -52,7 +52,7 @@ Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati 
 Un tipo di dati che si può considerare sensibili può essere di diversi tipi di dati geografici; tuttavia, questa categoria non si limita ai dati geografici.
 
 | Etichetta | Definizione |
-|---|---|
+| --- | --- |
 | **S1** | Dati che specificano latitudine e longitudine utilizzabili per determinare la posizione precisa di un dispositivo. |
 | **S2** | Dati che possono essere utilizzati per determinare un&#39;area geografica ampiamente definita. |
 
@@ -127,3 +127,7 @@ Alcuni contratti includono divieti espliciti sull&#39;uso dei dati per la scienz
 #### C10 {#c10}
 
 Alcuni criteri di utilizzo dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. L’etichetta C10 viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;grafico privato&quot;.
+
+#### C11 {#c11}
+
+Adobe Experience Platform Segment Match consente di associare segmenti di prime parti con preferenze di privacy e consenso, facilitando l’arricchimento dei profili e delle informazioni a valle. L’etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato quali set di dati e/o campi si desidera escludere da Segment Match (Confronta segmento) e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match (Corrispondenza segmento).
