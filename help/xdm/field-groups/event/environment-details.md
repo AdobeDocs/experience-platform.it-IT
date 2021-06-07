@@ -5,10 +5,10 @@ title: Gruppo campi schema dettagli ambiente
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli ambiente ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
 
-[!UICONTROL Dettagli dell’ambiente ] è un gruppo di campi schema standard per la  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) classe utilizzato per acquisire informazioni relative ai dettagli dell’ambiente relativi a un evento esperienza, ad esempio dettagli del dispositivo, informazioni sul browser, ora locale e altre informazioni geografiche.
+[!UICONTROL Dettagli dell’ambiente ] è un gruppo di campi schema standard per la  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) classe utilizzato per acquisire informazioni relative ai dettagli dell’ambiente relativi a un evento esperienza, ad esempio dettagli del dispositivo, informazioni sul browser, ora locale e altre informazioni geografiche.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
