@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemi
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '305'
 ht-degree: 15%
 
 ---
@@ -23,24 +23,29 @@ ht-degree: 15%
    * [Dizionario dei campi XDM](schema/field-dictionary.md)
    * Modelli di dati di settore {#industries}
       * [Panoramica](./schema/industries/overview.md)
-      * [ERD del modello dati retail](./schema/industries/retail.md)
-      * [Modello di dati per i servizi finanziari ERD](./schema/industries/financial.md)
-      * [Modello dati di viaggio e ospitalità ERD](./schema/industries/travel-hospitality.md)
+      * [Vendita al dettaglio](./schema/industries/retail.md)
+      * [Servizi finanziari](./schema/industries/financial.md)
+      * [Viaggi e ospitalità](./schema/industries/travel-hospitality.md)
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
    * [Definizione del segmento](./classes/segment-definition.md)
 * Gruppi di campi dello schema {#field-groups}
    * Gruppi di campi del profilo {#profile}
-      * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Dettagli demografici](./field-groups/profile/demographic-details.md)
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dati di contatto personali](./field-groups/profile/personal-contact-details.md)
+      * [Privacy/Personalizzazione/Preferenze di marketing (Consensi)](./field-groups/profile/consents.md)
       * [Dettagli di appartenenza al segmento](./field-groups/profile/segmentation.md)
       * [Dettagli contatto lavoro](./field-groups/profile/work-contact-details.md)
-      * [Privacy/Personalizzazione/Preferenze di marketing (Consensi)](./field-groups/profile/consents.md)
    * Gruppi di campi evento {#event}
+      * [Dettagli di marketing per le campagne](./field-groups/event/campaign-marketing-details.md)
+      * [Dettagli canale](./field-groups/event/channel-details.md)
+      * [Dettagli Commerce](./field-groups/event/commerce-details.md)
       * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
       * [Dettagli dell&#39;ambiente](./field-groups/event/environment-details.md)
+      * [Dettagli Web](./field-groups/event/web-details.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
    * [Applicazione](./data-types/application.md)
@@ -51,6 +56,7 @@ ht-degree: 15%
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
+   * [Canale esperienza](./data-types/experience-channel.md)
    * [Campo di consenso generico](./data-types/consent-field.md)
    * [Campo preferenza marketing generico](./data-types/marketing-field.md)
    * [Campo preferenza marketing generico con sottoscrizioni](./data-types/marketing-field-subscriptions.md)
@@ -61,6 +67,7 @@ ht-degree: 15%
    * [Dettagli interazione geografica](./data-types/geo-interaction-details.md)
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
+   * [Marketing](./data-types/marketing.md)
    * [Misura](./data-types/measure.md)
    * [Ordine](./data-types/order.md)
    * [Elemento di pagamento](./data-types/payment-item.md)
@@ -71,9 +78,11 @@ ht-degree: 15%
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
+   * [Voce dell’elenco dei prodotti](./data-types/product-list-item.md)
    * [Cerca](./data-types/search.md)
    * [Abbonamento](./data-types/subscription.md)
-   * [Interazione web](./data-types/web-interactions.md)
+   * [Informazioni web](./data-types/web-information.md)
+   * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
 * [!UICONTROL Interfaccia utente degli schemi ]   {#ui}
    * [Panoramica](./ui/overview.md)
