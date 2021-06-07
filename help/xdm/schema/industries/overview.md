@@ -4,11 +4,10 @@ title: Panoramica dei modelli di dati di settore
 topic-legacy: overview
 description: Scopri i modelli di dati standardizzati per vari settori verticali che possono essere costruiti utilizzando componenti XDM (Experience Data Model) standard.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
 
@@ -35,23 +34,11 @@ Per leggere gli ERD a cui si fa riferimento in questa guida, è necessario avere
 
 ## ERD dei modelli di dati di settore {#erds}
 
-I modelli verticali del settore rappresentati dalle ERD di seguito sono intenzionalmente creati in modo denormalizzato e tenendo conto del modo in cui i dati vengono memorizzati in Platform.
-
-Per un dato ERD, ogni entità mostrata in si basa su una classe XDM sottostante. Per una determinata entità, ogni riga contrassegnata in **grassetto** rappresenta un gruppo di campi o un tipo di dati, con i campi pertinenti che fornisce elencati di seguito nel testo senza bolli. I campi più importanti per una determinata entità sono evidenziati in rosso.
-
->[!NOTE]
->
->Alcune entità possono includere un campo &quot;_ID&quot;. Rappresenta l’identificatore univoco (`_id`) che Platform assegna automaticamente alle entità evento o profilo al momento dell’acquisizione. Tuttavia, se lo desideri, puoi scegliere di utilizzare i tuoi valori ID univoci per questo campo.
-
-Tutte le proprietà che possono essere utilizzate per identificare i singoli clienti sono contrassegnate come &quot;identità&quot;, con una di queste proprietà contrassegnata come &quot;identità principale&quot;.
-
-Le relazioni di entità sono contrassegnate come non dipendenti, poiché gli eventi basati su cookie spesso non possono determinare la persona o la persona che ha eseguito la transazione.
-
 Le ERD sono fornite per i seguenti settori verticali:
 
-* [[!UICONTROL Retail]](./retail.md)
-* [[!UICONTROL Financial services]](./financial.md)
-* [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
+* [[!UICONTROL Vendita al dettaglio]](./retail.md)
+* [[!UICONTROL Servizi finanziari]](./financial.md)
+* [[!UICONTROL Viaggi e ospitalità]](./travel-hospitality.md)
 
 ## Passaggi successivi
 
