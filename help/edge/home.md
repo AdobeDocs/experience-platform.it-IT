@@ -1,46 +1,45 @@
 ---
-title: Panoramica di Adobe Experience Platform Web SDK
-description: Scopri come utilizzare Adobe Experience Platform Web SDK per integrare le funzionalità della piattaforma nel tuo sito Web.
-keywords: SDK Web per Adobe Experience Platform;SDK per piattaforma Web;SDK per Web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Panoramica dell’SDK per web Adobe Experience Platform
+description: Scopri come utilizzare Adobe Experience Platform Web SDK per integrare le funzionalità di Platform nel sito web.
+keywords: SDK per web Adobe Experience Platform;SDK per web Platform;SDK per web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK per web;Launch;launch
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: 7607f01109de1f6207f2e910a8620698c60b89d4
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 2%
+source-wordcount: '674'
+ht-degree: 1%
 
 ---
 
-
 # Panoramica di Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi in [!DNL Experience Cloud] tramite Adobe Experience Platform Edge Network. Oltre alla libreria JavaScript, è disponibile un [estensione di Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) per facilitare le configurazioni SDK Web.
+Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite Adobe Experience Platform Edge Network. Oltre alla libreria JavaScript, esiste un [estensione di Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) per facilitare le configurazioni dell&#39;SDK per web.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] fa parte della raccolta che costituisce Experience Edge. Experience Edge è costituito da tre tecnologie:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** SDK JavaScript e  [!DNL Experience Platform Launch] estensione per semplificare notevolmente  [!DNL Adobe] le tecnologie di distribuzione
-* **SDK di Adobe Experience Platform Mobile:** Estensione dell’SDK v5 per dispositivi mobili per consentire ai clienti di utilizzare la nuova metodologia di distribuzione
-* **[!DNL Adobe Experience Platform Edge Network]:** Una rete distribuita globale di server che consente una nuova metodologia di implementazione  [!DNL Adobe] dei prodotti
+* **[!DNL Adobe Experience Platform Web SDK]:** SDK JavaScript ed  [!DNL Experience Platform Launch] estensione per semplificare notevolmente la distribuzione  [!DNL Adobe] delle tecnologie
+* **Adobe Experience Platform Mobile SDK:**  estensione dell’SDK per dispositivi mobili v5 per consentire ai clienti di utilizzare la nuova metodologia di distribuzione
+* **[!DNL Adobe Experience Platform Edge Network]:** Una rete distribuita globale di server che consente una nuova metodologia di distribuzione  [!DNL Adobe] dei prodotti
 
-Il [!DNL Adobe Experience Edge] è un nuovo framework per la raccolta di dati a bassa latenza, il computing collegabile e l&#39;attivazione rapida dei dati su tutti i canali indirizzabili.
+Il [!DNL Adobe Experience Edge] è un nuovo framework per la raccolta di dati a bassa latenza, il calcolo collegabile e l&#39;attivazione rapida dei dati su tutti i canali indirizzabili.
 
-[!DNL Adobe Experience Edge] fornisce un unico SDK consolidato per ogni canale (JavaScript, Mobile, lato server), che invia dati a un dominio  Adobe (`adobedc.net`) comune e riceve un singolo payload per la distribuzione di dati e esperienze.
+[!DNL Adobe Experience Edge] fornisce un singolo SDK consolidato per ogni canale (JavaScript, Mobile, lato server), che invia dati a un dominio di Adobe comune (`adobedc.net`) e riceve un singolo payload per la distribuzione di dati ed esperienze.
 
-Sul lato server, un gateway periferico unificato e un framework comune per i servizi di piattaforma facilitano il collegamento e l&#39;implementazione di nuove funzionalità in questo ambiente di elaborazione in tempo reale.  Tale architettura:
+Sul lato server, un gateway edge unificato e un framework comune di servizi di piattaforma facilitano il plug-in e l&#39;implementazione di nuove funzionalità in questo ambiente informatico in tempo reale.  Tale architettura:
 
-* Riduce il tempo cliente al valore
+* Diminuisce il time-to-value del cliente
 * Termina la necessità di integrazioni &quot;point&quot;
 * Migliora le prestazioni rispetto alle vecchie librerie
-* Riduce i costi
+* Riduzione dei costi
 * Aumenta la velocità dell&#39;innovazione
-* Crea vantaggi competitivi duraturi per i clienti  Adobi
+* Offre vantaggi competitivi duraturi per i clienti di Adobi
 
-Un unico sistema Edge consolidato consente ai clienti di gestire le campagne pubblicitarie, di marketing o di personalizzazione su tutti i canali come un&#39;esperienza integrata.  Consente a [!DNL Adobe] di fornire servizi con costi di proprietà totali inferiori per i clienti.  Consente inoltre di aumentare la velocità dell&#39;innovazione dei prodotti, rendendo il sistema compatibile con i margini in tempo reale e consentendo a [!DNL Adobe] e ai suoi clienti di aggiungere più rapidamente nuove funzionalità e logica definita dal cliente a tale sistema in tempo reale.
+Un unico sistema Edge consolidato consente ai clienti di gestire le campagne pubblicitarie, di marketing o di personalizzazione su tutti i canali come esperienza integrata.  Permette a [!DNL Adobe] di fornire servizi con un costo totale di proprietà inferiore per i clienti.  Aiuta inoltre ad aumentare la velocità di innovazione del prodotto rendendo il dispositivo plug-in in tempo reale e consentendo a [!DNL Adobe] e ai suoi clienti di aggiungere più rapidamente nuove funzionalità e logica definita dal cliente a tale sistema in tempo reale.
 
 ## Video introduttivo
 
-Il seguente video offre una panoramica dei prodotti Adobe Experience Platform [!DNL Web SDK] e Adobe Experience Platform [!DNL Edge Network].
+Il video seguente offre una panoramica di Adobe Experience Platform [!DNL Web SDK] e Adobe Experience Platform [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -53,17 +52,17 @@ Adobe Experience Platform Web SDK sostituisce i seguenti SDK:
 * AT.js
 * DIL.js
 
-Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. È un nuovo modo per implementare il [!DNL Experience Cloud] ed è [open source](https://github.com/adobe/alloy).
+Questo non è solo un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono attivarsi nell&#39;ordine giusto, incoerenza con le problematiche di gestione delle versioni della libreria e una migliore gestione delle dipendenze. È un nuovo modo per implementare il [!DNL Experience Cloud] ed è [open source](https://github.com/adobe/alloy).
 
-Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni di  Adobe. Prima, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata a  Adobe Target, DIL.js aveva inviato una chiamata ad Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata a  Adobe Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39;esperienza [!DNL Target], inviare dati a [!DNL Audience Manager] e passare i dati ad Adobe Experience Platform in una singola chiamata.
+Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni Adobe. Prima, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata ad Adobe Target, DIL.js aveva inviato una chiamata a Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata ad Adobe Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un’esperienza [!DNL Target], inviare dati a [!DNL Audience Manager] e passare i dati a Adobe Experience Platform in una singola chiamata.
 
-Il seguente video illustra l&#39;azione di Adobe Experience Platform [!DNL Web SDK] e Adobe Experience Platform [!DNL Edge Network]. Nell&#39;esempio video viene utilizzata una singola chiamata per  Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] e [!DNL Target].
+Il video seguente illustra Adobe Experience Platform [!DNL Web SDK] e Adobe Experience Platform [!DNL Edge Network] in azione. Nell&#39;esempio video viene utilizzata una singola chiamata all&#39;Adobe che invia i dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Questo prodotto è in continua evoluzione e continua crescita per supportare sempre più casi di utilizzo. Per essere al passo con le ultime novità, consulta la nostra [scheda dei casi d&#39;uso supportata](https://github.com/adobe/alloy/projects/5). Teniamo aggiornati i casi di utilizzo attualmente supportati e quelli su cui stiamo lavorando per consentirvi di prendere le migliori decisioni possibili.
+Questo prodotto è in continua evoluzione e in crescita per supportare sempre più casi d&#39;uso. Per essere sempre al passo con le ultime novità, consulta la pagina [casi d’uso supportati](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). In questa pagina sono elencati i casi d’uso attualmente supportati, con collegamenti a ulteriori informazioni quando disponibili.
 
-* **Casi d’uso non ancora supportati:** si tratta di casi d’uso che sono inclusi nella nostra tabella di marcia e che saranno supportati in futuro.
-* **Casi d’uso in corso:** questi sono i casi d’uso a cui il team sta lavorando per completare il rilascio.
-* **Casi di utilizzo supportati:** questi sono i casi di utilizzo supportati e attualmente in uso.
-* **Casi di utilizzo non supportati:** questi sono i casi di utilizzo che abbiamo deciso di non supportare.
+* **Casi d’uso non ancora supportati:**  si tratta di casi d’uso che sono nella nostra roadmap e che devono essere supportati in futuro.
+* **Casi d’uso in corso:**  questi sono i casi d’uso che il team sta attualmente cercando di completare per la versione.
+* **Casi d’uso supportati:**  questi sono i casi d’uso supportati e funzionano attualmente.
+* **Casi d’uso non supportati:** questi sono i casi d’uso che abbiamo deciso di non supportare.
