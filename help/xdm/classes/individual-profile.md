@@ -5,10 +5,10 @@ title: Classe di profilo individuale XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 0%
+source-wordcount: '561'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ La classe [!DNL XDM Individual Profile] fornisce direttamente diversi valori gen
 | Proprietà | Descrizione |
 | --- | --- |
 | `_repo` | Un oggetto contenente i seguenti campi [!UICONTROL DateTime]: <ul><li>`createDate`: La data e l’ora in cui la risorsa è stata creata nell’archivio dati, ad esempio la prima acquisizione dei dati.</li><li>`modifyDate`: Data e ora dell’ultima modifica della risorsa.</li></ul> |
-| `_id` | Identificatore univoco del record. Questo campo viene utilizzato per tenere traccia dell&#39;univocità di un singolo record, evitare la duplicazione dei dati e per cercare tale record nei servizi a valle.<br><br>È importante distinguere che questo campo  **non** rappresenta un&#39;identità correlata a una singola persona, ma piuttosto il record dei dati stessi. I dati di identità relativi a una persona devono essere invece relegati a [campi di identità](../schema/composition.md#identity). |
+| `_id` | Identificatore stringa univoco per il record. Questo campo viene utilizzato per tenere traccia dell&#39;univocità di un singolo record, impedire la duplicazione dei dati e cercare tale record nei servizi a valle. In alcuni casi, `_id` può essere un [identificatore univoco universale (UUID)](https://tools.ietf.org/html/rfc4122) o [Identificatore univoco globale (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Se stai eseguendo lo streaming dei dati da una connessione di origine o l’acquisizione diretta da un file Parquet, devi generare questo valore concatenando una determinata combinazione di campi che rendono il record unico, ad esempio un ID principale, una marca temporale, un tipo di record e così via. Il valore concatenato deve essere una stringa in formato `uri-reference`, il che significa che è necessario rimuovere eventuali caratteri di due punti. In seguito, il valore concatenato deve essere dotato di hash utilizzando SHA-256 o un altro algoritmo scelto.<br><br>È importante distinguere che  **questo campo non rappresenta un&#39;identità correlata a una persona**, ma piuttosto il record dei dati stessi. I dati di identità relativi a una persona devono essere relegati a [campi di identità](../schema/composition.md#identity) forniti dai gruppi di campi compatibili. |
 | `createdByBatchID` | ID del batch acquisito che ha causato la creazione del record. |
 | `modifiedByBatchID` | ID dell’ultimo batch acquisito che ha causato l’aggiornamento del record. |
 | `personID` | Identificatore univoco per la singola persona a cui si riferisce il record. Questo campo non rappresenta necessariamente un&#39;identità correlata alla persona a meno che non sia anche designato come campo [identity](../schema/composition.md#identity). |
