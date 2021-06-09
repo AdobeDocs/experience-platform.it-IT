@@ -5,10 +5,10 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
-ht-degree: 3%
+source-wordcount: '3935'
+ht-degree: 4%
 
 ---
 
@@ -115,7 +115,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | now | Recupera l&#39;ora corrente. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera l&#39;ora Unix corrente. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** La data di input, come oggetto ZoningDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-gg HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la marca temporale.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;gg-MMM-aaaa hh:mm&quot;) | &quot;23-ott-2019 11:24&quot; |
+| dformat | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la marca temporale.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-gg&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** La stringa che rappresenta il formato della data.</li><li>DEFAULT_DATE: **Obbligatorio** La data predefinita restituita, se la data fornita è null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** La stringa che rappresenta il formato della data.</li></ul> | date(DATA, FORMATO) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li></ul> | data(DATA) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
