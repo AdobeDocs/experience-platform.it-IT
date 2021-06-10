@@ -5,10 +5,10 @@ title: Appendice della guida API del registro dello schema
 description: Questo documento fornisce informazioni supplementari relative all'utilizzo dell'API del Registro di sistema dello schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -76,7 +76,7 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
   <th>Modalità di compatibilità</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:nascitaDate": {
               "title": "Data di nascita",
@@ -97,7 +97,7 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "data di nascita": {
               "title": "Data di nascita",
