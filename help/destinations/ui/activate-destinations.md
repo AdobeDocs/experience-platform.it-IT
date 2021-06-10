@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,11 @@ Nel flusso di lavoro **[!UICONTROL Attiva destinazione]**, nella pagina **[!UICO
 ![da segmenti a destinazione](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  Mappingstep {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Applica trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
 
 Si applica a: destinazioni social e destinazione pubblicitaria Google Customer Match
 
@@ -239,6 +244,12 @@ Le esportazioni di file variano nei seguenti modi, a seconda che sia selezionato
 
 ### Attributi obbligatori {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="Informazioni sugli attributi obbligatori"
+>abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione . Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Ulteriori informazioni nella documentazione"
+
 Puoi contrassegnare gli attributi come obbligatori per garantire che [!DNL Platform] esporti solo i profili che includono l’attributo specifico. Di conseguenza, può essere utilizzato come ulteriore forma di filtro. La marcatura di un attributo come obbligatorio è **non** obbligatoria.
 
 Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi.
@@ -246,6 +257,12 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 È consigliabile che uno degli attributi sia un [identificatore univoco](../../destinations/catalog/email-marketing/overview.md#identity) dallo schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione identità nella documentazione [Destinazioni di marketing e-mail](../../destinations/catalog/email-marketing/overview.md#identity) .
 
 ### Tasti di deduplicazione {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="Informazioni sulle chiavi di deduplicazione"
+>abstract="Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. Seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. La mancata selezione di una chiave di deduplicazione può causare la presenza di voci di profilo duplicate nei file di esportazione."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Ulteriori informazioni nella documentazione"
 
 >[!IMPORTANT]
 >
