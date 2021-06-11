@@ -5,10 +5,9 @@ title: Anteprime e stime degli endpoint API
 topic-legacy: developer guide
 description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima all’interno di Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo per assicurarti di isolare il pubblico previsto.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '978'
 ht-degree: 2%
 
 ---
@@ -75,7 +74,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -84,6 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | Espressione PQL per eseguire una query dei dati. |
 | `predicateType` | Il tipo di predicato per l’espressione di query in `predicateExpression`. Attualmente, l&#39;unico valore accettato per questa proprietà è `pql/text`. |
 | `predicateModel` | Nome della classe dello schema [!DNL Experience Data Model] (XDM) su cui si basano i dati del profilo. |
+| `graphType` | Il tipo di grafico da cui si desidera ottenere il cluster. I valori supportati sono `none` (non esegue alcuna unione delle identità) e `pdg` (esegue la combinazione delle identità in base al grafico delle identità private). |
 
 **Risposta**
 
