@@ -5,9 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: 59edc19267913e5156caaa49d01a687d04cf1c6f
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,12 @@ Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribu
 | Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Per ulteriori informazioni, consulta la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) . |
 | Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
 | Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (a volte denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio di utilizzo dei dati. In altre parole, il caso di utilizzo marketing definito per una destinazione determina quali criteri di utilizzo dei dati sono applicabili a tale destinazione. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili della destinazione di destinazione. |
+
+>[!IMPORTANT]
+>
+>Alcuni criteri di utilizzo dei dati possono specificare due o più etichette con una relazione AND. Ad esempio, un criterio potrebbe limitare un’azione di marketing se sono presenti entrambe le etichette `C1` E `C2` , ma non limita la stessa azione se è presente solo una di queste etichette.
+>
+>Quando si tratta di applicazione automatica, il framework per la governance dei dati non considera l’attivazione di segmenti separati a una destinazione come una combinazione di dati. Pertanto, il criterio di esempio `C1 AND C2` è **NOT** applicato se queste etichette sono incluse in segmenti separati. Al contrario, questo criterio viene applicato solo quando entrambe le etichette sono presenti nello stesso segmento al momento dell’attivazione.
 
 Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati nell’interfaccia utente forniscono strumenti utili per esplorare la linea di dati che contribuiscono alla violazione per risolvere il problema. Ulteriori dettagli sono forniti nella sezione successiva.
 
