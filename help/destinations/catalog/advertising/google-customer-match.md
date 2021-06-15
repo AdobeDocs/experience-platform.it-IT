@@ -3,7 +3,7 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Per promuovere il rilascio, caricano gli indirizzi e-mail dal loro database CRM 
 
 ## Governance dei dati per le destinazioni [!DNL Google Customer Match] {#data-governance}
 
-Alcune destinazioni in Experience Platform hanno determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. Sei responsabile di comprendere i limiti e gli obblighi dei tuoi dati e come li utilizzi in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori ](../../..//data-governance/labels/overview.md) informazioni sugli strumenti e i criteri di governance dei dati.
+Alcune destinazioni in Experience Platform hanno determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. Sei responsabile di comprendere i limiti e gli obblighi dei tuoi dati e come li utilizzi in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori ](../../../data-governance/labels/overview.md) informazioni sugli strumenti e i criteri di governance dei dati.
 
 ## Identità supportate {#supported-identities}
 
