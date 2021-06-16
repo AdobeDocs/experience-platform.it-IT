@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
+source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1306'
 ht-degree: 3%
 
 ---
@@ -82,7 +82,6 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Unisci aggiornamenti del flusso di lavoro dei criteri | Durante la creazione e l’aggiornamento dei criteri di unione nell’interfaccia utente, gli utenti ora possono visualizzare in anteprima 20 profili di esempio in base allo schema dell’unione. Questo consente agli utenti di visualizzare in anteprima l&#39;aspetto dei profili dei clienti prima di salvare le configurazioni dei criteri di unione. Per ulteriori informazioni, consulta la [guida all&#39;interfaccia utente dei criteri di unione](../../profile/merge-policies/ui-guide.md). |
 | Rapporto di sovrapposizione set di dati | Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Oltre a fornire informazioni approfondite sui dati di Profilo, questo rapporto consente agli utenti di intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio per impostare un limite di vita di determinati dati. Per ulteriori informazioni, segui l’esercitazione su [generazione del rapporto di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md). |
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, comprese esercitazioni e best practice per l’utilizzo dei dati [!DNL Profile], si prega di iniziare leggendo la [Panoramica del profilo del cliente in tempo reale](../../profile/home.md).
