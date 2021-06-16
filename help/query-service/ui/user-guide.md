@@ -5,10 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-translation-type: tm+mt
-source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
+source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1082'
 ht-degree: 1%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Query Editor] è uno strumento interattivo fornito da Adobe Experience Platform  [!DNL Query Service], che consente di scrivere, convalidare ed eseguire query per dati sulla customer experience all’interno dell’interfaccia  [!DNL Experience Platform] utente. [!DNL Query Editor] supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per compilare i set di dati in  [!DNL Experience Platform].
 
-Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Service], consulta la [Panoramica del servizio query][query-service-overview]. Per ulteriori informazioni su come navigare nell’interfaccia utente del servizio query su [!DNL Platform], consulta la [Panoramica dell’interfaccia utente del servizio query][query-service-ui].
+Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Service], consulta la [Panoramica del servizio query](../home.md). Per ulteriori informazioni su come navigare nell’interfaccia utente del servizio query su [!DNL Platform], consulta la [Panoramica dell’interfaccia utente del servizio query](./overview.md).
 
 ## Introduzione
 
@@ -39,13 +38,13 @@ Utilizzando [!DNL Query Editor], puoi scrivere, eseguire e salvare query per i d
 
 ### Accesso al [!DNL Query Editor]
 
-Nell’interfaccia utente [!DNL Experience Platform] , seleziona **[!UICONTROL Queries]** nel menu di navigazione a sinistra per aprire l’area di lavoro [!DNL Query Service]. Quindi, seleziona **[!UICONTROL Create Query]** in alto a destra dello schermo per iniziare a scrivere le query. Questo collegamento è disponibile da una qualsiasi delle pagine nell’ area di lavoro [!DNL Query Service] .
+Nell&#39;interfaccia utente [!DNL Experience Platform], seleziona **[!UICONTROL Query]** nel menu di navigazione a sinistra per aprire l&#39;area di lavoro [!DNL Query Service]. Quindi, seleziona **[!UICONTROL Crea query]** in alto a destra nella schermata per iniziare a scrivere query. Questo collegamento è disponibile da una qualsiasi delle pagine nell’ area di lavoro [!DNL Query Service] .
 
 ![Immagine](../images/ui/query-editor/create-query.png)
 
 ### Scrittura di query
 
-[!UICONTROL Query Editor] è organizzato in modo da rendere la scrittura di query il più semplice possibile. La schermata seguente mostra come l&#39;editor appare nell&#39;interfaccia utente, con il pulsante **Play** e il campo di immissione SQL evidenziato.
+[!UICONTROL L’] editor delle query è organizzato in modo da rendere la scrittura di query il più semplice possibile. La schermata seguente mostra come l&#39;editor appare nell&#39;interfaccia utente, con il pulsante **Play** e il campo di immissione SQL evidenziato.
 
 ![Immagine](../images/ui/query-editor/editor.png)
 
@@ -77,21 +76,21 @@ Quando vengono rilevati errori, è possibile visualizzare i messaggi di errore s
 
 ### Dettagli query
 
-Durante la visualizzazione di una query in [!DNL Query Editor], il pannello **[!UICONTROL Query Details]** fornisce gli strumenti per gestire la query selezionata.
+Durante la visualizzazione di una query in [!DNL Query Editor], il pannello **[!UICONTROL Dettagli query]** fornisce gli strumenti per gestire la query selezionata.
 
 ![Immagine](../images/ui/query-editor/query-details.png)
 
-Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o denominare la query visualizzata e visualizzare il codice SQL in un formato di semplice copia nella scheda **[!UICONTROL SQL Query]** . Questo pannello mostra anche metadati utili, come l’ultima volta che la query è stata modificata e chi l’ha modificata, se applicabile. Per generare un set di dati, seleziona **[!UICONTROL Output Dataset]**. Viene visualizzata la finestra di dialogo **[!UICONTROL Output Dataset]**. Immetti un nome e una descrizione, quindi seleziona **[!UICONTROL Run Query]**. Il nuovo set di dati viene visualizzato nella scheda **[!UICONTROL Datasets]** dell’interfaccia utente [!DNL Query Service] in [!DNL Platform].
+Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o denominare la query visualizzata e visualizzare il codice SQL in un formato di semplice copia nella scheda **[!UICONTROL Query SQL]**. Questo pannello mostra anche metadati utili, come l’ultima volta che la query è stata modificata e chi l’ha modificata, se applicabile. Per generare un set di dati, seleziona **[!UICONTROL Set di dati di output]**. Viene visualizzata la finestra di dialogo **[!UICONTROL Set di dati di output]**. Immetti un nome e una descrizione, quindi seleziona **[!UICONTROL Esegui query]**. Il nuovo set di dati viene visualizzato nella scheda **[!UICONTROL Set di dati]** dell’interfaccia utente [!DNL Query Service] in [!DNL Platform].
 
 ### Salvataggio delle query
 
-[!DNL Query Editor] fornisce una funzione di salvataggio che ti consente di salvare una query e lavorarci in un secondo momento. Per salvare una query, seleziona **[!UICONTROL Save]** nell’angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando il pannello **[!UICONTROL Query Details]** .
+[!DNL Query Editor] fornisce una funzione di salvataggio che ti consente di salvare una query e lavorarci in un secondo momento. Per salvare una query, seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando il pannello **[!UICONTROL Dettagli query]** .
 
 ### Come trovare le query precedenti
 
-Tutte le query eseguite da [!DNL Query Editor] vengono acquisite nella tabella Registro. Puoi utilizzare la funzionalità di ricerca nella scheda **[!UICONTROL Log]** per trovare le esecuzioni delle query. Le query salvate sono elencate nella scheda **[!UICONTROL Browse]** .
+Tutte le query eseguite da [!DNL Query Editor] vengono acquisite nella tabella Registro. Puoi utilizzare la funzionalità di ricerca nella scheda **[!UICONTROL Registro]** per trovare le esecuzioni delle query. Le query salvate sono elencate nella scheda **[!UICONTROL Sfoglia]** .
 
-Per ulteriori informazioni, consulta la [Panoramica dell’interfaccia utente del servizio query][query-service-ui] .
+Per ulteriori informazioni, consulta la [Panoramica dell’interfaccia utente del servizio query](./overview.md) .
 
 >[!NOTE]
 >
@@ -99,7 +98,7 @@ Per ulteriori informazioni, consulta la [Panoramica dell’interfaccia utente de
 
 ## Esecuzione di query tramite Editor query
 
-Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dalla scheda **[!UICONTROL Log]** o **[!UICONTROL Browse]** e selezionare **Play**. Lo stato di esecuzione della query viene visualizzato nella scheda **[!UICONTROL Console]** qui sotto, mentre i dati di output sono visualizzati nella scheda **[!UICONTROL Results]**.
+Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dalla scheda **[!UICONTROL Log]** o **[!UICONTROL Sfoglia]** e selezionare **Play**. Lo stato di esecuzione della query viene visualizzato nella scheda **[!UICONTROL Console]** qui sotto, mentre i dati di output sono visualizzati nella scheda **[!UICONTROL Risultati]**.
 
 ### Console
 
@@ -113,7 +112,7 @@ La console fornisce informazioni sullo stato e il funzionamento di [!DNL Query S
 
 ### Risultati della query
 
-Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICONTROL Results]**, accanto alla scheda **[!UICONTROL Console]** . Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione ti consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovi i limiti sulle righe restituite ed esegui la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l’output. Per istruzioni su come generare un set di dati dai risultati della query in [!DNL Query Editor], consulta l’ [esercitazione sulla generazione di set di dati][query-service-create-datasets] .
+Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICONTROL Risultati]**, accanto alla scheda **[!UICONTROL Console]** . Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione ti consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovi i limiti sulle righe restituite ed esegui la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l’output. Per istruzioni su come generare un set di dati dai risultati della query in [!DNL Query Editor], consulta l’ [esercitazione sulla generazione di set di dati](./create-datasets.md) .
 
 ![Immagine](../images/ui/query-editor/query-results.png)
 
@@ -125,9 +124,4 @@ Il video seguente mostra come eseguire le query nell’interfaccia Adobe Experie
 
 ## Passaggi successivi
 
-Ora che sai quali funzioni sono disponibili in [!DNL Query Editor] e come navigare nell’applicazione, puoi iniziare a creare query personalizzate direttamente in [!DNL Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai set di dati in [!DNL Data Lake], vedere la guida sull&#39;esecuzione di query [a2/>.][query-service-running-queries]
-
-[query-service-overview]: ../home.md
-[query-service-ui]: overview.md
-[query-service-running-queries]: ../best-practices/writing-queries.md
-[query-service-create-datasets]: ./create-datasets.md
+Ora che sai quali funzioni sono disponibili in [!DNL Query Editor] e come navigare nell’applicazione, puoi iniziare a creare query personalizzate direttamente in [!DNL Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai set di dati in [!DNL Data Lake], vedere la guida sull&#39;esecuzione di query [a2/>.](../best-practices/writing-queries.md)
