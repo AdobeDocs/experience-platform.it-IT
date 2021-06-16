@@ -5,10 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
@@ -229,6 +228,34 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 **Parametri**
 
 - `IF EXISTS`: Se viene specificato, non viene generata alcuna eccezione se la tabella  **** non esiste.
+
+## DATABASE DI RILASCIO
+
+Il comando `DROP DATABASE` rilascia un database esistente.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parametri**
+
+- `IF EXISTS`: Se viene specificato, non viene generata alcuna eccezione se il database  **** non esiste.
+
+## SCHEMA DI RILASCIO
+
+Il comando `DROP SCHEMA` rilascia uno schema esistente.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+
+**Parametri**
+
+- `IF EXISTS`: Se viene specificato, non viene generata alcuna eccezione se lo schema  **** non esiste.
+
+- `RESTRICT`: Valore predefinito per la modalità. Se viene specificato, lo schema verrà eliminato solo se **non** contiene tabelle.
+
+- `CASCADE`: Se viene specificato, lo schema verrà rilasciato insieme a tutte le tabelle presenti nello schema.
 
 ## CREA VISTA
 
