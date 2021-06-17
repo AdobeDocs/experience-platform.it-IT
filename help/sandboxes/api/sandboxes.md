@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per la gestione delle sandbox
 topic-legacy: developer guide
 description: L’endpoint /sandbox nell’API Sandbox consente di gestire le sandbox in Adobe Experience Platform a livello di programmazione.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
@@ -348,11 +348,7 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) con i dettagli della sa
 
 ## Reimpostare una sandbox {#reset}
 
->[!IMPORTANT]
->
->Non è possibile ripristinare la sandbox di produzione predefinita se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
-
-Le sandbox di sviluppo dispongono di una funzione di &quot;reimpostazione di fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Puoi reimpostare una sandbox effettuando una richiesta di PUT che include il `name` della sandbox nel percorso della richiesta.
+Le sandbox hanno una funzione di &quot;reimpostazione di fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Puoi reimpostare una sandbox effettuando una richiesta di PUT che include il `name` della sandbox nel percorso della richiesta.
 
 **Formato API**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SANDBOX_NAME}` | La proprietà `name` della sandbox da reimpostare. |
+| `validationOnly` | Un parametro facoltativo che consente di eseguire un controllo pre-volo sull’operazione di ripristino della sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per reimpostare contiene dati di condivisione di segmenti, Adobe Analytics, Adobe Audience Manager o. |
 
 **Richiesta**
 
@@ -370,7 +367,7 @@ La richiesta seguente reimposta una sandbox denominata &quot;acme-dev&quot;.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Risposta**
 
+>[!NOTE]
+>
+>Una volta reimpostata la sandbox, il sistema impiega circa 30 secondi per effettuare il provisioning.
+
 Una risposta corretta restituisce i dettagli della sandbox aggiornata, indicando che la relativa `state` è &quot;reimpostazione&quot;.
 
 ```json
@@ -399,18 +400,76 @@ Una risposta corretta restituisce i dettagli della sandbox aggiornata, indicando
 }
 ```
 
->[!NOTE]
->
->Una volta reimpostata la sandbox, il sistema impiega circa 30 secondi per effettuare il provisioning. Una volta eseguito il provisioning, l’ `state` della sandbox diventa &quot;attivo&quot; o &quot;non riuscito&quot;.
+Non è possibile ripristinare la sandbox di produzione predefinita e le sandbox di produzione create dall’utente se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
 
-La tabella seguente contiene possibili eccezioni che potrebbero impedire la reimpostazione di una sandbox:
+Di seguito è riportato un elenco di possibili eccezioni che potrebbero impedire la reimpostazione di una sandbox:
 
-| Codice di errore | Descrizione |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+Per ripristinare una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionali con [!DNL Audience Manager] o [!DNL Audience Core Service], aggiungi il parametro `ignoreWarnings` alla richiesta.
+
+**Formato API**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Parametro | Descrizione |
 | --- | --- |
-| `2074-400` | Impossibile reimpostare questa sandbox perché il grafico delle identità ospitato in questa sandbox viene utilizzato anche da Adobe Analytics per la funzione Cross Device Analytics (CDA). |
-| `2075-400` | Impossibile reimpostare questa sandbox perché il grafico delle identità ospitato in questa sandbox viene utilizzato anche da Adobe Audience Manager per la funzione Destinazioni basate su persone (PBD). |
-| `2076-400` | Non è possibile reimpostare questa sandbox perché il grafico delle identità ospitato in questa sandbox viene utilizzato anche da Adobe Audience Manager per la funzione People Based Destinations (PBD) e da Adobe Analytics per la funzione Cross Device Analytics (CDA). |
-| `2077-400` | Avviso: La sandbox `{SANDBOX_NAME}` viene utilizzata per la condivisione di segmenti bidirezionale con Adobe Audience Manager o con il servizio core Audience. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da reimpostare. |
+| `ignoreWarnings` | Un parametro opzionale che consente di saltare il controllo di convalida e forzare la reimpostazione di una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionali con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
+
+**Richiesta**
+
+La richiesta seguente reimposta una sandbox di produzione denominata &quot;acme&quot;.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce i dettagli della sandbox aggiornata, indicando che la relativa `state` è &quot;reimpostazione&quot;.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Eliminare una sandbox {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SANDBOX_NAME}` | La `name` della sandbox da eliminare. |
+| `validationOnly` | Un parametro facoltativo che consente di eseguire un controllo pre-volo sull’operazione di eliminazione della sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per reimpostare contiene dati di condivisione di segmenti, Adobe Analytics, Adobe Audience Manager o. |
+| `ignoreWarnings` | Un parametro facoltativo che consente di saltare il controllo di convalida e forzare l’eliminazione di una sandbox di produzione creata dall’utente utilizzata per la condivisione di segmenti bidirezionali con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
 
 **Richiesta**
 
-La richiesta seguente elimina una sandbox denominata &quot;acme-dev&quot;.
+La richiesta seguente elimina una sandbox di produzione denominata &quot;acme&quot;.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Una risposta corretta restituisce i dettagli aggiornati della sandbox, indicando
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
