@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente sandbox
 topic-legacy: user guide
 description: Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Dopo aver completato la creazione della sandbox, aggiorna la pagina e la nuova s
 
 >[!IMPORTANT]
 >
->Non è possibile ripristinare la sandbox di produzione predefinita se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) . Non è inoltre possibile ripristinare le sandbox di produzione utilizzate per la condivisione di segmenti bidirezionali con Adobe Audience Manager o il servizio core Audience.
+>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
 
 Se si reimposta una sandbox di produzione o sviluppo, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
 
@@ -88,29 +88,29 @@ Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una 
 
 ![success](../images/ui/success.png)
 
-### Messaggi di errore
+### Avvisi
 
-Una sandbox di produzione predefinita contenente dati CDA non può essere reimpostata e restituisce il seguente errore.
+Una sandbox di produzione predefinita contenente dati CDA non può essere reimpostata e restituisce il seguente avviso.
 
 ![cda](../images/ui/cda.png)
 
-Anche una sandbox di produzione predefinita contenente dati PBD non può essere reimpostata e restituisce il seguente errore.
+Anche una sandbox di produzione predefinita contenente dati PBD non può essere reimpostata e restituisce il seguente avviso.
 
 ![pbd](../images/ui/pbd.png)
 
-Anche una sandbox di produzione predefinita che contiene dati sia per CDA che per PBD non può essere reimpostata e restituisce il seguente errore.
+Anche una sandbox di produzione predefinita che contiene dati sia per CDA che per PBD non può essere reimpostata e restituisce il seguente avviso.
 
 ![entrambi](../images/ui/both.png)
 
-Anche una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionale con Adobe Audience Manager o il servizio core Audience non può essere reimpostata e restituisce il seguente errore.
+Puoi ripristinare una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionale con [!DNL Audience Manager] o [!DNL Audience Core Service]. Seleziona [!UICONTROL Continua] per procedere con la reimpostazione.
 
-![cucire](../images/ui/seg.png)
+![entrambi](../images/ui/seg.png)
 
 ## Eliminare una sandbox
 
 >[!IMPORTANT]
 >
->Non è possibile eliminare la sandbox di produzione predefinita e non è possibile eliminare anche le sandbox di produzione utilizzate per la condivisione di segmenti bidirezionali con Adobe Audience Manager o con il servizio core Audience.
+>Impossibile eliminare la sandbox di produzione predefinita.
 
 L’eliminazione di una sandbox di produzione o di sviluppo comporta la rimozione definitiva di tutte le risorse associate a tale sandbox, comprese le autorizzazioni.
 
@@ -126,9 +126,9 @@ Nella finestra di conferma finale, immetti il nome della sandbox nella finestra 
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Non è possibile eliminare una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionale con Adobe Audience Manager o con il servizio core Audience e restituisce il seguente errore.
+Una sandbox di produzione creata dall’utente utilizzata per la condivisione di segmenti bidirezionali con [!DNL Audience Manager] o [!DNL Audience Core Service] può ancora essere eliminata dopo il seguente avviso.
 
-![cucire](../images/ui/seg.png)
+![cucire](../images/ui/delete-seg.png)
 
 ## Passaggi successivi
 
