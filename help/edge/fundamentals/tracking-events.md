@@ -2,14 +2,13 @@
 title: Tracciare gli eventi utilizzando l’SDK per web di Adobe Experience Platform
 description: Scopri come tenere traccia degli eventi dell’SDK Web per Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentSloading;document Unloading;onBeforeEventSend;
-translation-type: tm+mt
-source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
+exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
+source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
-
 
 # Tracciare gli eventi
 
@@ -75,9 +74,32 @@ In questo esempio, il livello dati viene clonato serializzandolo in JSON e quind
 >
 >Esiste un limite di 32 KB per i dati che possono essere inviati in ogni evento nel campo XDM.
 
+
 ### Invio di dati non XDM
 
-Al momento, l’invio di dati che non corrispondono a uno schema XDM non è supportato. Il supporto è pianificato per una data futura.
+I dati che non corrispondono a uno schema XDM devono essere inviati utilizzando l&#39;opzione `data` del comando `sendEvent`. Questa funzione è supportata nelle versioni 2.5.0 e successive dell’SDK per web.
+
+Questa opzione è utile se devi aggiornare un profilo Adobe Target o inviare attributi Recommendations di Target. [Ulteriori informazioni su queste funzionalità di Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
+
+In futuro, potrai inviare il livello dati completo sotto l’ opzione `data` e mapparlo sul lato server XDM.
+
+**Come inviare gli attributi Profilo e Recommendations ad Adobe Target:**
+
+```
+alloy("sendEvent", {
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30,
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
+
 
 ### Impostazione `eventType` {#event-types}
 
