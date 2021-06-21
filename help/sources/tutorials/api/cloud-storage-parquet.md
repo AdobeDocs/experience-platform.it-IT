@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione utilizza l’API del servizio Flusso per illustrarvi i passaggi necessari per acquisire i dati Apache Parquet da un sistema di archiviazione cloud di terze parti.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1099'
 ht-degree: 2%
 
 ---
@@ -43,7 +42,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- `x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
@@ -198,7 +197,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, compres
 }
 ```
 
-## Creare una connessione sorgente {#source}
+## Creazione di una connessione sorgente {#source}
 
 Con la creazione di uno schema XDM di destinazione, è ora possibile creare una connessione di origine utilizzando una richiesta di POST all’ API [!DNL Flow Service]. Una connessione di origine è costituita da una connessione per l’API, un formato di dati di origine e un riferimento allo schema XDM di destinazione recuperato nel passaggio precedente.
 
