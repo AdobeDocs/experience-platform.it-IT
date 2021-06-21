@@ -4,7 +4,7 @@ title: Panoramica sulle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Per informazioni su questo passaggio, fai riferimento al passaggio [Seleziona at
 Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo di cui si distinguono le identità utente. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
------------------ | ---------------------------
+|----------------- | ---------------------------|
 | Indirizzo e-mail | `personalEmail.address` |
 | Telefono | `mobilePhone.number` |
 | ID programma fedeltà | `Customer-defined XDM field` |
@@ -73,7 +73,7 @@ Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](
 Nel selettore del campo Schema, scegli gli altri campi da esportare nella destinazione e-mail. Alcune opzioni consigliate sono:
 
 | Schema | Campo XDM |
------- | ---------
+|------ | ---------|
 | Nome | `person.name.firstName` |
 | Cognome | `person.name.lastName` |
 | Telefono | `mobilePhone.number` |
