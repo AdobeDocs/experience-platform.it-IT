@@ -4,10 +4,10 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
 feature: Segmenti
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 20%
+ht-degree: 26%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 20%
    - [Segmentazione streaming](ui/streaming-segmentation.md)
    - [Segmentazione streaming (video)](video/streaming-segmentation-overview.md)
    - [Refactoring dei vincoli di tempo](ui/segment-refactoring.md)
-- [Rispetto delle rinunce](honoring-opt-outs.md)
+- [Approvazione](consents.md)
 - [Segmentazione su più entità](multi-entity-segmentation.md)
 - Lingua della query del profilo {#pql}
    - [Panoramica](pql/overview.md)
@@ -45,7 +45,7 @@ ht-degree: 20%
    - [Funzioni Array, list e set](pql/array-functions.md)
    - [Mappare le funzioni](pql/map-functions.md)
    - [Funzioni stringa](pql/string-functions.md)
-   - [Funzioni dell&#39;oggetto](pql/object-functions.md)
+   - [Funzioni oggetto](pql/object-functions.md)
    - [Funzioni aritmetiche](pql/arithmetic-functions.md)
    - [Funzioni di aggregazione](pql/aggregation-functions.md)
    - [Funzioni di data e ora](pql/datetime-functions.md)
