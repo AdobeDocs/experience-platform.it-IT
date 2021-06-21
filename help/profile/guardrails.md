@@ -3,23 +3,21 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guardrail per i dati del profilo cliente in tempo reale
 solution: Experience Platform
 product: experience platform
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform fornisce una serie di protezioni per aiutarti a evitare la creazione di modelli di dati non supportati da Profilo cliente in tempo reale. Questo documento delinea le best practice e i vincoli da tenere a mente durante la modellazione dei dati del profilo.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1666'
 ht-degree: 1%
 
 ---
 
 # Guardrail per i dati [!DNL Real-time Customer Profile]
 
-[!DNL Real-time Customer Profile] fornisce profili individuali che ti consentono di fornire esperienze cross-channel personalizzate basate su approfondimenti comportamentali e attributi del cliente. Per raggiungere questo obiettivo, [!DNL Profile] e il motore di segmentazione all’interno di Adobe Experience Platform utilizzano un modello di dati ibrido altamente denormalizzato che offre un nuovo approccio allo sviluppo dei profili dei clienti. L’utilizzo di questo modello di dati ibridi rende estremamente importante che i dati raccolti siano modellati correttamente. Sebbene l’ archivio dati [!DNL Profile] che conserva i dati di profilo non sia un archivio relazionale, [!DNL Profile] consente l’integrazione con entità di piccole dimensioni per creare segmenti in modo semplificato e intuitivo. Questa integrazione è nota come segmentazione su più entità.
+[!DNL Real-time Customer Profile] fornisce profili individuali che ti consentono di fornire esperienze cross-channel personalizzate basate su approfondimenti comportamentali e attributi del cliente. Per raggiungere questo obiettivo, [!DNL Profile] e il motore di segmentazione all’interno di Adobe Experience Platform utilizzano un modello di dati ibrido altamente denormalizzato che offre un nuovo approccio allo sviluppo dei profili dei clienti. L’utilizzo di questo modello di dati ibridi rende importante che i dati raccolti siano modellati correttamente. Sebbene l’ archivio dati [!DNL Profile] che conserva i dati di profilo non sia un archivio relazionale, [!DNL Profile] consente l’integrazione con entità di piccole dimensioni per creare segmenti in modo semplificato e intuitivo. Questa integrazione è nota come segmentazione su più entità.
 
-Adobe Experience Platform fornisce una serie di protezioni per evitare la creazione di modelli di dati che [!DNL Real-time Customer Profile] non è in grado di supportare. Questo documento illustra queste protezioni, nonché le best practice e i vincoli quando si utilizzano i dati di profilo per la segmentazione.
+Adobe Experience Platform fornisce una serie di protezioni per evitare la creazione di modelli di dati che [!DNL Real-time Customer Profile] non è in grado di supportare. In questo documento vengono illustrate le protezioni, le best practice e i vincoli quando si utilizzano i dati di profilo per la segmentazione.
 
 >[!NOTE]
 >
@@ -50,9 +48,15 @@ Il modello di dati di archivio [!DNL Profile] è costituito da due tipi di entit
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
+## Frammenti di profilo
+
+In questo documento sono presenti più protezioni che fanno riferimento a &quot;frammenti di profilo&quot;. Il Profilo cliente in tempo reale è composto da più frammenti di profilo. Ogni frammento rappresenta i dati per l’identità da un set di dati in cui è l’identità principale. Ciò significa che un frammento può contenere un ID principale e dati evento (serie temporale) in un set di dati XDM ExperienceEvent oppure può essere composto da un ID principale e da dati di record (attributi indipendenti dalla data e ora) in un set di dati XDM per profili individuali.
+
 ## Tipi di limite
 
-Quando definisci il modello dati, si consiglia di rimanere entro le protezioni fornite per garantire le prestazioni corrette ed evitare errori di sistema. Le protezioni fornite in questo documento comprendono due tipi di limiti:
+Quando definisci il modello dati, si consiglia di rimanere entro le protezioni fornite per garantire le prestazioni corrette ed evitare errori di sistema.
+
+Le protezioni fornite in questo documento comprendono due tipi di limiti:
 
 * **Limite morbido:** un limite morbido fornisce un massimo consigliato per prestazioni di sistema ottimali. È possibile andare oltre un limite soft senza interrompere il sistema o ricevere messaggi di errore, ma andare oltre un limite soft comporterà un deterioramento delle prestazioni. Si consiglia di rimanere entro il limite soft per evitare riduzioni delle prestazioni complessive.
 
@@ -86,14 +90,17 @@ Le seguenti protezioni fanno riferimento alla dimensione dei dati e sono consigl
 
 >[!NOTE]
 >
->La dimensione dei dati verrà misurata come dati non compressi in JSON al momento dell’acquisizione.
+>La dimensione dei dati viene misurata come dati non compressi in JSON al momento dell’acquisizione.
 
 ### Garanzie dell&#39;entità principale
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 | --- | --- | --- | --- |
-| Dimensione massima per frammento di profilo | 10 KB | Morbido | **La dimensione massima consigliata di un frammento di profilo è 10 KB.** L’inserimento di frammenti di profilo più grandi influisce sulle prestazioni del sistema. Ad esempio, il caricamento di un set di dati CRM pesante in cui alcuni frammenti di profilo hanno dimensioni di 50 kB comprometterà le prestazioni del sistema. |
-| Dimensione massima assoluta per frammento di profilo | 1 MB | Duro | **La dimensione massima assoluta di un frammento di profilo è 1 MB.** L’acquisizione non riesce quando si tenta di caricare un frammento di profilo di dimensioni superiori a 1 MB. |
+| Dimensione massima di ExperienceEvent | 10 KB | Duro | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno eliminati. |
+| Dimensione massima del record del profilo | 100 KB | Duro | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, tuttavia i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
+| Dimensione massima del frammento di profilo | 50 MB | Duro | **La dimensione massima di un frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi  [frammento di ](#profile-fragments) profilo maggiore di 50 MB. |
+| Dimensioni massime di archiviazione del profilo | 50 MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** L’aggiunta di nuovi  [frammenti di ](#profile-fragments) profilo a un profilo di dimensioni superiori a 50 MB influirà sulle prestazioni del sistema. |
+| Numero di batch di profili o ExperienceEvent acquisiti al giorno | 90 | Morbido | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. |
 
 ### protezioni di entità Dimension
 
@@ -101,6 +108,7 @@ Le seguenti protezioni fanno riferimento alla dimensione dei dati e sono consigl
 | --- | --- | --- | --- |
 | Dimensione totale massima per tutte le entità dimensionali | 5 GB | Morbido | **La dimensione totale massima consigliata per tutte le entità dimensionali è 5 GB.** L&#39;inserimento di entità di grandi dimensioni comporterà prestazioni di sistema scadenti. Ad esempio, non è consigliato caricare un catalogo di prodotti da 10 GB come entità dimensione. |
 | Set di dati per schema entità dimensionale | 5 | Morbido | **È consigliato un massimo di 5 set di dati associati a ogni schema di entità dimensionale.** Ad esempio, se crei uno schema per &quot;prodotti&quot; e aggiungi cinque set di dati che contribuiscono, non devi creare un sesto set di dati associato allo schema dei prodotti. |
+| Numero di batch di entità dimensione acquisiti al giorno | 4 per entità | Morbido | **Il numero massimo di batch di entità dimensione acquisiti al giorno è 4 per entità.** Ad esempio, puoi inserire gli aggiornamenti di un catalogo di prodotti fino a 4 volte al giorno. L’inserimento di batch di entità dimensione aggiuntivi per la stessa entità influisce sulle prestazioni del sistema. |
 
 ## Garanzie di segmentazione
 
