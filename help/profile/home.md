@@ -4,7 +4,7 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Per quanto riguarda l’accesso ai dati, la governance dei dati svolge un ruolo 
 
 ### Gestione delle richieste di rinuncia e di privacy dei dati
 
-[!DNL Experience Platform] consente ai clienti di inviare richieste di rinuncia relative all’utilizzo e all’archiviazione dei propri dati all’interno di  [!DNL Real-time Customer Profile]. Per ulteriori informazioni su come vengono gestite le richieste di rinuncia, consulta la documentazione su [onorare le richieste di rinuncia](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] consente ai clienti di inviare richieste di rinuncia relative all’utilizzo e all’archiviazione dei propri dati all’interno di  [!DNL Real-time Customer Profile]. Per ulteriori informazioni su come vengono gestite le richieste di rinuncia, consulta la documentazione su [onorare le richieste di rinuncia](../segmentation/consents.md).
 
 ## Passaggi successivi e risorse aggiuntive
 
