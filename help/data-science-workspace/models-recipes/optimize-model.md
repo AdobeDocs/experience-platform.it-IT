@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Il Framework di informazioni sul modello fornisce allo scienziato dei dati gli strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli di apprendimento automatico ottimali basati su esperimenti.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -44,7 +43,7 @@ Esistono due modi per inserire le metriche nelle ricette. Una consiste nell&#39;
 Le valutazioni predefinite sono calcolate come parte degli algoritmi di classificazione. Di seguito sono riportati alcuni valori predefiniti per i valutatori attualmente implementati:
 
 | Classe valutatore | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | ConsigliValutatore | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
