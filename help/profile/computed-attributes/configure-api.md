@@ -5,8 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un gruppo di campi personalizzati che conterrà il campo dell’attributo calcolato.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%
@@ -89,9 +88,9 @@ Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "mixins",
   "version": "1.0",
   "title": "Computed Attributes Field Group",
   "type": "object",
@@ -167,7 +166,7 @@ Questa richiesta aggiunge nuovi campi relativi alle informazioni `purchaseSummar
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -234,9 +233,9 @@ Una risposta corretta restituisce i dettagli del gruppo di campi aggiornato.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "mixins",
   "version": "1.0",
   "title": "Computed Attributes Field Group",
   "type": "object",
@@ -345,7 +344,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +357,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +390,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +398,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +408,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
