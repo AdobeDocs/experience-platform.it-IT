@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,19 @@ Questa guida all&#39;interfaccia utente richiede una comprensione dei vari servi
 
 ## Panoramica
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a utilizzare i profili.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** che visualizza il dashboard [!UICONTROL Profili].
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Se la tua organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, la dashboard [!UICONTROL Profiles] non è visibile. Al contrario, la scheda [!UICONTROL Panoramica] mostra collegamenti e documentazione per aiutarti a iniziare con Profilo cliente in tempo reale.
 
-### Dashboard dei profili
+###  Dashboard dei profili  {#profile-dashboard}
 
-Per alcuni utenti, la selezione di **[!UICONTROL Profiles]** nel menu di navigazione a sinistra e l&#39;apertura della scheda **[!UICONTROL Panoramica]** fornisce una dashboard che descrive le metriche chiave correlate ai dati del profilo.
+Il dashboard **[!UICONTROL Profiles]** delinea le metriche chiave correlate ai dati del profilo della tua organizzazione.
 
-Per ulteriori informazioni, visita la [Guida al dashboard del profilo](profile-dashboard.md).
+Per ulteriori informazioni, visita la [Guida al dashboard del profilo](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Sfoglia
 
