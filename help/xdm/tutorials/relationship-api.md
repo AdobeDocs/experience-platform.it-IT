@@ -6,10 +6,10 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1369'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Questa esercitazione richiede una buona comprensione di [!DNL Experience Data Mo
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ [!DNL Schema Registry] API. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all&#39;intestazione [!DNL Accept] e ai suoi possibili valori).
+Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all&#39;intestazione [!DNL Accept] e ai suoi possibili valori).
 
 ## Definire uno schema di origine e destinazione {#define-schemas}
 
@@ -179,9 +179,9 @@ Una risposta corretta restituisce i dettagli del gruppo di campi appena creato.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
@@ -267,7 +267,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -305,13 +305,13 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -328,8 +328,8 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
