@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Il dashboard [!UICONTROL Destinazioni] visualizza un&#39;istantanea delle destin
 ## Esplorazione del dashboard delle destinazioni
 
 Per passare al dashboard delle destinazioni nell’interfaccia utente di Platform, seleziona **[!UICONTROL Destinazioni]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+
+>[!NOTE]
+>
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, il dashboard [!UICONTROL Destinazioni] e la scheda [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] dalla navigazione a sinistra viene visualizzata la scheda [!UICONTROL Catalogo] . Per ulteriori informazioni sulla scheda [!UICONTROL Catalogo], consulta la guida all’area di lavoro [[!UICONTROL Destinazioni]](../../destinations/ui/destinations-workspace.md) .
 
 ![](../images/destinations/dashboard-overview.png)
 
