@@ -5,10 +5,9 @@ description: Scopri come esportare uno schema esistente in un’organizzazione s
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Tutte le risorse all’interno della Libreria schema sono contenute in una sandbox specifica all’interno di un’organizzazione IMS. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra le sandbox e le organizzazioni IMS.
 
-Per soddisfare questa esigenza, l’area di lavoro [!UICONTROL Schemas] nell’interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all’interno della Libreria schema. Questo payload può quindi essere utilizzato in una chiamata all’API del Registro di sistema dello schema per importare lo schema (e tutte le risorse dipendenti) in una sandbox di destinazione e nell’organizzazione IMS.
+Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all&#39;interno della Libreria schema. Questo payload può quindi essere utilizzato in una chiamata all’API del Registro di sistema dello schema per importare lo schema (e tutte le risorse dipendenti) in una sandbox di destinazione e nell’organizzazione IMS.
 
 >[!NOTE]
 >
@@ -29,13 +28,13 @@ Sebbene l’interfaccia utente di Platform consenta di esportare risorse XDM, è
 
 ## Generare un payload di esportazione
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemas] individuare lo schema da esportare e aprirlo nel percorso [!DNL Schema Editor].
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemi], individua lo schema da esportare e aprilo in [!DNL Schema Editor].
 
 >[!TIP]
 >
 >Per informazioni dettagliate su come trovare la risorsa XDM desiderata, consulta la guida sull’ [esplorazione delle risorse XDM](./explore.md) .
 
-Una volta aperto lo schema, seleziona l’icona **[!UICONTROL Copy JSON]** (![Copia icona](../images/ui/export/icon.png)) in alto a destra nell’area di lavoro.
+Una volta aperto lo schema, seleziona l’icona **[!UICONTROL Copia JSON]** (![Copia icona](../images/ui/export/icon.png)) in alto a destra nell’area di lavoro.
 
 ![](../images/ui/export/copy-json.png)
 
@@ -44,9 +43,9 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -213,4 +212,4 @@ Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come p
 
 ## Passaggi successivi
 
-Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione IMS o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente di [!UICONTROL Schemas], consulta la [[!UICONTROL Schemas] panoramica dell&#39;interfaccia utente](./overview.md).
+Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione IMS o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente di [!UICONTROL Schemi], consulta la [[!UICONTROL Panoramica dell&#39;interfaccia utente di Schemi]](./overview.md) .
