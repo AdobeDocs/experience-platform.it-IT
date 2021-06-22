@@ -4,30 +4,30 @@ description: Scopri i diversi tipi di azioni forniti dall’estensione Adobe Exp
 solution: Experience Platform
 feature: SDK per web
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
+source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 9%
+source-wordcount: '547'
+ht-degree: 4%
 
 ---
 
 # Tipi di azioni
 
-Dopo aver configurato l&#39; [estensione Adobe Experience Platform Web SDK](web-sdk-extension.md) per [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configura i tipi di azione.
+Dopo aver configurato l&#39; [estensione Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md) per [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configura i tipi di azione.
 
 In questa pagina sono descritti i tipi di azioni disponibili.
 
 ## Invia evento
 
-Invia un evento ad Adobe [!DNL Experience Platform] in modo che Adobe Experience Platform possa raccogliere i dati inviati e agire in base a tali informazioni. Seleziona un&#39;istanza (se ne hai più di una). Tutti i dati che vuoi inviare possono essere inviati nel campo **[!UICONTROL XDM Data]**. Utilizza un oggetto JSON conforme alla struttura dello schema XDM. Questo oggetto può essere creato sulla pagina o attraverso un **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Invia un evento ad Adobe [!DNL Experience Platform] in modo che Adobe Experience Platform possa raccogliere i dati inviati e agire in base a tali informazioni. Seleziona un&#39;istanza (se ne hai più di una). Tutti i dati che desideri inviare possono essere inviati nel campo **[!UICONTROL Dati XDM]** . Utilizza un oggetto JSON conforme alla struttura dello schema XDM. Questo oggetto può essere creato sulla pagina o tramite un **[!UICONTROL Codice personalizzato]** **[!UICONTROL Elemento dati]**.
 
 Ci sono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere utili anche a seconda dell&#39;implementazione. Tieni presente che questi campi sono tutti facoltativi.
 
 - **Tipo:** questo campo consente di specificare un tipo di evento che verrà registrato nello schema XDM. Per ulteriori informazioni sui tipi di evento predefiniti, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
 - **ID unione:** se desideri specificare un  [ID unione ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) per l’evento, puoi farlo in questo campo. Tieni presente che le soluzioni a valle non sono in grado di unire i dati dell’evento in questo momento.
 - **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nel tuo datastream, puoi specificarlo qui.
-- **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la  **[!UICONTROL Document will unload]** casella di controllo . Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
-- **Decisioni relative al rendering della personalizzazione visiva:** se desideri eseguire il rendering di contenuto personalizzato sulla pagina, seleziona la  **[!UICONTROL Render visual personalization decisions]** casella di controllo. Se necessario, puoi anche specificare gli ambiti decisionali. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
+- **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la casella di controllo  **[!UICONTROL Documento]** che verrà scaricata. Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
+- **Decisioni relative alla personalizzazione visiva del rendering:** se desideri eseguire il rendering di contenuti personalizzati sulla pagina, seleziona la casella di controllo  **[!UICONTROL Rendering visual personalization]** decisionScript. Se necessario, puoi anche specificare gli ambiti decisionali. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
 
 ## Imposta consenso
 
