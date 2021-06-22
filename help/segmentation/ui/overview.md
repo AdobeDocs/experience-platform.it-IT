@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,19 @@ Per lavorare con le definizioni dei segmenti è necessario conoscere i vari serv
 
 ## Panoramica
 
-Nella [[!DNL Experience Platform] Interfaccia](https://platform.adobe.com/), seleziona **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a lavorare con i segmenti.
+Nell’interfaccia utente Experience Platform, seleziona **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** che visualizza il dashboard [!UICONTROL Segmenti].
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>Se l’organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, il dashboard [!UICONTROL Segmenti] non è visibile. Al contrario, la scheda [!UICONTROL Panoramica] visualizza collegamenti e documentazione per aiutarti a iniziare con i segmenti.
 
-### Dashboard dei segmenti
+###  Dashboard dei segmenti  {#segments-dashboard}
 
-Per alcuni utenti, la selezione di **[!UICONTROL Segmenti]** nella navigazione a sinistra e l&#39;apertura della scheda **[!UICONTROL Panoramica]** fornisce una dashboard che delinea le metriche chiave correlate ai dati del segmento.
+Il dashboard **[!UICONTROL Segmenti]** delinea le metriche chiave correlate ai dati dei segmenti della tua organizzazione.
 
-Per ulteriori informazioni, visita la [guida al dashboard dei segmenti](segment-dashboard.md).
+Per ulteriori informazioni, visita la [guida al dashboard dei segmenti](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Sfoglia
 
