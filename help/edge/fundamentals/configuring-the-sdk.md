@@ -4,11 +4,10 @@ description: Scopri come configurare Adobe Experience Platform Web SDK.
 seo-description: Scopri come configurare Experience Platform Web SDK
 keywords: configurare;configurazione;SDK;edge;Web SDK;configurare;edgeConfigId;contesto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;impostazioni sdk web;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyParty CookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 5%
+source-wordcount: '839'
+ht-degree: 10%
 
 ---
 
@@ -94,7 +93,7 @@ L&#39;ID organizzazione [!DNL Experience Cloud] assegnato. Quando configuri più
 
 {style=&quot;table-layout:auto&quot;}
 
-Indica se i dati associati ai clic sul collegamento vengono raccolti automaticamente. Per ulteriori informazioni, consulta [Tracciamento automatico dei collegamenti](../data-collection/track-links.md#automaticLinkTracking) .
+Indica se i dati associati ai clic sul collegamento vengono raccolti automaticamente. Per ulteriori informazioni, consulta [Tracciamento automatico dei collegamenti](../data-collection/track-links.md#automaticLinkTracking) . I collegamenti sono anche etichettati come collegamenti di download se includono un attributo di download o se il collegamento termina con un’estensione di file. I qualificatori di collegamento per il download possono essere configurati con un’espressione regolare. Il valore predefinito è `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
