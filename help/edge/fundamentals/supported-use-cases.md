@@ -2,10 +2,10 @@
 title: Casi d’uso supportati con Adobe Experience Platform Web SDK
 description: Scopri quali casi d’uso sono supportati con Adobe Experience Platform Web SDK.
 keywords: sdk web;casi di utilizzo
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 13%
+source-wordcount: '574'
+ht-degree: 15%
 
 ---
 
@@ -40,7 +40,7 @@ In questa pagina sono elencati i casi d’uso supportati per l’SDK per web, co
 | --- | --- |
 | Inviare eventi di esperienza |  |
 | Offer Decisioning | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Invia dati a Profilo dati cliente in tempo reale con bassa latenza |
+| Se il set di dati è abilitato per il profilo, la capacità di inviare dati a Profilo dati cliente in tempo reale in tempo reale |  |
 | Inviare dati al Customer Journey Analytics in tempo reale |  |
 | Scrivere il consenso al profilo | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Inoltrare i dati lato server in tempo reale a terze parti | [Documentazione](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ In questa pagina sono elencati i casi d’uso supportati per l’SDK per web, co
 | Supporto degli attributi dei visitatori |  |
 | Script di profilo |  |
 | XDM diventa parametri mbox |  |
+| Offerte di reindirizzamento supportate con reporting A4T | [Documentazione](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Aggiornamento del profilo di Target | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Raccomandazioni |  |
+| ID di terze parti di mBox |  |
 
 {style=&quot;table-layout:auto&quot;}
 
