@@ -3,18 +3,18 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Endpoint API di anteprima dello stato del campione (anteprima profilo)
 description: Utilizzando l’endpoint di stato di esempio di anteprima, parte dell’API Profilo cliente in tempo reale, puoi visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, elencare la distribuzione del profilo per set di dati e per identità e generare un rapporto di sovrapposizione dei set di dati.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
+source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2450'
 ht-degree: 1%
 
 ---
 
 # Anteprima dell’endpoint di stato di esempio (anteprima profilo)
 
-Adobe Experience Platform consente di acquisire dati dei clienti da più sorgenti per creare un profilo solido e unificato per ciascuno dei singoli clienti. Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio del profilo e altre metriche relative al profilo.
+Adobe Experience Platform consente di acquisire dati dei clienti da più sorgenti per creare un profilo solido e unificato per ciascuno dei singoli clienti. Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale.
 
-I risultati di questo lavoro di esempio possono essere visualizzati utilizzando l’ `/previewsamplestatus` endpoint dell’API Profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare un rapporto di sovrapposizione dei set di dati per acquisire visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando l’ endpoint API `/previewsamplestatus` .
+I risultati di questo lavoro di esempio possono essere visualizzati utilizzando l’ `/previewsamplestatus` endpoint , parte dell’API Profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare un rapporto di sovrapposizione dei set di dati e un rapporto di sovrapposizione delle identità per acquisire visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando l’ endpoint API `/previewsamplestatus` .
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 |---|---|
-| `date` | Specifica la data del rapporto da restituire. Se alla data sono stati eseguiti più rapporti, verrà restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, verrà restituito un errore 404. Se non viene specificata alcuna data, verrà restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
+| `date` | Specifica la data del rapporto da restituire. Se alla data sono stati eseguiti più rapporti, viene restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, viene restituito un errore 404 (Non trovato). Se non viene specificata alcuna data, viene restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
 
 **Richiesta**
 
@@ -204,15 +204,15 @@ La risposta include un array `data` contenente un elenco di oggetti set di dati.
 | `createdUser` | ID utente dell’utente che ha creato il set di dati. |
 | `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
 
-## Distribuzione del profilo di elenco in base allo spazio dei nomi
+## Distribuzione dei profili in base allo spazio dei nomi identità
 
-Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace di identità in tutti i profili uniti nell’archivio profili.
+Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace di identità in tutti i profili uniti nell’archivio profili. Ciò include sia le identità standard fornite da Adobe, sia le identità personalizzate definite dalla tua organizzazione.
 
 Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, inizia leggendo la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
->Il numero totale di profili per namespace (aggiunta insieme dei valori mostrati per ogni namespace) sarà sempre più alto della metrica di conteggio dei profili, perché un profilo può essere associato a più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
+>Il numero totale di profili per namespace (aggiunta insieme dei valori mostrati per ogni namespace) può essere maggiore della metrica di conteggio dei profili, perché un profilo può essere associato a più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
 
 **Formato API**
 
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 |---|---|
-| `date` | Specifica la data del rapporto da restituire. Se alla data sono stati eseguiti più rapporti, verrà restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, verrà restituito un errore 404. Se non viene specificata alcuna data, verrà restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
+| `date` | Specifica la data del rapporto da restituire. Se alla data sono stati eseguiti più rapporti, viene restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, viene restituito un errore 404 (Non trovato). Se non viene specificata alcuna data, viene restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
 
 **Richiesta**
 
@@ -301,9 +301,9 @@ La risposta include un array `data` con singoli oggetti contenenti i dettagli di
 | `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con i namespace utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è indicato anche come [!UICONTROL simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
 | `value` | Il valore `id` per lo spazio dei nomi. Questo si può trovare quando si utilizzano i namespace utilizzando l’ [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
-## Genera report di sovrapposizione set di dati
+## Genera il rapporto di sovrapposizione dei set di dati
 
-Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile (profili). Oltre a fornire informazioni approfondite sui dati, questo rapporto può essere utile per ottimizzare l’utilizzo della licenza, ad esempio per impostare un TTL per alcuni set di dati.
+Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Oltre a fornire informazioni approfondite sui dati, questo rapporto può essere utile per ottimizzare l’utilizzo della licenza, ad esempio per impostare un TTL per alcuni set di dati.
 
 Puoi generare il rapporto di sovrapposizione dei set di dati eseguendo una richiesta di GET all’ endpoint `/previewsamplestatus/report/dataset/overlap` .
 
@@ -352,6 +352,8 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovra
 | `data` | L&#39;oggetto `data` contiene elenchi di set di dati separati da virgole e i rispettivi conteggi dei profili. |
 | `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
 
+### Interpretazione del rapporto di sovrapposizione del set di dati
+
 I risultati del rapporto possono essere interpretati dai set di dati e dai conteggi dei profili nella risposta. Considera l&#39;oggetto report di esempio `data` seguente:
 
 ```json
@@ -366,7 +368,102 @@ Questo rapporto fornisce le seguenti informazioni:
 * Esistono 107 profili costituiti solo da dati del set di dati `5eeda0032af7bb19162172a7`.
 * L’organizzazione dispone di un totale di 454.642 profili.
 
+## Genera il rapporto di sovrapposizione delle identità
+
+Il rapporto di sovrapposizione identità fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo le identità che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Ciò include sia le identità standard fornite da Adobe, sia le identità personalizzate definite dalla tua organizzazione.
+
+Puoi generare il rapporto di sovrapposizione identità eseguendo una richiesta di GET all’ endpoint `/previewsamplestatus/report/identity/overlap` .
+
+**Formato API**
+
+```http
+GET /previewsamplestatus/report/identity/overlap
+GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+```
+
+| Parametro | Descrizione |
+|---|---|
+| `date` | Specifica la data del rapporto da restituire. Se più rapporti sono stati eseguiti nella stessa data, viene restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, viene restituito un errore 404 (Non trovato). Se non viene specificata alcuna data, viene restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
+
+**Richiesta**
+
+La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Risposta**
+
+Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione delle identità.
+
+```json
+{
+    "data": {
+        "Email,crmid,loyal": 2,
+        "ECID,Email,crmid": 7,
+        "ECID,Email,mobilenr": 12,
+        "AAID,ECID,loyal": 1,
+        "mobilenr": 25,
+        "AAID,ECID": 1508,
+        "ECID,crmid": 1,
+        "AAID,ECID,crmid": 2,
+        "Email,crmid": 328,
+        "CORE": 49,
+        "AAID": 446,
+        "crmid,loyal": 20988,
+        "Email": 10904,
+        "crmid": 249,
+        "ECID,Email": 74,
+        "Phone": 40,
+        "Email,Phone,loyal": 48,
+        "AAID,AVID,ECID": 85,
+        "Email,loyal": 1002,
+        "AAID,ECID,Email,Phone,crmid": 5,
+        "AAID,ECID,Email,crmid,loyal": 23,
+        "AAID,AVID,ECID,Email,crmid": 2,
+        "AVID": 3,
+        "AAID,ECID,Phone": 1,
+        "loyal": 43,
+        "ECID,Email,crmid,loyal": 6,
+        "AAID,ECID,Email,Phone,crmid,loyal": 1,
+        "AAID,ECID,Email": 2,
+        "AAID,ECID,Email,crmid": 142,
+        "AVID,ECID": 24,
+        "ECID": 6565
+    },
+    "reportTimestamp": "2021-12-29T16:55:03.624"
+}
+```
+
+| Proprietà | Descrizione |
+|---|---|
+| `data` | L’oggetto `data` contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi di identità e dei rispettivi conteggi dei profili. |
+| Codici dei namespace | Il `code` è un formato breve per ciascun nome dello spazio dei nomi di identità. È possibile trovare una mappatura di ciascun `code` nel relativo `name` utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Nell’interfaccia utente di Experience Platform, il simbolo `code` è anche denominato [!UICONTROL simbolo di identità] . Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
+| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+
+### Interpretazione del rapporto di sovrapposizione delle identità
+
+I risultati del rapporto possono essere interpretati dalle identità e dai conteggi dei profili nella risposta. Il valore numerico di ogni riga indica quanti profili sono composti da quell’esatta combinazione di spazi dei nomi di identità standard e personalizzati.
+
+Prendi in considerazione il seguente estratto dall&#39;oggetto `data` :
+
+```json
+  "AAID,ECID,Email,crmid": 142,
+  "AVID,ECID": 24,
+  "ECID": 6565
+```
+
+Questo rapporto fornisce le seguenti informazioni:
+* Sono disponibili 142 profili composti da `AAID`, `ECID` e `Email` identità standard, nonché da uno spazio dei nomi di identità `crmid` personalizzato.
+* Sono disponibili 24 profili composti da `AAID` e `ECID` spazi dei nomi di identità.
+* Esistono 6.565 profili che includono solo un&#39;identità `ECID`.
+
 ## Passaggi successivi
 
-Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire il rapporto di sovrapposizione dei set di dati, puoi anche utilizzare gli endpoint stimati e di anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l&#39;API di segmentazione, visita la [guida all&#39;anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti di sovrapposizione, puoi anche utilizzare gli endpoint stimati e di anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l&#39;API di segmentazione, visita la [guida all&#39;anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
 
