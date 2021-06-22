@@ -5,8 +5,7 @@ title: Creare un set di dati utilizzando le API
 topic-legacy: datasets
 description: Questo documento fornisce passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e la compilazione del set di dati utilizzando un file .
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-* nome x-sandbox: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -103,7 +102,7 @@ Il formato dell’oggetto di risposta dipende dall’intestazione Accept inviata
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
