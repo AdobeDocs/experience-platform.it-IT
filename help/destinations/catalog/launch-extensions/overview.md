@@ -1,64 +1,64 @@
 ---
-keywords: estensioni lancio;estensione lancio;destinazioni lancio; estensioni lancio piattaforma;estensione lancio piattaforma;destinazioni lancio piattaforma
-title: Estensione  Adobe Experience Platform Launch
-description: ' Adobe Experience Platform Launch è la nuova generazione di funzionalità di gestione dei tag  Adobe. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.'
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+keywords: estensioni launch;estensione launch;destinazioni launch; Estensioni platform launch;estensione platform launch;destinazioni platform launch
+title: Estensione Adobe Experience Platform Launch
+description: Adobe Experience Platform Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.
+exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
+source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 12%
+source-wordcount: '616'
+ht-degree: 14%
 
 ---
 
-
 # Estensioni di Adobe Experience Platform Launch
 
- Adobe Experience Platform Launch è la nuova generazione di funzionalità di gestione dei tag  Adobe. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate. Launch piattaforma è disponibile per i clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto.
+Adobe Experience Platform Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate. Il platform launch è offerto ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto.
 
 Per un&#39;introduzione alle funzionalità di Experience Platform Launch, consulta le risorse seguenti:
--  documentazione Adobe Experience Platform Launch [](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html)
--  Adobe Experience Platform Launch [video di avvio rapido](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Inizia con [Introduzione a  Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) e [Panoramica del processo di pubblicazione](https://helpx.adobe.com/it/analytics/how-to/adobe-launch-publishing-process.html), quindi passa ai concetti successivi.
 
-## Come trovare le estensioni Platform Launch nell&#39;interfaccia della piattaforma {#how-to-find-extensions-in-interface}
+- Documentazione di Adobe Experience Platform Launch [](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=it)
+- Adobe Experience Platform Launch [video di avvio rapido](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Inizia con [Introduzione ad Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) e [Panoramica del processo di pubblicazione](https://helpx.adobe.com/it/analytics/how-to/adobe-launch-publishing-process.html), quindi passa ai concetti successivi.
 
-Per trovare le estensioni Platform Launch nell&#39;interfaccia della piattaforma, individuare **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** e selezionare **[!UICONTROL Extensions]** nel filtro **[!UICONTROL Types]**.
+## Come trovare le estensioni di Platform launch nell’ interfaccia di Platform {#how-to-find-extensions-in-interface}
 
-![Filtro delle estensioni nell&#39;interfaccia](../../assets/catalog/launch-extensions/filter.png)
+Per trovare le estensioni del Platform launch nell’interfaccia di Platform, passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** e seleziona **[!UICONTROL Estensioni]** nel filtro **[!UICONTROL Tipi]** .
 
-## Funzionamento delle estensioni del lancio della piattaforma {#how-extensions-work}
+![Filtro delle estensioni nell’interfaccia](../../assets/catalog/launch-extensions/filter.png)
 
-Le estensioni Launch piattaforma inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Alcuni esempi sono l&#39; [Estensione di personalizzazione del guadagno](../personalization/gainsight.md) o la [Conferma voce dell&#39;estensione del cliente](../voice/confirmit-digital-feedback.md).
+## Funzionamento delle estensioni di Platform launch {#how-extensions-work}
 
-**Le destinazioni di** esportazione profilo/segmento nei dati dell&#39;evento Adobe Experience Platform acquisiscono i dati, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Alcuni esempi sono la [ destinazione di archiviazione cloud Amazon S3](../cloud-storage/amazon-s3.md) o la [destinazione pubblicitaria Google Display &amp; Video 360](../advertising/google-dv360.md).
+Le estensioni di platform launch inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considera le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Alcuni esempi sono l&#39; [Estensione di personalizzazione Gainsight](../personalization/gainsight.md) o la [Voce di conferma dell&#39;estensione del cliente](../voice/confirmit-digital-feedback.md).
 
-![Estensioni Experience Platform Launch confrontate con altre destinazioni](../../assets/common/launch-and-other-destinations.png)
+**Le destinazioni** esportazione profilo/segmento in Adobe Experience Platform acquisiscono i dati dell’evento, li combinano con altre origini dati, applicano la segmentazione, esportano segmenti e profili qualificati nelle destinazioni. Esempi di questi sono la [destinazione di archiviazione cloud Amazon S3](../cloud-storage/amazon-s3.md) o la [destinazione pubblicitaria Google Display &amp; Video 360](../advertising/google-dv360.md).
 
-## Vantaggi dell&#39;utilizzo delle estensioni del lancio della piattaforma {#extensions-benefits}
+![Experience Platform Launch di estensioni rispetto ad altre destinazioni](../../assets/common/launch-and-other-destinations.png)
 
- Adobe Experience Platform Launch è gratuito per i clienti  Experienci Cloud esistenti. Platform Launch semplifica la distribuzione dei tag nel sito Web tramite le estensioni di facile utilizzo che puoi installare, configurare, aggiornare ed eliminare. Platform Launch ha un piccolo impatto sul sito Web e consente di mantenere il caricamento delle pagine rapidamente.
+## Vantaggi dell&#39;utilizzo delle estensioni di Platform launch {#extensions-benefits}
+
+Adobe Experience Platform Launch è gratuito per i clienti esistenti di Experience Cloud. Il platform launch semplifica la distribuzione dei tag sul sito web tramite estensioni facili da usare che puoi installare, configurare, aggiornare ed eliminare. Il platform launch ha un piccolo ingombro sul tuo sito web e ti consente di mantenere le tue pagine caricate rapidamente.
 
 >[!IMPORTANT]
 >
->Sebbene non sia possibile attivare i segmenti nelle estensioni di Launch piattaforma, è possibile impostare regole per inoltrare solo i dati dell&#39;evento in determinate situazioni. Ulteriori informazioni sono disponibili di seguito.
+>Sebbene non sia possibile attivare segmenti nelle estensioni di Platform launch, è possibile impostare regole per inoltrare solo i dati evento in determinate situazioni. Ulteriori informazioni qui sotto.
 
-È possibile creare *regole* che determinano quando inoltrare i dati dell&#39;evento alle estensioni. Questa potente funzionalità consente di inoltrare i dati dell&#39;evento solo in determinate situazioni, anziché inviare i dati dell&#39;evento su ogni interazione. Per ulteriori informazioni, leggi le regole nella [ documentazione Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Puoi creare *regole* che determinano quando inoltrare i dati dell&#39;evento alle estensioni. Questa potente funzionalità ti consente di inoltrare i dati evento solo in determinate situazioni, anziché inviare i dati evento su ogni interazione. Per ulteriori informazioni, consulta le regole nella [documentazione di Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
 
-## Esempi di utilizzo per le estensioni del lancio della piattaforma {#extensions-use-cases}
+## Esempi di casi d&#39;uso per le estensioni di Platform launch {#extensions-use-cases}
 
-Le estensioni Platform Launch consentono di soddisfare diversi casi di utilizzo da parte dei clienti. Alcuni esempi di utilizzo delle estensioni Launch della piattaforma sono:
+Le estensioni di platform launch consentono di soddisfare vari casi d’uso dei clienti. Alcuni esempi di casi d&#39;uso per l&#39;utilizzo di estensioni di Platform launch sono:
 
-- Potete inviare dati di siti Web o app native a Facebook tramite l’estensione pixel di Facebook. Pixel di Facebook indica a quali parti del sito o dell’app ha navigato un visitatore, inoltra tali informazioni a Facebook e puoi nuovamente richiamare il visitatore tramite Facebook.
-- Potete inoltrare i dati evento dai siti Web e dalle app alle Google Analytics per analizzare e prendere decisioni in base a tali dati.
-- Potete attivare un&#39;app chatbox lato client al momento giusto in base a come gli utenti interagiscono con le pagine, in base alle regole configurate in Lancio piattaforma.
+- Puoi inviare dati di siti web o app nativi a Facebook tramite l’estensione Facebook pixel. Facebook Pixel indica in quali parti del sito o dell’app un visitatore ha navigato, inoltra tali informazioni a Facebook e puoi effettuare il retargeting del visitatore tramite Facebook.
+- Puoi inoltrare i dati evento dai tuoi siti web e dalle tue app in Google Analytics per analizzarli e prendere decisioni basate su tali dati.
+- Puoi attivare un’app chatbox lato client al momento giusto in base alle modalità di interazione degli utenti con le tue pagine, in base alle regole impostate in Platform launch.
 
-## Categorie di estensione {#extension-categories}
+## Categorie di estensioni {#extension-categories}
 
-Le estensioni Launch piattaforma possono essere classificate nelle seguenti categorie in Piattaforma:
+Le estensioni di platform launch possono rientrare nelle seguenti categorie in Platform:
 
 - [Pubblicità](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Piattaforma di gestione dati](../data-management/overview.md)
 - [Destinazioni di marketing e-mail](../email-marketing/overview.md)
 - [Personalizzazione](../personalization/overview.md)
-- [Sondaggi](../survey/overview.md)
+- [Indagini](../survey/overview.md)
 - [Voce del cliente](../voice/overview.md)
