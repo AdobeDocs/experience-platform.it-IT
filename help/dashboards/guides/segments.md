@@ -4,9 +4,9 @@ title: Dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,11 @@ I dati attributo nello snapshot mostrano esattamente come vengono visualizzati n
 
 ## Esplorazione del dashboard dei segmenti
 
-Per passare al dashboard dei segmenti all’interno dell’interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+Per passare al dashboard [!UICONTROL Segmenti] nell’interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+
+>[!NOTE]
+>
+>Se l’organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, il dashboard [!UICONTROL Segmenti] non è visibile. Al contrario, la scheda [!UICONTROL Panoramica] mostra collegamenti e documentazione per aiutarti a iniziare con la segmentazione.
 
 ![](../images/segments/dashboard-overview.png)
 
