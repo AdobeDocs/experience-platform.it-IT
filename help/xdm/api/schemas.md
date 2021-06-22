@@ -5,10 +5,10 @@ title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -161,7 +161,7 @@ Una risposta corretta restituisce i dettagli dello schema. I campi restituiti di
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -170,7 +170,7 @@ Una risposta corretta restituisce i dettagli dello schema. I campi restituiti di
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -400,13 +400,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -426,7 +426,7 @@ La risposta indica che entrambe le operazioni sono state eseguite correttamente.
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -435,7 +435,7 @@ La risposta indica che entrambe le operazioni sono state eseguite correttamente.
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -508,7 +508,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, indicando 
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -517,7 +517,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, indicando 
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
