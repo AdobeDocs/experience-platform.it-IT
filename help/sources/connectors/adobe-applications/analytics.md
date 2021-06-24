@@ -5,9 +5,9 @@ title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 topic-legacy: overview
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,8 @@ Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL
 
 ## Qual è la latenza prevista per i dati di Analytics su Platform?
 
+La latenza prevista per i dati di Analytics su Platform è descritta nella tabella seguente. La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l’implementazione di Analytics è configurata con `A4T` la latenza alla pipeline aumenterà a 5-10 minuti.
+
 | Dati di Analytics | Latenza prevista |
 | -------------- | ---------------- |
 | Nuovi dati su [!DNL Real-time Customer Profile] (A4T **not** abilitato) | &lt; 2 minuti |
@@ -53,7 +55,7 @@ Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL
 
 >[!NOTE]
 >
->La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l’implementazione [!DNL Analytics] è configurata con `A4T` la latenza alla pipeline aumenterà a 5-10 minuti.
+>I dati di backfill di Analytics non vengono acquisiti in [!DNL Profile] e quindi non vengono contabilizzati nei profili di licenza.
 
 ## Identificatori principali nei dati [!DNL Analytics]
 
