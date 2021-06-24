@@ -5,10 +5,9 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-translation-type: tm+mt
-source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
+source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -31,13 +30,13 @@ Experience Platform consente l’acquisizione di dati da altre applicazioni Adob
 
 - [Panoramica del connettore Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Panoramica del connettore dati classificazioni di Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Panoramica sulla connessione all’origine dati di Adobe Analytics Classifications](connectors/adobe-applications/classifications.md)
 - [Creare una connessione all’origine dati Adobe Analytics Classifications nell’interfaccia utente](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Panoramica del connettore dati Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Panoramica sulla connessione all’origine dati di Adobe Analytics Report Suite](connectors/adobe-applications/analytics.md)
 - [Creare una connessione sorgente Adobe Analytics nell’interfaccia utente](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Creare una connessione sorgente Attributi del cliente nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] panoramica del connettore](connectors/adobe-applications/marketo/marketo.md)
-- [Creare una connessione  [!DNL Marketo Engage] sorgente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Creare una connessione sorgente [!DNL Marketo Engage] nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Pubblicità
 
@@ -131,15 +130,15 @@ Experience Platform fornisce il supporto per l’acquisizione di dati da un sist
 
 ## Controllo degli accessi alle origini durante l’acquisizione dei dati
 
-Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite in Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la scheda **[!UICONTROL Permissions]** in un particolare profilo di prodotto. Dal pannello **[!UICONTROL Edit Permissions]** puoi accedere alle autorizzazioni relative alle origini tramite la voce di menu **[!UICONTROL data ingestion]** . L&#39;autorizzazione **[!UICONTROL View Sources]** consente l&#39;accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalog]** e alle origini autenticate nella scheda **[!UICONTROL Browse]**, mentre l&#39;autorizzazione **[!UICONTROL Manage Sources]** consente l&#39;accesso completo per leggere, creare, modificare e disabilitare le origini.
+Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite in Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la scheda **[!UICONTROL Autorizzazioni]** in un particolare profilo di prodotto. Dal pannello **[!UICONTROL Modifica autorizzazioni]**, puoi accedere alle autorizzazioni relative alle origini tramite la voce di menu **[!UICONTROL inserimento dati]**. L&#39;autorizzazione **[!UICONTROL Visualizza origini]** consente l&#39;accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**, mentre l&#39;autorizzazione **[!UICONTROL Gestisci origini]** consente l&#39;accesso completo per leggere, creare, modificare e disabilitare le origini.
 
 La tabella seguente illustra il funzionamento dell’interfaccia utente in base a diverse combinazioni di queste autorizzazioni:
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
-| **[!UICONTROL View Sources]** On | Concedi l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché alle schede Sfoglia, Account e Flusso di dati. |
-| **[!UICONTROL Manage Sources]** On | Oltre alle funzioni incluse in **[!UICONTROL View Sources]**, consente l&#39;accesso all&#39;opzione **[!UICONTROL Connect Source]** in **[!UICONTROL Catalog]** e all&#39;opzione **[!UICONTROL Select Data]** in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** consente inoltre di abilitare o disabilitare  **[!UICONTROL DataFlows]** e modificare le relative pianificazioni. |
-| **[!UICONTROL View Sources]** Disattivato e  **[!UICONTROL Manage Sources]** disattivato | Revoca tutti gli accessi alle sorgenti. |
+| **[!UICONTROL Visualizza]** SourcesOn | Concedi l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché alle schede Sfoglia, Account e Flusso di dati. |
+| **[!UICONTROL Gestisci]** originiOn | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, consente l&#39;accesso all&#39;opzione **[!UICONTROL Connetti origine]** in **[!UICONTROL Catalogo]** e all&#39;opzione **[!UICONTROL Seleziona dati]** in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci]** origini consente inoltre di abilitare o disabilitare i  **** flussi dati e di modificarne le pianificazioni. |
+| **[!UICONTROL Visualizza]** originiDisattivato e  **[!UICONTROL Gestisci]** originiDisattivato | Revoca tutti gli accessi alle sorgenti. |
 
 Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite l&#39;Admin Console, incluse quelle quattro origini, consulta la [panoramica sul controllo degli accessi](../access-control/home.md).
 
