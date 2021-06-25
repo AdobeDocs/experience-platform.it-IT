@@ -2,16 +2,16 @@
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;profilo;rtcp;grafici XDM
 title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
-description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
+description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile]panoramica
+# [!DNL Real-time Customer Profile] panoramica
 
 Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile] puoi visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica ti aiuterà a comprendere il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
@@ -35,11 +35,7 @@ L’archivio profili utilizza un’infrastruttura database Cosmos di Microsoft A
 
 Experience Platform fornisce una serie di protezioni per evitare di creare schemi [Experience Data Model (XDM)](../xdm/home.md) che non possono essere supportati dal Profilo cliente in tempo reale. Ciò include i limiti soft che si traducono in deterioramento delle prestazioni, nonché i limiti rigidi che si traducono in errori e interruzioni del sistema. Per ulteriori informazioni, tra cui un elenco di linee guida e casi di utilizzo di esempio, consulta la documentazione [Profile guardrails](guardrails.md) .
 
-### (Beta) Dashboard del profilo {#profile-dashboard}
-
->[!IMPORTANT]
->
->La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+### Dashboard dei profili {#profile-dashboard}
 
 L’interfaccia utente di Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati del profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per informazioni su come accedere e lavorare con il dashboard [!DNL Profile] nell’interfaccia utente e sulle metriche visualizzate nel dashboard, consulta la [Guida all’interfaccia utente del dashboard del profilo](ui/profile-dashboard.md) .
 
