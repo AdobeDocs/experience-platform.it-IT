@@ -5,10 +5,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione mostra come abilitare un set di dati per l’utilizzo con Profilo cliente in tempo reale e il servizio Identity utilizzando le API di Adobe Experience Platform.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: bcca4d6212ee3f0d661549eca359ab8c8aaf905c
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1061'
 ht-degree: 1%
 
 ---
@@ -43,17 +42,13 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva `Content-Type`. Il valore corretto per questa intestazione viene mostrato nelle richieste di esempio, se necessario.
 
-- Tipo di contenuto: application/json
-
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione. Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
-
-- nome x-sandbox: `{SANDBOX_NAME}`
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione `x-sandbox-name` che specifica il nome della sandbox in cui avrà luogo l’operazione. Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
 ## Crea un set di dati abilitato per [!DNL Profile] e [!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -112,7 +107,7 @@ Una risposta corretta mostra un array contenente l’ID del set di dati appena c
 
 I passaggi seguenti spiegano come abilitare un set di dati creato in precedenza per [!DNL Real-time Customer Profile] e [!DNL Identity Service]. Se hai già creato un set di dati abilitato per il profilo, procedi con i passaggi per [acquisizione di dati](#ingest-data-into-the-dataset).
 
-### Verifica se il set di dati è abilitato {#check-if-the-dataset-is-enabled}
+### Controlla se il set di dati è abilitato {#check-if-the-dataset-is-enabled}
 
 Utilizzando l’API [!DNL Catalog], puoi controllare un set di dati esistente per determinare se è abilitato per l’utilizzo in [!DNL Real-time Customer Profile] e [!DNL Identity Service]. La chiamata seguente recupera i dettagli di un set di dati per ID.
 
@@ -194,7 +189,7 @@ curl -X GET \
 
 Sotto la proprietà `tags` , puoi vedere che `unifiedProfile` e `unifiedIdentity` sono entrambi presenti con il valore `enabled:true`. Pertanto, [!DNL Real-time Customer Profile] e [!DNL Identity Service] sono abilitati rispettivamente per questo set di dati.
 
-### Abilita il set di dati {#enable-the-dataset}
+### Abilitare il set di dati {#enable-the-dataset}
 
 Se il set di dati esistente non è stato abilitato per [!DNL Profile] o [!DNL Identity Service], puoi abilitarlo effettuando una richiesta PATCH utilizzando l’ID del set di dati.
 
@@ -213,23 +208,21 @@ PATCH /dataSets/{DATASET_ID}
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "tags" : {
-        "unifiedProfile": ["enabled:true"],
-        "unifiedIdentity": ["enabled:true"]
-    }
-  }'
+  -d '[
+        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },
+        { "op": "add", "path": "/tags/unifiedIdentity", "value": ["enabled:true"] }	
+      ]'
 ```
 
-Il corpo della richiesta include una proprietà `tags` che contiene due proprietà secondarie: `"unifiedProfile"` e `"unifiedIdentity"`. I valori di queste proprietà secondarie sono array contenenti la stringa `"enabled:true"`.
+Il corpo della richiesta include un tag `path` a due tipi di tag, `unifiedProfile` e `unifiedIdentity`. Le `value` di ciascuna sono matrici contenenti la stringa `enabled:true`.
 
 ****
-ResponseUna richiesta PATCH riuscita restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. I tag `"unifiedProfile"` e `"unifiedIdentity"` sono stati aggiunti e il set di dati è abilitato per l’uso da parte dei servizi Profilo e Identità.
+ResponseUna richiesta PATCH riuscita restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. I tag `unifiedProfile` e `unifiedIdentity` sono stati aggiunti e il set di dati è abilitato per l’uso da parte dei servizi Profilo e Identità.
 
 ```json
 [
@@ -248,6 +241,6 @@ Sia [!DNL Real-time Customer Profile] che [!DNL Identity Service] utilizzano dat
 
 Quando carichi i dati in un nuovo set di dati per la prima volta o come parte di un processo che coinvolge una nuova ETL o una nuova origine dati, è consigliabile controllare attentamente i dati per assicurarsi che siano stati caricati come previsto. Utilizzando l’ API di accesso [!DNL Real-time Customer Profile] è possibile recuperare i dati batch caricati in un set di dati. Se non riesci a recuperare nessuna delle entità previste, il set di dati potrebbe non essere abilitato per [!DNL Real-time Customer Profile]. Dopo aver confermato che il set di dati è stato abilitato, assicurati che il formato e gli identificatori dei dati di origine supportino le tue aspettative. Per istruzioni dettagliate su come utilizzare l&#39;API [!DNL Real-time Customer Profile] per accedere ai dati [!DNL Profile], segui la [guida all&#39;endpoint entità](../api/entities.md), nota anche come API &quot;[!DNL Profile Access]&quot;.
 
-## Conferma l’acquisizione dei dati da parte del servizio Identity {#confirm-data-ingest-by-identity-service}
+## Conferma dell’acquisizione dei dati da parte del servizio Identity {#confirm-data-ingest-by-identity-service}
 
 Ogni frammento di dati acquisito che contiene più di un’identità crea un collegamento nel grafico della tua identità privata. Per ulteriori informazioni sui grafici di identità e sull’accesso ai dati di identità, inizia leggendo la [panoramica del servizio Identity](../../identity-service/home.md).
