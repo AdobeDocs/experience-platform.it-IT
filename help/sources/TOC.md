@@ -4,11 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 10%
+source-wordcount: '616'
+ht-degree: 11%
 
 ---
 
@@ -230,7 +229,8 @@ ht-degree: 10%
       - [Flusso dati connessione pagamento](tutorials/ui/dataflow/payments.md)
       - [Flusso dati connessione protocollo](tutorials/ui/dataflow/protocols.md)
    - [Attivare i dati in entrata per compilare i profili cliente](tutorials/ui/profile.md)
-   - [Monitorare i flussi di dati](tutorials/ui/monitor.md)
+   - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
+   - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
    - [Aggiorna account](tutorials/ui/update.md)
    - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
