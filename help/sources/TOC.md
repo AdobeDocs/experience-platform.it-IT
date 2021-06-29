@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
-source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
+source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '623'
 ht-degree: 11%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 11%
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
+      - [Connettore Veeva CRM](connectors/crm/veeva.md)
    - Successo del cliente {#customer-success}
       - [Connettore cloud del servizio Salesforce](connectors/customer-success/salesforce-service-cloud.md)
       - [Connettore ServiceNow](connectors/customer-success/servicenow.md)
@@ -100,6 +101,7 @@ ht-degree: 11%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Successo del cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -186,6 +188,7 @@ ht-degree: 11%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Successo cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
