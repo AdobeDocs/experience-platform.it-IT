@@ -5,7 +5,7 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
+source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -67,6 +67,7 @@ I sistemi di gestione delle relazioni con i clienti forniscono dati che possono 
 
 - [[!DNL Microsoft Dynamics] connettore](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connettore](connectors/crm/salesforce.md)
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 
 ### Successo del cliente
 
