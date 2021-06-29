@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Attiva i dati in [!DNL Adobe Experience Platform] mappando i segmenti sulle dest
 
 Per attivare i dati nelle destinazioni, è necessario aver collegato correttamente [una destinazione](./connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura una o più destinazioni.
 
-## Attiva i dati {#activate-data}
+## Attivare i dati {#activate-data}
 
 I passaggi nel flusso di lavoro di attivazione variano leggermente tra i tipi di destinazione. Il flusso di lavoro completo per tutti i tipi di destinazione è descritto di seguito.
 
-## Selezionare la destinazione in cui attivare i dati in {#select-destination}
+## Selezionare la destinazione in cui attivare i dati {#select-destination}
 
 Si applica a: Tutte le destinazioni
 
@@ -37,7 +37,7 @@ Nell&#39;interfaccia utente di Adobe Experience Platform, passa a **[!UICONTROL 
 
 Segui i passaggi della sezione successiva per selezionare i segmenti da attivare.
 
-## [!UICONTROL Seleziona ] segmenti, passaggio  {#select-segments}
+## [!UICONTROL Seleziona ] segmenti, passaggio {#select-segments}
 
 Si applica a: Tutte le destinazioni
 
@@ -136,7 +136,7 @@ Seleziona il pulsante **[!UICONTROL Crea pianificazione]** corrispondente al seg
 
 ![Pulsante Crea pianificazione](../assets/ui/activate-destinations/create-schedule-button.png)
 
-### Esporta file completi {#export-full-files}
+### Esportare file completi {#export-full-files}
 
 Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esportati contengano uno snapshot completo di tutti i profili idonei per quel segmento.
 
@@ -149,10 +149,15 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
    >
    >L’opzione per esportare i file in un determinato momento è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.
 
+   >[!IMPORTANT]
+   >
+   >A seconda di quando il processo di esportazione del profilo termina l’esecuzione e quando il servizio di destinazione avvia il processo di attivazione del segmento, la prima esportazione del file incrementale o completo potrebbe non contenere tutti i dati di backfill necessari. Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, ti consigliamo di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Esporta file incrementali {#export-incremental-files}
+
+### Esportare file incrementali {#export-incremental-files}
 
 Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file esportati contengano solo i profili qualificati per quel segmento dall&#39;ultima esportazione.
 
@@ -173,12 +178,16 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
    >[!IMPORTANT]
    >
-   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti. I clienti non beta possono esportare file incrementali una volta al giorno, alle 12:00 UTC (7:00 AM EST).
+   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti.
+
+   >[!IMPORTANT]
+   >
+   >A seconda di quando il processo di esportazione del profilo termina l’esecuzione e quando il servizio di destinazione avvia il processo di attivazione del segmento, la prima esportazione del file incrementale o completo potrebbe non contenere tutti i dati di backfill necessari. Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, ti consigliamo di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Configura i nomi dei file {#file-names}
+### Configurare i nomi dei file {#file-names}
 
 I nomi file predefiniti sono costituiti dal nome di destinazione, dall’ID del segmento e da un indicatore di data e ora. Ad esempio, puoi modificare i nomi dei file esportati per distinguere tra campagne diverse o per far sì che il tempo di esportazione dei dati sia aggiunto ai file.
 
@@ -204,7 +213,7 @@ Seleziona **[!UICONTROL Applica modifiche]** per confermare la selezione.
 
 Al termine della configurazione di tutti i segmenti, seleziona **[!UICONTROL Avanti]** per continuare.
 
-## **[!UICONTROL Segment]** schedulestep  {#segment-schedule}
+## **[!UICONTROL Segment]** schedulestep {#segment-schedule}
 
 Si applica a: destinazioni pubblicitarie, destinazioni social
 
@@ -224,7 +233,7 @@ Nella pagina **[!UICONTROL Programmazione segmenti]** puoi impostare la data di 
 
 ![entrare in app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Passaggio Seleziona]** attributi  {#select-attributes}
+## **[!UICONTROL Passaggio Seleziona]** attributi {#select-attributes}
 
 Si applica a: destinazioni e-mail marketing e cloud storage
 
@@ -256,7 +265,7 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 
 È consigliabile che uno degli attributi sia un [identificatore univoco](../../destinations/catalog/email-marketing/overview.md#identity) dallo schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione identità nella documentazione [Destinazioni di marketing e-mail](../../destinations/catalog/email-marketing/overview.md#identity) .
 
-### Tasti di deduplicazione {#deduplication-keys}
+### Chiavi di deduplicazione {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
@@ -425,9 +434,9 @@ Se non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Fin
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
-## Verifica che l&#39;attivazione del segmento sia avvenuta correttamente {#verify-activation}
+## Verifica che l’attivazione del segmento sia avvenuta correttamente {#verify-activation}
 
-### Destinazioni e-mail marketing e destinazioni di archiviazione cloud {#esp-and-cloud-storage}
+### Destinazioni e-mail marketing e archiviazione cloud {#esp-and-cloud-storage}
 
 Per le destinazioni di e-mail marketing e l’archiviazione cloud, Adobe Experience Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Attendi la creazione di un nuovo file nel percorso di archiviazione ogni giorno. Il formato predefinito del file è:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
