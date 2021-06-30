@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce
 solution: Experience Platform
-title: Creare una connessione sorgente Salesforce utilizzando l’API del servizio di flusso
+title: Creare una connessione di base Salesforce utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a un account Salesforce utilizzando l’API del servizio di flusso.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 2%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
-# Creare una connessione sorgente [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service]
 
-Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ API [!DNL Flow Service] per seguire i passaggi necessari per connettersi [!DNL Platform] a un account [!DNL Salesforce] utilizzando l’API del servizio di flusso.
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Salesforce] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -39,32 +38,20 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL Salesforce], è necessar
 | `username` | Il nome utente per l&#39;account utente [!DNL Salesforce]. |
 | `password` | Password dell&#39;account utente [!DNL Salesforce]. |
 | `securityToken` | Token di sicurezza per l&#39;account utente [!DNL Salesforce]. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL AdWords] è: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Per ulteriori informazioni su come iniziare, visita [questo documento Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Salesforce] come parte dei parametri della richiesta.
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Salesforce] in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -74,7 +61,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione [!DNL Salesforce], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Salesforce] è `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`.
+La seguente richiesta crea una connessione di base per [!DNL Salesforce]:
 
 ```shell
 curl -X POST \
@@ -107,7 +94,7 @@ curl -X POST \
 | `auth.params.username` | Il nome utente associato al tuo account [!DNL Salesforce]. |
 | `auth.params.password` | La password associata al tuo account [!DNL Salesforce]. |
 | `auth.params.securityToken` | Token di sicurezza associato al tuo account [!DNL Salesforce]. |
-| `connectionSpec.id` | Specifica di connessione `id` dell&#39;account [!DNL Salesforce] recuperato nel passaggio precedente. |
+| `connectionSpec.id` | ID delle specifiche di connessione [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **Risposta**
 
