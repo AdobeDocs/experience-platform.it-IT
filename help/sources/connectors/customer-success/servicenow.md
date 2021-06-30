@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine ServiceNow
 topic-legacy: overview
 description: Scopri come collegare ServiceNow a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Ser
 
 ## Connetti [!DNL ServiceNow] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente ServiceNow utilizzando l’API del servizio di flusso](../../tutorials/api/create/customer-success/servicenow.md)
-- [Esplorare un sistema di successo cliente tramite l’API del servizio di flusso](../../tutorials/api/explore/customer-success.md)
-- [Raccogliere dati da un sistema di successo cliente utilizzando l’API del servizio di flusso](../../tutorials/api/collect/customer-success.md)
+- [Creare una connessione di base ServiceNow utilizzando l’API del servizio di flusso](../../tutorials/api/create/customer-success/servicenow.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di successo del cliente utilizzando l’API del servizio di flusso](../../tutorials/api/explore/customer-success.md)
+- [Creare un flusso di dati per un’origine di successo del cliente utilizzando l’API del servizio di flusso](../../tutorials/api/collect/customer-success.md)
 
 ## Connetti [!DNL ServiceNow] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente ServiceNow nell&#39;interfaccia utente](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Configurare il flusso di dati per una connessione del cliente nell’interfaccia utente](../../tutorials/ui/dataflow/customer-success.md)
+- [Creazione di un flusso di dati per una connessione sorgente con successo cliente nell’interfaccia utente](../../tutorials/ui/dataflow/customer-success.md)
