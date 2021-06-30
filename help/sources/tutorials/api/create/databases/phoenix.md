@@ -1,20 +1,19 @@
 ---
 keywords: Experience Platform;casa;argomenti popolari;Phoenix;fenice
 solution: Experience Platform
-title: Creare una connessione Phoenix Source utilizzando l’API del servizio di flusso
+title: Creare una connessione Phoenix Base utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare un database Phoenix a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
 
-# Creare una connessione sorgente [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
@@ -45,43 +44,29 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL Phoenix], è necessario 
 | `port` | La porta TCP utilizzata dal server [!DNL Phoenix] per ascoltare le connessioni client. Se ti connetti a [!DNL Azure] HDInsights, specifica la porta come 443. |
 | `httpPath` | L&#39;URL parziale corrispondente al server [!DNL Phoenix] . Specificare /hbasephoenix0 se si utilizza il cluster [!DNL Azure] HDInsights. |
 | `enableSsl` | Un valore booleano. Specifica se le connessioni al server sono crittografate utilizzando SSL. |
-| `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Phoenix] è: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Phoenix] è: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
 Per ulteriori informazioni su come iniziare, consulta [questo documento Phoenix](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Phoenix] in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Phoenix] come parte dei parametri della richiesta.
 
 **Formato API**
 
-```http
+```https
 POST /connections
 ```
 
 **Richiesta**
 
-Per creare una connessione [!DNL Phoenix], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Phoenix] è `102706fb-a5cd-42ee-afe0-bc42f017ff43`.
+La seguente richiesta crea una connessione di base per [!DNL Phoenix]:
 
 ```shell
 curl -X POST \
