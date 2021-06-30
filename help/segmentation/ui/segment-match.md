@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Corrispondenza segmento;corrispondenza segmento
 solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1900'
 ht-degree: 1%
 
 ---
@@ -191,4 +191,4 @@ Leggendo questo documento, hai acquisito una conoscenza di [!DNL Segment Match],
 
 * [[!DNL Segmentation Service]](../home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile]panoramica](../../profile/home.md)
+* [[!DNL Real-time Customer Profile] panoramica](../../profile/home.md)
