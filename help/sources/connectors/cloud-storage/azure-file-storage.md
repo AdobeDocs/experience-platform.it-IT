@@ -5,9 +5,9 @@ title: Panoramica del connettore origine archiviazione file di Azure
 topic-legacy: overview
 description: Scopri come collegare Azure File Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Azu
 
 ### Utilizzo delle API
 
-- [Creare una connessione sorgente Azure File Storage utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Esplorare un sistema di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
-- [Raccogliere dati di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
+- [Creare una connessione di base Azure File Storage utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
+- [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
 - [Creare una connessione sorgente Azure File Storage nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
