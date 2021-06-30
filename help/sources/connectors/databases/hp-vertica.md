@@ -5,10 +5,9 @@ title: Panoramica del connettore sorgente HP Vertica
 topic-legacy: overview
 description: Scopri come collegare HP Vertica a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -32,10 +31,10 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL HP 
 ## Connetti [!DNL HP Vertica] a [!DNL Platform] utilizzando le API
 
 - [Creare una connessione sorgente HP Vertica utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/hp-vertica.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL HP Vertica] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente HP Vertica nell&#39;interfaccia utente](../../tutorials/ui/create/databases/hp-vertica.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
