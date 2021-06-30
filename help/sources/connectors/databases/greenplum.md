@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine di GreenPlum
 topic-legacy: overview
 description: Scopri come collegare GreenPlum a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Gre
 
 ## Connetti [!DNL GreenPlum] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente GreenPlum utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/greenplum.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base GreenPlum utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/greenplum.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL GreenPlum] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente GreenPlum nell&#39;interfaccia utente](../../tutorials/ui/create/databases/greenplum.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
