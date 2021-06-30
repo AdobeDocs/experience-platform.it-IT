@@ -1,22 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;archiviazione oggetti Oracle;archiviazione oggetti oracle
 solution: Experience Platform
-title: Creare una connessione ad Oracle dell’origine di archiviazione degli oggetti mediante l’API del servizio di flusso
+title: Creare una connessione di base di archiviazione degli oggetti di Oracle utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform ad Oracle Object Storage utilizzando l’API del servizio di flusso.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
 
-# Creare una connessione sorgente [!DNL Oracle Object Storage] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL Oracle Object Storage] utilizzando l&#39;API [!DNL Flow Service]
 
-Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per seguire i passaggi necessari per collegare Adobe Experience Platform a [!DNL Oracle Object Storage].
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
+
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Oracle Object Storage] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -38,32 +39,19 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL Oracle Object Storage], 
 | `secretKey` | Password [!DNL Oracle Object Storage] necessaria per l&#39;autenticazione. |
 | `bucketName` | Il nome del bucket consentito richiesto se l’utente ha accesso limitato. Il nome del bucket deve essere lungo tra i tre e i 63 caratteri, deve iniziare e terminare con una lettera o un numero e può contenere solo lettere minuscole, numeri o trattini (`-`). Impossibile formattare il nome del bucket come indirizzo IP. |
 | `folderPath` | Percorso della cartella consentito richiesto se l&#39;utente dispone di accesso limitato. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Oracle Object Storage] è: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 Per ulteriori informazioni su come ottenere questi valori, consulta la [Guida all&#39;autenticazione di Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Oracle Object Storage] in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Oracle Object Storage] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -73,7 +61,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione [!DNL Oracle Object Storage], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID delle specifiche di connessione per [!DNL Oracle Object Storage] è `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
+La seguente richiesta crea una connessione di base per [!DNL Oracle Object Storage]:
 
 ```shell
 curl -X POST \
