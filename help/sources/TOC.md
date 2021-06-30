@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 11%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 11%
    - Streaming {#streaming}
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
-   - Creare una connessione sorgente {#create}
+   - Creare una connessione di base {#create}
       - Pubblicità {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 11%
       - [Esplorare i dati di archiviazione cloud](tutorials/api/explore/cloud-storage.md)
       - [Esplorare i dati CRM](tutorials/api/explore/crm.md)
       - [Esplorare i dati di successo dei clienti](tutorials/api/explore/customer-success.md)
-      - [Esplora il database o i dati NoSQL](tutorials/api/explore/database-nosql.md)
+      - [Esplorare i dati del database](tutorials/api/explore/database-nosql.md)
       - [Esplorare i dati di eCommerce](tutorials/api/explore/ecommerce.md)
       - [Esplorare i dati di automazione del marketing](tutorials/api/explore/marketing-automation.md)
       - [Esplorare i dati di pagamento](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 11%
       - [Raccolta di dati di archiviazione cloud](tutorials/api/collect/cloud-storage.md)
       - [Raccogliere dati CRM](tutorials/api/collect/crm.md)
       - [Raccogliere dati di successo dei clienti](tutorials/api/collect/customer-success.md)
-      - [Raccolta di dati di database o NoSQL](tutorials/api/collect/database-nosql.md)
+      - [Raccogliere dati di database](tutorials/api/collect/database-nosql.md)
       - [Raccolta di dati eCommerce](tutorials/api/collect/ecommerce.md)
       - [Raccogliere dati di automazione del marketing](tutorials/api/collect/marketing-automation.md)
       - [Raccogliere dati di pagamento](tutorials/api/collect/payments.md)
