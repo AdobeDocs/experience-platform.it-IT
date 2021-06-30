@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;MariaDB;mariadb
 solution: Experience Platform
-title: Creare una connessione sorgente MariaDB utilizzando l’API del servizio di flusso
+title: Creare una connessione di base MariaDB utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a MariaDB utilizzando l’API del servizio di flusso.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
 
+# Creare una connessione di base [!DNL MariaDB] utilizzando l&#39;API [!DNL Flow Service]
 
-# Creare una connessione sorgente [!DNL MariaDB] utilizzando l&#39;API [!DNL Flow Service]
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
-
-Questa esercitazione utilizza l’ [!DNL Flow Service] API per seguire i passaggi necessari per la connessione di [!DNL Experience Platform] a [!DNL MariaDB].
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL MariaDB] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -36,43 +35,29 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL MariaDB], è necessario 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `connectionString` | Stringa di connessione associata all&#39;autenticazione [!DNL MariaDB]. Il pattern della stringa di connessione [!DNL MariaDB] è: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | ID utilizzato per generare una connessione. L&#39;ID delle specifiche di connessione fisse per [!DNL MariaDB] è `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL MariaDB] è `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Per ulteriori informazioni su come ottenere una stringa di connessione, vedere [questo documento MariaDB](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Per ulteriori informazioni su come ottenere una stringa di connessione, consulta questo [[!DNL MariaDB] documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL MariaDB] in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL MariaDB] come parte dei parametri della richiesta.
 
 **Formato API**
 
-```http
+```https
 POST /connections
 ```
 
 **Richiesta**
 
-Per creare una connessione [!DNL MariaDB], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID delle specifiche di connessione per [!DNL MariaDB] è `3000eb99-cd47-43f3-827c-43caf170f015`.
+La seguente richiesta crea una connessione di base per [!DNL MariaDB]:
 
 ```shell
 curl -X POST \
