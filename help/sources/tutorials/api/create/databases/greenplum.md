@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;greenplum;Greenplum
 solution: Experience Platform
-title: Creare una connessione sorgente GreenPlum utilizzando l’API del servizio di flusso
+title: Creare una connessione di base GreenPlum utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare GreenPlum a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '439'
 ht-degree: 2%
 
 ---
 
-# Creare una connessione sorgente [!DNL GreenPlum] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL GreenPlum] utilizzando l&#39;API [!DNL Flow Service]
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ [!DNL Flow Service] API per seguire i passaggi necessari per la connessione di [!DNL GreenPlum] a [!DNL Experience Platform].
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL GreenPlum] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -31,43 +31,29 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza [!DNL GreenPlum]. Il pattern della stringa di connessione per [!DNL GreenPlum] è `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | Identificatore necessario per creare una connessione. L&#39;ID delle specifiche di connessione fisse per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, vedere [questo documento GreenPlum](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessario un solo connettore per account [!DNL GreenPlum] in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL GreenPlum] come parte dei parametri della richiesta.
 
 **Formato API**
 
-```http
+```https
 POST /connections
 ```
 
 **Richiesta**
 
-Per creare una connessione [!DNL GreenPlum], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID delle specifiche di connessione per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+La seguente richiesta crea una connessione di base per [!DNL GreenPlum]:
 
 ```shell
 curl -X POST \
