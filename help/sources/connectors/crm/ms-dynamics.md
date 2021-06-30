@@ -5,10 +5,9 @@ title: Panoramica del connettore di origine Microsoft Dynamics
 topic-legacy: overview
 description: Scopri come collegare Microsoft Dynamics a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -31,11 +30,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Mic
 
 ## Connetti [!DNL Microsoft Dynamics] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente Microsoft Dynamics utilizzando l’API del servizio di flusso](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Esplorare un sistema CRM utilizzando l’API del servizio di flusso](../../tutorials/api/explore/crm.md)
-- [Raccogliere dati CRM utilizzando l’API del servizio di flusso](../../tutorials/api/collect/crm.md)
+- [Creare una connessione di base Microsoft Dynamics utilizzando l’API del servizio di flusso](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Esplorare la struttura dati e il contenuto di un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/explore/crm.md)
+- [Creare un flusso di dati per un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/collect/crm.md)
 
 ## Connetti [!DNL Microsoft Dynamics] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente Microsoft Dynamics nell’interfaccia utente](../../tutorials/ui/create/crm/dynamics.md)
-- [Configurare un flusso di dati per una connessione CRM nell’interfaccia utente](../../tutorials/ui/dataflow/crm.md)
+- [Creare un flusso di dati per una connessione CRM nell&#39;interfaccia utente](../../tutorials/ui/dataflow/crm.md)
