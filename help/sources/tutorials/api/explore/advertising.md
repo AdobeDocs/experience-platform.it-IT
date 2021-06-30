@@ -5,21 +5,24 @@ title: Esplorare un sistema pubblicitario utilizzando l’API del servizio di fl
 topic-legacy: overview
 description: Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate. Questa esercitazione utilizza l’API del servizio Flusso per esplorare i sistemi pubblicitari.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '506'
+ht-degree: 2%
 
 ---
 
 # Esplora un sistema pubblicitario utilizzando l’ API [!DNL Flow Service]
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Con la creazione di una connessione di base, è ora possibile utilizzare l&#39;ID di connessione di base univoco per navigare ed esplorare la struttura dati e il contenuto della sorgente. Questo ti consente di identificare gli elementi specifici, nonché i rispettivi tipi e formati di dati, prima di creare un flusso di dati e portarli in Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ API [!DNL Flow Service] per esplorare i sistemi pubblicitari.
+Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). per esplorare i sistemi pubblicitari.
 
 ## Introduzione
+
+>[!IMPORTANT]
+
+Questa esercitazione richiede l&#39;ID univoco della connessione di base per l&#39;origine pubblicitaria. Se non disponi di questo ID, consulta l’esercitazione su [come collegare un’origine pubblicitaria a Platform](../../api/create/advertising/ads.md) .
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
@@ -28,29 +31,9 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un sistema pubblicitario utilizzando l’ [!DNL Flow Service] API.
 
-### Raccogli credenziali richieste
+### Utilizzo delle API di Platform
 
-Questa esercitazione richiede una connessione valida con l’applicazione pubblicitaria di terze parti da cui desideri acquisire i dati. Una connessione valida include l&#39;ID delle specifiche di connessione dell&#39;applicazione e l&#39;ID di connessione. Ulteriori informazioni sulla creazione di una connessione pubblicitaria e sul recupero di tali valori sono disponibili nell’ esercitazione [collegare un’origine pubblicitaria a Platform](../../api/create/advertising/ads.md) .
-
-### Lettura di chiamate API di esempio
-
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
-
-### Raccogli i valori delle intestazioni richieste
-
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../landing/api-guide.md) .
 
 ## Esplorare le tabelle di dati
 
