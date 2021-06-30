@@ -5,9 +5,9 @@ title: Panoramica del connettore sorgente HubSpot
 topic-legacy: overview
 description: Scopri come collegare HubSpot a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Hub
 
 ## Connetti [!DNL HubSpot] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente HubSpot utilizzando l’API del servizio di flusso](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Esplorare un sistema di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/explore/marketing-automation.md)
-- [Raccogliere dati di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/collect/marketing-automation.md)
+- [Creare una connessione base HubSpot utilizzando l’API del servizio di flusso](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/explore/marketing-automation.md)
+- [Creare un flusso di dati per un’origine di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connetti [!DNL HubSpot] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente HubSpot nell’interfaccia utente](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Configurare un flusso di dati per una connessione di automazione marketing nell’interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Creare un flusso di dati per una connessione sorgente di automazione marketing nell’interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md)
