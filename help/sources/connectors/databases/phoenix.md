@@ -5,10 +5,9 @@ title: Panoramica del connettore di origine Phoenix
 topic-legacy: overview
 description: Scopri come collegare Phoenix a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Pho
 
 ## Connetti [!DNL Phoenix] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente Phoenix utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/phoenix.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base Phoenix utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/phoenix.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL Phoenix] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente Phoenix nell’interfaccia utente](../../tutorials/ui/create/databases/phoenix.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
