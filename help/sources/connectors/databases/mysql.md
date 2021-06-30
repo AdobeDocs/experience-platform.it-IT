@@ -5,10 +5,9 @@ title: Panoramica del connettore di origine MySQL
 topic-legacy: overview
 description: Scopri come collegare MySQL a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -27,11 +26,11 @@ La documentazione seguente fornisce informazioni su come collegare MySQL a [!DNL
 
 ## Collegare MySQL a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente MySQL utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/mysql.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base MySQL utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/mysql.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Collegare MySQL a [!DNL Platform] utilizzando l&#39;interfaccia utente
 
 - [Creare una connessione sorgente MySQL nell&#39;interfaccia utente](../../tutorials/ui/create/databases/mysql.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
