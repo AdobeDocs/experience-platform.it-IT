@@ -5,10 +5,9 @@ title: Panoramica di Apache Hive su Azure HDInsights Source Connector
 topic-legacy: overview
 description: Scopri come collegare Apache Hive su Azure HDInsights a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Apa
 
 ## Connetti [!DNL Apache Hive] su [!DNL Azure HDInsights] a [!DNL Platform] utilizzando le API
 
-- [Creare un hive Apache sulla connessione sorgente Azure HDInsights utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/hive.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare un hive Apache sulla connessione di base Azure HDInsights utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/hive.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL Apache Hive] su [!DNL Azure HDInsights] a [!DNL Platform] utilizzando l&#39;interfaccia utente
 
 - [Creare un hive Apache sulla connessione sorgente Azure HDInsights nell’interfaccia utente](../../tutorials/ui/create/databases/hive.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
