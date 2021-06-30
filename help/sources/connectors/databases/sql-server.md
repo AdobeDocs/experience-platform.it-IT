@@ -5,10 +5,9 @@ title: Panoramica del connettore di origine SQL Server
 topic-legacy: overview
 description: Scopri come collegare Microsoft SQL Server a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ La documentazione seguente fornisce informazioni su come collegare [!DNL Microso
 
 ## Collegare [!DNL Microsoft] SQL Server a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione di origine Microsoft SQL Server utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/sql-server.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base di Microsoft SQL Server utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/sql-server.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Collegare [!DNL Microsoft] SQL Server a [!DNL Platform] utilizzando l&#39;interfaccia utente
 
 - [Creare una connessione di origine Microsoft SQL Server nell&#39;interfaccia utente](../../tutorials/ui/create/databases/sql-server.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
