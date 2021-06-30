@@ -5,10 +5,9 @@ title: Panoramica del connettore di origine di Azure Data Explorer
 topic-legacy: overview
 description: Scopri come collegare Azure Data Explorer a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -35,11 +34,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Azu
 
 ## Connetti [!DNL Azure Data Explorer] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente di Data Explorer di Azure utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/data-explorer.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base alla Data Explorer di Azure utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/data-explorer.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL Azure Data Explorer] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente di Data Explorer Azure nell’interfaccia utente](../../tutorials/ui/create/databases/data-explorer.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
