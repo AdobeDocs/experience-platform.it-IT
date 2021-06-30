@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;hubspot;Hubspot
 solution: Experience Platform
-title: Creare una connessione sorgente HubSpot utilizzando l’API del servizio di flusso
+title: Creare una connessione di base HubSpot utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a HubSpot utilizzando l’API del servizio di flusso.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 143f3b4a113c6f36cb1bb0c3624c8503f158a16d
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
 
-# Creare una connessione sorgente [!DNL HubSpot] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL HubSpot] utilizzando l&#39;API [!DNL Flow Service]
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ [!DNL Flow Service] API per seguire i passaggi necessari per la connessione di [!DNL Experience Platform] a [!DNL HubSpot].
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL HubSpot] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -38,33 +38,19 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL HubSpot], è necessario 
 | `clientSecret` | Il segreto client associato all&#39;applicazione [!DNL HubSpot]. |
 | `accessToken` | Token di accesso ottenuto all’autenticazione iniziale dell’integrazione OAuth. |
 | `refreshToken` | Il token di aggiornamento ottenuto all’autenticazione iniziale dell’integrazione OAuth. |
-| `connectionSpec` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL HubSpot] è: `cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL HubSpot] è: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 Per ulteriori informazioni su come iniziare, consulta questo [documento HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL HubSpot] in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL HubSpot] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione [!DNL HubSpot], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL HubSpot] è `cc6a4487-9e91-433e-a3a3-9cf6626c1806`.
+La seguente richiesta crea una connessione di base per [!DNL HubSpot]:
 
 ```shell
 curl -X POST \
@@ -85,8 +71,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "connection for hubspot",
-        "description": "connection for hubspot",
+        "name": "connection for HubSpot",
+        "description": "connection for HubSpot",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -109,6 +95,7 @@ curl -X POST \
 | `auth.params.clientSecret` | Il segreto client associato all&#39;applicazione [!DNL HubSpot]. |
 | `auth.params.accessToken` | Token di accesso ottenuto all’autenticazione iniziale dell’integrazione OAuth. |
 | `auth.params.refreshToken` | Il token di aggiornamento ottenuto all’autenticazione iniziale dell’integrazione OAuth. |
+| `connectionSpec.id` | ID delle specifiche di connessione [!DNL HubSpot]: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Risposta**
 
