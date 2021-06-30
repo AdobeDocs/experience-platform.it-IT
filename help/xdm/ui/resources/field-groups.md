@@ -3,11 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
-topic: Guida utente
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+topic-legacy: user guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -31,11 +30,11 @@ Sebbene non sia richiesto per questa guida, si consiglia anche di seguire l&#39;
 
 Per creare un nuovo gruppo di campi, è innanzitutto necessario selezionare uno schema a cui aggiungere il gruppo di campi. È possibile scegliere di [creare un nuovo schema](./schemas.md#create) o [selezionare uno schema esistente da modificare](./schemas.md#edit).
 
-Una volta aperto lo schema in [!DNL Schema Editor], seleziona **[!UICONTROL Add]** accanto alla sezione [!UICONTROL Field groups] nella barra a sinistra.
+Una volta aperto lo schema in [!DNL Schema Editor], seleziona **[!UICONTROL Aggiungi]** accanto alla sezione [!UICONTROL Gruppi di campi] nella barra a sinistra.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Viene visualizzata una finestra di dialogo che mostra un elenco dei gruppi di campi esistenti per l’organizzazione. Nella parte superiore della finestra di dialogo, seleziona **[!UICONTROL Create new field group]**. Qui puoi fornire un **[!UICONTROL Display name]** e **[!UICONTROL Description]** per il gruppo di campi. Al termine, seleziona **[!UICONTROL Add field group]**.
+Viene visualizzata una finestra di dialogo che mostra un elenco dei gruppi di campi esistenti per l’organizzazione. Nella parte superiore della finestra di dialogo, seleziona **[!UICONTROL Crea nuovo gruppo di campi]**. Qui puoi fornire un **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, seleziona **[!UICONTROL Aggiungi gruppo di campi]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -59,9 +58,9 @@ Per aggiungere campi a un gruppo di campi in [!DNL Schema Editor], inizia selezi
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Nell’area di lavoro viene visualizzato un **[!UICONTROL New field]** e la barra a destra viene aggiornata per mostrare i controlli necessari per configurare le proprietà del campo. Per passaggi specifici su come configurare e aggiungere il campo al gruppo di campi, consulta la guida [Definizione dei campi nell’interfaccia utente](../fields/overview.md#define) .
+Un **[!UICONTROL Nuovo campo]** viene visualizzato nell&#39;area di lavoro e la barra a destra viene aggiornata per mostrare i controlli per configurare le proprietà del campo. Per passaggi specifici su come configurare e aggiungere il campo al gruppo di campi, consulta la guida [Definizione dei campi nell’interfaccia utente](../fields/overview.md#define) .
 
-Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, seleziona **[!UICONTROL Save]** per salvare sia lo schema che il gruppo di campi.
+Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, selezionare **[!UICONTROL Salva]** per salvare sia lo schema che il gruppo di campi.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -69,6 +68,6 @@ Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena 
 
 ## Passaggi successivi
 
-Questa guida illustra come creare e modificare gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], consulta la [[!UICONTROL Schemas] panoramica dell&#39;area di lavoro](../overview.md).
+Questa guida illustra come creare e modificare gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
 
 Per informazioni su come gestire i gruppi di campi utilizzando l&#39;API [!DNL Schema Registry], consulta la [guida all&#39;endpoint dei gruppi di campi](../../api/field-groups.md).
