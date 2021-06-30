@@ -5,10 +5,9 @@ title: Panoramica del connettore sorgente Couchbase
 topic-legacy: overview
 description: Scopri come collegare Couchbase a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -29,11 +28,11 @@ La documentazione seguente fornisce informazioni su come connettersi a [!DNL Cou
 
 ## Connetti [!DNL Couchbase] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione sorgente Couchbase utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/couchbase.md)
-- [Esplorare un sistema di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
-- [Raccogliere dati da un database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+- [Creare una connessione di base Couchbase utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/couchbase.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL Couchbase] a [!DNL Platform] utilizzando l’interfaccia utente
 
 - [Creare una connessione sorgente Couchbase nell’interfaccia utente](../../tutorials/ui/create/databases/couchbase.md)
-- [Configurare un flusso di dati per una connessione al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)
