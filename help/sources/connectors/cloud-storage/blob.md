@@ -5,10 +5,9 @@ title: Panoramica del connettore sorgente BLOB di Azure
 topic-legacy: overview
 description: Scopri come collegare Azure Blob a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -44,11 +43,11 @@ La documentazione seguente fornisce informazioni su come collegare Azure Blob a 
 
 ### Utilizzo delle API
 
-- [Creare una connessione sorgente Azure Blob utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/blob.md)
-- [Esplorare un sistema di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
-- [Raccogliere dati di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
+- [Creare una connessione di base BLOB di Azure utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/blob.md)
+- [Esplorare la struttura dati e il contenuto di un’origine di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
+- [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
 - [Creare una connessione sorgente Azure Blob nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configurare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
