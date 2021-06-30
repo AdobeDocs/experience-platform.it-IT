@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Oracle;oracle
 solution: Experience Platform
-title: Creare una connessione sorgente di Oracle utilizzando l’API del servizio di flusso
+title: Creare una connessione di base di Oracle utilizzando l’API del servizio di flusso
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Oracle ad Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
 
-# Creare una connessione sorgente [!DNL Oracle] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di base [!DNL Oracle] utilizzando l&#39;API [!DNL Flow Service]
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ [!DNL Flow Service] API per seguire i passaggi necessari per la connessione di [!DNL Oracle] a [!DNL Experience Platform].
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Oracle] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
@@ -32,43 +31,29 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `connectionString` | Stringa di connessione utilizzata per la connessione a [!DNL Oracle]. Il pattern della stringa di connessione [!DNL Oracle] è: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Oracle] è `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Oracle] è `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento di Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Per ulteriori informazioni su come iniziare, consulta questo [[!DNL Oracle] documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
-### Lettura di chiamate API di esempio
+### Utilizzo delle API di Platform
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
 
-### Raccogli i valori delle intestazioni richieste
+## Creare una connessione di base
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Creare una connessione
-
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessario un solo connettore per account [!DNL Oracle] in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
+Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Oracle] come parte dei parametri della richiesta.
 
 **Formato API**
 
-```http
+```https
 POST /connections
 ```
 
 **Richiesta**
 
-Per creare una connessione [!DNL Oracle], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Oracle] è `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
+La seguente richiesta crea una connessione di base per [!DNL Oracle]:
 
 ```shell
 curl -X POST \
