@@ -5,15 +5,14 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service]panoramica
+# [!DNL Segmentation Service] panoramica
 
 Adobe Experience Platform [!DNL Segmentation Service] fornisce un’interfaccia utente e RESTful API che consente di creare segmenti e generare tipi di pubblico dai dati [!DNL Real-time Customer Profile]. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione di Adobe.
 
@@ -44,6 +43,8 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l&#39;AP
 >[!NOTE]
 >
 >Nel caso in cui uno schema venga esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi appena aggiunti. Per ulteriori informazioni sulla personalizzazione di [!DNL Experience Data Model] (XDM), visita il tutorial [Editor di schema](../xdm/tutorials/create-schema-ui.md).
+>
+>Inoltre, se il valore TTL (time-to-live) è abilitato nel set di dati, ciò potrebbe influenzare l’appartenenza del segmento creato. Per ulteriori informazioni sul TTL e su come può influenzare la segmentazione, consulta la [Guida TTL del servizio profilo](../profile/apply-ttl.md).
 
 ## Valutare i segmenti
 
@@ -145,7 +146,7 @@ A causa delle diverse combinazioni di segmenti che inevitabilmente si presentano
 
 Assegnando una variabile all&#39;attributo dello stato di acquisto, il segmento dinamico semplifica la &quot;ricerca di un acquisto in cui lo stato di tale acquisto non è uguale allo stato di origine del cliente&quot;. In questo modo puoi consolidare 50 segmenti statici in un unico segmento dinamico.
 
-## Segmentazione multi-entità {#multi-entity}
+## Segmentazione su più entità {#multi-entity}
 
 Con la funzione avanzata di segmentazione multi-entità, puoi estendere i dati [!DNL Real-time Customer Profile] con dati aggiuntivi basati su prodotti, store o altre entità non personali, note anche come entità &quot;dimensione&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento come se fossero nativi nell’ archivio dati [!DNL Profile]. La segmentazione su più entità offre flessibilità nell’identificazione dei tipi di pubblico in base ai dati pertinenti alle tue esigenze aziendali specifiche. Per ulteriori informazioni, inclusi casi d&#39;uso e flussi di lavoro, consulta la [guida alla segmentazione su più entità](multi-entity-segmentation.md).
 
