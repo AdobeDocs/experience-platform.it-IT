@@ -6,10 +6,9 @@ description: Questo documento tratta la creazione di destinazioni di streaming u
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2024'
 ht-degree: 1%
 
 ---
@@ -49,7 +48,7 @@ Per completare i passaggi descritti in questa esercitazione, devi disporre delle
 
 Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-### Raccogli i valori delle intestazioni obbligatorie e facoltative {#gather-values}
+### Raccogli i valori delle intestazioni richieste e facoltative {#gather-values}
 
 Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
@@ -59,7 +58,7 @@ Per effettuare chiamate alle API di Platform, devi prima completare l’ [eserci
 
 Le risorse in Experience Platform possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui avrà luogo l’operazione. Si tratta di parametri facoltativi.
 
-* nome x-sandbox: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -117,7 +116,7 @@ Una risposta corretta contiene un elenco delle destinazioni disponibili e dei re
 }
 ```
 
-## Connettiti ai dati del tuo Experience Platform {#connect-to-your-experience-platform-data}
+## Connettersi ai dati di Experience Platform {#connect-to-your-experience-platform-data}
 
 ![Passaggio 2: panoramica dei passaggi di destinazione](../assets/api/streaming-destination/step2.png)
 
@@ -155,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per Unified Profile Service -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per il servizio profili -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
@@ -167,7 +166,7 @@ Una risposta corretta contiene l&#39;identificatore univoco della connessione di
 }
 ```
 
-### Connettiti ai dati del tuo Experience Platform {#connect-to-platform-data}
+### Connettersi ai dati di Experience Platform {#connect-to-platform-data}
 
 **Formato API**
 
@@ -185,7 +184,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -200,11 +199,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilizza l&#39;ID ottenuto nel passaggio precedente.
-* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per Unified Profile Service -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per il servizio profili -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
-Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione di origine al servizio Unified Profile. Conferma che la connessione ai dati di Experience Platform è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
+Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione sorgente al servizio profilo appena creata. Conferma che la connessione ai dati di Experience Platform è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
 
 ```json
 {
@@ -470,7 +469,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilizza il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizza il tag ottenuto nel passaggio precedente.
-* `{SEGMENT_ID}`: Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID del segmento per i segmenti che si desidera attivare, vai su **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleziona **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cerca l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}`: Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID dei segmenti per i segmenti che si desidera attivare, vai su **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleziona **[!UICONTROL API Servizio di segmentazione]** nel menu di navigazione a sinistra e cerca l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Definizioni dei segmenti]**.
 * `{PROFILE_ATTRIBUTE}`: Ad esempio,  `personalEmail.address` o  `person.lastName`
 
 **Risposta**
@@ -594,7 +593,7 @@ La risposta restituita deve includere nel parametro `transformations` i segmenti
 }
 ```
 
-## Utilizzo di raccolte Postman per connettersi alle destinazioni in streaming {#collections}
+## Utilizzo delle raccolte Postman per connettersi alle destinazioni in streaming  {#collections}
 
 Per collegarti alle destinazioni di streaming descritte in questa esercitazione in modo più semplice, puoi utilizzare [[!DNL Postman]](https://www.postman.com/).
 
