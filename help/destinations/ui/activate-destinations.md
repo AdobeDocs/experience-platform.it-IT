@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
+source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
 workflow-type: tm+mt
-source-wordcount: '2808'
+source-wordcount: '2806'
 ht-degree: 0%
 
 ---
@@ -147,8 +147,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
 
    >[!IMPORTANT]
    >
-   >L’opzione per esportare i file in un determinato momento è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.
-   ><br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill necessari.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, ti consigliamo di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >L&#39;opzione per esportare i file in un determinato momento è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.<br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
@@ -175,7 +174,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
    >[!IMPORTANT]
    >
-   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti. <br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill necessari.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, ti consigliamo di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti. <br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
