@@ -3,9 +3,9 @@ title: Tracciare gli eventi utilizzando l’SDK per web di Adobe Experience Plat
 description: Scopri come tenere traccia degli eventi dell’SDK Web per Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentSloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Per inviare i dati dell’evento a Adobe Experience Cloud, utilizza il comando `
 I dati inviati a Adobe Experience Cloud rientrano in due categorie:
 
 * Dati XDM
-* Dati non XDM (attualmente non supportati)
+* Dati non XDM
 
 ## Invio di dati XDM
 
@@ -75,7 +75,7 @@ In questo esempio, il livello dati viene clonato serializzandolo in JSON e quind
 >Esiste un limite di 32 KB per i dati che possono essere inviati in ogni evento nel campo XDM.
 
 
-### Invio di dati non XDM
+## Invio di dati non XDM
 
 I dati che non corrispondono a uno schema XDM devono essere inviati utilizzando l&#39;opzione `data` del comando `sendEvent`. Questa funzione è supportata nelle versioni 2.5.0 e successive dell’SDK per web.
 
@@ -85,7 +85,7 @@ In futuro, potrai inviare il livello dati completo sotto l’ opzione `data` e m
 
 **Come inviare gli attributi Profilo e Recommendations ad Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
