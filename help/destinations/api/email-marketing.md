@@ -6,10 +6,9 @@ description: Questo documento tratta la creazione di destinazioni di marketing e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1704'
 ht-degree: 1%
 
 ---
@@ -55,7 +54,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Le risorse in [!DNL Experience Platform] possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API [!DNL Platform] , puoi specificare il nome e l’ID della sandbox in cui avrà luogo l’operazione. Si tratta di parametri facoltativi.
 
-* nome x-sandbox: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -69,7 +68,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 In Swagger puoi trovare la documentazione di riferimento associata per tutte le chiamate API in questa esercitazione. Consulta la [documentazione API del servizio di flusso su Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
-## Ottieni l&#39;elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
+## Ottieni l’elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
 
 ![Passaggio 1: panoramica dei passaggi di destinazione](../assets/api/email-marketing/step1.png)
 
@@ -121,7 +120,7 @@ Una risposta corretta contiene un elenco delle destinazioni disponibili e dei re
 }
 ```
 
-## Connettiti ai dati [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
+## Connettiti ai tuoi dati [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
 
 ![Passaggio 2: panoramica dei passaggi di destinazione](../assets/api/email-marketing/step2.png)
 
@@ -183,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per Unified Profile Service -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizza l’ID delle specifiche di connessione per il servizio profili -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
@@ -195,7 +194,7 @@ Una risposta corretta contiene l&#39;identificatore univoco della connessione di
 }
 ```
 
-### Connettiti ai dati [!DNL Experience Platform] {#connect-to-platform-data}
+### Connettiti ai tuoi dati [!DNL Experience Platform] {#connect-to-platform-data}
 
 **Formato API**
 
@@ -217,7 +216,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-  "name": "Connecting to Unified Profile Service",
+  "name": "Connecting to Profile Service",
   "description": "Optional",
   "baseConnectionId": "{BASE_CONNECTION_ID}",
   "connectionSpec": {
@@ -241,7 +240,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -257,11 +256,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilizza l&#39;ID ottenuto nel passaggio precedente.
-* `{CONNECTION_SPEC_ID}`: Utilizza l&#39;ID delle specifiche di connessione per  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizza l&#39;ID delle specifiche di connessione per  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) per la nuova connessione di origine a [!DNL Unified Profile Service]. Questo conferma che la connessione ai dati [!DNL Experience Platform] è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
+Una risposta corretta restituisce l&#39;identificatore univoco (`id`) per la nuova connessione di origine a [!DNL Profile Service]. Questo conferma che la connessione ai dati [!DNL Experience Platform] è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
 
 ```json
 {
@@ -270,7 +269,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) per la nuo
 ```
 
 
-## Connessione alla destinazione di marketing e-mail {#connect-to-email-marketing-destination}
+## Connessione a una destinazione di e-mail marketing {#connect-to-email-marketing-destination}
 
 ![Passaggi di destinazione: passaggio 3](../assets/api/email-marketing/step3.png)
 
@@ -593,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilizza il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizza il tag ottenuto nel passaggio precedente.
-* `{SEGMENT_ID}`: Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID del segmento per i segmenti che si desidera attivare, vai su **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleziona **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cerca l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Segment Definitions]**.
+* `{SEGMENT_ID}`: Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID dei segmenti per i segmenti che si desidera attivare, vai su **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleziona **[!UICONTROL API Servizio di segmentazione]** nel menu di navigazione a sinistra e cerca l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Definizioni dei segmenti]**.
 * `{PROFILE_ATTRIBUTE}`: Esempio, `"person.lastName"`
 
 **Risposta**
