@@ -4,9 +4,9 @@ description: Scopri come mappare manualmente le variabili in Adobe Analytics uti
 seo-description: Mappare manualmente le variabili in Adobe Analytics utilizzando le regole di elaborazione con SDK per web
 keywords: adobe analytics;analytics;variabili;variabili di mappatura;variabili di mappatura;dati contestuali;dati contestuali;regole di elaborazione;regole;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Inoltre, puoi utilizzare un set predefinito di azioni ed elenchi di prodotti per
 
 ## Dati contestuali
 
-I dati XDM vengono appiattiti utilizzando la notazione del punto e resi disponibili come `contextData`. [!DNL Analytics] Il seguente elenco di coppie di valori mostra un esempio di `context data`:
+I dati XDM vengono appiattiti utilizzando la notazione del punto e resi disponibili come `contextData`. [!DNL Analytics] Il seguente elenco di coppie di valori mostra un esempio di come si presenta `context data` quando viene appiattito:
 
 ```json
 {
