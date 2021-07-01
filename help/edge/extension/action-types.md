@@ -4,9 +4,9 @@ description: Scopri i diversi tipi di azioni forniti dall’estensione Adobe Exp
 solution: Experience Platform
 feature: SDK per web
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
+source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '595'
 ht-degree: 4%
 
 ---
@@ -24,6 +24,7 @@ Invia un evento ad Adobe [!DNL Experience Platform] in modo che Adobe Experience
 Ci sono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere utili anche a seconda dell&#39;implementazione. Tieni presente che questi campi sono tutti facoltativi.
 
 - **Tipo:** questo campo consente di specificare un tipo di evento che verrà registrato nello schema XDM. Per ulteriori informazioni sui tipi di evento predefiniti, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
+- **Dati:** i dati che non corrispondono a uno schema XDM possono essere inviati utilizzando questo campo. Questo campo è utile se cerchi di aggiornare un profilo Adobe Target o di inviare attributi Recommendations di Target. Per esempi, consulta la nostra [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
 - **ID unione:** se desideri specificare un  [ID unione ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) per l’evento, puoi farlo in questo campo. Tieni presente che le soluzioni a valle non sono in grado di unire i dati dell’evento in questo momento.
 - **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nel tuo datastream, puoi specificarlo qui.
 - **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la casella di controllo  **[!UICONTROL Documento]** che verrà scaricata. Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
