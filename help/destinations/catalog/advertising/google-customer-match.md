@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,11 @@ Alcune destinazioni in Experience Platform hanno determinate regole e obblighi p
 
 **Esportazione segmento** : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati nella  [!DNL Google Customer Match] destinazione.
 
-## [!DNL Google Customer Match] prerequisiti dell’account  {#google-account-prerequisites}
+## [!DNL Google Customer Match] prerequisiti dell’account {#google-account-prerequisites}
 
 Prima di configurare una destinazione [!DNL Google Customer Match] in Experience Platform, assicurati di leggere e rispettare i criteri di Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto di Google](https://support.google.com/google-ads/answer/6299717).
+
+Quindi, assicurati che il tuo account [!DNL Google] sia configurato per un [!DNL Standard] o per un livello di accesso superiore. Per ulteriori informazioni, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ### Elenco consentiti {#allowlist}
 
@@ -159,12 +161,12 @@ Nel passaggio **[!UICONTROL Pianificazione segmenti]** , devi fornire l’ [!UIC
 
 Per informazioni su come trovare il [!DNL App ID], consulta la [documentazione ufficiale di Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
-## Verifica che l&#39;attivazione del segmento sia avvenuta correttamente {#verify-activation}
+## Verifica che l’attivazione del segmento sia avvenuta correttamente {#verify-activation}
 
 Dopo aver completato il flusso di attivazione, passa al tuo account **[!UICONTROL Google Ads]**. I segmenti attivati vengono visualizzati nel tuo account Google come elenchi di clienti. Tieni presente che a seconda della dimensione del segmento, alcuni tipi di pubblico non vengono compilati a meno che non vi siano più di 100 utenti attivi da servire.
 
 Quando mappi un segmento con gli ID mobili [!DNL IDFA] e [!DNL GAID] , [!DNL Google Customer Match] crea un segmento separato per ogni mappatura ID. L&#39;account [!DNL Google Ads] mostra due segmenti diversi, uno per [!DNL IDFA] e uno per la mappatura [!DNL GAID].
 
-## Risorse extra {#additional-resources}
+## Risorse aggiuntive {#additional-resources}
 
 * [Integrare Google Customer Match - Esercitazione video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
