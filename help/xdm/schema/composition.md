@@ -5,7 +5,7 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 0%
@@ -32,18 +32,18 @@ La standardizzazione è un concetto chiave alla base di [!DNL Experience Platfor
 
 L&#39;infrastruttura su cui è generato [!DNL Experience Platform], nota come [!DNL XDM System], agevola i flussi di lavoro basati su schema e include i pattern di consumo del servizio [!DNL Schema Registry], [!DNL Schema Editor], i metadati dello schema e i modelli di consumo del servizio. Per ulteriori informazioni, consulta la [Panoramica del sistema XDM](../home.md) .
 
-L’utilizzo degli schemi in [!DNL Experience Platform] presenta diversi vantaggi principali. In primo luogo, gli schemi consentono una migliore governance dei dati e una minimizzazione dei dati, che è particolarmente importante con le normative sulla privacy. In secondo luogo, la creazione di schemi con componenti standard di Adobe consente di ottenere informazioni predefinite e l’utilizzo di servizi AI/ML con personalizzazioni minime. Infine, gli schemi forniscono un’infrastruttura per la condivisione dei dati insights e un’orchestrazione efficiente.
+There are several key benefits to leveraging schemas in [!DNL Experience Platform]. First, schemas allow for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe&#39;s standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Infine, gli schemi forniscono un’infrastruttura per la condivisione dei dati insights e un’orchestrazione efficiente.
 
 ## Pianificazione dello schema
 
 Il primo passaggio nella creazione di uno schema consiste nel determinare il concetto, o oggetto reale, che si sta tentando di acquisire all&#39;interno dello schema. Una volta identificato il concetto che si sta tentando di descrivere, è possibile iniziare a pianificare lo schema pensando a elementi quali il tipo di dati, i campi di identità potenziali e l&#39;evoluzione dello schema in futuro.
 
-### Comportamenti dei dati in [!DNL Experience Platform]
+### Data behaviors in [!DNL Experience Platform]
 
 I dati destinati a essere utilizzati in [!DNL Experience Platform] sono raggruppati in due tipi di comportamento:
 
 * **Dati** record: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **Dati** delle serie temporali: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
+* **Time series data**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
 Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema quando viene creato per la prima volta. Le classi XDM sono descritte più avanti in questo documento.
 
@@ -131,7 +131,7 @@ Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima u
 
 [!DNL Experience Platform] utilizza un approccio di composizione in cui i blocchi predefiniti standard vengono combinati per creare schemi. Questo approccio promuove la riutilizzabilità dei componenti esistenti e favorisce la standardizzazione in tutto il settore per supportare schemi e componenti dei fornitori in [!DNL Platform].
 
-Gli schemi sono composti con la seguente formula:
+Schemas are composed using the following formula:
 
 **Classe + Schema Field Group&amp;ast; = Schema XDM**
 
@@ -139,9 +139,9 @@ Gli schemi sono composti con la seguente formula:
 
 ### Classe {#class}
 
-La composizione di uno schema inizia con l’assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
+La composizione di uno schema inizia con l’assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-La classe di uno schema determina quali gruppi di campi saranno idonei per essere utilizzati in tale schema. Questo è discusso più dettagliatamente nella [sezione successiva](#field-group).
+A schema&#39;s class determines which field groups will be eligible for use in that schema. This is discussed in more detail in the [next section](#field-group).
 
 Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi della piattaforma a valle. Inoltre, puoi creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate sono definite da un&#39;organizzazione quando non sono disponibili classi principali definite da Adobi per descrivere un caso d&#39;uso univoco.
 
@@ -167,7 +167,7 @@ La schermata seguente illustra come i gruppi di campi sono rappresentati nell’
 
 ![](../images/schema-composition/field-group.png)
 
-Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, consulta l&#39; [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/mixins). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
+Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, consulta l&#39; [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/fieldgroups). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
 ### Tipo di dati {#data-type}
 
