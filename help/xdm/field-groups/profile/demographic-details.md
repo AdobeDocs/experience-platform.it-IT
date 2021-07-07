@@ -3,17 +3,17 @@ keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo 
 solution: Experience Platform
 title: Gruppo campi schema dettagli demografici
 topic-legacy: overview
-description: Questo documento fornisce una panoramica del gruppo di campi schema Dettagli demografici.
+description: This document provides an overview of the Demographic Details schema field group.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Gruppo di campi ] Detailsschema demografico
+# [!UICONTROL Demographic Details] schema field group
 
 >[!NOTE]
 >
@@ -23,12 +23,12 @@ ht-degree: 3%
 
 ![](../../images/field-groups/demographic-details.png)
 
-| Proprietà | Tipo di dati | Descrizione |
+| Proprietà | Data type | Descrizione |
 | --- | --- | --- |
 | `person.name` | [Nome della persona](../../data-types/person-name.md) | Un oggetto i cui sottocampi descrivono vari elementi del nome di una persona. |
 | `person.birthDate` | Data | La data completa in cui è nata una persona, sotto forma di marca temporale ISO 8601. |
-| `person.birthDayAndMonth` | Stringa | Il giorno e il mese in cui è nata una persona, nel formato MM-DD. Questo campo deve essere utilizzato quando è noto il giorno e il mese della nascita di una persona, ma non l&#39;anno. |
-| `person.birthYear` | Intero | L&#39;anno in cui è nata una persona, compreso il secolo (come il 1989). Questo campo deve essere utilizzato quando si conosce solo l&#39;età della persona, non la data di nascita completa. |
+| `person.birthDayAndMonth` | Stringa | The day and month a person was born, in the format MM-DD. This field should be used when the day and month of a person&#39;s birth is known, but not the year. |
+| `person.birthYear` | Intero | The year a person was born, including the century (such as 1989). Questo campo deve essere utilizzato quando si conosce solo l&#39;età della persona, non la data di nascita completa. |
 | `person.gender` | Stringa | L&#39;identità di genere della persona. |
 | `person.martialStatus` | Stringa | Descrive il rapporto di una persona con un altro significativo. |
 | `person.nationality` | Stringa | Il rapporto giuridico tra una persona e il suo stato rappresentato utilizzando il codice Alpha-2 ISO 3166-1. |
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
-Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
+For more details on the field group, refer to the public XDM repository:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)
