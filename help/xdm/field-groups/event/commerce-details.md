@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;progettazione schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
-title: Gruppo campi schema dettagli commercio
+title: Commerce Details Schema Field Group
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli commercio.
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 3%
@@ -31,5 +31,5 @@ ht-degree: 3%
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.schema.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.schema.json)
