@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmenti;appartenenza segmento;appartenenza segmento;struttura schema;mappa;mappa;
 solution: Experience Platform
-title: Gruppo di campi schema Dettagli appartenenza segmento
+title: Segment Membership Details Schema Field Group
 topic-legacy: overview
-description: Questo documento fornisce una panoramica del gruppo di campi di schema Dettagli appartenenza segmento.
+description: This document provides an overview of the Segment Membership Details schema field group.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Segment Membership ] Dettagli del gruppo di campi dello schema
+# [!UICONTROL Segment Membership Details] schema field group
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>The names of several schema field groups have changed. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
 
 [!UICONTROL Iscrizione al segmento ] Consente di specificare un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che acquisisce informazioni relative all’appartenenza al segmento, compresi i segmenti a cui appartiene l’individuo, l’ultima volta di qualificazione e quando l’iscrizione è valida fino a quando.
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Le appartenenze ai segmenti sono ordinate per namespace, come indicato dalle chiavi a livello principale dell’oggetto. A sua volta, le singole chiavi sotto ogni namespace rappresentano gli ID dei segmenti di cui il profilo è membro. Ogni oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull’appartenenza:
+Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Segment memberships are sorted by namespace, as indicated by the root-level keys of the object. In turn, the individual keys under each namespace represent the IDs of the segments the profile is a member of. Each segment object contains several sub-fields that provide further details about the membership:
 
 ```json
 {
@@ -76,7 +76,7 @@ Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema h
 | --- | --- |
 | `xdm:version` | Versione del segmento per cui si è qualificato questo profilo. |
 | `xdm:lastQualificationTime` | Una marca temporale dell’ultima volta che il profilo è qualificato per il segmento. |
-| `xdm:validUntil` | Una marca temporale di quando non si deve più presumere che l’appartenenza al segmento sia valida. |
+| `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. |
 | `xdm:status` | Indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
 | `xdm:payload` | Alcune appartenenze a segmenti includono un payload che descrive i valori aggiuntivi direttamente correlati all’appartenenza. È possibile fornire un solo payload di un determinato tipo per ogni appartenenza. `xdm:payloadType` indica il tipo di payload (`boolean`,  `number`,  `propensity` o  `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
 
@@ -84,5 +84,5 @@ Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema h
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
