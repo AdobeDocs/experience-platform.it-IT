@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,9 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
+>[!IMPORTANT]
+>
+>La modifica della pianificazione dell&#39;esportazione dei file, da qualsiasi configurazione di pianificazione all&#39;esportazione completa dei file, con la **[!UICONTROL Frequenza]** impostata su **[!UICONTROL Una volta]**, per i segmenti già esportati, non esporta un nuovo file di backfill. Per esportare un nuovo file di backfill con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 ### Esportare file incrementali {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
+
+>[!IMPORTANT]
+>
+>La modifica della pianificazione dell&#39;esportazione dei file, da qualsiasi configurazione di pianificazione all&#39;esportazione completa dei file, con la **[!UICONTROL Frequenza]** impostata su **[!UICONTROL Una volta]**, per i segmenti già esportati, non esporta un nuovo file di backfill. Per esportare un nuovo file di backfill con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 ### Configurare i nomi dei file {#file-names}
 
