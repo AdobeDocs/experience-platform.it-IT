@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
@@ -37,7 +36,7 @@ Questa esercitazione richiede anche di aver completato l&#39; [esercitazione sul
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -55,7 +54,7 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 Se non hai ancora completato l&#39;esercitazione [crea un segmento utilizzando l&#39;API di segmentazione](./create-a-segment.md) o creato una definizione di segmento utilizzando [Generatore di segmenti](../ui/overview.md), procedi prima di procedere con questa esercitazione.
 
-## Valutazione pianificata {#scheduled-evaluation}
+## Valutazione programmata {#scheduled-evaluation}
 
 Tramite la valutazione pianificata, l’organizzazione IMS può creare una pianificazione ricorrente per eseguire automaticamente i processi di esportazione.
 
@@ -191,9 +190,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/xdm/context/profile__union",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true
     }
 }'
 ```
@@ -202,7 +198,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Un nome descrittivo per il set di dati. |
 | `schemaRef.id` | ID della visualizzazione unione (schema) a cui sarà associato il set di dati. |
-| `fileDescription.persisted` | Un valore booleano che, se impostato su `true`, consente al set di dati di persistere nella visualizzazione unione. |
 
 **Risposta**
 
