@@ -3,12 +3,11 @@ keywords: Experience Platform;casa;servizi intelligenti;argomenti comuni;servizi
 solution: Experience Platform, Intelligent Services
 title: Preparare i dati da utilizzare nei servizi intelligenti
 topic-legacy: Intelligent Services
-description: Affinché i servizi intelligenti possano scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in una struttura standard. Per ottenere questo risultato, i servizi intelligenti utilizzano gli schemi Experience Data Model (XDM).
+description: Affinché i servizi intelligenti possano scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in una struttura standard in modo semantico. Per ottenere questo risultato, i servizi intelligenti utilizzano gli schemi Experience Data Model (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: aa73f8f4175793e82d6324b7c59bdd44bf8d20f9
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -19,19 +18,31 @@ Per consentire a [!DNL Intelligent Services] di scoprire informazioni provenient
 
 Questo documento fornisce indicazioni generali sulla mappatura dei dati degli eventi di marketing da più canali allo schema CEE, delineando informazioni su campi importanti all&#39;interno dello schema per aiutarti a determinare come mappare efficacemente i dati alla struttura. Se prevedi di utilizzare i dati di Adobe Analytics, visualizza la sezione relativa alla [preparazione dei dati di Adobe Analytics](#analytics-data). Se prevedi di utilizzare i dati di Adobe Audience Manager (solo Customer AI), visualizza la sezione per [preparazione dei dati di Adobe Audience Manager](#AAM-data).
 
+## Requisiti dei dati
+
+[!DNL Intelligent Services] richiedono quantità diverse di dati storici a seconda dell’obiettivo creato. Indipendentemente dal fatto che i dati che prepari per **all** [!DNL Intelligent Services] devono includere percorsi/eventi cliente sia positivi che negativi. La presenza di eventi negativi e positivi migliora la precisione e l&#39;accuratezza del modello.
+
+Ad esempio, se utilizzi Customer AI per prevedere la propensione all’acquisto di un prodotto, il modello per Customer AI richiede sia esempi di percorsi di acquisto riusciti sia esempi di percorsi di acquisto non riusciti. Questo perché durante la formazione sul modello, Customer AI cerca di capire quali eventi e percorsi portano ad un acquisto. Ciò include anche le azioni dei clienti che non hanno acquistato, ad esempio una persona che ha interrotto il percorso aggiungendo un articolo al carrello. Tuttavia, questi clienti possono mostrare comportamenti simili, Customer AI può fornire informazioni approfondite ed approfondire le principali differenze e fattori che portano a un punteggio di propensione più elevato. Allo stesso modo, Attribution AI richiede sia tipi di eventi che percorsi per visualizzare metriche quali l’efficacia dei punti di contatto, i migliori percorsi di conversione e le suddivisioni per posizione dei punti di contatto.
+
+Per ulteriori esempi e informazioni sui requisiti storici dei dati, visita la sezione sui requisiti storici dei dati [Customer AI](./customer-ai/input-output.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements) nella documentazione di input/output.
+
+### Linee guida per l’unione dei dati
+
+È consigliabile unire gli eventi di un utente in un ID comune quando possibile. Ad esempio, puoi avere dati utente con &quot;id1&quot; in 10 eventi. Successivamente, lo stesso utente ha eliminato l&#39;id cookie e viene registrato come &quot;id2&quot; nei successivi 20 eventi. Se sai che l’id1 e l’id2 corrispondono allo stesso utente, la best practice consiste nell’unire tutti e 30 gli eventi con un ID comune.
+
+Se ciò non è possibile, è necessario trattare ogni set di eventi come un utente diverso durante la creazione dei dati di input del modello. Questo garantisce i migliori risultati durante l&#39;addestramento e il punteggio del modello.
+
 ## Riepilogo del flusso di lavoro
 
 Il processo di preparazione varia a seconda che i dati siano memorizzati in Adobe Experience Platform o esternamente. In questa sezione vengono riepilogati i passaggi necessari, in base a entrambi gli scenari.
 
 ### Preparazione dei dati esterni
 
-Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], segui i passaggi seguenti:
+Se i dati sono memorizzati al di fuori dell&#39;Experience Platform, devi mappare i tuoi dati sui campi obbligatori e rilevanti in uno [schema ExperienceEvent del consumatore](#cee-schema). Questo schema può essere migliorato con gruppi di campi personalizzati per acquisire meglio i dati dei clienti. Una volta mappato, puoi creare un set di dati utilizzando lo schema Consumer ExperienceEvent e [acquisendo i dati in Platform](../ingestion/home.md). È quindi possibile selezionare il set di dati CEE durante la configurazione di un [!DNL Intelligent Service].
 
-1. Contattare Adobe Consulting Services per richiedere le credenziali di accesso per un contenitore di archiviazione BLOB di Azure dedicato.
-1. Utilizzando le credenziali di accesso, carica i dati nel contenitore BLOB.
-1. Lavora con Adobe Consulting Services per mappare i tuoi dati sullo [schema ExperienceEvent del consumatore](#cee-schema) e acquisirli in [!DNL Intelligent Services].
+A seconda del [!DNL Intelligent Service] che si desidera utilizzare, potrebbero essere necessari campi diversi. È consigliabile aggiungere dati a un campo se i dati sono disponibili. Per ulteriori informazioni sui campi obbligatori, visita la guida di input/output [Attribution AI](./attribution-ai/input-output.md) o [Customer AI](./customer-ai/input-output.md) .
 
-### Preparazione dei dati Adobe Analytics {#analytics-data}
+### Preparazione dei dati di Adobe Analytics {#analytics-data}
 
 Customer AI e Attribution AI supportano i dati di Adobe Analytics in modo nativo. Per utilizzare i dati di Adobe Analytics, segui i passaggi descritti nella documentazione per impostare un [connettore di origine di Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -53,7 +64,7 @@ Una volta che il connettore di origine trasmette i dati in Experience Platform, 
 
 ### [!DNL Experience Platform] preparazione dei dati
 
-Se i dati sono già memorizzati in [!DNL Platform] e non lo streaming tramite i connettori sorgente Adobe Analytics o Adobe Audience Manager (solo Customer AI), segui i passaggi seguenti. Se si intende lavorare con Customer AI, è comunque consigliabile comprendere lo schema CEE.
+Se i dati sono già memorizzati in [!DNL Platform] e non lo streaming tramite i connettori sorgente Adobe Analytics o Adobe Audience Manager (solo Customer AI), segui i passaggi seguenti. È comunque consigliabile comprendere lo schema CEE.
 
 1. Rivedi la struttura dello [schema di Consumer ExperienceEvent](#cee-schema) e determina se i tuoi dati possono essere mappati ai relativi campi.
 2. Contatta Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l’acquisizione in [!DNL Intelligent Services] oppure [segui i passaggi descritti in questa guida](#mapping) se desideri mappare i dati da solo.
@@ -102,19 +113,19 @@ Se non sei sicuro di quale campo utilizzare come identità principale, contatta 
 | Colonna identità | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | Namespace | AAID | ECID |
 
-Per impostare un&#39;identità primaria, passa allo schema dalla scheda **[!UICONTROL Schemas]** e seleziona il collegamento ipertestuale del nome dello schema per aprire **[!DNL Schema Editor]**.
+Per impostare un&#39;identità primaria, passa allo schema dalla scheda **[!UICONTROL Schemi]** e seleziona il nome dello schema ipertestuale per aprire il **[!DNL Schema Editor]**.
 
 ![Passa allo schema](./images/data-preparation/navigate_schema.png)
 
-Quindi, accedi al campo che desideri utilizzare come identità principale e selezionalo. Viene visualizzato il menu **[!UICONTROL Field properties]** per tale campo.
+Quindi, accedi al campo che desideri utilizzare come identità principale e selezionalo. Viene visualizzato il menu **[!UICONTROL Proprietà campo]** per tale campo.
 
 ![Selezionare il campo](./images/data-preparation/find_field.png)
 
-Nel menu **[!UICONTROL Field properties]**, scorri verso il basso fino a trovare la casella di controllo **[!UICONTROL Identity]**. Dopo aver selezionato la casella, viene visualizzata l&#39;opzione per impostare l&#39;identità selezionata come **[!UICONTROL Primary identity]**. Seleziona anche questa casella.
+Nel menu **[!UICONTROL Proprietà campo]**, scorri verso il basso fino a trovare la casella di controllo **[!UICONTROL Identità]**. Dopo aver selezionato la casella, viene visualizzata l&#39;opzione per impostare l&#39;identità selezionata come **[!UICONTROL Identità principale]**. Seleziona anche questa casella.
 
 ![Seleziona casella di controllo](./images/data-preparation/set_primary_identity.png)
 
-Successivamente, devi fornire un **[!UICONTROL Identity namespace]** dall’elenco dei namespace predefiniti nel menu a discesa. In questo esempio, lo spazio dei nomi ECID viene selezionato in quanto viene utilizzato un Adobe Audience Manager ID `mcid.id`. Seleziona **[!UICONTROL Apply]** per confermare gli aggiornamenti, quindi seleziona **[!UICONTROL Save]** nell’angolo in alto a destra per salvare le modifiche allo schema.
+Successivamente, devi fornire un **[!UICONTROL namespace Identity]** dall’elenco dei namespace predefiniti nel menu a discesa. In questo esempio, lo spazio dei nomi ECID viene selezionato in quanto viene utilizzato un Adobe Audience Manager ID `mcid.id`. Seleziona **[!UICONTROL Applica]** per confermare gli aggiornamenti, quindi seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra per salvare le modifiche allo schema.
 
 ![Salva le modifiche](./images/data-preparation/select_namespace.png)
 
@@ -313,7 +324,7 @@ Dopo aver creato e salvato lo schema, puoi creare un nuovo set di dati basato su
 * [Crea un set di dati nell’interfaccia utente ](../catalog/datasets/user-guide.md#create)  (segui il flusso di lavoro per utilizzare uno schema esistente)
 * [Creare un set di dati nell’API](../catalog/datasets/create.md)
 
-Dopo la creazione del set di dati, puoi trovarlo nell’interfaccia utente di Platform nell’area di lavoro **[!UICONTROL Datasets]**.
+Dopo la creazione del set di dati, puoi trovarlo nell’interfaccia utente di Platform nell’area di lavoro **[!UICONTROL Set di dati]**.
 
 ![](images/data-preparation/dataset-location.png)
 
