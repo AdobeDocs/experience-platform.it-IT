@@ -4,10 +4,10 @@ title: Tipo di dati campo di consenso generico
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM del campo di consenso generico.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 1%
+source-wordcount: '478'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando come base di riferimento [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)] gruppo di campi](../field-groups/profile/consents.md).
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell&#39;organizzazione utilizzando il gruppo di campi [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md) come linea di base.
 
 ![](../images/data-types/consent-field.png)
 
