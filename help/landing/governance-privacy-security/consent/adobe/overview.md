@@ -5,9 +5,9 @@ title: Elaborazione del consenso in Adobe Experience Platform
 topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Nella versione corrente del supporto per l’elaborazione del consenso in Platfo
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulla struttura dei campi di consenso XDM di cui sopra, consulta la guida sul tipo di dati [Consensi e preferenze](../../../../xdm/data-types/consents.md).
+>Per ulteriori informazioni sulla struttura dei campi di consenso XDM di cui sopra, consulta la guida sul tipo di dati [[!UICONTROL Consensi e preferenze]](../../../../xdm/data-types/consents.md).
 
 Una volta configurato il sistema, Platform Web SDK interpreta il valore del consenso per la raccolta dati per l’utente corrente per determinare se i dati devono essere inviati a Adobe Experience Platform Edge Network, rilasciati dal client o mantenuti fino a quando l’autorizzazione per la raccolta dati non viene impostata su sì o no.
 
-## Determinare come generare i dati sul consenso dei clienti all&#39;interno di CMP {#consent-data}
+## Determinare come generare i dati di consenso dei clienti all’interno di CMP {#consent-data}
 
 Poiché ogni sistema CMP è univoco, devi determinare il modo migliore per consentire ai tuoi clienti di fornire il consenso mentre interagiscono con il tuo servizio. Un modo comune per ottenere questo risultato consiste nell’utilizzare una finestra di dialogo di consenso dei cookie, simile all’esempio seguente:
 
@@ -76,7 +76,7 @@ Dopo aver creato un set di dati abilitato [!DNL Profile] per l’elaborazione de
 >
 >Se non si dispone di set di dati in conflitto, è invece necessario impostare la precedenza delle marche temporali per il criterio di unione. In questo modo è possibile garantire che l’impostazione di consenso utilizzata sia l’impostazione più recente del consenso specificato da un cliente.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, iniziare leggendo la [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Quando si impostano i criteri di unione, è necessario assicurarsi che i profili includano tutti gli attributi di consenso richiesti forniti dal gruppo di campi dello schema Consensi e preferenze, come descritto nella guida sulla [preparazione dei set di dati](./dataset.md).
+Per ulteriori informazioni su come utilizzare i criteri di unione, iniziare leggendo la [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Quando si impostano i criteri di unione, è necessario assicurarsi che i profili includano tutti gli attributi di consenso richiesti forniti dal gruppo di campi dello schema [!UICONTROL Consensi e Preferenze], come descritto nella guida sulla [preparazione dei set di dati](./dataset.md).
 
 ## Inserire i dati di consenso in Platform
 
@@ -86,11 +86,11 @@ In genere, devi utilizzare Adobe Experience Platform Web SDK per inviare dati di
 
 I dettagli relativi a ciascuno di questi metodi sono forniti nelle sottosezioni seguenti.
 
-### Configura l’SDK web per Experience Platform per elaborare i dati di consenso {#web-sdk}
+### Configurare Experience Platform Web SDK per elaborare i dati di consenso {#web-sdk}
 
 Dopo aver configurato la CMP per ascoltare gli eventi relativi alla modifica del consenso sul sito web, è possibile integrare l’SDK per web di Experience Platform per ricevere le impostazioni di consenso aggiornate e inviarle a Platform a ogni caricamento di pagina e ogni volta che si verificano eventi relativi alla modifica del consenso. Per ulteriori informazioni, consulta la guida sulla [configurazione dell’SDK web per elaborare i dati di consenso dei clienti](./sdk.md) .
 
-### Configura l&#39;SDK di Experience Platform Mobile per elaborare i dati di consenso {#mobile-sdk}
+### Configurare l’SDK di Experience Platform Mobile per elaborare i dati di consenso {#mobile-sdk}
 
 Se nell’app mobile sono richieste le preferenze di consenso dei clienti, puoi integrare l’SDK di Experience Platform Mobile per recuperare e aggiornare le impostazioni di consenso, inviandole a Platform ogni chiamata dell’API di consenso.
 
@@ -102,7 +102,7 @@ Consulta la documentazione Mobile SDK per [configurare l&#39;estensione Consent 
 
 Segui l’esercitazione su [mappare un file CSV in XDM](../../../../ingestion/tutorials/map-a-csv-file.md) per scoprire come convertire i campi dati in XDM e assimilarli in Platform. Quando selezioni l&#39;opzione [!UICONTROL Destinazione] per la mappatura, accertati di selezionare l&#39;opzione **[!UICONTROL Usa set di dati esistente]** e scegli il set di dati di consenso abilitato [!DNL Profile] creato in precedenza.
 
-## Testa l&#39;implementazione {#test-implementation}
+## Verificare l’implementazione {#test-implementation}
 
 Dopo aver acquisito i dati di consenso dei clienti nel set di dati abilitato [!DNL Profile], puoi controllare i profili aggiornati per verificare se contengono gli attributi di consenso.
 
