@@ -3,10 +3,9 @@ title: Supporto delle preferenze di consenso dei clienti tramite Adobe Experienc
 description: Scopri come supportare le preferenze di consenso con Adobe Experience Platform Web SDK.
 keywords: consenso;consenso predefinito;consenso predefinito;setConsent;gruppo di campi Privacy profilo;gruppo di campi Privacy evento esperienza;gruppo di campi Privacy;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -54,7 +53,7 @@ L’SDK supporta le versioni 1.0 e 2.0 dello standard di consenso Adobe Experien
 
 ### Utilizzo della versione standard di Adobe 2.0
 
-Se utilizzi Adobe Experience Platform, dovrai includere un gruppo di campi dello schema di privacy nello schema del profilo. Per ulteriori informazioni sulla versione 2.0 di Adobe standard, consulta [Governance, privacy e sicurezza in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) . È possibile aggiungere dati all&#39;interno dell&#39;oggetto valore corrispondente allo schema del campo `consents` del gruppo di campi di profilo Consensi e preferenze .
+Se utilizzi Adobe Experience Platform, dovrai includere un gruppo di campi dello schema di privacy nello schema del profilo. Per ulteriori informazioni sulla versione 2.0 di Adobe standard, consulta [Governance, privacy e sicurezza in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) . È possibile aggiungere dati all&#39;interno dell&#39;oggetto valore corrispondente allo schema del campo `consents` del gruppo di campi di profilo [!UICONTROL Consensi e preferenze] .
 
 Se l&#39;utente effettua il consenso, esegui il comando `setConsent` con la preferenza di raccolta impostata su `y` come segue:
 
