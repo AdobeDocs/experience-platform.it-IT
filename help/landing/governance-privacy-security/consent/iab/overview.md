@@ -5,10 +5,10 @@ title: Supporto IAB TCF 2.0 in Experience Platform
 topic-legacy: privacy events
 description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2476'
-ht-degree: 0%
+source-wordcount: '2564'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Platform ti consente di raccogliere i dati sul consenso dei clienti attraverso i
 
 Oltre ai comandi SDK attivati dagli hook di CMP per la modifica del consenso, i dati di consenso possono fluire in Experience Platform attraverso qualsiasi dato XDM generato dal cliente e caricato direttamente in un set di dati abilitato [!DNL Profile].
 
-Anche qualsiasi segmento condiviso con Platform da Adobe Audience Manager (tramite il connettore di origine [!DNL Audience Manager] o altro) può contenere dati di consenso, purché i campi appropriati siano stati applicati a tali segmenti tramite [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni sulla raccolta dei dati di consenso in [!DNL Audience Manager], consulta il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Anche qualsiasi segmento condiviso con Platform da Adobe Audience Manager (tramite il connettore di origine [!DNL Audience Manager] o altro) può contenere dati di consenso, purché i campi appropriati siano stati applicati a tali segmenti tramite [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni sulla raccolta dei dati di consenso in [!DNL Audience Manager], consulta il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
 
 ### Applicazione del consenso a valle
 
@@ -74,7 +74,7 @@ Una volta che i dati di consenso TCF sono stati correttamente acquisiti, i segue
 
 Le altre sezioni di questo documento forniscono indicazioni su come configurare Platform e le operazioni sui dati per soddisfare i requisiti di raccolta e applicazione descritti in precedenza.
 
-## Determinare come generare i dati sul consenso dei clienti all&#39;interno di CMP {#consent-data}
+## Determinare come generare i dati di consenso dei clienti all’interno di CMP {#consent-data}
 
 Poiché ogni sistema CMP è univoco, devi determinare il modo migliore per consentire ai tuoi clienti di fornire il consenso mentre interagiscono con il tuo servizio. Un modo comune per ottenere questo risultato è l’utilizzo di una finestra di dialogo di consenso dei cookie, simile all’esempio seguente:
 
@@ -97,7 +97,7 @@ Le stringhe di consenso possono essere create solo da una CMP registrata con IAB
 
 ## Creare set di dati con campi di consenso TCF {#datasets}
 
-I dati di consenso del cliente devono essere inviati ai set di dati i cui schemi contengono campi di consenso TCF. Fai riferimento all&#39;esercitazione su [creazione di set di dati per l&#39;acquisizione del consenso TCF 2.0](./dataset.md) per sapere come creare i due set di dati richiesti prima di continuare con questa guida.
+I dati di consenso del cliente devono essere inviati ai set di dati i cui schemi contengono campi di consenso TCF. Fai riferimento all’esercitazione su [creazione di set di dati per l’acquisizione del consenso TCF 2.0](./dataset.md) per scoprire come creare il set di dati di profilo richiesto (e un set di dati opzionale per gli eventi di esperienza) prima di continuare con questa guida.
 
 ## Aggiornare [!DNL Profile] i criteri di unione per includere i dati di consenso {#merge-policies}
 
@@ -127,8 +127,8 @@ Dopo aver fornito un nome univoco per la configurazione, seleziona il pulsante d
 | --- | --- |
 | [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare la configurazione Edge. |
 | [!UICONTROL Ingresso streaming] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
-| [!UICONTROL Set di dati evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). |
-| [!UICONTROL Set di dati del profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). |
+| [!UICONTROL Set di dati evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). Se hai incluso il gruppo di campi [[!UICONTROL Consent] IAB TCF 2.0](../../../../xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando il comando [`sendEvent`](#sendEvent), memorizzando tali dati in questo set di dati. Tieni presente che i valori di consenso memorizzati in questo set di dati sono **non** utilizzati nei flussi di lavoro di implementazione automatica. |
+| [!UICONTROL Set di dati del profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). Quando rispondi agli hook di modifica del consenso CMP utilizzando il comando [`setConsent`](#setConsent), i dati raccolti saranno memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori di consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di implementazione automatica. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ Dopo aver creato la configurazione perimetrale descritta nella sezione precedent
 >
 >Per un’introduzione alla sintassi comune per tutti i comandi SDK di Platform, consulta il documento relativo all’ [esecuzione di comandi](../../../../edge/fundamentals/executing-commands.md).
 
-#### Utilizzo degli hook CMP per la modifica del consenso
+#### Utilizzo degli hook CMP per la modifica del consenso {#setConsent}
 
 Molte CMP forniscono hook predefiniti che ascoltano eventi di cambiamento del consenso. Quando si verificano tali eventi, puoi utilizzare il comando `setConsent` per aggiornare i dati di consenso del cliente.
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Utilizzo degli eventi
+#### Utilizzo degli eventi {#sendEvent}
 
 Puoi anche raccogliere i dati di consenso TCF 2.0 su ogni evento attivato in Platform utilizzando il comando `sendEvent` .
 
@@ -245,7 +245,7 @@ TCF 2.0 richiede inoltre che l&#39;origine dei dati controlli l&#39;autorizzazio
 >
 >Tutti i segmenti condivisi con Adobe Audience Manager conterranno gli stessi valori di consenso TCF 2.0 dei loro omologhi della piattaforma. Poiché [!DNL Audience Manager] condivide lo stesso ID fornitore di Platform (565), sono necessari gli stessi scopi e le stesse autorizzazioni fornitore. Per ulteriori informazioni, consulta il documento sul [plug-in Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) .
 
-## Testa l&#39;implementazione {#test-implementation}
+## Verificare l’implementazione {#test-implementation}
 
 Dopo aver configurato l’implementazione di TCF 2.0 e aver esportato segmenti nelle destinazioni, i dati che non soddisfano i requisiti di consenso non verranno esportati. Tuttavia, per verificare se i profili cliente corretti sono stati filtrati durante l’esportazione, è necessario controllare manualmente gli archivi di dati sulle destinazioni per verificare se il consenso è stato applicato correttamente.
 
