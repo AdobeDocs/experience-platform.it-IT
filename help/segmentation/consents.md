@@ -5,9 +5,9 @@ title: Rispetto del consenso nei segmenti
 topic-legacy: overview
 description: Scopri come rispettare le preferenze di consenso dei clienti per la raccolta e la condivisione di dati personali nelle operazioni sui segmenti.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Il rispetto dei valori di consenso dei clienti richiede una comprensione dei var
 
 ## Campi dello schema di consenso
 
-Per rispettare i consensi e le preferenze del cliente, uno degli schemi che fa parte dello schema di unione [!UICONTROL Profilo individuale XDM] deve contenere il gruppo di campi standard **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)]**.
+Per rispettare i consensi e le preferenze del cliente, uno degli schemi che fa parte dello schema di unione [!UICONTROL Profilo individuale XDM] deve contenere il gruppo di campi standard **[!UICONTROL Consensi e preferenze]**.
 
 Per informazioni dettagliate sulla struttura e sul caso d&#39;uso previsto per ciascuno degli attributi forniti dal gruppo di campi, consulta la guida di riferimento [consensi e preferenze](../xdm/field-groups/profile/consents.md). Per istruzioni dettagliate su come aggiungere un gruppo di campi a uno schema, consulta la [Guida all’interfaccia utente XDM](../xdm/ui/resources/schemas.md#add-field-groups) .
 
