@@ -4,10 +4,10 @@ title: Campo Preferenza Di Marketing Generico Con Tipo Di Dati Di Abbonamento
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del campo Preferenze di marketing generiche con tipo di dati XDM sottoscrizioni.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 2%
+source-wordcount: '736'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando come base di riferimento [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)] gruppo di campi](../field-groups/profile/consents.md).
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell&#39;organizzazione utilizzando il gruppo di campi [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md) come linea di base.
 >
 >Se non hai bisogno di una mappatura `subscriptions` per un particolare campo delle preferenze di marketing, puoi invece utilizzare il tipo di dati del campo di marketing [base](./marketing-field.md).
 
