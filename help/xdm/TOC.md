@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemi
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '311'
 ht-degree: 15%
 
 ---
@@ -33,10 +33,11 @@ ht-degree: 15%
 * Gruppi di campi dello schema {#field-groups}
    * Gruppi di campi del profilo {#profile}
       * [Dettagli demografici](./field-groups/profile/demographic-details.md)
+      * [Consenso IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dati di contatto personali](./field-groups/profile/personal-contact-details.md)
-      * [Privacy/Personalizzazione/Preferenze di marketing (Consensi)](./field-groups/profile/consents.md)
+      * [Consensi e preferenze](./field-groups/profile/consents.md)
       * [Dettagli di appartenenza al segmento](./field-groups/profile/segmentation.md)
       * [Dettagli contatto lavoro](./field-groups/profile/work-contact-details.md)
    * Gruppi di campi evento {#event}
@@ -45,6 +46,7 @@ ht-degree: 15%
       * [Dettagli Commerce](./field-groups/event/commerce-details.md)
       * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
       * [Dettagli dell&#39;ambiente](./field-groups/event/environment-details.md)
+      * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Dettagli Web](./field-groups/event/web-details.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 15%
    * [Beacon](./data-types/beacon.md)
    * [Dettagli del browser](./data-types/browser-details.md)
    * [Commerce](./data-types/commerce.md)
+   * [Stringa di consenso](./data-types/consent-string.md)
    * [Consensi e preferenze](./data-types/consents.md)
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
