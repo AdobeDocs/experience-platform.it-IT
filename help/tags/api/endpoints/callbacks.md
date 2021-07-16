@@ -1,0 +1,374 @@
+---
+title: Endpoint di callback
+description: Scopri come effettuare chiamate all’endpoint /callback nell’API di Reactor.
+source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 8%
+
+---
+
+# Endpoint di callback
+
+Un callback è un messaggio che l&#39;API di Reactor invia a un URL specifico (di solito quello ospitato dalla tua organizzazione).
+
+I callback sono destinati a essere utilizzati insieme a [eventi di controllo](./audit-events.md) per monitorare le attività nell&#39;API di Reactor. Ogni volta che viene generato un evento di controllo di un determinato tipo, un callback può inviare un messaggio corrispondente all’URL specificato.
+
+Il servizio dietro l&#39;URL specificato nel callback deve rispondere con il codice di stato HTTP 200 (OK) o 201 (Creato). Se il servizio non risponde con uno di questi codici di stato, la consegna del messaggio viene ritentata agli intervalli seguenti:
+
+* 1 minuto
+* 5 minuti
+* 30 minuti
+* 1 ora
+* 12 ore
+* 1 giorno
+* 3 giorni
+
+>[!NOTE]
+>
+>Gli intervalli dei tentativi sono relativi all’intervallo precedente. Ad esempio, se l’esecuzione del nuovo tentativo in un minuto non riesce, il tentativo successivo è pianificato per cinque minuti dopo l’errore del tentativo di un minuto (sei minuti dopo la generazione del messaggio).
+
+Se tutti i tentativi di consegna non sono riusciti, il messaggio viene eliminato.
+
+Un callback appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere molti callback.
+
+## Introduzione
+
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+
+## Elencare i callback {#list}
+
+È possibile elencare tutti i callback sotto una proprietà effettuando una richiesta GET.
+
+**Formato API**
+
+```http
+GET  /properties/{PROPERTY_ID}/callbacks
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{PROPERTY_ID}` | Il `id` della proprietà di cui si desidera elencare i callback. |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Utilizzando i parametri di query, i callback elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+
+**Richiesta**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce un elenco di callback per la proprietà specificata.
+
+```json
+{
+  "data": [
+    {
+      "id": "CB26edef8d709243579589107bcda034da",
+      "type": "callbacks",
+      "attributes": {
+        "created_at": "2020-12-14T17:34:47.082Z",
+        "subscriptions": [
+          "rule.created"
+        ],
+        "updated_at": "2020-12-14T17:34:47.082Z",
+        "url": "https://www.example.com"
+      },
+      "relationships": {
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/callbacks/CB26edef8d709243579589107bcda034da/property"
+          },
+          "data": {
+            "id": "PR66a3356c73fc4aabb67ee22caae53d70",
+            "type": "properties"
+          }
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70",
+        "self": "https://reactor.adobe.io/callbacks/CB26edef8d709243579589107bcda034da"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 1
+    }
+  }
+}
+```
+
+## Cercare un callback {#lookup}
+
+Puoi cercare un callback fornendo il relativo ID nel percorso di una richiesta GET.
+
+**Formato API**
+
+```http
+GET /callbacks/{CALLBACK_ID}
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `CALLBACK_ID` | Il `id` del callback che si desidera cercare. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Richiesta**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce i dettagli del callback.
+
+```json
+{
+  "data": {
+    "id": "CBeef389cee8d84e69acef8665e4dcbef6",
+    "type": "callbacks",
+    "attributes": {
+      "created_at": "2020-12-14T17:34:36.872Z",
+      "subscriptions": [
+        "rule.created"
+      ],
+      "updated_at": "2020-12-14T17:34:36.872Z",
+      "url": "https://www.example.com"
+    },
+    "relationships": {
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6/property"
+        },
+        "data": {
+          "id": "PRb513bbab52114573ac87f9848eea6ead",
+          "type": "properties"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PRb513bbab52114573ac87f9848eea6ead",
+      "self": "https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6"
+    }
+  }
+}
+```
+
+## Creare un callback {#create}
+
+Puoi creare un nuovo callback effettuando una richiesta POST.
+
+**Formato API**
+
+```http
+POST /properties/{PROPERTY_ID}/callbacks
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo il callback. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d/callbacks \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "url": "https://www.example.com",
+            "subscriptions": [
+              "rule.created"
+            ]
+          }
+        }
+      }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `url` | La destinazione URL del messaggio di callback. L’URL deve utilizzare l’estensione del protocollo HTTPS. |
+| `subscriptions` | Matrice di stringhe che indica i tipi di evento di controllo che attiveranno il callback. Per un elenco dei possibili tipi di eventi, consulta la [guida endpoint per gli eventi di controllo](./audit-events.md) . |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Risposta**
+
+Una risposta corretta restituisce i dettagli del nuovo callback creato.
+
+```json
+{
+  "data": {
+    "id": "CB32d8f23d5ee548278d32076af4c442a0",
+    "type": "callbacks",
+    "attributes": {
+      "created_at": "2020-12-14T17:34:27.059Z",
+      "subscriptions": [
+        "rule.created"
+      ],
+      "updated_at": "2020-12-14T17:34:27.059Z",
+      "url": "https://www.example.com"
+    },
+    "relationships": {
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/callbacks/CB32d8f23d5ee548278d32076af4c442a0/property"
+        },
+        "data": {
+          "id": "PR5e22de986a7c4070965e7546b2bb108d",
+          "type": "properties"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d",
+      "self": "https://reactor.adobe.io/callbacks/CB32d8f23d5ee548278d32076af4c442a0"
+    }
+  }
+}
+```
+
+## Aggiornare un callback
+
+Puoi aggiornare un callback includendo il relativo ID nel percorso di una richiesta PUT.
+
+**Formato API**
+
+```http
+PUT /callbacks/{CALLBACK_ID}
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `CALLBACK_ID` | Il `id` del callback che si desidera aggiornare. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Richiesta**
+
+La richiesta seguente aggiorna la matrice `subscriptions` per un callback esistente.
+
+```shell
+curl -X PUT \
+  https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "subscriptions": [
+              "rule.created",
+              "build.created"
+            ]
+          },
+          "type": "callbacks",
+          "id": "CB4310904d415549888cc9e31ebe1e1e45"
+        }
+      }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per il callback. Ogni chiave rappresenta il particolare attributo di callback da aggiornare, insieme al valore corrispondente a cui deve essere aggiornato.<br><br>I seguenti attributi possono essere aggiornati per i callback:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | Il `id` del callback che desideri aggiornare. Questo deve corrispondere al valore `{CALLBACK_ID}` fornito nel percorso della richiesta. |
+| `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `callbacks`. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Risposta**
+
+Una risposta corretta restituisce i dettagli del callback aggiornato.
+
+```json
+{
+  "data": {
+    "id": "CB4310904d415549888cc9e31ebe1e1e45",
+    "type": "callbacks",
+    "attributes": {
+      "created_at": "2020-12-14T17:34:56.884Z",
+      "subscriptions": [
+        "rule.created",
+        "build.created"
+      ],
+      "updated_at": "2020-12-14T17:34:57.614Z",
+      "url": "https://www.example.net"
+    },
+    "relationships": {
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45/property"
+        },
+        "data": {
+          "id": "PR0a8ef3ca31dc456a8566e9288960bd79",
+          "type": "properties"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR0a8ef3ca31dc456a8566e9288960bd79",
+      "self": "https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45"
+    }
+  }
+}
+```
+
+## Eliminare un callback
+
+Puoi eliminare un callback includendo il relativo ID nel percorso di una richiesta DELETE.
+
+**Formato API**
+
+```http
+DELETE /callbacks/{CALLBACK_ID}
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `CALLBACK_ID` | Il `id` del callback che desideri eliminare. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Richiesta**
+
+```shell
+curl -X DELETE \
+  https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che il callback è stato eliminato.
