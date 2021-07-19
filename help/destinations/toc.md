@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '481'
 ht-degree: 11%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 11%
    * [ Connessione HTTP (Alpha)](./catalog/http-destination.md)
    * Destinazioni Adobe{#adobe}
       * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
+      * [Connessione al Marketo Engage (Beta)](./catalog/adobe/marketo-engage.md)
       * [Experience Platform di condivisione dei segmenti](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinazioni pubblicitarie{#advertising}
       * [Panoramica sulle destinazioni pubblicitarie](./catalog/advertising/overview.md)
@@ -134,5 +135,5 @@ ht-degree: 11%
       * [Estensione Invoca Tags](./catalog/voice/invoca.md)
       * [Estensione Medallia](./catalog/voice/medallia.md)
       * [Estensione casella in entrata Talk URL](./catalog/voice/talkurl.md)
-* [Domande frequenti ](./destinations-faq.md)
+* [Domande frequenti](./destinations-faq.md)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
