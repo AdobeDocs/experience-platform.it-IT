@@ -1,9 +1,9 @@
 ---
 title: Panoramica dell’estensione Adobe Analytics Product String
 description: Scopri l’estensione tag Adobe Analytics Product String in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ Questa azione deve essere seguita da un’azione “Adobe Analytics - Imposta va
 ### Requisiti
 
 * Un [livello dati](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basato su oggetti con variabili per tutti i dati relativi al prodotto (ad esempio, ID prodotto, quantità, prezzo). Questa estensione non funziona con livelli dati basati sulla matrice.
-* È necessario installare l’estensione [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=it).
+* È necessario installare l’estensione [Adobe Analytics](../analytics/overview.md).
