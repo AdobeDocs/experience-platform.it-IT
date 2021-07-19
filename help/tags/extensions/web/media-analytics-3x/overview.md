@@ -1,10 +1,10 @@
 ---
-title: Estensione Adobe Media Analytics (3.x SDK) for Audio and Video Panoramica
+title: Panoramica dell’estensione Adobe Medium Analytics (3.x SDK) for Audio and Video
 description: Scopri l’estensione Adobe Medium Analytics (3.x SDK) for Audio and Video tag in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 89%
+source-wordcount: '768'
+ht-degree: 88%
 
 ---
 
@@ -51,7 +51,7 @@ Dopo aver incluso tutte e tre le estensioni menzionate in precedenza nel progett
 | Export APIs to Window Object | Attivare o disattivare l&#39;esportazione delle API di Media Analytics all&#39;ambito globale |
 | Variable Name | Una variabile utilizzata per esportare le API di Media Analytics sotto l&#39;oggetto `window` |
 
-**Promemoria:** l&#39;estensione MA richiede le estensioni [Analytics](../analytics/overview.md) ed [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=it). Devi aggiungere queste estensioni alla proprietà dell&#39;estensione e configurarle.
+**Promemoria:** l&#39;estensione MA richiede le estensioni [Analytics](../analytics/overview.md) ed [Experience Cloud ID](../id-service/overview.md). Devi aggiungere queste estensioni alla proprietà dell&#39;estensione e configurarle.
 
 ## Utilizzo dell&#39;estensione MA
 
@@ -109,4 +109,4 @@ L&#39;estensione MA espone `media` come modulo condiviso ad altre estensioni. (P
 
 >[!NOTE]
 >
->**Test:** per questa versione, per testare l’estensione devi caricarla in [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com), dove puoi accedere a tutte le estensioni dipendenti.
+>**Test:** per questa versione, per testare l’estensione devi caricarla in [ Platform ](../../../extension-dev/submit/upload-and-test.md), dove puoi accedere a tutte le estensioni dipendenti.
