@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 90%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti (Content Security Policy, CSP) con un nonce, in modo che gli script Platform Launch possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo di Platform Launch con CSP, consulta [questo articolo](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti (Content Security Policy, CSP) con un nonce, in modo che gli script Platform Launch possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo di Platform Launch con CSP, consulta [questo articolo](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
