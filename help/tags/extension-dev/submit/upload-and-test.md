@@ -1,7 +1,7 @@
 ---
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 35%
@@ -228,9 +228,3 @@ Se occorre apportare delle modifiche al pacchetto di estensione, il processo di 
 1. Modifica risorse: se la configurazione di uno qualsiasi dei componenti dell’estensione è stata modificata, dovrai aggiornare tali risorse nell’interfaccia utente Raccolta dati.
 1. Aggiungi le modifiche più recenti alla libreria e genera di nuovo.
 1. Completare un altro ciclo di test.
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
