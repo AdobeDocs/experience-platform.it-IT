@@ -1,10 +1,10 @@
 ---
 title: Guida rapida
 description: Scopri come iniziare rapidamente a usare i tag in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 45%
+source-wordcount: '1533'
+ht-degree: 44%
 
 ---
 
@@ -134,8 +134,6 @@ Per ulteriori informazioni sui diversi stati e opzioni disponibili durante il pr
 ## Risorse aggiuntive
 
 Per ulteriori informazioni sui tag, consulta le risorse seguenti:
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) e rispondi alle domande, invia idee, vota quelle degli altri. Accedi con il tuo Adobe ID.
 
 * **[Community](https://forums.adobe.com/community/experience-cloud/platform/launch)** di raccolta dati: Fai e rispondi alle domande, invia idee, vota quelle degli altri. Accedi con il tuo Adobe ID.
 * **[Documenti](https://developer.adobelaunch.com/)** per sviluppatori: Partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare API di tag
