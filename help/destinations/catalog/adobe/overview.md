@@ -1,44 +1,44 @@
 ---
-keywords: destinazioni;soluzioni Experience Cloud; target;destinazione; ad cloud; pubblicità cloud; audience manager; destinazione adobe; target; destinazione del manager dell'audience;
-title: 'Panoramica sulle destinazioni dei Adobi '
-description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+keywords: destinazioni;soluzioni experience cloud; target;destinazione target; ad cloud; advertising cloud; audience manager; destinazione adobe target; target; destinazione audience manager;
+title: Panoramica sulle destinazioni di Adobe
+description: Gestisci la tua esperienza cliente connettendo i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l’automazione del marketing e altro ancora
+exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
+source-git-commit: d42756bcfaa4c420362e60672b097ae667a8782b
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '223'
 ht-degree: 12%
 
 ---
 
+# Panoramica sulle destinazioni di Adobe {#adobe-destinations}
 
-#  delle destinazioni dei Adobi {#adobe-destinations}
-
-Gestisci la tua esperienza cliente connettendo i dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l&#39;automazione del marketing e altro ancora.
+Gestisci la tua esperienza cliente connettendo i tuoi dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l’automazione del marketing e altro ancora.
 
 ## Connessioni
 
-Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie.
+Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
 
-- [ connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Collegamento Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## Estensioni
 
-Per comprendere la differenza tra connessioni ed estensioni, vedere [Estensioni](../../destination-types.md#extensions) nella pagina Tipi di destinazione e categorie.
+Per comprendere la differenza tra connessioni ed estensioni, consulta [Estensioni](../../destination-types.md#extensions) nella pagina Tipi di destinazione e categorie .
 
 - [Estensione Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 - [Estensione Adobe Analytics](../analytics/adobe-analytics.md)
-- [Estensione  Adobe Livefyre](../social/adobe-livefyre.md)
+- [Estensione Adobe Livefyre](../social/adobe-livefyre.md)
 - [Estensione Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 - [Estensione Adobe Target](../personalization/adobe-target.md)
 - [Estensione Adobe Target v2](../personalization/adobe-target-v2.md)
-- [Estensione DIL Audience Manager ](../data-management/aam-dil-extension.md)
+- [Estensione Audience Manager DIL](../data-management/aam-dil-extension.md)
 - [Estensione del servizio Experience Cloud ID](../personalization/adobe-ecid.md)
 - [Estensione Marketo](../email/marketo.md)
 - [Estensione Marketo Munchkin](../email/marketo-munchkin.md)
 - [Estensione Marketo Web Personalization](../personalization/marketo-web-personalization.md)
 
-## Condivisione dei segmenti  Experience Platform
+## Experience Platform di condivisione dei segmenti
 
-Utilizzate la funzionalità di condivisione del segmento di Experience Platform  per condividere i segmenti di Experience Platform  in destinazioni   aggiuntive. Per ulteriori informazioni, consultate la pagina seguente (disponibile nel portale della documentazione del Audience Manager ):
+Utilizza la funzionalità di condivisione dei segmenti di Experience Platform per condividere i segmenti di Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (visualizzata nel portale della documentazione di Audience Manager):
 
-- [ condivisione di segmenti di Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e  Adobe Target tramite l&#39;integrazione con i servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+- [Experience Platform di condivisione di segmenti con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione con i servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
