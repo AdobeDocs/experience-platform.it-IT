@@ -5,10 +5,10 @@ title: Tipo di dati geo
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 4%
+source-wordcount: '202'
+ht-degree: 5%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 4%
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)
