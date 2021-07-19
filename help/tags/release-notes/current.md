@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione
 description: Note aggiornate sulla versione dei tag in Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 19 luglio 2021
+
+**Adeguamenti a &quot;Gestisci proprietà&quot; a destra** : il diritto Gestisci proprietà ha riscontrato un problema per cui un utente disponeva dell&#39;autorizzazione per creare una nuova proprietà ma non poteva visualizzarla dopo la creazione (come descritto nel thread della community  [qui](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). Una correzione è ora attiva e le autorizzazioni vengono applicate come descritto nell&#39;articolo.
+
+>[!NOTE]
+>
+>Se assegni il nuovo diritto &quot;Modifica proprietà&quot; a un gruppo di utenti, l’interfaccia utente non si aggiorna per abilitare i campi nella schermata di configurazione delle proprietà. Una correzione di questo problema verrà implementata in una prossima versione.
 
 ## 17 maggio 2021
 
