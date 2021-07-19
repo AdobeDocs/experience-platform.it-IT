@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati di informazioni web
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Experience Data Model) per informazioni web.
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '190'
 ht-degree: 3%
 
 ---
@@ -27,5 +27,5 @@ ht-degree: 3%
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)
