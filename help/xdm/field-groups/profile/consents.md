@@ -4,9 +4,9 @@ title: Gruppo di campi schema Consensi e Preferenze
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Consensi e Preferenze .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2317'
 ht-degree: 2%
 
 ---
@@ -401,4 +401,4 @@ La tabella seguente illustra i valori accettati per `preferred`:
 
 ### Schema completo [!UICONTROL Consensi e preferenze] {#full-schema}
 
-Per visualizzare lo schema completo del gruppo di campi [!UICONTROL Consensi e Preferenze], consulta l’ [archivio XDM ufficiale](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Per visualizzare lo schema completo del gruppo di campi [!UICONTROL Consensi e Preferenze], consulta l’ [archivio XDM ufficiale](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
