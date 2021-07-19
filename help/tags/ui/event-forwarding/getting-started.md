@@ -1,9 +1,9 @@
 ---
 title: Guida introduttiva all’inoltro eventi
 description: Segui questa esercitazione passo per iniziare a utilizzare l’inoltro eventi in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '906'
 ht-degree: 48%
 
 ---
@@ -110,7 +110,7 @@ Crea la proprietà nell’interfaccia utente di raccolta dati, quindi utilizza l
 
 1. Seleziona il dominio Edge.
 
-Per ulteriori opzioni di configurazione, consulta la [documentazione dell&#39;estensione SDK Web](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=it).
+Per ulteriori opzioni di configurazione, consulta la [documentazione dell&#39;estensione SDK Web](../../extensions/web/sdk/overview.md).
 
 ## Creare una regola di tag per inviare dati all’SDK per web di Platform
 
