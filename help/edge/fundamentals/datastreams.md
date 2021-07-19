@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i flussi di dati. '
 keywords: configurazione;datastreams;datastreamId;edge;edge configuration id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni URL;destinazioni;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ I Datastreams possono essere creati nell&#39;Adobe [!DNL Experience Platform Lau
 
 >[!NOTE]
 >
->Lo strumento di configurazione dei datastreams è disponibile per i clienti dell’elenco consentiti indipendentemente dal fatto che utilizzino [!DNL Experience Platform Launch] come gestore di tag. Inoltre, gli utenti devono disporre delle autorizzazioni di sviluppo in [!DNL Experience Platform Launch]. Per ulteriori informazioni, consulta l’articolo [Autorizzazioni utente](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) nella documentazione [!DNL Experience Platform Launch] .
+>Lo strumento di configurazione dei datastreams è disponibile per i clienti dell’elenco consentiti indipendentemente dal fatto che utilizzino [!DNL Experience Platform Launch] come gestore di tag. Inoltre, gli utenti devono disporre delle autorizzazioni di sviluppo in [!DNL Experience Platform Launch]. Per ulteriori informazioni, consulta l’articolo [Autorizzazioni utente](../../tags/ui/administration/user-permissions.md) nella documentazione [!DNL Experience Platform Launch] .
 
 Crea un datastream facendo clic su **[!UICONTROL Nuovo Datastream]** nell&#39;area in alto a destra dello schermo. Dopo aver specificato un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente. Le impostazioni disponibili sono descritte di seguito.
 
