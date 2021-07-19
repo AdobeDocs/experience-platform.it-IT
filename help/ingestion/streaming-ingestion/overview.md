@@ -5,10 +5,9 @@ title: Panoramica dell’acquisizione in streaming
 topic-legacy: overview
 description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '277'
 ht-degree: 3%
 
 ---
@@ -46,4 +45,4 @@ Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Pro
 
 ## Estensione Adobe Experience Platform
 
-Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, visita la documentazione [Estensione Experience Platform](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) .
+Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, visita la documentazione [Estensione Experience Platform](../../tags/extensions/web/sdk/overview.md) .
