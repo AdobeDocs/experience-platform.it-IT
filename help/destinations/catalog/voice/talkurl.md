@@ -1,62 +1,61 @@
 ---
-keywords: Casella in entrata URL conversazione;casella in entrata URL conversazione;casella in entrata URL conversazione;inbox URL conversazione;URL conversazione;URL conversazione;URL conversazione;URL conversazione
-title: Estensione Inbox URL conversazione
-description: L’estensione Talk URL Inbox è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+keywords: Casella in entrata URL discorso;URL conversazione;casella in entrata URL discorso;casella in entrata URL discorso;URL conversazione;URL conversazione;URL di conversazione;URL di conversazione
+title: Estensione casella in entrata Talk URL
+description: L’estensione Talk URL Inbox è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
+exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
 
-
 # [!DNL Talk URL Inbox] Estensione {#talk-url-extension}
 
-Ricevi messaggi vocali dai visitatori della pagina Web. Include l&#39;interfaccia utente in hosting e l&#39;apprendimento automatico basato su cloud per trascrivere istantaneamente i messaggi vocali in approfondimenti testuali.
+Ricevi messaggi vocali dai visitatori della tua pagina web. Include l’interfaccia utente in hosting e l’apprendimento automatico basato su cloud per trascrivere immediatamente i messaggi vocali in informazioni testuali.
 
-[!DNL Talk URL Inbox] è una voce dell&#39;estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina dell&#39;estensione in [ Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] è una voce dell’estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
-Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch in Platform, vedere [ panoramica delle estensioni Adobe Experience Platform Launch](../launch-extensions/overview.md).
+Questa destinazione è un&#39;estensione Adobe Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni di Platform launch in Platform, consulta [Panoramica delle estensioni Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
-![Estensione Inbox URL conversazione](../../assets/catalog/voice/talkurl/catalog.png)
+![Estensione casella in entrata Talk URL](../../assets/catalog/voice/talkurl/catalog.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato la piattaforma.
+Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, è necessario accedere a  Adobe Experience Platform Launch. Launch piattaforma è disponibile per i clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contattate l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso a Platform Launch e chiedete loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ad Adobe Experience Platform Launch. Il platform launch è offerto ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere al Platform launch e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
 
-## Installare l&#39;estensione {#install-extension}
+## Installa estensione {#install-extension}
 
 Per installare l&#39;estensione [!DNL Talk URL Inbox]:
 
-Nell&#39;interfaccia [Piattaforma](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Nell’ [Interfaccia piattaforma](http://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
-Selezionate l’estensione dal catalogo o usate la barra di ricerca.
+Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
-Fare clic sulla destinazione per evidenziarla, quindi selezionare **[!UICONTROL Configure]** nella barra a destra. Se il controllo **[!UICONTROL Configure]** è disattivato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Vedere [Prerequisiti](#prerequisites).
+Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Configura]** nella barra a destra. Se il controllo **[!UICONTROL Configura]** è disabilitato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Consulta [Prerequisiti](#prerequisites).
 
-Nella finestra **[!UICONTROL Select available Platform Launch property]**, selezionate la proprietà Lancio piattaforma in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Lancio piattaforma. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà nella sezione [Proprietà della pagina](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) della documentazione di Launch piattaforma.
+Nella finestra **[!UICONTROL Seleziona la proprietà del Platform launch disponibile]**, seleziona la proprietà del Platform launch in cui desideri installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Platform launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Scopri le proprietà nella sezione [Proprietà pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) della documentazione del Platform launch.
 
-Il flusso di lavoro consente di passare al lancio della piattaforma per completare l’installazione.
+Il flusso di lavoro ti porta al Platform launch per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto per l&#39;installazione, vedere la pagina [Talk URL Inbox  Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto per l&#39;installazione, consulta la pagina [Casella in entrata degli URL del discorso in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
-È inoltre possibile installare l&#39;estensione direttamente nell&#39; [ interfaccia Adobe Experience Platform Launch](https://launch.adobe.com/). Consultate [Aggiungere una nuova estensione](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) nella documentazione di Launch piattaforma.
+Puoi anche installare l&#39;estensione direttamente nell&#39; [interfaccia Adobe Experience Platform Launch](https://launch.adobe.com/). Consulta [Aggiungi una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione del Platform launch.
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
-Una volta installata l’estensione, potete avviare la configurazione delle relative regole direttamente in Launch piattaforma.
+Una volta installata l&#39;estensione, puoi avviare l&#39;impostazione delle regole per essa direttamente nel Platform launch.
 
-In Avvio piattaforma, potete impostare le regole per le estensioni installate per inviare i dati dell&#39;evento alla destinazione dell&#39;estensione solo in alcune situazioni. Per ulteriori informazioni sull&#39;impostazione delle regole per le estensioni, vedere la [documentazione sulle regole](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Al Platform launch, puoi impostare regole per le estensioni installate per inviare dati evento alla destinazione dell&#39;estensione solo in determinate situazioni. Per ulteriori informazioni sull&#39;impostazione delle regole per le estensioni, consulta la [documentazione sulle regole](../../../tags/ui/managing-resources/rules.md).
 
 ## Configurare, aggiornare ed eliminare l&#39;estensione {#configure-upgrade-delete}
 
-Puoi configurare, aggiornare ed eliminare le estensioni nell&#39;interfaccia Launch piattaforma.
+Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia di Platform launch.
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata su una delle proprietà, l&#39;interfaccia utente della piattaforma continua a visualizzare **[!UICONTROL Install]** per l&#39;estensione. Per accedere al lancio della piattaforma e configurare o eliminare l&#39;estensione, selezionate il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension).
+>Se l&#39;estensione è già installata su una delle tue proprietà, l&#39;interfaccia utente di Platform visualizza ancora **[!UICONTROL Install]** per l&#39;estensione. Per accedere al Platform launch e configurare o eliminare l&#39;estensione, fai clic sul flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) .
 
-Per aggiornare l&#39;estensione, consultare [Aggiornamento dell&#39;estensione](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) nella documentazione di Launch piattaforma.
+Per aggiornare l&#39;estensione, consulta [Aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione del Platform launch.
