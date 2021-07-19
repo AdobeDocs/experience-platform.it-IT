@@ -1,10 +1,10 @@
 ---
 title: Supporto di Content Security Policy (CSP)
 description: Scopri come gestire le restrizioni dell’informativa sulla sicurezza dei contenuti (CSP) durante l’integrazione del sito web con i tag in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 59%
+source-wordcount: '1079'
+ht-degree: 58%
 
 ---
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **Tag HTML `<meta>`**
 
 
-Esiste un prerequisito molto importante: Devi caricare la libreria di tag [in modo asincrono](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html?lang=it). Questo non funziona con un caricamento sincrono della libreria di tag (il che si traduce in errori della console e regole non eseguite correttamente).
+Esiste un prerequisito molto importante: Devi caricare la libreria di tag [in modo asincrono](./asynchronous-deployment.md). Questo non funziona con un caricamento sincrono della libreria di tag (il che si traduce in errori della console e regole non eseguite correttamente).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
