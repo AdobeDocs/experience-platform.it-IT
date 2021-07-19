@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 topic-legacy: overview
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1901'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Il controllo del consenso opt-in e opt-out determina se è possibile operare con
 
 La configurazione di consenso predefinita per [!DNL Segment Match] è impostata su `opt-out`. Per applicare un modello di consenso per i tuoi dati, invia una richiesta e-mail al tuo Adobe Account Manager.
 
-Per ulteriori informazioni sull&#39;attributo `share` utilizzato per impostare il valore del consenso per la condivisione dei dati, consulta la seguente documentazione sul [gruppo di campi privacy e consenso](../../xdm/field-groups/profile/consents.md). Per informazioni sul gruppo di campi specifico utilizzato per acquisire il consenso dei consumatori per la raccolta e l’utilizzo dei dati relativi alla privacy, alla personalizzazione e alle preferenze di marketing, consulta il seguente [Consenso per Privacy, personalizzazione e marketing Preferenze GitHub esempio](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
+Per ulteriori informazioni sull&#39;attributo `share` utilizzato per impostare il valore del consenso per la condivisione dei dati, consulta la seguente documentazione sul [gruppo di campi privacy e consenso](../../xdm/field-groups/profile/consents.md). Per informazioni sul gruppo di campi specifico utilizzato per acquisire il consenso dei consumatori per la raccolta e l’utilizzo dei dati relativi alla privacy, alla personalizzazione e alle preferenze di marketing, consulta il seguente [Consenso per Privacy, personalizzazione e marketing Preferenze GitHub esempio](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Configurare le etichette di utilizzo dei dati
 
