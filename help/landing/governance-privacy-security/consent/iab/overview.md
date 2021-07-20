@@ -5,9 +5,9 @@ title: Supporto IAB TCF 2.0 in Experience Platform
 topic-legacy: privacy events
 description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 1%
 
 ---
@@ -117,15 +117,15 @@ Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario
 
 **L’SDK non si interfaccia con alcuna CMP preconfigurata**. Sta a te determinare come integrare l’SDK nel tuo sito web, ascoltare le modifiche al consenso nella CMP e chiamare il comando appropriato.
 
-### Creare una nuova configurazione perimetrale
+### Crea un nuovo datastream
 
-Affinché l’SDK invii dati ad Experience Platform, devi prima creare una nuova configurazione edge per Platform in [!DNL Adobe Experience Platform Launch]. I passaggi specifici per la creazione di una nuova configurazione sono descritti nella documentazione [SDK](../../../../edge/fundamentals/datastreams.md).
+Affinché l’SDK invii dati ad Experience Platform, devi prima creare un nuovo datastream per Platform in [!DNL Adobe Experience Platform Launch]. I passaggi specifici per la creazione di una nuova configurazione sono descritti nella documentazione [SDK](../../../../edge/fundamentals/datastreams.md).
 
 Dopo aver fornito un nome univoco per la configurazione, seleziona il pulsante di attivazione accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i seguenti valori per completare il resto del modulo:
 
-| Campo di configurazione perimetrale | Valore |
+| Campo Datastream | Valore |
 | --- | --- |
-| [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare la configurazione Edge. |
+| [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare il datastream. |
 | [!UICONTROL Ingresso streaming] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
 | [!UICONTROL Set di dati evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). Se hai incluso il gruppo di campi [[!UICONTROL Consent] IAB TCF 2.0](../../../../xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando il comando [`sendEvent`](#sendEvent), memorizzando tali dati in questo set di dati. Tieni presente che i valori di consenso memorizzati in questo set di dati sono **non** utilizzati nei flussi di lavoro di implementazione automatica. |
 | [!UICONTROL Set di dati del profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). Quando rispondi agli hook di modifica del consenso CMP utilizzando il comando [`setConsent`](#setConsent), i dati raccolti saranno memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori di consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di implementazione automatica. |
@@ -136,7 +136,7 @@ Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore dello schermo
 
 ### Esecuzione di comandi di modifica del consenso
 
-Dopo aver creato la configurazione perimetrale descritta nella sezione precedente, puoi iniziare a utilizzare i comandi SDK per inviare i dati di consenso a Platform. Le sezioni seguenti forniscono esempi di come ogni comando SDK può essere utilizzato in scenari diversi.
+Dopo aver creato il datastream descritto nella sezione precedente, puoi iniziare a utilizzare i comandi SDK per inviare i dati di consenso a Platform. Le sezioni seguenti forniscono esempi di come ogni comando SDK può essere utilizzato in scenari diversi.
 
 >[!NOTE]
 >
