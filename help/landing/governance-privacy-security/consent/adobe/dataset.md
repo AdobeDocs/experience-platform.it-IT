@@ -5,9 +5,9 @@ title: Configurare un set di dati per acquisire dati di consenso e preferenza
 topic-legacy: getting started
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenza in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ L&#39;area di lavoro viene visualizzata nuovamente, mostrando che l&#39;oggetto 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Se lo schema modificato viene utilizzato dal [!UICONTROL Set di dati di profilo] specificato nella configurazione Edge di Platform Web SDK, tale set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare alla [guida all&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare il processo di configurazione di Experience Platform per l&#39;elaborazione dei dati di consenso.
+Se lo schema modificato viene utilizzato dal [!UICONTROL set di dati profilo] specificato nel datastream SDK per web di Platform, tale set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare alla [guida all&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare il processo di configurazione di Experience Platform per l&#39;elaborazione dei dati di consenso.
 
 Se non hai creato un set di dati per questo schema, segui i passaggi della sezione successiva.
 
@@ -150,7 +150,7 @@ Infine, seleziona **[!UICONTROL Abilita]** nel puntatore di conferma per abilita
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Il set di dati viene ora salvato e abilitato per l’utilizzo in [!DNL Profile]. Se prevedi di utilizzare Platform Web SDK per inviare i dati di consenso a Profilo, devi selezionare questo set di dati come [!UICONTROL Set di dati di profilo] al momento di configurare la [configurazione edge](../../../../edge/fundamentals/datastreams.md).
+Il set di dati viene ora salvato e abilitato per l’utilizzo in [!DNL Profile]. Se prevedi di utilizzare Platform Web SDK per inviare i dati di consenso a Profilo, devi selezionare questo set di dati come [!UICONTROL Set di dati profilo] durante la configurazione del [datastream](../../../../edge/fundamentals/datastreams.md).
 
 ## Passaggi successivi
 
