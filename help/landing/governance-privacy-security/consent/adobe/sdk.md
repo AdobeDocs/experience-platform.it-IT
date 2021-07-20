@@ -3,11 +3,10 @@ title: Elaborazione dei dati di consenso dei clienti tramite Adobe Experience Pl
 topic-legacy: getting started
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 0%
+source-wordcount: '1237'
+ht-degree: 1%
 
 ---
 
@@ -23,39 +22,39 @@ Questa esercitazione presuppone che tu abbia già determinato come generare i da
 
 Inoltre, questa guida richiede una buona conoscenza delle estensioni Adobe Experience Platform Launch e della loro modalità di installazione nelle applicazioni web. Per ulteriori informazioni, consulta la seguente documentazione:
 
-* [Panoramica del platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
+* [Panoramica del platform launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=it)
 * [Guida rapida](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
 * [Panoramica sulla pubblicazione](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
 
-## Configurare una configurazione edge
+## Configurare un datastream
 
-Affinché l’SDK invii dati ad Experience Platform, devi disporre di una configurazione edge esistente per Platform configurata in Adobe Experience Platform Launch. Inoltre, la [!UICONTROL Profile Dataset] selezionata per la configurazione deve contenere campi di consenso standardizzati.
+Affinché l’SDK invii dati ad Experience Platform, devi disporre di un datastream esistente per Platform configurato in Adobe Experience Platform Launch. Inoltre, il [!UICONTROL Set di dati di profilo] selezionato per la configurazione deve contenere campi di consenso standardizzati.
 
 Dopo aver creato una nuova configurazione o aver selezionato una configurazione esistente da modificare, seleziona il pulsante di attivazione accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizza i valori elencati di seguito per completare il modulo.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Campo di configurazione perimetrale | Valore |
+| Campo Datastream | Valore |
 | --- | --- |
-| [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare la configurazione Edge. |
-| [!UICONTROL Streaming Inlet] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
-| [!UICONTROL Event Dataset] | Un set di dati [!DNL XDM ExperienceEvent] che prevedi di inviare dati evento all’utilizzo dell’SDK. Sebbene sia necessario fornire un set di dati evento per creare una configurazione Edge di Platform, al momento l’invio diretto dei dati di consenso tramite eventi non è supportato. |
-| [!UICONTROL Profile Dataset] | Il set di dati abilitato [!DNL Profile] con i campi di consenso dei clienti creati in precedenza. |
+| [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare il datastream. |
+| [!UICONTROL Ingresso streaming] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
+| [!UICONTROL Set di dati evento] | Un set di dati [!DNL XDM ExperienceEvent] che prevedi di inviare dati evento all’utilizzo dell’SDK. Sebbene sia necessario fornire un set di dati dell’evento per creare un datastream Platform, al momento l’invio diretto dei dati di consenso tramite eventi non è supportato. |
+| [!UICONTROL Set di dati del profilo] | Il set di dati abilitato [!DNL Profile] con i campi di consenso dei clienti creati in precedenza. |
 
-Al termine, seleziona **[!UICONTROL Save]** nella parte inferiore dello schermo e continua a seguire tutte le istruzioni aggiuntive per completare la configurazione.
+Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore dello schermo e continua a seguire tutte le istruzioni aggiuntive per completare la configurazione.
 
 
 ## Installare e configurare l’estensione Platform Web SDK
 
-Dopo aver creato una configurazione perimetrale come descritto nella sezione precedente, devi configurare l’estensione Platform Web SDK che distribuirai in ultima istanza sul sito. Se l&#39;estensione SDK non è installata nella proprietà del Platform launch, seleziona **[!UICONTROL Extensions]** nel menu di navigazione a sinistra, seguito dalla scheda **[!UICONTROL Catalog]** . Quindi, seleziona **[!UICONTROL Install]** nell’estensione Platform SDK all’interno dell’elenco delle estensioni disponibili.
+Dopo aver creato un datastream come descritto nella sezione precedente, devi configurare l’estensione Platform Web SDK che distribuirai in ultima analisi sul sito. Se l&#39;estensione SDK non è installata nella proprietà del Platform launch, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seguito dalla scheda **[!UICONTROL Catalogo]** . Quindi, seleziona **[!UICONTROL Installa]** sotto l&#39;estensione Platform SDK all&#39;interno dell&#39;elenco delle estensioni disponibili.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Durante la configurazione dell&#39;SDK, in **[!UICONTROL Edge Configurations]** seleziona la configurazione creata nel passaggio precedente.
+Durante la configurazione dell&#39;SDK, in **[!UICONTROL Configurazioni bordi]**, seleziona il datastream creato nel passaggio precedente.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Seleziona **[!UICONTROL Save]** per installare l&#39;estensione.
+Seleziona **[!UICONTROL Salva]** per installare l&#39;estensione.
 
 ### Creare un elemento dati per impostare il consenso predefinito
 
@@ -73,13 +72,13 @@ Se l&#39;area geografica dell&#39;utente è determinata da una CMP, puoi invece 
 1. Nel gestore eventi, imposta una variabile `adobeDefaultConsent` basata sull&#39;area dell&#39;utente, quindi carica lo script della libreria di Platform launch utilizzando JavaScript.
 1. Imposta un elemento dati che utilizza la variabile JavaScript `adobeDefaultConsent` e utilizza questo elemento dati come valore di consenso predefinito per l’utente.
 
-Per creare un elemento dati nell’interfaccia utente del Platform launch, seleziona **[!UICONTROL Data Elements]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Add Data Element]** per accedere alla finestra di dialogo per la creazione dell’elemento dati.
+Per creare un elemento dati nell’interfaccia utente del Platform launch, seleziona **[!UICONTROL Elementi dati]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Aggiungi elemento dati]** per accedere alla finestra di dialogo per la creazione dell’elemento dati.
 
-Da qui, devi creare un elemento dati [!UICONTROL JavaScript Variable] basato su `adobeDefaultConsent`. Al termine, fai clic su **[!UICONTROL Save]**.
+Da qui, devi creare un elemento dati [!UICONTROL JavaScript Variable] basato su `adobeDefaultConsent`. Al termine, seleziona **[!UICONTROL Salva]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Una volta creato l&#39;elemento dati, torna alla pagina di configurazione dell&#39;estensione SDK per web. Nella sezione [!UICONTROL Privacy] , seleziona **[!UICONTROL Provided by data element]** e utilizza la finestra di dialogo fornita per selezionare l’elemento dati di consenso predefinito creato in precedenza.
+Una volta creato l&#39;elemento dati, torna alla pagina di configurazione dell&#39;estensione SDK per web. Nella sezione [!UICONTROL Privacy] , seleziona **[!UICONTROL Fornito dall&#39;elemento dati]** e utilizza la finestra di dialogo fornita per selezionare l&#39;elemento dati di consenso predefinito creato in precedenza.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
