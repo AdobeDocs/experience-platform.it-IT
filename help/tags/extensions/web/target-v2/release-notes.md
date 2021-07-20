@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note aggiornate sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 78%
+source-wordcount: '572'
+ht-degree: 62%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 78%
 >[!NOTE]
 >
 >Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 20 luglio 2021
+
+### Estensione Adobe Target v2 0.15.1
+
+- È stato risolto un problema relativo a una combinazione di nome funzione `stringify` che causava la generazione di valori UUID non corretti per `sessionId`, `requestId` e così via.
+
+## 16 luglio 2021
+
+### Estensione Adobe Target v2 0.15.0
+
+- Aggiungi l’attributo sicuro ai cookie ogni volta che le impostazioni di at.js secureOnly sono impostate su true
+- I token di risposta sono ora disponibili quando si utilizza `triggerView()`
+- È stato corretto un bug relativo all’evento `CONTENT_RENDERING_NO_OFFERS` . Ora viene attivato correttamente ogni volta che non vi è contenuto restituito da Target
+- I dettagli delle metriche di clic di A4T vengono restituiti correttamente quando si utilizzano richieste di preacquisizione
+- La generazione UID non utilizza più `Math.random()`, ma si basa su `window.crypto`
+- `sessionId` la scadenza dei cookie viene estesa correttamente su ogni chiamata di rete
+- SPA l&#39;inizializzazione della cache di visualizzazione è ora gestita correttamente e rispetta le impostazioni `viewsEnable`
+
+## 2 giugno 2021
+
+### Estensione Adobe Target v2 0.14.2
+
+- È stato corretto un bug a causa del quale il bundle Launch finale contiene due versioni di at.js, una con On-Device Decisioning e una senza.
 
 ## 19 maggio 2021
 
