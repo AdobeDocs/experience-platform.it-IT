@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '3054'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,21 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
 ![Esportare file completi](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per scegliere tra le esportazioni una tantum (**[!UICONTROL Una volta]**) o **[!UICONTROL Giornaliero]**. L’esportazione di un file completo **[!UICONTROL Daily]** esporta il file ogni giorno dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
+
+   >[!IMPORTANT]
+   >
+   >Quando si impostano la data di inizio e di fine, la **[!UICONTROL Data di inizio]** indica quando è pianificato l&#39;inizio delle esportazioni dei file e la **[!UICONTROL Data di fine]** indica quando è pianificato l&#39;arresto delle esportazioni dei file. Le esportazioni dei file iniziano il **[!UICONTROL Data inizio]**, ma non includono la **[!UICONTROL Data fine]**.
+   >
+   >Ad esempio, se imposti la pianificazione seguente:
+   >
+   >* Esportazione: Incrementale ogni 3 ore
+   >* Data di inizio: 07/07/19
+   >* Data di fine: 21/07/21
+
+   >
+   >I file inizieranno l&#39;esportazione il 19/7 e cesseranno l&#39;esportazione il 20/7/23 a 23:59:59 UTC. Non ci saranno file consegnati il 21/7.
+
+
 2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione. L’esportazione di un file **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine al momento in cui lo selezioni.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 ![Esportare file incrementali](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per scegliere tra le esportazioni **[!UICONTROL Giornaliero]** o **[!UICONTROL Orario]**. L’esportazione di un file incrementale **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine alle 12:00 UTC (7:00 AM EST).
+
+
+   >[!IMPORTANT]
+   >
+   >Quando si impostano la data di inizio e di fine, la **[!UICONTROL Data di inizio]** indica quando è pianificato l&#39;inizio delle esportazioni dei file e la **[!UICONTROL Data di fine]** indica quando è pianificato l&#39;arresto delle esportazioni dei file. Le esportazioni dei file iniziano il **[!UICONTROL Data inizio]**, ma non includono la **[!UICONTROL Data fine]**.
+   >
+   >Ad esempio, se imposti la pianificazione seguente:
+   >
+   >* Esportazione: Incrementale ogni 3 ore
+   >* Data di inizio: 07/07/19
+   >* Data di fine: 21/07/21
+
+   >
+   >I file inizieranno l&#39;esportazione il 19/7 e cesseranno l&#39;esportazione il 20/7/23 a 23:59:59 UTC. Non ci saranno file consegnati il 21/7.
+
    * Quando selezioni **[!UICONTROL Ogni ora]**, utilizza il selettore **[!UICONTROL Ogni]** per scegliere tra le opzioni **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** ora.
 
       >[!IMPORTANT]
       >
       >L’opzione per esportare i file incrementali ogni 3, 6, 8 o 12 ore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. I clienti non beta possono esportare file incrementali una volta al giorno.
+
 
 2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
