@@ -5,11 +5,10 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -168,7 +167,7 @@ Una risposta corretta restituisce un array di segmenti nell’organizzazione IMS
 
 ## Creare un segmento abilitato per la segmentazione dei bordi
 
-Puoi creare un segmento abilitato per la segmentazione edge effettuando una richiesta POST all’endpoint `/segment/definitions` . Oltre a corrispondere a uno dei tipi di query di segmentazione edge elencati sopra](#query-types), è necessario impostare il flag `evaluationInfo.synchronous.enabled` nel payload su true.[
+Puoi creare un segmento abilitato per la segmentazione edge effettuando una richiesta POST all’endpoint `/segment/definitions` che corrisponde a uno dei tipi di query di segmentazione edge elencati sopra](#query-types).[
 
 **Formato API**
 
@@ -201,18 +200,9 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | L’oggetto `evaluationInfo` determina il tipo di valutazione a cui verrà sottoposta la definizione del segmento. Per utilizzare la segmentazione dei bordi, impostate `evaluationInfo.synchronous.enabled` con un valore di `true`. |
 
 **Risposta**
 
