@@ -5,10 +5,9 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-translation-type: tm+mt
-source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
+source-git-commit: 8375d5a35ef652335c60b4b8b4571bf42ec1924a
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '345'
 ht-degree: 4%
 
 ---
@@ -32,9 +31,7 @@ La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Exper
 | Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |  |
 | Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |  |
 
-Se la query corrisponde a uno qualsiasi dei tipi di query di cui sopra, puoi abilitarla per la segmentazione edge attivando l’opzione **[!UICONTROL Evaluate as streaming segment on the edge]**.
-
-![](../images/ui/edge-segmentation/mark-on-edge.png)
+Se la query corrisponde a uno qualsiasi dei tipi di query di cui sopra, verrà valutata automaticamente utilizzando la segmentazione edge.
 
 I seguenti tipi di query sono **non** attualmente supportati per la segmentazione edge:
 
