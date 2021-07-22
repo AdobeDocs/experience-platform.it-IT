@@ -4,9 +4,9 @@ title: Dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Per passare al dashboard [!UICONTROL Segmenti] nell’interfaccia utente di Plat
 
 ### Modifica del dashboard [!UICONTROL Segmenti]
 
-Puoi modificare l&#39;aspetto del dashboard [!UICONTROL Segmenti] selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla [!UICONTROL Libreria widget] per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
+Puoi modificare l&#39;aspetto del dashboard [!UICONTROL Segmenti] selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
-Per ulteriori informazioni, consulta la documentazione [modifica di dashboard](../modify.md) e [libreria widget](../widget-library.md) .
+Per ulteriori informazioni, consulta la documentazione [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria di widget](../customize/widget-library.md) .
 
 ## Selezionare un segmento
 
@@ -61,9 +61,11 @@ La data e l’ora &quot;ultimo aggiornamento&quot; di un widget mostrano quando 
 
 ![](../images/segments/widget-timestamp.png)
 
-## Widget disponibili
+## Widget standard
 
-Experience Platform fornisce più widget che puoi utilizzare per visualizzare diverse metriche correlate al tuo segmento. Seleziona il nome di un widget qui sotto per ulteriori informazioni:
+Adobe fornisce più widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai tuoi segmenti. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando la [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, inizia leggendo la [panoramica della libreria di widget](../customize/widget-library.md).
+
+Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
 * [[!UICONTROL Dimensione del pubblico]](#audience-size)
 * [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
