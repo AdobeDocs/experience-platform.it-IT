@@ -4,9 +4,9 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Per passare al dashboard [!UICONTROL Profili] nell’interfaccia utente di Platf
 
 ### Modifica del dashboard [!UICONTROL Profili]
 
-È possibile modificare l&#39;aspetto del dashboard [!UICONTROL Profili] selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla [!UICONTROL Libreria widget] per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
+È possibile modificare l&#39;aspetto del dashboard [!UICONTROL Profili] selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
-Per ulteriori informazioni, consulta la documentazione [modifica di dashboard](../modify.md) e [libreria widget](../widget-library.md) .
+Per ulteriori informazioni, consulta la documentazione [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria di widget](../customize/widget-library.md) .
 
 ## Unisci criteri
 
@@ -63,9 +63,11 @@ Il dashboard è composto da widget, che sono metriche di sola lettura che fornis
 
 La data e l’ora &quot;ultimo aggiornamento&quot; di un widget mostrano quando è stata acquisita l’ultima istantanea dei dati. La data e l’ora dell’istantanea sono indicate in UTC; non si trova nel fuso orario del singolo utente o dell’organizzazione IMS.
 
-## Widget disponibili
+## Widget standard
 
-Experience Platform fornisce più widget che puoi utilizzare per visualizzare diverse metriche correlate ai dati del profilo. Seleziona il nome di un widget qui sotto per ulteriori informazioni:
+Adobe fornisce diversi widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai dati del profilo. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando la [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, inizia leggendo la [panoramica della libreria di widget](../customize/widget-library.md).
+
+Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
 * [[!UICONTROL Numero di profili]](#profile-count)
 * [[!UICONTROL Profili aggiunti]](#profiles-added)
