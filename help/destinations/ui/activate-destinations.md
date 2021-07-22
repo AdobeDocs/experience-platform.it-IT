@@ -6,7 +6,7 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%
@@ -169,7 +169,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
 
 >[!IMPORTANT]
 >
->La modifica della pianificazione dell’esportazione dei file per i segmenti già esportati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+>La modifica della pianificazione dell’esportazione dei file per i segmenti già salvati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 ### Esportare file incrementali {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
 >[!IMPORTANT]
 >
->La modifica della pianificazione dell’esportazione dei file per i segmenti già esportati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+>La modifica della pianificazione dell’esportazione dei file per i segmenti già salvati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 ### Configurare i nomi dei file {#file-names}
 
