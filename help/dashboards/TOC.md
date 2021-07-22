@@ -4,10 +4,10 @@ user-guide-title: Guida ai dashboard di Adobe Experience Platform
 breadcrumb-title: Guida ai dashboard
 user-guide-description: Visualizza i dati di Experience Platform in dashboard personalizzabili.
 feature: Gestione dati
-source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
+source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 36%
+source-wordcount: '56'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,12 @@ ht-degree: 36%
    * [Segmenti](guides/segments.md)
    * [Destinazioni](guides/destinations.md)
    * [Utilizzo della licenza](guides/license-usage.md)
-* [Modificare le dashboard](modify.md)
-* [Libreria widget](widget-library.md)
+* Personalizzazione delle dashboard {#customize}
+   * [Panoramica sulla personalizzazione](customize/overview.md)
+   * [Modificare le dashboard](customize/modify.md)
+   * [Libreria widget](customize/widget-library.md)
+   * [Widget standard](customize/standard-widgets.md)
+   * [Widget personalizzati](customize/custom-widgets.md)
+   * [Modifica di uno schema](customize/edit-schema.md)
 * [Set di dati del dashboard query](query.md)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
