@@ -1,10 +1,10 @@
 ---
 title: Panoramica sullo sviluppo di estensioni
 description: Scopri i componenti principali di diversi tipi di estensione tag e il processo di sviluppo dell’estensione in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
 source-wordcount: '1888'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 69%
 >
 >Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Uno degli obiettivi principali di Adobe Experience Platform è la creazione di un ecosistema aperto in cui gli ingegneri al di fuori del team di progettazione principale possono esporre funzionalità aggiuntive tramite tag. Questo avviene attraverso le estensioni Reactor. Una volta che un utente ha installato un&#39;estensione su una proprietà tag, la sua funzionalità diventa disponibile per l&#39;uso da parte di tutti gli utenti della proprietà.
+Uno degli obiettivi principali di Adobe Experience Platform è la creazione di un ecosistema aperto in cui gli ingegneri al di fuori del team di progettazione principale possono esporre funzionalità aggiuntive tramite tag. Questo avviene tramite le estensioni di tag. Una volta che un utente ha installato un&#39;estensione su una proprietà tag, la sua funzionalità diventa disponibile per l&#39;uso da parte di tutti gli utenti della proprietà.
 
 Questo documento illustra i componenti principali di diversi tipi di estensione e fornisce collegamenti per ulteriore documentazione che ti guiderà sul processo di sviluppo dell&#39;estensione.
 
