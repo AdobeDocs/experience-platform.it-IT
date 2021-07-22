@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramit
 
 Per una panoramica delle destinazioni e un catalogo di tutte le destinazioni disponibili all&#39;interno dell&#39;Experience Platform, visita la [documentazione sulle destinazioni](../../destinations/home.md).
 
-##  Destinazioni: dati dashboard  {#destinations-dashboard-data}
+##  Destinazioni: dati dashboard {#destinations-dashboard-data}
 
 Il dashboard [!UICONTROL Destinazioni] visualizza un&#39;istantanea delle destinazioni abilitate dall&#39;organizzazione all&#39;interno di Profilo esperienza. I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard delle destinazioni non viene aggiornato in tempo reale.
 
@@ -35,9 +35,17 @@ Per passare al dashboard delle destinazioni nell’interfaccia utente di Platfor
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Widget disponibili
+### Modifica del dashboard delle destinazioni
 
-Experience Platform fornisce più widget che puoi utilizzare per visualizzare diverse metriche correlate alle tue destinazioni. Seleziona il nome di un widget qui sotto per ulteriori informazioni:
+Puoi modificare l&#39;aspetto del dashboard delle destinazioni selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
+
+Per ulteriori informazioni, consulta la documentazione [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria di widget](../customize/widget-library.md) .
+
+## Widget standard
+
+Adobe fornisce diversi widget standard che puoi utilizzare per visualizzare diverse metriche correlate alle tue destinazioni. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando la [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, inizia leggendo la [panoramica della libreria di widget](../customize/widget-library.md).
+
+Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
 * [[!UICONTROL Destinazioni più utilizzate]](#most-used-destinations)
 * [[!UICONTROL Destinazioni create di recente]](#recently-created-destinations)
