@@ -1,9 +1,9 @@
 ---
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 77%
 
 ---
@@ -22,7 +22,7 @@ Un manifesto dell’estensione deve essere costituito dai seguenti elementi:
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni Reactor e deve essere conforme alle [regole relative alla denominazione](#naming-rules). **Questo viene utilizzato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell&#39;estensione.** |
+| `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni e deve essere conforme alle [regole relative alla denominazione](#naming-rules). **Questo viene utilizzato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell&#39;estensione.** |
 | `platform` | Piattaforma per l’estensione. Al momento l’unico valore accettato è `web`. |
 | `version` | Versione dell’estensione. Deve seguire il formato di controllo delle versioni [semver](http://semver.org/). È conforme al [campo npm version](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Nome leggibile dell’estensione. Questo verrà mostrato agli utenti di Platform. Non è necessario menzionare &quot;tag&quot; o &quot;estensione&quot;; Gli utenti sapranno già che stanno cercando un’estensione di tag. |
