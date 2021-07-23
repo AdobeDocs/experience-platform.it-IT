@@ -1,23 +1,22 @@
 ---
-title: Invio di dati a  Adobe Analytics tramite Adobe Experience Platform Web SDK
-description: Scopri come inviare dati ad  Adobe Analytics con Adobe Experience Platform Web SDK.
-keywords: adobe analytics;analytics;mappatura dei dati;mappatura delle variabili;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Invio di dati ad Adobe Analytics tramite Adobe Experience Platform Web SDK
+description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
+keywords: adobe analytics;analytics;dati mappati;variabili mappate;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
 
 ---
 
+# Invio di dati ad Adobe Analytics
 
-# Invio di dati a  Adobe Analytics
-
-Adobe Experience Platform [!DNL Web SDK] può inviare dati a  Adobe Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile dall&#39;Adobe Analytics .
+Adobe Experience Platform [!DNL Web SDK] può inviare dati ad Adobe Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile da Adobe Analytics.
 
 ## Configurazione
 
- Adobe Analytics recupera automaticamente i dati che stai inviando se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
+Se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione cliente, Adobe Analytics raccoglie automaticamente i dati che stai inviando. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
 
 ## Dati mappati automaticamente
 
@@ -25,9 +24,9 @@ Adobe Experience Platform [!DNL Edge Network] mappa automaticamente molte variab
 
 ## Dati mappati manualmente
 
-Tutti i dati raccolti dalla rete Edge sono accessibili tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
+Tutti i dati raccolti dalla rete perimetrale sono accessibili tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
 
-Se si aveva uno schema simile a questo.
+Se avevi uno schema simile a questo.
 
 ```javascript
 {
@@ -52,7 +51,7 @@ Se si aveva uno schema simile a questo.
 }
 ```
 
-Queste sono quindi le chiavi dei dati contestuali a tua disposizione.
+Queste sarebbero le chiavi dei dati contestuali a tua disposizione.
 
 ```javascript
 a.x.key //value
@@ -65,6 +64,6 @@ a.x.arrayofobjects.0.obj1key //objval0
 a.x.arrayofobjects.1.obj2key //objval1
 ```
 
-Esempio di una regola di elaborazione che utilizzerebbe questi dati.
+Ecco un esempio di regola di elaborazione che utilizzerebbe questi dati.
 
-![Interfaccia delle regole di elaborazione](../../../assets/edge_analytics_processing_rules.png)
+![Interfaccia delle regole di elaborazione](./assets/edge_analytics_processing_rules.png)
