@@ -4,17 +4,16 @@ description: Scopri quali variabili vengono mappate automaticamente in Adobe Ana
 seo-description: Scopri quali variabili vengono mappate automaticamente in Adobe Analytics con Adobe Experience Platform Web SDK
 keywords: adobe analytics;variabili;analytics;mappa automatica;mappatura automatica;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-translation-type: tm+mt
-source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
+source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
 
 # Variabili mappate automaticamente in [!DNL Analytics]
 
-Di seguito è riportato un elenco di variabili che Adobe Experience Platform Edge Network mappa automaticamente in Adobe Analytics.
+Di seguito è riportato un elenco di variabili che Adobe Experience Platform Edge Network mappa automaticamente in Adobe Analytics. Informazioni dettagliate sui parametri delle query di raccolta dati di Adobe Analytics sono disponibili nella [Guida all&#39;implementazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
 
 | Percorso campo XDM | [!DNL Analytics Query String] / Intestazione HTTP | Descrizione |
 | ---------- | ------------------------- | ----------------------------------------- |
