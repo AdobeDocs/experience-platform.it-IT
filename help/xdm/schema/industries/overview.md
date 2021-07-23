@@ -4,9 +4,9 @@ title: Panoramica dei modelli di dati di settore
 topic-legacy: overview
 description: Scopri i modelli di dati standardizzati per vari settori verticali che possono essere costruiti utilizzando componenti XDM (Experience Data Model) standard.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -38,6 +38,7 @@ Le ERD sono fornite per i seguenti settori verticali:
 
 * [[!UICONTROL Vendita al dettaglio]](./retail.md)
 * [[!UICONTROL Servizi finanziari]](./financial.md)
+* [[!UICONTROL Telecomunicazioni]](./telecom.md)
 * [[!UICONTROL Viaggi e ospitalità]](./travel-hospitality.md)
 
 ## Passaggi successivi
