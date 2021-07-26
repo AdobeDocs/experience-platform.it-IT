@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '628'
 ht-degree: 11%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 11%
       - [Connettore Shopify](connectors/ecommerce/shopify.md)
    - Automazione del marketing {#marketing-automation}
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
    - Protocolli {#protocols}
@@ -127,6 +128,7 @@ ht-degree: 11%
          - [Shopificante](tutorials/api/create/ecommerce/shopify.md)
       - Automazione del marketing {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolli {#protocols}
@@ -200,7 +202,7 @@ ht-degree: 11%
          - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Archiviazione tabella di Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Big Query di Google](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [Plum verde](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -214,6 +216,7 @@ ht-degree: 11%
          - [Shopificante](tutorials/ui/create/ecommerce/shopify.md)
       - Automazione del marketing {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolli {#protocols}
