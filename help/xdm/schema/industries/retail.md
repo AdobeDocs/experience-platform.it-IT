@@ -4,16 +4,20 @@ title: Modello dati retail
 topic-legacy: overview
 description: Visualizza un modello dati standardizzato per il settore retail, compatibile con Experience Data Model (XDM) per l’utilizzo in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 9c5a4e064af0b46ff30b41afef71ca2fd3503a82
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 1%
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
 #  Modello dati retail
 
 Il seguente schema di relazione tra entità (ERD) rappresenta un modello di dati standardizzato per il settore retail. L&#39;ERD viene presentato intenzionalmente in modo denormalizzato e tenendo conto del modo in cui i dati vengono memorizzati in Adobe Experience Platform.
+
+>[!NOTE]
+>
+>L’ERD come descritto è una raccomandazione su come modellare i dati per questo caso d’uso del settore. Per utilizzare questo modello dati in Platform, è necessario creare autonomamente gli schemi consigliati e le relative relazioni. Per ulteriori informazioni, consulta le guide sulla gestione di [schemi](../../ui/resources/schemas.md) e [relazioni](../../tutorials/relationship-ui.md) nell’interfaccia utente.
 
 Utilizzare la seguente legenda per interpretare questo ERD:
 
