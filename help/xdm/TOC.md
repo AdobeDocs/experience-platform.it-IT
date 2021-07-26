@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemi
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 15%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 15%
       * [Dati di contatto personali](./field-groups/profile/personal-contact-details.md)
       * [Consensi e preferenze](./field-groups/profile/consents.md)
       * [Dettagli di appartenenza al segmento](./field-groups/profile/segmentation.md)
+      * [Abbonamento a domicilio](./field-groups/profile/telecom-subscription.md)
       * [Dettagli contatto lavoro](./field-groups/profile/work-contact-details.md)
    * Gruppi di campi evento {#event}
       * [Dettagli di marketing per le campagne](./field-groups/event/campaign-marketing-details.md)
       * [Dettagli canale](./field-groups/event/channel-details.md)
       * [Dettagli Commerce](./field-groups/event/commerce-details.md)
+      * [Dettagli sul trasferimento dei dispositivi](./field-groups/event/device-trade-in-details.md)
       * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
       * [Dettagli dell&#39;ambiente](./field-groups/event/environment-details.md)
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 15%
    * [Commerce](./data-types/commerce.md)
    * [Stringa di consenso](./data-types/consent-string.md)
    * [Consensi e preferenze](./data-types/consents.md)
+   * [Valuta](./data-types/currency.md)
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 15%
    * [Voce dell’elenco dei prodotti](./data-types/product-list-item.md)
    * [Cerca](./data-types/search.md)
    * [Abbonamento](./data-types/subscription.md)
+   * [Abbonamento a domicilio](./data-types/telecom-subscription.md)
    * [Informazioni web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
