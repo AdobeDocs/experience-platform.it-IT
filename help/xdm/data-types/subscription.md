@@ -5,10 +5,10 @@ title: Tipo di dati sottoscrizione
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Subscription Experience Data Model).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d99ddc65849a88350bf61977b399b07989554426
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 9%
+source-wordcount: '420'
+ht-degree: 10%
 
 ---
 
