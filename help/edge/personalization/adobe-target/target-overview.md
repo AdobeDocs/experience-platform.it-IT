@@ -3,10 +3,10 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 5%
+source-wordcount: '1220'
+ht-degree: 4%
 
 ---
 
@@ -24,6 +24,22 @@ Le seguenti funzioni sono state testate e sono attualmente supportate in [!DNL T
 * [Attività di Consigli](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Generazione di rapporti sulle impression e sulle conversioni di Target nativi](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Supporto VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] diagramma di sistema
+
+Il diagramma seguente ti aiuta a comprendere il flusso di lavoro delle [!DNL Target] e [!DNL Platform Web SDK] decisioni edge.
+
+![Diagramma delle decisioni edge di Adobe Target con Platform Web SDK](./assets/target-platform-web-sdk.png)
+
+| Chiamata | Dettagli |
+| --- | --- |
+| 1 | Il dispositivo carica il [!DNL Platform Web SDK]. Il [!DNL Platform Web SDK] invia una richiesta alla rete perimetrale con dati XDM, l’ID ambiente Datastreams, i parametri passati e l’ID cliente (facoltativo). La pagina (o i contenitori) è prenascosta. |
+| 2 | La rete perimetrale invia la richiesta ai servizi perimetrali per arricchirla con l’ID visitatore, il consenso e altre informazioni contestuali, come la geolocalizzazione e i nomi descrittivi dei dispositivi. |
+| 3 | La rete perimetrale invia la richiesta di personalizzazione arricchita al server Edge [!DNL Target] con l’ID visitatore e i parametri passati. |
+| 4 | Gli script di profilo vengono eseguiti e quindi inseriti nell’archivio dei profili [!DNL Target]. L’archiviazione dei profili recupera i segmenti dalla [!UICONTROL Libreria tipi di pubblico] (ad esempio, i segmenti condivisi da [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 5 | In base ai parametri di richiesta URL e ai dati di profilo, [!DNL Target] determina quali attività ed esperienze visualizzare per il visitatore per la visualizzazione della pagina corrente e per le visualizzazioni preacquisite future. [!DNL Target] quindi invia nuovamente questo messaggio alla rete perimetrale. |
+| 6 | a) La rete perimetrale invia nuovamente la risposta di personalizzazione alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione. Il contenuto personalizzato sulla pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<br>b) Il contenuto personalizzato per le visualizzazioni mostrate come risultato delle azioni dell’utente in un’applicazione a pagina singola (SPA) viene memorizzato nella cache in modo che possa essere applicato immediatamente senza una chiamata al server aggiuntiva quando vengono attivate le visualizzazioni &#x200B;.<br>c. La rete perimetrale invia l’ID visitatore e altri valori nei cookie, come il consenso, l’ID sessione, l’identità, il controllo dei cookie, la personalizzazione e così via. |
+| 7 | La rete Edge inoltra i dettagli [!UICONTROL Analytics for Target] (A4T) (attività, esperienza e metadati di conversione) al &#x200B; Edge [!DNL Analytics]. |
 
 ## Abilitazione di [!DNL Adobe Target]
 
