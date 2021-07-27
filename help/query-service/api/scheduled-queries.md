@@ -5,10 +5,9 @@ title: Endpoint API per query pianificate
 topic-legacy: scheduled queries
 description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per query pianificate con l’API del servizio query.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1010'
 ht-degree: 3%
 
 ---
@@ -125,7 +124,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query piani
 
 ### Crea una nuova query pianificata
 
-Puoi creare una nuova query pianificata effettuando una richiesta di POST all’endpoint `/schedules` .
+Puoi creare una nuova query pianificata effettuando una richiesta di POST all’endpoint `/schedules` . Quando crei una query pianificata nell’API, puoi visualizzarla anche nell’editor delle query. Per ulteriori informazioni sulle query pianificate nell&#39;interfaccia utente, consulta la [documentazione dell&#39;editor delle query](../ui/user-guide.md#scheduled-queries).
 
 **Formato API**
 
