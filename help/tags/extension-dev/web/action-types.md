@@ -1,10 +1,10 @@
 ---
 title: Tipi di azioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 65%
+source-wordcount: '407'
+ht-degree: 53%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 65%
 >
 >Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Un modulo libreria di tipi di azione è destinato a eseguire un&#39;azione predefinita. Ciò che questa azione fa dipende interamente da te. Desideri inviare un beacon, mostrare un’offerta, ringraziare l’utente per la visita, salvare un cookie o aprire una chat di supporto?
+Nel contesto dei tag di raccolta dati, un&#39;azione è qualcosa che viene eseguita dopo un evento di regola e tutte le condizioni hanno superato la valutazione.
+
+Ad esempio, un’estensione potrebbe fornire un tipo di azione “show support chat” che potrebbe mostrare una finestra di dialogo con la chat di supporto per aiutare gli utenti che riscontrano difficoltà nel concludere un acquisto.
+
+Questo documento illustra come definire i tipi di azioni per un&#39;estensione Web in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Questo documento descrive i tipi di azione per le estensioni web. Se stai sviluppando un’estensione Edge, consulta invece la guida sui [tipi di azione per le estensioni Edge](../edge/action-types.md).
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli libreria e con la loro integrazione nelle estensioni tag. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con la loro integrazione nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+
+I tipi di azione in genere consistono nei seguenti elementi:
+
+1. Una [visualizzazione](./views.md) mostrata nell&#39;interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni per l&#39;azione.
+2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni ed eseguire un&#39;azione.
 
 ```js
 module.exports = function(settings) {
