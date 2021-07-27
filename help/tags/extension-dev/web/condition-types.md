@@ -1,10 +1,10 @@
 ---
 title: Tipi di condizioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo condizione per un’estensione tag in una proprietà web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 86%
+source-wordcount: '497'
+ht-degree: 67%
 
 ---
 
@@ -12,15 +12,26 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta il seguente[documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Un modulo libreria per tipi di condizione ha un obiettivo: valutare se qualcosa è vero o falso. Sta a te definire ciò che verrà valutato.
+Nel contesto di una regola, una condizione viene valutata dopo che si è verificato un evento. Tutte le condizioni devono restituire true affinché la regola possa continuare l’elaborazione. L’eccezione si verifica quando gli utenti inseriscono esplicitamente le condizioni in un bucket di &quot;eccezione&quot;, nel qual caso tutte le condizioni all’interno del bucket devono restituire false perché la regola continui l’elaborazione.
+
+Ad esempio, un’estensione potrebbe fornire un tipo di condizione “viewport contains” in cui l’utente di potrebbe specificare un selettore CSS. Quando la condizione viene valutata sul sito web del client, l’estensione sarà in grado di trovare elementi che corrispondono al selettore CSS e restituire se uno di essi è contenuto nella finestra dell’utente.
+
+Questo documento illustra come definire i tipi di condizioni per un&#39;estensione Web in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Questo documento descrive i tipi di condizioni per le estensioni web. Se stai sviluppando un’estensione Edge, consulta invece la guida sui [tipi di condizioni per le estensioni Edge](../edge/condition-types.md).
+>Se stai sviluppando un’estensione Edge, consulta invece la guida sui [tipi di condizioni per le estensioni Edge](../edge/condition-types.md).
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli libreria e con la loro integrazione nelle estensioni tag. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>Questo documento presuppone che tu abbia familiarità con i moduli di libreria e con il modo in cui sono integrati nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+
+I tipi di condizione sono in genere costituiti dai seguenti elementi:
+
+1. Una [visualizzazione](./views.md) mostrata nell’interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
+2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e valutare una condizione.
+
+Un modulo libreria di tipo condizione ha un obiettivo: valuta se qualcosa è vero o falso. Sta a te definire ciò che verrà valutato.
 
 Ad esempio, per valutare se l’utente si trova sull’host `example.com`, il modulo potrebbe presentarsi così:
 
