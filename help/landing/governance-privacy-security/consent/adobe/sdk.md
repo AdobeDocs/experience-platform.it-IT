@@ -3,9 +3,9 @@ title: Elaborazione dei dati di consenso dei clienti tramite Adobe Experience Pl
 topic-legacy: getting started
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 1%
 Adobe Experience Platform Web SDK consente di recuperare i segnali di consenso generati dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e inviarli a Adobe Experience Platform ogni volta che si verifica un evento di modifica del consenso.
 
 **L’SDK non si interfaccia con alcuna CMP preconfigurata**. Sta a te determinare come integrare l’SDK nel tuo sito web, ascoltare le modifiche al consenso nella CMP e chiamare il comando appropriato. Questo documento fornisce indicazioni generali su come integrare CMP con Platform Web SDK.
+
+>[!NOTE]
+>
+>Questa guida descrive i passaggi necessari per integrare l’SDK tramite un’estensione tag nell’interfaccia utente di Raccolta dati. Se invece desideri utilizzare la versione autonoma dell&#39;SDK, consulta i seguenti documenti:
+>
+>* [Configurare un datastream](../../../../edge/fundamentals/datastreams.md)
+* [Installare l’SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+* [Configurare l&#39;SDK per i comandi di consenso](../../../../edge/consent/supporting-consent.md)
+
 
 ## Prerequisiti
 
@@ -44,7 +53,7 @@ Dopo aver creato una nuova configurazione o aver selezionato una configurazione 
 Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore dello schermo e continua a seguire tutte le istruzioni aggiuntive per completare la configurazione.
 
 
-## Installare e configurare l’estensione Platform Web SDK
+## Installare e configurare l’SDK per web di Platform
 
 Dopo aver creato un datastream come descritto nella sezione precedente, devi configurare l’estensione Platform Web SDK che distribuirai in ultima analisi sul sito. Se l&#39;estensione SDK non è installata nella proprietà del Platform launch, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seguito dalla scheda **[!UICONTROL Catalogo]** . Quindi, seleziona **[!UICONTROL Installa]** sotto l&#39;estensione Platform SDK all&#39;interno dell&#39;elenco delle estensioni disponibili.
 
@@ -86,7 +95,7 @@ Una volta creato l&#39;elemento dati, torna alla pagina di configurazione dell&#
 
 Dopo aver configurato l&#39;estensione, questa può essere integrata nel sito web. Per informazioni dettagliate su come distribuire la build della libreria aggiornata, consulta la [guida alla pubblicazione](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) nella documentazione del Platform launch .
 
-## Esecuzione di comandi di modifica del consenso
+## Esecuzione di comandi di modifica del consenso {#commands}
 
 Dopo aver integrato l’estensione SDK nel sito web, puoi iniziare a utilizzare il comando Platform Web SDK `setConsent` per inviare i dati di consenso a Platform.
 
@@ -96,8 +105,7 @@ Esistono due scenari in cui `setConsent` deve essere chiamato sul sito:
 1. Come parte di un hook CMP o listener di eventi che rileva le modifiche nelle impostazioni di consenso
 
 >[!NOTE]
->
->Per un’introduzione alla sintassi comune per i comandi SDK di Platform, consulta il documento relativo all’ [esecuzione di comandi](../../../../edge/fundamentals/executing-commands.md).
+Per un’introduzione alla sintassi comune per i comandi SDK di Platform, consulta il documento relativo all’ [esecuzione di comandi](../../../../edge/fundamentals/executing-commands.md).
 
 Il comando `setConsent` prevede due argomenti:
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | Le informazioni di consenso aggiornate del cliente, fornite come oggetto XDM conforme alla struttura dei campi di consenso del set di dati abilitati per il profilo. |
 
 >[!NOTE]
->
->Se utilizzi altri standard di consenso insieme a `Adobe` (ad esempio `IAB TCF`), puoi aggiungere altri oggetti alla matrice `consent` per ogni standard. Ogni oggetto deve contenere i valori appropriati per `standard`, `version` e `value` per lo standard di consenso che rappresenta.
+Se utilizzi altri standard di consenso insieme a `Adobe` (ad esempio `IAB TCF`), puoi aggiungere altri oggetti alla matrice `consent` per ogni standard. Ogni oggetto deve contenere i valori appropriati per `standard`, `version` e `value` per lo standard di consenso che rappresenta.
 
 Il seguente JavaScript fornisce un esempio di una funzione che gestisce le modifiche delle preferenze di consenso su un sito web, che può essere utilizzata come callback in un listener di eventi o un hook CMP:
 
