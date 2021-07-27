@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,57 @@ Durante la visualizzazione di una query in [!DNL Query Editor], il pannello **[!
 
 ![Immagine](../images/ui/query-editor/query-details.png)
 
-Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o denominare la query visualizzata e visualizzare il codice SQL in un formato di semplice copia nella scheda **[!UICONTROL Query SQL]**. Questo pannello mostra anche metadati utili, come l’ultima volta che la query è stata modificata e chi l’ha modificata, se applicabile. Per generare un set di dati, seleziona **[!UICONTROL Set di dati di output]**. Viene visualizzata la finestra di dialogo **[!UICONTROL Set di dati di output]**. Immetti un nome e una descrizione, quindi seleziona **[!UICONTROL Esegui query]**. Il nuovo set di dati viene visualizzato nella scheda **[!UICONTROL Set di dati]** dell’interfaccia utente [!DNL Query Service] in [!DNL Platform].
+Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o denominare la query visualizzata e aggiungere una pianificazione alla query.
+
+Questo pannello mostra anche metadati utili, come l’ultima volta che la query è stata modificata e chi l’ha modificata, se applicabile. Per generare un set di dati, seleziona **[!UICONTROL Set di dati di output]**. Viene visualizzata la finestra di dialogo **[!UICONTROL Set di dati di output]**. Immetti un nome e una descrizione, quindi seleziona **[!UICONTROL Esegui query]**. Il nuovo set di dati viene visualizzato nella scheda **[!UICONTROL Set di dati]** dell’interfaccia utente [!DNL Query Service] in [!DNL Platform].
+
+### Query pianificate {#scheduled-queries}
+
+>[!NOTE]
+>
+> È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. Inoltre, **non** sarà in grado di aggiungere una pianificazione a una query con parametri.
+
+Per aggiungere una pianificazione a una query, selezionare **[!UICONTROL Aggiungi pianificazione]**.
+
+![Immagine](../images/ui/query-editor/add-schedule.png)
+
+Viene visualizzata la pagina **[!UICONTROL Dettagli pianificazione]** . In questa pagina puoi scegliere la frequenza della query pianificata, le date di esecuzione della query pianificata e il set di dati in cui esportare la query.
+
+![Immagine](../images/ui/query-editor/schedule-details.png)
+
+Puoi scegliere le seguenti opzioni per **[!UICONTROL Frequenza]**:
+
+- **[!UICONTROL Orario]**: La query pianificata viene eseguita ogni ora per il periodo di data selezionato.
+- **[!UICONTROL Giornaliero]**: La query pianificata verrà eseguita ogni X giorni all’ora e al periodo di data selezionato. L&#39;ora selezionata è in **UTC** e non nel fuso orario locale.
+- **[!UICONTROL Settimanale]**: La query selezionata verrà eseguita nei giorni della settimana, dell’ora e del periodo di data selezionati. L&#39;ora selezionata è in **UTC** e non nel fuso orario locale.
+- **[!UICONTROL Mensile]**: La query selezionata viene eseguita ogni mese al giorno, all’ora e al periodo di data selezionato. L&#39;ora selezionata è in **UTC** e non nel fuso orario locale.
+- **[!UICONTROL Annuale]**: La query selezionata viene eseguita ogni anno al giorno, al mese, all’ora e al periodo di data selezionato. L&#39;ora selezionata è in **UTC** e non nel fuso orario locale.
+
+Per il set di dati, puoi utilizzare un set di dati esistente o crearne uno nuovo.
+
+>[!IMPORTANT]
+>
+> Poiché utilizzi un set di dati esistente o crei un nuovo set di dati, **non** devi includerlo `INSERT INTO` o `CREATE TABLE AS SELECT` come parte della query, poiché i set di dati sono già impostati. L’inclusione di `INSERT INTO` o `CREATE TABLE AS SELECT` come parte delle query pianificate genera un errore.
+
+Dopo aver confermato tutti questi dettagli, seleziona **[!UICONTROL Salva]** per creare una pianificazione.
+
+Viene visualizzata nuovamente la pagina dei dettagli della query e vengono visualizzati i dettagli della nuova pianificazione creata, inclusi l’ID pianificazione, la pianificazione stessa e il set di dati di output della pianificazione. Puoi utilizzare l’ID pianificazione per cercare ulteriori informazioni sulle esecuzioni della query pianificata stessa. Per ulteriori informazioni, consulta la [guida agli endpoint di esecuzione delle query pianificate](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> È possibile pianificare solo un modello di query **uno** utilizzando l&#39;interfaccia utente. Se desideri aggiungere ulteriori pianificazioni a un modello di query, dovrai utilizzare l’API . Se una pianificazione è già stata aggiunta utilizzando l’API , puoi aggiungere **not** altre pianificazioni utilizzando l’interfaccia utente . Se più pianificazioni sono già collegate a un modello di query, verrà visualizzata solo la pianificazione meno recente. Per informazioni su come aggiungere pianificazioni utilizzando l&#39;API, leggi la [guida all&#39;endpoint delle query pianificate](../api/scheduled-queries.md).
+>
+> Inoltre, devi aggiornare la pagina se desideri assicurarti di avere lo stato più recente della pianificazione che stai visualizzando.
+
+#### Eliminare una pianificazione
+
+Per eliminare una pianificazione, seleziona **[!UICONTROL Elimina una pianificazione]**.
+
+![Immagine](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Se si desidera eliminare una pianificazione per una query, è necessario prima disattivare la pianificazione.
 
 ### Salvataggio delle query
 
