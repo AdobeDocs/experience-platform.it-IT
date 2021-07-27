@@ -3,9 +3,9 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;diagramma di sistema;diagramma
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
+source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1256'
 ht-degree: 4%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 4%
 # Utilizzo di [!DNL Adobe Target] con [!DNL Platform Web SDK]
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] può fornire ed eseguire il rendering di esperienze personalizzate gestite in  [!DNL Adobe Target] sul canale web. Puoi utilizzare un editor WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le tue attività e esperienze di personalizzazione.
+
+>[!IMPORTANT]
+>
+>La [documentazione di Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) include argomenti contenenti informazioni specifiche sull’SDK per web di Platform in relazione alle funzioni e alle funzionalità di Target.
 
 Le seguenti funzioni sono state testate e sono attualmente supportate in [!DNL Target]:
 
