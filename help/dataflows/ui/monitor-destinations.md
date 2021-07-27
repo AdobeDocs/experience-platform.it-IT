@@ -6,25 +6,29 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1d40ef02bd0bdb48bb999c3308f78824f75e3459
+source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
 
 # Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 
-Le destinazioni ti consentono di attivare i tuoi dati da Adobe Experience Platform a innumerevoli partner esterni. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experience Platform.
+Le destinazioni ti consentono di attivare i tuoi dati da Adobe Experience Platform a innumerevoli partner esterni. Platform semplifica il processo di tracciamento del flusso di dati verso le destinazioni fornendo trasparenza con i flussi di dati.
+
+Il dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione a cui vengono attivati i dati. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizza il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni tramite l’interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
+- [Flussi di dati](../home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
+   - [Il flusso di dati viene eseguito](../../sources/notifications.md): Le esecuzioni dei flussi di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
 - [Destinazioni](../../destinations/home.md): Le destinazioni sono integrazioni predefinite con applicazioni comunemente utilizzate che consentono l’attivazione senza soluzione di continuità dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 - [Sandbox](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-## Monitorare i flussi di dati
+## Monitorare i flussi di dati nell’area di lavoro Destinazioni
 
 Nell’area di lavoro **[!UICONTROL Destinazioni]** nell’interfaccia utente di Platform, passa alla scheda **[!UICONTROL Sfoglia]** e seleziona il nome di una destinazione da visualizzare.
 
@@ -41,7 +45,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Elaborazione | Lo stato `Processing` indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | Lo stato `Error` indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
-## Il flusso di dati viene eseguito per le destinazioni di streaming
+### Il flusso di dati viene eseguito per le destinazioni di streaming
 
 Per le destinazioni di streaming, la scheda [!UICONTROL Flusso di dati esegue] fornisce un aggiornamento orario per i dati delle metriche nel flusso di dati in esecuzione. Le statistiche più importanti etichettate sono quelle sulle identità.
 
@@ -77,7 +81,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-## Esecuzione del flusso di dati per le destinazioni batch
+### Esecuzione del flusso di dati per le destinazioni batch
 
 Per le destinazioni batch, la scheda [!UICONTROL Flusso di dati esegue] fornisce i dati della metrica per le esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
@@ -113,6 +117,58 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+## Dashboard del monitoraggio delle destinazioni
+
+Per accedere al dashboard [!UICONTROL Monitoraggio], seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)
+) nella navigazione a sinistra. Una volta nella pagina [!UICONTROL Monitoraggio], seleziona [!UICONTROL Destinazioni]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni sui processi di esecuzione di destinazione.
+
+Al centro del dashboard c&#39;è il pannello Activation , che contiene metriche e grafici che mostrano dati sulla frequenza di attivazione dei dati esportati nelle destinazioni.
+
+![](../assets/ui/monitor-destinations/dashboard-graph.png)
+
+
+Per impostazione predefinita, i dati visualizzati contengono i tassi di attivazione delle ultime 24 ore. Selezionare **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati. Le opzioni disponibili includono **[!UICONTROL Ultime 24 ore]**, **[!UICONTROL Ultimi 7 giorni]** e **[!UICONTROL Ultimi 30 giorni]**. In alternativa, è possibile selezionare le date nella finestra a comparsa del calendario visualizzata. Dopo aver selezionato le date, selezionare **[!UICONTROL Applica]** per regolare l&#39;intervallo di tempo delle informazioni visualizzate.
+
+>[!NOTE]
+>
+>La schermata seguente mostra il tasso di attivazione per gli ultimi 30 giorni invece delle ultime 24 ore. Per regolare l&#39;intervallo di tempo, seleziona **[!UICONTROL Ultimi 30 giorni]**.
+
+![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+
+Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona l&#39;interruttore **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
+
+Il pannello **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
+
+![](../assets/ui/monitor-destinations/dashboard-destinations.png)
+
+Puoi anche filtrare l’elenco di destinazioni per visualizzare solo la categoria di destinazioni selezionata. Seleziona il menu a discesa **[!UICONTROL Destinazioni personali]** e seleziona il tipo di destinazione a cui desideri applicare il filtro.
+
+![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
+
+Inoltre, puoi inserire una destinazione nella barra di ricerca per isolarla in una singola destinazione. Per visualizzare i flussi di dati della destinazione, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a esso per visualizzare un elenco dei relativi flussi di dati attivi.
+
+![](../assets/ui/monitor-destinations/filtered-destinations.png)
+
+Se desideri visualizzare tutti i flussi di dati esistenti tra tutte le destinazioni, seleziona **[!UICONTROL Flussi di dati]**.
+
+Viene visualizzato un elenco di flussi di dati raggruppati per destinazione. Per ulteriori dettagli su un flusso di dati specifico, individua la destinazione da monitorare, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a esso e quindi seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto al flusso di dati di cui desideri ottenere ulteriori informazioni.
+
+![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+
+
+La pagina delle esecuzioni del flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio del flusso di dati, il tempo di elaborazione, i profili ricevuti, le identità attivate, le identità escluse, le identità non riuscite, il tasso di attivazione e lo stato. Per visualizzare ulteriori dettagli su un’esecuzione di un flusso di dati specifico, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto all’ora di avvio del flusso di dati.
+
+![](../assets/ui/monitor-destinations/dashboard-dataflows-filter.png)
+
+Oltre ai dettagli visualizzati nell’elenco dei flussi di dati, nella pagina dei dettagli dei flussi di dati vengono visualizzate informazioni più specifiche relative al flusso di dati:
+
+- **[!UICONTROL ID]** esecuzione flusso di dati: ID del flusso di dati.
+- **[!UICONTROL ID organizzazione IMS]**: Organizzazione IMS a cui appartiene il flusso di dati.
+- **[!UICONTROL Ultimo aggiornamento]**: L’ora dell’ultimo aggiornamento del flusso di dati.
+
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+
+![](../assets/ui/monitor-destinations/identities-excluded.png)
 
 ## Passaggi successivi
 
