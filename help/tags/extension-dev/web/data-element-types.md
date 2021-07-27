@@ -1,26 +1,35 @@
 ---
 title: Tipi di elementi dati per le estensioni web
 description: Scopri come definire un modulo libreria di tipo elemento dati per un’estensione tag in una proprietà web.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 70%
+source-wordcount: '595'
+ht-degree: 63%
 
 ---
 
-# Tipi di elementi dati per le estensioni Edge
+# Tipi di elementi dati per estensioni web
 
 >[!NOTE]
 >
 >Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Lo scopo di un modulo di raccolta di tipi di elementi dati è quello di recuperare una parte di dati. Il metodo per questo recupero è personalizzabile. I diversi tipi di elementi dati consentono agli utenti Adobe Experience Platform di recuperare dati dall’archiviazione locale, da un cookie o da un elemento DOM.
+Nei tag di raccolta dati, gli elementi dati sono essenzialmente alias a parti di dati su una pagina. Questi dati si trovano nei parametri della stringa di query, nei cookie, negli elementi DOM o in altre posizioni. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati.
+
+I tipi di elementi dati sono forniti da estensioni e consentono agli utenti di configurare elementi dati per accedere a parti di dati in un particolare modo. Ad esempio, un’estensione potrebbe fornire un tipo di elemento dati “elemento di archiviazione locale” in cui l’utente di può specificare il nome di un elemento specifico. Quando una regola fa riferimento all’elemento dati, l’estensione sarà in grado di cercare il valore dell’elemento nell’archiazione locale utilizzando il nome fornito dall’utente durante la configurazione dell’elemento dati.
+
+Questo documento illustra come definire i tipi di elementi dati per un&#39;estensione Web in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Questo documento fornisce informazioni sui tipi di elementi dati per le estensioni Web. Se stai sviluppando un’estensione Edge, consulta invece la guida sui [tipi di elementi dati per le estensioni Edge](../edge/data-element-types.md).
+>Se stai sviluppando un&#39;estensione Edge, consulta la guida sui tipi di elementi dati [per le estensioni edge](../edge/data-element-types.md) .
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli libreria e con la loro integrazione nelle estensioni tag. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con la loro integrazione nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+
+I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
+
+1. Una [visualizzazione](./views.md) mostrata nell&#39;interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni per l&#39;elemento dati.
+2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:
 
