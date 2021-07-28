@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
+source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esp
 
    >[!IMPORTANT]
    >
-   >L&#39;opzione per esportare i file in un determinato momento è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.<br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
@@ -199,19 +199,15 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
    * Quando selezioni **[!UICONTROL Ogni ora]**, utilizza il selettore **[!UICONTROL Ogni]** per scegliere tra le opzioni **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** ora.
 
-      >[!IMPORTANT]
-      >
-      >L’opzione per esportare i file incrementali ogni 3, 6, 8 o 12 ore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. I clienti non beta possono esportare file incrementali una volta al giorno.
 
-
-2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
+1. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
    >[!IMPORTANT]
    >
-   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti. <br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
-3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
-4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
+1. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
+1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 >[!IMPORTANT]
 >
@@ -302,10 +298,6 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 >title="Informazioni sulle chiavi di deduplicazione"
 >abstract="Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. Seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. La mancata selezione di una chiave di deduplicazione può causare la presenza di voci di profilo duplicate nei file di esportazione."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Ulteriori informazioni nella documentazione"
-
->[!IMPORTANT]
->
->L’opzione per utilizzare le chiavi di deduplicazione è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.
 
 Le chiavi di deduplicazione eliminano la possibilità di avere più record dello stesso profilo in un unico file di esportazione.
 
