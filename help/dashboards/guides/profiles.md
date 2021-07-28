@@ -4,9 +4,9 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Per passare al dashboard [!UICONTROL Profili] nell’interfaccia utente di Platf
 
 Per ulteriori informazioni, consulta la documentazione [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria di widget](../customize/widget-library.md) .
 
-## Unisci criteri
+## Unisci criteri {#merge-policies}
 
 Le metriche visualizzate nel dashboard [!UICONTROL Profili] si basano sui criteri di unione applicati ai dati del profilo cliente in tempo reale. Quando i dati vengono riuniti da più sorgenti per creare il profilo del cliente, è possibile che contengano valori in conflitto (ad esempio, un set di dati può elencare un cliente come &quot;singolo&quot;, mentre un altro set di dati può elencare il cliente come &quot;sposato&quot;). È compito del criterio di unione determinare quali dati assegnare priorità e visualizzare come parte del profilo.
 
@@ -79,29 +79,39 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 Il widget **[!UICONTROL Conteggio profili]** visualizza il numero totale di profili uniti all’interno dell’archivio dati del profilo al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
-Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo la sezione *Profili di profilo e profili uniti* della [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedente in questo documento](#merge-policies) .
+
+>[!NOTE]
+>
+>Il widget [!UICONTROL Conteggio profili] può mostrare un numero diverso dal conteggio dei profili visualizzato nella scheda [!UICONTROL Sfoglia] nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente per diversi motivi. Il motivo più comune è che la scheda [!UICONTROL Sfoglia] fa riferimento al numero totale di profili uniti in base ai criteri di unione predefiniti della tua organizzazione, mentre il widget [!UICONTROL Conteggio profili] fa riferimento al numero totale di profili uniti in base al criterio di unione selezionato per la visualizzazione nel dashboard.
+>
+>Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l&#39;istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la scheda [!UICONTROL Sfoglia]. Puoi vedere quando l&#39;ultimo aggiornamento del widget [!UICONTROL Conteggio profili] è stato eseguito guardando la marca temporale sul widget e per ulteriori informazioni su come il processo di esempio viene attivato nella scheda [!UICONTROL Sfoglia], consulta la sezione [conteggio profili nella guida all&#39;interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profili aggiunti] {#profiles-added}
 
-Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo a partire dall’ultima istantanea acquisita. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo a partire dall’ultima istantanea acquisita. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente. Puoi utilizzare il selettore a discesa per visualizzare i profili aggiunti negli ultimi 30 giorni, 90 giorni o 12 mesi.
 
-Puoi utilizzare il selettore a discesa per visualizzare i profili aggiunti negli ultimi 30 giorni, 90 giorni o 12 mesi.
+>[!NOTE]
+>
+>Il widget [!UICONTROL Profili aggiunti] riflette il numero di profili aggiunti al sistema dopo la configurazione iniziale della tua organizzazione. Ad esempio, se durante la configurazione sono stati aggiunti quattro milioni di profili e negli ultimi 30 giorni hai aggiunto un ulteriore milione di profili, il widget [!UICONTROL Profili aggiunti] visualizzerebbe &quot;1.000.000&quot;, mentre il widget [!UICONTROL Conteggio profili] visualizzerebbe &quot;5.000.000&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendenza del conteggio dei profili] {#profiles-count-trend}
 
-Il widget **[!UICONTROL Tendenza del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti ogni giorno all’archivio dati del profilo negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva.
+Il widget **[!UICONTROL Tendenza del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti ogni giorno all’archivio dati del profilo negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva. Il conteggio dei profili aggiunti è il risultato dell’applicazione dei criteri di unione selezionati ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
-Il conteggio dei profili aggiunti è il risultato dell’applicazione dei criteri di unione selezionati ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedente in questo documento](#merge-policies) .
 
 ![](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Profili per identità] {#profiles-by-identity}
 
 Il widget **[!UICONTROL Profili per identità]** visualizza la suddivisione delle identità in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per identità (in altre parole, l’aggiunta insieme dei valori mostrati per ogni spazio dei nomi) potrebbe essere superiore al numero totale di profili uniti, in quanto a un profilo potrebbero essere associati più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
+
+Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedente in questo documento](#merge-policies) .
 
 Per ulteriori informazioni sulle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
@@ -111,9 +121,9 @@ Per ulteriori informazioni sulle identità, visita la [documentazione del serviz
 
 Il widget **[!UICONTROL Sovrapposizione identità]** visualizza un diagramma di Venn, o un diagramma di set, che mostra la sovrapposizione di profili nell’archivio profili contenenti più identità.
 
-Dopo aver utilizzato i menu a discesa del widget per selezionare le identità da confrontare, i cerchi visualizzano la dimensione relativa di ogni identità, con il numero di profili contenenti entrambi i namespace rappresentati dalla dimensione della sovrapposizione tra i cerchi.
+Dopo aver utilizzato i menu a discesa del widget per selezionare le identità da confrontare, i cerchi visualizzano la dimensione relativa di ogni identità, con il numero di profili contenenti entrambi i namespace rappresentati dalla dimensione della sovrapposizione tra i cerchi. Se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associate più identità, pertanto è probabile che la tua organizzazione abbia più profili contenenti frammenti da più di una identità.
 
-Se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associate più identità, pertanto è probabile che la tua organizzazione abbia più profili contenenti frammenti da più di una identità.
+Per ulteriori informazioni sui frammenti di profilo, inizia leggendo la sezione sui [frammenti di profilo rispetto ai profili uniti](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) nella panoramica Profilo cliente in tempo reale.
 
 Per ulteriori informazioni sulle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
