@@ -1,18 +1,17 @@
 ---
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
-description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
-seo-description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
+description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento illustra le note sulla versione dell&#39;estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch. Per le ultime note sulla versione dell&#39;SDK stesso, consulta le [Note sulla versione dell&#39;SDK per web della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+Questo documento illustra le note sulla versione per l&#39;estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell&#39;SDK stesso, consulta le [Note sulla versione dell&#39;SDK per web della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Versione 2.6.0 - 27 luglio 2021
 
@@ -103,14 +102,14 @@ Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecision
 * La richiesta effettuata durante la migrazione degli ID viene inviata all&#39;endpoint demdex per migliorare l&#39;identificazione tra domini se il cookie demdex non è impostato.
 * La richiesta effettuata durante la migrazione degli ID prevede sempre una risposta per assicurarsi che venga impostato il cookie di identità.
 * Quando si esegue un comando non valido, nella console verrà registrato un elenco di nomi di comando validi.
-* È stata aggiunta una casella di controllo per attivare o disattivare il supporto dei cookie di terze parti per l’estensione Adobe Experience Platform Launch. Questa funzione disattiva le chiamate a demdex.net.
+* È stata aggiunta una casella di controllo per attivare o disattivare il supporto dei cookie di terze parti per l’estensione tag. Questa funzione disattiva le chiamate a demdex.net.
 
 ## Versione 0.0.5 - 20 dicembre 2019
 
-* Aggiunta della configurazione Activity Tracker all’estensione Platform Launch
+* Aggiungi la configurazione Activity Tracker all&#39;estensione tag
 * Comando esposizione di EventType ed EventMergeId su evento
-* Aggiunta della configurazione onBeforeEventSend all’estensione Platform Launch
-* Aggiunta della configurazione edgeBasePath all’estensione Platform Launch
+* Aggiungi la configurazione onBeforeEventSend all&#39;estensione tag
+* Aggiungi la configurazione edgeBasePath all’estensione tag
 
 ## Versione 0.0.3 - 25 novembre 2019
 
