@@ -1,10 +1,10 @@
 ---
 title: Tipi di elementi dati per le estensioni web
 description: Scopri come definire un modulo libreria di tipo elemento dati per un’estensione tag in una proprietà web.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 63%
+source-wordcount: '596'
+ht-degree: 60%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nei tag di raccolta dati, gli elementi dati sono essenzialmente alias a parti di dati su una pagina. Questi dati si trovano nei parametri della stringa di query, nei cookie, negli elementi DOM o in altre posizioni. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati.
 
