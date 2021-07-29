@@ -1,19 +1,18 @@
 ---
 title: Integrare il supporto IAB TCF 2.0 utilizzando l’SDK web Adobe Experience Platform
-description: Scopri come configurare il supporto IAB TCF 2.0 per il tuo sito web senza utilizzare Adobe Experience Platform Launch.
+description: Scopri come configurare il supporto IAB TCF 2.0 per il tuo sito web senza utilizzare tag.
 seo-description: Scopri come configurare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
 
-
 # Integrare il supporto IAB TCF 2.0 con Platform Web SDK
 
-Questa guida mostra come integrare il framework per la trasparenza e il consenso di Interactive Advertising Bureau, versione 2.0 (IAB TCF 2.0) con l’SDK Web di Adobe Experience Platform senza utilizzare il Experience Platform Launch. Per una panoramica dell’integrazione con IAB TCF 2.0, consulta la sezione [panoramica](./overview.md). Per una guida su come integrare con il Experience Platform Launch, leggi la guida [IAB TCF 2.0 per Experience Platform Launch](./with-launch.md).
+Questa guida mostra come integrare il framework per la trasparenza e il consenso di Interactive Advertising Bureau, versione 2.0 (IAB TCF 2.0) con l’SDK web di Adobe Experience Platform senza l’utilizzo di tag. Per una panoramica dell’integrazione con IAB TCF 2.0, consulta la sezione [panoramica](./overview.md). Per una guida su come integrare con i tag, leggi la guida [IAB TCF 2.0 per i tag](./with-launch.md).
 
 ## Introduzione
 
@@ -23,7 +22,7 @@ Questa guida utilizza l’ interfaccia `__tcfapi` per accedere alle informazioni
 >
 >Questi esempi presuppongono che al momento dell’esecuzione del codice, `window.__tcfapi` sia definito nella pagina. Le CMP possono fornire un hook in cui è possibile eseguire queste funzioni quando l&#39;oggetto `__tcfapi` è pronto.
 
-Per utilizzare IAB TCF 2.0 con l’estensione Experience Platform Launch e Adobe Experience Platform Web SDK, è necessario disporre di uno schema XDM. Se non hai impostato nessuno dei due, inizia visualizzando questa pagina prima di procedere.
+Per utilizzare IAB TCF 2.0 con tag e l’estensione Adobe Experience Platform Web SDK, è necessario disporre di uno schema XDM. Se non hai impostato nessuno dei due, inizia visualizzando questa pagina prima di procedere.
 
 Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un aggiornamento rapido, consulta la [Panoramica dell’SDK web Adobe Experience Platform](../../home.md) e la documentazione [Domande frequenti](../../web-sdk-faq.md) .
 
