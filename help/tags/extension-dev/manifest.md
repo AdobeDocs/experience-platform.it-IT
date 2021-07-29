@@ -1,9 +1,9 @@
 ---
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
+source-wordcount: '2647'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nella directory di base dell’estensione è necessario creare un file denominato `extension.json`. Contiene informazioni critiche sull’estensione che consentono a Adobe Experience Platform di utilizzarla correttamente. Alcuni contenuti sono creati secondo le regole [npm per `package.json`](https://docs.npmjs.com/files/package.json).
 
