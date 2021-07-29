@@ -1,17 +1,17 @@
 ---
 title: Tipi di elementi dati nell’estensione Adobe Experience Platform Web SDK
-description: Scopri i diversi tipi di elementi dati forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
+description: Scopri i diversi tipi di elementi dati forniti dall’estensione tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # Tipi di elementi dati
 
-Dopo aver impostato i [tipi di azione](action-types.md) nell&#39; [estensione Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md) per [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configura i tipi di elementi dati.
+Dopo aver impostato i [tipi di azione](action-types.md) nell&#39; [estensione tag Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), configura i tipi di elementi dati.
 
 Questa pagina descrive i tipi di elementi dati disponibili.
 
