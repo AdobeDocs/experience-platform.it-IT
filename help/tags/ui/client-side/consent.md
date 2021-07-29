@@ -1,10 +1,10 @@
 ---
 title: Implementare i tag JavaScript per gestire il consenso dei clienti
 description: Scopri come gestire i segnali di opt-in e opt-out del cliente per diverse soluzioni Adobe in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 87%
+source-wordcount: '651'
+ht-degree: 84%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 La combinazione del [Regolamento generale sulla protezione dei dati (GDPR)](https://gdpr-info.eu/art-7-gdpr/) e [la direttiva ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) dell&#39;Unione Europea richiede alle aziende di gestire il consenso per gli utenti. I clienti di Adobe possono richiedere il consenso ai visitatori prima che le soluzioni di Adobe vengano eseguite per un determinato visitatore. I visitatori devono avere la possibilità di gestire il loro stato di consenso e rinuncia.
 
