@@ -1,10 +1,10 @@
 ---
 title: Implementazione di librerie di terze parti
 description: Scopri i diversi metodi di hosting delle librerie di terze parti all’interno delle estensioni di tag Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 69%
+source-wordcount: '1330'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Uno degli scopi principali delle estensioni di tag in Adobe Experience Platform è quello di consentire di implementare facilmente le tecnologie di marketing esistenti (librerie) nel sito web. Utilizzando le estensioni, è possibile implementare le librerie fornite da reti CDN (content delivery network) di terze parti senza dover modificare manualmente il codice HTML del sito web.
 
