@@ -1,10 +1,10 @@
 ---
 title: Creare un’inserzione in Exchange per un’estensione
 description: Scopri come aggiungere l’estensione al catalogo pubblico in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 63%
+ht-degree: 59%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Adobe Experience Platform dispone di un singolo catalogo unificato in cui gli utenti possono visualizzare le estensioni dei tag disponibili per l’installazione. Questo catalogo è disponibile all’interno del prodotto e contiene estensioni di tre tipi:
 
@@ -44,7 +44,6 @@ Se disponi già di un account aziendale o se non hai intenzione di completare l�
    >[!NOTE]
    >
    >Si tratta di un formato di file diverso da quello utilizzato nel codice di estensione. L’estensione stessa conterrà come [icona](../manifest.md) un file svg.
-   
    - **Immagine in primo piano** : ottieni attenzione utilizzando un&#39;immagine che può rimanere isolata e mostrerà il tuo marchio ed evidenziare la tua applicazione. L&#39;immagine in primo piano è quella mostrata quando qualcuno condivide un collegamento alla tua inserzione o post su di essa sui social media. Deve quindi essere una rappresentazione modello del tuo marchio.
    - **Logo dell’editore dell’app**: questo è il logo aziendale; assicurati che l’icona abbia le dimensioni appropriate, pari a 1280 x 720 oppure 2560 x 1440 (16:9) in formato png o jpg.
    - **Istruzioni di configurazione**  - Informare i clienti su come configurare l&#39;estensione Adobe Experience Platform. Assicurati che siano ben chiare le impostazioni e i passaggi successivi richiesti quando viene visualizzata la [vista di configurazione](../configuration.md), subito dopo l’installazione dell’estensione in una proprietà. 
@@ -69,4 +68,4 @@ Se hai aggiornato l&#39;estensione, o semplicemente se desideri aggiornare l&#39
 
 ## Collegare il pacchetto di estensione all’inserzione
 
-Dopo aver approvato e reso pubblicamente disponibile l’inserzione, ti consigliamo di fornire un collegamento all’inserzione pubblica nel campo `exchange_url` del file `extension.json` all’interno del pacchetto di estensione.  Questo creerà un collegamento “Ulteriori informazioni” all’interno del catalogo delle estensioni del Platform Launch in modo che gli utenti del prodotto possano trovare la tua inserzione e le relative informazioni.
+Dopo aver approvato e reso pubblicamente disponibile l’inserzione, ti consigliamo di fornire un collegamento all’inserzione pubblica nel campo `exchange_url` del file `extension.json` all’interno del pacchetto di estensione.  Questo creerà un collegamento &quot;Ulteriori informazioni&quot; all’interno del catalogo delle estensioni dei tag in modo che gli utenti all’interno del prodotto possano trovare la tua inserzione ed è composto da informazioni aggiuntive.
