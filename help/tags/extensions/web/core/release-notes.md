@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 90%
+source-wordcount: '1210'
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 20 maggio 2021
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti (Content Security Policy, CSP) con un nonce, in modo che gli script Platform Launch possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo di Platform Launch con CSP, consulta [questo articolo](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull&#39;utilizzo dei tag con un CSP [qui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
