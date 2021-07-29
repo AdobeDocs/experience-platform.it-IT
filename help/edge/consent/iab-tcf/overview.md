@@ -3,9 +3,9 @@ title: Supporto IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
 description: Scopri come supportare le preferenze di consenso IAB TCF 2.0 utilizzando l’SDK web di Adobe Experience Platform
 keywords: consenso;setConsent;gruppo di campi per la privacy dei profili;gruppo di campi per la privacy degli eventi di esperienza;gruppo di campi per la privacy;IAB TCF 2.0;Real-time CDP;Profilo dati cliente in tempo reale
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK supporta la versione 2.0 di Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Questa guida mostra i requisiti per supportare IAB TCF 2.0 tramite Adobe Experience Platform Web SDK integrato con Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics ed Experience Edge.
 
-Sono inoltre disponibili le seguenti guide per aiutarti a integrare IAB TCF 2.0 con e senza Adobe Experience Platform Launch.
+Sono inoltre disponibili le seguenti guide per informazioni su come integrare IAB TCF 2.0 con e senza tag.
 
-- [Con Adobe Experience Platform Launch](./with-launch.md)
-- [Senza Adobe Experience Platform Launch](./without-launch.md)
+- [Con tag](./with-launch.md)
+- [Senza tag](./without-launch.md)
 
 ## Introduzione
 
@@ -90,4 +90,4 @@ Per ulteriori informazioni sul comando `sendEvent`, consulta la documentazione r
 
 ## Passaggi successivi
 
-Ora che conosci le nozioni di base di IAB Transparency &amp; Consent Framework 2.0, fai riferimento a una delle guide sull&#39;utilizzo di IAB TCF 2.0 [con Adobe Experience Platform Launch](./with-launch.md) o [senza Adobe Experience Platform Launch](./without-launch.md).
+Ora che conosci le nozioni di base di IAB Transparency &amp; Consent Framework 2.0, fai riferimento a una delle guide sull&#39;utilizzo di IAB TCF 2.0 [con tag](./with-launch.md) o [senza tag](./without-launch.md).
