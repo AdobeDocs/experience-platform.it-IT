@@ -1,10 +1,10 @@
 ---
 title: Panoramica dell’estensione Adobe Analytics Product String
 description: Scopri l’estensione tag Adobe Analytics Product String in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 95%
+source-wordcount: '525'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 La variabile `products` traccia il modo in cui gli utenti interagiscono con i prodotti sul sito. Ad esempio, la variabile `products` può tracciare il numero di volte in cui un prodotto viene visualizzato, aggiunto al carrello, estratto e acquistato. Può anche tracciare l’efficacia delle categorie di merchandising sul sito.
 
