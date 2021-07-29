@@ -3,9 +3,9 @@ title: Tracciare gli eventi utilizzando l’SDK per web di Adobe Experience Plat
 description: Scopri come tenere traccia degli eventi dell’SDK Web per Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentSloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Successivamente, il risultato clonato viene passato nel comando `sendEvent` . In questo modo il comando `sendEvent` dispone di un&#39;istantanea del livello dati come era presente quando è stato eseguito il comando `sendEvent` in modo che le modifiche successive all&#39;oggetto livello dati originale non vengano riportate nei dati inviati al server. Se utilizzi un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se utilizzi [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), il metodo `getState()` fornisce un&#39;istantanea calcolata e clonata di tutte le modifiche precedenti. Questa operazione viene gestita automaticamente anche se utilizzi l’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
+In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Successivamente, il risultato clonato viene passato nel comando `sendEvent` . In questo modo il comando `sendEvent` dispone di un&#39;istantanea del livello dati come era presente quando è stato eseguito il comando `sendEvent` in modo che le modifiche successive all&#39;oggetto livello dati originale non vengano riportate nei dati inviati al server. Se utilizzi un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se utilizzi [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), il metodo `getState()` fornisce un&#39;istantanea calcolata e clonata di tutte le modifiche precedenti. Questa operazione viene gestita automaticamente anche se utilizzi l’estensione tag Adobe Experience Platform Web SDK.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ In un evento di esperienza XDM, è disponibile un campo facoltativo `eventType` 
 | delivery.feedback | Eventi di feedback per una consegna. Esempio di eventi di feedback per una consegna e-mail |
 
 
-Questi tipi di evento verranno visualizzati in un elenco a discesa se utilizzi l’estensione Adobe Experience Platform Launch o puoi sempre trasmetterli senza Experience Platform Launch. Possono essere passati come parte dell&#39;opzione `xdm` .
+Questi tipi di evento vengono visualizzati in un elenco a discesa se utilizzi l’estensione tag oppure puoi sempre trasmetterli senza tag . Possono essere passati come parte dell&#39;opzione `xdm` .
 
 
 ```javascript
