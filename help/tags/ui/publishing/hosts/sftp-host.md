@@ -1,10 +1,10 @@
 ---
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire build della libreria a un server SFTP protetto e self-hosting.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 48%
+source-wordcount: '527'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Se non vuoi che le librerie ospitate vengano gestite da Adobe, puoi fare sì che Adobe Experience Platform distribuisca le build a un tuo server SFTP protetto.
 
