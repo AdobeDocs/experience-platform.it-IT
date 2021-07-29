@@ -1,10 +1,10 @@
 ---
 title: Panoramica dell’estensione Cloud Connector
 description: Scopri l’estensione di inoltro eventi Cloud Connector in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 92%
+source-wordcount: '1616'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione di inoltro eventi del connettore cloud consente di creare richieste HTTP personalizzate per inviare dati a una destinazione o recuperare dati da una destinazione. L’estensione Cloud Connector è simile a Postman su Adobe Experience Platform Edge Network e può essere utilizzata per inviare dati a un endpoint che non ha ancora un’estensione dedicata.
 
