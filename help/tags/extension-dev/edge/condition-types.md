@@ -1,10 +1,10 @@
 ---
 title: Tipi di condizioni per le estensioni Edge
 description: Scopri come definire un modulo libreria per tipi di condizione per un’estensione Edge in Adobe Experience Platform.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 57%
+source-wordcount: '408'
+ht-degree: 53%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
-> Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+> Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In una regola di tag, una condizione viene valutata dopo che si è verificato un evento. Tutte le condizioni devono restituire true affinché la regola possa continuare l’elaborazione. I tipi di condizione vengono forniti dalle estensioni e valutano se qualcosa è vero o falso e restituisce un valore booleano.
 
