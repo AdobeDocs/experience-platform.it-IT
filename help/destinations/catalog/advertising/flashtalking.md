@@ -3,9 +3,9 @@ keywords: Estensioni Flashtalk OneTag;Estensione Flashtalk OneTag;Destinazioni F
 title: Estensione Flashtalk OneTag
 description: L'estensione Flashtalk OneTag è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-L’estensione tag [!DNL Flashtalking OneTag] semplifica l’attribuzione delle azioni del sito per la visualizzazione, il video e l’attività di annunci mobili. Distribuisci il [!DNL Flashtalking OneTag] nelle proprietà web utilizzando Launch.
+L’estensione tag [!DNL Flashtalking OneTag] semplifica l’attribuzione delle azioni del sito per la visualizzazione, il video e l’attività di annunci mobili. Distribuisci [!DNL Flashtalking OneTag] alle proprietà web utilizzando i tag .
 
 [!DNL Flashtalking OneTag] è un&#39;estensione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
@@ -26,7 +26,7 @@ Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul fun
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. Tag offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni. e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni. e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
