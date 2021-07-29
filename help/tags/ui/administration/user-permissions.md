@@ -1,7 +1,7 @@
 ---
 title: Autorizzazioni utente
 description: Scopri le diverse autorizzazioni tag disponibili per gli utenti Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Tipi di autorizzazione
 
@@ -76,7 +76,7 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 
 * **Gestisci proprietà:** consente di creare nuove proprietà nell’interfaccia utente di raccolta dati e di modificare i metadati e le impostazioni a livello di proprietà. Inoltre, puoi eliminare le proprietà. Per ulteriori informazioni, consulta la [documentazione sulle proprietà](companies-and-properties.md) . Generalmente, gli amministratori eseguono questo ruolo.
 * 
-* Consente di creare nuove proprietà in [!DNL Platform Launch] e di modificare i metadati e le impostazioni a livello di proprietà. Inoltre, puoi eliminare le proprietà. Ulteriori informazioni sulle proprietà disponibili [qui](companies-and-properties.md). Generalmente, gli amministratori eseguono questo ruolo.
+* Consente di creare nuove proprietà e di modificare i metadati e le impostazioni a livello di proprietà. Inoltre, puoi eliminare le proprietà. Ulteriori informazioni sulle proprietà disponibili [qui](companies-and-properties.md). Generalmente, gli amministratori eseguono questo ruolo.
 * **Develop Extensions (Sviluppa estensioni):** consente di creare e modificare pacchetti di estensioni di proprietà dell&#39;azienda, incluse versioni private e richieste di versioni pubbliche.
 * **Gestione configurazioni app:** questa opzione è disponibile solo per i clienti che dispongono di una licenza per Adobe Journey Optimizer o altre soluzioni che consentono di accedere ai messaggi in-app e push mobili.  Questo ti consente di gestire le app che Experience Cloud conosce insieme alle credenziali push necessarie per comunicare con il servizio Firebase Cloud Messaging e il servizio Apple Push Notification.
 
