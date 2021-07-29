@@ -1,10 +1,10 @@
 ---
 title: Tipi di elementi dati per le estensioni Edge
 description: Scopri come definire un modulo di libreria di tipo elemento dati per un’estensione tag in una proprietà edge.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 35%
+source-wordcount: '435'
+ht-degree: 31%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nei tag, gli elementi dati sono alias per parti di dati su una pagina web o mobile, indipendentemente da dove si trovano all’interno dell’evento ricevuto dal server. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati. Quando la posizione dei dati cambia in futuro (ad esempio se si modifica la chiave evento che contiene il valore), è possibile riconfigurare un singolo elemento dati mentre tutte le regole che vi fanno riferimento possono rimanere invariate.
 
