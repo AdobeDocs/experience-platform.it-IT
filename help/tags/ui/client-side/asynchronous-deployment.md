@@ -1,10 +1,10 @@
 ---
 title: Implementazione asincrona
 description: Scopri come distribuire in modo asincrono le librerie di tag Adobe Experience Platform sul tuo sito web.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 59%
+source-wordcount: '1010'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 La distribuzione delle prestazioni e non di blocco delle librerie JavaScript richieste dai nostri prodotti è sempre più importante per gli utenti Adobe Experience Cloud. Strumenti come [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) consigliano agli utenti di modificare il modo in cui distribuiscono le librerie di Adobi sul loro sito. Questo articolo spiega come utilizzare le librerie JavaScript di Adobe in modo asincrono.
 
