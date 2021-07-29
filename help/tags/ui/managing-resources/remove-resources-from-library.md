@@ -1,10 +1,10 @@
 ---
 title: Rimuovere risorse da una libreria
 description: Scopri come rimuovere le risorse da una libreria di tag.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 92%
+source-wordcount: '314'
+ht-degree: 87%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Quando non desideri più che una risorsa abbia effetto all&#39;interno di una build è necessario rimuoverla dalla libreria che la contiene e creare una nuova build.
 
