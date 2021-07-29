@@ -1,10 +1,10 @@
 ---
 title: Flusso di pubblicazione
 description: Scopri come creare librerie, testare le build e approvarle per la produzione in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 92%
+source-wordcount: '1499'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Il flusso di pubblicazione dei tag in Adobe Experience Platform si riferisce al processo di creazione delle librerie, al test delle build e alla loro approvazione per la produzione.
 
@@ -63,7 +63,7 @@ La tabella seguente illustra le azioni disponibili per una libreria in stato di 
 | [!UICONTROL Submit &amp; Build to Staging] | Questa operazione può essere eseguita solo da un utente con autorizzazioni per sviluppo e approvazione. Questa azione annulla l’assegnazione della libreria dall’ambiente di sviluppo, sposta la libreria nello stato [!UICONTROL Inviato] e crea la libreria nell’ambiente di staging. Questa opzione è abilitata solo se l’ultima build della libreria ha avuto esito positivo. |
 | [!UICONTROL Approva per la Pubblicazione] | Questa operazione può essere eseguita solo da un utente con autorizzazioni per sviluppo e approvazione. Questa azione annulla l’assegnazione della libreria dall’ambiente di sviluppo e la sposta nello stato [!UICONTROL Approvato], saltando completamente l’ambiente di staging e lo stato [!UICONTROL Inviato]. Questa opzione è abilitata solo se l’ultima build della libreria ha avuto esito positivo. |
 | [!UICONTROL Approve &amp; Publish to Production] | Questa operazione può essere eseguita solo da un utente con autorizzazioni per sviluppo, approvazione e pubblicazione. Questa azione annulla l’assegnazione della libreria dall’ambiente di sviluppo, la sposta nello stato [!UICONTROL Approvato] e la pubblica in produzione. Al termine della build di produzione, la libreria passerà allo stato [!UICONTROL Pubblicato]. Questa opzione è abilitata solo se l’ultima build della libreria ha avuto esito positivo. |
-| [!UICONTROL Elimina] | Rimuove la libreria da Platform Launch. Questa azione non rimuove la build dall’ambiente. |
+| [!UICONTROL Elimina] | Rimuovi la libreria dal sistema. Questa azione non rimuove la build dall’ambiente. |
 
 ### [!UICONTROL Inviato] {#submitted}
 
