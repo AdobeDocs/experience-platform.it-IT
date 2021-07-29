@@ -5,10 +5,9 @@ title: Panoramica ECID
 topic-legacy: overview
 description: L’identificatore Experience Cloud (ECID) è il modulo lato client che fornisce l’accesso alla gestione dell’identità, che fornisce tre funzioni principali.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '275'
 ht-degree: 2%
 
 ---
@@ -31,8 +30,8 @@ Per identificare gli utenti online è necessario strumentalizzare il sito o l’
 
 La seguente documentazione fornisce ulteriori risorse sulla comprensione di ECID tra diverse applicazioni Platform ed Experience Cloud:
 
-* Per utilizzare ECID con l’implementazione del sito web, consulta la documentazione relativa a [Servizio Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+* Per utilizzare ECID con l’implementazione del sito web, consulta la documentazione relativa a [Servizio Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
 * Per vedere in che modo ECID viene utilizzato con le app e i contenuti web per dispositivi mobili, consulta la documentazione relativa al [tracciamento dei visitatori tra app e contenuti web per dispositivi mobili](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios).
-* La distribuzione di questi strumenti può essere semplice e facile da gestire se utilizzi [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en).
+* La distribuzione di questi strumenti può essere semplice e facile da gestire se utilizzi [tags](../tags/home.md).
 * Per informazioni sull&#39;utilizzo di ECID per facilitare la conformità alle normative sulla privacy come il RGPD, consulta la [documentazione Privacy Service](../privacy-service/identity-data.md) .
 * Per ulteriori informazioni su ECID con il contesto di Platform, consulta la [panoramica del servizio Identity](./home.md) e la [panoramica dei namespace di identità](./namespaces.md).
