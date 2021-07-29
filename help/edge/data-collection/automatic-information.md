@@ -3,9 +3,9 @@ title: Raccolta automatica di informazioni nell’SDK per web di Adobe Experienc
 description: Panoramica di ogni informazione che l’SDK di Adobe Experience Platform raccoglie automaticamente.
 keywords: raccogliere informazioni;contesto;configurare;dispositivo;altezza schermo;altezza schermo;orientamento dello schermo;orientamento dello schermo;larghezza dello schermo;larghezza dello schermo;ambiente;finestraAltezza;altezza;altezza del riquadro di visualizzazione;larghezza del riquadro di visualizzazione;larghezza del riquadro di visualizzazione;dettagli del browser;dettagli dell'implementazione;dettagli di implementazione;nome;versione;contesto;ora locale;ora locale;ora locale;fuso orarioOffset;fuso orario locale;offset;timestamp;web;url;webPageDetails;dettagli pagina web;webReferrer;web Referrer;orizzontale;verticale;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '511'
 ht-degree: 6%
 
 ---
@@ -82,7 +82,7 @@ Informazioni sull’SDK utilizzato per raccogliere l’evento.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell&#39;estensione del Platform launch, il valore è `https://ns.adobe.com/experience/alloy+reactor`.
+Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, il valore è `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versione
 
@@ -90,7 +90,7 @@ Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Quando si utilizza la libreria autonoma, il valore è semplicemente la versione della libreria. Quando la libreria viene utilizzata come parte dell&#39;estensione del Platform launch, si tratta della versione della libreria e della versione dell&#39;estensione del Platform launch unita a un &quot;+&quot;. Ad esempio, se la versione della libreria fosse 2.1.0 e la versione dell&#39;estensione del Platform launch fosse 2.1.3, il valore sarebbe `2.1.0+2.1.3`.
+Quando si utilizza la libreria autonoma, il valore è semplicemente la versione della libreria. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, si tratta della versione della libreria e della versione dell&#39;estensione tag unita a un &quot;+&quot;. Ad esempio, se la versione della libreria fosse 2.1.0 e la versione dell&#39;estensione del tag fosse 2.1.3, il valore sarebbe `2.1.0+2.1.3`.
 
 ### Ambiente
 
