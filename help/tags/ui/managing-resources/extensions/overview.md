@@ -1,10 +1,10 @@
 ---
 title: Estensioni
 description: Scopri come funzionano le estensioni di tag in Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 77%
+source-wordcount: '497'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un&#39;estensione è un set di codice che estende le funzionalità fornite dai tag o dall&#39;inoltro di eventi.
 
@@ -26,15 +26,13 @@ Le estensioni determinano gli elementi disponibili per la creazione di propriet�
 
 Utilizza i collegamenti nella parte superiore dell&#39;elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
 
-Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per informazioni sulle opzioni di estensione, consulta [Aggiungi una nuova estensione](#add-a-new-extension).
+Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione.
 
 >[!IMPORTANT]
 >
 >Le modifiche diventano effettive solo dopo la loro [pubblicazione](../../publishing/overview.md).
 
 Per impostazione predefinita, Adobe fornisce estensioni che supportano integrazioni comuni. Le estensioni possono essere modificate con configurazioni personalizzate. Le configurazioni vengono fornite tramite le estensioni. Per creare una configurazione, fai clic sulla scheda dell’estensione, quindi seleziona **[!UICONTROL Aggiungi nuova configurazione]**.
-
-Per un video introduttivo, consulta [Estensioni](../../../quick-start/videos.md).
 
 ## Catalogo delle estensioni
 
