@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione dell’estensione Adobe Media Analytics (SDK 3.x) per audio e video
 description: Note aggiornate sulla versione dell’estensione tag Adobe Medium Analytics (3.x SDK) for Audio and Video in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 71%
+source-wordcount: '171'
+ht-degree: 61%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 5 aprile 2021
 
