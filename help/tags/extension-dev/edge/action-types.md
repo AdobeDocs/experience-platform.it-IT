@@ -1,10 +1,10 @@
 ---
 title: Tipi di azioni per le estensioni Edge
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà edge.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 45%
+source-wordcount: '382'
+ht-degree: 41%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In una regola di tag, un&#39;azione viene eseguita dopo che le condizioni della regola hanno superato la valutazione. I tipi di azione vengono forniti dalle estensioni e i loro effetti sono interamente definiti dall&#39;autore dell&#39;estensione.
 
