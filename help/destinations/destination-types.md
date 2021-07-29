@@ -3,14 +3,13 @@ keywords: destinazioni;destinazione;tipi di destinazione
 title: Tipi di destinazione e categorie
 seo-title: Tipi di destinazione e categorie
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
-translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
-
 
 # Tipi di destinazione e categorie
 
@@ -24,7 +23,7 @@ In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: conness
 
 ## Connessioni {#connections}
 
-**[!UICONTROL Profile Export]** e  **[!UICONTROL Segment Export]** le destinazioni in Adobe Experience Platform acquisiscono dati evento, li combinano con altre origini dati per formare il Profilo [ cliente in tempo ](../profile/home.md)reale, applicano la segmentazione ed esportano segmenti e profili qualificati nelle destinazioni.
+**[!UICONTROL Le destinazioni di]** esportazione di profili e  **[!UICONTROL segmenti]** esportati in Adobe Experience Platform acquisiscono dati evento, li combinano con altre sorgenti di dati per formare il profilo cliente in tempo  [reale](../profile/home.md), applicano la segmentazione ed esportano segmenti e profili qualificati nelle destinazioni.
 
 ## Destinazioni di esportazione del profilo
 
@@ -42,15 +41,15 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ## Estensioni {#extensions}
 
-Platform sfrutta la potenza e la flessibilità di Adobe Experience Platform Launch per includere estensioni di Platform launch nell’interfaccia di Platform.
+Platform sfrutta la potenza e la flessibilità della gestione dei tag, consentendoti di configurare le estensioni dei tag nell’interfaccia utente di raccolta dati.
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle estensioni Adobe Experience Platform Launch, compresi i casi d&#39;uso e su come trovarle nell&#39;interfaccia, consulta la [Panoramica delle estensioni Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
+>Per informazioni dettagliate sulle estensioni dei tag, compresi i casi d&#39;uso e su come trovarli nell&#39;interfaccia, consulta la [panoramica delle estensioni dei tag](./catalog/launch-extensions/overview.md) .
 
-Le estensioni di platform launch inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considera le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Alcuni esempi sono l&#39; [Estensione di personalizzazione Gainsight](./catalog/personalization/gainsight.md) o la [Voce di conferma dell&#39;estensione del cliente](./catalog/voice/confirmit-digital-feedback.md).
+I tag delle estensioni inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considera le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Alcuni esempi sono l&#39; [Estensione di personalizzazione Gainsight](./catalog/personalization/gainsight.md) o la [Voce di conferma dell&#39;estensione del cliente](./catalog/voice/confirmit-digital-feedback.md).
 
-![Experience Platform Launch di estensioni rispetto ad altre destinazioni](./assets/common/launch-and-other-destinations.png)
+![Assegnare tag alle estensioni rispetto ad altre destinazioni](./assets/common/launch-and-other-destinations.png)
 
 ## Quando utilizzare connessioni ed estensioni
 
@@ -65,4 +64,3 @@ Le estensioni sono utili quando i dati evento vengono utilizzati per attivare un
 Le connessioni e le estensioni nel catalogo [destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppate per categoria di destinazione (**Pubblicità**, **Archiviazione cloud**, **Piattaforme di sondaggio**, **Marketing e-mail**, ecc.), a seconda dell&#39;azione di marketing che consentono di raggiungere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la [Documentazione del catalogo delle destinazioni](./catalog/overview.md).
 
 ![Categorie di destinazione](./assets/destination-types/destination-categories-menu.png)
-
