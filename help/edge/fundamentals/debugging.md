@@ -3,9 +3,9 @@ title: Debug in Adobe Experience Platform Web SDK
 description: Scopri come attivare/disattivare le funzionalità di debug nell’SDK per web di Experience Platform.
 keywords: debugging sdk Web;debugging;configurare;comando di configurazione;comando di debug;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Attualmente, l&#39;oggetto `libraryInfo` fornito contiene le seguenti proprietà:
 
-* `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`. Quando la libreria viene eseguita all&#39;interno dell&#39;estensione Adobe Experience Platform Launch (denominata &quot;AEP Web SDK&quot;), la versione è la versione della libreria e la versione dell&#39;estensione del Platform launch è unita a un segno &quot;+&quot;. Ad esempio, se la versione della libreria fosse 1.0.0 e l&#39;estensione Platform launch fosse 1.2.0, il valore sarebbe `1.0.0+1.2.0`.
+* `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`. Quando la libreria viene eseguita all&#39;interno dell&#39;estensione tag (denominata &quot;AEP Web SDK&quot;), la versione è la versione della libreria e la versione dell&#39;estensione tag è unita con un segno &quot;+&quot;. Ad esempio, se la versione della libreria fosse 1.0.0 e l&#39;estensione tag fosse 1.2.0, il valore sarebbe `1.0.0+1.2.0`.
