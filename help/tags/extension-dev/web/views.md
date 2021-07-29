@@ -1,10 +1,10 @@
 ---
 title: Viste in estensioni Web
 description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
-ht-degree: 79%
+source-wordcount: '2063'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione o tipo di elemento dati può offrire una vista mediante la quale l’utente potrà specificare alcune impostazioni. L’estensione può anche avere una [vista di livello superiore per la configurazione dell’estensione](../configuration.md), mediante la quale gli utenti possono specificare impostazioni globali per tutta l’estensione. Il processo di creazione è identico per tutti i tipi di vista.
 
