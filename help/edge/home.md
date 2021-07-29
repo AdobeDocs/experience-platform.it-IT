@@ -3,22 +3,22 @@ title: Panoramica dell’SDK per web Adobe Experience Platform
 description: Scopri come utilizzare Adobe Experience Platform Web SDK per integrare le funzionalità di Platform nel sito web.
 keywords: SDK per web Adobe Experience Platform;SDK per web Platform;SDK per web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK per web;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
 
 # Panoramica di Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite Adobe Experience Platform Edge Network. Oltre alla libreria JavaScript, esiste un [estensione di Experience Platform Launch](../tags/extensions/web/sdk/overview.md) per facilitare le configurazioni dell&#39;SDK per web.
+Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite Adobe Experience Platform Edge Network. Oltre alla libreria JavaScript, esiste un [estensione tag](../tags/extensions/web/sdk/overview.md) per facilitare le configurazioni dell&#39;SDK web.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] fa parte della raccolta che costituisce Experience Edge. Experience Edge è costituito da tre tecnologie:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** SDK JavaScript ed  [!DNL Experience Platform Launch] estensione per semplificare notevolmente la distribuzione  [!DNL Adobe] delle tecnologie
+* **[!DNL Adobe Experience Platform Web SDK]:** SDK JavaScript ed estensione tag per semplificare radicalmente la distribuzione  [!DNL Adobe] delle tecnologie
 * **Adobe Experience Platform Mobile SDK:**  estensione dell’SDK per dispositivi mobili v5 per consentire ai clienti di utilizzare la nuova metodologia di distribuzione
 * **[!DNL Adobe Experience Platform Edge Network]:** Una rete distribuita globale di server che consente una nuova metodologia di distribuzione  [!DNL Adobe] dei prodotti
 
