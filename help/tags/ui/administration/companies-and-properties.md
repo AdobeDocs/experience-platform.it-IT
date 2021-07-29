@@ -1,10 +1,10 @@
 ---
 title: Proprietà
 description: Scopri come le estensioni, gli ambienti e le librerie vengono organizzati e raggruppati per la tua organizzazione in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 69%
+source-wordcount: '1178'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Proprietà web
 
@@ -21,8 +21,6 @@ Una proprietà web è una raccolta di regole, elementi dati, estensioni configur
 ## Proprietà mobili
 
 Un tipo di proprietà mobile può contenere più applicazioni. Ad esempio, in una proprietà mobile puoi gestire lo stesso set di regole ed estensioni tra più applicazioni iOS e Android.
-
-Per un&#39;esercitazione video, consulta [Creazione della prima proprietà](../../quick-start/videos.md).
 
 ## Best practice per la pianificazione delle proprietà {#best-practices-for-planning-properties}
 
