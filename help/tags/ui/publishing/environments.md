@@ -1,10 +1,10 @@
 ---
 title: Ambienti
 description: Scopri il concetto degli ambienti tag e il loro funzionamento in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1482'
-ht-degree: 83%
+source-wordcount: '1483'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli ambienti di tag definiscono diversi aspetti chiave delle build della libreria che distribuisci sul sito web o sull’app:
 
