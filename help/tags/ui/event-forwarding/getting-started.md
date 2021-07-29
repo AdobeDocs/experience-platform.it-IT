@@ -1,10 +1,10 @@
 ---
 title: Guida introduttiva all’inoltro eventi
 description: Segui questa esercitazione passo per iniziare a utilizzare l’inoltro eventi in Adobe Experience Platform.
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 48%
+source-wordcount: '907'
+ht-degree: 46%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per utilizzare l’inoltro eventi in Adobe Experience Platform, i dati devono essere inviati a Adobe Experience Platform Edge Network utilizzando una o più delle tre opzioni seguenti:
 
