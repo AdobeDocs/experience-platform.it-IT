@@ -3,9 +3,9 @@ keywords: Medallia;medallia
 title: Estensione Medallia
 description: L'estensione Medallia è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '494'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Distribuisci [!DNL Medallia] in modo rapido e semplice sulle proprietà web. L�
 
 [!DNL Medallia] è una voce dell’estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
-Questa destinazione è un&#39;estensione Adobe Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni di Platform launch in Platform, consulta [Panoramica delle estensioni Adobe Experience Platform Launch](../launch-extensions/overview.md).
+Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta la [panoramica sulle estensioni dei tag](../launch-extensions/overview.md).
 
 ![Estensione Medallia](../../assets/catalog/voice/medallia/catalog.png)
 
@@ -26,7 +26,7 @@ Questa destinazione è un&#39;estensione Adobe Experience Platform Launch. Per u
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ad Adobe Experience Platform Launch. Il platform launch è offerto ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere al Platform launch e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. Tag offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni. e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
@@ -38,26 +38,26 @@ Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
 Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Configura]** nella barra a destra. Se il controllo **[!UICONTROL Configura]** è disabilitato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Consulta [Prerequisiti](#prerequisites).
 
-Nella finestra **[!UICONTROL Seleziona la proprietà del Platform launch disponibile]**, seleziona la proprietà del Platform launch in cui desideri installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Platform launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Scopri le proprietà nella sezione [Proprietà pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) della documentazione del Platform launch.
+Seleziona la proprietà in cui desideri installare l&#39;estensione. Puoi anche creare una nuova proprietà. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà nella sezione [Proprietà della pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) nella documentazione sui tag.
 
-Il flusso di lavoro ti porta al Platform launch per completare l’installazione.
+Il flusso di lavoro descrive i passaggi necessari per completare l’installazione.
 
 Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consulta la pagina [Medallia su Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
-Puoi anche installare l&#39;estensione direttamente nell&#39; [interfaccia Adobe Experience Platform Launch](https://launch.adobe.com/). Consulta [Aggiungi una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione del Platform launch.
+Puoi anche installare l’estensione direttamente nell’ [Interfaccia di raccolta dati](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
-Una volta installata l&#39;estensione, puoi avviare l&#39;impostazione delle regole per essa direttamente nel Platform launch.
+Dopo aver installato l&#39;estensione, puoi avviare l&#39;impostazione delle regole.
 
-Al Platform launch, puoi impostare regole per le estensioni installate per inviare dati evento alla destinazione dell&#39;estensione solo in determinate situazioni. Per ulteriori informazioni sull&#39;impostazione delle regole per le estensioni, consulta la [documentazione sulle regole](../../../tags/ui/managing-resources/rules.md).
+Puoi impostare regole per le estensioni installate per inviare dati evento alla destinazione dell&#39;estensione solo in determinate situazioni. Per ulteriori informazioni sull&#39;impostazione delle regole per le estensioni, consulta la documentazione [tags](../../../tags/ui/managing-resources/rules.md).
 
 ## Configurare, aggiornare ed eliminare l&#39;estensione {#configure-upgrade-delete}
 
-Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia di Platform launch.
+Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utente Raccolta dati.
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata su una delle tue proprietà, l&#39;interfaccia utente di Platform visualizza ancora **[!UICONTROL Install]** per l&#39;estensione. Per accedere al Platform launch e configurare o eliminare l&#39;estensione, fai clic sul flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) .
+>Se l&#39;estensione è già installata su una delle tue proprietà, l&#39;interfaccia utente di Platform visualizza ancora **[!UICONTROL Install]** per l&#39;estensione. Per configurare o eliminare l&#39;estensione, fai clic sul flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) .
 
-Per aggiornare l&#39;estensione, consulta [Aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione del Platform launch.
+Per aggiornare l&#39;estensione, consulta la guida al [processo di aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione sui tag.
