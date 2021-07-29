@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i flussi di dati. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,17 @@ Per questa funzione è necessario eseguire il provisioning della tua organizzazi
 
 ## Creazione di una configurazione del Datastream
 
-I Datastreams possono essere creati nell&#39;Adobe [!DNL Experience Platform Launch] utilizzando lo strumento di configurazione Datastream.
+I Datastreams possono essere creati nell&#39;interfaccia utente di raccolta dati utilizzando lo strumento di configurazione Datastream.
 
 ![navigazione dello strumento datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->Lo strumento di configurazione dei datastreams è disponibile per i clienti dell’elenco consentiti indipendentemente dal fatto che utilizzino [!DNL Experience Platform Launch] come gestore di tag. Inoltre, gli utenti devono disporre delle autorizzazioni di sviluppo in [!DNL Experience Platform Launch]. Per ulteriori informazioni, consulta l’articolo [Autorizzazioni utente](../../tags/ui/administration/user-permissions.md) nella documentazione [!DNL Experience Platform Launch] .
+>Lo strumento di configurazione dei datastreams è disponibile per i clienti dell’elenco consentiti indipendentemente dal fatto che utilizzino Platform come gestore di tag. Inoltre, gli utenti devono disporre delle autorizzazioni di sviluppo. Per ulteriori informazioni, consulta l’articolo [autorizzazioni utente](../../tags/ui/administration/user-permissions.md) nella documentazione dei tag .
 
 Crea un datastream facendo clic su **[!UICONTROL Nuovo Datastream]** nell&#39;area in alto a destra dello schermo. Dopo aver specificato un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente. Le impostazioni disponibili sono descritte di seguito.
 
-Durante la creazione di un datastream, vengono creati automaticamente tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stage* e *prod*. Corrispondono ai tre ambienti predefiniti in [!DNL Experience Platform Launch]. Quando si crea una libreria [!DNL Experience Platform Launch] in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni nei singoli ambienti nel modo desiderato.
+Durante la creazione di un datastream, vengono creati automaticamente tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stage* e *prod*. Corrispondono ai tre ambienti predefiniti per i tag. Quando crei una libreria di tag in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni nei singoli ambienti nel modo desiderato.
 
 L&#39;ID utilizzato nell&#39;SDK come `edgeConfigId` è un ID composito che specifica la configurazione e l&#39;ambiente (ad esempio, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Se nell’ID composito non è presente alcun ambiente (ad esempio, `stage` nell’esempio precedente), viene utilizzato l’ambiente di produzione.
 
