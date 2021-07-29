@@ -1,10 +1,10 @@
 ---
 title: Contesto nei moduli di estensione Edge
 description: Scopri l’oggetto contestuale e il ruolo che svolge nell’interazione con i moduli della libreria nelle estensioni dei tag delle proprietà edge.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 84%
+source-wordcount: '747'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
-> Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+> Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 A tutti i moduli libreria nelle estensioni edge viene fornito un oggetto `context` quando vengono eseguiti. Questo documento descrive le proprietà fornite dall&#39;oggetto `context` e il ruolo che svolgono nei moduli libreria.
 
