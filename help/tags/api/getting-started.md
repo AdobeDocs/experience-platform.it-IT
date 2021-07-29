@@ -1,9 +1,9 @@
 ---
 title: Guida introduttiva all’API di Reactor
 description: Scopri come iniziare a utilizzare l’API di Reactor, compresi i passaggi per generare le credenziali di accesso richieste.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Nella schermata successiva viene richiesto di selezionare uno o più profili di 
 
 >[!NOTE]
 >
->I profili di prodotto sono gestiti dalla tua organizzazione tramite Adobe Admin Console e contengono set specifici di autorizzazioni per le funzioni granulari di Adobe Experience Platform Launch. I profili di prodotto e le relative autorizzazioni possono essere gestiti solo da utenti con privilegi di amministratore all’interno della tua organizzazione. Se non sei sicuro dei profili di prodotto da selezionare per l’API, contatta l’amministratore.
+>I profili di prodotto sono gestiti dalla tua organizzazione tramite Adobe Admin Console e contengono set specifici di autorizzazioni per le funzioni granulari. I profili di prodotto e le relative autorizzazioni possono essere gestiti solo da utenti con privilegi di amministratore all’interno della tua organizzazione. Se non sei sicuro dei profili di prodotto da selezionare per l’API, contatta l’amministratore.
 
 Seleziona i profili di prodotto desiderati dall’elenco, quindi seleziona **Salva API configurata** per completare la registrazione API.
 
@@ -98,7 +98,7 @@ Viene generato un nuovo token di accesso e viene fornito un pulsante per copiare
 
 #### Generare token di accesso a livello di programmazione {#program}
 
-Se utilizzi l’integrazione Launch per un’applicazione, puoi generare in modo programmatico token di accesso tramite richieste API. Per eseguire questa operazione, è necessario ottenere i seguenti valori:
+Se utilizzi l’integrazione per un’applicazione, puoi generare in modo programmatico token di accesso tramite richieste API. Per eseguire questa operazione, è necessario ottenere i seguenti valori:
 
 * ID client (`{API_KEY}`)
 * Segreto client (`{SECRET}`)
