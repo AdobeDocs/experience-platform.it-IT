@@ -1,10 +1,10 @@
 ---
 title: Variabile libera “turbine”
 description: Scopri l’oggetto turbine, una variabile gratuita che fornisce informazioni e utility specifiche per il runtime di tag Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 58%
+source-wordcount: '577'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei moduli libreria dell’estensione. Fornisce informazioni e utility specifiche per il runtime di tag Adobe Experience Platform ed è sempre disponibile per i moduli della libreria senza utilizzare `require()`.
 
@@ -90,7 +90,7 @@ Recupera un modulo condiviso da un&#39;altra estensione. Se non viene trovato al
 turbine.logger.error('Error!');
 ```
 
-L&#39;utilità di registrazione viene utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Per attivare il debug, si consiglia di utilizzare l’estensione [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) oppure [ Launch e l’estensione DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) di Chrome. In alternativa, l’utente può eseguire il seguente comando `_satellite.setDebug(true)` all’interno della console per sviluppatori del browser. Il logger dispone dei seguenti metodi:
+L&#39;utilità di registrazione viene utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Il modo consigliato per attivare il debug è quello di utilizzare il [debugger Adobe Experience Cloud](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, l’utente può eseguire il seguente comando `_satellite.setDebug(true)` all’interno della console per sviluppatori del browser. Il logger dispone dei seguenti metodi:
 
 * `logger.log(message: string)`: registra un messaggio nella console.
 * `logger.info(message: string)`: registra un messaggio informativo nella console.
