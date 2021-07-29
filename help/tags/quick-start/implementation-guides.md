@@ -1,10 +1,10 @@
 ---
 title: Guide all'implementazione
 description: Scopri come implementare le soluzioni Adobe Experience Cloud con i tag.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 79%
+source-wordcount: '115'
+ht-degree: 64%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Sono disponibili due guide all&#39;implementazione. Queste ultime sono state progettate per sviluppatori front-end e professionisti del marketing tecnico che desiderano imparare a implementare le soluzioni [!DNL Adobe Experience Cloud] nei loro siti e nelle loro applicazioni mobili.
 
