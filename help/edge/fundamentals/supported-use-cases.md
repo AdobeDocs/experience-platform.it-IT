@@ -2,9 +2,9 @@
 title: Casi d’uso supportati con Adobe Experience Platform Web SDK
 description: Scopri quali casi d’uso sono supportati con Adobe Experience Platform Web SDK.
 keywords: sdk web;casi di utilizzo
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '552'
 ht-degree: 14%
 
 ---
@@ -29,7 +29,7 @@ In questa pagina sono elencati i casi d’uso supportati per l’SDK per web, co
 | Invia dati a più organizzazioni sulla pagina | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Report dettagliati degli errori e registri |  |
 | Richieste di traccia lato client e lato server |  |
-| Estensione Adobe Experience Platform Launch | [Documenti di estensione dell’SDK per web](../../tags/extensions/web/sdk/overview.md) |
+| estensione tag | [Documenti di estensione dell’SDK per web](../../tags/extensions/web/sdk/overview.md) |
 | Strumenti di debug disponibili | [Estensione Debugger ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) e  [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}
