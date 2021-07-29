@@ -1,10 +1,10 @@
 ---
 title: Panoramica sullo sviluppo di estensioni
 description: Scopri i componenti principali di diversi tipi di estensione tag e il processo di sviluppo dell’estensione in Adobe Experience Platform.
-source-git-commit: a165f0c254885b17db734ab09bf6523175a11dfb
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 21%
+source-wordcount: '948'
+ht-degree: 19%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Uno degli obiettivi principali dei tag in Adobe Experience Platform è quello di creare un ecosistema aperto in cui gli ingegneri al di fuori di Adobe possono esporre funzionalità aggiuntive sui loro siti web e applicazioni mobili. Questa operazione viene eseguita tramite le estensioni di tag. Una volta installata un&#39;estensione su una proprietà tag, la relativa funzionalità diventa disponibile per l&#39;uso da parte di tutti gli utenti della proprietà.
 
