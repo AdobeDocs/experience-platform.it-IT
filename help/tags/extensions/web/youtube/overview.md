@@ -1,10 +1,10 @@
 ---
 title: Panoramica dell’estensione di tracciamento di video YouTube
 description: Scopri l’estensione tag di tracciamento video di YouTube in Adobe Experience Platform.
-source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 51%
+source-wordcount: '891'
+ht-degree: 49%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 **Prerequisiti**
 
