@@ -1,10 +1,10 @@
 ---
 title: Tipi di eventi per le estensioni Web
 description: Scopri come definire un modulo libreria per tipi di evento per un’estensione Web in Adobe Experience Platform.
-source-git-commit: 5a6549577c61817f6fe239e1e9e47ab06d2bc807
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 33%
+source-wordcount: '1048'
+ht-degree: 31%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 33%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In una regola di tag , un evento è un&#39;attività che deve verificarsi per attivare una regola. Ad esempio, un&#39;estensione web potrebbe fornire un tipo di evento &quot;gesture&quot; che controlla l&#39;esecuzione di un determinato movimento del mouse o del tocco. Quando si verifica il gesto, la logica dell’evento attiva la regola.
 
