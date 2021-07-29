@@ -1,7 +1,7 @@
 ---
 title: Endpoint di estensioni
 description: Scopri come effettuare chiamate all’endpoint /extensions nell’API del reattore.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 8%
@@ -1092,7 +1092,7 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione su cui 
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
