@@ -1,10 +1,10 @@
 ---
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 79%
+source-wordcount: '1631'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 
@@ -38,8 +38,6 @@ Gli elementi dati sono compilati con dati quando sono utilizzati in regole o se 
 
 1. [Crea un elemento dati](#create-a-data-element), se non lo hai già fatto.
 1. Utilizza l&#39;elemento dati in una [regola](./rules.md) o in uno script personalizzato.
-
-Per un video introduttivo, consulta [Elementi dati](../../quick-start/videos.md).
 
 ## Uso degli elementi dati
 
