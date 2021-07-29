@@ -1,10 +1,10 @@
 ---
 title: Guida rapida
 description: Scopri come iniziare rapidamente a usare i tag in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 44%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag sono la tecnologia di nuova generazione di Adobe Experience Platform per la gestione dei tag. È stata creata per supportare un ecosistema aperto e sostenibile in cui chiunque può creare integrazioni che i clienti di Adobe possono distribuire ai propri siti. Si tratta di una prima applicazione API, in modo che tutto ciò che puoi fare tramite l&#39;interfaccia utente tu possa anche farlo a livello di programmazione tramite un&#39;API.
 
@@ -26,8 +26,6 @@ Flusso di lavoro dei tag di base:
 6. Eseguire test nell’ambiente di sviluppo.
 7. Promuovere a produzione.
 
-Per un video introduttivo, consulta la documentazione [video introduttivi](videos.md) .
-
 ## 1. Configurare gruppi e utenti
 
 I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente sono gestite tramite l&#39;Admin Console con altri prodotti e soluzioni Adobe da [!DNL Creative Cloud], [!DNL Document Cloud] e dall&#39;Experience Cloud.
@@ -38,7 +36,7 @@ Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per tag, co
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di raccolta dati. Per farlo, vai direttamente alla [schermata di accesso di Experience Cloud](https://experiencecloud.adobe.com) e seleziona **[!UICONTROL Launch / Data Collection]** dalla scheda Accesso rapido.
+Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di raccolta dati. Per farlo, vai direttamente alla [schermata di accesso di Experience Cloud](https://experiencecloud.adobe.com) e seleziona l&#39;interfaccia utente di raccolta dati dalla scheda Accesso rapido.
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ Un&#39;estensione è un&#39;integrazione generata da Adobe o un partner Adobe ch
 
 Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/web/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L&#39;estensione Core è generata da Adobe per fornire un set predefinito solido di tipi di elementi dati per i livelli dati e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
 
-Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali per fornire assistenza con [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul sito? Guarda Clicktale. Per ulteriori informazioni, consulta [Aggiungere una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali per fornire assistenza con [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul sito? Guarda Clicktale. Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Creare elementi dati e regole
 
