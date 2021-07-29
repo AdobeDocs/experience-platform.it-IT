@@ -1,10 +1,10 @@
 ---
 title: Panoramica dell’estensione Adobe Media Analytics for Audio and Video
 description: Scopri l’estensione tag Adobe Medium Analytics for Audio and Video in Adobe Experience Platform.
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 93%
+source-wordcount: '987'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questa documentazione per avere maggiori informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Adobe Media Analytics for Audio and Video (estensione Media Analytics). Sono incluse le opzioni disponibili quando si utilizza questa estensione per generare una regola, insieme a esempi e collegamenti a campioni.
 
