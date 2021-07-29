@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note aggiornate sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 62%
+ht-degree: 61%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 20 luglio 2021
 
@@ -28,7 +28,7 @@ ht-degree: 62%
 - I token di risposta sono ora disponibili quando si utilizza `triggerView()`
 - È stato corretto un bug relativo all’evento `CONTENT_RENDERING_NO_OFFERS` . Ora viene attivato correttamente ogni volta che non vi è contenuto restituito da Target
 - I dettagli delle metriche di clic di A4T vengono restituiti correttamente quando si utilizzano richieste di preacquisizione
-- La generazione UID non utilizza più `Math.random()`, ma si basa su `window.crypto`
+- La generazione di UUID non utilizza più `Math.random()`, ma si basa su `window.crypto`
 - `sessionId` la scadenza dei cookie viene estesa correttamente su ogni chiamata di rete
 - SPA l&#39;inizializzazione della cache di visualizzazione è ora gestita correttamente e rispetta le impostazioni `viewsEnable`
 
@@ -36,7 +36,7 @@ ht-degree: 62%
 
 ### Estensione Adobe Target v2 0.14.2
 
-- È stato corretto un bug a causa del quale il bundle Launch finale contiene due versioni di at.js, una con On-Device Decisioning e una senza.
+- Correggi un bug in cui il bundle finale contiene due versioni di at.js, una con On-Device Decisioning e una senza.
 
 ## 19 maggio 2021
 
