@@ -1,11 +1,11 @@
 ---
 title: Configurazione Adobe Experience Platform Web SDK
-description: Scopri l’estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch
+description: Scopri l’estensione tag Adobe Experience Platform Web SDK.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 7%
+source-wordcount: '1034'
+ht-degree: 8%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 L’estensione Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
-Questo documento illustra come configurare l&#39;estensione nell&#39;interfaccia utente di Adobe Experience Platform Launch.
+Questo documento illustra come configurare l’estensione nell’interfaccia utente di raccolta dati.
 
 ## Configura l&#39;estensione
 
-Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente del Platform launch e seleziona la scheda **[!UICONTROL Estensioni]** . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
+Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente di raccolta dati e seleziona la scheda **[!UICONTROL Estensioni]** . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 
 ### [!UICONTROL Nome]
 
-L&#39;estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una singola configurazione di Platform launch.
+L&#39;estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag.
 
 Il nome dell&#39;estensione viene impostato automaticamente su &quot;[!DNL alloy]&quot;. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
 
@@ -45,7 +45,7 @@ L’ [!UICONTROL ID organizzazione IMS] è l’organizzazione a cui si desidera 
 
 ### **[!UICONTROL Dominio Edge]**
 
-Il [!UICONTROL Dominio Edge] è il dominio da cui l&#39;estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Il [!UICONTROL Dominio Edge] è il dominio da cui l&#39;estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
 ## [!UICONTROL Datastream]
 
