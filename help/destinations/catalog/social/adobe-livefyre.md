@@ -3,9 +3,9 @@ keywords: livefyre;estensione livefyre
 title: Estensione Adobe Livefyre
 description: L'estensione Adobe Livefyre è una destinazione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '452'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Adobe Livefyre consente di scoprire, organizzare e pubblicare sul tuo sito web un flusso costante di contenuti generati dagli utenti per creare esperienze autentiche e altamente personalizzate.
 
-Adobe Livefyre è un&#39;estensione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre è un&#39;estensione social in Adobe Experience Platform. Per ulteriori informazioni sull&#39;Adobe Livefyre, consulta la [Guida all&#39;implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta la [panoramica sulle estensioni dei tag](../launch-extensions/overview.md).
 
@@ -42,10 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l&#39;estensione . Puoi a
 
 Il flusso di lavoro ti porta all’interfaccia utente di raccolta dati per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consulta la pagina [Adobe Livefyre su Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 Puoi anche installare l’estensione direttamente nell’ [Interfaccia di raccolta dati](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la guida sull’ [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
-
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
