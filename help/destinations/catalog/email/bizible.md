@@ -3,9 +3,9 @@ keywords: bizible;estensione bizible;destinazione bizible
 title: Estensione Bizible
 description: L’estensione Bizible è una destinazione e-mail in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[!DNL Bizible] è la soluzione di attribuzione B2B leader del settore che offre una visibilità impareggiabile dei dati, per poter prendere decisioni intelligenti che alimentano la crescita.
+[!DNL Bizible] è la soluzione di attribuzione B2B leader del settore che offre una visibilità impareggiabile dei tuoi dati, consentendoti di prendere decisioni intelligenti che alimentano la crescita.
 
-[!DNL Bizible] è un&#39;estensione e-mail in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] è un&#39;estensione e-mail in Adobe Experience Platform. Per ulteriori informazioni su Bizible, consulta [Attribuzione di marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) nelle risorse di panoramica Bizible .
 
 Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta la [panoramica sulle estensioni dei tag](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Con
 Seleziona la proprietà tag in cui desideri installare l&#39;estensione . Puoi anche creare una nuova proprietà. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà nella [documentazione tag](../../../tags/ui/administration/companies-and-properties.md).
 
 Il flusso di lavoro ti porta all’interfaccia utente di raccolta dati per completare l’installazione.
-
-Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consulta la pagina [Bizible su Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 Puoi anche installare l’estensione direttamente nell’ [Interfaccia di raccolta dati](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la guida sull’ [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
 
