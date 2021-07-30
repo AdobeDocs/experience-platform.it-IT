@@ -5,7 +5,7 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
+source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -141,7 +141,7 @@ La tabella seguente delinea i campi dello schema nell’output di esempio di pun
 | identity (Object) | False | Contiene i dettagli dell&#39;utente utilizzato per creare il modello, ad esempio `id` e `namespace`. |
 | id (String) | True | ID identità dell&#39;utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |
 | namespace (String) | True | Spazio dei nomi Identity utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aaid |
-| touchpointsDetail (Array di oggetti) | True | Elenco dei dettagli dei punti di contatto che conducono alla conversione ordinata per occorrenza punto di contatto o marca temporale. |
+| touchpointsDetail (Array di oggetti) | True | Elenco dei dettagli dei punti di contatto che conducono alla conversione ordinata da | occorrenza punto di contatto o marca temporale. |
 | touchpointName (String) | True | Nome del punto di contatto configurato durante la configurazione. <br> **Esempio:** PAID_SEARCH_CLICK |
 | punteggi (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all’interno di questo oggetto, consulta la sezione [punteggi di attribuzione aggregati](#aggregated-attribution-scores) . |
 | touchPoint (oggetto) | True | Metadati dei punti di contatto. Per ulteriori informazioni sui punteggi prodotti all’interno di questo oggetto, consulta la sezione [punteggi aggregati](#aggregated-scores) . |
