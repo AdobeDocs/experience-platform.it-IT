@@ -5,9 +5,9 @@ user-guide-title: Guida di Adobe Experience Platform Web SDK
 breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Gestione dati
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '144'
 ht-degree: 36%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 36%
    * Adobe Target {#adobe-target}
       * [Panoramica](personalization/adobe-target/target-overview.md)
       * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
+      * [Accesso ai token di risposta](personalization/adobe-target/accessing-response-tokens.md)
    * Offer Decisioning {#offer-decisioning}
       * [Panoramica](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consenso {#consent}
@@ -54,6 +55,7 @@ ht-degree: 36%
       * [Integrazione senza tag](consent/iab-tcf/without-launch.md)
 * Estensione tag SDK per web {#extension}
    * [Estensione SDK per web](extension/web-sdk-extension-configuration.md)
+   * [Tipi di evento](extension/event-types.md)
    * [Tipi di azioni](extension/action-types.md)
    * [Tipi di elementi dati](extension/data-element-types.md)
    * [Accesso all’ECID](extension/accessing-the-ecid.md)
