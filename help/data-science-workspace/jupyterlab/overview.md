@@ -5,10 +5,9 @@ title: Panoramica dell’interfaccia utente di JupyterLab
 topic-legacy: Overview
 description: JupyterLab è un’interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Offre agli scienziati dei dati un ambiente di sviluppo interattivo per lavorare con i notebook Jupyter, il codice e i dati. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, nonché istruzioni per eseguire azioni comuni.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91003bf142008bcb1277269b45d8a55234ea6564
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1831'
 ht-degree: 3%
 
 ---
@@ -64,7 +63,7 @@ Le informazioni sulle caratteristiche principali di [!DNL JupyterLab] e le istru
 
 ### Accedere ad [!DNL JupyterLab] {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Consenti l&#39;inizializzazione completa di [!DNL JupyterLab].
+In [Adobe Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Notebook]** dalla colonna di navigazione a sinistra. Consenti l&#39;inizializzazione completa di [!DNL JupyterLab].
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -108,7 +107,7 @@ L’area di lavoro principale in [!DNL JupyterLab] consente di disporre document
 
 ### Configurazione di GPU e server di memoria in [!DNL Python]/R
 
-In [!DNL JupyterLab] seleziona l&#39;icona a forma di ingranaggio nell&#39;angolo in alto a destra per aprire *Configurazione del server appunti*. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il cursore. La quantità di memoria che è possibile allocare dipende da quanto è stato effettuato il provisioning della tua organizzazione. Selezionare **[!UICONTROL Update configs]** per salvare.
+In [!DNL JupyterLab] seleziona l&#39;icona a forma di ingranaggio nell&#39;angolo in alto a destra per aprire *Configurazione del server appunti*. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il cursore. La quantità di memoria che è possibile allocare dipende da quanto è stato effettuato il provisioning della tua organizzazione. Selezionare **[!UICONTROL Aggiorna configs]** per salvare.
 
 >[!NOTE]
 >
@@ -118,7 +117,7 @@ In [!DNL JupyterLab] seleziona l&#39;icona a forma di ingranaggio nell&#39;angol
 
 ### Termina e riavvia [!DNL JupyterLab]
 
-In [!DNL JupyterLab], puoi terminare la sessione per impedire l’utilizzo di ulteriori risorse. Inizia selezionando l&#39; **icona di alimentazione** ![icona di alimentazione](../images/jupyterlab/user-guide/power_button.png), quindi seleziona **[!UICONTROL Shut Down]** dal puntatore che appare per terminare la sessione. Le sessioni del blocco appunti terminano automaticamente dopo 12 ore di assenza di attività.
+In [!DNL JupyterLab], puoi terminare la sessione per impedire l’utilizzo di ulteriori risorse. Inizia selezionando l&#39; **icona di alimentazione** ![icona di alimentazione](../images/jupyterlab/user-guide/power_button.png), quindi seleziona **[!UICONTROL Spegni]** dal puntatore che appare per terminare la sessione. Le sessioni del blocco appunti terminano automaticamente dopo 12 ore di assenza di attività.
 
 Per riavviare [!DNL JupyterLab], selezionare l&#39; **icona di riavvio** ![icona di riavvio](../images/jupyterlab/user-guide/restart_button.png) situata direttamente a sinistra dell&#39;icona di alimentazione, quindi selezionare **[!UICONTROL Restart]** dal puntatore visualizzato.
 
@@ -255,6 +254,11 @@ Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizz
 
 ## Librerie supportate {#supported-libraries}
 
-Per un elenco dei pacchetti supportati in Python, R e PySpark, copia e incolla `!pip list --format=columns` in una nuova cella, quindi esegui la cella. Un elenco di pacchetti supportati viene compilato in ordine alfabetico.
+Per un elenco dei pacchetti supportati in Python, R e PySpark, copia e incolla `!conda list` in una nuova cella, quindi esegui la cella. Un elenco di pacchetti supportati viene compilato in ordine alfabetico.
 
 ![esempio](../images/jupyterlab/user-guide/libraries.PNG)
+
+Inoltre, vengono utilizzate le dipendenze seguenti, ma non elencate:
+* CUDA 11.2
+* CUDNN 8.1
+
