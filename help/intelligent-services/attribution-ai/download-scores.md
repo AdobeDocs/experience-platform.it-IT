@@ -5,10 +5,9 @@ title: Scaricare i punteggi in Attribution AI
 topic-legacy: Downloading scores
 description: Questo documento funge da guida per il download dei punteggi per Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 2%
 
 ---
@@ -23,9 +22,9 @@ Attribution AI consente di scaricare i punteggi in formato file Parquet. Questa 
 
 Inoltre, per accedere ai punteggi per Attribution AI, è necessario che sia disponibile un’istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visita la [guida utente Attribution AI](./user-guide.md). Se hai creato di recente un&#39;istanza di servizio ed è ancora in fase di formazione e valutazione, ti preghiamo di consentire 24 ore per il completamento dell&#39;esecuzione.
 
-## Trova l&#39;ID del set di dati {#dataset-id}
+## Trova l’ID del set di dati {#dataset-id}
 
-Nell&#39;istanza del servizio per informazioni approfondite, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
+Nell&#39;istanza del servizio per informazioni Attribution AI, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Punti di accesso]**.
 
 ![altre azioni](./images/download-scores/more-actions.png)
 
@@ -261,7 +260,7 @@ La risposta scarica il file richiesto nella directory corrente. In questo esempi
 
 ![Terminale](./images/download-scores/terminal-output.png)
 
-I punteggi scaricati saranno in formato Parquet e sarà necessario un [!DNL Spark]-shell o un lettore Parquet per visualizzare i punteggi. Per la visualizzazione del punteggio non elaborato, è possibile utilizzare gli [strumenti per il parquet Apache](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Gli strumenti per il parquet possono analizzare i dati con [!DNL Spark].
+I punteggi scaricati saranno in formato Parquet e sarà necessario un [!DNL Spark]-shell o un lettore Parquet per visualizzare i punteggi. Per la visualizzazione del punteggio non elaborato, è possibile utilizzare gli [strumenti per il parquet Apache](https://parquet.apache.org/documentation/latest/). Gli strumenti per il parquet possono analizzare i dati con [!DNL Spark].
 
 ## Passaggi successivi
 
