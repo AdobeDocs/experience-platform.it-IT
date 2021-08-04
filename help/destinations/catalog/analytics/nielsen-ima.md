@@ -3,7 +3,7 @@ keywords: Gestore Nielsen IMA;gestore nielsen ima;nielsen ima;Nielsen ima;Nielse
 title: Estensione Nielsen IMA Handler
 description: L’estensione Nielsen IMA Handler è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 4%
@@ -30,7 +30,7 @@ Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platf
 
 Per installare l&#39;estensione [!DNL Nielsen IMA Handler]:
 
-Nell’ [Interfaccia piattaforma](http://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell’ [Interfaccia piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
