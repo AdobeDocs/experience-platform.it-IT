@@ -5,10 +5,10 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
+source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 1%
+source-wordcount: '525'
+ht-degree: 6%
 
 ---
 
@@ -51,8 +51,8 @@ SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
 FROM actual_dataset a
-WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
-AND timestamp < To_timestamp('2021-01-21 13:00:00')
+WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
+AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
@@ -85,15 +85,20 @@ Non è possibile utilizzare i caratteri jolly per ottenere tutti i dati dalle ri
 
 ## Errori API PostgreSQL
 
-| Codice di errore e stato di connessione | Descrizione | Possibile causa |
-| ------------------------------- | ----------- | -------------- |
-| **Start-up 28P01**  - autenticazione | Password non valida | Token di autenticazione non valido |
-| **Start-up 28000**  - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Deve essere `AuthenticationCleartextPassword`. |
-| **42P12** Start-up - autenticazione | Nessuna tabella trovata | Non sono state trovate tabelle da utilizzare |
-| **Query 42601**  | Errore di sintassi | Errore di comando o sintassi non valido |
-| **Query 58000**  | Errore di sistema | Errore interno del sistema |
-| **Query 42P01**  | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
-| **Query 42P07**  | La tabella esiste | La tabella esiste già con lo stesso nome (CREATE TABLE) |
-| **Query 53400**  | LIMITE supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
-| **Query 53400**  | Timeout dell&#39;istruzione | La dichiarazione in diretta ha richiesto più di 10 minuti al massimo |
-| **08P01** N/D | Tipo di messaggio non supportato | Tipo di messaggio non supportato |
+| Codice di errore | Stato connessione | Descrizione | Possibile causa |
+| ---------- | ---------------- | ----------- | -------------- |
+| **08P01** | N/D | Tipo di messaggio non supportato | Tipo di messaggio non supportato |
+| **28P01** | Avvio - autenticazione | Password non valida | Token di autenticazione non valido |
+| **28000** | Avvio - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Deve essere `AuthenticationCleartextPassword`. |
+| **42P12** | Avvio - autenticazione | Nessuna tabella trovata | Non sono state trovate tabelle da utilizzare |
+| **42601** | Query | Errore di sintassi | Errore di comando o sintassi non valido |
+| **42P01** | Query | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
+| **42P07** | Query | La tabella esiste | Esiste già una tabella con lo stesso nome (CREATE TABLE) |
+| **53400** | Query | LIMITE supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
+| **53400** | Query | Timeout dell&#39;istruzione | La dichiarazione in diretta ha richiesto più di 10 minuti al massimo |
+| **58000** | Query | Errore di sistema | Errore interno del sistema |
+| **0A000** | Query/Comando | Non supportati | Funzionalità/funzionalità nella query/comando non supportata |
+| **42501** | Query DI TABELLA A DISCESA | Tabella di eliminazione non creata dal servizio query | La tabella che viene eliminata non è stata creata dal servizio query utilizzando l’istruzione `CREATE TABLE` |
+| **42501** | Query DI TABELLA A DISCESA | Tabella non creata dall&#39;utente autenticato | La tabella da eliminare non è stata creata dall&#39;utente attualmente connesso |
+| **42P01** | Query DI TABELLA A DISCESA | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
+| **42P12** | Query DI TABELLA A DISCESA | Nessuna tabella trovata per `dbName`: controlla il`dbName` | Impossibile trovare tabelle nel database corrente |
