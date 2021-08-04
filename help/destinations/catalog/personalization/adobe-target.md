@@ -3,7 +3,7 @@ keywords: estensione target;target
 title: Estensione Adobe Target
 description: L'estensione Adobe Target è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 12%
@@ -32,7 +32,7 @@ Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platf
 
 Per installare l’estensione Adobe Target:
 
-Nell’ [Interfaccia piattaforma](http://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell’ [Interfaccia piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
