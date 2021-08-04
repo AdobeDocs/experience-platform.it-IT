@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Configurare la destinazione - Procedura dettagliata sul video {#video}
 
-Il video seguente illustra i passaggi per configurare una destinazione [!DNL Google Customer Match] e attivare i segmenti. Le fasi sono inoltre illustrate in sequenza nelle sezioni successive.
+Il video seguente illustra i passaggi per configurare una destinazione social e attivare i segmenti. Il video utilizza LinkedIn come esempio, ma i passaggi sono simili tra le destinazioni social, incluso [!DNL Google Customer Match]. I passaggi del video sono descritti anche in sequenza nelle sezioni successive.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
