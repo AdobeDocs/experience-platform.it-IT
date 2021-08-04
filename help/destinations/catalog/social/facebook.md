@@ -3,9 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
@@ -112,7 +112,7 @@ Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DN
 
 Per connetterti alla destinazione [!DNL Facebook], vedi [Flusso di lavoro di autenticazione delle destinazioni social ](./workflow.md).
 
-Il video seguente illustra anche i passaggi per configurare una destinazione [!DNL Facebook] e attivare i segmenti.
+Il video seguente illustra anche i passaggi per configurare una destinazione social e attivare i segmenti. Il video utilizza LinkedIn come esempio, ma i passaggi sono simili tra le destinazioni social.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
