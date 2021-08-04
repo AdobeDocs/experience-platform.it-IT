@@ -3,7 +3,7 @@ keywords: TMMData;dati tmm;dati tmmmdata;dati TMM
 title: Estensione TMMData
 description: L’estensione TMMData è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platf
 
 Per installare l&#39;estensione [!DNL TMMData]:
 
-Nell’ [Interfaccia piattaforma](http://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell’ [Interfaccia piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
