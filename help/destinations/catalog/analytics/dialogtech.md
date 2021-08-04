@@ -3,7 +3,7 @@ keywords: estensione dialogtech;dialogtech;destinazione dialogtech;DialogTech;Di
 title: Estensione DialogTech
 description: L’estensione DialogTech è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platf
 
 Per installare l&#39;estensione [!DNL DialogTech]:
 
-Nell’ [Interfaccia piattaforma](http://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell’ [Interfaccia piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
