@@ -5,10 +5,9 @@ title: Endpoint API per le definizioni dei segmenti
 topic-legacy: developer guide
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1188'
 ht-degree: 3%
 
 ---
@@ -337,7 +336,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 | `description` | Descrizione umana leggibile della definizione. |
 | `evaluationInfo` | Un oggetto generato dal sistema che indica il tipo di valutazione, batch, continuo (noto anche come streaming) o sincrono, cui verrà sottoposta la definizione del segmento. |
 
-## Recupera in blocco le definizioni dei segmenti {#bulk-get}
+## Recuperare in blocco le definizioni dei segmenti {#bulk-get}
 
 È possibile recuperare informazioni dettagliate su più definizioni di segmenti specificate effettuando una richiesta POST all&#39;endpoint `/segment/definitions/bulk-get` e fornendo i valori `id` delle definizioni di segmenti nel corpo della richiesta.
 
@@ -473,6 +472,10 @@ Una risposta corretta restituisce lo stato HTTP 207 con le definizioni dei segme
 ## Eliminare una definizione di segmento specifica {#delete}
 
 Puoi richiedere di eliminare una definizione di segmento specifica effettuando una richiesta di DELETE all’ endpoint `/segment/definitions` e fornendo l’ID della definizione di segmento da eliminare nel percorso della richiesta.
+
+>[!NOTE]
+>
+> Potrai **non** eliminare un segmento utilizzato nell’attivazione di una destinazione.
 
 **Formato API**
 
