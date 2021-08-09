@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Nell’interfaccia utente Experience Platform, seleziona **[!UICONTROL Segmenti]
 >
 >Se l’organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, il dashboard [!UICONTROL Segmenti] non è visibile. Al contrario, la scheda [!UICONTROL Panoramica] visualizza collegamenti e documentazione per aiutarti a iniziare con i segmenti.
 
-###  Dashboard dei segmenti  {#segments-dashboard}
+###  Dashboard dei segmenti {#segments-dashboard}
 
 Il dashboard **[!UICONTROL Segmenti]** delinea le metriche chiave correlate ai dati dei segmenti della tua organizzazione.
 
@@ -82,6 +82,10 @@ La barra laterale destra contiene informazioni su tutti i segmenti all’interno
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
 Selezionando la riga della definizione del segmento viene fornito un riepilogo della definizione del segmento, incluse le opzioni per modificare o eliminare il segmento, il pubblico qualificato per il segmento, la dimensione totale del pubblico, oltre al nome, alla descrizione, al metodo di valutazione, alla data di creazione e all’ultima data di modifica del segmento.
+
+>[!NOTE]
+>
+> Potrai **non** eliminare un segmento utilizzato nell’attivazione di una destinazione.
 
 ![](../images/ui/overview/segment-browse-details.png)
 
@@ -177,7 +181,7 @@ Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella [
 >
 >Affinché la segmentazione in streaming funzioni, è necessario abilitare la segmentazione pianificata per l’organizzazione. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, fai riferimento alla sezione [segmentazione in streaming in questa guida utente](#scheduled-segmentation).
 
-## Segmentazione dei bordi {#edge-segmentation}
+## Segmentazione degli spigoli {#edge-segmentation}
 
 La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 
