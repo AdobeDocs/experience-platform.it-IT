@@ -2,14 +2,13 @@
 keywords: annunci Google;annunci google;parole adwords Google;Google AdWords;Google Adwords
 title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di effettuare pubblicità a pagamento per clic tra ricerche basate su testo, visualizzazioni grafiche, video YouTube e display mobili in-app.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Ads] connection
 
@@ -62,30 +61,30 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Ads
 
 Prima di creare la destinazione [!DNL Google Ads] in Platform, è necessario contattare [!DNL Google] per Adobe per essere inserito nell’elenco dei provider di dati consentiti e per aggiungere l’account all’elenco consentiti. Contatta [!DNL Google] e fornisci le seguenti informazioni:
 
-* **ID**  account: questo è l&#39;ID account di Adobe con  [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
-* **ID**  cliente: questo è l&#39;ID account cliente Adobe con  [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID** account: ID account di Adobe con Google. ID account: 87933855.
+* **ID** cliente: ID account cliente di Adobe con Google. ID cliente: 89690775.
 * Tipo di account: **AdWords**
-* **ID**  di Google AdWords: Questo è il tuo ID con  [!DNL Google]. Il formato ID è tipicamente 123-456-7890.
+* **ID** di Google AdWords: Questo è il tuo ID con  [!DNL Google]. Il formato ID è tipicamente 123-456-7890.
 
 ## Configurare la destinazione
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Ads] e selezionare **[!UICONTROL Configure]**.
+In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Google Ads] e selezionare **[!UICONTROL Configura]**.
 
 ![Connetti destinazione Google Ads](../../assets/catalog/advertising/google-ads-destination/catalog.png)
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attiva]** e **[!UICONTROL Configura]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila il [!UICONTROL Basic Information] per la destinazione.
+Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila [!UICONTROL Informazioni di base] per la destinazione.
 
 ![Informazioni di base Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
 
-* **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
-* **[!UICONTROL Description]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
-* **[!UICONTROL Account Type]**: AdWords è l’unica opzione disponibile.
-* **[!UICONTROL Account ID]**: Compila il tuo ID account con  [!DNL Google Ads]. Il formato ID è tipicamente 123-456-7890.
-* **[!UICONTROL Marketing action]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
+* **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
+* **[!UICONTROL Tipo]** account: AdWords è l’unica opzione disponibile.
+* **[!UICONTROL ID]** account: Compila il tuo ID account con  [!DNL Google Ads]. Il formato ID è tipicamente 123-456-7890.
+* **[!UICONTROL Azione]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ## Attiva i segmenti in [!DNL Google Ads]
 
