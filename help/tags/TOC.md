@@ -4,9 +4,9 @@ user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Raccolta dati
-source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
+source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '378'
 ht-degree: 79%
 
 ---
@@ -88,9 +88,6 @@ ht-degree: 79%
       * Informazioni sulle risorse di Adobe Experience Manager {#asset-insights}
          * [Panoramica](./extensions/web/asset-insights/overview.md)
          * [Note sulla versione](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Experience Manager Forms {#forms}
-         * [Panoramica](./extensions/web/forms/overview.md)
-         * [Note sulla versione](./extensions/web/forms/release-notes.md)
       * Adobi Medium Analytics per audio e video {#media-analytics}
          * [Panoramica](./extensions/web/media-analytics/overview.md)
          * [Note sulla versione](./extensions/web/media-analytics/release-notes.md)
