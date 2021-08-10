@@ -2,14 +2,13 @@
 keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;visualizzazione e video
 title: Connessione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento utilizzato per eseguire il retargeting e le campagne digitali mirate al pubblico tra le origini di inventario Display, Video e Mobile.
-translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Display & Video 360] connection
 
@@ -54,33 +53,33 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Dis
 >
 >L’elenco consentiti è obbligatorio prima di configurare la tua prima destinazione [!DNL Google Display & Video 360] in Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco consentiti descritto di seguito.
 
-Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
+Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire l’Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
 
-* **ID**  account: questo è l&#39;ID account Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
-* **ID**  cliente: questo è l&#39;ID account cliente Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID** account: ID account di Adobe con Google. ID account: 87933855.
+* **ID** cliente: ID account cliente di Adobe con Google. ID cliente: 89690775.
 * **Tipo** di account: utilizza  **[!DNL Invite advertiser]** per consentire ai tipi di pubblico di essere condivisi solo con un marchio specifico nel tuo account Display &amp; Video 360 o  **[!DNL Invite partner]** per consentire al pubblico di essere condiviso con tutti i marchi del tuo account Display &amp; Video 360.
 
 ## Configurare la destinazione
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Display & Video 360] e selezionare **[!UICONTROL Configure]**.
+In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Google Display & Video 360] e selezionare **[!UICONTROL Configura]**.
 
 ![Connetti la destinazione Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/catalog.png)
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Activate] e [!UICONTROL Configure], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Attiva] e [!UICONTROL Configura], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione , compila [!UICONTROL Basic Information] per la destinazione e le azioni di marketing che devono essere applicate a questa destinazione.
+Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione , compila le [!UICONTROL Informazioni di base] per la destinazione, nonché le azioni di marketing che devono essere applicate a questa destinazione.
 
 ![Informazioni di base Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
-* **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
-* **[!UICONTROL Description]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
-* **[!UICONTROL Account Type]**: Seleziona un’opzione, a seconda del tuo account con Google:
+* **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
+* **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
+* **[!UICONTROL Tipo]** account: Seleziona un’opzione, a seconda del tuo account con Google:
    * Utilizza `Invite Advertiser` per consentire ai tipi di pubblico di essere condivisi solo con un marchio specifico nel tuo account Display &amp; Video 360 .
    * Utilizza `Invite Partner` per consentire ai tipi di pubblico di essere condivisi con tutti i marchi del tuo account Display &amp; Video 360.
-* **[!UICONTROL Account ID]**: Compila il tuo ID  **[!DNL Invite partner]** o  **[!DNL Invite advertiser]** account con Google. In genere si tratta di un ID a sei o sette cifre.
-* **[!UICONTROL Marketing action]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* **[!UICONTROL ID]** account: Compila il tuo ID  **[!DNL Invite partner]** o  **[!DNL Invite advertiser]** account con Google. In genere si tratta di un ID a sei o sette cifre.
+* **[!UICONTROL Azione]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
