@@ -5,9 +5,9 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '332'
 ht-degree: 3%
 
 ---
@@ -36,11 +36,15 @@ Le tecnologie di raccolta dati fornite da Experience Platform si concentrano sul
 
 Gli SDK Adobe Experience Platform per web e dispositivi mobili comprimono e comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo per le piattaforme web o mobili. La compressione di queste librerie velocizza la raccolta dei dati e consolida le operazioni in un unico flusso da dispositivi lato client a Adobe Experience Platform Edge Network.
 
-## Processo di ribaltamento per l&#39;implementazione della tecnologia Adobe
+## Processo di ribaltamento per l&#39;implementazione della tecnologia Adobe {#edge}
 
 Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi impostare [datastreams](../edge/fundamentals/datastreams.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che ti consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
 
 ![](./images/deploy.png)
+
+>[!NOTE]
+>
+>Per un’introduzione di alto livello a Platform Edge Network, consulta la seguente [presentazione interattiva del prodotto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Trasforma, arricchisci e invia dati in modo rapido e sicuro
 
