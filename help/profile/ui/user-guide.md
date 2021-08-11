@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -19,91 +19,123 @@ ht-degree: 0%
 
 Questa guida all&#39;interfaccia utente richiede una comprensione dei vari servizi [!DNL Experience Platform] coinvolti nella gestione di [!DNL Real-time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, controlla la documentazione relativa ai seguenti servizi:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile] panoramica](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Identity Service]](../../identity-service/home.md): Consente  [!DNL Real-time Customer Profile] di colmare le identità provenienti da origini dati diverse durante l’acquisizione in  [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
 
-## Panoramica
+## [!UICONTROL Panoramica]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** che visualizza il dashboard [!UICONTROL Profili].
+Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profiles]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** che mostra il dashboard del profilo.
 
 >[!NOTE]
 >
 >Se la tua organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, la dashboard [!UICONTROL Profiles] non è visibile. Al contrario, la scheda [!UICONTROL Panoramica] mostra collegamenti e documentazione per aiutarti a iniziare con Profilo cliente in tempo reale.
 
-###  Dashboard dei profili  {#profile-dashboard}
+### Dashboard dei profili {#profile-dashboard}
 
-Il dashboard **[!UICONTROL Profiles]** delinea le metriche chiave correlate ai dati del profilo della tua organizzazione.
+Il dashboard del profilo delinea le metriche chiave correlate ai dati di profilo della tua organizzazione.
 
-Per ulteriori informazioni, visita la [Guida al dashboard del profilo](../../dashboards/guides/profiles.md).
+Per ulteriori informazioni, visita la [guida alla dashboard del profilo](../../dashboards/guides/profiles.md).
 
 ![](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Sfoglia
+## [!UICONTROL Metriche ] browser
 
-Seleziona la scheda **[!UICONTROL Sfoglia]** per sfogliare i profili in base all’identità.
+Seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare diverse metriche correlate ai dati di profilo della tua organizzazione. È inoltre possibile utilizzare questa scheda per sfogliare l’archivio dei profili utilizzando un criterio di unione o un’identità, come descritto nella sezione successiva di questa guida.
 
-![](../images/user-guide/profiles-browse.png)
+Sul lato destro della scheda **[!UICONTROL Sfoglia]** è presente il [conteggio dei profili](#profile-count) e un elenco di profili [per namespace](#profiles-by-namespace).
 
-### Metriche del profilo {#profile-metrics}
+>[!NOTE]
+>
+>Queste metriche di profilo possono variare dalle metriche visualizzate nel [dashboard del profilo](#profile-dashboard) perché vengono valutate utilizzando i criteri di unione predefiniti della tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, tra cui la definizione di un criterio di unione predefinito, vedere la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
-Sul lato destro della scheda **[!UICONTROL Sfoglia]** sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il totale [conteggio profili](#profile-count) e un elenco di profili [per namespace](#profiles-by-namespace).
+Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ultimo aggiornamento, indicando quando sono state valutate le metriche.
 
-Queste metriche di profilo vengono valutate utilizzando il criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, tra cui la definizione di un criterio di unione predefinito, vedere la [panoramica dei criteri di unione](../merge-policies/overview.md).
-
-Oltre a queste metriche, la sezione relativa alle metriche del profilo fornisce anche una data e un’ora dell’ultimo aggiornamento, indicando quando sono state valutate le metriche.
-
-![](../images/user-guide/profiles-profile-metrics.png)
+![](../images/user-guide/profiles-browse-metrics.png)
 
 ### Numero di profili {#profile-count}
 
-Il conteggio dei profili visualizza il numero totale di profili di cui dispone la tua organizzazione all’interno di [!DNL Experience Platform], dopo che il criterio di unione predefinito della tua organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, l’organizzazione può disporre di più frammenti di profilo relativi a un singolo cliente che interagisce con il tuo marchio su diversi canali, ma questi frammenti verranno uniti (in base al criterio di unione predefinito) e restituiranno un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
+Il conteggio dei profili visualizza il numero totale di profili di cui dispone l’organizzazione all’interno dell’Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, l’organizzazione può disporre di più frammenti di profilo relativi a un singolo cliente che interagisce con il tuo marchio su diversi canali, ma questi frammenti verranno uniti (in base al criterio di unione predefinito) e restituiranno un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
 
 Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), ad esempio profili Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all’interno di Platform.
 
+#### Aggiornamento della metrica del conteggio dei profili
+
 Quando l&#39;acquisizione di record nell&#39;archivio [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro con dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio del profilo. Per l’acquisizione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene soddisfatta la soglia di aumento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio dei profili.
 
-### Profili per namespace {#profiles-by-namespace}
+### [!UICONTROL Profili per namespace] {#profiles-by-namespace}
 
 La metrica **[!UICONTROL Profili per namespace]** visualizza il conteggio totale e la suddivisione dei namespace in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, l’aggiunta insieme dei valori mostrati per ogni namespace) sarà sempre superiore alla metrica di conteggio dei profili, perché a un profilo potrebbero essere associati più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
 
+#### Aggiornamento dei profili per metrica [!UICONTROL spazio dei nomi]
+
 Simile alla metrica [conteggio profilo](#profile-count), quando l’acquisizione di record nello store [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio dei nomi. Per i flussi di lavoro con dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio del profilo. Per l’acquisizione in batch, entro 15 minuti dal corretto inserimento di un batch nell’ archivio [!DNL Profile], se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare le metriche.
 
-### Criteri di unione
+## Utilizza la scheda [!UICONTROL Sfoglia] per visualizzare i profili
 
-Il selettore **[!UICONTROL Criteri di unione]** seleziona automaticamente il criterio di unione predefinito per la tua organizzazione. Se non si desidera utilizzare il criterio di unione, è possibile selezionare il `X` accanto al criterio di unione predefinito per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]** in cui è possibile scegliere un altro criterio di unione.
+Nella scheda **[!UICONTROL Sfoglia]** è possibile visualizzare profili di esempio utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
+
+![](../images/user-guide/browse-by-dropdown.png)
+
+### Sfoglia per [!UICONTROL Criteri di unione]
+
+Il selettore **[!UICONTROL Sfoglia per]** è impostato su [!UICONTROL Criteri di unione] per impostazione predefinita e il **[!UICONTROL Criterio di unione]** selezionato è il criterio di unione predefinito per la tua organizzazione.
 
 Per ulteriori informazioni sull&#39;unione dei criteri e sul loro ruolo all&#39;interno di Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
-![](../images/user-guide/profiles-search-merge-policy.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
-### Spazio dei nomi identità
+I profili visualizzati rappresentano un esempio di fino a 20 profili dall’archivio profili della tua organizzazione, dopo l’applicazione del criterio di unione selezionato. I profili di esempio per il criterio di unione selezionato vengono aggiornati quando vengono aggiunti nuovi dati all’archivio profili dell’organizzazione.
 
-Il selettore **[!UICONTROL Identity namespace]** apre una finestra di dialogo in cui è possibile scegliere lo spazio dei nomi di identità in base al quale eseguire la ricerca. Puoi personalizzare gli attributi visualizzati nella ricerca selezionando l’icona del filtro e scegliendo gli attributi da aggiungere o rimuovere.
+Per visualizzare i dettagli di uno dei profili di esempio, seleziona l&#39; **[!UICONTROL ID profilo]**. Per ulteriori informazioni, consulta la sezione più avanti in questa guida sulla [visualizzazione dei dettagli del profilo](#profile-detail).
 
-![](../images/user-guide/profiles-search-filter.png)
+![](../images/user-guide/sample-profiles.png)
 
-Dalla finestra di dialogo **[!UICONTROL Seleziona namespace identità]**, scegli lo spazio dei nomi in base al quale desideri eseguire la ricerca oppure utilizza la barra di ricerca nella finestra di dialogo per iniziare a digitare il nome di uno spazio dei nomi. È possibile selezionare uno spazio dei nomi per visualizzare ulteriori dettagli. Una volta trovato lo spazio dei nomi desiderato, è possibile selezionare il pulsante di scelta e premere **[!UICONTROL Seleziona]** per continuare.
+Per scegliere un criterio di unione diverso, selezionare il `X` accanto al nome del criterio di unione, quindi utilizzare il selettore per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**.
+
+![](../images/user-guide/merge-policy-select.png)
+
+Per scegliere un criterio di unione dalla finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**, selezionare il pulsante di scelta accanto al nome del criterio, quindi utilizzare **[!UICONTROL Seleziona]** per tornare alla scheda [!UICONTROL Sfoglia]. È quindi possibile selezionare **[!UICONTROL Visualizza]** per aggiornare i profili di esempio e visualizzare un campionamento dei profili con il nuovo criterio di unione applicato.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
+
+### Sfoglia per [!UICONTROL Identità]
+
+Utilizzando il selettore **[!UICONTROL Sfoglia per]**, puoi scegliere [!UICONTROL Identità] per cercare un profilo specifico in base a un valore di identità. La ricerca eseguita in base a un&#39;identità richiede inoltre di specificare un criterio di unione, uno spazio dei nomi di identità e un valore di identità.
+
+![](../images/user-guide/browse-by-identity.png)
+
+Utilizzare il selettore **[!UICONTROL Criteri di unione]** per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]** e scegliere il criterio di unione da utilizzare.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
+
+Quindi utilizza il selettore **[!UICONTROL Identity namespace]** per aprire la finestra di dialogo **[!UICONTROL Select identity namespace]** e scegli lo spazio dei nomi in base al quale desideri eseguire la ricerca. Se l’organizzazione dispone di più spazi dei nomi, è possibile utilizzare la barra di ricerca nella finestra di dialogo per iniziare a digitare il nome di uno spazio dei nomi.
+
+Puoi selezionare uno spazio dei nomi per visualizzare ulteriori dettagli oppure il pulsante di scelta per scegliere uno spazio dei nomi. Puoi quindi utilizzare **[!UICONTROL Seleziona]** per continuare.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
-### Valore identità
+Dopo aver selezionato uno [!UICONTROL spazio dei nomi identità] e essere tornato alla scheda [!UICONTROL Sfoglia], puoi immettere un **[!UICONTROL valore identità]** relativo allo spazio dei nomi selezionato.
 
-Dopo aver selezionato uno spazio dei nomi di identità, torna alla scheda **[!UICONTROL Sfoglia]** in cui puoi immettere un **[!UICONTROL valore di identità]**. Questo valore è specifico per un profilo cliente individuale e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione dello spazio dei nomi di identità &quot;E-mail&quot; richiede un valore di identità sotto forma di un indirizzo e-mail valido.
+>[!NOTE]
+>
+>Questo valore è specifico per un profilo cliente individuale e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione dello spazio dei nomi di identità &quot;E-mail&quot; richiede un valore di identità sotto forma di un indirizzo e-mail valido.
 
-![](../images/user-guide/profiles-show-profile.png)
+![](../images/user-guide/browse-by-identity-values.png)
 
-Una volta immesso un valore, seleziona **[!UICONTROL Mostra profilo]** e viene restituito un singolo profilo corrispondente al valore. Seleziona l&#39; **[!UICONTROL ID profilo]** per visualizzare i dettagli del profilo.
+Una volta immesso un valore, seleziona **[!UICONTROL Visualizza]** e viene restituito un singolo profilo corrispondente al valore. Seleziona l&#39; **[!UICONTROL ID profilo]** per visualizzare i dettagli del profilo.
 
-![](../images/user-guide/profiles-display-profile.png)
+![](../images/user-guide/browse-by-identity-profile.png)
 
-### Dettagli profilo {#profile-detail}
+## Visualizzare i dettagli del profilo {#profile-detail}
 
-Selezionando l&#39; **[!UICONTROL ID profilo]**, si apre la scheda **[!UICONTROL Dettagli]** . Le informazioni di profilo visualizzate nella scheda **[!UICONTROL Dettaglio]** sono state unite da più frammenti di profilo per formare una singola visualizzazione del singolo cliente. Ciò include dettagli del cliente quali attributi di base, identità collegate e preferenze del canale. I campi predefiniti visualizzati possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, incluse le istruzioni dettagliate per l’aggiunta e la rimozione degli attributi e il ridimensionamento dei pannelli della dashboard, consulta la [guida alla personalizzazione dei dettagli del profilo](profile-customization.md).
+Dopo aver selezionato un **[!UICONTROL ID profilo]**, si apre la scheda **[!UICONTROL Dettagli]** . Le informazioni di profilo visualizzate nella scheda **[!UICONTROL Dettaglio]** sono state unite da più frammenti di profilo per formare una singola visualizzazione del singolo cliente. Ciò include dettagli del cliente quali attributi di base, identità collegate e preferenze del canale.
+
+I campi predefiniti visualizzati possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, incluse le istruzioni dettagliate per l’aggiunta e la rimozione degli attributi e il ridimensionamento dei pannelli della dashboard, consulta la [guida alla personalizzazione dei dettagli del profilo](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puoi visualizzare ulteriori informazioni relative al singolo profilo selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e appartenenza al segmento, che mostrano i segmenti per i quali il profilo è attualmente qualificato.
+Puoi visualizzare ulteriori informazioni relative al singolo profilo selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda di appartenenza del segmento che mostra i segmenti per i quali il profilo è attualmente qualificato.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
@@ -115,7 +147,7 @@ Per ulteriori informazioni sui criteri di unione, vedere la [panoramica dei crit
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
-## Schema dell&#39;Unione {#union-schema}
+## Schema dell&#39;unione {#union-schema}
 
 Dal menu principale **[!UICONTROL Profili]**, seleziona la scheda **[!UICONTROL Schema unione]** per visualizzare gli schemi di unione disponibili per i dati acquisiti. Uno schema di unione è un’unione di tutti i campi [!DNL Experience Data Model] (XDM) della stessa classe, i cui schemi sono stati abilitati per l’utilizzo in [!DNL Real-time Customer Profile].
 
@@ -125,4 +157,4 @@ Per ulteriori informazioni sugli schemi di unione, visita la [guida all&#39;inte
 
 ## Passaggi successivi
 
-Leggendo questa guida, ora sai come visualizzare e gestire i dati [!DNL Profile] utilizzando l’ interfaccia utente [!DNL Experience Platform] . Per informazioni su come lavorare con i dati del profilo utilizzando l’API Profilo cliente in tempo reale, consulta la [Guida per gli sviluppatori di profili](../api/overview.md).
+Leggendo questa guida, sarai in grado di visualizzare e gestire i dati del profilo della tua organizzazione tramite l’interfaccia utente di Experience Platform. Per informazioni su come lavorare con i dati di profilo utilizzando le API di Experience Platform, consulta la [Guida API del profilo cliente in tempo reale](../api/overview.md).
