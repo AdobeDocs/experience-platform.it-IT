@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-translation-type: tm+mt
-source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -44,7 +43,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -304,13 +303,13 @@ Con il set di dati, la connessione in streaming e il flusso di dati creati, puoi
 **Formato API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | Il valore `id` della nuova connessione streaming creata. |
-| `synchronousValidation` | Parametro di query facoltativo destinato a scopi di sviluppo. Se impostato su `true`, può essere utilizzato per un feedback immediato per determinare se la richiesta è stata inviata correttamente. Per impostazione predefinita, questo valore è impostato su `false`. |
+| `syncValidation` | Parametro di query facoltativo destinato a scopi di sviluppo. Se impostato su `true`, può essere utilizzato per un feedback immediato per determinare se la richiesta è stata inviata correttamente. Per impostazione predefinita, questo valore è impostato su `false`. Tieni presente che se imposti questo parametro di query su `true`, la richiesta sarà limitata a 60 volte al minuto per `CONNECTION_ID`. |
 
 **Richiesta**
 
@@ -325,7 +324,7 @@ La richiesta di esempio riportata di seguito acquisisce i dati delle serie tempo
 >Sia `xdmEntity._id` che `xdmEntity.timestamp` sono gli unici campi obbligatori per i dati relativi alle serie temporali. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{
     "header": {
@@ -412,7 +411,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -423,7 +422,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 | `{CONNECTION_ID}` | La `inletId` della connessione streaming creata in precedenza. |
 | `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
 | `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra a che ora è stata ricevuta la richiesta. |
-| `synchronousValidation.status` | Poiché è stato aggiunto il parametro di query `synchronousValidation=true`, questo valore viene visualizzato. Se la convalida è riuscita, lo stato sarà `pass`. |
+| `syncValidation.status` | Poiché è stato aggiunto il parametro di query `syncValidation=true`, questo valore viene visualizzato. Se la convalida è riuscita, lo stato sarà `pass`. |
 
 ## Recupera i nuovi dati della serie temporale acquisiti
 
