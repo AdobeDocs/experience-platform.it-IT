@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Nel flusso di lavoro **[!UICONTROL Attiva destinazione]**, nella pagina **[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Applica trasformazione"
->abstract="Seleziona questa opzione quando utilizzi campi di origine senza hash (come *personalEmail.address* **personalEmail.address** `personalEmail.address`), affinché Adobe Experience Platform li hash automaticamente all’attivazione."
+>abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
 
 Si applica a: destinazioni social e destinazione pubblicitaria Google Customer Match
 
