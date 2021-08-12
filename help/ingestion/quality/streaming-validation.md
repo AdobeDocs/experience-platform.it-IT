@@ -6,8 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API Streaming Ingestion supportano due modalità di convalida, sincrone e asincrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 3%
@@ -39,7 +38,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -63,7 +62,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 La convalida sincrona è un metodo di convalida che fornisce un feedback immediato sui motivi per cui un’acquisizione non è riuscita. Tuttavia, in caso di errore, i record con errore di convalida vengono eliminati e non possono essere inviati a valle. Di conseguenza, la convalida sincrona deve essere utilizzata solo durante il processo di sviluppo. Durante la convalida sincrona, i chiamanti vengono informati del risultato della convalida XDM e, in caso di errore, del motivo dell’errore.
 
-Per impostazione predefinita, la convalida sincrona non è attivata. Per abilitarlo, devi trasmettere il parametro di query opzionale `synchronousValidation=true` durante l’esecuzione di chiamate API. Inoltre, la convalida sincrona è attualmente disponibile solo se l&#39;endpoint del flusso si trova nel data center VA7.
+Per impostazione predefinita, la convalida sincrona non è attivata. Per abilitarlo, devi trasmettere il parametro di query opzionale `syncValidation=true` durante l’esecuzione di chiamate API. Inoltre, la convalida sincrona è attualmente disponibile solo se l&#39;endpoint del flusso si trova nel data center VA7.
 
 Se un messaggio non riesce durante la convalida sincrona, non verrà scritto nella coda di output, che fornisce un feedback immediato agli utenti.
 
@@ -74,7 +73,7 @@ Se un messaggio non riesce durante la convalida sincrona, non verrà scritto nel
 **Formato API**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parametro | Descrizione |
@@ -86,7 +85,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 Invia la seguente richiesta per l’acquisizione di dati all’entrata dati con convalida sincrona:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -185,7 +184,7 @@ Con la convalida asincrona abilitata, una risposta corretta restituisce quanto s
     "inletId": "f6ca9706d61de3b78be69e2673ad68ab9fb2cece0c1e1afc071718a0033e6877",
     "xactionId": "1555445493896:8600:8",
     "receivedTimeMs": 1555445493932,
-    "synchronousValidation": {
+    "syncValidation": {
         "skipped": true
     }
 }
