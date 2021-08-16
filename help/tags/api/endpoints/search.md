@@ -1,10 +1,10 @@
 ---
 title: Endpoint di ricerca
 description: Scopri come effettuare chiamate all’endpoint /search nell’API di Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -43,25 +43,15 @@ Per ulteriori informazioni su come utilizzare questa funzionalità, consulta la 
 
 L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
 
-## Recupera un elenco di regole {#list}
+## Eseguire una ricerca {#perform}
 
-Puoi recuperare un elenco di regole appartenenti a una proprietà effettuando una richiesta di GET.
+È possibile eseguire una ricerca effettuando una richiesta di POST.
 
 **Formato API**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `PROPERTY_ID` | La proprietà `id` di cui si desidera elencare i componenti. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->Utilizzando i parametri di query, le regole elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
 
 **Richiesta**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
