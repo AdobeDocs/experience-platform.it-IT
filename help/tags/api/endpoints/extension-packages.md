@@ -1,10 +1,10 @@
 ---
 title: Endpoint dei pacchetti di estensione
 description: Scopri come effettuare chiamate all’endpoint /extension_packages nell’API Reactor.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 6%
+source-wordcount: '955'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,32 @@ Un pacchetto di estensione appartiene alla [azienda](./companies.md) dello svilu
 ## Introduzione
 
 L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+
+Oltre a comprendere come effettuare chiamate all&#39;API di Reactor, è importante comprendere in che modo gli attributi `status` e `availability` di un pacchetto di estensione influiscono sulle azioni che puoi eseguire su di esso. Queste sono spiegate nelle sezioni seguenti.
+
+### Stato
+
+I pacchetti di estensione hanno tre stati potenziali: `pending`, `succeeded` e `failed`.
+
+| Stato | Descrizione |
+| --- | --- |
+| `pending` | Quando viene creato un pacchetto di estensione, il relativo `status` viene impostato su `pending`. Indica che il sistema ha ricevuto le informazioni per il pacchetto di estensione e inizierà l&#39;elaborazione. I pacchetti di estensione con stato `pending` non sono disponibili per l’uso. |
+| `succeeded` | Lo stato di un pacchetto di estensione viene aggiornato a `succeeded` se l&#39;elaborazione viene completata correttamente. |
+| `failed` | Lo stato di un pacchetto di estensione viene aggiornato a `failed` se l&#39;elaborazione viene completata senza successo. Un pacchetto di estensione con stato `failed` può essere aggiornato finché l&#39;elaborazione non riesce. I pacchetti di estensione con stato `failed` non sono disponibili per l’uso. |
+
+### Disponibilità
+
+Sono disponibili livelli di disponibilità per un pacchetto di estensione: `development`, `private` e `public`.
+
+| Disponibilità | Descrizione |
+| --- | --- |
+| `development` | Un pacchetto di estensione in `development` è visibile solo all&#39;azienda proprietaria e disponibile all&#39;interno di essa. Inoltre, può essere utilizzato solo sulle proprietà configurate per lo sviluppo dell&#39;estensione. |
+| `private` | Un pacchetto di estensione `private` è visibile solo all&#39;azienda che lo possiede e può essere installato solo sulle proprietà di proprietà dell&#39;azienda. |
+| `public` | Un pacchetto di estensione `public` è visibile e disponibile per tutte le aziende e proprietà. |
+
+>[!NOTE]
+>
+>Quando viene creato un pacchetto di estensione, `availability` viene impostato su `development`. Al termine del test, puoi passare il pacchetto di estensione a `private` o `public`.
 
 ## Recupera un elenco di pacchetti di estensione {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione, inclus
 }
 ```
 
-## Crea o aggiorna un pacchetto di estensione {#create}
+## Creare un pacchetto di estensione {#create}
 
 I pacchetti di estensione vengono creati utilizzando uno strumento di scaffolding Node.js e salvati sul computer locale prima di essere inviati all’API Reactor. Per ulteriori informazioni sulla configurazione di un pacchetto di estensione, consulta la guida [guida introduttiva allo sviluppo di estensioni](../../extension-dev/getting-started.md).
 
-Dopo aver creato il file del pacchetto di estensione, puoi inviarlo all’API di Reactor tramite una richiesta di POST. Se il pacchetto di estensione esiste già nell&#39;API, questa chiamata aggiorna il pacchetto a una nuova versione.
+Dopo aver creato il file del pacchetto di estensione, puoi inviarlo all’API di Reactor tramite una richiesta di POST.
 
 **Formato API**
 
@@ -676,12 +704,12 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione appena 
 
 ## Aggiornare un pacchetto di estensione {#update}
 
-Puoi aggiornare un pacchetto di estensione includendo il relativo ID nel percorso di una richiesta POST.
+Puoi aggiornare un pacchetto di estensione includendo il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | Parametro | Descrizione |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 Come con [creazione di un pacchetto di estensione](#create), è necessario caricare tramite i dati del modulo una versione locale del pacchetto aggiornato.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Una versione privata viene ottenuta fornendo un `action` con un valore di `release_private` nel `meta` dei dati della richiesta.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Una versione privata viene ottenuta fornendo un `action` con un valore di `release_private` nel `meta` dei dati della richiesta.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
