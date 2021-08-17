@@ -1,20 +1,19 @@
 ---
-keywords: destinazioni dmp;DIL;estensione dmp di Gestione dell'audience;estensione dmp;piattaforma di gestione dei dati;destinazioni della piattaforma di gestione dei dati
-title: Panoramica delle destinazioni della piattaforma di gestione dati (DMP)
-description: Le piattaforme di gestione dei dati (DMP) consentono a inserzionisti, editori e agenzie di creare profili di audience univoci, identificare i segmenti di maggior valore e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare audience significative.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+keywords: destinazioni dmp;DIL;estensione dmp di audience manager;estensione dmp;piattaforma di gestione dati;destinazioni piattaforma di gestione dati
+title: Panoramica sulle destinazioni della Data Management Platform (DMP)
+description: Le piattaforme di gestione dei dati (DMP) consentono a inserzionisti, editori e agenzie di creare profili di pubblico univoci, identificare i segmenti più importanti e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare tipi di pubblico significativi.
+exl-id: 1c925edc-b31e-440f-bdd9-37aa399565d5
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
+# [!DNL Data Management Platform] Panoramica delle destinazioni (DMP) {#dmp-destinations}
 
-# [!DNL Data Management Platform] Panoramica delle destinazioni (DMP)  {#dmp-destinations}
-
-[!DNL Data Management Platforms] (DMP) consente a inserzionisti, editori e agenzie di creare profili di audience univoci, identificare i segmenti di maggior valore e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare audience significative.
+[!DNL Data Management Platforms] (DMP) consente agli inserzionisti, agli editori e alle agenzie di creare profili di pubblico univoci, identificare i segmenti di pubblico più importanti e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare tipi di pubblico significativi.
 
 Al momento, Adobe Experience Platform supporta le destinazioni DMP (Data Management Platform) elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
-- [Estensione DIL Audience Manager ](./aam-dil-extension.md)
+* [Estensione Audience Manager DIL](aam-dil-extension.md)
