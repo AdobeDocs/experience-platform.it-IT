@@ -6,10 +6,9 @@ seo-title: Modifica flussi di attivazione
 description: Segui i passaggi descritti in questo articolo per modificare un flusso di attivazione esistente in Adobe Experience Platform.
 seo-description: Segui i passaggi descritti in questo articolo per modificare un flusso di attivazione esistente in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 Per modificare i flussi di attivazione esistenti in Adobe Experience Platform, effettua le seguenti operazioni:
 
-1. Accedi a [Interfaccia Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall’intestazione superiore per visualizzare le destinazioni esistenti.
+1. Accedi a [Interfaccia Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -30,8 +29,8 @@ Per modificare i flussi di attivazione esistenti in Adobe Experience Platform, e
 
    ![Seleziona destinazione](../assets/ui/edit-activation/destination-select.png)
 
-4. Viene visualizzata la pagina dei dettagli della destinazione, con i relativi controlli disponibili. Seleziona **[!UICONTROL Activate]** nella barra a destra per modificare i segmenti da inviare alla destinazione.
+4. Viene visualizzata la pagina dei dettagli della destinazione, con i relativi controlli disponibili. Seleziona **[!UICONTROL Attiva]** nella barra a destra per modificare i segmenti da inviare alla destinazione.
 
    ![Dettagli della destinazione](../assets/ui/edit-activation/destination-details.png)
 
-5. Per informazioni dettagliate su come attivare nuovi segmenti, consulta [Attivare profili e segmenti su una destinazione](activate-destinations.md) .
+5. Per informazioni dettagliate su come attivare i nuovi segmenti, consulta [Panoramica sull’attivazione](activation-overview.md) .
