@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;oracle eloqua;oracle
 title: Oracle collegamento Eloqua
 description: Oracle Eloqua è una piattaforma software as a service (SaaS) per l'automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Per inviare i dati dei segmenti a [!DNL Oracle Eloqua], è necessario prima [col
 
 ## Tipo di esportazione {#export-type}
 
-**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
+**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione del ](../../ui/activate-batch-profile-destinations.md#select-attributes)pubblico.
 
 ## ELENCO CONSENTITI di indirizzo IP {#allow-list}
 
@@ -66,15 +66,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) .
 
-## Attributi di destinazione {#destination-attributes}
+### Attributi di destinazione {#destination-attributes}
 
-Quando si attivano [segmenti](../../ui/activate-destinations.md) a questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes).
+Quando si attivano i segmenti su questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione dei tipi di pubblico nelle destinazioni di marketing via e-mail](overview.md#best-practices).
 
 ## Dati esportati {#exported-data}
 
-Per le destinazioni [!DNL Oracle Eloqua], Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
+Per le destinazioni [!DNL Oracle Eloqua], Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verificare l’attivazione dei segmenti](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione sull’attivazione dei segmenti.
 
 ## Imposta l’importazione di dati in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
