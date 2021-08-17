@@ -5,9 +5,9 @@ title: Panoramica sulla preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ Data Prep applica anche diverse convalide di dati intrinseci per garantire che l
 Una mappatura è un&#39;associazione di un attributo di input o di un campo calcolato a un attributo XDM. Un singolo attributo può essere mappato su più attributi XDM creando mappature individuali.
 
 Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md).
+
+### Campi calcolati
+
+I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione per facilitarne il riferimento.
+
+Per ulteriori informazioni sui campi calcolati, consulta la [guida ai campi calcolati](./functions.md#calculated-fields).
 
 ## Set di mappature
 
