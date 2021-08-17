@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,7 @@ La seguente documentazione fornisce ulteriori risorse sulla preparazione dei dat
 
 * [Panoramica sulla preparazione dei dati](../../../../../data-prep/home.md)
 * [Funzioni di mappatura della preparazione dei dati](../../../../../data-prep/functions.md)
-* [Mappare un file CSV in uno schema XDM e aggiungere campi calcolati](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [Aggiungi campi calcolati](../../../../../data-prep/calculated-fields.md)
 
 ### Fornire i dettagli del flusso di dati
 
