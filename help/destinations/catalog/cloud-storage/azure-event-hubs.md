@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: (Beta) Connessione a !DNL Azure Event Hubs]
 description: Crea una connessione in uscita in tempo reale all’archivio !DNL Azure Event Hubs] per lo streaming dei dati dall’Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -38,31 +38,23 @@ Ad esempio, un prospect ha scaricato un white paper che li qualifica in un segme
 
 **Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
 
-## Collegare la destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-Per istruzioni su come connettersi alle destinazioni di archiviazione cloud, tra cui [!DNL Azure Event Hubs], consulta [Flusso di lavoro delle destinazioni di archiviazione cloud ](./workflow.md).
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-Per le destinazioni [!DNL Azure Event Hubs] , inserisci le seguenti informazioni nel flusso di lavoro crea destinazione :
+### Parametri di connessione {#parameters}
 
-## Passaggio account {#account-step}
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome chiave]** SAS e chiave  **[!UICONTROL SAS]**: Immettere il nome e la chiave della chiave SAS. Informazioni sull&#39;autenticazione in [!DNL Azure Event Hubs] con chiavi SAS nella [documentazione Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Inserisci lo  [!DNL Azure Event Hubs] spazio dei nomi. Ulteriori informazioni sui namespace [!DNL Azure Event Hubs] nella [documentazione Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-
-![Input richiesto nel passaggio account](../../assets/catalog/cloud-storage/event-hubs/account.png)
-
-## Passaggio di autenticazione {#authentication-step}
-
 * **[!UICONTROL Nome]**: Immetti un nome per la connessione a  [!DNL Azure Event Hubs].
 * **[!UICONTROL Descrizione]**: Fornire una descrizione della connessione.  Esempi: &quot;Clienti di livello Premium&quot;, &quot;Maschi interessati al kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: Specifica un nome per il flusso alla  [!DNL Azure Event Hubs] destinazione.
-* **[!UICONTROL Azioni]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Per informazioni sulle singole azioni di marketing definite da Adobe, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
-![Dati richiesti nel passaggio di autenticazione](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+## Attiva i segmenti in questa destinazione {#activate}
 
-## Attiva segmenti {#activate-segments}
-
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Dati esportati {#exported-data}
 
