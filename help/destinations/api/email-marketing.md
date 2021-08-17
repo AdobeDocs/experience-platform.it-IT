@@ -6,9 +6,9 @@ description: Questo documento tratta la creazione di destinazioni di marketing e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Questa esercitazione utilizza la destinazione Adobe Campaign in tutti gli esempi
 
 ![Panoramica : i passaggi per creare una destinazione e attivare i segmenti](../assets/api/email-marketing/overview.png)
 
-Se preferisci utilizzare l’interfaccia utente di Platform per collegare una destinazione e attivare i dati, consulta le esercitazioni [Collegare una destinazione](../ui/connect-destination.md) e [Attivare profili e segmenti a una destinazione](../ui/activate-destinations.md) .
+Se preferisci utilizzare l’interfaccia utente di Platform per collegare una destinazione e attivare i dati, consulta le esercitazioni [Connetti una destinazione](../ui/connect-destination.md) e [Attiva i dati del pubblico per le destinazioni di esportazione del profilo batch](../ui/activate-batch-profile-destinations.md) .
 
 ## Introduzione
 
