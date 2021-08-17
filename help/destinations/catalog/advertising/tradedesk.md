@@ -3,9 +3,9 @@ keywords: pubblicità; il banco commerciale; ufficio commerciale pubblicitario
 title: Il collegamento del Trade Desk
 description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -63,9 +63,9 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) .
 
-Nel passaggio [Pianificazione segmento](../../ui/activate-destinations.md#segment-schedule) , devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella piattaforma di destinazione.
+Nel passaggio [Pianificazione segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella piattaforma di destinazione.
 
 Durante la mappatura dei segmenti, ti consigliamo di utilizzare il nome del segmento di Platform o una sua forma più breve, per facilitarne l’utilizzo. Tuttavia, l’ID o il nome del segmento nella destinazione non deve necessariamente corrispondere a quello nell’account Platform. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
 
