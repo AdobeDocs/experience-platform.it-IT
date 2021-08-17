@@ -3,9 +3,9 @@ keywords: 'pubblicità; bing; '
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '384'
 ht-degree: 1%
 
 ---
@@ -56,9 +56,9 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) .
 
-Nel passaggio [Pianificazione segmento](../../ui/activate-destinations.md#segment-schedule) , devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella destinazione.
+Nel passaggio [Pianificazione segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella destinazione.
 
 Durante la mappatura dei segmenti, è consigliabile utilizzare il nome del segmento [!DNL Platform] o una sua forma più breve, per facilitarne l’utilizzo. Tuttavia, l&#39;ID o il nome del segmento nella destinazione non deve necessariamente corrispondere a quello nel tuo account [!DNL Platform] . Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
 
