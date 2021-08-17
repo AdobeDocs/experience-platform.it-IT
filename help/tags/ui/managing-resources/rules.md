@@ -1,7 +1,7 @@
 ---
 title: Regole
 description: Scopri come funzionano le estensioni di tag in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 * **JavaScript:** il JavaScript viene caricato dal server come testo normale, racchiuso in un tag script e aggiunto al documento utilizzando Postscribe. Se la regola dispone di più script personalizzati JavaScript, questi verranno caricati in parallelo dal server, ma vengono eseguiti nello stesso ordine configurato nella regola.
 * **HTML:** l’HTML viene caricato dal server e aggiunto al documento utilizzando Postscribe. Se la regola dispone di più script personalizzati HTML, questi verranno caricati in parallelo dal server, ma vengono eseguiti nello stesso ordine configurato nella regola.
 
-## Sequenza dei componenti della regola
+## Sequenza dei componenti della regola {#sequencing}
 
 Il comportamento dell&#39;ambiente di runtime di tag dipende dall&#39;abilitazione o meno di **[!UICONTROL Run rule components in sequence]** per la proprietà.
 
