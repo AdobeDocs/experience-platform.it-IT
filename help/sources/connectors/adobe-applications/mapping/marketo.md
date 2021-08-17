@@ -5,10 +5,10 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -111,7 +111,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 {style=&quot;table-layout:auto&quot;}
 
-## Iscrizione al programma {#program-memberships}
+## Partecipazioni al programma {#program-memberships}
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -176,7 +176,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 {style=&quot;table-layout:auto&quot;}
 
-## Iscrizioni di elenchi statici {#static-list-memnberships}
+## appartenenze a elenchi statici {#static-list-memnberships}
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -310,7 +310,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 >[!NOTE]
 >
->Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../ingestion/tutorials/map-a-csv-file.md) .
+>Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../data-prep/calculated-fields.md) .
 
 ## Passaggi successivi
 
