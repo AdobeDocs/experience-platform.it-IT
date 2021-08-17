@@ -3,9 +3,9 @@ keywords: streaming;
 title: connessione HTTP
 description: La destinazione HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,11 @@ Durante la [configurazione](../ui/connect-destination.md) di questa destinazione
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../ui/activate-destinations.md#select-attributes) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per lo streaming delle destinazioni di esportazione del profilo](../ui/activate-streaming-profile-destinations.md) .
 
-## Attributi di destinazione {#attributes}
+### Attributi di destinazione {#attributes}
 
-Nel passaggio [[!UICONTROL Seleziona attributi]](../ui/activate-destinations.md#select-attributes), quando [attivi segmenti](../ui/activate-destinations.md) in una destinazione [!DNL HTTP], Adobe consiglia di selezionare un identificatore univoco dal tuo [schema di unione](../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
+Nel passaggio [[!UICONTROL Seleziona attributi]](../ui/activate-streaming-profile-destinations.md#select-attributes), l&#39;Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
 
 ## Dati esportati {#exported-data}
 
