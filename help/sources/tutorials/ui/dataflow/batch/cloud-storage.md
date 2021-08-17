@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2001'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona schema]**. Sel
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare funzioni di mappatura per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV nei campi dello schema XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
+In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulle funzioni di mappatura e sui campi calcolati, consulta la [Guida alle funzioni di preparazione dei dati](../../../../../data-prep/functions.md) o la [guida ai campi calcolati](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -217,8 +217,8 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. Per ulteriori informazioni sulla creazione di flussi di dati, è possibile completare l&#39;apprendimento guardando il video sottostante. Inoltre, i dati in arrivo possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile]panoramica](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]panoramica](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
