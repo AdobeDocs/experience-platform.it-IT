@@ -3,9 +3,9 @@ keywords: BLOB di Azure;destinazione BLOB;s3;destinazione BLOB di azzurro
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita dal vivo all’archivio BLOB di Azure per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
    * [Esercitazione](../../../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponi già di una destinazione [!DNL Blob] valida, puoi saltare il resto del documento e procedere all&#39;esercitazione sull&#39; [attivazione dei segmenti nella destinazione](../../ui/activate-destinations.md).
+Se disponi già di una destinazione [!DNL Blob] valida, puoi saltare il resto del documento e procedere all&#39;esercitazione sull&#39; [attivazione dei segmenti nella destinazione](../../ui/activate-batch-profile-destinations.md).
 
 ## Formati di file supportati {#file-formats}
 
 [!DNL Experience Platform] supporta il seguente formato di file da esportare in  [!DNL Blob]:
 
-* Valori separati da delimitatore (DSV): Il supporto per i file di dati formattati DSV è attualmente limitato ai valori separati da virgole. Il supporto per i file DSV generali verrà fornito in futuro. Per ulteriori informazioni sui file supportati, consulta la sezione archiviazione cloud nell’esercitazione sull’ [attivazione delle destinazioni](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Valori separati da delimitatore (DSV): Il supporto per i file di dati formattati DSV è attualmente limitato ai valori separati da virgole. Il supporto per i file DSV generali verrà fornito in futuro.
 
 ## Collegati alla destinazione {#connect}
 
@@ -54,4 +54,4 @@ Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) .
