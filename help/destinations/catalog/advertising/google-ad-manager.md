@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci pubblicitari sui loro siti web, attraverso video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -59,19 +59,13 @@ Prima di creare la destinazione [!DNL Google Ad Manager] in Platform, è necessa
 * **ID**  collegamento pubblico: questo è il tuo account con  [!DNL Google Ad Manager]
 * Tipo di account. DFP di Google o dell&#39;acquirente AdX.
 
-## Configurare la destinazione
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare **[!DNL Google Ad Manager]** e selezionare **[!UICONTROL Configura]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-![Connetti destinazione Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### Parametri di connessione {#parameters}
 
->[!NOTE]
->
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attiva]** e **[!UICONTROL Configura]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
-
-Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila [!UICONTROL Informazioni di base] per la destinazione.
-
-![Informazioni di base Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
@@ -79,15 +73,14 @@ Nel passaggio **Configurazione** del flusso di lavoro di creazione della destina
    * Utilizza `DFP by Google` per [!DNL DoubleClick] per gli editori
    * Utilizza `AdX buyer` per [!DNL Google AdX]
 * **[!UICONTROL ID]** account: Compila il tuo ID account con  [!DNL Google]. Può essere l&#39;ID di rete o l&#39;ID del collegamento di pubblico. In genere si tratta di un ID a otto cifre.
-* **[!UICONTROL Azione]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Quando imposti una destinazione [!DNL Google Ad Manager], rivolgiti al tuo [!DNL Google Account Manager] o rappresentante di Adobe per capire quale tipo di account hai.
+>Quando imposti una destinazione [!DNL Google Ad Manager], collabora con il tuo [!DNL Google Account Manager] o rappresentante di Adobe per capire quale tipo di account hai.
 
-## Attiva i segmenti in [!DNL Google Ad Manager]
+## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni su come attivare i segmenti su [!DNL Google Ad Manager], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Dati esportati
 
