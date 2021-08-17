@@ -5,10 +5,10 @@ seo-title: Panoramica sulle destinazioni
 description: Scopri come attivare i dati di Adobe Experience Platform nelle destinazioni per campagne di marketing cross-channel, e-mail, pubblicità mirata e altro ancora.
 seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Una delle funzionalità principali di Platform è l’acquisizione dei dati di p
 ## Passaggi per le destinazioni {#steps}
 
 * Scegli tra un [catalogo self-service](./catalog/overview.md) tutte le destinazioni disponibili in Platform.
-* Utilizza le destinazioni per [attivare](./ui/activate-destinations.md) e invia profili o segmenti alle piattaforme di automazione del marketing, alle piattaforme di pubblicità digitale e altro ancora.
+* Utilizza le destinazioni per e inviare profili o segmenti alle piattaforme di automazione del marketing, alle piattaforme di pubblicità digitale e altro ancora.
 * Pianifica le esportazioni di dati nelle destinazioni preferite in orari regolari.
 
 ## Controlli {#controls}
@@ -66,4 +66,8 @@ Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso 
 * [Destinazioni di marketing e-mail](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione dei segmenti, consulta il passaggio Revisione in [Attivare profili e segmenti a una destinazione](./ui/activate-destinations.md#review).
+Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione dei segmenti, consulta il passaggio Revisione nelle guide seguenti:
+
+* [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](./ui/activate-segment-streaming-destinations.md#review)
+* [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](./ui/activate-streaming-profile-destinations.md#review)
+* [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md#review)
