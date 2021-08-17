@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Connessione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,22 @@ Crea una connessione in uscita dal vivo al server SFTP per esportare periodicame
 
 ![Tipo di esportazione basato su profilo SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Collegare la destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-Per istruzioni su come connettersi alle destinazioni di archiviazione cloud, incluso SFTP, fai riferimento al [flusso di lavoro delle destinazioni di archiviazione cloud ](./workflow.md) .
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-Per le destinazioni SFTP, inserisci le seguenti informazioni nel flusso di lavoro di creazione della destinazione, nel passaggio **Autenticazione** :
+### Parametri di connessione {#parameters}
+
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **Host**: Indirizzo del percorso di archiviazione SFTP
 * **Nome utente**: Nome utente per accedere al percorso di archiviazione SFTP
 * **Password**: Password per accedere al percorso di archiviazione SFTP
+* **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione.
+* **[!UICONTROL Descrizione]**: immettere una descrizione della destinazione.
+* **[!UICONTROL Percorso]** cartella: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
+
+Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
 
 ## Dati esportati {#exported-data}
 
@@ -42,4 +49,4 @@ Per le destinazioni [!DNL SFTP], Platform crea un file `.csv` delimitato da tabu
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Per aggiungere IP di Adobe a un elenco consentiti, fai riferimento all’ [elenco consentiti di indirizzi IP per le destinazioni di archiviazione cloud](./ip-address-allow-list.md) .
+Per aggiungere IP di Adobe a un elenco consentiti, fai riferimento all’ [elenco consentiti di indirizzi IP per le destinazioni di archiviazione cloud](ip-address-allow-list.md) .
