@@ -3,9 +3,9 @@ title: Elaborazione dei dati di consenso dei clienti tramite Adobe Experience Pl
 topic-legacy: getting started
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Una volta creato l&#39;elemento dati, torna alla pagina di configurazione dell&#
 
 ### Distribuire l&#39;estensione sul sito web
 
-Dopo aver configurato l&#39;estensione, questa può essere integrata nel sito web. Per informazioni dettagliate su come distribuire la build della libreria aggiornata, consulta la [guida alla pubblicazione](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) nella documentazione sui tag .
+Dopo aver configurato l&#39;estensione, questa può essere integrata nel sito web. Per informazioni dettagliate su come distribuire la build della libreria aggiornata, consulta la [guida alla pubblicazione](../../../../tags/ui/publishing/overview.md) nella documentazione sui tag .
 
 ## Esecuzione di comandi di modifica del consenso {#commands}
 
