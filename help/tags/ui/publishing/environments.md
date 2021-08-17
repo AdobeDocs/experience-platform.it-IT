@@ -1,9 +1,9 @@
 ---
 title: Ambienti
 description: Scopri il concetto degli ambienti tag e il loro funzionamento in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 82%
 
 ---
@@ -128,7 +128,7 @@ Per ulteriori informazioni su questa impostazione, consulta la guida alla [distr
 
 #### Distribuzione sincrona
 
-Quando il browser legge un codice di incorporamento utilizzando la distribuzione sincrona, recupera la libreria di tag ed esegue tale operazione prima di continuare a caricare la pagina. [Dynamic Tag Management (DTM)](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) funziona allo stesso modo.
+Quando il browser legge un codice di incorporamento utilizzando la distribuzione sincrona, recupera la libreria di tag ed esegue tale operazione prima di continuare a caricare la pagina.
 
 I codici di incorporamento sincroni sono costituiti da due tag `<script>` che devono essere inseriti all’interno dell’HTML del sito web. Un tag `<script>` va inserito nella sezione `<head>` del documento, mentre l’altro deve essere posizionato immediatamente prima del tag `</body>` di chiusura.
 
