@@ -2,16 +2,15 @@
 keywords: attributi del volo;destinazione del volo
 title: Collegamento Attributi del volo
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come Attributi di pubblico per il targeting all’interno di Airship.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '720'
 ht-degree: 1%
 
 ---
 
-
-# (Beta) [!DNL Airship Attributes] connessione {#airship-attributes-destination}
+# (Beta) Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -24,7 +23,6 @@ ht-degree: 1%
 Questa integrazione trasmette i dati del profilo di Adobe in [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
 
 Per ulteriori informazioni su [!DNL Airship], consulta le [Documenti di navigazione aerea](https://docs.airship.com).
-
 
 >[!TIP]
 >
@@ -41,7 +39,7 @@ Prima di inviare i segmenti di pubblico a [!DNL Airship], devi:
 >
 >Crea un account [!DNL Airship] tramite [questo collegamento di registrazione](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
 
-## Abilita gli attributi {#enable-attributes}
+## Abilitare gli attributi {#enable-attributes}
 
 Gli attributi di profilo Adobe Experience Platform sono simili agli attributi [!DNL Airship] e possono essere facilmente mappati l’uno sull’altro in Platform utilizzando lo strumento di mappatura illustrato di seguito in questa pagina.
 
@@ -49,15 +47,15 @@ Gli attributi di profilo Adobe Experience Platform sono simili agli attributi [!
 
 ## Genera token portatore {#bearer-token}
 
-Vai a **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** nel [Dashboard di bordo](https://go.airship.com) e seleziona **[!UICONTROL Tokens]** nel menu a sinistra.
+Vai a **[!UICONTROL Impostazioni]**&quot; **[!UICONTROL API e integrazioni]** nel [Dashboard di navigazione](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu a sinistra.
 
-Fai clic su **[!UICONTROL Create Token]**.
+Fai clic su **[!UICONTROL Crea token]**.
 
 Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione attributi Adobe&quot;, e seleziona &quot;Accesso completo&quot; per il ruolo.
 
-Fai clic su **[!UICONTROL Create Token]** e salva i dettagli come riservati.
+Fai clic su **[!UICONTROL Crea token]** e salva i dettagli come riservati.
 
-## Casi d’uso {#use-cases}
+## Casi di utilizzo {#use-cases}
 
 Per comprendere meglio come e quando utilizzare la destinazione [!DNL Airship Attributes], di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
@@ -69,59 +67,26 @@ Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personali
 
 Utilizza gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con i dati SDK o [!DNL Airship] predittivi. Ad esempio, un rivenditore può creare un segmento con stato di fedeltà e dati di posizione (attributi da Platform) e [!DNL Airship] previsti per l’abbandono dei dati per inviare messaggi altamente mirati agli utenti con stato di fidelizzazione dell’oro che vivono a Las Vegas, NV, e con un’elevata probabilità di esecuzione.
 
-## Connetti a [!DNL Airship Attributes] {#connect-airship-attributes}
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorri fino alla categoria **[!UICONTROL Mobile Engagement]** . Selezionare **[!DNL Airship Attributes]**, quindi selezionare **[!UICONTROL Configure]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
->[!NOTE]
->
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+### Parametri di connessione {#parameters}
 
-![Connetti agli attributi del volo](../../assets/catalog/mobile-engagement/airship/catalog.png)
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
-Nel passaggio **Account**, se in precedenza hai impostato una connessione alla destinazione [!DNL Airship Attributes], seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione a [!DNL Airship Attributes]. Seleziona **[!UICONTROL Connect to destination]** per collegare Adobe Experience Platform al progetto [!DNL Airship] utilizzando il token portatore generato dal dashboard [!DNL Airship].
+* **[!UICONTROL Token]** portatore: token portatore generato dal  [!DNL Airship] dashboard.
+* **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione.
+* **[!UICONTROL Descrizione]**: immettere una descrizione per la destinazione.
+* **[!UICONTROL Dominio]**: selezionare un centro dati USA o UE, a seconda del centro  [!DNL Airship] dati applicato a questa destinazione.
 
->[!NOTE]
->
->Adobe Experience Platform supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se immetti credenziali errate nel tuo account [!DNL Airship]. In questo modo non completa il flusso di lavoro con credenziali errate.
+## Attiva i segmenti in questa destinazione {#activate}
 
-![Connetti agli attributi del volo](../../assets/catalog/mobile-engagement/airship/connect.png)
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
-Una volta confermate le credenziali e quando Adobe Experience Platform è connesso al progetto [!DNL Airship], puoi selezionare **[!UICONTROL Next]** per procedere al passaggio **[!UICONTROL Setup]**.
+## Considerazioni sulla mappatura {#mapping-considerations}
 
-Nel passaggio **[!UICONTROL Authentication]** immetti un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
-
-Anche in questo passaggio, è possibile selezionare un centro dati US o EU, a seconda di quale [!DNL Airship] centro dati si applica a questa destinazione. Infine, seleziona uno o più **[!UICONTROL Marketing Actions]** per i quali verranno esportati i dati nella destinazione. Puoi scegliere tra le azioni di marketing definite da Adobe o crearne una tua. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
-
-Seleziona **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
-
-![Connetti agli attributi del volo](../../assets/catalog/mobile-engagement/airship/select-domain.png)
-
-La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva [Attivare i segmenti](#activate-segments) per il resto del flusso di lavoro.
-
-## Attiva segmenti {#activate-segments}
-
-Per attivare i segmenti su [!DNL Airship Attributes], segui i passaggi seguenti:
-
-In **[!UICONTROL Destinations > Browse]**, seleziona la destinazione [!DNL Airship Attributes] in cui desideri attivare i segmenti.
-
-![flusso di attivazione](../../assets/catalog/mobile-engagement/airship/browse.png)
-
-Fare clic sul nome della destinazione. Viene visualizzato il flusso Attiva .
-
-Se esiste già un flusso di attivazione per una destinazione, puoi vedere i segmenti attualmente inviati alla destinazione. Seleziona **[!UICONTROL Edit activation]** nella barra a destra e segui i passaggi riportati di seguito per modificare i dettagli di attivazione.
-
-![flusso di attivazione](../../assets/catalog/mobile-engagement/airship/activate.png)
-
-Seleziona **[!UICONTROL Activate]**. Nel flusso di lavoro **[!UICONTROL Activate destination]**, nella pagina **[!UICONTROL Select Segments]** seleziona i segmenti da inviare a [!DNL Airship Attributes].
-
-![da segmenti a destinazione](../../assets/catalog/mobile-engagement/airship/select-segments.png)
-
-Nel passaggio **[!UICONTROL Mapping]** , seleziona gli attributi e le identità dallo schema [XDM](../../../xdm/home.md) da mappare allo schema di destinazione. Seleziona **[!UICONTROL Add new mapping]** per sfogliare lo schema e mapparlo sull&#39;identità di destinazione corrispondente.
-
-![schermata iniziale della mappatura identità](../../assets/catalog/mobile-engagement/airship/identity-mapping.png)
-
-[!DNL Airship] Gli attributi possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente a un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail in testo normale (con hash) come identità principale, seleziona il campo e-mail nel **[!UICONTROL Source Attributes]** e mappalo sull’ [!DNL Airship] utente denominato nella colonna di destra sotto **[!UICONTROL Target Identities]**, come mostrato di seguito.
+[!DNL Airship] Gli attributi possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente a un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail in testo normale (con hash) come identità principale, seleziona il campo e-mail in **[!UICONTROL Attributi di origine]** e mappalo sull’ [!DNL Airship] utente denominato nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come mostrato di seguito.
 
 ![Mapping utente denominato](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
@@ -158,21 +123,6 @@ Verifica mappatura:
 
 ![Mappatura del canale](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-Nella pagina **[!UICONTROL Segment schedule]** la pianificazione è attualmente disabilitata. Fai clic su **[!UICONTROL Next]** per continuare il passaggio di revisione.
-
-![Pianificazione disabilitata](../../assets/catalog/mobile-engagement/airship/scheduling.png)
-
-Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione. Seleziona **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** per modificare le impostazioni oppure **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
-
->[!IMPORTANT]
->
->In questo passaggio, Adobe Experience Platform verifica la presenza di violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di un criterio. Non puoi completare il flusso di lavoro di attivazione dei segmenti finché non avrai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, consulta [Applicazione dei criteri](../../../data-governance/enforcement/auto-enforcement.md) nella sezione relativa alla governance dei dati .
-
-![confirm-selection](../../assets/common/data-policy-violation.png)
-
-Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
-
-![revisione](../../assets/catalog/mobile-engagement/airship/review.png)
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
