@@ -3,9 +3,9 @@ keywords: Amazon S3;destinazione S3;s3;amazon s3
 title: Connessione Amazon S3
 description: Crea una connessione in uscita diretta all’archiviazione S3 di Amazon Web Services (AWS) per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Crea una connessione in uscita dal vivo all’archiviazione S3 [!DNL Amazon Web 
 
 ## Tipo di esportazione {#export-type}
 
-**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
+**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-segment-streaming-destinations.md#mapping)destinazione.
 
 ![Tipo di esportazione basato su profilo Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
@@ -65,8 +65,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) .
 
 ## Dati esportati {#exported-data}
 
-Per le destinazioni [!DNL Amazon S3], [!DNL Platform] crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
+Per le destinazioni [!DNL Amazon S3], [!DNL Platform] crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione sull’attivazione dei segmenti.
