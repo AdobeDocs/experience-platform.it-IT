@@ -3,10 +3,10 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ Tieni presente i seguenti dettagli specifici della destinazione [!DNL Braze]:
 >
 >Tieni presente che l’invio di attributi personalizzati aggiuntivi a [!DNL Braze] può causare un aumento del consumo di [!DNL Braze] punti dati. Consulta il tuo account manager [!DNL Braze] prima di inviare attributi personalizzati aggiuntivi.
 
-## Casi d’uso {#use-cases}
+## Casi di utilizzo {#use-cases}
 
 In qualità di addetto al marketing, voglio indirizzare l’attività agli utenti in una destinazione di coinvolgimento mobile, con i segmenti generati in [!DNL Adobe Experience Platform]. Inoltre, voglio offrire loro esperienze personalizzate, basate sugli attributi dei loro profili [!DNL Adobe Experience Platform], non appena i segmenti e i profili vengono aggiornati in [!DNL Adobe Experience Platform].
 
@@ -51,37 +51,24 @@ In qualità di addetto al marketing, voglio indirizzare l’attività agli utent
 **[!DNL Profile-based]** - si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura del campo.
 [!DNL Adobe Experience Platform] i segmenti vengono esportati in  [!DNL Braze] sotto l’ `AdobeExperiencePlatformSegments` attributo .
 
-## Connetti alla destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Braze] e selezionare **[!UICONTROL Configura]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-![Configurare la destinazione del freno](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Parametri di connessione {#parameters}
 
->[!NOTE]
->
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attiva]** e **[!UICONTROL Configura]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
->
->![Attiva destinazione del freno](../../assets/catalog/mobile-engagement/braze/activate.png)
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
-Nel passaggio [!UICONTROL Account], devi fornire il token dell&#39;account [!DNL Braze]. Questa è la chiave [!DNL Braze] [!DNL API]. Puoi trovare istruzioni dettagliate su come ottenere la tua chiave [!DNL API] qui: [Panoramica della chiave API REST](https://www.braze.com/docs/api/api_key/). Immetti il token e fai clic su **[!UICONTROL Connetti a destinazione]**.
-
-![Fase dell&#39;account di destinazione del freno](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Fai clic su **[!UICONTROL Avanti]**. Nel passaggio [!UICONTROL Autenticazione], è necessario inserire i dettagli di connessione [!DNL Braze]:
+* **[!UICONTROL Token]** dell’account di Braze: Questa è la sua  [!DNL Braze] [!DNL API] chiave. Puoi trovare istruzioni dettagliate su come ottenere la tua chiave [!DNL API] qui: [Panoramica della chiave API REST](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Nome]**: immetti un nome in base al quale riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: inserisci una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Istanza]** endpoint: chiedi al tuo  [!DNL Braze] rappresentante quale istanza dell&#39;endpoint devi utilizzare.
-* **[!UICONTROL Azione]** di marketing: le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Per informazioni sulle singole azioni di marketing definite da Adobe, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
-![Passaggio di autenticazione del freno](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Attiva i segmenti in questa destinazione {#activate}
 
-Fai clic su **[!UICONTROL Crea destinazione]**. La destinazione viene ora creata. Puoi fare clic su **[!UICONTROL Salva e esci]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Avanti]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva [Attiva segmenti](#activate-segments), per il resto del flusso di lavoro.
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
-## Attiva segmenti {#activate-segments}
-
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md#select-attributes) .
-
-## Mappatura del campo {#field-mapping}
+## Considerazioni sulla mappatura {#mapping-considerations}
 
 Per inviare correttamente i dati del pubblico da [!DNL Adobe Experience Platform] alla destinazione [!DNL Braze], devi passare attraverso il passaggio di mappatura dei campi .
 
