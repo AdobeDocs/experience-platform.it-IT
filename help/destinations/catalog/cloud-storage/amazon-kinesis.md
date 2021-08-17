@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destinazione kinesis;kinesis
 title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale all’archiviazione Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 4febcef82c6da4534051cbe68820984814786224
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Puoi creare una connessione in uscita in tempo reale allo storage [!DNL Amazon K
 
 ![Amazon Kinesis nell’interfaccia utente](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Casi d’uso {#use-cases}
+## Casi di utilizzo {#use-cases}
 
 Utilizzando destinazioni di streaming come [!DNL Amazon Kinesis], puoi facilmente inserire nei tuoi sistemi selezionati eventi di segmentazione di alto valore e attributi di profilo associati.
 
@@ -77,27 +77,19 @@ Nell’esempio seguente vengono visualizzati i diritti di accesso minimi necessa
 
 Per ulteriori informazioni sul controllo dell&#39;accesso per i flussi di dati [!DNL Kinesis], leggi quanto segue [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Collegare la destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-Per istruzioni su come connettersi alle destinazioni di archiviazione cloud, incluse quelle supportate da [!DNL Amazon], consulta [Flusso di lavoro per le destinazioni di archiviazione cloud ](./workflow.md).
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-Per le destinazioni [!DNL Amazon Kinesis] , inserisci le seguenti informazioni nel flusso di lavoro crea destinazione :
+### Parametri di connessione {#parameters}
 
-## Passaggio account {#account-step}
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!DNL Amazon Web Services]chiave di accesso e chiave** segreta: In  [!DNL Amazon Web Services], genera una  `access key - secret access key` coppia per concedere a Platform l’accesso al tuo  [!DNL Amazon Kinesis] account. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **regione**: Indicare la  [!DNL Amazon Web Services] regione a cui inviare i dati.
-
-![Campi di input nel passaggio dell’account](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## Passaggio di autenticazione {#authentication-step}
-
 * **Nome**: Specifica un nome per la connessione a  [!DNL Amazon Kinesis]
 * **Descrizione**: Immetti una descrizione della connessione a  [!DNL Amazon Kinesis].
 * **flusso**: Immetti il nome di un flusso di dati esistente nel tuo  [!DNL Amazon Kinesis] account. Platform esporta i dati in questo flusso.
-* **[!UICONTROL Azioni]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Per informazioni sulle singole azioni di marketing definite da Adobe, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
-
-![Campi di input nel passaggio di autenticazione](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -107,9 +99,9 @@ Per le destinazioni [!DNL Amazon Kinesis] , inserisci le seguenti informazioni n
 
 -->
 
-## Attiva segmenti {#activate-segments}
+## Attiva i segmenti in questa destinazione {#activate}
 
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Dati esportati {#exported-data}
 
