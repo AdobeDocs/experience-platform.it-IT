@@ -5,9 +5,9 @@ title: Classe ExperienceEvent XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 1%
 
 ---
@@ -53,11 +53,11 @@ Alcune interazioni nelle applicazioni di esperienza possono causare più eventi 
 
 [Adobe Experience Platform Data ](../../data-prep/home.md) Preppiede consente di mappare, trasformare e convalidare i dati da e verso XDM. Utilizzando le funzioni di mappatura [disponibili](../../data-prep/functions.md) fornite dal servizio, è possibile richiamare operatori logici per assegnare la priorità, trasformare e/o consolidare i dati dai record con più eventi durante l&#39;acquisizione in Experience Platform. Nell’esempio precedente, puoi designare `eventType` come campo calcolato che dà priorità a una &quot;visualizzazione prodotto&quot; rispetto a una &quot;visualizzazione pagina&quot; ogni volta che si verificano entrambe.
 
-Se acquisisci manualmente i dati in Platform tramite l’interfaccia utente, consulta la guida sulla [mappatura di un file CSV in XDM](../../ingestion/tutorials/map-a-csv-file.md) per passaggi specifici su come creare i campi calcolati.
+Se acquisisci manualmente i dati in Platform tramite l’interfaccia utente, consulta la guida alla [guida ai campi calcolati](../../data-prep/calculated-fields.md) per i passaggi specifici su come creare i campi calcolati.
 
 Se i dati vengono inviati in streaming a Platform tramite una connessione sorgente, è possibile configurare l’origine in modo da utilizzare i campi calcolati. Per istruzioni su come implementare i campi calcolati durante la configurazione della connessione, consulta la [documentazione relativa alla specifica origine](../../sources/home.md) .
 
-## Gruppi di campi dello schema compatibili {#field-groups}
+## Gruppi di campi di schema compatibili {#field-groups}
 
 >[!NOTE]
 >
