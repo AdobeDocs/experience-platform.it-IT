@@ -6,9 +6,9 @@ description: Questo documento tratta la creazione di destinazioni di streaming u
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Questa esercitazione utilizza la destinazione [!DNL Amazon Kinesis] in tutti gli
 
 ![Panoramica : i passaggi per creare una destinazione di streaming e attivare i segmenti](../assets/api/streaming-destination/overview.png)
 
-Se preferisci utilizzare l’interfaccia utente di Platform per connetterti a una destinazione e attivare i dati, consulta le esercitazioni [Connetti una destinazione](../ui/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../ui/activate-destinations.md) .
+Se preferisci utilizzare l’interfaccia utente di Platform per connetterti a una destinazione e attivare i dati, consulta le esercitazioni [Connetti una destinazione](../ui/connect-destination.md) e [Attiva i dati del pubblico per le destinazioni di esportazione dei segmenti in streaming](../ui/activate-segment-streaming-destinations.md) .
 
 ## Introduzione
 
