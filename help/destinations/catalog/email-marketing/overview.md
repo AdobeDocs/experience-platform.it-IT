@@ -4,9 +4,9 @@ title: Panoramica sulle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 3%
 
 ---
@@ -70,9 +70,9 @@ Leggi i singoli articoli di destinazione marketing e-mail per scoprire come impo
 
 ## Attivare i segmenti nelle destinazioni di marketing via e-mail {#activate}
 
-Per istruzioni su come attivare i segmenti nelle destinazioni di marketing e-mail, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md).
+Per istruzioni su come attivare i segmenti nelle destinazioni di marketing e-mail, consulta [Attivare i dati sul pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md).
 
 ## Risorse aggiuntive
 
-* [Attivare i dati nelle destinazioni](../../ui/activate-destinations.md)
+* [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md)
 * [Creare destinazioni di marketing e-mail e attivare i dati utilizzando l’API del servizio di flusso](../../api/email-marketing.md)
