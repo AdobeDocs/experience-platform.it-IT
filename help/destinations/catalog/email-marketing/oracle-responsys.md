@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;destinazione risposta oracle
 title: Oracle connessione Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing cross-channel offerte da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -22,37 +22,40 @@ Per inviare i dati dei segmenti a [!DNL Oracle Responsys], è necessario prima [
 
 **Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
 
-## ELENCO CONSENTITI di indirizzi IP {#allow-list}
+## ELENCO CONSENTITI di indirizzo IP {#allow-list}
 
 Quando si impostano le destinazioni di marketing e-mail con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al proprio elenco consentiti.
 
 Per aggiungere IP di Adobe al tuo elenco consentiti, fai riferimento all’ [elenco consentiti di indirizzi IP per le destinazioni di archiviazione cloud](../cloud-storage/ip-address-allow-list.md) .
 
-## Collegare la destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Oracle Responsys], quindi selezionare **[!UICONTROL Connetti destinazione]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-![Connetti a Responsys](../../assets/catalog/email-marketing/oracle-responsys/catalog.png)
+Questa destinazione supporta i seguenti tipi di connessione:
 
-Nel passaggio **[!UICONTROL Account]**, se in precedenza era stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Account esistente]** e selezionare una delle connessioni esistenti. In alternativa, è possibile selezionare **[!UICONTROL Nuovo account]** per impostare una nuova connessione. Inserisci le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connetti a destinazione]**. Per [!DNL Oracle Responsys], puoi scegliere tra **[!UICONTROL SFTP con password]** e **[!UICONTROL SFTP con chiave SSH]**.
+* **[!UICONTROL SFTP con password]**
+* **[!UICONTROL SFTP con chiave SSH]**
 
-![Collega account Responsys](../../assets/catalog/email-marketing/oracle-responsys/connection-type.png)
+### Parametri di connessione {#parameters}
 
-Compila le informazioni seguenti, a seconda del tipo di connessione, e seleziona **[!UICONTROL Configura]**.
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
-- Per le connessioni **[!UICONTROL SFTP con password]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Password].
-- Per le connessioni **[!UICONTROL SFTP con chiave SSH]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Chiave SSH].
-
-Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
-
-![Compila le informazioni di Responsys](../../assets/catalog/email-marketing/oracle-responsys/account-info.png)
-
-Nel passaggio **[!UICONTROL Autenticazione]**, compila le informazioni rilevanti per la tua destinazione come mostrato di seguito:
-- **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
-- **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
-- **[!UICONTROL Percorso]** cartella: Fornisci il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-- **[!UICONTROL Formato]** file:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
-- **[!UICONTROL Azioni]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* Per le connessioni **[!UICONTROL SFTP con password]**, devi fornire:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Porta]
+   * [!UICONTROL Nome utente]
+   * [!UICONTROL Password]
+* Per le connessioni **[!UICONTROL SFTP con chiave SSH]**, devi fornire:
+   * [!UICONTROL Dominio]
+   * [!UICONTROL Porta]
+   * [!UICONTROL Nome utente]
+   * [!UICONTROL Chiave SSH]
+* Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
+* **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
+* **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
+* **[!UICONTROL Percorso]** cartella: Fornisci il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+* **[!UICONTROL Formato]** file:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
 
 <!--
 
@@ -62,17 +65,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Rispondere alle informazioni di base](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
+## Attiva i segmenti in questa destinazione {#activate}
 
-Fai clic su **[!UICONTROL Crea destinazione]** dopo aver compilato i campi sopra riportati. La destinazione è ora connessa ed è possibile [attivare segmenti](../../ui/activate-destinations.md) alla destinazione.
-
-## Attiva segmenti {#activate-segments}
-
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Attributi di destinazione {#destination-attributes}
 
-Quando si attivano [i segmenti](../../ui/activate-destinations.md) alla destinazione [!DNL Oracle Responsys], l&#39;Adobe consiglia di selezionare un identificatore univoco dal proprio [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes).
+Quando si attivano [segmenti](../../ui/activate-destinations.md) a questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes).
 
 ## Dati esportati {#exported-data}
 
