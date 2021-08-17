@@ -4,7 +4,7 @@ title: Crea una nuova connessione di destinazione
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per la connessione a una destinazione in Adobe Experience Platform
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Immetti i dettagli della connessione alla piattaforma di destinazione, quindi se
 
    ![Connetti alla destinazione](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Seleziona **[!UICONTROL Salva e esci]** per salvare la configurazione di destinazione, oppure seleziona **[!UICONTROL Avanti]** per procedere con i dati del pubblico [flusso di attivazione](activate-destinations.md).
+1. Seleziona **[!UICONTROL Salva e esci]** per salvare la configurazione di destinazione, oppure seleziona **[!UICONTROL Avanti]** per procedere con i dati del pubblico [flusso di attivazione](activation-overview.md).
