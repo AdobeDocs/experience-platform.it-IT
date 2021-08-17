@@ -5,8 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 2%
@@ -78,7 +77,7 @@ Consulta il [catalogo di destinazione](../../destinations/catalog/overview.md) p
 
 **Limitazioni note**
 
-* Il controllo per consentire le pianificazioni di attivazione personalizzate nel [flusso di attivazione](../../destinations/ui/activate-destinations.md#activate-data) (passaggio di pianificazione) non è disponibile nella versione iniziale.
+* Il controllo per consentire pianificazioni di attivazione personalizzate nel flusso di attivazione (passaggio Pianificazione) non è disponibile nella versione iniziale.
 * Attualmente non è possibile modificare o eliminare una configurazione di destinazione. Per aggirare questo limite, puoi abilitare o disabilitare la destinazione nell&#39;angolo in alto a destra della [pagina dei dettagli della destinazione](../../destinations/ui/destination-details-page.md).
 * Al momento non è disponibile alcuna convalida per i dettagli dell&#39;account, il percorso o le credenziali quando ci si connette all&#39;account di destinazione o di archiviazione. Assicurati di immettere le credenziali corrette e di verificare la presenza di errori di ortografia o errori di battitura.
 * Non sono in vigore rinnovi di credenziali con la versione iniziale. Una volta scaduto o necessario aggiornare un account, devi creare una nuova connessione di destinazione e mappare nuovamente i segmenti mappati in precedenza.
@@ -116,7 +115,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] consente agli scienziati
 
 Per ulteriori informazioni, consulta la [Panoramica di Data Science Workspace](../../data-science-workspace/home.md).
 
-## [!DNL Experience Data Model] Sistema (XDM)  {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
 La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 
