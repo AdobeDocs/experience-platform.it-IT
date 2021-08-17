@@ -3,9 +3,9 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
+Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) .
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
