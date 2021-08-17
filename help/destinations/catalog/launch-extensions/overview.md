@@ -3,10 +3,10 @@ keywords: estensioni tag;estensione tag;destinazioni launch; estensioni tag piat
 title: Assegnare tag alle estensioni in Adobe Experience Platform
 description: Adobe Experience Platform fornisce la nuova generazione di funzionalità di gestione dei tag di Adobe. Platform ti offre un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform fornisce la nuova generazione di funzionalità di gest
 
 Per un’introduzione ai tag, consulta le risorse seguenti:
 
-- [Panoramica sui tag](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=it)
+- [Panoramica sui tag](../../../tags/home.md)
 - [Guida rapida](../../../tags/quick-start/quick-start.md)
 
 ## Come trovare le estensioni di tag nell’interfaccia di Platform {#how-to-find-extensions-in-interface}
