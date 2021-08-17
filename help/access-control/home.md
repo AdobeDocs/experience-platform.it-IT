@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 2%
+source-wordcount: '1320'
+ht-degree: 3%
 
 ---
 
@@ -109,6 +109,7 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Data Governance] | [!UICONTROL Applicare le etichette di utilizzo dei dati] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
 | [!DNL Data Governance] | [!UICONTROL Gestire i criteri di utilizzo dei dati] | Accesso a criteri di utilizzo dei dati di lettura, creazione, modifica ed eliminazione. |
 | [!DNL Data Governance] | [!UICONTROL Visualizzare i criteri di utilizzo dei dati] | Accesso in sola lettura per i criteri di utilizzo dei dati appartenenti all’organizzazione. |
+| [!DNL Data Governance] | [!UICONTROL Visualizza log di controllo] | Accesso in sola lettura per visualizzare i [registri di controllo ](../landing/governance-privacy-security/audit-logs/overview.md) registrati delle attività di Platform. |
 | [!DNL Dashboards] | [!UICONTROL Visualizza dashboard di utilizzo della licenza] | Accesso in sola lettura per visualizzare il dashboard di utilizzo della licenza. |
 | [!DNL Dashboards] | [!UICONTROL Gestire dashboard standard] | Aggiungi attributi personalizzati non ancora presenti nel data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Gestire le query] | Accesso alla lettura, alla creazione, alla modifica e all&#39;eliminazione di query SQL strutturate per i dati di Platform. |
