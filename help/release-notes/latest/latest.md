@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 7%
@@ -60,8 +60,8 @@ Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Esportazioni di file incrementali più rapide](../../destinations/ui/activate-destinations.md#export-incremental-files) | È ora possibile pianificare esportazioni incrementali di file per destinazioni basate su file ogni 3, 6, 8 e 12 ore. La modifica della pianificazione dell’esportazione dei file per i segmenti già salvati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni. |
-| [Supporto per le chiavi di deduplicazione](../../destinations/ui/activate-destinations.md#deduplication-keys) | Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. È possibile selezionare un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. |
+| [Esportazioni di file incrementali più rapide](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | È ora possibile pianificare esportazioni incrementali di file per destinazioni basate su file ogni 3, 6, 8 e 12 ore. La modifica della pianificazione dell’esportazione dei file per i segmenti già salvati non è attualmente supportata. Per riesportare i segmenti con una pianificazione diversa, devi creare una nuova istanza di destinazione. Si tratta di una limitazione che verrà affrontata nelle prossime versioni. |
+| [Supporto per le chiavi di deduplicazione](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. È possibile selezionare un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. |
 
 ## Experience Data Model (XDM) {#xdm}
 
