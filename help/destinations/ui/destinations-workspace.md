@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ La scheda **[!UICONTROL Sfoglia]** visualizza le destinazioni con le quali hai s
 
 >[!TIP]
 >
-> * Utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png) nella colonna **[!UICONTROL Nome]** per [attivare](activate-destinations.md) altri segmenti in quella destinazione.
+> * Utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png) nella colonna **[!UICONTROL Nome]** per inviare i segmenti a tale destinazione.
 > * Utilizza il pulsante ![Elimina destinazioni](../assets/ui/workspace/delete-destination-symbol.png) nella colonna **[!UICONTROL Nome]** per [eliminare](delete-destinations.md) una connessione esistente a una destinazione.
 
 
@@ -88,7 +88,7 @@ La scheda **[!UICONTROL Sfoglia]** visualizza le destinazioni con le quali hai s
 | [!UICONTROL Nome utente] | Le credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Dati di attivazione] | Indica il numero di segmenti che vengono attivati nella destinazione. Seleziona questo controllo per ulteriori informazioni sui segmenti attivati. Per ulteriori informazioni sui segmenti attivati, consulta [Dati di attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione . |
 | [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione alla destinazione. |
-| [!UICONTROL Stato] | `Active` oppure `Inactive`. Indica se i dati vengono attivati per questa destinazione. Per modificare lo stato, consulta [Disabilita attivazione](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Stato] | `Active` oppure `Inactive`. Indica se i dati vengono attivati per questa destinazione. |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
 
