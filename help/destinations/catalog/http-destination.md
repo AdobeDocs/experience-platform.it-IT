@@ -2,14 +2,13 @@
 keywords: streaming;
 title: connessione HTTP
 description: La destinazione HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 2%
+source-wordcount: '361'
+ht-degree: 3%
 
 ---
-
 
 # (Alfa) [!DNL HTTP] connessione
 
@@ -23,60 +22,45 @@ La destinazione [!DNL HTTP] è una destinazione di streaming [!DNL Adobe Experie
 
 Per inviare i dati del profilo agli endpoint [!DNL HTTP], è innanzitutto necessario connettersi alla destinazione in [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Casi d’uso {#use-cases}
+## Casi di utilizzo {#use-cases}
 
 La destinazione [!DNL HTTP] è destinata ai clienti che devono esportare dati di profilo XDM e segmenti di pubblico in endpoint [!DNL HTTP] generici.
 
 [!DNL HTTP] gli endpoint possono essere sistemi propri dei clienti o soluzioni di terze parti.
 
-## Connetti alla destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL HTTP API] e selezionare **[!UICONTROL Configure]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../ui/connect-destination.md).
 
-![Attiva destinazione HTTP](../assets/catalog/http/activate.png)
+### Parametri di connessione {#parameters}
 
-Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+Durante la [configurazione](../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
-![Attiva destinazione HTTP](../assets/catalog/http/connect.png)
+* **[!UICONTROL httpEndpoint]**: l’endpoint HTTP  [!DNL URL] a cui desideri inviare i dati del profilo.
+   * Facoltativamente, puoi aggiungere parametri di query al [!UICONTROL httpEndpoint] [!DNL URL].
+* **[!UICONTROL authEndpoint]**: l’endpoint HTTP  [!DNL URL] utilizzato per l’ [!DNL OAuth2] autenticazione.
+* **[!UICONTROL ID]** client: il  [!DNL clientID] parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
+* **[!UICONTROL Segreto]** client: il  [!DNL clientSecret] parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
 
-Nel passaggio [!UICONTROL Account] , devi definire i dettagli della connessione dell’endpoint HTTP. Seleziona **[!UICONTROL New account]** e immetti i dettagli di connessione per l’endpoint HTTP a cui desideri connetterti.
-- **[!UICONTROL httpEndpoint]**: l’intero  [!DNL URL] dell’endpoint HTTP a cui desideri inviare i dati del profilo.
-   - Facoltativamente è possibile aggiungere parametri di query al [!UICONTROL httpEndpoint] [!DNL URL].
-- **[!UICONTROL authEndpoint]**: il completamento  [!DNL URL] dell’endpoint HTTP utilizzato per l’ [!DNL OAuth2] autenticazione.
-- **[!UICONTROL Client ID]**: il  [!DNL clientID] parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
-- **[!UICONTROL Client Secret]**: il  [!DNL clientSecret] parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
+   >[!NOTE]
+   >
+   >Al momento sono supportate solo le credenziali client [!DNL OAuth2].
 
->[!NOTE]
->
->Al momento sono supportate solo le credenziali client [!DNL OAuth2].
+* **[!UICONTROL Nome]**: immetti un nome in base al quale riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: inserisci una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Intestazioni]** personalizzate: inserisci le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato:  `header1:value1,header2:value2,...headerN:valueN`.
 
-![Connessione endpoint HTTP](../assets/catalog/http/connect.png)
+   >[!IMPORTANT]
+   >
+   >L&#39;implementazione corrente richiede almeno un&#39;intestazione personalizzata. Questa limitazione verrà risolta in un aggiornamento futuro.
 
-Fai clic su **[!UICONTROL Connect to destination]**. Una volta completata la connessione, fare clic su **[!UICONTROL Next]**.
+## Attiva i segmenti in questa destinazione {#activate}
 
-Nel passaggio [!UICONTROL Authentication] , immetti le credenziali di autenticazione dell’account:
-- **[!UICONTROL Name]**: immetti un nome in base al quale riconoscerai questa destinazione in futuro.
-- **[!UICONTROL Description]**: inserisci una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-- **[!UICONTROL Custom Headers]**: inserisci le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato:  `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](/help/data-governance/policies/overview.md) . Per informazioni sulle singole azioni di marketing definite da Adobe, consulta la [Panoramica sui criteri di utilizzo dei dati](/help/data-governance/policies/overview.md).
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../ui/activate-destinations.md#select-attributes) .
 
->[!IMPORTANT]
->
->L&#39;implementazione corrente richiede almeno un&#39;intestazione personalizzata. Questa limitazione verrà risolta in un aggiornamento futuro.
+## Attributi di destinazione {#attributes}
 
-![Autenticazione HTTP](../assets/catalog/http/authenticate.png)
-
-**[!UICONTROL Marketing action]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
-
-Fai clic su **[!UICONTROL Create destination]**.
-
-## Attiva segmenti
-
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../ui/activate-destinations.md#select-attributes) .
-
-## Attributi di destinazione
-
-Durante il passaggio [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes), quando [attivi segmenti](../ui/activate-destinations.md) in una destinazione [!DNL HTTP], ti consigliamo di selezionare un identificatore univoco dal tuo [schema di unione](../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
+Nel passaggio [[!UICONTROL Seleziona attributi]](../ui/activate-destinations.md#select-attributes), quando [attivi segmenti](../ui/activate-destinations.md) in una destinazione [!DNL HTTP], Adobe consiglia di selezionare un identificatore univoco dal tuo [schema di unione](../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
 
 ## Dati esportati {#exported-data}
 
