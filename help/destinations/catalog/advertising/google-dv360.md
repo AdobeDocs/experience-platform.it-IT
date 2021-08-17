@@ -3,9 +3,9 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Connessione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento utilizzato per eseguire il retargeting e le campagne digitali mirate al pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -59,19 +59,13 @@ Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, �
 * **ID** cliente: ID account cliente di Adobe con Google. ID cliente: 89690775.
 * **Tipo** di account: utilizza  **[!DNL Invite advertiser]** per consentire ai tipi di pubblico di essere condivisi solo con un marchio specifico nel tuo account Display &amp; Video 360 o  **[!DNL Invite partner]** per consentire al pubblico di essere condiviso con tutti i marchi del tuo account Display &amp; Video 360.
 
-## Configurare la destinazione
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Google Display & Video 360] e selezionare **[!UICONTROL Configura]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-![Connetti la destinazione Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/catalog.png)
+### Parametri di connessione {#parameters}
 
->[!NOTE]
->
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Attiva] e [!UICONTROL Configura], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
-
-Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione , compila le [!UICONTROL Informazioni di base] per la destinazione, nonché le azioni di marketing che devono essere applicate a questa destinazione.
-
-![Informazioni di base Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
@@ -79,15 +73,14 @@ Nel passaggio **Configurazione** del flusso di lavoro di creazione della destina
    * Utilizza `Invite Advertiser` per consentire ai tipi di pubblico di essere condivisi solo con un marchio specifico nel tuo account Display &amp; Video 360 .
    * Utilizza `Invite Partner` per consentire ai tipi di pubblico di essere condivisi con tutti i marchi del tuo account Display &amp; Video 360.
 * **[!UICONTROL ID]** account: Compila il tuo ID  **[!DNL Invite partner]** o  **[!DNL Invite advertiser]** account con Google. In genere si tratta di un ID a sei o sette cifre.
-* **[!UICONTROL Azione]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Quando imposti una destinazione [!DNL Google Display & Video 360], rivolgiti al tuo [!DNL Google Account Manager] o rappresentante di Adobe per capire quale tipo di account hai.
+>Quando imposti una destinazione [!DNL Google Display & Video 360], collabora con il tuo [!DNL Google Account Manager] o rappresentante di Adobe per capire quale tipo di account hai.
 
-## Attiva i segmenti in [!DNL Google Display & Video 360]
+## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni su come attivare i segmenti su [!DNL Google Display & Video 360], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Dati esportati
 
