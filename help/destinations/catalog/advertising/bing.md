@@ -3,14 +3,14 @@ keywords: 'pubblicità; bing; '
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 0%
+source-wordcount: '382'
+ht-degree: 1%
 
 ---
 
-# [!DNL Microsoft Bing] connection  {#bing-destination}
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Panoramica {#overview}
 
@@ -18,7 +18,7 @@ La destinazione [!DNL Microsoft Bing] ti aiuta a inviare i dati del profilo a [!
 
 Per inviare i dati del profilo a [!DNL Microsoft Bing], è necessario prima connettersi alla destinazione.
 
-## Casi d’uso {#use-cases}
+## Casi di utilizzo {#use-cases}
 
 In qualità di addetto al marketing, voglio essere in grado di utilizzare segmenti generati da [!DNL Microsoft Advertising IDs] per indirizzare gli utenti tramite pubblicità display tra [!DNL Microsoft Advertising] canali.
 
@@ -42,38 +42,25 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 
 * [!UICONTROL ID] account: questo è il  [!DNL Bing Ads CID], in formato intero.
 
-## Connetti alla destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, selezionare [!DNL Microsoft Bing] e selezionare **[!UICONTROL Configura]**.
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-![Configurare la destinazione Microsoft Bing](../../assets/catalog/advertising/bing/configure.png)
+### Parametri di connessione {#parameters}
 
-Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attiva]** e **[!UICONTROL Configura]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
-
-![Attiva destinazione Bing Microsoft](../../assets/catalog/advertising/bing/activate.png)
-
-## Passaggio di autenticazione {#authentication}
-
-Nel passaggio **[!UICONTROL Autenticazione]**, è necessario immettere i dettagli di connessione di destinazione:
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID]** account: Il tuo  [!DNL Bing Ads CID].
-* **[!UICONTROL Azione]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Per informazioni sulle singole azioni di marketing definite da Adobe, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
-![Autenticazione destinazione Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
+## Attiva i segmenti in questa destinazione {#activate}
 
-Fai clic su **[!UICONTROL Crea destinazione]**. La destinazione viene ora creata. Puoi fare clic su [!UICONTROL Salva e esci] se desideri attivare i segmenti in un secondo momento, oppure puoi fare clic su [!UICONTROL Avanti] per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva [Attiva segmenti](#activate-segments), per il resto del flusso di lavoro.
-
-## Attiva segmenti {#activate-segments}
-
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md#select-attributes) .
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 Nel passaggio [Pianificazione segmento](../../ui/activate-destinations.md#segment-schedule) , devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella destinazione.
 
 Durante la mappatura dei segmenti, è consigliabile utilizzare il nome del segmento [!DNL Platform] o una sua forma più breve, per facilitarne l’utilizzo. Tuttavia, l&#39;ID o il nome del segmento nella destinazione non deve necessariamente corrispondere a quello nel tuo account [!DNL Platform] . Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
-
-![ID mappatura segmento](../../assets/common/segment-mapping-id.png)
 
 ## Dati esportati {#exported-data}
 
