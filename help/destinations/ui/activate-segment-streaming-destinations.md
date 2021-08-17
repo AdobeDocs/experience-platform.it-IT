@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ Usa le caselle di controllo a sinistra dei nomi dei segmenti per selezionare i s
 ![Selezionare segmenti](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Mappare attributi e identità {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Applica trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
 
 >[!IMPORTANT]
 >
