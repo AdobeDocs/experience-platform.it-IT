@@ -3,10 +3,10 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 1%
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -59,12 +59,12 @@ Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platfo
 
 Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare i seguenti requisiti:
 
-- Taglia tutti gli spazi iniziali e finali dalla stringa e-mail. Ad esempio: `johndoe@example.com`, non `<space>johndoe@example.com<space>`;
-- Quando esegui l’hashing delle stringhe e-mail, assicurati di utilizzare l’hash della stringa in minuscolo;
-   - Esempio: `example@email.com`, non `EXAMPLE@EMAIL.COM`;
-- Assicurati che la stringa con hash sia tutto minuscola
-   - Esempio: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Non saldare la stringa.
+* Taglia tutti gli spazi iniziali e finali dalla stringa e-mail. Ad esempio: `johndoe@example.com`, non `<space>johndoe@example.com<space>`;
+* Quando esegui l’hashing delle stringhe e-mail, assicurati di utilizzare l’hash della stringa in minuscolo;
+   * Esempio: `example@email.com`, non `EXAMPLE@EMAIL.COM`;
+* Assicurati che la stringa con hash sia tutto minuscola
+   * Esempio: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Non saldare la stringa.
 
 >[!NOTE]
 >
@@ -77,17 +77,29 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 
 ![Trasformazione mappatura identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## Connetti alla destinazione {#connect-destination}
+## Collegati alla destinazione {#connect}
 
-Per connetterti alla destinazione [!DNL LinkedIn Matched Audiences], vedi [Flusso di lavoro di autenticazione delle destinazioni social ](./workflow.md).
+Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 Il video seguente illustra anche i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i segmenti.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Attiva i segmenti in [!DNL LinkedIn Matched Audiences] {#activate-segments}
+>[!NOTE]
+>
+>L&#39;interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta l’ [esercitazione sulla configurazione di destinazione](../../ui/connect-destination.md) .
 
-Per istruzioni su come attivare i segmenti su [!DNL LinkedIn Matched Audiences], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+### Parametri di connessione {#parameters}
+
+Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+
+* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ID]** account: il tuo  [!DNL LinkedIn Campaign Manager Account ID]. Puoi trovare questo ID nel tuo account [!DNL LinkedIn Campaign Manager] .
+
+## Attiva i segmenti in questa destinazione {#activate}
+
+Per istruzioni sull’attivazione dei segmenti di pubblico nelle destinazioni, consulta [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md) .
 
 ## Dati esportati {#exported-data}
 
