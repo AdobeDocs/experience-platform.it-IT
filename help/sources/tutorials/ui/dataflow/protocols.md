@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account dei protocolli.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -31,54 +30,54 @@ Inoltre, questa esercitazione richiede che tu abbia già creato un account di pr
 
 ## Seleziona dati
 
-Dopo aver creato l&#39;account dei protocolli, viene visualizzato il passaggio **[!UICONTROL Select data]** , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
+Dopo aver creato l&#39;account dei protocolli, viene visualizzato il passaggio **[!UICONTROL Seleziona dati]** , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
 
 - La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
 - La metà destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-Puoi utilizzare l’opzione **[!UICONTROL Search]** nella parte superiore della pagina per identificare rapidamente i dati di origine che intendi utilizzare.
+Puoi utilizzare l&#39;opzione **[!UICONTROL Cerca]** nella parte superiore della pagina per identificare rapidamente i dati di origine che intendi utilizzare.
 
 >[!NOTE]
 >
 >L’opzione per i dati dell’origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, esclusi i connettori Analytics, Classificazioni, Hubs evento e Kinesis.
 
-Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Next]**.
+Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Avanti]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mappatura di campi dati su uno schema XDM
 
-Viene visualizzato il passaggio **[!UICONTROL Mapping]** che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati [!DNL Platform].
+Viene visualizzato il passaggio **[!UICONTROL Mapping]** , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati [!DNL Platform].
 
 Scegli un set di dati in entrata in cui acquisire i dati. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
 ### Utilizzare un set di dati esistente
 
-Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Use existing dataset]**, quindi fai clic sull’icona del set di dati.
+Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Utilizza set di dati esistenti]**, quindi fai clic sull’icona del set di dati.
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/protocols/use-existing-dataset.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trova il set di dati che desideri utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continue]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona set di dati]** . Trova il set di dati che desideri utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continua]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/protocols/select-existing-dataset.png)
 
 ### Utilizzare un nuovo set di dati
 
-Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Create new dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
+Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Crea nuovo set di dati]** e inserisci un nome e una descrizione per il set di dati nei campi forniti.
 
-È possibile allegare un campo schema immettendo un nome schema nella barra di ricerca **[!UICONTROL Select schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Advanced search]** per accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
+È possibile allegare un campo schema immettendo un nome schema nella barra di ricerca **[!UICONTROL Seleziona schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Ricerca avanzata]** per accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
 Durante questo passaggio, puoi abilitare il set di dati per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un’entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche vengono applicate al salvataggio del flusso di dati.
 
-Attiva il pulsante **[!UICONTROL Profile dataset]** per abilitare il set di dati di destinazione per [!DNL Profile].
+Attiva il pulsante **[!UICONTROL Set di dati di profilo]** per abilitare il set di dati di destinazione per [!DNL Profile].
 
 ![create-new-dataset](../../../images/tutorials/dataflow/protocols/new-dataset.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Select schema]**. Seleziona lo schema da applicare al nuovo set di dati, quindi fai clic su **[!UICONTROL Done]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona schema]**. Seleziona lo schema da applicare al nuovo set di dati, quindi fai clic su **[!UICONTROL Fine]**.
 
 ![select-schema](../../../images/tutorials/dataflow/protocols/select-existing-schema.png)
 
-In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare funzioni di mappatura per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV nei campi dello schema XDM](../../../../ingestion/tutorials/map-a-csv-file.md).
+In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulle funzioni di mappatura e sui campi calcolati, consulta la [Guida alle funzioni di preparazione dei dati](../../../../data-prep/functions.md) o la [guida ai campi calcolati](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >
@@ -86,65 +85,65 @@ In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-Seleziona **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
+Seleziona **[!UICONTROL Anteprima dati]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 
 Durante l’anteprima, la colonna Identity ha la priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per la convalida dei risultati della mappatura.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-Una volta mappati i dati di origine, seleziona **[!UICONTROL Close]**.
+Una volta mappati i dati di origine, seleziona **[!UICONTROL Chiudi]**.
 
 ## Pianifica esecuzioni di acquisizione
 
-Viene visualizzato il passaggio **[!UICONTROL Scheduling]** , che consente di configurare una pianificazione dell’acquisizione per acquisire automaticamente i dati di origine selezionati utilizzando le mappature configurate. La tabella seguente illustra i diversi campi configurabili per la pianificazione:
+Viene visualizzato il passaggio **[!UICONTROL Pianificazione]** , che consente di configurare una pianificazione dell’acquisizione per acquisire automaticamente i dati di origine selezionati utilizzando le mappature configurate. La tabella seguente illustra i diversi campi configurabili per la pianificazione:
 
 | Campo | Descrizione |
 | --- | --- |
 | Frequenza | Le frequenze selezionabili sono `Once`, `Minute`, `Hour`, `Day` e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
 | Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima acquisizione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se **[!UICONTROL Backfill]** è disabilitato, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non vengono acquisiti. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se è abilitato **[!UICONTROL Backfill]**, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non vengono acquisiti. |
 | Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo viene utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base al timestamp della colonna selezionata. |
 
 I flussi di dati sono progettati per acquisire automaticamente i dati su base pianificata. Inizia selezionando la frequenza di acquisizione. Quindi, impostare l&#39;intervallo per indicare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
 Per impostare l’ora di inizio per l’acquisizione, regola la data e l’ora visualizzate nella casella dell’ora di inizio. In alternativa, puoi selezionare l’icona del calendario per modificare il valore dell’ora di inizio. L’ora di inizio deve essere maggiore o uguale all’ora UTC corrente.
 
-Seleziona **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo distingue tra dati nuovi ed esistenti.
+Seleziona **[!UICONTROL Carica dati incrementali per]** per assegnare la colonna delta. Questo campo distingue tra dati nuovi ed esistenti.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
 ### Configurare un flusso di dati di acquisizione una tantum
 
-Per impostare l’acquisizione una tantum, seleziona la freccia a discesa della frequenza e seleziona **[!UICONTROL Once]**.
+Per impostare l’acquisizione una tantum, seleziona la freccia a discesa della frequenza e seleziona **[!UICONTROL Una volta]**.
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** e non  **[!UICONTROL Backfill]** sono visibili durante un’acquisizione una tantum.
+>**** Intervaland  **** Backfillare non sono visibili durante un’acquisizione una tantum.
 
-Dopo aver fornito i valori appropriati alla pianificazione, seleziona **[!UICONTROL Next]**.
+Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Avanti]**.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## Fornire i dettagli del flusso di dati
 
-Viene visualizzato il passaggio **[!UICONTROL Dataflow detail]** , che consente di denominare e fornire una breve descrizione del nuovo flusso di dati.
+Viene visualizzato il passaggio **[!UICONTROL Dettaglio flusso di dati]** , che consente di assegnare un nome e una breve descrizione del nuovo flusso di dati.
 
-Durante questo processo, puoi anche abilitare **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. L’abilitazione di **[!UICONTROL Partial ingestion]** consente di acquisire dati contenenti errori fino a una determinata soglia. Una volta abilitato **[!UICONTROL Partial ingestion]**, trascina il comando **[!UICONTROL Error threshold %]** per regolare la soglia di errore del batch. In alternativa, è possibile regolare manualmente la soglia selezionando la casella di input. Per ulteriori informazioni, consulta la [panoramica sull’acquisizione parziale dei batch](../../../../ingestion/batch-ingestion/partial.md).
+Durante questo processo, puoi anche abilitare **[!UICONTROL Acquisizione parziale]** e **[!UICONTROL Diagnostica errori]**. L’abilitazione di **[!UICONTROL Acquisizione parziale]** consente di acquisire dati contenenti errori fino a una determinata soglia. Una volta abilitato **[!UICONTROL Partial ingestion]**, trascina il comando **[!UICONTROL Error soglia %]** per regolare la soglia di errore del batch. In alternativa, è possibile regolare manualmente la soglia selezionando la casella di input. Per ulteriori informazioni, consulta la [panoramica sull’acquisizione parziale dei batch](../../../../ingestion/batch-ingestion/partial.md).
 
-Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Next]**.
+Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Avanti]**.
 
 ![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Controlla il tuo flusso di dati
 
-Viene visualizzato il passaggio **[!UICONTROL Review]** , che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-- **[!UICONTROL Connection]**: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
-- **[!UICONTROL Assign dataset & map fields]**: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-- **[!UICONTROL Scheduling]**: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione dell’acquisizione.
+- **[!UICONTROL Connessione]**: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+- **[!UICONTROL Assegna set di dati e campi]** mappa: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+- **[!UICONTROL Pianificazione]**: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione dell’acquisizione.
 
-Dopo aver esaminato il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
+Dopo aver esaminato il flusso di dati, fai clic su **[!UICONTROL Fine]** e consenti la creazione del flusso di dati.
 
 ![revisione](../../../images/tutorials/dataflow/protocols/review.png)
 
@@ -154,7 +153,7 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Elimina il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo errato utilizzando la funzione **[!UICONTROL Delete]** disponibile nell&#39;area di lavoro **[!UICONTROL Dataflows]**. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia utente](../delete.md).
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo errato utilizzando la funzione **[!UICONTROL Elimina]** disponibile nell&#39;area di lavoro **[!UICONTROL Dataflows]**. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia utente](../delete.md).
 
 ## Passaggi successivi
 
@@ -175,7 +174,7 @@ Nella schermata **[!UICONTROL Dataflows]** , seleziona il nome del flusso di dat
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/protocols/view-dataset-flows.png)
 
-La colonna **[!UICONTROL Properties]** viene visualizzata sul lato destro dello schermo. Questo pannello contiene un pulsante di attivazione/disattivazione **[!UICONTROL Enabled]**. Fai clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+La colonna **[!UICONTROL Proprietà]** viene visualizzata sul lato destro dello schermo. Questo pannello contiene un pulsante di attivazione/disattivazione ]**.**[!UICONTROL  Fai clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
 ![disable](../../../images/tutorials/dataflow/protocols/disable.png)
 
