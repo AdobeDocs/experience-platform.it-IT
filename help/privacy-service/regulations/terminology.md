@@ -5,8 +5,7 @@ title: Terminologia delle normative sulla privacy
 topic-legacy: troubleshooting
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47b5ad7fa9300772e0d2742c94021cf18d13313b
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
@@ -33,7 +32,7 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 ## D
 
-**Dati relativi alla salute**: Qualsiasi dato personale relativo alla salute fisica o mentale di un individuo o alla fornitura di servizi sanitari a quest&#39;ultimo.
+**Dati relativi alla salute**: Qualsiasi dato personale relativo alla salute fisica o mentale di un individuo o alla fornitura di servizi sanitari ad esso.
 
 **Titolare del trattamento** dei dati: L’entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali.
 
