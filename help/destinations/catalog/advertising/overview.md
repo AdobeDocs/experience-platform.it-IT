@@ -5,7 +5,7 @@ seo-title: Panoramica sulle destinazioni pubblicitarie
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Estensione Google Ads](google-ads-extension.md)
 * [Estensione Google Gtag](gtag-advertising.md)
 * [Estensione linkedIn Insight Tag](linkedin.md)
-* [Estensione pinterest Conversion Tracking](pinterest.md)
+* [Estensione pinterest Conversion Tracking](pinterest-extension.md)
 * [Estensione tag twitter Universal Website](twitter-uwt.md)
 
 ## Connessione a una nuova destinazione pubblicitaria {#connect-destination}
