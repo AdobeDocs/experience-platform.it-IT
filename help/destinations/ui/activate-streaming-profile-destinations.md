@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in streaming.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in streaming.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -86,16 +86,42 @@ Se non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Fin
 
 ## Verificare l’attivazione dei segmenti {#verify}
 
+I dati esportati [!DNL Experience Platform] arrivano nella destinazione in formato JSON. Ad esempio, l’evento seguente contiene l’attributo di profilo dell’indirizzo e-mail di un pubblico qualificato per un determinato segmento ed uscito da un altro segmento. Le identità di questo potenziale cliente sono ECID e e-mail.
 
-Per le destinazioni di e-mail marketing e l’archiviazione cloud, Adobe Experience Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Attendi la creazione di un nuovo file nel percorso di archiviazione ogni giorno. Il formato predefinito del file è:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-I file che si riceverebbero in tre giorni consecutivi potrebbero essere così:
-
-```console
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```json
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
-La presenza di questi file nel percorso di archiviazione è la conferma di un&#39;attivazione riuscita. Per comprendere come sono strutturati i file esportati, è possibile [scaricare un file .csv di esempio](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Questo file di esempio include gli attributi del profilo `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` e `personalEmail.address`.
