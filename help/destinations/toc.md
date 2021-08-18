@@ -4,7 +4,7 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
-source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 11%
@@ -57,7 +57,7 @@ ht-degree: 11%
       * [Estensione Google Gtag](./catalog/advertising/gtag-advertising.md)
       * [Estensione linkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
-      * [Estensione pinterest Conversion Tracking](./catalog/advertising/pinterest.md)
+      * [Estensione pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Il collegamento del Trade Desk](./catalog/advertising/tradedesk.md)
       * [Estensione tag twitter Universal Website](./catalog/advertising/twitter-uwt.md)
    * Destinazioni di Analytics {#analytics}
