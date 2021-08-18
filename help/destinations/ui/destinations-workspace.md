@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -72,8 +72,8 @@ La scheda **[!UICONTROL Sfoglia]** visualizza le destinazioni con le quali hai s
 
 >[!TIP]
 >
-> * Utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png) nella colonna **[!UICONTROL Nome]** per inviare i segmenti a tale destinazione.
-> * Utilizza il pulsante ![Elimina destinazioni](../assets/ui/workspace/delete-destination-symbol.png) nella colonna **[!UICONTROL Nome]** per [eliminare](delete-destinations.md) una connessione esistente a una destinazione.
+> * Seleziona i tre punti nella colonna [!UICONTROL Nome] e utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attiva ]**per inviare i segmenti a tale destinazione.
+> * Seleziona i tre punti nella colonna [!UICONTROL Nome] e utilizza il pulsante ![Elimina destinazioni](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Elimina ]**per [rimuovere](delete-destinations.md) una connessione esistente a una destinazione.
 
 
 ![Scheda Sfoglia](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ La scheda **[!UICONTROL Vista sistema]** visualizza una rappresentazione grafica
 
 ![Flussi di dati1](../assets/ui/workspace/data-flows1.png)
 
-Seleziona una delle destinazioni visualizzate sulla pagina e fai clic su **[!UICONTROL Visualizza flussi]** per visualizzare informazioni su tutte le connessioni impostate per ciascuna destinazione.
+Seleziona una delle destinazioni visualizzate sulla pagina e fai clic su **[!UICONTROL Visualizza flussi di dati]** per visualizzare informazioni su tutte le connessioni configurate per ogni destinazione.
 
 ![Flussi di dati2](../assets/ui/workspace/data-flows2.png)
