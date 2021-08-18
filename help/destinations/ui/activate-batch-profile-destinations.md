@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -270,7 +270,7 @@ Consideriamo i due profili seguenti.
 }
 ```
 
-### Caso di utilizzo della deduplicazione 1: nessuna deduplicazione
+### Caso di utilizzo della deduplicazione 1: nessuna deduplicazione {#deduplication-use-case-1}
 
 Senza la deduplicazione, il file di esportazione conterrebbe le seguenti voci.
 
@@ -280,7 +280,7 @@ Senza la deduplicazione, il file di esportazione conterrebbe le seguenti voci.
 | johndoe@example.com | John | D |
 
 
-### Caso di utilizzo della deduplicazione 2: deduplicazione basata sullo spazio dei nomi identità
+### Caso di utilizzo della deduplicazione 2: deduplicazione basata sullo spazio dei nomi identità {#deduplication-use-case-2}
 
 Supponendo la deduplicazione dello spazio dei nomi [!DNL Email], il file di esportazione conterrà le seguenti voci. Il profilo B è l’ultimo ad essere qualificato per il segmento, quindi è l’unico ad essere esportato.
 
@@ -289,7 +289,7 @@ Supponendo la deduplicazione dello spazio dei nomi [!DNL Email], il file di espo
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Caso di utilizzo della deduplicazione 3: deduplicazione basata su un singolo attributo di profilo
+### Caso di utilizzo della deduplicazione 3: deduplicazione basata su un singolo attributo di profilo {#deduplication-use-case-3}
 
 Supponendo la deduplicazione dell’attributo `personal Email` , il file di esportazione conterrà la voce seguente. Il profilo B è l’ultimo ad essere qualificato per il segmento, quindi è l’unico ad essere esportato.
 
@@ -298,7 +298,7 @@ Supponendo la deduplicazione dell’attributo `personal Email` , il file di espo
 | johndoe@example.com | John | D |
 
 
-### Caso di utilizzo della deduplicazione 4: deduplicazione basata su due attributi di profilo (chiave di deduplicazione composita)
+### Caso di utilizzo della deduplicazione 4: deduplicazione basata su due attributi di profilo {#deduplication-use-case-4}
 
 Supponendo la deduplicazione della chiave composita `personalEmail + lastName`, il file di esportazione conterrà le seguenti voci.
 
