@@ -4,9 +4,9 @@ title: Eliminare le destinazioni
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per eliminare una destinazione esistente nell'interfaccia utente di Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ Segui i passaggi riportati di seguito per eliminare una destinazione dalla sched
 
    ![Filtrare le destinazioni](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Seleziona il pulsante ![Elimina](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Elimina]** nella colonna **[!UICONTROL Piattaforma]** per rimuovere una destinazione esistente.
+3. Selezionare il pulsante ![Altro](../assets/ui/delete-destinations/more-icon.png) nella colonna Nome, quindi selezionare il pulsante ![Elimina](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Elimina]** per rimuovere una connessione di destinazione esistente.
    ![Eliminare le destinazioni](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Selezionare **[!UICONTROL Elimina]** per confermare la rimozione della destinazione.
+4. Selezionare **[!UICONTROL Elimina]** per confermare la rimozione della connessione di destinazione.
 
    ![Conferma eliminazione destinazione](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
