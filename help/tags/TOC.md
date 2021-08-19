@@ -4,9 +4,9 @@ user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Raccolta dati
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 79%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 79%
    * [Panoramica](./ui/administration/overview.md)
    * [Aziende e proprietà](./ui/administration/companies-and-properties.md)
    * [Autorizzazioni utente](./ui/administration/user-permissions.md)
+   * [Gestire le autorizzazioni](./ui/administration/manage-permissions.md)
 * Estensioni {#extensions}
    * [Panoramica](./extensions/overview.md)
    * Estensioni Adobe {#adobe}
