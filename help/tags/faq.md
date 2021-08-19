@@ -1,10 +1,10 @@
 ---
-title: Domande frequenti
+title: Guida alla risoluzione dei problemi dei tag
 description: Risposte alle domande più frequenti sui tag in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ La maggior parte dei client di Adobe sfrutta funzioni più moderne per la piatta
 ## I tag funzionano nelle app mobile native?
 
 Sì! I tag ora supportano le proprietà e la configurazione mobili per i nuovi SDK Adobe Experience Platform [Mobile](https://sdkdocs.com) per implementare la raccolta e la consegna dati in un ambiente nativo per app mobili. Per ulteriori informazioni, consulta la [documentazione](https://sdkdocs.com).
+
+## Perché l&#39;interfaccia utente dice che si è verificato un errore durante il caricamento del mio account?
+
+Se ricevi un messaggio che indica che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Per informazioni su come configurare un profilo di prodotto in Adobe Admin Console per concedere l’accesso all’interfaccia utente di raccolta dati, consulta la guida sulla [gestione delle autorizzazioni](./ui/administration/manage-permissions.md) .
+
+## Perché non posso aggiungere proprietà nell’interfaccia utente?
+
+Se non riesci a creare nuove proprietà quando hai effettuato l’accesso all’interfaccia utente di raccolta dati, significa che il tuo account non appartiene a un profilo di prodotto con i permessi di gestione proprietà.
+
+Per informazioni su come configurare un profilo di prodotto in Adobe Admin Console in modo da concedere i permessi di gestione, consulta la guida sulla [gestione delle autorizzazioni](./ui/administration/manage-permissions.md) . Per ulteriori informazioni sui diversi diritti per i tag, consulta la panoramica sulle [autorizzazioni utente per tag](./ui/administration/user-permissions.md).
 
 ## Cosa succede se ho altre domande?
 
