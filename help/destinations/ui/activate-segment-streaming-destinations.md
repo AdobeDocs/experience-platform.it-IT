@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,9 @@ Usa le caselle di controllo a sinistra dei nomi dei segmenti per selezionare i s
 
 ## Mappare attributi e identità {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Applica trasformazione"
->abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
-
 >[!IMPORTANT]
 >
->Questo passaggio si applica solo ad alcune destinazioni di streaming di segmenti. Se le destinazioni non dispongono di un passaggio **[!UICONTROL Mapping]**, passa a [Pianifica esportazione segmento](#scheduling).
+>Questo passaggio si applica solo ad alcune destinazioni di streaming di segmenti. Se la destinazione non dispone di un passaggio **[!UICONTROL Mapping]**, passa a [Pianifica esportazione segmento](#scheduling).
 
 Alcune destinazioni di streaming di segmenti richiedono di selezionare gli attributi di origine o i namespace di identità da mappare come identità di destinazione nella destinazione.
 
@@ -76,8 +71,17 @@ Alcune destinazioni di streaming di segmenti richiedono di selezionare gli attri
 
 1. Per aggiungere altre mappature, ripeti i passaggi da 1 a 5.
 
+### Applica trasformazione {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Applica trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Ulteriori informazioni nella documentazione"
 
+Quando mappi attributi di origine con hash non crittografati su attributi di destinazione per cui si prevede di eseguire l’hashing della destinazione (ad esempio: `email_lc_sha256` o `phone_sha256`), seleziona l&#39;opzione **Applica trasformazione** affinché Adobe Experience Platform esegua automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
+
+![Mappatura identità](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## Esportazione di segmenti programmata {#scheduling}
