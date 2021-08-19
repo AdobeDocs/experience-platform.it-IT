@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
-source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
+source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -58,24 +58,28 @@ Seleziona il pulsante **[!UICONTROL Crea pianificazione]** corrispondente al seg
 
 ### Esportare file completi {#export-full-files}
 
-Seleziona **[!UICONTROL Esporta file completi]** per fare in modo che i file esportati contengano uno snapshot completo di tutti i profili idonei per quel segmento.
+Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione di un file contenente un&#39;istantanea completa di tutte le qualifiche di profilo per il segmento selezionato.
 
 ![Esportare file completi](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Utilizza il selettore **[!UICONTROL Frequenza]** per scegliere tra le esportazioni una tantum (**[!UICONTROL Una volta]**) o **[!UICONTROL Giornaliero]**. L’esportazione di un file completo **[!UICONTROL Daily]** esporta il file ogni giorno dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
-2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione. L’esportazione di un file **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine al momento in cui lo selezioni.
+1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
+
+   * **[!UICONTROL Una volta]**: pianificare un&#39;esportazione di file on-demand una sola volta.
+   * **[!UICONTROL Giornaliero]**: pianifica esportazioni di file completi una volta al giorno, ogni giorno, dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
+
+1. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione. L’esportazione di un file **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine al momento in cui lo selezioni.
 
    >[!IMPORTANT]
    >
-   >L&#39;opzione per esportare i file in un determinato momento è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.<br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
-3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
-4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
+1. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
+1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 
 ### Esportare file incrementali {#export-incremental-files}
 
-Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file esportati contengano solo i profili qualificati per quel segmento dall&#39;ultima esportazione.
+Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un&#39;esportazione in cui il primo file è uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato e i file successivi sono qualifiche di profilo incrementali a partire dall&#39;esportazione precedente.
 
 >[!IMPORTANT]
 >
@@ -83,12 +87,10 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per fare in modo che i file
 
 ![Esportare file incrementali](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Utilizza il selettore **[!UICONTROL Frequenza]** per scegliere tra le esportazioni **[!UICONTROL Giornaliero]** o **[!UICONTROL Orario]**. L’esportazione di un file incrementale **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine alle 12:00 UTC (7:00 AM EST).
-   * Quando selezioni **[!UICONTROL Ogni ora]**, utilizza il selettore **[!UICONTROL Ogni]** per scegliere tra le opzioni **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** e **[!UICONTROL 12]** ora.
+1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
-      >[!IMPORTANT]
-      >
-      >L’opzione per esportare i file incrementali ogni 3, 6, 8 o 12 ore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. I clienti non beta possono esportare file incrementali una volta al giorno.
+   * **[!UICONTROL Giornaliero]**: pianificare le esportazioni di file incrementali una volta al giorno, ogni giorno, dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
+   * **[!UICONTROL Orario]**: pianificare esportazioni di file incrementali ogni 3,6,7 o 12 ore.
 
 2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
@@ -164,6 +166,8 @@ Le esportazioni di file variano nei seguenti modi, a seconda che sia selezionato
 >abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione . Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Ulteriori informazioni nella documentazione"
 
+Un attributo obbligatorio è una casella di controllo abilitata dall’utente che assicura che tutti i record di profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail. &#x200B;
+
 Puoi contrassegnare gli attributi come obbligatori per garantire che [!DNL Platform] esporti solo i profili che includono l’attributo specifico. Di conseguenza, può essere utilizzato come ulteriore forma di filtro. La marcatura di un attributo come obbligatorio è **non** obbligatoria.
 
 Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi.
@@ -178,9 +182,7 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 >abstract="Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. Seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. La mancata selezione di una chiave di deduplicazione può causare la presenza di voci di profilo duplicate nei file di esportazione."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Ulteriori informazioni nella documentazione"
 
->[!IMPORTANT]
->
->L’opzione per utilizzare le chiavi di deduplicazione è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti.
+Una chiave di deduplicazione è una chiave primaria definita dall’utente che determina l’identità in base alla quale gli utenti desiderano che i loro profili vengano deduplicati &#x200B;.
 
 Le chiavi di deduplicazione eliminano la possibilità di avere più record dello stesso profilo in un unico file di esportazione.
 
