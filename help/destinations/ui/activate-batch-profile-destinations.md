@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
@@ -64,10 +64,10 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
 
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
-   * **[!UICONTROL Una volta]**: pianificare un&#39;esportazione di file on-demand una sola volta.
-   * **[!UICONTROL Giornaliero]**: pianifica esportazioni di file completi una volta al giorno, ogni giorno, dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
+   * **[!UICONTROL Una volta]**: pianificare un&#39;esportazione di file completi on-demand una sola volta.
+   * **[!UICONTROL Giornaliero]**: pianifica esportazioni di file completi una volta al giorno, ogni giorno, al momento specificato.
 
-1. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione. L’esportazione di un file **[!UICONTROL Giornaliero]** esporta il file ogni giorno dalla data di inizio alla data di fine al momento in cui lo selezioni.
+1. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un&#39;esporta
 
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
-   * **[!UICONTROL Giornaliero]**: pianificare le esportazioni di file incrementali una volta al giorno, ogni giorno, dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST).
+   * **[!UICONTROL Giornaliero]**: pianifica esportazioni incrementali di file una volta al giorno, ogni giorno, al momento specificato.
    * **[!UICONTROL Orario]**: pianificare esportazioni di file incrementali ogni 3,6,7 o 12 ore.
 
 2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
    >[!IMPORTANT]
    >
-   >L’opzione per selezionare l’ora del giorno per l’esportazione è disponibile solo per un numero selezionato di clienti. <br> <br> A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill.  <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
+   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Si tratta di una limitazione che verrà affrontata nelle prossime versioni.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui deve aver luogo l&#39;esportazione.
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
