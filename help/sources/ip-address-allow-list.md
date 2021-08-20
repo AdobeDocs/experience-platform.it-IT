@@ -5,11 +5,10 @@ solution: Experience Platform
 title: ELENCO CONSENTITI di indirizzi IP per le connessioni di origine
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 0%
+source-wordcount: '107'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 È possibile definire controlli di accesso alla rete tramite il firewall di rete. Specificando l&#39;intervallo IP di origine appropriato, puoi consentire il traffico per il servizio di trasferimento dati. I seguenti indirizzi IP devono essere aggiunti a un elenco consentiti prima di lavorare con i connettori sorgente. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini.
 
-## Regione degli Stati Uniti d&#39;America
+## VA7
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -25,9 +24,6 @@ ht-degree: 0%
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
-
-## Regione degli Stati Uniti dell&#39;Est 2
-
 - `20.41.2.0/23`
 - `20.41.4.0/26`
 - `20.44.17.80/28`
@@ -35,7 +31,7 @@ ht-degree: 0%
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## regione dell&#39;Europa occidentale
+## NLD2
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -45,7 +41,7 @@ ht-degree: 0%
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## Australia Est
+## AUS5
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
