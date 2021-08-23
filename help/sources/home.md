@@ -5,9 +5,9 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,12 @@ Experience Platform supporta l’acquisizione di dati da un sistema eCommerce di
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### Sistema locale
+
+Experience Platform supporta l’acquisizione di dati dal sistema locale. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
+
+- [Caricamento file locale](connectors/local-system/local-file-upload.md)
+
 ### Automazione del marketing
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di automazione marketing di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
@@ -122,7 +128,6 @@ Experience Platform fornisce il supporto per l’acquisizione di dati da un sist
 Experience Platform supporta l’acquisizione di dati da sorgenti in streaming. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### Protocolli
 
