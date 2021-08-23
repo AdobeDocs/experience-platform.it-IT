@@ -4,10 +4,10 @@ description: Scopri come configurare Adobe Experience Platform Web SDK.
 seo-description: Scopri come configurare Experience Platform Web SDK
 keywords: configurare;configurazione;SDK;edge;Web SDK;configurare;edgeConfigId;contesto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;impostazioni sdk web;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyParty CookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 10%
+source-wordcount: '856'
+ht-degree: 12%
 
 ---
 
@@ -31,6 +31,10 @@ alloy("configure", {
 ## Opzioni generali
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**Le configurazioni Edge sono state rinominate in Datastreams. Un ID di datastream è lo stesso di un ID di configurazione.**
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
@@ -69,7 +73,7 @@ Indica se il debug è abilitato. L&#39;impostazione di questa configurazione su 
 
 ### `edgeDomain` {#edge-domain}
 
-Compilare questo campo con il dominio di prime parti. Per ulteriori informazioni, consulta la [documentazione](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Compilare questo campo con il dominio di prime parti. Per ulteriori informazioni, consulta la [documentazione](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
 Il dominio è simile a `data.{customerdomain.com}` per un sito web all’indirizzo www.{customerdomain.com}.
 
