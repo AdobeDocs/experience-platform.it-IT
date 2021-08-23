@@ -4,7 +4,7 @@ title: Guida all’interfaccia utente per i criteri di unione
 type: Documentation
 description: Quando si riuniscono dati provenienti da più origini in Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare la visualizzazione unificata. Questa guida fornisce istruzioni passo per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 0%
@@ -84,7 +84,7 @@ A seconda del metodo di unione scelto, tutti i set di dati Profilo verranno unit
 
 Per ulteriori informazioni sui metodi di unione, fare riferimento alla [panoramica dei criteri di unione](overview.md).
 
-### Timestamp ordered {#timestamp-ordered-profile}
+### Timestamp ordinato {#timestamp-ordered-profile}
 
 Selezionando **[!UICONTROL Timestamp ordered]** come metodo di unione, gli attributi dei set di dati aggiornati più di recente avranno la precedenza. Questo vale per tutti i set di dati di profilo.
 
@@ -114,7 +114,7 @@ Quando si seleziona un set di dati, viene aggiornata anche la sezione **[!UICONT
 
 Il passaggio successivo nel flusso di lavoro richiede la selezione dei set di dati ExperienceEvent . Questa schermata è influenzata dal metodo di unione selezionato nella schermata [[!UICONTROL Seleziona set di dati profilo]](#select-profile-datasets) .
 
-### Timestamp ordered {#timestamp-ordered-experienceevent}
+### Timestamp ordinato {#timestamp-ordered-experienceevent}
 
 Se hai selezionato **[!UICONTROL Timestamp ordered]** come metodo di unione per i set di dati di Profilo, prevarranno anche gli attributi dei set di dati ExperienceEvent aggiornati più di recente.
 
@@ -148,7 +148,7 @@ Nella schermata di revisione è inclusa anche la tabella **[!UICONTROL Anteprima
 
 Prima di selezionare **[!UICONTROL Fine]** per completare il flusso di lavoro di creazione, controlla attentamente la configurazione dei criteri di unione e visualizza in anteprima i dati.
 
-### Timestamp ordered {#timestamp-ordered-review}
+### Timestamp ordinato {#timestamp-ordered-review}
 
 Se hai selezionato **[!UICONTROL Timestamp ordered]** come metodo di unione per i criteri di unione, l&#39;elenco dei set di dati di profilo include tutti i set di dati creati dalla tua organizzazione relativi alla classe dello schema, in ordine di timestamp. L’elenco dei set di dati ExperienceEvent include tutti i set di dati creati dalla tua organizzazione per la classe di schema selezionata e verrà aggiunto ai set di dati Profilo.
 
