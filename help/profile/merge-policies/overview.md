@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;criteri di 
 title: Panoramica dei criteri di unione
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più sorgenti e di combinarli per ottenere una visione completa dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare la visualizzazione unificata.
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,6 @@ Sono disponibili due possibili metodi di unione per i criteri di unione. Ciascun
 
 * **[!UICONTROL Precedenza set di dati]:** in caso di conflitto, assegna priorità ai frammenti di profilo in base al set di dati da cui provengono. Quando selezioni questa opzione, devi scegliere i set di dati correlati e il loro ordine di priorità. Ulteriori informazioni sul metodo di unione [precedenza set di dati](#dataset-precedence).
 * **[!UICONTROL Timestamp ordered]:** in caso di conflitto, viene data priorità al frammento di profilo aggiornato più di recente. Ulteriori informazioni sul metodo di unione [timestamp ordered](#timestamp-ordered) .
-   * **Marca temporale personalizzata:** il metodo di unione ordinata per le marche temporali supporta anche marche temporali personalizzate che hanno priorità rispetto alle marche temporali del sistema quando si uniscono dati all’interno dello stesso set di dati (più identità) o tra set di dati. Per ulteriori informazioni, consulta la sezione sull’ [utilizzo di marche temporali personalizzate](#custom-timestamps).
 
 ### Precedenza del set di dati {#dataset-precedence}
 
@@ -53,25 +52,9 @@ Quando **[!UICONTROL Precedenza set di dati]** è selezionato come metodo di uni
 
 Per creare un criterio di unione utilizzando **[!UICONTROL Precedenza set di dati]**, è necessario selezionare i set di dati Profilo ed ExperienceEvent inclusi, quindi è possibile ordinare manualmente i set di dati Profilo per la precedenza. Una volta selezionati e ordinati i set di dati, al set di dati principale verrà data la priorità più alta, al secondo e così via.
 
-### Timestamp ordered {#timestamp-ordered}
+### Timestamp ordinato {#timestamp-ordered}
 
 Poiché i record di profilo vengono acquisiti in Experience Platform, al momento dell’acquisizione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Quando **[!UICONTROL Timestamp ordered]** è selezionato come metodo di unione per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l’unione viene eseguita in base alla marca temporale per quando il record è stato acquisito in Platform.
-
-#### Utilizzo di marche temporali personalizzate {#custom-timestamps}
-
-Talvolta possono verificarsi casi d’uso in cui è necessario fornire una marca temporale personalizzata e il criterio di unione rispetta la marca temporale personalizzata anziché quella di sistema. Esempi di ciò includono il recupero dei dati o la garanzia dell’ordine corretto degli eventi se i record vengono acquisiti in modo errato.
-
-Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema di profilo il gruppo di campi **[!UICONTROL Dettagli controllo sistema origine esterna]**. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `lastUpdatedDate` . Quando un record viene acquisito con il campo `lastUpdatedDate` popolato, Experience Platform lo utilizzerà per unire i record tra i set di dati. Se `lastUpdatedDate` non è presente o non è popolato, Platform continuerà a utilizzare la marca temporale del sistema.
-
->[!NOTE]
->
->È necessario assicurarsi che la marca temporale `lastUpdatedDate` sia compilata quando si acquisisce un aggiornamento sullo stesso record.
-
-Nella schermata seguente sono visualizzati i campi nel gruppo di campi [!UICONTROL Dettagli controllo sistema di origine esterna] . Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’interfaccia utente di Platform e su come aggiungere gruppi di campi agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’interfaccia utente](../../xdm/tutorials/create-schema-ui.md) .
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-Per utilizzare le marche temporali personalizzate utilizzando l&#39;API, consulta la sezione [guida all&#39;endpoint dei criteri di unione sull&#39;utilizzo di marche temporali personalizzate](../api/merge-policies.md#custom-timestamps).
 
 ## Unione identità {#id-stitching}
 
