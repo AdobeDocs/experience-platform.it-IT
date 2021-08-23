@@ -2,9 +2,9 @@
 title: Casi d’uso supportati con Adobe Experience Platform Web SDK
 description: Scopri quali casi d’uso sono supportati con Adobe Experience Platform Web SDK.
 keywords: sdk web;casi di utilizzo
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 14%
 
 ---
@@ -91,6 +91,7 @@ In questa pagina sono elencati i casi d’uso supportati per l’SDK per web, co
 | Aggiornamento del profilo di Target | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Raccomandazioni |  |
 | ID di terze parti di mBox |  |
+| Token di risposta | [Documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
