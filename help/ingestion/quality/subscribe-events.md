@@ -5,10 +5,9 @@ title: Notifiche di acquisizione dei dati
 topic-legacy: overview
 description: Per facilitare il monitoraggio del processo di acquisizione, Adobe Experience Platform consente di abbonarsi a un set di eventi pubblicati in ogni fase del processo, notificandovi lo stato dei dati acquisiti ed eventuali errori.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---
@@ -25,11 +24,11 @@ Per facilitare il monitoraggio del processo di acquisizione, [!DNL Experience Pl
 
 Per ricevere le notifiche di inserimento dei dati, è necessario utilizzare [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) per registrare un webhook nell’integrazione di Experience Platform.
 
-Segui l&#39;esercitazione su [iscriverti a [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
+Segui l&#39;esercitazione su [iscriverti a [!DNL Adobe I/O Event] notifications](../../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di abbonamento, accertati di selezionare **[!UICONTROL Platform notifications]** come provider di eventi e di selezionare la sottoscrizione di eventi **[!UICONTROL Data ingestion notification]** quando richiesto.
+>Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Notifiche della piattaforma]** come provider di eventi e seleziona la sottoscrizione dell&#39;evento **[!UICONTROL Notifica di acquisizione dati]** quando richiesto.
 
 ## Ricevere notifiche di acquisizione dati
 
@@ -73,7 +72,7 @@ Per visualizzare lo schema completo delle notifiche degli eventi, fai riferiment
 
 ## Passaggi successivi
 
-Dopo aver registrato le notifiche [!DNL Platform] al progetto, puoi visualizzare gli eventi ricevuti da [!UICONTROL Project overview]. Per istruzioni dettagliate su come tracciare gli eventi, consulta la guida sul tracciamento di eventi di Adobe I/O [a1/> .](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)
+Dopo aver registrato le notifiche [!DNL Platform] al progetto, puoi visualizzare gli eventi ricevuti dalla [!UICONTROL Panoramica del progetto]. Per istruzioni dettagliate su come tracciare gli eventi, consulta la guida sul tracciamento di eventi di Adobe I/O [a1/> .](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)
 
 ## Appendice
 
