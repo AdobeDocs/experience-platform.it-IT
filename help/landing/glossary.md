@@ -5,9 +5,9 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
 workflow-type: tm+mt
-source-wordcount: '7225'
+source-wordcount: '7386'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,8 @@ ht-degree: 1%
 
 ## D
 
+**Giornaliero**: Nel contesto delle esportazioni pianificate di file, pianifica le esportazioni di file completi o incrementali una volta al giorno, ogni giorno, dalla data di inizio alla data di fine all’ora specificata dall’utente.
+
 **Dizionario** dati: Nel contesto dei tag, un dizionario dati (noto anche come mappa dati) è un set di elementi dati definiti all&#39;interno di una proprietà.
 
 **Elemento** dati: Nel contesto dei tag, un elemento dati è un puntatore utilizzato all&#39;interno di regole ed estensioni per puntare a uno specifico elemento di dati presente sul dispositivo client.
@@ -179,6 +181,8 @@ ht-degree: 1%
 **ID** set di dati: Identificatore generato da un Adobe per un set di dati acquisito.
 
 **Output** set di dati: L&#39;output del set di dati fornisce un meccanismo per determinare cosa verrà utilizzato l&#39;opzione &quot;Crea tabella come selezione&quot; per una particolare  [!DNL Query Service] esecuzione.
+
+**Chiave** di deduplicazione: Chiave primaria definita dall&#39;utente che determina l&#39;identità in base alla quale gli utenti desiderano che i loro profili vengano deduplicati. &#x200B;
 
 **Colonna** delta: Una colonna delta consente di selezionare un campo dati di origine per rappresentare una marca temporale per l’acquisizione incrementale.
 
@@ -224,6 +228,10 @@ ht-degree: 1%
 
 **Evento** esperienza: Un evento esperienza rappresenta un’istantanea del sistema quando si verifica un’interazione o un evento correlato a un’esperienza del cliente. Gli eventi di esperienza sono documenti di fatto immutabili di ciò che è accaduto e rappresentano ciò che è accaduto senza aggregazione o interpretazione. In Experience Data Model (XDM), questo concetto viene acquisito dalla classe [!DNL XDM ExperienceEvent] .
 
+**Esporta file** completo: Un file di esportazione contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
+
+**Esporta file** incrementali: Una serie di file esportati in cui il primo file è uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato e i file successivi sono qualifiche di profilo incrementali rispetto all’esportazione precedente.
+
 **Estensione**: Nel contesto dei tag, un&#39;estensione è un pacchetto di funzionalità aggiunte a una proprietà tag. Un’estensione si concentra solitamente su una particolare soluzione di marketing o analisi e fornisce gli strumenti necessari per distribuire tale tecnologia in un ambiente client.
 
 **Pacchetto** di estensione: Nel contesto dei tag, un pacchetto di estensione è un file ZIP creato e caricato da uno sviluppatore di estensioni che fornisce tutto il necessario affinché gli utenti dei tag installino l&#39;estensione all&#39;interno della loro proprietà. Un pacchetto di estensione contiene un manifesto che specifica le informazioni sull&#39;estensione, l&#39;HTML/JavaScript necessario agli utenti finali per configurare il comportamento dell&#39;estensione tag e il JavaScript eseguibile consegnato all&#39;ambiente client (se necessario).
@@ -253,6 +261,8 @@ ht-degree: 1%
 ## H
 
 **Host**: Nel contesto dei tag, un host specifica la posizione, il dominio e le credenziali utente necessarie affinché il sistema possa distribuire una build.
+
+**Orario**: Nel contesto delle esportazioni pianificate di file, pianifica le esportazioni incrementali di file ogni 3, 6, 7 o 12 ore.
 
 ## I
 
@@ -314,6 +324,8 @@ ht-degree: 1%
 
 **Modello** di apprendimento automatico: Un modello di apprendimento automatico è un&#39;istanza di una ricetta di apprendimento automatico formata utilizzando dati storici e configurazioni per risolvere un caso d&#39;uso aziendale. In Adobe Experience Platform Data Science Workspace, i modelli di apprendimento automatico sono chiamati ricette.
 
+**Attributo** obbligatorio: Casella di controllo abilitata dall’utente che assicura che tutti i record di profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail.
+
 **Mappatura**: La mappatura dei dati è il processo di mappatura dei campi dei dati di origine su campi di destinazione correlati in una destinazione.
 
 **Azione** di marketing: Nel framework di governance dei dati, un’azione di marketing (nota anche come caso d’uso del marketing) è un’azione eseguita da un consumatore di dati di Experience Platform, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
@@ -343,6 +355,8 @@ ht-degree: 1%
 **Azione** di marketing per la personalizzazione sul sito: Un’azione di marketing che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni.
 
 **Azione** di marketing di targeting sul sito: Un’azione di marketing che utilizza i dati per gli annunci sul sito, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci.
+
+**Una volta**: Nel contesto delle esportazioni di file pianificati, pianifica un’esportazione di file completi una tantum, su richiesta.
 
 **Sovrascrivi strategia** di salvataggio: La strategia di salvataggio &quot;Sovrascrivi&quot; è un’opzione per l’acquisizione di dati di terze parti tramite una connessione, dove puoi specificare se i dati acquisiti verranno sovrascritti in base a una pianificazione specifica.
 
