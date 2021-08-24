@@ -5,10 +5,10 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
+source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 4%
+source-wordcount: '633'
+ht-degree: 3%
 
 ---
 
@@ -38,8 +38,8 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione edge, l
 | ---------- | ------- |
 | Hit in entrata | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. |
 | Hit in entrata che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. |
-| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |
-| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |
+| Hit in arrivo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore |
+| Hit in arrivo che si riferisce a un profilo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore e a uno o più attributi di profilo |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -47,9 +47,9 @@ I seguenti tipi di query sono **non** attualmente supportati dalla segmentazione
 
 | Tipo di query | Dettagli |
 | ---------- | ------- |
-| Intervallo di tempo relativo | Se una query fa riferimento a una finestra temporale, non può essere valutata utilizzando la segmentazione edge. |
-| Negazione | Se una query contiene una negazione o un evento `not`, non può essere valutata utilizzando la segmentazione edge. |
 | Eventi multipli | Se una query contiene più di un evento, non può essere valutata utilizzando la segmentazione edge. |
+| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |
+| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |
 
 {style=&quot;table-layout:auto&quot;}
 
