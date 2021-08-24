@@ -5,15 +5,14 @@ title: Panoramica di Observability Insights
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights è un’API RESTful che ti consente di esporre le metriche chiave sulle attività di Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo di Platform, sui controlli di integrità per i servizi Platform, sulle tendenze della cronologia e sugli indicatori di prestazioni per varie funzionalità di Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
 
-# [!DNL Observability Insights]panoramica
+# [!DNL Observability Insights] panoramica
 
 Adobe Experience Platform [!DNL Observability Insights] consente di monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi. Questo documento fornisce una panoramica delle varie funzionalità fornite dal servizio, insieme a collegamenti a ulteriori documentazione per ulteriori dettagli.
 
@@ -23,11 +22,17 @@ L’ [!DNL Observability Insights] API è un’API RESTful che ti consente di es
 
 Per ulteriori informazioni sulle operazioni con l&#39;API, consulta la [[!DNL Observability Insights] Guida per gli sviluppatori API](./api/overview.md).
 
-## Notifiche degli eventi
+## Avvisi (beta)
 
-[!DNL Observability Insights] ti consente di abbonarti alle notifiche degli eventi relative alle attività di Adobe Experience Platform. Con la sottoscrizione agli eventi, puoi impostare i tuoi protocolli downstream per quando un processo è stato completato, se è stata raggiunta una determinata fase cardine all’interno di un flusso di lavoro o se si sono verificati errori durante il processo.
+>[!IMPORTANT]
+>
+>Gli avvisi in Adobe Experience Platform non sono ancora disponibili per tutti gli utenti. Questa funzione è in versione beta ed è ancora in fase di test. Questa sezione è soggetta a modifiche.
 
-Per ulteriori informazioni, consulta la panoramica sulle [notifiche eventi](./notifications/overview.md) .
+L’Experience Platform ti consente di abbonarti a avvisi basati su metriche di Osservabilità specifiche quando viene raggiunto un certo set di condizioni nelle operazioni di Platform. Un avviso può assumere la forma di una notifica una tantum o può ripetersi in un intervallo di tempo predefinito fino a quando le condizioni che hanno attivato l’avviso non sono state risolte.
+
+Con la sottoscrizione agli avvisi è possibile impostare i propri protocolli downstream per quando un processo è stato completato, se è stata raggiunta una determinata fase cardine all’interno di un flusso di lavoro o se si sono verificati errori durante il processo.
+
+Per ulteriori informazioni, consulta la panoramica sugli [avvisi](./alerts/overview.md) .
 
 ## Passaggi successivi
 
