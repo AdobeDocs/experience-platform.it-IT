@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
+source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1347'
 ht-degree: 3%
 
 ---
@@ -105,6 +105,8 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Destinations] | [!UICONTROL Attivare le destinazioni] | Possibilità di attivare i dati nelle destinazioni attive create. Questa autorizzazione richiede che &quot;Visualizza destinazioni&quot; o &quot;Gestisci [!UICONTROL destinazioni&quot;] sia concessa all&#39;utente che attiverà le destinazioni. |
 | [!DNL Data Ingestion] | [!UICONTROL Gestisci origini] | Accesso a fonti di lettura, creazione, modifica e disattivazione. |
 | [!DNL Data Ingestion] | [!UICONTROL Visualizza origini] | Accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accesso per creare, accettare e rifiutare handshake partner per collegare due organizzazioni IMS e abilitare i flussi [!DNL Segment Match]. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accesso a feed [!DNL Segment Match] in lettura, creazione, modifica e pubblicazione con partner attivi. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestione di Data Science Workspace] | Accesso a lettura, creazione, modifica ed eliminazione in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Applicare le etichette di utilizzo dei dati] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
 | [!DNL Data Governance] | [!UICONTROL Gestire i criteri di utilizzo dei dati] | Accesso a criteri di utilizzo dei dati di lettura, creazione, modifica ed eliminazione. |
