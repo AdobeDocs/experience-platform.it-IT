@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 topic-legacy: overview
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,17 @@ Le etichette di utilizzo dei dati ti consentono di classificare set di dati e ca
 [!DNL Segment Match] utilizza l’etichetta C11, un’etichetta di contratto specifica per  [!DNL Segment Match] la quale puoi aggiungere manualmente qualsiasi set di dati o attributo per assicurarti che siano esclusi dal processo di condivisione dei  [!DNL Segment Match] partner. L’etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da [!DNL Segment Match] e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro [!DNL Segment Match]. [!DNL Segment Match] abilita automaticamente i criteri di base  [!UICONTROL Limita ] condivisione dati. Per istruzioni specifiche su come applicare le etichette di utilizzo dei dati ai set di dati, consulta l’esercitazione sulla [gestione delle etichette di utilizzo dei dati nell’interfaccia utente](../../data-governance/labels/user-guide.md).
 
 Per un elenco delle etichette per l&#39;uso dei dati e delle relative definizioni, vedere il [glossario delle etichette per l&#39;uso dei dati](../../data-governance/labels/reference.md). Per informazioni sui criteri di utilizzo dei dati, vedere la [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
+
+### Informazioni sulle autorizzazioni [!DNL Segment Match]
+
+Ci sono due autorizzazioni associate a [!DNL Segment Match]:
+
+| Autorizzazione | Descrizione |
+| --- | --- |
+| Gestire le connessioni di Audience Share | Questa autorizzazione consente di completare il processo di handshake del partner, che collega due organizzazioni IMS per abilitare i flussi [!DNL Segment Match]. |
+| Gestire le condivisioni di pubblico | Questa autorizzazione ti consente di creare, modificare e pubblicare feed (il pacchetto di dati utilizzati per [!DNL Segment Match]) con partner attivi (partner che sono stati collegati dall&#39;utente amministratore con accesso **[!UICONTROL Connessioni di condivisione del pubblico]**). |
+
+Per ulteriori informazioni sul controllo degli accessi e sulle autorizzazioni, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
 
 ## [!DNL Segment Match] flusso di lavoro end-to-end
 
