@@ -5,10 +5,9 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '785'
 ht-degree: 1%
 
 ---
@@ -33,14 +32,14 @@ Questo documento richiede anche una comprensione funzionante dei webhook e come 
 
 Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare Adobe Developer Console per registrare un webhook nell’integrazione [!DNL Experience Platform].
 
-Segui l&#39;esercitazione su [iscriverti a [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
+Segui l&#39;esercitazione su [iscriverti a [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Platform notifications]** come provider di eventi e di selezionare le seguenti sottoscrizioni di eventi:
+>Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Notifiche della piattaforma]** come provider di eventi e di selezionare le seguenti sottoscrizioni di eventi:
 >
->* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
->* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
+>* **[!UICONTROL Flusso dell&#39;origine di Experience Platform eseguito correttamente]**
+>* **[!UICONTROL Impossibile eseguire il flusso dell&#39;origine di Experience Platform]**
 
 
 ## Ricevere notifiche di esecuzione del flusso
