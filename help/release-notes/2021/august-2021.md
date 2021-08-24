@@ -4,10 +4,10 @@ description: Note sulla versione di Experience Platform per il 25 agosto 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 12%
+source-wordcount: '457'
+ht-degree: 9%
 
 ---
 
@@ -20,6 +20,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Observability Insights](#observability)
 - [Profilo cliente in tempo reale](#profile)
+- [Fonti](#sources)
 
 ## Informazioni sull’osservabilità {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 | Sfoglia i profili in base a criteri di unione o identità | Durante l’esplorazione dei profili in Experience Platform, ora è possibile sfogliare i criteri di unione per visualizzare in anteprima 20 profili di esempio in base al criterio di unione selezionato. È inoltre possibile sfogliare in base all’identità per cercare un profilo specifico utilizzando uno spazio dei nomi identità e il relativo valore di identità. Per ulteriori informazioni, consulta la [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md). |
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati di profilo, inizia leggendo la [Panoramica del profilo del cliente in tempo reale](../../profile/home.md).
+
+## Fonti {#sources}
+
+Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+
+L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Connettore sorgente di caricamento file locale | La categoria di acquisizione dei file è stata rinominata nel sistema locale e consente di portare i file locali direttamente in Platform utilizzando il connettore di caricamento file locale. I dati acquisiti tramite questo connettore possono essere monitorati tramite il dashboard di monitoraggio. Per ulteriori informazioni, consulta la [panoramica sull’origine del caricamento dei file locali](../../sources/connectors/local-system/local-file-upload.md) . |
+
+Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md).
