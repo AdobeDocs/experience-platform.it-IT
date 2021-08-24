@@ -5,10 +5,9 @@ title: Diagnostica degli errori di acquisizione dei dati in recupero
 topic-legacy: overview
 description: Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '979'
 ht-degree: 2%
 
 ---
@@ -50,7 +49,7 @@ Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [
 
 Adobe Experience Platform consente agli utenti di scaricare la diagnostica degli errori dei file di input. La diagnostica verrà mantenuta entro [!DNL Platform] per un massimo di 30 giorni.
 
-### Elencare i file di input {#list-files}
+### Elencare file di input {#list-files}
 
 La richiesta seguente recupera un elenco di tutti i file forniti in un batch finalizzato.
 
@@ -145,19 +144,21 @@ Una risposta corretta restituirà oggetti JSON contenenti oggetti `path` che ind
 
 Se i batch contengono errori, è necessario recuperare le informazioni di errore relative a tali errori in modo da poter riacquisire i dati.
 
-### Verifica lo stato {#check-status}
+### Stato del controllo {#check-status}
 
-Per controllare lo stato del batch acquisito, devi fornire l’ID del batch nel percorso di una richiesta GET.
+Per controllare lo stato del batch acquisito, devi fornire l’ID del batch nel percorso di una richiesta GET. Per ulteriori informazioni sull’utilizzo di questa chiamata API, consulta la [guida agli endpoint del catalogo](../../catalog/api/list-objects.md).
 
 **Formato API**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | Il valore `id` del batch di cui si desidera controllare lo stato. |
+| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri sono separati da e commerciali (`&`). Per ulteriori informazioni, consulta la guida sul [filtraggio dei dati del catalogo](../../catalog/api/filter-data.md). |
 
 **Richiesta**
 
@@ -317,7 +318,7 @@ Se il batch acquisito dispone di file illeggibili, gli errori del batch verranno
 
 Se il batch acquisito dispone di uno schema non valido o di intestazioni non valide, gli errori del batch verranno collegati al batch stesso. Ulteriori informazioni sul recupero del batch non riuscito sono disponibili nella [guida al recupero dei batch non riusciti](../quality/retrieve-failed-batches.md).
 
-### Righe non analizzabili {#unparsable}
+### Righe non parsabili {#unparsable}
 
 Se il batch che hai acquisito contiene righe non analizzabili, puoi utilizzare la seguente richiesta per visualizzare un elenco di file contenenti errori.
 
