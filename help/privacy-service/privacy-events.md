@@ -5,10 +5,9 @@ title: Iscriviti agli eventi Privacy Service
 topic-legacy: privacy events
 description: Scopri come abbonarti agli eventi di Privacy Service utilizzando un webhook preconfigurato.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -39,7 +38,7 @@ Prima di avviare questa esercitazione, controlla la seguente documentazione di P
 
 Per ricevere [!DNL Privacy Service Events], è necessario utilizzare Adobe Developer Console per registrare un webhook nell’ integrazione [!DNL Privacy Service].
 
-Segui l&#39;esercitazione su [iscriverti a [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione. Assicurati di scegliere **[!UICONTROL Privacy Service Events]** come provider di eventi per accedere agli eventi elencati sopra.
+Segui l&#39;esercitazione su [iscriverti a [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione. Assicurati di scegliere **[!UICONTROL Privacy Service Events]** come provider di eventi per accedere agli eventi elencati sopra.
 
 ## Ricevere [!DNL Privacy Service Event] notifiche
 
