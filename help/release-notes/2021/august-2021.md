@@ -4,10 +4,10 @@ description: Note sulla versione di Experience Platform per il 25 agosto 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 94933392fafdf645a44a2702780ac1f02ea8760b
+source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 14%
+source-wordcount: '300'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,20 @@ ht-degree: 14%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Observability Insights](#observability)
 - [Profilo cliente in tempo reale](#profile)
+
+## Informazioni sull’osservabilità {#observability}
+
+Observability Insights consente di monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Avvisi | Ora puoi abbonarti a importanti avvisi relativi ai flussi di lavoro in esecuzione su Platform. Dopo aver effettuato l’abbonamento a regole di avviso specifiche, riceverai notifiche ed e-mail nell’interfaccia utente quando si verifica un evento importante sul ciclo di vita (ad esempio l’inserimento di dati con esito positivo) o in caso di problemi che richiedono attenzione (ad esempio un errore nel flusso di acquisizione o un processo di segmento che richiede più tempo del previsto). Per ulteriori informazioni, consulta la [panoramica degli avvisi](../../observability/alerts/overview.md). |
+
+Per ulteriori informazioni sul servizio, consulta la [Panoramica di Observability Insights](../../observability/home.md) .
 
 ## Profilo cliente in tempo reale {#profile}
 
@@ -26,6 +39,6 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Sfoglia i profili in base a criteri di unione o identità | Durante l’esplorazione dei profili in Experience Platform, gli utenti possono ora sfogliare i criteri di unione per visualizzare in anteprima 20 profili di esempio in base al criterio di unione selezionato. Gli utenti possono anche sfogliare per identità per cercare un profilo specifico utilizzando uno spazio dei nomi di identità e il relativo valore di identità. Per ulteriori informazioni, consulta la [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md). |
+| Sfoglia i profili in base a criteri di unione o identità | Durante l’esplorazione dei profili in Experience Platform, ora è possibile sfogliare i criteri di unione per visualizzare in anteprima 20 profili di esempio in base al criterio di unione selezionato. È inoltre possibile sfogliare in base all’identità per cercare un profilo specifico utilizzando uno spazio dei nomi identità e il relativo valore di identità. Per ulteriori informazioni, consulta la [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md). |
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati di profilo, inizia leggendo la [Panoramica del profilo del cliente in tempo reale](../../profile/home.md).
