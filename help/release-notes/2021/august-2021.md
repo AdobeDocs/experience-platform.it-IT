@@ -4,10 +4,10 @@ description: Note sulla versione di Experience Platform per il 25 agosto 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 9%
+source-wordcount: '534'
+ht-degree: 8%
 
 ---
 
@@ -18,9 +18,22 @@ ht-degree: 9%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Destinazioni](#destinations)
 - [Observability Insights](#observability)
 - [Profilo cliente in tempo reale](#profile)
 - [Fonti](#sources)
+
+## Destinazioni {#destinations}
+
+Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [Miglioramenti a livello di usabilità delle destinazioni](../../destinations/ui/activation-overview.md) | I miglioramenti a livello di usabilità per le destinazioni consentono agli addetti al marketing di attivare facilmente i segmenti sulle destinazioni esistenti. |
+
+Per informazioni più generali sulle destinazioni, consulta la [panoramica delle destinazioni](../../destinations/home.md).
 
 ## Informazioni sull’osservabilità {#observability}
 
