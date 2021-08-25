@@ -2,12 +2,12 @@
 keywords: attivare destinazioni profilo;attivare destinazioni;attivare dati; attivare le destinazioni di e-mail marketing; attivare le destinazioni di archiviazione cloud
 title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch
 type: Tutorial
-seo-title: Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch
+seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
-seo-description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un&#39;esporta
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
    * **[!UICONTROL Giornaliero]**: pianifica esportazioni incrementali di file una volta al giorno, ogni giorno, al momento specificato.
-   * **[!UICONTROL Orario]**: pianificare esportazioni di file incrementali ogni 3,6,7 o 12 ore.
+   * **[!UICONTROL Orario]**: pianificare esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
 
 2. Utilizza il selettore **[!UICONTROL Tempo]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui deve aver luogo l&#39;esportazione.
 
@@ -320,8 +320,7 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità, ad esempio un [
 >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
 
 >
-> 
-Ad esempio, se nel campo `person.name.firstName` sono presenti alcune etichette di utilizzo dei dati in conflitto con l’azione di marketing della destinazione, nel passaggio di revisione viene visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, consulta [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Ad esempio, se nel campo `person.name.firstName` sono presenti alcune etichette di utilizzo dei dati in conflitto con l’azione di marketing della destinazione, nel passaggio di revisione viene visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, consulta [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## Revisione {#review}
 
