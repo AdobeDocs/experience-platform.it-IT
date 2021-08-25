@@ -1,12 +1,12 @@
 ---
 title: Mappatura automatica delle variabili Adobe Analytics nell’SDK per web Adobe Experience Platform
 description: Scopri quali variabili vengono mappate automaticamente in Adobe Analytics con Experience Platform Web SDK
-seo-description: Scopri quali variabili vengono mappate automaticamente in Adobe Analytics con Adobe Experience Platform Web SDK
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variabili;analytics;mappa automatica;mappatura automatica;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ Di seguito è riportato un elenco di variabili che Adobe Experience Platform Edg
 | `placeContext.geo.postalCode` | `zip` | Mappatura ZIP del parametro della query AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Mappatura del parametro di query AppMeasurement STATE. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Parametro query AppMeasurement Prodotti Mappatura di eventi Merchandise / Evar. |
-| `productlistitems.[N].name` | `products` | Parametro query AppMeasurement Mappatura del nome dei prodotti. |
+| `productListItems[N].lineItemId` | `products` | Parametro query AppMeasurement Mappatura del nome dei prodotti. |
+| `productlistitems.[N].name` | `products` | Parametro query AppMeasurement Mappatura categoria prodotti. |
 | `productlistitems.[N].priceTotal` | `products` | Parametro della query AppMeasurement Prodotti Mappatura del prezzo. |
 | `productlistitems.[N].quantity` | `products` | Parametro query AppMeasurement Mappatura della quantità dei prodotti. |
 | `web.webInteraction.URL` | `pev1` | Mappatura del parametro di query AppMeasurement PAGE_EVENT_VAR1. |
