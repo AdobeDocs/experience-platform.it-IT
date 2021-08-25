@@ -7,8 +7,7 @@ landing-page-description: Trova le risposte alle domande frequenti e una guida p
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-translation-type: tm+mt
-source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 4%
@@ -25,7 +24,7 @@ Di seguito è riportato un elenco di risposte alle domande frequenti su Adobe Ex
 
 ## Cosa sono le API [!DNL Experience Platform]? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle  [!DNL Platform] risorse. Ciascuna API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) ed eliminare risorse (DELETE). Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en) sull&#39;Adobe I/O.
+[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle  [!DNL Platform] risorse. Ciascuna API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) ed eliminare risorse (DELETE). Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) sull&#39;Adobe I/O.
 
 ## Come si formatta una richiesta API? {#how-do-i-format-an-api-request}
 
@@ -97,7 +96,7 @@ I seguenti codici di stato possono essere rilevati su qualsiasi API [!DNL Experi
 
 ## Errori di intestazione della richiesta {#request-header-errors}
 
-Tutte le chiamate API in [!DNL Platform] richiedono intestazioni di richiesta specifiche. Per vedere quali intestazioni sono necessarie per i singoli servizi, consulta la [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en). Per trovare i valori per le intestazioni di autenticazione richieste, consulta l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Se una di queste intestazioni è mancante o non è valida durante una chiamata API, potrebbero verificarsi i seguenti errori.
+Tutte le chiamate API in [!DNL Platform] richiedono intestazioni di richiesta specifiche. Per vedere quali intestazioni sono necessarie per i singoli servizi, consulta la [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en). Per trovare i valori per le intestazioni di autenticazione richieste, consulta l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Se una di queste intestazioni è mancante o non è valida durante una chiamata API, potrebbero verificarsi i seguenti errori.
 
 ### Token OAuth mancante {#oauth-token-is-missing}
 
@@ -190,13 +189,13 @@ Questo messaggio di errore viene visualizzato quando una richiesta di POST, PUT 
 
 Questo messaggio di errore viene visualizzato quando l’account (rappresentato dalle credenziali di autenticazione fornite) non è associato, ad Experience Platform, a un profilo di prodotto. Segui i passaggi descritti in [generazione di credenziali di accesso](./api-authentication.md#authentication-for-each-session) nell’esercitazione sull’autenticazione dell’API Platform per aggiungere Platform al tuo account e aggiornare di conseguenza le tue credenziali di autenticazione.
 
-## Directory dei servizi per la risoluzione dei problemi {#service-troubleshooting-directory}
+## Directory di risoluzione dei problemi del servizio {#service-troubleshooting-directory}
 
 Di seguito è riportato un elenco delle guide per la risoluzione dei problemi e della documentazione di riferimento API per [!DNL Experience Platform] API. Ogni guida alla risoluzione dei problemi fornisce le risposte alle domande frequenti e le soluzioni ai problemi specifici dei singoli servizi [!DNL Platform]. I documenti di riferimento API forniscono una guida completa a tutti gli endpoint disponibili per ogni servizio e mostrano corpi di richiesta di esempio, risposte e codici di errore che possono essere ricevuti.
 
 | Servizio | Documentazione di riferimento API | Risoluzione dei problemi |
 | --- | --- | --- |
-| Controllo dell&#39;accesso | [API di controllo accessi](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guida alla risoluzione dei problemi di controllo degli accessi](../access-control/troubleshooting-guide.md) |
+| Controllo degli accessi | [API di controllo accessi](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guida alla risoluzione dei problemi di controllo degli accessi](../access-control/troubleshooting-guide.md) |
 | Acquisizione dei dati Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[alla risoluzione dei problemi di inserimento in batchGuida alla risoluzione dei problemi di acquisizione in streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guida alla risoluzione dei problemi](../data-science-workspace/troubleshooting-guide.md) |
 | Governance dei dati di Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
