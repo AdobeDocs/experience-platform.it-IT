@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: abd09eb26e7487442e4ded5b7aa4258df6b6c5fe
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 23%
@@ -32,7 +32,7 @@ ht-degree: 23%
    * [Autenticazione e accesso alle API di Platform](api-authentication.md)
    * [Nozioni di base sulle API](api-fundamentals.md)
    * [Utilizzo di Postman con le API di Platform](postman.md)
-   * [Documenti di riferimento API](http://www.adobe.com/go/platform-api-reference-en)
+   * [Documenti di riferimento API](https://www.adobe.com/go/platform-api-reference-en)
 * Documentazione di Platform {#documentation}
    * [Panoramica](documentation/overview.md)
    * [Supporto linguistico](documentation/language-support.md)
