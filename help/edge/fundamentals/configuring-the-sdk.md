@@ -1,12 +1,12 @@
 ---
 title: Configurare Adobe Experience Platform Web SDK
 description: Scopri come configurare Adobe Experience Platform Web SDK.
-seo-description: Scopri come configurare Experience Platform Web SDK
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configurare;configurazione;SDK;edge;Web SDK;configurare;edgeConfigId;contesto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;impostazioni sdk web;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyParty CookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '826'
 ht-degree: 12%
 
 ---
@@ -66,7 +66,6 @@ Indica se il debug è abilitato. L&#39;impostazione di questa configurazione su 
 
 | **Funzione** | **Funzione** |
 | ---------------------- | ------------------ |
-| Convalida sincrona | Convalida i dati raccolti rispetto allo schema e restituisce un errore nella risposta sotto la seguente etichetta: `collect:error OR success` |
 | Registrazione della console | Abilita la visualizzazione dei messaggi di debug nella console JavaScript del browser |
 
 {style=&quot;table-layout:auto&quot;}
