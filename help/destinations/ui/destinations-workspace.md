@@ -2,11 +2,11 @@
 keywords: piattaforma;destinazioni;area di lavoro destinazioni;area di lavoro;ui;interfaccia destinazioni;catalogo;catalogo destinazioni;
 title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
-seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 2%
 
 ---
@@ -40,14 +40,14 @@ L&#39;interfaccia utente [!DNL Platform] fornisce diverse opzioni di ricerca e f
 * Passa da [!UICONTROL Tutte le destinazioni] a [!UICONTROL Le mie destinazioni]. Quando selezioni **[!UICONTROL Tutte le destinazioni]**, vengono visualizzate tutte le destinazioni [!DNL Platform] disponibili. Quando selezioni **[!UICONTROL Le mie destinazioni]**, puoi vedere solo le destinazioni con le quali hai stabilito una connessione.
 * Selezionare per visualizzare **[!UICONTROL Connessioni]** e/o **[!UICONTROL Estensioni]**. Per comprendere la differenza tra le due categorie, vedere [Tipi di destinazione e Categorie](../destination-types.md).
 
-![demo di filtro e ricerca delle destinazioni](../assets/ui/workspace/destinations-search-and-filter.gif)
+![Catalogo](../assets/ui/workspace/catalog.png)
 
-Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o **[!UICONTROL Activate]** e un controllo secondario che consente di visualizzare più opzioni. Questi controlli sono descritti di seguito:
+Le schede di destinazione contengono un controllo **[!UICONTROL Set up]** o un controllo **[!UICONTROL Activate segment]** e un controllo secondario che consente di visualizzare più opzioni. Questi controlli sono descritti di seguito:
 
 | Controllo | Descrizione |
 |---------|----------|
-| [!UICONTROL Configurare gli] | Consente di creare una connessione alla destinazione. |
-| [!UICONTROL Attiva] | Una volta stabilita una connessione alla destinazione, puoi attivare i segmenti. |
+| [!UICONTROL Configurazione] | Consente di creare una connessione alla destinazione. |
+| [!UICONTROL Attivare i segmenti] | Una volta stabilita una connessione alla destinazione, puoi attivare i segmenti. |
 | [!UICONTROL Visualizza account] | Visualizzare gli account connessi a una destinazione. |
 | [!UICONTROL Visualizzare i flussi di dati] | Visualizza i flussi di attivazione dei dati esistenti per una destinazione. |
 | [!UICONTROL Visualizza la documentazione] | Apre un collegamento alla pagina di documentazione per la destinazione specifica, per ulteriori informazioni e per facilitarne la configurazione. |
@@ -72,7 +72,7 @@ La scheda **[!UICONTROL Sfoglia]** visualizza le destinazioni con le quali hai s
 
 >[!TIP]
 >
-> * Seleziona i tre punti nella colonna [!UICONTROL Nome] e utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attiva ]**per inviare i segmenti a tale destinazione.
+> * Seleziona i tre punti nella colonna [!UICONTROL Nome] e utilizza il pulsante ![Aggiungi segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attiva segmenti ]**per inviare i segmenti a tale destinazione.
 > * Seleziona i tre punti nella colonna [!UICONTROL Nome] e utilizza il pulsante ![Elimina destinazioni](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Elimina ]**per [rimuovere](delete-destinations.md) una connessione esistente a una destinazione.
 
 
