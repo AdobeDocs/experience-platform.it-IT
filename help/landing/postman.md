@@ -5,8 +5,7 @@ title: Postman in Adobe Experience Platform
 topic-legacy: api guide
 description: Questo documento contiene passaggi che descrivono come impostare un ambiente Postman, importare raccolte Postman e un elenco di raccolte disponibili per ogni servizio Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -23,9 +22,9 @@ La seguente guida video illustra la creazione e la configurazione dell’ambient
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Raccolte Postman {#collections}
+## Raccolte postali {#collections}
 
-Una cartella contenente tutte le raccolte Postman disponibili può essere trovata da, visitando l&#39; [Experience Platform Postman amples archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, un collegamento alla raccolta Postman può essere trovato in ogni singolo file swagger nella [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en) all&#39;Adobe I/O.
+Una cartella contenente tutte le raccolte Postman disponibili può essere trovata da, visitando l&#39; [Experience Platform Postman amples archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, un collegamento alla raccolta Postman può essere trovato in ogni singolo file swagger nella [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) all&#39;Adobe I/O.
 
 Per scaricare una raccolta Postman, seleziona **[!DNL Raw]** dalla pagina GitHub per caricare il file JSON non elaborato in una nuova scheda. Quindi, fai clic con il pulsante destro del mouse e seleziona **[!DNL Save as]** per salvare il file in una destinazione locale di tua scelta.
 
