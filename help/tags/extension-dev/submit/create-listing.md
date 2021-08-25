@@ -1,7 +1,7 @@
 ---
 title: Creare un’inserzione in Exchange per un’estensione
 description: Scopri come aggiungere l’estensione al catalogo pubblico in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 59%
@@ -41,9 +41,9 @@ Se disponi già di un account aziendale o se non hai intenzione di completare l�
 1. Specifica le informazioni della tua inserzione. Per informazioni dettagliate su App Manager, consulta l’[articolo completo](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Le informazioni sull’elenco devono essere molto chiare sulle attività dell’estensione e sul motivo per cui sono utili. L’elenco funziona come uno spazio di marketing per la tua app. Promuovi l’estensione qui utilizzando descrizioni chiare, collegamenti alle pagine di destinazione sul tuo sito, collegamenti ai documenti di aiuto o indirizzi e-mail di supporto e così via. Anche se lo spazio nelle visualizzazioni delle estensioni è limitato, l&#39;elenco di Exchange offre l&#39;opportunità di promuovere sia l&#39;estensione che la società. Di seguito sono riportati alcuni suggerimenti per migliorare la promozione dell&#39;estensione:
    - **Icona app**: accertati che l’icona per l’inserzione su Exchange abbia le dimensioni appropriate, 512 x 512 per i file png o proporzioni 1:1 per i file jpg.
 
-   >[!NOTE]
-   >
-   >Si tratta di un formato di file diverso da quello utilizzato nel codice di estensione. L’estensione stessa conterrà come [icona](../manifest.md) un file svg.
+      >[!NOTE]
+      >
+      >Si tratta di un formato di file diverso da quello utilizzato nel codice di estensione. L’estensione stessa conterrà come [icona](../manifest.md) un file svg.
 
    - **Immagine in primo piano** : ottieni attenzione utilizzando un&#39;immagine che può rimanere isolata e mostrerà il tuo marchio ed evidenziare la tua applicazione. L&#39;immagine in primo piano è quella mostrata quando qualcuno condivide un collegamento alla tua inserzione o post su di essa sui social media. Deve quindi essere una rappresentazione modello del tuo marchio.
    - **Logo dell’editore dell’app**: questo è il logo aziendale; assicurati che l’icona abbia le dimensioni appropriate, pari a 1280 x 720 oppure 2560 x 1440 (16:9) in formato png o jpg.
