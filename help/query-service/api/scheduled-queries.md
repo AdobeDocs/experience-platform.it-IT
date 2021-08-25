@@ -5,7 +5,7 @@ title: Endpoint API per query pianificate
 topic-legacy: scheduled queries
 description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per query pianificate con l’API del servizio query.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 2%
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nome del database per cui si sta creando una query pianificata. |
 | `query.sql` | Query SQL da creare. |
 | `query.name` | Nome della query pianificata. |
-| `schedule.schedule` | La pianificazione cron per la query. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) . In questo esempio, &quot;30 * * * * *&quot; significa che la query verrà eseguita ogni ora alla soglia dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: La query viene eseguita una sola volta.</li><li>`@hourly`: La query viene eseguita ogni ora all’inizio dell’ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: La query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: La query viene eseguita una volta alla settimana, domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: La query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: La query viene eseguita una volta all’anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `1 0 0 1 1 *`. |
+| `schedule.schedule` | La pianificazione cron per la query. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) . In questo esempio, &quot;30 * * * * *&quot; significa che la query verrà eseguita ogni ora alla soglia dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: La query viene eseguita una sola volta.</li><li>`@hourly`: La query viene eseguita ogni ora all’inizio dell’ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: La query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: La query viene eseguita una volta alla settimana, domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: La query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: La query viene eseguita una volta all’anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `1 0 0 1 1 *`. |
 | `schedule.startDate` | La data di inizio della query pianificata, scritta come timestamp UTC. |
 
 **Risposta**
@@ -364,7 +364,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Aggiorna pianificazione query pianificata
 
-È possibile utilizzare `/schedule/schedule` per aggiornare la pianificazione cron della query pianificata. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) .
+È possibile utilizzare `/schedule/schedule` per aggiornare la pianificazione cron della query pianificata. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) .
 
 **Formato API**
 
