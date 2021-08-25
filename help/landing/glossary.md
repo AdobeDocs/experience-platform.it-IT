@@ -5,7 +5,7 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 1%
@@ -262,7 +262,7 @@ ht-degree: 1%
 
 **Host**: Nel contesto dei tag, un host specifica la posizione, il dominio e le credenziali utente necessarie affinché il sistema possa distribuire una build.
 
-**Orario**: Nel contesto delle esportazioni pianificate di file, pianifica le esportazioni incrementali di file ogni 3, 6, 7 o 12 ore.
+**Orario**: Nel contesto delle esportazioni pianificate di file, pianifica le esportazioni incrementali di file ogni 3, 6, 8 o 12 ore.
 
 ## I
 
