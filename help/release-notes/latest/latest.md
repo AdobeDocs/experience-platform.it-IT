@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '536'
 ht-degree: 10%
 
 ---
@@ -16,9 +16,22 @@ ht-degree: 10%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Destinazioni](#destinations)
 - [Observability Insights](#observability)
 - [Profilo cliente in tempo reale](#profile)
 - [Fonti](#sources)
+
+## Destinazioni {#destinations}
+
+Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [Miglioramenti a livello di usabilità delle destinazioni](../../destinations/ui/activation-overview.md) | I miglioramenti a livello di usabilità per le destinazioni consentono agli addetti al marketing di attivare facilmente i segmenti sulle destinazioni esistenti. |
+
+Per informazioni più generali sulle destinazioni, consulta la [panoramica delle destinazioni](../../destinations/home.md).
 
 ## Informazioni sull’osservabilità {#observability}
 
