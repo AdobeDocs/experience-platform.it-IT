@@ -5,9 +5,9 @@ title: Panoramica di Observability Insights
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights è un’API RESTful che ti consente di esporre le metriche chiave sulle attività di Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo di Platform, sui controlli di integrità per i servizi Platform, sulle tendenze della cronologia e sugli indicatori di prestazioni per varie funzionalità di Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
+source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,7 @@ L’ [!DNL Observability Insights] API è un’API RESTful che ti consente di es
 
 Per ulteriori informazioni sulle operazioni con l&#39;API, consulta la [[!DNL Observability Insights] Guida per gli sviluppatori API](./api/overview.md).
 
-## Avvisi (beta)
-
->[!IMPORTANT]
->
->Gli avvisi in Adobe Experience Platform non sono ancora disponibili per tutti gli utenti. Questa funzione è in versione beta ed è ancora in fase di test. Questa sezione è soggetta a modifiche.
+## Avvisi
 
 L’Experience Platform ti consente di abbonarti a avvisi basati su metriche di Osservabilità specifiche quando viene raggiunto un certo set di condizioni nelle operazioni di Platform. Un avviso può assumere la forma di una notifica una tantum o può ripetersi in un intervallo di tempo predefinito fino a quando le condizioni che hanno attivato l’avviso non sono state risolte.
 
