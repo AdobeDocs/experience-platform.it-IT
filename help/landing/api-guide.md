@@ -5,8 +5,7 @@ title: Guida introduttiva alle API di Adobe Experience Platform
 topic-legacy: api guide
 description: Adobe Experience Platform fornisce servizi API strettamente collegati tra loro. Questa guida contiene informazioni sui servizi disponibili, sulle intestazioni richieste per le operazioni CRUD, sui messaggi di errore, sulle raccolte Postman e sulle chiamate API di esempio.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -117,7 +116,7 @@ Per le guide alla risoluzione dei problemi sui singoli servizi di Platform, cons
 
 Per ulteriori informazioni su endpoint specifici nelle API di Platform, comprese le intestazioni e i corpi di richiesta richiesti, consulta le [Guide API della piattaforma](#api-guides).
 
-## Guide API della piattaforma {#api-guides}
+## Guide all’API di Platform {#api-guides}
 
 | Guida all’API | Descrizione |
 | --- | --- |
@@ -138,7 +137,7 @@ Per ulteriori informazioni su endpoint specifici nelle API di Platform, comprese
 | [[!DNL Segmentation Service] Guida all’API](.././segmentation/api/overview.md) | L’ API [!DNL Segmentation Service] consente agli sviluppatori di gestire in modo programmatico le operazioni di segmentazione in Adobe Experience Platform. Ciò include la creazione di segmenti e la generazione di tipi di pubblico dai dati del profilo cliente in tempo reale. |
 | [[!DNL Sensei Machine Learning] Guida API](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | L’ API [!DNL Sensei Machine Learning] offre agli scienziati dei dati un meccanismo per organizzare e gestire i servizi di apprendimento automatico (ML) dall’onboarding degli algoritmi, dalla sperimentazione e dalla distribuzione dei servizi. |
 
-Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en) sull&#39;Adobe I/O.
+Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) sull&#39;Adobe I/O.
 
 ## Passaggi successivi
 
