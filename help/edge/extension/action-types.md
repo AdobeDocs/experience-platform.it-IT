@@ -2,11 +2,11 @@
 title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
-feature: SDK per web
+feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 67b73321b8e147b934ad4015f03c9a5364f2b9ea
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '533'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Ci sono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere
 
 - **Tipo:** questo campo consente di specificare un tipo di evento che verrà registrato nello schema XDM. Per ulteriori informazioni sui tipi di evento predefiniti, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
 - **Dati:** i dati che non corrispondono a uno schema XDM possono essere inviati utilizzando questo campo. Questo campo è utile se cerchi di aggiornare un profilo Adobe Target o di inviare attributi Recommendations di Target. Per esempi, consulta la nostra [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
-- **ID unione:** se desideri specificare un ID unione per l’evento, puoi farlo in questo campo. Tieni presente che le soluzioni a valle non sono in grado di unire i dati dell’evento in questo momento.
+<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nel tuo datastream, puoi specificarlo qui.
 - **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la casella di controllo  **[!UICONTROL Documento]** che verrà scaricata. Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
 - **Decisioni relative alla personalizzazione visiva del rendering:** se desideri eseguire il rendering di contenuti personalizzati sulla pagina, seleziona la casella di controllo  **[!UICONTROL Rendering visual personalization]** decisionScript. Se necessario, puoi anche specificare gli ambiti decisionali. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
