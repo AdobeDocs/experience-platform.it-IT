@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service consente di utilizzare SQL ANSI standard per le istruzioni `SELECT` e altri comandi limitati. Questo documento descrive la sintassi SQL supportata da [!DNL Query Service].
 
-## SELECT query {#select-queries}
+## Query SELECT {#select-queries}
 
 La sintassi seguente definisce una query `SELECT` supportata da [!DNL Query Service]:
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 Nota che una clausola `SNAPSHOT` funziona con un alias di tabella o tabella ma non sopra una sottoquery o una visualizzazione. Una clausola `SNAPSHOT` funziona ovunque sia possibile applicare una query `SELECT` su una tabella.
 
 Inoltre, è possibile utilizzare `HEAD` e `TAIL` come valori di offset speciali per le clausole snapshot. Utilizzando `HEAD` si fa riferimento a un offset prima della prima istantanea, mentre `TAIL` fa riferimento a un offset dopo l&#39;ultima istantanea.
+
+>[!NOTE]
+>
+>Se si esegue una query tra due ID snapshot e lo snapshot iniziale è scaduto, possono verificarsi i due scenari seguenti, a seconda che sia impostato il flag opzionale di comportamento di fallback (`resolve_fallback_snapshot_on_failure`):
+>
+>- Se è impostato il flag opzionale per il comportamento di fallback, Query Service sceglierà la prima istantanea disponibile, la imposterà come istantanea iniziale e restituirà i dati tra la prima istantanea disponibile e lo snapshot finale specificato. Questi dati sono **inclusi** della prima istantanea disponibile.
+>
+>- Se il flag di comportamento di fallback facoltativo non è impostato, viene restituito un errore.
+
 
 ### clausola WHERE
 
