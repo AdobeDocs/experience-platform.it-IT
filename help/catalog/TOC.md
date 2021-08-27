@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Guida al catalogo e ai set di dati
 user-guide-description: Esplora la derivazione dei dati, i metadati, le descrizioni dei file, le directory e i set di dati all’interno del Data Lake.
 feature: Data Management
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 18%
+source-wordcount: '102'
+ht-degree: 20%
 
 ---
 
@@ -34,5 +33,5 @@ ht-degree: 18%
    * [Creare e popolare un set di dati utilizzando le API](datasets/create.md)
 * [Elaborazione della richiesta di privacy in Data Lake](privacy.md)
 * [Protezione dei dati in Experience Platform](data-protection.md)
-* [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

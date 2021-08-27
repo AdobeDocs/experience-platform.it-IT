@@ -4,11 +4,10 @@ title: Guida all’API del servizio di segmentazione
 topic-legacy: guide
 description: L’API del servizio di segmentazione consente agli sviluppatori di gestire in modo programmatico le operazioni di segmentazione in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 0%
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +17,7 @@ ht-degree: 0%
 
 L’ API [!DNL Segmentation Service] fornisce più endpoint che consentono di gestire in modo programmatico le operazioni di segmentazione in [!DNL Experience Platform]. Questo documento di panoramica fornisce presentazioni di alto livello per ciascuno di questi endpoint e fornisce collegamenti alle relative guide degli endpoint associate per ulteriori dettagli. Prima di leggere le singole guide degli endpoint, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, fai riferimento al [riferimento API del servizio di segmentazione](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, fai riferimento al [riferimento API del servizio di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Esportare i processi
 

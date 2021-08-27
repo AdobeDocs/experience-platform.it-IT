@@ -5,16 +5,16 @@ title: Notifiche di acquisizione dei dati
 topic-legacy: overview
 description: Per facilitare il monitoraggio del processo di acquisizione, Adobe Experience Platform consente di abbonarsi a un set di eventi pubblicati in ogni fase del processo, notificandovi lo stato dei dati acquisiti ed eventuali errori.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 1%
+source-wordcount: '677'
+ht-degree: 2%
 
 ---
 
 # Notifiche di acquisizione dei dati
 
-Il processo di acquisizione dei dati in Adobe Experience Platform è composto da più passaggi. Una volta identificati i file di dati da acquisire in [!DNL Platform], inizia il processo di acquisizione e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono acquisiti correttamente o non riescono. Il processo di acquisizione può essere avviato utilizzando l’ [API di acquisizione dati di Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) o l’interfaccia utente [!DNL Experience Platform].
+Il processo di acquisizione dei dati in Adobe Experience Platform è composto da più passaggi. Una volta identificati i file di dati da acquisire in [!DNL Platform], inizia il processo di acquisizione e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono acquisiti correttamente o non riescono. Il processo di acquisizione può essere avviato utilizzando l’ [API di acquisizione dati di Adobe Experience Platform](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) o l’interfaccia utente [!DNL Experience Platform].
 
 I dati caricati in [!DNL Platform] devono attraversare più passaggi per raggiungere la relativa destinazione, l&#39; [!DNL Data Lake] o l&#39; [!DNL Real-time Customer Profile] archivio dati. Ogni passaggio comporta l’elaborazione dei dati, la convalida dei dati e quindi la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo e c&#39;è sempre la possibilità che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi di dati devono essere risolti e l’intero processo di acquisizione deve essere riavviato utilizzando i file di dati corretti.
 

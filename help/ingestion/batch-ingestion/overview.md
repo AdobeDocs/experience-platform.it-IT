@@ -5,11 +5,10 @@ title: Panoramica sull’acquisizione in batch
 topic-legacy: overview
 description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 2%
+source-wordcount: '1218'
+ht-degree: 3%
 
 ---
 
@@ -17,13 +16,13 @@ ht-degree: 2%
 
 L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro [!DNL Experience Data Model] (XDM).
 
-Il [Riferimento API di acquisizione dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fornisce informazioni aggiuntive su queste chiamate API.
+Il [Riferimento API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fornisce informazioni aggiuntive su queste chiamate API.
 
 Il diagramma seguente illustra il processo di acquisizione batch:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## Utilizzo dell’API
+## Mediante l’API
 
 L’ API [!DNL Data Ingestion] ti consente di acquisire dati come batch (un’unità di dati costituita da uno o più file da acquisire come singola unità) in [!DNL Experience Platform] in tre passaggi fondamentali:
 
@@ -60,7 +59,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >

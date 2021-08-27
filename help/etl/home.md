@@ -5,11 +5,10 @@ title: Sviluppo di integrazioni ETL per Adobe Experience Platform
 topic-legacy: overview
 description: La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '4143'
-ht-degree: 0%
+source-wordcount: '4083'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +17,9 @@ ht-degree: 0%
 La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per [!DNL Experience Platform] e l’acquisizione di dati in [!DNL Platform].
 
 
-- [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
+- [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
+- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Autenticazione e autorizzazione per le API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
@@ -38,7 +37,7 @@ Il seguente diagramma del flusso di lavoro fornisce una panoramica di alto livel
 
 Sono presenti più componenti di Experience Platform coinvolti nelle integrazioni dei connettori ETL. L’elenco seguente illustra diversi componenti e funzionalità chiave:
 
-- **Adobe Identity Management System (IMS)**  - Fornisce il framework per l’autenticazione ai servizi di Adobe.
+- **Adobe Identity Management System (IMS)**  - Fornisce il framework per l’autenticazione ai servizi Adobe.
 - **Organizzazione IMS** : un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
 - **Utente IMS** : membri di un’organizzazione IMS. La relazione tra l&#39;organizzazione e l&#39;utente è molto importante per molti.
 - **[!DNL Sandbox]** - Una partizione virtuale una singola  [!DNL Platform] istanza, per aiutare a sviluppare e sviluppare applicazioni di esperienza digitale.
@@ -65,7 +64,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -91,7 +90,7 @@ Sono stati forniti mapping per uno strumento e un flusso di lavoro ETL di esempi
 
 ### Visualizza elenco di set di dati
 
-Utilizzando l’origine dei dati per la mappatura, è possibile recuperare un elenco di tutti i set di dati disponibili utilizzando il percorso [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Utilizzando l’origine dei dati per la mappatura, è possibile recuperare un elenco di tutti i set di dati disponibili utilizzando il percorso [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 Puoi emettere una singola richiesta API per visualizzare tutti i set di dati disponibili (ad esempio `GET /dataSets`), come best practice, include parametri di query che limitano la dimensione della risposta.
 
@@ -128,7 +127,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Per esempi dettagliati su come effettuare chiamate a [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), consulta la [Panoramica del servizio catalogo](../catalog/home.md) .
+Per esempi dettagliati su come effettuare chiamate a [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/), consulta la [Panoramica del servizio catalogo](../catalog/home.md) .
 
 **Risposta**
 
@@ -230,7 +229,7 @@ I set di dati possono contenere una proprietà &quot;schema&quot; che ora è obs
 }
 ```
 
-Se la proprietà &quot;schema&quot; di un set di dati è compilata, questo segnala che lo schema è uno schema `/xdms` obsoleto e, se supportato, il connettore ETL deve utilizzare il valore nella proprietà &quot;schema&quot; con l’endpoint `/xdms` (un endpoint obsoleto in [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) per recuperare lo schema legacy.
+Se la proprietà &quot;schema&quot; di un set di dati è compilata, questo segnala che lo schema è uno schema `/xdms` obsoleto e, se supportato, il connettore ETL deve utilizzare il valore nella proprietà &quot;schema&quot; con l’endpoint `/xdms` (un endpoint obsoleto in [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/)) per recuperare lo schema legacy.
 
 **Formato API**
 
@@ -492,13 +491,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-I dati verranno scritti in [!DNL Experience Platform] utilizzando [API di acquisizione dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  La scrittura di dati è un processo asincrono. Quando i dati vengono scritti in Adobe Experience Platform, un batch viene creato e contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
+I dati verranno scritti in [!DNL Experience Platform] utilizzando [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  La scrittura di dati è un processo asincrono. Quando i dati vengono scritti in Adobe Experience Platform, un batch viene creato e contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
 
 I dati in [!DNL Experience Platform] devono essere scritti sotto forma di file Parquet.
 
 ## Fase di esecuzione
 
-All’avvio dell’esecuzione, il connettore (come definito nel componente di origine) leggerà i dati di [!DNL Experience Platform] utilizzando [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, eseguirà query sui batch di set di dati di origine. Durante l’esecuzione delle query, utilizzerà un valore parametrizzato (che continua per i dati delle serie temporali o i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
+All’avvio dell’esecuzione, il connettore (come definito nel componente di origine) leggerà i dati di [!DNL Experience Platform] utilizzando [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/). Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, eseguirà query sui batch di set di dati di origine. Durante l’esecuzione delle query, utilizzerà un valore parametrizzato (che continua per i dati delle serie temporali o i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
 
 ### Trasformazioni di esempio
 
@@ -506,7 +505,7 @@ Il documento [trasformazioni ETL di esempio](./transformations.md) contiene una 
 
 ### Leggi i dati da [!DNL Experience Platform]
 
-Utilizzando [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), è possibile recuperare tutti i batch tra un&#39;ora di inizio e di fine specificate e ordinarli in base all&#39;ordine in cui sono stati creati.
+Utilizzando [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/), è possibile recuperare tutti i batch tra un&#39;ora di inizio e di fine specificate e ordinarli in base all&#39;ordine in cui sono stati creati.
 
 **Richiesta**
 
@@ -523,7 +522,7 @@ I dettagli sui batch di filtri si trovano in [Esercitazione sull&#39;accesso ai 
 
 ### Estrarre file da un batch
 
-Una volta ottenuto l&#39;ID per il batch che stai cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a un batch specifico tramite [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  I dettagli per farlo sono disponibili nell’ [[!DNL Data Access] esercitazione](../data-access/tutorials/dataset-data.md).
+Una volta ottenuto l&#39;ID per il batch che stai cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a un batch specifico tramite [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  I dettagli per farlo sono disponibili nell’ [[!DNL Data Access] esercitazione](../data-access/tutorials/dataset-data.md).
 
 **Richiesta**
 
@@ -537,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### Accedere ai file utilizzando l’ID file
 
-Utilizzando l&#39;ID univoco di un file (`{FILE_ID`), è possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dettagli specifici del file, inclusi nome, dimensioni in byte e un collegamento per scaricarlo.
+Utilizzando l&#39;ID univoco di un file (`{FILE_ID`), è possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dettagli specifici del file, inclusi nome, dimensioni in byte e un collegamento per scaricarlo.
 
 **Richiesta**
 
@@ -553,7 +552,7 @@ La risposta può puntare a un singolo file o a una directory. I dettagli su cias
 
 ### Accedere al contenuto del file
 
-È possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta di GET utilizzando il valore restituito per `_links.self.href` quando si accede a un file utilizzando l’ID file.
+È possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta di GET utilizzando il valore restituito per `_links.self.href` quando si accede a un file utilizzando l’ID file.
 
 **Richiesta**
 
@@ -581,7 +580,7 @@ La convalida può essere eseguita per i tipi XDM logici, utilizzando attributi c
 
 ### Creare un batch
 
-Una volta elaborati i dati, lo strumento ETL restituirà i dati a [!DNL Experience Platform] utilizzando l’ [API di acquisizione batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
+Una volta elaborati i dati, lo strumento ETL restituirà i dati a [!DNL Experience Platform] utilizzando l’ [API di acquisizione batch](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
 
 **Richiesta**
 
@@ -641,7 +640,7 @@ Nell’esecuzione della trasformazione successiva, probabilmente per pianificazi
 
 ### Ottieni stato ultimo batch
 
-Prima di eseguire nuove attività nello strumento ETL, è necessario assicurarsi che l&#39;ultimo batch sia stato completato correttamente. Il [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) fornisce un&#39;opzione specifica per il batch che fornisce i dettagli dei batch pertinenti.
+Prima di eseguire nuove attività nello strumento ETL, è necessario assicurarsi che l&#39;ultimo batch sia stato completato correttamente. Il [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) fornisce un&#39;opzione specifica per il batch che fornisce i dettagli dei batch pertinenti.
 
 **Richiesta**
 
@@ -675,7 +674,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ### Ottieni stato ultimo batch per ID
 
-È possibile recuperare uno stato batch singolo attraverso [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) emettendo una richiesta di GET utilizzando `{BATCH_ID}`. Il `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
+È possibile recuperare uno stato batch singolo attraverso [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) emettendo una richiesta di GET utilizzando `{BATCH_ID}`. Il `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
 
 **Richiesta**
 

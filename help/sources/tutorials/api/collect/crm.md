@@ -6,11 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1590'
-ht-degree: 1%
+source-wordcount: '1586'
+ht-degree: 2%
 
 ---
 
@@ -53,7 +52,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 * `Content-Type: application/json`
 
-## Creare una connessione sorgente {#source}
+## Creazione di una connessione sorgente {#source}
 
 Puoi creare una connessione sorgente effettuando una richiesta di POST all’ API [!DNL Flow Service] . Una connessione di origine è costituita da un ID connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
@@ -230,7 +229,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, compres
 
 ## Creare un set di dati di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta POST all’ [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+Un set di dati di destinazione può essere creato eseguendo una richiesta POST all’ [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -400,7 +399,7 @@ Una risposta corretta restituisce i dettagli della nuova mappatura creata, inclu
 }
 ```
 
-## Recupera le specifiche del flusso di dati {#specs}
+## Recupera specifiche del flusso di dati {#specs}
 
 Un flusso di dati è responsabile della raccolta dei dati da origini e del loro inserimento in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati responsabili della raccolta dei dati CRM.
 

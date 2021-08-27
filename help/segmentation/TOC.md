@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
-feature: Segmenti
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+feature: Segments
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '159'
 ht-degree: 26%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 26%
    - [Segmentazione degli spigoli](api/edge-segmentation.md)
    - [Esportare i processi](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
-   - [Pianificazioni](api/schedules.md)
+   - [Scheduler](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
    - [Processi dei segmenti](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
@@ -61,5 +61,5 @@ ht-degree: 26%
    - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
    - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applicare la conformità per l’utilizzo dei dati per i segmenti](tutorials/governance.md)
-- [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [Riferimento API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

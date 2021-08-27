@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 2%
+source-wordcount: '1107'
+ht-degree: 3%
 
 ---
 
@@ -152,7 +152,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, compres
 
 ## Creare un set di dati di destinazione
 
-Con uno schema XDM di destinazione creato e il relativo `$id` univoco, ora puoi creare un set di dati di destinazione contenente i dati di origine. Per creare un set di dati di destinazione, effettua una richiesta POST all’ endpoint `dataSets` dell’ [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo al contempo l’ID dello schema di destinazione all’interno del payload.
+Con uno schema XDM di destinazione creato e il relativo `$id` univoco, ora puoi creare un set di dati di destinazione contenente i dati di origine. Per creare un set di dati di destinazione, effettua una richiesta POST all’ endpoint `dataSets` dell’ [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo al contempo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 

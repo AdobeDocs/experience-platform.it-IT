@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questo documento fornisce un tutorial per l’invio di più messaggi a Adobe Experience Platform all’interno di una singola richiesta HTTP utilizzando l’acquisizione in streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -45,7 +44,7 @@ Dopo aver registrato una connessione in streaming, in qualità di produttore dei
 
 L’esempio seguente mostra come inviare più messaggi a un set di dati specifico all’interno di una singola richiesta HTTP. Inserisci l’ID del set di dati nell’intestazione del messaggio per consentirne l’acquisizione diretta.
 
-Puoi ottenere l’ID per un set di dati esistente utilizzando l’ [!DNL Platform] interfaccia utente o utilizzando un’operazione di inserimento nell’elenco nell’API. L&#39;ID del set di dati si trova in [Experience Platform](https://platform.adobe.com) accedendo alla scheda **[!UICONTROL Datasets]** , facendo clic sul set di dati per il quale desideri l&#39;ID e copiando la stringa dal campo ID set di dati nella scheda **[!UICONTROL Info]** . Per informazioni su come recuperare i set di dati utilizzando l’API, consulta la [Panoramica del servizio catalogo](../../catalog/home.md) .
+Puoi ottenere l’ID per un set di dati esistente utilizzando l’ [!DNL Platform] interfaccia utente o utilizzando un’operazione di inserimento nell’elenco nell’API. L&#39;ID del set di dati si trova in [Experience Platform](https://platform.adobe.com) accedendo alla scheda **[!UICONTROL Set di dati]** , facendo clic sul set di dati per il quale desideri l&#39;ID e copiando la stringa dal campo ID set di dati nella scheda **[!UICONTROL Informazioni]** . Per informazioni su come recuperare i set di dati utilizzando l’API, consulta la [Panoramica del servizio catalogo](../../catalog/home.md) .
 
 Invece di utilizzare un set di dati esistente, puoi creare un nuovo set di dati. Per ulteriori informazioni sulla creazione di un set di dati utilizzando le API, consulta l’ esercitazione [creare un set di dati utilizzando le API .](../../catalog/api/create-dataset.md)
 
@@ -510,7 +509,7 @@ Il secondo messaggio non è riuscito perché non era presente un corpo del messa
     },
 ```
 
-Il terzo messaggio non è riuscito a causa dell’utilizzo di un ID organizzazione IMS non valido nell’intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare il messaggio. Per determinare quale ID organizzazione IMS corrisponde alla connessione in streaming che stai utilizzando, puoi eseguire una richiesta `GET inlet` utilizzando [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Per un esempio su come recuperare connessioni in streaming create in precedenza, consulta [recupero di una connessione in streaming](./create-streaming-connection.md#get-data-collection-url) .
+Il terzo messaggio non è riuscito a causa dell’utilizzo di un ID organizzazione IMS non valido nell’intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare il messaggio. Per determinare quale ID organizzazione IMS corrisponde alla connessione in streaming che stai utilizzando, puoi eseguire una richiesta `GET inlet` utilizzando [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Per un esempio su come recuperare connessioni in streaming create in precedenza, consulta [recupero di una connessione in streaming](./create-streaming-connection.md#get-data-collection-url) .
 
 Il quarto messaggio non è riuscito perché non ha seguito lo schema XDM previsto. Il `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell’intestazione e nel corpo del messaggio consente di passare la convalida DCCS e di essere inviato correttamente a [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio affinché corrisponda allo schema XDM del `{DATASET_ID}` affinché trasmetta la convalida in streaming su [!DNL Platform]. Per ulteriori informazioni sugli eventi che si verificano durante lo streaming dei messaggi su Platform, consulta la sezione [conferma dei messaggi acquisiti](#confirm-messages-ingested) di questa esercitazione.
 
@@ -525,7 +524,7 @@ Leggi la guida [recupero dei batch non riusciti](../quality/retrieve-failed-batc
 
 I messaggi che superano la convalida DCCS vengono inviati in streaming a [!DNL Platform]. In [!DNL Platform], i messaggi batch vengono testati tramite convalida in streaming prima di essere acquisiti in [!DNL Data Lake]. Lo stato dei batch, con esito positivo o meno, viene visualizzato all’interno del set di dati specificato da `{DATASET_ID}`.
 
-Per visualizzare lo stato dei messaggi batch che sono stati inviati correttamente a [!DNL Platform] utilizzando l&#39; [interfaccia utente di Experience Platform](https://platform.adobe.com), vai alla scheda **[!UICONTROL Datasets]** , fai clic sul set di dati a cui stai eseguendo lo streaming e controlla la scheda **[!UICONTROL Dataset Activity]** .
+Per visualizzare lo stato dei messaggi batch che sono stati inviati correttamente a [!DNL Platform] utilizzando l&#39; [Interfaccia utente Experience Platform](https://platform.adobe.com), vai alla scheda **[!UICONTROL Set di dati]** , fai clic sul set di dati a cui stai eseguendo lo streaming e controlla la scheda **[!UICONTROL Attività set di dati]** .
 
 I messaggi batch che trasmettono la convalida in streaming su [!DNL Platform] vengono acquisiti in [!DNL Data Lake]. I messaggi sono quindi disponibili per l’analisi o l’esportazione.
 

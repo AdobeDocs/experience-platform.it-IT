@@ -5,9 +5,9 @@ title: Panoramica delle sandbox
 topic-legacy: overview
 description: Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Nell’ [interfaccia utente di Experience Platform](https://platform.adobe.com),
 
 ## Sandbox nelle API di Experience Platform
 
-Quando si effettuano chiamate alle API di Experience Platform, un nome sandbox deve essere fornito sotto l’intestazione `x-sandbox-name`. Ad esempio, quando effettui una chiamata a [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) per visualizzare tutti i set di dati all’interno della sandbox Produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
+Quando si effettuano chiamate alle API di Experience Platform, un nome sandbox deve essere fornito sotto l’intestazione `x-sandbox-name`. Ad esempio, quando effettui una chiamata a [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) per visualizzare tutti i set di dati all’interno della sandbox Produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
 
 ```shell
 curl -X GET \

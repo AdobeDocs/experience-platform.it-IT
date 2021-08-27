@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Scopri come individuare, accedere e scaricare i dati memorizzati all’interno di un set di dati utilizzando l’API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune funzionalità uniche dell’API di accesso ai dati, come il paging e i download parziali.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 2%
+source-wordcount: '1390'
+ht-degree: 4%
 
 ---
 
@@ -38,7 +37,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -62,7 +61,7 @@ Prima di poter iniziare a utilizzare l’ API [!DNL Data Access] , devi identifi
 - `GET /batches`: Restituisce un elenco di batch nell&#39;organizzazione
 - `GET /dataSetFiles`: Restituisce un elenco di file nell&#39;organizzazione
 
-Per un elenco completo degli endpoint nell&#39; API [!DNL Catalog], fai riferimento alla [Guida di riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Per un elenco completo degli endpoint nell&#39; API [!DNL Catalog], fai riferimento alla [Guida di riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Recupera un elenco di batch nell’organizzazione IMS
 
@@ -193,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Un elenco completo dei parametri e dei filtri si trova nella sezione [Riferimento API del catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Un elenco completo dei parametri e dei filtri si trova nella sezione [Riferimento API del catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Recupera un elenco di tutti i file appartenenti a un particolare batch
 

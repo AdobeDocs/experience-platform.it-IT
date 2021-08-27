@@ -5,17 +5,16 @@ title: Guida all’API di acquisizione in batch
 topic-legacy: developer guide
 description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di acquisizione batch.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 6%
+source-wordcount: '2552'
+ht-degree: 7%
 
 ---
 
 # Guida all’API per l’acquisizione in batch
 
-Questo documento fornisce una panoramica completa sull’utilizzo delle API di acquisizione batch [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Questo documento fornisce una panoramica completa sull’utilizzo delle API di acquisizione batch [](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 L&#39;appendice di questo documento fornisce informazioni per la [formattazione dei dati da utilizzare per l&#39;acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
 
@@ -59,7 +58,7 @@ Durante l’acquisizione dei dati, è importante comprendere il funzionamento de
 
 È possibile acquisire i dati in modo flessibile: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. Se non è in grado di farlo, il batch non verrà completato con un valore `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un tipo di data o ora. Di conseguenza, questi valori vengono espressi utilizzando [ISO 8061 stringhe formattate](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Time formattato in millisecondi (15312639 59000) e vengono convertiti al momento dell’acquisizione al tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un tipo di data o ora. Di conseguenza, questi valori sono espressi utilizzando [ISO 8061 stringhe formattate](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Tempo formattato in millisecondi (15312639 59000) e vengono convertiti al momento dell’acquisizione al tipo XDM di destinazione.
 
 La tabella seguente mostra le conversioni supportate durante l’acquisizione dei dati.
 

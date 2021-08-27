@@ -6,21 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 1%
+source-wordcount: '1523'
+ht-degree: 2%
 
 ---
 
 # Raccogliere dati di e-commerce utilizzando connettori di origine e API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di terze parti **[!UICONTROL eCommerce]** e acquisirli in [!DNL Platform] tramite i connettori sorgente e l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di terze parti **[!UICONTROL eCommerce]** e per acquisirli in [!DNL Platform] tramite i connettori sorgente e l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
-Questa esercitazione richiede l&#39;accesso a un sistema **[!UICONTROL eCommerce]** tramite una connessione valida, nonché informazioni sul file che si desidera inserire in [!DNL Platform] (compreso il percorso e la struttura del file). Se non disponi di queste informazioni, consulta l’esercitazione su [come esplorare un sistema eCommerce utilizzando l’ API del servizio di flusso](../explore/ecommerce.md) prima di provare questa esercitazione.
+Questa esercitazione richiede l&#39;accesso a un sistema **[!UICONTROL eCommerce]** tramite una connessione valida, nonché informazioni sul file che desideri inserire in [!DNL Platform] (compreso il percorso e la struttura del file). Se non disponi di queste informazioni, consulta l’esercitazione su [come esplorare un sistema eCommerce utilizzando l’ API del servizio di flusso](../explore/ecommerce.md) prima di provare questa esercitazione.
 
 Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -53,7 +52,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 * `Content-Type: application/json`
 
-## Creare una connessione sorgente {#source}
+## Creazione di una connessione sorgente {#source}
 
 Puoi creare una connessione sorgente effettuando una richiesta di POST all’ API [!DNL Flow Service] . Una connessione di origine è costituita da un ID connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
@@ -114,9 +113,9 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `baseConnectionId` | L&#39;ID di connessione della tua **[!UICONTROL eCommerce]** sorgente. |
+| `baseConnectionId` | L&#39;ID di connessione della tua sorgente **[!UICONTROL eCommerce]**. |
 | `params.path` | Percorso del file di origine. |
-| `connectionSpec.id` | ID della specifica di connessione della **[!UICONTROL eCommerce]** sorgente. |
+| `connectionSpec.id` | ID delle specifiche di connessione della tua origine **[!UICONTROL eCommerce]**. |
 
 **Risposta**
 
@@ -241,7 +240,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, compres
 
 ## Creare un set di dati di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta POST all’ [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+Un set di dati di destinazione può essere creato eseguendo una richiesta POST all’ [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -404,7 +403,7 @@ Una risposta corretta restituisce i dettagli della nuova mappatura creata, inclu
 }
 ```
 
-## Cerca specifiche del flusso di dati {#specs}
+## Ricerca delle specifiche del flusso di dati {#specs}
 
 Un flusso di dati è responsabile della raccolta dei dati dalle origini e del loro inserimento in [!DNL Platform]. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta GET all’ API [!DNL Flow Service] . Le specifiche del flusso di dati sono responsabili della raccolta di dati da un&#39;origine **[!UICONTROL eCommerce]**.
 
@@ -718,7 +717,7 @@ curl -X POST \
 | `sourceConnectionIds` | L&#39; [ID connessione di origine](#source) recuperato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39; [ID connessione di destinazione](#target-connection) recuperato in un passaggio precedente. |
 | `transformations.params.mappingId` | L&#39; [ID di mappatura](#mapping) recuperato in un passaggio precedente. |
-| `transformations.params.mappingId` | L&#39;ID di mappatura associato alla tua sorgente **[!UICONTROL eCommerce]**. |
+| `transformations.params.mappingId` | L&#39;ID di mappatura associato alla tua origine **[!UICONTROL eCommerce]**. |
 | `scheduleParams.startTime` | Ora di inizio del flusso di dati in epoch time. |
 | `scheduleParams.frequency` | Il `frequency` in cui il flusso di dati raccoglie i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day` o `week`. |
 | `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Un intervallo non è necessario quando `frequency` è impostato come `once` e deve essere maggiore o uguale a `15` per altri valori `frequency`. |

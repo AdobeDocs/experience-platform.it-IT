@@ -5,10 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio Identity
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2185'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Di seguito è riportato un elenco delle risposte alle domande frequenti su [!DNL
 
 ## Cosa sono i dati di identità?
 
-I dati di identità sono tutti i dati che possono essere utilizzati per identificare una singola persona. A seconda del contesto in cui i dati vengono utilizzati all’interno della tua organizzazione, i dati di identità possono includere nomi utente, indirizzi e-mail e ID dai sistemi CRM. I dati di identità non sono limitati agli utenti registrati del tuo sito web o servizio, in quanto gli utenti anonimi possono essere identificati anche dal loro ID dispositivo o cookie.
+I dati di identità sono tutti i dati che possono essere utilizzati per identificare una singola persona. A seconda del contesto in cui i dati vengono utilizzati all’interno della tua organizzazione, i dati di identità possono includere nomi utente, indirizzi e-mail e ID dai sistemi CRM. I dati di identità non sono limitati agli utenti registrati del sito web o del servizio, in quanto gli utenti anonimi possono essere identificati anche dal loro ID dispositivo o cookie.
 
 ## Qual è il vantaggio dell&#39;etichettatura dei campi di dati come identità?
 
@@ -286,7 +285,7 @@ Questo errore viene visualizzato quando si verifica un&#39;eccezione imprevista 
 
 [!DNL Identity Service] acquisisce i dati di identità dai dati dei record e delle serie temporali caricati su  [!DNL Platform] utilizzando l’acquisizione in batch. Poiché l’acquisizione in batch è un processo asincrono, è necessario visualizzare i dettagli di un batch per visualizzare gli errori. Gli errori si accumulano mentre il batch progredisce fino al completamento del batch.
 
-Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identity Service] che è possibile incontrare quando si utilizza l’ [API di acquisizione dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identity Service] che è possibile incontrare quando si utilizza l’ [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 ### Schema XDM sconosciuto
 

@@ -5,9 +5,9 @@ title: Endpoint API Unions
 description: L’endpoint /sindacati nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi di unione XDM nell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '911'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ L&#39;array `timeSeriesEvents` è un elenco di eventi serie temporali relativi a
 
 ### Mappa di appartenenza al segmento
 
-La mappa `segmentMembership` memorizza i risultati delle valutazioni dei segmenti. Quando i processi di segmento vengono eseguiti correttamente utilizzando l’ [API di segmentazione](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), la mappa viene aggiornata. `segmentMembership` memorizza anche tutti i segmenti di pubblico valutati in precedenza acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l’esercitazione su [creazione di segmenti utilizzando le API](../../segmentation/tutorials/create-a-segment.md) .
+La mappa `segmentMembership` memorizza i risultati delle valutazioni dei segmenti. Quando i processi di segmento vengono eseguiti correttamente utilizzando l’ [API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` memorizza anche tutti i segmenti di pubblico valutati in precedenza acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l’esercitazione su [creazione di segmenti utilizzando le API](../../segmentation/tutorials/create-a-segment.md) .
 
 ## Recupera un elenco di unioni {#list}
 
@@ -183,7 +183,7 @@ Il formato della risposta dipende dall’intestazione Accept inviata nella richi
 
 Affinché uno schema possa essere incluso nell&#39;unione per la relativa classe, è necessario aggiungere un tag `union` all&#39;attributo `meta:immutableTags` dello schema. È possibile eseguire questa operazione effettuando una richiesta di PATCH per aggiungere un array `meta:immutableTags` con un singolo valore di stringa `union` allo schema in questione. Per un esempio dettagliato, consulta la [guida all’endpoint degli schemi](./schemas.md#union) .
 
-## Elencare schemi in un&#39;unione {#list-schemas}
+## Elencare schemi in un’unione {#list-schemas}
 
 Per vedere quali schemi fanno parte di un’unione specifica, puoi eseguire una richiesta di GET all’endpoint `/tenant/schemas` . Utilizzando il parametro di query `property`, puoi configurare la risposta per restituire solo gli schemi contenenti un campo `meta:immutableTags` e un `meta:class` uguale alla classe a cui stai accedendo.
 
