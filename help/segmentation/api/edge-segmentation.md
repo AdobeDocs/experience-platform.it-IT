@@ -5,10 +5,10 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
+source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -227,7 +227,7 @@ Una risposta corretta restituisce i dettagli della nuova definizione di segmento
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+        "value": "chain(xEvent, timestamp, [X: WHAT(var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = "true")])"
     },
     "evaluationInfo": {
         "batch": {
