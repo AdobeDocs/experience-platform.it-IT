@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di gestire in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, rendendo i dati giusti immediatamente disponibili e costantemente aggiornati man mano che avvengono le modifiche. Questo avviene tramite l'uso di edge, un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1959'
 ht-degree: 2%
 
 ---
@@ -19,7 +18,7 @@ Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personali
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 audience: user
 user-guide-title: Guida di Real-time Customer Profile
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
-feature: Profili
-source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
+feature: Profiles
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '133'
 ht-degree: 18%
 
 ---
@@ -49,5 +49,5 @@ ht-degree: 18%
    * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Elaborazione delle richieste di privacy](privacy.md)
 * [[!DNL Profile] guida alla risoluzione dei problemi](troubleshooting.md)
-* [Riferimento API del profilo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Riferimento API del profilo](https://www.adobe.com/go/profile-apis-en)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

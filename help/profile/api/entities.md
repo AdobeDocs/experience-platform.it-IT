@@ -5,11 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API del profilo.
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 1%
+source-wordcount: '1732'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +18,7 @@ Adobe Experience Platform consente di accedere ai dati [!DNL Real-time Customer 
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Accedere ai dati del profilo per identità
 
@@ -771,7 +770,7 @@ Una risposta corretta restituisce un elenco impaginato di eventi di serie tempor
 
 In questa risposta di esempio, il primo profilo elencato (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) fornisce un valore per `_links.next.payload`, il che significa che per questo profilo sono disponibili pagine di risultati aggiuntive. Per informazioni dettagliate su come accedere a tali risultati aggiuntivi, consulta la seguente sezione su [accesso a risultati aggiuntivi](#access-additional-results) .
 
-### Accedi ai risultati aggiuntivi {#access-additional-results}
+### Accedere a ulteriori risultati {#access-additional-results}
 
 Quando si recuperano gli eventi delle serie temporali potrebbero essere restituiti molti risultati, pertanto i risultati sono spesso impaginati. Se sono presenti pagine successive di risultati per un particolare profilo, il valore `_links.next.payload` di tale profilo conterrà un oggetto payload.
 

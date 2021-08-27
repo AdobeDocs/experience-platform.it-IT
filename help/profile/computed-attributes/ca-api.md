@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. Questa guida mostra come creare, visualizzare, aggiornare ed eliminare gli attributi calcolati utilizzando l’API Profilo cliente in tempo reale.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2272'
 ht-degree: 2%
 
 ---
@@ -25,7 +24,7 @@ Per ulteriori informazioni sugli attributi calcolati, inizia leggendo la [panora
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [API Profilo cliente in tempo reale](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [API Profilo cliente in tempo reale](https://www.adobe.com/go/profile-apis-en).
 
 Prima di continuare, controlla la [Guida introduttiva all’API di profilo](../api/getting-started.md) per i collegamenti alla documentazione consigliata, una guida per la lettura delle chiamate API di esempio visualizzate in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
@@ -39,7 +38,7 @@ Consulta la documentazione relativa alla [configurazione di un attributo calcola
 >
 >Per procedere con la guida API è necessario che sia configurato un campo attributo calcolato.
 
-## Crea un attributo calcolato {#create-a-computed-attribute}
+## Creare un attributo calcolato {#create-a-computed-attribute}
 
 Con il campo dell’attributo calcolato definito nello schema abilitato per il profilo, ora puoi configurare un attributo calcolato. Se non lo hai già fatto, segui il flusso di lavoro descritto nella documentazione [configurazione di un attributo calcolato](configure-api.md) .
 
@@ -284,7 +283,7 @@ I passaggi per entrambi i pattern di accesso sono descritti in questo documento.
 * **[Elenca tutti gli attributi calcolati esistenti](#list-all-computed-attributes):** restituisce un elenco di tutti gli attributi calcolati esistenti creati dalla tua organizzazione.
 * **[Visualizza un attributo calcolato specifico](#view-a-computed-attribute):** restituisce i dettagli di un singolo attributo calcolato specificandone l’ID durante la richiesta.
 
-### Elenca tutti gli attributi calcolati {#list-all-computed-attributes}
+### Elencare tutti gli attributi calcolati {#list-all-computed-attributes}
 
 L’organizzazione IMS può creare più attributi calcolati e l’esecuzione di una richiesta di GET all’endpoint `/config/computedAttributes` consente di elencare tutti gli attributi calcolati esistenti per l’organizzazione.
 
