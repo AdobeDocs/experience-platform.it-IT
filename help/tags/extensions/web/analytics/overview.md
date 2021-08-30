@@ -1,10 +1,10 @@
 ---
 title: Panoramica dell’estensione Adobe Analytics
-description: Scopri l’estensione tag di Adobe Analytics in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri le caratteristiche dell’estensione tag di Adobe Analytics in Adobe Experience Platform.
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ Consente di inserire il codice principale [AppMeasurement.js](https://experience
 
 >[!NOTE]
 >
->La convalida utilizzata nell&#39;editor di codice dei tag è concepita per identificare i problemi con il codice scritto da sviluppatori. Un codice che ha superato un processo di minimizzazione, come il codice AppMeasurement.js scaricato da Code Manager, potrebbe essere falsamente segnalato come problematico dal validatore dei tag, che in genere può essere ignorato.
+>La convalida utilizzata nell’editor di codice tag è progettata per individuare eventuali problemi nel codice scritto dallo sviluppatore. La convalida dei tag potrebbe erroneamente segnalare la presenza di errori in un codice che è stato sottoposto un processo di minimizzazione (come il codice AppMeasurement.js scaricato da Code Manager), ma in genere questo può essere ignorato.
 
 #### Imposta le seguenti suite di rapporti sul tracker
 
@@ -270,7 +270,7 @@ Vengono visualizzate le seguenti opzioni:
 
 Il sottodominio Audience Manager è assegnato da Adobe Audience Manager. A volte è denominato &quot;Partner Name&quot; (Nome partner) o &quot;Partner Subdomain&quot; (Sottodominio partner). Contatta il tuo consulente Adobe o l&#39;Assistenza clienti se non conosci il nome del tuo partner.
 
-Puoi configurare le impostazioni avanzate selezionando **Mostra impostazioni avanzate** e immettendo le preferenze.
+Per configurare le impostazioni avanzate, seleziona **Mostra impostazioni avanzate** e immetti le tue preferenze.
 
 ![](../../../images/an-ext-aam-adv.png)
 
@@ -367,7 +367,7 @@ Usa l&#39;editor per specificare il codice pagina personalizzato.
 
 Seleziona questa opzione per incrementare una visualizzazione di pagina.
 
-#### Non incrementare una visualizzazione di pagina - s.t()
+#### Non incrementare una visualizzazione di pagina - s.tl()
 
 Seleziona questa opzione se non desideri incrementare una visualizzazione di pagina.
 
