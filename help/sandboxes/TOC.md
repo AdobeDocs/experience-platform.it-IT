@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Guida alle sandbox di Adobe Experience Platform
 breadcrumb-title: Guida alle sandbox
 user-guide-description: Suddividi un’istanza di Platform in ambienti virtuali per lo sviluppo, il test e la distribuzione di applicazioni.
-feature: Gestione dati
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+feature: Data Management
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 39%
+source-wordcount: '60'
+ht-degree: 43%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 39%
    * [Tipi di sandbox](api/types.md)
    * [Appendice](api/appendix.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-* [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [Riferimento API](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
