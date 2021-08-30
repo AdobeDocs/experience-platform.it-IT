@@ -5,15 +5,14 @@ title: Guida all’API del servizio Identity
 topic-legacy: API guide
 description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti tra dispositivi, tra canali e in tempo quasi reale utilizzando grafici di identità in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 0%
+source-wordcount: '767'
+ht-degree: 3%
 
 ---
 
-# [!DNL Identity Service] Guida all’API
+# Guida dell’API di [!DNL Identity Service]
 
 Adobe Experience Platform [!DNL Identity Service] gestisce l’identificazione dei clienti in tempo reale su diversi dispositivi, tra canali e in tempo reale in quello che è noto come grafico di identità in Adobe Experience Platform.
 
@@ -41,7 +40,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -80,7 +79,7 @@ Quando un&#39;identità viene mantenuta, [!DNL Identity Service] genera e assegn
 
 Per limitare il payload nelle risposte, le API adattano le risposte al tipo di costrutto di identità utilizzato. Cioè, se passi XID le tue risposte avranno XID, se passi le identità composite, la risposta seguirà la struttura utilizzata nella richiesta.
 
-Gli esempi contenuti in questo documento non coprono la funzionalità completa dell’ API [!DNL Identity Service] . Per l&#39;API completa, consulta [Riferimento API Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
+Gli esempi contenuti in questo documento non coprono la funzionalità completa dell’ API [!DNL Identity Service] . Per l&#39;API completa, consulta [Riferimento API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

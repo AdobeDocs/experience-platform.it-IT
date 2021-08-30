@@ -5,10 +5,10 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 1%
+source-wordcount: '1630'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ L’endpoint `/descriptors` nell’ API [!DNL Schema Registry] consente di gesti
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
 ## Recupera un elenco di descrittori {#list}
 
@@ -315,7 +315,7 @@ Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | URI `$id` dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, usa &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi di identità. È possibile trovare un elenco di namespace utilizzando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi di identità. È possibile trovare un elenco di namespace utilizzando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
 | `xdm:property` | A seconda del `xdm:namespace` utilizzato, è possibile utilizzare `xdm:id` o `xdm:code`. |
 | `xdm:isPrimary` | Un valore booleano facoltativo. Se true, indica il campo come identità principale. Gli schemi possono contenere una sola identità principale. |
 

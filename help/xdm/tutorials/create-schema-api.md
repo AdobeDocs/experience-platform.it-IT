@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per guidarti nei passaggi necessari per comporre uno schema utilizzando una classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 1%
+source-wordcount: '2422'
+ht-degree: 2%
 
 ---
 
@@ -957,7 +957,7 @@ L&#39;esecuzione di una richiesta di GET per cercare lo schema ora mostra il rif
 
 Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identity&quot; (Identità) e, al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;Grafico identità&quot; per tale individuo. I dati del grafico sono quindi accessibili da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri servizi [!DNL Experience Platform] per fornire una vista unita di ogni singolo cliente.
 
-I campi comunemente contrassegnati come &quot;Identity&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID CRM o altri campi ID univoci.
+I campi comunemente contrassegnati come &quot;Identity&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci.
 
 Considera eventuali identificatori univoci specifici dell’organizzazione, in quanto potrebbero essere validi anche per i campi Identity.
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->È possibile elencare i valori &quot;xdm:namespace&quot; disponibili o crearne di nuovi utilizzando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda del &quot;xdm:namespace&quot; utilizzato.
+>È possibile elencare i valori &quot;xdm:namespace&quot; disponibili o crearne di nuovi utilizzando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda del &quot;xdm:namespace&quot; utilizzato.
 
 **Risposta**
 
@@ -1180,7 +1180,7 @@ Dopo aver creato più schemi, è possibile definire le relazioni tra di essi med
 
 Le seguenti informazioni integrano l’esercitazione API.
 
-## Schema completo dei membri fedeltà {#complete-schema}
+## Schema Membri fedeltà completi {#complete-schema}
 
 In questa esercitazione, viene composto uno schema per descrivere i membri di un programma fedeltà al dettaglio.
 
