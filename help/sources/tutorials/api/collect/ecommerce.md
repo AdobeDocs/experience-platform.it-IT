@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 Affinché i dati di origine siano utilizzati in [!DNL Platform], è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle proprie esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati [!DNL Platform] in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche la classe XDM [!DNL Individual Profile] .
 
-È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39; [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39; [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato API**
 

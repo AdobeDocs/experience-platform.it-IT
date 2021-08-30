@@ -5,9 +5,9 @@ title: Panoramica dei criteri di utilizzo dei dati
 topic-legacy: policies
 description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentita l’esecuzione di dati all’interno di un Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Un esempio di azione di marketing potrebbe essere il desiderio di esportare un s
 >
 >Le azioni di marketing da sole non limitano l’utilizzo dei dati. Devono essere inclusi nei criteri di utilizzo dei dati abilitati per poter valutare tali azioni in caso di violazioni dei criteri.
 
-Quando si verifica un utilizzo dei dati nel servizio dell’organizzazione, è necessario indicare le azioni di marketing rilevanti in modo da identificare eventuali violazioni dei criteri. Puoi quindi utilizzare l&#39; [API del servizio criteri](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per verificare la presenza di violazioni dei criteri nell&#39;integrazione.
+Quando si verifica un utilizzo dei dati nel servizio dell’organizzazione, è necessario indicare le azioni di marketing rilevanti in modo da identificare eventuali violazioni dei criteri. Puoi quindi utilizzare l&#39; [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) per verificare la presenza di violazioni dei criteri nell&#39;integrazione.
 
 >[!NOTE]
 >

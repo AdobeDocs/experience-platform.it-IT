@@ -4,11 +4,10 @@ solution: Experience Platform
 title: 'Gestire le etichette di utilizzo dei dati utilizzando le API '
 topic-legacy: developer guide
 description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1141'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 2%
 
 Questo documento fornisce passaggi su come gestire le etichette di utilizzo dei dati utilizzando le API [!DNL Policy Service] e [!DNL Dataset Service].
 
-Il [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la tua organizzazione.
+Il [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la tua organizzazione.
 
 L’ API [!DNL Dataset Service] ti consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’ [!DNL Catalog Service] API che gestisce i metadati del set di dati.
 
@@ -163,7 +162,7 @@ Una risposta corretta restituisce i dettagli dell’etichetta personalizzata.
 }
 ```
 
-## Creare o aggiornare un&#39;etichetta personalizzata {#create-update-label}
+## Creare o aggiornare un’etichetta personalizzata {#create-update-label}
 
 Per creare o aggiornare un’etichetta personalizzata, devi effettuare una richiesta PUT all’API [!DNL Policy Service] .
 

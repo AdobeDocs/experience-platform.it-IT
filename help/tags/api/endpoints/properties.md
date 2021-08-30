@@ -1,18 +1,18 @@
 ---
-title: Endpoint proprietà
-description: Scopri come effettuare chiamate all’endpoint /properties nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “properties”
+description: Scopri come effettuare chiamate all’endpoint /properties nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 9%
+source-wordcount: '1146'
+ht-degree: 99%
 
 ---
 
-# Endpoint proprietà
+# Endpoint “properties”
 
-Una proprietà è un costrutto contenitore che contiene la maggior parte delle altre risorse disponibili nell’API di Reactor. Puoi gestire le proprietà a livello di programmazione utilizzando l’endpoint `/properties` .
+Una proprietà è un costrutto contenitore per la maggior parte delle altre risorse disponibili nell’API di Reactor. Puoi gestire le proprietà a livello di programmazione utilizzando l’endpoint `/properties`.
 
-Nella gerarchia delle risorse, una proprietà è il proprietario dei seguenti elementi:
+Nella gerarchia delle risorse, i seguenti elementi appartengono a una proprietà:
 
 * [Build](./builds.md)
 * [Callback](./callbacks.md)
@@ -24,17 +24,17 @@ Nella gerarchia delle risorse, una proprietà è il proprietario dei seguenti el
 * [Componenti della regola](./rule-components.md)
 * [Regole](./rules.md)
 
-Una proprietà appartiene esattamente a una [azienda](./companies.md). Un&#39;azienda può avere molte proprietà.
+Una proprietà appartiene esattamente a una [azienda](./companies.md). Un’azienda può avere diverse proprietà.
 
 Per informazioni più generali sulle proprietà e sul loro ruolo nella gestione dei tag, consulta la panoramica su [aziende e proprietà](../../ui/administration/companies-and-properties.md).
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di proprietà {#list}
+## Recuperare un elenco di proprietà {#list}
 
-Puoi recuperare un elenco di proprietà appartenenti alla società includendo l’ID della società nel percorso di una richiesta di GET.
+Puoi recuperare un elenco di proprietà appartenenti all’azienda includendo il suo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -44,13 +44,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | Parametro | Descrizione |
 | --- | --- |
-| `COMPANY_ID` | La `id` della società proprietaria delle proprietà che si desidera elencare. |
+| `COMPANY_ID` | `id` dell’azienda a cui appartengono le proprietà che desideri elencare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le proprietà elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le proprietà elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di proprietà per la società specificata.
+In caso di esito positivo, la risposta restituisce un elenco di proprietà per la società specificata.
 
 ```json
 {
@@ -258,7 +258,7 @@ Una risposta corretta restituisce un elenco di proprietà per la società specif
 
 ## Cercare una proprietà {#lookup}
 
-Puoi cercare una proprietà fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare una proprietà devi fornire il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -268,7 +268,7 @@ GET /properties/{PROPERTY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | Il `id` della proprietà che si desidera cercare. |
+| `PROPERTY_ID` | `id` della proprietà che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -286,7 +286,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà.
 
 ```json
 {
@@ -381,7 +381,7 @@ Una risposta corretta restituisce i dettagli della proprietà.
 
 ## Creare una proprietà {#create}
 
-È possibile creare una nuova proprietà effettuando una richiesta di POST.
+È possibile creare una nuova proprietà effettuando una richiesta POST.
 
 **Formato API**
 
@@ -391,13 +391,13 @@ POST /company/{COMPANY_ID}/properties
 
 | Parametro | Descrizione |
 | --- | --- |
-| `COMPANY_ID` | La `id` della società in cui si sta definendo la proprietà. |
+| `COMPANY_ID` | `id` dell’azienda in cui si sta definendo la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Nella richiesta seguente viene creata una nuova proprietà per la proprietà specificata. La chiamata associa anche la proprietà a un&#39;estensione esistente tramite la proprietà `relationships` . Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md) .
+Nella richiesta seguente viene creata una nuova proprietà per la proprietà specificata. La chiamata associa anche la proprietà a un’estensione esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida delle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -426,12 +426,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per la proprietà. |
-| `attributes.platform` | **(Obbligatorio)** La piattaforma per la proprietà. Può essere `web` per le proprietà web oppure `mobile` o `edge` per le proprietà mobili. |
-| `attributes.domains` | **(Obbligatorio per le proprietà web)** Un array di domini URL per la proprietà. |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile della proprietà. |
+| `attributes.platform` | **(Obbligatorio)** Piattaforma della proprietà. Può essere `web` per le proprietà web oppure `mobile` o `edge` per le proprietà mobili. |
+| `attributes.domains` | **(Obbligatorio per le proprietà web)** Array di domini URL della proprietà. |
 | `attributes.development` | Valore booleano che indica se si tratta di una proprietà di sviluppo. |
-| `attributes.privacy` | Una stringa che può essere utilizzata per fare riferimento a considerazioni relative alla privacy per la proprietà. |
-| `attributes.rule_component_sequencing_enabled` | Valore booleano per specificare se la sequenza dei componenti della regola deve essere abilitata per questa proprietà. |
+| `attributes.privacy` | Stringa che può essere utilizzata per fare riferimento a considerazioni relative a criteri della proprietà. |
+| `attributes.rule_component_sequencing_enabled` | Valore booleano per specificare se la sequenza dei componenti regola deve essere abilitata per questa proprietà. |
 | `attributes.ssl_enabled` | Valore booleano che indica se Secure Sockets Layer (SSL) deve essere abilitato per questa proprietà. |
 | `attributes.undefined_vars_return_empty` | Valore booleano per specificare se le variabili non definite devono essere restituite come vuote per questa proprietà. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `properties`. |
@@ -440,7 +440,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà appena creata.
 
 ```json
 {
@@ -535,7 +535,7 @@ Una risposta corretta restituisce i dettagli della proprietà appena creata.
 
 ## Aggiornare una proprietà {#update}
 
-Puoi aggiornare una proprietà includendo il relativo ID nel percorso di una richiesta PATCH.
+Peri aggiornare una proprietà, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -545,7 +545,7 @@ PATCH /properties/{PROPERTY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della proprietà che si desidera aggiornare. |
+| `PROPERTY_ID` | `id` della proprietà che si desidera aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -576,15 +576,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per la proprietà. Per una proprietà è possibile aggiornare i seguenti attributi: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | La `id` della proprietà che desideri aggiornare. Questo deve corrispondere al valore `{PROPERTY_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per la proprietà. Per una proprietà è possibile aggiornare i seguenti attributi: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `id` | `id` della proprietà che desideri aggiornare. Deve corrispondere al valore `{PROPERTY_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà aggiornata.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà aggiornata.
 
 ```json
 {
@@ -679,7 +679,7 @@ Una risposta corretta restituisce i dettagli della proprietà aggiornata.
 
 ## Eliminare una proprietà
 
-Puoi eliminare una proprietà includendo il relativo ID nel percorso di una richiesta DELETE.
+Per eliminare una proprietà, devi includere il relativo ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -689,7 +689,7 @@ DELETE /properties/{PROPERTY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della proprietà che desideri eliminare. |
+| `PROPERTY_ID` | `id` della proprietà che desideri eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -705,21 +705,21 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che la proprietà è stata eliminata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che la proprietà è stata eliminata.
 
 ## Gestire le note per una proprietà {#notes}
 
-Le proprietà sono risorse &quot;di rilievo&quot;, ovvero puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le proprietà e altre risorse compatibili, consulta la [guida all’endpoint delle note](./notes.md) .
+Le proprietà sono risorse che supportano le note, ovvero puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le proprietà e altre risorse compatibili, consulta la [guida per l’endpoint “notes”](./notes.md).
 
 ## Recuperare le risorse correlate per una proprietà {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per una proprietà. Quando [cerca una proprietà](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate per una proprietà. Quando si [cerca una proprietà](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Elencare i callback correlati per una proprietà {#callbacks}
 
-È possibile elencare i [callback](./callbacks.md) registrati su una proprietà aggiungendo `/callbacks` al percorso di una richiesta di ricerca.
+È possibile elencare i [callback](./callbacks.md) (le richiamate) registrati su una proprietà aggiungendo `/callbacks` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -729,7 +729,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | Il `id` della proprietà di cui si desidera elencare i callback. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare i callback. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -747,7 +747,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di callback di proprietà della proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di callback appartenenti alla proprietà specificata.
 
 ```json
 {
@@ -794,7 +794,7 @@ Una risposta corretta restituisce un elenco di callback di proprietà della prop
 
 ### Elencare gli elementi dati correlati per una proprietà {#data-elements}
 
-È possibile elencare gli [elementi dati](./data-elements.md) di proprietà di una proprietà aggiungendo `/data_elements` al percorso di una richiesta di ricerca.
+Per elencare gli [elementi dati](./data-elements.md) appartenenti a una proprietà, devi aggiungere `/data_elements` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -804,7 +804,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | La proprietà `id` di cui si desidera elencare gli elementi dati. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare gli elementi dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -822,7 +822,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di elementi dati di proprietà della proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di elementi dati appartenenti alla proprietà specificata.
 
 ```json
 {
@@ -935,7 +935,7 @@ Una risposta corretta restituisce un elenco di elementi dati di proprietà della
 
 ### Elencare gli ambienti correlati per una proprietà {#environments}
 
-È possibile elencare gli [ambienti](./environments.md) di proprietà di una proprietà aggiungendo `/environments` al percorso di una richiesta di ricerca.
+Per elencare gli [ambienti](./environments.md) appartenenti a una proprietà, aggiungi `/environments` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -945,7 +945,7 @@ GET  /properties/{PROPERTY_ID}/environments
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | La `id` della proprietà di cui desideri elencare gli ambienti. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare gli ambienti. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -963,7 +963,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di ambienti di proprietà della proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di ambienti che appartengono alla proprietà specificata.
 
 ```json
 {
@@ -1055,7 +1055,7 @@ Una risposta corretta restituisce un elenco di ambienti di proprietà della prop
 
 ### Elencare le estensioni correlate per una proprietà {#extensions}
 
-Puoi elencare le [estensioni](./extensions.md) di proprietà di una proprietà aggiungendo `/extensions` al percorso di una richiesta di ricerca.
+Per elencare le [estensioni](./extensions.md) appartenenti a una proprietà, aggiungi `/extensions` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1065,7 +1065,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | La proprietà `id` di cui si desidera elencare le estensioni. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare le estensioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1083,7 +1083,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di estensioni di proprietà della proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di estensioni appartenenti alla proprietà specificata.
 
 ```json
 {
@@ -1186,7 +1186,7 @@ Una risposta corretta restituisce un elenco di estensioni di proprietà della pr
 
 ### Elencare gli host correlati per una proprietà {#hosts}
 
-È possibile elencare gli [host](./hosts.md) utilizzati da una proprietà aggiungendo `/hosts` al percorso di una richiesta di ricerca.
+Per elencare gli [host](./hosts.md) utilizzati da una proprietà, aggiungi `/hosts` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1196,7 +1196,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | Il `id` della proprietà di cui si desidera elencare gli host. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare gli host. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1214,7 +1214,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di host utilizzati da una proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di host utilizzati dalla proprietà specificata.
 
 ```json
 {
@@ -1264,7 +1264,7 @@ Una risposta corretta restituisce un elenco di host utilizzati da una proprietà
 
 ### Elencare le regole correlate per una proprietà {#rules}
 
-È possibile elencare le [regole](./rules.md) utilizzate da una proprietà aggiungendo `/rules` al percorso di una richiesta di ricerca.
+Per ottenere un elenco delle [regole](./rules.md) utilizzate da una proprietà, aggiungi `/rules` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1274,7 +1274,7 @@ GET  /properties/{PROPERTY_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | La proprietà `id` di cui si desidera elencare le regole. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare le regole. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1292,7 +1292,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di regole utilizzate da una proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di regole utilizzate dalla proprietà specificata.
 
 ```json
 {
@@ -1375,9 +1375,9 @@ Una risposta corretta restituisce un elenco di regole utilizzate da una propriet
 }
 ```
 
-### Cerca la società correlata per una proprietà {#company}
+### Cercare l’azienda correlata di una proprietà {#company}
 
-Puoi cercare la società proprietaria di una proprietà aggiungendo `/company` al percorso di una richiesta di ricerca.
+Per cercare l’azienda a cui appartiene una proprietà, aggiungi `/company` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1387,7 +1387,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | Il `id` della proprietà di cui desideri cercare la società. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri cercare l’azienda. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1405,7 +1405,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della società della proprietà specificata.
+In caso di esito positivo, la risposta restituisce i dettagli dell’azienda della proprietà specificata.
 
 ```json
 {

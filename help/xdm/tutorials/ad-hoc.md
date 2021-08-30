@@ -6,10 +6,10 @@ description: In circostanze specifiche, potrebbe essere necessario creare uno sc
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 2%
+source-wordcount: '828'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono spazi dei nomi per l’utilizzo solo da un singolo set di dati. Questo è denominato schema &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di inserimento dati per [!DNL Experience Platform], inclusi l’acquisizione di file CSV e la creazione di determinati tipi di connessioni sorgente.
 
-Questo documento fornisce passaggi generali per la creazione di uno schema ad hoc utilizzando l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). È progettato per essere utilizzato insieme ad altre esercitazioni [!DNL Experience Platform] che richiedono la creazione di uno schema ad-hoc come parte del loro flusso di lavoro. Ognuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
+Questo documento fornisce passaggi generali per la creazione di uno schema ad hoc utilizzando l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/). È progettato per essere utilizzato insieme ad altre esercitazioni [!DNL Experience Platform] che richiedono la creazione di uno schema ad-hoc come parte del loro flusso di lavoro. Ognuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
 
 ## Introduzione
 
@@ -26,7 +26,7 @@ Questa esercitazione richiede una buona comprensione del sistema [!DNL Experienc
 - [Panoramica](../home.md) del sistema XDM: Panoramica di alto livello di XDM e della sua implementazione in  [!DNL Experience Platform].
 - [Nozioni di base sulla composizione](../schema/composition.md) dello schema: Panoramica dei componenti di base degli schemi XDM.
 
-Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ [!DNL Schema Registry] API. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per fare richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
+Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per fare richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
 
 ## Creare una classe ad hoc
 

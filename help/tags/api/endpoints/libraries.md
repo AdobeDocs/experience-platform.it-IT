@@ -1,28 +1,28 @@
 ---
-title: Endpoint delle librerie
-description: Scopri come effettuare chiamate all’endpoint /librerie nell’API di Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “libraries”
+description: Scopri come effettuare chiamate all’endpoint /libraries nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 8%
+source-wordcount: '1584'
+ht-degree: 99%
 
 ---
 
-# Endpoint delle librerie
+# Endpoint “libraries”
 
-Una libreria è una raccolta di risorse tag ([estensioni](./extensions.md), [regole](./rules.md) e [elementi dati](./data-elements.md)) che rappresentano il comportamento desiderato di una [proprietà](./properties.md). L’endpoint `/libraries` nell’API di Reactor consente di gestire in modo programmatico le librerie all’interno delle proprietà dei tag.
+Una libreria è una raccolta di risorse tag ([estensioni](./extensions.md), [regole](./rules.md) ed [elementi dati](./data-elements.md)) che rappresentano il comportamento desiderato di una [proprietà](./properties.md). L’endpoint `/libraries` nell’API di Reactor consente di gestire in modo programmatico le librerie all’interno delle proprietà dei tag.
 
-Una libreria appartiene esattamente a una proprietà. Una proprietà può avere molte librerie.
+Una libreria appartiene esattamente a una proprietà. Una proprietà può avere diverse librerie.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-Prima di lavorare con le librerie nell&#39;API di Reactor, è importante comprendere i ruoli che lo stato e gli ambienti della libreria svolgono per determinare quali azioni puoi eseguire su una particolare libreria. Per ulteriori informazioni, consulta la guida sul [flusso di pubblicazione della libreria](../../ui/publishing/publishing-flow.md) .
+Prima di lavorare con le librerie nell’API di Reactor, è importante comprendere i ruoli che lo stato e gli ambienti della libreria svolgono per determinare quali azioni puoi eseguire su una particolare libreria. Per ulteriori informazioni, consulta la guida sul [flusso di pubblicazione della libreria](../../ui/publishing/publishing-flow.md).
 
-## Recupera un elenco di librerie {#list}
+## Recuperare un elenco di librerie {#list}
 
-Puoi recuperare un elenco di librerie per una proprietà includendo l’ID della proprietà nel percorso di una richiesta GET.
+Per recuperare un elenco di librerie per una proprietà, devi includere l’ID della proprietà nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -32,13 +32,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | Il `id` della proprietà proprietaria delle librerie. |
+| `PROPERTY_ID` | `id` della proprietà a cui appartengono le librerie. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le librerie elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le librerie elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di librerie per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di librerie per la proprietà specificata.
 
 ```json
 {
@@ -146,9 +146,9 @@ Una risposta corretta restituisce un elenco di librerie per la proprietà specif
 }
 ```
 
-## Cerca una libreria {#lookup}
+## Cercare una libreria {#lookup}
 
-Puoi cercare una libreria fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare una libreria, dei fornire il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -158,7 +158,7 @@ GET /libraries/{LIBRARY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `LIBRARY_ID` | Il `id` della libreria che desideri cercare. |
+| `LIBRARY_ID` | `id` della libreria che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della libreria.
+In caso di esito positivo, la risposta restituisce i dettagli della libreria.
 
 ```json
 {
@@ -259,7 +259,7 @@ Una risposta corretta restituisce i dettagli della libreria.
 
 ## Creare una libreria {#create}
 
-Puoi creare una nuova libreria effettuando una richiesta POST.
+Per creare una nuova libreria, effettua una richiesta POST.
 
 **Formato API**
 
@@ -269,13 +269,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo la libreria. |
+| `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo la libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Nella richiesta seguente viene creata una nuova libreria per la proprietà specificata. Quando crei una libreria, puoi configurare solo il relativo attributo `name` . Per aggiungere elementi dati, estensioni e regole alla libreria, è necessario creare relazioni. Per ulteriori informazioni, consulta la sezione sulla [gestione delle risorse della libreria](#resources) .
+Nella richiesta seguente viene creata una nuova libreria per la proprietà specificata. Quando crei una libreria, puoi configurare solo il relativo attributo `name`. Per aggiungere elementi dati, estensioni e regole alla libreria, è necessario creare delle relazioni. Per ulteriori informazioni, consulta la sezione sulla [gestione delle risorse della libreria](#resources).
 
 ```shell
 curl -X POST \
@@ -296,14 +296,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per la libreria. |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile della libreria. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della libreria appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della libreria appena creata.
 
 ```json
 {
@@ -403,13 +403,13 @@ Una risposta corretta restituisce i dettagli della libreria appena creata.
 }
 ```
 
-## Gestione delle risorse di una libreria {#resources}
+## Gestire le risorse di una libreria {#resources}
 
-Gli elementi dati, le estensioni, le regole e l&#39;ambiente associati a una libreria vengono stabiliti tramite relazioni. Le sezioni seguenti spiegano come gestire queste relazioni tramite chiamate API.
+Gli elementi dati, le estensioni, le regole e l’ambiente associati a una libreria vengono stabiliti tramite relazioni. Le sezioni seguenti spiegano come gestire queste relazioni tramite chiamate API.
 
 ### Aggiungere risorse a una libreria {#add-resources}
 
-Puoi aggiungere risorse a una libreria aggiungendo `/relationships` al percorso di una richiesta POST, seguito dal tipo di risorsa .
+Per aggiungere risorse a una libreria, devi aggiungere `/relationships` al percorso di una richiesta POST, seguito dal tipo di risorsa.
 
 **Formato API**
 
@@ -420,7 +420,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | Parametro | Descrizione |
 | --- | --- |
 | `{LIBRARY_ID}` | ID della libreria a cui desideri aggiungere risorse. |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa che si sta aggiungendo alla libreria. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | Tipo di risorsa che si sta aggiungendo alla libreria. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -453,13 +453,13 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | ID della risorsa che stai aggiungendo alla libreria. |
-| `type` | Il tipo di risorsa che si sta aggiungendo alla libreria. |
+| `type` | Tipo di risorsa che si sta aggiungendo alla libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli delle relazioni aggiunte. L&#39;esecuzione di una [richiesta di ricerca](#lookup) per la libreria mostra le relazioni aggiunte sotto la proprietà `relationships` .
+In caso di esito positivo, la risposta restituisce i dettagli delle relazioni aggiunte. L’esecuzione di una [richiesta di ricerca](#lookup) per la libreria mostra le relazioni aggiunte sotto la proprietà `relationships`.
 
 ```json
 {
@@ -482,7 +482,7 @@ Una risposta corretta restituisce i dettagli delle relazioni aggiunte. L&#39;ese
 
 ### Sostituire le risorse di una libreria {#replace-resources}
 
-Puoi sostituire tutte le risorse esistenti di un certo tipo per una libreria aggiungendo `/relationships` al percorso di una richiesta PATCH, seguito dal tipo di risorsa che stai sostituendo.
+Per una libreria, puoi sostituire tutte le risorse esistenti di un certo tipo aggiungendo `/relationships` al percorso di una richiesta PATCH, seguito dal tipo di risorsa da sostituire.
 
 **Formato API**
 
@@ -492,14 +492,14 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | ID della libreria di cui si desidera sostituire le relazioni. |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da sostituire. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | ID della libreria di cui desideri sostituire le relazioni. |
+| `{RESOURCE_TYPE}` | Tipo di risorsa da sostituire. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La seguente richiesta sostituisce le estensioni di una libreria con quelle fornite nell&#39;array `data` .
+La seguente richiesta sostituisce le estensioni di una libreria con quelle fornite nell’array `data`.
 
 ```shell
 curl -X PATCH \
@@ -522,13 +522,13 @@ curl -X PATCH \
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | ID della risorsa che stai aggiungendo alla libreria. |
-| `type` | Il tipo di risorsa che si sta aggiungendo alla libreria. |
+| `type` | Tipo di risorsa che si sta aggiungendo alla libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli delle relazioni aggiornate. L&#39;esecuzione di una [richiesta di ricerca](#lookup) per la libreria mostra le relazioni sotto la proprietà `relationships` .
+In caso di esito positivo, la risposta restituisce i dettagli delle relazioni aggiornate. Quando si esegue una [richiesta di ricerca](#lookup) per la libreria, le relazioni vengono mostrate sotto la proprietà `relationships`.
 
 ```json
 {
@@ -547,7 +547,7 @@ Una risposta corretta restituisce i dettagli delle relazioni aggiornate. L&#39;e
 
 ### Rimuovere risorse da una libreria {#remove-resources}
 
-Puoi rimuovere risorse esistenti da una libreria aggiungendo `/relationships` al percorso di una richiesta DELETE, seguito dal tipo di risorsa che stai rimuovendo.
+Puoi rimuovere risorse esistenti da una libreria aggiungendo `/relationships` al percorso di una richiesta DELETE, seguito dal tipo di risorsa da rimuovere.
 
 **Formato API**
 
@@ -557,14 +557,14 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | ID della libreria di cui desideri rimuovere le risorse. |
+| `{LIBRARY_ID}` | ID della libreria da cui desideri rimuovere le risorse. |
 | `{RESOURCE_TYPE}` | Tipo di risorsa da rimuovere. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La seguente richiesta rimuove una regola da una libreria. Eventuali regole esistenti non incluse nell&#39;array `data` non vengono eliminate.
+La seguente richiesta rimuove una regola da una libreria. Eventuali regole esistenti non incluse nell’array `data` non vengono eliminate.
 
 ```shell
 curl -X DELETE \
@@ -586,14 +586,14 @@ curl -X DELETE \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID della risorsa che stai rimuovendo dalla libreria. |
-| `type` | Il tipo di risorsa che stai rimuovendo dalla libreria. |
+| `id` | ID della risorsa da rimuovere dalla libreria. |
+| `type` | Tipo di risorsa da rimuovere dalla libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli delle relazioni aggiornate per il tipo di risorsa. Se non esistono relazioni per questo tipo di risorsa, la proprietà `data` viene restituita come matrice vuota. L&#39;esecuzione di una [richiesta di ricerca](#lookup) per la libreria mostra le relazioni sotto la proprietà `relationships` .
+In caso di esito positivo, la risposta restituisce i dettagli delle relazioni aggiornate per il tipo di risorsa. Se non esistono relazioni per questo tipo di risorsa, la proprietà `data` viene restituita come un array vuoto. Quando si esegue una [richiesta di ricerca](#lookup) per la libreria, le relazioni vengono mostrate sotto la proprietà `relationships`.
 
 ```json
 {
@@ -609,7 +609,7 @@ Una risposta corretta restituisce i dettagli delle relazioni aggiornate per il t
 
 ## Assegnare una libreria a un ambiente {#environment}
 
-È possibile assegnare una libreria a un ambiente `/relationships/environment` al percorso di una richiesta POST.
+È possibile assegnare una libreria a un ambiente `/relationships/environment` nel percorso di una richiesta POST.
 
 **Formato API**
 
@@ -643,14 +643,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID dell&#39;ambiente a cui assegni la libreria. |
+| `id` | ID dell’ambiente a cui assegnare la libreria. |
 | `type` | Deve essere impostato su `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della relazione. L&#39;esecuzione di una [richiesta di ricerca](#lookup) per la libreria mostra la relazione aggiunta sotto la proprietà `relationships` .
+In caso di esito positivo, la risposta restituisce i dettagli della relazione. Quando si esegue una [richiesta di ricerca](#lookup) per la libreria, la relazione aggiunta viene mostrata sotto la proprietà `relationships`.
 
 ```json
 {
@@ -665,9 +665,9 @@ Una risposta corretta restituisce i dettagli della relazione. L&#39;esecuzione d
 }
 ```
 
-## Transizione di una libreria {#transition}
+## Cambiare lo stato di una libreria {#transition}
 
-Puoi passare una libreria a un altro stato di pubblicazione includendo il relativo ID nel percorso di una richiesta PATCH e fornendo un valore `meta.action` appropriato nel payload.
+Per cambiare lo stato di pubblicazione di una libreria, includi il relativo ID nel percorso di una richiesta PATCH e fornisci un valore `meta.action` appropriato nel payload.
 
 **Formato API**
 
@@ -677,13 +677,13 @@ PATCH /libraries/{LIBRARY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `LIBRARY_ID` | Il `id` della libreria di cui desideri eseguire la transizione. |
+| `LIBRARY_ID` | `id` della libreria di cui cambiare lo stato. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente sposta lo stato di una libreria esistente in base al valore di `meta.action` fornito nel payload. Le azioni disponibili per una libreria dipendono dal suo stato di pubblicazione corrente, come descritto in [flusso di pubblicazione](../../ui/publishing/publishing-flow.md#state).
+La richiesta seguente cambia lo stato di una libreria esistente in base al valore di `meta.action` fornito nel payload. Le azioni disponibili per una libreria dipendono dal suo stato di pubblicazione corrente, come descritto nella sezione sul [flusso di pubblicazione](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -705,15 +705,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `meta.action` | L&#39;azione di transizione specifica che desideri eseguire sulla libreria. Sono disponibili le azioni seguenti, a seconda dello stato di pubblicazione corrente della libreria: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | Il `id` della libreria da aggiornare. Questo deve corrispondere al valore `{LIBRARY_ID}` fornito nel percorso della richiesta. |
+| `meta.action` | Azione specifica di transizione a un altro stato da eseguire sulla libreria. A seconda dello stato di pubblicazione corrente della libreria, sono disponibili le azioni seguenti: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | `id` della libreria da aggiornare. Questo deve corrispondere al valore `{LIBRARY_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `libraries`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della libreria aggiornata.
+In caso di esito positivo, la risposta restituisce i dettagli della libreria aggiornata.
 
 ```json
 {
@@ -813,7 +813,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | Parametro | Descrizione |
 | --- | --- |
-| `LIBRARY_ID` | Il `id` della libreria che desideri pubblicare. |
+| `LIBRARY_ID` | `id` della libreria da pubblicare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -904,17 +904,17 @@ curl -X POST \
 
 ## Gestire le note per una libreria {#notes}
 
-Le librerie sono risorse &quot;di rilievo&quot;, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le librerie e altre risorse compatibili, consulta la [guida all’endpoint delle note](./notes.md) .
+Le librerie sono risorse che supportano le note, pertanto puoi creare e recuperare note testuali per ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le librerie e altre risorse compatibili, consulta la [guida sugli endpoint per note](./notes.md).
 
 ## Recuperare le risorse correlate per una libreria {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per una libreria. Quando [cerca una libreria](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate per una libreria. Quando [cerchi una libreria](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
-### Elencare gli elementi dati correlati per una libreria {#data-elements}
+### Elencare gli elementi dati correlati di una libreria {#data-elements}
 
-Puoi elencare gli elementi dati utilizzati da una libreria aggiungendo `/data_elements` al percorso di una richiesta di ricerca.
+Per elencare gli elementi dati utilizzati da una libreria, devi aggiungere `/data_elements` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -924,7 +924,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | Il `id` della libreria di cui si desidera elencare gli elementi dati. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare gli elementi dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -942,7 +942,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di elementi dati che utilizzano la libreria specificata.
+In caso di esito positivo, la risposta restituisce un elenco di elementi dati che utilizzano la libreria specificata.
 
 ```json
 {
@@ -1053,9 +1053,9 @@ Una risposta corretta restituisce un elenco di elementi dati che utilizzano la l
 }
 ```
 
-### Elencare le estensioni correlate per una libreria {#extensions}
+### Elencare le estensioni correlate di una libreria {#extensions}
 
-Puoi elencare le estensioni utilizzate da una libreria aggiungendo `/extensions` al percorso di una richiesta di ricerca.
+Per elencare le estensioni utilizzate da una libreria, devi aggiungere `/extensions` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1065,7 +1065,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | Il `id` della libreria di cui desideri elencare le estensioni. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare le estensioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1083,7 +1083,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di estensioni che utilizzano la libreria specificata.
+In caso di esito positivo, la risposta restituisce un elenco di estensioni che utilizzano la libreria specificata.
 
 ```json
 {
@@ -1184,9 +1184,9 @@ Una risposta corretta restituisce un elenco di estensioni che utilizzano la libr
 }
 ```
 
-### Elencare le regole correlate per una libreria {#rules}
+### Elencare le regole correlate di una libreria {#rules}
 
-Puoi elencare le regole utilizzate da una libreria aggiungendo `/rules` al percorso di una richiesta di ricerca.
+Per elencare le regole utilizzate da una libreria, devi aggiungere `/rules` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1196,7 +1196,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | Il `id` della libreria di cui si desidera elencare le regole. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare le regole. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1214,7 +1214,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di regole che utilizzano la libreria specificata.
+In caso di esito positivo, la risposta restituisce un elenco di regole che utilizzano la libreria specificata.
 
 ```json
 {
@@ -1297,9 +1297,9 @@ Una risposta corretta restituisce un elenco di regole che utilizzano la libreria
 }
 ```
 
-### Cercare l&#39;ambiente correlato per una libreria {#related-environment}
+### Cercare l’ambiente correlato di una libreria {#related-environment}
 
-Puoi cercare l&#39;ambiente a cui è assegnata una libreria aggiungendo `/environment` al percorso di una richiesta GET.
+Per cercare l’ambiente a cui è assegnata una libreria, devi aggiungere `/environment` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1309,7 +1309,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | Il `id` della libreria di cui desideri cercare l&#39;ambiente. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare l’ambiente. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1327,7 +1327,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;ambiente a cui è assegnata la libreria specificata.
+In caso di esito positivo, la risposta restituisce i dettagli dell’ambiente a cui è assegnata la libreria specificata.
 
 ```json
 {
@@ -1409,9 +1409,9 @@ Una risposta corretta restituisce i dettagli dell&#39;ambiente a cui è assegnat
 }
 ```
 
-### Cerca la proprietà correlata per una libreria {#property}
+### Cercare la proprietà correlata di una libreria {#property}
 
-Puoi cercare la proprietà proprietaria di una libreria aggiungendo `/property` al percorso di una richiesta GET.
+Per cercare la proprietà a cui appartiene una libreria, aggiungi `/property` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1421,7 +1421,7 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | Il `id` della libreria di cui desideri cercare la proprietà. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1439,7 +1439,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà proprietaria della libreria specificata.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà a cui appartiene la libreria specificata.
 
 ```json
 {
@@ -1532,9 +1532,9 @@ Una risposta corretta restituisce i dettagli della proprietà proprietaria della
 }
 ```
 
-### Cerca una libreria a monte {#upstream}
+### Cercare una libreria a monte {#upstream}
 
-Puoi cercare la libreria successiva a monte da una libreria aggiungendo `/upstream_library` al percorso di una richiesta GET.
+Per cercare la prossima libreria a monte rispetto a una libreria, aggiungi `/upstream_library` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1544,7 +1544,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LIBRARY_ID}` | La `id` della libreria di cui desideri cercare la libreria a monte. |
+| `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare la libreria a monte. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1562,7 +1562,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della libreria a monte.
+In caso di esito positivo, la risposta restituisce i dettagli della libreria a monte.
 
 ```json
 {

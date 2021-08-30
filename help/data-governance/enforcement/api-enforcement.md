@@ -6,17 +6,16 @@ topic-legacy: guide
 type: Tutorial
 description: Dopo aver creato etichette di utilizzo dei dati per i dati e aver creato criteri di utilizzo per le azioni di marketing rispetto a tali etichette, puoi utilizzare l’API del servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisca una violazione dei criteri. Puoi quindi impostare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 1%
+source-wordcount: '1002'
+ht-degree: 2%
 
 ---
 
 # Applica i criteri di utilizzo dei dati utilizzando l&#39;API [!DNL Policy Service]
 
-Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing rispetto a tali etichette, puoi utilizzare [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi impostare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing rispetto a tali etichette, puoi utilizzare [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi impostare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 
 >[!NOTE]
 >

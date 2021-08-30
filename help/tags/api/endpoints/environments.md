@@ -1,23 +1,23 @@
 ---
-title: Endpoint ambienti
-description: Scopri come effettuare chiamate all’endpoint /ambienti nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “environments”
+description: Scopri come effettuare chiamate all’endpoint /environments nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 8%
+source-wordcount: '1038'
+ht-degree: 99%
 
 ---
 
-# Endpoint ambienti
+# Endpoint “environments”
 
-Quando una [libreria](./libraries.md) viene compilata in una [build](./builds.md) nell&#39;API del reattore, il contenuto esatto della build dipende dalle impostazioni dell&#39;ambiente e dalle risorse incluse nella libreria. In particolare, l’ambiente determina quanto segue:
+Quando una [libreria](./libraries.md) viene compilata in una [build](./builds.md) nell’API di Reactor, il contenuto esatto della build dipende dalle impostazioni dell’ambiente e dalle risorse incluse nella libreria. In particolare, l’ambiente determina quanto segue:
 
-1. **Destinazione**: Il percorso in cui desideri distribuire la build. Questo viene controllato selezionando un [host](./hosts.md) per l&#39;ambiente da utilizzare.
-1. **Archivia**: Puoi scegliere di recuperare la build come set di file distribuibili o di farla comprimere in un formato di archivio. Questa funzione è controllata dall’impostazione `archive` nell’ambiente.
+1. **Destinazione**: percorso in cui desideri distribuire la build. Viene controllata selezionando un [host](./hosts.md) per l&#39;ambiente da utilizzare.
+1. **Archivia**: puoi scegliere se recuperare la build come set di file distribuibili o comprimerla in un formato archivio. Questa funzione è controllata dall’impostazione `archive` nell’ambiente.
 
-Il formato di destinazione e archivio configurato dall&#39;ambiente cambia il modo in cui si fa riferimento alla build nell&#39;applicazione (tale riferimento è un [codice di incorporamento](../../ui/publishing/environments.md#embed-code)). Se si apportano modifiche alla destinazione o al formato di file, è necessario eseguire un aggiornamento corrispondente all&#39;applicazione per utilizzare il nuovo riferimento.
+La destinazione e il formato archivio configurati dall’ambiente determinano il modo in cui si fa riferimento alla build nell’applicazione (tale riferimento è un [codice di incorporamento](../../ui/publishing/environments.md#embed-code)). Se si apportano modifiche alla destinazione o al formato file, è necessario eseguire un aggiornamento corrispondente all’applicazione per utilizzare il nuovo riferimento.
 
-Gli ambienti sono disponibili in tre tipi (o stadi), con ogni tipo con un limite diverso al numero totale che puoi avere:
+Gli ambienti sono disponibili in tre tipi (o stadi), ognuno con un limite totale diverso:
 
 | Tipo di ambiente | Numero consentito |
 | --- | --- |
@@ -31,15 +31,15 @@ Questi tipi di ambiente hanno un comportamento simile, ma vengono utilizzati in 
 
 Un ambiente appartiene esattamente a una [proprietà](./properties.md).
 
-Per informazioni generali sugli ambienti, consulta la sezione relativa agli [ambienti](../../ui/publishing/environments.md) nella documentazione di pubblicazione.
+Per informazioni generali sugli ambienti, consulta la sezione relativa agli [ambienti](../../ui/publishing/environments.md) nella documentazione sulla pubblicazione.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di ambienti {#list}
+## Recuperare un elenco di ambienti {#list}
 
-Puoi recuperare un elenco di ambienti per una proprietà includendo l’ID della proprietà nel percorso di una richiesta GET.
+Per recuperare un elenco di ambienti per una proprietà occorre includere l’ID della proprietà nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -49,13 +49,13 @@ GET /properties/{PROPERTY_ID}/environments
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | L’ `id` della proprietà proprietaria degli ambienti. |
+| `PROPERTY_ID` | `id` della proprietà a cui appartengono gli ambienti. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, gli ambienti elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, gli ambienti elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di ambienti per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce l’elenco degli ambienti per la proprietà specificata.
 
 ```json
 {
@@ -163,7 +163,7 @@ Una risposta corretta restituisce un elenco di ambienti per la proprietà specif
 
 ## Cercare un ambiente {#lookup}
 
-Puoi cercare un ambiente fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare un ambiente occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -173,7 +173,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ENVIRONMENT_ID` | Il `id` dell&#39;ambiente da cercare. |
+| `ENVIRONMENT_ID` | `id` dell’ambiente da cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -191,7 +191,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’ambiente.
+In caso di esito positivo, la risposta restituisce i dettagli dell’ambiente.
 
 ```json
 {
@@ -272,7 +272,7 @@ Una risposta corretta restituisce i dettagli dell’ambiente.
 
 ## Creare un ambiente {#create}
 
-Puoi creare un nuovo ambiente effettuando una richiesta POST.
+Per creare un nuovo ambiente, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -282,13 +282,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo l&#39;ambiente. |
+| `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo l’ambiente. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo ambiente per la proprietà specificata. La chiamata associa inoltre l’ambiente a un host esistente tramite la proprietà `relationships` . Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md) .
+La richiesta seguente crea un nuovo ambiente per la proprietà specificata. La chiamata associa inoltre l’ambiente a un host esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida delle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -321,19 +321,19 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per l&#39;ambiente. |
-| `attributes.archive` | Un valore booleano che indica se la build è in formato archivio. |
-| `attributes.archive_passphrase` | Una password di stringa che può essere utilizzata per sbloccare il file di archivio. |
-| `attributes.path` | Un percorso dall&#39;URL host per l&#39;ambiente. |
-| `attributes.stage` | La fase per l&#39;ambiente (sviluppo, staging o produzione). |
-| `id` | Il `id` dell’ambiente da aggiornare. Questo deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile dell’ambiente. |
+| `attributes.archive` | Valore booleano che indica se la build è in formato archivio. |
+| `attributes.archive_passphrase` | Stringa della password che può essere utilizzata per sbloccare il file di archivio. |
+| `attributes.path` | Percorso dall’URL host per l’ambiente. |
+| `attributes.stage` | Fase dell’ambiente (sviluppo, staging o produzione). |
+| `id` | `id` dell’ambiente da aggiornare. Deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’ambiente appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’ambiente appena creato.
 
 ```json
 {
@@ -414,7 +414,7 @@ Una risposta corretta restituisce i dettagli dell’ambiente appena creato.
 
 ## Aggiornare un ambiente {#update}
 
-Puoi aggiornare un ambiente includendo il relativo ID nel percorso di una richiesta PATCH.
+Per aggiornare un ambiente, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -424,13 +424,13 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ENVIRONMENT_ID` | Il `id` dell&#39;ambiente da aggiornare. |
+| `ENVIRONMENT_ID` | `id` dell’ambiente da aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `name` per un ambiente esistente.
+La richiesta seguente aggiorna il valore `name` di un ambiente esistente.
 
 ```shell
 curl -X PATCH \
@@ -452,15 +452,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’ambiente. È possibile aggiornare i seguenti attributi di ambiente: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Consulta l’esempio di chiamata per [creazione di un ambiente](#create) per un elenco di attributi e relativi casi d’uso. |
-| `id` | Il `id` dell’ambiente da aggiornare. Questo deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’ambiente. È possibile aggiornare i seguenti attributi di ambiente: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Per un elenco di attributi e relativi casi d’uso, consulta l’esempio di chiamata per la [creazione di un ambiente](#create). |
+| `id` | `id` dell’ambiente da aggiornare. Deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’ambiente aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’ambiente aggiornato.
 
 ```json
 {
@@ -541,7 +541,7 @@ Una risposta corretta restituisce i dettagli dell’ambiente aggiornato.
 
 ## Eliminare un ambiente
 
-Puoi eliminare un ambiente includendo il relativo ID nel percorso di una richiesta DELETE.
+Per eliminare un ambiente, devi includere il relativo ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -551,7 +551,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ENVIRONMENT_ID` | L’ `id` dell’ambiente da eliminare. |
+| `ENVIRONMENT_ID` | `id` dell’ambiente da eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -567,17 +567,17 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che l’ambiente è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che l’ambiente è stato eliminato.
 
 ## Recuperare le risorse correlate per un ambiente {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un ambiente. Quando [cerca un ambiente](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate per un ambiente. Quando [cerchi un ambiente](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Elencare le build correlate per un ambiente {#builds}
 
-Puoi elencare le build che utilizzano un ambiente aggiungendo `/builds` al percorso di una richiesta di ricerca.
+Per elencare le build che utilizzano un ambiente, aggiungi `/builds` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -587,7 +587,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Il `id` dell&#39;ambiente di cui desideri elencare le build. |
+| `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri elencare le build. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -605,7 +605,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di build che utilizzano l&#39;ambiente specificato.
+In caso di esito positivo, la risposta restituisce un elenco di build che utilizzano l’ambiente specificato.
 
 ```json
 {
@@ -688,13 +688,13 @@ Una risposta corretta restituisce un elenco di build che utilizzano l&#39;ambien
 }
 ```
 
-### Cercare l&#39;host correlato per un ambiente {#host}
+### Cercare l’host correlato per un ambiente {#host}
 
-Puoi cercare l’host che utilizza un ambiente aggiungendo `/host` al percorso di una richiesta GET.
+Per cercare l’host che utilizza un ambiente, aggiungi `/host` al percorso di una richiesta GET.
 
 >[!NOTE]
 >
->Puoi cercare l&#39;oggetto relazione host stesso tramite una [chiamata separata](#host-relationship).
+>Puoi cercare l’oggetto relazione host stesso tramite una [chiamata separata](#host-relationship).
 
 **Formato API**
 
@@ -704,7 +704,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Il `id` dell&#39;ambiente di cui desideri cercare l&#39;host. |
+| `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare l’host. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -722,7 +722,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’host che utilizza l’ambiente specificato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’host che utilizza l’ambiente specificato.
 
 ```json
 {
@@ -761,7 +761,7 @@ Una risposta corretta restituisce i dettagli dell’host che utilizza l’ambien
 
 ### Cercare la libreria correlata per un ambiente {#library}
 
-Puoi cercare la libreria che utilizza un ambiente aggiungendo `/library` al percorso di una richiesta GET.
+Per cercare la libreria che utilizza un ambiente, aggiungi `/library` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -771,7 +771,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Il `id` dell&#39;ambiente di cui desideri cercare la libreria. |
+| `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare la libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -789,7 +789,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della libreria che utilizza l&#39;ambiente specificato.
+In caso di esito positivo, la risposta restituisce i dettagli della libreria che utilizza l’ambiente specificato.
 
 ```json
 {
@@ -876,7 +876,7 @@ Una risposta corretta restituisce i dettagli della libreria che utilizza l&#39;a
 
 ### Cercare la proprietà correlata per un ambiente {#property}
 
-Puoi cercare la proprietà proprietaria di un ambiente aggiungendo `/property` al percorso di una richiesta GET.
+Per cercare la proprietà a cui appartiene un ambiente, aggiungi `/property` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -886,7 +886,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Il `id` dell&#39;ambiente di cui desideri cercare la proprietà. |
+| `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -904,7 +904,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà proprietaria dell’ambiente specificato.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà a cui appartiene l’ambiente specificato.
 
 ```json
 {

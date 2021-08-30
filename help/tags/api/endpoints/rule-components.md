@@ -1,42 +1,42 @@
 ---
-title: Endpoint dei componenti regola
-description: Scopri come effettuare chiamate all’endpoint /rule_components nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “rule_components”
+description: Scopri come effettuare chiamate all’endpoint /rule_components nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 6%
+source-wordcount: '1207'
+ht-degree: 99%
 
 ---
 
-# Endpoint dei componenti regola
+# Endpoint “rule_components”
 
-Nei tag di raccolta dati, [rules](./rules.md) controlla il comportamento delle risorse in una [libreria](./libraries.md) distribuita. **I** componenti delle regole sono le singole parti che compongono una regola. Se una regola è una ricetta, allora un componente della regola è uno degli ingredienti. L’endpoint `/rule_components` nell’API di Reactor consente di gestire in modo programmatico i componenti della regola.
+Nei tag di raccolta dati, le [regole](./rules.md) controllano il comportamento delle risorse in una [libreria](./libraries.md) distribuita. I **componenti delle regole** sono le singole parti che compongono una regola. Una regola è come una ricetta, in cui un componente della regola è uno degli ingredienti. L’endpoint `/rule_components` nell’API di Reactor consente di gestire in modo programmatico i componenti della regola.
 
 >[!NOTE]
 >
->Questo documento illustra come gestire i componenti regola nell&#39;API di Reactor. Per informazioni dettagliate su come interagire con le regole e i componenti delle regole nell&#39;interfaccia utente di raccolta dati, consulta la [guida dell&#39;interfaccia utente](../../ui/managing-resources/rules.md).
+>Questo documento illustra come gestire i componenti regola nell’API di Reactor. Per informazioni dettagliate su come interagire con le regole e i componenti delle regole nell’interfaccia di Data Collection, consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
 
 I componenti delle regole hanno tre tipi di base:
 
-| Tipo di componente della regola | Descrizione |
+| Tipo di componente regola | Descrizione |
 | --- | --- |
-| Eventi | Un evento è il trigger di una regola. La regola viene avviata quando l&#39;evento si verifica in fase di runtime sul dispositivo client. &quot;[!UICONTROL Caricamento libreria]&quot;, &quot;[!UICONTROL Page Top]&quot; e &quot;[!UICONTROL Click]&quot; sono esempi di eventi. |
-| Condizioni | Una condizione è una valutazione del rispetto di determinati criteri prima dell’esecuzione delle azioni. Una volta che si verifica un evento, le condizioni vengono valutate. Le azioni della regola vengono eseguite solo se vengono soddisfatte tutte le condizioni. |
-| Azioni | Queste sono le azioni che desideri che la regola esegua effettivamente, ad esempio l’invio di un beacon Adobe Analytics, il recupero di un ID visitatore personalizzato o l’attivazione di una particolare mbox. |
+| Eventi | Un evento attiva una regola. La regola viene avviata quando l’evento si verifica in fase di runtime sul dispositivo client. Esempi di eventi sono [!UICONTROL Library Load] (caricamento della libreria), [!UICONTROL Page Top] (parte superiore pagina) e [!UICONTROL Click]. |
+| Condizioni | Una condizione determina i criteri che devono essere rispettati prima che venga eseguita un’aziona. Quando si verifica un evento, le condizioni vengono valutate. Le azioni della regola vengono eseguite solo se sono soddisfatte tutte le condizioni. |
+| Azioni | Queste sono le azioni che la regola dovrà effettivamente eseguire, ad esempio inviare un beacon Adobe Analytics, recuperare un ID visitatore personalizzato o attivare una particolare mbox. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Un componente della regola appartiene esattamente a una regola. Una regola può avere (e deve) molti componenti regola.
+Un componente regola appartiene esattamente a una regola. Una regola può (e dovrebbe) avere diversi componenti regola.
 
-Un componente della regola viene fornito esattamente da un&#39;estensione [estensione](./extensions.md). Le estensioni possono fornire molti tipi di componenti regola.
+Un componente regola viene fornito esattamente da una [estensione](./extensions.md). Le estensioni possono fornire molti tipi di componenti regola.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di componenti regola {#list}
+## Recuperare un elenco di componenti regola {#list}
 
-Puoi recuperare un elenco di componenti regola appartenenti a una regola includendo l’ID della regola nel percorso di una richiesta di GET.
+Per recuperare un elenco di componenti regola appartenenti a una regola, includi l’ID della regola nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -46,13 +46,13 @@ GET /rules/{RULE_ID}/rule_components
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | La `id` della regola di cui si desidera elencare i componenti. |
+| `RULE_ID` | `id` della regola di cui si desidera elencare i componenti. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, i componenti di regole elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, i componenti regola elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di componenti regola per la regola specificata.
+In caso di esito positivo, la risposta restituisce un elenco di componenti regola per la regola specificata.
 
 ```json
 {
@@ -175,7 +175,7 @@ Una risposta corretta restituisce un elenco di componenti regola per la regola s
 
 ## Cercare un componente regola {#lookup}
 
-Puoi cercare un componente regola fornendo il suo ID nel percorso di una richiesta GET.
+Per cercare un componente regola, devi fornire il suo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_COMPONENT_ID` | Il `id` del componente della regola che si desidera cercare. |
+| `RULE_COMPONENT_ID` | `id` del componente regola che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -203,7 +203,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del componente della regola.
+In caso di esito positivo, la risposta restituisce i dettagli del componente regola.
 
 ```json
 {
@@ -299,7 +299,7 @@ Una risposta corretta restituisce i dettagli del componente della regola.
 
 ## Creare un componente regola {#create}
 
-Puoi creare un nuovo componente regola effettuando una richiesta POST.
+Per creare un nuovo componente regola devi effettuare una richiesta POST.
 
 **Formato API**
 
@@ -309,13 +309,13 @@ POST /rules/{RULE_ID}/rule_components
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | La `id` della regola per la quale stai definendo un componente della regola. |
+| `RULE_ID` | `id` della regola per la quale stai definendo un componente regola. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo componente della regola per la regola specificata. La chiamata associa anche il componente della regola a un&#39;estensione esistente tramite la proprietà `relationships` . Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md) .
+La richiesta seguente crea un nuovo componente per la regola specificata. La chiamata associa anche il componente regola a un’estensione esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -358,21 +358,21 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obbligatorio)** I tipi di componenti regola che è possibile definire sono forniti dai pacchetti di  [estensione](./extension-packages.md). Quando crei un nuovo componente regola, devi fornire un ID descrittore delegato per indicare su quale pacchetto di estensione si basa questo componente regola, il tipo del componente (evento, condizione o azione) e il nome del componente specifico come definito dall&#39;estensione (come l&#39;evento &quot;Click&quot; nell&#39;estensione Core).<br><br>Per ulteriori informazioni, consulta la guida  [sugli ](../guides/delegate-descriptor-ids.md) ID del descrittore delegato . |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per il componente della regola. |
+| `attributes.delegate_descriptor_id` | **(Obbligatorio)** I tipi di componenti regola che è possibile definire sono forniti dai [pacchetti di estensione](./extension-packages.md). Quando crei un nuovo componente regola, devi fornire un ID descrittore delegato per indicare su quale pacchetto di estensione si basa il componente regola, il tipo di componente (evento, condizione o azione) e il nome del componente specifico come definito dall’estensione (ad esempio, l’evento “Click” nell’estensione Core).<br><br>Per ulteriori informazioni, consulta la guida sugli [ID del descrittore delegato](../guides/delegate-descriptor-ids.md). |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile del componente regola. |
 | `attributes.delay_next` | Valore booleano che indica se ritardare le azioni successive. |
-| `attributes.order` | Un numero intero che indica l’ordine di caricamento del componente per tipo. |
-| `attributes.rule_order` | Un numero intero che indica la priorità dell&#39;attivazione della regola associata. |
-| `attributes.settings` | Un oggetto JSON delle impostazioni rappresentato come stringa. |
-| `attributes.timeout` | Un numero intero che indica il timeout dell&#39;azione eseguita in sequenza. |
-| `relationships` | Un oggetto che stabilisce le relazioni necessarie per il componente della regola. Occorre stabilire due relazioni: <ol><li>`extension`: L&#39;estensione che definisce questo componente della regola. Deve essere la stessa estensione il cui pacchetto di estensione è indicato da `delegate_descriptor_id`.</li><li>`rules`: La regola in cui viene definito questo componente. Deve essere lo stesso ID regola fornito nel percorso della richiesta.</li></ol>Per informazioni più generali sulle relazioni, fare riferimento alla [guida alle relazioni](../guides/relationships.md). |
+| `attributes.order` | Numero intero che indica l’ordine di caricamento del componente per tipo. |
+| `attributes.rule_order` | Numero intero che indica la priorità di attivazione della regola associata. |
+| `attributes.settings` | Oggetto JSON delle impostazioni rappresentato come stringa. |
+| `attributes.timeout` | Numero intero che indica il timeout dell’azione eseguita in sequenza. |
+| `relationships` | Oggetto che stabilisce le relazioni necessarie per il componente regola. Occorre stabilire due relazioni: <ol><li>`extension`: l’estensione che definisce questo componente regola. Deve essere la stessa estensione il cui pacchetto di estensione è indicato da `delegate_descriptor_id`.</li><li>`rules`: la regola in cui viene definito questo componente. Deve essere lo stesso ID regola fornito nel percorso della richiesta.</li></ol>Per informazioni più generali sulle relazioni, consulta la [guida delle relazioni](../guides/relationships.md). |
 | `type` | Tipo di risorsa da creare. Per questo endpoint, il valore deve essere `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del componente regola appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli del componente regola appena creato.
 
 ```json
 {
@@ -468,7 +468,7 @@ Una risposta corretta restituisce i dettagli del componente regola appena creato
 
 ## Aggiornare un componente regola {#update}
 
-Puoi aggiornare un componente regola includendone l’ID nel percorso di una richiesta PATCH.
+Per aggiornare un componente regola, devi includere il suo ID nel percorso di una richiesta PATCH.
 
 >[!NOTE]
 >
@@ -482,13 +482,13 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_COMPONENT_ID` | Il `id` del componente della regola che si desidera aggiornare. |
+| `RULE_COMPONENT_ID` | `id` del componente regola che desideri aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna gli attributi `order` e `settings` per un componente della regola esistente.
+La richiesta seguente aggiorna gli attributi `order` e `settings` di un componente regola esistente.
 
 ```shell
 curl -X PATCH \
@@ -511,15 +511,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto i cui componenti regola rappresentano gli attributi da aggiornare per il componente regola. Per un componente regola è possibile aggiornare i seguenti attributi: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | Il `id` del componente della regola che si desidera aggiornare. Questo deve corrispondere al valore `{RULE_COMPONENT_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto i cui componenti regola rappresentano gli attributi da aggiornare per il componente regola. Per un componente regola, è possibile aggiornare i seguenti attributi: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
+| `id` | `id` del componente regola che si desidera aggiornare. Deve corrispondere al valore `{RULE_COMPONENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del componente della regola aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli del componente regola aggiornato.
 
 ```json
 {
@@ -615,7 +615,7 @@ Una risposta corretta restituisce i dettagli del componente della regola aggiorn
 
 ## Eliminare un componente regola
 
-Puoi eliminare un componente della regola includendone l’ID nel percorso di una richiesta di DELETE.
+Puoi eliminare un componente regola includendone l’ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -625,7 +625,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_COMPONENT_ID` | Il `id` del componente della regola che desideri eliminare. |
+| `RULE_COMPONENT_ID` | `id` del componente regola che desideri eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -641,21 +641,21 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che il componente della regola è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che il componente regola è stato eliminato.
 
 ## Gestire le note di un componente regola {#notes}
 
-I componenti delle regole sono risorse &quot;di rilievo&quot;, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per i componenti della regola e altre risorse compatibili, consulta la [guida all’endpoint delle note](./notes.md) .
+I componenti delle regole sono risorse che supportano le note, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per i componenti regola e altre risorse compatibili, consulta la [guida dell’endpoint “notes”](./notes.md).
 
 ## Recuperare le risorse correlate per un componente regola {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un componente regola. Quando [cerca un componente regola](#lookup), queste relazioni sono elencate nel componente regola `relationships`.
+Le seguenti chiamate mostrano come recuperare le risorse correlate per un componente regola. Quando [cerchi un componente regola](#lookup), queste relazioni sono elencate nel componente regola `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Elencare le regole correlate per un componente regola {#rules}
 
-Puoi elencare le regole che utilizzano un particolare componente della regola aggiungendo `/rules` al percorso di una richiesta di ricerca.
+Per elencare le regole che utilizzano un particolare componente regola, aggiungi `/rules` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -665,7 +665,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | Il `id` del componente della regola di cui si desidera elencare le regole. |
+| `{RULE_COMPONENT_ID}` | `id` del componente regola di cui desideri elencare le regole. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -683,7 +683,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di regole che utilizzano il componente della regola specificato.
+In caso di esito positivo, la risposta restituisce un elenco di regole che utilizzano il componente regola specificato.
 
 ```json
 {
@@ -757,9 +757,9 @@ Una risposta corretta restituisce un elenco di regole che utilizzano il componen
 }
 ```
 
-### Cerca l&#39;estensione correlata per un componente regola {#extension}
+### Cercare l’estensione correlata per un componente regola {#extension}
 
-Puoi cercare l’estensione che fornisce un componente regola aggiungendo `/extension` al percorso di una richiesta di ricerca.
+Per cercare l’estensione che fornisce un componente regola, aggiungi `/extension` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -769,7 +769,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | Il `id` del componente della regola di cui desideri cercare l&#39;estensione. |
+| `{RULE_COMPONENT_ID}` | `id` del componente regola di cui desideri cercare l’estensione. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -787,7 +787,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;estensione del componente della regola specificato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’estensione del componente regola specificato.
 
 ```json
 {
@@ -877,9 +877,9 @@ Una risposta corretta restituisce i dettagli dell&#39;estensione del componente 
 }
 ```
 
-### Cerca l’origine correlata per un componente regola {#origin}
+### Cercare l’origine correlata per un componente regola {#origin}
 
-Puoi cercare l’origine (revisione precedente) di un componente regola aggiungendo `/origin` al percorso di una richiesta di ricerca.
+Per cercare l’origine (revisione precedente) di un componente regola, aggiungi `/origin` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -889,7 +889,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | Il `id` del componente della regola di cui si desidera cercare l&#39;origine. |
+| `{RULE_COMPONENT_ID}` | `id` del componente regola di cui si desidera cercare l’origine. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -907,7 +907,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;origine del componente della regola specificato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’origine del componente regola specificato.
 
 ```json
 {

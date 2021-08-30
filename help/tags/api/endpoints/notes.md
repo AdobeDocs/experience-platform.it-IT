@@ -1,26 +1,26 @@
 ---
-title: Endpoint note
-description: Scopri come effettuare chiamate all’endpoint /notes nell’API del reattore.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “notes”
+description: Scopri come effettuare chiamate all’endpoint /notes nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 7%
+source-wordcount: '526'
+ht-degree: 99%
 
 ---
 
-# Endpoint note
+# Endpoint “notes”
 
 Nell’API di Reactor, le note sono annotazioni testuali che possono essere aggiunte ad alcune risorse. Le note sono essenzialmente commenti sulle rispettive risorse. Il contenuto delle note non ha alcun impatto sul comportamento delle risorse e può essere utilizzato per diversi casi d’uso, tra cui:
 
 * Informazioni di base
-* Funzionamento degli elenchi
-* Passaggio lungo i consigli sull’utilizzo delle risorse
-* Istruzioni ad altri membri del team
-* Contesto storico della registrazione
+* Elenchi di cose da fare
+* Consigli sull’utilizzo delle risorse
+* Istruzioni per altri membri del team
+* Contesto cronologico
 
 L’endpoint `/notes` nell’API di Reactor consente di gestire queste note a livello di programmazione.
 
-Le note possono essere applicate alle seguenti risorse:
+Le note possono essere aggiunte alle seguenti risorse:
 
 * [Elementi dati](./data-elements.md)
 * [Estensioni](./extensions.md)
@@ -29,21 +29,21 @@ Le note possono essere applicate alle seguenti risorse:
 * [Componenti della regola](./rule-components.md)
 * [Regole](./rules.md)
 
-Questi sei tipi sono noti collettivamente come risorse &quot;notevoli&quot;. Quando una risorsa notevole viene eliminata, vengono eliminate anche le relative note associate.
+Questi sei tipi sono noti collettivamente come risorse “che supportano le note”. Quando si elimina una risorsa che supporta le nota, vengono eliminate anche le relative note associate.
 
 >[!NOTE]
 >
->Per le risorse che possono avere più revisioni, tutte le note devono essere create nella revisione corrente (head). Non possono essere collegate ad altre revisioni.
+>Per le risorse che possono avere più revisioni, le note devono essere create nella revisione corrente (head). Non possono essere collegate ad altre revisioni.
 >
->Tuttavia, le note possono ancora essere lette da revisioni. In questi casi, l’API restituisce solo le note esistenti prima della creazione della revisione. Offrono un’istantanea delle annotazioni così come erano quando la revisione è stata tagliata. Al contrario, la lettura delle note della revisione corrente (head) restituisce tutte le note.
+>Tuttavia, le note possono comunque essere lette da revisioni. In questi casi, l’API restituisce solo le note esistenti prima della creazione della revisione. Offrono un’istantanea delle annotazioni così come erano quando la revisione è stata tagliata. La lettura delle note della revisione corrente (head) restituisce invece tutte le note.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di note {#list}
+## Recuperare un elenco di note {#list}
 
-Puoi recuperare un elenco di note per una risorsa aggiungendo `/notes` al percorso di una richiesta di GET per la risorsa in questione.
+Per recuperare un elenco di note per una risorsa, aggiungi `/notes` al percorso di una richiesta GET per la risorsa in questione.
 
 **Formato API**
 
@@ -53,14 +53,14 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RESOURCE_TYPE` | Il tipo di risorsa per cui vengono recuperate le note. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | La `id` della risorsa specifica di cui si desidera elencare le note. |
+| `RESOURCE_TYPE` | Tipo di risorsa di cui si devono recuperare le note. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | `id` della risorsa specifica di cui desideri elencare le note. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate le note collegate a una libreria.
+Con la richiesta seguente vengono elencate le note associate a una libreria.
 
 ```shell
 curl -X GET \
@@ -74,7 +74,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di note associate alla risorsa specificata.
+In caso di esito positivo, la risposta restituisce un elenco di note associate alla risorsa specificata.
 
 ```json
 {
@@ -117,9 +117,9 @@ Una risposta corretta restituisce un elenco di note associate alla risorsa speci
 }
 ```
 
-## Cerca una nota {#lookup}
+## Cercare una nota {#lookup}
 
-Puoi cercare una nota inserendone l’ID nel percorso di una richiesta GET.
+Per cercare una nota occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `NOTE_ID` | La `id` della nota che si desidera cercare. |
+| `NOTE_ID` | `id` della nota da cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -147,7 +147,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nota.
+In caso di esito positivo, la risposta restituisce i dettagli della nota.
 
 ```json
 {
@@ -183,9 +183,9 @@ Una risposta corretta restituisce i dettagli della nota.
 
 >[!WARNING]
 >
->Prima di creare una nuova nota, tenere presente che le note non sono modificabili e che l’unico modo per eliminarle consiste nell’eliminare la risorsa corrispondente.
+>Prima di creare una nuova nota, tieni presente che le note non sono modificabili e che l’unico modo per eliminarle consiste nell’eliminare la risorsa corrispondente.
 
-Puoi creare una nuova nota aggiungendo `/notes` al percorso di una richiesta POST per la risorsa in questione.
+Per creare una nuova nota, aggiungi `/notes` al percorso di una richiesta POST per la risorsa in questione.
 
 **Formato API**
 
@@ -195,14 +195,14 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RESOURCE_TYPE` | Il tipo di risorsa per cui si sta creando una nota. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | La `id` della risorsa specifica per la quale desideri creare una nota. |
+| `RESOURCE_TYPE` | Tipo di risorsa per cui si sta creando una nota. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | `id` della risorsa specifica per la quale desideri creare una nota. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Nella richiesta seguente viene creata una nuova nota per una proprietà.
+La richiesta seguente crea una nuova nota per una proprietà.
 
 ```shell
 curl -X POST \
@@ -223,14 +223,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `type` | **(Obbligatorio)** Il tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `notes`. |
-| `attributes.text` | **(Obbligatorio)** Testo che comprende la nota. Ogni nota è limitata a 512 caratteri Unicode. |
+| `type` | **(Obbligatorio)** Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `notes`. |
+| `attributes.text` | **(Obbligatorio)** Testo della nota. Ogni nota può contenere un massimo di 512 caratteri Unicode. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nota appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della nota appena creata.
 
 ```json
 {

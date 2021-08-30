@@ -5,21 +5,20 @@ title: Guida all’API di Policy Service
 topic-legacy: developer guide
 description: L’API del servizio criteri consente agli sviluppatori di gestire le etichette di utilizzo dei dati e i criteri in Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
-# [!DNL Policy Service] Guida all’API
+# Guida dell’API di [!DNL Policy Service]
 
 Adobe Experience Platform [!DNL Data Governance] ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all’interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
 
-L’ API [!DNL Policy Service] fornisce diversi endpoint che ti consentono di gestire in modo programmatico le etichette e i criteri di utilizzo dei dati, nonché di valutare le azioni di marketing per le violazioni dei criteri. Questi punti finali sono descritti di seguito. Per informazioni dettagliate, visita le singole guide dell&#39;endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
+L’ API [!DNL Policy Service] fornisce diversi endpoint che ti consentono di gestire in modo programmatico le etichette e i criteri di utilizzo dei dati, nonché di valutare le azioni di marketing per le violazioni dei criteri. Questi endpoint sono descritti di seguito. Per informazioni dettagliate, visita le singole guide dell&#39;endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [[!DNL Policy Service] Swagger API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [[!DNL Policy Service] Swagger API](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
 ## Etichette
 

@@ -5,9 +5,9 @@ title: Sviluppo di integrazioni ETL per Adobe Experience Platform
 topic-legacy: overview
 description: La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ La guida all’integrazione ETL descrive i passaggi generali per la creazione di
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Autenticazione e autorizzazione per le API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Questa guida include anche esempi di chiamate API da utilizzare durante la progettazione di un connettore ETL, con collegamenti alla documentazione che descrive ogni servizio [!DNL Experience Platform] e l’utilizzo della relativa API, in modo più dettagliato.
 
@@ -257,7 +257,7 @@ Simile ai passaggi per [visualizzare lo schema del set di dati](#view-dataset-sc
 
 >[!NOTE]
 >
->Quando il campo &quot;schema&quot; è completamente vuoto o assente, il connettore deve leggere il campo &quot;schemaRef&quot; e utilizzare l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) come mostrato nei passaggi precedenti per [visualizzare uno schema di set di dati](#view-dataset-schema).
+>Quando il campo &quot;schema&quot; è completamente vuoto o assente, il connettore deve leggere il campo &quot;schemaRef&quot; e utilizzare l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/) come mostrato nei passaggi precedenti per [visualizzare uno schema di set di dati](#view-dataset-schema).
 
 ### Proprietà &quot;osservableSchema&quot;
 

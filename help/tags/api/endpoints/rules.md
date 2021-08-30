@@ -1,30 +1,30 @@
 ---
-title: Endpoint regole
-description: Scopri come effettuare chiamate all’endpoint /rules nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “rules”
+description: Scopri come effettuare chiamate all’endpoint /rules nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 8%
+source-wordcount: '933'
+ht-degree: 99%
 
 ---
 
-# Endpoint regole
+# Endpoint “rules”
 
-Nel contesto dei tag di raccolta dati, le regole controllano il comportamento delle risorse in una libreria distribuita. Una regola è composta da uno o più [componenti regola](./rule-components.md), esiste per collegare i componenti della regola in modo logico. L’endpoint `/rules` nell’API di Reactor consente di gestire le regole dei tag a livello di programmazione.
+Nel contesto dei tag di raccolta dati, le regole controllano il comportamento delle risorse in una libreria implementata. Una regola è composta da uno o più [componenti regola](./rule-components.md), collegati in modo logico. L’endpoint `/rules` nell’API di Reactor consente di gestire le regole dei tag a livello di programmazione.
 
 >[!NOTE]
 >
->Questo documento illustra come gestire le regole nell’API di Reactor. Per informazioni su come interagire con le regole nell&#39;interfaccia utente di Raccolta dati, consulta la [guida dell&#39;interfaccia utente](../../ui/managing-resources/rules.md).
+>Questo documento illustra come gestire le regole nell’API di Reactor. Per informazioni su come interagire con le regole nell’interfaccia di Data Collection, consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
 
-Una regola appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere molte regole.
+Una regola appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere diverse regole.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di regole {#list}
+## Recuperare un elenco di regole {#list}
 
-Puoi recuperare un elenco di regole appartenenti a una proprietà effettuando una richiesta di GET.
+Per recuperare un elenco di regole appartenenti a una proprietà, devi eseguire una richiesta GET.
 
 **Formato API**
 
@@ -34,13 +34,13 @@ GET /properties/{PROPERTY_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La proprietà `id` di cui si desidera elencare i componenti. |
+| `PROPERTY_ID` | `id` della proprietà di cui desideri elencare i componenti. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le regole elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le regole elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di regole per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di regole per la proprietà specificata.
 
 ```json
 {
@@ -139,13 +139,13 @@ Una risposta corretta restituisce un elenco di regole per la proprietà specific
 }
 ```
 
-## Cerca una regola {#lookup}
+## Cercare una regola {#lookup}
 
-Puoi cercare una regola fornendo il suo ID nel percorso di una richiesta GET.
+Per cercare una regola occorre specificare il suo ID nel percorso di una richiesta GET.
 
 >[!NOTE]
 >
->Quando le regole vengono eliminate, vengono contrassegnate come eliminate ma non vengono rimosse dal sistema. Pertanto, è possibile recuperare una regola eliminata. Le regole eliminate possono essere identificate dalla presenza di una proprietà `meta.deleted_at` .
+>Quando le regole vengono eliminate, vengono contrassegnate come eliminate ma non vengono rimosse dal sistema. Pertanto, è possibile recuperare una regola eliminata. Le regole eliminate possono essere identificate dalla presenza di una proprietà `meta.deleted_at`.
 
 **Formato API**
 
@@ -155,7 +155,7 @@ GET /rules/{RULE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | La `id` della regola che desideri cercare. |
+| `RULE_ID` | `id` della regola che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -173,7 +173,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della regola.
+In caso di esito positivo, la risposta restituisce i dettagli della regola.
 
 ```json
 {
@@ -247,7 +247,7 @@ Una risposta corretta restituisce i dettagli della regola.
 
 ## Creare una regola {#create}
 
-Puoi creare una nuova regola effettuando una richiesta di POST.
+Per creare una nuova regola, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -257,7 +257,7 @@ POST /properties/{PROPERTY_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | Il `id` della proprietà in cui si sta definendo una regola. |
+| `PROPERTY_ID` | `id` della proprietà in cui si sta definendo una regola. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -283,15 +283,15 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per la regola. |
-| `attributes.enabled` | Un valore booleano che indica se la regola è abilitata. |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile della regola. |
+| `attributes.enabled` | Valore booleano che indica se la regola è abilitata. |
 | `type` | Tipo di risorsa da creare. Per questo endpoint, il valore deve essere `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della regola appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della regola appena creata.
 
 ```json
 {
@@ -365,11 +365,11 @@ Una risposta corretta restituisce i dettagli della regola appena creata.
 
 ## Aggiungere eventi, condizioni e azioni a una regola {#components}
 
-Dopo aver [creato una regola](#create), puoi iniziare a svilupparne la logica aggiungendo eventi, condizioni e azioni (collettivamente denominati componenti regola). Per informazioni su come eseguire questa operazione nell’API del reattore, consulta la sezione sulla [creazione di un componente regola](./rule-components.md#create) nella guida all’endpoint `/rule_components` .
+Dopo aver [creato una regola](#create), puoi iniziare a svilupparne la logica aggiungendo eventi, condizioni e azioni (collettivamente denominati “componenti regola”). Per informazioni su come eseguire questa operazione nell’API Reactor, consulta la sezione sulla [creazione di un componente regola](./rule-components.md#create) nella guida dell’endpoint `/rule_components`.
 
 ## Aggiornare una regola {#update}
 
-Puoi aggiornare gli attributi di una regola includendone l’ID nel percorso di una richiesta PATCH.
+Per aggiornare gli attributi di una regola, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -379,13 +379,13 @@ PATCH /rules/{RULE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | La `id` della regola che desideri aggiornare. |
+| `RULE_ID` | `id` della regola che desideri aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna la `name` di una regola esistente.
+La richiesta seguente aggiorna il `name` di una regola esistente.
 
 ```shell
 curl -X PATCH \
@@ -408,7 +408,7 @@ curl -X PATCH \
 | Proprietà | Descrizione |
 | --- | --- |
 | `attributes` | Un oggetto le cui regole rappresentano gli attributi da aggiornare per la regola. Per una regola è possibile aggiornare i seguenti attributi: <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | La `id` della regola da aggiornare. Questo deve corrispondere al valore `{RULE_ID}` fornito nel percorso della richiesta. |
+| `id` | `id` della regola da aggiornare. Deve corrispondere al valore `{RULE_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -489,7 +489,7 @@ Una risposta corretta restituisce i dettagli della regola aggiornata.
 
 ## Eliminare una regola
 
-Puoi eliminare una regola includendone l’ID nel percorso di una richiesta DELETE.
+Per eliminare una regola, devi includere il relativo ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -499,7 +499,7 @@ DELETE /rules/{RULE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | La `id` della regola da eliminare. |
+| `RULE_ID` | `id` della regola da eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -515,21 +515,21 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che la regola è stata eliminata.
+Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, che indica che la regola è stata eliminata.
 
 ## Gestire le note per una regola {#notes}
 
-Le regole sono risorse &quot;di rilievo&quot;, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le regole e altre risorse compatibili, consulta la [guida all’endpoint delle note](./notes.md) .
+Le regole sono risorse “di rilievo”, il che significa che puoi creare e recuperare note basate su testo per ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le regole e altre risorse compatibili, consulta la [guida dell’endpoint “notes”](./notes.md).
 
-## Recupera risorse correlate per una regola {#related}
+## Recuperare risorse correlate di una regola {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per una regola. Quando [cerca una regola](#lookup), queste relazioni sono elencate nella regola `relationships`.
+Le seguenti chiamate mostrano come recuperare le risorse correlate di una regola. Quando si [cerca una regola](#lookup), le relazioni sono elencate nella regola `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
-### Elencare le librerie correlate per una regola {#libraries}
+### Elencare le librerie correlate di una regola {#libraries}
 
-Puoi elencare le librerie che utilizzano una regola particolare aggiungendo `/libraries` al percorso di una richiesta di ricerca.
+Puoi elencare le librerie che utilizzano una regola particolare aggiungendo `/libraries` alla fine del percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -539,7 +539,7 @@ GET  /rules/{RULE_ID}/libraries
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_ID}` | La `id` della regola di cui desideri elencare le librerie. |
+| `{RULE_ID}` | `id` della regola di cui desideri elencare le librerie. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,9 +649,9 @@ Una risposta corretta restituisce un elenco di librerie che utilizzano la regola
 }
 ```
 
-### Elencare le revisioni correlate per una regola {#revisions}
+### Elencare le revisioni correlate di una regola {#revisions}
 
-Puoi elencare le revisioni di una regola aggiungendo `/revisions` al percorso di una richiesta di ricerca.
+Puoi elencare le revisioni di una regola aggiungendo `/revisions` alla fine del percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -661,7 +661,7 @@ GET  /rules/{RULE_ID}/revisions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_ID}` | La `id` della regola di cui si desidera elencare le revisioni. |
+| `{RULE_ID}` | `id` della regola di cui desideri elencare le revisioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -827,9 +827,9 @@ Una risposta corretta restituisce un elenco di revisioni che utilizzano la regol
 }
 ```
 
-### Cerca l&#39;origine correlata per una regola {#origin}
+### Cercare l’origine correlata di una regola {#origin}
 
-Puoi cercare l&#39;origine (versione precedente) di una regola aggiungendo `/origin` al percorso di una richiesta di ricerca.
+Per cercare l’origine (versione precedente) di una regola, devi aggiungere `/origin` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -839,7 +839,7 @@ GET /rules/{RULE_ID}/origin
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_ID}` | La `id` della regola di cui desideri cercare l&#39;origine. |
+| `{RULE_ID}` | `id` della regola di cui desideri cercare l’origine. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -857,7 +857,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;estensione della regola specificata.
+In caso di esito positivo, la risposta restituisce i dettagli dell’estensione della regola specificata.
 
 ```json
 {
@@ -929,9 +929,9 @@ Una risposta corretta restituisce i dettagli dell&#39;estensione della regola sp
 }
 ```
 
-### Cerca la proprietà correlata per una regola {#property}
+### Cercare la proprietà correlata di una regola {#property}
 
-Puoi cercare la proprietà proprietaria di una regola aggiungendo `/property` al percorso di una richiesta di ricerca.
+Per cercare la proprietà a cui appartiene una regola, devi aggiungere `/property` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -941,7 +941,7 @@ GET /rules/{RULE_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RULE_ID}` | La `id` della regola di cui si desidera cercare la proprietà. |
+| `{RULE_ID}` | `id` della regola di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 

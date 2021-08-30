@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un database e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1641'
 ht-degree: 2%
 
 ---
@@ -147,7 +147,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema XDM di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema XDM di destinazione viene quindi utilizzato per creare un set di dati della piattaforma in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche la classe [!DNL XDM Individual Profile] .
 
-È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39; [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39; [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato API**
 

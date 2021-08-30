@@ -5,17 +5,16 @@ title: 'Gestire le etichette di utilizzo dei dati per i set di dati utilizzando 
 topic-legacy: developer guide
 description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '957'
 ht-degree: 2%
 
 ---
 
 # Gestire le etichette di utilizzo dei dati per i set di dati tramite API
 
-Il [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) ti consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’ [!DNL Catalog Service] API che gestisce i metadati del set di dati.
+Il [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) ti consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’ [!DNL Catalog Service] API che gestisce i metadati del set di dati.
 
 Questo documento illustra come gestire le etichette per i set di dati e i campi utilizzando [!DNL Dataset Service API]. Per i passaggi su come gestire direttamente le etichette di utilizzo dei dati utilizzando le chiamate API, consulta la [guida all&#39;endpoint delle etichette](../api/labels.md) per il tag [!DNL Policy Service API].
 
@@ -200,7 +199,7 @@ Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Pl
 
 La sezione seguente contiene informazioni aggiuntive sull’utilizzo delle etichette tramite l’API Servizio set di dati.
 
-### [!DNL If-Match] header  {#if-match}
+### [!DNL If-Match] header {#if-match}
 
 Quando si eseguono chiamate API che aggiornano le etichette esistenti di un set di dati (PUT e DELETE), deve essere inclusa un’intestazione `If-Match` che indica la versione corrente dell’entità etichetta di set di dati nel servizio set di dati. Per evitare conflitti tra dati, il servizio aggiorna l’entità set di dati solo se la stringa inclusa `If-Match` corrisponde al tag di versione più recente generato dal sistema per quel set di dati.
 

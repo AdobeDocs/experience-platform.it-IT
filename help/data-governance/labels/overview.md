@@ -5,10 +5,9 @@ title: Panoramica delle etichette di utilizzo dei dati
 topic-legacy: labels
 description: La governance dei dati di Adobe Experience Platform consente di applicare etichette di utilizzo dei dati ai set di dati e ai campi, suddivisi in categorie in base ai criteri di utilizzo dei dati correlati. Questo documento fornisce una panoramica delle etichette di utilizzo dei dati in Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
@@ -49,13 +48,13 @@ Puoi gestire le etichette di utilizzo dei dati utilizzando le API [!DNL Experien
 
 ### Utilizzo dell’interfaccia
 
-L’area di lavoro **[!UICONTROL Policies]** nell’ interfaccia utente di [!DNL Experience Platform] consente di visualizzare e gestire le etichette core e personalizzate per la tua organizzazione. L’area di lavoro **[!DNL Datasets]** ti consente di applicare etichette ai set di dati e ai campi. Per ulteriori informazioni, consulta la [guida utente sulle etichette](user-guide.md).
+L&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente [!DNL Experience Platform] consente di visualizzare e gestire le etichette core e personalizzate per la tua organizzazione. L’area di lavoro **[!DNL Datasets]** ti consente di applicare etichette ai set di dati e ai campi. Per ulteriori informazioni, consulta la [guida utente sulle etichette](user-guide.md).
 
 ### Utilizzo delle API
 
-L’endpoint `/labels` nell’ [API del servizio criteri](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) consente di gestire in modo programmatico le etichette di utilizzo dei dati, inclusa la creazione di etichette personalizzate. Per ulteriori informazioni, consulta la [guida all’endpoint delle etichette](../api/labels.md) .
+L’endpoint `/labels` nell’ [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di gestire in modo programmatico le etichette di utilizzo dei dati, inclusa la creazione di etichette personalizzate. Per ulteriori informazioni, consulta la [guida all’endpoint delle etichette](../api/labels.md) .
 
-L’ [API del servizio set di dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) viene utilizzata per gestire le etichette per i set di dati e i campi. Per ulteriori informazioni, consulta la guida sulla [gestione delle etichette dei set di dati](./dataset-api.md) .
+L’ [API del servizio set di dati](https://www.adobe.io/experience-platform-apis/references/dataset-service/) viene utilizzata per gestire le etichette per i set di dati e i campi. Per ulteriori informazioni, consulta la guida sulla [gestione delle etichette dei set di dati](./dataset-api.md) .
 
 ## Passaggi successivi
 

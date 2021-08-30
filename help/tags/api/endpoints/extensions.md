@@ -1,26 +1,26 @@
 ---
-title: Endpoint di estensioni
-description: Scopri come effettuare chiamate all’endpoint /extensions nell’API del reattore.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “extensions"
+description: Scopri come effettuare chiamate all’endpoint /extensions nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 8%
+source-wordcount: '977'
+ht-degree: 99%
 
 ---
 
-# Endpoint di estensioni
+# Endpoint “extensions&quot;
 
-Nell&#39;API di Reactor, un&#39;estensione rappresenta l&#39;istanza installata di un [pacchetto di estensione](./extension-packages.md). Un&#39;estensione rende disponibili le funzioni definite da un pacchetto di estensione a una [proprietà](./properties.md). Queste funzioni vengono utilizzate durante la creazione di [estensioni](./data-elements.md) e [componenti regola](./rule-components.md).
+Nell’API di Reactor, un’estensione rappresenta l’istanza installata di un [pacchetto di estensione](./extension-packages.md). Un’estensione rende disponibili in una [proprietà](./properties.md) le funzioni definite da un pacchetto di estensione. Queste funzioni vengono utilizzate durante la creazione di [estensioni](./data-elements.md) e [componenti regola](./rule-components.md).
 
-Un&#39;estensione appartiene esattamente a una proprietà. Una proprietà può avere molte estensioni, ma non più di un&#39;istanza installata di un determinato pacchetto di estensione.
+Un’estensione appartiene esattamente a una proprietà. Una proprietà può avere diverse estensioni, ma una sola istanza installata di un determinato pacchetto di estensione.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di estensioni {#list}
+## Recuperare un elenco di estensioni {#list}
 
-Puoi recuperare un elenco di estensioni per una proprietà effettuando una richiesta GET.
+Per recuperare un elenco di estensioni per una proprietà, devi effettuare una richiesta GET.
 
 **Formato API**
 
@@ -30,13 +30,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | La proprietà `id` di cui si desidera elencare le estensioni. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare le estensioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le estensioni elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le estensioni elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di estensioni definite sotto la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di estensioni definite sotto la proprietà specificata.
 
 ```json
 {
@@ -153,13 +153,13 @@ Una risposta corretta restituisce un elenco di estensioni definite sotto la prop
 }
 ```
 
-## Cerca un&#39;estensione {#lookup}
+## Cercare un’estensione {#lookup}
 
-Puoi cercare un&#39;estensione fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare un’estensione, devi fornire il relativo ID nel percorso di una richiesta GET.
 
 >[!NOTE]
 >
->Quando le estensioni vengono eliminate, vengono contrassegnate come eliminate nel sistema ma non vengono rimosse. È quindi possibile recuperare un’estensione eliminata. Le estensioni eliminate possono essere identificate dalla presenza di una proprietà `deleted_at` nel `meta` dei dati di estensione restituiti.
+>Quando le estensioni vengono eliminate, vengono contrassegnate come eliminate nel sistema ma non vengono rimosse. È quindi possibile recuperare un’estensione eliminata. Le estensioni eliminate possono essere identificate dalla presenza di una proprietà `deleted_at` nella sezione `meta` dei dati di estensione restituiti.
 
 **Formato API**
 
@@ -169,7 +169,7 @@ GET /extensions/{EXTENSION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_ID` | Il `id` dell&#39;estensione che desideri cercare. |
+| `EXTENSION_ID` | `id` dell’estensione che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;estensione.
+In caso di esito positivo, la risposta restituisce i dettagli dell’estensione.
 
 ```json
 {
@@ -277,9 +277,9 @@ Una risposta corretta restituisce i dettagli dell&#39;estensione.
 }
 ```
 
-## Creare o aggiornare un&#39;estensione {#create}
+## Creare o aggiornare un’estensione {#create}
 
-Le estensioni vengono create facendo riferimento a un [pacchetto di estensione](./extension-packages.md) e aggiungendo l&#39;estensione installata a una proprietà. Al termine dell&#39;attività di installazione, viene restituita una risposta che indica se l&#39;estensione è stata installata correttamente.
+Le estensioni vengono create facendo riferimento a un [pacchetto di estensione](./extension-packages.md) e aggiungendo l’estensione installata a una proprietà. Al termine dell’attività di installazione, viene restituita una risposta che indica se l’estensione è stata installata correttamente.
 
 **Formato API**
 
@@ -289,7 +289,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della proprietà in cui desideri installare l&#39;estensione. |
+| `PROPERTY_ID` | `id` della proprietà in cui desideri installare l’estensione. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -324,16 +324,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `relationships.extension_package` | **(Obbligatorio)** Un oggetto che fa riferimento all&#39;ID del pacchetto di estensione da installare. |
-| `attributes.delegate_descriptor_id` | Se l&#39;estensione richiede impostazioni personalizzate, richiede anche un ID descrittore delegato. Per ulteriori informazioni, consulta la guida sugli [ID descrittori delegati](../guides/delegate-descriptor-ids.md) . |
-| `attributes.enabled` | Valore booleano che indica se l&#39;estensione è abilitata. |
-| `attributes.settings` | Un oggetto JSON delle impostazioni rappresentato come stringa. |
+| `relationships.extension_package` | **(Obbligatorio)** Oggetto che fa riferimento all’ID del pacchetto di estensione da installare. |
+| `attributes.delegate_descriptor_id` | Se l’estensione richiede impostazioni personalizzate, richiede anche un ID descrittore del delegato. Per ulteriori informazioni, consulta la guida degli [ID descrittori delegati](../guides/delegate-descriptor-ids.md). |
+| `attributes.enabled` | Valore booleano che indica se l’estensione è abilitata. |
+| `attributes.settings` | Oggetto JSON delle impostazioni rappresentato come stringa. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova estensione creata.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova estensione creata.
 
 ```json
 {
@@ -423,9 +423,9 @@ Una risposta corretta restituisce i dettagli della nuova estensione creata.
 }
 ```
 
-## Revisionare un’estensione {#revise}
+## Rivedere un’estensione {#revise}
 
-Puoi rivedere un&#39;estensione inserendone l&#39;ID nel percorso di una richiesta PATCH.
+Per rivedere un’estensione, devi inserire il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -435,13 +435,13 @@ PATCH /extensions/{EXTENSION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_ID` | Il `id` dell&#39;estensione che desideri modificare. |
+| `EXTENSION_ID` | `id` dell’estensione che desideri rivedere. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Come con [creazione di un&#39;estensione](#create), è necessario caricare tramite i dati del modulo una versione locale del pacchetto rivisto.
+Come per la [creazione di un’estensione](#create), è necessario caricare tramite i dati del modulo una versione locale del pacchetto rivisto.
 
 ```shell
 curl -X PATCH \
@@ -466,14 +466,14 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Attributi che si desidera modificare. Per le estensioni, puoi modificare i relativi attributi `delegate_descriptor_id`, `enabled` e `settings`. |
-| `meta.action` | Deve essere incluso con un valore `revise` durante la revisione. |
+| `attributes` | Attributi che desideri rivedere. Per le estensioni, puoi rivedere gli attributi `delegate_descriptor_id`, `enabled` e `settings`. |
+| `meta.action` | Durante la creazione della revisione, occorre includere un valore `revise`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’estensione rivista, con la relativa proprietà `meta.latest_revision_number` aumentata di 1.
+In caso di esito positivo, la risposta restituisce i dettagli dell’estensione rivista, con la relativa proprietà `meta.latest_revision_number` aumentata di 1.
 
 ```json
 {
@@ -563,7 +563,7 @@ Una risposta corretta restituisce i dettagli dell’estensione rivista, con la r
 }
 ```
 
-## Eliminare un&#39;estensione {#private-release}
+## Eliminare un’estensione {#private-release}
 
 Puoi eliminare un’estensione includendo il relativo ID nel percorso di una richiesta DELETE.
 
@@ -575,7 +575,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_ID` | Il `id` dell&#39;estensione che desideri eliminare. |
+| `EXTENSION_ID` | `id` dell’estensione che desideri eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -591,21 +591,21 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l&#39;estensione è stata eliminata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l’estensione è stata eliminata.
 
-## Gestione delle note per un&#39;estensione {#notes}
+## Gestione delle note di un’estensione {#notes}
 
-Le estensioni sono risorse &quot;di rilievo&quot;, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le estensioni e altre risorse compatibili, consulta la [guida all’endpoint delle note](./notes.md) .
+Le estensioni sono risorse che supportano le note, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per le estensioni e altre risorse compatibili, consulta la [guida dell’endpoint “notes”](./notes.md).
 
-## Recupera risorse correlate per un&#39;estensione {#related}
+## Recuperare le risorse correlate di un&#39;estensione {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un&#39;estensione. Quando [cerca un&#39;estensione](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate di un’estensione. Quando [cerchi un’estensione](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
-### Elencare le librerie correlate per un&#39;estensione {#libraries}
+### Elencare le librerie correlate di un’estensione {#libraries}
 
-Puoi elencare le librerie che utilizzano un’estensione aggiungendo `/libraries` al percorso di una richiesta di ricerca.
+Per elencare le librerie che utilizzano un’estensione, aggiungi `/libraries` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -615,7 +615,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXTENSION_ID}` | Il `id` dell&#39;estensione di cui desideri elencare le librerie. |
+| `{EXTENSION_ID}` | `id` dell’estensione di cui desideri elencare le librerie. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -633,7 +633,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di librerie che utilizzano l&#39;estensione specificata.
+In caso di esito positivo, la risposta restituisce un elenco di librerie che utilizzano l’estensione specificata.
 
 ```json
 {
@@ -725,9 +725,9 @@ Una risposta corretta restituisce un elenco di librerie che utilizzano l&#39;est
 }
 ```
 
-### Elencare le revisioni correlate per un&#39;estensione {#revisions}
+### Elencare le revisioni correlate per un’estensione {#revisions}
 
-Puoi elencare le precedenti revisioni di un’estensione aggiungendo `/revisions` al percorso di una richiesta di ricerca.
+Per elencare le precedenti revisioni di un’estensione, aggiungi `/revisions` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -737,7 +737,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXTENSION_ID}` | Il `id` dell&#39;estensione di cui desideri elencare le revisioni. |
+| `{EXTENSION_ID}` | `id` dell’estensione di cui desideri elencare le revisioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -755,7 +755,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di revisioni per l&#39;estensione specificata.
+In caso di esito positivo, la risposta restituisce l’elenco delle revisioni che hanno l’estensione specificata.
 
 ```json
 {
@@ -939,9 +939,9 @@ Una risposta corretta restituisce un elenco di revisioni per l&#39;estensione sp
 }
 ```
 
-### Cerca il pacchetto di estensione correlato per un&#39;estensione {#extension}
+### Cercare il pacchetto di estensione correlato per un’estensione {#extension}
 
-Puoi cercare il pacchetto di estensione su cui si basa un&#39;estensione aggiungendo `/extension_package` al percorso di una richiesta di GET.
+Per cercare il pacchetto di estensione su cui si basa un’estensione, aggiungi `/extension_package` al percorso di una richiesta di GET.
 
 **Formato API**
 
@@ -951,7 +951,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXTENSION_ID}` | Il `id` dell&#39;estensione di cui desideri cercare l&#39;estensione. |
+| `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare l’estensione. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -969,7 +969,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione su cui si basa l&#39;estensione specificata. La risposta di esempio seguente è stata troncata per lo spazio.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione su cui si basa l’estensione specificata. La risposta di esempio seguente è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -1174,9 +1174,9 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione su cui 
 }
 ```
 
-### Cerca l&#39;origine correlata per un&#39;estensione {#origin}
+### Cercare l’origine correlata per un’estensione {#origin}
 
-Puoi cercare l’origine di un’estensione aggiungendo `/origin` al percorso di una richiesta GET. L’origine di un’estensione è la revisione precedente aggiornata per creare la revisione corrente.
+Per cercare l’origine di un’estensione, aggiungi `/origin` al percorso di una richiesta GET. L’origine di un’estensione è la revisione precedente che era stata aggiornata per creare la revisione corrente.
 
 **Formato API**
 
@@ -1186,7 +1186,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXTENSION_ID}` | Il `id` dell&#39;estensione di cui desideri cercare l&#39;origine. |
+| `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare l’origine. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1204,7 +1204,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;origine dell&#39;estensione specificata.
+In caso di esito positivo, la risposta restituisce i dettagli dell’origine dell’estensione specificata.
 
 ```json
 {
@@ -1294,9 +1294,9 @@ Una risposta corretta restituisce i dettagli dell&#39;origine dell&#39;estension
 }
 ```
 
-### Cerca la proprietà correlata per un&#39;estensione {#property}
+### Cercare la proprietà correlata per un’estensione {#property}
 
-Puoi cercare la proprietà proprietaria di un&#39;estensione aggiungendo `/property` al percorso di una richiesta GET.
+Per cercare la proprietà a cui appartiene un’estensione, aggiungi `/property` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1306,7 +1306,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXTENSION_ID}` | La `id` dell&#39;estensione di cui desideri cercare la proprietà. |
+| `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1324,7 +1324,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà proprietaria dell&#39;estensione specificata.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà a cui appartiene l’estensione specificata.
 
 ```json
 {

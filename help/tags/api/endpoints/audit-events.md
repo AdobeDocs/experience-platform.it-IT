@@ -1,24 +1,24 @@
 ---
-title: Endpoint eventi di controllo
-description: Scopri come effettuare chiamate all’endpoint /audit_events nell’API del reattore.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “audit_events”
+description: Scopri come effettuare chiamate all’endpoint /audit_events nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 4%
+source-wordcount: '262'
+ht-degree: 98%
 
 ---
 
-# Endpoint eventi di controllo
+# Endpoint “audit_events”
 
 >[!WARNING]
 >
->L’implementazione dell’endpoint `/audit_events` è in continuo cambiamento in seguito all’aggiunta, alla rimozione e alla rielaborazione delle funzioni.
+>L’implementazione dell’endpoint `/audit_events` è in continua evoluzione, di pari passo con l’aggiunta, la rimozione e la rielaborazione delle varie funzioni.
 
-Un evento di controllo è un record di una specifica modifica apportata a un’altra risorsa nell’API del reattore, generata al momento della modifica. Si tratta di eventi di sistema a cui è possibile effettuare la sottoscrizione tramite un [callback](./callbacks.md). L’endpoint `/audit_events` nell’API di Reactor consente di gestire programmaticamente gli eventi di controllo all’interno dell’applicazione di esperienza.
+Un evento di audit è un record di una specifica modifica apportata a un’altra risorsa nell’API di Reactor, generato al momento della modifica stessa. Si tratta di eventi di sistema a cui è possibile sottoscrivere tramite una richiamata, o [callback](./callbacks.md). L’endpoint `/audit_events` nell’API di Reactor consente di gestire programmaticamente gli eventi di audit all’interno dell’applicazione Experience.
 
-Gli eventi di controllo sono strutturati sotto forma di `{RESOURCE_TYPE}.{EVENT}`, ad esempio `build.created` o `rule.updated`.
+Gli eventi di audit sono strutturati sotto forma di `{RESOURCE_TYPE}.{EVENT}`, ad esempio `build.created` o `rule.updated`.
 
-Il tipo di risorsa può essere uno dei seguenti:
+Sono ammessi i seguenti tipi di risorsa:
 
 * `property`
 * `extension`
@@ -38,11 +38,11 @@ Per ogni tipo di risorsa sono supportati i seguenti eventi:
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di eventi di controllo {#list}
+## Recuperare un elenco di eventi di audit {#list}
 
-Puoi recuperare un elenco di eventi di controllo per tutte le proprietà di proprietà dell’organizzazione effettuando una richiesta di GET all’endpoint `/audit_events`.
+Per recuperare un elenco di eventi di audit per tutte le proprietà appartenenti all’organizzazione, devi eseguire una richiesta GET all’endpoint `/audit_events`.
 
 **Formato API**
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di eventi di controllo. La risposta di esempio seguente è stata troncata per lo spazio.
+In caso di esito positivo, la risposta restituisce un elenco di eventi di audit. La risposta di esempio seguente è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -157,9 +157,9 @@ Una risposta corretta restituisce un elenco di eventi di controllo. La risposta 
 }
 ```
 
-## Cerca un evento di controllo {#lookup}
+## Cercare un evento di audit {#lookup}
 
-Puoi cercare un evento di controllo fornendo il relativo ID nel percorso di una richiesta di GET.
+Per cercare un evento di audit occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -169,7 +169,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `AUDIT_EVENT_ID` | Il `id` dell&#39;evento di controllo che si desidera cercare. |
+| `AUDIT_EVENT_ID` | `id` dell’evento di audit che si desidera cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’evento di controllo.
+In caso di esito positivo, la risposta restituisce i dettagli dell’evento di audit.
 
 ```json
 {

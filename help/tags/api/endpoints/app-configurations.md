@@ -1,26 +1,26 @@
 ---
-title: Endpoint di configurazione dell'app
-description: Scopri come effettuare chiamate all’endpoint /app_configuration nell’API del reattore.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “app_configuration”
+description: Scopri come effettuare chiamate all’endpoint /app_configuration nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 7%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
-# Endpoint di configurazione dell&#39;app
+# Endpoint “app_configuration”
 
 >[!WARNING]
 >
->L’implementazione dell’endpoint `/app_configurations` è in continuo cambiamento in seguito all’aggiunta, alla rimozione e alla rielaborazione delle funzioni.
+>L’implementazione dell’endpoint `/app_configurations` è in continua evoluzione, di pari passo con l’aggiunta, la rimozione e la rielaborazione delle varie funzioni.
 
-Le configurazioni dell’app consentono di memorizzare le credenziali e recuperarle per un utilizzo successivo. L’endpoint `/app_configurations` nell’API di Reactor consente di gestire programmaticamente le configurazioni dell’app all’interno dell’applicazione di esperienza.
+Le configurazioni dell’app consentono di memorizzare le credenziali e recuperarle per un utilizzo successivo. L’endpoint `/app_configurations` nell’API di Reactor consente di gestire programmaticamente le configurazioni di app all’interno dell’applicazione Experience.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di configurazioni dell’app {#list}
+## Recuperare un elenco di configurazioni di app {#list}
 
 **Formato API**
 
@@ -30,13 +30,13 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 | Parametro | Descrizione |
 | --- | --- |
-| `COMPANY_ID` | La `id` della [società](./companies.md) proprietaria delle configurazioni dell&#39;app. |
+| `COMPANY_ID` | `id` dell’[azienda](./companies.md) proprietaria delle configurazioni di app. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le configurazioni dell’app elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le configurazioni di app elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di configurazioni dell&#39;app.
+In caso di esito positivo, la risposta restituisce un elenco di configurazioni di app.
 
 ```json
 {
@@ -98,9 +98,9 @@ Una risposta corretta restituisce un elenco di configurazioni dell&#39;app.
 }
 ```
 
-## Cercare una configurazione dell’app {#lookup}
+## Cercare una configurazione di app {#lookup}
 
-Puoi cercare una configurazione dell’app fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare una configurazione di app occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -110,7 +110,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | La `id` della configurazione dell&#39;app che desideri cercare. |
+| `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -128,7 +128,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della configurazione dell’app.
+In caso di esito positivo, la risposta restituisce i dettagli della configurazione di app.
 
 ```json
 {
@@ -163,9 +163,9 @@ Una risposta corretta restituisce i dettagli della configurazione dell’app.
 }
 ```
 
-## Creare una configurazione dell’app {#create}
+## Creare una configurazione di app {#create}
 
-Puoi creare una nuova configurazione dell’app effettuando una richiesta di POST.
+Per creare una nuova configurazione di app, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -175,7 +175,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | Parametro | Descrizione |
 | --- | --- |
-| `COMPANY_ID` | La `id` della [società](./companies.md) in cui stai definendo la configurazione dell&#39;app. |
+| `COMPANY_ID` | `id` dell’[azienda](./companies.md) in cui stai definendo la configurazione di app. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -210,16 +210,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `platform` | Piattaforma su cui viene eseguita l&#39;applicazione (web o mobile). Questo determina quali servizi di messaggistica sono disponibili. |
-| `messaging_service` | Il servizio di messaggistica associato all&#39;app, ad esempio [APN (Apple Push Notification Service)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) e [FCM (Firebase Cloud Messaging)](https://firebase.google.com/docs/cloud-messaging). Questo determina quali tipi di chiave possono essere utilizzati. |
-| `key_type` | Rappresenta il protocollo supportato da un fornitore di servizi push e determina il formato dell&#39;oggetto `push_credential`. Man mano che i protocolli si evolvono per i servizi di messaggistica, vengono creati nuovi valori `key_type` per supportare i protocolli aggiornati. |
-| `push_credential` | Valore credenziale effettivo, crittografato a riposo. Questo campo non viene normalmente decrittografato o incluso nelle risposte API. Solo alcuni servizi di Adobe possono ricevere una risposta contenente una credenziale push decrittografata. |
+| `platform` | Piattaforma su cui viene eseguita l’applicazione (web o mobile). Questo determina quali servizi di messaggistica sono disponibili. |
+| `messaging_service` | Il servizio di messaggistica associato all’app, ad esempio [Apple Push Notification Service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) e [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Questo determina quali tipi di chiave possono essere utilizzati. |
+| `key_type` | Rappresenta il protocollo supportato da un fornitore di servizi push e determina il formato dell’oggetto `push_credential`. Man mano che i protocolli si evolvono per i servizi di messaggistica, vengono creati nuovi valori `key_type` per supportare i protocolli aggiornati. |
+| `push_credential` | Valore effettivo delle credenziali, che a riposo è crittografato. Questo campo non viene normalmente decrittografato né incluso nelle risposte API. Solo alcuni servizi di Adobe possono ricevere una risposta contenente credenziali push decrittografate. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova configurazione dell’app appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova configurazione di app appena creata.
 
 ```json
 {
@@ -254,9 +254,9 @@ Una risposta corretta restituisce i dettagli della nuova configurazione dell’a
 }
 ```
 
-## Aggiornare la configurazione dell’app
+## Aggiornare una configurazione di app
 
-Puoi aggiornare una configurazione dell’app includendo il relativo ID nel percorso di una richiesta PUT.
+Puoi aggiornare una configurazione di app includendo il relativo ID nel percorso di una richiesta PUT.
 
 **Formato API**
 
@@ -266,13 +266,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | La `id` della configurazione dell&#39;app che desideri aggiornare. |
+| `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `app_id` per una configurazione dell&#39;app esistente.
+La richiesta seguente aggiorna l’`app_id` per la configurazione di un’app esistente.
 
 ```shell
 curl -X PUT \
@@ -294,15 +294,15 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per la configurazione dell’app. Ogni chiave rappresenta il particolare attributo di configurazione dell’app da aggiornare, insieme al valore corrispondente a cui deve essere aggiornato.<br><br>I seguenti attributi possono essere aggiornati per le configurazioni dell’app:<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
-| `id` | La `id` della configurazione dell&#39;app che desideri aggiornare. Questo deve corrispondere al valore `{APP_CONFIGURATION_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per la configurazione di app. Ogni chiave rappresenta il particolare attributo di configurazione di app da aggiornare, insieme al valore corrispondente a cui deve essere aggiornato.<br><br>I seguenti attributi possono essere aggiornati per le configurazioni di app:<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
+| `id` |  `id` della configurazione di app che desideri aggiornare. Deve corrispondere al valore `{APP_CONFIGURATION_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `app_configurations`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della configurazione dell’app aggiornata.
+In caso di esito positivo, la risposta restituisce i dettagli della configurazione di app aggiornata.
 
 ```json
 {
@@ -339,7 +339,7 @@ Una risposta corretta restituisce i dettagli della configurazione dell’app agg
 
 ## Eliminare una configurazione di app
 
-Puoi eliminare una configurazione dell’app includendo il relativo ID nel percorso di una richiesta DELETE.
+Puoi eliminare una configurazione di app includendo il relativo ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -349,7 +349,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `APP_CONFIGURATION_ID` | La `id` della configurazione dell&#39;app che desideri eliminare. |
+| `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,4 +365,4 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che la configurazione dell’app è stata eliminata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che la configurazione di app è stata eliminata.

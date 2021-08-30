@@ -5,19 +5,18 @@ title: Guida all’API di Observability Insights
 topic-legacy: developer guide
 description: Observability Insights è un’API RESTful che consente agli sviluppatori di esporre le metriche chiave di osservabilità in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo di Platform, sui controlli di integrità per i servizi Platform, sulle tendenze della cronologia e sugli indicatori di prestazioni per varie funzionalità di Platform.
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '155'
+ht-degree: 1%
 
 ---
 
-# [!DNL Observability Insights] Guida all’API
+# Guida dell’API di [!DNL Observability Insights]
 
 L’ API [!DNL Observability Insights] fornisce un endpoint che consente di recuperare e monitorare programmaticamente i dati delle metriche per varie funzioni di Adobe Experience Platform. Questo endpoint è descritto di seguito. Per informazioni dettagliate, visita la guida all’endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [[!DNL Observability Insights] Swagger API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [[!DNL Observability Insights] Swagger API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Metriche
 

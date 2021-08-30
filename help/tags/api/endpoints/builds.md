@@ -1,34 +1,34 @@
 ---
-title: Genera l’endpoint
-description: Scopri come effettuare chiamate all’endpoint /build nell’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “builds”
+description: Scopri come effettuare chiamate all’endpoint /build nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 8%
+source-wordcount: '833'
+ht-degree: 99%
 
 ---
 
-# Genera l’endpoint
+# Endpoint “builds”
 
-Le estensioni, le regole e gli elementi dati sono gli elementi costitutivi dei tag in Adobe Experience Platform. Quando desideri eseguire un&#39;operazione con l&#39;applicazione, questi blocchi predefiniti vengono aggiunti a una [libreria](./libraries.md). Per distribuire una libreria sull&#39;applicazione experience, la libreria viene compilata in una build. L’endpoint `/builds` nell’API di Reactor consente di gestire programmaticamente le build all’interno dell’applicazione di esperienza.
+Le estensioni, le regole e gli elementi dati sono gli elementi costitutivi dei tag in Adobe Experience Platform. Quando desideri eseguire un’operazione con l’applicazione, questi elementi di base vengono aggiunti a una [libreria](./libraries.md). Per implementare una libreria nell’applicazione Experience, la libreria viene compilata in una build. L’endpoint `/builds` nell’API di Reactor consente di gestire programmaticamente le build all’interno dell’applicazione Experience.
 
-Una build è il file (o i file) effettivo caricato all&#39;interno della tua applicazione web e mobile. Il contenuto di ciascuna build varia in base ai seguenti fattori:
+Una build è il file (o i file) effettivo caricato all’interno dell’applicazione web e mobile. Il contenuto di ciascuna build varia in base ai seguenti fattori:
 
 * Risorse incluse nella libreria
-* La configurazione dell&#39; [ambiente](./environments.md) in cui viene generata la libreria
+* Configurazione dell’[ambiente](./environments.md) in cui viene generata la libreria
 * Piattaforma della [proprietà](./properties.md) a cui appartiene la build
 
 Una build appartiene esattamente a una libreria. Una libreria può avere molte build.
 
-Per informazioni più generali sulle build e sulle modalità di inclusione nel flusso di lavoro di pubblicazione dei tag, consulta la [panoramica sulla pubblicazione](../../ui/publishing/overview.md).
+Per informazioni più generali sulle build e su come rientrano nel flusso di lavoro di pubblicazione dei tag, consulta la [panoramica sulla pubblicazione](../../ui/publishing/overview.md).
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di build {#list}
+## Recuperare un elenco di build {#list}
 
-Puoi elencare le build per una particolare libreria includendo l’ID della libreria nel percorso di una richiesta GET.
+Per elencare le build di una particolare libreria, devi includere l’ID della libreria nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -44,7 +44,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le build elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le build elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -145,7 +145,7 @@ Una risposta corretta restituisce un elenco di build per la libreria specificata
 
 ## Cercare una build {#lookup}
 
-Puoi cercare una build fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare una build, devi fornire il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -155,7 +155,7 @@ GET /builds/{BUILD_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `BUILD_ID` | Il `id` della build da cercare. |
+| `BUILD_ID` | `id` della build da cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -173,7 +173,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della build.
+In caso di esito positivo, la risposta restituisce i dettagli della build.
 
 ```json
 {
@@ -247,7 +247,7 @@ Una risposta corretta restituisce i dettagli della build.
 
 ## Creare una build {#create}
 
-Puoi creare una build per una libreria contenente l’ID della libreria nel percorso di una richiesta POST.
+Per creare una build per una libreria, devi includere l’ID della libreria nel percorso di una richiesta POST.
 
 **Formato API**
 
@@ -257,13 +257,13 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | Parametro | Descrizione |
 | --- | --- |
-| `LIBRARY_ID` | La `id` della libreria in cui stai definendo la build. |
+| `LIBRARY_ID` | `id` della libreria in cui stai definendo la build. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La seguente richiesta crea una nuova build per la libreria specificata nel percorso della richiesta. Non è richiesto alcun payload di richiesta.
+La seguente richiesta crea una nuova build per la libreria specificata nel percorso della richiesta. Non è necessario alcun payload di richiesta.
 
 ```shell
 curl -X POST \
@@ -275,7 +275,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della build appena creata.
+In caso di esito positivo, la risposta restituisce i dettagli della build appena creata.
 
 ```json
 {
@@ -349,7 +349,7 @@ Una risposta corretta restituisce i dettagli della build appena creata.
 
 ## Ripubblicare una build {#republish}
 
-Puoi ripubblicare una build da una [libreria pubblicata](./libraries.md#publish) includendo il relativo ID nel percorso di una richiesta PATCH.
+Per ripubblicare una build da una [libreria pubblicata](./libraries.md#publish), devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -359,13 +359,13 @@ PATCH /builds/{BUILD_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `BUILD_ID` | La `id` della build che desideri ripubblicare. |
+| `BUILD_ID` | `id` della build che desideri ripubblicare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `app_id` per una configurazione dell&#39;app esistente.
+La richiesta seguente aggiorna l’`app_id` per la configurazione di un’app esistente.
 
 ```shell
 curl -X PATCH \
@@ -387,15 +387,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | La `id` della build da aggiornare. Questo deve corrispondere al valore `{BUILD_ID}` fornito nel percorso della richiesta. |
+| `id` | `id` della build da aggiornare. Deve corrispondere al valore `{BUILD_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `builds`. |
-| `meta.action` | Tipo di azione di PATCH da eseguire. Deve essere impostato su `republish`. |
+| `meta.action` | Tipo di azione PATCH da eseguire. Deve essere impostata su `republish`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della build ripubblicata.
+In caso di esito positivo, la risposta restituisce i dettagli della build ripubblicata.
 
 ```json
 {
@@ -468,15 +468,15 @@ Una risposta corretta restituisce i dettagli della build ripubblicata.
 }
 ```
 
-## Recuperare le risorse correlate per una build {#related}
+## Recuperare le risorse correlate di una build {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per una build. Quando [cerca una build](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate di una build. Nella [ricerca di una build](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Elencare gli elementi dati correlati per una build {#data-elements}
 
-Puoi elencare gli elementi dati correlati per una build aggiungendo `/data_elements` al percorso di una richiesta di ricerca.
+Per elencare gli elementi dati correlati per una build, aggiungi `/data_elements` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -486,7 +486,7 @@ GET  /builds/{BUILD_ID}/data_elements
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BUILD_ID}` | La `id` della build di cui desideri elencare gli elementi dati. |
+| `{BUILD_ID}` | `id` della build di cui desideri elencare gli elementi dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -504,7 +504,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di elementi dati correlati alla build.
+In caso di esito positivo, la risposta restituisce un elenco di elementi dati correlati alla build.
 
 ```json
 {
@@ -617,7 +617,7 @@ Una risposta corretta restituisce un elenco di elementi dati correlati alla buil
 
 ### Elencare le estensioni correlate per una build {#extensions}
 
-Puoi elencare le estensioni correlate per una build aggiungendo `/extensions` al percorso di una richiesta di ricerca.
+Per elencare le estensioni correlate per una build, aggiungi `/extensions` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -627,7 +627,7 @@ GET  /builds/{BUILD_ID}/extensions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BUILD_ID}` | La `id` della build di cui desideri elencare le estensioni. |
+| `{BUILD_ID}` | `id` della build di cui desideri elencare le estensioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -645,7 +645,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di estensioni correlate alla build.
+In caso di esito positivo, la risposta restituisce un elenco di estensioni correlate alla build.
 
 ```json
 {
@@ -748,7 +748,7 @@ Una risposta corretta restituisce un elenco di estensioni correlate alla build.
 
 ### Elencare le regole correlate per una build {#rules}
 
-Puoi elencare le regole correlate per una build aggiungendo `/rules` al percorso di una richiesta di ricerca.
+Per elencare le regole correlate per una build, aggiungi `/rules` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -758,7 +758,7 @@ GET  /builds/{BUILD_ID}/rules
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BUILD_ID}` | La `id` della build di cui desideri elencare le regole. |
+| `{BUILD_ID}` | `id` della build di cui desideri elencare le regole. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -776,7 +776,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di regole correlate alla build.
+In caso di esito positivo, la risposta restituisce un elenco di regole correlate alla build.
 
 ```json
 {
@@ -859,9 +859,9 @@ Una risposta corretta restituisce un elenco di regole correlate alla build.
 }
 ```
 
-### Cerca la libreria correlata per una build {#library}
+### Ricercare la libreria correlata per una build {#library}
 
-Puoi recuperare la libreria correlata per una build aggiungendo `/library` al percorso di una richiesta di ricerca.
+Per recuperare la libreria correlata per una build, aggiungi `/library` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -871,7 +871,7 @@ GET  /builds/{BUILD_ID}/library
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BUILD_ID}` | La `id` della build di cui desideri cercare la libreria. |
+| `{BUILD_ID}` | `id` della build di cui desideri cercare la libreria. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -974,7 +974,7 @@ curl -X GET \
 
 ### Cercare l’ambiente correlato per una build {#environment}
 
-Puoi recuperare l’ambiente correlato per una build aggiungendo `/environment` al percorso di una richiesta di ricerca.
+Per recuperare l’ambiente correlato per una build, aggiungi `/environment` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -984,7 +984,7 @@ GET  /builds/{BUILD_ID}/environment
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BUILD_ID}` | Il `id` della build di cui desideri cercare l’ambiente. |
+| `{BUILD_ID}` | `id` della build di cui desideri cercare l’ambiente. |
 
 {style=&quot;table-layout:auto&quot;}
 

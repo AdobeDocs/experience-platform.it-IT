@@ -1,30 +1,30 @@
 ---
-title: Endpoint degli elementi dati
-description: Scopri come effettuare chiamate all’endpoint /data_elements nell’API del reattore.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “data_elements”
+description: Scopri come effettuare chiamate all’endpoint /data_elements nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 6%
+source-wordcount: '1411'
+ht-degree: 99%
 
 ---
 
-# Endpoint degli elementi dati
+# Endpoint “data_elements”
 
-Un elemento dati funziona come una variabile che punta a un elemento importante di dati all’interno dell’applicazione. Gli elementi dati vengono utilizzati nelle configurazioni [rules](./rules.md) e [extension](./extensions.md) . Quando una regola viene attivata in fase di runtime in un browser o in un’applicazione, il valore dell’elemento dati viene risolto e utilizzato all’interno della regola. Gli elementi dati funzionano allo stesso modo per le configurazioni delle estensioni.
+Un elemento dati funziona come una variabile che punta a un elemento di dati importante nell’applicazione. Gli elementi dati vengono utilizzati nelle configurazioni di [regole](./rules.md) ed [estensioni](./extensions.md). Quando una regola viene attivata in fase di runtime in un browser o in un’applicazione, il valore dell’elemento dati viene risolto e utilizzato all’interno della regola. Gli elementi dati funzionano allo stesso modo per le configurazioni delle estensioni.
 
 Se si utilizzano insieme più elementi dati, si ottiene un dizionario dati o una mappa dati. Questo dizionario rappresenta i dati che Adobe Experience Platform conosce e può utilizzare.
 
 Un elemento dati appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere molti elementi dati.
 
-Per informazioni generali sugli elementi dati e sul loro utilizzo nei tag, consulta la [guida agli elementi dati](../../ui/managing-resources/data-elements.md) nella documentazione dell&#39;interfaccia utente.
+Per informazioni generali sugli elementi dati e sul loro utilizzo nei tag, consulta la [guida agli elementi dati](../../ui/managing-resources/data-elements.md) nella documentazione dell’interfaccia utente.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di elementi dati {#list}
+## Recuperare un elenco di elementi dati {#list}
 
-Puoi recuperare un elenco di elementi dati per una proprietà includendo l’ID della proprietà nel percorso di una richiesta di GET.
+Puoi recuperare un elenco di elementi dati per una proprietà includendo l’ID della proprietà nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -34,13 +34,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La proprietà `id` della proprietà proprietaria degli elementi dati. |
+| `PROPERTY_ID` | `id` della proprietà a cui appartengono gli elementi dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, gli elementi dati elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, gli elementi dati elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di elementi dati per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di elementi dati per la proprietà specificata.
 
 ```json
 {
@@ -169,11 +169,11 @@ Una risposta corretta restituisce un elenco di elementi dati per la proprietà s
 
 ## Cercare un elemento dati {#lookup}
 
-Puoi cercare un elemento dati fornendone l’ID nel percorso di una richiesta GET.
+Per cercare un elemento dati occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 >[!NOTE]
 >
->Quando gli elementi dati vengono eliminati, vengono contrassegnati come eliminati ma non vengono effettivamente rimossi dal sistema. Pertanto, è possibile cercare un elemento dati eliminato. Gli elementi di dati eliminati possono essere identificati dalla presenza di un attributo `data.meta.deleted_at` .
+>Quando gli elementi dati vengono eliminati, vengono contrassegnati come eliminati ma non vengono effettivamente rimossi dal sistema. Pertanto, è possibile cercare un elemento dati eliminato. Gli elementi dati eliminati possono essere identificati dalla presenza di un attributo `data.meta.deleted_at`.
 
 **Formato API**
 
@@ -183,7 +183,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `DATA_ELEMENT_ID` | Il `id` dell&#39;elemento dati che desideri cercare. |
+| `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,7 +201,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’elemento dati.
+In caso di esito positivo, la risposta restituisce i dettagli dell’elemento dati.
 
 ```json
 {
@@ -303,7 +303,7 @@ Una risposta corretta restituisce i dettagli dell’elemento dati.
 
 ## Creare un elemento dati {#create}
 
-Puoi creare un nuovo elemento dati effettuando una richiesta POST.
+Per creare un nuovo elemento dati, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -313,13 +313,13 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo l&#39;elemento dati. |
+| `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo l’elemento dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo elemento dati per la proprietà specificata. La chiamata associa anche l’elemento dati a un’estensione esistente tramite la proprietà `relationships` . Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md) .
+La richiesta seguente crea un nuovo elemento dati per la proprietà specificata. La chiamata associa anche l’elemento dati a un’estensione esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida delle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -354,20 +354,20 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per l&#39;elemento dati. |
-| `attributes.delegate_descriptor_id` | **(Obbligatorio)** Una stringa formattata che associa l’elemento dati a un pacchetto di estensione. Tutti gli elementi di dati devono essere associati a un pacchetto di estensione quando vengono creati per la prima volta, in quanto ogni pacchetto di estensione definisce i tipi compatibili per i relativi elementi di dati delegati e il comportamento a cui sono destinati. Per ulteriori informazioni, consulta la guida sugli [ID descrittori delegati](../guides/delegate-descriptor-ids.md) . |
-| `attributes.settings` | Un oggetto JSON delle impostazioni rappresentato come stringa. |
-| `attributes.default_value` | Un valore predefinito da restituire se l’elemento dati restituisce `undefined`. |
-| `attributes.enabled` | Un valore booleano che indica se l’elemento dati è abilitato. |
-| `attributes.force_lower_case` | Un valore booleano che indica se il valore dell’elemento dati deve essere convertito in minuscolo prima di essere memorizzato. |
-| `attributes.clean_text` | Un valore booleano che indica se gli spazi vuoti iniziali e finali devono essere rimossi dal valore dell’elemento dati prima di essere memorizzati. |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile dell’elemento dati. |
+| `attributes.delegate_descriptor_id` | **(Obbligatorio)** Stringa formattata che associa l’elemento dati a un pacchetto di estensione. Tutti gli elementi dati devono essere associati a un pacchetto di estensione quando vengono creati per la prima volta, in quanto ogni pacchetto di estensione definisce i tipi compatibili per i relativi elementi dati delegati e il comportamento a cui sono destinati. Per ulteriori informazioni, consulta la guida sugli [ID descrittori dei delegati](../guides/delegate-descriptor-ids.md). |
+| `attributes.settings` | Oggetto JSON delle impostazioni rappresentato come stringa. |
+| `attributes.default_value` | Valore predefinito da restituire se l’elemento dati restituisce `undefined`. |
+| `attributes.enabled` | Valore booleano che indica se l’elemento dati è abilitato. |
+| `attributes.force_lower_case` | Valore booleano che indica se il valore dell’elemento dati deve essere convertito in minuscolo prima di essere memorizzato. |
+| `attributes.clean_text` | Valore booleano che indica se gli spazi vuoti iniziali e finali devono essere rimossi dal valore dell’elemento dati prima di essere memorizzati. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’elemento dati appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’elemento dati appena creato.
 
 ```json
 {
@@ -467,7 +467,7 @@ Una risposta corretta restituisce i dettagli dell’elemento dati appena creato.
 }
 ```
 
-## Aggiornare un elemento dati {#update}
+## Creare un elemento dati {#update}
 
 Puoi aggiornare un elemento dati includendone l’ID nel percorso di una richiesta PATCH.
 
@@ -479,13 +479,13 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `DATA_ELEMENT_ID` | Il `id` dell&#39;elemento dati che desideri aggiornare. |
+| `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `name` per un elemento dati esistente.
+La richiesta seguente aggiorna il valore `name` di un elemento dati esistente.
 
 ```shell
 curl -X PATCH \
@@ -507,15 +507,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’elemento dati. È possibile aggiornare tutti gli attributi degli elementi dati. Consulta l’esempio di chiamata per [creazione di un elemento dati](#create) per un elenco di attributi e relativi casi d’uso. |
-| `id` | Il `id` dell’elemento dati che desideri aggiornare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’elemento dati. È possibile aggiornare tutti gli attributi degli elementi dati. Per un elenco di attributi e relativi casi d’uso, consulta l’esempio di chiamata per [creare un elemento dati](#create). |
+| `id` | `id` dell’elemento dati che desideri aggiornare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’elemento dati aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’elemento dati aggiornato.
 
 ```json
 {
@@ -615,11 +615,11 @@ Una risposta corretta restituisce i dettagli dell’elemento dati aggiornato.
 }
 ```
 
-## Revisionare un elemento dati {#revise}
+## Creare un elemento dati {#revise}
 
 Quando modifichi un elemento dati, viene creata una nuova revisione dell’elemento dati con la revisione corrente (head). Ogni revisione di un elemento dati avrà un proprio ID. L’elemento dati originale può essere scoperto tramite un collegamento di origine.
 
-È possibile modificare un elemento dati fornendo una proprietà `meta.action` con un valore `revise` nel corpo di una richiesta PATCH.
+È possibile modificare un elemento dati fornendo una proprietà `meta.action` con il valore `revise` nel corpo di una richiesta PATCH.
 
 **Formato API**
 
@@ -629,7 +629,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `DATA_ELEMENT_ID` | Il `id` dell’elemento dati che desideri modificare. |
+| `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri modificare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -658,16 +658,16 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’elemento dati. È possibile aggiornare tutti gli attributi degli elementi dati. Consulta l’esempio di chiamata per [creazione di un elemento dati](#create) per un elenco di attributi e relativi casi d’uso. |
-| `meta.action` | Se inclusa con un valore di `revise`, questa proprietà indica che è necessario creare una nuova revisione per l&#39;elemento dati. |
-| `id` | Il `id` dell’elemento dati che desideri modificare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’elemento dati. È possibile aggiornare tutti gli attributi degli elementi dati. Per un elenco di attributi e relativi casi d’uso, consulta l’esempio di chiamata per [creare un elemento dati](#create). |
+| `meta.action` | Se inclusa con un valore `revise`, questa proprietà indica che è necessario creare una nuova revisione per l’elemento dati. |
+| `id` | `id` dell’elemento dati che desideri modificare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da revisionare. Per questo endpoint, il valore deve essere `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova revisione per l’elemento dati, come indicato dall’attributo `meta.latest_revision_number` incrementato.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova revisione per l’elemento dati, come indicato dall’attributo `meta.latest_revision_number` incrementato.
 
 ```json
 {
@@ -779,7 +779,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `DATA_ELEMENT_ID` | Il `id` dell’elemento dati da eliminare. |
+| `DATA_ELEMENT_ID` | `id` dell’elemento dati da eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -795,17 +795,17 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l’elemento dati è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l’elemento dati è stato eliminato.
 
 ## Gestire le note per un elemento dati {#notes}
 
-Gli elementi dati sono risorse &quot;di rilievo&quot;, il che significa che puoi creare e recuperare note basate su testo su ogni singola risorsa. Per ulteriori informazioni su come gestire le note per gli elementi dati e altre risorse compatibili, consulta la [guida endpoint note](./notes.md) .
+Gli elementi dati sono risorse che supportano le note, pertanto puoi creare e recuperare note testuali per ogni singola risorsa. Per ulteriori informazioni su come gestire le note per gli elementi dati e altre risorse compatibili, consulta la [guida per l’endpoint “notes”](./notes.md).
 
 ## Recuperare le risorse correlate per un elemento dati {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un elemento dati. Quando [cerca un elemento dati](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate per un elemento dati. Quando [cerchi un elemento dati](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Elencare le librerie correlate per un elemento dati {#libraries}
 
@@ -819,7 +819,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | L&#39; `id` dell&#39;elemento dati di cui desideri elencare le librerie. |
+| `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri elencare le librerie. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -837,7 +837,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di librerie che utilizzano l’elemento dati specificato.
+In caso di esito positivo, la risposta restituisce un elenco di librerie che utilizzano l’elemento dati specificato.
 
 ```json
 {
@@ -941,7 +941,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | Il `id` dell&#39;elemento dati di cui desideri elencare le revisioni. |
+| `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri elencare le revisioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -959,7 +959,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di revisioni per l&#39;elemento dati specificato.
+In caso di esito positivo, la risposta restituisce un elenco di revisioni per l’elemento dati specificato.
 
 ```json
 {
@@ -1163,9 +1163,9 @@ Una risposta corretta restituisce un elenco di revisioni per l&#39;elemento dati
 }
 ```
 
-### Cerca l&#39;estensione correlata per un elemento dati {#extension}
+### Cercare l’estensione correlata di un elemento dati {#extension}
 
-Puoi cercare l’estensione che utilizza un elemento dati aggiungendo `/extension` al percorso di una richiesta di GET.
+Per cercare l’estensione che utilizza un elemento dati, devi aggiungere `/extension` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1175,7 +1175,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | L&#39; `id` dell&#39;elemento dati di cui desideri cercare l&#39;estensione. |
+| `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare l’estensione. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1193,7 +1193,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;estensione che utilizza l&#39;elemento dati specificato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’estensione che utilizza l’elemento dati specificato.
 
 ```json
 {
@@ -1283,9 +1283,9 @@ Una risposta corretta restituisce i dettagli dell&#39;estensione che utilizza l&
 }
 ```
 
-### Cercare l’origine correlata per un elemento dati {#origin}
+### Cercare l’origine correlata di un elemento dati {#origin}
 
-Puoi cercare l’origine di un elemento dati aggiungendo `/origin` al percorso di una richiesta di GET. L’origine di un elemento dati è la revisione precedente aggiornata per creare la revisione corrente.
+Per cercare l’origine di un elemento dati, devi aggiungere `/origin` al percorso di una richiesta GET. L’origine di un elemento dati è la revisione precedente che era stata aggiornata per creare la revisione corrente.
 
 **Formato API**
 
@@ -1295,7 +1295,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | Il `id` dell&#39;elemento dati di cui desideri cercare l&#39;origine. |
+| `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare l’origine. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1313,7 +1313,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;origine dell&#39;elemento dati specificato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’origine dell’elemento dati specificato.
 
 ```json
 {
@@ -1413,9 +1413,9 @@ Una risposta corretta restituisce i dettagli dell&#39;origine dell&#39;elemento 
 }
 ```
 
-### Cerca la proprietà correlata per un elemento dati {#property}
+### Cercare la proprietà correlata di un elemento dati {#property}
 
-Puoi cercare la proprietà proprietaria di un elemento dati aggiungendo `/property` al percorso di una richiesta di GET.
+Per cercare la proprietà a cui appartiene un elemento dati, devi aggiungere `/property` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -1425,7 +1425,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | L’ `id` dell’elemento dati di cui desideri cercare la proprietà. |
+| `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1443,7 +1443,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà proprietaria dell’elemento dati specificato.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà a cui appartiene l’elemento dati specificato.
 
 ```json
 {

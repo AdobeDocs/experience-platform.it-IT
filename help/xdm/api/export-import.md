@@ -5,9 +5,9 @@ title: Esporta/Importa endpoint API
 description: Gli endpoint /export e /import nell’API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '506'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Tutte le risorse all’interno di [!DNL Schema Library] sono contenute in una sa
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell’ [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) . Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
+Gli endpoint utilizzati in questa guida fanno parte dell’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) . Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
 Gli endpoint di esportazione/importazione fanno parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nelle chiamate API riportate di seguito.
 

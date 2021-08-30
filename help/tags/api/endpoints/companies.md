@@ -1,26 +1,26 @@
 ---
-title: Endpoint aziendale
-description: Scopri come effettuare chiamate all’endpoint /company nell’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “companies”
+description: Scopri come effettuare chiamate all’endpoint /companies nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 4%
+source-wordcount: '243'
+ht-degree: 97%
 
 ---
 
-# Endpoint aziendale
+# Endpoint “companies”
 
-Un&#39;azienda rappresenta un&#39;organizzazione cliente, in genere un&#39;azienda. Nell’API di Reactor, queste società corrispondono a 1:1 con l’ID organizzazione IMS. Gli utenti API hanno solo visibilità nelle aziende a cui hanno accesso. Un&#39;azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene esattamente a una società.
+Un’azienda rappresenta un’organizzazione del cliente, in genere una divisione dell’azienza. Nell’API di Reactor, le aziende (companies) corrispondono all’ID organizzazione IMS. Gli utenti API possono vedere solo le aziende a cui hanno accesso. Un’azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene a una sola azienda.
 
-L’endpoint `/companies` nell’API di Reactor ti consente di recuperare in modo programmatico le società a cui hai accesso all’interno dell’applicazione di esperienza.
+L’endpoint `/companies` nell’API di Reactor consente di recuperare in modo programmatico le aziende a cui hai accesso all’interno dell’applicazione Experience.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di aziende {#list}
+## Recuperare un elenco di aziende {#list}
 
-Puoi elencare le aziende a cui sei autorizzato a utilizzare effettuando una richiesta di GET all’endpoint `/companies` . Nella maggior parte dei casi ce n&#39;è esattamente uno.
+Per elencare le aziende che sei autorizzato a utilizzare, devi eseguire una richiesta di GET all’endpoint `/companies`. Nella maggior parte dei casi ce n&#39;è solo una.
 
 **Formato API**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, le società elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, le aziende elencate possono essere filtrate in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di aziende a cui hai accesso.
+In caso di esito positivo, la risposta restituisce l’elenco delle aziende a cui hai accesso.
 
 ```json
 {
@@ -106,9 +106,9 @@ Una risposta corretta restituisce un elenco di aziende a cui hai accesso.
 }
 ```
 
-## Cerca un&#39;azienda {#lookup}
+## Cercare un’azienda {#lookup}
 
-Puoi cercare una società specifica includendo il relativo ID nel percorso di una richiesta di GET.
+Puoi cercare un’azienda specifica includendo il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{COMPANY_ID}` | Il valore `id` della società che si desidera cercare. |
+| `{COMPANY_ID}` | Valore `id` dell’azienda da cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;azienda.
+In caso di esito positivo, la risposta restituisce i dettagli dell’azienda.
 
 ```json
 {

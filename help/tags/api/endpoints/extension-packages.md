@@ -1,28 +1,28 @@
 ---
-title: Endpoint dei pacchetti di estensione
-description: Scopri come effettuare chiamate all’endpoint /extension_packages nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “extension_packages”
+description: Scopri come effettuare chiamate all’endpoint /extension_packages nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 5%
+source-wordcount: '951'
+ht-degree: 73%
 
 ---
 
-# Endpoint dei pacchetti di estensione
+# Endpoint “extension_packages”
 
 >[!WARNING]
 >
->L’implementazione dell’endpoint `/extension_packages` è in continuo cambiamento in seguito all’aggiunta, alla rimozione e alla rielaborazione delle funzioni.
+>L’implementazione dell’endpoint `/extension_packages` è in continua evoluzione, di pari passo con l’aggiunta, la rimozione e la rielaborazione delle varie funzioni.
 
-Un pacchetto di estensione rappresenta un [estensione](./extensions.md) creato da uno sviluppatore di estensioni. Un pacchetto di estensione definisce funzionalità aggiuntive che possono essere rese disponibili agli utenti di tag. Nella maggior parte dei casi queste funzionalità si presentano sotto forma di [componenti regola](./rule-components.md) (eventi, condizioni e azioni) e di [elementi dati](./data-elements.md), ma possono anche includere moduli principali e moduli condivisi.
+Un pacchetto di estensione rappresenta un’[estensione](./extensions.md) creata da uno sviluppatore di estensioni. Un pacchetto di estensione definisce funzionalità aggiuntive che possono essere rese disponibili agli utenti di tag. Nella maggior parte dei casi queste funzionalità si presentano sotto forma di [componenti regola](./rule-components.md) (eventi, condizioni e azioni) e di [elementi dati](./data-elements.md), ma possono anche includere moduli principali e moduli condivisi.
 
-I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di raccolta dati per consentire agli utenti di eseguire l’installazione. L&#39;aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un&#39;estensione con un collegamento al pacchetto di estensione.
+I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di Data Collection per consentire agli utenti di eseguire l’installazione. L’aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un’estensione con un collegamento al pacchetto di estensione.
 
-Un pacchetto di estensione appartiene alla [azienda](./companies.md) dello sviluppatore che lo ha creato.
+Un pacchetto di estensione appartiene all’[azienda](./companies.md) dello sviluppatore che lo ha creato.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
 Oltre a comprendere come effettuare chiamate all&#39;API di Reactor, è importante comprendere in che modo gli attributi `status` e `availability` di un pacchetto di estensione influiscono sulle azioni che puoi eseguire su di esso. Queste sono spiegate nelle sezioni seguenti.
 
@@ -50,9 +50,9 @@ Sono disponibili livelli di disponibilità per un pacchetto di estensione: `deve
 >
 >Quando viene creato un pacchetto di estensione, `availability` viene impostato su `development`. Al termine del test, puoi passare il pacchetto di estensione a `private` o `public`.
 
-## Recupera un elenco di pacchetti di estensione {#list}
+## Recuperare un elenco di pacchetti di estensione {#list}
 
-Puoi recuperare un elenco di pacchetti di estensione effettuando una richiesta GET a `/extension_packages`.
+Per recuperare un elenco di pacchetti di estensione, effettua una richiesta GET a `/extension_packages`.
 
 **Formato API**
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, i pacchetti di estensione elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, i pacchetti di estensione elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di pacchetti di estensione.
+In caso di esito positivo, la risposta restituisce un elenco di pacchetti di estensione.
 
 ```json
 {
@@ -234,9 +234,9 @@ Una risposta corretta restituisce un elenco di pacchetti di estensione.
 }
 ```
 
-## Cerca un pacchetto di estensione {#lookup}
+## Cercare un pacchetto di estensione {#lookup}
 
-Puoi cercare un pacchetto di estensione fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare un pacchetto di estensione, devi fornire il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `id` del pacchetto di estensione che desideri cercare. |
+| `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione, incluse le relative risorse delegate come `actions`, `conditions`, `data_elements` e altro ancora. La risposta di esempio seguente è stata troncata per lo spazio.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione, incluse le relative risorse delegate come `actions`, `conditions`, `data_elements` ecc. La risposta di esempio seguente è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -471,9 +471,9 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione, inclus
 
 ## Creare un pacchetto di estensione {#create}
 
-I pacchetti di estensione vengono creati utilizzando uno strumento di scaffolding Node.js e salvati sul computer locale prima di essere inviati all’API Reactor. Per ulteriori informazioni sulla configurazione di un pacchetto di estensione, consulta la guida [guida introduttiva allo sviluppo di estensioni](../../extension-dev/getting-started.md).
+I pacchetti di estensione vengono creati utilizzando uno strumento di scaffolding Node.js e salvati sul computer locale prima di essere inviati all’API di Reactor. Per ulteriori informazioni sulla configurazione di un pacchetto di estensione, consulta la [guida introduttiva allo sviluppo di estensioni](../../extension-dev/getting-started.md).
 
-Dopo aver creato il file del pacchetto di estensione, puoi inviarlo all’API di Reactor tramite una richiesta di POST.
+Dopo aver creato il file del pacchetto di estensione, puoi inviarlo all’API di Reactor tramite una richiesta POST.
 
 **Formato API**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo pacchetto di estensione. Il percorso locale del file del pacchetto che viene caricato è indicato come dati del modulo (`package`) e pertanto questo endpoint richiede un&#39;intestazione `Content-Type` di `multipart/form-data`.
+La seguente richiesta crea un nuovo pacchetto di estensione. Il percorso locale del file del pacchetto che viene caricato è indicato come dati del modulo (`package`) e pertanto questo endpoint richiede un’intestazione `Content-Type` con valore `multipart/form-data`.
 
 ```shell
 curl -X POST \
@@ -497,7 +497,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione appena creato.
 
 ```json
 {
@@ -714,13 +714,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `id` del pacchetto di estensione che desideri aggiornare. |
+| `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Come con [creazione di un pacchetto di estensione](#create), è necessario caricare tramite i dati del modulo una versione locale del pacchetto aggiornato.
+Come per la [creazione di un pacchetto di estensione](#create), è necessario caricare tramite dati modulo una versione locale del pacchetto aggiornato.
 
 ```shell
 curl -X PATCH \
@@ -734,7 +734,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione aggiornato.
 
 ```json
 {
@@ -941,9 +941,9 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione aggiorn
 
 ## Rilasciare in privato un pacchetto di estensione {#private-release}
 
-Una volta completato il test del pacchetto di estensione, puoi rilasciarlo privatamente. Questo lo rende disponibile a qualsiasi proprietà all’interno della tua azienda.
+Una volta completato il test del pacchetto di estensione, puoi rilasciarlo privatamente. Questo lo rende disponibile alle proprietà della tua azienda.
 
-Dopo aver rilasciato privatamente, puoi iniziare il processo di rilascio pubblico compilando il [modulo di richiesta di rilascio pubblico](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+Dopo averlo rilasciato privatamente, puoi iniziare il processo di rilascio pubblico compilando il [modulo di richiesta di rilascio pubblico](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
 
 **Formato API**
 
@@ -953,13 +953,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `id` del pacchetto di estensione che desideri rilasciare privatamente. |
+| `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri rilasciare privatamente. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Una versione privata viene ottenuta fornendo un `action` con un valore di `release_private` nel `meta` dei dati della richiesta.
+Per ottenere una versione privata, si deve fornire una `action` con valore `release_private` nella sezione `meta` dei dati della richiesta.
 
 ```shell
 curl -X PATCH \
@@ -981,7 +981,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione.
 
 ```json
 {
@@ -1186,9 +1186,9 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione.
 }
 ```
 
-## Interrompere un pacchetto di estensione {#discontinue}
+## Dismettere un pacchetto di estensione {#discontinue}
 
-Puoi interrompere un pacchetto di estensione impostando il relativo attributo `discontinued` su `true` tramite una richiesta PATCH.
+Per dismettere un pacchetto di estensione, si imposta il relativo attributo `discontinued` su `true` tramite una richiesta PATCH.
 
 **Formato API**
 
@@ -1198,13 +1198,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `id` del pacchetto di estensione che desideri interrompere. |
+| `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri dismettere. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-Una versione privata viene ottenuta fornendo un `action` con un valore di `release_private` nel `meta` dei dati della richiesta.
+Per ottenere una versione privata, si deve fornire una `action` con valore `release_private` nella sezione `meta` dei dati della richiesta.
 
 ```shell
 curl -X PATCH \
@@ -1226,7 +1226,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del pacchetto di estensione.
+In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di estensione.
 
 ```json
 {
@@ -1281,7 +1281,7 @@ Una risposta corretta restituisce i dettagli del pacchetto di estensione.
 
 ## Elencare le versioni di un pacchetto di estensione
 
-Puoi elencare le versioni di un pacchetto di estensione aggiungendo `/versions` al percorso di una richiesta di ricerca.
+Per elencare le versioni di un pacchetto di estensione, si aggiunge `/versions` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -1291,7 +1291,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `id` del pacchetto di estensione di cui desideri elencare le versioni. |
+| `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione di cui desideri elencare le versioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1309,4 +1309,4 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array delle versioni precedenti del pacchetto di estensione. Una risposta di esempio è stata omessa per lo spazio.
+In caso di esito positivo, la risposta restituisce un array delle versioni precedenti del pacchetto di estensione. Una risposta di esempio è stata omessa per motivo di spazio.

@@ -5,9 +5,9 @@ title: Guida all’API del Registro di sistema dello schema
 description: L’API del Registro di sistema dello schema consente agli sviluppatori di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '983'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ Questi endpoint sono descritti di seguito. Per informazioni dettagliate, visita 
 >
 >XDM utilizza la formattazione dello schema JSON per descrivere e convalidare la struttura dei dati sulla customer experience acquisiti. Prima di utilizzare l&#39;API del Registro di sistema dello schema, si consiglia vivamente di consultare la [documentazione ufficiale dello schema JSON](https://json-schema.org/) per una migliore comprensione di questa tecnologia di base.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [riferimento API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [riferimento API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Schemi
 

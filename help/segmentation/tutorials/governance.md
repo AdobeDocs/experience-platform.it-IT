@@ -6,11 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per applicare la conformità dell’utilizzo dei dati per i segmenti di pubblico Profilo cliente in tempo reale che utilizzano le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 1%
+source-wordcount: '1358'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +46,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -189,7 +188,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
 >
 > Questo passaggio presuppone che tu disponga di almeno un criterio di utilizzo dei dati attivo che impedisce l’esecuzione di azioni di marketing specifiche su dati contenenti determinate etichette. Se non disponi di criteri di utilizzo applicabili per i set di dati in fase di valutazione, segui l&#39; [esercitazione sulla creazione dei criteri](../../data-governance/policies/create.md) per crearne uno prima di continuare con questo passaggio.
 
-Dopo aver ottenuto gli ID dei set di dati di origine dei criteri di unione, puoi utilizzare l’ [API del servizio criteri](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare tali set di dati rispetto a azioni di marketing specifiche al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Dopo aver ottenuto gli ID dei set di dati di origine dei criteri di unione, puoi utilizzare l’ [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) per valutare tali set di dati rispetto a azioni di marketing specifiche al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Per valutare i set di dati, devi fornire il nome dell’azione di marketing nel percorso di una richiesta di POST, fornendo allo stesso tempo gli ID dei set di dati all’interno del corpo della richiesta, come mostrato nell’esempio seguente.
 
@@ -385,4 +384,4 @@ Per ulteriori informazioni, consulta la sezione sull’ [esportazione di un segm
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e le hai testate per individuare eventuali violazioni dei criteri rispetto a specifiche azioni di marketing. Per ulteriori informazioni su [!DNL Data Governance] in [!DNL Experience Platform], leggere la panoramica relativa a [[!DNL Data Governance]](../../data-governance/home.md).
+Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e le hai testate per verificare la presenza di violazioni dei criteri rispetto a specifiche azioni di marketing. Per ulteriori informazioni su [!DNL Data Governance] in [!DNL Experience Platform], leggere la panoramica relativa a [[!DNL Data Governance]](../../data-governance/home.md).

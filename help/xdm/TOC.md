@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
-feature: Schemi
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+feature: Schemas
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '315'
 ht-degree: 15%
 
 ---
@@ -133,5 +133,5 @@ ht-degree: 15%
    * [Definire una relazione tra due schemi (API)](tutorials/relationship-api.md)
    * [Creare uno schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-* [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [Riferimento API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

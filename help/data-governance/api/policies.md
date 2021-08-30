@@ -5,11 +5,10 @@ title: Endpoint API per criteri
 topic-legacy: developer guide
 description: I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing che puoi o da cui ti sono limitate, eseguendo dati all’interno di un Experience Platform. L’endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di utilizzo dei dati.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 2%
+source-wordcount: '1813'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +18,7 @@ I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di ma
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Recupera un elenco di criteri {#list}
 
@@ -147,7 +146,7 @@ Una risposta corretta include una matrice `children` che elenca i dettagli di ci
 | `description` | Una descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
 | `deny` | Un oggetto che descrive le etichette di utilizzo dati specifiche per le quali è stata limitata l&#39;esecuzione dell&#39;azione di marketing associata a un criterio. Per ulteriori informazioni su questa proprietà, consulta la sezione su [creazione di un criterio](#create-policy) . |
 
-## Cerca un criterio {#look-up}
+## Cercare una politica {#look-up}
 
 Puoi cercare un criterio specifico includendo la proprietà `id` di tale criterio nel percorso di una richiesta GET.
 
@@ -606,7 +605,7 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) con un corpo vuoto.
 
 Puoi confermare l’eliminazione tentando di cercare nuovamente (GET) il criterio. Se il criterio è stato eliminato correttamente, riceverai un errore HTTP 404 (Non trovato).
 
-## Recupera un elenco di criteri core abilitati {#list-enabled-core}
+## Recupera un elenco dei criteri di base abilitati {#list-enabled-core}
 
 Per impostazione predefinita, solo i criteri di utilizzo dei dati abilitati partecipano alla valutazione. È possibile recuperare un elenco dei criteri di base attualmente abilitati dalla propria organizzazione effettuando una richiesta di GET all&#39;endpoint `/enabledCorePolicies`.
 
@@ -658,7 +657,7 @@ Una risposta corretta restituisce l&#39;elenco dei criteri di base abilitati in 
 }
 ```
 
-## Aggiorna l&#39;elenco dei criteri di base abilitati {#update-enabled-core}
+## Aggiornare l’elenco dei criteri di base abilitati {#update-enabled-core}
 
 Per impostazione predefinita, solo i criteri di utilizzo dei dati abilitati partecipano alla valutazione. Effettuando una richiesta di PUT all&#39;endpoint `/enabledCorePolicies`, puoi aggiornare l&#39;elenco dei criteri di base abilitati per la tua organizzazione utilizzando una singola chiamata.
 

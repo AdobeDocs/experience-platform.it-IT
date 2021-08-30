@@ -5,11 +5,10 @@ title: Endpoint API per la valutazione dei criteri
 topic-legacy: developer guide
 description: Una volta create le azioni di marketing e definiti i criteri, puoi utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l'azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 1%
+source-wordcount: '1540'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +26,7 @@ Le richieste di valutazione possono essere effettuate in uno dei tre modi seguen
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Valutare le violazioni dei criteri utilizzando le etichette di utilizzo dei dati {#labels}
 
@@ -348,7 +347,7 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
 | `duleLabels` | L&#39;oggetto response include una matrice `duleLabels` che contiene un elenco consolidato di tutte le etichette presenti nei set di dati specificati. Questo elenco include etichette a livello di set di dati e di campo su tutti i campi all’interno del set di dati. |
 | `discoveredLabels` | La risposta include anche un array `discoveredLabels` contenente oggetti per ogni set di dati, che mostra `datasetLabels` suddivisi in etichette a livello di set di dati e di campi. Ogni etichetta a livello di campo mostra il percorso del campo specifico con tale etichetta. |
 
-## Valutazione delle violazioni dei criteri utilizzando campi di set di dati specifici {#fields}
+## Valutare le violazioni dei criteri utilizzando campi di set di dati specifici {#fields}
 
 È possibile valutare le violazioni dei criteri in base a un sottoinsieme di campi all’interno di uno o più set di dati, in modo che vengano valutate solo le etichette di utilizzo dei dati applicate a tali campi.
 
@@ -523,7 +522,7 @@ Confrontando la risposta di esempio riportata di seguito alla risposta [che coin
 }
 ```
 
-## Valutare i criteri in blocco {#bulk}
+## Valutare le politiche in blocco {#bulk}
 
 L’endpoint `/bulk-eval` ti consente di eseguire più processi di valutazione in una singola chiamata API.
 

@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guida alle informazioni sull’osservabilità
 user-guide-description: Monitora le attività di Platform mediante l’uso di metriche statistiche e notifiche di eventi.
-feature: Gestione dati
-source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
+feature: Data Management
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 41%
+source-wordcount: '54'
+ht-degree: 42%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 41%
    * [Regole di avviso standard](./alerts/rules.md)
    * [Guida all’interfaccia utente](./alerts/ui.md)
    * [Iscriviti alle notifiche degli eventi I/O](./alerts/subscribe.md)
-* [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [Riferimento API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

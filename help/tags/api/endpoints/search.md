@@ -1,16 +1,16 @@
 ---
-title: Endpoint di ricerca
+title: Endpoint “search”
 description: Scopri come effettuare chiamate all’endpoint /search nell’API di Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 97%
 
 ---
 
-# Endpoint di ricerca
+# Endpoint “search”
 
-L’endpoint `/search` nell’API di Reactor fornisce un modo per trovare le risorse che corrispondono ai criteri desiderati, espressi come query.
+L’endpoint `/search` nell’API di Reactor consente di trovare le risorse che corrispondono ai criteri desiderati, espressi come query.
 
 È possibile cercare i seguenti tipi di risorse API, utilizzando la stessa struttura di dati dei documenti basati sulle risorse restituiti nell’API:
 
@@ -27,13 +27,13 @@ L’endpoint `/search` nell’API di Reactor fornisce un modo per trovare le ris
 * `rule_components`
 * `rules`
 
-Tutte le query hanno ambito per la società corrente e le proprietà accessibili.
+L’ambito di tutte le query corrisponde all’azienda corrente e alle proprietà accessibili.
 
 >[!IMPORTANT]
 >
->La funzionalità di ricerca presenta le seguenti avvertenze ed eccezioni:
->* meta non è ricercabile e non viene restituito nei risultati della ricerca.
->* Campi dello schema per i delegati del pacchetto di estensione (azioni, condizioni, ecc.) sono ricercabili come testo, non come struttura dati nidificata.
+>Avvertenze ed eccezioni applicabili alla funzionalità di ricerca:
+>* I metadati non sono ricercabili e non vengono restituiti nei risultati della ricerca.
+>* I campi dello schema per i delegati del pacchetto di estensione (azioni, condizioni, ecc.) sono ricercabili come testo, ma non come struttura di dati nidificata.
 >* Le query di intervallo al momento supportano solo i numeri interi.
 
 
@@ -41,7 +41,7 @@ Per ulteriori informazioni su come utilizzare questa funzionalità, consulta la 
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
 ## Eseguire una ricerca {#perform}
 
@@ -93,17 +93,17 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `from` | Il numero di risultati per cui eseguire l&#39;offset della risposta. |
-| `size` | La quantità massima di risultati da restituire. I risultati non possono superare i 100 elementi. |
-| `query` | Oggetto che rappresenta la query di ricerca. Per ogni proprietà di questo oggetto, la chiave deve rappresentare un percorso di campo per la query e il valore deve essere un oggetto le cui sottoproprietà determinano per cosa eseguire la query.<br><br>Per ogni percorso di campo, puoi utilizzare le seguenti sottoproprietà:<ul><li>`exists`: Restituisce true se il campo esiste nella risorsa.</li><li>`value`: Restituisce true se il valore del campo corrisponde al valore di questa proprietà.</li><li>`value_operator`: Logica booleana utilizzata per determinare come deve essere gestita una  `value` query. I valori consentiti sono `AND` e `OR`. Se viene escluso, viene utilizzata la logica `AND`. Per ulteriori informazioni, consulta la sezione relativa alla logica dell’operatore di valore [e](#value-operator)</li><li>`range` Restituisce true se il valore del campo rientra in un intervallo numerico specifico. L’intervallo stesso è determinato dalle seguenti sottoproprietà:<ul><li>`gt`: Maggiore del valore specificato, non incluso.</li><li>`gte`: Maggiore o uguale al valore specificato.</li><li>`lt`: Minore del valore specificato, non incluso.</li><li>`lte`: Minore o uguale al valore specificato.</li></ul></li></ul> |
-| `sort` | Matrice di oggetti che indica l’ordine in cui ordinare i risultati. Ogni oggetto deve contenere una singola proprietà: la chiave rappresenta il percorso del campo in base al quale eseguire l’ordinamento e il valore rappresenta l’ordinamento (`asc` per crescente, `desc` per decrescente). |
+| `from` | Numero di risultati oltre i quali veranno inclusi nella risposta. |
+| `size` | Quantità massima di risultati da restituire. I risultati non possono superare i 100 elementi. |
+| `query` | Oggetto che rappresenta la query di ricerca. Per ogni proprietà di questo oggetto, la chiave deve rappresentare un percorso di campo da considerare per la query; il valore deve essere un oggetto le cui sottoproprietà determinano per cosa viene eseguita la query.<br><br>Per ogni percorso di campo, puoi utilizzare le seguenti sottoproprietà:<ul><li>`exists`: restituisce true se il campo esiste nella risorsa.</li><li>`value`: restituisce true se il valore del campo corrisponde al valore di questa proprietà.</li><li>`value_operator`: logica booleana utilizzata per determinare come deve essere gestita una query `value`. I valori consentiti sono `AND` e `OR`. Se non specificato, viene utilizzata la logica `AND`. Per ulteriori informazioni, consulta la sezione relativa alla [logica dell’operatore dei valori](#value-operator)</li><li>`range`: restituisce true se il valore del campo rientra in un intervallo numerico specifico. L’intervallo stesso è determinato dalle seguenti sottoproprietà:<ul><li>`gt`: maggiore del valore specificato, escluso il valore specificato stesso.</li><li>`gte`: maggiore o uguale al valore specificato.</li><li>`lt`: minore del valore specificato, escluso il valore specificato stesso.</li><li>`lte`: minore o uguale al valore specificato.</li></ul></li></ul> |
+| `sort` | Matrice di oggetti che indica l’ordine in cui elencare i risultati. Ogni oggetto deve contenere una singola proprietà: la chiave rappresenta il percorso del campo in base al quale eseguire l’ordinamento; il valore rappresenta l’ordinamento (`asc` per crescente, `desc` per decrescente). |
 | `resource_types` | Matrice di stringhe che indica i tipi di risorse specifici da cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di risorse corrispondenti per la query. Per informazioni dettagliate sulle modalità in cui l&#39;API determina le corrispondenze per valori specifici, consulta la sezione dell&#39;appendice sulle [convenzioni di corrispondenza](#conventions).
+In caso di esito positivo, la risposta restituisce un elenco di risorse corrispondenti per la query. Per informazioni dettagliate sulle modalità in cui l’API determina le corrispondenze per valori specifici, consulta la sezione dell’appendice sulle [convenzioni di corrispondenza](#conventions).
 
 ```json
 {
@@ -210,21 +210,21 @@ Una risposta corretta restituisce un elenco di risorse corrispondenti per la que
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sull’utilizzo dell’endpoint `/search` .
+La sezione seguente contiene informazioni aggiuntive sull’utilizzo dell’endpoint `/search`.
 
-### Logica operatore valore {#value-operator}
+### Logica dell’operatore del valore {#value-operator}
 
-I valori delle query di ricerca sono suddivisi in termini da confrontare con i documenti indicizzati. Tra ciascun termine, si presume una relazione `AND`.
+I valori delle query di ricerca sono suddivisi nei diversi termini che devono essere rilevati nei documenti indicizzati. Tra ciascun termine, si presume una relazione `AND`.
 
-Quando utilizzi `AND` come `value_operator`, un valore di query di `My Rule Holiday Sale` viene interpretato come documento con un campo contenente `My AND Rule AND Holiday AND Sale`.
+Quando utilizzi `AND` come `value_operator`, un valore di query `My Rule Holiday Sale` viene interpretato come documento con un campo contenente `My AND Rule AND Holiday AND Sale`.
 
-Quando utilizzi `OR` come `value_operator`, un valore di query di `My Rule Holiday Sale` viene interpretato come documento con un campo contenente `My OR Rule OR Holiday OR Sale`. Maggiore è il numero di termini corrispondenti, maggiore è il valore di `match_score`. A causa della natura della corrispondenza parziale dei termini, quando nulla corrisponde esattamente al valore desiderato, è possibile ottenere un set di risultati in cui il valore corrisponde solo a un livello di base, ad esempio alcuni caratteri di testo.
+Quando utilizzi `OR` come `value_operator`, un valore di query `My Rule Holiday Sale` viene interpretato come documento con un campo contenente `My OR Rule OR Holiday OR Sale`. Maggiore è il numero di termini corrispondenti rilevati, maggiore è il valore di `match_score`. A causa della natura della corrispondenza parziale dei termini, quando nulla corrisponde esattamente al valore desiderato, è possibile ottenere un set di risultati per una corrispondenza molto basilare, ad esempio considerando solo alcuni dei caratteri che compongono i termini cercati.
 
-### Convenzioni corrispondenti {#conventions}
+### Convenzioni per la corrispondenza nelle ricerche {#conventions}
 
-La ricerca si occupa di rispondere alla rilevanza di un documento per una query fornita. Il modo in cui i dati del documento vengono analizzati e indicizzati influisce direttamente su questo aspetto.
+Nella ricerca viene esaminata la rilevanza di un documento rispetto alla query fornita. Il modo in cui i dati del documento vengono analizzati e indicizzati influisce direttamente su questo aspetto.
 
-La tabella seguente suddivide le convenzioni di corrispondenza per i tipi di campo comuni:
+La tabella seguente suddivide le convenzioni di corrispondenza per i tipi di campo più comuni:
 
 | Tipo di campo | Convenzioni di corrispondenza |
 | --- | --- |
@@ -232,7 +232,7 @@ La tabella seguente suddivide le convenzioni di corrispondenza per i tipi di cam
 | Valori enum | Corrispondenza esatta, distinzione tra maiuscole e minuscole |
 | Interi | Corrispondenza esatta |
 | Mobile | Corrispondenza esatta |
-| Marca temporale | Corrispondenza esatta (formato DateTime) |
+| Marca temporale | Corrispondenza esatta (formato DataOra) |
 | Nomi visualizzati | Testo con analisi parziale dei termini, senza distinzione tra maiuscole e minuscole |
 
 Nell’API sono disponibili convenzioni aggiuntive per campi specifici:
@@ -240,7 +240,7 @@ Nell’API sono disponibili convenzioni aggiuntive per campi specifici:
 | Campo | Convenzioni di corrispondenza |
 | --- | --- |
 | `id` | Corrispondenza esatta, distinzione tra maiuscole e minuscole |
-| `delegate_descriptor_id` | Corrispondenza esatta, con distinzione tra maiuscole e minuscole, con termini suddivisi in `::` |
+| `delegate_descriptor_id` | Corrispondenza esatta, con distinzione tra maiuscole e minuscole, con termini suddivisi da `::` |
 | `name` | Corrispondenza esatta, distinzione tra maiuscole e minuscole |
 | `settings` | Testo con analisi parziale dei termini, senza distinzione tra maiuscole e minuscole |
 | `type` | Corrispondenza esatta, distinzione tra maiuscole e minuscole |

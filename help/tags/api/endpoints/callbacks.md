@@ -1,20 +1,20 @@
 ---
-title: Endpoint di callback
-description: Scopri come effettuare chiamate all’endpoint /callback nell’API di Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “callbacks”
+description: Scopri come effettuare chiamate all’endpoint /callbacks nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 8%
+source-wordcount: '621'
+ht-degree: 99%
 
 ---
 
-# Endpoint di callback
+# Endpoint “callbacks”
 
-Un callback è un messaggio che l&#39;API di Reactor invia a un URL specifico (di solito quello ospitato dalla tua organizzazione).
+Un callback (o richiamata) è un messaggio che l’API di Reactor invia a un URL specifico (di solito quello ospitato dalla tua organizzazione).
 
-I callback sono destinati a essere utilizzati insieme a [eventi di controllo](./audit-events.md) per monitorare le attività nell&#39;API di Reactor. Ogni volta che viene generato un evento di controllo di un determinato tipo, un callback può inviare un messaggio corrispondente all’URL specificato.
+I callback devono essere utilizzati insieme a [eventi di audit](./audit-events.md) per monitorare le attività nell’API di Reactor. Ogni volta che viene generato un evento di audit di un determinato tipo, un callback può inviare un messaggio corrispondente all’URL specificato.
 
-Il servizio dietro l&#39;URL specificato nel callback deve rispondere con il codice di stato HTTP 200 (OK) o 201 (Creato). Se il servizio non risponde con uno di questi codici di stato, la consegna del messaggio viene ritentata agli intervalli seguenti:
+Il servizio dietro l’URL specificato nel callback deve rispondere con il codice di stato HTTP 200 (OK) o 201 (Creato). Se il servizio non risponde con uno di questi codici di stato, la consegna del messaggio viene ritentata agli intervalli seguenti:
 
 * 1 minuto
 * 5 minuti
@@ -26,19 +26,19 @@ Il servizio dietro l&#39;URL specificato nel callback deve rispondere con il cod
 
 >[!NOTE]
 >
->Gli intervalli dei tentativi sono relativi all’intervallo precedente. Ad esempio, se l’esecuzione del nuovo tentativo in un minuto non riesce, il tentativo successivo è pianificato per cinque minuti dopo l’errore del tentativo di un minuto (sei minuti dopo la generazione del messaggio).
+>Gli intervalli dei tentativi sono relativi all’intervallo precedente. Ad esempio, se il nuovo tentativo eseguito dopo un minuto non riesce, il tentativo successivo avverrà cinque minuti dall’errore del tentativo a un minuto (quindi sei minuti dopo la generazione del messaggio).
 
-Se tutti i tentativi di consegna non sono riusciti, il messaggio viene eliminato.
+Se nessuno dei tentativi di consegna ha esito positivo, il messaggio viene eliminato.
 
 Un callback appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere molti callback.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
 ## Elencare i callback {#list}
 
-È possibile elencare tutti i callback sotto una proprietà effettuando una richiesta GET.
+Per elencare tutti i callback di una proprietà, devi eseguire una richiesta GET.
 
 **Formato API**
 
@@ -48,13 +48,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | Il `id` della proprietà di cui si desidera elencare i callback. |
+| `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare i callback. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, i callback elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, i callback elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di callback per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di callback per la proprietà specificata.
 
 ```json
 {
@@ -117,7 +117,7 @@ Una risposta corretta restituisce un elenco di callback per la proprietà specif
 
 ## Cercare un callback {#lookup}
 
-Puoi cercare un callback fornendo il relativo ID nel percorso di una richiesta GET.
+Per cercare un callback occorre specificare il relativo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -127,7 +127,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `CALLBACK_ID` | Il `id` del callback che si desidera cercare. |
+| `CALLBACK_ID` | `id` del callback che si desidera cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del callback.
+In caso di esito positivo, la risposta restituisce i dettagli del callback.
 
 ```json
 {
@@ -181,7 +181,7 @@ Una risposta corretta restituisce i dettagli del callback.
 
 ## Creare un callback {#create}
 
-Puoi creare un nuovo callback effettuando una richiesta POST.
+Per creare un nuovo callback, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -191,7 +191,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo il callback. |
+| `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo il callback. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -218,14 +218,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `url` | La destinazione URL del messaggio di callback. L’URL deve utilizzare l’estensione del protocollo HTTPS. |
-| `subscriptions` | Matrice di stringhe che indica i tipi di evento di controllo che attiveranno il callback. Per un elenco dei possibili tipi di eventi, consulta la [guida endpoint per gli eventi di controllo](./audit-events.md) . |
+| `url` | Destinazione URL del messaggio di callback. L’URL deve utilizzare l’estensione del protocollo HTTPS. |
+| `subscriptions` | Matrice di stringhe che indica i tipi di evento di audit che attiveranno il callback. Per un elenco dei possibili tipi di eventi, consulta la [guida dell’endpoint “audit_events”](./audit-events.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del nuovo callback creato.
+In caso di esito positivo, la risposta restituisce i dettagli del nuovo callback creato.
 
 ```json
 {
@@ -271,7 +271,7 @@ PUT /callbacks/{CALLBACK_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `CALLBACK_ID` | Il `id` del callback che si desidera aggiornare. |
+| `CALLBACK_ID` | `id` del callback che si desidera aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -302,15 +302,15 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per il callback. Ogni chiave rappresenta il particolare attributo di callback da aggiornare, insieme al valore corrispondente a cui deve essere aggiornato.<br><br>I seguenti attributi possono essere aggiornati per i callback:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | Il `id` del callback che desideri aggiornare. Questo deve corrispondere al valore `{CALLBACK_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per il callback. Ogni chiave rappresenta il particolare attributo di callback da aggiornare, insieme al valore corrispondente a cui deve essere aggiornato.<br><br>I seguenti attributi possono essere aggiornati per i callback:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | `id` del callback che desideri aggiornare. Questo deve corrispondere al valore `{CALLBACK_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `callbacks`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del callback aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli del callback aggiornato.
 
 ```json
 {
@@ -357,7 +357,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `CALLBACK_ID` | Il `id` del callback che desideri eliminare. |
+| `CALLBACK_ID` | `id` del callback che desideri eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -373,4 +373,4 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che il callback è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, a indicare che il callback è stato eliminato.

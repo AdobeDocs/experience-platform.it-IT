@@ -5,11 +5,10 @@ title: Endpoint API per le azioni di marketing
 topic-legacy: developer guide
 description: Un’azione di marketing, nel contesto della governance dei dati di Adobe Experience Platform, è un’azione eseguita da un consumatore di dati di Experience Platform per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 2%
+source-wordcount: '730'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +20,7 @@ Puoi gestire le azioni di marketing per la tua organizzazione utilizzando l’en
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Recupera un elenco di azioni di marketing {#list}
 
@@ -106,7 +105,7 @@ Una risposta corretta restituisce i dettagli di ogni azione di marketing recuper
 | `name` | Il nome dell&#39;azione di marketing, che agisce come identificatore univoco quando [cerca un&#39;azione di marketing specifica](#lookup). |
 | `_links.self.href` | Un riferimento URI per l’azione di marketing, che può essere utilizzato per completare la matrice `marketingActionsRefs` durante la creazione di un criterio di utilizzo dei dati](policies.md#create-policy).[ |
 
-## Cerca un&#39;azione di marketing specifica {#lookup}
+## Ricerca di un’azione di marketing specifica {#lookup}
 
 Puoi cercare i dettagli di una specifica azione di marketing includendo la proprietà `name` dell’azione di marketing nel percorso di una richiesta di GET.
 
@@ -157,7 +156,7 @@ L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso
 }
 ```
 
-## Crea o aggiorna un&#39;azione di marketing personalizzata {#create-update}
+## Creare o aggiornare un’azione di marketing personalizzata {#create-update}
 
 Puoi creare una nuova azione di marketing personalizzata o aggiornare una esistente includendo il nome esistente o previsto dell’azione di marketing nel percorso di una richiesta di PUT.
 

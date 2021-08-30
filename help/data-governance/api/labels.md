@@ -5,11 +5,10 @@ title: Endpoint API per le etichette
 topic-legacy: developer guide
 description: Scopri come gestire le etichette di utilizzo dei dati in Experience Platform utilizzando l’API del servizio criteri.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '506'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +22,7 @@ Le etichette per l’utilizzo dei dati ti consentono di classificare i dati in b
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Recupera un elenco di etichette {#list}
 
@@ -161,7 +160,7 @@ Una risposta corretta restituisce i dettagli dell’etichetta personalizzata.
 }
 ```
 
-## Creare o aggiornare un&#39;etichetta personalizzata {#create-update}
+## Creare o aggiornare un’etichetta personalizzata {#create-update}
 
 Per creare o aggiornare un’etichetta personalizzata, devi effettuare una richiesta PUT all’API [!DNL Policy Service] .
 

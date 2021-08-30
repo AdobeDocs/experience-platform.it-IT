@@ -6,10 +6,10 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 2%
+source-wordcount: '1365'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ La capacità di comprendere le relazioni tra i clienti e le loro interazioni con
 
 Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema di unione e di [!DNL Real-time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che fa riferimento all&#39;identità di uno schema di destinazione.
 
-Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione utilizzando il percorso [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione utilizzando il percorso [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Introduzione
 
@@ -32,7 +32,7 @@ Questa esercitazione richiede una buona comprensione di [!DNL Experience Data Mo
 
 Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all&#39;intestazione [!DNL Accept] e ai suoi possibili valori).
 
-## Definire uno schema di origine e destinazione {#define-schemas}
+## Definire uno schema di origine e di destinazione {#define-schemas}
 
 È previsto che siano già stati creati i due schemi che verranno definiti nella relazione. Questa esercitazione crea una relazione tra i membri del programma fedeltà corrente di un&#39;organizzazione (definito in uno schema &quot;[!DNL Loyalty Members]&quot;) e i loro alberghi preferiti (definito in uno schema &quot;[!DNL Hotels]&quot;).
 

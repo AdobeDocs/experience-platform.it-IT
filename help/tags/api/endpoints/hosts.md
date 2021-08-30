@@ -1,34 +1,34 @@
 ---
-title: Endpoint host
-description: Scopri come effettuare chiamate all’endpoint /hosts nell’API Reactor.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+title: Endpoint “hosts”
+description: Scopri come effettuare chiamate all’endpoint /hosts nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 7%
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
-# Endpoint host
+# Endpoint “hosts”
 
 >[!NOTE]
 >
->Questo documento illustra come gestire gli host nell’API di Reactor. Per informazioni generali sugli host per i tag, consulta la guida su [host overview](../../ui/publishing/hosts/hosts-overview.md) nella documentazione relativa alla pubblicazione.
+>Questo documento illustra come gestire gli host nell’API di Reactor. Per informazioni generali sugli host per i tag, consulta la [panoramica sugli host](../../ui/publishing/hosts/hosts-overview.md) nella documentazione relativa alla pubblicazione.
 
-Nell&#39;API del reattore, un host definisce una destinazione in cui è possibile distribuire una [build](./builds.md).
+Nell’API di Reactor, un host definisce una destinazione in cui è possibile distribuire una [build](./builds.md).
 
-Quando una build viene richiesta da un utente di tag in Adobe Experience Platform, il sistema controlla la libreria per determinare a quale [ambiente](./environments.md) deve essere generata la libreria. Ogni ambiente ha una relazione con un host, che indica dove distribuire la build.
+Quando una build viene richiesta da un utente di tag in Adobe Experience Platform, il sistema controlla la libreria per determinare per quale [ambiente](./environments.md) deve essere generata la libreria. Ogni ambiente ha una relazione con un host, che indica dove distribuire la build.
 
-Un host appartiene esattamente a una [proprietà](./properties.md), mentre una proprietà può avere molti host. Una proprietà deve avere almeno un host prima di poter pubblicare.
+Un host appartiene esattamente a una [proprietà](./properties.md), mentre una proprietà può avere diversi host. Una proprietà deve avere almeno un host prima che sia possibilie pubblicare.
 
-Un host può essere utilizzato da più di un ambiente all&#39;interno di una proprietà. È comune avere un singolo host su una proprietà e tutti gli ambienti su tale proprietà utilizzano lo stesso host.
+Un host può essere utilizzato da più ambienti all’interno di una proprietà. In genere viene usato un singolo host per una proprietà e tutti gli ambienti di tale proprietà utilizzano lo stesso host.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera un elenco di host {#list}
+## Recuperare un elenco di host {#list}
 
-Puoi recuperare un elenco di host per una proprietà includendo l’ID della proprietà nel percorso di una richiesta GET.
+Per recuperare un elenco di host per una proprietà, devi includere l’ID della proprietà nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -38,13 +38,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La proprietà `id` proprietaria degli host. |
+| `PROPERTY_ID` | `id` della proprietà a cui appartengono gli host. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Utilizzando i parametri di query, gli host elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida sulle [risposte relative al filtro](../guides/filtering.md) .
+>Utilizzando i parametri di query, gli host elencati possono essere filtrati in base ai seguenti attributi:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Per ulteriori informazioni, consulta la guida su come [filtrare le risposte](../guides/filtering.md).
 
 **Richiesta**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di host per la proprietà specificata.
+In caso di esito positivo, la risposta restituisce un elenco di host per la proprietà specificata.
 
 ```json
 {
@@ -110,7 +110,7 @@ Una risposta corretta restituisce un elenco di host per la proprietà specificat
 
 ## Cercare un host {#lookup}
 
-Puoi cercare un host fornendo il suo ID nel percorso di una richiesta GET.
+Per cercare un host, devi fornire il suo ID nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -120,7 +120,7 @@ GET /hosts/{HOST_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `HOST_ID` | Il `id` dell&#39;host che desideri cercare. |
+| `HOST_ID` | `id` dell’host che desideri cercare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’host.
+In caso di esito positivo, la risposta restituisce i dettagli dell’host.
 
 ```json
 {
@@ -177,7 +177,7 @@ Una risposta corretta restituisce i dettagli dell’host.
 
 ## Creare un host {#create}
 
-Puoi creare un nuovo host effettuando una richiesta POST.
+Per creare un nuovo host, effettua una richiesta POST.
 
 **Formato API**
 
@@ -187,13 +187,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | Parametro | Descrizione |
 | --- | --- |
-| `PROPERTY_ID` | La `id` della [proprietà](./properties.md) in cui si sta definendo l&#39;host. |
+| `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo l’host. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo host per la proprietà specificata. La chiamata associa inoltre l’host a un’estensione esistente tramite la proprietà `relationships` . Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md) .
+La richiesta seguente crea un nuovo host per la proprietà specificata. La chiamata associa inoltre l’host a un’estensione esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida delle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -220,20 +220,20 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.name` | **(Obbligatorio)** Un nome leggibile dall&#39;utente per l&#39;host. |
-| `attributes.type_of` | **(Obbligatorio)** Il tipo di host. Può essere una delle due opzioni seguenti: <ul><li>`akamai` per host gestiti  [da Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` per host  [SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.name` | **(Obbligatorio)** Nome leggibile per l’host. |
+| `attributes.type_of` | **(Obbligatorio)** Tipo di host. Può essere una delle due opzioni seguenti: <ul><li>`akamai` per gli [host gestiti da Adobe](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` per gli [host SFTP](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Chiave privata opzionale da utilizzare per l’autenticazione host. |
-| `attributes.path` | Percorso da aggiungere all&#39;URL `server`. |
-| `attributes.port` | Un numero intero che indica la porta server specifica da utilizzare. |
-| `attributes.server` | L&#39;URL host per il server. |
-| `attributes.username` | Un nome utente facoltativo per l&#39;autenticazione. |
+| `attributes.path` | Percorso da aggiungere all’URL `server`. |
+| `attributes.port` | Numero intero che indica la porta server specifica da utilizzare. |
+| `attributes.server` | URL host per il server. |
+| `attributes.username` | Nome utente facoltativo per l’autenticazione. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del nuovo host creato.
+In caso di esito positivo, la risposta restituisce i dettagli del nuovo host creato.
 
 ```json
 {
@@ -276,7 +276,7 @@ Una risposta corretta restituisce i dettagli del nuovo host creato.
 >
 >È possibile aggiornare solo gli host SFTP.
 
-Puoi aggiornare un host includendo il suo ID nel percorso di una richiesta PATCH.
+Per aggiornare un host, devi includere il suo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -286,13 +286,13 @@ PATCH /hosts/{HOST_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `HOST_ID` | Il `id` dell&#39;host da aggiornare. |
+| `HOST_ID` | `id` dell’host da aggiornare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `name` per un host esistente.
+La richiesta seguente aggiorna il `name` di un host esistente.
 
 ```shell
 curl -X PATCH \
@@ -314,15 +314,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Un oggetto le cui proprietà rappresentano gli attributi da aggiornare per l&#39;host. I seguenti attributi possono essere aggiornati per un host: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | Il `id` dell’host da aggiornare. Questo deve corrispondere al valore `{HOST_ID}` fornito nel percorso della richiesta. |
+| `attributes` | Oggetto le cui proprietà rappresentano gli attributi da aggiornare per l’host. È possibile aggiornare i seguenti attributi di un host: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
+| `id` | `id` dell’host da aggiornare. Deve corrispondere al valore `{HOST_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `hosts`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’host aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli dell’host aggiornato.
 
 ```json
 {
@@ -361,7 +361,7 @@ Una risposta corretta restituisce i dettagli dell’host aggiornato.
 
 ## Eliminare un host
 
-Puoi eliminare un host includendo il suo ID nel percorso di una richiesta DELETE.
+Per eliminare un host, devi includere il suo ID nel percorso di una richiesta DELETE.
 
 **Formato API**
 
@@ -371,7 +371,7 @@ DELETE /hosts/{HOST_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `HOST_ID` | Il `id` dell’host da eliminare. |
+| `HOST_ID` | `id` dell’host da eliminare. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -387,17 +387,17 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l’host è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) senza corpo di risposta, indicando che l’host è stato eliminato.
 
 ## Recuperare le risorse correlate per un host {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un host. Quando [cerca un host](#lookup), queste relazioni sono elencate nella proprietà `relationships` .
+Le seguenti chiamate mostrano come recuperare le risorse correlate per un host. Quando si [cerca un host](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
-Per ulteriori informazioni sulle relazioni nell&#39;API del reattore, consulta la [guida alle relazioni](../guides/relationships.md) .
+Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
-### Cerca la proprietà correlata per un host {#property}
+### Cercare la proprietà correlata per un host {#property}
 
-Puoi cercare la proprietà proprietaria di un host aggiungendo `/property` al percorso di una richiesta di ricerca.
+Per cercare la proprietà a cui appartiene un host, aggiungi `/property` al percorso di una richiesta di ricerca.
 
 **Formato API**
 
@@ -407,7 +407,7 @@ GET /hosts/{HOST_ID}/property
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{HOST_ID}` | Il `id` dell&#39;host di cui desideri cercare la proprietà. |
+| `{HOST_ID}` | `id` dell’host di cui desideri cercare la proprietà. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -425,7 +425,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà dell&#39;host specificato.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà dell’host specificato.
 
 ```json
 {

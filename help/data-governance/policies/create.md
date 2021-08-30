@@ -6,17 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: L’API di Policy Service ti consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere intraprese rispetto ai dati che contengono alcune etichette di utilizzo dei dati. Questo documento fornisce un'esercitazione passo per creare un criterio utilizzando l'API del servizio criteri.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
 
 # Creare un criterio di utilizzo dei dati nell’API
 
-L’ [API del servizio criteri](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ti consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
+L’ [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) ti consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
 
 Questo documento fornisce un&#39;esercitazione passo per creare un criterio utilizzando l&#39;API [!DNL Policy Service] . Per una guida più completa alle diverse operazioni disponibili nell&#39;API, consulta la [Guida per gli sviluppatori di Policy Service](../api/getting-started.md).
 
@@ -40,7 +39,7 @@ Il primo passaggio nella creazione di un criterio di utilizzo dei dati consiste 
 * [Cerca un’azione di marketing esistente](#look-up)
 * [Crea una nuova azione di marketing](#create-new)
 
-### Cerca un&#39;azione di marketing esistente {#look-up}
+### Cerca un’azione di marketing esistente {#look-up}
 
 Puoi cercare le azioni di marketing esistenti da valutare in base al criterio effettuando una richiesta di GET a uno degli endpoint `/marketingActions`.
 

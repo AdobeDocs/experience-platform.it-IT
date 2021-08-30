@@ -1,26 +1,26 @@
 ---
-title: Endpoint profili
-description: Scopri come effettuare chiamate all’endpoint /profiles nell’API Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+title: Endpoint “profiles”
+description: Scopri come effettuare chiamate all’endpoint /profiles nell’API di Reactor.
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 5%
+source-wordcount: '170'
+ht-degree: 97%
 
 ---
 
-# Endpoint profilo
+# Endpoint “profile”
 
-Nell’API di Reactor, un profilo rappresenta un utente Adobe Experience Platform. L’API di Reactor non mantiene il proprio database di utenti e autorizzazioni, ma si basa sugli ID di Adobe gestiti da [IMS (Identity Management System)](https://helpx.adobe.com/it/enterprise/using/identity.html) di Adobe.
+Nell’API di Reactor, un profilo rappresenta un utente di Adobe Experience Platform. L’API di Reactor non mantiene il proprio database di utenti e autorizzazioni, ma si basa sugli Adobe ID gestiti da [Adobe IMS (Identity Management System)](https://helpx.adobe.com/it/enterprise/using/identity.html).
 
 Un profilo contiene tutte le informazioni sull’utente connesso, comprese tutte le organizzazioni IMS a cui appartengono, i profili di prodotto a cui appartengono all’interno di ogni organizzazione e i diritti di cui dispongono da ciascun profilo di prodotto.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [API del reattore](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l&#39;autenticazione nell&#39;API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-## Recupera il profilo corrente {#lookup}
+## Recuperare il profilo corrente {#lookup}
 
-Puoi recuperare i dettagli del profilo attualmente connesso effettuando una richiesta di GET all’endpoint `/profile` .
+Per recuperare i dettagli del profilo attualmente connesso, effettua una richiesta GET all’endpoint `/profile`.
 
 **Formato API**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del profilo.
+In caso di esito positivo, la risposta restituisce i dettagli del profilo.
 
 ```json
 {
