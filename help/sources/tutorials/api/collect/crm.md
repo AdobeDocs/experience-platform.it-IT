@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1578'
 ht-degree: 2%
 
 ---
 
 # Raccogliere dati CRM utilizzando connettori di origine e API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di gestione delle relazioni con i clienti di terze parti e acquisirli in Adobe Experience Platform tramite i connettori sorgente e l’ [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di gestione delle relazioni con i clienti di terze parti e acquisirli in Adobe Experience Platform tramite i connettori sorgente e l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

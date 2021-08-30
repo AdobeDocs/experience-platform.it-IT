@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Google BigQuery utilizzando l’API del servizio di flusso.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Google BigQuery] (in seguito denominata &quot;[!DNL BigQuery]&quot;) utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Google BigQuery] (in seguito denominata &quot;[!DNL BigQuery]&quot;) utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

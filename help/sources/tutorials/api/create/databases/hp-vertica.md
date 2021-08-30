@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare HP Vertica a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 3506e8307d5f6dbdb11a04911ddbd6dc81b8278f
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 1%
+source-wordcount: '472'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL HP Vertica] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL HP Vertica] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

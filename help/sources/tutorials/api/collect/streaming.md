@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 3%
 
 ---
 
 # Creare un flusso di dati in streaming per i dati non elaborati utilizzando l’ API [!DNL Flow Service]
 
-Questa esercitazione descrive i passaggi per recuperare i dati non elaborati da un connettore di origine streaming e portarli ad Experience Platform utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi per recuperare i dati non elaborati da un connettore di origine streaming e portarli ad Experience Platform utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

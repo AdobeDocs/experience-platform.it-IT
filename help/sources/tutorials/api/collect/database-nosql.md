@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un database e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 2%
 
 ---
 
 # Raccogliere dati da un database utilizzando connettori di origine e API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un database di terze parti e acquisirli in Platform tramite i connettori sorgente e l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi per recuperare i dati da un database di terze parti e acquisirli in Platform tramite i connettori sorgente e l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -30,7 +30,7 @@ Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti c
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API di acquisizione in batch consente di inserire dati in Experience Platform come file batch.
 * [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un database di terze parti utilizzando l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un database di terze parti utilizzando l&#39;API [!DNL Flow Service].
 
 ### Lettura di chiamate API di esempio
 
@@ -431,7 +431,7 @@ Una risposta corretta restituisce i dettagli della nuova mappatura creata, inclu
 
 ## Recupera specifiche del flusso di dati {#specs}
 
-Un flusso di dati è responsabile della raccolta dei dati da origini e del loro inserimento in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta di GET all’ API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Le specifiche del flusso di dati sono responsabili della raccolta di dati da un database esterno o da un sistema NoSQL.
+Un flusso di dati è responsabile della raccolta dei dati da origini e del loro inserimento in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta GET all’ API [!DNL Flow Service] . Le specifiche del flusso di dati sono responsabili della raccolta di dati da un database esterno o da un sistema NoSQL.
 
 **Formato API**
 

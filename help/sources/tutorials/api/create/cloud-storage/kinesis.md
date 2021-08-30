@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a un’origine Amazon Kinesis utilizzando l’API del servizio di flusso.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: fe7c498542cc0dd5f53bc3a434ab34d62e449048
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 1%
+source-wordcount: '730'
+ht-degree: 2%
 
 ---
 
 # Creare una connessione sorgente [!DNL Amazon Kinesis] utilizzando l’API del servizio di flusso
 
-Questa esercitazione descrive i passaggi necessari per collegare [!DNL Amazon Kinesis] (in seguito denominato &quot;[!DNL Kinesis]&quot;) all’Experience Platform, utilizzando l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per collegare [!DNL Amazon Kinesis] (in seguito denominato &quot;[!DNL Kinesis]&quot;) all’Experience Platform, utilizzando l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

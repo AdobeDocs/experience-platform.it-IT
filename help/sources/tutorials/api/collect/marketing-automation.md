@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di automazione del marketing e inserirli in Adobe Experience Platform utilizzando i connettori sorgente e le API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1564'
 ht-degree: 2%
 
 ---
 
 # Raccogliere dati di automazione del marketing utilizzando connettori sorgente e API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di automazione di marketing di terze parti e acquisirli in Platform tramite i connettori sorgente e l’ [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API .
+Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di automazione di marketing di terze parti e acquisirli in Platform tramite i connettori sorgente e l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

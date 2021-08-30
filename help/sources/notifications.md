@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno di  [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+[[!DNL Flow Service] Le API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) vengono utilizzate per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di  [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
 Ad Adobe I/O, Eventi, puoi abbonarti agli eventi e utilizzare i webhook per ricevere notifiche sullo stato delle esecuzioni dei flussi. Queste notifiche contengono informazioni sul successo dell&#39;esecuzione del flusso o sugli errori che hanno contribuito al fallimento di un&#39;esecuzione.
 

@@ -6,10 +6,10 @@ description: Questo documento tratta la creazione di destinazioni di marketing e
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1705'
-ht-degree: 1%
+source-wordcount: '1701'
+ht-degree: 2%
 
 ---
 
@@ -66,7 +66,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Documentazione Swagger
 
-In Swagger puoi trovare la documentazione di riferimento associata per tutte le chiamate API in questa esercitazione. Consulta la [documentazione API del servizio di flusso su Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
+In Swagger puoi trovare la documentazione di riferimento associata per tutte le chiamate API in questa esercitazione. Consulta la [documentazione API del servizio di flusso su Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
 ## Ottieni l’elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
 

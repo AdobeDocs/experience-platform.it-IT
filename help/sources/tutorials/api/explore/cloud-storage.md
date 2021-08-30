@@ -5,17 +5,16 @@ title: Esplorare un sistema di storage ad alta voce utilizzando l’API del serv
 topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare un sistema di archiviazione cloud di terze parti.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 1%
+source-wordcount: '812'
+ht-degree: 2%
 
 ---
 
 # Esplorare un sistema di archiviazione cloud utilizzando l&#39;API [!DNL Flow Service]
 
-Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per esplorare un sistema di archiviazione cloud di terze parti.
+Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per esplorare un sistema di archiviazione cloud di terze parti.
 
 ## Introduzione
 
@@ -187,7 +186,7 @@ Una risposta corretta restituisce la struttura del file interrogato, inclusi i n
 
 ## Utilizzo dei parametri di query {#query}
 
-L&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) supporta l&#39;utilizzo di parametri di query per visualizzare in anteprima ed esaminare diversi tipi di file.
+L&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supporta l&#39;utilizzo di parametri di query per visualizzare in anteprima ed esaminare diversi tipi di file.
 
 | Parametro | Descrizione |
 | --------- | ----------- |

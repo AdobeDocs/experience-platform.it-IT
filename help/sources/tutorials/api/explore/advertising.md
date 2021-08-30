@@ -5,10 +5,10 @@ title: Esplorare un sistema pubblicitario utilizzando l’API del servizio di fl
 topic-legacy: overview
 description: Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate. Questa esercitazione utilizza l’API del servizio Flusso per esplorare i sistemi pubblicitari.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 3%
 
 ---
 
@@ -16,12 +16,11 @@ ht-degree: 2%
 
 Con la creazione di una connessione di base, è ora possibile utilizzare l&#39;ID di connessione di base univoco per navigare ed esplorare la struttura dati e il contenuto della sorgente. Questo ti consente di identificare gli elementi specifici, nonché i rispettivi tipi e formati di dati, prima di creare un flusso di dati e portarli in Adobe Experience Platform.
 
-Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). per esplorare i sistemi pubblicitari.
+Questa esercitazione utilizza l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per esplorare i sistemi pubblicitari.
 
 ## Introduzione
 
 >[!IMPORTANT]
-
 Questa esercitazione richiede l&#39;ID univoco della connessione di base per l&#39;origine pubblicitaria. Se non disponi di questo ID, consulta l’esercitazione su [come collegare un’origine pubblicitaria a Platform](../../api/create/advertising/ads.md) .
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:

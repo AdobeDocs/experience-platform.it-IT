@@ -6,10 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando l’API del servizio di flusso.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -20,7 +19,7 @@ Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo 
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
-Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

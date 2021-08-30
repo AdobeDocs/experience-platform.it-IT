@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Shopify a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Shopify] (in seguito denominata &quot;[!DNL Shopify]&quot;) utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Shopify] (in seguito denominata &quot;[!DNL Shopify]&quot;) utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

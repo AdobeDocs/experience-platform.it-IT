@@ -6,17 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per l’aggiornamento di un flusso di dati, inclusi nome, descrizione e pianificazione, tramite l’API del servizio di flusso.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 1%
+source-wordcount: '611'
+ht-degree: 2%
 
 ---
 
 # Aggiornare i flussi di dati utilizzando l’API del servizio di flusso
 
-Questa esercitazione descrive i passaggi per l&#39;aggiornamento di un flusso di dati, inclusi nome, descrizione e pianificazione utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi per l&#39;aggiornamento di un flusso di dati, inclusi nome, descrizione e pianificazione utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 

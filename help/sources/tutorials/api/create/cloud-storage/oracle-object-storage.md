@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform ad Oracle Object Storage utilizzando l’API del servizio di flusso.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Oracle Object Storage] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Oracle Object Storage] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
