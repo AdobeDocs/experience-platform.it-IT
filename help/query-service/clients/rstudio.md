@@ -5,10 +5,9 @@ title: Collegare lo studio al servizio query
 topic-legacy: connect
 description: Questo documento descrive i passaggi necessari per la connessione di R Studio con Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -51,7 +50,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, visita la pagina delle credenziali [su Platform](https://platform.adobe.com/query/configuration). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
+>Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 

@@ -5,10 +5,9 @@ title: Collegare PSQL al servizio query
 topic-legacy: connect
 description: PSQL è un'interfaccia a riga di comando che viene quando si installa PostgreSQL sul computer. È possibile installarlo seguendo queste istruzioni.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
@@ -21,15 +20,15 @@ PSQL è un&#39;interfaccia a riga di comando che viene installata quando si inst
 >
 > Questa guida presuppone che tu abbia già accesso a [!DNL PSQL] e che tu abbia familiarità con come usarlo. Ulteriori informazioni su [!DNL PSQL] sono disponibili nella documentazione [ufficiale [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html.
 
-Dopo aver installato PSQL sul computer, è possibile collegare PSQL con Query Service. Torna all’ [!DNL Platform] interfaccia utente, quindi seleziona **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
+Dopo aver installato PSQL sul computer, è possibile collegare PSQL con Query Service. Torna all&#39;interfaccia utente [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
 
 ![Immagine](../images/clients/psql/connect-bi.png)
 
-Selezionare l&#39;icona per copiare la sezione etichettata **[!UICONTROL PSQL Command]**, quindi incollare la stringa del comando in un terminale o in una finestra della riga di comando prima di premere Invio.
+Selezionare l&#39;icona per copiare la sezione etichettata **[!UICONTROL Comando PSQL]**, quindi incollare la stringa di comando in un terminale o in una finestra della riga di comando prima di premere Invio.
 
 >[!IMPORTANT]
 >
->Se ti trovi su un PC, utilizza un editor di testo per rimuovere le interruzioni di riga nella stringa di comando, quindi copia la stringa. Inoltre, se utilizzi una versione 12.0 o successiva, dovrai aggiungere `PGGSSENCMODE=disable` alla stringa di connessione.
+>Se ti trovi su un PC, utilizza un editor di testo per rimuovere le interruzioni di riga nella stringa di comando, quindi copia la stringa. Se utilizzi una versione 12.0 o successiva, dovrai aggiungere `PGGSSENCMODE=disable` alla stringa di connessione. Inoltre, se utilizzi credenziali non in scadenza, assicurati di sostituire il campo password con la password delle credenziali non in scadenza. Per ulteriori informazioni sulle credenziali in scadenza, consulta la [guida alle credenziali](../ui/credentials.md).
 
 Dovresti vedere un risultato come questo:
 
