@@ -5,7 +5,7 @@ title: Elaborazione del consenso in Adobe Experience Platform
 topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ I dettagli relativi a ciascuno di questi metodi sono forniti nelle sottosezioni 
 
 ### Configurare Experience Platform Web SDK per elaborare i dati di consenso {#web-sdk}
 
-Dopo aver configurato la CMP per ascoltare gli eventi relativi alla modifica del consenso sul sito web, è possibile integrare l’SDK per web di Experience Platform per ricevere le impostazioni di consenso aggiornate e inviarle a Platform a ogni caricamento di pagina e ogni volta che si verificano eventi relativi alla modifica del consenso. Per ulteriori informazioni, consulta la guida sulla [configurazione dell’SDK web per elaborare i dati di consenso dei clienti](./sdk.md) .
+Dopo aver configurato la CMP per ascoltare gli eventi relativi alla modifica del consenso sul sito web, è possibile integrare l’SDK per web di Experience Platform per ricevere le impostazioni di consenso aggiornate e inviarle a Platform a ogni caricamento di pagina e ogni volta che si verificano eventi relativi alla modifica del consenso. Per ulteriori informazioni, consulta la guida sulla [configurazione dell’SDK web per elaborare i dati di consenso dei clienti](../sdk.md) .
 
 ### Configurare l’SDK di Experience Platform Mobile per elaborare i dati di consenso {#mobile-sdk}
 
