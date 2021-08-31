@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Alcune destinazioni in Experience Platform hanno determinate regole e obblighi p
 
 Prima di configurare una destinazione [!DNL Google Customer Match] in Experience Platform, assicurati di leggere e rispettare i criteri di Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto di Google](https://support.google.com/google-ads/answer/6299717).
 
-Quindi, assicurati che il tuo account [!DNL Google] sia configurato per un [!DNL Standard] o per un livello di accesso superiore. Per ulteriori informazioni, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+Quindi, assicurati che il tuo account [!DNL Google] sia configurato per un [!DNL Standard] o per un livello di autorizzazione superiore. Per ulteriori informazioni, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ### Elenco consentiti {#allowlist}
 
@@ -174,6 +174,17 @@ Dopo aver completato il flusso di attivazione, passa al tuo account **[!UICONTRO
 
 Quando mappi un segmento con gli ID mobili [!DNL IDFA] e [!DNL GAID] , [!DNL Google Customer Match] crea un segmento separato per ogni mappatura ID. L&#39;account [!DNL Google Ads] mostra due segmenti diversi, uno per [!DNL IDFA] e uno per la mappatura [!DNL GAID].
 
+## Risoluzione dei problemi {#troubleshooting}
+
+### 400 Messaggio di errore di richiesta non valida {#bad-request}
+
+Durante la configurazione di questa destinazione, potresti ricevere il seguente errore:
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+Questo errore si verifica quando gli account cliente non sono conformi ai [prerequisiti](#google-account-prerequisites). Per risolvere questo problema, contatta Google e assicurati che il tuo account sia inserito nell’elenco Consentiti e sia configurato per un [!DNL Standard] o un livello di autorizzazione superiore. Per ulteriori informazioni, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+
 ## Risorse aggiuntive {#additional-resources}
 
 * [Integrare Google Customer Match - Esercitazione video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

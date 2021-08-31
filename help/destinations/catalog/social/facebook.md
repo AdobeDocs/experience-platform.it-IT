@@ -3,7 +3,7 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 1%
@@ -177,7 +177,7 @@ Per [!DNL Facebook], una corretta attivazione implica la creazione programmatica
 
 ### 400 Messaggio di errore di richiesta non valida {#bad-request}
 
-Quando attivi i segmenti su [!DNL Facebook], potresti ricevere il seguente errore:
+Durante la configurazione di questa destinazione, potresti ricevere il seguente errore:
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
