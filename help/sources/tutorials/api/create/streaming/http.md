@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 3%
+source-wordcount: '1268'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
-Questa esercitazione utilizza l’ API [!DNL Flow Service] per seguire i passaggi necessari per creare una connessione in streaming utilizzando l’API del servizio di flusso.
+Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per seguire i passaggi necessari per creare una connessione in streaming utilizzando l’API del servizio di flusso.
 
 ## Introduzione
 
@@ -295,7 +295,9 @@ Una risposta corretta restituisce lo stato HTTP 201 con informazioni dettagliate
 
 ## Creare una connessione di destinazione
 
-Dopo aver creato la connessione sorgente, è possibile creare una connessione di destinazione. Quando crei la connessione di destinazione, è necessario il valore `id` del set di dati creato in precedenza.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti arrivano. Per creare una connessione di destinazione, devi fornire l’ID di specifica di connessione fisso associato al Data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID delle specifiche di connessione di Data Lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando l’ API [!DNL Flow Service] per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
