@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
-feature: Acquisizione dei dati, origini
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 10%
 
 ---
@@ -248,4 +248,5 @@ ht-degree: 10%
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
+- [Riferimento API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

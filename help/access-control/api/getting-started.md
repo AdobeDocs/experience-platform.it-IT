@@ -5,19 +5,18 @@ title: Guida all’API di controllo degli accessi
 topic-legacy: developer guide
 description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie funzionalità di Platform utilizzando Adobe Admin Console. Le sezioni seguenti forniscono informazioni aggiuntive che gli sviluppatori dovranno conoscere per effettuare correttamente le chiamate all’API del Registro di sistema dello schema.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 2%
 
 ---
 
-# [!DNL Access Control] Guida all’API
+# Guida dell’API di [!DNL Access Control]
 
 [!DNL Access control] per  [!DNL Experience Platform] viene gestito tramite  [Adobe Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox. Per ulteriori informazioni, consulta la [panoramica sul controllo degli accessi](../home.md) .
 
-Questa guida per sviluppatori fornisce informazioni su come formattare le richieste in [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) e illustra le seguenti operazioni:
+Questa guida per sviluppatori fornisce informazioni su come formattare le richieste in [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) e illustra le seguenti operazioni:
 
 - [Elencare nomi di autorizzazioni e tipi di risorse](./permissions-and-resource-types.md)
 - [Visualizza criteri efficaci per l&#39;utente corrente](./effective-policies.md)
@@ -40,7 +39,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [es
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
