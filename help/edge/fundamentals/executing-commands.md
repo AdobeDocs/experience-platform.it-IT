@@ -1,15 +1,14 @@
 ---
-title: Esegui comandi SDK per web di Adobe Experience Platform
-description: Scopri come eseguire i comandi SDK per web di Experience Platform
+title: Esegui comandi Adobe Experience Platform Web SDK
+description: Scopri come eseguire i comandi Experience Platform Web SDK
 keywords: Esegui comandi;commandName;Promises;getLibraryInfo;oggetti di risposta;consenso;
-translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
+source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 2%
 
 ---
-
 
 # Esegui comandi
 
@@ -26,9 +25,9 @@ Il `commandName` indica all&#39;SDK cosa fare, mentre `options` sono i parametri
 
 ## Una nota sulle promesse
 
-[](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) Le promesse sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore . Le funzioni del gestore possono essere associate a una promessa, in modo che tu possa essere informato quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per ulteriori informazioni sulle promesse, leggi [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse sul web.
+[](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) Le promesse sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore . Le funzioni del gestore possono essere associate a una promessa, in modo che tu possa essere informato quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per ulteriori informazioni sulle promesse, leggi [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse sul web.
 
-## Gestione del successo o dell&#39;errore {#handling-success-or-failure}
+## Gestione del successo o dell’errore {#handling-success-or-failure}
 
 Ogni volta che viene eseguito un comando, viene restituita una promessa. La promessa rappresenta l&#39;eventuale completamento del comando. Nell&#39;esempio seguente, è possibile utilizzare i metodi `then` e `catch` per determinare quando il comando ha avuto esito positivo o negativo.
 
@@ -71,7 +70,7 @@ Tutte le promesse restituite dai comandi vengono risolte con un oggetto `result`
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 
