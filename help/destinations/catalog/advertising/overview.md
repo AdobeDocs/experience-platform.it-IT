@@ -1,13 +1,13 @@
 ---
 keywords: destinazioni pubblicitarie;destinazioni;destinazioni;piattaforme
 title: Panoramica sulle destinazioni pubblicitarie
-seo-title: Panoramica sulle destinazioni pubblicitarie
+seo-title: Advertising destinations overview
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
-seo-description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
+seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '227'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,7 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Connessione Customer Match di Google](google-customer-match.md)
 * [Connessione Microsoft Bing](bing.md)
 * [Il collegamento del Trade Desk](tradedesk.md)
+* [Dati Yahoo/Verizon X](datax.md)
 
 ### Estensioni
 
