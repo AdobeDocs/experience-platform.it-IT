@@ -1,15 +1,15 @@
 ---
-title: Integrazione Verizon MediaYahoo DataX
+title: Connessione Verizon MediaYahoo DataX
 description: DataX è un’infrastruttura globale Verizon Media/Yahoo che ospita vari componenti che consentono a Verizon Media/Yahoo di scambiare dati con i suoi partner esterni in modo sicuro, automatizzato e scalabile.
-source-git-commit: 07c8a7afaf6cd2af249ad52eabfbc5f8cd6689ae
+source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
 
 
-# Verizon Media/Yahoo DataX
+# Connessione Verizon Media/Yahoo DataX
 
 ## Panoramica {#overview}
 
