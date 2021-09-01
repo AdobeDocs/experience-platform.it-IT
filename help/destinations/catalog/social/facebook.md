@@ -3,9 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ Prima di poter inviare i segmenti di pubblico a [!DNL Facebook], assicurati di s
    >
    > Quando configuri le autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione [!DNL Adobe Experience Platform].
 * Leggi e firma i termini del servizio [!DNL Facebook Custom Audiences]. Per farlo, vai su `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID].
+   >[!IMPORTANT]
+   >
+   >Durante la firma dei termini del servizio [!DNL Facebook Custom Audiences] , assicurati di utilizzare lo stesso account utente utilizzato per l&#39;autenticazione nell&#39;API Facebook.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
