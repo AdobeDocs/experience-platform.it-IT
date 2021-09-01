@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e lavorare con i dati del profilo, tra cui visualizzare i profili, creare e aggiornare criteri di unione, esportare o dati del profilo di esempio ed eliminare i dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Per ulteriori informazioni sui criteri di unione e sul loro ruolo in Platform, c
 
 ## Anteprima stato campione ([!DNL Profile] anteprima) {#profile-preview}
 
-Poiché i dati abilitati per Profilo vengono acquisiti in Experience Platform, vengono memorizzati nell’archivio dati Profilo. Man mano che il numero di record nell’archivio profili aumenta o diminuisce, viene eseguito un processo di esempio che include informazioni sul numero di frammenti di profilo e profili uniti nell’archivio dati. Utilizzando l’API di profilo puoi visualizzare in anteprima l’esempio di successo più recente, oltre a elencare la distribuzione dei profili per set di dati e per namespace di identità. Per iniziare a utilizzare l&#39;endpoint `/profilepreviewstatus`, fai riferimento alla [guida all&#39;endpoint per lo stato di esempio di anteprima](preview-sample-status.md).
+Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale. I risultati di questo lavoro di esempio possono essere visualizzati utilizzando l’ `/previewsamplestatus` endpoint , parte dell’API Profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare più rapporti al fine di acquisire visibilità nella composizione dell’archivio profili della tua organizzazione.  Per iniziare a utilizzare l&#39;endpoint `/profilepreviewstatus`, fai riferimento alla [guida all&#39;endpoint per lo stato di esempio di anteprima](preview-sample-status.md).
 
 ## Processi del sistema di profili {#profile-system-jobs}
 
