@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 È importante comprendere i seguenti termini chiave utilizzati in questo documento:
 
 * **Attributo** standard: Gli attributi standard sono tutti gli attributi predefiniti di Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi [!DNL Analytics] di origine e [!DNL Analytics] dello schema.
-* **Attributo** personalizzato: Gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle dimensioni personalizzate in  [!DNL Analytics]. Sono anche uno degli schemi definiti dall’Adobe, ma possono essere interpretati in modo diverso da clienti diversi. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la seguente [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
+* **Attributo** personalizzato: Gli attributi personalizzati sono qualsiasi attributo nella gerarchia di variabili personalizzate in  [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire per il loro utilizzo da suite di rapporti a suite di rapporti. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la seguente [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 * **Qualsiasi attributo nei gruppi** di campi personalizzati: Gli attributi che provengono da gruppi di campi creati dai clienti sono tutti definiti dall’utente e non sono considerati attributi standard o personalizzati.
 * **Nomi** descrittivi: I nomi descrittivi sono etichette fornite dall&#39;utente per le variabili personalizzate in un&#39; [!DNL Analytics] implementazione. Per ulteriori informazioni sui nomi descrittivi, consulta la seguente [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 
@@ -46,15 +46,15 @@ Sotto la categoria **[!UICONTROL Applicazioni di Adobe]**, selezionare **[!UICON
 
 ### Seleziona dati
 
-Viene visualizzato il passaggio **[!UICONTROL Aggiungi dati origine Analytics]** . Seleziona **[!UICONTROL Suite di rapporti]** per iniziare a creare una connessione sorgente per i dati della suite di rapporti di Analytics, quindi seleziona la suite di rapporti da acquisire. Selezionare **[!UICONTROL Avanti]** per continuare.
+Viene visualizzato il passaggio **[!UICONTROL Aggiungi dati origine Analytics]** . Seleziona **[!UICONTROL Suite di rapporti]** per iniziare a creare una connessione sorgente per i dati della suite di rapporti di Analytics, quindi seleziona la suite di rapporti da acquisire. Le suite di rapporti che non sono selezionabili sono già state acquisite, in questa sandbox o in una sandbox diversa. Selezionare **[!UICONTROL Avanti]** per continuare.
 
 >[!NOTE]
 >
->È possibile effettuare più connessioni in-bound a un’origine per l’inserimento di dati diversi.
+>È possibile effettuare più connessioni in-bound per inserire più suite di rapporti, tuttavia è possibile utilizzare una sola suite di rapporti con Real-time Customer Data Platform alla volta.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mappatura
 
@@ -74,9 +74,9 @@ La sezione [!UICONTROL Mappa campi standard] visualizza i pannelli per le mappat
 
 | Mappa campi standard | Descrizione |
 | --- | --- |
-| [!UICONTROL Mappature standard applicate] | Il pannello [!UICONTROL Mappature standard applicate] visualizza il numero totale di attributi standard mappati. Le mappature standard si riferiscono ai set di mappatura tra gli attributi standard nei dati di origine [!DNL Analytics] e gli attributi standard nel gruppo di campi [!DNL Analytics]. Questi sono pre-mappati e non possono essere modificati. |
-| [!UICONTROL Mappature standard non corrispondenti] | Il pannello [!UICONTROL Mappature standard non corrispondenti] fa riferimento al numero di attributi standard mappati che contengono conflitti di nomi descrittivi. Questi conflitti vengono visualizzati quando si riutilizza uno schema che dispone già di un set popolato di descrittori di campo. Puoi procedere con il flusso di dati [!DNL Analytics] anche con conflitti di nomi descrittivi. |
-| [!UICONTROL Mappature personalizzate] | Il pannello [!UICONTROL Mappature personalizzate] visualizza il numero di attributi personalizzati mappati, tra cui eVar, prop ed elenchi. Le mappature personalizzate fanno riferimento ai set di mappature tra gli attributi personalizzati nei dati [!DNL Analytics] di origine e gli attributi personalizzati nel gruppo di campi [!DNL Analytics]. Gli attributi personalizzati possono essere mappati ad altri attributi personalizzati, nonché agli attributi standard. |
+| [!UICONTROL Mappature standard applicate] | Il pannello [!UICONTROL Mappature standard applicate] visualizza il numero totale di attributi mappati. Le mappature standard si riferiscono ai set di mappatura tra tutti gli attributi nei dati di origine [!DNL Analytics] e gli attributi corrispondenti nel gruppo di campi [!DNL Analytics]. Questi sono pre-mappati e non possono essere modificati. |
+| [!UICONTROL Mappature standard non corrispondenti] | Il pannello [!UICONTROL Mappature standard non corrispondenti] fa riferimento al numero di attributi mappati che contengono conflitti di nomi descrittivi. Questi conflitti vengono visualizzati quando si riutilizza uno schema che dispone già di un set popolato di descrittori di campo di una suite di rapporti diversa. Puoi procedere con il flusso di dati [!DNL Analytics] anche con conflitti di nomi descrittivi. |
+| [!UICONTROL Mappature personalizzate] | Il pannello [!UICONTROL Mappature personalizzate] visualizza il numero di attributi personalizzati mappati, tra cui eVar, prop ed elenchi. Le mappature personalizzate fanno riferimento ai set di mappatura tra gli attributi personalizzati nei dati [!DNL Analytics] di origine e gli attributi nei gruppi di campi personalizzati inclusi nello schema selezionato. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform rileva automaticamente i set di mappatura per eventuali conflitti di no
 
 ![mappatura](../../../../images/tutorials/create/analytics/mapping.png)
 
-Se nei set di mappatura sono presenti conflitti di nomi descrittivi, puoi comunque continuare con il flusso di dati [!DNL Analytics], riconoscendo che i descrittori dei campi saranno gli stessi. In alternativa, puoi scegliere di creare un nuovo schema con un set vuoto di descrittori.
+In presenza di conflitti di nomi descrittivi tra la suite di rapporti di origine e lo schema selezionato, è comunque possibile continuare con il flusso di dati [!DNL Analytics], riconoscendo che i descrittori dei campi non verranno modificati. In alternativa, puoi scegliere di creare un nuovo schema con un set vuoto di descrittori.
 
 Selezionare **[!UICONTROL Avanti]** per continuare.
 
@@ -181,7 +181,7 @@ Per eliminare un flusso di dati, passare alla pagina [!UICONTROL Dataflows], qui
 
 ## Passaggi successivi e risorse aggiuntive
 
-Una volta creata la connessione, viene creato automaticamente uno schema e un flusso di dati di destinazione per contenere i dati in arrivo. Inoltre, avviene il recupero dei dati e vengono acquisiti fino a 13 mesi di dati storici. Al termine dell’acquisizione iniziale, i dati [!DNL Analytics] vengono utilizzati dai servizi della piattaforma a valle, come [!DNL Real-time Customer Profile] e il servizio di segmentazione. Per ulteriori informazioni, consulta i seguenti documenti:
+Una volta creata la connessione, il flusso di dati viene creato automaticamente per contenere i dati in arrivo e compilare un set di dati con lo schema selezionato. Inoltre, avviene il recupero dei dati e vengono acquisiti fino a 13 mesi di dati storici. Al termine dell’acquisizione iniziale, i dati [!DNL Analytics] vengono utilizzati dai servizi della piattaforma a valle, come [!DNL Real-time Customer Profile] e il servizio di segmentazione. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
