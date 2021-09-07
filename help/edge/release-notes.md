@@ -3,14 +3,18 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 2%
 
 ---
 
 # Note sulla versione
+
+## Versione 2.6.4 - 7 settembre 2021
+
+* È stato risolto un problema che causava la sostituzione dell&#39;intero contenuto `head` con le azioni Adobe Target HTML impostate applicate all&#39;elemento `head` . Ora le azioni HTML applicate all&#39;elemento `head` vengono modificate per aggiungere l&#39;HTML.
 
 ## Versione 2.6.3 - 16 agosto 2021
 
