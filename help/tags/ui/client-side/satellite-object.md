@@ -1,20 +1,21 @@
 ---
 title: Riferimento agli oggetti satellite
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che puoi eseguire con esso nei tag.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 43%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
-# Riferimento a oggetti satellitari
+# Documentazione per gli oggetti Satellite
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Questo documento funge da riferimento per l&#39;oggetto lato client `_satellite` e le varie funzioni che è possibile eseguire con esso.
+Questo documento funge da riferimento per l’oggetto `_satellite` lato client e le varie funzioni che è possibile eseguire con esso.
 
 ## `track`
 
@@ -30,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` attiva tutte le regole utilizzando il tipo di evento Direct Call configurato con l&#39;identificatore specificato dall&#39;estensione Core tag. L&#39;esempio precedente attiva tutte le regole utilizzando un tipo di evento Call Direct in cui l&#39;identificativo configurato è `contact_submit`. Inoltre, viene trasmesso un oggetto facoltativo contenente le relative informazioni. L&#39;oggetto dettaglio è accessibile immettendo `%event.detail%` all&#39;interno di un campo di testo in una condizione o in un&#39;azione oppure `event.detail` all&#39;interno dell&#39;editor di codice in una condizione o in un&#39;azione di codice personalizzato.
+`track` attiva tutte le regole utilizzando il tipo di evento Direct Call configurato con l’identificatore specificato dall’estensione tag Core. L&#39;esempio precedente attiva tutte le regole utilizzando un tipo di evento Call Direct in cui l&#39;identificativo configurato è `contact_submit`. Inoltre, viene trasmesso un oggetto facoltativo contenente le relative informazioni. L&#39;oggetto dettaglio è accessibile immettendo `%event.detail%` all&#39;interno di un campo di testo in una condizione o in un&#39;azione oppure `event.detail` all&#39;interno dell&#39;editor di codice in una condizione o in un&#39;azione di codice personalizzato.
 
 ## `getVar`
 
@@ -46,9 +47,9 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-Nell&#39;esempio fornito, se esiste un elemento dati con un nome corrispondente, viene restituito il valore dell&#39;elemento dati. Se non esiste alcun elemento di dati corrispondente, eseguirà una verifica per vedere se in precedenza è stata impostata una variabile personalizzata con un nome corrispondente utilizzando `_satellite.setVar()`. Se si trova una variabile personalizzata corrispondente, verrà restituito il relativo valore.
+Nell’esempio fornito, se esiste un elemento dati con un nome corrispondente, verrà restituito il suo valore. Se non esiste alcun elemento di dati corrispondente, eseguirà una verifica per vedere se in precedenza è stata impostata una variabile personalizzata con un nome corrispondente utilizzando `_satellite.setVar()`. Se si trova una variabile personalizzata corrispondente, verrà restituito il relativo valore.
 
-Tieni presente che in molti campi del modulo nell’interfaccia utente Raccolta dati puoi utilizzare la sintassi `%%` per fare riferimento alle variabili, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, se utilizzi %product% accederai al valore dell&#39;elemento di dati o della variabile personalizzata del prodotto.
+Tieni presente che, in molti campi del modulo nell’interfaccia utente di Data Collection, puoi utilizzare la sintassi `%%` per fare riferimento alle variabili, riducendo la necessità di chiamate a `_satellite.getVar()`. Ad esempio, se utilizzi %product% accederai al valore dell&#39;elemento di dati o della variabile personalizzata del prodotto.
 
 ## `setVar`
 
@@ -114,7 +115,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-L’oggetto `logger` consente di registrare un messaggio nella console del browser. Il messaggio verrà visualizzato solo se l’utente ha abilitato il debug dei tag (chiamando `_satellite.setDebug(true)` o utilizzando un’estensione del browser appropriata).
+L’oggetto `logger` consente di registrare un messaggio nella console del browser. Il messaggio viene visualizzato solo se l’utente ha abilitato il debug dei tag (chiamando `_satellite.setDebug(true)` o utilizzando un’estensione del browser adeguata).
 
 ### Registrazione degli avvisi di funzioni deprecate
 
@@ -128,11 +129,11 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Questo registra un avviso nella console del browser. Viene visualizzato il messaggio se l’utente ha abilitato o meno il debug dei tag.
+Registra un avviso nella console del browser. Il messaggio viene visualizzato indipendentemente dal fatto che l’utente abbia abilitato o meno il debug del tag.
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. È una copia esposta della libreria di terze parti js-cookie. Per informazioni sull&#39;utilizzo più avanzato di questa libreria, consulta la [documentazione js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. Questa è una copia esposta della libreria js-cookie di terze parti. Per informazioni sull&#39;utilizzo più avanzato di questa libreria, consulta la [documentazione js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Imposta un cookie {#cookie-set}
 
@@ -200,11 +201,11 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-Questo oggetto contiene informazioni sulla build della libreria di runtime di tag corrente. L&#39;oggetto contiene le proprietà seguenti:
+Questo oggetto contiene informazioni sulla build dell’attuale libreria di runtime dei tag. L&#39;oggetto contiene le proprietà seguenti:
 
 ### `turbineVersion`
 
-Questo fornisce la versione [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all&#39;interno della libreria corrente.
+Fornisce la versione di [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all’interno della libreria corrente.
 
 ### `turbineBuildDate`
 
@@ -214,7 +215,31 @@ La data di creazione della versione di [Turbine](https://www.npmjs.com/package/@
 
 La data di creazione della libreria corrente in formato ISO 8601.
 
-### `environment`
+Questo esempio illustra i valori dell&#39;oggetto:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Codice**
+
+```javascript
+_satellite.environment
+```
+
+Questo oggetto contiene informazioni sull&#39;ambiente in cui viene distribuita la libreria di runtime di tag corrente. L&#39;oggetto contiene le proprietà seguenti:
+
+### `id`
+
+ID dell&#39;ambiente.
+
+### `stage`
 
 L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono:
 
@@ -226,10 +251,8 @@ Questo esempio illustra i valori dell&#39;oggetto:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,9 +274,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` registra un messaggio nella console del browser. Il messaggio verrà visualizzato solo se l’utente ha abilitato il debug dei tag (chiamando `_satellite.setDebug(true)` o utilizzando un’estensione del browser appropriata).
+`notify` registra un messaggio nella console del browser. Il messaggio viene visualizzato solo se l’utente ha abilitato il debug dei tag (chiamando `_satellite.setDebug(true)` o utilizzando un’estensione del browser adeguata).
 
-È possibile passare un livello di registrazione facoltativo che influirà sullo stile e sul filtraggio del messaggio registrato. I livelli supportati sono i seguenti:
+È possibile trasmettere un livello di registrazione facoltativo che influisca sullo stile e sul filtraggio del messaggio registrato. I livelli supportati sono i seguenti:
 
 3: messaggi informativi.
 
@@ -281,7 +304,7 @@ _satellite.setCookie(name: string, value: string, days: number)
 _satellite.setCookie('product', 'Circuit Pro', 3);
 ```
 
-Questo imposta un cookie nel browser dell&#39;utente. Il cookie persiste per il numero di giorni specificati.
+Questa operazione imposta un cookie nel browser dell’utente. Il cookie persiste per il numero di giorni specificati.
 
 ## `readCookie`
 
@@ -301,7 +324,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-Questo legge un cookie dal browser dell&#39;utente.
+Legge un cookie dal browser dell’utente.
 
 ## `removeCookie`
 
@@ -321,11 +344,11 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-Questo rimuove un cookie dal browser dell&#39;utente.
+Rimuove un cookie dal browser dell’utente.
 
 ## Funzioni di debug
 
-Le seguenti funzioni non sono accessibili dal codice di produzione. Queste sono intese solo a scopo di debug e cambiano nel tempo in base alle esigenze.
+Non è possibile accedere alle seguenti funzioni dal codice di produzione. Queste sono intese solo a scopo di debug e cambiano nel tempo in base alle esigenze.
 
 ### `container`
 
@@ -357,7 +380,7 @@ _satellite._monitors
 
 **Esempio**
 
-Nella pagina web in cui è in esecuzione una libreria di tag, aggiungi uno snippet di codice al codice HTML. In genere, il codice viene inserito nell&#39;elemento `<head>` prima dell&#39;elemento `<script>` che carica la libreria di tag. Questo consente al monitoraggio di rilevare i primi eventi di sistema che si verificano nella libreria di tag. Esempio:
+Nella pagina web in cui è in esecuzione una libreria di tag, aggiungi uno snippet di codice all’HTML. In genere, il codice viene inserito nell’elemento `<head>` prima dell’elemento `<script>` che carica la libreria di tag. Questo consente al monitoraggio di rilevare i primi eventi di sistema che si verificano nella libreria di tag. Esempio:
 
 ```html
 <!DOCTYPE html>
@@ -399,19 +422,19 @@ Nella pagina web in cui è in esecuzione una libreria di tag, aggiungi uno snipp
 </html>
 ```
 
-Nel primo elemento di script, poiché la libreria di tag non è ancora stata caricata, viene creato l&#39;oggetto iniziale `_satellite` e viene inizializzato un array su `_satellite._monitors`. Lo script aggiunge quindi un oggetto di monitoraggio a tale array. L&#39;oggetto di monitoraggio può specificare i seguenti metodi che verranno successivamente chiamati dalla libreria di tag:
+Nel primo elemento di script, poiché la libreria dei tag non è ancora stata caricata, viene creato l’oggetto `_satellite` iniziale e viene inizializzato un array su `_satellite._monitors`. Lo script aggiunge quindi un oggetto di monitoraggio a tale array. L’oggetto di monitoraggio può specificare i metodi seguenti, che verranno successivamente chiamati dalla libreria dei tag:
 
 ### `ruleTriggered`
 
-Questa funzione viene chiamata dopo che un evento attiva una regola ma prima che le condizioni e le azioni della regola siano state elaborate. L&#39;oggetto evento trasmesso a `ruleTriggered` contiene informazioni sulla regola attivata.
+Questa funzione viene chiamata dopo che un evento attiva una regola, ma prima dell’elaborazione delle condizioni e azioni della regola. L&#39;oggetto evento trasmesso a `ruleTriggered` contiene informazioni sulla regola attivata.
 
 ### `ruleCompleted`
 
-Questa funzione viene chiamata dopo che una regola è stata completamente elaborata. In altre parole, l’evento si è verificato, tutte le condizioni sono state passate e tutte le azioni sono state eseguite. L&#39;oggetto evento trasmesso a `ruleCompleted` contiene informazioni sulla regola completata.
+Questa funzione viene chiamata dopo che una regola è stata completamente elaborata. In altre parole, l’evento si è verificato, tutte le condizioni sono state trasmesse e tutte le azioni sono state eseguite. L’oggetto evento trasmesso a `ruleCompleted` contiene informazioni sulla regola attivata.
 
 ### `ruleConditionFailed`
 
-Questa funzione viene chiamata dopo che una regola è stata attivata e una delle sue condizioni non è riuscita. L&#39;oggetto evento trasmesso a `ruleConditionFailed` contiene informazioni sulla regola attivata e sula condizione che ha avuto esito negativo.
+Questa funzione viene chiamata dopo l’attivazione di una regola per la quale una condizione ha avuto esito negativo. L&#39;oggetto evento trasmesso a `ruleConditionFailed` contiene informazioni sulla regola attivata e sula condizione che ha avuto esito negativo.
 
 Se si chiama `ruleTriggered`, poco dopo sarà chiamato `ruleCompleted` oppure `ruleConditionFailed`.
 
@@ -430,4 +453,4 @@ Se apri la pagina in [!DNL Chrome], apri la console del browser e fai clic sulla
 
 ![](../../images/debug.png)
 
-Se necessario, a questi gestori possono essere aggiunti hook o informazioni aggiuntive.
+Puoi aggiungere agli handler hook o informazioni supplementari, se necessario.

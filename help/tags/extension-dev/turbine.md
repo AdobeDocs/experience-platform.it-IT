@@ -1,10 +1,11 @@
 ---
 title: Variabile libera “turbine”
-description: Scopri l’oggetto turbine, una variabile gratuita che fornisce informazioni e utility specifiche per il runtime di tag Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri l’oggetto turbine, una variabile libera che fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform.
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 51%
+source-wordcount: '598'
+ht-degree: 91%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 51%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei moduli libreria dell’estensione. Fornisce informazioni e utility specifiche per il runtime di tag Adobe Experience Platform ed è sempre disponibile per i moduli della libreria senza utilizzare `require()`.
+L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei moduli libreria dell’estensione. Fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform ed è sempre disponibile per i moduli libreria senza che sia necessario utilizzare `require()`.
 
 ## [!DNL buildInfo]
 
@@ -22,14 +23,13 @@ L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei m
 console.log(turbine.buildInfo.turbineBuildDate);
 ```
 
-`turbine.buildInfo` è un oggetto contenente informazioni sulla build della libreria di runtime di tag corrente.
+`turbine.buildInfo` è un oggetto che contiene informazioni sulla versione attuale della libreria runtime dei tag.
 
 ```js
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,14 +38,34 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | La versione di [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all&#39;interno della libreria corrente. |
 | `turbineBuildDate` | La data di creazione della versione di [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all&#39;interno del contenitore in formato ISO 8601. |
 | `buildDate` | La data di creazione della libreria corrente in formato ISO 8601. |
-| `environment` | L&#39;ambiente per il quale è stata generata la libreria. I valori accettati sono `development`, `staging` e `production`. |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` è un oggetto contenente informazioni sull&#39;ambiente in cui viene distribuita la libreria.
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `id` | ID dell&#39;ambiente. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori accettati sono `development`, `staging` e `production`. |
 
 
 ## [!DNL debugEnabled]
 
-Se il debug dei tag è attualmente abilitato.
+Specifica se il debug dei tag è attualmente abilitato.
 
-Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Al contrario, registra sempre i messaggi utilizzando `turbine.logger` per garantire che vengano stampati sulla console solo quando è abilitato il debug dei tag.
+Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Piuttosto, per registrare i messaggi utilizza sempre `turbine.logger` per assicurarti che i messaggi vengano riportati nella console solo quando è abilitato il debug dei tag.
 
 ### [!DNL getDataElementValue]
 
@@ -63,7 +83,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 Restituisce l’ultimo oggetto impostazioni salvato dalla vista di [configurazione delle estensioni](./configuration.md).
 
-I valori negli oggetti impostazioni restituiti potrebbero provenire da elementi di dati. Per questo motivo, se richiami `getExtensionSettings()` in momenti diversi potresti ottenere risultati diversi, dovuti all’eventuale cambiamento dei valori degli elementi dati. Per ottenere i valori più aggiornati, attendi il più a lungo possibile prima di chiamare `getExtensionSettings()`.
+I valori negli oggetti impostazioni restituiti potrebbero provenire da elementi di dati. Per questo motivo, se richiami `getExtensionSettings()` in momenti diversi potresti ottenere risultati diversi, dovuti all’eventuale cambiamento dei valori degli elementi dati. Per ottenere i valori più aggiornati, attendi il più tardi possibile prima di richiamare `getExtensionSettings()`.
 
 ### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
 
@@ -74,7 +94,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-La proprietà [hostingLibFiles](./manifest.md) può essere definita all&#39;interno del manifesto dell&#39;estensione per ospitare vari file insieme alla libreria di runtime del tag. Questo modulo restituisce l’URL in cui è ospitato il file libreria specificato.
+La proprietà [hostedLibFiles](./manifest.md) può essere definita nel manifesto dell’estensione in modo da includere vari file oltre alla libreria runtime dei tag. Questo modulo restituisce l’URL in cui è ospitato il file libreria specificato.
 
 ### [!DNL getSharedModule] {#shared}
 
@@ -82,7 +102,7 @@ La proprietà [hostingLibFiles](./manifest.md) può essere definita all&#39;inte
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 ```
 
-Recupera un modulo condiviso da un&#39;altra estensione. Se non viene trovato alcun modulo corrispondente, verrà restituito `undefined`. Per ulteriori informazioni sui moduli condivisi, consulta [Implementazione di moduli condivisi](./web/shared.md).
+Recupera un modulo che è stato condiviso da un’altra estensione. Se non viene trovato alcun modulo corrispondente, verrà restituito `undefined`. Per ulteriori informazioni sui moduli condivisi, consulta [Implementazione di moduli condivisi](./web/shared.md).
 
 ### [!DNL logger]
 
@@ -90,7 +110,7 @@ Recupera un modulo condiviso da un&#39;altra estensione. Se non viene trovato al
 turbine.logger.error('Error!');
 ```
 
-L&#39;utilità di registrazione viene utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Il modo consigliato per attivare il debug è quello di utilizzare il [debugger Adobe Experience Cloud](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, l’utente può eseguire il seguente comando `_satellite.setDebug(true)` all’interno della console per sviluppatori del browser. Il logger dispone dei seguenti metodi:
+Utility di registrazione utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Il modo consigliato per attivare il debug è quello di utilizzare il [debugger Adobe Experience Cloud](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, è possibile eseguire il comando `_satellite.setDebug(true)` seguente nella console di sviluppo del browser. Il logger dispone dei seguenti metodi:
 
 * `logger.log(message: string)`: registra un messaggio nella console.
 * `logger.info(message: string)`: registra un messaggio informativo nella console.
@@ -100,9 +120,9 @@ L&#39;utilità di registrazione viene utilizzata per registrare i messaggi nella
 
 ### [!DNL onDebugChanged]
 
-Trasmettendo una funzione di callback in `turbine.onDebugChanged`, i tag richiameranno il callback ogni volta che il debug viene attivato. I tag trasmettono un valore booleano alla funzione di callback che sarà true se il debug è stato abilitato o false se il debug è stato disattivato.
+Quando si trasmette una funzione di callback in `turbine.onDebugChanged`, i tag richiameranno il callback ogni volta che viene attivato il debug. I tag trasmetteranno un valore booleano alla funzione di callback che sarà true se il debug è abilitato o false se è disabilitato.
 
-Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Al contrario, i messaggi di registro che utilizzano `turbine.logger` e garantiscono la stampa dei messaggi nella console solo quando è abilitato il debug dei tag.
+Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Piuttosto, per registrare i messaggi utilizza sempre `turbine.logger` e i tag faranno sì che i messaggi vengano riportati nella console solo quando è abilitato il debug di tag.
 
 ### [!DNL propertySettings] {#property-settings}
 
@@ -110,7 +130,7 @@ Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizz
 console.log(turbine.propertySettings.domains);
 ```
 
-Un oggetto contenente le seguenti impostazioni definite dall&#39;utente per la proprietà della libreria runtime di tag corrente:
+Oggetto contenente le seguenti impostazioni definite dall’utente per la proprietà della libreria runtime attuale di tag:
 
 * `propertySettings.domains: Array<String>`
 
