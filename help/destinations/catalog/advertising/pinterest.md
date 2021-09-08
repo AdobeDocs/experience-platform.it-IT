@@ -1,15 +1,15 @@
 ---
 title: Connessione all’elenco dei clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-
-# Connessione all’elenco dei clienti pinterest
+# [!DNL Pinterest Customer List] connection
 
 ## Panoramica {#overview}
 
@@ -21,20 +21,20 @@ Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitat
 
 ## Prerequisiti {#prerequisites}
 
-* L’utente dovrà effettuare l’autenticazione con un account Pinterest che dispone dell’accesso all’account dell’inserzionista a cui desidera aggiungere un pubblico. I dettagli sulla condivisione degli account degli inserzionisti sono disponibili qui: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. In particolare, l&#39;utente avrebbe bisogno dei livelli di accesso &quot;audience&quot;.
-* I dettagli sui formati di identità dell&#39;elenco dei clienti sono disponibili qui: https://help.pinterest.com/en/business/article/audience-targeting.
+* L’utente dovrà effettuare l’autenticazione con un account Pinterest che dispone dell’accesso all’account dell’inserzionista a cui desidera aggiungere un pubblico. I dettagli sulla condivisione degli account degli inserzionisti sono disponibili [qui](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). In particolare, l&#39;utente avrebbe bisogno dei livelli di accesso &quot;audience&quot;.
+* I dettagli sui formati di identità dell&#39;elenco dei clienti sono disponibili [qui](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Identità supportate {#supported-identities}
 
-La destinazione Pinterest Customer List supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+La destinazione [!DNL Pinterest Customer List] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 Nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione, mappa le identità desiderate nel campo di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | Google Advertising ID | Mappa lo spazio dei nomi dell&#39;identità sorgente *GAID* nel campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
-| IDFA | Apple ID per gli inserzionisti | Mappa lo spazio dei nomi dell&#39;identità sorgente *IDFA* nel campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Mappa lo spazio dei nomi dell&#39;identità sorgente *GAID* nel campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mappa lo spazio dei nomi dell&#39;identità sorgente *IDFA* nel campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
 | E-MAIL | Indirizzi e-mail (testo cancellato o con hash con l’algoritmo SHA256) | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. <br> Mappa lo spazio dei nomi dell&#39;identità sorgente  ** Email_LC_ *SHA256* nel campo dell&#39;identità di destinazione  *pinterest_audience*. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ Nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-de
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a comprendere meglio come e quando utilizzare la destinazione Elenco clienti Pinterest, ecco alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per comprendere meglio come e quando utilizzare la destinazione [!DNL Pinterest Customer List], di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 
 ### Caso d&#39;uso n. 1
@@ -76,4 +76,4 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 
 ## Risorse aggiuntive {#additional-resources}
 
-Per ulteriori informazioni, consultare la pagina Pinterest Help Center (https://help.pinterest.com/en/business/article/audience-targeting).
+Per ulteriori informazioni, consultare la [pagina del Centro assistenza Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) .

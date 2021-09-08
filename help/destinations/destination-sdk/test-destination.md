@@ -1,9 +1,10 @@
 ---
-description: 'Nell’ambito dell’SDK di destinazione, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. '
+description: Nell’ambito dell’SDK di destinazione, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione.
 title: Verifica la configurazione di destinazione
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ Per una descrizione dei parametri di richiesta e risposta, fai riferimento a [Op
 
 ## Passaggi successivi
 
-Dopo aver confermato che la destinazione è configurata correttamente, utilizza l&#39;Adobe [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione per la destinazione.
+Dopo aver verificato la destinazione e aver confermato che è configurata correttamente, utilizza l&#39; [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la configurazione ad Adobe per la revisione.

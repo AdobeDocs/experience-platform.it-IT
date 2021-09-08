@@ -3,18 +3,14 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# (Beta) Connessione [!DNL Braze]
-
->[!IMPORTANT]
->
->La destinazione Braze in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# [!DNL Braze] connection
 
 ## Panoramica {#overview}
 
@@ -99,11 +95,9 @@ Nella sezione [!UICONTROL Campo di destinazione] , fai clic sull&#39;icona di ma
 
 ![Mappatura del target di destinazione del freno](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Nella finestra [!UICONTROL Seleziona campo di destinazione], puoi scegliere tra tre categorie di campi di destinazione:
-* [!UICONTROL Seleziona attributi]: Utilizza questa opzione per mappare gli attributi XDM su  [!DNL Braze] attributi standard.
+Nella finestra [!UICONTROL Seleziona campo di destinazione], puoi scegliere tra due categorie di campi di destinazione:
 * [!UICONTROL Selezionare lo spazio dei nomi] identità: Utilizzare questa opzione per mappare i namespace  [!DNL Platform] di identità agli spazi dei nomi  [!DNL Braze] di identità.
-* [!UICONTROL Seleziona attributi] personalizzati: Utilizza questa opzione per mappare gli attributi XDM su  [!DNL Braze] attributi personalizzati definiti nel tuo  [!DNL Braze] account.
-* Puoi inoltre utilizzare questa opzione per rinominare gli attributi XDM esistenti in [!DNL Braze]. Ad esempio, se mappi un attributo `lastName` XDM su un attributo `Last_Name` personalizzato in [!DNL Braze], crea l&#39;attributo `Last_Name` in [!DNL Braze], se non esiste già, e mappalo sull&#39;attributo `lastName` XDM.
+* [!UICONTROL Seleziona attributi] personalizzati: Utilizza questa opzione per mappare gli attributi XDM su  [!DNL Braze] attributi personalizzati definiti nel tuo  [!DNL Braze] account. <br> Puoi inoltre utilizzare questa opzione per rinominare gli attributi XDM esistenti in  [!DNL Braze]. Ad esempio, se mappi un attributo `lastName` XDM su un attributo `Last_Name` personalizzato in [!DNL Braze], crea l&#39;attributo `Last_Name` in [!DNL Braze], se non esiste già, e mappalo sull&#39;attributo `lastName` XDM.
 
 ![Campi di mappatura destinazione di branding](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
