@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 3%
+source-wordcount: '1375'
+ht-degree: 2%
 
 ---
 
@@ -103,6 +103,7 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Destinations] | [!UICONTROL Gestire le destinazioni] | Accesso a destinazioni in lettura, creazione, modifica e disattivazione. |
 | [!DNL Destinations] | [!UICONTROL Visualizzare le destinazioni] | Accesso in sola lettura alle destinazioni disponibili nella scheda **[!UICONTROL Catalogo]** e alle destinazioni autenticate nella scheda **[!UICONTROL Sfoglia]**. |
 | [!DNL Destinations] | [!UICONTROL Attivare le destinazioni] | Possibilità di attivare i dati nelle destinazioni attive create. Questa autorizzazione richiede che &quot;Visualizza destinazioni&quot; o &quot;Gestisci [!UICONTROL destinazioni&quot;] sia concessa all&#39;utente che attiverà le destinazioni. |
+| [!DNL Destinations] | [!UICONTROL Authoring delle destinazioni] | Possibilità di creare destinazioni utilizzando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestisci origini] | Accesso a fonti di lettura, creazione, modifica e disattivazione. |
 | [!DNL Data Ingestion] | [!UICONTROL Visualizza origini] | Accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accesso per creare, accettare e rifiutare handshake partner per collegare due organizzazioni IMS e abilitare i flussi [!DNL Segment Match]. |
