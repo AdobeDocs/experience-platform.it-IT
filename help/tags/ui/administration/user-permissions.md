@@ -1,10 +1,11 @@
 ---
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 16%
+ht-degree: 23%
 
 ---
 
@@ -33,13 +34,13 @@ All’interno di un profilo di prodotto, le autorizzazioni per i tag sono suddiv
 
 ### Piattaforme
 
-Ogni proprietà tag ha una piattaforma. Sono attualmente disponibili due piattaforme utilizzabili per i tag: Web e dispositivi mobili. Puoi utilizzare questo tipo di autorizzazione per limitare o concedere l’accesso a un particolare tipo di proprietà. Ciò può essere utile quando il team che gestisce le app mobili è diverso da quello che gestisce i siti web.
+Ogni proprietà tag ha una piattaforma. Al momento esistono due piattaforme utilizzabili per i tag: Web e Mobile. Puoi utilizzare questo tipo di autorizzazione per limitare o concedere l’accesso a un particolare tipo di proprietà. Ciò può essere utile quando il team che gestisce le app mobili è diverso da quello che gestisce i siti web.
 
 ### Proprietà
 
 Per impostazione predefinita, i profili di prodotto concedono l’accesso a tutte le proprietà esistenti all’interno dell’azienda, sia attualmente che in futuro. Utilizzando questo tipo di autorizzazione, puoi limitare o concedere l’accesso a specifiche proprietà esistenti per nome.
 
-### Diritti di proprietà
+### Diritti di proprietà {#property-rights}
 
 Tutte le proprietà create nell’interfaccia utente Raccolta dati diventano disponibili in Admin Console, consentendoti di raggruppare la proprietà con diritti di proprietà specifici nello stesso profilo di prodotto.
 
@@ -51,11 +52,11 @@ La tabella seguente illustra i diritti di proprietà disponibili e le funzionali
 
 | Diritto di proprietà | Descrizione |
 | --- | --- |
-| **Sviluppa** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Invia una libreria per l&#39;approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di raccolta dati richiede questo diritto. |
+| **Sviluppa** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Invia una libreria per l&#39;approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di Data Collection richiede questo diritto. |
 | **Approva** | Questo consente di trasferire una libreria e una build inviate all&#39;ambiente di staging. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
 | **Pubblica** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
-| **Gestire le estensioni** | Questo consente di eseguire le seguenti azioni: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modifica la configurazione di un&#39;estensione già installata</li><li>Eliminare un&#39;estensione</li></ul>Consulta la documentazione di panoramica sulle estensioni per [ulteriori informazioni sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
-| **Gestire gli ambienti** | Questo consente di creare e modificare ambienti. Per ulteriori informazioni, consulta la documentazione [ambienti](../publishing/environments.md) . Generalmente, questo ruolo appartiene al reparto IT. |
+| **Gestire le estensioni** | Questo consente di eseguire le seguenti azioni: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modifica la configurazione di un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
+| **Gestire gli ambienti** | Questo consente di creare e modificare ambienti. Per ulteriori informazioni, consulta la [documentazione degli ambienti](../publishing/environments.md). Generalmente, questo ruolo appartiene al reparto IT. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -67,7 +68,7 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 | --- | --- |
 | **Gestisci proprietà** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare nuove proprietà</li><li>Modificare metadati e impostazioni a livello di proprietà</li><li>Elimina proprietà</li></ul>Generalmente, gli amministratori eseguono questo ruolo. Per ulteriori informazioni, consulta la [documentazione sulle proprietà](companies-and-properties.md) . |
 | **Sviluppa estensioni** | Consente di creare e modificare pacchetti di estensione di proprietà dell&#39;azienda, incluse versioni private e richieste di versioni pubbliche. |
-| **Gestire le configurazioni dell’app** | Questa opzione è disponibile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso ai messaggi in-app e push per dispositivi mobili.  Questo ti consente di gestire le app che Experience Cloud conosce insieme alle credenziali push necessarie per comunicare con il servizio Firebase Cloud Messaging e il servizio Apple Push Notification. |
+| **Gestire le configurazioni dell’app** | Questa opzione è disponibile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso ai messaggi in-app e push per dispositivi mobili.  Questo consente di gestire le app conosciute da Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio di messaggistica Firebase Cloud e il servizio Apple Push Notification. |
 
 {style=&quot;table-layout:auto&quot;}
 
