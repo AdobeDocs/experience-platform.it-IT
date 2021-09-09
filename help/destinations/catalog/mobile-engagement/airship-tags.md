@@ -3,18 +3,14 @@ keywords: targhette di bordo;destinazione di volo
 title: Collegamento dei tag dell'aeroporto
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come tag di pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Beta) Connessione [!DNL Airship Tags] {#airship-tags-destination}
-
->[!IMPORTANT]
->
->La destinazione [!DNL Airship Tags] in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# [!DNL Airship Tags] connection {#airship-tags-destination}
 
 ## Panoramica
 

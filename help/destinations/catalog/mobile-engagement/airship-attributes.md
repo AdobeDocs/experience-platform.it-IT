@@ -3,18 +3,14 @@ keywords: attributi del volo;destinazione del volo
 title: Collegamento Attributi del volo
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come Attributi di pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (Beta) Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->La destinazione [!DNL Airship Attributes] in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 ## Panoramica {#overview}
 

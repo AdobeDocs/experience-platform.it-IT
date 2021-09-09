@@ -2,9 +2,9 @@
 title: Riferimento agli oggetti satellite
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che puoi eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ Questo esempio illustra i valori dell&#39;oggetto:
 
 ## `environment`
 
+Questo oggetto contiene informazioni sull&#39;ambiente in cui viene distribuita la libreria di runtime di tag corrente.
+
 **Codice**
 
 ```javascript
 _satellite.environment
 ```
 
-Questo oggetto contiene informazioni sull&#39;ambiente in cui viene distribuita la libreria di runtime di tag corrente. L&#39;oggetto contiene le proprietà seguenti:
-
-### `id`
-
-ID dell&#39;ambiente.
-
-### `stage`
-
-L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono:
-
-* development
-* staging
-* production
-
-Questo esempio illustra i valori dell&#39;oggetto:
+L&#39;oggetto contiene le proprietà seguenti:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `id` | ID dell&#39;ambiente. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging` e `production`. |
 
 ## `notify`
 
