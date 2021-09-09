@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Tipo di dati della valuta
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM della valuta.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '127'
 ht-degree: 5%
 
 ---
@@ -19,9 +20,9 @@ ht-degree: 5%
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `amount` | Doppio | Il numero di colori che il display è in grado di rappresentare. |
-| `conversionDate` | DateTime | Il numero di colori che il display è in grado di rappresentare. |
-| `currencyCode` | Stringa | Il numero di colori che il display è in grado di rappresentare. |
+| `amount` | Doppio | L&#39;ammontare della valuta definito da `currencyCode`. |
+| `conversionDate` | DateTime | Una marca temporale di quando è stata effettuata la conversione della valuta. |
+| `currencyCode` | Stringa | Un codice ISO 4217 che indica il tipo di valuta che `amount` rappresenta. |
 
 {style=&quot;table-layout:auto&quot;}
 
