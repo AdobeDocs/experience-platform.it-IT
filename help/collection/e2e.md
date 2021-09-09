@@ -1,16 +1,16 @@
 ---
-title: Panoramica della raccolta dati di Adobe Experience Platform end-to-end
-description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando la raccolta dati di Adobe Experience Platform.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Panoramica della raccolta dati end-to-end
+description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando le tecnologie di raccolta dati fornite da Adobe Experience Platform.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
 
-# Panoramica sulla raccolta dati di Adobe Experience Platform
+# Panoramica sulla raccolta dati end-to-end
 
-Adobe Experience Platform Data Collection fornisce diverse tecnologie che collaborano per raccogliere i dati da trasferire ad altri prodotti Adobe o a destinazioni di terze parti. Per inviare i dati dell’evento dall’applicazione a Adobe Experience Platform Edge Network, è importante comprendere queste tecnologie di base e come configurarle in modo da inviare i dati alle destinazioni richieste, quando necessario.
+In Adobe Experience Platform, per raccolta dati si intendono diverse tecnologie che lavorano insieme per raccogliere i dati da trasferire ad altri prodotti Adobe o a destinazioni di terze parti. Per inviare i dati dell’evento dall’applicazione a Adobe Experience Platform Edge Network, è importante comprendere queste tecnologie di base e come configurarle in modo da inviare i dati alle destinazioni richieste, quando necessario.
 
 Questa guida fornisce un tutorial di alto livello su come inviare un evento tramite la rete Edge utilizzando le tecnologie di raccolta dati. In particolare, l&#39;esercitazione descrive i passaggi necessari per installare e configurare l&#39;estensione tag Adobe Experience Platform Web SDK all&#39;interno dell&#39;interfaccia utente di raccolta dati.
 
@@ -255,4 +255,4 @@ Al termine della compilazione, il passaggio finale è quello di aggiornare il da
 
 ## Passaggi successivi
 
-Questa guida fornisce una panoramica completa e dettagliata su come inviare dati alla rete Edge tramite l’SDK per web di Platform. Per ulteriori informazioni sui vari componenti e servizi interessati, consulta la documentazione collegata a in questa guida.
+Questa guida fornisce una panoramica completa e dettagliata su come inviare dati alla rete Edge tramite l’SDK per web di Platform. Per ulteriori informazioni sui vari componenti e servizi coinvolti, consulta la documentazione collegata a in questa guida.
