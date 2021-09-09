@@ -1,10 +1,11 @@
 ---
 title: Estensioni
-description: Scopri come funzionano le estensioni di tag in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 70%
+ht-degree: 93%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 70%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Un&#39;estensione è un set di codice che estende le funzionalità fornite dai tag o dall&#39;inoltro di eventi.
+Un’estensione è un set di codice che estende le funzionalità fornite dai tag o dall’inoltro di eventi.
 
 L&#39;aggiunta di un&#39;estensione aggiunge nuovi elementi dati e nuove opzioni per la creazione di regole.
 
@@ -32,11 +33,11 @@ Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visuali
 >
 >Le modifiche diventano effettive solo dopo la loro [pubblicazione](../../publishing/overview.md).
 
-Per impostazione predefinita, Adobe fornisce estensioni che supportano integrazioni comuni. Le estensioni possono essere modificate con configurazioni personalizzate. Le configurazioni vengono fornite tramite le estensioni. Per creare una configurazione, fai clic sulla scheda dell’estensione, quindi seleziona **[!UICONTROL Aggiungi nuova configurazione]**.
+Per impostazione predefinita, Adobe fornisce estensioni che supportano diverse integrazioni comuni. Le estensioni possono essere modificate con configurazioni personalizzate. Le configurazioni vengono fornite tramite le estensioni. Per creare una configurazione, fai clic sulla scheda dell’estensione, quindi seleziona **[!UICONTROL Aggiungi nuova configurazione]**.
 
 ## Catalogo delle estensioni
 
-Utilizza il catalogo delle estensioni per sfogliare, configurare e distribuire tecnologie marketing e pubblicitarie create e gestite da fornitori software indipendenti, oltre che da estensioni per soluzioni di Adobe.
+Utilizza il catalogo delle estensioni per trovare, configurare e implementare tecnologie marketing e pubblicitarie create e gestite da fornitori software indipendenti, oltre che le estensioni per soluzioni Adobe.
 
 La pagina Estensioni offre tre visualizzazioni:
 
@@ -52,7 +53,7 @@ La pagina Estensioni offre tre visualizzazioni:
 
 Fai clic su **[!UICONTROL Estensioni]** per visualizzare tutte le estensioni installate. Puoi inoltre utilizzare il catalogo per visualizzare un elenco di tutte le estensioni disponibili e per quali estensioni sono disponibili aggiornamenti.
 
-Consulta [Riferimento estensioni](../../../extensions/web/overview.md) per informazioni dettagliate sulle estensioni di proprietà di Adobe.
+Per informazioni sulle estensioni proprietarie di Adobe, consulta la [documentazione sulle estensioni](../../../extensions/web/overview.md).
 
 ## Aggiungi una nuova estensione {#add-a-new-extension}
 
@@ -61,7 +62,7 @@ I tag sono altamente estensibili. Le estensioni aggiungono funzionalità di base
 1. Dalla pagina della panoramica di una proprietà, apri la scheda **[!UICONTROL Estensioni]**.
 1. Selezionare un&#39;estensione.
 
-   ![]()../../../images/extensions.png)
+   ![Estensione core](../../../images/extensions.png)
 
    * Se l&#39;estensione esiste, selezionala dal catalogo delle estensioni.
    * Passa il cursore sopra un&#39;estensione nell&#39;elenco per configurarla o disattivarla.
@@ -85,4 +86,4 @@ Passa il puntatore del mouse su un’estensione installata e seleziona **[!UICON
 >
 >Alcune estensioni non richiedono configurazione e non offrono opzioni di configurazione.
 
-Ciascuna estensione configurabile dispone di opzioni univoche. Per informazioni sulle opzioni disponibili per ciascuna estensione Adobe, fai riferimento a [Estensioni Reference](../../../extensions/web/overview.md) .
+Ciascuna estensione configurabile dispone di opzioni univoche. Per informazioni sulle opzioni disponibili per ciascuna estensione Adobe, fai riferimento alla [documentazione delle estensioni](../../../extensions/web/overview.md).
