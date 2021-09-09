@@ -4,26 +4,25 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-translation-type: tm+mt
-source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 50%
+ht-degree: 52%
 
 ---
 
 
-# Guida della piattaforma dati cliente in tempo reale {#rtcdp}
+# Guida di Real-time Customer Data Platform {#rtcdp}
 
-* [Panoramica su CDP in tempo reale](overview.md)
+* [Panoramica di Real-time CDP](overview.md)
 * Introduzione {#intro}
    * [Introduzione](get-started.md)
    * [Panoramica delle metriche](home-page-dashboards.md)
 * Amministrazione {#admin}
-   * [Panoramica sull&#39;amministrazione](administration/admin-overview.md)
+   * [Panoramica sull’amministrazione](administration/admin-overview.md)
 * Set di dati {#datasets}
    * [Set di dati](datasets/dataset.md)
-   * [Qualità dei dati sulla piattaforma](datasets/data-quality.md)
+   * [Qualità dei dati su Platform](datasets/data-quality.md)
 * Destinazioni {#destinations}
    * [Panoramica sulle destinazioni](destinations/overview.md)
 * Privacy e governance dei dati {#privacy}
@@ -33,12 +32,12 @@ ht-degree: 50%
    * [Panoramica del profilo](profile/profile-overview.md)
    * [Identità e spazi dei nomi delle identità](profile/identities-overview.md)
    * [Unisci criteri](profile/merge-policies.md)
-   * [Visualizzatore profilo](profile/profile-viewer.md)
+   * [Visualizzatore profili](profile/profile-viewer.md)
 * Segmenti {#segmentation}
    * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
    * [Guida al generatore di segmenti](segmentation/segment-builder-guide.md)
-   * [AI cliente](segmentation/customer-ai.md)
-* Origini {#sources}
+   * [Customer AI](segmentation/customer-ai.md)
+* Fonti {#sources}
    * [Panoramica delle origini](sources/sources-overview.md)
-* [Note sulla versione  Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Glossario di Experience Platform](https://www.adobe.com/go/platform-glossary-en)
