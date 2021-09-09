@@ -5,10 +5,9 @@ title: Risoluzione dei problemi di Origini
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli riscontrati in tutte le API [!DNL Platform], consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-## Domande frequenti 
+## Domande frequenti
 
 Di seguito è riportato un elenco delle risposte alle domande più frequenti sulle fonti.
 
@@ -74,3 +73,7 @@ L’acquisizione parziale deve essere utilizzata se **non** presenta vincoli, ad
 ### Qual è la tipica soglia di errore di acquisizione parziale?
 
 Non esiste una &quot;soglia di errore tipica&quot; per l’acquisizione parziale. Al contrario, questo valore può variare da caso d’uso a caso d’uso. Per impostazione predefinita, la soglia di errore è impostata su 5%.
+
+### Quanto tempo è necessario per l’aggiornamento dello stato di un’esecuzione di flusso dopo la creazione di un nuovo flusso di dati?
+
+Le esecuzioni del flusso non vengono generate istantaneamente e possono richiedere circa due o tre minuti per l’aggiornamento dopo il `startTime` designato. Il controllo dello stato di un’esecuzione di flusso, subito dopo la creazione di un nuovo flusso di dati, non restituisce informazioni sull’ `lastRunDetails` dell’esecuzione di flusso, in quanto non è ancora successo. Si consiglia di consentire la generazione del flusso di dati per alcuni minuti prima di controllare lo stato dell’esecuzione del flusso.
