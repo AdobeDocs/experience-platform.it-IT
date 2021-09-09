@@ -2,13 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;intervallo di date
 title: Panoramica degli avvisi
 description: Scopri gli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
-
 
 # Panoramica sugli avvisi
 
@@ -56,6 +57,10 @@ Gli avvisi possono essere ricevuti e gestiti tramite due canali:
 Gli avvisi possono essere inviati a un webhook configurato per facilitare l&#39;automazione efficiente del monitoraggio delle attività. Per ricevere avvisi tramite webhook, è necessario registrare il webhook per gli avvisi relativi alla piattaforma in Adobe Developer Console. Per passaggi specifici, consulta la guida sull’ [abbonamento alle notifiche degli eventi di Adobe I/O](./subscribe.md) .
 
 ### Interfaccia utente della piattaforma {#ui}
+
+L’interfaccia utente di Platform consente di visualizzare gli avvisi ricevuti e di gestire le regole per gli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario che le seguenti autorizzazioni di controllo accessi siano abilitate tramite Adobe Admin Console:
 

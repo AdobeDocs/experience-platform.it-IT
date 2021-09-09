@@ -2,11 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;intervallo di date
 title: Iscriviti ad Adobe I/O Event Notifications
 description: Questo documento fornisce passaggi su come effettuare l’abbonamento ad Adobi I/O di notifiche di eventi per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme a collegamenti a ulteriori informazioni su come interpretare i dati dell’evento restituiti per ciascun servizio  [!DNL Platform] applicabile.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -58,8 +59,8 @@ Nella schermata successiva viene visualizzato un elenco dei tipi di evento a cui
 >Se non sei sicuro degli eventi a cui effettuare l’abbonamento per il servizio con cui stai lavorando, consulta la documentazione di notifica specifica per il servizio:
 >
 >* [[!DNL Privacy Service] Notifiche](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] Notifiche](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] Notifiche](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] Notifiche](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] Notifiche](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -72,7 +73,7 @@ Ai fini di questa esercitazione, viene seguita la prima opzione. Seleziona la ca
 
 Quando la coppia di chiavi viene generata, viene scaricata automaticamente dal browser. Devi memorizzare questo file da solo in quanto non viene mantenuto nella Console per sviluppatori.
 
-La schermata successiva ti consente di esaminare i dettagli della nuova coppia di chiavi generata. Seleziona **[!UICONTROL Avanti]** per continuare.
+La schermata successiva ti consente di esaminare i dettagli della nuova coppia di chiavi generata. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
 
 ![](../images/notifications/keypair-generated.png)
 

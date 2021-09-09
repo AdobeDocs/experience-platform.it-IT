@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;intervallo di date
 title: Regole di avviso standard
-description: 'Il presente documento illustra le regole di avviso predefinite fornite dall''Experience Platform. '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 11%
 
 ---
-
 
 # Regole di avviso standard
 

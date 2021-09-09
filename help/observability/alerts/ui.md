@@ -2,13 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;intervallo di date
 title: Guida all’interfaccia utente degli avvisi
 description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
 
 ---
-
 
 # Guida all’interfaccia utente per gli avvisi
 
