@@ -2,8 +2,7 @@
 keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenza
 title: Widget dashboard standard
 description: 'Questa guida fornisce istruzioni dettagliate per l’aggiunta di widget standard alle dashboard di Adobe Experience Platform. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
