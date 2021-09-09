@@ -2,10 +2,10 @@
 title: Variabile libera “turbine”
 description: Scopri l’oggetto turbine, una variabile libera che fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ Utility di registrazione utilizzata per registrare i messaggi nella console. I m
 * `logger.warn(message: string)`: registra un messaggio di avvertenza nella console.
 * `logger.error(message: string)`: registra un messaggio di errore nella console.
 * `logger.debug(message: string)`: registra un messaggio di debug nella console. (Visibile solo se la registrazione `verbose` è abilitata nella console del browser.)
+* `logger.deprecation(message: string)`: Registra un messaggio di avviso nella console se l’utente ha abilitato o meno il debug dei tag.
 
 ### `onDebugChanged`
 
