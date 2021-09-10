@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
+source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '628'
 ht-degree: 10%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 10%
       * [Estensione Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connessione facebook](./catalog/social/facebook.md)
       * [Connessione linkedIn Matched Audiences](./catalog/social/linkedin.md)
+      * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Destinazioni sondaggio {#survey}
       * [Panoramica sulle destinazioni del sondaggio](./catalog/survey/overview.md)
       * [Destinazione dell&#39;estensione Foresee](./catalog/survey/foresee.md)
