@@ -1,10 +1,11 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destinations`.
 title: Operazioni degli endpoint API delle destinazioni
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 4%
+source-wordcount: '2381'
+ht-degree: 5%
 
 ---
 
@@ -383,7 +384,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
 | `uiAttributes.connectionType` | Stringa | `Server-to-server` al momento è l’unica opzione disponibile. |
 | `uiAttributes.frequency` | Stringa | `Streaming` al momento è l’unica opzione disponibile. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se la destinazione accetta attributi di profilo standard. Di solito, questi attributi sono evidenziati nella documentazione dei nostri partner. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se i clienti possono impostare spazi dei nomi personalizzati nella destinazione. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booleano | Indica se i clienti possono impostare spazi dei nomi personalizzati nella destinazione. Ulteriori informazioni su [spazi dei nomi personalizzati](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) in Adobe Experience Platform. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | Stringa | _Non mostrato nella configurazione_ di esempio. Utilizzato, ad esempio, quando il cliente [!DNL Platform] ha indirizzi e-mail semplici come attributo e la piattaforma accetta solo e-mail con hash. Qui puoi fornire la trasformazione da applicare (ad esempio, trasforma l’e-mail in minuscolo e quindi hash). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Non mostrato nella configurazione_ di esempio. Utilizzato per i casi in cui la piattaforma accetta [spazi dei nomi di identità standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (ad esempio, IDFA), in modo da limitare gli utenti Platform alla selezione solo di questi spazi dei nomi di identità. |
 | `destinationDelivery.authenticationRule` | Stringa | Indica il modo in cui i clienti [!DNL Platform] si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizza `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al tuo sistema tramite un nome utente e una password, un token portatore o un altro metodo di autenticazione. Ad esempio, puoi selezionare questa opzione se hai selezionato anche `authType: OAUTH2` o `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Utilizza `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la destinazione e il cliente [!DNL Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso è necessario creare un oggetto credenziali utilizzando la configurazione [Credentials](./credentials-configuration.md). </li><li>Utilizza `NONE` se non è necessaria alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
@@ -396,6 +397,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controlla se l&#39;ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è il nome del segmento di Experience Platform. |
 | `segmentMappingConfig.audienceTemplateId` | Booleano | Il `instanceId` del [modello di metadati del pubblico](./audience-metadata-management.md) utilizzato per questa destinazione. Per impostare un modello di metadati del pubblico, leggi [riferimento API per i metadati del pubblico](./audience-metadata-api.md). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Aggiornare una configurazione di destinazione esistente {#update}
 

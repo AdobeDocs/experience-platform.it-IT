@@ -1,9 +1,10 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destinations/publish`.
 title: Operazioni dell’endpoint API Publish Destinations
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 5%
 
 ---
@@ -123,6 +124,8 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di destinazioni
 | `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experienci Platform per le quali la destinazione deve essere disponibile. |
 | `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione della destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
 | `publishDetailsList.publishedDate` | Stringa | Data in cui la destinazione è stata inviata per la pubblicazione, in epoch time. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Aggiornare una richiesta di pubblicazione di destinazione esistente {#update}
 

@@ -1,10 +1,11 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l’endpoint API `/authoring/sample-profiles`, per generare profili di esempio da utilizzare nel test di destinazione.
 title: Operazioni API per la generazione di profili di esempio
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 2%
+source-wordcount: '805'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | L’ID dell’istanza di destinazione in base a cui stai generando profili di esempio. |
 | `{COUNT}` | *Facoltativo*. Il numero di profili di esempio che stai generando. Il parametro può accettare valori compresi tra `1 - 1000`. <br> Se il parametro count non è specificato, il numero predefinito di profili generati è determinato dal  `maxUsersPerRequest` valore nella configurazione [ del server di ](./destination-server-api.md#create)destinazione. Se questa proprietà non è definita, Adobe genererà un profilo di esempio. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **Richiesta**
@@ -170,6 +173,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con il numero specificato di
 | `xdm:status` | Indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
 | `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un singolo utente, insieme ai relativi namespace associati. Per ulteriori informazioni su `identityMap`, leggere [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Generare profili di esempio in base allo schema di destinazione {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | L’ID della configurazione di destinazione in base alla quale stai generando profili di esempio. |
 | `{COUNT}` | *Facoltativo*. Il numero di profili di esempio che stai generando. Il parametro può accettare valori compresi tra `1 - 1000`. <br> Se il parametro count non è specificato, il numero predefinito di profili generati è determinato dal  `maxUsersPerRequest` valore nella configurazione [ del server di ](./destination-server-api.md#create)destinazione. Se questa proprietà non è definita, Adobe genererà un profilo di esempio. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 

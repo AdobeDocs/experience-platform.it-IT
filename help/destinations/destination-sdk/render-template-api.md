@@ -1,10 +1,11 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/render`, per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
 title: Operazioni API per i modelli di rendering
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | L&#39;ID della configurazione di destinazione per la quale stai eseguendo il rendering dei dati esportati. |
 | `template` | Versione con sequenza di caratteri del modello in base alla quale esegui il rendering dei dati esportati. |
 | `profiles` | Per aggiungere profili al corpo della chiamata , puoi generarne alcuni utilizzando l&#39; [API di generazione del profilo di esempio](./sample-profile-generation-api.md). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Puoi eseguire il rendering dei dati esportati come mostrato negli esempi seguenti:
