@@ -1,7 +1,8 @@
 ---
 description: Le specifiche del server e del modello possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint comune `/authoring/destination-servers`.
 title: Opzioni di configurazione per le specifiche del server e del modello nell’SDK di destinazione
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 7%
@@ -23,7 +24,7 @@ Le specifiche del server e del modello possono essere configurate in Adobe Exper
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ Questo processo distribuisce i dati utente sotto forma di serie di messaggi HTTP
 |---|---|---|
 | `name` | Stringa | Rappresenta un nome descrittivo del server, visibile solo ad Adobe. Questo nome non è visibile ai partner o clienti. Esempio `Moviestar destination server`. |
 | `destinationServerType` | Stringa | `URL_BASED` al momento è l’unica opzione disponibile. |
-| `templatingStrategy` | Stringa | <ul><li>Utilizza `PEBBLE_V1` se l&#39;Adobe deve trasformare l&#39;URL nel campo `value` sottostante. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Utilizza `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se disponi di un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | Stringa | <ul><li>Utilizza `PEBBLE_V1` se l&#39;Adobe deve trasformare l&#39;URL nel campo `value` sottostante. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilizza `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se disponi di un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | Stringa | Inserisci l’indirizzo dell’endpoint API a cui Experience Platform deve connettersi. |
 
 {style=&quot;table-layout:auto&quot;}

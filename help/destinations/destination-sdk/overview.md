@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK è un set di API di configurazione che ti consentono di configurare pattern di integrazione di destinazione, ad Experience Platform per distribuire i dati di pubblico e profilo all’endpoint, in base ai dati e ai formati di autenticazione desiderati. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 title: SDK per destinazione Adobe Experience Platform
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 2%
 
 ---
@@ -63,8 +63,8 @@ L&#39;accesso all&#39;SDK di destinazione varia a seconda dello stato come clien
 ---------|----------|
 | Fornitore di software indipendente (ISV) | Partecipa al [programma Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud.html) e richiedi il provisioning di una sandbox di Experience Platform per accedere all&#39;SDK di destinazione. |
 | Integratore di sistema (SI) | È necessario essere a livello Gold o Platinum nel [programma Adobe Solution Partner](https://solutionpartners.adobe.com/home.html) e otterrai un Experience Platform di provisioning sandbox e l&#39;accesso all&#39;SDK di destinazione. |
-| Experience Platform del cliente sul pacchetto Activation | Per impostazione predefinita, puoi accedere alle sandbox di Experience Platform e all’SDK di destinazione. |
-| Experience Platform di clienti sul pacchetto Real-time CDP | Non hai accesso all’SDK di destinazione, ma hai accesso a tutte le destinazioni prodotti configurate da altre aziende che utilizzano l’SDK di destinazione e pubblicate tra le organizzazioni Experience Platform. |
+| Experience Platform di clienti sul [pacchetto di attivazione](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Per impostazione predefinita, puoi accedere alle sandbox di Experience Platform e all’SDK di destinazione. |
+| Experience Platform di clienti sul [pacchetto Real-time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Non hai accesso all’SDK di destinazione, ma hai accesso a tutte le destinazioni prodotti configurate da altre aziende che utilizzano l’SDK di destinazione e pubblicate tra le organizzazioni Experience Platform. |
 
 {style=&quot;table-layout:auto&quot;}
 
