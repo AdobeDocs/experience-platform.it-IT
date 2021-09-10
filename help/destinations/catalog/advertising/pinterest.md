@@ -1,7 +1,7 @@
 ---
 title: Connessione all’elenco dei clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+source-git-commit: 96086324e644d4e2b2b2a3d03dce393c49c2d52e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
