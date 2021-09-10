@@ -2,9 +2,9 @@
 title: Panoramica della raccolta dati end-to-end
 description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando le tecnologie di raccolta dati fornite da Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Per informazioni su come concedere autorizzazioni per le funzionalità di Platfo
 
 ## Riepilogo del processo
 
-Il processo di configurazione della rete Edge per il sito Web può essere riassunto come segue:
+Il processo di configurazione della raccolta dati per il sito web può essere riassunto come segue:
 
 1. [Creare uno ](#schema) schema determina la struttura dei dati quando vengono inviati alla rete Edge.
 1. [Crea un ](#datastream) datastreamper configurare le destinazioni a cui desideri inviare i dati.
