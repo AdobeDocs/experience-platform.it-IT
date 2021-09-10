@@ -1,9 +1,10 @@
 ---
 title: Panoramica della raccolta dati end-to-end
 description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando le tecnologie di raccolta dati fornite da Adobe Experience Platform.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, per raccolta dati si intendono diverse tecnologie che lavorano insieme per raccogliere i dati da trasferire ad altri prodotti Adobe o a destinazioni di terze parti. Per inviare i dati dell’evento dall’applicazione a Adobe Experience Platform Edge Network, è importante comprendere queste tecnologie di base e come configurarle in modo da inviare i dati alle destinazioni richieste, quando necessario.
 
-Questa guida fornisce un tutorial di alto livello su come inviare un evento tramite la rete Edge utilizzando le tecnologie di raccolta dati. In particolare, l&#39;esercitazione descrive i passaggi necessari per installare e configurare l&#39;estensione tag Adobe Experience Platform Web SDK all&#39;interno dell&#39;interfaccia utente di raccolta dati.
+Questa guida fornisce un tutorial di alto livello su come inviare un evento tramite la rete Edge utilizzando le tecnologie di raccolta dati. In particolare, l&#39;esercitazione descrive i passaggi necessari per installare e configurare l&#39;estensione tag Adobe Experience Platform Web SDK all&#39;interno dell&#39;interfaccia utente di raccolta dati (precedentemente Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ Un datastream è una configurazione che indica alla rete Edge in cui desideri in
 >
 >Se desideri utilizzare [inoltro eventi](../tags/ui/event-forwarding/overview.md) (partendo dal presupposto che la tua organizzazione disponga di una licenza per la funzionalità), devi abilitarlo per un datastream nello stesso modo in cui abiliti i prodotti Adobe. I dettagli su questo processo sono descritti in una sezione [successiva](#event-forwarding).
 
-Nell’interfaccia utente di raccolta dati, seleziona **[!UICONTROL Datastreams]**. Da qui è possibile selezionare un datastream esistente dall&#39;elenco da modificare, oppure è possibile creare una nuova configurazione selezionando **[!UICONTROL Nuovo Datastream]**.
+Nell’interfaccia utente di raccolta dati, seleziona **[!UICONTROL Datastreams]**. Da qui, è possibile selezionare un datastream esistente dall&#39;elenco da modificare, oppure è possibile creare una nuova configurazione selezionando **[!UICONTROL Nuovo Datastream]**.
 
 ![Datastream](./images/e2e/datastreams.png)
 
@@ -179,9 +180,26 @@ Una volta completata la mappatura dei dati sullo schema, fornisci un nome per l&
 
 Dopo aver salvato l’elemento dati, il passaggio successivo consiste nel creare una regola che lo invierà alla rete Edge ogni volta che si verifica un determinato evento sul sito web (ad esempio quando un cliente aggiunge un prodotto a un carrello).
 
-Ad esempio, in questa sezione viene illustrato come creare una regola che si attivi quando un cliente aggiunge un elemento a un carrello. Tuttavia, puoi impostare regole per praticamente qualsiasi evento che può verificarsi sul tuo sito web.
+Puoi impostare regole per praticamente qualsiasi evento che può verificarsi sul tuo sito web. Ad esempio, in questa sezione viene illustrato come creare una regola che si attivi quando un cliente invia un modulo. Il seguente HTML rappresenta una semplice pagina web con un modulo &quot;Aggiungi al carrello&quot;, che sarà oggetto della regola:
 
-Seleziona **[!UICONTROL Regole]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Crea nuova regola]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Regole]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Crea nuova regola]**.
 
 ![Regole](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ Nella schermata successiva, specifica un nome per la regola. Da qui, il passaggi
 
 ![Regola di nome](./images/e2e/name-rule.png)
 
-Viene visualizzata la pagina di configurazione dell’evento. Per configurare un evento, devi innanzitutto selezionare il tipo di evento. I tipi di evento vengono forniti dalle estensioni. Per impostare un evento &quot;invio modulo&quot;, ad esempio, seleziona l’estensione **[!UICONTROL Core]**, quindi seleziona il tipo di evento **[!UICONTROL Submit]** sotto la categoria **[!UICONTROL Form]** . Nella finestra di dialogo di configurazione visualizzata, puoi fornire il selettore CSS per il modulo specifico su cui desideri attivare la regola.
+Viene visualizzata la pagina di configurazione dell’evento. Per configurare un evento, devi innanzitutto selezionare il tipo di evento. I tipi di evento vengono forniti dalle estensioni. Per impostare un evento &quot;invio modulo&quot;, ad esempio, seleziona l’estensione **[!UICONTROL Core]**, quindi seleziona il tipo di evento **[!UICONTROL Submit]** sotto la categoria **[!UICONTROL Form]** .
 
 >[!NOTE]
 >
 >Per ulteriori informazioni sui diversi tipi di eventi forniti da estensioni Web di Adobe, tra cui come configurarli, consulta la sezione [Guida di riferimento delle estensioni Adobe](../tags/extensions/web/overview.md) nella documentazione sui tag.
 
-Seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;evento alla regola.
+L’evento di invio del modulo consente di utilizzare un [selettore CSS](https://www.w3schools.com/css/css_selectors.asp) per fare riferimento a un elemento specifico su cui attivare la regola. Nell’esempio seguente, viene utilizzato l’ID `add-to-cart-form` in modo che questa regola venga attivata solo per il modulo &quot;Aggiungi al carrello&quot;. Seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;evento alla regola.
 
 ![Configurazione evento](./images/e2e/event-config.png)
 
@@ -255,4 +273,4 @@ Al termine della compilazione, il passaggio finale è quello di aggiornare il da
 
 ## Passaggi successivi
 
-Questa guida fornisce una panoramica completa e dettagliata su come inviare dati alla rete Edge tramite l’SDK per web di Platform. Per ulteriori informazioni sui vari componenti e servizi coinvolti, consulta la documentazione collegata a in questa guida.
+Questa guida fornisce una panoramica completa e dettagliata su come inviare dati alla rete Edge tramite l’SDK per web di Platform. Per ulteriori informazioni sui vari componenti e servizi interessati, consulta la documentazione collegata a in questa guida.
