@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Analytics Extension
-description: Note aggiornate sull’estensione tag di Adobe Analytics in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Note aggiornate sulla versione dell’estensione tag Adobe Analytics in Adobe Experience Platform.
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 94%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
@@ -13,6 +14,15 @@ ht-degree: 94%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 24 agosto 2021
+
+### Estensione Adobe Analytics 1.8.6
+
+#### Correzioni di bug
+
+* Aggiornato [AppMeasurement alla versione v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it).
+* È stato aggiornato fallback linkName per eseguire il mirroring della logica Activity Map invece di utilizzare innerHTML.
 
 ## 6 agosto 2020
 
@@ -24,7 +34,7 @@ ht-degree: 94%
 
 #### Funzioni
 
-* È stato aggiornato [AppMeasurement alla versione 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it).
+* È stato aggiornato [AppMeasurement alla versione 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * È stata introdotta una piccola modifica nell’interfaccia utente e l’impostazione aggiuntiva è inserita in modalità ridotta in un pannello a soffietto, anziché come casella di controllo.
 
 ## 2 giugno 2020
@@ -148,7 +158,7 @@ ht-degree: 94%
 
 #### Correzioni di bug
 
-* Estensione ridotta dopo aver trovato un bug in appMeasurement 2.13.0. appMeasurement 2.13.0 causava un problema che non inviava l&#39;ECID, quindi se hai installato 1.7.3 ti consigliamo di effettuare l&#39;aggiornamento alla versione 1.7.4 per evitare il problema. I clearVar continueranno fino a quando non verrà distribuita una versione aggiornata di appMeasurement
+* Estensione ridotta dopo aver trovato un bug in AppMeasurement 2.13.0. causava un problema che non inviava l&#39;ECID, quindi se hai installato 1.7.3 ti consigliamo di effettuare l&#39;aggiornamento alla versione 1.7.4 per evitare il problema. I clearVar continueranno fino a quando non verrà distribuita una versione aggiornata di AppMeasurement
 
 ## 12 aprile 2019
 
@@ -156,7 +166,7 @@ ht-degree: 94%
 
 #### Correzioni di bug
 
-* Aggiornamento dell&#39;estensione Adobe Analytics ad appMeasurement 2.13.0 che include una correzione a un problema clearVar noto.
+* Aggiornamento dell&#39;estensione Adobe Analytics ad AppMeasurement 2.13.0 che include una correzione a un problema clearVar noto.
 
 ## 21 marzo 2019
 
@@ -165,7 +175,7 @@ ht-degree: 94%
 #### Funzioni
 
 * Aggiornamento dell&#39;estensione Adobe Analytics a DIL 9.1.
-* Aggiornamento dell&#39;estensione Adobe Analytics ad appMeasurement 2.12.
+* Aggiornamento dell&#39;estensione Adobe Analytics ad AppMeasurement 2.12.
 * Aggiornamento della visualizzazione dell&#39;estensione Adobe Analytics a React-Spectrum.
 * Durante la configurazione delle suite di rapporti nella pagina di configurazione, ora visualizzi un menu a discesa di tutte le suite di rapporti della società per facilitare la selezione della suite di rapporti appropriata.
 
@@ -255,7 +265,7 @@ ht-degree: 94%
 #### **Funzioni**
 
 * AppMeasurement è stato aggiornato alla versione 2.6
-* Il tracker inizializzato di Analytics ora è esposto tramite un modulo condiviso nell&#39;estensione tag di Adobe Experience Platform in modo che altre estensioni possano includere codice per interagire con esso.
+* Il tracker inizializzato di Analytics ora è esposto tramite un modulo condiviso nell’estensione tag Adobe Experience Platform, così altre estensioni possono includere il codice necessario per interagire con esso.
 
 #### **Correzioni di bug**
 
