@@ -3,9 +3,9 @@ keywords: InMoment;momento;InMomento;Avvia l'integrazione
 title: Estensione InMoment
 description: L’estensione InMoment è una destinazione di sondaggio in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul fun
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni. e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

@@ -3,9 +3,9 @@ keywords: Pinterest;pinterest;Pinterest Conversion Tracking;tracciamento convers
 title: Estensione pinterest Conversion Tracking
 description: L'estensione Pinterest Conversion Tracking è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '473'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul fun
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni. e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
