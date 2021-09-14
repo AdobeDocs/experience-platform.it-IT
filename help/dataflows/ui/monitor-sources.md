@@ -6,15 +6,18 @@ title: Monitorare i flussi di dati per le sorgenti nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5b52d7cc2a39ce15b5a9568df14c86624ae069a
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
 
 # Monitorare i flussi di dati per le sorgenti nell’interfaccia utente
+
+>[!IMPORTANT]
+>
+>Le origini di streaming, come [origine API HTTP](../../sources/connectors/streaming/http.md), non sono attualmente supportate dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
 In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di sorgenti, analizzati all’interno di Experience Platform, e attivati in un’ampia varietà di destinazioni. Platform facilita il processo di tracciamento di questo flusso di dati potenzialmente non lineare grazie alla trasparenza dei flussi di dati.
 
@@ -35,39 +38,39 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 ## Vista di monitoraggio aggregato
 
-Nell’ [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoring]** dal menu di navigazione a sinistra per accedere al dashboard [!UICONTROL Monitoring]. Il dashboard [!UICONTROL Monitoring] contiene metriche e informazioni su tutti i flussi di dati di origine, comprese informazioni sullo stato del traffico dei dati da un’origine a [!DNL Identity Service] e a [!DNL Profile].
+Nella [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dal menu di navigazione a sinistra per accedere al dashboard [!UICONTROL Monitoraggio]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni su tutti i flussi di dati di origine, comprese informazioni sullo stato del traffico dei dati da un&#39;origine a [!DNL Identity Service] e a [!DNL Profile].
 
-Al centro del dashboard c&#39;è il pannello [!UICONTROL Source ingestion], che contiene metriche e grafici che mostrano i dati sui record acquisiti e i record non riusciti.
+Al centro del dashboard c&#39;è il pannello [!UICONTROL Origine ingestione], che contiene metriche e grafici che mostrano i dati sui record acquisiti e i record non riusciti.
 
 ![dashboard di monitoraggio](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
-Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione delle ultime 24 ore. Selezionare **[!UICONTROL Last 24 hours]** per regolare l&#39;intervallo di tempo dei record visualizzati.
+Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione delle ultime 24 ore. Selezionare **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati.
 
 ![cambia data](../assets/ui/monitor-sources/change-date.png)
 
-Viene visualizzata una finestra a comparsa del calendario che fornisce le opzioni per l’inserimento di intervalli di tempo alternativi. Seleziona **[!UICONTROL Last 30 days]**, quindi seleziona **[!UICONTROL Apply]**
+Viene visualizzata una finestra a comparsa del calendario che fornisce le opzioni per l’inserimento di intervalli di tempo alternativi. Seleziona **[!UICONTROL Ultimi 30 giorni]**, quindi seleziona **[!UICONTROL Applica]**
 
 ![regolazione del tempo](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-I grafici sono attivati per impostazione predefinita ed è possibile disattivarli per espandere l&#39;elenco delle origini riportate di seguito. Seleziona l’opzione **[!UICONTROL Metrics and graphs]** per disattivare i grafici.
+I grafici sono attivati per impostazione predefinita ed è possibile disattivarli per espandere l&#39;elenco delle origini riportate di seguito. Seleziona l&#39;interruttore **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
 ![metriche e grafici](../assets/ui/monitor-sources/metrics-graphs.png)
 
 | Acquisizione sorgente | Descrizione |
 | ---------------- | ----------- |
-| [!UICONTROL Records ingested ] | Numero totale di record acquisiti. |
-| [!UICONTROL Records failed] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
-| [!UICONTROL Total failed dataflows] | Il numero totale di flussi di dati con stato `failed`. |
+| [!UICONTROL Record acquisiti  ] | Numero totale di record acquisiti. |
+| [!UICONTROL Record non elaborati] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
+| [!UICONTROL Totale flussi di dati non riusciti] | Il numero totale di flussi di dati con stato `failed`. |
 
 Nell’elenco di acquisizione di origine sono visualizzate tutte le origini che contengono almeno un account esistente. L’elenco include inoltre informazioni sul tasso di acquisizione di ogni origine, sul numero di record con errore e sul numero totale di flussi di dati con errore in base all’intervallo di tempo applicato.
 
 ![acquisizione di origine](../assets/ui/monitor-sources/source-ingestion.png)
 
-Per ordinare l’elenco delle origini, seleziona **[!UICONTROL My sources]** e quindi seleziona la categoria scelta dal menu a discesa. Ad esempio, per concentrarti sugli archivi cloud, seleziona **[!UICONTROL Cloud storage]**
+Per ordinare l&#39;elenco delle origini, selezionare **[!UICONTROL Risorse personali]**, quindi selezionare la categoria scelta dal menu a discesa. Ad esempio, per concentrarti sugli archivi cloud, seleziona **[!UICONTROL Cloud storage]**
 
 ![ordinabile per categoria](../assets/ui/monitor-sources/sort-by-category.png)
 
-Per visualizzare tutti i flussi di dati esistenti in tutte le origini, selezionare **[!UICONTROL Dataflows]**.
+Per visualizzare tutti i flussi di dati esistenti in tutte le origini, selezionare **[!UICONTROL Flussi di dati]**.
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
@@ -75,7 +78,7 @@ In alternativa, è possibile inserire una sorgente nella barra di ricerca per is
 
 ![ricerca](../assets/ui/monitor-sources/search.png)
 
-Viene visualizzato un elenco di flussi di dati. Per limitare l’elenco e attivare i flussi di dati con errori, selezionare **[!UICONTROL Show failures only]**.
+Viene visualizzato un elenco di flussi di dati. Per limitare l&#39;elenco e attivare i flussi di dati con errori, selezionare **[!UICONTROL Mostra solo errori]**.
 
 ![show-failed-only](../assets/ui/monitor-sources/show-failures-only.png)
 
@@ -87,31 +90,31 @@ La pagina di esecuzione del flusso di dati visualizza informazioni sulla data di
 
 ![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
 
-La pagina [!UICONTROL Dataflow run details] visualizza informazioni sui metadati del flusso di dati, sullo stato di acquisizione parziale e sul riepilogo degli errori. Il riepilogo degli errori contiene lo specifico errore di livello principale che mostra in quale fase il processo di acquisizione ha rilevato un errore.
+La pagina [!UICONTROL Dettagli esecuzione flusso di dati] visualizza informazioni sui metadati del flusso di dati, sullo stato di inserimento parziale e sul riepilogo degli errori. Il riepilogo degli errori contiene lo specifico errore di livello principale che mostra in quale fase il processo di acquisizione ha rilevato un errore.
 
 Scorri verso il basso per visualizzare informazioni più specifiche sull’errore che si è verificato.
 
 ![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-Il pannello [!UICONTROL Dataflow run errors] visualizza l&#39;errore specifico e il codice di errore che hanno causato l&#39;errore di inserimento del flusso di dati. In questo scenario, si è verificato un errore di trasformazione di mappatura, con conseguente errore di 24 record.
+Il pannello [!UICONTROL Errori di esecuzione del flusso di dati] visualizza l&#39;errore specifico e il codice di errore che hanno causato l&#39;errore di inserimento del flusso di dati. In questo scenario, si è verificato un errore di trasformazione di mappatura, con conseguente errore di 24 record.
 
-Seleziona **[!UICONTROL Files]** per ulteriori informazioni.
+Seleziona **[!UICONTROL File]** per ulteriori informazioni.
 
 ![errori di esecuzione del flusso di dati](../assets/ui/monitor-sources/dataflow-run-errors.png)
 
-Il pannello [!UICONTROL Files] contiene informazioni sul nome e il percorso del file.
+Il pannello [!UICONTROL File] contiene informazioni sul nome e il percorso del file.
 
-Per una rappresentazione più granulare dell’errore, seleziona **[!UICONTROL Preview error diagnostics]**.
+Per una rappresentazione più granulare dell&#39;errore, selezionare **[!UICONTROL Anteprima diagnostica errori]**.
 
 ![file](../assets/ui/monitor-sources/files.png)
 
-Viene visualizzata la finestra [!UICONTROL Error diagnostics preview], che visualizza un&#39;anteprima di un massimo di 100 errori nel flusso di dati. È possibile selezionare **[!UICONTROL Download]** per recuperare un comando curl, che consente quindi di scaricare la diagnostica degli errori.
+Viene visualizzata la finestra [!UICONTROL Anteprima diagnostica errori], che visualizza un&#39;anteprima di un massimo di 100 errori nel flusso di dati. È possibile selezionare **[!UICONTROL Scarica]** per recuperare un comando curl, che consente di scaricare la diagnostica dell&#39;errore.
 
-Al termine, seleziona **[!UICONTROL Close]**
+Al termine, seleziona **[!UICONTROL Chiudi]**
 
 ![diagnostica degli errori](../assets/ui/monitor-sources/error-diagnostics.png)
 
-Puoi usare il sistema di breadcrumb nell’intestazione superiore per tornare al dashboard [!UICONTROL Monitoring]. Seleziona **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** per tornare alla pagina precedente, quindi seleziona **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** per tornare alla pagina dei flussi di dati.
+Puoi usare il sistema di breadcrumb nell&#39;intestazione superiore per tornare al dashboard [!UICONTROL Monitoraggio]. Seleziona **[!UICONTROL Esegui inizio: 14/02/2021, 9:47 PM]** per tornare alla pagina precedente, quindi selezionare **[!UICONTROL Flusso di dati: Demo di acquisizione dei dati fedeltà - Non riuscito]** a tornare alla pagina dei flussi di dati.
 
 ![breadcrumb](../assets/ui/monitor-sources/breadcrumbs.png)
 
@@ -125,15 +128,15 @@ Dalla pagina dei flussi di dati, individua un flusso di dati di successo e selez
 
 ![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
 
-La pagina [!UICONTROL Source ingestion] contiene informazioni che confermano il corretto inserimento del flusso di dati. Da qui, puoi iniziare a monitorare il percorso del flusso di dati dal livello di origine a [!DNL Identity Service] e quindi a [!DNL Profile].
+La pagina [!UICONTROL Origine ingestione] contiene informazioni che confermano il corretto inserimento del flusso di dati. Da qui, puoi iniziare a monitorare il percorso del flusso di dati dal livello di origine a [!DNL Identity Service] e quindi a [!DNL Profile].
 
-Seleziona **[!UICONTROL Identities]** per visualizzare l’acquisizione nel passaggio [!UICONTROL Identities] .
+Seleziona **[!UICONTROL Identità]** per visualizzare l’acquisizione nel passaggio [!UICONTROL Identità] .
 
 ![origini](../assets/ui/monitor-sources/sources.png)
 
 ### [!DNL Identity] metriche
 
-La pagina [!UICONTROL Identity processing] contiene informazioni sui record acquisiti in [!DNL Identity Service], tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati.
+La pagina [!UICONTROL Elaborazione identità] contiene informazioni sui record acquisiti in [!DNL Identity Service], tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati.
 
 Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto all’ora di avvio del flusso di dati per visualizzare ulteriori informazioni sull’esecuzione del flusso di dati [!DNL Identity].
 
@@ -141,31 +144,31 @@ Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png
 
 | Metriche di identità | Descrizione |
 | ---------------- | ----------- |
-| [!UICONTROL Records received] | Il numero di record ricevuti da [!DNL Data Lake]. |
-| [!UICONTROL Records failed] | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
-| [!UICONTROL Records skipped] | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga del record era presente un solo identificatore. |
-| [!UICONTROL Records ingested] | Il numero di record acquisiti in [!DNL Identity Service]. |
-| [!UICONTROL Total records] | Il conteggio totale di tutti i record, inclusi quelli non riusciti, i record saltati, [!DNL Identities] aggiunti e i record duplicati. |
-| [!UICONTROL Identities added] | Numero di nuovi identificatori netti aggiunti a [!DNL Identity Service]. |
-| [!UICONTROL Graphs created] | Numero di nuovi grafici di identità netti creati in [!DNL Identity Service]. |
-| [!UICONTROL Graphs updated] | Numero di grafici di identità esistenti aggiornati con nuovi bordi. |
-| [!UICONTROL Failed dataflow runs] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
-| [!UICONTROL Processing time] | La marca temporale dall’inizio dell’acquisizione al completamento. |
-| [!UICONTROL Status] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
+| [!UICONTROL Record ricevuti] | Il numero di record ricevuti da [!DNL Data Lake]. |
+| [!UICONTROL Record non elaborati] | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| [!UICONTROL Record saltati] | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga del record era presente un solo identificatore. |
+| [!UICONTROL Record acquisiti] | Il numero di record acquisiti in [!DNL Identity Service]. |
+| [!UICONTROL Record totali] | Il conteggio totale di tutti i record, inclusi quelli non riusciti, i record saltati, [!DNL Identities] aggiunti e i record duplicati. |
+| [!UICONTROL Identità aggiunte] | Numero di nuovi identificatori netti aggiunti a [!DNL Identity Service]. |
+| [!UICONTROL Grafici creati] | Numero di nuovi grafici di identità netti creati in [!DNL Identity Service]. |
+| [!UICONTROL Grafici aggiornati] | Numero di grafici di identità esistenti aggiornati con nuovi bordi. |
+| [!UICONTROL Esecuzione del flusso di dati non riuscita] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
+| [!UICONTROL Tempo di elaborazione] | La marca temporale dall’inizio dell’acquisizione al completamento. |
+| [!UICONTROL Stato] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
 
-Nella pagina [!UICONTROL Dataflow run details] sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati [!DNL Identity], inclusi l’ID organizzazione IMS e l’ID di esecuzione del flusso di dati. In questa pagina vengono visualizzati anche il codice di errore e il messaggio di errore corrispondenti forniti da [!DNL Identity Service], nel caso in cui si verifichino errori nel processo di acquisizione.
+Nella pagina [!UICONTROL Dettagli esecuzione flusso di dati] vengono visualizzate ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Identity], inclusi l&#39;ID organizzazione IMS e l&#39;ID esecuzione del flusso di dati. In questa pagina vengono visualizzati anche il codice di errore e il messaggio di errore corrispondenti forniti da [!DNL Identity Service], nel caso in cui si verifichino errori nel processo di acquisizione.
 
-Seleziona **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** per tornare alla pagina precedente.
+Seleziona **[!UICONTROL Esegui inizio: 14/02/2021, alle 9:47 PM]** per tornare alla pagina precedente.
 
 ![identity-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
 
-Dalla pagina [!UICONTROL Identity processing] , seleziona **[!UICONTROL Profiles]** per visualizzare lo stato dell’acquisizione dei record nel passaggio [!UICONTROL Profiles] .
+Dalla pagina [!UICONTROL Elaborazione identità], seleziona **[!UICONTROL Profili]** per visualizzare lo stato dell’acquisizione dei record nel passaggio [!UICONTROL Profili] .
 
 ![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
 
 ### [!DNL Profile] metriche
 
-La pagina [!UICONTROL Profile processing] contiene informazioni sui record acquisiti in [!DNL Profile], tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo.
+La pagina [!UICONTROL Elaborazione profilo] contiene informazioni sui record acquisiti in [!DNL Profile], tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo.
 
 Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto all’ora di avvio del flusso di dati per visualizzare ulteriori informazioni sull’esecuzione del flusso di dati [!DNL Profile].
 
@@ -173,22 +176,22 @@ Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png
 
 | Metriche del profilo | Descrizione |
 | --------------- | ----------- |
-| [!UICONTROL Records received] | Il numero di record ricevuti da [!DNL Data Lake]. |
-| [!UICONTROL Records failed ] | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
-| [!UICONTROL Profile fragments added] | Numero di nuovi frammenti [!DNL Profile] aggiunti. |
-| [!UICONTROL Profile fragments updated] | Numero di frammenti [!DNL Profile] esistenti aggiornati |
-| [!UICONTROL Total Profile fragments] | Numero totale di record scritti in [!DNL Profile], inclusi tutti i frammenti [!DNL Profile] esistenti aggiornati e i nuovi frammenti [!DNL Profile] creati. |
-| [!UICONTROL Failed dataflow runs] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
-| [!UICONTROL Processing time] | La marca temporale dall’inizio dell’acquisizione al completamento. |
-| [!UICONTROL Status] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
+| [!UICONTROL Record ricevuti] | Il numero di record ricevuti da [!DNL Data Lake]. |
+| [!UICONTROL Record non elaborati  ] | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
+| [!UICONTROL Frammenti di profilo aggiunti] | Numero di nuovi frammenti [!DNL Profile] aggiunti. |
+| [!UICONTROL Frammenti di profilo aggiornati] | Numero di frammenti [!DNL Profile] esistenti aggiornati |
+| [!UICONTROL Frammenti di profilo totali] | Numero totale di record scritti in [!DNL Profile], inclusi tutti i frammenti [!DNL Profile] esistenti aggiornati e i nuovi frammenti [!DNL Profile] creati. |
+| [!UICONTROL Esecuzione del flusso di dati non riuscita] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
+| [!UICONTROL Tempo di elaborazione] | La marca temporale dall’inizio dell’acquisizione al completamento. |
+| [!UICONTROL Stato] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
 
-Nella pagina [!UICONTROL Dataflow run details] sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati [!DNL Profile], inclusi l’ID organizzazione IMS e l’ID di esecuzione del flusso di dati. In questa pagina vengono visualizzati anche il codice di errore e il messaggio di errore corrispondenti forniti da [!DNL Profile], nel caso in cui si verifichino errori nel processo di acquisizione.
+Nella pagina [!UICONTROL Dettagli esecuzione flusso di dati] vengono visualizzate ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Profile], inclusi l&#39;ID organizzazione IMS e l&#39;ID esecuzione del flusso di dati. In questa pagina vengono visualizzati anche il codice di errore e il messaggio di errore corrispondenti forniti da [!DNL Profile], nel caso in cui si verifichino errori nel processo di acquisizione.
 
 ![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai monitorato correttamente il flusso di dati di acquisizione da livello di origine a [!DNL Identity Service] e a [!DNL Profile] utilizzando il dashboard **[!UICONTROL Monitoring]**. Hai inoltre identificato con successo gli errori che hanno contribuito al fallimento dei flussi di dati durante il processo di acquisizione. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai monitorato correttamente il flusso di dati di acquisizione da livello di origine a [!DNL Identity Service] e a [!DNL Profile] utilizzando il dashboard **[!UICONTROL Monitoraggio]**. Hai inoltre identificato con successo gli errori che hanno contribuito al fallimento dei flussi di dati durante il processo di acquisizione. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica del profilo cliente in tempo reale](../../profile/home.md)
 * [Panoramica di Data Science Workspace](../../data-science-workspace/home.md)
