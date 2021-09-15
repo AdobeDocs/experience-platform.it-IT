@@ -4,10 +4,10 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Formato del messaggio
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
-ht-degree: 2%
+source-wordcount: '2056'
+ht-degree: 1%
 
 ---
 
@@ -775,17 +775,22 @@ Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
 }
 ```
 
-### Includi chiave di aggregazione nel modello per raggruppare i profili esportati in base a vari criteri {#template-aggregation-key}
+### Includi chiave di aggregazione nel modello per accedere ai profili esportati raggruppati per vari criteri {#template-aggregation-key}
 
-Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, puoi modificare il modello di trasformazione del messaggio per raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o namespace di identità, come mostrato negli esempi seguenti.
+Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o spazi dei nomi di identità.
+
+Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione di cui sopra, come mostrato negli esempi nelle sezioni seguenti. In questo modo puoi formattare il messaggio HTTP esportato da Experience Platform in modo che corrisponda al formato previsto dalla destinazione.
 
 #### Utilizza la chiave di aggregazione ID segmento nel modello {#aggregation-key-segment-id}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi utilizzare `segmentId` nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione:
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione vengono raggruppati per ID segmento. Vedi sotto come puoi accedere all’ID del segmento nel modello.
 
 **Ingresso**
 
-Considera i quattro profili seguenti, in cui i primi due fanno parte del segmento con l’ ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` e gli altri due fanno parte del segmento con l’ ID `8f812592-3f06-416b-bd50-e7831848a31a`.
+Considera i quattro profili seguenti, dove:
+* i primi due fanno parte del segmento con l’ ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* il terzo profilo fa parte del segmento con l’ ID del segmento `8f812592-3f06-416b-bd50-e7831848a31a`
+* il quarto profilo fa parte di entrambi i segmenti di cui sopra.
 
 Profilo 1:
 
@@ -873,6 +878,10 @@ Profilo 4:
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Profilo 4:
 >
 >Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Di seguito viene illustrato come `audienceId` viene utilizzato nel modello per accedere agli ID del segmento. Ciò presuppone che si utilizzi `audienceId` per l’appartenenza al segmento nella tassonomia di destinazione. È invece possibile utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Quando vengono esportati nella destinazione, i profili vengono suddivisi in due 
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### Utilizza la chiave di aggregazione degli alias dei segmenti nel modello {#aggregation-key-segment-alias}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi utilizzare l’alias del segmento nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione.
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi anche accedere all’alias del segmento nel modello.
 
-Aggiungi la riga sottostante al modello per raggruppare i profili esportati in base all’alias del segmento.
+Aggiungi la riga sottostante al modello per accedere ai profili esportati raggruppati per alias del segmento.
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### Utilizza la chiave di aggregazione dello stato del segmento nel modello {#aggregation-key-segment-status}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` e `includeSegmentStatus` su true, puoi utilizzare lo stato del segmento nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione in base al fatto che i profili debbano essere aggiunti o rimossi dai segmenti.
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` e `includeSegmentStatus` su true, puoi accedere allo stato del segmento nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione in base al fatto che i profili debbano essere aggiunti o rimossi dai segmenti.
 
 I valori possibili sono:
 
@@ -962,10 +969,10 @@ I valori possibili sono:
 * esistente
 * uscito
 
-Aggiungi la riga sottostante al modello per aggiungere o rimuovere profili dai segmenti, in base ai valori sopra riportati.:
+Aggiungi la riga sottostante al modello per aggiungere o rimuovere profili dai segmenti, in base ai valori sopra riportati:
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### Utilizza la chiave di aggregazione dello spazio dei nomi identità nel modello {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Profilo 2:
 >
 >Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Nota che `input.aggregationKey.identityNamespaces` viene utilizzato nel modello seguente
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
 }
 ```
 
-#### Utilizzare la chiave di aggregazione in un modello URL
+#### Utilizzare la chiave di aggregazione in un modello URL {#aggregation-key-url-template}
 
 A seconda del caso d’uso, puoi anche utilizzare le chiavi di aggregazione descritte qui in un URL, come illustrato di seguito:
 
