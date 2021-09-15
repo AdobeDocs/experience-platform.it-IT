@@ -2,9 +2,9 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione per l’SDK di destinazione
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,8 @@ Questa sezione ti consente di impostare i criteri di aggregazione che Experience
 Un criterio di aggregazione determina il modo in cui i profili esportati vengono combinati insieme nelle esportazioni di dati. Le opzioni disponibili sono:
 * Aggregazione degli sforzi migliori
 * Aggregazione configurabile (mostrata nella configurazione precedente)
+
+Leggi la sezione su [uso del modello](./message-format.md#using-templating) e gli [esempi di chiave di aggregazione](./message-format.md#template-aggregation-key) per comprendere come includere il criterio di aggregazione nel modello di trasformazione del messaggio in base al criterio di aggregazione selezionato.
 
 ### Aggregazione degli sforzi migliori {#best-effort-aggregation}
 
