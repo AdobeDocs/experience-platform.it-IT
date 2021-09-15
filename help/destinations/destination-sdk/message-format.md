@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Formato del messaggio
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 2%
 
 ---
@@ -779,7 +779,7 @@ Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
 
 Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, puoi modificare il modello di trasformazione del messaggio per raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o namespace di identità, come mostrato negli esempi seguenti.
 
-#### Esempio di utilizzo della chiave di aggregazione ID segmento nel modello {#aggregation-key-segment-id}
+#### Utilizza la chiave di aggregazione ID segmento nel modello {#aggregation-key-segment-id}
 
 Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi utilizzare `segmentId` nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione:
 
@@ -942,7 +942,7 @@ Quando vengono esportati nella destinazione, i profili vengono suddivisi in due 
 }
 ```
 
-#### Esempio di utilizzo della chiave di aggregazione dell’alias del segmento nel modello {#aggregation-key-segment-alias}
+#### Utilizza la chiave di aggregazione degli alias dei segmenti nel modello {#aggregation-key-segment-alias}
 
 Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi utilizzare l’alias del segmento nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione.
 
@@ -952,7 +952,7 @@ Aggiungi la riga sottostante al modello per raggruppare i profili esportati in b
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Esempio di utilizzo della chiave di aggregazione dello stato del segmento nel modello {#aggregation-key-segment-status}
+#### Utilizza la chiave di aggregazione dello stato del segmento nel modello {#aggregation-key-segment-status}
 
 Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` e `includeSegmentStatus` su true, puoi utilizzare lo stato del segmento nel modello per raggruppare i profili nei messaggi HTTP esportati nella destinazione in base al fatto che i profili debbano essere aggiunti o rimossi dai segmenti.
 
@@ -968,7 +968,7 @@ Aggiungi la riga sottostante al modello per aggiungere o rimuovere profili dai s
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Esempio di utilizzo della chiave di aggregazione dello spazio dei nomi identità nel modello {#aggregation-key-identity}
+#### Utilizza la chiave di aggregazione dello spazio dei nomi identità nel modello {#aggregation-key-identity}
 
 Di seguito è riportato un esempio in cui l’ [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione è impostata per aggregare i profili esportati per spazi dei nomi di identità, nel modulo `"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
 }
 ```
 
-#### Esempio di utilizzo della chiave di aggregazione in un modello URL
+#### Utilizzare la chiave di aggregazione in un modello URL
 
 A seconda del caso d’uso, puoi anche utilizzare le chiavi di aggregazione descritte qui in un URL, come illustrato di seguito:
 
