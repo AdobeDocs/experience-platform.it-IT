@@ -2,10 +2,10 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 4%
+source-wordcount: '598'
+ht-degree: 5%
 
 ---
 
@@ -21,16 +21,18 @@ In un senso semplice, un registro di controllo indica a **chi** ha eseguito l&#3
 
 Questo documento tratta i registri di controllo di Platform, incluso come visualizzarli e gestirli nell’interfaccia utente o nell’API.
 
-## Tipi di eventi acquisiti dai registri di controllo
+## Tipi di eventi acquisiti dai registri di controllo {#category}
 
 La tabella seguente indica le azioni sulle quali le risorse vengono registrate dai registri di controllo:
 
 | Risorsa | Azioni |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
 | [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Tipo di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Attiva</li></ul> |
 
 ## Accesso ai registri di controllo
@@ -50,6 +52,23 @@ Il sistema visualizza solo i registri di controllo dell’ultimo anno. Tutti i r
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
 ![Dettagli evento](../../images/audit-logs/select-event.png)
+
+Seleziona l&#39;icona funnel (![Icona filtro](../../images/audit-logs/icon.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
+
+![Filtri](../../images/audit-logs/filters.png)
+
+Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di controllo:
+
+| Filtro | Descrizione |
+| --- | --- |
+| [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati per [categoria](#category). |
+| [!UICONTROL Azione] | Filtrare per azione. Attualmente è possibile filtrare solo le azioni [!UICONTROL Crea] e [!UICONTROL Elimina] . |
+| [!UICONTROL Stato del controllo di accesso] | Filtrare in base al fatto che l&#39;azione sia stata consentita (completata) o negata a causa di autorizzazioni [controllo accessi](../../../access-control/home.md) insufficienti. |
+| [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
+
+Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola relativa al filtro in questione oppure seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
+
+![Cancella filtri](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log
