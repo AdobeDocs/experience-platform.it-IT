@@ -1,9 +1,10 @@
 ---
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1417'
 ht-degree: 81%
 
 ---
@@ -13,6 +14,18 @@ ht-degree: 81%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 16 settembre 2021
+
+v3.1.0
+
+Sono stati aggiunti nuovi elementi dati:
+
+* Oggetto unito: consente di selezionare più elementi dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto.
+* Valore condizionale - Restituisce uno dei due valori (condizionaleValue o fallbackValue) in base al risultato del confronto.
+* Ambiente runtime - Restituisce una delle seguenti variabili di ambiente Launch: stage dell&#39;ambiente, data build della libreria, nome della proprietà, ID della proprietà, nome della regola, id della regola, tipo di evento, payload dei dettagli dell&#39;evento, identificatore di chiamata diretta.
+* Strumenti JavaScript - Wrapper per operazioni JavaScript comuni: manipolazione di base delle stringhe (sostituzione, sottostringa, corrispondenza regex, primo e ultimo indice, divisione, sezione), operazioni di base array (sezione, join, pop, shift) e operazioni universali di base (sezione, lunghezza).
+* Attributi del dispositivo - Restituisce gli attributi del dispositivo come le dimensioni della finestra o dello schermo.
 
 ## 11 agosto 2021
 
@@ -49,7 +62,7 @@ v2.0.4
 
 * Supporto per elementi dati per vari campi. Il supporto per gli elementi dati è stato aggiunto ai seguenti eventi: “Tempo sulla pagina”, “Entra in viewport”, “Passaggio del mouse” e “Tempo file multimediale riprodotto”; e alle seguenti condizioni: “Tempo sul sito” e “Confronto valori”.
 * È stato aggiunto il supporto del comportamento predefinito per Ctrl/Comando + clic e per clic del pulsante centrale del mouse quando si utilizza Ritardo collegamento.
-* **Ritardo collegamento contrassegnato sull’evento clic come “non più supportato”.** - ulteriori informazioni sono disponibili sul  [Data Collection ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) Blogfor Adobe Experience Platform
+* **Ritardo collegamento contrassegnato sull’evento clic come “non più supportato”.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
 
 ## 6 gennaio 2021
 
@@ -113,7 +126,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull&#39;utilizzo dei tag con un CSP [qui](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull&#39;utilizzo dei tag con un CSP [qui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
@@ -141,8 +154,8 @@ v1.4.2
 ## 8 novembre 2018
 
 * **Opzione Persist Cohort**: l&#39;opzione di mantenere una coorte è stata aggiunta alla condizione Sampling. Ciò ha l&#39;effetto di mantenere un utente dentro o fuori la coorte di campionamento tra le diverse sessioni. Ad esempio, se la casella di controllo “persist cohort” è selezionata e la condizione restituisce true la prima volta che viene eseguita per un visitatore specifico, restituirà true su tutte le esecuzioni successive della condizione per lo stesso visitatore. Analogamente, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce false la prima volta che viene eseguita per un visitatore specifico, restituirà false su tutte le esecuzioni successive della condizione per lo stesso visitatore.
-* **Correzione bug** : è stato corretto un problema a causa del quale una regola, utilizzando un evento Page Bottom e un’azione Custom Code su una pagina in cui i tag venivano caricati in modo sincrono ma non correttamente installati (nessuna chiamata a  `_satellite.pageBottom()`), avrebbe azzerato il contenuto del sito web.
-* **Correzione bug** : è stato corretto un problema a causa del quale l’opzione Enter Viewport non funzionava se la libreria di tag veniva caricata in modo asincrono e terminava il caricamento dopo l’attivazione dell’evento DOMContentLoaded del browser.
+* **Correzione di bug**: è stato risolto un problema che causava la cancellazione del contenuto del sito Web da parte di una regola con un evento Page Bottom e un’azione Custom Code su una pagina in cui i tag venivano caricati in modo sincrono ma non erano installati correttamente (nessuna chiamata a `_satellite.pageBottom()`).
+* **Correzione di bug**: è stato risolto un problema che causava il mancato funzionamento di Enters Viewport se la libreria di tag veniva caricata in modo asincrono e il caricamento veniva completato dopo che l’evento DOMContentLoaded del browser era stato avviato.
 
 ## 24 maggio 2018
 

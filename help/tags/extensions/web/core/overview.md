@@ -1,10 +1,11 @@
 ---
 title: Panoramica dell’estensione Core
-description: Scopri l’estensione del tag core in Adobe Experience Platform.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+description: Scopri l’estensione tag Core in Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4905'
-ht-degree: 75%
+source-wordcount: '5130'
+ht-degree: 94%
 
 ---
 
@@ -14,92 +15,92 @@ ht-degree: 75%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L&#39;estensione tag core è l&#39;estensione predefinita rilasciata con Adobe Experience Platform.
+L’estensione tag Core è l’estensione predefinita rilasciata con Adobe Experience Platform.
 
-Questo documento fornisce informazioni sulle opzioni disponibili quando utilizzi l&#39;estensione Core per creare una regola.
+Questo documento descrive le opzioni disponibili quando si utilizza l’estensione Core per creare una regola.
 
 ## Tipi di eventi dell&#39;estensione core {#core-extension-event-types}
 
-In questo capitolo sono descritti i tipi di evento disponibili nell&#39;estensione core. Per informazioni sulle opzioni che possono essere impostate per diversi tipi di eventi, consulta la sezione [Opzioni](#options) .
+In questo capitolo sono descritti i tipi di evento disponibili nell&#39;estensione core. Per informazioni sulle opzioni che possono essere impostate per diversi tipi di eventi, vedi la sezione [Opzioni](#options).
 
 ### Eventi basati su browser
 
 #### Tab Blur
 
-L&#39;evento tab-blur attiva l&#39;azione quando una scheda perde lo stato attivo. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento tab-blur attiva l’azione quando una scheda perde lo stato attivo. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Tab Focus
 
-L&#39;evento Tab-Focus attiva l&#39;azione quando una scheda diventa attiva. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento tab-focus attiva l’azione quando una scheda diventa attiva. Non sono disponibili impostazioni per questo tipo di evento.
 
 ### Modulo
 
 #### Blur
 
-L&#39;evento di sfocatura attiva l&#39;azione quando un modulo perde lo stato attivo. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento blur attiva l’azione quando un modulo perde lo stato attivo. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Focus
 
-L&#39;evento attivo attiva l&#39;azione quando un modulo diventa attivo. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento focus attiva l’azione quando un modulo diventa attivo. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Submit
 
-L&#39;evento submit attiva l&#39;azione quando un modulo viene inviato. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento submit attiva l’azione quando un modulo viene inviato. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 ### Eventi controllati dalla tastiera
 
 #### Key Press
 
-L&#39;evento viene attivato quando viene premuto un tasto. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento viene attivato quando viene premuto un tasto. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 ### Eventi basati su file multimediali
 
 #### Media Ended
 
-L&#39;evento viene attivato al termine del contenuto multimediale. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento viene attivato al termine del contenuto multimediale. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
-#### Dati caricati da contenuti multimediali
+#### Media-Loaded Data
 
-L&#39;evento viene attivato quando il contenuto multimediale carica i dati. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento viene attivato quando vengono caricati dati di file multimediali. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Media Pause
 
-L&#39;evento viene attivato quando il contenuto multimediale viene messo in pausa. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva quando il contenuto multimediale viene messo in pausa. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Media Play
 
-L&#39;evento si attiva quando il contenuto multimediale viene riprodotto. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva durante la riproduzione del contenuto multimediale. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Media Stalled
 
-L&#39;evento si attiva se il contenuto multimediale si arresta. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva se il contenuto multimediale si arresta. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
-#### Media-Time
+#### Tempo di riproduzione file multimediale
 
-L&#39;evento si attiva se il contenuto multimediale viene riprodotto per un periodo di tempo specificato. Per attivare l’evento è necessario specificare la durata della riproduzione del file multimediale. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva se il contenuto multimediale viene riprodotto per un periodo di tempo specificato. Per attivare l’evento è necessario specificare la durata della riproduzione del file multimediale. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 
-#### Media-Volume modificato
+#### Volume del file multimediale modificato
 
-L&#39;evento viene attivato se il volume viene alzato o abbassato. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva se il volume viene alzato o abbassato. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 ### Eventi orientati ai dispositivi mobili
 
 #### Orientation Change
 
-L&#39;evento si attiva se l&#39;orientamento del dispositivo cambia. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento si attiva se cambia l’orientamento del dispositivo. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Zoom Change
 
-L&#39;evento viene attivato se l&#39;utente esegue lo zoom in o out. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento si attiva se l’utente utilizza la funzione zoom. Non sono disponibili impostazioni per questo tipo di evento.
 
 ### Eventi controllati dal mouse
 
 #### Click
 
-L&#39;evento viene attivato se l&#39;elemento specificato è selezionato (su cui è stato fatto clic). Facoltativamente, puoi specificare valori di proprietà che devono risultare true per l&#39;elemento prima che l&#39;evento venga attivato.
+L’evento si attiva se l’utente seleziona l’elemento specificato (facendo clic). Facoltativamente, puoi specificare valori di proprietà che devono risultare true per l&#39;elemento prima che l&#39;evento venga attivato.
 
-Se l’elemento è un tag di ancoraggio (`<a>`) al contenuto collegato, puoi anche specificare se ritardare la navigazione per un periodo di tempo. Questo può essere utile se la regola richiede un tempo supplementare per essere eseguita e non viene normalmente completata prima che venga eseguita la navigazione nelle pagine.
+Se l’elemento è un tag di ancoraggio (`<a>`) per collegare il contenuto, puoi anche specificare se posticipare la navigazione per un periodo di tempo. Questo può essere utile se la regola richiede un tempo supplementare per essere eseguita e non viene normalmente completata prima che venga eseguita la navigazione nelle pagine.
 
 >[!WARNING]
 >
@@ -107,65 +108,65 @@ Se l’elemento è un tag di ancoraggio (`<a>`) al contenuto collegato, puoi anc
 
 Quando utilizzi il ritardo dei collegamenti, Platform impedisce al browser di spostarsi fuori dalla pagina. Successivamente, esegue un reindirizzamento JavaScript alla destinazione originale dopo il timeout specificato. Ciò è particolarmente pericoloso se il markup della pagina contiene tag `<a>` la cui funzionalità prevista non fa uscire l’utente dalla pagina. Se non è possibile risolvere il problema in altro modo, è necessario essere estremamente precisi nella definizione del selettore, in modo che questo evento venga attivato esattamente dove necessario e in nessun altro punto.
 
-Il valore predefinito del ritardo del collegamento è 100 millisecondi. Tieni presente che i tag attendono sempre il periodo di tempo specificato e non sono in alcun modo collegati all’esecuzione delle azioni della regola. È possibile che il ritardo obblighi l’utente ad aspettare più tempo del necessario, e che il ritardo non sia abbastanza lungo per consentire il completamento di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l&#39;esecuzione delle regole, ma peggiorano anche l&#39;esperienza utente.
+Il valore predefinito del ritardo del collegamento è 100 millisecondi. Si prega di notare che i tag attenderanno sempre il tempo specificato e non sarà in alcun modo collegato all’esecuzione delle azioni della regola. È possibile che il ritardo obblighi l’utente ad aspettare più tempo del necessario, e che il ritardo non sia abbastanza lungo per consentire il completamento di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l’esecuzione delle regole, ma peggiorano anche l’esperienza utente.
 
 Per attivare il ritardo è necessario fornire sia l’elemento selezionato che attiva l’evento, sia la quantità specifica di tempo prima che l’evento venga attivato.
 
-Per ulteriori informazioni, consulta la sezione [Opzioni](#options) .
+Per ulteriori informazioni sulle opzioni avanzate, consulta la sezione [Opzioni](#options).
 
 #### Hover
 
-L&#39;evento viene attivato se l&#39;utente passa il mouse su un elemento specificato. Devi anche configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva se l’utente passa col cursore sopra un elemento specificato. Inoltre, devi configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 ### Altri eventi
 
 #### Custom Event
 
-L&#39;evento viene attivato se si verifica un tipo di evento personalizzato. Le funzioni JavaScript denominate definite altrove nel codebase possono essere utilizzate come tipo di evento personalizzato. È necessario specificare il nome del tipo di evento personalizzato e configurare tutte le altre impostazioni come descritto nella sezione [Opzioni](#options) seguente.
+L’evento si attiva se si verifica un tipo di evento personalizzato. Le funzioni JavaScript denominate definite altrove nel codebase possono essere utilizzate come tipo di evento personalizzato. Specifica il nome del tipo di evento personalizzato, quindi configura le altre impostazioni come descritto nella sezione [Opzioni](#options) di seguito.
 
 #### Data Element Changed
 
-L&#39;evento viene attivato se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. È possibile selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
+L’evento si attiva se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. È possibile selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
 
 #### Direct Call
 
-L&#39;evento di chiamata diretta bypassa i sistemi di rilevamento degli eventi e di ricerca. Le regole di chiamata diretta sono ideali per le situazioni in cui desideri comunicare a Platform esattamente ciò che sta accadendo. Inoltre, sono ideali quando Platform non è in grado di rilevare un evento nel DOM, ad esempio con Adobe Flash. Specifica la stringa `_satellite.track` nel campo di testo dell&#39;identificatore.
+L’evento di chiamata diretta bypassa i sistemi di rilevamento degli eventi e di ricerca. Le regole di chiamata diretta sono ideali per le situazioni in cui desideri comunicare a Platform esattamente ciò che sta accadendo. Inoltre, sono ideali quando Platform non è in grado di rilevare un evento nel DOM, ad esempio con Adobe Flash. Specifica la stringa `_satellite.track` nel campo di testo dell’identificatore.
 
 #### Element Exists
 
-L&#39;evento viene attivato se esiste un elemento specificato. Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+L’evento si attiva se è presente un elemento specificato. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### Enters Viewport
 
-L&#39;evento viene attivato se l&#39;utente immette una finestra specifica. Devi fornire un selettore CSS come criterio per eseguire il targeting degli elementi corrispondenti. È inoltre necessario configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi e se l&#39;evento deve essere attivato ogni volta che si verifica l&#39;evento o solo la prima volta.
+Attiva l’evento se l’utente immette un riquadro di visualizzazione specificato. Devi fornire un selettore CSS come criterio per eseguire il targeting degli elementi corrispondenti. È inoltre necessario configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi e se l’evento deve essere attivato ogni volta che si verifica o solo la prima volta.
 
-Per ulteriori informazioni sulle impostazioni personalizzabili dell’evento, consulta la sezione [Opzioni](#options) .
+Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 #### History Change
 
-L&#39;evento viene attivato se si verifica un evento pushState o hashchange. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento viene attivato se si verifica un evento pushState o hashchange. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Tempo trascorso sulla pagina
 
-L&#39;evento si attiva se l&#39;utente rimane sulla pagina per un numero specificato di secondi. È necessario specificare il numero di secondi che devono trascorrere prima che l&#39;evento venga attivato.
+L’evento viene attivato se l’utente rimane sulla pagina per un numero specificato di secondi. Specifica quanti secondi devono trascorrere prima che l’evento venga attivato.
 
 ### Eventi di caricamento pagina
 
 #### DOM Ready
 
-L&#39;evento viene attivato quando il DOM è pronto e l&#39;utente può interagire con la pagina. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento viene attivato quando il DOM è pronto e l’utente può interagire con la pagina. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Library Loaded (Page Top) {#library-loaded-page-top}
 
-L&#39;evento viene attivato non appena viene caricata la libreria di tag. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento viene attivato non appena viene caricata la libreria di tag. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Page Bottom {#page-bottom}
 
-L&#39;evento viene attivato una volta chiamato `_satellite.pageBottom();`. Quando si carica la libreria di tag in modo asincrono, non utilizzare questo tipo di evento. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento viene attivato una volta chiamato `_satellite.pageBottom();`. Quando la libreria di tag viene caricata in modo asincrono, questo tipo di evento non deve essere utilizzato. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Window Loaded
 
-L’evento viene attivato quando onLoad viene chiamato dal browser e il caricamento della pagina è terminato. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento si attiva quando onLoad viene chiamato dal browser e la pagina è stata completamente caricata. Non sono disponibili impostazioni per questo tipo di evento.
 
 ### Opzioni {#options}
 
@@ -237,7 +238,7 @@ Esegui la regola in un browser e controlla l’oggetto evento a cui hai avuto ac
 
 Quando è abilitata l’opzione “Run rule components in sequence” dalle impostazioni di proprietà, è possibile che dei componenti della regola successivi siano in attesa mentre la condizione esegue un’attività asincrona.
 
-Quando la condizione restituisce una [promessa](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise), la condizione successiva nella regola non viene eseguita finché la promessa restituita non è risolta. Se la promessa viene rifiutata, i tag considerano tale condizione come non riuscita e non verranno eseguite ulteriori condizioni o azioni da quella regola.
+Quando la condizione restituisce una [promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), la condizione successiva nella regola non viene eseguita finché la promessa restituita non è risolta. Se la promessa viene rifiutata, i tag considerano tale condizione come non riuscita e non verranno eseguite ulteriori condizioni o azioni da quella regola.
 
 Esempio di condizione che restituisce una promessa:
 
@@ -555,11 +556,11 @@ Esegui la regola in un browser e controlla l’oggetto evento a cui hai avuto ac
 
 ### Elaborazione azione Custom Code
 
-L&#39;estensione Core, disponibile per tutti gli utenti Adobe Experience Platform, contiene un&#39;azione Custom Code per l&#39;esecuzione di JavaScript o HTML fornito dall&#39;utente. Spesso è utile che gli utenti possano capire in che modo vengono elaborate le regole con le azioni Custom Code.
+L’estensione Core, disponibile per tutti gli utenti di Adobe Experience Platform, contiene un’azione Custom Code per l’esecuzione di JavaScript o HTML fornito dall’utente. Spesso è utile che gli utenti possano capire in che modo vengono elaborate le regole con le azioni Custom Code.
 
 #### Regole che utilizzano gli eventi nella parte superiore o inferiore della pagina
 
-Il codice da azioni personalizzate è incorporato nella libreria tag principale . Il codice viene scritto nel documento utilizzando document.write. Se una regola include più azioni Custom Code, il codice viene scritto nell&#39;ordine configurato nella regola.
+Il codice da azioni personalizzate è incorporato nella libreria di tag principale. Il codice viene scritto nel documento utilizzando document.write. Se una regola include più azioni Custom Code, il codice viene scritto nell&#39;ordine configurato nella regola.
 
 #### Regole che utilizzano un evento diverso dalla pagina superiore o dalla pagina inferiore
 
@@ -569,7 +570,7 @@ L&#39;utilizzo di a document.write dopo il caricamento di una pagina comportereb
 
 #### Convalida Custom Code
 
-La convalida utilizzata nell&#39;editor di codice dei tag è concepita per identificare i problemi con il codice scritto da sviluppatori. Un codice che è passato attraverso un processo di minimizzazione, come il codice AppMeasurement.js scaricato dal Code Manager, potrebbe essere falsamente segnalato come problematico dal validatore, che di solito può essere ignorato.
+La convalida utilizzata nell’editor di codice tag è progettata per individuare eventuali problemi nel codice scritto dallo sviluppatore. Un codice che è passato attraverso un processo di minimizzazione, come il codice AppMeasurement.js scaricato dal Code Manager, potrebbe essere falsamente segnalato come problematico dal validatore, che di solito può essere ignorato.
 
 #### Sequenza delle azioni
 
@@ -581,7 +582,7 @@ Quando si crea un’azione di codice personalizzato JavaScript, è possibile res
 
 >[!NOTE]
 >
->Questo funziona solo quando il codice JavaScript non è impostato per l’esecuzione a livello globale. Se esegui l’azione del codice personalizzato nell’ambito globale, i tag considereranno la promessa risolta immediatamente e passeranno all’elemento successivo nella coda di elaborazione.
+>Questo avviene solo quando il codice JavaScript non è impostato per l’esecuzione a livello globale. Se esegui l’azione del codice personalizzato nell’ambito globale, i tag intenderanno la promessa risolta immediatamente e passeranno all’elemento successivo nella coda di elaborazione.
 
 Esempio di azione di un codice personalizzato JavaScript che restituisce una promessa:
 
@@ -599,7 +600,7 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Quando si crea un’azione di codice personalizzato HTML, una funzione denominata `onCustomCodeSuccess()` è disponibile per l’uso all’interno del codice personalizzato. È possibile chiamare questa funzione per indicare che il codice personalizzato è stato completato e che i tag possono continuare l’esecuzione delle azioni successive. Se invece per qualche motivo il codice personalizzato genera un errore, è possibile chiamare `onCustomCodeFailure()`. In questo modo si informano i tag di non eseguire le azioni successive da quella regola.
+Quando si crea un’azione di codice personalizzato HTML, una funzione denominata `onCustomCodeSuccess()` è disponibile per l’uso all’interno del codice personalizzato. È possibile chiamare questa funzione per indicare che il codice personalizzato è stato completato e che i tag possono continuare l’esecuzione delle azioni successive. Se invece per qualche motivo il codice personalizzato genera un errore, è possibile chiamare `onCustomCodeFailure()`. In questo modo i tag non eseguiranno le azioni successive da quella regola.
 
 Un esempio di azione di un codice personalizzato HTML che utilizza i nuovi callback:
 
@@ -681,7 +682,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all&#39;interno delle estensioni o delle regole personalizzate facendo riferimento agli elementi dei dati dei tag. Se l’origine dei dati cambia, è necessario aggiornare il riferimento all’origine solo all’interno dell’interfaccia utente Raccolta dati.
+Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all’interno di estensioni o regole personalizzate mediante riferimento agli elementi dati dei tag. Se l’origine dei dati cambia, sarà solo necessario aggiornare il riferimento all’origine nell’interfaccia utente di Data Collection.
 
 Nell’esempio seguente, il markup contiene una variabile JavaScript denominata `Page_Name`.
 
@@ -692,9 +693,9 @@ Nell’esempio seguente, il markup contiene una variabile JavaScript denominata 
 </script>
 ```
 
-Quando crei l’elemento dati nell’interfaccia utente di raccolta dati, fornisci semplicemente il percorso di tale variabile.
+Quando crei l’elemento dati nell’interfaccia utente di Data Collection, fornisci semplicemente il percorso di tale variabile.
 
-Se utilizzi un oggetto raccolta dati come parte del livello dati, utilizza la notazione del punto nel percorso per fare riferimento all’oggetto e alla proprietà che desideri acquisire nell’elemento dati, come `_myData.pageName` o `digitalData.pageName` e così via.
+Se utilizzi un oggetto raccolta dati come parte del livello dati, è sufficiente utilizzare la notazione del punto nel percorso per fare riferimento all’oggetto e alla proprietà che desideri acquisire nell’elemento dati, come `_myData.pageName`, `digitalData.pageName`, ecc.
 
 #### Esempio:
 
@@ -756,7 +757,7 @@ L&#39;archiviazione della sessione è simile all&#39;archiviazione locale, fatta
 
 ### Comportamento dei visitatori
 
-Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportamento comuni per arricchire la logica all’interno di regole e altre soluzioni Platform.
+Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportamento comuni per arricchire una logica all’interno di regole e altre soluzioni Platform.
 
 Seleziona uno dei seguenti attributi di comportamento dei visitatori:
 
@@ -774,3 +775,36 @@ Alcuni casi d&#39;uso comuni includono:
 * Se si tratta della pagina di destinazione della visita, compila una metrica Analytics
 * Mostra una nuova offerta al visitatore dopo X conteggi delle sessioni
 * Visualizza una newsletter per la prima volta, se si tratta di un nuovo visitatore
+
+### Valore condizionale
+
+Un wrapper per la condizione [Value Comparison](#value-comparison-value-comparison). In base al risultato del confronto, restituirà uno dei due valori disponibili nel modulo. Può quindi gestire &quot;Se... Allora... Altro...&quot; scenari senza la necessità di regole aggiuntive.
+
+### Ambiente runtime
+
+Consente di selezionare una delle seguenti variabili:
+
+* Stage ambiente - Restituisce `_satellite.environment.stage` per distinguere tra ambienti di sviluppo/staging/produzione.
+* Data build libreria - Restituisce `turbine.buildInfo.buildDate` che contiene lo stesso valore come `_satellite.buildInfo.buildDate`.
+* Nome proprietà - Restituisce `_satellite.property.name` per ottenere il nome della proprietà Launch.
+* ID proprietà - Restituisce `_satellite.property.id` per ottenere l&#39;ID della proprietà Launch
+* Nome regola - Restituisce `event.$rule.name` contenente il nome della regola eseguita.
+* ID regola - Restituisce `event.$rule.id` contenente l&#39;ID della regola eseguita.
+* Tipo evento : restituisce `event.$type` contenente il tipo di evento che ha attivato la regola.
+* Payload per dettagli evento - Restituisce `event.detail` contenente il payload di un evento personalizzato o una regola di chiamata diretta.
+* Identificatore di chiamata diretta - Restituisce `event.identifier` contenente l&#39;identificatore di una regola di chiamata diretta.
+
+### Attributi del dispositivo
+
+Restituisce uno dei seguenti attributi del dispositivo visitatore:
+
+* Dimensioni della finestra del browser
+* Dimensioni dello schermo
+
+### Strumenti JavaScript
+
+È un wrapper per le operazioni JavaScript comuni. Riceve un elemento dati come input. Restituisce il risultato di una delle seguenti trasformazioni del valore dell&#39;elemento dati:
+
+* Manipolazione stringa di base (sostituzione, sottostringa, corrispondenza regex, primo e ultimo indice, divisione, sezione)
+* Operazioni di base dell&#39;array (slice, join, pop, shift)
+* Operazioni universali di base (sezione, lunghezza)
