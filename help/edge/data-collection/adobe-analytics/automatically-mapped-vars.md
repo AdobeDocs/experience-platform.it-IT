@@ -4,9 +4,9 @@ description: Scopri quali variabili vengono mappate automaticamente in Adobe Ana
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;variabili;analytics;mappa automatica;mappatura automatica;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 5%
 
 ---
@@ -19,21 +19,21 @@ Di seguito è riportato un elenco di variabili che Adobe Experience Platform Edg
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | Mappatura dei dati contestuali di AppMeasurement `c.a.appid` . |
 | application.launches.value | c.a.launches | Mappatura dei dati contestuali di AppMeasurement `c.a.launches` . |
-| commerce.checkouts.id | events | `scCheckout` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.checkouts.value | events | Mapping del parametro di query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_SC_CHECKOUT, utilizzando il delimitatore `,`. |
+| commerce.checkouts.id | eventi | `scCheckout` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.checkouts.value | eventi | Mapping del parametro di query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_SC_CHECKOUT, utilizzando il delimitatore `,`. |
 | commerce.order.currencyCode | cc | Mappatura del parametro di query AppMeasurement CURRENCY. |
 | commerce.order.purchaseID | pi | Mappatura del parametro query AppMeasurement PURCHASEID. |
-| commerce.productListAdds.id | events | `scAdd` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.productListAdds.value | events | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_ADD, utilizzando delimitatore `,`. |
-| commerce.productListOpens.id | events | `scOpen` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.productListOpens.value | events | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_OPEN, utilizzando il delimitatore `,`. |
-| commerce.productListRemovals.id | events | `scRemove` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.productListRemovals.value | events | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_REMOVE, utilizzando il delimitatore `,`. |
-| commerce.productListViews.id | events | `scView` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.productListViews.value | events | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_VIEW, utilizzando il delimitatore `,`. |
-| commerce.productViews.id | events | `prodView` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
-| commerce.productViews.value | events | Mapping del parametro di query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_PROD_VIEW, utilizzando il delimitatore `,`. |
-| commerce.purchases.value | events | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_PURCHASE, utilizzando il delimitatore `,`. |
+| commerce.productListAdds.id | eventi | `scAdd` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.productListAdds.value | eventi | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_ADD, utilizzando delimitatore `,`. |
+| commerce.productListOpens.id | eventi | `scOpen` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.productListOpens.value | eventi | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_OPEN, utilizzando il delimitatore `,`. |
+| commerce.productListRemovals.id | eventi | `scRemove` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.productListRemovals.value | eventi | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_REMOVE, utilizzando il delimitatore `,`. |
+| commerce.productListViews.id | eventi | `scView` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.productListViews.value | eventi | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_SC_VIEW, utilizzando il delimitatore `,`. |
+| commerce.productViews.id | eventi | `prodView` serializzazione degli eventi. Se questo campo viene escluso (ad esempio per eventi non serializzati), il sistema genera e assegna il proprio valore ID all’entità. |
+| commerce.productViews.value | eventi | Mapping del parametro di query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_PROD_VIEW, utilizzando il delimitatore `,`. |
+| commerce.purchases.value | eventi | Parametro query AppMeasurement Mappatura EVENT_LIST_FULL con conversione COMMERCE_PURCHASE, utilizzando il delimitatore `,`. |
 | device.colorDepth | c | Mappatura del parametro di query AppMeasurement C_COLOR. |
 | device.screenHeight | s | Mappatura del parametro di query AppMeasurement Screen Resolution. |
 | device.screenWidth | s | Mappatura del parametro di query AppMeasurement Screen Resolution. |
@@ -88,9 +88,8 @@ Di seguito è riportato un elenco di variabili che Adobe Experience Platform Edg
 | placeContext.geo.longitude | lon | Mappatura del parametro di query AppMeasurement LONGITUDE. |
 | placeContext.geo.postalCode | zip | Mappatura ZIP del parametro della query AppMeasurement. |
 | placeContext.geo.stateProvince | Stato | Mappatura del parametro di query AppMeasurement STATE. |
-| prodotti.[N]._[NAME_SPACE].* | products | Parametro query AppMeasurement Prodotti Mappatura di eventi Merchandise / Evar. |
-| productListItems[N].lineItemId | products | Parametro query AppMeasurement Mappatura del nome dei prodotti. |
-| prodotti.[N].name | products | Parametro query AppMeasurement Mappatura categoria prodotti. |
+| productListItems[N].lineItemId | products | Parametro query AppMeasurement Mappatura categoria prodotti. |
+| prodotti.[N].name | products | Parametro query AppMeasurement Mappatura del nome dei prodotti. |
 | prodotti.[N].priceTotal | products | Parametro della query AppMeasurement Prodotti Mappatura del prezzo. |
 | prodotti.[N].quantità | products | Parametro query AppMeasurement Mappatura della quantità dei prodotti. |
 | web.webInteraction.URL | pev1 | Mappatura del parametro di query AppMeasurement PAGE_EVENT_VAR1. |
