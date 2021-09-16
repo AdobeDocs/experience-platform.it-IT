@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -75,15 +75,21 @@ Simile alla metrica [conteggio profilo](#profile-count), quando l’acquisizione
 
 Nella scheda **[!UICONTROL Sfoglia]** è possibile visualizzare profili di esempio utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Sfoglia per [!UICONTROL Criteri di unione]
 
-Il selettore **[!UICONTROL Sfoglia per]** è impostato su [!UICONTROL Criteri di unione] per impostazione predefinita e il **[!UICONTROL Criterio di unione]** selezionato è il criterio di unione predefinito per la tua organizzazione.
+Per impostazione predefinita, la scheda **[!UICONTROL Sfoglia]** è impostata sul criterio di unione predefinito per la propria organizzazione. Per scegliere un criterio di unione diverso, selezionare il `X` accanto al nome del criterio di unione, quindi utilizzare il selettore per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**.
 
-Per ulteriori informazioni sull&#39;unione dei criteri e sul loro ruolo all&#39;interno di Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Se non è selezionato alcun criterio di unione, utilizza il pulsante di selezione accanto al campo **[!UICONTROL Criteri di unione]** per aprire la finestra di dialogo di selezione.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Per scegliere un criterio di unione dalla finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**, selezionare il pulsante di scelta accanto al nome del criterio, quindi utilizzare **[!UICONTROL Seleziona]** per tornare alla scheda [!UICONTROL Sfoglia]. È quindi possibile selezionare **[!UICONTROL Visualizza]** per aggiornare i profili di esempio e visualizzare un campionamento dei profili con il nuovo criterio di unione applicato.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 I profili visualizzati rappresentano un esempio di fino a 20 profili dall’archivio profili della tua organizzazione, dopo l’applicazione del criterio di unione selezionato. I profili di esempio per il criterio di unione selezionato vengono aggiornati quando vengono aggiunti nuovi dati all’archivio profili dell’organizzazione.
 
@@ -91,21 +97,16 @@ Per visualizzare i dettagli di uno dei profili di esempio, seleziona l&#39; **[!
 
 ![](../images/user-guide/sample-profiles.png)
 
-Per scegliere un criterio di unione diverso, selezionare il `X` accanto al nome del criterio di unione, quindi utilizzare il selettore per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**.
+Per ulteriori informazioni sull&#39;unione dei criteri e sul loro ruolo all&#39;interno di Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Per scegliere un criterio di unione dalla finestra di dialogo **[!UICONTROL Seleziona criterio di unione]**, selezionare il pulsante di scelta accanto al nome del criterio, quindi utilizzare **[!UICONTROL Seleziona]** per tornare alla scheda [!UICONTROL Sfoglia]. È quindi possibile selezionare **[!UICONTROL Visualizza]** per aggiornare i profili di esempio e visualizzare un campionamento dei profili con il nuovo criterio di unione applicato.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Sfoglia per [!UICONTROL Identità]
 
-Utilizzando il selettore **[!UICONTROL Sfoglia per]**, puoi scegliere [!UICONTROL Identità] per cercare un profilo specifico in base a un valore di identità. La ricerca eseguita in base a un&#39;identità richiede inoltre di specificare un criterio di unione, uno spazio dei nomi di identità e un valore di identità.
+Nella scheda **[!UICONTROL Sfoglia]** è possibile utilizzare uno spazio dei nomi di identità per cercare un profilo specifico in base a un valore di identità. Per effettuare la ricerca in base a un&#39;identità è necessario specificare un criterio di unione, uno spazio dei nomi di identità e un valore di identità.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Utilizzare il selettore **[!UICONTROL Criteri di unione]** per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]** e scegliere il criterio di unione da utilizzare.
+Se necessario, utilizzare il selettore **[!UICONTROL Criteri di unione]** per aprire la finestra di dialogo **[!UICONTROL Seleziona criterio di unione]** e scegliere il criterio di unione che si desidera utilizzare.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
