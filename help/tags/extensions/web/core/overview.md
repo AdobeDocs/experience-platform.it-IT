@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 94%
+source-wordcount: '5257'
+ht-degree: 92%
 
 ---
 
@@ -708,6 +708,61 @@ Immetti il nome dell&#39;elemento di memorizzazione locale nel campo Local Stora
 La memorizzazione locale offre ai browser un modo per memorizzare informazioni da pagina a pagina ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). La memorizzazione locale funziona in modo simile ai cookie, ma è molto più grande e flessibile.
 
 Utilizza il campo fornito per specificare il valore creato per un elemento di archiviazione locale, ad esempio `lastProductViewed.`
+
+### Oggetti uniti
+
+Seleziona più elementi di dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto. Gli oggetti di origine non verranno modificati. Se una proprietà si trova nella stessa posizione in più oggetti di origine, verrà utilizzato il valore di quest&#39;ultimo oggetto. Se il valore di una proprietà di origine è `undefined`, non sostituisce un valore di un oggetto di origine precedente. Se gli array si trovano nella stessa posizione in più oggetti di origine, gli array verranno concatenati.
+
+Ad esempio, si supponga di selezionare un elemento dati che fornisce il seguente oggetto:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Supponiamo anche di selezionare un altro elemento dati che fornisce il seguente oggetto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+Il risultato dell&#39;elemento dati Oggetti uniti sarebbe il seguente oggetto:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Informazioni pagina
 
