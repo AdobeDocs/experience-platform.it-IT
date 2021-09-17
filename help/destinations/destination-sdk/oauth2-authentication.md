@@ -2,9 +2,9 @@
 description: Questa pagina descrive i vari flussi di autenticazione OAuth 2 supportati dall’SDK di destinazione e fornisce istruzioni per configurare l’autenticazione OAuth 2 per la destinazione.
 title: Autenticazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 5%
 
 ---
@@ -21,18 +21,15 @@ Questa pagina descrive i vari flussi di autenticazione OAuth 2 supportati dall�
 
 ### Prerequisiti nel sistema {#prerequisites}
 
-Come primo passo, devi creare un’app nel tuo sistema per Adobe Experience Platform o registrare in altro modo l’Experience Platform nel tuo sistema. L&#39;obiettivo è quello di generare un ID client e un segreto client, necessari per autenticare l&#39;Experience Platform nella destinazione. Come parte di questa configurazione del sistema, hai bisogno dell’URL di reindirizzamento/callback di Adobe Experience Platform OAuth 2, che puoi ottenere dalla tabella seguente.
+Come primo passo, devi creare un’app nel tuo sistema per Adobe Experience Platform o registrare in altro modo l’Experience Platform nel tuo sistema. L&#39;obiettivo è quello di generare un ID client e un segreto client, necessari per autenticare l&#39;Experience Platform nella destinazione. Come parte di questa configurazione del sistema, hai bisogno degli URL di reindirizzamento/callback di Adobe Experience Platform OAuth 2, che puoi ottenere dall’elenco seguente.
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >Il passaggio per registrare un URL di reindirizzamento/callback per Adobe Experience Platform nel sistema è necessario solo per il tipo di sovvenzione [OAuth 2 con codice di autorizzazione](./oauth2-authentication.md#authorization-code). Per gli altri due tipi di sovvenzione supportati (password e credenziali client), puoi saltare questo passaggio.
-
-| URL di reindirizzamento/callback | Ambiente |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | Produzione |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | Staging |
-
-{style=&quot;table-layout:auto&quot;}
 
 Alla fine di questo passaggio, dovresti avere:
 * Un ID cliente;
@@ -466,7 +463,7 @@ A seconda della personalizzazione dell’autenticazione, potrebbe essere necessa
 | response.body | corpo di risposta HTTP | ``{{ response.body.access_token }}`` |
 | response.status | Stato della risposta HTTP | ``{{ response.status }}`` |
 | response.headers | Intestazioni di risposta HTTP | ``{{ response.headers.server[0] }}`` |
-| authContext | Accedere alle informazioni sul tentativo di autenticazione corrente | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | Accedere alle informazioni sul tentativo di autenticazione corrente | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
