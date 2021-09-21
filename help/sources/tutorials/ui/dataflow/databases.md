@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account del database.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 Inoltre, questa esercitazione richiede che tu abbia già creato un account di database. Un elenco di esercitazioni per la creazione di diversi connettori di database nell&#39;interfaccia utente è disponibile nella [panoramica dei connettori sorgente](../../../home.md).
 
-## Seleziona dati
+## Aggiungi dati
 
-Dopo aver creato l&#39;account di database, viene visualizzato il passaggio **[!UICONTROL Seleziona dati]** , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
+Dopo aver creato l&#39;account di database, viene visualizzato il passaggio **[!UICONTROL Aggiungi dati]**, che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
 
-- La metà sinistra dell&#39;interfaccia è un browser, che visualizza l&#39;elenco dei database del tuo account.
+- La metà sinistra dell&#39;interfaccia è un browser, che visualizza l&#39;elenco delle tabelle di dati del tuo account.
 - La metà destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati.
 
 Puoi utilizzare l&#39;opzione **[!UICONTROL Cerca]** nella parte superiore della pagina per identificare rapidamente i dati di origine che intendi utilizzare.
@@ -41,7 +41,7 @@ Puoi utilizzare l&#39;opzione **[!UICONTROL Cerca]** nella parte superiore della
 >
 >L’opzione per i dati dell’origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, esclusi i connettori Analytics, Classificazioni, Hubs evento e Kinesis.
 
-Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Avanti]**.
+Una volta trovati i dati di origine, seleziona la tabella, quindi seleziona **[!UICONTROL Avanti]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 

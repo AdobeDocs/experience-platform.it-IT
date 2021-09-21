@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 10%
+source-wordcount: '647'
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 10%
          - [Connettore Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guida all’autenticazione Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [spazi dei nomi e schemi di Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Pubblicità {#advertising}
+   - Advertising {#advertising}
       - [Connettore Google AdWords](connectors/advertising/ads.md)
    - Archiviazione cloud {#cloud-storage}
       - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
@@ -71,6 +71,7 @@ ht-degree: 10%
       - [Connettore Oracle](connectors/databases/oracle.md)
       - [Connettore Phoenix](connectors/databases/phoenix.md)
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
+      - [Connettore Snowflake](connectors/databases/snowflake.md)
    - eCommerce {#ecommerce}
       - [Connettore Shopify](connectors/ecommerce/shopify.md)
    - Sistema locale {#local-system}
@@ -125,6 +126,7 @@ ht-degree: 10%
          - [ Oracle](tutorials/api/create/databases/oracle.md)
          - [Fenice](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopificante](tutorials/api/create/ecommerce/shopify.md)
@@ -214,6 +216,7 @@ ht-degree: 10%
          - [ Oracle](tutorials/ui/create/databases/oracle.md)
          - [Fenice](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - eCommerce {#ecommerce}
          - [Shopificante](tutorials/ui/create/ecommerce/shopify.md)
       - Sistema locale {#local-system}

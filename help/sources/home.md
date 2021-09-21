@@ -5,9 +5,9 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Experience Platform consente l’acquisizione di dati da altre applicazioni Adob
 - [[!DNL Marketo Engage] panoramica del connettore](connectors/adobe-applications/marketo/marketo.md)
 - [Creare una connessione sorgente [!DNL Marketo Engage] nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Pubblicità
+### Advertising
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
@@ -97,6 +97,7 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [[!DNL Oracle] connettore](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connettore](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connettore](connectors/databases/postgres.md)
+- [[!DNL Snowflake] connettore](connectors/databases/snowflake.md)
 
 ### eCommerce
 
