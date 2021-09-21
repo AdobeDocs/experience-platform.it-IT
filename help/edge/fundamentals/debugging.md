@@ -3,10 +3,10 @@ title: Debug in Adobe Experience Platform Web SDK
 description: Scopri come attivare/disattivare le funzionalità di debug nell’SDK per web di Experience Platform.
 keywords: debugging sdk Web;debugging;configurare;comando di configurazione;comando di debug;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 2%
 
 ---
 
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il comportamento dell’SDK.
 
-Il debug è disattivato per impostazione predefinita, ma può essere attivato in tre modi diversi:
+Il debug è disattivato per impostazione predefinita, ma può essere attivato in quattro modi diversi:
 
 * `configure` command
 * `setDebug` command
 * parametro della stringa di query
+* Attivazione del debug in Adobe Experience Platform Debugger. Adobe Experience Platform è uno strumento potente che esamina le pagine web e ti aiuta a eseguire il debug dei problemi di implementazione con i prodotti Experience Cloud. Adobe Experience Platform Debugger è disponibile sia come estensione [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) che [Firefox](https://addons.mozilla.org/it/firefox/addon/adobe-experience-platform-dbg/). Il debug può essere abilitato dalla scheda di configurazione della sezione AEP Web SDK .
+
+![](../images/enable-debugging.png)
 
 ## Attivazione del debugging con il comando Configura
 

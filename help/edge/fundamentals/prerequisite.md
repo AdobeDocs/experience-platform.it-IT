@@ -3,10 +3,10 @@ title: Prerequisiti per l’utilizzo dell’SDK per web di Adobe Experience Plat
 description: Scopri i prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK.
 keywords: dominio di prima parte;CNAME;schema;crea schema;launch;estensione sdk web aep;estensione;id di configurazione;strumento di configurazione;elemento dati;crea elemento dati;oggetto XDM;sendEvent;send Event;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
+source-git-commit: 9d3965be1956de754f0d2a82178bf5dcd871e239
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '405'
+ht-degree: 1%
 
 ---
 
@@ -23,3 +23,17 @@ Per utilizzare l’SDK per web di Platform, devi prima:
 
 - Avere diritto a Adobe Experience Platform. Se non hai acquistato Adobe Experience Platform, Adobe ti fornirà l’accesso necessario da utilizzare in modo limitato con l’SDK senza alcun costo aggiuntivo.
 - Se il tuo sito web utilizza già il [servizio ID Experience Cloud](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) sul tuo sito web, tramite l&#39;API visitatore o l&#39;estensione del servizio ID Experience Cloud all&#39;interno di Adobe Experience Platform Launch, e desideri continuare a usarlo durante la migrazione all&#39;SDK per web di Adobe Experience Platform, devi utilizzare la versione più recente dell&#39;API visitatore o l&#39;estensione del servizio ID di Experience Cloud. Per ulteriori informazioni, consulta [Migrazione ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) .
+
+## Gestione delle autorizzazioni per Adobe Experience Platform Web SDK
+
+L&#39;utilizzo di Adobe Experience Platform non richiede autorizzazioni speciali ma è necessario disporre dei diritti [permissions](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=it) per creare gli schemi in Adobe Experience Platform. Le autorizzazioni minime necessarie sono disponibili nella categoria Modellazione dati e identità .
+
+![](../images/AEP-permission-categories.png)
+
+All’interno della categoria Modellazione dati, concedere agli utenti le autorizzazioni Gestisci schemi e Visualizza schemi.
+
+![](../images/data-modeling-permissions.png)
+
+All’interno della categoria Identity Management, assegna agli utenti le autorizzazioni Gestisci spazi dei nomi identità e Visualizza spazi dei nomi identità .
+
+![](../images/identity-management-permissions.png)
