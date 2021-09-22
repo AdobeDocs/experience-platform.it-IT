@@ -1,9 +1,10 @@
 ---
 description: Nell’ambito dell’SDK di destinazione, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi.
 title: Creare e testare un modello di trasformazione dei messaggi
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con `maxUsersPerRequest=1`, la richiesta restituisce un modello di esempio simile a questo:
+Se l&#39;ID di destinazione fornito corrisponde a una configurazione di destinazione con [aggregazione dello sforzo migliore](./destination-configuration.md#best-effort-aggregation) e `maxUsersPerRequest=1` nel criterio di aggregazione, la richiesta restituisce un modello di esempio simile a questo:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destin
 }
 ```
 
-Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile a questo:
+Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) o [aggregazione dello sforzo migliore](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile a questo:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

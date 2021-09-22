@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l’endpoint API `/authoring/sample-profiles`, per generare profili di esempio da utilizzare nel test di destinazione.
 title: Operazioni API per la generazione di profili di esempio
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ Puoi generare profili di esempio in base allo schema di origine XDM di Adobe o a
 Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
 
 ## Generare profili di esempio in base allo schema di origine {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Aggiungi i profili di esempio generati qui alle chiamate HTTP durante il [test della destinazione](./test-destination.md).
 
 Puoi generare profili di esempio basati sullo schema di origine effettuando una richiesta di GET all’ endpoint `authoring/sample-profiles/` e fornendo l’ID di un’istanza di destinazione creata in base alla configurazione di destinazione che desideri verificare.
 
@@ -176,6 +180,10 @@ Una risposta corretta restituisce lo stato HTTP 200 con il numero specificato di
 {style=&quot;table-layout:auto&quot;}
 
 ## Generare profili di esempio in base allo schema di destinazione {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Utilizza i profili di esempio generati qui durante la creazione del modello, nel [passaggio del modello di rendering](./render-template-api.md#multiple-profiles-with-body).
 
 Puoi generare profili di esempio in base allo schema di destinazione effettuando una richiesta di GET all’ endpoint `authoring/sample-profiles/` e fornendo l’ID di destinazione della configurazione di destinazione in base alla quale stai creando il modello.
 

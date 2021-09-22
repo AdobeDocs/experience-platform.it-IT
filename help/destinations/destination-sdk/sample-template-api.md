@@ -1,10 +1,11 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/sample`, per ottenere un modello di trasformazione del messaggio di prova per la destinazione.
 title: Ottieni operazioni API con modelli di esempio
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Una risposta corretta restituisce lo stato HTTP 200 con un modello di esempio che è possibile modificare per adattarlo al formato di dati previsto.
 
-Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con `maxUsersPerRequest=1`, la richiesta restituisce un modello di esempio simile a questo:
+Se l&#39;ID di destinazione fornito corrisponde a una configurazione di destinazione con [aggregazione dello sforzo migliore](./destination-configuration.md#best-effort-aggregation) e `maxUsersPerRequest=1` nel criterio di aggregazione, la richiesta restituisce un modello di esempio simile a questo:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destin
 }
 ```
 
-Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile a questo:
+Se l&#39;ID di destinazione fornito corrisponde a un modello di server di destinazione con [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) o [aggregazione dello sforzo migliore](./destination-configuration.md#best-effort-aggregation) con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile a questo:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
