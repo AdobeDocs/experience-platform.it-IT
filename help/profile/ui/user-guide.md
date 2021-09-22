@@ -4,7 +4,7 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Per visualizzare i dettagli di uno dei profili di esempio, seleziona l&#39; **[!
 Per ulteriori informazioni sull&#39;unione dei criteri e sul loro ruolo all&#39;interno di Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 
-### Sfoglia per [!UICONTROL Identità]
+### Sfoglia per [!UICONTROL Identità] {#browse-identity}
 
 Nella scheda **[!UICONTROL Sfoglia]** è possibile utilizzare uno spazio dei nomi di identità per cercare un profilo specifico in base a un valore di identità. Per effettuare la ricerca in base a un&#39;identità è necessario specificare un criterio di unione, uno spazio dei nomi di identità e un valore di identità.
 
