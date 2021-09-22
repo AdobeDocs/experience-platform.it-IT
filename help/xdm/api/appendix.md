@@ -5,9 +5,9 @@ title: Appendice della guida API del registro dello schema
 description: Questo documento fornisce informazioni supplementari relative all'utilizzo dell'API del Registro di sistema dello schema.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ I parametri di query più comuni per il paging includono:
 
 | Parametro | Descrizione |
 | --- | --- |
-| `start` | Specifica da dove devono iniziare i risultati elencati. Questo valore può essere ottenuto dall&#39;attributo `_page.next` di una risposta a elenco e utilizzato per accedere alla pagina successiva di risultati. Se il valore `_page.next` è null, non è disponibile alcuna pagina aggiuntiva. |
-| `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituisce un elenco di cinque risorse. |
 | `orderby` | Ordinare i risultati per una proprietà specifica. Esempio: `orderby=title` ordinerà i risultati per titolo in ordine crescente (A-Z). Se si aggiunge un `-` prima del valore del parametro (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
+| `limit` | Se utilizzato insieme a un parametro `orderby` , `limit` limita il numero massimo di elementi che devono essere restituiti per una determinata richiesta. Questo parametro non può essere utilizzato senza un parametro `orderby` presente.<br><br>Il  `limit` parametro specifica un numero intero positivo (tra  `0` e  `500`) come  ** hintas al numero massimo di elementi che devono essere restituiti. Ad esempio, `limit=5` restituisce solo cinque risorse nell’elenco. Tuttavia, questo valore non è strettamente rispettato. La dimensione effettiva della risposta può essere inferiore o maggiore in base alla necessità di fornire il funzionamento affidabile del parametro `start`, se fornito. |
+| `start` | Se utilizzato insieme a un parametro `orderby`, `start` specifica la posizione di inizio dell’elenco degli elementi impostato come secondario. Questo parametro non può essere utilizzato senza un parametro `orderby` presente. Questo valore può essere ottenuto dall&#39;attributo `_page.next` di una risposta a elenco e utilizzato per accedere alla pagina successiva di risultati. Se il valore `_page.next` è null, non è disponibile alcuna pagina aggiuntiva.<br><br>In genere, questo parametro viene omesso per ottenere la prima pagina dei risultati. Successivamente, `start` deve essere impostato sul valore massimo della proprietà di ordinamento principale del campo `orderby` ricevuto nella pagina precedente. La risposta API restituisce quindi le voci che iniziano con quelle che hanno una proprietà di ordinamento principale da `orderby` rigorosamente maggiore di (per ascendente) o rigorosamente inferiore (per decrescente) al valore specificato.<br><br>Ad esempio, se il  `orderby` parametro è impostato su  `orderby=name,firstname`, il  `start` parametro conterrà un valore per la  `name` proprietà. In questo caso, se desideri visualizzare le 20 voci successive di una risorsa immediatamente dopo il nome &quot;Miller&quot;, utilizza: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
