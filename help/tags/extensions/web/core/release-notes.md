@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 81%
+source-wordcount: '1522'
+ht-degree: 76%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 81%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 23 settembre 2021
+
+v3.2.1
+
+* È stato corretto un errore a causa del quale l’inizializzazione della visualizzazione dell’elemento dati del valore condizionale non funzionava correttamente quando i valori del campo erano 0.
+
+## 23 settembre 2021
+
+v3.2.0
+
+Nell’elemento dati Valore condizionale sono state introdotte le seguenti modifiche:
+
+* Aggiungi una casella di controllo per i valori condizionali e di fallback che consentono all’utente di scegliere se non definiti deve essere il valore restituito.
+* I valori numerici sono esposti come numeri nell&#39;oggetto settings.
+* Il valore condizionale non è più necessario in modo che possa comportarsi nello stesso modo del valore di fallback.
 
 ## 17 settembre 2021
 
