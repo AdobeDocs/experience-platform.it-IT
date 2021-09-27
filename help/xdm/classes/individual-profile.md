@@ -5,9 +5,9 @@ title: Classe di profilo individuale XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ La classe [!DNL XDM Individual Profile] fornisce direttamente diversi valori gen
 
 Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM Individual Profile] . Di seguito è riportato un elenco di alcuni gruppi di campi di uso comune per la classe:
 
+* [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md)
 * [[!UICONTROL Dettagli demografici]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Dettagli fedeltà]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Dati di contatto personali]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md)
 * [[!UICONTROL Dettagli di appartenenza al segmento]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Abbonamento a domicilio]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Dettagli contatto lavoro]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Componenti]](../field-groups/profile/business-person-components.md) Business Person XDM\*
+* [[!UICONTROL Dettagli sulle persone aziendali XDM]](../field-groups/profile/business-person-details.md)\*
+
+*\*Questo gruppo di campi è disponibile solo per le organizzazioni con accesso all’edizione B2B di Real-time Customer Data Platform.*
 
 Per un elenco completo di tutti i gruppi di campi compatibili per [!DNL XDM Individual Profile], consulta l’ [repository GitHub XDM](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
