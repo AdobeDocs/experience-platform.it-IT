@@ -1,7 +1,8 @@
 ---
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello di metadati estensibili per il pubblico, che puoi configurare in base alle specifiche dell’API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato per Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -54,7 +55,7 @@ Puoi utilizzare il modello generico per [creare un nuovo modello di pubblico](./
 
 Il team di progettazione di Adobe può collaborare con l’utente per espandere il modello generico con campi personalizzati, se richiesto dai casi di utilizzo.
 
-## Esempi di modelli {#template-examples}
+## Esempi di configurazione {#configuration-examples}
 
 Questa sezione include tre esempi di configurazioni generiche di metadati del pubblico, per il tuo riferimento, insieme a descrizioni delle sezioni principali della configurazione. Osserva come url, intestazioni, corpo della richiesta e della risposta differiscono tra le tre configurazioni di esempio. Ciò è dovuto alle diverse specifiche dell’API marketing delle tre piattaforme di esempio.
 
