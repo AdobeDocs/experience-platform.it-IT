@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a un server SFTP (Secure File Transfer Protocol) utilizzando l’API del servizio di flusso.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9ad09fba3119b631576f22574a2151c74f91e07b
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '809'
 ht-degree: 2%
 
 ---
@@ -39,6 +39,7 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL SFTP], è necessario for
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `host` | Nome o indirizzo IP associato al server [!DNL SFTP]. |
+| `port` | La porta server SFTP a cui ti connetti. Se non viene fornito, il valore predefinito è `22`. |
 | `username` | Il nome utente con accesso al server [!DNL SFTP]. |
 | `password` | Password per il server [!DNL SFTP]. |
 | `privateKeyContent` | Contenuto della chiave privata SSH codificata Base64. Il tipo di chiave OpenSSH deve essere classificato come RSA o DSA. |
@@ -55,7 +56,7 @@ Una connessione di base conserva le informazioni tra l&#39;origine e la piattafo
 
 Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL SFTP] come parte dei parametri della richiesta.
 
-### Creare una connessione [!DNL SFTP] utilizzando l&#39;autenticazione di base
+### Creare una connessione di base [!DNL SFTP] utilizzando l&#39;autenticazione di base
 
 Per creare una connessione di base [!DNL SFTP] utilizzando l’autenticazione di base, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `host`, `userName` e `password` della connessione.
 
@@ -113,7 +114,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 }
 ```
 
-### Creare una connessione [!DNL SFTP] utilizzando l’autenticazione a chiave pubblica SSH
+### Creare una connessione di base [!DNL SFTP] utilizzando l’autenticazione a chiave pubblica SSH
 
 Per creare una connessione di base [!DNL SFTP] utilizzando l’autenticazione a chiave pubblica SSH, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `host`, `userName`, `privateKeyContent` e `passPhrase`.
 
