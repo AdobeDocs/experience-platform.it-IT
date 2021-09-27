@@ -1,14 +1,18 @@
 ---
 title: Schemi in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Real-time Customer Data Platform B2B Edition.
-source-git-commit: a8c322cfe02c7a005275ec33e5dac92d2f76667a
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# Schemi in Real-time Customer Data Platform B2B Edition
+# Schemi in Real-time Customer Data Platform B2B Edition (Beta)
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Real-time Customer Data Platform B2B Edition fornisce diverse classi [Experience Data Model (XDM) ](../../xdm/schema/composition.md#class) che acquisiscono dettagli sulle entità dati B2B essenziali, come account, opportunità, campagne e altro ancora. Inoltre, Real-time CDP B2B Edition ti consente di definire relazioni molti-a-uno tra questi schemi in modo che possano partecipare a casi di utilizzo di segmentazione avanzati.
 

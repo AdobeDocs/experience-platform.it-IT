@@ -4,10 +4,10 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 13%
+source-wordcount: '391'
+ht-degree: 12%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 13%
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
    * [Definizione del segmento](./classes/segment-definition.md)
-   * Classi B2B {#b2b}
+   * Classi B2B (Beta) {#b2b}
       * [Account aziendale XDM](./classes/b2b/business-account.md)
       * [Relazione personale account aziendale XDM](./classes/b2b/business-account-person-relation.md)
       * [Campagna aziendale XDM](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 13%
    * [Mixins (obsoleto)](api/mixins.md)
    * [Appendice](api/appendix.md)
 * Tutorial {#tutorials}
-   * [Creare uno schema (interfaccia utente)](tutorials/create-schema-ui.md)
-   * [Creare uno schema (API)](tutorials/create-schema-api.md)
-   * [Definire una relazione tra due schemi (interfaccia utente)](tutorials/relationship-ui.md)
-   * [Definire una relazione tra due schemi (API)](tutorials/relationship-api.md)
-   * [Definire una relazione tra due schemi (B2B)](tutorials/relationship-b2b.md)
+   * [Creare uno schema nell’interfaccia utente](tutorials/create-schema-ui.md)
+   * [Creare uno schema nell’API](tutorials/create-schema-api.md)
+   * [Definire una relazione di schema nell’interfaccia utente](tutorials/relationship-ui.md)
+   * [Definire una relazione di schema nell’API](tutorials/relationship-api.md)
+   * [Definire una relazione di schema in Real-time CDP B2B Edition (Beta)](tutorials/relationship-b2b.md)
    * [Creare uno schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

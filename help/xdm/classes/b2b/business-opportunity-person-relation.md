@@ -1,18 +1,18 @@
 ---
 title: Classe di relazione tra persone opportunità aziendali XDM
 description: Questo documento fornisce una panoramica della classe di relazione tra le persone opportunità commerciali XDM in Experience Data Model (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Classe ] relazione persona opportunità aziendale XDM
+# [!UICONTROL Classe di ] relazione tra persone opportunità aziendali XDM (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Questa classe è disponibile solo per le organizzazioni che hanno accesso a Real-time Customer Data Platform B2B Edition.
+>Questa classe è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 [!UICONTROL XDM Business Opportunity Person ] Relationship è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di una persona associata a un&#39;opportunità aziendale.
 

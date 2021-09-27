@@ -1,14 +1,18 @@
 ---
 title: Definire una relazione tra due schemi in tempo reale Customer Data Platform B2B Edition
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Real-time Customer Data Platform B2B Edition.
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
 
 # Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 >[!NOTE]
 >
