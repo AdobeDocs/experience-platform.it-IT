@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 12%
+source-wordcount: '381'
+ht-degree: 11%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 12%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Acquisizione dei dati](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Fonti](#sources)
+
+## Acquisizione dei dati {#ingestion}
+
+L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi metodi in base ai quali Platform acquisisce i dati da varie sorgenti, nonché il modo in cui tali dati vengono mantenuti all’interno del Data Lake e possono essere utilizzati dai servizi di Platform a valle.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+|------- | -----------|
+| Aggiornare o applicare patch i record del profilo utilizzando l’acquisizione batch | Il profilo cliente in tempo reale ora consente di aggiornare gli attributi del profilo nei dati dei record dei singoli profili tramite l’acquisizione batch. Per ulteriori informazioni, consulta la [guida per gli sviluppatori di inserimento batch](../../ingestion/batch-ingestion/api-overview.md). |
+
+Per ulteriori informazioni sull’acquisizione di dati in Platform, consulta la [documentazione sull’acquisizione dei dati](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
