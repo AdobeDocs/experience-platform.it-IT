@@ -5,9 +5,9 @@ title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1598'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ Per visualizzare i namespace delle identità nell&#39;interfaccia utente, selezi
 
 ![navigare](./images/browse.png)
 
-Nell’interfaccia principale della pagina viene visualizzato un elenco di spazi dei nomi delle identità, con informazioni sui nomi, i simboli di identità, la data dell’ultimo aggiornamento e se si tratta di uno spazio dei nomi standard o personalizzato. La barra a destra contiene informazioni su [!UICONTROL Identità univoche] e [!UICONTROL Forza grafico identità]. [!UICONTROL Le ] identità univoche fanno riferimento al numero di identità esistenti nella particolare sandbox che stai utilizzando, mentre la forza del grafico di  [!UICONTROL identità ] mostra informazioni sul numero di ID di cookie e non cookie all’interno della sandbox.
+Nell’interfaccia principale della pagina viene visualizzato un elenco di spazi dei nomi delle identità, con informazioni sui nomi, i simboli di identità, la data dell’ultimo aggiornamento e se si tratta di uno spazio dei nomi standard o personalizzato. La barra a destra contiene informazioni sulla resistenza del grafico di identità [!UICONTROL a1/>.]
 
 ![identità](./images/identities.png)
 
@@ -91,7 +91,7 @@ Seleziona uno spazio dei nomi di identità dall’elenco per visualizzare le inf
 
 ![select-namespace](./images/select-namespace.png)
 
-## Gestire i namespace personalizzati {#manage-namespaces}
+## Gestire spazi dei nomi personalizzati {#manage-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, è possibile che siano necessari spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando l’ API [[!DNL Identity Service]](./api/create-custom-namespace.md) o tramite l’interfaccia utente.
 

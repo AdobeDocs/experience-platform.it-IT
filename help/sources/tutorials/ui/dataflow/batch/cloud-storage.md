@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
+source-git-commit: e980ca69517d6e51ce00f102492829aabaa52976
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Non è possibile eseguire la mappatura tra tipi diversi. Ad esempio, non è poss
 
 >[!TIP]
 >
->[!DNL Platform] fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
+>Platform fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
 
 Seleziona **[!UICONTROL Anteprima dati]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 

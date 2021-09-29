@@ -5,9 +5,9 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Questa guida per gli sviluppatori richiede una buona comprensione dei vari servi
 - [[!DNL Segmentation]](../home.md): Consente di creare segmenti e tipi di pubblico dai  [!DNL Real-time Customer Profile] dati.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
 
-Per effettuare correttamente le chiamate agli endpoint API [!DNL Data Prep], leggi la guida introduttiva [alle API Platform](../../landing/api-guide.md) per informazioni sulle intestazioni richieste e su come leggere chiamate API di esempio.
+Per effettuare correttamente le chiamate a qualsiasi endpoint API Experience Platform, leggi la guida [guida introduttiva alle API Platform](../../landing/api-guide.md) per informazioni sulle intestazioni richieste e su come leggere chiamate API di esempio.
 
 ## Tipi di query per segmentazione Edge {#query-types}
 

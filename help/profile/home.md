@@ -4,9 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
+source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,15 @@ L’interfaccia utente di Experience Platform fornisce un dashboard tramite il q
 
 Ogni singolo profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi al singolo cliente che compaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un singolo profilo per quel cliente.
 
-Quando i dati provenienti da più origini sono in conflitto (ad esempio, un frammento elenca il cliente come &quot;singolo&quot;, mentre l&#39;altro elenca il cliente come &quot;sposato&quot;), il [criterio di unione](#merge-policies) determina quali informazioni dare la priorità e includere nel profilo dell&#39;individuo. Pertanto, è probabile che il numero totale di frammenti di profilo all’interno di Platform sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
+In altre parole, i frammenti di profilo rappresentano un&#39;identità principale univoca e i dati corrispondenti [record](#record-data) o [evento](#time-series-events) per tale ID all&#39;interno di un dato set di dati.
 
-### Registra dati
+Quando i dati provenienti da più set di dati sono in conflitto (ad esempio, un frammento elenca il cliente come &quot;singolo&quot;, mentre l’altro elenca il cliente come &quot;sposato&quot;), il [criterio di unione](#merge-policies) determina quali informazioni dare la priorità e includere nel profilo dell’utente. Pertanto, è probabile che il numero totale di frammenti di profilo all’interno di Platform sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è in genere composto da più frammenti provenienti da più set di dati.
+
+### Registra dati {#record-data}
 
 Un profilo è una rappresentazione di un soggetto, un’organizzazione o una persona, composta da molti attributi (noti anche come dati di record). Ad esempio, il profilo di un prodotto può includere una SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. Utilizzando [!DNL Experience Platform], puoi personalizzare i profili in modo da utilizzare dati specifici rilevanti per la tua azienda. La classe [!DNL Experience Data Model] (XDM) standard, [!DNL XDM Individual Profile], è la classe preferita da cui creare uno schema per descrivere i dati dei record cliente e fornisce i dati integrali a molte interazioni tra i servizi Platform. Per ulteriori informazioni sull&#39;utilizzo degli schemi in [!DNL Experience Platform], iniziare leggendo la [Panoramica del sistema XDM](../xdm/home.md).
 
-### Eventi delle serie temporali
+### Eventi delle serie temporali {#time-series-events}
 
 I dati delle serie temporali forniscono un&#39;istantanea del sistema al momento in cui un soggetto ha agito direttamente o indirettamente, nonché i dati che descrivono l&#39;evento stesso. Rappresentato dalla classe di schema standard XDM ExperienceEvent, i dati delle serie temporali possono descrivere eventi quali elementi aggiunti a un carrello, collegamenti su cui si fa clic e video visualizzati. I dati delle serie temporali possono essere utilizzati per basare le regole di segmentazione su e gli eventi sono accessibili singolarmente nel contesto di un profilo.
 
@@ -108,6 +110,7 @@ Observability Insights consente di esporre le metriche chiave in Adobe Experienc
 [!DNL Data governance] è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e politiche applicabili all’utilizzo dei dati.
 
 Per quanto riguarda l’accesso ai dati, la governance dei dati svolge un ruolo chiave all’interno di [!DNL Experience Platform] a vari livelli:
+
 * Etichette per l’uso dei dati
 * Criteri di accesso ai dati
 * Controllo degli accessi ai dati per le azioni di marketing
@@ -120,4 +123,4 @@ Per quanto riguarda l’accesso ai dati, la governance dei dati svolge un ruolo 
 
 ## Passaggi successivi e risorse aggiuntive
 
-Per ulteriori informazioni sull’utilizzo dei dati [!DNL Real-time Customer Profile] tramite l’interfaccia utente di Experience Platform o l’API di profilo, inizia leggendo rispettivamente la [Guida per gli sviluppatori dell’interfaccia utente di profilo](ui/user-guide.md) o la [Guida per gli sviluppatori API](api/overview.md) .
+Per ulteriori informazioni sull’utilizzo dei dati del profilo cliente in tempo reale tramite l’interfaccia utente di Experience Platform o l’API di profilo, inizia leggendo rispettivamente la [Guida per gli sviluppatori dell’interfaccia utente del profilo](ui/user-guide.md) o [Guida per gli sviluppatori API](api/overview.md) .

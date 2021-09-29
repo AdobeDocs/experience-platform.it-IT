@@ -1,19 +1,19 @@
 ---
 title: Gruppo di campi di schema dei componenti per Business Person XDM
 description: In questo documento viene fornita una panoramica del gruppo di campi dello schema dei componenti Business Person XDM.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Gruppo di campi ] Componente Business Person XDM (Beta)
 
-# [!UICONTROL Gruppo di campi ] Componenti per Business Person XDM
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Questo gruppo di campi è disponibile solo per le organizzazioni che hanno accesso all’edizione B2B di Real-time Customer Data Platform (Real-time CDP).
+>Questo gruppo di campi è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 [!UICONTROL Il ] componente Business Person XDM è un gruppo di campi schema standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che acquisisce più record di origine per una persona e altri attributi richiesti per la segmentazione di una persona.
 

@@ -5,9 +5,9 @@ title: Panoramica del servizio Identity
 topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Prima di immergerti nei dettagli di [!DNL Identity Service], ecco una breve sint
 | Spazio dei nomi identità | Uno spazio dei nomi di identità serve a distinguere il contesto o il tipo di un&#39;identità. Ad esempio, un&#39;identità distingue &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico. I namespace Identity vengono utilizzati per cercare le singole identità e fornire il contesto per i valori di identità. Questo consente di determinare che due frammenti [!DNL Profile] che contengono ID primari diversi, ma condividono lo stesso valore per lo spazio dei nomi di identità `email` sono in realtà la stessa persona. Per ulteriori informazioni, consulta la [panoramica dello spazio dei nomi di identità](./namespaces.md) . |
 | Grafico di identità | Un grafico delle identità è una mappa delle relazioni tra identità diverse, che ti consente di visualizzare e comprendere meglio quali identità dei clienti sono unite e come. Per ulteriori informazioni, consulta l’esercitazione su [uso del visualizzatore del grafico delle identità](./ui/identity-graph-viewer.md) . |
 | Informazioni personali (PII) | Le informazioni PII sono informazioni che possono identificare direttamente un cliente, ad esempio un indirizzo e-mail o un numero di telefono. I valori PII vengono spesso utilizzati per la corrispondenza. identità multiple di un cliente tra diversi sistemi. |
-| Identità univoca | Un’identità univoca è un’identità che esiste solo in una particolare sandbox. |
 | Identità sconosciute o anonime | Le identità sconosciute o anonime sono indicatori che isolano i dispositivi senza identificare la persona effettiva che utilizza il dispositivo. Le identità sconosciute e anonime includono informazioni quali l&#39;indirizzo IP di un visitatore e l&#39;ID cookie. Sebbene le identità sconosciute e anonime possano fornire dati comportamentali, sono limitate fino a quando un cliente non fornisce i propri dati PII. |
 
 ## Che cosa è [!DNL Identity Service]?

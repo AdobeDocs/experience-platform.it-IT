@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform fornisce una serie di protezioni per aiutarti a evitare la creazione di modelli di dati non supportati da Profilo cliente in tempo reale. Questo documento delinea le best practice e i vincoli da tenere a mente durante la modellazione dei dati del profilo.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1962'
 ht-degree: 1%
 
 ---
@@ -48,10 +48,6 @@ Il modello di dati di archivio [!DNL Profile] è costituito da due tipi di entit
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Frammenti di profilo
-
-In questo documento sono presenti più protezioni che fanno riferimento a &quot;frammenti di profilo&quot;. Il Profilo cliente in tempo reale è composto da più frammenti di profilo. Ogni frammento rappresenta i dati per l’identità da un set di dati in cui è l’identità principale. Ciò significa che un frammento può contenere un ID principale e dati evento (serie temporale) in un set di dati XDM ExperienceEvent oppure può essere composto da un ID principale e da dati di record (attributi indipendenti dalla data e ora) in un set di dati XDM per profili individuali.
-
 ## Tipi di limite
 
 Quando definisci il modello dati, si consiglia di rimanere entro le protezioni fornite per garantire le prestazioni corrette ed evitare errori di sistema.
@@ -62,6 +58,10 @@ Le protezioni fornite in questo documento comprendono due tipi di limiti:
 
 * **Limite rigido:** un limite rigido fornisce un massimo assoluto per il sistema. Superando un limite rigido si otterranno interruzioni ed errori, impedendo il funzionamento del sistema come previsto.
 
+## Frammenti di profilo
+
+In questo documento sono presenti diverse protezioni che fanno riferimento a &quot;frammenti di profilo&quot;. Ad Experience Platform, più frammenti di profilo vengono uniti per formare il Profilo cliente in tempo reale. Ciascun frammento rappresenta un’identità principale univoca e i dati corrispondenti del record o dell’evento per tale ID all’interno di un dato set di dati. Per ulteriori informazioni sui frammenti di profilo, consulta la [Panoramica del profilo](home.md#profile-fragments-vs-merged-profiles).
+
 ## Guardrail del modello dati
 
 Durante la creazione di un modello dati da utilizzare con [!DNL Real-time Customer Profile] si consiglia di attenersi alle seguenti protezioni.
@@ -70,11 +70,13 @@ Durante la creazione di un modello dati da utilizzare con [!DNL Real-time Custom
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero di set di dati consigliati per contribuire allo schema di unione [!DNL Profile] | 20 | Morbido | **Si consiglia un massimo di 20 set di dati  [!DNL Profile]abilitati.** Per abilitare un altro set di dati per  [!DNL Profile], devi prima rimuovere o disabilitare un set di dati esistente. |
+| Numero di set di dati abilitati per il profilo | 20 | Morbido | **Un massimo di 20 set di dati può contribuire allo schema  [!DNL Profile] dell’unione.** Per abilitare un altro set di dati per  [!DNL Profile], devi prima rimuovere o disabilitare un set di dati esistente. Il limite di 20 set di dati include i set di dati di altre soluzioni di Adobe (ad esempio, Adobe Analytics). |
+| Numero di set di dati della suite di rapporti di Adobe Analytics abilitati per Profilo | 1 | Morbido | **Per Profilo deve essere abilitato un massimo di un set di dati della suite di rapporti di Analytics (1).** Il tentativo di abilitare più set di dati della suite di rapporti di Analytics per il profilo potrebbe avere conseguenze indesiderate per la qualità dei dati. Per ulteriori informazioni, consulta la sezione sui [set di dati Adobe Analytics](#aa-datasets) nell’appendice di questo documento. |
 | Numero di relazioni con più entità consigliate | 5 | Morbido | **È consigliato un massimo di 5 relazioni tra più entità definite tra entità primarie ed entità dimensione.** Le mappature aggiuntive delle relazioni non devono essere effettuate finché non viene rimossa o disabilitata una relazione esistente. |
 | Profondità JSON massima per il campo ID utilizzato nella relazione multi-entità | 4 | Morbido | **La profondità massima JSON consigliata per un campo ID utilizzato nelle relazioni tra più entità è 4.** Ciò significa che in uno schema altamente nidificato i campi nidificati con profondità superiore a 4 livelli non devono essere utilizzati come campo ID in una relazione. |
 | Cardinalità array in un frammento di profilo | &lt;> | Morbido | **La cardinalità ottimale dell’array in un frammento di profilo (dati indipendenti dal tempo) è  &lt;>** |
 | Cardinalità array in ExperienceEvent | &lt;=10 | Morbido | **La cardinalità ottimale dell’array in un ExperienceEvent (dati di serie temporali) è  &lt;>** |
+| Limite del conteggio delle identità per singolo profilo Grafico identità | 50 | Duro | **Il numero massimo di identità in un grafico di identità per un singolo profilo è 50.** Eventuali profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. |
 
 ### protezioni di entità Dimension
 
@@ -98,8 +100,8 @@ Le seguenti protezioni fanno riferimento alla dimensione dei dati e sono consigl
 | --- | --- | --- | --- |
 | Dimensione massima di ExperienceEvent | 10 KB | Duro | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno eliminati. |
 | Dimensione massima del record del profilo | 100 KB | Duro | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, tuttavia i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
-| Dimensione massima del frammento di profilo | 50 MB | Duro | **La dimensione massima di un frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi  [frammento di ](#profile-fragments) profilo maggiore di 50 MB. |
-| Dimensioni massime di archiviazione del profilo | 50 MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** L’aggiunta di nuovi  [frammenti di ](#profile-fragments) profilo a un profilo di dimensioni superiori a 50 MB influirà sulle prestazioni del sistema. |
+| Dimensione massima del frammento di profilo | 50 MB | Duro | **La dimensione massima di un singolo frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi  [frammento di ](#profile-fragments) profilo maggiore di 50 MB. |
+| Dimensioni massime di archiviazione del profilo | 50 MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** L’aggiunta di nuovi  [frammenti di ](#profile-fragments) profilo a un profilo di dimensioni superiori a 50 MB influirà sulle prestazioni del sistema. Ad esempio, un profilo potrebbe contenere un singolo frammento di 50 MB oppure più frammenti in più set di dati con una dimensione totale combinata di 50 MB. Il tentativo di memorizzare un profilo con un singolo frammento di dimensioni superiori a 50 MB o più frammenti di dimensioni totali superiori a 50 MB in una dimensione combinata influisce sulle prestazioni del sistema. |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | 90 | Morbido | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. |
 
 ### protezioni di entità Dimension
@@ -119,3 +121,13 @@ Le protezioni descritte in questa sezione si riferiscono al numero e alla natura
 | Numero massimo di segmenti per sandbox | 10.000 | Morbido | **Il numero massimo di segmenti che un&#39;organizzazione può creare è 10.000 per sandbox.** Un’organizzazione può avere più di 10.000 segmenti in totale, purché ci siano meno di 10.000 segmenti in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti comporterà prestazioni di sistema ridotte. |
 | Numero massimo di segmenti di streaming per sandbox | 500 | Morbido | **Il numero massimo di segmenti di streaming che un&#39;organizzazione può creare è 500 per sandbox.** Un’organizzazione può disporre di più di 500 segmenti di streaming in totale, purché ci siano meno di 500 segmenti di streaming in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti di streaming si tradurrà in prestazioni di sistema degradate. |
 | Numero massimo di segmenti batch per sandbox | 10.000 | Morbido | **Il numero massimo di segmenti batch che un&#39;organizzazione può creare è 10.000 per sandbox.** Un&#39;organizzazione può avere più di 10.000 segmenti batch in totale, purché ci siano meno di 10.000 segmenti batch in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti batch provocherà un deterioramento delle prestazioni del sistema. |
+
+## Appendice
+
+Questa sezione fornisce ulteriori dettagli per le protezioni individuali.
+
+### Set di dati suite di rapporti Adobe Analytics in Platform {#aa-datasets}
+
+Per Profilo deve essere abilitato un massimo di un (1) set di dati della suite di rapporti di Adobe Analytics. Si tratta di un limite soft, il che significa che puoi abilitare più di un set di dati Analytics per il profilo, ma non è consigliato in quanto potrebbe avere conseguenze non intenzionali per i tuoi dati. Ciò è dovuto alle differenze tra gli schemi Experience Data Model (XDM), che forniscono la struttura semantica dei dati in Experience Platform e consentono l’interpretazione uniforme dei dati, e la natura personalizzabile degli eVar e delle variabili di conversione in Adobe Analytics.
+
+Ad esempio, in Adobe Analytics una singola organizzazione può avere più suite di rapporti. Se la suite di rapporti A designa eVar 4 come &quot;termine di ricerca interno&quot; e la suite di rapporti B designa eVar 4 come &quot;dominio di riferimento&quot;, questi valori verranno entrambi acquisiti nello stesso campo in Profilo, causando confusione e degradando la qualità dei dati.

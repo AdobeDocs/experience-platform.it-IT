@@ -1,19 +1,19 @@
 ---
 title: Gruppo di campi di schema Dettagli persona aziendale XDM
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli persona commerciale XDM.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 5%
+source-wordcount: '562'
+ht-degree: 4%
 
 ---
 
+# [!UICONTROL XDM Business Person ] Detailsschema field group (Beta)
 
-# [!UICONTROL XDM Business Person ] Detailsschema, gruppo di campi
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Questo gruppo di campi è disponibile solo per le organizzazioni che hanno accesso all’edizione B2B di Real-time Customer Data Platform.
+>Questo gruppo di campi è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 [!UICONTROL Business Person XDM ] Consente di specificare un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che acquisisce informazioni su una persona nel contesto di un&#39;azienda business-to-business (B2B).
 
