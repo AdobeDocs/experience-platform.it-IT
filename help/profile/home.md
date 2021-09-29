@@ -4,9 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,10 @@ Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personali
 ### Metriche di acquisizione del profilo
 
 Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche di utilizzo e agli indicatori di prestazioni [!DNL Experience Platform] per varie funzionalità [!DNL Platform], sono disponibili metriche specifiche relative al profilo che consentono di ottenere informazioni dettagliate sui tassi di richiesta in arrivo, sui tassi di acquisizione riusciti, sulle dimensioni dei record acquisiti e altro ancora. Per ulteriori informazioni, inizia leggendo la [panoramica API di Registri di osservazione](../observability/api/overview.md) e per un elenco completo delle metriche Profilo cliente in tempo reale, consulta la documentazione sulle [metriche disponibili](../observability/api/metrics.md#available-metrics).
+
+## Aggiorna dati archivio profili
+
+A volte può essere necessario aggiornare i dati nell’archivio profili della tua organizzazione. Ad esempio, potrebbe essere necessario correggere i record o modificare un valore di attributo. Questo può essere fatto tramite l’acquisizione in batch o in streaming e richiede un set di dati abilitato per il profilo configurato con un tag upsert. Per ulteriori informazioni su come configurare un set di dati per gli aggiornamenti degli attributi, consulta l’esercitazione per [abilitare un set di dati per Profilo e aggiornamento](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] e [!DNL Privacy]
 

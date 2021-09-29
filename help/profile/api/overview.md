@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e lavorare con i dati del profilo, tra cui visualizzare i profili, creare e aggiornare criteri di unione, esportare o dati del profilo di esempio ed eliminare i dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di
 ## Processi del sistema di profili {#profile-system-jobs}
 
 I dati abilitati per il profilo acquisiti in [!DNL Platform] vengono memorizzati sia nell’ [!DNL Data Lake] che nell’ archivio dati [!DNL Real-time Customer Profile]. A volte può essere necessario eliminare un set di dati o un batch dall&#39; archivio [!DNL Profile] per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. Questo richiede l&#39;utilizzo dell&#39;API per creare un [!DNL Profile System Job], noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o eliminato se necessario. Per informazioni su come lavorare con le richieste di eliminazione utilizzando l&#39;endpoint `/system/jobs` nell&#39;API [!DNL Real-time Customer Profile], segui i passaggi descritti nella [guida all&#39;endpoint dei processi del sistema di profilo](profile-system-jobs.md).
+
+## Aggiornare gli attributi dei profili {#update-profile}
+
+A volte può essere necessario aggiornare i dati nell’archivio profili della tua organizzazione. Ad esempio, potrebbe essere necessario correggere i record o modificare un valore di attributo. Questo può essere fatto tramite l’acquisizione in batch o in streaming e richiede un set di dati abilitato per il profilo configurato con un tag upsert. Per ulteriori informazioni su come configurare un set di dati per gli aggiornamenti degli attributi, consulta l’esercitazione per [abilitare un set di dati per Profilo e aggiornamento](../../catalog/datasets/enable-upsert.md).
 
 ## Passaggi successivi {#next-steps}
 

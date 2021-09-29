@@ -5,13 +5,13 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per aggiungere dati al profilo cliente in tempo reale.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
+
 
 # Aggiungi dati a [!DNL Real-time Customer Profile]
 
@@ -40,3 +40,7 @@ Quando carichi i dati in un nuovo set di dati per la prima volta o come parte di
 Utilizzando l’ API di accesso [!DNL Real-time Customer Profile] è possibile recuperare i dati batch caricati in un set di dati. Se non riesci a recuperare nessuna delle entità previste, il set di dati potrebbe non essere abilitato per [!DNL Profile]. Dopo aver confermato che il set di dati è stato abilitato, assicurati che il formato e gli identificatori dei dati di origine supportino le tue aspettative.
 
 Per istruzioni dettagliate su come accedere alle entità utilizzando l&#39;API [!DNL Real-time Customer Profile], fai riferimento alla [guida all&#39;endpoint entità](../api/entities.md), nota anche come &quot;[!DNL Profile Access] API&quot;.
+
+## Aggiorna dati archivio profili
+
+A volte può essere necessario aggiornare i dati nell’archivio profili della tua organizzazione. Ad esempio, potrebbe essere necessario correggere i record o modificare un valore di attributo. Questo può essere fatto tramite l’acquisizione in batch o in streaming e richiede un set di dati abilitato per il profilo configurato con un tag upsert. Per ulteriori informazioni su come configurare un set di dati per gli aggiornamenti degli attributi, consulta l’esercitazione per [abilitare un set di dati per Profilo e aggiornamento](../../catalog/datasets/enable-upsert.md).

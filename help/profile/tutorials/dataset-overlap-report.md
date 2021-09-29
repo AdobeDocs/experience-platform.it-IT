@@ -3,13 +3,13 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Genera il rapporto di sovrapposizione del set di dati
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione dei set di dati utilizzando l’API del profilo cliente in tempo reale.
-source-git-commit: f30f87527f5e903c851a140e7cbaad1964a48803
+exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
 
 ---
-
 
 # Genera il rapporto di sovrapposizione dei set di dati
 
@@ -99,7 +99,7 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovra
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
-## Interpreta i dati del rapporto di sovrapposizione del set di dati {#interpret-the-report}
+## Interpretare i dati del rapporto di sovrapposizione del set di dati {#interpret-the-report}
 
 Il rapporto di sovrapposizione dei set di dati generato fornisce una marca temporale che mostra la data e l’ora del rapporto e un oggetto dati che include combinazioni univoche di ID dei set di dati come elenchi separati da virgole. Le sezioni seguenti forniscono informazioni aggiuntive relative ai componenti del rapporto.
 
@@ -124,6 +124,7 @@ Per interpretare i risultati del rapporto, considera l’esempio seguente:
 ```
 
 Questo rapporto fornisce le seguenti informazioni:
+
 * Esistono 123 profili composti da dati provenienti dai seguenti set di dati: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Esistono 454.412 profili composti da dati provenienti da questi due set di dati: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
 * Esistono 107 profili costituiti solo da dati del set di dati `5eeda0032af7bb19162172a7`.

@@ -4,10 +4,10 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 21%
+source-wordcount: '124'
+ht-degree: 19%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 21%
    - [Connettore Kafka](streaming-ingestion/kafka.md)
    - [Risoluzione dei problemi](streaming-ingestion/troubleshooting.md)
 - Acquisizione batch{#batch}
-   - [Panoramica](batch-ingestion/overview.md)
-   - [API per l’acquisizione in batch](batch-ingestion/api-overview.md)
+   - [Guida introduttiva alle API di acquisizione batch](batch-ingestion/getting-started.md)
+   - [Panoramica API](batch-ingestion/overview.md)
+   - [Guida per gli sviluppatori API](batch-ingestion/api-overview.md)
    - [Acquisizione batch parziale](batch-ingestion/partial.md)
    - [Risoluzione dei problemi](batch-ingestion/troubleshooting.md)
 - Tutorial {#tutorials}

@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Guida di Real-time Customer Profile
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 feature: Profiles
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '136'
 ht-degree: 18%
 
 ---
@@ -43,8 +43,8 @@ ht-degree: 18%
    * [Guida all’interfaccia utente dello schema dell’unione](ui/union-schema.md)
    * [Panoramica dello schema dell’Unione (video)](video/union-schemas-overview.md)
 * Tutorial {#tutorials}
-   * [Aggiungi dati a [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configurare un set di dati per il servizio [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
+   * [Aggiungere dati al profilo cliente in tempo reale](tutorials/add-profile-data.md)
+   * [Configurare un set di dati per il profilo](tutorials/dataset-configuration.md)
    * [Genera il rapporto di sovrapposizione dei set di dati](tutorials/dataset-overlap-report.md)
    * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Elaborazione delle richieste di privacy](privacy.md)
