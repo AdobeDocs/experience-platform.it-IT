@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketi Engage è l’unica soluzione end-to-end per la gestione dell’esperienza dei clienti (CXM) per il marketing, la pubblicità, l’analisi e il commercio. Ti consente di automatizzare e gestire le attività dalla gestione dei lead CRM e il coinvolgimento dei clienti fino all’attribuzione di marketing e ricavi basata sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
+source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Marketi Engage è l’unica soluzione end-to-end per la gestione dell’esperienza dei clienti (CXM) per il marketing, la pubblicità, l’analisi e il commercio. Ti consente di automatizzare e gestire le attività dalla gestione dei lead CRM e il coinvolgimento dei clienti fino all’attribuzione di marketing e ricavi basata sull’account.
 
-Il connettore dei segmenti consente agli addetti al marketing di inviare i segmenti creati in Adobe Experience Platform a Marketo dove verranno visualizzati come elenchi statici.
+La destinazione consente agli esperti di marketing di inviare in push i segmenti creati in Adobe Experience Platform a Marketo dove verranno visualizzati come elenchi statici.
 
 ## Identità supportate {#supported-identities}
 
@@ -30,7 +30,7 @@ Il connettore dei segmenti consente agli addetti al marketing di inviare i segme
 
 ## Tipo di esportazione {#export-type}
 
-Esportazione segmento : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione del Marketo Engage.
+Esportazione segmento: stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (e-mail, ECID) utilizzati nella destinazione del Marketo Engage.
 
 ## Impostare la destinazione e attivare i segmenti {#set-up}
 
