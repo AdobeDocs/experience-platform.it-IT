@@ -1,13 +1,13 @@
 ---
 keywords: attivare destinazioni di richiesta profilo;attivare dati;destinazioni di richiesta profilo
-title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo
+title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo (Beta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Scopri come attivare i dati sul pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di richiesta del profilo.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Per attivare i dati nelle destinazioni, è necessario che [sia stato collegato c
 
 ### Criterio di unione dei segmenti {#merge-policy}
 
-Le destinazioni di richiesta del profilo supportano attualmente solo l’attivazione di segmenti che utilizzano il criterio di unione predefinito. Il tentativo di attivare segmenti con un criterio di unione diverso causa un errore nella pagina [[!UICONTROL Rivedi]](#review).
+Attualmente, le destinazioni di richiesta del profilo supportano solo l&#39;attivazione di segmenti che utilizzano il [criterio di unione predefinito](../../segmentation/ui/segment-builder.md#merge-policies).
 
 ## Seleziona la destinazione {#select-destination}
 

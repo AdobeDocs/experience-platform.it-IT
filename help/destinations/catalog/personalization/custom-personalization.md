@@ -1,10 +1,10 @@
 ---
 keywords: personalizzazione personalizzata; destinazione; destinazione personalizzata di experience platform;
-title: Destinazione personalizzazione personalizzata
+title: Connessione di personalizzazione personalizzata (Beta)
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito per recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce 1:1 in tempo reale e personalizzazione in base all’appartenenza a un segmento di un profilo utente.
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 ## Tipo di esportazione {#export-type}
 
-**Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile configurare diverse destinazioni di personalizzazione personalizzate per diversi datastreams di raccolta dati di Adobe.
+**Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile configurare diverse destinazioni di personalizzazione personalizzate per diversi [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
 
 ## Casi di utilizzo {#use-cases}
 
-Questa destinazione condivide i tipi di pubblico con un server di annunci e applicazioni di personalizzazione non Adobe, da utilizzare in tempo reale, per decidere quali utenti di annunci pubblicitari visualizzare su un sito web.
+Questa destinazione condivide i tipi di pubblico con server di annunci e applicazioni di personalizzazione senza Adobi, da utilizzare in tempo reale, per decidere quali utenti di annunci pubblicitari visualizzare su un sito web.
 
 ### Caso d&#39;uso n. 1
 
@@ -62,7 +62,7 @@ Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione
 
 Se utilizzi [Tag di Adobe](../../../tags/home.md) per distribuire l&#39;SDK per web di Experience Platform, utilizza la funzionalità [invia evento completato](../../../edge/extension/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
 
-Se non utilizzi [Tag per Adobi](../../../tags/home.md) per distribuire l&#39;SDK per web Experience Platform, utilizza la funzionalità [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) .
+Se non utilizzi [Tag per Adobi](../../../tags/home.md) per distribuire l&#39;SDK per web Experience Platform, utilizza la funzionalità [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
 
 La risposta JSON di Adobe Experience Platform può essere analizzata per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del segmento possono essere passati nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di come potrebbe essere specifico per la risposta di destinazione.
 
