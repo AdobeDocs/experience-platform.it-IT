@@ -5,29 +5,34 @@ title: Creare un nuovo profilo di prodotto in Adobe Admin Console
 topic-legacy: user guide
 description: Questo documento descrive i passaggi necessari per creare un nuovo profilo di prodotto in Adobe Admin Console. Per iniziare a creare un nuovo profilo, passa alla scheda Profili di prodotto e fai clic su Nuovo profilo .
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 3%
+source-wordcount: '315'
+ht-degree: 1%
 
 ---
 
 # Creare un nuovo profilo di prodotto in Adobe Admin Console
 
-Per iniziare a creare un nuovo profilo, passa alla scheda **[!UICONTROL Product Profiles]** e fai clic su **[!UICONTROL New Profile]**.
+Per iniziare a creare un nuovo profilo, passa alla scheda **[!UICONTROL Profili di prodotto]** e seleziona **[!UICONTROL Nuovo profilo]**.
 
-![pulsante nuovo profilo](../images/new-profile-button.png)
+![nuovo profilo](../images/new-profile.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Create New Profile]** in cui viene richiesto di immettere un nome e una descrizione del profilo per il nuovo profilo. Se si desidera che il nome visualizzato del profilo sia diverso, deselezionare **[!UICONTROL Same as Profile Name]** e immettere il nome visualizzato nella casella di testo visualizzata. In **[!UICONTROL User Notifications]** puoi scegliere se gli utenti verranno informati via e-mail quando verranno aggiunti o rimossi dal profilo.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Crea un nuovo profilo di prodotto]** che richiede di immettere un profilo, un nome visualizzato facoltativo e una descrizione facoltativa. In **[!UICONTROL Notifiche utente]**, puoi scegliere se gli utenti verranno informati via e-mail quando verranno aggiunti o rimossi dal profilo.
 
-Al termine, fai clic su **[!UICONTROL Next]**.
+Al termine, seleziona **[!UICONTROL Avanti]**.
 
-![new-profile-details](../images/new-profile-details.png)
+![create-new-product-profile](../images/create-new-product-profile.png)
 
-Nella schermata successiva viene richiesto di scegliere i servizi [!DNL Platform] da includere nel profilo. Fai clic sul pulsante di attivazione/disattivazione accanto a un servizio per disattivarlo. Se un servizio è disabilitato, tutte le funzioni associate a tale servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, fai clic su **[!UICONTROL Done]**.
+Nella schermata successiva viene richiesto di scegliere i servizi Platform da includere nel profilo. Seleziona il pulsante di attivazione accanto a un servizio per disattivarlo. Se un servizio è disabilitato, tutte le funzioni associate a tale servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, seleziona **[!UICONTROL Salva]**.
 
-![new-profile-services](../images/new-profile-services.png)
+![enable-services](../images/enable-services.png)
+
+I clienti autorizzati all’edizione B2B o B2P hanno accesso all’interfaccia utente B2B. È possibile eseguire il provisioning dell&#39;interfaccia utente B2B per gli utenti tramite il menu [!UICONTROL Abilita servizi]. Seleziona l&#39;interruttore accanto a [!UICONTROL B2B UI] per abilitare il servizio per un particolare profilo di prodotto, quindi seleziona **[!UICONTROL Salva]**.
+
+L’interruttore dell’interfaccia utente B2B consente agli utenti di visualizzare i flussi di lavoro B2B sulla gestione di account e opportunità, nonché di creare segmenti relativi a B2B.
+
+![enable-b2b](../images/enable-b2b.png)
 
 Il nuovo profilo di prodotto viene creato correttamente e l&#39;utente viene reindirizzato alla [pagina delle autorizzazioni di modifica del profilo](#edit-permissions). Per ulteriori informazioni su come gestire i profili di prodotto una volta creati, consulta le sezioni sulla [gestione delle autorizzazioni](#manage-permissions-for-a-product-profile) e sulla [gestione degli utenti](#manage-users-for-a-product-profile) .
 

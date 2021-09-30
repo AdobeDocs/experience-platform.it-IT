@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -72,7 +72,7 @@ L’autorizzazione &quot;Gestione sandbox&quot; consente agli utenti di gestire,
 
 La scheda Autorizzazioni all’interno di un profilo di prodotto visualizza le sandbox e le autorizzazioni attive per tale profilo:
 
-![permissions-overview](./images/permissions-overview.png)
+![permissions-overview](./images/permissions.png)
 
 Le autorizzazioni concesse tramite [!DNL Admin Console] sono ordinate per categoria, con alcune autorizzazioni che consentono l&#39;accesso a diverse funzionalità di basso livello.
 
