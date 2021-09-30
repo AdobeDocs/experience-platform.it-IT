@@ -1,7 +1,8 @@
 ---
-title: Schemi in Real-time Customer Data Platform B2B Edition
+title: Fonti in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo delle sorgenti in Real-time Customer Data Platform B2B Edition.
-source-git-commit: 457a5729e936582f30851a11375a904916871096
+exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
+source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -16,5 +17,5 @@ I seguenti documenti forniscono ulteriori informazioni sull’utilizzo di [!DNL 
 
 * Per informazioni su come collegare i dati [!DNL Marketo] a Platform, consulta l’esercitazione su [creazione di un connettore sorgente Marketo nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
 * Per informazioni sulla configurazione sottostante per i namespace e gli schemi B2B utilizzati con [!DNL Marketo], consulta la documentazione relativa a [namespace e schemi B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* Per informazioni su come trovare il tuo [!DNL Marketo] munchkin ID e generare le tue credenziali, consulta la [[!DNL Marketo] guida all&#39;autenticazione](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
+* Per informazioni su come trovare il tuo [!DNL Marketo] ID Munchkin e generare le tue credenziali, consulta la [[!DNL Marketo] guida all&#39;autenticazione](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * Per informazioni sulle regole di mappatura specifiche applicabili ai set di dati [!DNL Marketo], consulta la documentazione sulle mappature dei campi [[!DNL Marketo] a2/>.](../../sources/connectors/adobe-applications//mapping/marketo.md)
