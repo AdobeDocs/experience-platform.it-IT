@@ -1,13 +1,11 @@
 ---
 title: 'Utilizza l’interfaccia web GitHub per creare una pagina di documentazione di destinazione '
-seo-title: Use the GitHub web interface to create a destination documentation page
-description: Le istruzioni presenti in questa pagina mostrano come utilizzare l’interfaccia web GitHub per creare la documentazione e inviare una richiesta di pull.
-seo-description: The instructions on this page show you how to use the GitHub web interface to author documentation and submit a pull request.
+description: Le istruzioni presenti in questa pagina mostrano come utilizzare l’interfaccia web GitHub per creare una pagina di documentazione per la destinazione dell’Experience Platform e inviarla per la revisione.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 2%
+source-wordcount: '768'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +26,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`.
 2. Per [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) il repository, fai clic su **Fork** come mostrato nell&#39;immagine seguente.
 
-   ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repo.png)
+   ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repository.gif)
 
 3. Nel fork dell’archivio, crea un nuovo ramo per il progetto, come mostrato di seguito. Utilizza questo nuovo ramo per il tuo lavoro.
 
@@ -44,6 +42,10 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 1. Il contenuto della pagina di destinazione verrà creato in base al [modello self-service della documentazione](./self-service-template.md). **[](assets/yourdestination-template.zip)** Scarica il modello e decomprimilo per estrarre il modello di  `.md` file.
 2. Incolla e modifica il contenuto del modello con le informazioni pertinenti per la destinazione in un editor markdown online, ad esempio [dillinger.io](https://dillinger.io/). Segui le istruzioni riportate nel modello per informazioni dettagliate su cosa devi compilare e quali paragrafi possono essere rimossi.
+
+   >[!TIP]
+   >
+   >È possibile chiudere la finestra del browser in qualsiasi momento e riaprirla in un secondo momento. Il tuo lavoro viene salvato automaticamente e ti aspetterà quando riapri il browser.
 3. Copia il contenuto dall’editor markdown nel nuovo file in GitHub.
 4. Per tutte le schermate o immagini che intendi utilizzare, utilizza l’interfaccia GitHub per caricare i file in `experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la destinazione. Ad Experience Platform, se aggiungi una destinazione di personalizzazione, seleziona la categoria `personalization` . Devi impostare un collegamento alle immagini dalla pagina che stai creando. Consulta [istruzioni su come collegare immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 
@@ -55,9 +57,13 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 ## Invia la documentazione per la revisione {#submit-review}
 
-1. Dopo aver salvato il file e caricato le immagini desiderate, puoi aprire una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Richiesta di pull**.
+>[!TIP]
+>
+>Notate che non c&#39;è niente che potete rompere qui. Seguendo le istruzioni contenute in questa sezione, ti consigliamo semplicemente un aggiornamento della documentazione. L’aggiornamento consigliato verrà approvato o modificato dal team di documentazione di Adobe Experience Platform.
 
-![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.png)
+1. Dopo aver salvato il file e caricato le immagini desiderate, puoi aprire una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Contribute > Pull request**.
+
+![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.gif)
 
 1. Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, e seleziona **Crea richiesta di pull**. Viene aperto un PR per unire il ramo di lavoro del fork nel ramo principale dell’archivio Adobe.
 

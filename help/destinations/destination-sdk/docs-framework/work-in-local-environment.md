@@ -1,13 +1,11 @@
 ---
 title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di destinazione
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di testo per lavorare nel proprio ambiente locale per creare la documentazione e inviare una richiesta di pull.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: Le istruzioni riportate in questa pagina mostrano come utilizzare un editor di testo per lavorare nell’ambiente locale per creare una pagina di documentazione per la destinazione dell’Experience Platform e inviarla per la revisione.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '871'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +26,7 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`
 2. Per [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) il repository, fai clic su **Fork** come mostrato nella schermata .
 
-   ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repo.png)
+   ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repository.gif)
 
 3. Clonare l’archivio sul computer locale. Seleziona **Codice > HTTPS > Apri con GitHub Desktop**, come mostrato di seguito. Assicurati di aver installato [GitHub Desktop](https://desktop.github.com/). Per ulteriori riferimenti, consulta [Creare un clone locale dell’archivio](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) nella guida per i collaboratori di Adobe .
 
@@ -47,6 +45,10 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 
 ## Invia la documentazione per la revisione {#submit-review}
 
+>[!TIP]
+>
+>Notate che non c&#39;è niente che potete rompere qui. Seguendo le istruzioni contenute in questa sezione, ti consigliamo semplicemente un aggiornamento della documentazione. L’aggiornamento consigliato verrà approvato o modificato dal team di documentazione di Adobe Experience Platform.
+
 1. In GitHub Desktop, crea un ramo di lavoro per gli aggiornamenti e seleziona **Pubblica ramo** per pubblicare il ramo in GitHub.
 
 ![Nuovo ramo locale](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 
 1. Nell’interfaccia web GitHub, apri una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Richiesta di pull**.
 
-   ![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.png)
+   ![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.gif)
 
 1. Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, e seleziona **Crea richiesta di pull**. Viene aperto un PR per unire il ramo di lavoro del fork nel ramo principale dell’archivio Adobe.
    >[!TIP]
