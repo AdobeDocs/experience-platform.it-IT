@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: af122e5064fc5618266948d46c438d1776cdd0cf
+source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -36,73 +36,28 @@ La sezione **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informa
 
 È possibile utilizzare le credenziali non in scadenza per impostare una connessione più permanente a un client esterno.
 
-Prima di poter creare credenziali non in scadenza, è necessario configurare entrambe le autorizzazioni **Sandbox** e **Gestisci integrazione servizio query** per la tua organizzazione in Adobe Admin Console.
+### Prerequisiti
 
-Accedi a [Adobe Admin Console](https://adminconsole.adobe.com/) e seleziona l&#39;organizzazione pertinente dalla barra di navigazione superiore.
+Prima di poter generare credenziali non in scadenza, è necessario completare i seguenti passaggi in Adobe Admin Console:
 
-Nella sezione [!UICONTROL Prodotti e servizi] della [!UICONTROL Panoramica], seleziona **Adobe Experience Platform**.
+1. Accedi a [Adobe Admin Console](https://adminconsole.adobe.com/) e seleziona l&#39;organizzazione pertinente dalla barra di navigazione superiore.
+2. [Seleziona un profilo di prodotto.](../../access-control/ui/browse.md)
+3. [Configura sia le  **** sandbox che le autorizzazioni  **Manage Query Service** ](../../access-control/ui/permissions.md) Integration per il profilo di prodotto.
+4. [Aggiungi un nuovo utente a un ](../../access-control/ui/users.md) profilo di prodotto per ottenere le autorizzazioni configurate.
+5. [Aggiungi l’utente come ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) amministratore del profilo di prodotto per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
+6. [Aggiungi l’utente come ](https://helpx.adobe.com/enterprise/using/manage-developers.html) sviluppatore del profilo di prodotto per creare un’integrazione.
 
-![Dashboard di Adobe Admin Console](../images/ui/credentials/adobe-admin-console-dashboard.png)
-
-Viene visualizzata la pagina Dettagli Adobe Experience Platform. Quindi, crea un nuovo profilo. Seleziona [!UICONTROL **Nuovo profilo**].
-
-![Pagina Dettagli Adobe Experience Platform](../images/ui/credentials/aep-details.png)
-
-Viene visualizzata una finestra di dialogo per la creazione del profilo. Immetti un nome descrittivo per il nuovo profilo e seleziona [!UICONTROL **Salva**]. Viene visualizzata la pagina [!UICONTROL Impostazioni] per il nuovo profilo. Seleziona la scheda [!UICONTROL **Autorizzazioni**] dalle opzioni disponibili.
-
-### Abilitare le autorizzazioni del servizio query
-
-Per garantire che le autorizzazioni corrette per il servizio query siano abilitate per la tua organizzazione, trova e seleziona la categoria [!UICONTROL **Servizio query**] dall’elenco.
-
-![Categoria del servizio query nella scheda Autorizzazioni evidenziata](../images/ui/credentials/permissions-tab-query-service-category.png)
-
-Viene visualizzata l&#39;area di lavoro [!UICONTROL Modifica autorizzazioni] per Query Service. Seleziona l’icona più (**+**) per [!UICONTROL **Gestisci query**] e [!UICONTROL **Gestisci integrazione servizio query**] per aggiungerle alla colonna [!UICONTROL Elementi autorizzazione inclusi]. Quindi, seleziona [!UICONTROL **Salva**] per confermare le modifiche.
-
-![Salva elementi di autorizzazione inclusi](../images/ui/credentials/edit-permissions-for-query-service-profile.png)
-
-Viene visualizzata la scheda Impostazioni > Autorizzazioni .
-
-### Abilita autorizzazioni sandbox
-
-Per verificare che la sandbox corretta sia selezionata per la tua organizzazione, trova e seleziona la categoria [!UICONTROL **Sandbox**] dall’elenco.
-
-![Categoria di sandbox della scheda Autorizzazioni evidenziata](../images/ui/credentials/permissions-tab-sandboxes-category.png)
-
-Viene visualizzata l’area di lavoro Sandbox. Dall’ [!UICONTROL Autorizzazioni disponibili], trova la sandbox pertinente, in questa immagine è la sandbox Prod. Seleziona l&#39;icona più (**+**) per aggiungerla a [!UICONTROL Autorizzazioni incluse]. Quindi, seleziona [!UICONTROL **Salva**] per confermare le modifiche.
-
-![Aggiungi autorizzazione Sandbox prod](../images/ui/credentials/prod-sandbox.png)
-
-Viene visualizzata la scheda Impostazioni > Autorizzazioni .
-
-Sono necessari altri tre passaggi per consentire a un utente di accedere alla funzione dell’account non in scadenza.
-
-- Aggiungi un nuovo utente a cui concedere le autorizzazioni appena create. Selezionare la scheda [!UICONTROL **Utenti**], seguita da [!UICONTROL **Aggiungi utente**].
-
-![Scheda Utente Pulsante Aggiungi utente evidenziato](../images/ui/credentials/users-tab-new-user.png)
-
-Viene visualizzata la finestra di dialogo Crea utente. Inserisci un nome e un&#39;e-mail per il nuovo utente e seleziona [!UICONTROL **Salva**].
-
-- L’utente deve quindi essere aggiunto come amministratore per consentire la creazione di un account per qualsiasi profilo di prodotto attivo. Per aggiungere l’utente appena creato come amministratore. selezionare la scheda [!UICONTROL **Amministratori**], seguita da [!UICONTROL **Aggiungi amministratori**].
-
-![Scheda Amministratore Pulsante Aggiungi amministratore evidenziato](../images/ui/credentials/admins-tab-add-admin.png)
-
-Viene visualizzata la finestra di dialogo aggiungi amministratore. Inserisci i dettagli del nuovo amministratore nei campi di testo e seleziona [!UICONTROL **Salva**].
-
-- L’utente deve quindi essere aggiunto come sviluppatore per creare un’integrazione. Seleziona la scheda **Sviluppatori** , seguita dalla scheda **Aggiungi sviluppatore**.
-
-![Scheda Sviluppatori Pulsante Aggiungi sviluppatore evidenziato](../images/ui/credentials/developers-tab-add-developer.png)
-
-Viene visualizzata la finestra di dialogo Aggiungi sviluppatore . Inserisci i dettagli del nuovo sviluppatore nei campi di testo e seleziona **Salva**.
-
-Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione su [Controllo accessi](../../access-control/home.md).
+Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione sul [controllo accessi](../../access-control/home.md).
 
 Tutte le autorizzazioni necessarie sono ora configurate in Adobe Developer Console in modo che l’utente possa utilizzare la funzione delle credenziali in scadenza.
 
-Per creare un set di credenziali non in scadenza, nell&#39;area di lavoro Credenziali query selezionare **[!UICONTROL Genera credenziali]**.
+### Genera credenziali
+
+Per creare un set di credenziali non in scadenza, torna all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra per accedere all’area di lavoro [!UICONTROL Query]. Quindi, selezionare la scheda **[!UICONTROL Credenziali]** seguita da **[!UICONTROL Genera credenziali]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
-Viene visualizzata la finestra modale per la generazione delle credenziali. Per creare credenziali non in scadenza, è necessario fornire i seguenti dettagli:
+Viene visualizzata una finestra di dialogo che consente di generare le credenziali. Per creare credenziali non in scadenza, è necessario fornire i seguenti dettagli:
 
 - **[!UICONTROL Nome]**: Nome delle credenziali che si sta generando.
 - **[!UICONTROL Descrizione]**: (Facoltativo) Una descrizione delle credenziali che stai generando.
@@ -115,9 +70,9 @@ Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Genera cre
 
 >[!IMPORTANT]
 >
->Una volta selezionato il pulsante **[!UICONTROL Genera credenziali]**, viene scaricato un file JSON di configurazione nel computer locale. Poiché in Adobe **non** viene registrata la credenziale generata, **è necessario** memorizzare in modo sicuro il file scaricato e conservare un record della credenziale.
+>Una volta selezionato il pulsante **[!UICONTROL Genera credenziali]**, viene scaricato un file JSON di configurazione nel computer locale. Poiché in Adobe **non** vengono registrate le credenziali generate, è necessario memorizzare in modo sicuro il file scaricato e conservare un record delle credenziali.
 >
->Inoltre, se le credenziali non vengono utilizzate per 90 giorni, verranno eliminate.
+>Inoltre, se le credenziali non vengono utilizzate per 90 giorni, verranno rimosse.
 
 Il file JSON di configurazione contiene informazioni quali il nome dell’account tecnico, l’ID account tecnico e le credenziali. Viene fornito nel seguente formato.
 
@@ -143,21 +98,25 @@ Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna a
 
 ## Utilizzo delle credenziali per la connessione a client esterni
 
-È possibile utilizzare le credenziali in scadenza o non in scadenza per connettersi con client esterni, ad esempio Aqua Data Studio, Looker o Power BI.
+È possibile utilizzare le credenziali in scadenza o non in scadenza per connettersi con client esterni, ad esempio Aqua Data Studio, Looker o Power BI. Il metodo di input per queste credenziali varia a seconda del client esterno. Per istruzioni specifiche sull&#39;utilizzo di queste credenziali, consulta la documentazione del client esterno .
 
-La tabella seguente contiene l’elenco dei parametri e la relativa descrizione, in genere necessari per connettersi a client esterni.
+L’immagine indica la posizione di ogni parametro trovato nell’interfaccia utente, ad eccezione della password delle credenziali in scadenza. Le credenziali in scadenza vengono fornite dai relativi file di configurazione JSON, ma puoi visualizzarle nella scheda **Credenziali** dell’interfaccia utente.
+
+![](../images/ui/credentials/expiring-credentials.png)
+
+La tabella seguente delinea i parametri generalmente necessari per la connessione a client esterni.
 
 >[!NOTE]
 >
->Quando ci si connette a un host utilizzando credenziali non in scadenza, è comunque necessario utilizzare tutti i parametri elencati nella sezione [!UICONTROL EXPIRING CREDENTIALS] ad eccezione della password.
+>Quando ci si connette a un host utilizzando credenziali non in scadenza, è comunque necessario utilizzare tutti i parametri elencati nella sezione [!UICONTROL EXPIRING CREDENTIALS] ad eccezione della password e del nome utente.
 
 | Parametro | Descrizione |
 |---|---|
-| **Server/Host** | Il nome del server/host a cui ti connetti. Questo valore si presenta sotto forma di `server.adobe.io` e si trova in **[!UICONTROL Host]**. |
-| **Porta** | La porta del server/host a cui ti stai connettendo. Questo valore si trova in **[!UICONTROL Porta]**. Un valore di esempio per la porta è `80`. |
-| **Database** | Database a cui ci si connette. Questo valore si trova in **[!UICONTROL Database]**. Un valore di esempio per il database è `prod:all`. |
-| **Nome utente** | Nome utente per l’utente che si connette al client esterno. Si tratta di una stringa alfanumerica prima di `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**. |
-| **Password** | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** nella sezione relativa alle credenziali in scadenza.</li><li>Se utilizzi credenziali non in scadenza, questo valore è composto dagli argomenti del technicalAccountID e dalle credenziali prelevate dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
+| Server/Host | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** nella sezione [!UICONTROL CREDENZIALI DI SCADENZA].</ul></li> |
+| Porta | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** nella sezione [!UICONTROL CREDENZIALI IN SCADENZA] . Un valore di esempio per la porta è `80`.</ul></li> |
+| Database | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Database]** nella sezione [!UICONTROL CREDENZIALI IN SCADENZA] . Un valore di esempio per il database è `prod:all`.</ul></li> |
+| Nome utente | Nome utente per l’utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, si tratta di una stringa alfanumerica precedente a `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li><li>Se utilizzi credenziali non in scadenza, questa è una stringa di tua scelta anche se **non può** essere la stessa del valore `technicalAccountID` trovato nel file JSON di configurazione.</li></ul> |
+| Password | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno della sezione [!UICONTROL SCADENZIALI].</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Passaggi successivi
 
