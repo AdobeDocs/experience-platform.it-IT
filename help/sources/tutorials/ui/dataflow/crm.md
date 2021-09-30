@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account CRM.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: cd9b28c66f6cc841e46e797b39db838a83e727e3
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
 
 # Configurare un flusso di dati per una connessione CRM nell’interfaccia utente
 
-Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati [!DNL Platform]. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account CRM.
+Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account CRM.
 
 ## Introduzione
 
@@ -30,9 +30,9 @@ Inoltre, questa esercitazione richiede che tu abbia già creato un account CRM. 
 
 ## Seleziona dati
 
-Dopo aver creato il tuo account CRM, viene visualizzato il passaggio *Seleziona dati* , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
+Dopo aver creato il tuo account CRM, viene visualizzato il passaggio [!UICONTROL Seleziona dati] , che fornisce un&#39;interfaccia per esplorare la gerarchia dei file.
 
-* La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
+* La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del CRM.
 * La metà destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
 Puoi utilizzare l&#39;opzione **[!UICONTROL Cerca]** nella parte superiore della pagina per identificare rapidamente i dati di origine che intendi utilizzare.
@@ -41,29 +41,29 @@ Puoi utilizzare l&#39;opzione **[!UICONTROL Cerca]** nella parte superiore della
 >
 >L’opzione per i dati dell’origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, esclusi i connettori Analytics, Classificazioni, Hubs evento e Kinesis.
 
-Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Avanti]**.
+Una volta trovati i dati di origine, seleziona la directory, quindi seleziona **[!UICONTROL Avanti]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mappatura di campi dati su uno schema XDM
 
-Viene visualizzato il passaggio **[!UICONTROL Mapping]** , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati [!DNL Platform].
+Viene visualizzato il passaggio **[!UICONTROL Mapping]** , che fornisce un’interfaccia per mappare i dati di origine a un set di dati della Platform.
 
 Scegli un set di dati in entrata in cui acquisire i dati. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
 ### Utilizzare un set di dati esistente
 
-Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Utilizza set di dati esistenti]**, quindi fai clic sull’icona del set di dati.
+Per acquisire i dati in un set di dati esistente, seleziona **[!UICONTROL Set di dati esistente]**, quindi seleziona l’icona dei dati ![data](../../../images/tutorials/dataflow/crm/data.png) accanto alla barra di input.
 
-![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
+![set di dati esistente](../../../images/tutorials/dataflow/crm/existing-dataset.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona set di dati]** . Trova il set di dati che desideri utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continua]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona set di dati]** . Trova il set di dati da utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continua]**.
 
-![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
+![set di dati selezionati](../../../images/tutorials/dataflow/crm/select-dataset.png)
 
 ### Utilizzare un nuovo set di dati
 
-Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Crea nuovo set di dati]** e inserisci un nome e una descrizione per il set di dati nei campi forniti.
+Per acquisire i dati in un nuovo set di dati, seleziona **[!UICONTROL Nuovo set di dati]** e inserisci un nome e una descrizione per il set di dati nei campi forniti.
 
 È possibile allegare un campo schema immettendo un nome schema nella barra di ricerca **[!UICONTROL Seleziona schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Ricerca avanzata]** per accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
@@ -79,19 +79,27 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona schema]**. Sel
 
 In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulle funzioni di mappatura e sui campi calcolati, consulta la [Guida alle funzioni di preparazione dei dati](../../../../data-prep/functions.md) o la [guida ai campi calcolati](../../../../data-prep/calculated-fields.md).
 
+<!--
 >[!TIP]
 >
->[!DNL Platform] fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+-->
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Platform fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
 
 Seleziona **[!UICONTROL Anteprima dati]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 
+![](../../../images/tutorials/dataflow/crm/preview-data.png)
+
 Durante l’anteprima, la colonna Identity ha la priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per la convalida dei risultati della mappatura.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
 Una volta mappati i dati di origine, seleziona **[!UICONTROL Chiudi]**.
+
+![](../../../images/tutorials/dataflow/crm/preview.png)
+
+Quindi, dalla schermata [!UICONTROL Mappatura], seleziona **[!UICONTROL Avanti]** per procedere.
+
+![](../../../images/tutorials/dataflow/crm/mapping.png)
 
 ## Pianifica esecuzioni di acquisizione
 
@@ -111,7 +119,7 @@ Per impostare l’ora di inizio per l’acquisizione, regola la data e l’ora v
 
 Seleziona **[!UICONTROL Carica dati incrementali per]** per assegnare la colonna delta. Questo campo distingue tra dati nuovi ed esistenti.
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![](../../../images/tutorials/dataflow/crm/scheduling.png)
 
 ### Configurare un flusso di dati di acquisizione una tantum
 
@@ -123,7 +131,7 @@ Per impostare l’acquisizione una tantum, seleziona la freccia a discesa della 
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Avanti]**.
 
-![pianificazione](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![pianificazione](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
 
 ## Fornire i dettagli del flusso di dati
 
@@ -133,15 +141,15 @@ Durante questo processo, puoi anche abilitare **[!UICONTROL Acquisizione parzial
 
 Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Avanti]**.
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![dataflow-details](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
 
 ## Controlla il tuo flusso di dati
 
 Viene visualizzato il passaggio *Rivedi*, che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Dettagli]** di connessione: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
-* **[!UICONTROL Dettagli]** mappatura: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-* **[!UICONTROL Dettagli]** pianificazione: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione dell’acquisizione.
+* **[!UICONTROL Connessione]**: Visualizza il nome dell&#39;account di origine, la piattaforma di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+* **[!UICONTROL Assegna set di dati e campi]** mappa: Visualizza il set di dati di destinazione in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+* **[!UICONTROL Pianificazione]**: Visualizza l&#39;ora di inizio e la frequenza del flusso di dati.
 
 Dopo aver esaminato il flusso di dati, fai clic su **[!UICONTROL Fine]** e consenti la creazione del flusso di dati.
 
@@ -157,33 +165,13 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire i dati da un CRM e hai acquisito informazioni sul monitoraggio dei set di dati. Per ulteriori informazioni sulla creazione di flussi di dati, è possibile completare l&#39;apprendimento guardando il video sottostante. Inoltre, i dati in arrivo possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire i dati da un CRM e hai acquisito informazioni sul monitoraggio dei set di dati. Per ulteriori informazioni sulla creazione di flussi di dati, è possibile completare l&#39;apprendimento guardando il video sottostante. Inoltre, i dati in arrivo possono ora essere utilizzati dai servizi Platform a valle, come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 * [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Fai riferimento alla documentazione precedente per le ultime schermate e funzionalità dell’interfaccia utente.
-
+> L’interfaccia utente della piattaforma mostrata nel video seguente è obsoleta. Fai riferimento alla documentazione precedente per le ultime schermate e funzionalità dell’interfaccia utente.
+>
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
-
-## Appendice
-
-Le sezioni seguenti forniscono informazioni aggiuntive per l’utilizzo dei connettori sorgente.
-
-### Disattiva un flusso di dati
-
-Quando un flusso di dati viene creato, diventa immediatamente attivo e acquisisce i dati in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
-
-Nella schermata **[!UICONTROL autenticazione]** , seleziona il nome della connessione associata al flusso di dati che desideri disattivare.
-
-![](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Viene visualizzata la pagina **Attività sorgente** . Seleziona il flusso di dati attivo dall’elenco per aprire la relativa colonna **[!UICONTROL Proprietà]** sul lato destro dello schermo, che contiene un pulsante di attivazione/disattivazione **[!UICONTROL Attivato]**. Fai clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
-
-![disable](../../../images/tutorials/dataflow/crm/disable.png)
-
-### Attivare i dati in entrata per la popolazione [!DNL Profile]
-
-I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e popolare i dati [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla compilazione dei dati [!DNL Real-time Customer Profile], consulta l’esercitazione su [Popolazione di profili](../profile.md).
