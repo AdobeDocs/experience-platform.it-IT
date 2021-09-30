@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Data Ingestion, Sources
-source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
+source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 10%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 10%
          - [Audience Manager di mappature dei campi](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappature dei campi di destinazione](connectors/adobe-applications/mapping/target.md)
          - [Mappature dei campi di Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
-      - B2B {#b2b}
+      - Marketo {#marketo}
          - [Connettore Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guida all’autenticazione Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [namespace e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
