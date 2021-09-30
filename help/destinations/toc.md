@@ -4,10 +4,10 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 10%
+source-wordcount: '644'
+ht-degree: 9%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 10%
       * [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](./ui/activate-segment-streaming-destinations.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](./ui/activate-streaming-profile-destinations.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md)
+      * [Attivare i dati del pubblico nelle destinazioni di richiesta del profilo (Beta)](./ui/activate-profile-request-destinations.md)
    * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Modifica flussi di attivazione](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 10%
       * [Collegamento del freno](./catalog/mobile-engagement/braze.md)
    * Destinazioni di personalizzazione {#personalization}
       * [Panoramica sulle destinazioni di personalizzazione](./catalog/personalization/overview.md)
+      * [Connessione Adobe Target (Beta)](./catalog/personalization/adobe-target-connection.md)
       * [Estensione Adobe Target](./catalog/personalization/adobe-target.md)
       * [Estensione Adobe Target v2](./catalog/personalization/adobe-target-v2.md)
       * [Estensione dei raggi anabbaglianti](./catalog/personalization/beemray.md)
+      * [Connessione di personalizzazione personalizzata (Beta)](./catalog/personalization/custom-personalization.md)
       * [Estensione D&amp;B Visitor Intelligence](./catalog/personalization/dnb.md)
       * [Estensione del servizio Experience Cloud ID](./catalog/personalization/adobe-ecid.md)
       * [Estensione del guadagno](./catalog/personalization/gainsight.md)
