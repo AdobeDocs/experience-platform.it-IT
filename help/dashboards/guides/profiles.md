@@ -4,9 +4,9 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profi
 
 >[!NOTE]
 >
->Il widget [!UICONTROL Profili aggiunti] riflette il numero di profili aggiunti al sistema dopo la configurazione iniziale della tua organizzazione. Ad esempio, se durante la configurazione sono stati aggiunti quattro milioni di profili e negli ultimi 30 giorni hai aggiunto un ulteriore milione di profili, il widget [!UICONTROL Profili aggiunti] visualizzerebbe &quot;1.000.000&quot;, mentre il widget [!UICONTROL Conteggio profili] visualizzerebbe &quot;5.000.000&quot;.
+>Il widget [!UICONTROL Profili aggiunti] riflette il numero di profili aggiunti al sistema dopo la configurazione iniziale della tua organizzazione. Per ulteriori informazioni sull&#39;aggiunta di profili all&#39;archivio profili, consulta la [documentazione Profilo cliente in tempo reale](../../profile/home.md).
+>
+>Ad esempio, se durante la configurazione sono stati aggiunti quattro milioni di profili e negli ultimi 30 giorni hai aggiunto un ulteriore milione di profili, il widget [!UICONTROL Profili aggiunti] visualizzerebbe &quot;1.000.000&quot;, mentre il widget [!UICONTROL Conteggio profili] visualizzerebbe &quot;5.000.000&quot;.
 
 ![](../images/profiles/profiles-added.png)
 
