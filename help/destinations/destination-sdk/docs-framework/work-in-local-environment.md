@@ -2,9 +2,9 @@
 title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di destinazione
 description: Le istruzioni riportate in questa pagina mostrano come utilizzare un editor di testo per lavorare nell’ambiente locale per creare una pagina di documentazione per la destinazione dell’Experience Platform e inviarla per la revisione.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 ## Connettersi a GitHub e configurare l’ambiente di authoring locale {#set-up-environment}
 
 1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`
-2. Per [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) il repository, fai clic su **Fork** come mostrato nella schermata .
+2. Per [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) l&#39;archivio, fai clic su **Fork** come mostrato di seguito. In questo modo viene creata una copia dell’archivio Experience Platform nel tuo account GitHub.
 
    ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 
    ![Spingi il tuo commit](./assets/push-local-to-remote.png)
 
-1. Nell’interfaccia web GitHub, apri una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Richiesta di pull**.
+1. Nell’interfaccia web GitHub, apri una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Contribute > Apri richiesta di pull**.
 
    ![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.gif)
 
