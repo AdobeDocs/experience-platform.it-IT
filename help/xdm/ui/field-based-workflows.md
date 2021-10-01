@@ -3,9 +3,10 @@ title: Flussi di lavoro basati su campi nell’Editor di schema (Beta)
 description: Scopri come aggiungere individualmente i campi dai gruppi di campi esistenti agli schemi Experience Data Model (XDM).
 hide: true
 hidefromtoc: true
-source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
+source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -50,6 +51,26 @@ L&#39;area di lavoro viene visualizzata nuovamente con solo i campi selezionati 
 
 ![Campi aggiunti](../images/ui/field-based-workflows/fields-added.png)
 
+## Aggiungere campi standard direttamente a uno schema
+
+È possibile aggiungere campi dai gruppi di campi standard direttamente a uno schema senza dover prima conoscere il gruppo di campi corrispondente. Per aggiungere un campo standard a uno schema, seleziona l’icona più (**+**) accanto al nome dello schema nell’area di lavoro. Nella struttura dello schema viene visualizzato un segnaposto **[!UICONTROL Campo senza titolo]** e la barra laterale destra viene aggiornata per visualizzare i controlli per configurare il campo.
+
+![Segnaposto campo](../images/ui/field-based-workflows/root-custom-field.png)
+
+In **[!UICONTROL Nome campo]**, inizia a digitare il nome del campo che desideri aggiungere. Il sistema cerca automaticamente i campi standard corrispondenti alla query e li elenca in **[!UICONTROL Campi standard consigliati]**, compresi i gruppi di campi a cui appartengono.
+
+![Campi standard consigliati](../images/ui/field-based-workflows/standard-field-search.png)
+
+Anche se alcuni campi standard condividono lo stesso nome, la loro struttura può variare a seconda del gruppo di campi da cui provengono. Se un campo standard è nidificato all’interno di un oggetto principale nella struttura del gruppo di campi, anche il campo principale verrà incluso nello schema se viene aggiunto il campo figlio.
+
+Seleziona l’icona di anteprima (![Icona di anteprima](../images/ui/field-based-workflows/preview-icon.png)) accanto a un campo standard per visualizzare la struttura del relativo gruppo di campi e capire meglio come nidificarlo. Per aggiungere il campo standard allo schema, seleziona l’icona più (![Icona più](../images/ui/field-based-workflows/add-icon.png)).
+
+![Aggiungi campo standard](../images/ui/field-based-workflows/add-standard-field.png)
+
+L’area di lavoro viene aggiornata per mostrare il campo standard aggiunto allo schema, compresi tutti i campi principali nidificati all’interno della struttura del gruppo di campi. Il nome del gruppo di campi è inoltre elencato in **[!UICONTROL Gruppi di campi]** nella barra a sinistra. Per aggiungere altri campi dallo stesso gruppo di campi, seleziona **[!UICONTROL Gestisci campi correlati]** nella barra a destra.
+
+![Campo standard aggiunto](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## Aggiungere campi personalizzati direttamente a uno schema
 
 Se in precedenza sono stati creati [gruppi di campi personalizzati](./resources/field-groups.md#create), è possibile aggiungere campi personalizzati direttamente allo schema senza prima doverli aggiungere separatamente a un gruppo di campi personalizzato.
@@ -62,7 +83,11 @@ Per aggiungere campi al livello principale di uno schema, seleziona l’icona pi
 
 ![Campo personalizzato radice](../images/ui/field-based-workflows/root-custom-field.png)
 
-Utilizza i controlli nella barra a destra per specificare un nome, un nome visualizzato e un tipo di dati per il campo. In **[!UICONTROL Assegna gruppo di campi]**, selezionare il gruppo di campi personalizzati a cui si desidera associare il nuovo campo.
+Inizia a digitare il nome del campo personalizzato che desideri aggiungere e il sistema inizia automaticamente a cercare i campi standard corrispondenti. Per creare un nuovo campo personalizzato, seleziona l’opzione superiore aggiunta con **([!UICONTROL Nuovo campo])**.
+
+![Nuovo campo](../images/ui/field-based-workflows/custom-field-search.png)
+
+Da qui, fornisci un nome visualizzato e un tipo di dati per il campo. In **[!UICONTROL Assegna gruppo di campi]**, selezionare il gruppo di campi personalizzati a cui si desidera associare il nuovo campo.
 
 ![Seleziona gruppo di campi](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -78,7 +103,7 @@ Il nuovo campo viene aggiunto all’area di lavoro e viene spazi dei nomi sotto 
 >
 >Gli altri campi forniti dal gruppo di campi personalizzati selezionato vengono rimossi dallo schema per impostazione predefinita. Se desideri aggiungere alcuni di questi campi allo schema, seleziona un campo appartenente al gruppo e quindi seleziona **[!UICONTROL Gestisci campi correlati]** nella barra a destra.
 
-### Aggiungere campi alla struttura dei gruppi di campi standard
+### Aggiungere campi personalizzati alla struttura dei gruppi di campi standard
 
 Se lo schema su cui si sta lavorando dispone di un campo di tipo oggetto fornito da un gruppo di campi standard, è possibile aggiungere campi personalizzati a tale oggetto standard. Seleziona l’icona più (**+**) accanto alla radice dell’oggetto e fornisci i dettagli del campo personalizzato nella barra a destra.
 
