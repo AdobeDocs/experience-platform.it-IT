@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ I campi predefiniti visualizzati possono essere modificati anche a livello organ
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Puoi visualizzare ulteriori informazioni relative al singolo profilo selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda di appartenenza del segmento che mostra i segmenti per i quali il profilo è attualmente qualificato.
+Puoi visualizzare ulteriori informazioni relative al singolo profilo cliente selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda di appartenenza del segmento che mostra i segmenti per i quali il profilo è attualmente qualificato.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Scheda Attributi
+
+La scheda **[!UICONTROL Attributi]** fornisce una vista a elenco che riepiloga tutti gli attributi relativi a un singolo profilo, dopo l’applicazione del criterio di unione specificato.
+
+Questi attributi possono essere visualizzati anche come un oggetto JSON selezionando **[!UICONTROL Visualizza JSON]**. È utile per gli utenti che desiderano comprendere meglio in che modo gli attributi del profilo vengono acquisiti in Platform.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Scheda Eventi
+
+La scheda **[!UICONTROL Eventi]** contiene i dati relativi a ExperienceEvents associati al cliente. Questo potrebbe includere aperture e-mail, attività del carrello, visualizzazioni di pagina e altro ancora. Selezionando **[!UICONTROL Visualizza tutto]** per ogni singolo evento, sono disponibili campi e valori aggiuntivi per l’acquisizione come parte dell’evento.
+
+Gli eventi possono essere visualizzati anche come un oggetto JSON selezionando a **[!UICONTROL Visualizza JSON]**. È utile per comprendere come vengono acquisiti gli eventi in Platform.
+
+![](../images/user-guide/profiles-events.png)
+
+### Scheda Iscrizione al segmento
+
+La scheda **[!UICONTROL Iscrizione al segmento]** visualizza un elenco con il nome e la descrizione dei segmenti a cui appartiene attualmente il singolo profilo cliente. Questo elenco viene aggiornato automaticamente quando il profilo si qualifica o scade dai segmenti. Il conteggio totale dei segmenti per i quali il profilo è attualmente qualificato viene visualizzato sul lato destro della scheda .
+
+Per ulteriori informazioni sulla segmentazione in Experience Platform, consulta la [documentazione relativa al servizio di segmentazione di Experience Platform ](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Unisci criteri
 
