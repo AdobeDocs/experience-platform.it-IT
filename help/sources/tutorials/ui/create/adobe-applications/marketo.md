@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 9c8b63bf577a4258a7ef87c11bc8f87c1a01cc20
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
 
-# Creare un connettore sorgente [!DNL Marketo Engage] nell’interfaccia utente
+# (Beta) Crea un connettore sorgente [!DNL Marketo Engage] nell’interfaccia utente
+
+>[!IMPORTANT]
+>
+>La [!DNL Marketo Engage] sorgente in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questa esercitazione fornisce passaggi per creare un connettore sorgente [!DNL Marketo Engage] (in seguito denominato &quot;[!DNL Marketo]&quot;) nell’interfaccia utente per inserire i dati B2B in Adobe Experience Platform.
 

@@ -5,14 +5,18 @@ title: namespace e schemi B2B
 topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore sorgente B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1588'
 ht-degree: 2%
 
 ---
 
-# namespace e schemi B2B
+# (Beta) namespace e schemi B2B
+
+>[!IMPORTANT]
+>
+>Questa funzione è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questo documento fornisce informazioni sull&#39;impostazione sottostante per i namespace e gli schemi da utilizzare con le origini B2B. Questo documento fornisce anche dettagli sull&#39;impostazione dell&#39;utility di automazione Postman necessaria per generare spazi dei nomi e schemi B2B.
 

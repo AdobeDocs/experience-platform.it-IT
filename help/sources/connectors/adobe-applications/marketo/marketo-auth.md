@@ -5,14 +5,18 @@ title: Autenticazione del connettore sorgente Marketo
 topic-legacy: overview
 description: Questo documento fornisce informazioni su come generare le credenziali di autenticazione Marketo.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
 
-# Autentica il connettore di origine [!DNL Marketo Engage]
+# (Beta) Autentica il connettore di origine [!DNL Marketo Engage]
+
+>[!IMPORTANT]
+>
+>La sorgente [!DNL Marketo Engage] in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Prima di poter creare un connettore di origine [!DNL Marketo Engage] (in seguito denominato &quot;[!DNL Marketo]&quot;), è necessario impostare un servizio personalizzato tramite l&#39;interfaccia [!DNL Marketo] e recuperare i valori per l&#39;ID Munchkin, l&#39;ID client e il segreto client.
 

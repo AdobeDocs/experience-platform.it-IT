@@ -2,14 +2,18 @@
 title: Fonti in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo delle sorgenti in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # Fonti in Real-time Customer Data Platform B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Real-time Customer Data Platform B2B Edition consente di inserire i dati B2B attraverso il connettore di origine [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi.
 
