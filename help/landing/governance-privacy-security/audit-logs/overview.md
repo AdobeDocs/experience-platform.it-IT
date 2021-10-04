@@ -2,9 +2,9 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
+source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '608'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->La funzione dei registri di controllo in Adobe Experience Platform è attualmente in versione beta. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+>La funzione dei registri di controllo in Adobe Experience Platform è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
 
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare l’attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di controllo&quot;. Questi registri formano un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare efficacemente le politiche di gestione dei dati aziendali e i requisiti normativi.
 
