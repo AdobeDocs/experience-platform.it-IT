@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/destinationInstance/`, per verificare se la destinazione è configurata correttamente e per verificare l'integrità dei dati che fluiscono nella destinazione configurata.
 title: Operazioni API per il test di destinazione
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utiliz
 Esegui richieste all’endpoint di test con o senza aggiungere profili alla chiamata . Se non invii profili alla richiesta, Adobe li genererà internamente per te e li aggiungerà alla richiesta.
 
 Puoi utilizzare l’ [API di generazione del profilo di esempio](./sample-profile-generation-api.md) per creare profili da utilizzare nelle richieste per l’API di test di destinazione.
+
+## Come ottenere l&#39;ID dell&#39;istanza di destinazione {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
