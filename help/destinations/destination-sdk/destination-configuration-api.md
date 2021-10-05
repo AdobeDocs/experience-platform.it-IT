@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destinations`.
 title: Operazioni degli endpoint API delle destinazioni
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
+source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2340'
 ht-degree: 5%
 
 ---
@@ -365,7 +365,6 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
                "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
             }
          ],
-         "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
          "destConfigId":"410631b8-f6b3-4b7c-82da-7998aa3f327c",
          "backfillHistoricalProfileData":true
       }
@@ -398,7 +397,6 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Utilizzato per i casi in cui la piattaforma accetta [spazi dei nomi di identità standard](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (ad esempio, IDFA), in modo da limitare gli utenti Platform alla selezione solo di questi spazi dei nomi di identità. |
 | `destinationDelivery.authenticationRule` | Stringa | Indica il modo in cui i clienti [!DNL Platform] si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizza `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al tuo sistema tramite un nome utente e una password, un token portatore o un altro metodo di autenticazione. Ad esempio, puoi selezionare questa opzione se hai selezionato anche `authType: OAUTH2` o `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Utilizza `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la destinazione e il cliente [!DNL Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso è necessario creare un oggetto credenziali utilizzando la configurazione [Credentials](./credentials-configuration.md). </li><li>Utilizza `NONE` se non è necessaria alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
 | `destinationDelivery.destinationServerId` | Stringa | Il `instanceId` del [modello del server di destinazione](./destination-server-api.md) utilizzato per questa destinazione. |
-| `inputSchemaId` | Stringa | Questo campo viene generato automaticamente e non richiede l’input. |
 | `destConfigId` | Stringa | Questo campo viene generato automaticamente e non richiede l’input. |
 | `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. <br> <ul><li> `true`:  [!DNL Platform] invia i profili utente storici qualificati per il segmento prima che il segmento venga attivato. </li><li> `false`:  [!DNL Platform] include solo i profili utente qualificati per il segmento dopo l’attivazione del segmento. </li></ul> |
 | `segmentMappingConfig.mapUserInput` | Booleano | Controlla se l&#39;ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione viene immesso dall&#39;utente. |
@@ -586,7 +584,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
@@ -773,7 +770,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
    ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "backfillHistoricalProfileData":true
 }
 ```
