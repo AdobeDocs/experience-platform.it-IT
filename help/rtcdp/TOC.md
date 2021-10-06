@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 37%
+source-wordcount: '160'
+ht-degree: 35%
 
 ---
 
@@ -24,19 +24,24 @@ ht-degree: 37%
       * [Guida introduttiva a Real-time CDP B2B Edition](./b2b-use-case.md)
 * Amministrazione {#admin}
    * [Panoramica sull’amministrazione](administration/admin-overview.md)
+* Profili account {#account}
+   * [Panoramica del profilo account](accounts/account-profile-overview.md)
+   * [Guida all’interfaccia utente del profilo account](accounts/account-profile-ui-guide.md)
 * Set di dati {#datasets}
    * [Set di dati](datasets/dataset.md)
    * [Qualità dei dati su Platform](datasets/data-quality.md)
 * Destinazioni {#destinations}
    * [Panoramica sulle destinazioni](destinations/overview.md)
+* Identità {#identity}
+   * [Identità e spazi dei nomi delle identità](profile/identities-overview.md)
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
    * [Panoramica sulla governance dei dati](privacy/data-governance-overview.md)
+* Criteri di unione {#merge-policies}
+   * [Panoramica sui criteri di unione](profile/merge-policies.md)
 * Profili {#profile}
    * [Panoramica del profilo](profile/profile-overview.md)
-   * [Identità e spazi dei nomi delle identità](profile/identities-overview.md)
-   * [Unisci criteri](profile/merge-policies.md)
-   * [Visualizzatore profili](profile/profile-viewer.md)
+   * [Sfoglia profilo](profile/profile-browse.md)
 * Segmenti {#segmentation}
    * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
    * [Guida al generatore di segmenti](segmentation/segment-builder-guide.md)

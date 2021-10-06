@@ -1,32 +1,31 @@
 ---
 keywords: identità rtcdp;identità rtcdp;identità cdp in tempo reale
-title: Identità nella piattaforma dati cliente in tempo reale
-description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore dei tuoi clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+title: Identità in Real-time Customer Data Platform
+description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore dei clienti e del loro comportamento combinando le identità tra dispositivi e sistemi.
+exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
 
+# Panoramica sulle identità
 
-# Identità nella piattaforma dati cliente in tempo reale
+Adobe Experience Platform [!DNL Identity Service] ti aiuta a ottenere una visione migliore dei tuoi clienti e del loro comportamento collegando le identità tra i vari dispositivi e sistemi. In genere, i clienti interagiscono con il tuo marchio su più canali, tra cui la navigazione sul sito web online, l&#39;acquisto in negozio, l&#39;iscrizione al programma fedeltà o la chiamata di un help desk per il supporto, per citarne alcuni. Su questi diversi sistemi, esiste un&#39;identità creata per quel cliente e [!DNL Identity Service] consente di unire queste identità per vedere il quadro completo.
 
-Adobe Experience Platform [!DNL Identity Service] consente di avere una visione migliore dei clienti e del loro comportamento collegando identità tra dispositivi e sistemi. In genere, i clienti interagiscono con il tuo marchio su più canali, tra cui visitare il sito Web online, effettuare un acquisto in-store, partecipare al programma fedeltà o chiamare un help desk per il supporto, per citarne alcuni. Tra questi diversi sistemi, esiste un&#39;identità creata per quel cliente, e [!DNL Identity Service] consente di unire queste identità per vedere il quadro completo.
+Ora, invece di cinque clienti separati che interagiscono con il tuo marchio su cinque canali diversi, puoi vedere che si tratta dello stesso cliente e assicurarti che riceva un’esperienza coerente, personalizzata e pertinente attraverso ogni interazione. Man mano che si conoscono ulteriori informazioni sul cliente (ad esempio, un browser anonimo del sito web decide di registrarsi per un account e di effettuare l&#39;accesso), le informazioni vengono unite e l&#39;immagine del cliente diventa sempre più chiara.
 
-Ora, invece di cinque clienti separati che interagiscono con il tuo marchio su cinque canali diversi, puoi vedere che si tratta dello stesso cliente e accertarti che riceva un&#39;esperienza coerente, personalizzata e rilevante attraverso ogni interazione. Man mano che si rendono note ulteriori informazioni sul cliente (ad esempio, un browser anonimo del sito Web decide di registrarsi per un account e di effettuare l’accesso), le informazioni vengono unite insieme e l’immagine del cliente diventa sempre più chiara.
+## Namespace Identity
 
-## Spazi dei nomi delle identità
-
-Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service] e fungono da indicatori che forniscono contesto aggiuntivo alle identità dei clienti. Un esempio dello spazio dei nomi ID comunemente usato sarebbe &quot;E-mail&quot;, dove l&#39;uso dello stesso indirizzo e-mail in più siti Web consente di unire diverse identità diverse, ognuna con un ID cliente univoco, che appartengono effettivamente allo stesso cliente. [!DNL Experience Platform] consente di utilizzare gli spazi dei nomi ID per cercare singoli profili all’interno dell’interfaccia utente. Per ulteriori informazioni sulla visualizzazione dei profili, consultate la [panoramica del visualizzatore dei profili](/help/rtcdp/profile/profile-viewer.md). Per ulteriori informazioni sugli spazi dei nomi di identità, vedere la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md).
+Gli spazi dei nomi di identità sono un componente di [!DNL Identity Service] e fungono da indicatori che forniscono contesto aggiuntivo alle identità dei clienti. Un esempio di spazio dei nomi ID comunemente utilizzato è &quot;E-mail&quot;, dove l’utilizzo dello stesso indirizzo e-mail in più siti web consente di unire diverse identità diverse, ciascuna con un ID cliente univoco, in quanto di fatto appartenente allo stesso cliente. [!DNL Experience Platform] consente di utilizzare i namespace ID per cercare singoli profili all’interno dell’interfaccia utente. Per ulteriori informazioni sulla visualizzazione dei profili, consulta la [panoramica del profilo](profile-browse.md). Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md).
 
 ## Grafici di identità
 
-Un grafico di identità è una mappa di relazioni tra diversi spazi dei nomi di identità, che fornisce una rappresentazione visiva di come il cliente interagisce con il proprio marchio tra canali diversi. Tutti i grafici dell&#39;identità del cliente vengono gestiti e aggiornati collettivamente da [!DNL Identity Service] in tempo quasi reale, in risposta all&#39;attività del cliente.
+Un grafico di identità è una mappa delle relazioni tra diversi namespace di identità, che fornisce una rappresentazione visiva del modo in cui il cliente interagisce con il tuo marchio attraverso diversi canali. Tutti i grafici di identità dei clienti vengono gestiti e aggiornati collettivamente da [!DNL Identity Service] in tempo quasi reale, in risposta all&#39;attività dei clienti.
 
-[!DNL Identity Service] gestisce un grafico di identità visibile solo dalla tua organizzazione e basato sui dati, detto grafico privato. [!DNL Identity Service] amplia il grafico privato quando un record di dati acquisito contiene più identità, aggiungendo una relazione tra le identità trovate.
+[!DNL Identity Service] gestisce un grafico delle identità visibile solo dalla tua organizzazione e generato in base ai tuoi dati, denominato grafico privato. [!DNL Identity Service] potenzia il grafico privato quando un record di dati acquisito contiene più di un’identità, aggiungendo una relazione tra le identità trovate.
 
 ## Passaggi successivi
 
-Le identità e le relazioni tra di esse sono definite e mantenute da [!DNL Identity Service] e sfruttate da [!DNL Real-time Customer Profile] per creare un quadro completo di ciascun cliente e delle sue interazioni. Per ulteriori informazioni, consultare la [documentazione del servizio identità](../../identity-service/home.md).
+Le identità e le relazioni tra di esse sono definite e gestite da [!DNL Identity Service] e sfruttate da [!DNL Real-time Customer Profile] per creare un quadro completo delle singole interazioni dei clienti. Per ulteriori informazioni, visita la [documentazione del servizio Identity](../../identity-service/home.md).
