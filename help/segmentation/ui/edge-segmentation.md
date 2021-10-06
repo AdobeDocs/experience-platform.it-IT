@@ -5,16 +5,16 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: 6bb1f417b5856f153adebe4deaac4fab264ef3a8
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '417'
 ht-degree: 3%
 
 ---
 
 # Guida all’interfaccia utente per la segmentazione dei bordi (versione beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >La segmentazione dei bordi è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
@@ -22,7 +22,15 @@ La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Exper
 
 ## Tipi di query per segmentazione Edge
 
-È possibile valutare una query con segmentazione edge se soddisfa uno dei seguenti criteri:
+Attualmente è possibile valutare solo i tipi di query selezionati con la segmentazione edge. Le sezioni seguenti forniscono un elenco dei tipi di query che possono essere valutati con la segmentazione edge e quelli che non sono attualmente supportati.
+
+### Tipi di query supportati
+
+Una query può essere valutata con segmentazione edge se soddisfa uno dei criteri descritti nella tabella seguente.
+
+>[!NOTE]
+>
+>Se la query corrisponde a uno qualsiasi dei tipi di query nella tabella seguente, verrà valutata automaticamente utilizzando la segmentazione edge. Il sistema determina automaticamente questa capacità in base all&#39;espressione della query.
 
 | Tipo di query | Dettagli | Esempio |
 | ---------- | ------- | ------- |
@@ -31,7 +39,7 @@ La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Exper
 | Hit in arrivo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore |  |
 | Hit in arrivo che si riferisce a un profilo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore e a uno o più attributi di profilo |  |
 
-Se la query corrisponde a uno qualsiasi dei tipi di query di cui sopra, verrà valutata automaticamente utilizzando la segmentazione edge.
+### Tipi di query non attualmente supportati
 
 I seguenti tipi di query sono **non** attualmente supportati per la segmentazione edge:
 
@@ -43,6 +51,4 @@ I seguenti tipi di query sono **non** attualmente supportati per la segmentazion
 
 ## Passaggi successivi
 
-Questa guida utente spiega come valutare i segmenti con la segmentazione edge su Adobe Experience Platform.
-
-Per ulteriori informazioni sull&#39;utilizzo dell&#39;interfaccia utente di Adobe Experience Platform, consulta la [Guida utente alla segmentazione](./overview.md). Per informazioni su come eseguire azioni simili e lavorare con segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita la [guida API di segmentazione edge](../api/edge-segmentation.md).
+Questa guida spiega come valutare i segmenti con la segmentazione edge su Adobe Experience Platform. Per ulteriori informazioni sull&#39;utilizzo dell&#39;interfaccia utente di Experience Platform, consulta la [Guida utente alla segmentazione](./overview.md). Per informazioni su come eseguire azioni simili e lavorare con segmenti utilizzando le API di Experience Platform, visita la [guida API di segmentazione edge](../api/edge-segmentation.md).
