@@ -4,14 +4,14 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
+source-git-commit: 05f2ba2e8e7abadeef18a908ba8b0e9a02d4c3f8
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
 
-#  Dashboard dei profili
+#  Dashboard Profilesdashboard
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui dati [!DNL Real-time Customer Profile] acquisiti durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Profiles] nell&#39;interfaccia utente e fornisce informazioni sulle metriche visualizzate nel dashboard.
 
@@ -19,7 +19,7 @@ Per una panoramica di tutte le funzioni Profilo nell’interfaccia utente di Exp
 
 ## Dati del dashboard del profilo
 
-Il dashboard [!UICONTROL Profiles] visualizza in Experience Platform un&#39;istantanea dei dati dell&#39;attributo (record) della tua organizzazione all&#39;interno dell&#39;archivio profili. Lo snapshot non include dati di eventi (serie temporali).
+Il dashboard [!UICONTROL Profiles] visualizza un&#39;istantanea dei dati dell&#39;attributo (record) della tua organizzazione all&#39;interno dell&#39;archivio profili in Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
 
 I dati attributo nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard Profilo non viene aggiornato in tempo reale.
 
@@ -77,7 +77,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 ### [!UICONTROL Numero di profili] {#profile-count}
 
-Il widget **[!UICONTROL Conteggio profili]** visualizza il numero totale di profili uniti all’interno dell’archivio dati del profilo al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Il widget **[!UICONTROL Conteggio profili]** visualizza il numero totale di profili uniti all’interno dell’archivio profili al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
 Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedente in questo documento](#merge-policies) .
 
@@ -91,19 +91,17 @@ Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedent
 
 ### [!UICONTROL Profili aggiunti] {#profiles-added}
 
-Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo a partire dall’ultima istantanea acquisita. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente. Puoi utilizzare il selettore a discesa per visualizzare i profili aggiunti negli ultimi 30 giorni, 90 giorni o 12 mesi.
+Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio profili a partire dall’ultima istantanea acquisita. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente. Puoi utilizzare il selettore a discesa per visualizzare i profili aggiunti negli ultimi 30 giorni, 90 giorni o 12 mesi.
 
 >[!NOTE]
 >
->Il widget [!UICONTROL Profili aggiunti] riflette il numero di profili aggiunti al sistema dopo la configurazione iniziale della tua organizzazione. Per ulteriori informazioni sull&#39;aggiunta di profili all&#39;archivio profili, consulta la [documentazione Profilo cliente in tempo reale](../../profile/home.md).
->
->Ad esempio, se durante la configurazione sono stati aggiunti quattro milioni di profili e negli ultimi 30 giorni hai aggiunto un ulteriore milione di profili, il widget [!UICONTROL Profili aggiunti] visualizzerebbe &quot;1.000.000&quot;, mentre il widget [!UICONTROL Conteggio profili] visualizzerebbe &quot;5.000.000&quot;.
+>Il widget [!UICONTROL Profili aggiunti] riflette il numero di profili aggiunti dopo la configurazione dell’archivio profili e l’acquisizione dei profili. In altre parole, se l’organizzazione configurasse l’archivio profili e acquisisse 4.000.000 nel giorno 1, entro 24 ore il dashboard sarebbe disponibile, tuttavia il widget [!UICONTROL Profili aggiunti] verrebbe impostato su 0. Questo viene fatto per evitare un picco associato all’acquisizione iniziale di profili nel sistema. Nei successivi 30 giorni, l’organizzazione acquisisce ulteriori 1.000.000 profili nell’archivio profili. Dopo l&#39;acquisizione della successiva istantanea, il widget [!UICONTROL Profili aggiunti] mostrerebbe un totale di 1.000.000 profili aggiunti, mentre il widget [!UICONTROL Conteggio profili] visualizzerebbe 5.000.000 profili totali.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Tendenza del conteggio dei profili] {#profiles-count-trend}
 
-Il widget **[!UICONTROL Tendenza del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti ogni giorno all’archivio dati del profilo negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva. Il conteggio dei profili aggiunti è il risultato dell’applicazione dei criteri di unione selezionati ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Il widget **[!UICONTROL Tendenza conteggio profili]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio profili ogni giorno negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva. Il conteggio dei profili aggiunti è il risultato dell’applicazione dei criteri di unione selezionati ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
 Per ulteriori informazioni, consulta la sezione [sui criteri di unione precedente in questo documento](#merge-policies) .
 
