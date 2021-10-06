@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
-feature: Raccolta dati
-source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
+feature: Data Collection
+source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 79%
+source-wordcount: '378'
+ht-degree: 88%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 79%
 * Introduzione {#get-started}
    * [Guida rapida](./quick-start/quick-start.md)
    * [Guide all&#39;implementazione](./quick-start/implementation-guides.md)
-* Interfaccia utente per la raccolta dati {#ui}
+* Interfaccia utente di Data Collection {#ui}
    * [Panoramica](./ui/managing-resources/overview.md)
    * Estensioni {#extensions}
       * [Panoramica](./ui/managing-resources/extensions/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 79%
 * Informazioni sul lato client {#client-side}
    * [Panoramica](./ui/client-side/overview.md)
    * [Implementazione asincrona](./ui/client-side/asynchronous-deployment.md)
-   * [Riferimento a oggetti satellitari](./ui/client-side/satellite-object.md)
+   * [Documentazione per gli oggetti Satellite](./ui/client-side/satellite-object.md)
    * [Implementare i tag JavaScript per gestire il consenso dei clienti](./ui/client-side/consent.md)
    * [Supporto di Content Security Policy (CSP)](./ui/client-side/content-security-policy.md)
    * [Supporto di Subresource Integrity (SRI)](./ui/client-side/sri.md)
@@ -72,7 +72,7 @@ ht-degree: 79%
          * [Note sulla versione](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
          * [Panoramica](./extensions/web/audience-manager/overview.md)
-      * Livello dati client di Adobe {#client-data-layer}
+      * Adobe Client Data Layer {#client-data-layer}
          * [Panoramica](./extensions/web/client-data-layer/overview.md)
          * [Note sulla versione](./extensions/web/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
@@ -154,7 +154,7 @@ ht-degree: 79%
    * [Hosting di librerie di terze parti](./extension-dev/third-party-libraries.md)
    * [Variabile libera “turbine”](./extension-dev/turbine.md)
    * [Standard di compatibilità con le versioni precedenti](./extension-dev/backwards-compatibility.md)
-* API Reactor {#api}
+* API di Reactor {#api}
    * [Panoramica](./api/overview.md)
    * [Introduzione](./api/getting-started.md)
    * Endpoint {#endpoints}
@@ -169,18 +169,18 @@ ht-degree: 79%
       * [Build](./api/endpoints/builds.md)
       * [Ambienti](./api/endpoints/environments.md)
       * [Host](./api/endpoints/hosts.md)
-      * [Configurazioni app](./api/endpoints/app-configurations.md)
-      * [Eventi di controllo](./api/endpoints/audit-events.md)
+      * [Configurazioni delle app](./api/endpoints/app-configurations.md)
+      * [Eventi di audit](./api/endpoints/audit-events.md)
       * [Callback](./api/endpoints/callbacks.md)
       * [Note](./api/endpoints/notes.md)
       * [Profilo](./api/endpoints/profile.md)
       * [Cerca](./api/endpoints/search.md)
    * Guide {#guides}
-      * [ID dei descrittori delegati](./api/guides/delegate-descriptor-ids.md)
-      * [Valori di crittografia](./api/guides/encrypting-values.md)
+      * [ID descrittori dei delegati](./api/guides/delegate-descriptor-ids.md)
+      * [Crittografia dei valori](./api/guides/encrypting-values.md)
       * [Gestione degli errori](./api/guides/error-handling.md)
       * [Filtrare le risposte](./api/guides/filtering.md)
-      * [Paginazione delle risposte](./api/guides/pagination.md)
+      * [Impaginazione delle risposte](./api/guides/pagination.md)
       * [Ordinamento delle risposte](./api/guides/sorting.md)
       * [Relazioni](./api/guides/relationships.md)
       * [Ricerca delle risorse](./api/guides/search.md)

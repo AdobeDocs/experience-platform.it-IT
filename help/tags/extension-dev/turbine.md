@@ -2,9 +2,9 @@
 title: Variabile libera “turbine”
 description: Scopri l’oggetto turbine, una variabile libera che fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 86%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | La data di creazione della versione di [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all&#39;interno del contenitore in formato ISO 8601. |
 | `buildDate` | La data di creazione della libreria corrente in formato ISO 8601. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | ID dell&#39;ambiente. |
 | `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging` e `production`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ Un valore booleano che indica se il debug dei tag è attualmente abilitato.
 
 Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Piuttosto, per registrare i messaggi utilizza sempre `turbine.logger` per assicurarti che i messaggi vengano riportati nella console solo quando è abilitato il debug dei tag.
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Restituisce il valore di un elemento dati.
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ Restituisce l’ultimo oggetto impostazioni salvato dalla vista di [configurazio
 
 I valori negli oggetti impostazioni restituiti potrebbero provenire da elementi di dati. Per questo motivo, se richiami `getExtensionSettings()` in momenti diversi potresti ottenere risultati diversi, dovuti all’eventuale cambiamento dei valori degli elementi dati. Per ottenere i valori più aggiornati, attendi il più tardi possibile prima di richiamare `getExtensionSettings()`.
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 La proprietà [hostedLibFiles](./manifest.md) può essere definita nel manifesto dell’estensione in modo da includere vari file oltre alla libreria runtime dei tag. Questo modulo restituisce l’URL in cui è ospitato il file libreria specificato.
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Recupera un modulo che è stato condiviso da un’altra estensione. Se non viene trovato alcun modulo corrispondente, verrà restituito `undefined`. Per ulteriori informazioni sui moduli condivisi, consulta [Implementazione di moduli condivisi](./web/shared.md).
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ Utility di registrazione utilizzata per registrare i messaggi nella console. I m
 * `logger.debug(message: string)`: registra un messaggio di debug nella console. (Visibile solo se la registrazione `verbose` è abilitata nella console del browser.)
 * `logger.deprecation(message: string)`: Registra un messaggio di avviso nella console se l’utente ha abilitato o meno il debug dei tag.
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 Quando si trasmette una funzione di callback in `turbine.onDebugChanged`, i tag richiameranno il callback ogni volta che viene attivato il debug. I tag trasmetteranno un valore booleano alla funzione di callback che sarà true se il debug è abilitato o false se è disabilitato.
 
 Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Piuttosto, per registrare i messaggi utilizza sempre `turbine.logger` e i tag faranno sì che i messaggi vengano riportati nella console solo quando è abilitato il debug di tag.
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
