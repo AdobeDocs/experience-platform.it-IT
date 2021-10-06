@@ -5,10 +5,9 @@ title: Funzioni SQL Spark in Query Service
 topic-legacy: spark sql functions
 description: Questa documentazione contiene informazioni sulle funzioni SQL Spark che estendono le funzionalità SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3909'
 ht-degree: 1%
 
 ---
@@ -28,14 +27,14 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 - [Matematica e operatori statistici e funzioni](#math)
 - [Operatori logici](#logical-operators)
 - [Funzioni di data/ora](#datetime-functions)
-- [Array](#arrays)
+- [Matrici](#arrays)
 - [Funzioni di fusione del tipo di dati](#datatype-casting)
 - [Funzioni di conversione e formattazione](#conversion)
 - [Valutazione dei dati](#data-evaluation)
 - [Informazioni correnti](#current-information)
 - [Funzioni di ordine più elevato](#higher-order)
 
-## Operatori matematici e statistici e funzioni {#math}
+## Matematica e operatori statistici e funzioni {#math}
 
 | Operatore/Funzione | Descrizione |
 | ----------------- | ----------- |
@@ -131,7 +130,7 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 | [`when`](https://spark.apache.org/docs/latest/api/sql/index.html#when) | Quando può essere utilizzato per creare condizioni di ramo per il confronto |
 | [`xpath_boolean`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_boolean) | Restituisce true se l&#39;espressione XPath restituisce true o se viene trovato un nodo corrispondente |
 
-### Funzioni data/ora {#datetime-functions}
+### Funzioni di data/ora {#datetime-functions}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
@@ -154,8 +153,8 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Restituisce il primo giorno successivo all’input |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Restituisce il trimestre dell’input |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Restituisce il secondo della stringa |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte la stringa in una data |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte la stringa in una marca temporale |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte la stringa in una data. **Nota:** la stringa  **** deve essere nel formato  `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte la stringa in una marca temporale. **Nota:** la stringa  **** deve essere nel formato  `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte la stringa in una marca temporale Unix |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte la stringa in una marca temporale UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Tronca la data |
@@ -164,7 +163,7 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Restituisce la settimana dell’anno per una data specificata |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Restituisce l’anno della stringa |
 
-### Array {#arrays}
+### Matrici {#arrays}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
@@ -198,7 +197,7 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 | [`sort_array`](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array) | Ordinare un array in base a un ordine |
 | [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | Unisce i due array in un singolo array, prima di applicare una funzione |
 
-### Funzioni di casting del tipo di dati {#datatype-casting}
+### Funzioni di fusione del tipo di dati {#datatype-casting}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
@@ -321,7 +320,7 @@ Per informazioni più dettagliate sulle funzioni, inclusi sintassi, utilizzo ed 
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | Restituisce la data corrente |
 | [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp),  [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Restituisce la marca temporale corrente |
 
-### Funzioni ordine più elevato {#higher-order}
+### Funzioni di ordine più elevato {#higher-order}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
