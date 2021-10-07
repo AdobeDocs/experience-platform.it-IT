@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 12%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 12%
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Riserva](./field-groups/event/lodging-reservation.md)
       * [Dettagli prenotazione](./field-groups/event/reservation-details.md)
+      * [Dettagli aggiornamento](./field-groups/event/upgrade-details.md)
+      * [Dettagli di upselling](./field-groups/event/upsell-details.md)
       * [Dettagli Web](./field-groups/event/web-details.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 12%
    * [Dettagli interazione geografica](./data-types/geo-interaction-details.md)
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
+   * [Impression](./data-types/impressions.md)
    * [Marketing](./data-types/marketing.md)
    * [Misura](./data-types/measure.md)
    * [Ordine](./data-types/order.md)
@@ -110,7 +113,7 @@ ht-degree: 12%
    * [Informazioni web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
-* [!UICONTROL Interfaccia utente degli schemi ]   {#ui}
+*  Interfaccia utente  {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplorare le risorse XDM](./ui/explore.md)
    * Creare e modificare risorse {#resources}
