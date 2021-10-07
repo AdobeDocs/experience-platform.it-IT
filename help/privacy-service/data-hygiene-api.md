@@ -3,9 +3,10 @@ title: API di igiene dei dati (Alpha)
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '535'
 ht-degree: 2%
 
 ---
@@ -17,6 +18,8 @@ ht-degree: 2%
 >L’API di igiene dati è attualmente in lingua alfa e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questo documento è soggetta a modifiche.
 
 L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform. A differenza dell’API Privacy Service, queste operazioni non devono essere associate alle normative sulla privacy legali e possono essere utilizzate esclusivamente per mantenere i dati puliti e precisi.
+
+Puoi accedere all’API tramite il seguente percorso principale: `https://platform.adobe.io/data/core/hygiene/`
 
 ## Introduzione
 
