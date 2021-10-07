@@ -2,9 +2,10 @@
 keywords: personalizzazione personalizzata; destinazione; destinazione personalizzata di experience platform;
 title: Connessione di personalizzazione personalizzata (Beta)
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito per recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce 1:1 in tempo reale e personalizzazione in base all’appartenenza a un segmento di un profilo utente.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -61,6 +62,28 @@ Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione
 ## Dati esportati {#exported-data}
 
 Se utilizzi [Tag di Adobe](../../../tags/home.md) per distribuire l&#39;SDK per web di Experience Platform, utilizza la funzionalità [invia evento completato](../../../edge/extension/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
+
+Di seguito è riportato un valore di esempio per la variabile `event.destinations` :
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 Se non utilizzi [Tag per Adobi](../../../tags/home.md) per distribuire l&#39;SDK per web Experience Platform, utilizza la funzionalità [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
 
