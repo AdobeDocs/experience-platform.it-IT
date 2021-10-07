@@ -4,9 +4,9 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: Come utilizzare l'SDK di destinazione per configurare la destinazione
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 ## Passaggio 2: Creare la configurazione di destinazione {#create-destination-configuration}
 
 Di seguito è riportato un esempio di configurazione per un modello di destinazione, creato utilizzando l’endpoint API `/destinations`. Per ulteriori informazioni su questo modello, consulta [Configurazione di destinazione](./destination-configuration.md).
+
+Per collegare la configurazione del server e del modello nel passaggio 1 a questa configurazione di destinazione, aggiungi l&#39;ID istanza del server e la configurazione del modello come `destinationServerId` qui.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -109,6 +111,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -138,20 +146,24 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 In base ai payload supportati dalla destinazione, è necessario creare un modello che trasformi il formato dei dati esportati dal formato Adobe XDM in un formato supportato dalla destinazione. Consulta gli esempi di modelli nella sezione [Uso di un linguaggio di template per le trasformazioni di identità, attributi e appartenenza al segmento](./message-format.md#using-templating) e utilizza lo [strumento di creazione dei modelli](./create-template.md) fornito dall&#39;Adobe.
 
+Dopo aver creato un modello di trasformazione del messaggio che funziona per te, aggiungilo al server e alla configurazione del modello che hai creato al passaggio 1.
+
 ## Passaggio 4: Creare la configurazione dei metadati del pubblico {#create-audience-metadata-configuration}
 
-Per alcune destinazioni, l&#39;SDK di destinazione richiede di configurare un modello di metadati per i tipi di pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando devi configurare questa configurazione e come farlo.
+Per alcune destinazioni, l&#39;SDK di destinazione richiede di configurare una configurazione dei metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando devi configurare questa configurazione e come farlo.
+
+Se utilizzi una configurazione di metadati del pubblico, devi connetterla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
 ## Passaggio 5: Creare la configurazione delle credenziali / Configurare l&#39;autenticazione {#set-up-authentication}
 
 A seconda che sia stato specificato `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione di cui sopra, è possibile impostare l’autenticazione per la destinazione utilizzando l’endpoint `/destination` o `/credentials`.
 
-* **Caso** più comune: Se hai selezionato  `"authenticationRule": "CUSTOMER_AUTHENTICATION"` e la destinazione supporta il metodo di autenticazione OAuth 2, leggi l’autenticazione [ ](./oauth2-authentication.md)OAuth 2 .
+* **Caso** più comune: Se hai selezionato  `"authenticationRule": "CUSTOMER_AUTHENTICATION"` nella configurazione di destinazione e la destinazione supporta il metodo di autenticazione OAuth 2, leggi  [OAuth 2 authentication](./oauth2-authentication.md).
 * Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, fai riferimento a [Configurazione delle credenziali](./credentials-configuration.md) nella documentazione di riferimento.
 
 ## Passaggio 6: Verificare la destinazione {#test-destination}
 
-Dopo aver impostato la destinazione utilizzando i modelli dei passaggi precedenti, puoi utilizzare lo [strumento di test della destinazione](./create-template.md) per testare l&#39;integrazione tra Adobe Experience Platform e la destinazione.
+Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare lo [strumento di test della destinazione](./create-template.md) per testare l&#39;integrazione tra Adobe Experience Platform e la destinazione.
 
 Per testare la destinazione devi usare l’interfaccia utente di Experience Platform per creare i segmenti da attivare nella destinazione. Per istruzioni su come creare segmenti in Experience Platform, consulta le due risorse seguenti:
 
