@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine Microsoft Dynamics
 topic-legacy: overview
 description: Scopri come collegare Microsoft Dynamics a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '229'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,11 @@ Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo 
 
 Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
 
->[!IMPORTANT]
->
->Il connettore di origine [!DNL Microsoft Dynamics] al momento non supporta la connettività della stessa regione a Platform. Ciò significa che, se l’istanza di Azure utilizza la stessa area di rete di Platform, non è possibile stabilire una connessione alle origini di Platform. Al momento, è supportata solo la connettività tra aree geografiche. Per ulteriori informazioni, contatta il tuo Adobe account manager.
-
 La documentazione seguente fornisce informazioni su come connettersi a [!DNL Microsoft Dynamics] utilizzando le API o l&#39;interfaccia utente:[!DNL Platform]
 
 ## Connetti [!DNL Microsoft Dynamics] a [!DNL Platform] utilizzando le API
 
-- [Creare una connessione di base Microsoft Dynamics utilizzando l’API del servizio di flusso](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Creare una connessione base Microsoft Dynamics utilizzando l’API del servizio di flusso](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Esplorare la struttura dati e il contenuto di un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/explore/crm.md)
 - [Creare un flusso di dati per un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/collect/crm.md)
 

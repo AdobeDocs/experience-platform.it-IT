@@ -5,9 +5,9 @@ title: Panoramica del connettore origine archiviazione file di Azure
 topic-legacy: overview
 description: Scopri come collegare Azure File Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform
 ## ELENCO CONSENTITI di indirizzo IP
 
 Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
-
->[!IMPORTANT]
->
->Il connettore di origine [!DNL Azure File Storage] al momento non supporta la connettività della stessa regione a Platform. Ciò significa che, se l’istanza di Azure utilizza la stessa area di rete di Platform, non è possibile stabilire una connessione alle origini di Platform. Al momento, è supportata solo la connettività tra aree geografiche. Per ulteriori informazioni, contatta il tuo Adobe account manager.
 
 ## Vincoli di denominazione per file e directory
 
