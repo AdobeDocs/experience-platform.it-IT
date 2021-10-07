@@ -3,9 +3,9 @@ title: API di igiene dei dati (Alpha)
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Matrice contenente informazioni di autenticazione per la tua organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: Deve essere impostato su `imsOrgID`.</li><li>`value`: Il tuo ID organizzazione IMS. Si tratta dello stesso valore fornito nell&#39;intestazione `x-gw-ims-org-id` .</li></ul> |
 | `users` | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera eliminare. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità contiene le seguenti proprietà: <ul><li>`namespace`: Il  [namespace ](../identity-service/namespaces.md) identity associato all&#39;ID. Può trattarsi di un [namespace standard](./api/appendix.md#standard-namespaces) riconosciuto da Platform oppure di uno spazio dei nomi personalizzato definito dall’organizzazione. Il tipo di spazio dei nomi utilizzato deve riflettersi nella proprietà `type` .</li><li>`value`: Il valore di identità.</li><li>`type`: Deve essere impostato su  `standard` se utilizzi uno spazio dei nomi riconosciuto a livello globale o  `custom` se utilizzi uno spazio dei nomi definito dall’organizzazione.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
