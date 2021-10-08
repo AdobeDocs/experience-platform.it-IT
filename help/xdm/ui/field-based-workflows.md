@@ -4,9 +4,9 @@ description: Scopri come aggiungere individualmente i campi dai gruppi di campi 
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->I flussi di lavoro descritti in questo documento sono attualmente in versione beta. La funzionalità e la documentazione sono soggette a modifiche.
+>I flussi di lavoro descritti in questo documento sono attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
 
 Adobe Experience Platform fornisce un solido set di gruppi di campi [standardizzati](../schema/composition.md#field-group) da utilizzare negli schemi Experience Data Model (XDM). La struttura e la semantica dietro questi gruppi di campi sono accuratamente studiate per soddisfare una vasta gamma di casi d&#39;uso di segmentazione e altre applicazioni a valle in Platform. Puoi anche definire gruppi di campi personalizzati per soddisfare esigenze aziendali specifiche.
 
@@ -43,7 +43,7 @@ Se si desidera rimuovere più campi, è possibile gestire il gruppo di campi nel
 
 ![Gestire i campi correlati](../images/ui/field-based-workflows/manage-related-fields.png)
 
-Viene visualizzata una finestra di dialogo che mostra la struttura del gruppo di campi in questione. Da qui è possibile utilizzare le caselle di controllo fornite per selezionare o deselezionare i campi necessari. Una volta soddisfatti, selezionare **[!UICONTROL Aggiungi campi]**.
+Viene visualizzata una finestra di dialogo che mostra la struttura del gruppo di campi in questione. Da qui è possibile utilizzare le caselle di controllo fornite per selezionare o deselezionare i campi necessari. Quando sei soddisfatto, seleziona **[!UICONTROL Conferma]**.
 
 ![Seleziona campi dal gruppo di campi](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ L’area di lavoro viene aggiornata per mostrare il campo standard aggiunto allo
 
 ## Aggiungere campi personalizzati direttamente a uno schema
 
-Se in precedenza sono stati creati [gruppi di campi personalizzati](./resources/field-groups.md#create), è possibile aggiungere campi personalizzati direttamente allo schema senza prima doverli aggiungere separatamente a un gruppo di campi personalizzato.
-
->[!WARNING]
->
->Quando si aggiunge un campo personalizzato a uno schema, è comunque necessario selezionare un gruppo di campi personalizzati esistente a cui associarlo. Ciò significa che per aggiungere campi personalizzati direttamente a uno schema, è necessario disporre di almeno un gruppo di campi personalizzati precedentemente definito nella sandbox in cui si sta lavorando. Inoltre, qualsiasi altro schema che utilizzi tale gruppo di campi personalizzato erediterà il campo appena aggiunto dopo il salvataggio delle modifiche.
+Analogamente al flusso di lavoro per i campi standard, puoi anche aggiungere campi personalizzati direttamente a uno schema.
 
 Per aggiungere campi al livello principale di uno schema, seleziona l’icona più (**+**) accanto al nome dello schema nell’area di lavoro. Nella struttura dello schema viene visualizzato un segnaposto **[!UICONTROL Campo senza titolo]** e la barra laterale destra viene aggiornata per visualizzare i controlli per configurare il campo.
 
 ![Campo personalizzato radice](../images/ui/field-based-workflows/root-custom-field.png)
 
-Inizia a digitare il nome del campo personalizzato che desideri aggiungere e il sistema inizia automaticamente a cercare i campi standard corrispondenti. Per creare un nuovo campo personalizzato, seleziona l’opzione superiore aggiunta con **([!UICONTROL Nuovo campo])**.
+Inizia a digitare il nome del campo che desideri aggiungere e il sistema inizia automaticamente a cercare i campi standard corrispondenti. Per creare un nuovo campo personalizzato, seleziona l’opzione superiore aggiunta con **([!UICONTROL Nuovo campo])**.
 
 ![Nuovo campo](../images/ui/field-based-workflows/custom-field-search.png)
 
-Da qui, fornisci un nome visualizzato e un tipo di dati per il campo. In **[!UICONTROL Assegna gruppo di campi]**, selezionare il gruppo di campi personalizzati a cui si desidera associare il nuovo campo.
+Da qui, fornisci un nome visualizzato e un tipo di dati per il campo. In **[!UICONTROL Assegna gruppo di campi]**, è necessario selezionare un gruppo di campi a cui associare il nuovo campo. Inizia a digitare il nome del gruppo di campi e, se in precedenza sono stati creati [gruppi di campi personalizzati](./resources/field-groups.md#create), verranno visualizzati nell&#39;elenco a discesa. In alternativa, è possibile digitare un nome univoco nel campo per creare un nuovo gruppo di campi.
 
 ![Seleziona gruppo di campi](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>Se selezioni un gruppo di campi personalizzato esistente, anche gli altri schemi che utilizzano quel gruppo di campi erediteranno il campo appena aggiunto dopo il salvataggio delle modifiche. Per questo motivo, selezionare un gruppo di campi esistente solo se si desidera questo tipo di propagazione. In caso contrario, dovresti scegliere di creare un nuovo gruppo di campi personalizzato.
 
 Al termine, selezionare **[!UICONTROL Applica]**.
 
@@ -110,6 +110,8 @@ Se lo schema su cui si sta lavorando dispone di un campo di tipo oggetto fornito
 ![Aggiungi campo all’oggetto standard](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 Dopo aver applicato le modifiche, il nuovo campo viene visualizzato nello spazio dei nomi dell’ID tenant all’interno dell’oggetto standard. Questo spazio dei nomi nidificato evita conflitti tra nomi di campo all’interno del gruppo di campi stesso per evitare l’interruzione delle modifiche in altri schemi che utilizzano lo stesso gruppo di campi.
+
+![Campo aggiunto all’oggetto standard](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## Passaggi successivi
 
