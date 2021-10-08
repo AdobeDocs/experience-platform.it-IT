@@ -1,27 +1,28 @@
 ---
-title: Guida introduttiva all’inoltro eventi
-description: Segui questa esercitazione passo per iniziare a utilizzare l’inoltro eventi in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: Guida introduttiva all’inoltro degli eventi
+description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 92%
 
 ---
 
-# Guida introduttiva all&#39;inoltro eventi
+# Guida introduttiva all&#39;inoltro degli eventi
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per utilizzare l’inoltro eventi in Adobe Experience Platform, i dati devono essere inviati a Adobe Experience Platform Edge Network utilizzando una o più delle tre opzioni seguenti:
+Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe Experience Platform Edge Network utilizzando una o più delle tre opzioni seguenti:
 
 * [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [API server-to-server](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [API server-to-server](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=it)
 
 >[!NOTE]
->L’SDK per web di Platform e l’SDK per dispositivi mobili di Platform non richiedono la distribuzione tramite tag in Adobe Experience Platform. Tuttavia, l&#39;utilizzo di tag per distribuire questi SDK è l&#39;approccio consigliato.
+>Platform Web SDK e Platform Mobile SDK non richiedono l’implementazione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
 
 Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adobe a cui inviare i dati. Per inviare dati a una soluzione non Adobe, impostala nell’inoltro degli eventi.
 
@@ -30,7 +31,7 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 * Adobe Experience Platform Collection Enterprise (contatta il tuo account manager per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
 * Adobe Experience Platform Web SDK o Mobile SDK, configurato per inviare i dati a Edge Network
-* Mappa i dati su Experience Data Model (XDM) (Questa mappatura può essere effettuata utilizzando i tag)
+* Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
 
 ## Creare uno schema XDM
 
@@ -40,7 +41,7 @@ Crea lo schema in Adobe Experience Platform.
 
 1. Assegna allo schema un nome e una breve descrizione.
 
-1. Puoi aggiungere il gruppo di campi &quot;Dettagli web ExperienceEvent&quot; selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
+1. Puoi aggiungere il gruppo di campi “Dettagli web ExperienceEvent” selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
 
    >[!NOTE]
    >
@@ -50,9 +51,9 @@ Crea lo schema in Adobe Experience Platform.
 
 Per ulteriori informazioni sugli schemi, consulta la [guida del sistema Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it).
 
-## Creare una proprietà di inoltro eventi
+## Creare una proprietà di inoltro degli eventi
 
-Nell’interfaccia utente Raccolta dati creare una proprietà di tipo &quot;Edge&quot;.
+Nell’interfaccia utente Data Collection, crea una proprietà di tipo “Edge”.
 
 1. Seleziona **[!UICONTROL Nuova proprietà]**.
 
@@ -65,13 +66,13 @@ Nell’interfaccia utente Raccolta dati creare una proprietà di tipo &quot;Edge
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
 gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel datastream è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un datastream. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
-## Creare un datastream
+## Creare un flusso di dati
 
-Per creare il datastream in Adobe Experience Platform, utilizza l’ID ambiente generato quando hai creato la proprietà di inoltro dell’evento.
+Per creare il flusso di dati in Adobe Experience Platform, utilizza l’ID ambiente generato quando hai creato la proprietà di inoltro degli eventi.
 
-1. Utilizza il collegamento nella barra a sinistra dell’interfaccia utente Raccolta dati per aprire l’interfaccia datastreams.
+1. Utilizza il collegamento nella barra a sinistra dell’interfaccia utente di Data Collection per aprire l’interfaccia per i flussi di dati.
 
-1. Selezionare **[!UICONTROL Datastreams]**.
+1. Seleziona **[!UICONTROL Flussi di dati]**.
 
 1. Assegna un nome alla configurazione e fornisci una descrizione facoltativa.
 La descrizione è utile per identificare le configurazioni, qualora ne siano elencate diverse.
@@ -80,27 +81,27 @@ La descrizione è utile per identificare le configurazioni, qualora ne siano ele
 
 
 
-## Abilita inoltro eventi
+## Abilitare l’inoltro degli eventi
 
-Quindi, configura la rete Edge per l’invio di dati all’inoltro eventi e ad altri prodotti Adobe.
+Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad altri prodotti Adobe.
 
-1. Nell’interfaccia utente dei datastreams, seleziona la proprietà creata.
+1. Seleziona la proprietà creata nell’interfaccia utente per i flussi di dati.
 
 1. Seleziona l&#39;ambiente di sviluppo, di produzione oppure di gestione temporanea.
 
-   Oppure, per inviare dati a un ambiente di inoltro eventi al di fuori dell&#39;organizzazione Adobe, seleziona **[!UICONTROL Passa alla modalità avanzata]** e incolla un ID. L&#39;ID viene fornito quando crei una proprietà di inoltro eventi.
+   In alternativa, per inviare i dati a un ambiente di inoltro degli eventi che si trova all’esterno dell’organizzazione Adobe, seleziona **[!UICONTROL Passa a modalità avanzata]** e incolla un ID. L’ID viene fornito quando crei una proprietà di inoltro degli eventi.
 
 1. Attiva gli strumenti necessari e configura le opzioni in base alle tue esigenze.
 
    * Adobe Analytics richiede un ID della suite di rapporti.
 
-   * L&#39;inoltro degli eventi in Adobe Experience Platform richiede un ID di proprietà e un ID ambiente. Percorso di pubblicazione per la proprietà di inoltro eventi.
+   * L&#39;inoltro degli eventi in Adobe Experience Platform richiede un ID di proprietà e un ID ambiente. Si tratta del percorso di pubblicazione per la proprietà di inoltro degli eventi.
 
 Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
-## Configura l’estensione tag Web SDK per inviare dati al datastream creato in precedenza
+## Configura l’estensione Platform Web SDK per inviare dati al datastream creato in precedenza
 
-Crea la proprietà nell’interfaccia utente di raccolta dati, quindi utilizza l’estensione Adobe Experience Platform Web SDK per configurarla.
+Crea la proprietà nell’interfaccia utente di Data Collection, quindi utilizza l’estensione Adobe Experience Platform Web SDK per configurarla.
 
 1. Assegna un nome alla proprietà.
 
@@ -114,7 +115,7 @@ Per ulteriori opzioni di configurazione, consulta la [documentazione dell&#39;es
 
 ## Creare una regola di tag per inviare dati all’SDK per web di Platform
 
-Dopo aver implementato quanto sopra, crea definizioni di dati, regole e così via, che utilizzano l’inoltro eventi e i tag, ma che richiedono una sola richiesta dalla pagina.
+Dopo aver eseguito le operazioni descritte qui sopra, puoi creare tutti gli elementi che sfruttano sia l’inoltro degli eventi che i tag ma che richiedono una sola richiesta dalla pagina, come le definizioni di dati, le regole e così via.
 
 Crea una regola di caricamento della pagina utilizzando l’estensione Platform Web SDK e il tipo di azione &quot;Invia evento&quot;:
 
@@ -134,9 +135,9 @@ Per un altro esempio, potresti creare una regola che invia il livello dati a Edg
 
 ## Riepilogo
 
-Con quanto segue, ora puoi creare regole di inoltro eventi per inoltrare i dati a destinazioni non Adobi.
+Dopo aver eseguito quanto segue, sarà possibile creare delle regole di inoltro degli eventi per inoltrare i dati a destinazioni non Adobe.
 
 * Schema Experience Data Model (prendi nota del nome che gli hai assegnato).
-* Proprietà di inoltro eventi (tieni traccia degli ID proprietà e degli ID ambiente).
-* Un datastream (prendi nota dell’ID ambiente, da non confondere con l’ID ambiente dall’inoltro degli eventi).
-* Proprietà tag
+* Una proprietà di inoltro degli eventi (prendi nota dell’ID proprietà e degli ID ambiente)
+* Un flusso di dati (prendi nota dell’ID ambiente, da non confondere con l’ID ambiente dall’inoltro degli eventi)
+* Una proprietà tag
