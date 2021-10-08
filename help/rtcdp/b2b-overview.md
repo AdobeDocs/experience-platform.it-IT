@@ -5,14 +5,14 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Panoramica dell’account Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
+source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1057'
 ht-degree: 1%
 
 ---
 
-# Panoramica su Real-time Customer Data Platform B2B Edition
+# Panoramica di Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
@@ -69,22 +69,16 @@ Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di s
 >
 >La [!DNL Marketo] sorgente è **non** necessaria per utilizzare Real-time CDP B2B Edition.
 
-Per ulteriori informazioni su Marketo e sull’inserimento di dati B2B in Platform, consulta le fonti nella documentazione di Real-time CDP B2B Edition .
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+Consulta le [sorgenti nella documentazione Real-time CDP B2B Edition](./sources/b2b.md) per ulteriori informazioni su Marketo e per inserire dati B2B in Platform.
 
 ## Destinazioni B2B
 
-Tutte le destinazioni di Experience Platform come [!DNL Google], [!DNL Linkedin] o [!DNL Facebook] sono disponibili e supportate completamente da Real-time CDP B2B Edition. Esiste anche una destinazione [!DNL Marketo Engage] che esegue lo streaming dei dati da [!DNL Marketo] o fuori dalla piattaforma e li rende disponibili come tipi di pubblico.
+Le destinazioni di Experience Platform come Google, Linkedin e Facebook sono disponibili e completamente supportate da Real-time CDP B2B Edition. Esiste anche una destinazione di Marketo Engage che invia in streaming i dati di appartenenza ai segmenti fuori da Platform e li rende disponibili come elenchi in Marketo.
 
-La destinazione [!DNL Marketo] offre un modo semplice e rapido per estrarre informazioni dall&#39;Experience Platform in [!DNL Marketo]. La destinazione consente agli addetti al marketing di inviare in push i segmenti creati in Adobe Experience Platform a [!DNL Marketo]. In [!DNL Marketo] questi tipi di pubblico sono quindi disponibili come elenchi statici.
-
-Per le aziende con più di un sistema di gestione delle relazioni con i clienti, Real-time CDP B2B Edition offre la possibilità di configurare connettori di destinazione per istanze separate di [!DNL Marketo] o CRM. Se necessario, puoi configurare i connettori di destinazione per ogni istanza e inviare i tipi di pubblico a ciascuna istanza CRM in modo indipendente.
+Per le aziende con più di un sistema di gestione delle relazioni con i clienti, Real-time CDP B2B Edition offre la possibilità di configurare connettori di destinazione per istanze separate di Marketo o CRM. Se necessario, puoi configurare i connettori di destinazione per ogni istanza e inviare i tipi di pubblico a ciascuna istanza CRM in modo indipendente.
 
 ## Passaggi successivi
 
 Ora che conosci meglio i vantaggi per gli addetti al marketing offerti da Real-time CDP B2B Edition e le differenze tra esso e Real-time CDP, puoi imparare ad applicare queste funzioni alla tua organizzazione IMS.
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
-Per comprendere in che modo Real-time CDP B2B Edition può trarre vantaggio dal modello di servizio business-to-business, vedi l&#39;esempio di caso d&#39;uso per Real-time CDP B2B Edition. In alternativa, puoi fare riferimento agli schemi [nella documentazione di Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) per indicazioni più specifiche sulla creazione di schemi e sulla definizione di relazioni per le entità dati B2B essenziali.
+Per capire in che modo Real-time CDP B2B Edition può trarre vantaggio dal modello di servizio business-to-business, vedi l&#39; [esempio di caso d&#39;uso per Real-time CDP B2B Edition](./b2b-use-case.md). In alternativa, puoi fare riferimento agli schemi [nella documentazione di Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) per informazioni più specifiche sulla creazione di schemi e sulla definizione di relazioni per le entità dati B2B essenziali.

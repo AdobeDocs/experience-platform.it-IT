@@ -2,9 +2,10 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;cdp;rtcdp
 title: Esempio di utilizzo per Real-time Customer Data Platform B2B Edition
 description: Questo scenario di esempio fornisce un esempio per la configurazione dell’implementazione di Real-time Customer Data Platform B2B Edition.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
@@ -18,8 +19,7 @@ ht-degree: 1%
 Real-time Customer Data Platform B2B Edition amplia le offerte Real-time CDP e Adobe Experience Platform per supportare i dati e i flussi di lavoro B2B. Questo documento fornisce un esempio di caso d&#39;uso che dimostra i vantaggi aggiuntivi forniti da B2B Edition. Sono le seguenti:
 
 - Combina i dati relativi a persone e account provenienti da diverse origini dati in silos per produrre una visualizzazione completa che consenta una migliore comprensione dei clienti e una segmentazione più accurata. Per ulteriori informazioni, consulta la documentazione su [creazione di relazioni di schema XDM](./schemas/b2b.md) da utilizzare con diverse origini B2B.
-- Segmenta un pubblico in base agli attributi delle entità correlate. Sono inclusi account, opportunità, campagne ed elenchi di marketing. I segmenti non sono più limitati agli attributi Persona ed Eventi di esperienza. Per ulteriori esempi sulla creazione di tipi di pubblico specifici per B2B, consulta la documentazione sulla segmentazione B2B .
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- Segmenta un pubblico in base agli attributi delle entità correlate. Sono inclusi account, opportunità, campagne ed elenchi di marketing. I segmenti non sono più limitati agli attributi Persona ed Eventi di esperienza. Per ulteriori esempi sulla creazione di tipi di pubblico specifici per B2B, consulta la documentazione sulla segmentazione B2B](./segmentation/b2b.md) .[
 - Supporta in modo nativo il caso d’uso di una persona relativa a più account.
 
 ## Caso d’uso
@@ -97,12 +97,10 @@ Leggendo questo documento, ti sono stati presentati i tipi di obiettivi e proble
 
 Per migliorare la comprensione delle funzioni specifiche di B2B, si consiglia di consultare la seguente documentazione:
 
-<!-- - [Marketo connector]() -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Fonti in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemi in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
-- [Documentazione sulla destinazione del Marketo Engage](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [Configurare una destinazione LinkedIn Matched Audiences](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+- [Esempi di segmentazione B2B](./segmentation/b2b.md)
+- [Panoramica dei profili account](./accounts/account-profile-overview.md)
+- [Destinazioni in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [Configurare una destinazione LinkedIn Matched Audiences](../destinations/catalog/social/linkedin.md)

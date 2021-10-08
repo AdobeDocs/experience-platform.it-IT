@@ -1,10 +1,11 @@
 ---
 title: Panoramica dei casi di utilizzo della segmentazione per Real-time CDP B2B Edition.
-description: Panoramica dei vari casi d’uso di Real-time CDP B2B Edition disponibili.
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+description: Panoramica dei vari casi d’uso disponibili in tempo reale CDP B2B Edition.
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1122'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +56,7 @@ Questa relazione si riflette all’interno del Generatore di segmenti attraverso
 
 ![esempio chiave sorgente utilizzando il generatore di segmenti nell’area di lavoro segmentazione](../assets/segmentation/source-key-segmentation-example.png)
 
-Per ulteriori informazioni sulle classi B2B disponibili, consulta gli schemi [nella documentazione di Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) .
+Per ulteriori informazioni sulle classi B2B disponibili, consulta gli [schemi nella documentazione di Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) .
 
 I casi di utilizzo riportati di seguito forniscono informazioni sulle classi utilizzate per stabilire relazioni tra i diversi schemi per ottenere questi risultati. Questi esempi possono essere utilizzati per creare segmenti personalizzati.
 
