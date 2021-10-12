@@ -5,9 +5,9 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
+source-git-commit: ed14e0745ef105a35477f933b2ec435162f847de
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3933'
 ht-degree: 4%
 
 ---
@@ -115,7 +115,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | now | Recupera l&#39;ora corrente. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera l&#39;ora Unix corrente. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** La data di input, come oggetto ZoningDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-gg HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la marca temporale.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-gg&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
+| dformat | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la marca temporale.</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** La stringa che rappresenta il formato della data.</li><li>DEFAULT_DATE: **Obbligatorio** La data predefinita restituita, se la data fornita è null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** La stringa che rappresenta il formato della data.</li></ul> | date(DATA, FORMATO) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** La stringa che rappresenta la data.</li></ul> | data(DATA) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
@@ -141,7 +141,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | array_to_object | Crea un elenco di oggetti. | <ul><li>INGRESSO: **Obbligatorio** Un raggruppamento di coppie chiave-array.</li></ul> | array_to_object(INPUT) | campione necessario | campione necessario |
 | to_object | Crea un oggetto in base alle coppie chiave/valore flat specificate. | <ul><li>INGRESSO: **Obbligatorio** Elenco semplice di coppie chiave/valore.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un oggetto dalla stringa di input. | <ul><li>STRINGA: **Obbligatorio** Stringa che viene analizzata per creare un oggetto.</li><li>VALUE_DELIMITER: *Facoltativo* Il delimitatore che separa un campo dal valore. Il delimitatore predefinito è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di valori di campo. Il delimitatore predefinito è `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | telefono - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
-| is_set | Controlla se l&#39;oggetto esiste all&#39;interno dei dati di origine. | <ul><li>INGRESSO: **Obbligatorio** Il percorso da controllare se esiste all&#39;interno dei dati di origine.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evar.evar.field1&quot;) | true |
+| contains_key | Controlla se l&#39;oggetto esiste all&#39;interno dei dati di origine. | <ul><li>INGRESSO: **Obbligatorio** Il percorso da controllare se esiste all&#39;interno dei dati di origine.</li></ul> | contains_key(INPUT) | contains_key(&quot;evar.evar.field1&quot;) | true |
 | annullare | Imposta il valore dell&#39;attributo su `null`. Da utilizzare quando non si desidera copiare il campo nello schema di destinazione. |  | nullify() | nullify() | `null` |
 | get_keys | Analizza le coppie chiave/valore e restituisce tutte le chiavi. | <ul><li>OGGETTO: **Obbligatorio** L&#39;oggetto da cui verranno estratti i tasti.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;): &quot;Orgoglio e pregiudizio&quot;, &quot;libro2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analizza le coppie chiave/valore e restituisce il valore della stringa, in base alla chiave specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa da analizzare.</li><li>CHIAVE: **Obbligatorio** Chiave per la quale estrarre il valore.</li><li>VALUE_DELIMITER: **Obbligatorio** Il delimitatore che separa il campo e il valore. Se viene fornito un valore `null` o una stringa vuota, questo valore è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di campi e valori. Se viene fornito un valore `null` o una stringa vuota, questo valore è `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , telefono - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
@@ -191,7 +191,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 {style=&quot;table-layout:auto&quot;}
 
-### Digita conversioni {#type-conversions}
+### Conversioni di tipo {#type-conversions}
 
 >[!NOTE]
 >
