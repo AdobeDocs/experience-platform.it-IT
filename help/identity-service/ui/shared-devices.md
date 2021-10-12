@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: Rilevamento dispositivi condiviso identifica diversi utenti autenticati dello stesso dispositivo, consentendo una rappresentazione più accurata dei dati dei clienti nei grafici delle identità
 hide: true
 hidefromtoc: true
-source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
+source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Identity Service] ti aiuta a ottenere una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendoti di offrire esperienze digitali personali di grande impatto in tempo reale.
 
-[!DNL Shared Device] si riferisce ai dispositivi utilizzati da più di una persona. Alcuni esempi di dispositivi condivisi sono tablet, computer libreria e chioschi. Attraverso la funzione [!DNL Shared Device Detection] è possibile impedire l’unione di utenti diversi dello stesso dispositivo in un’unica identità, per una rappresentazione più precisa.
+[!DNL Shared Device] si riferisce ai dispositivi utilizzati da più di una persona. Alcuni esempi di dispositivi condivisi sono tablet, computer libreria e chioschi. Attraverso la funzione [!DNL Shared Device Detection] è possibile evitare che utenti diversi dello stesso dispositivo vengano uniti in un&#39;unica identità, consentendo una rappresentazione più precisa di un singolo utente.
 
 Con [!DNL Shared Device Detection] puoi:
 
@@ -31,7 +31,7 @@ Con [!DNL Shared Device Detection] puoi:
 
 >[!TIP]
 >
->Le configurazioni per [!DNL Shared Device Detection] devono essere completate prima di abilitare [!DNL Profile] per il set di dati perché non è più possibile rivedere le impostazioni una volta che i grafici sono generati in [!DNL Identity Service].
+>Le configurazioni per [!DNL Shared Device Detection] devono essere completate prima di abilitare Profilo per il set di dati perché non è più possibile modificare le impostazioni dopo la generazione dei grafici in [!DNL Identity Service].
 
 ## Introduzione
 
