@@ -2,13 +2,13 @@
 keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;profilo cliente in tempo reale
 title: Guida all’interfaccia utente del profilo account
 description: Utilizzando i profili account, Real-time Customer Data Platform B2B Edition consente di unificare le informazioni account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # Guida all’interfaccia utente del profilo account
 
@@ -24,7 +24,7 @@ I profili account ti consentono di unificare le informazioni dell’account da p
 
 ## Sfoglia profili account
 
-Per sfogliare i profili di account, inizia selezionando **[!UICONTROL Profili]** in Account nella navigazione a sinistra.
+Per sfogliare i profili di account, inizia selezionando **[!UICONTROL Profili]** in [!UICONTROL Account] nella navigazione a sinistra.
 
 ![](images/b2b-account-browse.png)
 
@@ -34,7 +34,7 @@ Nella scheda **[!UICONTROL Sfoglia]** è possibile esplorare i profili dell&#39;
 
 ### Sfoglia per [!UICONTROL Origine enterprise connessa]
 
-Per sfogliare i profili account in base a un&#39;origine enterprise connessa, è innanzitutto necessario selezionare un&#39;origine connessa utilizzando il pulsante di selezione accanto al campo **[!UICONTROL Origine]**.
+Per sfogliare i profili account in base a un&#39;origine enterprise connessa, selezionare **[!UICONTROL Origine enterprise connessa]** dal menu a discesa **[!UICONTROL Sfoglia per]**, quindi scegliere un&#39;origine connessa utilizzando il pulsante di selezione accanto al campo **[!UICONTROL Origine]**.
 
 ![](images/b2b-account-browse.png)
 
@@ -67,6 +67,8 @@ Real-time CDP, B2B Edition supporta la possibilità di eseguire una ricerca dire
 La capacità di eseguire una ricerca diretta è utile in circostanze in cui non è possibile una connessione sorgente diretta ai dati. Ad esempio, se la tua organizzazione dispone di criteri di governance dei dati che impediscono la connessione diretta a un sistema di gestione delle relazioni con i clienti, puoi esportare tali dati in un sistema di archiviazione cloud e quindi trasferirli in Experience Platform.
 
 Un altro esempio potrebbe essere la trasformazione dei dati che si sta effettuando tra il momento in cui lascia un sistema ed entra in Platform. Puoi utilizzare la funzionalità di ricerca diretta per fornire contesto per i dati (ad esempio per specificare che si tratta di dati Marketo, nonostante provengano, ad esempio, da un bucket Amazon S3) in modo che il sistema sappia dove cercare e come eseguire correttamente il rendering dei dati.
+
+Per iniziare una ricerca diretta, seleziona **[!UICONTROL Altri]** dal menu a discesa **[!UICONTROL Sfoglia per]**, quindi immetti un **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza origine]** e **[!UICONTROL ID account]** per l&#39;account che desideri visualizzare.
 
 ![](images/b2b-account-browse-adhoc.png)
 
