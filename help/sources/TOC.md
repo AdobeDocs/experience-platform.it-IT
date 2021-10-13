@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 10%
@@ -42,7 +42,7 @@ ht-degree: 10%
       - [Connettore di archiviazione file di Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Zona di destinazione dei dati](connectors/cloud-storage/data-landing-zone.md)
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
-      - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connettore Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Archiviazione oggetti Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
@@ -100,7 +100,7 @@ ht-degree: 10%
          - [Archiviazione file di Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Zona di destinazione dei dati](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Archiviazione oggetti Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -119,7 +119,7 @@ ht-degree: 10%
          - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Archiviazione tabella di Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [BigQuery Google](tutorials/api/create/databases/bigquery.md)
          - [Plum verde](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
@@ -189,7 +189,7 @@ ht-degree: 10%
          - [Archiviazione file di Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Zona di destinazione dei dati](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Archiviazione oggetti Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)

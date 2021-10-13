@@ -2,8 +2,8 @@
 audience: user
 user-guide-title: Guida ai flussi di dati
 user-guide-description: I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati in Platform.
-feature: Data Management, Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+feature: Dataflows
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 38%

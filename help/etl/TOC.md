@@ -3,17 +3,16 @@ audience: user
 user-guide-title: Guida ad Adobe Experience Platform ETL
 breadcrumb-title: Guida a ETL
 user-guide-description: Scopri i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per l’acquisizione dei dati in Platform.
-feature: Data Management, Data Ingestion
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Ingestion
+source-git-commit: d1f50cc228cc6bc31a94981edb3109d07378911f
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 44%
+source-wordcount: '43'
+ht-degree: 48%
 
 ---
 
 
-# Estrarre, trasformare e caricare procedure nell&#39;Experience Platform {#etl}
+# Estrarre, trasformare e caricare procedure in Experience Platform {#etl}
 
 - [Sviluppo di integrazioni ETL](home.md)
 - [Trasformazione ETL](transformations.md)

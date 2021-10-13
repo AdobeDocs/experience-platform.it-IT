@@ -1,20 +1,22 @@
 ---
-title: Panoramica dell’estensione Core Event Forwarding
-description: Scopri l’estensione Core event forwarding in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: Panoramica dell’estensione Core per l’inoltro degli eventi
+description: Scopri l’estensione Core per l’inoltro degli eventi in Adobe Experience Platform.
+feature: Event Forwarding
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1724'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
-# Panoramica sull&#39;estensione dell&#39;inoltro eventi core
+# Panoramica sull’estensione Core per l’inoltro degli eventi
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L&#39;estensione Core per l&#39;inoltro di eventi fornisce gli eventi, le condizioni e i tipi di dati predefiniti per l&#39;inoltro di eventi in Adobe Experience Platform.
+L’estensione Core per l’inoltro degli eventi fornisce gli eventi, le condizioni e i tipi di dati predefiniti per l’inoltro di eventi in Adobe Experience Platform.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -24,7 +26,7 @@ In questa sezione sono descritti i tipi di condizioni disponibili nell’estensi
 
 ### Custom Code
 
-Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato. L&#39;inoltro di eventi in Adobe Experience Platform supporta ES6.
+Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato. L’inoltro degli eventi in Adobe Experience Platform supporta ES6.
 
 1. Seleziona **[!UICONTROL Apri editor]**.
 1. Digita il codice personalizzato.
@@ -153,7 +155,7 @@ In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estension
 
 ### Codice personalizzato
 
-Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L&#39;inoltro di eventi in Adobe Experience Platform supporta ES6.
+Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L’inoltro degli eventi in Adobe Experience Platform supporta ES6.
 
 1. Denomina il codice dell&#39;azione.
 1. Seleziona **[!UICONTROL Apri editor]**.
@@ -224,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->La chiamata `interact` dal client ha `events`, ma per l’inoltro degli eventi è necessario `event`. Questo perché l&#39;inoltro eventi esamina ogni evento singolarmente e non come batch di più eventi come mostrato sul client.
+>La chiamata `interact` dal client contiene `events`, ma per l’inoltro degli eventi è necessario `event`. L’inoltro di eventi, infatti, controlla ogni evento singolarmente e non come batch di più eventi come visualizzato sul client.

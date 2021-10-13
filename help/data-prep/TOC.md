@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guida alla preparazione dei dati
 user-guide-description: Prepara i dati per l’inserimento in Adobe Experience Platform.
-feature: Gestione dei dati, acquisizione dei dati
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+feature: Data Prep
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 37%
+source-wordcount: '44'
+ht-degree: 40%
 
 ---
 
