@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;insights;attribution ai;argomenti popolari;approfondimenti di attribuzione ai
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Scopri informazioni approfondite in Attribution AI
 topic-legacy: Attribution AI insights
 description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Per utilizzare le informazioni per Attribution AI, è necessario disporre di un�
 
 ## Panoramica delle informazioni sulle istanze del servizio
 
-Nell’interfaccia utente [!DNL Adobe Experience Platform] , seleziona **[!UICONTROL Services]** nel menu di navigazione a sinistra. Viene visualizzato il browser **[!UICONTROL Services]** che visualizza l&#39;Adobe di Intelligent Services disponibile. Nel contenitore per Attribution AI, seleziona **[!UICONTROL Open]**.
+Nell&#39;interfaccia utente [!DNL Adobe Experience Platform], seleziona **[!UICONTROL Servizi]** nel menu di navigazione a sinistra. Viene visualizzato il browser **[!UICONTROL Servizi]** che visualizza i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, seleziona **[!UICONTROL Apri]**.
 
 ![Accesso all’istanza](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +42,7 @@ Viene quindi visualizzata la pagina delle informazioni relative all’istanza de
 
 ### Dettagli istanza servizio
 
-Per visualizzare ulteriori dettagli su un’istanza di servizio, seleziona **[!UICONTROL Show more]** in alto a destra.
+Per visualizzare ulteriori dettagli per un&#39;istanza del servizio, seleziona **[!UICONTROL Mostra altro]** in alto a destra.
 
 ![mostrare di più](./images/insights/show-more.png)
 
@@ -53,22 +52,22 @@ Viene visualizzato un elenco dettagliato. Per ulteriori informazioni su una dell
 
 ### Modificare un’istanza
 
-Per modificare un’istanza, seleziona **[!UICONTROL Edit]** nella navigazione in alto a destra.
+Per modificare un&#39;istanza, seleziona **[!UICONTROL Modifica]** nella navigazione in alto a destra.
 ![fai clic sul pulsante modifica](./images/insights/edit-button.png)
 
-Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione e la frequenza di punteggio dell’istanza. Se lo stato dell’istanza è disabilitato, non è possibile modificare la frequenza di punteggio. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Save]** nell’angolo in basso a destra.
+Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione e la frequenza di punteggio dell’istanza. Se lo stato dell’istanza è disabilitato, non è possibile modificare la frequenza di punteggio. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Salva]** nell’angolo in basso a destra.
 
 ![pozzo di modifica](./images/insights/edit-popover.png)
 
 ### Altre azioni {#more-actions}
 
-Il pulsante **[!UICONTROL More actions]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Edit]**. Selezionando **[!UICONTROL More actions]** viene aperto un menu a discesa che consente di selezionare una delle operazioni seguenti:
+Il pulsante **[!UICONTROL Altre azioni]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Modifica]**. Selezionando **[!UICONTROL Altre azioni]** si apre un menu a discesa che consente di selezionare una delle seguenti operazioni:
 
-- **[!UICONTROL Clone]**: Duplica l&#39;istanza.
-- **[!UICONTROL Delete]**: Elimina l’istanza.
-- **[!UICONTROL Download summary data]**: Scarica un file CSV contenente i dati di riepilogo.
-- **[!UICONTROL Access scores]**: La selezione  **[!UICONTROL Access scores]** reindirizza ai punteggi di  [accesso per l’esercitazione](./download-scores.md) Attribution AI.
-- **[!UICONTROL View run history]**: Viene visualizzato un pover contenente un elenco di tutte le esecuzioni del punteggio associate all’istanza del servizio.
+- **[!UICONTROL Clona]**: Duplica l&#39;istanza.
+- **[!UICONTROL Elimina]**: Elimina l’istanza.
+- **[!UICONTROL Scarica i dati]** di riepilogo: Scarica un file CSV contenente i dati di riepilogo.
+- **[!UICONTROL Punteggi]** di accesso: Selezionando  **[!UICONTROL i]** punteggi di accesso , puoi accedere ai punteggi di  [accesso per l’esercitazione](./download-scores.md) Attribution AI.
+- **[!UICONTROL Visualizzare la cronologia]** di esecuzione: Viene visualizzato un pover contenente un elenco di tutte le esecuzioni del punteggio associate all’istanza del servizio.
 
 ![altre azioni](./images/insights/more-actions.png)
 
@@ -80,13 +79,13 @@ Le informazioni di Attribution AI ti consentono di filtrare i dati e aggiornare 
 
 Quando crei una nuova istanza in Attribution AI, uno dei campi obbligatori è &quot;Eventi di conversione&quot;. Gli eventi di conversione sono obiettivi aziendali che identificano l’impatto delle attività di marketing, come ordini di e-commerce, acquisti in-store e visite a siti web.
 
-Dall’interno dell’istanza, il menu a discesa **[!UICONTROL Conversion events]** ti consente di selezionare uno degli eventi definiti per l’istanza al fine di filtrare i dati. Quando si selezionano eventi specifici, le visualizzazioni dell’interfaccia utente vengono modificate per compilare solo le conversioni appartenenti a tali eventi.
+Dall’interno dell’istanza, il menu a discesa **[!UICONTROL Eventi di conversione]** ti consente di selezionare uno degli eventi definiti per l’istanza al fine di filtrare i dati. Quando si selezionano eventi specifici, le visualizzazioni dell’interfaccia utente vengono modificate per compilare solo le conversioni appartenenti a tali eventi.
 
 ![evento di conversione](./images/insights/conversion-event.png)
 
 ### Modello di attribuzione
 
-Selezionando **[!UICONTROL Attribution Model]** viene aperto un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Puoi selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la panoramica [Attribution AI](./overview.md) che contiene una tabella con informazioni su ciascun modello.
+Selezionando **[!UICONTROL Modello di attribuzione]** si apre un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Puoi selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la panoramica [Attribution AI](./overview.md) che contiene una tabella con informazioni su ciascun modello.
 
 ![modello di attribuzione](./images/insights/attribution-model.png)
 
@@ -100,16 +99,16 @@ Questo filtro consente di selezionare le aree configurate nel processo di creazi
 
 ### Aggiungere filtri
 
-Per aggiungere altri filtri, seleziona l’icona **filter** per aprire il puntatore **[!UICONTROL Add filters]**. Il puntatore **[!UICONTROL Add filters]** ti consente di filtrare per canale, posizione geografica, tipo di file multimediali e prodotto. Solo i filtri applicabili per un&#39;istanza di servizio sono compilati dal proxy. Ad esempio, se non hai fornito dati geografici o un tipo di supporto, questi attributi di filtro non saranno disponibili per la tua istanza.
+Per aggiungere altri filtri, seleziona l’icona **filter** per aprire il puntatore **[!UICONTROL Aggiungi filtri]**. Il puntatore **[!UICONTROL Aggiungi filtri]** ti consente di filtrare in base a Canale, Geografia, Tipo di file multimediali e Prodotto. Solo i filtri applicabili per un&#39;istanza di servizio sono compilati dal proxy. Ad esempio, se non hai fornito dati geografici o un tipo di supporto, questi attributi di filtro non saranno disponibili per la tua istanza.
 
 ![filtri aggiuntivi](./images/insights/additional-filters.png)
 
 ![pover filtro](./images/insights/filter-popover.png)
 
-- **[!UICONTROL Channel]:** seleziona l’attributo del canale per filtrare tutti i canali di marketing disponibili. Puoi selezionare più canali per confrontarli.
-- **[!UICONTROL Geography]:** seleziona l’attributo geografia per filtrare i codici paese in base ai modelli basati su regione. A seconda dei dati, questo filtro potrebbe essere presente o meno. I codici paese sono lunghi due caratteri. Vedi l&#39;elenco completo dei codici paese [qui](https://datahub.io/core/country-list).
-- **[!UICONTROL Media type]:** seleziona l’attributo tipo di file multimediale per filtrare i tipi di file multimediali definiti.
-- **[!UICONTROL Product]:** selezionando l’attributo di prodotto puoi filtrare da tutti i prodotti che sono stati inizialmente acquisiti nella creazione della tua istanza.
+- **[!UICONTROL Canale]:** seleziona l’attributo del canale per filtrare tutti i canali di marketing disponibili. Puoi selezionare più canali per confrontarli.
+- **[!UICONTROL Geografia]:** seleziona l’attributo geografia per filtrare i codici paese in base ai modelli basati su regione. A seconda dei dati, questo filtro potrebbe essere presente o meno. I codici paese sono lunghi due caratteri. Vedi l&#39;elenco completo dei codici paese [qui](https://datahub.io/core/country-list).
+- **[!UICONTROL Tipo di file multimediale]:** seleziona l’attributo tipo di file multimediale per filtrare tutti i tipi di file multimediali definiti.
+- **[!UICONTROL Prodotto]:** seleziona l’attributo prodotto per filtrare da tutti i prodotti inizialmente acquisiti nella creazione dell’istanza.
 
 ### Date Range
 
@@ -119,13 +118,13 @@ Seleziona l’icona del calendario per aprire l’intervallo di date. Le date de
 
 ## Panoramica dei dati
 
-La scheda **[!UICONTROL Overview]** mostra le conversioni totali per modello di attribuzione. Il numero totale cambia in base alla specifica ricerca effettuata utilizzando i filtri precedentemente descritti in questo documento. Selezionando più modelli, vengono aggiunti ulteriori cerchi alla Panoramica, ciascuno con il proprio colore corrispondente alla legenda.
+La scheda **[!UICONTROL Panoramica]** mostra le conversioni totali in base al modello di attribuzione. Il numero totale cambia in base alla specifica ricerca effettuata utilizzando i filtri precedentemente descritti in questo documento. Selezionando più modelli, vengono aggiunti ulteriori cerchi alla Panoramica, ciascuno con il proprio colore corrispondente alla legenda.
 
 ![panoramica](./images/insights/Overview.png)
 
 ## Tendenze settimanali
 
-La scheda **[!UICONTROL Weekly trends]** suddivide la conversione totale in base all’intervallo di date impostato durante il processo di filtraggio.
+La scheda **[!UICONTROL Tendenze settimanali]** suddivide la conversione totale in base all&#39;intervallo di date impostato durante il processo di filtraggio.
 
 Selezionando i puntini di sospensione in alto a destra della scheda **Tendenze settimanali** viene visualizzato un elenco a discesa che consente di selezionare le tendenze giornaliere, settimanali o mensili.
 
@@ -135,23 +134,23 @@ Passando il puntatore del mouse sulla riga dati di un modello di attribuzione sp
 
 ## Suddivisione per canale
 
-La scheda **[!UICONTROL Breakdown by channel]** viene utilizzata per determinare il numero totale di conversioni in relazione a ciascun canale. Questa scheda può essere utilizzata per prendere decisioni sull&#39;efficacia di ogni canale e sul ritorno sull&#39;investimento.
+La scheda **[!UICONTROL Suddivisione per canale]** viene utilizzata per determinare il numero totale di conversioni in relazione a ciascun canale. Questa scheda può essere utilizzata per prendere decisioni sull&#39;efficacia di ogni canale e sul ritorno sull&#39;investimento.
 
-Selezionando i puntini di sospensione in alto a destra della scheda **[!UICONTROL Breakdown by channel]** viene visualizzato un menu a discesa che consente di popolare i dati in base ai punti di contatto.
+Selezionando i puntini di sospensione in alto a destra della scheda **[!UICONTROL Suddivisione per canale]** viene visualizzato un menu a discesa che consente di popolare i dati in base ai punti di contatto.
 
 ![canale di rottura](./images/insights/channel-breakdown.png)
 
 ## Campagne principali
 
-La scheda **[!UICONTROL Top campaigns]** presenta una panoramica delle campagne e delle prestazioni della campagna in ciascun canale. Questa scheda può aiutare a informare il tuo team dell’efficacia di una campagna specifica per un dato canale e fornire informazioni quali le campagne in cui investire ulteriormente.
+La scheda **[!UICONTROL Campagne principali]** presenta una panoramica delle campagne e delle prestazioni della campagna in ciascun canale. Questa scheda può aiutare a informare il tuo team dell’efficacia di una campagna specifica per un dato canale e fornire informazioni quali le campagne in cui investire ulteriormente.
 
 ![campagne principali](./images/insights/top-campaigns.png)
 
 ## Suddivisione per posizione punto di contatto
 
-Selezionando la scheda **[!UICONTROL Path Analysis]** vengono caricati i grafici **[!UICONTROL Breakdown by touchpoint position]** e **[!UICONTROL Top conversion paths]**.
+Quando si seleziona la scheda **[!UICONTROL Analisi percorso]** , i grafici **[!UICONTROL Suddivisione per posizione punto di contatto]** e **[!UICONTROL Percorsi di conversione principali]** vengono caricati.
 
-Il grafico **[!UICONTROL Breakdown by touchpoint position]** è una suddivisione delle conversioni attribuite in base alla posizione del punto di contatto rispetto a tutti i percorsi di conversione. Questo grafico ti aiuta a comprendere quali punti di contatto sono più efficaci nelle diverse fasi del percorso di conversione. Le tappe sono di inizio, giocatore e più vicino.
+Il grafico **[!UICONTROL Suddivisione per posizione punto di contatto]** è una suddivisione delle conversioni attribuite per posizione del punto di contatto rispetto a tutti i percorsi di conversione. Questo grafico ti aiuta a comprendere quali punti di contatto sono più efficaci nelle diverse fasi del percorso di conversione. Le tappe sono di inizio, giocatore e più vicino.
 
 - **Starter:** indica che il punto di contatto è stato il primo contatto in un percorso di conversione.
 - **Lettore:** indica che il punto di contatto non è stato il primo o l’ultimo contatto che ha portato a una conversione.
@@ -164,17 +163,17 @@ La somma del contributo percentuale per un modello di attribuzione per tutti i p
 
 ## Percorsi di conversione principali
 
-Il grafico **[!UICONTROL Top conversion paths]** mostra i punteggi algoritmici e influenzati sui principali percorsi di conversione nelle aree selezionate. Questo grafico ti consente di visualizzare cosa i punti di contatto contribuiscono alle conversioni e qual è il punteggio di attribuzione per ogni punto di contatto. Puoi utilizzare queste informazioni per visualizzare i percorsi più frequenti in una determinata area e vedere se emergono dei pattern tra i diversi set di punti di contatto.
+Il grafico **[!UICONTROL Primi percorsi di conversione]** mostra i punteggi algoritmici e influenzati sui principali percorsi di conversione nelle aree selezionate. Questo grafico ti consente di visualizzare cosa i punti di contatto contribuiscono alle conversioni e qual è il punteggio di attribuzione per ogni punto di contatto. Puoi utilizzare queste informazioni per visualizzare i percorsi più frequenti in una determinata area e vedere se emergono dei pattern tra i diversi set di punti di contatto.
 
 ![Percorsi utente più comuni](./images/insights/Touchpoint-paths.png)
 
 ## Efficienza dei punti di contatto
 
-Selezionando la scheda **[!UICONTROL Touchpoint Effectiveness]** viene caricata la scheda **[!UICONTROL Touchpoint effectiveness]** . Questa scheda utilizza la distribuzione dei dati da parte di Attribution AI per visualizzare le informazioni per ogni punto di contatto. I dati per questa tabella vengono generati solo per periodi di tempo specifici, come indicato dalla data **[!UICONTROL As of]** in alto a destra della scheda.
+Selezionando la scheda **[!UICONTROL Efficacia punto di contatto]** , viene caricata la scheda **[!UICONTROL Efficienza punto di contatto]** . Questa scheda utilizza la distribuzione dei dati da parte di Attribution AI per visualizzare le informazioni per ogni punto di contatto. I dati per questa tabella vengono generati solo per periodi di tempo specifici, come indicato dalla data **[!UICONTROL A di]** in alto a destra della scheda.
 
 ![selezione dell’efficacia del punto di contatto](./images/insights/Touchpoint-effectiveness.png)
 
-Puoi usare le informazioni sulla scheda **[!UICONTROL Touchpoint effectiveness]** per comprendere in che modo un punto di contatto contribuisce a una conversione. Puoi anche vedere l’efficacia di ogni punto di contatto con le seguenti metriche di prestazioni:
+Puoi utilizzare le informazioni sulla scheda **[!UICONTROL Efficienza punto di contatto]** per comprendere in che modo un punto di contatto contribuisce a una conversione. Puoi anche vedere l’efficacia di ogni punto di contatto con le seguenti metriche di prestazioni:
 
 **Percorsi toccati**: Questa metrica mostra una percentuale di percorsi che raggiungono o meno la conversione per il punto di contatto. Vedrai conversioni attribuite più elevate se il rapporto di percorsi (percentuale) che raggiungono la conversione in percorsi che non raggiungono la conversione è alto.
 

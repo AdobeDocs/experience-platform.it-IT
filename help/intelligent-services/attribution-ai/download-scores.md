@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;ai di attribuzione;punteggi di accesso;argomenti popolari;punteggi di download;punteggi di attribuzione;esportazione;esportazione
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Scaricare i punteggi in Attribution AI
 topic-legacy: Downloading scores
 description: Questo documento funge da guida per il download dei punteggi per Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 2%

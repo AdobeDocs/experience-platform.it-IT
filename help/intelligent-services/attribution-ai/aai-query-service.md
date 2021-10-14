@@ -1,14 +1,13 @@
 ---
 keywords: insights;attribution ai;attribution ai insights;AAI query service;query di attribuzione;punteggi di attribuzione
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Analisi dei punteggi di attribuzione tramite Query Service
 topic-legacy: Attribution AI queries
 description: Scopri come utilizzare Adobe Experience Platform Query Service per analizzare i punteggi delle Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ Ogni riga nei dati rappresenta una conversione in cui le informazioni per i punt
 
 ## Ricerca dei percorsi dati
 
-Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Datasets]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Datasets]** . Quindi, seleziona la scheda **[!UICONTROL Browse]** e trova il set di dati di output per i punteggi delle Attribution AI.
+Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Set di dati]**. Quindi, seleziona la scheda **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
 
 ![Accesso all’istanza](./images/aai-query/datasets_browse.png)
 
@@ -33,7 +32,7 @@ Seleziona il set di dati di output. Viene visualizzata la pagina dell’attivit�
 
 ![pagina di attività del set di dati](./images/aai-query/select_preview.png)
 
-Nella pagina dell’attività del set di dati , seleziona **[!UICONTROL Preview dataset]** nell’angolo in alto a destra per visualizzare l’anteprima dei dati e accertati che siano stati acquisiti come previsto.
+Nella pagina dell’attività del set di dati , seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra per visualizzare in anteprima i dati e assicurarsi che siano stati acquisiti come previsto.
 
 ![set di dati di anteprima](./images/aai-query/preview_dataset.JPG)
 
@@ -41,17 +40,17 @@ Dopo aver visualizzato l’anteprima dei dati, seleziona lo schema nella barra a
 
 ![selezionare lo schema](./images/aai-query/select_schema.png)
 
-Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionata, si apre la barra laterale **[!UICONTROL Field properties]** che consente di copiare il percorso da utilizzare nella creazione delle query.
+Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionata, si apre la barra laterale **[!UICONTROL Proprietà campo]** che consente di copiare il percorso da utilizzare nella creazione delle query.
 
 ![copiare il percorso](./images/aai-query/copy_path.png)
 
 ## Servizio query di accesso
 
-Per accedere a Query Service dall’interno dell’interfaccia utente di Platform, inizia selezionando **[!UICONTROL Queries]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Browse]** . Viene caricato un elenco delle query salvate in precedenza.
+Per accedere a Query Service dall’interno dell’interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** . Viene caricato un elenco delle query salvate in precedenza.
 
 ![navigatore del servizio di query](./images/aai-query/query_tab.png)
 
-Quindi, seleziona **[!UICONTROL Create query]** nell’angolo in alto a destra. Viene caricato l’editor delle query. Utilizzando l’editor delle query è possibile iniziare a creare query utilizzando i dati di punteggio.
+Quindi, seleziona **[!UICONTROL Crea query]** nell&#39;angolo in alto a destra. Viene caricato l’editor delle query. Utilizzando l’editor delle query è possibile iniziare a creare query utilizzando i dati di punteggio.
 
 ![editor di query](./images/aai-query/query_example.png)
 

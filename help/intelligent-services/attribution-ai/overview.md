@@ -1,13 +1,12 @@
 ---
 keywords: Experience Platform;panoramica dell’attribuzione;argomenti popolari;ai di attribuzione;ai di attribuzione
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Panoramica delle Attribution AI
 topic-legacy: Attribution AI
 description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti. I punti di contatto includono, ad esempio, le visualizzazioni di ad impression, gli invii di e-mail, le aperture delle e-mail e i clic su risultati di ricerca a pagamento.
 landing-page-description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 32%

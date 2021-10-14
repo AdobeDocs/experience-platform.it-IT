@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;guida utente;ai di attribuzione;argomenti popolari;area geografica
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1765'
 ht-degree: 1%
 
 ---
@@ -21,33 +20,33 @@ Questo documento funge da guida per l’interazione con Attribution AI nell’in
 
 ## Creare un’istanza
 
-Nell’interfaccia utente di [!DNL Adobe Experience Platform], fai clic su **[!UICONTROL Services]** nel menu di navigazione a sinistra. Viene visualizzato il browser **[!UICONTROL Services]** che visualizza i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, fai clic su **[!UICONTROL Open]**.
+Nell&#39;interfaccia utente [!DNL Adobe Experience Platform], fai clic su **[!UICONTROL Servizi]** nel menu di navigazione a sinistra. Viene visualizzato il browser **[!UICONTROL Servizi]** e vengono visualizzati i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, fai clic su **[!UICONTROL Apri]**.
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
 Viene visualizzata la pagina del servizio Attribution AI. In questa pagina sono elencate le istanze di servizio di Attribution AI e vengono visualizzate informazioni su di esse, tra cui il nome dell’istanza, gli eventi di conversione, la frequenza di esecuzione dell’istanza e lo stato dell’ultimo aggiornamento.
 
-Puoi trovare la metrica **[!UICONTROL Total conversion events scored]** situata in basso a destra del contenitore **[!UICONTROL Create instance]** . Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali istanze di servizio eliminate.
+Puoi trovare la metrica **[!UICONTROL Totale eventi di conversione con punteggio]** situata in basso a destra del contenitore **[!UICONTROL Crea istanza]** . Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali istanze di servizio eliminate.
 
 ![](./images/user-guide/total_conversions.png)
 
-Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, seleziona un&#39;istanza dal tuo **[!UICONTROL Service instances]** esistente. I controlli contengono le seguenti informazioni:
+Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, seleziona un&#39;istanza dalle **[!UICONTROL istanze di servizio]** esistenti. I controlli contengono le seguenti informazioni:
 
-- **[!UICONTROL Edit]**: La selezione  **[!UICONTROL Edit]** ti consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
-- **[!UICONTROL Clone]**: Selezionando  **[!UICONTROL Clone]** copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Delete]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
-- **[!UICONTROL Data source]**: Un collegamento al set di dati utilizzato da questa istanza.
-- **[!UICONTROL Last run details]**: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
+- **[!UICONTROL Modifica]**: Selezionando  **** Modifica puoi modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
+- **[!UICONTROL Clona]**: Selezionando  **** Copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
+- **[!UICONTROL Origine]** dati: Un collegamento al set di dati utilizzato da questa istanza.
+- **[!UICONTROL Dettagli]** dell&#39;ultima esecuzione: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL Conversion events]**: Panoramica rapida degli eventi di conversione configurati per questa istanza.
-- **[!UICONTROL Lookback window]**: Intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell’evento di conversione sono inclusi.
-- **[!UICONTROL Touchpoints]**: Elenco di tutti i punti di contatto definiti durante la creazione dell’istanza.
+- **[!UICONTROL Eventi]** di conversione: Panoramica rapida degli eventi di conversione configurati per questa istanza.
+- **[!UICONTROL Intervallo]** di lookback: Intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell’evento di conversione sono inclusi.
+- **[!UICONTROL Punti di contatto]**: Elenco di tutti i punti di contatto definiti durante la creazione dell’istanza.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Selezionare **[!UICONTROL Create instance]** per iniziare.
+Seleziona **[!UICONTROL Crea istanza]** per iniziare.
 
 ![Crea istanza](./images/user-guide/landing_page.png)
 
@@ -57,7 +56,7 @@ Viene quindi visualizzata la pagina di configurazione di Attribution AI, in cui 
 
 ### Denomina l&#39;istanza
 
-Alla voce **[!UICONTROL Basic information]**, fornisci un nome e una descrizione facoltative per la tua istanza di servizio.
+In **[!UICONTROL Informazioni di base]**, fornisci un nome e una descrizione facoltative per la tua istanza di servizio.
 
 ![denominazione di un’istanza](./images/user-guide/naming_instance.png)
 
@@ -93,15 +92,15 @@ Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a de
 
 ![nessun menu a discesa](./images/user-guide/conversion_event_1.png)
 
-I pulsanti **[!UICONTROL Add event]** e **[!UICONTROL Add Group]** vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che stai definendo, potrebbe essere necessario utilizzare i pulsanti **[!UICONTROL Add event]** e **[!UICONTROL Add group]** per fornire ulteriore contesto.
+I pulsanti **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che stai definendo, potrebbe essere necessario utilizzare i pulsanti **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** per fornire ulteriore contesto.
 
 ![aggiungi evento](./images/user-guide/add_event.png)
 
-Facendo clic su **[!UICONTROL Add event]** vengono creati campi aggiuntivi che possono essere compilati utilizzando lo stesso metodo descritto in precedenza. In questo modo viene aggiunta un&#39;istruzione AND alla definizione della stringa sotto il nome di conversione. Fai clic su **x** per rimuovere un evento aggiunto.
+Facendo clic su **[!UICONTROL Aggiungi evento]** vengono creati campi aggiuntivi che possono essere compilati utilizzando lo stesso metodo descritto in precedenza. In questo modo viene aggiunta un&#39;istruzione AND alla definizione della stringa sotto il nome di conversione. Fai clic su **x** per rimuovere un evento aggiunto.
 
 ![aggiungi menu eventi](./images/user-guide/add_event_result.png)
 
-Facendo clic su **[!UICONTROL Add Group]** è possibile creare campi aggiuntivi separati dall’originale. Aggiungendo i gruppi, viene visualizzato un pulsante blu *And* . Facendo clic su **And** è possibile modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione riusciti. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
+Facendo clic su **[!UICONTROL Aggiungi gruppo]** è possibile creare campi aggiuntivi separati dall&#39;originale. Aggiungendo i gruppi, viene visualizzato un pulsante blu *And* . Facendo clic su **And** è possibile modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione riusciti. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
 
 ![utilizzando e](./images/user-guide/and_or.png)
 
@@ -109,7 +108,7 @@ Se hai bisogno di più conversioni, fai clic su **Aggiungi conversione** per cre
 
 ![aggiungi conversione](./images/user-guide/add_conversion.png)
 
-### Definisci la finestra di lookback {#lookback-window}
+### Definisci l’intervallo di lookback {#lookback-window}
 
 Dopo aver definito la conversione, devi confermare l’intervallo di lookback. Utilizzando i tasti freccia o facendo clic sul valore predefinito (56), specifica quanti giorni prima dell’evento di conversione da cui desideri includere i punti di contatto. I punti di contatto sono definiti nel passaggio successivo.
 
@@ -159,7 +158,7 @@ Dopo aver definito tutti i punti di contatto necessari, scorri verso l’alto e 
 
 ## Impostazione avanzata di formazione e valutazione
 
-La pagina finale in Attribution AI è la pagina **[!UICONTROL Advanced]** utilizzata per impostare formazione e valutazione.
+La pagina finale in Attribution AI è la pagina **[!UICONTROL Avanzate]** utilizzata per impostare la formazione e il punteggio.
 
 ![nuova pagina avanzata](./images/user-guide/advanced_settings.png)
 
@@ -185,11 +184,11 @@ Per impostazione predefinita, viene creato un set di dati di punteggio per ogni 
 
 ![aggiunta a una colonna di set di dati di punteggio](./images/user-guide/Add-score-dataset.png)
 
-### Modellazione basata su regione (opzionale) {#region-based-modeling-optional}
+### Modellazione basata su regione (facoltativo) {#region-based-modeling-optional}
 
 I comportamenti dei clienti possono variare in modo significativo a seconda del paese e dell’area geografica. Per le aziende globali, l’utilizzo di modelli basati su paesi o aree geografiche può aumentare l’accuratezza dell’attribuzione. Ogni area aggiunta crea un nuovo modello con i dati di tale area.
 
-Per definire una nuova area, fai clic su **[!UICONTROL Add region]**. Specifica un nome per la regione nel contenitore visualizzato. Solo un valore (&quot;placeContext.geo.countryCode&quot;) viene popolato dal menu a discesa **[!UICONTROL Enter Field Name]**. Selezionare questo valore.
+Per definire una nuova area, inizia facendo clic su **[!UICONTROL Aggiungi area]**. Specifica un nome per la regione nel contenitore visualizzato. Viene compilato un solo valore (&quot;placeContext.geo.countryCode&quot;) dal menu a discesa **[!UICONTROL Enter Field Name]** (Inserisci nome campo). Selezionare questo valore.
 
 ![Seleziona la regione in](./images/user-guide/select_region_att.png)
 
@@ -197,7 +196,7 @@ Quindi, seleziona un operatore.
 
 ![operatore regionale](./images/user-guide/region_operators.png)
 
-Infine, digita il codice del paese nel menu a discesa **[!UICONTROL Enter Field Value]** .
+Infine, digita il codice del paese nel menu a discesa **[!UICONTROL Immetti valore campo]** .
 
 >[!NOTE]
 >
@@ -215,7 +214,7 @@ Per garantire che il modello sia il più accurato possibile, è importante addes
 
 ![finestra di formazione](./images/user-guide/training_window.png)
 
-Dopo aver selezionato la finestra di formazione, fai clic su **[!UICONTROL Finish]** nell’angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Fai clic su **[!UICONTROL Ok]** per essere reindirizzato alla pagina **[!UICONTROL Service instances]** in cui puoi visualizzare la tua istanza di servizio.
+Dopo aver selezionato la finestra di formazione, fai clic su **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Fai clic su **[!UICONTROL Ok]** per essere reindirizzato alla pagina **[!UICONTROL istanze del servizio]** in cui puoi vedere la tua istanza del servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
 

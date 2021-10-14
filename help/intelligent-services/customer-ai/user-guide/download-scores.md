@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;download dei punteggi;customer ai;argomenti popolari;esportazione;esportazione;download degli ai clienti;punteggi degli ai clienti
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Scaricare i punteggi in Customer AI
 topic-legacy: Downloading scores
 description: Customer AI consente di scaricare i punteggi in formato file Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 2%
+source-wordcount: '961'
+ht-degree: 3%
 
 ---
 
@@ -28,9 +28,9 @@ Al momento, sono disponibili due modi per scaricare i punteggi di Customer AI:
 1. Se desideri scaricare i punteggi a livello individuale e/o non hai abilitato Profilo cliente in tempo reale, passa a [trova l&#39;ID set di dati](#dataset-id).
 2. Se il profilo è abilitato e desideri scaricare i segmenti configurati utilizzando Customer AI, passa a [scarica un segmento configurato con Customer AI](#segment).
 
-## Trova l&#39;ID del set di dati {#dataset-id}
+## Trova l’ID del set di dati {#dataset-id}
 
-Nell’istanza del servizio per informazioni di Customer AI, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
+Nell’istanza del servizio per informazioni di Customer AI, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Punteggi di accesso]**.
 
 ![altre azioni](../images/insights/more-actions.png)
 

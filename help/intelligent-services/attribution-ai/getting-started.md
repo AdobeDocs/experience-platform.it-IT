@@ -1,15 +1,14 @@
 ---
 keywords: Experience Platform;guida introduttiva;ai di attribuzione;argomenti comuni
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Guida introduttiva ad Attribution AI
 topic-legacy: Getting started
 description: Le guide seguenti richiedono una comprensione dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di Attribution AI. Prima di iniziare le esercitazioni, controlla i seguenti documenti.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -43,7 +42,7 @@ Il download dei punteggi di Attribution AI viene effettuato tramite una combinaz
 
 Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >

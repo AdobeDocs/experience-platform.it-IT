@@ -1,17 +1,18 @@
 ---
 keywords: Experience Platform;guida introduttiva;customer ai;argomenti comuni;input ai clienti;output ai clienti;risoluzione dei problemi ai clienti;errori ai clienti
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Risoluzione degli errori di Customer AI
 topic-legacy: Getting started
 description: Trova le risposte agli errori comuni in Customer AI.
 type: Documentation
-source-git-commit: ceb203899cda83aa79b994d45798d6147c3ff3b8
+exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
 
 ---
-
 
 # Risoluzione degli errori di Customer AI
 
@@ -44,4 +45,3 @@ Se i dati non sembrano essere il problema, prova a modificare la condizione di p
 Se la limitazione della popolazione di idoneità non ha funzionato o non è possibile, modifica la finestra di previsione.
 
 - Prova a cambiare la finestra di previsione a 7 giorni e controlla se l&#39;errore continua a verificarsi. Se l&#39;errore non si verifica più, ciò indica che potrebbero non essere disponibili dati sufficienti per la finestra di previsione definita.
-
