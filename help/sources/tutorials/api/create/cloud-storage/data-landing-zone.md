@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '935'
 ht-degree: 4%
 
 ---
 
 # Connetti [!DNL Data Landing Zone] a Adobe Experience Platform utilizzando l’API del servizio di flusso
 
-[!DNL Data Landing Zone] è una struttura di archiviazione dati basata su cloud per l’archiviazione temporanea dei file con provisioning di Adobe Experience Platform. [!DNL Data Landing Zone] è utilizzato esclusivamente per l’ingresso e l’uscita dei dati in e fuori da Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
+[!DNL Data Landing Zone] è una struttura di archiviazione dati basata su cloud per l’archiviazione temporanea dei file con provisioning di Adobe Experience Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
 
 Questa esercitazione illustra i passaggi necessari per creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Questa esercitazione fornisce anche istruzioni su come recuperare le [!DNL Data Landing Zone], nonché visualizzare e aggiornare le credenziali.
 

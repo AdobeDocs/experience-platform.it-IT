@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare un connettore sorgente dell’area di destinazione dei dati utilizzando l’interfaccia utente di Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
 # Connetti [!DNL Data Landing Zone] alla piattaforma utilizzando l’interfaccia utente
 
-[!DNL Data Landing Zone] è una struttura di archiviazione dati basata su cloud per l’archiviazione temporanea dei file con provisioning di Adobe Experience Platform. [!DNL Data Landing Zone] è utilizzato esclusivamente per l’ingresso e l’uscita dei dati in e fuori da Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
+[!DNL Data Landing Zone] è una struttura di archiviazione dati basata su cloud per l’archiviazione temporanea dei file con provisioning di Adobe Experience Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
 
 Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l’interfaccia utente di Platform.
 

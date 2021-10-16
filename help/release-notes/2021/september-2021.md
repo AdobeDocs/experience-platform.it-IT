@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '376'
 ht-degree: 11%
 
 ---
@@ -51,7 +51,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!DNL Data Landing Zone] | È ora possibile creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l’ [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o l’ [interfaccia utente](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] è un’interfaccia di  [!DNL Azure Blob] archiviazione fornita da Platform che consente di accedere a una struttura di storage basata su cloud sicura per l’acquisizione e l’uscita di file da e verso Platform. Per ulteriori informazioni, consulta la sezione [[!DNL Data Landing Zone] panoramica](../../sources/connectors/cloud-storage/data-landing-zone.md) . |
+| [!DNL Data Landing Zone] | È ora possibile creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l’ [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o l’ [interfaccia utente](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] è un’interfaccia di  [!DNL Azure Blob] archiviazione fornita da Platform che consente di accedere a una struttura di storage basata su cloud sicura per l’importazione di file in Platform. Per ulteriori informazioni, consulta la sezione [[!DNL Data Landing Zone] panoramica](../../sources/connectors/cloud-storage/data-landing-zone.md) . |
 | [!DNL Snowflake] | È ora possibile creare una connessione sorgente [!DNL Snowflake] utilizzando [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o l’ [interfaccia utente](../../sources/tutorials/ui/create/databases/snowflake.md) per trasferire i dati dal database [!DNL Snowflake] a Platform. Per ulteriori informazioni, consulta la sezione [[!DNL Snowflake] panoramica](../../sources/connectors/databases/snowflake.md) . |
 | [!DNL SFTP] miglioramenti alla sorgente | Puoi impostare manualmente un numero di porta personalizzato durante la creazione di una connessione sorgente [!DNL SFTP]. Per ulteriori informazioni, consulta la sezione [[!DNL SFTP] panoramica](../../sources/connectors/cloud-storage/sftp.md) . |
 
