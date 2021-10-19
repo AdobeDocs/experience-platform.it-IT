@@ -5,10 +5,10 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 4%
+source-wordcount: '917'
+ht-degree: 2%
 
 ---
 
@@ -16,46 +16,43 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Il seguente documento spiega come eseguire la segmentazione edge utilizzando l’API . Per informazioni su come eseguire la segmentazione dei bordi tramite l’interfaccia utente, consulta la [guida all’interfaccia utente per la segmentazione dei bordi](../ui/edge-segmentation.md) . Inoltre, la segmentazione dei bordi è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+>Il seguente documento spiega come eseguire la segmentazione edge utilizzando l’API . Per informazioni sull’esecuzione della segmentazione edge tramite l’interfaccia utente, consulta la [guida all’interfaccia utente per la segmentazione dei bordi](../ui/edge-segmentation.md). Inoltre, la segmentazione dei bordi è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Experience Platform istantaneamente sul bordo, abilitando casi d’uso di personalizzazione della pagina stessa e di pagina successiva.
 
 ## Introduzione
 
-Questa guida per gli sviluppatori richiede una buona comprensione dei vari servizi [!DNL Adobe Experience Platform] coinvolti nella segmentazione edge. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa guida per gli sviluppatori richiede una comprensione approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella segmentazione edge. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-- [[!DNL Segmentation]](../home.md): Consente di creare segmenti e tipi di pubblico dai  [!DNL Real-time Customer Profile] dati.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
+- [[!DNL Segmentation]](../home.md): Consente di creare segmenti e tipi di pubblico dal [!DNL Real-time Customer Profile] dati.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
 
-Per effettuare correttamente le chiamate a qualsiasi endpoint API Experience Platform, leggi la guida [guida introduttiva alle API Platform](../../landing/api-guide.md) per informazioni sulle intestazioni richieste e su come leggere chiamate API di esempio.
+Per effettuare correttamente le chiamate a qualsiasi endpoint API di Experience Platform, leggi la guida su [guida introduttiva alle API di Platform](../../landing/api-guide.md) per informazioni sulle intestazioni richieste e su come leggere chiamate API di esempio.
 
 ## Tipi di query per segmentazione Edge {#query-types}
 
 Affinché un segmento possa essere valutato utilizzando la segmentazione edge, la query deve essere conforme alle seguenti linee guida:
 
-| Tipo di query | Dettagli |
-| ---------- | ------- |
-| Hit in entrata | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. |
-| Hit in entrata che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. |
-| Hit in arrivo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore |
-| Hit in arrivo che si riferisce a un profilo con una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore e a uno o più attributi di profilo |
-
-{style=&quot;table-layout:auto&quot;}
-
-I seguenti tipi di query sono **non** attualmente supportati dalla segmentazione edge:
-
-| Tipo di query | Dettagli |
-| ---------- | ------- |
-| Eventi multipli | Se una query contiene più di un evento, non può essere valutata utilizzando la segmentazione edge. |
-| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |
-| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |
+| Tipo di query | Dettagli | Esempio |
+| ---------- | ------- | ------- |
+| Evento singolo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. | Persone che hanno aggiunto un elemento al carrello. |
+| Singolo evento che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a un singolo evento in arrivo senza restrizioni di tempo. | Persone che vivono negli Stati Uniti che hanno visitato la homepage. |
+| Singolo evento ignorato con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in entrata negato e a uno o più attributi di profilo | Persone che vivono negli Stati Uniti e che hanno **not** Ho visitato la homepage. |
+| Singolo evento in una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro 24 ore. | Persone che hanno visitato la homepage nelle ultime 24 ore. |
+| Singolo evento con un attributo di profilo in una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a un singolo evento in arrivo negato entro 24 ore. | Persone che vivono negli Stati Uniti che hanno visitato la homepage nelle ultime 24 ore. |
+| Singolo evento ignorato con un attributo di profilo entro un intervallo di tempo di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a un singolo evento in arrivo negato entro 24 ore. | Persone che vivono negli Stati Uniti e che hanno **not** Ho visitato la homepage nelle ultime 24 ore. |
+| Evento di frequenza entro una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica un certo numero di volte all’interno di un intervallo di tempo di 24 ore. | Persone che hanno visitato la homepage **almeno** cinque volte nelle ultime 24 ore. |
+| Evento di frequenza con un attributo di profilo entro un intervallo di tempo di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a un evento che si verifica un certo numero di volte all’interno di un intervallo di tempo di 24 ore. | Persone dagli Stati Uniti che hanno visitato la homepage **almeno** cinque volte nelle ultime 24 ore. |
+| Evento di frequenza ignorato con un profilo entro una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a un evento negato che si verifica un certo numero di volte all’interno di un intervallo di tempo di 24 ore. | Persone che non hanno visitato la homepage **more** cinque volte nelle ultime 24 ore. |
+| Più hit in arrivo in un profilo temporale di 24 ore | Una definizione di segmento che fa riferimento a più eventi che si verificano all’interno di un intervallo di tempo di 24 ore. | Persone che hanno visitato la homepage **o** Ho visitato la pagina di pagamento nelle ultime 24 ore. |
+| Eventi multipli con un profilo entro una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a più eventi che si verificano all’interno di un intervallo di tempo di 24 ore. | Persone dagli Stati Uniti che hanno visitato la homepage **e** Ho visitato la pagina di pagamento nelle ultime 24 ore. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Recupera tutti i segmenti abilitati per la segmentazione dei bordi
 
-È possibile recuperare un elenco di tutti i segmenti abilitati per la segmentazione edge all’interno dell’organizzazione IMS effettuando una richiesta di GET all’endpoint `/segment/definitions`.
+È possibile recuperare un elenco di tutti i segmenti abilitati per la segmentazione edge all’interno dell’organizzazione IMS effettuando una richiesta di GET al `/segment/definitions` punto finale.
 
 **Formato API**
 
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di segmenti nell’organizzazione IMS abilitati per la segmentazione edge. Informazioni più dettagliate sulla definizione del segmento restituita sono disponibili nella [guida all&#39;endpoint per le definizioni dei segmenti](./segment-definitions.md).
+Una risposta corretta restituisce un array di segmenti nell’organizzazione IMS abilitati per la segmentazione edge. Informazioni più dettagliate sulla definizione del segmento restituita sono disponibili nella sezione [guida endpoint per le definizioni dei segmenti](./segment-definitions.md).
 
 ```json
 {
@@ -167,7 +164,7 @@ Una risposta corretta restituisce un array di segmenti nell’organizzazione IMS
 
 ## Creare un segmento abilitato per la segmentazione dei bordi
 
-Puoi creare un segmento abilitato per la segmentazione edge effettuando una richiesta POST all’endpoint `/segment/definitions` che corrisponde a uno dei tipi di query di segmentazione edge elencati sopra](#query-types).[
+Puoi creare un segmento abilitato per la segmentazione edge effettuando una richiesta di POST al `/segment/definitions` endpoint che corrisponde a uno dei [tipi di query per segmentazione edge elencati sopra](#query-types).
 
 **Formato API**
 
@@ -250,4 +247,4 @@ Una risposta corretta restituisce i dettagli della nuova definizione di segmento
 
 Ora che sai come creare segmenti abilitati per la segmentazione dei bordi, puoi utilizzarli per abilitare i casi di utilizzo per la personalizzazione della pagina stessa e di quella successiva.
 
-Per informazioni su come eseguire azioni simili e lavorare con segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita la [Guida utente di Generatore di segmenti](../ui/segment-builder.md).
+Per informazioni su come eseguire azioni simili e lavorare con i segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita il [Guida utente di Segment Builder](../ui/segment-builder.md).
