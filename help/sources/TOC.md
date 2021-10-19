@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 10%
+source-wordcount: '644'
+ht-degree: 11%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 10%
 
 - [Panoramica dei connettori sorgente](home.md)
 - Connettori sorgente disponibili {#connectors}
-   - Applicazioni Adobe {#adobe-applications}
+   - Applicazioni di Adobe {#adobe-applications}
       - [Connettore sorgente classificazioni di Analytics](connectors/adobe-applications/classifications.md)
       - [Connettore sorgente di Analytics](connectors/adobe-applications/analytics.md)
       - [Connettore sorgente di Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -32,7 +32,7 @@ ht-degree: 10%
          - [namespace e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Connettore Google AdWords](connectors/advertising/ads.md)
-   - Archiviazione cloud {#cloud-storage}
+   - archiviazione cloud {#cloud-storage}
       - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connettore Amazon S3](connectors/cloud-storage/s3.md)
       - [Connettore Apache HDFS](connectors/cloud-storage/hdfs.md)
@@ -51,7 +51,7 @@ ht-degree: 10%
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
       - [Connettore Veeva CRM](connectors/crm/veeva.md)
-   - Successo del cliente {#customer-success}
+   - Successo cliente {#customer-success}
       - [Connettore cloud del servizio Salesforce](connectors/customer-success/salesforce-service-cloud.md)
       - [Connettore ServiceNow](connectors/customer-success/servicenow.md)
    - Database {#databases}
@@ -90,7 +90,7 @@ ht-degree: 10%
    - Creare una connessione di base {#create}
       - Pubblicità {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - Archiviazione cloud {#cloud-storage}
+      - archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [HDFS Apache](tutorials/api/create/cloud-storage/hdfs.md)
@@ -108,7 +108,7 @@ ht-degree: 10%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-      - Successo del cliente {#customer-success}
+      - Successo cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Database {#databases}
@@ -164,16 +164,14 @@ ht-degree: 10%
       - [Raccogliere dati di pagamento](tutorials/api/collect/payments.md)
       - [Raccogliere dati di protocollo](tutorials/api/collect/protocols.md)
       - [Raccogliere dati in streaming](tutorials/api/collect/streaming.md)
-   - [Acquisire dati Parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
-   - [Creare una connessione set di dati](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna account](tutorials/api/update.md)
    - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
    - [Elimina account](tutorials/api/delete.md)
    - [Eliminare i flussi di dati](tutorials/api/delete-dataflows.md)
-- Esercitazioni dell’interfaccia utente {#ui-tutorials}
-   - Creare una connessione sorgente {#create}
-      - Applicazioni Adobe {#adobe-applications}
+- Esercitazioni sull’interfaccia utente {#ui-tutorials}
+   - Creazione di una connessione sorgente {#create}
+      - Applicazioni di Adobe {#adobe-applications}
          - [Adobe Analytics (dati della suite di rapporti)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (dati di classificazione)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -181,7 +179,7 @@ ht-degree: 10%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Pubblicità {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - Archiviazione cloud {#cloud-storage}
+      - archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [HDFS Apache](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -200,7 +198,7 @@ ht-degree: 10%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-      - Successo cliente {#customer-success}
+      - Successo del cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Database {#databases}
