@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 9%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 9%
 
 # Destinazioni {#destinations}
 
-* [Destinazioni - Panoramica](./home.md)
+* [Panoramica sulle destinazioni](./home.md)
 * [Tipi di destinazione e categorie](./destination-types.md)
 * Esercitazioni API {#api}
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
-* Guide dell&#39;interfaccia utente {#ui}
+* Guide dell&#39;interfaccia {#ui}
    * [Area di lavoro Destinazioni](./ui/destinations-workspace.md)
    * [Crea una nuova connessione di destinazione](./ui/connect-destination.md)
-   * Attiva i dati del pubblico nelle destinazioni{#activate}
+   * Attivare i dati del pubblico nelle destinazioni{#activate}
       * [Panoramica di Activation](./ui/activation-overview.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](./ui/activate-segment-streaming-destinations.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](./ui/activate-streaming-profile-destinations.md)
@@ -36,7 +36,7 @@ ht-degree: 9%
 * Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
    * [ Connessione HTTP (Alpha)](./catalog/http-destination.md)
-   * Destinazioni Adobe{#adobe}
+   * Destinazioni di Adobe{#adobe}
       * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
       * [Connessione al Marketo Engage (Beta)](./catalog/adobe/marketo-engage.md)
       * [Experience Platform di condivisione dei segmenti](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
@@ -54,8 +54,8 @@ ht-degree: 9%
       * [Estensione Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Connessione Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [Connessione Customer Match di Google](./catalog/advertising/google-customer-match.md)
-      * [Connessione Google Display e Video 360](./catalog/advertising/google-dv360.md)
-      * [Estensione Google Gtag](./catalog/advertising/gtag-advertising.md)
+      * [Connessione Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+      * [Estensione tag Google](./catalog/advertising/gtag-advertising.md)
       * [Estensione linkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
@@ -131,7 +131,7 @@ ht-degree: 9%
       * [Connessione facebook](./catalog/social/facebook.md)
       * [Connessione linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
-   * Destinazioni sondaggio {#survey}
+   * Destinazioni del sondaggio {#survey}
       * [Panoramica sulle destinazioni del sondaggio](./catalog/survey/overview.md)
       * [Destinazione dell&#39;estensione Foresee](./catalog/survey/foresee.md)
       * [Estensione InMoment](./catalog/survey/inmoment.md)
@@ -143,11 +143,11 @@ ht-degree: 9%
       * [Estensione Invoca Tags](./catalog/voice/invoca.md)
       * [Estensione Medallia](./catalog/voice/medallia.md)
       * [Estensione casella in entrata Talk URL](./catalog/voice/talkurl.md)
-* SDK di destinazione {#destination-sdk}
+* SDK per la destinazione {#destination-sdk}
    * [Panoramica](./destination-sdk/overview.md)
    * [Prerequisiti per l’integrazione](./destination-sdk/integration-prerequisites.md)
    * [Introduzione](./destination-sdk/getting-started.md)
-   * Funzionalità SDK di destinazione {#functionality}
+   * Funzionalità SDK per la destinazione {#functionality}
       * [Opzioni di configurazione](./destination-sdk/configuration-options.md)
       * [Configurazione della destinazione](./destination-sdk/destination-configuration.md)
       * [Specifiche del server e del modello](./destination-sdk/server-and-template-configuration.md)
@@ -170,7 +170,7 @@ ht-degree: 9%
          * [Operazioni API per il test di destinazione](./destination-sdk/destination-testing-api.md)
          * [Operazioni API per la generazione di profili di esempio](./destination-sdk/sample-profile-generation-api.md)
    * Guide {#guides}
-      * [Usa SDK di destinazione per configurare la destinazione](./destination-sdk/configure-destination-instructions.md)
+      * [Usa SDK di destinazione per configurare una destinazione in streaming](./destination-sdk/configure-destination-instructions.md)
    * Documentare la destinazione {#document-destination}
       * [Documentare la destinazione in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Utilizza l’interfaccia web GitHub per creare una pagina di documentazione di destinazione](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
