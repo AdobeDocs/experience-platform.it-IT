@@ -5,7 +5,7 @@ title: Origine area di destinazione dei dati
 topic-legacy: overview
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: ecc9bc603bfd7b56f5f232b0d6d91eb65a901510
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] è un’interfaccia di  [!DNL Azure Blob] archiviazione fornita da Adobe Experience Platform che consente di accedere a una struttura di storage basata su cloud sicura per l’importazione di file in Platform. Puoi accedere a un contenitore [!DNL Data Landing Zone] per sandbox e il volume totale di dati per tutti i contenitori è limitato ai dati totali forniti con la licenza Platform Produces and Services . Tutti i clienti di Platform e dei relativi servizi applicativi come [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] e [!DNL Real-time Customer Data Platform] dispongono del provisioning di un contenitore [!DNL Data Landing Zone] per sandbox. È possibile leggere e scrivere file nel contenitore tramite [!DNL Azure Storage Explorer] o l&#39;interfaccia a riga di comando.
+[!DNL Data Landing Zone] è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione file sicura basata su cloud per l’importazione di file in Platform. Hai accesso a uno [!DNL Data Landing Zone] Il contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato ai dati totali forniti con la licenza Platform Products and Services . Tutti i clienti di Platform e dei relativi servizi applicativi, quali [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]e [!DNL Real-time Customer Data Platform] dispongono di un provisioning [!DNL Data Landing Zone] contenitore per sandbox. È possibile leggere e scrivere file nel contenitore attraverso [!DNL Azure Storage Explorer] o l&#39;interfaccia della riga di comando.
 
-[!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con meccanismi standard di sicurezza  [!DNL Azure Blob] dello storage a riposo e in transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al contenitore [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al contenitore [!DNL Data Landing Zone], il che significa che non è necessario configurare elenchi consentiti o impostazioni internazionali per la rete. Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati in un contenitore [!DNL Data Landing Zone] . Tutti i file vengono eliminati dopo sette giorni.
+[!DNL Data Landing Zone] supporta l’autenticazione basata su SAS e i relativi dati sono protetti con standard [!DNL Azure Blob] meccanismi di sicurezza dello stoccaggio a riposo e in transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro ai [!DNL Data Landing Zone] container tramite una connessione internet pubblica. Non sono necessarie modifiche di rete per accedere al [!DNL Data Landing Zone] , il che significa che non è necessario configurare elenchi consentiti o configurazioni di più aree per la rete. Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati in un [!DNL Data Landing Zone] contenitore. Tutti i file vengono eliminati dopo sette giorni.
 
 ## Vincoli di denominazione per file e directory
 
@@ -26,19 +26,19 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - I nomi di directory e file non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
 - I seguenti caratteri URL riservati devono essere correttamente preceduti: `! ' ( ) ; @ & = + $ , % # [ ]`
 - I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
-- Caratteri di percorso URL non validi. I punti di codice come `\uE000`, mentre sono validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti alcuni caratteri ASCII o Unicode, come caratteri di controllo (ad esempio da `0x00` a `0x1F`, `\u0081` e così via). Per le regole che governano le stringhe Unicode in HTTP/1.1, consulta [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Caratteri di percorso URL non validi. Punti di codice come `\uE000`, anche se valido nei nomi file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (come `0x00` a `0x1F`, `\u0081`, e così via), non sono consentiti. Per le regole che governano le stringhe Unicode in HTTP/1.1 vedi [RFC 2616, sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - I seguenti nomi di file non sono consentiti: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (..) e due caratteri punto (.).
 
 ## Connetti [!DNL Data Landing Zone] a [!DNL Platform]
 
-La documentazione seguente fornisce informazioni su come portare dati dal contenitore [!DNL Data Landing Zone] a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+La documentazione seguente fornisce informazioni su come estrarre i dati dal tuo [!DNL Data Landing Zone] in Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 
 ### Utilizzo delle API
 
-- [Creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/data-landing-zone.md)
+- [Crea un [!DNL Data Landing Zone] connessione sorgente tramite l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/data-landing-zone.md)
 - [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Connetti [!DNL Data Landing Zone] alla piattaforma utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Connetti [!DNL Data Landing Zone] su Platform tramite l’interfaccia utente](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Creare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
