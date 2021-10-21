@@ -4,10 +4,10 @@ user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 88%
+source-wordcount: '380'
+ht-degree: 87%
 
 ---
 
@@ -84,18 +84,18 @@ ht-degree: 88%
          * [Panoramica](./extensions/web/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
          * [Panoramica](./extensions/web/sdk/overview.md)
-      * Connettore cloud Adobe Experience Platform {#cloud-connector}
+      * Connettore Adobe Experience Platform Cloud {#cloud-connector}
          * [Panoramica](./extensions/web/cloud-connector/overview.md)
       * Informazioni sulle risorse di Adobe Experience Manager {#asset-insights}
          * [Panoramica](./extensions/web/asset-insights/overview.md)
          * [Note sulla versione](./extensions/web/asset-insights/release-notes.md)
-      * Adobi Medium Analytics per audio e video {#media-analytics}
+      * Adobe Medium Analytics per audio e video {#media-analytics}
          * [Panoramica](./extensions/web/media-analytics/overview.md)
          * [Note sulla versione](./extensions/web/media-analytics/release-notes.md)
       * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
          * [Panoramica](./extensions/web/media-analytics-3x/overview.md)
          * [Note sulla versione](./extensions/web/media-analytics-3x/release-notes.md)
-      * Adobe Privacy {#privacy}
+      * Privacy degli Adobi {#privacy}
          * [Panoramica](./extensions/web/privacy/overview.md)
       * Adobe Target {#target}
          * [Panoramica](./extensions/web/target/overview.md)
@@ -113,7 +113,7 @@ ht-degree: 88%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Panoramica](./extensions/web/marketo/overview.md)
          * [Note sulla versione](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] tracciamento video  {#brightcove}
+      * [!DNL BrightCove] tracciamento video {#brightcove}
          * [Panoramica](./extensions/web/brightcove/overview.md)
          * [Note sulla versione](./extensions/web/brightcove/release-notes.md)
       * Estensione di tracciamento di video [!DNL YouTube] {#youtube}
@@ -175,6 +175,7 @@ ht-degree: 88%
       * [Note](./api/endpoints/notes.md)
       * [Profilo](./api/endpoints/profile.md)
       * [Cerca](./api/endpoints/search.md)
+      * [Segreti](./api/endpoints/secrets.md)
    * Guide {#guides}
       * [ID descrittori dei delegati](./api/guides/delegate-descriptor-ids.md)
       * [Crittografia dei valori](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 88%
       * [Ordinamento delle risposte](./api/guides/sorting.md)
       * [Relazioni](./api/guides/relationships.md)
       * [Ricerca delle risorse](./api/guides/search.md)
+      * [Segreti](./api/guides/secrets.md)
 * [Domande frequenti](./faq.md)
 * [Aggiornamenti terminologici](./term-updates.md)
 * Note sulla versione {#release-notes}

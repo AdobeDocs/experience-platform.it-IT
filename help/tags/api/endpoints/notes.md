@@ -1,10 +1,11 @@
 ---
 title: Endpoint “notes”
 description: Scopri come effettuare chiamate all’endpoint /notes nell’API di Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 99%
+source-wordcount: '527'
+ht-degree: 98%
 
 ---
 
@@ -28,6 +29,7 @@ Le note possono essere aggiunte alle seguenti risorse:
 * [Proprietà](./properties.md)
 * [Componenti della regola](./rule-components.md)
 * [Regole](./rules.md)
+* [Segreti](./secrets.md)
 
 Questi sei tipi sono noti collettivamente come risorse “che supportano le note”. Quando si elimina una risorsa che supporta le nota, vengono eliminate anche le relative note associate.
 

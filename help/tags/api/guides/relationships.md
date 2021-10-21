@@ -1,32 +1,33 @@
 ---
-title: Relazioni nell'API di Reactor
-description: Scopri in che modo le relazioni tra le risorse vengono stabilite nell’API di Reactor, compresi i requisiti di relazione per ogni risorsa.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+title: Relazioni nell’API di Reactor
+description: Scopri come vengono stabilite le relazioni tra le risorse nell’API di Reactor, compresi i requisiti di relazione per ogni risorsa.
+exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 10%
+source-wordcount: '807'
+ht-degree: 99%
 
 ---
 
-# Relazioni nell&#39;API di Reactor
+# Relazioni nell’API di Reactor
 
-Le risorse nell’API di Reactor sono spesso correlate tra loro. Questo documento fornisce una panoramica dell’impostazione delle relazioni tra le risorse nell’API e dei requisiti di relazione di ciascun tipo di risorsa.
+Le risorse nell’API di Reactor sono spesso correlate tra loro. Questo documento fornisce una panoramica dell’impostazione delle relazioni tra le risorse nell’API e dei requisiti di relazione per ciascun tipo di risorsa.
 
-A seconda del tipo di risorsa in questione, sono necessarie alcune relazioni. Una relazione obbligatoria implica che la risorsa padre non può esistere senza la relazione. Tutte le altre relazioni sono facoltative.
+A seconda del tipo di risorsa, alcune relazioni sono obbligatorie. Una relazione obbligatoria implica che la risorsa padre non può esistere senza la relazione. Tutte le altre relazioni sono facoltative.
 
-Indipendentemente dal fatto che siano obbligatori o facoltativi, le relazioni vengono stabilite automaticamente dal sistema al momento della creazione delle relative risorse, oppure devono essere create manualmente. Nel caso di creazione manuale di relazioni, esistono due metodi possibili a seconda della risorsa in questione:
+Sia le relazioni obbligatorie che quelle facoltative vengono stabilite automaticamente dal sistema quando vengono create le relative risorse, oppure devono essere create manualmente. Nel caso di creazione manuale, esistono due metodi possibili a seconda della risorsa in questione:
 
-* [Crea per payload](#payload)
-* [Crea per URL](#url)  (solo per le librerie)
+* [Creare tramite payload](#payload)
+* [Creare tramite URL](#url) (solo per le librerie)
 
-Fai riferimento alla sezione sui [requisiti di relazione](#requirements) per un elenco delle relazioni compatibili per ciascun tipo di risorsa e ai metodi necessari per stabilire tali relazioni, se applicabile.
+Per un elenco delle relazioni compatibili per ciascun tipo di risorsa e per i metodi necessari per stabilire le relazioni applicabili, consulta la sezione sui [requisiti delle relazioni](#requirements).
 
-## Creare una relazione per payload {#payload}
+## Creare una relazione tramite payload {#payload}
 
 Alcune relazioni devono essere stabilite manualmente al momento della creazione iniziale di una risorsa. A questo scopo, devi fornire un oggetto `relationship` nel payload della richiesta al momento della creazione della risorsa principale. Esempi di queste relazioni includono:
 
-* [Creazione di un ](../endpoints/data-elements.md#create) elemento dati con le estensioni richieste
-* [Creazione di un ](../endpoints/environments.md#create) ambiente con la relazione host richiesta
+* [Creazione di un elemento dati](../endpoints/data-elements.md#create) con le estensioni richieste
+* [Creazione di un ambiente](../endpoints/environments.md#create) con la relazione host richiesta
 
 **Formato API**
 
@@ -43,7 +44,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo `rule_component`, stabilendo relazioni con `rules` e un `extension`.
+La seguente richiesta crea un nuovo `rule_component`, stabilendo relazioni con `rules` e una `extension`.
 
 ```shell
 curl -X POST \
@@ -83,14 +84,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `relationships` | Un oggetto che deve essere fornito durante la creazione di relazioni per payload. Ogni chiave in questo oggetto rappresenta un tipo di relazione specifico. Nell&#39;esempio precedente, sono stabilite le relazioni `extension` e `rules`, che sono particolari per `rule_components`. Per ulteriori informazioni sui tipi di relazione compatibili per risorse diverse, consulta la sezione sui [requisiti di relazione per risorsa](#relationship-requirements-by-resource). |
-| `data` | Ogni tipo di relazione fornito sotto l&#39;oggetto `relationship` deve contenere una proprietà `data` che fa riferimento a `id` e `type` della risorsa con cui viene stabilita una relazione. È possibile creare una relazione con più risorse dello stesso tipo formattando la proprietà `data` come array di oggetti, con ogni oggetto contenente le risorse `id` e `type` di una risorsa applicabile. |
-| `id` | ID univoco di una risorsa. A ogni `id` deve essere associata una proprietà di pari livello `type` che indica il tipo di risorsa in questione. |
-| `type` | Il tipo di risorsa a cui fa riferimento un campo di pari livello `id`. I valori accettati includono `data_elements`, `rules`, `extensions` e `environments`. |
+| `relationships` | Oggetto che deve essere fornito durante la creazione di relazioni tramite payload. Ogni chiave in questo oggetto rappresenta un tipo di relazione specifico. Nell’esempio precedente, sono stabilite le relazioni `extension` e `rules`, che sono specifiche per `rule_components`. Per ulteriori informazioni sui tipi di relazione compatibili per risorse diverse, consulta la sezione sui [requisiti delle relazioni per risorsa](#relationship-requirements-by-resource). |
+| `data` | Ogni tipo di relazione fornito sotto l’oggetto `relationship` deve contenere una proprietà `data` che fa riferimento all’`id` e al `type` della risorsa con cui viene stabilita una relazione. Per creare una relazione con più risorse dello stesso tipo, puoi formattare la proprietà `data` come array di oggetti, con ogni oggetto contenente l’`id` e il `type` di una risorsa applicabile. |
+| `id` | ID univoco di una risorsa. A ogni `id` deve essere associata una proprietà `type` di pari livello che indica il tipo di risorsa in questione. |
+| `type` | Tipo di risorsa a cui fa riferimento un campo `id` di pari livello. I valori accettati sono `data_elements`, `rules`, `extensions` e `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Creare una relazione per URL {#url}
+## Creare una relazione tramite URL {#url}
 
 A differenza di altre risorse, le librerie stabiliscono relazioni attraverso i propri endpoint `/relationship` dedicati. Gli esempi includono:
 
@@ -107,11 +108,11 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 | --- | --- |
 | `{PROPERTY_ID}` | ID della proprietà a cui appartiene la libreria. |
 | `{LIBRARY_ID}` | ID della libreria per cui desideri creare una relazione. |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa di destinazione della relazione. I valori disponibili sono `environment`, `data_elements`, `extensions` e `rules`. |
+| `{RESOURCE_TYPE}` | Tipo di risorsa di destinazione della relazione. I valori possibili includono `environment`, `data_elements`, `extensions` e `rules`. |
 
 **Richiesta**
 
-La richiesta seguente utilizza l&#39;endpoint `/relationships/environment` di una libreria per creare una relazione con un ambiente.
+La seguente richiesta utilizza l’endpoint `/relationships/environment` di una libreria per creare una relazione con un ambiente.
 
 ```shell
 curl -X POST \
@@ -131,32 +132,32 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `data` | Un oggetto che fa riferimento alle `id` e `type` della risorsa di destinazione per la relazione. Se si sta creando una relazione con più risorse dello stesso tipo (ad esempio `extensions` e `rules`), la proprietà `data` deve essere formattata come una matrice di oggetti, con ogni oggetto contenente i valori `id` e `type` di una risorsa applicabile. |
-| `id` | ID univoco di una risorsa. A ogni `id` deve essere associata una proprietà di pari livello `type` che indica il tipo di risorsa in questione. |
-| `type` | Il tipo di risorsa a cui fa riferimento un campo di pari livello `id`. I valori accettati includono `data_elements`, `rules`, `extensions` e `environments`. |
+| `data` | Oggetto che fa riferimento all’`id` e al `type` della risorsa di destinazione della relazione. Se vuoi creare una relazione con più risorse dello stesso tipo (ad esempio `extensions` e `rules`), la proprietà `data` deve essere formattata come un array di oggetti, ognuno dei quali deve contenere i valori `id` e `type` della risorsa applicabile. |
+| `id` | ID univoco di una risorsa. A ogni `id` deve essere associata una proprietà `type` di pari livello che indica il tipo di risorsa in questione. |
+| `type` | Tipo di risorsa a cui fa riferimento un campo `id` di pari livello. I valori accettati sono `data_elements`, `rules`, `extensions` e `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Requisiti di relazione per risorsa {#requirements}
+## Requisiti delle relazioni per risorsa {#requirements}
 
-Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa, indipendentemente dal fatto che tali relazioni siano necessarie o meno, e il metodo accettato per creare manualmente la relazione, se applicabile.
+Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa, obbligatorie o meno, e il metodo accettato per creare manualmente la relazione applicabile.
 
 >[!NOTE]
 >
->Se una relazione non è elencata come creata dal payload o dall’URL, viene assegnata automaticamente dal sistema.
+>Se una relazione non è elencata tra quelle create tramite payload o URL, viene assegnata automaticamente dal sistema.
 
-### Eventi di controllo
+### Eventi di audit
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `property` | . |  |  |
+| `property` | ✓ |  |  |
 | `entity` | . |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Build
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
@@ -169,7 +170,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Callback
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `property` | . |  |  |
 
@@ -177,7 +178,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Aziende
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
@@ -185,7 +186,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Elementi dati
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | . |  |  |
@@ -200,7 +201,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Ambienti
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
@@ -211,7 +212,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Estensioni
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | . |  |  |
@@ -225,7 +226,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Host
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `property` | . |  |  |
 
@@ -233,7 +234,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Librerie
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
 | `environment` |  |  | . |
@@ -249,7 +250,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Note
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `resource` | . |  |  |
 
@@ -257,7 +258,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Proprietà
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `company` | . |  |  |
 | `callbacks` |  |  |  |
@@ -271,7 +272,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Componenti della regola
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `updated_with_extensions_package` | . |  |  |
 | `updated_with_extension` | . |  |  |
@@ -286,7 +287,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 ### Regole
 
-| Relazione | Obbligatorio | Crea per payload | Crea per URL |
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
 | `revisions` | . |  |  |
@@ -294,3 +295,11 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 | `property` | . |  |  |
 | `origin` | . |  |  |
 | `rule_components` |  |  |  |
+
+### Segreti
+
+| Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
+| :--- | :---: | :---: | :---: |
+| `property` | . |  | . |
+| `environment` | . | . |  |
+

@@ -1,10 +1,11 @@
 ---
 title: Guida dell’API di Reactor
 description: L’API di Reactor consente agli sviluppatori di gestire in modo programmatico tutte le risorse per i tag in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 99%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -113,6 +114,10 @@ Per informazioni su come visualizzare queste informazioni nell’API, consulta l
 ## Cerca
 
 L’endpoint `/search` fpermette di trovare le risorse che corrispondono a un dato criterio, espresso come query. Tutte le query prendono in esame la società corrente e le proprietà accessibili. Per informazioni sull’utilizzo di questa funzionalità, consulta la [guida dell’endpoint “search”](./endpoints/search.md).
+
+## Segreti
+
+Un segreto contiene credenziali che consentono l&#39;inoltro degli eventi per l&#39;autenticazione in un altro sistema per lo scambio sicuro dei dati. Consulta la sezione [guida ai segreti](./guides/secrets.md) per una panoramica del funzionamento dei segreti nell&#39;inoltro degli eventi e [guida all’endpoint segreti](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
 
 ## Passaggi successivi
 
