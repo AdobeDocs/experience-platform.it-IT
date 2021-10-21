@@ -4,9 +4,9 @@ user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 87%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 87%
 * Inoltro eventi {#event-forwarding}
    * [Panoramica](./ui/event-forwarding/overview.md)
    * [Introduzione](./ui/event-forwarding/getting-started.md)
+   * [Segreti](./ui/event-forwarding/secrets.md)
 * Amministrazione {#admin}
    * [Panoramica](./ui/administration/overview.md)
    * [Aziende e proprietà](./ui/administration/companies-and-properties.md)
