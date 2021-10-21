@@ -5,27 +5,26 @@ title: Panoramica sulla segmentazione su più entità
 topic-legacy: overview
 description: La segmentazione su più entità consente di estendere i dati di profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati provenienti da classi aggiuntive diventano disponibili come se fossero nativi dello schema Profilo.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
 
 # Panoramica sulla segmentazione su più entità
 
-La segmentazione su più entità è una funzione avanzata disponibile come parte di Adobe Experience Platform [!DNL Segmentation Service]. Questa funzione ti consente di estendere i dati [!DNL Real-time Customer Profile] con dati aggiuntivi &quot;non relativi alle persone&quot; (noti anche come &quot;entità dimensione&quot;) che possono essere definiti dalla tua organizzazione, ad esempio dati relativi a prodotti o store. La segmentazione su più entità offre flessibilità quando si definiscono i segmenti di pubblico in base ai dati pertinenti alle specifiche esigenze aziendali e può essere eseguita senza disporre di esperienza nell’esecuzione di query sui database. Con la segmentazione su più entità, puoi aggiungere dati chiave ai segmenti senza dover apportare modifiche costose ai flussi di dati o attendere un’unione di dati back-end.
+La segmentazione su più entità è una funzione avanzata disponibile come parte di Adobe Experience Platform [!DNL Segmentation Service]. Questa funzione consente di estendere [!DNL Real-time Customer Profile] dati con dati &quot;non personali&quot; aggiuntivi (noti anche come &quot;entità dimensione&quot;) che la tua organizzazione può definire, ad esempio dati relativi a prodotti o store. La segmentazione su più entità offre flessibilità quando si definiscono i segmenti di pubblico in base ai dati pertinenti alle specifiche esigenze aziendali e può essere eseguita senza disporre di esperienza nell’esecuzione di query sui database. Con la segmentazione su più entità, puoi aggiungere dati chiave ai segmenti senza dover apportare modifiche costose ai flussi di dati o attendere un’unione di dati back-end.
 
 ## Introduzione
 
 La segmentazione su più entità richiede una comprensione funzionante dei vari servizi Adobe Experience Platform coinvolti nella segmentazione. Prima di continuare con questa guida, consulta la seguente documentazione:
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo di consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-   * [Profili](../profile/guardrails.md): Best practice per la creazione di modelli di dati supportati da  [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ti consente di creare segmenti dai  [!DNL Real-time Customer Profile] dati.
+   * [Guardrail profilo](../profile/guardrails.md): Best practice per la creazione di modelli di dati supportati da [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ti consente di creare segmenti da [!DNL Real-time Customer Profile] dati.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
-   * [Nozioni di base sulla composizione](../xdm/schema/composition.md#union) dello schema: Scopri le best practice per la composizione degli schemi da utilizzare in Experience Platform.
+   * [Nozioni di base sulla composizione dello schema](../xdm/schema/composition.md#union): Scopri le best practice per la composizione degli schemi da utilizzare in Experience Platform. Per utilizzare al meglio la segmentazione, assicurati che i tuoi dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../xdm/schema/best-practices.md).
 
 ## Casi di utilizzo
 
@@ -41,7 +40,7 @@ Spesso è complesso creare e qualificare gli utenti in segmenti che puntano all�
 
 ## Creazione di segmenti con più entità
 
-Per creare un segmento con più entità è innanzitutto necessario definire le relazioni tra gli schemi prima di utilizzare l’ [!DNL Segmentation] API o l’interfaccia utente di Generatore di segmenti per creare la definizione del segmento.
+La creazione di un segmento con più entità richiede prima di tutto la definizione di relazioni tra schemi prima di utilizzare il [!DNL Segmentation] Interfaccia utente dell’API o del Generatore di segmenti per creare la definizione del segmento.
 
 ### Definire relazioni
 
@@ -61,4 +60,4 @@ Una volta definite le relazioni XDM necessarie, puoi iniziare a creare un segmen
 
 ## Valutare e accedere a segmenti con più entità
 
-Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando l’API Segmentazione. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento standard. Questo processo può essere eseguito solo utilizzando l’API di segmentazione. Per una guida dettagliata su come utilizzare l’API per valutare e accedere ai segmenti, leggi l’ esercitazione [valutazione e accesso ai segmenti](./tutorials/evaluate-a-segment.md) .
+Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando l’API Segmentazione. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento standard. Questo processo può essere eseguito solo utilizzando l’API di segmentazione. Per una guida dettagliata su come utilizzare l’API per valutare e accedere ai segmenti, consulta la sezione [valutazione e accesso ai segmenti](./tutorials/evaluate-a-segment.md) esercitazione.

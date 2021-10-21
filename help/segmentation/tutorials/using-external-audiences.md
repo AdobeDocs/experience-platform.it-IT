@@ -5,9 +5,9 @@ title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Adobe Experience Platform supporta la possibilità di importare tipi di pubblico
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei vari servizi [!DNL Adobe Experience Platform] coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una comprensione approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [Servizio](../home.md) di segmentazione: Consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
-- [Profilo](../../profile/home.md) cliente in tempo reale: Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
+- [Servizio di segmentazione](../home.md): Consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
+- [Profilo cliente in tempo reale](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience. Per utilizzare al meglio la segmentazione, assicurati che i tuoi dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 - [Set di dati](../../catalog/datasets/overview.md): Il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
-- [Acquisizione](../../ingestion/streaming-ingestion/overview.md) in streaming: In che modo Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
+- [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): In che modo Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
 ### Dati del segmento e metadati del segmento
 
@@ -42,7 +42,7 @@ I metadati del segmento sono informazioni sul segmento stesso, che includono nom
 
 Il primo passaggio per l’utilizzo di tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi di identità. I namespace di identità consentono a Platform di associare la posizione di origine di un segmento.
 
-Per creare uno spazio dei nomi di identità, segui le istruzioni contenute nella [guida allo spazio dei nomi di identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegna il relativo [!UICONTROL Tipo] come **[!UICONTROL Identificatore non-people]**.
+Per creare uno spazio dei nomi di identità, segui le istruzioni contenute in [guida allo spazio dei nomi identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegnali [!UICONTROL Tipo] come **[!UICONTROL Identificatore non personale]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -50,11 +50,11 @@ Per creare uno spazio dei nomi di identità, segui le istruzioni contenute nella
 
 Dopo aver creato uno spazio dei nomi di identità, devi creare un nuovo schema per il segmento che creerai.
 
-Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemi]** nella barra di navigazione a sinistra, quindi **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra dell&#39;area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Sfoglia]** per visualizzare una selezione completa dei tipi di schema disponibili.
+Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemi]** sulla barra di navigazione a sinistra, seguita dalla **[!UICONTROL Creare uno schema]** nell’angolo in alto a destra dell’area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Sfoglia]** per visualizzare una selezione completa dei tipi di schema disponibili.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Poiché stai creando una definizione di segmento, che è una classe predefinita, seleziona **[!UICONTROL Usa classe esistente]**. A questo punto, seleziona la classe **[!UICONTROL Definizione segmento]** , seguita da **[!UICONTROL Assegna classe]**.
+Poiché stai creando una definizione di segmento, che è una classe predefinita, seleziona **[!UICONTROL Usa classe esistente]**. Ora, seleziona la **[!UICONTROL Definizione del segmento]** classe, seguita da **[!UICONTROL Assegna classe]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -62,7 +62,7 @@ Dopo la creazione dello schema, dovrai specificare quale campo conterrà l’ID 
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Dopo aver contrassegnato il campo `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore **[!UICONTROL Profilo]**. Selezionare **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-time Customer Profile].
+Dopo la marcatura `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore etichettato **[!UICONTROL Profilo]**. Seleziona **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -72,11 +72,11 @@ Ora, questo schema è abilitato per Profilo, con l’identificazione principale 
 
 Dopo aver configurato lo schema, dovrai creare un set di dati per i metadati del segmento.
 
-Per creare un set di dati, segui le istruzioni contenute nella [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Segui l&#39;opzione **[!UICONTROL Crea set di dati da schema]**, utilizzando lo schema creato in precedenza.
+Per creare un set di dati, segui le istruzioni nella sezione [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Lei vorrà seguire la **[!UICONTROL Creare un set di dati dallo schema]** utilizzando lo schema creato in precedenza.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
-Dopo aver creato il set di dati, continua a seguire le istruzioni contenute nella [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per il profilo cliente in tempo reale.
+Dopo aver creato il set di dati, continua a seguire le istruzioni in [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per il profilo cliente in tempo reale.
 
 ![](../images/tutorials/external-audiences/dataset-profile.png)
 
@@ -84,18 +84,18 @@ Dopo aver creato il set di dati, continua a seguire le istruzioni contenute nell
 
 Con il set di dati abilitato, i dati possono ora essere inviati in Platform tramite l’interfaccia utente o utilizzando le API di Experience Platform. Per acquisire questi dati in Platform, dovrai creare una connessione in streaming.
 
-Per creare una connessione in streaming, puoi seguire le istruzioni contenute nell’ [esercitazione API](../../sources/tutorials/api/create/streaming/http.md) o nell’ [esercitazione sull’interfaccia utente](../../sources/tutorials/ui/create/streaming/http.md).
+Per creare una connessione in streaming, puoi seguire le istruzioni contenute in [Esercitazione API](../../sources/tutorials/api/create/streaming/http.md) o [Esercitazione sull’interfaccia utente](../../sources/tutorials/ui/create/streaming/http.md).
 
-Una volta creata la connessione streaming, avrai accesso all&#39;endpoint streaming univoco a cui puoi inviare i tuoi dati. Per informazioni su come inviare dati a questi endpoint, leggi l&#39; [esercitazione sullo streaming di dati di record](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+Una volta creata la connessione streaming, avrai accesso all&#39;endpoint streaming univoco a cui puoi inviare i tuoi dati. Per informazioni su come inviare dati a questi endpoint, consulta la sezione [esercitazione sullo streaming dei dati di record](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Creazione di segmenti utilizzando i tipi di pubblico importati
 
-Una volta configurati i tipi di pubblico importati, possono essere utilizzati come parte del processo di segmentazione. Per trovare tipi di pubblico esterni, vai al Generatore di segmenti e seleziona la scheda **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Campi]** .
+Una volta configurati i tipi di pubblico importati, possono essere utilizzati come parte del processo di segmentazione. Per trovare tipi di pubblico esterni, vai al Generatore di segmenti e seleziona **[!UICONTROL Tipi di pubblico]** nella scheda **[!UICONTROL Campi]** sezione .
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Passaggi successivi
 
-Ora che puoi utilizzare tipi di pubblico esterni nei segmenti, puoi utilizzare il Generatore di segmenti per creare segmenti. Per scoprire come creare i segmenti, leggi l’ [esercitazione sulla creazione di segmenti](./create-a-segment.md).
+Ora che puoi utilizzare tipi di pubblico esterni nei segmenti, puoi utilizzare il Generatore di segmenti per creare segmenti. Per scoprire come creare i segmenti, leggi la sezione [esercitazione sulla creazione di segmenti](./create-a-segment.md).

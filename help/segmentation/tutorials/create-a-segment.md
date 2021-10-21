@@ -6,49 +6,48 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # Creare un segmento utilizzando l’API del servizio di segmentazione
 
-Questo documento fornisce un&#39;esercitazione per sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Questo documento fornisce un’esercitazione per sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Per informazioni su come creare i segmenti utilizzando l’interfaccia utente, consulta la [guida al Generatore di segmenti](../ui/overview.md).
+Per informazioni su come creare i segmenti utilizzando l’interfaccia utente, consulta [Guida al Generatore di segmenti](../ui/overview.md).
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei vari servizi [!DNL Adobe Experience Platform] coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una comprensione approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience. Per utilizzare al meglio la segmentazione, assicurati che i tuoi dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 
-Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per effettuare correttamente le chiamate alle API [!DNL Platform] .
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente le chiamate al [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -56,22 +55,22 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Sviluppare una definizione di segmento
 
-Il primo passaggio nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione di segmento. Una definizione di segmento è un oggetto che incapsula una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti a [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consulta la [Guida PQL](../pql/overview.md) .
+Il primo passaggio nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione di segmento. Una definizione di segmento è un oggetto che incapsula una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o ai dati delle serie temporali forniti [!DNL Real-time Customer Profile]. Consulta la sezione [Guida PQL](../pql/overview.md) per ulteriori informazioni sulla scrittura di query PQL.
 
-Puoi creare una nuova definizione di segmento effettuando una richiesta POST all’endpoint `/segment/definitions` nell’ API [!DNL Segmentation] . L’esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie affinché un segmento possa essere definito correttamente.
+Puoi creare una nuova definizione di segmento effettuando una richiesta di POST al `/segment/definitions` punto finale [!DNL Segmentation] API. L’esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie affinché un segmento possa essere definito correttamente.
 
-Per una spiegazione dettagliata su come definire un segmento, consulta la [guida per gli sviluppatori della definizione del segmento](../api/segment-definitions.md#create).
+Per una spiegazione dettagliata su come definire un segmento, leggere il [guida per gli sviluppatori di definizioni di segmenti](../api/segment-definitions.md#create).
 
 ## Stimare e visualizzare in anteprima un pubblico {#estimate-and-preview-an-audience}
 
-Man mano che sviluppi la definizione del segmento, puoi utilizzare gli strumenti di stima e anteprima all’interno di [!DNL Real-time Customer Profile] per visualizzare le informazioni a livello di riepilogo per assicurarti di isolare il pubblico previsto. Le stime forniscono informazioni statistiche su una definizione di segmento, ad esempio la dimensione del pubblico e l’intervallo di affidabilità proiettati. Le anteprime forniscono elenchi impaginati di profili qualificati per una definizione di segmento, che consentono di confrontare i risultati rispetto alle aspettative.
+Man mano che sviluppi la definizione del segmento, puoi utilizzare gli strumenti di stima e anteprima in [!DNL Real-time Customer Profile] per visualizzare informazioni a livello di riepilogo per assicurarti di isolare il pubblico previsto. Le stime forniscono informazioni statistiche su una definizione di segmento, ad esempio la dimensione del pubblico e l’intervallo di affidabilità proiettati. Le anteprime forniscono elenchi impaginati di profili qualificati per una definizione di segmento, che consentono di confrontare i risultati rispetto alle aspettative.
 
 Stimando e visualizzando in anteprima il pubblico, puoi testare e ottimizzare i predicati PQL fino a quando non producono un risultato desiderato, dove possono quindi essere utilizzati in una definizione di segmento aggiornata.
 
 Esistono due passaggi necessari per visualizzare in anteprima o ottenere una stima del segmento:
 
 1. [Creare un processo di anteprima](#create-a-preview-job)
-2. [Visualizza la stima o l’](#view-an-estimate-or-preview) anteprima utilizzando l’ID del processo di anteprima
+2. [Visualizza stima o anteprima](#view-an-estimate-or-preview) utilizzo dell’ID del processo di anteprima
 
 ### Generazione delle stime
 
@@ -89,17 +88,17 @@ Le stime vengono generalmente eseguite per più di 10-15 secondi, a partire da u
 
 ### Creare un processo di anteprima
 
-È possibile creare un nuovo processo di anteprima effettuando una richiesta di POST all&#39;endpoint `/preview`.
+Puoi creare un nuovo processo di anteprima effettuando una richiesta di POST al `/preview` punto finale.
 
-Le istruzioni dettagliate sulla creazione di un processo di anteprima si trovano nella [guida alle anteprime e alle stime degli endpoint](../api/previews-and-estimates.md#create-preview).
+Le istruzioni dettagliate sulla creazione di un processo di anteprima sono disponibili nella sezione [guida alle anteprime e alle stime degli endpoint](../api/previews-and-estimates.md#create-preview).
 
 ### Visualizzare una stima o un&#39;anteprima
 
 La stima e l’anteprima dei processi vengono eseguite in modo asincrono, in quanto il completamento di query diverse può richiedere tempi diversi. Una volta avviata una query, puoi utilizzare le chiamate API per recuperare (GET) lo stato corrente della stima o dell’anteprima mentre progredisce.
 
-Utilizzando l&#39;API [!DNL Segmentation Service], puoi cercare lo stato corrente di un processo di anteprima in base al relativo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. Per cercare lo stato corrente di un processo di anteprima, leggi la sezione su [recupero di una sezione del processo di anteprima](../api/previews-and-estimates.md#get-preview) nella guida anteprime e stime degli endpoint. Per cercare lo stato corrente di un processo di stima, leggi la sezione su [recupero di un processo di stima](../api/previews-and-estimates.md#get-estimate) nella guida anteprime e stime endpoint.
+Utilizzo della [!DNL Segmentation Service] API, puoi cercare lo stato corrente di un processo di anteprima in base al suo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. Per cercare lo stato corrente di un processo di anteprima, leggi la sezione su [recupero di una sezione del processo di anteprima](../api/previews-and-estimates.md#get-preview) nella guida anteprime e stime endpoint . Per cercare lo stato corrente di un processo di stima, leggere la sezione su [recupero di un processo di stima](../api/previews-and-estimates.md#get-estimate) nella guida anteprime e stime endpoint .
 
 
 ## Passaggi successivi
 
-Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi creare un processo di segmento per creare un pubblico utilizzando l’ [!DNL Segmentation Service] API . Per informazioni dettagliate su come eseguire questa operazione, consulta l’ esercitazione su [valutazione e accesso ai risultati dei segmenti](./evaluate-a-segment.md) .
+Una volta sviluppata, testata e salvata la definizione del segmento, puoi creare un processo di segmento per creare un pubblico utilizzando [!DNL Segmentation Service] API. Guarda l’esercitazione su [valutazione e accesso ai risultati dei segmenti](./evaluate-a-segment.md) per passaggi dettagliati su come eseguire questa operazione.
