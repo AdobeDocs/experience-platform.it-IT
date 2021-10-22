@@ -5,10 +5,9 @@ title: Gestione dei formati di dati con Data Prep
 topic-legacy: overview
 description: Questo documento offre una panoramica della gestione dei diversi tipi di dati in Preparazione dati.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 13%
 
 ---
@@ -21,9 +20,9 @@ Data Prep può gestire in modo affidabile diversi formati di dati acquisiti in A
 
 Se il tipo di origine è una stringa e il tipo di destinazione è booleano, Data Prep può analizzare automaticamente il valore e convertire il valore di origine in booleano.
 
-I valori `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` e `TRUE` vengono automaticamente analizzati per essere `true`.
+I valori `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`e `TRUE` vengono analizzati automaticamente `true`.
 
-I valori `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` e `FALSE` vengono automaticamente analizzati per essere `false`.
+I valori `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`e `FALSE` vengono analizzati automaticamente `false`.
 
 ## Date {#dates}
 
@@ -42,10 +41,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{DATE}` | Obbligatorio. Stringa che rappresenta la data. |
-| `{FORMAT}` | Facoltativo. Stringa che rappresenta il formato della data. Ulteriori informazioni sulla formattazione delle stringhe sono disponibili nella sezione [stringa formato data/ora](#format). |
+| `{FORMAT}` | Facoltativo. Stringa che rappresenta il formato della data di origine. Ulteriori informazioni sulla formattazione delle stringhe sono disponibili nella sezione [sezione stringa formato data/ora](#format). |
 | `{DEFAULT_DATE}` | Facoltativo. La data predefinita da restituire se la data specificata è null. |
 
-Ad esempio, l’espressione `date(orderDate, "yyyy-MM-dd")` converte un valore `orderDate` di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
+Ad esempio, l’espressione `date(orderDate, "yyyy-MM-dd")` convertirà un `orderDate` valore di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
 
 ### Conversioni di funzioni data
 
