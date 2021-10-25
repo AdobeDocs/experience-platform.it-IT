@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando l’SDK di destinazione.
 title: Come utilizzare l’SDK di destinazione per configurare una destinazione in streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -178,4 +178,4 @@ Dopo aver configurato e testato la destinazione, utilizza il [API di pubblicazio
 
 ## Passaggio 8: Documentare la destinazione {#document-destination}
 
-Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione in [Catalogo delle destinazioni di Experience League](/help/destinations/catalog/overview.md).
+Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione in [Catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md).
