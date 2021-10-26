@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 11%
+source-wordcount: '651'
+ht-degree: 12%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 11%
       - [Connettore BLOB di Azure](connectors/cloud-storage/blob.md)
       - [Connettore Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connettore di archiviazione file di Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Zona di destinazione dei dati](connectors/cloud-storage/data-landing-zone.md)
+      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -51,6 +51,7 @@ ht-degree: 11%
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
       - [Connettore Veeva CRM](connectors/crm/veeva.md)
+      - [Connettore Zoho CRM](connectors/crm/zoho.md)
    - Successo cliente {#customer-success}
       - [Connettore cloud del servizio Salesforce](connectors/customer-success/salesforce-service-cloud.md)
       - [Connettore ServiceNow](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 11%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoo CRM](tutorials/api/create/crm/zoho.md)
       - Successo cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 11%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoo CRM](tutorials/ui/create/crm/zoho.md)
       - Successo del cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

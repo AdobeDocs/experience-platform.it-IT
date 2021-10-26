@@ -5,7 +5,7 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Experience Platform consente l’acquisizione di dati da altre applicazioni Adob
 - [Creare una connessione sorgente Adobe Analytics nell’interfaccia utente](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Creare una connessione sorgente Attributi del cliente nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] panoramica del connettore](connectors/adobe-applications/marketo/marketo.md)
-- [Creare una connessione sorgente [!DNL Marketo Engage] nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Crea un [!DNL Marketo Engage] connessione sorgente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising
 
@@ -69,6 +69,7 @@ I sistemi di gestione delle relazioni con i clienti forniscono dati che possono 
 - [[!DNL Microsoft Dynamics] connettore](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connettore](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### Successo del cliente
 
@@ -141,21 +142,21 @@ Experience Platform fornisce il supporto per l’acquisizione di dati da un sist
 
 ## Controllo degli accessi alle origini durante l’acquisizione dei dati
 
-Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite in Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la scheda **[!UICONTROL Autorizzazioni]** in un particolare profilo di prodotto. Dal pannello **[!UICONTROL Modifica autorizzazioni]**, puoi accedere alle autorizzazioni relative alle origini tramite la voce di menu **[!UICONTROL inserimento dati]**. L&#39;autorizzazione **[!UICONTROL Visualizza origini]** consente l&#39;accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**, mentre l&#39;autorizzazione **[!UICONTROL Gestisci origini]** consente l&#39;accesso completo per leggere, creare, modificare e disabilitare le origini.
+Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite in Adobe Admin Console. Puoi accedere alle autorizzazioni tramite **[!UICONTROL Autorizzazioni]** in un particolare profilo di prodotto. Da **[!UICONTROL Modifica autorizzazioni]** puoi accedere alle autorizzazioni relative alle origini tramite il pannello **[!UICONTROL inserimento dati]** voce di menu. La **[!UICONTROL Visualizza origini]** l&#39;autorizzazione consente l&#39;accesso in sola lettura alle origini disponibili nel **[!UICONTROL Catalogo]** e le origini autenticate nel **[!UICONTROL Sfoglia]** , mentre **[!UICONTROL Gestisci origini]** Le autorizzazioni consentono l&#39;accesso completo alle origini in lettura, creazione, modifica e disattivazione.
 
 La tabella seguente illustra il funzionamento dell’interfaccia utente in base a diverse combinazioni di queste autorizzazioni:
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
-| **[!UICONTROL Visualizza]** SourcesOn | Concedi l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché alle schede Sfoglia, Account e Flusso di dati. |
-| **[!UICONTROL Gestisci]** originiOn | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, consente l&#39;accesso all&#39;opzione **[!UICONTROL Connetti origine]** in **[!UICONTROL Catalogo]** e all&#39;opzione **[!UICONTROL Seleziona dati]** in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci]** origini consente inoltre di abilitare o disabilitare i  **** flussi dati e di modificarne le pianificazioni. |
-| **[!UICONTROL Visualizza]** originiDisattivato e  **[!UICONTROL Gestisci]** originiDisattivato | Revoca tutti gli accessi alle sorgenti. |
+| **[!UICONTROL Visualizza origini]** On | Concedi l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché alle schede Sfoglia, Account e Flusso di dati. |
+| **[!UICONTROL Gestisci origini]** On | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, concede l&#39;accesso **[!UICONTROL Origine connessione]** opzione in **[!UICONTROL Catalogo]** e **[!UICONTROL Seleziona dati]** opzione in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci origini]** consente inoltre di abilitare o disabilitare **[!UICONTROL Flussi dati]** e modificarne le pianificazioni. |
+| **[!UICONTROL Visualizza origini]** Off e **[!UICONTROL Gestisci origini]** Disattivato | Revoca tutti gli accessi alle sorgenti. |
 
-Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite l&#39;Admin Console, incluse quelle quattro origini, consulta la [panoramica sul controllo degli accessi](../access-control/home.md).
+Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite l&#39;Admin Console, incluse quelle quattro origini, vedi [panoramica sul controllo degli accessi](../access-control/home.md).
 
 ## Termini e condizioni {#terms-and-conditions}
 
-Utilizzando una delle fonti etichettate come beta (&quot;Beta&quot;), l&#39;Utente riconosce che la Beta viene fornita ***&quot;così com&#39;è&quot; senza garanzia di alcun tipo***.
+Utilizzando una delle fonti etichettate come beta (&quot;Beta&quot;), l&#39;Utente riconosce che la Beta è fornita ***&quot;così com&#39;è&quot; senza garanzia di alcun tipo***.
 
 L&#39;Adobe non ha l&#39;obbligo di mantenere, correggere, aggiornare, modificare, modificare o altrimenti supportare la versione beta. Si consiglia di usare cautela e di non fare affidamento in alcun modo sul corretto funzionamento o sulle prestazioni di tali materiali Beta e/o di accompagnamento. La versione beta è considerata un’informazione riservata di Adobe.
 
