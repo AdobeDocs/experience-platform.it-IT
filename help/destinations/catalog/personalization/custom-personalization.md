@@ -3,7 +3,7 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata (Beta)
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito per recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce 1:1 in tempo reale e personalizzazione in base all’appartenenza a un segmento di un profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
+source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 ## Tipo di esportazione {#export-type}
 
-**Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile configurare diverse destinazioni di personalizzazione personalizzate per diversi [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
+**Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile configurare diverse destinazioni di personalizzazione personalizzate per diverse destinazioni [Adobe Data Collection Datastreams](../../../edge/fundamentals/datastreams.md).
 
 ## Casi di utilizzo {#use-cases}
 
@@ -44,26 +44,26 @@ Utilizzando una destinazione di personalizzazione personalizzata separata per il
 
 ## Collegati alla destinazione {#connect}
 
-Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione. Questo campo è facoltativo.
-* **[!UICONTROL Alias]** integrazione: Questo valore viene inviato all’Experience Platform Web SDK come nome di oggetto JSON.
-* **[!UICONTROL ID]** Datastream: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Per ulteriori informazioni, consulta [Configurazione di un datastream](../../../edge/fundamentals/datastreams.md) .
+* **[!UICONTROL Alias di integrazione]**: Questo valore viene inviato all’Experience Platform Web SDK come nome di oggetto JSON.
+* **[!UICONTROL ID Datastream]**: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Vedi [Configurazione di un datastream](../../../edge/fundamentals/datastreams.md) per ulteriori dettagli.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, leggi [Attivare profili e segmenti nelle destinazioni di richiesta del profilo](../../ui/activate-profile-request-destinations.md) .
+Leggi [Attivare profili e segmenti nelle destinazioni di richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ## Dati esportati {#exported-data}
 
-Se utilizzi [Tag di Adobe](../../../tags/home.md) per distribuire l&#39;SDK per web di Experience Platform, utilizza la funzionalità [invia evento completato](../../../edge/extension/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
+Se utilizzi [Adobe di tag](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [invio evento completato](../../../edge/extension/event-types.md) La funzionalità e l&#39;azione del codice personalizzato avranno un `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
 
-Di seguito è riportato un valore di esempio per la variabile `event.destinations` :
+Di seguito è riportato un valore di esempio per `event.destinations` variabile:
 
 ```
 [
@@ -85,7 +85,7 @@ Di seguito è riportato un valore di esempio per la variabile `event.destination
 ]
 ```
 
-Se non utilizzi [Tag per Adobi](../../../tags/home.md) per distribuire l&#39;SDK per web Experience Platform, utilizza la funzionalità [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
+Se non utilizzi [Adobe di tag](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
 
 La risposta JSON di Adobe Experience Platform può essere analizzata per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del segmento possono essere passati nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di come potrebbe essere specifico per la risposta di destinazione.
 
@@ -102,15 +102,15 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
-    if(results.destinations) { // Looking to see if the destination results are there
+}).then(function(result) {
+    if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -124,4 +124,4 @@ alloy("sendEvent", {
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, consulta la [Panoramica sulla governance dei dati](../../../data-governance/home.md).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](../../../data-governance/home.md).
