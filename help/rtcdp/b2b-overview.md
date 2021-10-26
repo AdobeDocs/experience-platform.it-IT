@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Panoramica dell’account Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
+source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1079'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Basato su Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition è progettato appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Riunisce i dati provenienti da più sorgenti e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono agli esperti di marketing di eseguire il targeting preciso di tipi di pubblico specifici e coinvolgerli in tutti i canali disponibili.
 
-Sono stati apportati miglioramenti a una varietà di funzionalità di Adobe Experience Platform che distinguono Real-time CDP B2B Edition dalla sua controparte B2C. Includono miglioramenti a Experience Data Model (XDM) per casi d’uso B2B, aggiornamenti alla risoluzione delle identità e alla segmentazione del profilo, nonché un connettore e una destinazione personalizzati per [!DNL Marketo Engage]. Il connettore [!DNL Marketo] consente ai marchi B2B di collegare i dati di coinvolgimento B2B leader del settore con informazioni comportamentali al fine di generare lead e migliorare le operazioni di marketing basate sull’account.
+Sono stati apportati miglioramenti a una varietà di funzionalità di Adobe Experience Platform che distinguono Real-time CDP B2B Edition dalla sua controparte B2C. Includono miglioramenti a Experience Data Model (XDM) per casi d’uso B2B, aggiornamenti alla risoluzione delle identità e alla segmentazione del profilo, nonché un connettore e una destinazione personalizzati per [!DNL Marketo Engage]. La [!DNL Marketo] connettore consente ai marchi B2B di collegare i dati di coinvolgimento B2B leader del settore con informazioni comportamentali al fine di generare lead e migliorare le operazioni di marketing basate sull’account.
 
 Con Real-time CDP B2B Edition, puoi:
 
@@ -32,9 +32,9 @@ I dettagli più completi sui miglioramenti apportati per Real-time CDP B2B Editi
 
 ## XDM
 
-Real-time CDP B2B Edition fornisce diverse nuove classi di schema XDM, gruppi di campi e tipi di relazione per acquisire e strutturare i dati in modo specifico per scopi B2B. Per informazioni dettagliate su ciascuno di questi miglioramenti, consulta la panoramica su [XDM in Real-time CDP B2B edition](./schemas/b2b.md) .
+Real-time CDP B2B Edition fornisce diverse nuove classi di schema XDM, gruppi di campi e tipi di relazione per acquisire e strutturare i dati in modo specifico per scopi B2B. Vedi la panoramica su [XDM in tempo reale CDP B2B edition](./schemas/b2b.md) per una suddivisione di ciascuno di questi miglioramenti.
 
-Utilizzando schemi B2B preconfigurati, puoi inserire i dati in una struttura standardizzata e fruibile. Molte delle nuove classi di schema sono mappate quasi direttamente a quelle incontrate nelle CRM tradizionali come [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] e altre origini dati B2B. Con Real-time CDP B2B Edition, è possibile portare i dati da fonti B2B in Platform in modo semplice e con risultati di facile controllo.
+Utilizzando schemi B2B preconfigurati, puoi inserire i dati in una struttura standardizzata e fruibile. Molte delle nuove classi di schema sono mappate quasi direttamente a quelle incontrate nelle CRM tradizionali come [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]e altre fonti di dati B2B. Con Real-time CDP B2B Edition, è possibile portare i dati da fonti B2B in Platform in modo semplice e con risultati di facile controllo.
 
 Questi miglioramenti XDM ti consentono di acquisire e attivare meglio i dati tramite sorgenti e destinazioni incentrate su B2B, migliorando l’unificazione dei dati e la presentazione per casi d’uso più vari e flessibili.
 
@@ -63,17 +63,19 @@ Se implementato correttamente, il sistema tiene traccia delle persone utilizzand
 
 ## Fonti B2B
 
-Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. La sorgente [!DNL Marketo] consente di inviare dati B2B in Platform e di tenerli aggiornati utilizzando le applicazioni connesse a Platform. Supporta un numero qualsiasi di istanze di [!DNL Marketo] (utile per le grandi aziende con più istanze) e richiama in un&#39;unica organizzazione IMS in cui i dati vengono uniti.
+Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. La [!DNL Marketo] source consente di inviare dati B2B in Platform e di tenerli aggiornati utilizzando le applicazioni connesse a Platform. Supporta qualsiasi numero di istanze di [!DNL Marketo] (utile per le grandi aziende con più istanze) e si rivolge a un’unica organizzazione IMS in cui i dati vengono uniti.
 
 >[!NOTE]
 >
->La [!DNL Marketo] sorgente è **non** necessaria per utilizzare Real-time CDP B2B Edition.
+>La [!DNL Marketo] source **not** richiesto per utilizzare Real-time CDP B2B Edition.
 
-Consulta le [sorgenti nella documentazione Real-time CDP B2B Edition](./sources/b2b.md) per ulteriori informazioni su Marketo e per inserire dati B2B in Platform.
+Consulta la sezione [origini in Real-time CDP B2B Edition](./sources/b2b.md) documentazione per ulteriori informazioni su Marketo e sull’inserimento di dati B2B in Platform.
 
 ## Destinazioni B2B
 
-Le destinazioni di Experience Platform come Google, Linkedin e Facebook sono disponibili e completamente supportate da Real-time CDP B2B Edition. Esiste anche una destinazione di Marketo Engage che invia in streaming i dati di appartenenza ai segmenti fuori da Platform e li rende disponibili come elenchi in Marketo.
+Le destinazioni di Experience Platform come Google Customer Match, Facebook, LinkedIn, Marketi Engage, Amazon S3, Google Display &amp; Video 360, Google Ads e Google Ad Manager sono disponibili e completamente supportate da Real-time CDP B2B Edition. La destinazione del Marketo Engage invia anche i dati di appartenenza al segmento da Platform e li rende disponibili come elenchi in Marketo.
+
+Vedi la panoramica sul [Destinazione Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) per ulteriori informazioni.
 
 Per le aziende con più di un sistema di gestione delle relazioni con i clienti, Real-time CDP B2B Edition offre la possibilità di configurare connettori di destinazione per istanze separate di Marketo o CRM. Se necessario, puoi configurare i connettori di destinazione per ogni istanza e inviare i tipi di pubblico a ciascuna istanza CRM in modo indipendente.
 
@@ -81,4 +83,4 @@ Per le aziende con più di un sistema di gestione delle relazioni con i clienti,
 
 Ora che conosci meglio i vantaggi per gli addetti al marketing offerti da Real-time CDP B2B Edition e le differenze tra esso e Real-time CDP, puoi imparare ad applicare queste funzioni alla tua organizzazione IMS.
 
-Per capire in che modo Real-time CDP B2B Edition può trarre vantaggio dal modello di servizio business-to-business, vedi l&#39; [esempio di caso d&#39;uso per Real-time CDP B2B Edition](./b2b-use-case.md). In alternativa, puoi fare riferimento agli schemi [nella documentazione di Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) per informazioni più specifiche sulla creazione di schemi e sulla definizione di relazioni per le entità dati B2B essenziali.
+Per comprendere in che modo Real-time CDP B2B Edition può trarre vantaggio dal modello di servizio business-to-business, vedi [esempio di utilizzo per Real-time CDP B2B Edition](./b2b-use-case.md). In alternativa, puoi fare riferimento alla [schemi in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentazione per indicazioni più specifiche sulla creazione degli schemi e sulla definizione delle relazioni per le entità di dati B2B essenziali.
