@@ -4,20 +4,18 @@ solution: Experience Platform
 title: Panoramica del connettore origine API HTTP
 description: Scopri come creare connettori di streaming per la connessione con Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
+source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# Connettore API HTTP
-
->[!IMPORTANT]
->
->Le funzioni mappatore per l’origine API HTTP sono attualmente supportate solo nell’API e non nell’interfaccia utente.
+# [!DNL HTTP API] connettore
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+
+È possibile utilizzare [!DNL HTTP API] connettore di origine per lo streaming dei dati in Platform. La [!DNL HTTP API] source è supportato da [!DNL Data Prep] che consente di mappare qualsiasi dato non conforme a XDM su un set di dati conforme a XDM.
 
 La documentazione seguente fornisce informazioni su come creare un connettore di streaming API HTTP con cui connettersi [!DNL Platform] utilizzando le API o l’interfaccia utente:
 

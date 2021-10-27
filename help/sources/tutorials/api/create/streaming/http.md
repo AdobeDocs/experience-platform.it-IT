@@ -1,55 +1,55 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;connessione streaming;creare una connessione streaming;guida api;tutorial;creare una connessione streaming;acquisizione streaming;acquisizione;
 solution: Experience Platform
-title: Creare una connessione in streaming utilizzando l’API
+title: Creare una connessione HTTP API Streaming utilizzando l’API
 topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 4ceeac5a7ae4a57787b37f6758851c49e02aa909
+source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 4%
+source-wordcount: '1567'
+ht-degree: 3%
 
 ---
 
 
-# Creazione di una connessione in streaming tramite API
+# Creazione di un [!DNL HTTP API] connessione in streaming tramite API
 
 Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
-Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per seguire i passaggi necessari per creare una connessione in streaming utilizzando l’API del servizio di flusso.
+Questa esercitazione utilizza la funzione [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per seguire i passaggi necessari per creare una connessione in streaming utilizzando l’API del servizio di flusso.
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Il framework standardizzato tramite il quale  [!DNL Platform] organizza i dati relativi alle esperienze.
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati dell’esperienza.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, per creare una connessione in streaming è necessario disporre di uno schema XDM di destinazione e di un set di dati. Per informazioni su come crearli, leggi l&#39;esercitazione su [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) o l&#39;esercitazione su [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Inoltre, per creare una connessione in streaming è necessario disporre di uno schema XDM di destinazione e di un set di dati. Per scoprire come crearli, leggi l’esercitazione su [dati di registrazione in streaming](../../../../../ingestion/tutorials/streaming-record-data.md) o l&#39;esercitazione su [streaming di dati della serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per effettuare correttamente le chiamate alle API di acquisizione in streaming.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../../../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../../../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -103,11 +103,11 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | ID della connessione streaming che desideri creare. |
 | `auth.params.dataType` | Tipo di dati per la connessione in streaming. Questo valore deve essere `xdm`. |
 | `auth.params.name` | Nome della connessione streaming che si desidera creare. |
-| `connectionSpec.id` | Specifica di connessione `id` per le connessioni in streaming. |
+| `connectionSpec.id` | Specifica della connessione `id` per connessioni in streaming. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova connessione creata, incluso l&#39;identificatore univoco (`id`).
+Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -118,7 +118,7 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | La `id` della nuova connessione creata. Questo viene qui indicato come `{CONNECTION_ID}`. |
+| `id` | La `id` della nuova connessione creata. Il presente regolamento è denominato `{CONNECTION_ID}`. |
 | `etag` | Identificatore assegnato alla connessione, che specifica la revisione della connessione. |
 
 ### Connessione autenticata
@@ -168,11 +168,11 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.dataType` | Tipo di dati per la connessione in streaming. Questo valore deve essere `xdm`. |
 | `auth.params.name` | Nome della connessione streaming che si desidera creare. |
 | `auth.params.authenticationRequired` | Il parametro che specifica la connessione streaming creata |
-| `connectionSpec.id` | Specifica di connessione `id` per le connessioni in streaming. |
+| `connectionSpec.id` | Specifica della connessione `id` per connessioni in streaming. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova connessione creata, incluso l&#39;identificatore univoco (`id`).
+Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -183,7 +183,7 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | La `id` della nuova connessione creata. Questo viene qui indicato come `{CONNECTION_ID}`. |
+| `id` | La `id` della nuova connessione creata. Il presente regolamento è denominato `{CONNECTION_ID}`. |
 | `etag` | Identificatore assegnato alla connessione, che specifica la revisione della connessione. |
 
 ## Ottieni URL endpoint di streaming
@@ -198,7 +198,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il valore `id` della connessione creata in precedenza. |
+| `{CONNECTION_ID}` | La `id` valore della connessione creata in precedenza. |
 
 **Richiesta**
 
@@ -212,7 +212,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla connessione richiesta. L’URL dell’endpoint di streaming viene creato automaticamente con la connessione e può essere recuperato utilizzando il valore `inletUrl` .
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla connessione richiesta. L’URL dell’endpoint di streaming viene creato automaticamente con la connessione e può essere recuperato utilizzando l’ `inletUrl` valore.
 
 ```json
 {
@@ -249,9 +249,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-## Creazione di una connessione sorgente
+## Creazione di una connessione sorgente {#source}
 
-Dopo aver creato la connessione di base, sarà necessario creare una connessione di origine. Quando crei una connessione sorgente, è necessario il valore `id` dalla connessione di base creata.
+Dopo aver creato la connessione di base, sarà necessario creare una connessione di origine. Quando crei una connessione sorgente, è necessario disporre della `id` dalla connessione di base creata.
 
 **Formato API**
 
@@ -282,7 +282,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 con informazioni dettagliate sulla nuova connessione sorgente creata, incluso l’identificatore univoco (`id`).
+Una risposta corretta restituisce lo stato HTTP 201 con dettagli sulla nuova connessione sorgente creata, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -291,11 +291,25 @@ Una risposta corretta restituisce lo stato HTTP 201 con informazioni dettagliate
 }
 ```
 
-## Creare una connessione di destinazione
+## Creare uno schema XDM di destinazione {#target-schema}
+
+Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+
+È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](../../../../../xdm/api/schemas.md).
+
+### Creare un set di dati di destinazione {#target-dataset}
+
+Un set di dati di destinazione può essere creato eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite API](../../../../../catalog/api/create-dataset.md).
+
+## Creare una connessione di destinazione {#target}
 
 Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti arrivano. Per creare una connessione di destinazione, devi fornire l’ID di specifica di connessione fisso associato al Data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID delle specifiche di connessione di Data Lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando l’ API [!DNL Flow Service] per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID delle specifiche di connessione di Data Lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -340,9 +354,71 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova c
 }
 ```
 
+## Creare una mappatura {#mapping}
+
+Affinché i dati di origine possano essere acquisiti in un set di dati di destinazione, devono prima essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione.
+
+Per creare un set di mappatura, invia una richiesta POST al gruppo `mappingSets` punto finale [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) fornendo lo schema XDM di destinazione `$id` e i dettagli dei set di mappatura che desideri creare.
+
+**Formato API**
+
+```http
+POST /mappingSets
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "version": 0,
+        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+        "xdmVersion": "1.0",
+        "mappings": [
+            {
+                "destinationXdmPath": "person.name.firstName",
+                "sourceAttribute": "firstName",
+                "identity": false,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.lastName",
+                "sourceAttribute": "lastName",
+                "identity": false,
+                "version": 0
+            }
+        ]
+    }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `xdmSchema` | La `$id` dello schema XDM di destinazione. |
+
+**Risposta**
+
+Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+
+```json
+{
+    "id": "380b032b445a46008e77585e046efe5e",
+    "version": 0,
+    "createdDate": 1604960750613,
+    "modifiedDate": 1604960750613,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
+}
+```
+
 ## Creare un flusso di dati
 
-Con le connessioni di origine e destinazione create, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta POST all&#39;endpoint `/flows`.
+Con le connessioni di origine e destinazione create, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta POST al `/flows` punto finale.
 
 **Formato API**
 
@@ -361,20 +437,36 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample flow",
-    "description": "Sample flow description",
-    "flowSpec": {
-        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
-        "version": "1.0"
-    },
-    "sourceConnectionIds": [
-        "{SOURCE_CONNECTION_ID}"
-    ],
-    "targetConnectionIds": [
-        "{TARGET_CONNECTION_ID}"
-    ]
-}'
+        "name": "HTTP API streaming dataflow",
+        "description": "HTTP API streaming dataflow",
+        "flowSpec": {
+            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
+        ],
+        "targetConnectionIds": [
+            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
+        ],
+        "transformations": [
+            {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "380b032b445a46008e77585e046efe5e",
+                "mappingVersion": 0
+            }
+            }
+        ]
+    }'
 ```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `flowSpec.id` | ID della specifica di flusso per [!DNL HTTP API]. Questo ID è: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | La [ID connessione di origine](#source) recuperato in un passaggio precedente. |
+| `targetConnectionIds` | La [ID connessione di destinazione](#target) recuperato in un passaggio precedente. |
+| `transformations.params.mappingId` | La [ID mappatura](#mapping) recuperato in un passaggio precedente. |
 
 **Risposta**
 
@@ -389,9 +481,9 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli del flusso di
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione HTTP in streaming che ti consente di utilizzare l’endpoint di streaming per acquisire dati in Platform. Per istruzioni su come creare una connessione in streaming nell&#39;interfaccia utente, leggi l&#39; [esercitazione sulla creazione di una connessione in streaming](../../../ui/create/streaming/http.md).
+Seguendo questa esercitazione, hai creato una connessione HTTP in streaming che ti consente di utilizzare l’endpoint di streaming per acquisire dati in Platform. Per istruzioni su come creare una connessione in streaming nell’interfaccia utente, leggi la [creazione di un&#39;esercitazione sulla connessione in streaming](../../../ui/create/streaming/http.md).
 
-Per informazioni su come eseguire lo streaming dei dati su Platform, leggi l’esercitazione su [dati in streaming della serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l’esercitazione su [dati in streaming record](../../../../../ingestion/tutorials/streaming-record-data.md).
+Per informazioni su come inviare dati a Platform, consulta l’esercitazione su [dati in streaming](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l&#39;esercitazione su [dati di registrazione in streaming](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Appendice
 
@@ -399,9 +491,9 @@ Questa sezione fornisce informazioni supplementari sulla creazione di connession
 
 ### Invio di messaggi a una connessione in streaming autenticata
 
-Se l’autenticazione di una connessione in streaming è abilitata, al client verrà richiesto di aggiungere l’intestazione `Authorization` alla richiesta.
+Se l’autenticazione di una connessione in streaming è abilitata, sarà necessario aggiungere al client `Authorization` intestazione della richiesta.
 
-Se l’intestazione `Authorization` non è presente o viene inviato un token di accesso non valido/scaduto, viene restituita una risposta HTTP 401 Non autorizzata con una risposta simile a quella riportata di seguito:
+Se la `Authorization` l&#39;intestazione non è presente oppure viene inviato un token di accesso non valido/scaduto. Verrà restituita una risposta non autorizzata HTTP 401 con una risposta simile come segue:
 
 **Risposta**
 
@@ -428,7 +520,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il valore `id` della nuova connessione streaming creata. |
+| `{CONNECTION_ID}` | La `id` valore della nuova connessione in streaming. |
 
 **Richiesta**
 
