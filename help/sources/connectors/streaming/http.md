@@ -1,27 +1,30 @@
 ---
-keywords: Experience Platform ;home;argomenti popolari;http api
+keywords: Experience Platform;home;argomenti popolari;api http
 solution: Experience Platform
-title: Panoramica del connettore di origine API HTTP
-description: Scoprite come creare connettori di streaming per connettersi ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
-translation-type: tm+mt
-source-git-commit: a4019227abaddd9dbe143899d273580ebf21849e
+title: Panoramica del connettore origine API HTTP
+description: Scopri come creare connettori di streaming per la connessione con Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+exl-id: 41e079f3-75b2-4033-8138-73162c31461a
+source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-
 # Connettore API HTTP
 
-Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform]. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+>[!IMPORTANT]
+>
+>Le funzioni mappatore per l’origine API HTTP sono attualmente supportate solo nell’API e non nell’interfaccia utente.
 
-La documentazione seguente fornisce informazioni su come creare un connettore di streaming API HTTP da connettere a [!DNL Platform] mediante le API o l&#39;interfaccia utente:
+Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+
+La documentazione seguente fornisce informazioni su come creare un connettore di streaming API HTTP con cui connettersi [!DNL Platform] utilizzando le API o l’interfaccia utente:
 
 ## Creare un connettore di streaming API HTTP utilizzando le API
 
-- [Creazione di una connessione di streaming HTTP tramite l&#39;API del servizio di flusso](../../tutorials/api/create/streaming/http.md)
+- [Creare una connessione in streaming HTTP utilizzando l’API del servizio di flusso](../../tutorials/api/create/streaming/http.md)
 
-## Creare un connettore di streaming API HTTP utilizzando l&#39;interfaccia utente
+## Creare un connettore di streaming API HTTP utilizzando l’interfaccia utente
 
-- [Creare una connessione di streaming API HTTP nell’interfaccia utente](../../tutorials/ui/create/streaming/http.md)
+- [Creare una connessione in streaming API HTTP nell’interfaccia utente](../../tutorials/ui/create/streaming/http.md)

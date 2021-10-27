@@ -5,21 +5,24 @@ title: Connettore Kafka
 topic-legacy: overview
 description: Il connettore di flusso per Adobe Experience Platform si basa su Apache Kafka Connect. Questa libreria può essere utilizzata per lo streaming in tempo reale di eventi JSON da argomenti Kafka nel tuo centro dati direttamente ad Experience Platform.
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a3aa74ca7319235c10902422abc0e897ad823b8
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# [!DNL Kafka] connettore per Adobe Experience Platform
+# [!DNL Kafka] connettore per Adobe Experience Platform (obsoleto)
 
-Il connettore di flusso per Adobe Experience Platform si basa su [!DNL Apache Kafka Connect]. Questa libreria può essere utilizzata per lo streaming in tempo reale di eventi JSON da [!DNL Kafka] argomenti nel datacenter direttamente a [!DNL Experience Platform].
+>[!IMPORTANT]
+>
+>Il connettore Kafka è obsoleto. Per creare una connessione in streaming e inserire dati in Adobe Experience Platform, consulta l’esercitazione su [creazione di una connessione streaming API HTTP](../../sources/connectors/streaming/http.md)
 
-Il connettore di flusso è un connettore lavello (unidirezionale) che fornisce dati da [!DNL Kafka] argomenti a un endpoint registrato su [!DNL Experience Platform]. Per utilizzare questo connettore, devi scaricare la libreria, aggiungerla alla distribuzione [!DNL Kafka] esistente e configurare gli argomenti [!DNL Kafka] nell’URL HTTP Adobe Streaming. Il codice aggiuntivo è **non** obbligatorio. Il connettore supporta le seguenti funzioni:
+Il connettore di flusso per Adobe Experience Platform è basato su [!DNL Apache Kafka Connect]. Questa libreria può essere utilizzata per lo streaming di eventi JSON da [!DNL Kafka] argomenti nel centro dati direttamente in [!DNL Experience Platform] in tempo reale.
+
+Il connettore di flusso è un connettore di lavello (unidirezionale), che fornisce i dati da [!DNL Kafka] argomenti relativi a un endpoint registrato su [!DNL Experience Platform]. Per utilizzare questo connettore, devi scaricare la libreria e aggiungerla al tuo esistente [!DNL Kafka] distribuzione e configurazione [!DNL Kafka] argomento relativo all’URL HTTP Adobe Streaming. Il codice aggiuntivo è **not** obbligatorio. Il connettore supporta le seguenti funzioni:
 
 - Raccolta di dati autenticata
 - Gestione in batch dei messaggi per ridurre le chiamate di rete e aumentare il throughput
 
-Per ulteriori informazioni sul connettore [!DNL Kafka], comprese le istruzioni su come impostare il connettore, consulta la [guida introduttiva](https://github.com/adobe/experience-platform-streaming-connect). Per un flusso di lavoro più dettagliato, consulta la [guida per gli sviluppatori](https://www.adobe.com/go/kafka-connector-developer-guide).
+Per ulteriori informazioni sulla [!DNL Kafka] il connettore, comprese le istruzioni su come impostare il connettore, leggere il [guida introduttiva](https://github.com/adobe/experience-platform-streaming-connect). Per un flusso di lavoro più dettagliato, leggi la sezione [guida per sviluppatori](https://www.adobe.com/go/kafka-connector-developer-guide).
