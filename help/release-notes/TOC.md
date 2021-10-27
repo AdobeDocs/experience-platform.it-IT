@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Note sulla versione di Adobe Experience Platform
 breadcrumb-title: Note sulla versione di Platform
 user-guide-description: Note sulla versione mensili per Adobe Experience Platform.
-source-git-commit: cb48952cb8aa0b8ca748a29559ca0daedb6fe7d2
+source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '55'
 ht-degree: 92%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 92%
 
 * [Note sulla versione corrente di Platform](latest/latest.md)
 * 2021 {#2021}
+   * [Ottobre 2021](2021/october-2021.md)
    * [Settembre 2021](2021/september-2021.md)
    * [Agosto 2021](2021/august-2021.md)
    * [Luglio 2021](2021/july-2021.md)
