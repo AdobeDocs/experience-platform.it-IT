@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 92%
+source-wordcount: '5292'
+ht-degree: 91%
 
 ---
 
@@ -219,7 +219,13 @@ Specifica il nome e il valore del cookie che devono esistere affinché un evento
 
 #### Custom Code
 
-Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato.
+Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento.
+
+>[!NOTE]
+>
+>ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
+
+Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato:
 
 1. Seleziona **[!UICONTROL Apri editor]**.
 1. Digita il codice personalizzato.
@@ -711,7 +717,7 @@ Utilizza il campo fornito per specificare il valore creato per un elemento di ar
 
 ### Oggetti uniti
 
-Seleziona più elementi di dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto. Gli oggetti di origine non verranno modificati. Se una proprietà si trova nella stessa posizione in più oggetti di origine, verrà utilizzato il valore di quest&#39;ultimo oggetto. Se il valore di una proprietà di origine è `undefined`, non sostituisce un valore di un oggetto di origine precedente. Se gli array si trovano nella stessa posizione in più oggetti di origine, gli array verranno concatenati.
+Seleziona più elementi di dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto. Gli oggetti di origine non verranno modificati. Se una proprietà si trova nella stessa posizione in più oggetti di origine, verrà utilizzato il valore di quest&#39;ultimo oggetto. Se il valore della proprietà di origine è `undefined`, non sovrascriverà un valore da un oggetto sorgente precedente. Se gli array si trovano nella stessa posizione in più oggetti di origine, gli array verranno concatenati.
 
 Ad esempio, si supponga di selezionare un elemento dati che fornisce il seguente oggetto:
 
@@ -833,20 +839,20 @@ Alcuni casi d&#39;uso comuni includono:
 
 ### Valore condizionale
 
-Un wrapper per la condizione [Value Comparison](#value-comparison-value-comparison). In base al risultato del confronto, restituirà uno dei due valori disponibili nel modulo. Può quindi gestire &quot;Se... Allora... Altro...&quot; scenari senza la necessità di regole aggiuntive.
+Un wrapper per il [Value Comparison](#value-comparison-value-comparison) condizione. In base al risultato del confronto, restituirà uno dei due valori disponibili nel modulo. Può quindi gestire &quot;Se... Allora... Altro...&quot; scenari senza la necessità di regole aggiuntive.
 
 ### Ambiente runtime
 
 Consente di selezionare una delle seguenti variabili:
 
-* Stage ambiente - Restituisce `_satellite.environment.stage` per distinguere tra ambienti di sviluppo/staging/produzione.
-* Data build libreria - Restituisce `turbine.buildInfo.buildDate` che contiene lo stesso valore come `_satellite.buildInfo.buildDate`.
+* Fase dell&#39;ambiente - Resi `_satellite.environment.stage` per distinguere tra ambienti di sviluppo/staging/produzione.
+* Data build della libreria - Restituisce `turbine.buildInfo.buildDate` che contiene lo stesso valore `_satellite.buildInfo.buildDate`.
 * Nome proprietà - Restituisce `_satellite.property.name` per ottenere il nome della proprietà Launch.
-* ID proprietà - Restituisce `_satellite.property.id` per ottenere l&#39;ID della proprietà Launch
+* ID proprietà - Restituisce `_satellite.property.id` per ottenere l’ID della proprietà Launch
 * Nome regola - Restituisce `event.$rule.name` contenente il nome della regola eseguita.
 * ID regola - Restituisce `event.$rule.id` contenente l&#39;ID della regola eseguita.
-* Tipo evento : restituisce `event.$type` contenente il tipo di evento che ha attivato la regola.
-* Payload per dettagli evento - Restituisce `event.detail` contenente il payload di un evento personalizzato o una regola di chiamata diretta.
+* Tipo evento - Restituisce `event.$type` contenente il tipo di evento che ha attivato la regola.
+* Payload dei dettagli dell&#39;evento - Restituisce `event.detail` contenente il payload di un evento personalizzato o una regola di chiamata diretta.
 * Identificatore di chiamata diretta - Restituisce `event.identifier` contenente l&#39;identificatore di una regola di chiamata diretta.
 
 ### Attributi del dispositivo
