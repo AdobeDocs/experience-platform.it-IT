@@ -1,14 +1,14 @@
 ---
 keywords: personalizzazione mirata; destinazione; destinazione target experience platform;destinazione adobe target;
 title: Connessione Adobe Target (Beta)
-description: Adobe Target è un’applicazione che fornisce personalizzazione e sperimentazione in tempo reale, 1:1 e basate sull’intelligenza artificiale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
+exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '453'
+ht-degree: 0%
 
 ---
-
 
 # Connessione Adobe Target (Beta) {#adobe-target-connection}
 
@@ -38,21 +38,27 @@ Una società di noleggio e vendita di casa vuole personalizzare la propria home 
 
 ## Collegati alla destinazione {#connect}
 
-Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_datastream"
+>title="Informazioni sugli ID di datastream"
+>abstract="Questa opzione determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. È necessario configurare un datastream prima di poter configurare la destinazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Scopri come configurare un datastream."
+
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 Adobe Experience Platform si connette automaticamente all’istanza Adobe Target della tua azienda. Non è richiesta alcuna autenticazione.
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
 * **Nome**: Compila il nome preferito per questa destinazione.
 * **Descrizione**: Inserisci una descrizione per la destinazione. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione. Questo campo è facoltativo.
-* **ID** Datastream: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Per ulteriori informazioni, consulta [Configurazione di un datastream](../../../edge/fundamentals/datastreams.md) .
+* **ID Datastream**: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Vedi [Configurazione di un datastream](../../../edge/fundamentals/datastreams.md) per ulteriori dettagli.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, leggi [Attivare profili e segmenti nelle destinazioni di richiesta del profilo](../../ui/activate-profile-request-destinations.md) .
+Leggi [Attivare profili e segmenti nelle destinazioni di richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ## Dati esportati {#exported-data}
 
@@ -60,4 +66,4 @@ Adobe Target legge i dati del profilo da Adobe Experience Platform Edge Network,
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
