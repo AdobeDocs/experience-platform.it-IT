@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 12%
+source-wordcount: '458'
+ht-degree: 9%
 
 ---
 
@@ -12,12 +12,30 @@ ht-degree: 12%
 
 **Data di rilascio: 27 ottobre 2021**
 
+## Aggiornamenti ad Experience Platform
+
+Aggiornamenti ad Experience Platform.
+
+### [Interfaccia utente] {#ui}
+
+L’interfaccia utente è stata aggiornata con le seguenti modifiche:
+
+| Funzione | Descrizione |
+| --- | --- |
+| Tema scuro | Utilizza lo switch Tema scuro per alternare tra temi chiari e scuri nell’interfaccia di Platform. Lo switch si trova nel profilo utente sotto nome utente ed e-mail. |
+| Attiva/disattiva la navigazione a sinistra | Utilizza l’interruttore di navigazione migliorato nella parte superiore dell’intestazione dell’applicazione per mostrare o nascondere il menu che mostra le funzionalità dell’Experience Platform. Il sistema ricorda l’ultima selezione e mostra solo le funzionalità a cui hai accesso. |
+| Visibilità degli accessi | La barra di navigazione a sinistra mostra solo le funzioni accessibili. Nelle versioni precedenti di Adobe Experience Platform, gli elementi non disponibili erano visibili, anche se non era possibile accedervi. |
+
+Consulta la sezione [Guida all’interfaccia utente di Platform](../../landing/ui-guide.md) per saperne di più.
+
+## Aggiornamenti alle funzioni esistenti
+
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [Origini](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
@@ -30,7 +48,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 Consulta la sezione [[!DNL Data Prep] panoramica](../../data-prep/home.md) per ulteriori informazioni su questo servizio.
 
-## Origini {#sources}
+### Origini {#sources}
 
 Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
