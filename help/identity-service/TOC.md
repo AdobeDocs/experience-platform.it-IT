@@ -4,10 +4,10 @@ user-guide-title: Servizio Adobe Experience Platform Identity
 breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 81b325fe0994eef73111f9fc474984a4550dd256
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 29%
+source-wordcount: '98'
+ht-degree: 28%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 29%
    - [Visualizzatore grafico di identità](ui/identity-graph-viewer.md)
    - [Rilevamento di dispositivi condivisi](ui/shared-devices.md)
 - [Panoramica ECID](ecid.md)
+- [Elaborazione delle richieste di privacy](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
