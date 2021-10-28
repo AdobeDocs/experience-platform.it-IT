@@ -5,118 +5,28 @@ title: Endpoint API per le metriche
 topic-legacy: developer guide
 description: Scopri come recuperare le metriche di osservabilità in Experience Platform utilizzando l’API Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '1865'
 ht-degree: 3%
 
 ---
 
 # Endpoint metriche
 
-Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, sulle tendenze della cronologia e sugli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. L’ endpoint `/metrics` nel [!DNL Observability Insights API] consente di recuperare in modo programmatico i dati delle metriche per l’attività dell’organizzazione in [!DNL Platform].
+Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, sulle tendenze della cronologia e sugli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. La `/metrics` punto finale [!DNL Observability Insights API] consente di recuperare in modo programmatico i dati delle metriche per l’attività dell’organizzazione in [!DNL Platform].
+
+>[!NOTE]
+>
+>L’endpoint delle metriche della versione precedente (V1) è stato dichiarato obsoleto. Questo documento si concentra esclusivamente sulla versione corrente (V2). Per informazioni dettagliate sull’endpoint V1 per le implementazioni legacy, consulta [Riferimento API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
 
 ## Recupera metriche di osservabilità
 
-Esistono due metodi supportati per recuperare i dati delle metriche utilizzando l’API:
-
-* [Versione 1](#v1): Specifica le metriche utilizzando i parametri di query.
-* [Versione 2](#v2): Specifica e applica filtri alle metriche utilizzando un payload JSON.
-
-### Versione 1 {#v1}
-
-Puoi recuperare i dati delle metriche effettuando una richiesta di GET all’ endpoint `/metrics`, specificando le metriche utilizzando i parametri di query.
-
-**Formato API**
-
-È necessario fornire almeno una metrica nel parametro `metric` . Altri parametri di query sono facoltativi per filtrare i risultati.
-
-```http
-GET /metrics?metric={METRIC}
-GET /metrics?metric={METRIC}&metric={METRIC_2}
-GET /metrics?metric={METRIC}&id={ID}
-GET /metrics?metric={METRIC}&dateRange={DATE_RANGE}
-GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
-```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `{METRIC}` | La metrica che desideri esporre. Quando combini più metriche in una singola chiamata, devi utilizzare una e commerciale (`&`) per separare le singole metriche. Ad esempio, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identificatore di una particolare risorsa [!DNL Platform] di cui desideri esporre le metriche. Questo ID può essere facoltativo, obbligatorio o non applicabile a seconda delle metriche utilizzate. Per un elenco delle metriche disponibili, inclusi gli ID supportati (obbligatori e facoltativi) per ciascuna metrica, consulta l’ [appendice](#available-metrics) . |
-| `{DATE_RANGE}` | L’intervallo di date per le metriche da esporre, in formato ISO 8601 (ad esempio, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
-
-**Richiesta**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/infrastructure/observability/insights/metrics?metric=timeseries.ingestion.dataset.size&metric=timeseries.ingestion.dataset.recordsuccess.count&id=5cf8ab4ec48aba145214abeb&dateRange=2018-10-01T07:00:00.000Z/2019-06-06T07:00:00.000Z \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce un elenco di oggetti, ognuno contenente una marca temporale all’interno della `dateRange` fornita e i valori corrispondenti per le metriche specificate nel percorso della richiesta. Se nel percorso della richiesta è incluso il `id` di una risorsa [!DNL Platform] , i risultati verranno applicati solo a tale risorsa. Se `id` viene omesso, i risultati verranno applicati a tutte le risorse applicabili all’interno dell’organizzazione IMS.
-
-```json
-{
-  "id": "5cf8ab4ec48aba145214abeb",
-  "imsOrgId": "{IMS_ORG}",
-  "timeseries": {
-    "granularity": "MONTH",
-    "items": [
-      {
-        "timestamp": "2019-06-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-          "timeseries.ingestion.dataset.size": 32320
-        }
-      },
-      {
-        "timestamp": "2019-05-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-          "timeseries.ingestion.dataset.size": 31409
-        }
-      },
-      {
-        "timestamp": "2019-04-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-03-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-02-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 390,
-          "timeseries.ingestion.dataset.size": 16801
-        }
-      }
-    ],
-    "_page": null,
-    "_links": null
-  },
-  "stats": {}
-}
-```
-
-### Versione 2 {#v2}
-
-Puoi recuperare i dati delle metriche effettuando una richiesta POST all’endpoint `/metrics`, specificando le metriche da recuperare nel payload.
+Puoi recuperare i dati delle metriche effettuando una richiesta di POST al `/metrics` endpoint, specificando le metriche da recuperare nel payload.
 
 **Formato API**
 
@@ -170,12 +80,12 @@ curl -X POST \
 | --- | --- |
 | `start` | La data/ora più recente da cui recuperare i dati delle metriche. |
 | `end` | Data/ora più recente da cui recuperare i dati delle metriche. |
-| `granularity` | Un campo facoltativo che indica l’intervallo di tempo per il quale dividere i dati delle metriche. Ad esempio, un valore di `DAY` restituisce metriche per ogni giorno compreso tra la data `start` e la data `end`, mentre un valore di `MONTH` raggrupperebbe i risultati delle metriche per mese. Quando si utilizza questo campo, è necessario fornire anche una proprietà `downsample` corrispondente per indicare la funzione di aggregazione tramite la quale raggruppare i dati. |
+| `granularity` | Un campo facoltativo che indica l’intervallo di tempo per il quale dividere i dati delle metriche. Ad esempio, un valore di `DAY` restituisce le metriche per ogni giorno compreso tra `start` e `end` data, mentre un valore `MONTH` raggrupperebbe invece i risultati delle metriche per mese. Quando si utilizza questo campo, un `downsample` è inoltre necessario fornire la proprietà per indicare la funzione di aggregazione tramite la quale raggruppare i dati. |
 | `metrics` | Matrice di oggetti, una per ogni metrica che si desidera recuperare. |
-| `name` | Nome di una metrica riconosciuta da Observability Insights. Per un elenco completo dei nomi delle metriche accettate, consulta l’ [appendice](#available-metrics) . |
-| `filters` | Un campo facoltativo che consente di filtrare le metriche in base a set di dati specifici. Il campo è una matrice di oggetti (uno per ogni filtro), con ogni oggetto contenente le seguenti proprietà: <ul><li>`name`: Il tipo di entità su cui filtrare le metriche. Attualmente, è supportato solo `dataSets`.</li><li>`value`: ID di uno o più set di dati. È possibile fornire più ID di set di dati come una singola stringa, con ciascun ID separato da caratteri a barre verticali (`|`).</li><li>`groupBy`: Se è impostato su true, indica che il corrispondente  `value` rappresenta più set di dati i cui risultati della metrica devono essere restituiti separatamente. Se è impostato su false, i risultati delle metriche per tali set di dati sono raggruppati.</li></ul> |
-| `aggregator` | Specifica la funzione di aggregazione da utilizzare per raggruppare più record serie temporali in singoli risultati. Per informazioni dettagliate sugli aggregatori disponibili, consulta la [documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Un campo facoltativo che consente di specificare una funzione di aggregazione per ridurre la frequenza di campionamento dei dati metrici ordinando i campi in intervalli (o &quot;bucket&quot;). L&#39;intervallo per il downsampling è determinato dalla proprietà `granularity` . Per informazioni dettagliate sul sottocampionamento, consulta la [documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `name` | Nome di una metrica riconosciuta da Observability Insights. Consulta la sezione [appendice](#available-metrics) per un elenco completo dei nomi delle metriche accettate. |
+| `filters` | Un campo facoltativo che consente di filtrare le metriche in base a set di dati specifici. Il campo è una matrice di oggetti (uno per ogni filtro), con ogni oggetto contenente le seguenti proprietà: <ul><li>`name`: Il tipo di entità su cui filtrare le metriche. Attualmente, solo `dataSets` è supportato.</li><li>`value`: ID di uno o più set di dati. È possibile fornire più ID di set di dati come una singola stringa, con ogni ID separato da caratteri a barre verticali (`|`).</li><li>`groupBy`: Quando è impostato su true, indica che il corrispondente `value` rappresenta più set di dati i cui risultati delle metriche devono essere restituiti separatamente. Se è impostato su false, i risultati delle metriche per tali set di dati sono raggruppati.</li></ul> |
+| `aggregator` | Specifica la funzione di aggregazione da utilizzare per raggruppare più record serie temporali in singoli risultati. Per informazioni dettagliate sugli aggregati disponibili, consulta la sezione [Documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
+| `downsample` | Un campo facoltativo che consente di specificare una funzione di aggregazione per ridurre la frequenza di campionamento dei dati metrici ordinando i campi in intervalli (o &quot;bucket&quot;). L&#39;intervallo per il sottocampionamento è determinato dalla `granularity` proprietà. Per informazioni dettagliate sul downcampionamento, consulta la [Documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,18 +178,18 @@ Una risposta corretta restituisce i punti dati risultanti per le metriche e i fi
 | `metric` | Nome di una delle metriche fornite nella richiesta. |
 | `filters` | La configurazione del filtro per la metrica specificata. |
 | `datapoints` | Matrice i cui oggetti rappresentano i risultati della metrica e i filtri specificati. Il numero di oggetti nell’array dipende dalle opzioni di filtro fornite nella richiesta. Se non sono stati forniti filtri, la matrice conterrà solo un singolo oggetto che rappresenta tutti i set di dati. |
-| `groupBy` | Se nella proprietà `filter` di una metrica sono stati specificati più set di dati e l’opzione `groupBy` è stata impostata su true nella richiesta, questo oggetto conterrà l’ID del set di dati a cui si applica la proprietà `dps` corrispondente.<br><br>Se l&#39;oggetto appare vuoto nella risposta, la  `dps` proprietà corrispondente si applica a tutti i set di dati forniti nella  `filters` matrice (o a tutti i set di dati in  [!DNL Platform] se non sono stati forniti filtri). |
-| `dps` | I dati restituiti per la metrica, il filtro e l’intervallo di tempo specificato. Ogni chiave in questo oggetto rappresenta una marca temporale con un valore corrispondente per la metrica specificata. Il periodo di tempo tra ciascun punto di dati dipende dal valore `granularity` specificato nella richiesta. |
+| `groupBy` | Se sono stati specificati più set di dati in `filter` per una metrica e `groupBy` è stata impostata su true nella richiesta, questo oggetto conterrà l&#39;ID del set di dati corrispondente `dps` si applica a.<br><br>Se l&#39;oggetto viene visualizzato vuoto nella risposta, il valore corrispondente `dps` si applica a tutti i set di dati forniti nella `filters` array (o tutti i set di dati in [!DNL Platform] se non sono stati forniti filtri). |
+| `dps` | I dati restituiti per la metrica, il filtro e l’intervallo di tempo specificato. Ogni chiave in questo oggetto rappresenta una marca temporale con un valore corrispondente per la metrica specificata. Il periodo di tempo tra ciascun punto di dati dipende dal `granularity` valore specificato nella richiesta. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sull’utilizzo dell’endpoint `/metrics`.
+La sezione seguente contiene informazioni aggiuntive sull’utilizzo delle `/metrics` punto finale.
 
 ### Metriche disponibili {#available-metrics}
 
-Nelle tabelle seguenti sono elencate tutte le metriche esposte da [!DNL Observability Insights], suddivise per il servizio [!DNL Platform] . Ogni metrica include una descrizione e un parametro di query ID accettato.
+Nelle tabelle seguenti sono elencate tutte le metriche esposte da [!DNL Observability Insights], suddivisi per [!DNL Platform] servizio. Ogni metrica include una descrizione e un parametro di query ID accettato.
 
 >[!NOTE]
 >
@@ -287,7 +197,7 @@ Nelle tabelle seguenti sono elencate tutte le metriche esposte da [!DNL Observab
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-La tabella seguente delinea le metriche per Adobe Experience Platform [!DNL Data Ingestion]. Le metriche in **grassetto** trasmettono in streaming le metriche di acquisizione.
+La tabella seguente delinea le metriche per Adobe Experience Platform [!DNL Data Ingestion]. Metriche in **audace** sono metriche di acquisizione in streaming.
 
 | Metrica Approfondimenti | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
@@ -321,7 +231,7 @@ La tabella seguente delinea le metriche per Adobe Experience Platform [!DNL Iden
 
 | Metrica Approfondimenti | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da [!DNL Identity Service] per un set di dati o tutti i set di dati. | ID set di dati |
+| timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nella relativa origine dati da [!DNL Identity Service], per un set di dati o tutti i set di dati. | ID set di dati |
 | timeseries.identity.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Identity Service], per un set di dati o per tutti i set di dati. | ID set di dati |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Numero di record Identity correttamente acquisiti per uno spazio dei nomi. | ID dello spazio dei nomi (**Obbligatorio**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Numero di record di identità non riusciti da uno spazio dei nomi. | ID dello spazio dei nomi (**Obbligatorio**) |
@@ -366,26 +276,26 @@ La tabella seguente delinea le metriche per [!DNL Real-time Customer Profile].
 
 | Metrica Approfondimenti | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Numero di record letti da [!DNL Data Lake] da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati |
+| timeseries.profiles.dataset.recordread.count | Numero di record letti dal [!DNL Data Lake] da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati |
 | timeseries.profiles.dataset.recordsuccess.count | Numero di record scritti nella relativa origine dati da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati |
 | timeseries.profiles.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati |
-| timeseries.profiles.dataset.batchsuccess.count | Numero di batch [!DNL Profile] acquisiti per un set di dati o per tutti i set di dati. | ID set di dati |
-| timeseries.profiles.dataset.batchfailed.count | Numero di batch [!DNL Profile] non riusciti per un set di dati o per tutti i set di dati. | ID set di dati |
-| platform.ups.ingest.streaming.request.m1_rate | Frequenza richieste in arrivo. | Organizzazione IMS (**Obbligatoria**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Tasso di successo dell’acquisizione. | Organizzazione IMS (**Obbligatoria**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | Frequenza dei nuovi record acquisiti per un set di dati. | ID set di dati (**Richiesto**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per creare una richiesta per un set di dati. | ID set di dati (**Richiesto**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp dell’ultima richiesta di creazione record per un set di dati. | ID set di dati (**Richiesto**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per la richiesta di aggiornamento di un set di dati. | ID set di dati (**Richiesto**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp dell’ultima richiesta di record di aggiornamento per un set di dati. | ID set di dati (**Richiesto**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | Dimensione media del record. | Organizzazione IMS (**Obbligatoria**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Frequenza di richieste di aggiornamento per i record acquisiti per un set di dati. | ID set di dati (**Richiesto**) |
+| timeseries.profiles.dataset.batchsuccess.count | Numero di [!DNL Profile] batch acquisiti per un set di dati o per tutti i set di dati. | ID set di dati |
+| timeseries.profiles.dataset.batchfailed.count | Numero di [!DNL Profile] batch non riusciti per un set di dati o per tutti i set di dati. | ID set di dati |
+| platform.ups.ingest.streaming.request.m1_rate | Frequenza richieste in arrivo. | Organizzazione IMS (**Obbligatorio**) |
+| platform.ups.ingest.streaming.access.put.success.m1_rate | Tasso di successo dell’acquisizione. | Organizzazione IMS (**Obbligatorio**) |
+| platform.ups.ingest.streaming.records.created.m15_rate | Frequenza dei nuovi record acquisiti per un set di dati. | ID set di dati (**Obbligatorio**) |
+| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per creare una richiesta per un set di dati. | ID set di dati (**Obbligatorio**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp dell’ultima richiesta di creazione record per un set di dati. | ID set di dati (**Obbligatorio**) |
+| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per la richiesta di aggiornamento di un set di dati. | ID set di dati (**Obbligatorio**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp dell’ultima richiesta di record di aggiornamento per un set di dati. | ID set di dati (**Obbligatorio**) |
+| platform.ups.ingest.streaming.record.size.m1_rate | Dimensione media del record. | Organizzazione IMS (**Obbligatorio**) |
+| platform.ups.ingest.streaming.records.updated.m15_rate | Frequenza di richieste di aggiornamento per i record acquisiti per un set di dati. | ID set di dati (**Obbligatorio**) |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Messaggi di errore
 
-Le risposte dall’endpoint `/metrics` possono restituire messaggi di errore in determinate condizioni. Questi messaggi di errore vengono restituiti nel seguente formato:
+Risposte da `/metrics` l’endpoint può restituire messaggi di errore in determinate condizioni. Questi messaggi di errore vengono restituiti nel seguente formato:
 
 ```json
 {
@@ -426,6 +336,6 @@ Nella tabella seguente sono elencati i diversi codici di errore che possono esse
 | `INSGHT-1001-400` | Query metriche non riuscita | Errore durante il tentativo di eseguire query sul database delle metriche a causa di una richiesta errata o dell&#39;annullamento della parsabilità della query stessa. Assicurati che la richiesta sia formattata correttamente prima di riprovare. |
 | `INSGHT-1001-500` | Query metriche non riuscita | Errore durante il tentativo di eseguire query sul database delle metriche a causa di un errore del server. Riprovare la richiesta e, se il problema persiste, contattare il supporto Adobe. |
 | `INSGHT-1002-500` | Errore del servizio | Impossibile elaborare la richiesta a causa di un errore interno. Riprovare la richiesta e, se il problema persiste, contattare il supporto Adobe. |
-| `INSGHT-1003-401` | Errore di convalida sandbox | Impossibile elaborare la richiesta a causa di un errore di convalida sandbox. Assicurati che il nome della sandbox fornito nell’intestazione `x-sandbox-name` rappresenti una sandbox valida e abilitata per la tua organizzazione IMS prima di riprovare. |
+| `INSGHT-1003-401` | Errore di convalida sandbox | Impossibile elaborare la richiesta a causa di un errore di convalida sandbox. Assicurati che il nome della sandbox fornito nella `x-sandbox-name` header rappresenta una sandbox valida e abilitata per la tua organizzazione IMS prima di riprovare. |
 
 {style=&quot;table-layout:auto&quot;}
