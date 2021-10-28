@@ -4,7 +4,7 @@ seo-description: The destinations service in Adobe Experience Platform uses conf
 seo-title: Configuration options in Destination SDK
 title: Opzioni di configurazione nell’SDK di destinazione
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 1%
@@ -17,12 +17,12 @@ ht-degree: 1%
 
 Il servizio Destinazioni in Adobe Experience Platform utilizza modelli di configurazione per diversi componenti che creano la funzionalità Destinazioni. Combinati, questi componenti consentono ad Experience Platform di connettersi ai partner di destinazione, inviare messaggi personalizzati e attivare i dati di profilo nell’ecosistema digitale. I modelli utilizzati in Adobe Experience Platform sono:
 
-* **Configurazione** della destinazione: Contiene informazioni di base sulla destinazione. Questa configurazione include i tipi di identità supportati dalla destinazione e vari attributi dell&#39;interfaccia utente per la scheda di destinazione nell&#39;interfaccia utente di Adobe Experience Platform.
-* **Specifiche** del server e del modello: Collega le informazioni sulle specifiche del server e sul modello utilizzato da Adobe per distribuire i payload alla destinazione.
-   * **Specifiche** server: Un modello che memorizza i dettagli dell’endpoint.
-   * **Specifiche** del modello: In questo modello, puoi definire come trasformare i campi dell’attributo di profilo tra lo schema XDM e il formato supportato dalla piattaforma. Per informazioni approfondite sulle lingue dei modelli supportati, i formati dei messaggi e le informazioni richieste da Adobe per configurare l&#39;integrazione con la piattaforma, leggi [Formato del messaggio](./message-format.md).
-* **Configurazione** autenticazione: Queste impostazioni definiscono il modo in cui gli utenti Adobe Experience Platform si connettono alla tua destinazione.
-* **Configurazione** dei metadati del pubblico: Questo modello ti consente di configurare il modo in cui i tipi di pubblico/segmenti vengono creati, aggiornati o eliminati a livello di programmazione nella destinazione.
+* **Configurazione della destinazione**: Contiene informazioni di base sulla destinazione. Questa configurazione include i tipi di identità supportati dalla destinazione e vari attributi dell&#39;interfaccia utente per la scheda di destinazione nell&#39;interfaccia utente di Adobe Experience Platform.
+* **Specifiche del server e del modello**: Collega le informazioni sulle specifiche del server e sul modello utilizzato da Adobe per distribuire i payload alla destinazione.
+   * **Specifiche del server**: Un modello che memorizza i dettagli dell’endpoint.
+   * **Specifiche dei modelli**: In questo modello, puoi definire come trasformare i campi dell’attributo di profilo tra lo schema XDM e il formato supportato dalla piattaforma. Per informazioni approfondite sui linguaggi di template supportati, sui formati dei messaggi e sulle informazioni richieste da Adobe per configurare l&#39;integrazione con la piattaforma, consulta [Formato del messaggio](./message-format.md).
+* **Configurazione dell’autenticazione**: Queste impostazioni definiscono il modo in cui gli utenti Adobe Experience Platform si connettono alla tua destinazione.
+* **Configurazione dei metadati del pubblico**: Questo modello ti consente di configurare il modo in cui i tipi di pubblico/segmenti vengono creati, aggiornati o eliminati a livello di programmazione nella destinazione.
 
 ![Modelli e configurazioni dell’SDK di destinazione](./assets/self-service-configuration.png)
 
@@ -34,9 +34,9 @@ Le pagine seguenti forniscono ulteriori dettagli sulle funzionalità e sulle opz
 |--- |--- |
 | [Configurazione della destinazione](./destination-configuration.md) | [Operazioni degli endpoint API delle destinazioni](./destination-configuration-api.md) |
 | [Specifiche del server e del modello](./server-and-template-configuration.md) | [Operazioni endpoint API server di destinazione](./destination-server-api.md) |
-| [Configurazione dell’autenticazione](./credentials-configuration.md) | [Operazioni API per l’endpoint delle credenziali](./credentials-configuration-api.md) |
+| [Configurazione dell’autenticazione](./authentication-configuration.md) | [Operazioni API per l’endpoint delle credenziali](./credentials-configuration-api.md) |
 | [Gestione dei metadati del pubblico](./audience-metadata-management.md) | [Operazioni API per l’endpoint dei metadati del pubblico](./audience-metadata-api.md) |
-| [Configurazione OAuth 2](./oauth2-authentication.md) | Configura utilizzando il parametro `customerAuthenticationConfigurations` nell&#39; [/destinations API endpoint](./destination-configuration-api.md). |
+| [Configurazione OAuth 2](./oauth2-authentication.md) | Configura utilizzando `customerAuthenticationConfigurations` nel [endpoint API /Destinazioni](./destination-configuration-api.md). |
 | [Formato del messaggio](./message-format.md) | - |
 | [Test di destinazione](./test-destination.md) | [Operazioni API per il test di destinazione](./destination-testing-api.md) |
 | [Pubblicazione destinazione](./configure-destination-instructions.md#publish-destination) | [Operazioni API di pubblicazione della destinazione](./destination-publish-api.md) |

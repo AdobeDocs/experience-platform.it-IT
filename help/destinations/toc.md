@@ -4,17 +4,17 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 9%
+source-wordcount: '657'
+ht-degree: 10%
 
 ---
 
 
 # Destinazioni {#destinations}
 
-* [Panoramica sulle destinazioni](./home.md)
+* [Destinazioni - Panoramica](./home.md)
 * [Tipi di destinazione e categorie](./destination-types.md)
 * Esercitazioni API {#api}
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
@@ -143,7 +143,7 @@ ht-degree: 9%
       * [Estensione Invoca Tags](./catalog/voice/invoca.md)
       * [Estensione Medallia](./catalog/voice/medallia.md)
       * [Estensione casella in entrata Talk URL](./catalog/voice/talkurl.md)
-* SDK per la destinazione {#destination-sdk}
+* SDK di destinazione {#destination-sdk}
    * [Panoramica](./destination-sdk/overview.md)
    * [Prerequisiti per l’integrazione](./destination-sdk/integration-prerequisites.md)
    * [Introduzione](./destination-sdk/getting-started.md)
@@ -153,12 +153,14 @@ ht-degree: 9%
       * [Specifiche del server e del modello](./destination-sdk/server-and-template-configuration.md)
       * [Formato del messaggio](./destination-sdk/message-format.md)
       * [Gestione dei metadati del pubblico](./destination-sdk/audience-metadata-management.md)
-      * [Configurazione dell’autenticazione](./destination-sdk/credentials-configuration.md)
-      * [Autenticazione OAuth 2](./destination-sdk/oauth2-authentication.md)
+      * Autenticazione {#authentication}
+         * [Configurazione dell’autenticazione](./destination-sdk/authentication-configuration.md)
+         * [Autenticazione OAuth 2](./destination-sdk/oauth2-authentication.md)
       * Strumenti per sviluppatori {#developer-tools}
          * [Creare e testare un modello di trasformazione dei messaggi](./destination-sdk/create-template.md)
          * [Verifica la configurazione di destinazione](./destination-sdk/test-destination.md)
-   * Riferimento API {#api-reference}
+   * Operazioni API {#api}
+      * [Riferimento API per l’SDK di destinazione (Authoring delle destinazioni)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operazioni API per gli endpoint delle destinazioni](./destination-sdk/destination-configuration-api.md)
       * [Operazioni API endpoint server di destinazione](./destination-sdk/destination-server-api.md)
       * [Operazioni API per l’endpoint dei metadati del pubblico](./destination-sdk/audience-metadata-api.md)
