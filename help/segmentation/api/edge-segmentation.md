@@ -5,9 +5,9 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione edge, l
 | Più hit in arrivo in un profilo temporale di 24 ore | Una definizione di segmento che fa riferimento a più eventi che si verificano all’interno di un intervallo di tempo di 24 ore. | Persone che hanno visitato la homepage **o** Ho visitato la pagina di pagamento nelle ultime 24 ore. |
 | Eventi multipli con un profilo entro una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a più eventi che si verificano all’interno di un intervallo di tempo di 24 ore. | Persone dagli Stati Uniti che hanno visitato la homepage **e** Ho visitato la pagina di pagamento nelle ultime 24 ore. |
 
-{style=&quot;table-layout:auto&quot;}
+Inoltre, il segmento **deve** essere associato a un criterio di unione attivo sul bordo. Per ulteriori informazioni sui criteri di unione, consultare il [guida ai criteri di unione](../../profile/api/merge-policies.md).
 
 ## Recupera tutti i segmenti abilitati per la segmentazione dei bordi
 
