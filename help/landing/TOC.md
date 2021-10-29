@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: a0954c6134c532fbcecadd8b4b8775fdf28711da
+source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '233'
 ht-degree: 22%
 
 ---
@@ -37,8 +37,12 @@ ht-degree: 22%
 * Documentazione di Platform {#documentation}
    * [Panoramica](documentation/overview.md)
    * [Supporto linguistico](documentation/language-support.md)
-* Piattaforma nell&#39;ecosistema Adobe {#ecosystem}
-   * [Servizi applicazione](application-services.md)
+* Servizi applicativi basati su Platform {#ecosystem}
+   * [Panoramica](application-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
+   * [Real-time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Applicazione e servizi intelligenti (video)](video/application-intelligent-services.md)
    * [Integrazioni con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
@@ -51,7 +55,7 @@ ht-degree: 22%
          * [Panoramica](./governance-privacy-security/consent/iab/overview.md)
          * [Configurare un set di dati per acquisire dati di consenso e preferenza](./governance-privacy-security/consent/iab/dataset.md)
       * [Integrare Platform Web SDK per elaborare i dati di consenso e preferenza](./governance-privacy-security/consent/sdk.md)
-   * Log di controllo (Beta) {#audit-logs}
+   * Registri di controllo (beta) {#audit-logs}
       * [Panoramica](./governance-privacy-security/audit-logs/overview.md)
 * [Dashboard di utilizzo licenze](license-usage-dashboard.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
