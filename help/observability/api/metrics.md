@@ -5,9 +5,9 @@ title: Endpoint API per le metriche
 topic-legacy: developer guide
 description: Scopri come recuperare le metriche di osservabilità in Experience Platform utilizzando l’API Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `granularity` | Un campo facoltativo che indica l’intervallo di tempo per il quale dividere i dati delle metriche. Ad esempio, un valore di `DAY` restituisce le metriche per ogni giorno compreso tra `start` e `end` data, mentre un valore `MONTH` raggrupperebbe invece i risultati delle metriche per mese. Quando si utilizza questo campo, un `downsample` è inoltre necessario fornire la proprietà per indicare la funzione di aggregazione tramite la quale raggruppare i dati. |
 | `metrics` | Matrice di oggetti, una per ogni metrica che si desidera recuperare. |
 | `name` | Nome di una metrica riconosciuta da Observability Insights. Consulta la sezione [appendice](#available-metrics) per un elenco completo dei nomi delle metriche accettate. |
-| `filters` | Un campo facoltativo che consente di filtrare le metriche in base a set di dati specifici. Il campo è una matrice di oggetti (uno per ogni filtro), con ogni oggetto contenente le seguenti proprietà: <ul><li>`name`: Il tipo di entità su cui filtrare le metriche. Attualmente, solo `dataSets` è supportato.</li><li>`value`: ID di uno o più set di dati. È possibile fornire più ID di set di dati come una singola stringa, con ogni ID separato da caratteri a barre verticali (`|`).</li><li>`groupBy`: Quando è impostato su true, indica che il corrispondente `value` rappresenta più set di dati i cui risultati delle metriche devono essere restituiti separatamente. Se è impostato su false, i risultati delle metriche per tali set di dati sono raggruppati.</li></ul> |
+| `filters` | Un campo facoltativo che consente di filtrare le metriche in base a set di dati specifici. Il campo è una matrice di oggetti (uno per ogni filtro), con ogni oggetto contenente le seguenti proprietà: <ul><li>`name`: Il tipo di entità su cui filtrare le metriche. Attualmente, solo `dataSets` è supportato.</li><li>`value`: ID di uno o più set di dati. È possibile fornire più ID di set di dati come una singola stringa, con ogni ID separato da caratteri a barre verticali (`\|`).</li><li>`groupBy`: Quando è impostato su true, indica che il corrispondente `value` rappresenta più set di dati i cui risultati delle metriche devono essere restituiti separatamente. Se è impostato su false, i risultati delle metriche per tali set di dati sono raggruppati.</li></ul> |
 | `aggregator` | Specifica la funzione di aggregazione da utilizzare per raggruppare più record serie temporali in singoli risultati. Per informazioni dettagliate sugli aggregati disponibili, consulta la sezione [Documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Un campo facoltativo che consente di specificare una funzione di aggregazione per ridurre la frequenza di campionamento dei dati metrici ordinando i campi in intervalli (o &quot;bucket&quot;). L&#39;intervallo per il sottocampionamento è determinato dalla `granularity` proprietà. Per informazioni dettagliate sul downcampionamento, consulta la [Documentazione OpenTSDB](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
