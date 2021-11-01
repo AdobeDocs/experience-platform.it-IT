@@ -6,7 +6,7 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
+source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 0%
@@ -23,14 +23,14 @@ Il dashboard di monitoraggio fornisce una rappresentazione visiva del percorso d
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [Flussi di dati](../home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
-   - [Il flusso di dati viene eseguito](../../sources/notifications.md): Le esecuzioni dei flussi di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
+- [Flussi di dati](../home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, fino a [!DNL Identity] e [!DNL Profile]e a [!DNL Destinations].
+   - [Corse del flusso di dati](../../sources/notifications.md): Le esecuzioni dei flussi di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
 - [Destinazioni](../../destinations/home.md): Le destinazioni sono integrazioni predefinite con applicazioni comunemente utilizzate che consentono l’attivazione senza soluzione di continuità dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-- [Sandbox](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 ## Monitorare i flussi di dati nell’area di lavoro Destinazioni
 
-Nell’area di lavoro **[!UICONTROL Destinazioni]** nell’interfaccia utente di Platform, passa alla scheda **[!UICONTROL Sfoglia]** e seleziona il nome di una destinazione da visualizzare.
+In **[!UICONTROL Destinazioni]** nell’interfaccia utente di Platform, passa alla **[!UICONTROL Sfoglia]** e selezionare il nome di una destinazione che si desidera visualizzare.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -40,14 +40,14 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| Abilitata | Lo stato `Enabled` indica che un flusso di dati è attivo e acquisisce i dati in base alla pianificazione fornita. |
-| Disabilitata | Lo stato `Disabled` indica che un flusso di dati è inattivo e non acquisisce alcun dato. |
-| Elaborazione | Lo stato `Processing` indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
-| Errore | Lo stato `Error` indica che il processo di attivazione di un flusso di dati è stato interrotto. |
+| Abilitata | La `Enabled` lo stato indica che un flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. |
+| Disabilitata | La `Disabled` lo stato indica che un flusso di dati è inattivo e non esporta alcun dato. |
+| Elaborazione | La `Processing` lo stato indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
+| Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
 ### Il flusso di dati viene eseguito per le destinazioni di streaming
 
-Per le destinazioni di streaming, la scheda [!UICONTROL Flusso di dati esegue] fornisce un aggiornamento orario per i dati delle metriche nel flusso di dati in esecuzione. Le statistiche più importanti etichettate sono quelle sulle identità.
+Per le destinazioni di streaming, l’ [!UICONTROL Corse del flusso di dati] La scheda fornisce un aggiornamento orario per i dati delle metriche in esecuzione nel flusso di dati. Le statistiche più importanti etichettate sono quelle sulle identità.
 
 Le identità rappresentano i diversi facet di un profilo. Ad esempio, se un profilo contiene sia un numero di telefono che un indirizzo e-mail, questo avrà due identità.
 
@@ -61,15 +61,15 @@ Viene visualizzato un elenco di singole esecuzioni e le relative metriche specif
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Inizio]** esecuzione flusso di dati: Data di inizio dell&#39;esecuzione del flusso di dati.
-- **[!UICONTROL Tempo]** di elaborazione: Il tempo necessario all’elaborazione del flusso di dati.
+- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
 - **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
-- **[!UICONTROL Identità]** non riusciteIl numero totale di identità di profilo non attivate nella destinazione a causa di errori.
-- **[!UICONTROL Tasso]** di attivazione: Percentuale di identità ricevute che sono state attivate o saltate correttamente. La formula seguente illustra come viene calcolato questo valore:
+- **[!UICONTROL Identità non riuscite]** Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
+- **[!UICONTROL Tasso di attivazione]**: Percentuale di identità ricevute che sono state attivate o saltate correttamente. La formula seguente illustra come viene calcolato questo valore:
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
-- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati: Completato   o  [!UICONTROL Elaborazione].  Completato significa che tutte le identità per l’esecuzione del flusso di dati corrispondente sono state acquisite entro un’ora.  L’elaborazione indica che l’esecuzione del flusso di dati non è ancora stata completata.
+- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati: o [!UICONTROL Completato] o [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che tutte le identità per l’esecuzione del flusso di dati corrispondente sono state esportate entro un periodo di un’ora. [!UICONTROL Elaborazione] significa che l’esecuzione del flusso di dati non è ancora stata completata.
 
 Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, selezionare l’ora di inizio dell’esecuzione dall’elenco.
 
@@ -77,13 +77,13 @@ La pagina dei dettagli di un’esecuzione del flusso di dati contiene informazio
 
 ![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona la **[!UICONTROL Identità escluse]** alternare.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Esecuzione del flusso di dati per le destinazioni batch
 
-Per le destinazioni batch, la scheda [!UICONTROL Flusso di dati esegue] fornisce i dati della metrica per le esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
+Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati delle metriche sulle esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
 - **[!UICONTROL Identità attivate]**: Numero di singole identità di profilo attivate correttamente nella destinazione selezionata.
 - **[!UICONTROL Identità escluse]**: Il conteggio delle singole identità di profilo escluse per l’attivazione per la destinazione selezionata, in base agli attributi mancanti e alla violazione del consenso.
@@ -92,12 +92,12 @@ Per le destinazioni batch, la scheda [!UICONTROL Flusso di dati esegue] fornisce
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Inizio]** esecuzione flusso di dati: Data di inizio dell&#39;esecuzione del flusso di dati.
-- **[!UICONTROL Tempo]** di elaborazione: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
+- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
 - **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
-- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati. Può essere uno dei tre stati seguenti: [!UICONTROL Riuscito], [!UICONTROL Non riuscito] e [!UICONTROL Elaborazione].  Il flusso di dati è attivo e acquisisce i dati in base alla pianificazione fornita.  Non riuscito significa che l’attivazione dei dati è stata sospesa a causa di errori.  L’elaborazione indica che il flusso di dati non è ancora attivo e viene generalmente rilevato quando viene creato un nuovo flusso di dati.
+- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati. Può essere uno dei tre stati seguenti: [!UICONTROL Completato], [!UICONTROL Non riuscito]e [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che il flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. [!UICONTROL Non riuscito] significa che l’attivazione dei dati è stata sospesa a causa di errori. [!UICONTROL Elaborazione] significa che il flusso di dati non è ancora attivo e viene generalmente rilevato quando viene creato un nuovo flusso di dati.
 
 Per visualizzare i dettagli di un’esecuzione di un flusso di dati specifico, selezionare l’ora di inizio dell’esecuzione dall’elenco.
 
@@ -107,69 +107,68 @@ Per visualizzare i dettagli di un’esecuzione di un flusso di dati specifico, s
 
 La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’elenco dei flussi di dati, visualizza informazioni più specifiche sul flusso di dati:
 
-- **[!UICONTROL Dimensione dei dati]**: Dimensione del flusso di dati che viene acquisito.
-- **[!UICONTROL File]** totali: Numero totale di file acquisiti nel flusso di dati.
+- **[!UICONTROL Dimensione dei dati]**: Dimensione del flusso di dati da esportare.
+- **[!UICONTROL File totali]**: Numero totale di file esportati nel flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: L’ora dell’ultimo aggiornamento del flusso di dati.
 
 ![](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona la **[!UICONTROL Identità escluse]** alternare.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Dashboard del monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
 
-Per accedere al dashboard [!UICONTROL Monitoraggio], seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)
-) nella navigazione a sinistra. Una volta nella pagina [!UICONTROL Monitoraggio], seleziona [!UICONTROL Destinazioni]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni sui processi di esecuzione di destinazione.
+Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
 
 Al centro del dashboard c&#39;è il pannello Activation , che contiene metriche e grafici che mostrano dati sulla frequenza di attivazione dei dati esportati nelle destinazioni.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-Per impostazione predefinita, i dati visualizzati contengono i tassi di attivazione delle ultime 24 ore. Selezionare **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati. Le opzioni disponibili includono **[!UICONTROL Ultime 24 ore]**, **[!UICONTROL Ultimi 7 giorni]** e **[!UICONTROL Ultimi 30 giorni]**. In alternativa, è possibile selezionare le date nella finestra a comparsa del calendario visualizzata. Dopo aver selezionato le date, selezionare **[!UICONTROL Applica]** per regolare l&#39;intervallo di tempo delle informazioni visualizzate.
+Per impostazione predefinita, i dati visualizzati contengono i tassi di attivazione delle ultime 24 ore. Seleziona **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati. Le opzioni disponibili includono **[!UICONTROL Ultime 24 ore]**, **[!UICONTROL Ultimi 7 giorni]** e **[!UICONTROL Ultimi 30 giorni]**. In alternativa, è possibile selezionare le date nella finestra a comparsa del calendario visualizzata. Dopo aver selezionato le date, seleziona **[!UICONTROL Applica]** per regolare l&#39;intervallo di tempo delle informazioni visualizzate.
 
 >[!NOTE]
 >
->La schermata seguente mostra il tasso di attivazione per gli ultimi 30 giorni invece delle ultime 24 ore. Per regolare l&#39;intervallo di tempo, seleziona **[!UICONTROL Ultimi 30 giorni]**.
+>La schermata seguente mostra il tasso di attivazione per gli ultimi 30 giorni invece delle ultime 24 ore. È possibile regolare l&#39;intervallo di tempo selezionando **[!UICONTROL Ultimi 30 giorni]**.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona l&#39;interruttore **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
+Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-Il pannello **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-Puoi anche filtrare l’elenco di destinazioni per visualizzare solo la categoria di destinazioni selezionata. Seleziona il menu a discesa **[!UICONTROL Destinazioni personali]** e seleziona il tipo di destinazione a cui desideri applicare il filtro.
+Puoi anche filtrare l’elenco di destinazioni per visualizzare solo la categoria di destinazioni selezionata. Seleziona la **[!UICONTROL Destinazioni personali]** e seleziona il tipo di destinazione in cui desideri filtrare.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Inoltre, puoi inserire una destinazione nella barra di ricerca per isolarla in una singola destinazione. Per visualizzare i flussi di dati della destinazione, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a esso per visualizzare un elenco dei relativi flussi di dati attivi.
+Inoltre, puoi inserire una destinazione nella barra di ricerca per isolarla in una singola destinazione. Per visualizzare i flussi di dati della destinazione, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a per visualizzare un elenco dei relativi flussi di dati attivi.
 
 ![](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Se desideri visualizzare tutti i flussi di dati esistenti tra tutte le destinazioni, seleziona **[!UICONTROL Flussi di dati]**.
 
-Viene visualizzato un elenco di flussi di dati raggruppati per destinazione. Per ulteriori dettagli su un flusso di dati specifico, individua la destinazione da monitorare, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a esso e quindi seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto al flusso di dati di cui desideri ottenere ulteriori informazioni.
+Viene visualizzato un elenco di flussi di dati raggruppati per destinazione. Puoi visualizzare ulteriori dettagli per un flusso di dati specifico individuando la destinazione da monitorare, selezionando il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto a esso, quindi selezionando il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto al flusso di dati desideri ulteriori informazioni.
 
 ![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 
-La pagina delle esecuzioni del flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio del flusso di dati, il tempo di elaborazione, i profili ricevuti, le identità attivate, le identità escluse, le identità non riuscite, il tasso di attivazione e lo stato. Per visualizzare ulteriori dettagli su un’esecuzione di un flusso di dati specifico, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto all’ora di avvio del flusso di dati.
+La pagina delle esecuzioni del flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio del flusso di dati, il tempo di elaborazione, i profili ricevuti, le identità attivate, le identità escluse, le identità non riuscite, il tasso di attivazione e lo stato. Per visualizzare ulteriori dettagli sull’esecuzione di un flusso di dati specifico, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter.png) accanto all’ora di avvio del flusso di dati.
 
 ![](../assets/ui/monitor-destinations/dashboard-dataflows-filter.png)
 
 Oltre ai dettagli visualizzati nell’elenco dei flussi di dati, nella pagina dei dettagli dei flussi di dati vengono visualizzate informazioni più specifiche relative al flusso di dati:
 
-- **[!UICONTROL ID]** esecuzione flusso di dati: ID del flusso di dati.
+- **[!UICONTROL ID esecuzione flusso di dati]**: ID del flusso di dati.
 - **[!UICONTROL ID organizzazione IMS]**: Organizzazione IMS a cui appartiene il flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: L’ora dell’ultimo aggiornamento del flusso di dati.
 
-Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona la **[!UICONTROL Identità escluse]** alternare.
 
 ![](../assets/ui/monitor-destinations/identities-excluded.png)
 
 ## Passaggi successivi
 
-Seguendo questa guida, ora sai come monitorare i flussi di dati sia per le destinazioni batch che per quelle in streaming, comprese tutte le informazioni rilevanti quali il tempo di elaborazione, il tasso di attivazione e lo stato. Per ulteriori informazioni sui flussi di dati in Platform, consulta la [panoramica dei flussi di dati](../home.md). Per ulteriori informazioni sulle destinazioni, consulta la [panoramica delle destinazioni](../../destinations/home.md).
+Seguendo questa guida, ora sai come monitorare i flussi di dati sia per le destinazioni batch che per quelle in streaming, comprese tutte le informazioni rilevanti quali il tempo di elaborazione, il tasso di attivazione e lo stato. Per ulteriori informazioni sui flussi di dati in Platform, consulta la sezione [panoramica dei dataflows](../home.md). Per ulteriori informazioni sulle destinazioni, consulta il [panoramica sulle destinazioni](../../destinations/home.md).
