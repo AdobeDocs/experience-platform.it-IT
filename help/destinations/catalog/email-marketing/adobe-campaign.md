@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un set di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '713'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Nome blocco]**: *Per connessioni S3*. Immetti la posizione del tuo bucket S3 dove [!DNL Platform] depositerà i dati di esportazione come file CSV.
 * **[!UICONTROL Percorso cartella]**: Fornisci il percorso nel percorso di archiviazione in cui [!DNL Platform] depositerà i dati di esportazione come file CSV.
 * **[!UICONTROL Contenitore]**: *Per connessioni BLOB*. Il contenitore contenente il BLOB nel percorso della cartella è in.
-* **[!UICONTROL Formato file]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+* **[!UICONTROL Formato file]**: Seleziona **CSV** per esportare i file CSV nel percorso di archiviazione.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

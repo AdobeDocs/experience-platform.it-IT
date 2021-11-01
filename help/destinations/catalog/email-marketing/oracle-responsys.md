@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;destinazione risposta oracle
 title: Oracle connessione Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing cross-channel offerte da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
 * **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
 * **[!UICONTROL Percorso cartella]**: Fornisci il percorso nella posizione di archiviazione in cui Platform depositerà i dati di esportazione come file CSV.
-* **[!UICONTROL Formato file]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+* **[!UICONTROL Formato file]**: Seleziona **CSV** per esportare i file CSV nel percorso di archiviazione.
 
 <!--
 

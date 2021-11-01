@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni;salesforce;destinazione salesforce
 title: Collegamento Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
 * **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
 * **[!UICONTROL Percorso cartella]**: Fornisci il percorso nella posizione di archiviazione in cui Platform depositerà i dati di esportazione come file CSV.
-* **[!UICONTROL Formato file]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+* **[!UICONTROL Formato file]**: Seleziona **CSV** per esportare i file CSV nel percorso di archiviazione.
 
 <!--
 
