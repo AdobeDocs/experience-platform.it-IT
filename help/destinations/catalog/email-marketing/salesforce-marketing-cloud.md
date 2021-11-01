@@ -1,11 +1,11 @@
 ---
 keywords: e-mail;e-mail;e-mail;destinazioni;salesforce;destinazione salesforce
 title: Collegamento Marketing Cloud Salesforce
-seo-description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per visitatori e clienti per personalizzare la loro esperienza.
+seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -16,21 +16,21 @@ ht-degree: 0%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per visitatori e clienti per personalizzare la loro esperienza.
 
-Per inviare i dati dei segmenti a [!DNL Salesforce Marketing Cloud], è necessario prima [collegare la destinazione](#connect-destination) in Platform, quindi [impostare un&#39;importazione di dati](#import-data-into-salesforce) dal percorso di archiviazione in [!DNL Salesforce Marketing Cloud].
+Per inviare i dati del segmento a [!DNL Salesforce Marketing Cloud], devi prima [collegare la destinazione](#connect-destination) in Platform, e quindi [impostare un’importazione di dati](#import-data-into-salesforce) dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
 
 ## Tipo di esportazione {#export-type}
 
-**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata seleziona attributi del flusso di lavoro [ di attivazione del ](../../ui/activate-batch-profile-destinations.md#select-attributes)pubblico.
+**Basato su profilo** - si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata Seleziona attributi del [flusso di lavoro di attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## ELENCO CONSENTITI di indirizzo IP {#allow-list}
 
 Quando si impostano le destinazioni di marketing e-mail con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al proprio elenco consentiti.
 
-Per aggiungere IP di Adobe al tuo elenco consentiti, fai riferimento all’ [elenco consentiti di indirizzi IP per le destinazioni di archiviazione cloud](../cloud-storage/ip-address-allow-list.md) .
+Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di archiviazione cloud](../cloud-storage/ip-address-allow-list.md) se devi aggiungere IP di Adobe al tuo elenco consentiti.
 
 ## Collegati alla destinazione {#connect}
 
-Per connetterti a questa destinazione, segui i passaggi descritti nel [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 Questa destinazione supporta i seguenti tipi di connessione:
 
@@ -39,24 +39,24 @@ Questa destinazione supporta i seguenti tipi di connessione:
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
-* Per le connessioni **[!UICONTROL SFTP con password]**, devi fornire:
+* Per **[!UICONTROL SFTP con password]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
    * [!UICONTROL Porta]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Password]
-* Per le connessioni **[!UICONTROL SFTP con chiave SSH]**, devi fornire:
+* Per **[!UICONTROL SFTP con chiave SSH]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
    * [!UICONTROL Porta]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Chiave SSH]
 
-* Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
+* Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati sotto **[!UICONTROL Chiave]** sezione . La chiave pubblica deve essere scritta come [!DNL Base64] stringa codificata.
 * **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
 * **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
-* **[!UICONTROL Percorso]** cartella: Fornisci il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-* **[!UICONTROL Formato]** file:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+* **[!UICONTROL Percorso cartella]**: Fornisci il percorso nella posizione di archiviazione in cui Platform depositerà i dati di esportazione come file CSV.
+* **[!UICONTROL Formato file]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
 
 <!--
 
@@ -68,16 +68,16 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) .
+Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ### Attributi di destinazione {#destination-attributes}
 
-Quando si attivano i segmenti su questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione dei tipi di pubblico nelle destinazioni di marketing via e-mail](overview.md#best-practices).
+Quando attivi i segmenti su questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per attivare i tipi di pubblico nelle destinazioni di marketing via e-mail](overview.md#best-practices).
 
 ## Dati esportati {#exported-data}
 
-Per le destinazioni [!DNL Salesforce Marketing Cloud], Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verificare l’attivazione dei segmenti](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione sull’attivazione dei segmenti.
+Per [!DNL Salesforce Marketing Cloud] destinazioni, Platform crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [verifica attivazione segmento](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione sull’attivazione dei segmenti.
 
 ## Imposta l’importazione di dati in [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Dopo aver collegato [!DNL Platform] allo storage [!DNL SFTP], è necessario impostare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Salesforce Marketing Cloud]. Per informazioni su come eseguire questa operazione, consulta [Importazione di Sottoscrittori in un Marketing Cloud da un file](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
+Dopo la connessione [!DNL Platform] al tuo [!DNL SFTP] archiviazione, è necessario impostare l&#39;importazione di dati dal percorso di archiviazione in [!DNL Salesforce Marketing Cloud]. Per scoprire come eseguire questa operazione, consulta [Importazione degli abbonati al Marketing Cloud da un file](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
