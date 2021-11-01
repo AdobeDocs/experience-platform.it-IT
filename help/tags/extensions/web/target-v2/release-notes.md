@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione per l’estensione Adobe Target v2
-description: Note aggiornate sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 61%
+source-wordcount: '589'
+ht-degree: 94%
 
 ---
 
@@ -14,29 +15,35 @@ ht-degree: 61%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
+## 28 ottobre 2021
+
+### Estensione Adobe Target v2 0.16.0
+
+- Aggiornato per supportare at.js v2.7.0, ora disponibile per il download da Adobe Target.
+
 ## 20 luglio 2021
 
 ### Estensione Adobe Target v2 0.15.1
 
-- È stato risolto un problema relativo a una combinazione di nome funzione `stringify` che causava la generazione di valori UUID non corretti per `sessionId`, `requestId` e così via.
+- È stato risolto un problema relativo a un conflitto nel nome della funzione `stringify` a causa del quale venivano generati valori UUID errati per `sessionId`, `requestId` e così via.
 
 ## 16 luglio 2021
 
 ### Estensione Adobe Target v2 0.15.0
 
-- Aggiungi l’attributo sicuro ai cookie ogni volta che le impostazioni di at.js secureOnly sono impostate su true
-- I token di risposta sono ora disponibili quando si utilizza `triggerView()`
-- È stato corretto un bug relativo all’evento `CONTENT_RENDERING_NO_OFFERS` . Ora viene attivato correttamente ogni volta che non vi è contenuto restituito da Target
-- I dettagli delle metriche di clic di A4T vengono restituiti correttamente quando si utilizzano richieste di preacquisizione
+- Ai cookie è stato aggiunto un attributo di sicurezza ogni volta che il valore di secureOnly nelle impostazioni di at.js sono impostate su true.
+- Ora quando si utilizza `triggerView()` sono disponibili i token di risposta.
+- È stato corretto un bug relativo all’evento `CONTENT_RENDERING_NO_OFFERS`. Ora viene attivato correttamente ogni volta che non viene restituito alcun contenuto da Target.
+- I dettagli delle metriche di clic di A4T vengono restituiti correttamente quando si utilizzano le richieste prefetch.
 - La generazione di UUID non utilizza più `Math.random()`, ma si basa su `window.crypto`
-- `sessionId` la scadenza dei cookie viene estesa correttamente su ogni chiamata di rete
-- SPA l&#39;inizializzazione della cache di visualizzazione è ora gestita correttamente e rispetta le impostazioni `viewsEnable`
+- La scadenza dei cookie `sessionId` viene estesa correttamente a ogni chiamata di rete.
+- L’inizializzazione della cache di visualizzazione delle applicazioni a pagina singola è ora gestita correttamente e rispetta le impostazioni `viewsEnable`.
 
 ## 2 giugno 2021
 
 ### Estensione Adobe Target v2 0.14.2
 
-- Correggi un bug in cui il bundle finale contiene due versioni di at.js, una con On-Device Decisioning e una senza.
+- È stato corretto un bug a causa del quale il bundle finale conteneva due versioni di at.js, una con decisioning sul dispositivo e una senza.
 
 ## 19 maggio 2021
 
@@ -57,7 +64,7 @@ ht-degree: 61%
 ### Estensione Adobe Target v2 0.13.7
 
 - È stato risolto un problema a causa del quale `targetPageParams` veniva incluso nelle richieste mbox. `targetPageParams` deve essere incluso solo nelle richieste `pageLoad`.
-- È stato risolto un problema relativo agli oggetti globali documento e finestra nell’estensione tag sostituendo le dipendenze degli oggetti globali con riferimenti diretti ad essi.
+- È stato risolto un problema relativo agli oggetti globali di documenti e finestre nell’estensione tag, sostituendo le dipendenze degli oggetti globali con riferimenti diretti a essi.
 - at.js è stato aggiornato a 2.4.1.
 
 ## 25 gennaio 2021
@@ -89,7 +96,7 @@ ht-degree: 61%
 ### Estensione 0.13.2 di Adobe Target v2
 
 - È stato risolto un problema che si verificava durante l’utilizzo di CNAME e Edge override, a causa del quale at.js 1.x poteva creare il dominio del server in modo incorretto e la richiesta Target non riusciva.
-- È stato risolto un problema a causa del quale, quando si utilizzava l’estensione tag v2 per Target e l’estensione tag Adobe Analytics, Target ritardava la chiamata sendBeacon di Analytics
+- È stato risolto un problema a causa del quale, quando si utilizzava l’estensione tag v2 per Target e l’estensione tag Adobe Analytics, Target ritardava la chiamata sendBeacon di Analytics.
 - È stata migliorata l’impostazione `deviceIdLifetime` rendendola sostituibile tramite `targetGlobalSettings`
 
 ## 25 marzo 2020
@@ -109,7 +116,7 @@ ht-degree: 61%
 - In precedenza, la libreria ECID effettuava due chiamate di blocco prima che at.js potesse riportare le esperienze. Ora effettua una sola chiamata, migliorando notevolmente le prestazioni.
 
 >[!NOTE]
->Aggiorna l’estensione tag ECID alla versione 4.4.1 per usufruire di questo miglioramento delle prestazioni.
+>Aggiorna l’estensione tag ECID alla versione 4.4.1 per approfittare di questo miglioramento delle prestazioni.
 
 ## 31 luglio 2019
 
