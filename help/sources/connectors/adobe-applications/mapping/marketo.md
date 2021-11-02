@@ -5,7 +5,7 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: bbd2b92d1ad1e8abf4a6b624c00132ffa96aa676
+source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # [!DNL Marketo Engage] mappature dei campi
 
-Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!DNL Marketo] e i corrispondenti campi Experience Data Model (XDM).
+Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] set di dati e i campi XDM (Experience Data Model) corrispondenti.
 
 ## Attività {#activities}
 
@@ -22,13 +22,13 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
-| `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
+| `web.webPageDetails.URL` | `web.webPageDetails.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4` |
 | `search.keywords` | `search.keywords` |
@@ -98,10 +98,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -126,9 +126,9 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relazione |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -142,7 +142,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -156,10 +156,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -187,7 +187,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API Esplora . |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -200,9 +200,9 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relazione |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -218,10 +218,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -243,10 +243,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -264,7 +264,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Questo set di dati di origine è disponibile solo per gli utenti con integrazione [!DNL Salesforce]. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Questo set di dati di origine è disponibile solo per gli utenti con [!DNL Salesforce] integrazione. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -276,10 +276,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identità principale. Il valore per `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API di Esplora . |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori di `{CRM_ORG_ID}` e `{CRM_TYPE}` verranno sostituiti automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API Esplora . |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relazione |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `role` | `personRole` |
@@ -294,10 +294,10 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identità principale. Il valore di `"${MUNCHKIN_ID}"` viene sostituito automaticamente. |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Se l&#39;iscrizione è `true` (ad esempio, valore = `1`), impostare `consents.marketing.email.val` come (`n`). Se l&#39;iscrizione è `false` (ad esempio, valore = `0`), imposta `consents.marketing.email.val` come `null`. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Se l’abbonamento viene annullato `true` (ad esempio, value = `1`), quindi imposta `consents.marketing.email.val` come (`n`). Se l’abbonamento viene annullato `false` (ad esempio, value = `0`), quindi imposta `consents.marketing.email.val` come `null`. |
 | `unsubscribedReason` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -309,7 +309,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | L’ `extSourceSystemAudit.externalKey.sourceKey` è l’identità secondaria. |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey.sourceKey` | La `extSourceSystemAudit.externalKey.sourceKey` è l&#39;identità secondaria. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -343,8 +343,8 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 >[!NOTE]
 >
->Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../data-prep/calculated-fields.md) .
+>La `to_object('ECID',arrays_to_objects('id',explode(ecids)))` il campo di origine è un campo calcolato che deve essere aggiunto utilizzando [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Guarda l’esercitazione su [aggiunta di campi calcolati](../../../../data-prep/calculated-fields.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai acquisito informazioni sulla relazione di mappatura tra i set di dati [!DNL Marketo] e i campi XDM corrispondenti. Per completare il flusso di dati [!DNL Marketo], consulta l’esercitazione su [creazione di una connessione [!DNL Marketo] sorgente](../../../tutorials/ui/create/adobe-applications/marketo.md) .
+Leggendo questo documento, hai acquisito informazioni sulla relazione di mappatura tra [!DNL Marketo] set di dati e i relativi campi XDM corrispondenti. Guarda l’esercitazione su [creazione di un [!DNL Marketo] connessione sorgente](../../../tutorials/ui/create/adobe-applications/marketo.md) per completare il [!DNL Marketo] flusso di dati.
