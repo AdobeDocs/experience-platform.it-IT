@@ -5,32 +5,32 @@ title: Elaborazione delle richieste di privacy in Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei propri dati personali come delineato dalle normative legali e organizzative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti archiviati nel Data Lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
+source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1380'
 ht-degree: 1%
 
 ---
 
-# Elaborazione della richiesta di accesso a dati personali in [!DNL Data Lake]
+# Elaborazione della richiesta di privacy in [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali secondo quanto delineato dalle normative legali e organizzative sulla privacy.
+Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti per accedere, rinunciare alla vendita o cancellare i loro dati personali come delineato dalle normative legali e organizzative sulla privacy.
 
 Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti memorizzati in [!DNL Data Lake].
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di privacy per Data Lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l’archivio dati Profilo cliente in tempo reale, fai riferimento alla guida sull’ [elaborazione delle richieste di accesso a dati personali per Profilo](../profile/privacy.md) in aggiunta a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di privacy per Data Lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l’archivio dati Profilo cliente in tempo reale, consulta la guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
->Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta la [documentazione Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introduzione
 
-Prima di leggere questa guida, è consigliabile avere familiarità con i seguenti servizi [!DNL Experience Platform] :
+Si consiglia di avere una comprensione operativa dei seguenti elementi [!DNL Experience Platform] servizi prima di leggere questa guida:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
-* [[!DNL Catalog Service]](home.md): Il sistema di registrazione per la posizione dei dati e la derivazione all’interno di  [!DNL Experience Platform]. Fornisce un’API che può essere utilizzata per aggiornare i metadati del set di dati.
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+* [[!DNL Catalog Service]](home.md): Il sistema di registrazione per la posizione dei dati e la derivazione all&#39;interno di [!DNL Experience Platform]. Fornisce un’API che può essere utilizzata per aggiornare i metadati del set di dati.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
@@ -39,30 +39,30 @@ Adobe Experience Platform [!DNL Identity Service] collega i dati di identità de
 
 [!DNL Identity Service] mantiene un archivio di namespace di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; ed &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
-Per ulteriori informazioni sugli spazi dei nomi di identità in [!DNL Experience Platform], consulta la [panoramica dello spazio dei nomi di identità](../identity-service/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi delle identità in [!DNL Experience Platform], vedi [panoramica dello spazio dei nomi identità](../identity-service/namespaces.md).
 
 ## Aggiunta di dati di identità ai set di dati
 
-Durante la creazione di richieste di privacy per [!DNL Data Lake], è necessario fornire valori di identità validi (e relativi namespace associati) per ogni singolo cliente al fine di individuare i propri dati ed elaborarli di conseguenza. Pertanto, tutti i set di dati soggetti a richieste di privacy devono contenere un descrittore di identità nello schema XDM associato.
+Durante la creazione di richieste di privacy per [!DNL Data Lake], è necessario fornire valori di identità validi (e i relativi namespace associati) per ogni singolo cliente al fine di individuare i propri dati ed elaborarli di conseguenza. Pertanto, tutti i set di dati soggetti a richieste di privacy devono contenere un descrittore di identità nello schema XDM associato.
 
 >[!NOTE]
 >
 >Eventuali set di dati basati su schemi che non supportano i metadati del descrittore di identità (come i set di dati ad hoc) attualmente non possono essere elaborati nelle richieste di privacy.
 
-Questa sezione descrive i passaggi necessari per aggiungere un descrittore di identità allo schema XDM di un set di dati esistente. Se disponi già di un set di dati con un descrittore di identità, puoi passare alla sezione [successiva](#nested-maps).
+Questa sezione descrive i passaggi necessari per aggiungere un descrittore di identità allo schema XDM di un set di dati esistente. Se disponi già di un set di dati con un descrittore di identità, puoi passare alla [sezione successiva](#nested-maps).
 
 >[!IMPORTANT]
 >
->Per decidere quali campi dello schema impostare come identità, ricorda le [limitazioni dell&#39;utilizzo di campi di tipo mappa nidificati](#nested-maps).
+>Quando decidi quali campi dello schema impostare come identità, ricorda [limitazioni dell’utilizzo di campi di tipo mappa nidificati](#nested-maps).
 
 Esistono due metodi per aggiungere un descrittore di identità a uno schema di set di dati:
 
 * [Utilizzo dell’interfaccia](#identity-ui)
 * [Mediante l’API](#identity-api)
 
-### Utilizzo dell&#39;interfaccia utente {#identity-ui}
+### Utilizzo dell’interfaccia {#identity-ui}
 
-Nell’interfaccia utente [!DNL Experience Platform ]schema, l’area di lavoro **[!UICONTROL Schemi]** consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, seleziona lo schema dall’elenco e segui i passaggi per [impostare un campo di schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) nell’esercitazione [!DNL Schema Editor].
+In [!DNL Experience Platform ]interfaccia utente, **[!UICONTROL Schemi]** workspace consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionalo dall’elenco e segui i passaggi descritti per [impostazione di un campo schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) in [!DNL Schema Editor] esercitazione.
 
 Dopo aver impostato come campi di identità i campi appropriati all&#39;interno dello schema, puoi passare alla sezione successiva in [invio di richieste di privacy](#submit).
 
@@ -70,11 +70,11 @@ Dopo aver impostato come campi di identità i campi appropriati all&#39;interno 
 
 >[!NOTE]
 >
->Questa sezione presuppone che tu conosca il valore ID URI univoco dello schema XDM del set di dati. Se non conosci questo valore, puoi recuperarlo utilizzando l’ API [!DNL Catalog Service] . Dopo aver letto la sezione [guida introduttiva](./api/getting-started.md) della guida per gli sviluppatori, segui i passaggi descritti in per [elencare](./api/list-objects.md) o [cercare gli oggetti](./api/look-up-object.md) [!DNL Catalog] per trovare il set di dati. L&#39;ID dello schema si trova in `schemaRef.id`
+>Questa sezione presuppone che tu conosca il valore ID URI univoco dello schema XDM del set di dati. Se non conosci questo valore, puoi recuperarlo utilizzando il [!DNL Catalog Service] API. Dopo aver letto [guida introduttiva](./api/getting-started.md) nella sezione della guida per gli sviluppatori, segui i passaggi descritti in per [elenco](./api/list-objects.md) o [cercare](./api/look-up-object.md) [!DNL Catalog] oggetti per trovare il set di dati. L&#39;ID dello schema si trova in `schemaRef.id`
 >
-> Questa sezione include le chiamate all&#39;API del Registro di sistema dello schema. Per informazioni importanti sull’utilizzo dell’API, inclusa la conoscenza di `{TENANT_ID}` e del concetto di contenitori, consulta la sezione [guida introduttiva](../xdm/api/getting-started.md) della guida per gli sviluppatori.
+>Questa sezione presuppone anche che tu sappia come effettuare chiamate all&#39;API del Registro di sistema dello schema. Per informazioni importanti sull’utilizzo dell’API, inclusa la conoscenza del `{TENANT_ID}` e il concetto di contenitori, vedi [guida introduttiva](../xdm/api/getting-started.md) della guida API.
 
-Puoi aggiungere un descrittore di identità allo schema XDM di un set di dati effettuando una richiesta POST all’endpoint `/descriptors` nell’ API [!DNL Schema Registry].
+Puoi aggiungere un descrittore di identità allo schema XDM di un set di dati effettuando una richiesta di POST al gruppo `/descriptors` punto finale [!DNL Schema Registry] API.
 
 **Formato API**
 
@@ -90,10 +90,10 @@ La richiesta seguente definisce un descrittore di identità su un campo &quot;In
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '
       {
         "@type": "xdm:descriptorIdentity",
@@ -110,9 +110,9 @@ curl -X POST \
 | --- | --- |
 | `@type` | Il tipo di descrittore da creare. Per i descrittori di identità, il valore deve essere &quot;xdm:descriptorIdentity&quot;. |
 | `xdm:sourceSchema` | ID URI univoco dello schema XDM del set di dati. |
-| `xdm:sourceVersion` | Versione dello schema XDM specificata in `xdm:sourceSchema`. |
+| `xdm:sourceVersion` | Versione dello schema XDM specificato in `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Percorso del campo dello schema a cui viene applicato il descrittore. |
-| `xdm:namespace` | Uno dei [namespace di identità standard](../privacy-service/api/appendix.md#standard-namespaces) riconosciuti da [!DNL Privacy Service] o uno spazio dei nomi personalizzato definito dalla tua organizzazione. |
+| `xdm:namespace` | Uno dei [spazi dei nomi delle identità standard](../privacy-service/api/appendix.md#standard-namespaces) riconosciuti [!DNL Privacy Service]o uno spazio dei nomi personalizzato definito dall’organizzazione. |
 | `xdm:property` | &quot;xdm:id&quot; o &quot;xdm:code&quot;, a seconda dello spazio dei nomi utilizzato in `xdm:namespace`. |
 | `xdm:isPrimary` | Un valore booleano facoltativo. Se true, indica che il campo è un’identità principale. Gli schemi possono contenere una sola identità principale. Predefinito su false se non incluso. |
 
@@ -138,9 +138,9 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
 
 >[!NOTE]
 >
->Questa sezione illustra come formattare le richieste di privacy per [!DNL Data Lake]. È vivamente consigliato rivedere la documentazione [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) o [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) per i passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità utente inviati nei payload della richiesta.
+>Questa sezione illustra come formattare le richieste di privacy per [!DNL Data Lake]. Si consiglia vivamente di rivedere il [[!DNL Privacy Service] Interfaccia](../privacy-service/ui/overview.md) o [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentazione completa sui passaggi per l’invio di un processo relativo alla privacy, inclusa la modalità di formattazione corretta dei dati di identità utente inviati nei payload della richiesta.
 
-La sezione seguente illustra come effettuare richieste di privacy per [!DNL Data Lake] utilizzando l’ interfaccia utente o l’ API [!DNL Privacy Service] .
+La sezione seguente illustra come effettuare richieste di privacy per [!DNL Data Lake] utilizzando [!DNL Privacy Service] Interfaccia utente o API.
 
 >[!IMPORTANT]
 >
@@ -148,25 +148,25 @@ La sezione seguente illustra come effettuare richieste di privacy per [!DNL Data
 
 ### Utilizzo dell’interfaccia
 
-Durante la creazione di richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati memorizzati rispettivamente in [!DNL Data Lake] o [!DNL Real-time Customer Profile].
+Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati nel [!DNL Data Lake] o [!DNL Real-time Customer Profile], rispettivamente.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ### Mediante l’API
 
-Durante la creazione di richieste di lavoro nell’API, qualsiasi `userIDs` fornito deve utilizzare un `namespace` e `type` specifici a seconda dell’archivio dati a cui si applica. Gli ID per [!DNL Data Lake] devono utilizzare &quot;non registrato&quot; per il loro valore `type` e un valore `namespace` che corrisponde a una delle etichette [privacy](#privacy-labels) aggiunte ai set di dati applicabili.
+Quando crei richieste di lavoro nell’API, qualsiasi `userIDs` che devono utilizzare un `namespace` e `type` a seconda dell’archivio dati a cui si applicano. ID per [!DNL Data Lake] deve utilizzare `unregistered` per i `type` e un `namespace` che corrisponde a uno dei valori [etichette privacy](#privacy-labels) che sono stati aggiunti ai set di dati applicabili.
 
-Inoltre, la matrice `include` del payload della richiesta deve includere i valori del prodotto per i diversi archivi di dati in cui viene effettuata la richiesta. Quando si eseguono richieste a [!DNL Data Lake], l&#39;array deve includere il valore `aepDataLake`.
+Inoltre, il `include` la matrice del payload della richiesta deve includere i valori di prodotto per i diversi archivi di dati in cui viene effettuata la richiesta. Quando si effettuano richieste a [!DNL Data Lake], la matrice deve includere il valore `aepDataLake`.
 
-La seguente richiesta crea un nuovo processo per la privacy per [!DNL Data Lake], utilizzando lo spazio dei nomi &quot;email_label&quot; non registrato. Include inoltre il valore del prodotto per [!DNL Data Lake] nell&#39;array `include`:
+La seguente richiesta crea un nuovo processo di privacy per il [!DNL Data Lake], utilizzando `email_label` spazio dei nomi. Include inoltre il valore del prodotto per il [!DNL Data Lake] in `include` array:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -199,27 +199,31 @@ curl -X POST \
 }'
 ```
 
+>[!IMPORTANT]
+>
+>Platform elabora le richieste di privacy in tutti [sandbox](../sandboxes/home.md) appartenente alla tua organizzazione. Di conseguenza, qualsiasi `x-sandbox-name` l’intestazione inclusa nella richiesta viene ignorata dal sistema.
+
 ## Elimina elaborazione richiesta
 
-Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia una conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. I record vengono quindi rimossi dal [!DNL Data Lake] entro sette giorni. Durante questa finestra di sette giorni, i dati vengono cancellati in modo soft e non sono quindi accessibili da alcun servizio [!DNL Platform].
+Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. I record vengono quindi rimossi dal [!DNL Data Lake] entro sette giorni. Durante la finestra di sette giorni, i dati vengono cancellati in modo morbido e non sono quindi accessibili da nessuno [!DNL Platform] servizio.
 
-Nelle versioni future, [!DNL Platform] invierà una conferma a [!DNL Privacy Service] dopo che i dati sono stati fisicamente eliminati.
+Nelle versioni future, [!DNL Platform] invierà conferma a [!DNL Privacy Service] dopo che i dati sono stati fisicamente cancellati.
 
 ## Passaggi successivi
 
 Leggendo questo documento, ti sono stati introdotti i concetti importanti relativi all’elaborazione delle richieste di privacy per [!DNL Data Lake]. Si consiglia di continuare a leggere la documentazione fornita in questa guida per approfondire la comprensione su come gestire i dati di identità e creare processi di privacy.
 
-Consulta il documento sull&#39; [elaborazione della richiesta di accesso a dati personali per Profilo cliente in tempo reale](../profile/privacy.md) per i passaggi sull&#39;elaborazione delle richieste di accesso a dati personali per l&#39;archivio [!DNL Profile] .
+Visualizza il documento in [elaborazione della richiesta di accesso a dati personali per Profilo cliente in tempo reale](../profile/privacy.md) per i passaggi relativi all’elaborazione delle richieste di privacy per [!DNL Profile] archiviare.
 
 ## Appendice
 
 La sezione seguente contiene informazioni aggiuntive per l’elaborazione delle richieste di privacy in [!DNL Data Lake].
 
-### Etichettatura dei campi del tipo di mappa nidificati {#nested-maps}
+### Etichettatura dei campi nidificati del tipo di mappa {#nested-maps}
 
 È importante notare che esistono due tipi di campi di tipo mappa nidificati che non supportano l’etichettatura sulla privacy:
 
 * Campo di tipo mappa all’interno di un campo di tipo matrice
 * Campo di tipo mappa all’interno di un altro campo di tipo mappa
 
-L’elaborazione dei processi per la privacy per uno dei due esempi di cui sopra avrà esito negativo. Per questo motivo, si consiglia di evitare di utilizzare campi nidificati del tipo di mappa per memorizzare i dati privati dei clienti. Gli ID consumer rilevanti devono essere memorizzati come tipo di dati non mappato all’interno del campo `identityMap` (stesso campo di tipo mappa) per i set di dati basati su record, o del campo `endUserID` per i set di dati basati su serie temporali.
+L’elaborazione dei processi per la privacy per uno dei due esempi di cui sopra avrà esito negativo. Per questo motivo, si consiglia di evitare di utilizzare campi nidificati del tipo di mappa per memorizzare i dati privati dei clienti. Gli ID consumer rilevanti devono essere memorizzati come tipo di dati non mappato all’interno di `identityMap` campo (stesso campo di tipo mappa) per set di dati basati su record o `endUserID` campo per i set di dati basati su serie temporali.
