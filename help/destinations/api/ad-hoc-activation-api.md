@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;api di destinazione;attivazione ad hoc;attivare segmenti ad hoc
 solution: Experience Platform
-title: (Beta) Attivare i segmenti di pubblico tramite l’API di attivazione ad hoc Experience Platform
-description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
+title: (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
+description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) Attivare i segmenti di pubblico tramite l’API di attivazione ad hoc Experience Platform
+# (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 
 ### Vendite o promozioni Flash
 
-Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc Experience Platform, il team marketing può esportare segmenti di pubblico su richiesta e inviare rapidamente e-mail promozionali alla base clienti.
+Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc Experience Platform, il team marketing può esportare segmenti su richiesta e inviare rapidamente e-mail promozionali alla base clienti.
 
 
 ### Eventi attuali o novità
 
-Un hotel si aspetta il tempo inclemente nei giorni successivi, e la squadra vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc Experience Platform per esportare segmenti di pubblico su richiesta e avvisare gli ospiti.
+Un hotel si aspetta il tempo inclemente nei giorni successivi, e la squadra vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc Experience Platform per esportare segmenti su richiesta e avvisare gli ospiti.
 
 ### Test di integrazione
 
-I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare segmenti di pubblico su richiesta, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e assicurarsi che tutto funzioni correttamente.
+I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare segmenti su richiesta, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e assicurarsi che tutto funzioni correttamente.
 
 
 ## Guardrail {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID delle istanze di destinazione in cui desideri attivare i segmenti di pubblico. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID dei segmenti di pubblico che desideri attivare nella destinazione selezionata. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID delle istanze di destinazione in cui desideri attivare i segmenti. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID dei segmenti che desideri attivare nella destinazione selezionata. |
 | <ul><li>`exportId1`</li></ul> | L&#39;ID restituito nella risposta del [esportazione di segmenti](../../segmentation/api/export-jobs.md#retrieve-list) lavoro. Vedi [Passaggio 4: Ottieni l&#39;ID più recente del processo di esportazione del segmento](#segment-export-id) per istruzioni su come trovare questo ID. |
 
 ### Risposta
