@@ -5,7 +5,7 @@ title: (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’AP
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 2%
@@ -148,7 +148,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
          "segmentId3"
       ]
    },
-   "exportId":[
+   "exportIds":[
       "exportId1"
    ]
 }
