@@ -5,7 +5,7 @@ title: (Beta) Attivare i segmenti di pubblico tramite l’API di attivazione ad 
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -124,9 +124,9 @@ Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo 
 
 Una volta completato il processo di esportazione del segmento, puoi attivare l’attivazione.
 
->[!WARNING]
+>[!NOTE]
 >
->Puoi attivare un massimo di 50 segmenti per processo di attivazione ad hoc. Se si tenta di attivare più segmenti, il processo non riuscirà.
+>Puoi attivare un massimo di 20 segmenti per processo di attivazione ad hoc. Se si tenta di attivare più segmenti, il processo non riuscirà.
 
 ### Richiesta
 
