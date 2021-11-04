@@ -5,9 +5,9 @@ title: Applicazioni Privacy Service e Experience Cloud
 topic-legacy: overview
 description: Questo documento fornisce un riferimento su come configurare diverse applicazioni Experience Cloud per le operazioni relative alla privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '617'
 ht-degree: 15%
 
 ---
@@ -37,6 +37,7 @@ Di seguito è riportato un elenco di [!DNL Experience Cloud] applicazioni integr
 | Adobe Experience Platform | . | . | <ul><li>[Accedere/eliminare la documentazione per Data Lake](../catalog/privacy.md)</li><li>[Accedere/eliminare la documentazione relativa al servizio Identity](../identity-service/privacy.md)</li><li>[Accedere/eliminare la documentazione per il profilo cliente in tempo reale](../profile/privacy.md)</li><li>[!DNL Experience Platform] onori [richieste di rinuncia per segmenti di pubblico](../segmentation/consents.md).</li></ul> |
 | Autenticazione Adobe Primetime | . | N/D | <ul><li>[Accedere/eliminare la documentazione](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] non dispone della capacità di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 | Adobe Target | . | N/D | <ul><li>[Accedere/eliminare la documentazione](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=it)</li><li>[!DNL Target] non dispone della capacità di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
+| Marketo Engage | . | N/D | <ul><li>[Accedere/eliminare la documentazione](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] non dispone della capacità di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -50,7 +51,6 @@ Di seguito è riportato un elenco di [!DNL Experience Cloud] applicazioni non in
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Panoramica sulla gestione delle richieste RGPD da parte di un amministratore della privacy dei clienti o AEM amministratore. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Passaggi per effettuare le richieste di accesso e di cancellazione RGPD utilizzando Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Assicurati che le installazioni del tuo Magento Commerce siano conformi ai requisiti delle normative sulla privacy specifiche. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Scopri come le normative sulla privacy si applicano a Marketo. |
 | [Tag in Adobe Experience Platform](../tags/ui/client-side/consent.md) | Come gli sviluppatori possono utilizzare le estensioni e il generatore di regole per definire soluzioni di gestione dei consensi e delle rinunce. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Scopri in che modo Workfront raccoglie i dati personali e in che modo un interessato può inviare una richiesta di accesso a dati personali tramite un modulo. |
 

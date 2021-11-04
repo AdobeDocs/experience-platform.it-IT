@@ -5,10 +5,10 @@ title: Appendice della guida API di Privacy Service
 topic-legacy: developer guide
 description: Questo documento contiene informazioni aggiuntive sull’utilizzo dell’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 7%
+source-wordcount: '482'
+ht-degree: 8%
 
 ---
 
@@ -75,5 +75,6 @@ La tabella seguente illustra i valori accettati per specificare un prodotto Adob
 | Attributi del cliente (CRS) | `CRS` |
 | Servizio Identity | `Identity` |
 | Profilo cliente in tempo reale | `profileService` |
+| Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
