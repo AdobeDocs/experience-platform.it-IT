@@ -5,53 +5,67 @@ title: Guida alla risoluzione dei problemi delle sandbox
 topic-legacy: troubleshooting guide
 description: Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi delle sandbox
 
-Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi di Platform, consulta la [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi Platform, consulta la sezione [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-Le sandbox suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale. Per ulteriori informazioni, consulta la [panoramica sulle sandbox](home.md) .
+Le sandbox suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale. Consulta la sezione [panoramica sulle sandbox](home.md) per ulteriori informazioni.
 
 ## Cos&#39;è una sandbox?
 
-Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox. Per ulteriori informazioni, consulta la [panoramica sulle sandbox](home.md) .
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox. Consulta la sezione [panoramica sulle sandbox](home.md) per ulteriori informazioni.
 
 ## Quali tipi di sandbox sono disponibili e quali sono le loro differenze?
 
 Nell’Experience Platform sono disponibili due tipi di sandbox:
 
-* Sandbox di produzione
-* Sandbox non di produzione
+* **Sandbox di produzione**: Una sandbox di produzione deve essere utilizzata con i profili nell’ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati mantenendo al tempo stesso l’isolamento operativo. Questa funzione consente di dedicare sandbox di produzione specifiche a linee di business, marchi, progetti o aree geografiche diverse. Le sandbox di produzione supportano un volume di profili di produzione fino al vostro sotto licenza [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai il diritto di utilizzare il profilo medio concesso in licenza per ogni autorizzato [!DNL Profile] (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
+* **Sandbox di sviluppo**: Una sandbox di sviluppo è una sandbox che può essere utilizzata esclusivamente per lo sviluppo e il test con profili non di produzione. Le sandbox di sviluppo supportano un volume di profili non di produzione fino al 10% della licenza [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate). Hai diritto fino a:
+   * una ricchezza media di profilo non di produzione di 75 kilobyte per profilo non di produzione autorizzato (misurata cumulativamente in tutte le sandbox di sviluppo autorizzate);
+   * Un processo di segmentazione batch al giorno, per sandbox di sviluppo;
+   * Una media di 120 [!DNL Profile] Chiamate API, per [!DNL Profile], per anno (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate.
 
-Experience Platform fornisce una singola sandbox di produzione, che non può essere eliminata o reimpostata. Per una singola istanza di Platform può esistere una sola sandbox di produzione.
-
-Al contrario, più sandbox non di produzione possono essere create dagli amministratori di sandbox per una singola istanza di Platform. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione hanno una funzione di reimpostazione che rimuove tutte le risorse create dal cliente dalla sandbox. Le sandbox non di produzione non possono essere convertite in sandbox di produzione. Una licenza di Experience Platform predefinita concede cinque sandbox (una produzione e quattro non di produzione). Puoi aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox totali. Per ulteriori informazioni, contatta l’amministratore dell’organizzazione IMS o il rappresentante commerciale di Adobe.
-
-Per ulteriori informazioni, consulta la [panoramica sulle sandbox](./home.md) .
+Consulta la sezione [panoramica sulle sandbox](./home.md) per ulteriori informazioni.
 
 ## Posso accedere a una risorsa da più di una sandbox?
 
 Le sandbox sono partizioni isolate di una singola istanza di Platform, con ogni sandbox che mantiene la propria libreria indipendente di risorse. Una risorsa esistente in una sandbox non è accessibile da nessun’altra sandbox, indipendentemente dal tipo di sandbox (produzione o non produzione).
 
+## Qual è la sandbox di produzione predefinita?
+
+La sandbox di produzione predefinita è la prima sandbox di produzione che viene creata al momento del primo provisioning di un’organizzazione IMS. La sandbox di produzione predefinita consente di acquisire o utilizzare dati da Platform, nonché di accettare richieste che non includono valori per un nome sandbox o un ID sandbox. La sandbox di produzione predefinita può essere reimpostata ma non eliminata.
+
 ## Quante sandbox di produzione posso avere?
 
-Experience Platform supporta solo una sandbox di produzione per l’organizzazione IMS, fornita come standard. La sandbox di produzione può essere rinominata ma non può essere eliminata o reimpostata. Gli utenti con autorizzazioni di amministrazione sandbox possono solo creare, reimpostare ed eliminare sandbox non di produzione.
+Un’istanza di Experience Platform supporta più sandbox di produzione e sviluppo, con ogni sandbox che mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati e profili).
 
-## Quante sandbox non di produzione posso avere?
+Una licenza di Experience Platform predefinita ti concede un totale di cinque sandbox, che puoi classificare come produzione o sviluppo. È possibile concedere in licenza pacchetti aggiuntivi di 10 sandbox fino a un massimo di 75 sandbox in totale.
 
-Experience Platform consente attualmente l’attivazione di fino a 15 sandbox non di produzione all’interno di un’unica organizzazione IMS.
+Le sandbox di produzione possono essere reimpostate o eliminate, ad eccezione delle sandbox di produzione che vengono utilizzate anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) funzionalità.
+
+Puoi aggiornare il titolo di una sandbox di produzione. Tuttavia, non è possibile rinominare una sandbox di produzione.
+
+>[!NOTE]
+>
+>Il nome della sandbox viene utilizzato a scopo di ricerca nelle chiamate API, mentre il titolo della sandbox viene utilizzato come nome visualizzato.
+
+## Quante sandbox di sviluppo posso avere?
+
+L’Experience Platform consente attualmente l’attivazione di un massimo di 75 sandbox totali (produzione e sviluppo) all’interno di un’unica organizzazione IMS.
+
+Le sandbox di sviluppo supportano sia le funzionalità di ripristino che quelle di eliminazione.
 
 ## Ho appena creato una sandbox. Come si impostano le autorizzazioni per gli utenti che lavoreranno con questa sandbox?
 
-Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l’uso dei profili di prodotto. Dopo aver creato una nuova sandbox, passa alla scheda **Autorizzazioni** del profilo di prodotto a cui desideri concedere l’accesso, quindi fai clic su **Sandbox**. Da qui, puoi aggiungere o rimuovere l’accesso alla nuova sandbox nello stesso modo di altre autorizzazioni.
+Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l’uso dei profili di prodotto. Dopo aver creato una nuova sandbox, passa alla **Autorizzazioni** scheda del profilo di prodotto a cui si desidera concedere l’accesso, quindi fare clic su **Sandbox**. Da qui, puoi aggiungere o rimuovere l’accesso alla nuova sandbox nello stesso modo di altre autorizzazioni.
 
 Se desideri aggiungere autorizzazioni univoche agli utenti di una particolare sandbox, potrebbe essere necessario creare un nuovo profilo di prodotto con le sandbox e le autorizzazioni appropriate applicate e assegnare tali utenti a tale profilo.
 
-Per ulteriori informazioni sulla gestione delle sandbox e delle autorizzazioni nell’Admin Console, consulta la [guida utente per il controllo degli accessi](../access-control/ui/overview.md) .
+Consulta la sezione [guida utente per il controllo degli accessi](../access-control/ui/overview.md) per ulteriori informazioni sulla gestione di sandbox e autorizzazioni nell’Admin Console.
