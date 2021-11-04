@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente per i criteri di unione
 type: Documentation
 description: Quando si riuniscono dati provenienti da più origini in Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare la visualizzazione unificata. Questa guida fornisce istruzioni passo per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Dopo aver apportato le modifiche necessarie, esaminare i criteri di unione e sel
 
 ## Violazioni dei criteri di governance dei dati
 
-Durante la creazione o l&#39;aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se il criterio di unione viola uno qualsiasi dei criteri di utilizzo dei dati definiti dall&#39;organizzazione. I criteri di utilizzo dei dati fanno parte di Adobe Experience Platform [!DNL Data Governance] e sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o da cui ti è impedito di eseguire su specifiche [!DNL Platform] dati. Ad esempio, se un criterio di unione è stato utilizzato per creare un segmento attivato per una destinazione di terze parti e l&#39;organizzazione dispone di un criterio di utilizzo dei dati che impedisce l&#39;esportazione di dati specifici a terze parti, riceverai un **[!UICONTROL Violazione dei criteri di governance dei dati rilevata]** notifica quando si tenta di salvare il criterio di unione.
+Durante la creazione o l&#39;aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se il criterio di unione viola uno qualsiasi dei criteri di utilizzo dei dati definiti dall&#39;organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentito eseguire su specifici [!DNL Platform] dati. Ad esempio, se un criterio di unione è stato utilizzato per creare un segmento attivato per una destinazione di terze parti e l&#39;organizzazione dispone di un criterio di utilizzo dei dati che impedisce l&#39;esportazione di dati specifici a terze parti, riceverai un **[!UICONTROL Violazione dei criteri di governance dei dati rilevata]** notifica quando si tenta di salvare il criterio di unione.
 
 Questa notifica include un elenco dei criteri di utilizzo dei dati che sono stati violati e ti consente di visualizzare i dettagli della violazione selezionando un criterio dall’elenco. Selezionando una politica violata, il **[!UICONTROL Linea di dati]** La scheda fornisce il motivo della violazione e delle attivazioni interessate, ognuna delle quali fornisce ulteriori dettagli su come è stato violato il criterio di utilizzo dei dati.
 

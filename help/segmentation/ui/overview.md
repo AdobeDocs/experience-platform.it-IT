@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ Ulteriori informazioni sulla segmentazione dei bordi sono disponibili nella sezi
 >
 >Le violazioni dei criteri si applicano solo se si crea un segmento assegnato a una destinazione.
 
-Dopo aver creato il segmento, questo viene analizzato dalla governance dei dati di Adobe Experience Platform per garantire che non vi siano violazioni dei criteri all’interno del segmento. Consulta la sezione [[!DNL Data Governance] panoramica](../../data-governance/home.md) per ulteriori informazioni.
+Dopo aver creato il segmento, questo viene analizzato dalla governance dei dati di Adobe Experience Platform per garantire che non vi siano violazioni dei criteri all’interno del segmento. Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

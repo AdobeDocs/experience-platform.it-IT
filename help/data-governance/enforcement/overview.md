@@ -5,10 +5,9 @@ title: Panoramica sull’applicazione dei criteri
 topic-legacy: guide
 description: Una volta che le etichette di utilizzo dei dati sono state applicate ai set di dati Adobe Experience Platform e sono stati definiti i criteri di utilizzo dei dati per le azioni di marketing rispetto a tali etichette, le funzionalità di governance dei dati consentono di applicare tali criteri e di impedire le operazioni di dati che costituiscono violazioni dei criteri. Esistono due metodi di applicazione dei criteri forniti dalle funzioni di governance dei dati su Platform, applicazione basata su API e applicazione automatica.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -17,14 +16,14 @@ ht-degree: 0%
 
 Una volta applicate le etichette di utilizzo dei dati ai set di dati e definite le policy di utilizzo dei dati per le azioni di marketing rispetto a tali etichette, le funzionalità di governance dei dati di Adobe Experience Platform consentono di applicare tali criteri e di impedire le operazioni di dati che costituiscono violazioni dei criteri.
 
-Esistono due metodi per l&#39;applicazione dei criteri forniti dalle funzionalità [!DNL Data Governance] in [!DNL Platform]: Implementazione basata su API e applicazione automatica.
+Esistono due metodi di applicazione dei criteri forniti dalle funzioni di governance dei dati su [!DNL Platform]: Implementazione basata su API e applicazione automatica.
 
 ## Implementazione basata su API
 
-L’ API [!DNL Policy Service] fornisce endpoint che consentono di testare le azioni di marketing rispetto ai set di dati o a combinazioni arbitrarie di etichette di utilizzo dei dati per verificare se si verificano violazioni dei criteri. In base alla risposta API, puoi quindi impostare i protocolli all’interno dell’applicazione experience per applicare in modo appropriato la conformità ai criteri di utilizzo dei dati.
+La [!DNL Policy Service] L’API fornisce endpoint che consentono di testare le azioni di marketing rispetto ai set di dati o a combinazioni arbitrarie di etichette di utilizzo dei dati per verificare se si verificano violazioni dei criteri. In base alla risposta API, puoi quindi impostare i protocolli all’interno dell’applicazione experience per applicare in modo appropriato la conformità ai criteri di utilizzo dei dati.
 
-Per informazioni su come valutare i criteri utilizzando l&#39;API, consulta l&#39;esercitazione su [imposizione basata su API](./api-enforcement.md) .
+Guarda l’esercitazione su [Implementazione basata su API](./api-enforcement.md) per informazioni su come valutare i criteri utilizzando l’API .
 
 ## Applicazione automatica
 
-Experience Platform sfrutta la derivazione dei dati, la classificazione dei dati e le funzionalità di gestione dei criteri per valutare automaticamente e individuare le violazioni dei criteri. Per ulteriori informazioni, consulta la panoramica sull’ [applicazione automatica dei criteri](./auto-enforcement.md) .
+Experience Platform sfrutta la derivazione dei dati, la classificazione dei dati e le funzionalità di gestione dei criteri per valutare automaticamente e individuare le violazioni dei criteri. Vedi la panoramica su [applicazione automatica delle politiche](./auto-enforcement.md) per ulteriori informazioni.

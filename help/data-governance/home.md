@@ -5,19 +5,18 @@ title: Panoramica sulla governance dei dati
 topic-legacy: overview
 description: La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno dell’Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
 
 # Panoramica sulla governance dei dati
 
-Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. È quindi importante assicurarsi che le operazioni sui dati all’interno di [!DNL Platform] siano conformi ai criteri di utilizzo dei dati.
+Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. È quindi importante assicurarsi che i dati operino entro [!DNL Platform] sono conformi ai criteri di utilizzo dei dati.
 
-Adobe Experience Platform [!DNL Data Governance] ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all’interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
+La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all&#39;interno di [!DNL Experience Platform] a vari livelli, compresi catalogazione, derivazione dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
 
 ## Ruoli di governance dei dati
 
@@ -43,61 +42,61 @@ Gli addetti al marketing sono il punto finale della governance dei dati. Richied
 * Gli esperti marketing e i designer di esperienze utilizzano i dati per progettare nuove esperienze cliente.
 
 
-## [!DNL Data Governance] quadro
+## Quadro di riferimento per la governance dei dati
 
-Il framework [!DNL Data Governance] semplifica e semplifica il processo di categorizzazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dei dati e stabiliti i criteri di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l’uso corretto dei dati.
+Il framework per la governance dei dati semplifica e semplifica il processo di categorizzazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dei dati e stabiliti i criteri di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l’uso corretto dei dati.
 
-Il framework [!DNL Data Governance] presenta tre elementi chiave: Etichette, criteri e applicazione.
+Il framework per la governance dei dati presenta tre elementi chiave: Etichette, criteri e applicazione.
 
-1. **Etichette:** classifica i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e ai criteri aziendali.
-1. **Criteri:** descrive i tipi di azioni di marketing consentite o non consentite per dati specifici.
-1. **Applicazione:** utilizza il framework dei criteri per consigliare e applicare le politiche in diversi modelli di accesso ai dati.
+1. **Etichette:** Classificare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e ai criteri aziendali.
+1. **Criteri:** Descrivi il tipo o i tipi di azioni di marketing consentiti o non consentiti per dati specifici.
+1. **Applicazione:** Utilizza il framework dei criteri per consigliare e applicare le politiche in diversi schemi di accesso ai dati.
 
 ## Etichette di utilizzo dati
 
-[!DNL Data Governance] consente agli amministratori di dati di applicare etichette di utilizzo a livello di set di dati e di campo per classificare i dati in base al tipo di criteri applicabili.
+La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di set di dati e di campi per classificare i dati in base al tipo di criteri applicabili.
 
-Il framework [!DNL Data Governance] include etichette di utilizzo dati predefinite che possono essere utilizzate per classificare i dati in tre modi:
+Il framework per la governance dei dati include etichette di utilizzo dei dati predefinite che possono essere utilizzate per classificare i dati in tre modi:
 
 ![Categorie delle etichette per l&#39;utilizzo dei dati](./images/overview/label-categories.png)
 
-* **Etichette per i dati &quot;C&quot; del contratto:** Etichettare e categorizzare i dati che hanno obblighi contrattuali o sono relativi alle politiche di governance dei dati del cliente.
-* **Etichette per i dati di identità &quot;I&quot;:** etichettare e classificare i dati che possono identificare o contattare una persona specifica.
-* **Etichette per i dati sensibili &quot;S&quot;:** etichetta e categorizza i dati relativi a dati sensibili, come i dati geografici.
+* **Etichette dati &quot;C&quot; del contratto:** Etichettare e classificare i dati che hanno obblighi contrattuali o sono correlati ai criteri di governance dei dati dei clienti.
+* **Etichette per i dati di identità &quot;I&quot;:** Etichettare e classificare i dati che possono identificare o contattare una persona specifica.
+* **Etichette per i dati sensibili &quot;S&quot;:** Etichettare e classificare i dati relativi a dati sensibili, come i dati geografici.
 
 >[!NOTE]
 >
->Per un elenco completo delle etichette disponibili e delle definizioni per ogni tipo di etichetta, consulta la guida sulle [etichette di utilizzo dei dati supportate](labels/reference.md) .
+>Consulta la guida su [etichette di utilizzo dei dati supportate](labels/reference.md) per un elenco completo delle etichette disponibili, nonché delle definizioni per ciascun tipo di etichetta.
 
-Le etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta della modalità di gestione dei dati. La best practice incoraggia l’etichettatura dei dati non appena vengono acquisiti in [!DNL Experience Platform] o non appena i dati diventano disponibili in [!DNL Platform].
+Le etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta della modalità di gestione dei dati. Le best practice incoraggiano l’etichettatura dei dati non appena vengono acquisiti [!DNL Experience Platform], o non appena i dati diventano disponibili in [!DNL Platform].
 
-Per ulteriori informazioni, consulta la panoramica sulle [etichette di utilizzo dei dati](./labels/overview.md) .
+Vedi la panoramica su [etichette di utilizzo dei dati](./labels/overview.md) per ulteriori informazioni.
 
 ## Criteri di utilizzo dei dati
 
-Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o a cui è stata limitata l’esecuzione di dati all’interno di [!DNL Experience Platform].
+Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform].
 
-Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste un criterio che indica che tipi specifici di dati, come Informazioni personali (PII, Personally Identifiable Information), non possono essere esportati e che è stata applicata un’etichetta &quot;I&quot; (Dati identità) al set di dati, riceverai una risposta da [!DNL Policy Service] che informa che è stata violata una policy di utilizzo dei dati.
+Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste un criterio che indica che tipi specifici di dati, come PII (Personally Identifiable Information), non possono essere esportati e un’etichetta &quot;I&quot; (Dati di identità) è stata applicata al set di dati, riceverai una risposta dal [!DNL Policy Service] che indica che è stata violata una policy di utilizzo dei dati.
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l’ [!DNL Policy Service] API o l’ interfaccia utente [!DNL Experience Platform].
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare i criteri utilizzando [!DNL Policy Service] o [!DNL Experience Platform] interfaccia utente.
 
 >[!IMPORTANT]
 >
 >Per impostazione predefinita, tutti i criteri di utilizzo dei dati (inclusi i criteri principali forniti da Adobe) sono disabilitati. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio.
 
-Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la [panoramica dei criteri](./policies/overview.md).
+Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la sezione [panoramica dei criteri](./policies/overview.md).
 
 ## Passaggi successivi
 
-Questo documento fornisce un&#39;introduzione di alto livello al framework [!DNL Data Governance] e[!DNL Data Governance]. Ora puoi continuare con la [guida utente delle etichette per l’utilizzo dei dati](labels/user-guide.md) e iniziare ad aggiungere etichette di utilizzo ai dati dell’esperienza.
+Questo documento fornisce un’introduzione di alto livello alla governance dei dati e al framework per la governance dei dati. Ora puoi continuare con la [guida utente delle etichette per l’utilizzo dei dati](labels/user-guide.md) e inizia ad aggiungere etichette di utilizzo ai dati dell’esperienza.
 
 ## Appendice
 
-La sezione seguente fornisce ulteriori informazioni su [!DNL Data Governance].
+La sezione seguente fornisce ulteriori informazioni sulla governance dei dati.
 
-### [!DNL Data Governance] terminologia
+### Terminologia sulla governance dei dati
 
-La tabella seguente illustra i termini chiave relativi al framework [!DNL Data Governance] e[!DNL Data Governance] .
+La tabella seguente delinea i termini chiave relativi alla governance dei dati e al framework per la governance dei dati.
 
 | Termine | Definizione |
 |---|---|
@@ -111,16 +110,16 @@ La tabella seguente illustra i termini chiave relativi al framework [!DNL Data G
 | **Geofence** | Un recinto geografico è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area. |
 | **Etichette di identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati che possono identificare o contattare una persona specifica. |
 | **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: i dati raccolti sul sito vengono utilizzati per fare deduzioni sull’interesse degli utenti, vengono utilizzati in un altro contesto, ad esempio su un altro sito o un’app (fuori sito), e vengono utilizzati per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
-| **Azione di marketing** | Un’azione di marketing, nel contesto del framework di governance dei dati, è un’azione eseguita da un consumatore di dati [!DNL Experience Platform] per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
+| **Azione di marketing** | Un’azione di marketing, nel contesto del framework di governance dei dati, è un’azione che [!DNL Experience Platform] dati acquisiti dal consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, una policy è una regola che descrive il tipo di azioni di marketing consentite o non consentite su dati specifici. |
 | **Etichette sensibili** | Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati che tu e la tua organizzazione consideri sensibili. |
 
 ## Risorse aggiuntive
 
-Il video seguente è pensato per comprendere meglio il framework [!DNL Data Governance] .
+Il seguente video è pensato per aiutarti a comprendere il framework per la governance dei dati.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Il video seguente fornisce un’introduzione alle varie funzioni di [!DNL Data Governance] in Experience Platform.
+Il video seguente fornisce un’introduzione alle varie funzioni di governance dei dati di Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)

@@ -1,13 +1,13 @@
 ---
 keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinazioni;attivare dati;attivare;
 title: Panoramica sulle destinazioni
-seo-title: Panoramica sulle destinazioni
+seo-title: Destinations overview
 description: Scopri come attivare i dati di Adobe Experience Platform nelle destinazioni per campagne di marketing cross-channel, e-mail, pubblicità mirata e altro ancora.
-seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -20,42 +20,42 @@ ht-degree: 0%
 
 ## Destinazioni e fonti {#destinations-and-sources}
 
-Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le tue esigenze aziendali. Utilizza [origini](../sources/home.md) per acquisire dati in Platform e destinazioni per esportare dati da Platform.
+Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le tue esigenze aziendali. Utilizzo [origini](../sources/home.md) per acquisire dati in Platform e destinazioni per esportare dati da Platform.
 
 ## Passaggi per le destinazioni {#steps}
 
-* Scegli tra un [catalogo self-service](./catalog/overview.md) tutte le destinazioni disponibili in Platform.
+* Scegli tra [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Platform.
 * Utilizza le destinazioni per e inviare profili o segmenti alle piattaforme di automazione del marketing, alle piattaforme di pubblicità digitale e altro ancora.
 * Pianifica le esportazioni di dati nelle destinazioni preferite in orari regolari.
 
 ## Controlli {#controls}
 
-I controlli nell&#39; [Area di lavoro Destinazioni](./ui/destinations-workspace.md) consentono di:
+I controlli [Area di lavoro Destinazioni](./ui/destinations-workspace.md) consente di:
 
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
 * Crea un account in una posizione di archiviazione o collega Platform all’account nella piattaforma di destinazione;
 * Seleziona quali segmenti devono essere attivati nelle destinazioni;
-* Seleziona i campi [Experience Data Model (XDM)](../xdm/home.md) da esportare durante l’attivazione dei segmenti nelle destinazioni di marketing e-mail.
+* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano i segmenti nelle destinazioni di marketing via e-mail.
 
 ## Tipi di destinazione e categorie {#types-and-categories}
 
-Per informazioni dettagliate, consulta la [panoramica dei tipi di destinazione e delle categorie](./destination-types.md).
+Per informazioni dettagliate, consulta la sezione [panoramica dei tipi e delle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
 La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, puoi visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, consulta [Controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
 
-Per ulteriori informazioni sui controlli di accesso, consulta la [Guida utente al controllo di accesso](../access-control/ui/overview.md).
+Per ulteriori informazioni sui controlli di accesso, consulta la sezione [Guida utente al controllo degli accessi](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] restrizioni all’attivazione dei dati alle destinazioni {#data-governance}
+## Restrizioni sulla governance dei dati sull’attivazione dei dati alle destinazioni {#data-governance}
 
 La governance dei dati viene applicata alle destinazioni Platform tramite:
 
-* *Azioni di marketing* da selezionare nel flusso di lavoro crea destinazioni;
-* *Criteri di utilizzo* dei dati che impediscono l’attivazione di dati contenenti determinate etichette di utilizzo a destinazioni con determinate azioni di marketing.
+* *Azioni di marketing* che puoi selezionare nel flusso di lavoro crea destinazioni;
+* *Criteri di utilizzo dei dati* che impedisce l’attivazione di dati contenenti determinate etichette di utilizzo a destinazioni con determinate azioni di marketing.
 
-Per ulteriori informazioni sulle [azioni di marketing](../data-governance/policies/overview.md) e sulla [risoluzione delle violazioni dei criteri per i dati](../data-governance/enforcement/auto-enforcement.md), consulta la sezione [!DNL Data Governance] nella documentazione di Platform .
+Per ulteriori informazioni, consulta Governance dei dati nella documentazione di Platform . [azioni di marketing](../data-governance/policies/overview.md) e [risoluzione delle violazioni dei criteri dei dati](../data-governance/enforcement/auto-enforcement.md).
 
 Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Platform:
 

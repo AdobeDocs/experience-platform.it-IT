@@ -5,9 +5,9 @@ title: Glossario delle etichette di utilizzo dei dati
 topic-legacy: labels
 description: Questo documento delinea tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1984'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Le etichette di utilizzo dei dati ti consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. La governance dei dati di Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati di base pronte all’uso che puoi utilizzare per iniziare a categorizzare i tuoi dati.
 
-Questo documento delinea le etichette di utilizzo dei dati di base attualmente fornite da [!DNL Experience Platform]. Ulteriori informazioni su [!DNL Data Governance] sono disponibili nella [Panoramica sulla governance dei dati](../home.md).
+Questo documento delinea le etichette di utilizzo dei dati di base attualmente fornite da [!DNL Experience Platform]. Ulteriori informazioni sulla governance dei dati sono disponibili nella sezione [Panoramica sulla governance dei dati](../home.md).
 
 ## Etichette per i contratti
 
@@ -70,7 +70,7 @@ Alcuni dati possono essere esportati solo da Adobe Experience Cloud in forma agg
 
 #### C2 {#c2}
 
-Alcuni fornitori di dati hanno termini nei loro contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. L&#39;etichetta C2 è più restrittiva di [C1](#c1), che richiede solo l&#39;aggregazione e dati anonimi.
+Alcuni fornitori di dati hanno termini nei loro contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. L&#39;etichetta C2 è più restrittiva di [C1](#c1), che richiede solo l’aggregazione e dati anonimi.
 
 #### C3 {#c3}
 
@@ -78,7 +78,7 @@ Alcuni fornitori di dati hanno termini nei loro contratti che vietano la combina
 
 #### C4 {#c4}
 
-C4 è l&#39;etichetta più restrittiva - include le etichette [C5](#c5), [C6](#c6) e [C7](#c7).
+C4 è l&#39;etichetta più restrittiva - include le etichette [C5](#c5), [C6](#c6)e [C7](#c7).
 
 #### C5 {#c5}
 
@@ -98,7 +98,7 @@ DAA: Comunicazioni comportamentali on-line. Raccolta di dati da un determinato c
 
 #### C6 {#c6}
 
-Gli annunci sono messaggi o notifiche, compresi testo e immagini, che compaiono su un sito web o un&#39;app e sono destinati principalmente a promuovere la vendita di beni o servizi. Spetta a te determinare lo scopo di tali messaggi o notifiche. Gli annunci sono separati dal contenuto sul sito, coperti dall&#39;etichetta [C7](#c7). I dati con un’etichetta C6 non possono essere utilizzati per il targeting degli annunci in sito, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci. Ciò include l’utilizzo di dati precedentemente raccolti sul sito relativi agli interessi degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati mostrati, e se gli utenti hanno intrapreso azioni relative all’annuncio, come la selezione di un annuncio o l’acquisto. Generalmente, fare deduzioni sulle preferenze degli utenti in base alle loro attività sul sito e quindi utilizzare tali preferenze nel targeting degli annunci on-site non si qualifica come targeting basato sugli interessi (o personalizzazione), in quanto non soddisferebbe tutti e tre i requisiti necessari per il targeting basato sugli interessi. *[Cfr. l&#39;etichetta C5 per questi requisiti.](#c5)*
+Gli annunci sono messaggi o notifiche, compresi testo e immagini, che compaiono su un sito web o un&#39;app e sono destinati principalmente a promuovere la vendita di beni o servizi. Spetta a te determinare lo scopo di tali messaggi o notifiche. Gli annunci sono separati dal contenuto sul sito, coperti dall’etichetta [C7](#c7). I dati con un’etichetta C6 non possono essere utilizzati per il targeting degli annunci sul sito, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione o per misurare la consegna e l’efficacia di tali annunci. Ciò include l’utilizzo di dati precedentemente raccolti sul sito relativi agli interessi degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati mostrati, e se gli utenti hanno intrapreso azioni relative all’annuncio, come la selezione di un annuncio o l’acquisto. Generalmente, fare deduzioni sulle preferenze degli utenti in base alle loro attività sul sito e quindi utilizzare tali preferenze nel targeting degli annunci on-site non si qualifica come targeting basato sugli interessi (o personalizzazione), in quanto non soddisferebbe tutti e tre i requisiti necessari per il targeting basato sugli interessi. *[Cfr. l&#39;etichetta C5 per questi requisiti.](#c5)*
 
 In definitiva, spetta a te interpretare l&#39;etichetta e come viene applicato l&#39;uso dei dati con quell&#39;etichetta. Per riferimento, i framework IAB e DAA sono forniti di seguito:
 
@@ -108,7 +108,7 @@ DAA: La pubblicità comportamentale online non include le attività di Prime par
 
 #### C7 {#c7}
 
-Il contenuto in sito è testo e immagini progettati per informare, educare o intrattenere e non creati per promuovere la vendita di beni o servizi. Spetta a te determinare lo scopo del contenuto, compreso se il contenuto potrebbe essere qualificato come pubblicità nativa. L&#39;etichetta C7 non è destinata a coprire gli annunci sul sito, che sono coperti dall&#39;etichetta [C6](#c6). I dati con un’etichetta C7 non possono essere utilizzati per il targeting dei contenuti sul sito, inclusa la selezione e la consegna di contenuti sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali contenuti. Ciò include informazioni raccolte in precedenza sugli interessi degli utenti in contenuti selezionati, l’elaborazione di dati su quale contenuto è stato visualizzato, quanto spesso o per quanto tempo è stato visualizzato, quando e dove è stato visualizzato, e se gli utenti hanno intrapreso azioni relative al contenuto, ad esempio la selezione del contenuto. Generalmente, fare deduzioni sulle preferenze degli utenti in base alle loro attività sul sito e quindi utilizzare tali preferenze nel targeting dei contenuti on-site non si qualifica come targeting basato sugli interessi (o personalizzazione), in quanto non soddisferebbe tutti e tre i requisiti necessari per il targeting basato sugli interessi. *[Cfr. l&#39;etichetta C5 per questi requisiti.](#c5)*
+Il contenuto in sito è testo e immagini progettati per informare, educare o intrattenere e non creati per promuovere la vendita di beni o servizi. Spetta a te determinare lo scopo del contenuto, compreso se il contenuto potrebbe essere qualificato come pubblicità nativa. L&#39;etichetta C7 non è destinata a coprire gli annunci in loco che sono coperti dall&#39;etichetta [C6](#c6). I dati con un’etichetta C7 non possono essere utilizzati per il targeting dei contenuti sul sito, inclusa la selezione e la consegna di contenuti sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali contenuti. Ciò include informazioni raccolte in precedenza sugli interessi degli utenti in contenuti selezionati, l’elaborazione di dati su quale contenuto è stato visualizzato, quanto spesso o per quanto tempo è stato visualizzato, quando e dove è stato visualizzato, e se gli utenti hanno intrapreso azioni relative al contenuto, ad esempio la selezione del contenuto. Generalmente, fare deduzioni sulle preferenze degli utenti in base alle loro attività sul sito e quindi utilizzare tali preferenze nel targeting dei contenuti on-site non si qualifica come targeting basato sugli interessi (o personalizzazione), in quanto non soddisferebbe tutti e tre i requisiti necessari per il targeting basato sugli interessi. *[Cfr. l&#39;etichetta C5 per questi requisiti.](#c5)*
 
 In definitiva, spetta a te interpretare l&#39;etichetta e come viene applicato l&#39;uso dei dati con quell&#39;etichetta. Per riferimento, i framework IAB e DAA sono forniti di seguito:
 
@@ -130,4 +130,4 @@ Alcuni criteri di utilizzo dei dati limitano l’utilizzo di dati di identità u
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match consente di associare segmenti di prime parti con preferenze di privacy e consenso, facilitando l’arricchimento dei profili e delle informazioni a valle. L’etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato quali set di dati e/o campi si desidera escludere da Segment Match (Confronta segmento) e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match (Corrispondenza segmento).
+Adobe Experience Platform Segment Match consente di associare segmenti di prime parti con preferenze di privacy e consenso, facilitando l’arricchimento dei profili e delle informazioni a valle. L’etichetta C11 indica i dati che non devono essere utilizzati in [!DNL Segment Match] processi. Dopo aver determinato quali set di dati e/o campi si desidera escludere da Segment Match (Confronta segmento) e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match (Corrispondenza segmento).
