@@ -5,9 +5,9 @@ title: (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’AP
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
+source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1065'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience
 
 Quando utilizzi l’API di attivazione ad-hoc, ricorda le seguenti protezioni.
 
-* Ogni processo di attivazione ad-hoc può attivare fino a 20 segmenti. Se si tenta di attivare più di 20 segmenti per processo, il processo non riuscirà.
+* Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 20 segmenti. Se si tenta di attivare più di 20 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
 * I processi di attivazione ad hoc non possono essere eseguiti in parallelo con quelli pianificati [processi di esportazione dei segmenti](../../segmentation/api/export-jobs.md). Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione del segmento pianificato sia stato completato. Vedi [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni su come monitorare lo stato dei flussi di attivazione. Ad esempio, se il flusso di dati di attivazione mostra una **[!UICONTROL Elaborazione]** attendi che termini prima di eseguire il processo di attivazione ad-hoc.
 * Non eseguire più di un processo di attivazione ad hoc simultaneo per segmento.
 
@@ -126,7 +126,7 @@ Una volta completato il processo di esportazione del segmento, puoi attivare l�
 
 >[!NOTE]
 >
->Puoi attivare un massimo di 20 segmenti per processo di attivazione ad hoc. Se si tenta di attivare più segmenti, il processo non riuscirà.
+>Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 20 segmenti. Se si tenta di attivare più di 20 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
 
 ### Richiesta
 
@@ -166,20 +166,21 @@ Una risposta corretta restituisce lo stato HTTP 200.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `code` | Il codice di risposta API. Viene restituita una chiamata corretta `DEST-ADH-200` (codice di stato 200), mentre un formato non corretto restituisce `DEST-ADH-400` (codice di stato 400). |
-| `message` | Messaggio di errore o di successo restituito dall’API. |
-| `statusURLs` | URL di stato del flusso di attivazione. Puoi tenere traccia dell’avanzamento del flusso utilizzando [API del servizio di flusso](../../sources/tutorials/api/monitor.md). |
+| `segment` | ID del segmento attivato. |
+| `order` | ID della destinazione in cui è stato attivato il segmento. |
+| `statusURL` | URL di stato del flusso di attivazione. Puoi tenere traccia dell’avanzamento del flusso utilizzando [API del servizio di flusso](../../sources/tutorials/api/monitor.md). |
 
 
 ## Gestione degli errori API
