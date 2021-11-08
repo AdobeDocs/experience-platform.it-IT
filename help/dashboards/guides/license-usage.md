@@ -4,18 +4,18 @@ title: Dashboard di utilizzo della licenza
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
+source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 0%
+source-wordcount: '837'
+ht-degree: 1%
 
 ---
 
-# Dashboard di utilizzo della licenza {#license-usage-dashboard}
+# Dashboard di utilizzo licenze {#license-usage-dashboard}
 
 L’interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e utilizzare il dashboard per l’utilizzo delle licenze nell’interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-Per una panoramica generale dell’interfaccia utente di Platform, visita la [guida all’interfaccia utente di Experience Platform](../../landing/ui-guide.md).
+Per una panoramica generale dell’interfaccia utente di Platform, visita [Guida all’interfaccia utente di Experience Platform](../../landing/ui-guide.md).
 
 ## Dati del dashboard per l’utilizzo della licenza
 
@@ -27,19 +27,19 @@ Nel dashboard sull’utilizzo delle licenze viene visualizzata un’istantanea d
 
 ## Esplorazione del dashboard di utilizzo della licenza
 
-Per passare al dashboard dell’utilizzo della licenza nell’interfaccia utente di Platform, seleziona **[!UICONTROL Utilizzo della licenza]** nella barra a sinistra. Viene visualizzata la scheda **[!UICONTROL Panoramica]** che mostra il dashboard.
+Per passare al dashboard dell’utilizzo della licenza nell’interfaccia utente di Platform, seleziona **[!UICONTROL Utilizzo della licenza]** nella barra a sinistra. Viene aperta la **[!UICONTROL Panoramica]** scheda che mostra il dashboard.
 
 >[!NOTE]
 >
->Il dashboard di utilizzo della licenza non è abilitato per impostazione predefinita. Per poter visualizzare il dashboard, è necessario concedere agli utenti l’autorizzazione &quot;Visualizza dashboard di utilizzo licenze&quot;. Per i passaggi su come concedere le autorizzazioni di accesso per visualizzare il dashboard di utilizzo della licenza, fare riferimento alla [guida alle autorizzazioni del dashboard](../permissions.md).
+>Il dashboard di utilizzo della licenza non è abilitato per impostazione predefinita. Per poter visualizzare il dashboard, è necessario concedere agli utenti l’autorizzazione &quot;Visualizza dashboard di utilizzo licenze&quot;. Per i passaggi sulla concessione delle autorizzazioni di accesso per visualizzare il dashboard di utilizzo della licenza, fare riferimento al [guida alle autorizzazioni del dashboard](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Selezionare una sandbox
 
-Per scegliere una sandbox da visualizzare nel dashboard, seleziona [!UICONTROL Produzione] o [!UICONTROL Sviluppo]. La sandbox selezionata è indicata dal pulsante di scelta accanto al nome della sandbox.
+Per scegliere una sandbox da visualizzare nel dashboard, selezionate una delle seguenti opzioni [!UICONTROL Produzione] o [!UICONTROL Sviluppo]. La sandbox selezionata è indicata dal pulsante di scelta accanto al nome della sandbox.
 
-La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le sandbox dello stesso tipo. In altre parole, la selezione di [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti di consumo rispettivamente per tutte le sandbox di produzione o di sviluppo.
+La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le sandbox dello stesso tipo. In altre parole, seleziona [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti sui consumi per tutte le sandbox di produzione o di sviluppo, rispettivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -64,7 +64,7 @@ Puoi anche selezionare **[!UICONTROL Data personalizzata]** per scegliere il per
 
 ## Widget
 
-Il dashboard per l&#39;utilizzo delle licenze è composto da widget che visualizzano metriche di sola lettura che forniscono informazioni importanti sull&#39;utilizzo delle licenze dell&#39;organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione (consulta la sezione [metriche disponibili](#available-metrics) per i dettagli).
+Il dashboard per l&#39;utilizzo delle licenze è composto da widget che visualizzano metriche di sola lettura che forniscono informazioni importanti sull&#39;utilizzo delle licenze dell&#39;organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione (consulta la sezione [metriche disponibili](#available-metrics) sezione per i dettagli).
 
 Ogni widget visualizza un grafico a linee che confronta i numeri effettivi per la tua organizzazione con il totale disponibile con le licenze della tua organizzazione e fornisce una percentuale dell&#39;utilizzo totale.
 
@@ -72,20 +72,12 @@ Ogni widget visualizza un grafico a linee che confronta i numeri effettivi per l
 
 ## Metriche disponibili
 
-Il dashboard di utilizzo della licenza riporta quattro metriche chiave, con ulteriori metriche da aggiungere nelle versioni successive. Le metriche disponibili sono elencate di seguito.
-
->[!NOTE]
->
->Tre delle metriche disponibili sono attualmente in versione beta.
+Il dashboard di utilizzo della licenza riporta quattro metriche chiave, con ulteriori metriche da aggiungere nelle versioni successive. Le metriche disponibili sono:
 
 * [!UICONTROL Pubblico indirizzabile]
-* [!UICONTROL Ricchezza]  media del profilo (Beta)
-* [!UICONTROL Rapporto di analisi dei dati per segmentazione]  (Beta)
-* [!UICONTROL Conservazione]  totale consumata (Beta)
-
->[!WARNING]
->
->Limitazione nota della metrica [!UICONTROL Memoria totale consumata]: Quando si eliminano i dati batch, il batch viene inserito in uno stato di eliminazione soft per un periodo di 7 giorni per supportare i casi di utilizzo del recupero dei dati. Dopo 7 giorni, il batch viene spostato in uno stato di eliminazione rigido. La generazione di rapporti sull&#39;archiviazione consumata totale non rifletterà alcuna modifica al grafico di tendenze fino a quando il batch non sarà nello stato di eliminazione rigido. Questo problema verrà risolto in una versione futura.
+* [!UICONTROL Ricchezza media del profilo]
+* [!UICONTROL Rapporto dati analizzati per segmentazione]
+* [!UICONTROL Memoria totale consumata]
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse variano a seconda della licenza acquistata dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, fare riferimento alla documentazione appropriata relativa alla descrizione del prodotto:
 
@@ -105,4 +97,4 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 Dopo aver letto questo documento, è possibile individuare il dashboard di utilizzo della licenza e selezionare una sandbox da visualizzare. Puoi anche trovare ulteriori informazioni sulle metriche disponibili per la tua organizzazione, in base alla licenza acquistata dalla tua organizzazione.
 
-Per ulteriori informazioni sulle altre funzioni disponibili nell’interfaccia utente di Experience Platform, consulta la [Guida all’interfaccia utente della piattaforma](../../landing/ui-guide.md) .
+Per ulteriori informazioni sulle altre funzioni disponibili nell’interfaccia utente di Experience Platform, consulta [Guida all’interfaccia utente di Platform](../../landing/ui-guide.md).
