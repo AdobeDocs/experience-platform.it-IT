@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Dopo che un processo di segmentazione è stato completato correttamente (il valo
 Per esportare il pubblico sono necessari i seguenti passaggi:
 
 - [Creare un set di dati di destinazione](#create-a-target-dataset) - Crea il set di dati per i membri del pubblico.
-- [Generare profili di pubblico nel set di dati](#generate-profiles-for-audience-members) - Compilare il set di dati con i singoli profili XDM in base ai risultati di un processo di segmento.
+- [Generare profili di pubblico nel set di dati](#generate-profiles) - Compilare il set di dati con i singoli profili XDM in base ai risultati di un processo di segmento.
 - [Monitorare l’avanzamento dell’esportazione](#monitor-export-progress) - Controllare l&#39;avanzamento corrente del processo di esportazione.
 - [Leggere i dati sul pubblico](#next-steps) - Recupera i singoli profili XDM risultanti che rappresentano i membri del pubblico.
 
@@ -163,9 +163,9 @@ Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`sch
 Esistono due modi per creare il set di dati necessario:
 
 - **Utilizzo delle API:** I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che fa riferimento a [!DNL XDM Individual Profile Union Schema] utilizzando [!DNL Catalog] API.
-- **Utilizzo dell’interfaccia utente:** Per utilizzare [!DNL Adobe Experience Platform] per creare un set di dati che faccia riferimento allo schema di unione, segui i passaggi descritti in [Esercitazione sull’interfaccia utente](../ui/overview.md) quindi torna a questa esercitazione per procedere con i passaggi per [generazione di profili di pubblico](#generate-xdm-profiles-for-audience-members).
+- **Utilizzo dell’interfaccia utente:** Per utilizzare [!DNL Adobe Experience Platform] per creare un set di dati che faccia riferimento allo schema di unione, segui i passaggi descritti in [Esercitazione sull’interfaccia utente](../ui/overview.md) quindi torna a questa esercitazione per procedere con i passaggi per [generazione di profili di pubblico](#generate-profiles).
 
-Se disponi già di un set di dati compatibile e ne conosci l’ID, puoi procedere direttamente al passaggio per [generazione di profili di pubblico](#generate-xdm-profiles-for-audience-members).
+Se disponi già di un set di dati compatibile e ne conosci l’ID, puoi procedere direttamente al passaggio per [generazione di profili di pubblico](#generate-profiles).
 
 **Formato API**
 
