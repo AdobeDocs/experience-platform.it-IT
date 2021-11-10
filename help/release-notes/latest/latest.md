@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
+source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '454'
 ht-degree: 9%
 
 ---
@@ -57,7 +57,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Funzione | Descrizione |
 | --- | --- |
 | [!DNL Amazon S3] miglioramenti alla sorgente | Ora puoi utilizzare la `s3SessionToken` per collegare il [!DNL Amazon S3] su Platform utilizzando credenziali di sicurezza temporanee. Questo token ti consente di fornire accesso temporaneo e a breve termine al tuo [!DNL Amazon S3] risorse per gli utenti in ambienti non attendibili. Consulta la sezione [[!DNL Amazon S3] documentazione](../../sources/connectors/cloud-storage/s3.md#prerequisites) per ulteriori informazioni. |
-| [!DNL Generic REST API] (Beta) | Ora puoi creare una [!DNL Generic REST API] connessione di origine tramite [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) o [interfaccia utente](../../sources/tutorials/ui/create/protocols/generic-rest.md) per trasferire dati da un’applicazione REST generica a Platform. Consulta la sezione [[!DNL Generic REST API] panoramica](../../sources/connectors/protocols/generic-rest.md) per ulteriori informazioni. |
+| [!DNL Generic REST API] (Beta) | Ora puoi creare una [!DNL Generic REST API] connessione di origine tramite [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) per trasferire dati da un’applicazione REST generica a Platform. Consulta la sezione [[!DNL Generic REST API] panoramica](../../sources/connectors/protocols/generic-rest.md) per ulteriori informazioni. |
 | [!DNL Zoho CRM] (Beta) | Ora puoi creare una [!DNL Zoho CRM] connessione di origine tramite [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o [interfaccia utente](../../sources/tutorials/ui/create/crm/zoho.md) per ottenere i dati dal [!DNL Zoho CRM] a Platform. Consulta la sezione [[!DNL Zoho CRM] panoramica](../../sources/connectors/crm/zoho.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).

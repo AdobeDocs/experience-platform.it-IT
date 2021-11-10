@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '658'
 ht-degree: 12%
 
 ---
@@ -236,7 +236,6 @@ ht-degree: 12%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolli {#protocols}
          - [OData generico](tutorials/ui/create/protocols/odata.md)
-         - [API REST generica](tutorials/ui/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurare un flusso di dati {#dataflow}
