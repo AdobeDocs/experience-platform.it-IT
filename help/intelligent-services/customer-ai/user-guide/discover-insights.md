@@ -6,9 +6,9 @@ title: Scopri informazioni approfondite con Customer AI
 topic-legacy: Discovering insights
 description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 63d6ec7d72b448e9d1bf1da96a1f148838d99cec
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1716'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ Questo documento funge da guida per interagire con le informazioni sulle istanze
 
 ## Introduzione
 
-Per utilizzare le informazioni per Customer AI, è necessario disporre di un’istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza di servizio, visita [Configurazione di un&#39;istanza di Customer AI](./configure.md). Se hai creato di recente un&#39;istanza di servizio ed è ancora in fase di formazione e valutazione, ti preghiamo di consentire 24 ore per il completamento dell&#39;esecuzione.
+Per utilizzare le informazioni per Customer AI, è necessario disporre di un’istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza di servizio visita [Configurazione di un’istanza di Customer AI](./configure.md). Se hai creato di recente un&#39;istanza di servizio ed è ancora in fase di formazione e valutazione, ti preghiamo di consentire 24 ore per il completamento dell&#39;esecuzione.
 
 ## Panoramica dell&#39;istanza del servizio
 
-Nell&#39;interfaccia utente [!DNL Adobe Experience Platform], fai clic su **[!UICONTROL Servizi]** nel menu di navigazione a sinistra. Viene visualizzato il browser *Servizi* e vengono visualizzati i servizi intelligenti disponibili. Nel contenitore per Customer AI, fai clic su **[!UICONTROL Apri]**.
+In [!DNL Adobe Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Servizi]** nella navigazione a sinistra. La *Servizi* viene visualizzato il browser e viene visualizzato Intelligent Services disponibile. Nel contenitore per Customer AI, seleziona **[!UICONTROL Apri]**.
 
 ![Accesso all’istanza](../images/insights/navigate-to-service.png)
 
@@ -41,57 +41,69 @@ Seleziona un nome di istanza del servizio da iniziare.
 
 ![Crea istanza](../images/insights/click-the-name.png)
 
-Successivamente, viene visualizzata la pagina delle informazioni per l&#39;istanza del servizio con l&#39;opzione per selezionare **[!UICONTROL Punteggi più recenti]** o **[!UICONTROL Riepilogo delle prestazioni]**. La scheda predefinita **[!UICONTROL Ultimi punteggi]** fornisce visualizzazioni dei tuoi dati. Le visualizzazioni e le operazioni che puoi eseguire con i dati sono descritte più dettagliatamente in questa guida.
+Viene quindi visualizzata la pagina delle informazioni per l’istanza del servizio con l’opzione di selezione **[!UICONTROL Punteggi più recenti]** o **[!UICONTROL Riepilogo delle prestazioni]**. Scheda predefinita **[!UICONTROL Punteggi più recenti]** fornisce visualizzazioni dei tuoi dati. Le visualizzazioni e le operazioni che puoi eseguire con i dati sono descritte più dettagliatamente in questa guida.
 
-La scheda **[!UICONTROL Riepilogo prestazioni]** mostra i tassi di abbandono o di conversione effettivi per ciascun intervallo di propensione. Per ulteriori informazioni, consulta la sezione sulle [metriche di riepilogo delle prestazioni](#performance-metrics).
+La **[!UICONTROL Riepilogo delle prestazioni]** mostra i tassi di abbandono o di conversione effettivi per ogni intervallo di propensione. Per ulteriori informazioni, consulta la sezione su [metriche di riepilogo delle prestazioni](#performance-metrics).
 
 ![pagina di configurazione](../images/insights/landing_page_insights.png)
 
-### Dettagli istanza servizio
+## Dettagli istanza servizio
 
 Esistono due modi per visualizzare i dettagli dell’istanza del servizio: dal dashboard o all&#39;interno dell&#39;istanza del servizio.
 
+### Dashboard delle istanze del servizio
+
 Per visualizzare una panoramica dei dettagli dell&#39;istanza del servizio all&#39;interno del dashboard, selezionare un contenitore di istanza del servizio, evitando il collegamento ipertestuale associato al nome. Viene visualizzata la barra a destra con ulteriori dettagli. I controlli contengono i seguenti elementi:
 
-- **[!UICONTROL Modifica]**: Selezionando  **** Modifica puoi modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
-- **[!UICONTROL Clona]**: Selezionando  **** Copia l&#39;istanza di servizio attualmente selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
+- **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia l&#39;istanza di servizio attualmente selezionata impostata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
 - **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
-- **[!UICONTROL Origine]** dati: Un collegamento al set di dati utilizzato da questa istanza.
+- **[!UICONTROL Origine dati]**: Un collegamento al set di dati utilizzato da questa istanza.
 - **[!UICONTROL Esegui frequenza]**: Con quale frequenza e quando si svolge un’esecuzione del punteggio.
-- **[!UICONTROL Definizione]** punteggio: Panoramica rapida dell’obiettivo configurato per questa istanza.
+- **[!UICONTROL Definizione del punteggio]**: Panoramica rapida dell’obiettivo configurato per questa istanza.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->Se un’esecuzione del punteggio non riesce, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in **Dettagli ultima esecuzione** nella barra a destra, visibile solo per le esecuzioni non riuscite.
+>Se un’esecuzione del punteggio non riesce, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in **Dettagli dell&#39;ultima esecuzione** nella barra a destra, visibile solo per le esecuzioni non riuscite.
 
 ![messaggio di esecuzione non riuscito](../images/insights/failed-run.png)
 
-Il secondo modo per visualizzare dettagli aggiuntivi per un’istanza di servizio si trova nella pagina approfondimenti. Per compilare un elenco a discesa, fai clic su **[!UICONTROL Mostra altro]** in alto a destra. Sono elencati i dettagli, ad esempio la definizione del punteggio, la data di creazione e il tipo di propensione. Per ulteriori informazioni su una delle proprietà elencate, visita [Configurazione di un&#39;istanza di Customer AI](./configure.md).
+### Menu a discesa Mostra più approfondimenti
+
+Il secondo modo per visualizzare dettagli aggiuntivi per un’istanza di servizio si trova nella pagina approfondimenti. Seleziona **[!UICONTROL Mostra altro]** in alto a destra per compilare un elenco a discesa. Sono elencati i dettagli, ad esempio la definizione del punteggio, al momento della creazione, il tipo di propensione e i set di dati utilizzati. Per maggiori informazioni sulle proprietà elencate, visitare [Configurazione di un’istanza di Customer AI](./configure.md).
 
 ![mostrare di più](../images/insights/landing-show-more.png)
 
-![mostrare di più](../images/insights/show-more.png)
+### Puntatore di anteprima del set di dati di Customer AI
+
+Se Customer AI utilizza più di un set di dati, un collegamento ipertestuale etichettato **[!UICONTROL Multipli]** seguito dal numero di set di dati tra parentesi `()` è fornito.
+
+![set di dati multipli](../images/insights/insights-multi-datasets.png)
+
+Selezionando il collegamento per più set di dati si apre il profilo di anteprima del set di dati di Customer AI. Ogni colore nell’anteprima rappresenta un set di dati come mostrato dalla chiave colore a sinistra delle colonne del set di dati. In questo esempio, puoi vedere solo **Set di dati 1** contiene `PROP1` colonna.
+
+![mostrare di più](../images/insights/dataset-preview.png)
 
 ### Modificare un’istanza
 
-Per modificare un&#39;istanza, fai clic su **[!UICONTROL Modifica]** nella navigazione in alto a destra.
+Per modificare un’istanza, seleziona **[!UICONTROL Modifica]** nella navigazione in alto a destra.
 
 ![fai clic sul pulsante modifica](../images/insights/edit-button.png)
 
-Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Salva]** nell’angolo in basso a destra.
+Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Salva]** nell&#39;angolo in basso a destra.
 
 ![pozzo di modifica](../images/insights/edit-instance.png)
 
 ### Altre azioni
 
-Il pulsante **[!UICONTROL Altre azioni]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Modifica]**. Facendo clic su **[!UICONTROL Altre azioni]** si apre un menu a discesa che consente di selezionare una delle seguenti operazioni:
+La **[!UICONTROL Altre azioni]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Modifica]**. Selezione **[!UICONTROL Altre azioni]** apre un menu a discesa che consente di selezionare una delle seguenti operazioni:
 
-- **[!UICONTROL Clona]**: Selezionando  **** Copia l&#39;istanza del servizio impostata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia la configurazione dell&#39;istanza del servizio. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
 - **[!UICONTROL Elimina]**: Elimina l’istanza.
-- **[!UICONTROL Punteggi]** di accesso: Selezionando  **[!UICONTROL i]** punteggi di accesso si apre una finestra di dialogo che fornisce un collegamento ai punteggi di  [download per l’](./download-scores.md) esercitazione di Customer AI, la finestra di dialogo fornisce anche l’ID set di dati necessario per effettuare chiamate API.
-- **[!UICONTROL Visualizzare la cronologia]** di esecuzione: Viene visualizzata una finestra di dialogo contenente un elenco di tutte le esecuzioni del punteggio associate all’istanza del servizio.
+- **[!UICONTROL Punteggi di accesso]**: Selezione **[!UICONTROL Punteggi di accesso]** apre una finestra di dialogo che fornisce un collegamento al [download dei punteggi per Customer AI](./download-scores.md) tutorial, la finestra di dialogo fornisce anche l’ID set di dati necessario per effettuare chiamate API.
+- **[!UICONTROL Visualizza cronologia di esecuzione]**: Viene visualizzata una finestra di dialogo contenente un elenco di tutte le esecuzioni del punteggio associate all’istanza del servizio.
 
 ![altre azioni](../images/insights/more-actions.png)
 
@@ -111,7 +123,7 @@ Passa il cursore del mouse su un colore dell’anello per visualizzare informazi
 
 ## Distribuzione dei punteggi
 
-La scheda **[!UICONTROL Distribuzione di punteggi]** fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda [!UICONTROL Distribuzione di punteggi] rappresentano il tipo di punteggio di propensione generato. Passando il puntatore del mouse su una delle distribuzioni di punteggio, viene fornito il conteggio esatto appartenente a tale distribuzione.
+La **[!UICONTROL Distribuzione dei punteggi]** scheda fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella [!UICONTROL Distribuzione dei punteggi] la scheda rappresenta il tipo di punteggio di propensione generato. Passando il puntatore del mouse su una delle distribuzioni di punteggio, viene fornito il conteggio esatto appartenente a tale distribuzione.
 
 ![distribuzione dei punteggi](../images/insights/distribution-of-scores.png)
 
@@ -135,17 +147,17 @@ Puoi notare che i profili con bassa propensione alla conversione hanno meno prob
 
 ### Creare un segmento
 
-Selezionando il pulsante **[!UICONTROL Crea segmento]** in uno qualsiasi dei bucket per una propensione bassa, media e alta, si reindirizza al generatore di segmenti.
+Selezione della **[!UICONTROL Crea segmento]** in uno qualsiasi dei bucket per la propensione bassa, media e alta ti reindirizzerà al generatore di segmenti.
 
 >[!NOTE]
 >
->Il pulsante **[!UICONTROL Crea segmento]** è disponibile solo se per il set di dati è abilitato Profilo cliente in tempo reale. Per ulteriori informazioni su come abilitare il profilo cliente in tempo reale, visita la [Panoramica sul profilo cliente in tempo reale](../../../rtcdp/overview.md).
+>La **[!UICONTROL Crea segmento]** Questo pulsante è disponibile solo se per il set di dati è abilitato Profilo cliente in tempo reale . Per ulteriori informazioni su come abilitare il profilo cliente in tempo reale, visita il [Panoramica del profilo cliente in tempo reale](../../../rtcdp/overview.md).
 
 ![Fai clic su Crea segmento](../images/insights/influential-factors-create-segment.png)
 
 ![Creare un segmento](../images/insights/create-segment.png)
 
-Il generatore di segmenti viene utilizzato per definire un segmento. Quando selezioni **[!UICONTROL Crea segmento]** dalla pagina Approfondimenti , Customer AI aggiunge automaticamente le informazioni sui bucket selezionati al segmento. Per completare la creazione del segmento, è sufficiente compilare i contenitori *Name* e *Description* nella barra a destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato un nome e una descrizione al segmento, fai clic su **[!UICONTROL Salva]** in alto a destra.
+Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Crea segmento]** dalla pagina Approfondimenti , Customer AI aggiunge automaticamente al segmento le informazioni sui bucket selezionati. Per completare la creazione del segmento, compila semplicemente il **Nome** e **Descrizione** contenitori situati nella barra a destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato un nome e una descrizione al segmento, seleziona **[!UICONTROL Salva]** in alto a destra.
 
 >[!NOTE]
 >
@@ -153,13 +165,13 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando sele
 
 ![Riempimento del segmento](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Sfoglia]** che visualizza tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** nella navigazione a sinistra. La **[!UICONTROL Sfoglia]** viene visualizzata la pagina e visualizza tutti i segmenti disponibili.
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
 ## Metriche di riepilogo delle prestazioni {#performance-metrics}
 
-La scheda **[!UICONTROL Riepilogo delle prestazioni]** mostra i tassi di abbandono o di conversione effettivi, separati in ciascuno dei periodi di tendenza valutati da Customer AI.
+La **[!UICONTROL Riepilogo delle prestazioni]** La scheda mostra i tassi di abbandono o di conversione effettivi, separati in ciascuno dei periodi di tolleranza valutati da Customer AI.
 
 ![Scheda Riepilogo prestazioni](../images/insights/summary_tab.png)
 
@@ -169,21 +181,21 @@ Passando il puntatore del mouse sopra le righe viene visualizzata la data e il t
 
 ![Esempio di bucket](../images/insights/churn_tab.png)
 
-Puoi filtrare l’intervallo di tempo per la visualizzazione dei tassi previsti ed effettivi. Seleziona l&#39;icona **Calendario** ![icona](../images/insights/calendar_icon.png)e seleziona un nuovo intervallo di date. I risultati in ciascuno dei bucket vengono aggiornati per essere visualizzati all’interno del nuovo intervallo di date.
+Puoi filtrare l’intervallo di tempo per la visualizzazione dei tassi previsti ed effettivi. Seleziona la **icona calendario** ![icona](../images/insights/calendar_icon.png)quindi seleziona un nuovo intervallo di date. I risultati in ciascuno dei bucket vengono aggiornati per essere visualizzati all’interno del nuovo intervallo di date.
 
 ![Selettore data](../images/insights/date_selector.png)
 
 ### Tassi di esecuzione dei punteggi individuali
 
-Nella parte inferiore della scheda **[!UICONTROL Riepilogo prestazioni]** vengono visualizzati i risultati per ogni singola esecuzione del punteggio. Seleziona la data a discesa in alto a destra per visualizzare i risultati di una diversa esecuzione del punteggio.
+La metà inferiore del **[!UICONTROL Riepilogo delle prestazioni]** visualizza i risultati per ogni singola esecuzione del punteggio. Seleziona la data a discesa in alto a destra per visualizzare i risultati di una diversa esecuzione del punteggio.
 
-A seconda che si preveda un abbandono o una conversione, il grafico [!UICONTROL Distribuzione di punteggi] mostra la distribuzione dei profili eseguiti/convertiti e non eseguiti/non convertiti in ogni incremento.
+A seconda di se si prevede l’abbandono o la conversione, l’ [!UICONTROL Distribuzione dei punteggi] Il grafico mostra la distribuzione dei profili generati/convertiti e non eseguiti/non convertiti in ogni incremento.
 
 ![punteggio individuale](../images/insights/scoring_tab.png)
 
 ## Passaggi successivi
 
-Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. È ora possibile continuare l&#39;esercitazione su [download dei punteggi in Customer AI](./download-scores.md) oppure sfogliare le altre guide [Adobe Intelligent Services](../../home.md) offerte.
+Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. Ora puoi continuare l’esercitazione su [download dei punteggi in Customer AI](./download-scores.md) o navigare nell&#39;altro [Adobe Intelligent Services](../../home.md) guide che vengono offerte.
 
 ## Risorse aggiuntive
 
