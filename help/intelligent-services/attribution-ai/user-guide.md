@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '2281'
 ht-degree: 1%
 
 ---
@@ -20,28 +20,28 @@ Questo documento funge da guida per l’interazione con Attribution AI nell’in
 
 ## Creare un’istanza
 
-Nell&#39;interfaccia utente [!DNL Adobe Experience Platform], fai clic su **[!UICONTROL Servizi]** nel menu di navigazione a sinistra. Viene visualizzato il browser **[!UICONTROL Servizi]** e vengono visualizzati i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, fai clic su **[!UICONTROL Apri]**.
+In [!DNL Adobe Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Servizi]** nella navigazione a sinistra. La **[!UICONTROL Servizi]** viene visualizzato il browser e vengono visualizzati i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, seleziona **[!UICONTROL Apri]**.
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
 Viene visualizzata la pagina del servizio Attribution AI. In questa pagina sono elencate le istanze di servizio di Attribution AI e vengono visualizzate informazioni su di esse, tra cui il nome dell’istanza, gli eventi di conversione, la frequenza di esecuzione dell’istanza e lo stato dell’ultimo aggiornamento.
 
-Puoi trovare la metrica **[!UICONTROL Totale eventi di conversione con punteggio]** situata in basso a destra del contenitore **[!UICONTROL Crea istanza]** . Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali istanze di servizio eliminate.
+È possibile trovare le **[!UICONTROL Totale degli eventi di conversione valutati]** in basso a destra **[!UICONTROL Crea istanza]** contenitore. Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali istanze di servizio eliminate.
 
-![](./images/user-guide/total_conversions.png)
+![conversioni totali](./images/user-guide/total_conversions.png)
 
-Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, seleziona un&#39;istanza dalle **[!UICONTROL istanze di servizio]** esistenti. I controlli contengono le seguenti informazioni:
+Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, seleziona un&#39;istanza dal tuo esistente **[!UICONTROL Istanze del servizio]**. I controlli contengono le seguenti informazioni:
 
-- **[!UICONTROL Modifica]**: Selezionando  **** Modifica puoi modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
-- **[!UICONTROL Clona]**: Selezionando  **** Copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
+- **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
 - **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
-- **[!UICONTROL Origine]** dati: Un collegamento al set di dati utilizzato da questa istanza.
-- **[!UICONTROL Dettagli]** dell&#39;ultima esecuzione: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
+- **[!UICONTROL Origine dati]**: Un collegamento al set di dati in uso. Se Attribution AI utilizza più di un set di dati, viene visualizzato &quot;Multiplo&quot; seguito dal numero di set di dati. Quando si seleziona il collegamento ipertestuale, viene visualizzato il profilo di anteprima dei set di dati.
+- **[!UICONTROL Dettagli dell&#39;ultima esecuzione]**: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
 
-![](./images/user-guide/side_panel.png)
+![Riquadro laterale](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Eventi]** di conversione: Panoramica rapida degli eventi di conversione configurati per questa istanza.
-- **[!UICONTROL Intervallo]** di lookback: Intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell’evento di conversione sono inclusi.
+- **[!UICONTROL Eventi di conversione]**: Panoramica rapida degli eventi di conversione configurati per questa istanza.
+- **[!UICONTROL Intervallo di lookback]**: Intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell’evento di conversione sono inclusi.
 - **[!UICONTROL Punti di contatto]**: Elenco di tutti i punti di contatto definiti durante la creazione dell’istanza.
 
 ![](./images/user-guide/side_panel_2.png)
@@ -50,81 +50,123 @@ Seleziona **[!UICONTROL Crea istanza]** per iniziare.
 
 ![Crea istanza](./images/user-guide/landing_page.png)
 
-Viene quindi visualizzata la pagina di configurazione di Attribution AI, in cui puoi fornire informazioni di base e specificare un set di dati per l’istanza.
-
-![pagina di configurazione](./images/user-guide/setup_attribution.png)
-
-### Denomina l&#39;istanza
-
-In **[!UICONTROL Informazioni di base]**, fornisci un nome e una descrizione facoltative per la tua istanza di servizio.
+Viene quindi visualizzata la pagina di configurazione per Attribution AI in cui puoi specificare un nome e una descrizione facoltative per l’istanza del servizio.
 
 ![denominazione di un’istanza](./images/user-guide/naming_instance.png)
 
-### Selezionare un set di dati
+## Seleziona dati {#select-data}
 
-Dopo aver compilato le informazioni di base, fai clic sul menu a discesa con etichetta **Seleziona set di dati** per selezionare il set di dati. Il set di dati viene utilizzato per addestrare il modello e valutare i dati successivi che produce. Quando selezioni un set di dati dal selettore a discesa, vengono elencati solo quelli compatibili con Attribution AI e conformi allo schema Experience Data Model (XDM). Una volta scelto un set di dati, fai clic su **Successivo** nell’angolo in alto a destra per passare alla pagina degli eventi di definizione.
+<!-- https://www.adobe.com/go/aai-select-data -->
 
->[!TIP]
->
->I set di dati Adobe Analytics sono supportati tramite il connettore origine Analytics.
+Per progettazione, Attribution AI può utilizzare i dati di Adobe Analytics, Experience event e Consumer Experience Event per calcolare i punteggi di attribuzione. Quando selezioni un set di dati vengono elencati solo quelli compatibili con Attribution AI. Per selezionare un set di dati, seleziona il (**+**) accanto al nome del set di dati o seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Puoi anche utilizzare l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
 
-![pagina di configurazione](./images/user-guide/dataset_selector.png)
+Dopo aver selezionato i set di dati da utilizzare, seleziona la **[!UICONTROL Aggiungi]** per aggiungere i set di dati al riquadro di anteprima del set di dati.
 
-## Definizione degli eventi
+![Seleziona set di dati](./images/user-guide/select-datasets.png)
 
-Esistono tre diversi tipi di dati di input utilizzati per definire gli eventi:
+Selezione dell’icona delle informazioni ![icona info](./images/user-guide/info-icon.png) accanto a un set di dati viene aperto il set di dati preview pover.
 
-- **Eventi di conversione:** obiettivi aziendali che identificano l’impatto delle attività di marketing, come ordini di e-commerce, acquisti in negozio e visite a siti web.
-- **Intervallo di lookback:** fornisce un intervallo di tempo che indica quanti giorni prima dell’inclusione dei punti di contatto dell’evento di conversione.
-- **Punti di contatto: eventi di marketing a livello di destinatario, singolo e o cookie utilizzati per valutare l’impatto numerico o basato su ricavi delle conversioni.** 
+![Selezionare e cercare il set di dati](./images/user-guide/dataset-preview.png)
 
-### Definire gli eventi di conversione {#define-conversion-events}
+L’anteprima del set di dati contiene dati quali l’ora dell’ultimo aggiornamento, lo schema di origine e un’anteprima delle prime dieci colonne.
 
-Per definire un evento di conversione, devi assegnare un nome all’evento e selezionare il tipo di evento facendo clic sul menu a discesa **Inserisci nome campo** .
+### Completezza del set di dati {#dataset-completeness}
 
-![menu a discesa sì](./images/user-guide/conversion_event_2.png)
+<!-- https://www.adobe.com/go/aai-dataset-completeness -->
 
-Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a destra di tale evento. Il secondo menu a discesa viene utilizzato per fornire ulteriore contesto all’evento attraverso le operazioni. Per questo evento di conversione, viene utilizzata l&#39;operazione predefinita *exists* .
+Nell’anteprima del set di dati è presente un valore percentuale di completezza del set di dati. Questo valore fornisce un’istantanea rapida del numero di colonne del set di dati vuote o nulle. Se un set di dati contiene molti valori mancanti e questi valori vengono acquisiti altrove, si consiglia vivamente di includere il set di dati contenente i valori mancanti.
 
 >[!NOTE]
 >
->Una stringa sotto il *nome conversione* viene aggiornata mentre definisci l&#39;evento.
+>La completezza del set di dati viene calcolata utilizzando la finestra di addestramento massima per le Attribution AI (un anno). Ciò significa che i dati di età superiore a un anno non vengono presi in considerazione quando visualizzi il valore di completezza del set di dati.
+
+![Completezza del set di dati](./images/user-guide/dataset-completeness.png)
+
+### Selezionare un&#39;identità {#identity}
+
+Affinché più set di dati si possano unire tra loro, devi selezionare un tipo di identità (noto anche come &quot;namespace identità&quot;) e un valore di identità all’interno dello spazio dei nomi. Se hai assegnato più di un campo come identità all’interno dello schema sotto lo stesso spazio dei nomi, tutti i valori di identità assegnati vengono visualizzati nel menu a discesa Identità preceduto dallo spazio dei nomi, ad esempio `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+
+>[!IMPORTANT]
+>
+>Lo stesso tipo di identità (namespace) deve essere utilizzato per ogni set di dati selezionato. Accanto al tipo di identità all&#39;interno della colonna Identity, viene visualizzato un segno di spunta verde che indica che i set di dati sono compatibili. Ad esempio, quando utilizzi lo spazio dei nomi Telefono e `mobilePhone.number` come identificatore, tutti gli identificatori per i set di dati rimanenti devono contenere e utilizzare lo spazio dei nomi Telefono .
+
+Per selezionare un&#39;identità, selezionare il valore sottolineato che si trova nella colonna identità. Viene visualizzato il puntatore di selezione di un&#39;identità.
+
+![seleziona lo stesso namespace](./images/user-guide/identity-type.png)
+
+Se in uno spazio dei nomi sono disponibili più identità, accertati di selezionare il campo di identità corretto per il caso d’uso. Ad esempio, due identità e-mail sono disponibili all’interno dello spazio dei nomi e-mail, un messaggio e-mail aziendale e personale. A seconda del caso d’uso, è più probabile che un’e-mail personale venga compilata ed è più utile nelle singole previsioni. Ciò significa che puoi selezionare `EMAIL (personalEmail.address)` come la tua identità.
+
+![Chiave del set di dati non selezionata](./images/user-guide/select-identity.png)
+
+>[!NOTE]
+>
+> Se non esiste un tipo di identità (namespace) valido per un set di dati, è necessario impostare un&#39;identità primaria e assegnarla a uno spazio dei nomi di identità utilizzando [editor di schemi](../../xdm/schema/composition.md#identity). Per ulteriori informazioni sugli spazi dei nomi e le identità, visita il [Namespace del servizio Identity](../../identity-service/namespaces.md) documentazione.
+
+## Mappatura dei campi del canale e della campagna multimediale {#aai-mapping}
+
+<!-- https://www.adobe.com/go/aai-mapping -->
+
+Dopo aver selezionato e aggiunto i set di dati, la **Mappa** viene visualizzato il passaggio di configurazione. Attribution AI richiede di mappare il campo Canale multimediale per ogni set di dati selezionato nel passaggio precedente. Questo perché senza la mappatura del canale multimediale tra set di dati, le informazioni derivate da Attribution AI potrebbero non essere visualizzate correttamente rendendo difficile l’interpretazione della pagina delle informazioni. Anche se è richiesto solo il canale Media, si consiglia vivamente di mappare alcuni dei campi facoltativi quali azione Media, nome della campagna, gruppo Campaign e tag Campaign. In questo modo le Attribution AI possono fornire informazioni più chiare e risultati ottimali.
+
+![mappatura](./images/user-guide/mapping.png)
+
+## Definizione degli eventi {#define-events}
+
+<!-- https://www.adobe.com/go/aai-define-events -->
+
+Esistono tre diversi tipi di dati di input utilizzati per definire gli eventi:
+
+- **Eventi di conversione:** Obiettivi aziendali che identificano l&#39;impatto delle attività di marketing, come ordini di e-commerce, acquisti in-store e visite a siti web.
+- **Intervallo di lookback:** Fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell’evento di conversione devono essere inclusi.
+- **Punti di contatto:** eventi di marketing a livello di destinatari, singoli e o cookie utilizzati per valutare l’impatto numerico o basato sui ricavi delle conversioni.
+
+### Definire gli eventi di conversione {#define-conversion-events}
+
+Per definire un evento di conversione, devi assegnare un nome all’evento e selezionare il tipo di evento selezionando la **Immettere il nome del campo** menu a discesa.
+
+![menu a discesa sì](./images/user-guide/conversion_event_2.png)
+
+Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a destra di tale evento. Il secondo menu a discesa viene utilizzato per fornire ulteriore contesto all’evento attraverso le operazioni. Per questo evento di conversione, l’operazione predefinita *esiste* viene utilizzato.
+
+>[!NOTE]
+>
+>Una stringa sotto il tuo *nome conversione* viene aggiornato mentre definisci l’evento.
 
 ![nessun menu a discesa](./images/user-guide/conversion_event_1.png)
 
-I pulsanti **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che stai definendo, potrebbe essere necessario utilizzare i pulsanti **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** per fornire ulteriore contesto.
+La **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** i pulsanti vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che stai definendo, potrebbe essere necessario utilizzare il **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** per fornire ulteriore contesto.
 
 ![aggiungi evento](./images/user-guide/add_event.png)
 
-Facendo clic su **[!UICONTROL Aggiungi evento]** vengono creati campi aggiuntivi che possono essere compilati utilizzando lo stesso metodo descritto in precedenza. In questo modo viene aggiunta un&#39;istruzione AND alla definizione della stringa sotto il nome di conversione. Fai clic su **x** per rimuovere un evento aggiunto.
+Selezione **[!UICONTROL Aggiungi evento]** crea campi aggiuntivi che possono essere compilati utilizzando lo stesso metodo descritto in precedenza. In questo modo viene aggiunta un&#39;istruzione AND alla definizione della stringa sotto il nome di conversione. Seleziona la **x** per rimuovere un evento aggiunto.
 
 ![aggiungi menu eventi](./images/user-guide/add_event_result.png)
 
-Facendo clic su **[!UICONTROL Aggiungi gruppo]** è possibile creare campi aggiuntivi separati dall&#39;originale. Aggiungendo i gruppi, viene visualizzato un pulsante blu *And* . Facendo clic su **And** è possibile modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione riusciti. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
+Selezione **[!UICONTROL Aggiungi gruppo]** consente di creare campi aggiuntivi separati dall’originale. Con l&#39;aggiunta di gruppi, un blu *E* viene visualizzato il pulsante . Selezione **E** offre un’opzione per modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione riusciti. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
 
 ![utilizzando e](./images/user-guide/and_or.png)
 
-Se hai bisogno di più conversioni, fai clic su **Aggiungi conversione** per creare una nuova scheda di conversione. Puoi ripetere il processo sopra descritto per definire più conversioni.
+Se hai bisogno di più di una conversione, seleziona **Aggiungi conversione** per creare una nuova scheda di conversione. Puoi ripetere il processo sopra descritto per definire più conversioni.
 
 ![aggiungi conversione](./images/user-guide/add_conversion.png)
 
 ### Definisci l’intervallo di lookback {#lookback-window}
 
-Dopo aver definito la conversione, devi confermare l’intervallo di lookback. Utilizzando i tasti freccia o facendo clic sul valore predefinito (56), specifica quanti giorni prima dell’evento di conversione da cui desideri includere i punti di contatto. I punti di contatto sono definiti nel passaggio successivo.
+Dopo aver definito la conversione, devi confermare l’intervallo di lookback. Utilizzando i tasti freccia o selezionando il valore predefinito (56), specifica quanti giorni prima dell’evento di conversione da cui desideri includere i punti di contatto. I punti di contatto sono definiti nel passaggio successivo.
 
 ![lookback](./images/user-guide/lookback_window.png)
 
 ### Definire i punti di contatto
 
-La definizione dei punti di contatto segue un flusso di lavoro simile a [definizione delle conversioni](#define-conversion-events). Inizialmente devi denominare il punto di contatto e selezionare un valore del punto di contatto dal menu a discesa *Inserisci nome campo* . Una volta selezionato, viene visualizzato il menu a discesa dell’operatore con il valore predefinito &quot;exists&quot; (esiste). Fai clic sul menu a discesa per visualizzare un elenco di operatori.
+La definizione dei punti di contatto segue un flusso di lavoro simile a [definizione delle conversioni](#define-conversion-events). Inizialmente devi denominare il punto di contatto e selezionare un valore del punto di contatto dal *Immettere il nome del campo* menu a discesa. Una volta selezionato, viene visualizzato il menu a discesa dell’operatore con il valore predefinito &quot;exists&quot; (esiste). Seleziona il menu a discesa per visualizzare un elenco di operatori.
 
 ![operatori](./images/user-guide/operators.png)
 
-Per questo punto di contatto, seleziona **è uguale a**.
+Per questo punto di contatto, seleziona **è**.
 
 ![passaggio 1](./images/user-guide/touchpoint_step1.png)
 
-Dopo aver selezionato un operatore per un punto di contatto, viene reso disponibile *Immetti valore campo* . I valori a discesa per *Inserisci valore campo* vengono compilati in base all’operatore e al valore del punto di contatto precedentemente selezionati. Se un valore non viene compilato nel menu a discesa, è possibile digitarlo manualmente. Fai clic sul menu a discesa e seleziona **CLIC**.
+Quando viene selezionato un operatore per un punto di contatto, *Immetti valore campo* è reso disponibile. Valori a discesa per *Immetti valore campo* viene compilata in base all’operatore e al valore del punto di contatto precedentemente selezionati. Se un valore non viene compilato nel menu a discesa, è possibile digitarlo manualmente. Seleziona il menu a discesa e seleziona **FAI CLIC SU**.
 
 >[!NOTE]
 >
@@ -132,45 +174,45 @@ Dopo aver selezionato un operatore per un punto di contatto, viene reso disponib
 
 ![elenco a discesa dei punti di contatto](./images/user-guide/touchpoint_dropdown.png)
 
-I pulsanti *Aggiungi evento* e *Aggiungi gruppo* vengono utilizzati per definire ulteriormente il punto di contatto. A causa della complessità dei punti di contatto, non è raro che si disponga di più eventi e gruppi per un singolo punto di contatto.
+La **Aggiungi evento** e **Aggiungi gruppo** i pulsanti vengono utilizzati per definire ulteriormente il punto di contatto. A causa della complessità dei punti di contatto, non è raro che si disponga di più eventi e gruppi per un singolo punto di contatto.
 
-Quando fai clic su , **Aggiungi evento** consente l’aggiunta di campi aggiuntivi. Fai clic su **x** per rimuovere un evento aggiunto.
+Se selezionato, **Aggiungi evento** consente l’aggiunta di campi aggiuntivi. seleziona la **x** per rimuovere un evento aggiunto.
 
 ![aggiungi evento](./images/user-guide/touchpoint_add_event.png)
 
-Facendo clic su **Aggiungi gruppo** è possibile creare campi aggiuntivi separati dall&#39;originale. Aggiungendo i gruppi, viene visualizzato un pulsante blu *And* . Fai clic su **E** per modificare il parametro; il nuovo parametro &quot;OR&quot; viene utilizzato per definire più percorsi con esito positivo. Questo particolare punto di contatto ha un solo percorso di successo, quindi non è necessario &quot;O&quot;.
+Selezione **Aggiungi gruppo** consente di creare campi aggiuntivi separati dall’originale. Con l&#39;aggiunta di gruppi, un blu *E* viene visualizzato il pulsante . Seleziona **E** per modificare il parametro, il nuovo parametro &quot;OR&quot; viene utilizzato per definire più percorsi riusciti. Questo particolare punto di contatto ha un solo percorso di successo, quindi non è necessario &quot;O&quot;.
 
 ![panoramica dei punti di contatto](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->Utilizza la stringa in *Nome punto di contatto* per una panoramica rapida del punto di contatto. La stringa corrisponde al nome del punto di contatto.
+>Usa la stringa sotto *Nome punto di contatto* per una rapida panoramica del punto di contatto. La stringa corrisponde al nome del punto di contatto.
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Per aggiungere altri punti di contatto, fai clic su **Aggiungi punto di contatto** e ripeti il processo descritto sopra.
+Per aggiungere altri punti di contatto, seleziona **Aggiungi punto di contatto** e ripetendo il processo di cui sopra.
 
 ![aggiungi punto di contatto](./images/user-guide/add_touchpoint.png)
 
-Dopo aver definito tutti i punti di contatto necessari, scorri verso l’alto e fai clic su **Successivo** nell’angolo in alto a destra per passare al passaggio finale.
+Al termine della definizione di tutti i punti di contatto necessari, scorri verso l’alto e seleziona **Successivo** nell’angolo in alto a destra per passare al passaggio finale.
 
 ![definire finito](./images/user-guide/define_event_next.png)
 
 ## Impostazione avanzata di formazione e valutazione
 
-La pagina finale in Attribution AI è la pagina **[!UICONTROL Avanzate]** utilizzata per impostare la formazione e il punteggio.
+La pagina finale in Attribution AI è la **[!UICONTROL Avanzate]** pagina utilizzata per l’impostazione della formazione e del punteggio.
 
 ![nuova pagina avanzata](./images/user-guide/advanced_settings.png)
 
 ### Formazione programmata
 
-Utilizzando la *Pianificazione*, puoi selezionare un giorno e un&#39;ora della settimana in cui desideri eseguire il punteggio.
+Utilizzo della *Pianificazione*, puoi selezionare un giorno e un’ora della settimana in cui desideri eseguire il punteggio.
 
-Fai clic sull’elenco a discesa in *Frequenza di punteggio* per selezionare un punteggio giornaliero, settimanale e mensile. Quindi, seleziona i giorni della settimana in cui desideri che si verifichi il punteggio. È possibile selezionare più giorni. Fai clic una volta al secondo per deselezionarlo.
+Seleziona il menu a discesa sotto *Frequenza punteggio* per selezionare il punteggio giornaliero, settimanale e mensile. Quindi, seleziona i giorni della settimana in cui desideri che si verifichi il punteggio. È possibile selezionare più giorni. Selezionando di nuovo lo stesso giorno, lo deseleziona.
 
 ![Formazione programmata](./images/user-guide/schedule_training.png)
 
-Per modificare l&#39;ora del giorno in cui si desidera che si verifichi il punteggio, fare clic sull&#39;icona dell&#39;orologio. Nella nuova sovrapposizione visualizzata, immetti l’ora del giorno in cui desideri che venga effettuato il punteggio. Fai clic all’esterno della sovrapposizione per chiuderla.
+Per modificare l’ora del giorno in cui si desidera che si verifichi il punteggio, selezionare l’icona dell’orologio. Nella nuova sovrapposizione visualizzata, immetti l’ora del giorno in cui desideri che venga effettuato il punteggio. Seleziona all’esterno della sovrapposizione per chiuderla.
 
 >[!NOTE]
 >
@@ -180,7 +222,7 @@ Per modificare l&#39;ora del giorno in cui si desidera che si verifichi il punte
 
 ### Colonne di set di dati con punteggio aggiuntivo (facoltativo)
 
-Per impostazione predefinita, viene creato un set di dati di punteggio per ogni istanza di servizio in uno schema standard. Puoi scegliere di aggiungere ulteriori colonne in base alle configurazioni Evento di conversione e Punto di contatto all’output del set di dati del punteggio. Per iniziare, seleziona le colonne dal set di dati di input, puoi trascinarle e rilasciarle per modificare l’ordine tenendo premuto il pulsante sinistro del mouse sull’icona hamburger.
+Per impostazione predefinita, viene creato un set di dati di punteggio per ogni istanza di servizio in uno schema standard. Puoi scegliere di aggiungere ulteriori colonne in base alle configurazioni Evento di conversione e Punto di contatto all’output del set di dati di valutazione. Per iniziare, seleziona le colonne dal set di dati di input, puoi trascinarle e rilasciarle per modificare l’ordine tenendo premuto il pulsante sinistro del mouse sull’icona hamburger.
 
 ![aggiunta a una colonna di set di dati di punteggio](./images/user-guide/Add-score-dataset.png)
 
@@ -188,7 +230,7 @@ Per impostazione predefinita, viene creato un set di dati di punteggio per ogni 
 
 I comportamenti dei clienti possono variare in modo significativo a seconda del paese e dell’area geografica. Per le aziende globali, l’utilizzo di modelli basati su paesi o aree geografiche può aumentare l’accuratezza dell’attribuzione. Ogni area aggiunta crea un nuovo modello con i dati di tale area.
 
-Per definire una nuova area, inizia facendo clic su **[!UICONTROL Aggiungi area]**. Specifica un nome per la regione nel contenitore visualizzato. Viene compilato un solo valore (&quot;placeContext.geo.countryCode&quot;) dal menu a discesa **[!UICONTROL Enter Field Name]** (Inserisci nome campo). Selezionare questo valore.
+Per definire una nuova area, inizia selezionando **[!UICONTROL Aggiungi area]**. Specifica un nome per la regione nel contenitore visualizzato. Viene compilato un solo valore (&quot;placeContext.geo.countryCode&quot;) dal **[!UICONTROL Immettere il nome del campo]** a discesa. Selezionare questo valore.
 
 ![Seleziona la regione in](./images/user-guide/select_region_att.png)
 
@@ -196,11 +238,11 @@ Quindi, seleziona un operatore.
 
 ![operatore regionale](./images/user-guide/region_operators.png)
 
-Infine, digita il codice del paese nel menu a discesa **[!UICONTROL Immetti valore campo]** .
+Infine, digitare il codice del paese nel **[!UICONTROL Immetti valore campo]** a discesa.
 
 >[!NOTE]
 >
->I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alfa-2](https://datahub.io/core/country-list).
 
 ![regione](./images/user-guide/region-based.png)
 
@@ -214,13 +256,13 @@ Per garantire che il modello sia il più accurato possibile, è importante addes
 
 ![finestra di formazione](./images/user-guide/training_window.png)
 
-Dopo aver selezionato la finestra di formazione, fai clic su **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Fai clic su **[!UICONTROL Ok]** per essere reindirizzato alla pagina **[!UICONTROL istanze del servizio]** in cui puoi vedere la tua istanza del servizio.
+Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Seleziona **[!UICONTROL Ok]** da reindirizzare al **[!UICONTROL Istanze del servizio]** in cui puoi vedere la tua istanza di servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un&#39;istanza di servizio in Attribution AI. Al termine del punteggio dell&#39;istanza (consenti fino a 24 ore), puoi [scoprire informazioni sulle Attribution AI](./discover-insights.md). Inoltre, se desideri scaricare i risultati del punteggio, visita la documentazione [download scores](./download-scores.md) .
+Seguendo questa esercitazione, hai creato correttamente un&#39;istanza di servizio in Attribution AI. Al termine del punteggio dell’istanza (consenti fino a 24 ore), puoi [scoprire informazioni approfondite sulle Attribution AI](./discover-insights.md). Inoltre, se desideri scaricare i risultati del punteggio, visita il [download dei punteggi](./download-scores.md) documentazione.
 
 ## Risorse aggiuntive
 

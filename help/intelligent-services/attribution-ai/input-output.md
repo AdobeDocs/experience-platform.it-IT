@@ -5,35 +5,38 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2268'
 ht-degree: 3%
 
 ---
 
-# Ingresso e uscita in [!DNL Attribution AI]
+# Ingresso e uscita [!DNL Attribution AI]
 
-Il documento seguente illustra i diversi input e output utilizzati in [!DNL Attribution AI].
+Il seguente documento delinea i diversi input e output utilizzati in [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] dati di input
 
-Attribution AI funziona analizzando uno dei set di dati seguenti per calcolare i punteggi algoritmici:
+Attribution AI funziona analizzando i seguenti set di dati per calcolare i punteggi algoritmici:
 
+- Set di dati Adobe Analytics che utilizzano [Connettore sorgente di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Set di dati Experience Event (EE)
 - Set di dati di Consumer Experience Event (CEE)
-- Set di dati Adobe Analytics utilizzando il [connettore di origine Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+È possibile aggiungere più set di dati da origini diverse se ciascuno dei set di dati condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull’aggiunta di più set di dati, visita la [Guida utente di Attribution AI](./user-guide.md#identity).
 
 >[!IMPORTANT]
 >
->Il connettore di origine Adobe Analytics può richiedere fino a quattro settimane per il backfill dei dati. Se hai recentemente configurato un connettore, verifica che il set di dati abbia la lunghezza minima dei dati necessari per Attribution AI. Rivedi la sezione [Dati storici](#data-requirements) per verificare di disporre di dati sufficienti per calcolare i punteggi algoritmici accurati.
+>Il connettore di origine Adobe Analytics può richiedere fino a quattro settimane per il backfill dei dati. Se hai recentemente configurato un connettore, verifica che il set di dati abbia la lunghezza minima dei dati necessari per Attribution AI. Controlla la [dati storici](#data-requirements) per verificare di disporre di dati sufficienti per calcolare punteggi algoritmici accurati.
 
-Per ulteriori informazioni sulla configurazione dello schema [!DNL Consumer Experience Event] (CEE), fare riferimento alla guida [Preparazione dei dati di Intelligent Services](../data-preparation.md) . Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics, visita la documentazione [Mappature dei campi di Analytics](../../sources/connectors/adobe-applications/analytics.md) .
+Per maggiori dettagli sulla configurazione della [!DNL Consumer Experience Event] (CEE) schema, fare riferimento al [Preparazione dei dati di Intelligent Services](../data-preparation.md) guida. Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics, visita il [Mappature dei campi di Analytics](../../sources/connectors/adobe-applications/analytics.md) documentazione.
 
-Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono obbligatorie per Attribution AI.
+Non tutte le colonne nel [!DNL Consumer Experience Event] (CEE) Lo schema è obbligatorio per Attribution AI.
 
 >[!NOTE]
 >
-> Le 9 colonne seguenti sono obbligatorie. Le colonne aggiuntive sono facoltative, ma consigliate/necessarie se desideri utilizzare gli stessi dati per altre soluzioni di Adobe come [!DNL Customer AI] e [!DNL Journey AI].
+> Le 9 colonne seguenti sono obbligatorie. Le colonne aggiuntive sono facoltative ma consigliate/necessarie se desideri utilizzare gli stessi dati per altre soluzioni di Adobe, ad esempio [!DNL Customer AI] e [!DNL Journey AI].
 
 | Colonne obbligatorie | Necessario per |
 | --- | --- |
@@ -51,7 +54,7 @@ In genere, l’attribuzione viene eseguita su colonne di conversione quali ordin
 
 >[!TIP]
 >
->Se utilizzi i dati Adobe Analytics nello schema CEE, le informazioni sui punti di contatto per Analytics vengono generalmente memorizzate in `channel.typeAtSource` (ad esempio, `channel.typeAtSource = 'email'`).
+>Se utilizzi i dati di Adobe Analytics nello schema CEE, le informazioni sui punti di contatto per Analytics vengono in genere memorizzate in `channel.typeAtSource` (ad esempio, `channel.typeAtSource = 'email'`).
 
 Le colonne riportate di seguito non sono obbligatorie, ma è consigliabile includerle nello schema CEE se sono disponibili le informazioni.
 
@@ -72,7 +75,7 @@ Le colonne riportate di seguito non sono obbligatorie, ma è consigliabile inclu
 
 Attribution AI richiede dati storici come input per l&#39;addestramento dei modelli. La durata dei dati richiesti è determinata principalmente da due fattori chiave: finestra di formazione e finestra di look-back. Gli input con finestre di formazione più brevi sono più sensibili alle tendenze recenti, mentre le finestre di formazione più lunghe aiutano a produrre modelli più stabili e precisi. È importante modellare l&#39;obiettivo con dati storici che meglio rappresentano i tuoi obiettivi aziendali.
 
-La [configurazione della finestra di formazione](./user-guide.md#training-window) filtra gli eventi di conversione impostati per essere inclusi nella formazione del modello in base al tempo di occorrenza. Attualmente, il periodo minimo di addestramento è di 1 trimestre (90 giorni). L’ [intervallo di lookback](./user-guide.md#lookback-window) fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell’evento di conversione devono essere inclusi in questo evento di conversione. Questi due concetti determinano insieme la quantità di dati di input (misurati in giorni) necessari per un&#39;applicazione.
+La [configurazione della finestra di formazione](./user-guide.md#training-window) filtra gli eventi di conversione impostati per essere inclusi nell’addestramento del modello in base al tempo di occorrenza. Attualmente, il periodo minimo di addestramento è di 1 trimestre (90 giorni). La [finestra di lookback](./user-guide.md#lookback-window) fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell’evento di conversione devono essere inclusi in questo evento di conversione. Questi due concetti determinano insieme la quantità di dati di input (misurati in giorni) necessari per un&#39;applicazione.
 
 Per impostazione predefinita, Attribution AI definisce la finestra di formazione come l’ultimo periodo di 2 trimestri (6 mesi) e l’intervallo di lookback come 56 giorni. In altre parole, il modello terrà conto di tutti gli eventi di conversione definiti che si sono verificati negli ultimi 2 trimestri e cercherà tutti i punti di contatto che si sono verificati entro 56 giorni prima degli eventi di conversione associati.
 
@@ -101,7 +104,7 @@ Le uscite di Attribution AI sono le seguenti:
 
 ### Punteggi granulari grezzi {#raw-granular-scores}
 
-Attribution AI restituisce i punteggi di attribuzione nel livello più granulare possibile, in modo da poter suddividere i punteggi in base a qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell&#39;interfaccia utente, leggi la sezione relativa alla [visualizzazione dei percorsi dei punteggi non elaborati](#raw-score-path). Per scaricare i punteggi utilizzando l&#39;API visita il documento [download dei punteggi in Attribution AI](./download-scores.md) .
+Attribution AI restituisce i punteggi di attribuzione nel livello più granulare possibile, in modo da poter suddividere i punteggi in base a qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell’interfaccia utente, consulta la sezione [visualizzazione dei percorsi di valutazione non elaborati](#raw-score-path). Per scaricare i punteggi utilizzando l’API visita la pagina [download dei punteggi in Attribution AI](./download-scores.md) documento.
 
 >[!NOTE]
 >
@@ -119,16 +122,16 @@ La tabella seguente delinea i campi dello schema nell’output di esempio di pun
 | eventType (String) | True | Il tipo di evento principale per il record della serie temporale. <br> **Esempio:** &quot;Ordine&quot;, &quot;Acquisto&quot;, &quot;Visita&quot; |
 | eventMergeId (String) | True | Un ID per correlare o unire più [!DNL Experience Events] insieme che sono essenzialmente lo stesso evento o che devono essere uniti. Questo è destinato a essere compilato dal produttore di dati prima dell’acquisizione. <br> **Esempio:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (String) | False | Identificatore univoco dell&#39;evento serie temporale. <br> **Esempio:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId (oggetto) | False | Il contenitore di oggetti di livello superiore corrisponde all&#39;ID provvisorio. <br> **Esempio:** _atsdsnrmmsv2 |
-| your_schema_name (oggetto) | False | Punteggio riga con evento di conversione tutti gli eventi dei punti di contatto associati ad esso e i relativi metadati. <br> **Esempio:** Punteggi Attribution AI - Nome modello__2020 |
+| _tenantId (oggetto) | False | Il contenitore di oggetti di livello superiore corrispondente all&#39;ID tentante. <br> **Esempio:** _atsdsnrmmsv2 |
+| your_schema_name (oggetto) | False | Punteggio riga con evento di conversione tutti gli eventi dei punti di contatto associati ad esso e i relativi metadati. <br> **Esempio:** Punteggi delle Attribution AI - Nome modello__2020 |
 | segmentazione (stringa) | True | Segmento di conversione, ad esempio la segmentazione geografica in base alla quale il modello è costruito. In caso di assenza di segmenti, il segmento è uguale a conversionName. <br> **Esempio:** ORDER_US |
-| conversionName (String) | True | Nome della conversione configurata durante l&#39;installazione. <br> **Esempio:** Ordine, Lead, Visita |
+| conversionName (String) | True | Nome della conversione configurata durante l&#39;installazione. <br> **Esempio:** Ordine, lead, visita |
 | conversion (oggetto) | False | Colonne dei metadati di conversione. |
 | dataSource (String) | True | Identificazione univoca a livello globale di un’origine dati. <br> **Esempio:** Adobe Analytics |
 | eventSource (String) | True | L&#39;origine quando si è verificato l&#39;evento effettivo. <br> **Esempio:** Adobe.com |
 | eventType (String) | True | Il tipo di evento principale per il record della serie temporale. <br> **Esempio:** Ordine |
 | geo (Stringa) | True | Posizione geografica in cui è stata consegnata la conversione `placeContext.geo.countryCode`. <br> **Esempio:** US |
-| priceTotal (Double) | True | Entrate ottenute tramite la conversione <br> **Esempio:** 99.9 |
+| priceTotal (Double) | True | Entrate ottenute tramite la conversione <br> **Esempio:** 99,9 |
 | product (String) | True | Identificatore XDM del prodotto stesso. <br> **Esempio:** RX 1080 ti |
 | productType (String) | True | Nome visualizzato del prodotto presentato all’utente per la visualizzazione del prodotto. <br> **Esempio:** Gpus |
 | quantità (numero intero) | True | Quantità acquistata durante la conversione. <br> **Esempio:** 1 1080 ti |
@@ -136,23 +139,23 @@ La tabella seguente delinea i campi dello schema nell’output di esempio di pun
 | skuId (String) | True | Unità di conservazione delle scorte (SKU), l&#39;identificativo univoco di un prodotto definito dal fornitore. <br> **Esempio:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Timestamp della conversione. <br> **Esempio:** 2020-06-09T00:01:51.000Z |
 | passThrough (oggetto) | True | Colonne del set di dati Punteggio aggiuntive specificate dall&#39;utente durante la configurazione del modello. |
-| commerce_order_purchaseCity (Stringa) | True | Colonna del set di dati Punteggio aggiuntiva. <br> **Esempio:** city : San Jose |
+| commerce_order_purchaseCity (Stringa) | True | Colonna del set di dati Punteggio aggiuntiva. <br> **Esempio:** città : San Jose |
 | customerProfile (oggetto) | False | Dettagli dell&#39;identità dell&#39;utente utilizzato per generare il modello. |
 | identity (Object) | False | Contiene i dettagli dell&#39;utente utilizzato per creare il modello, ad esempio `id` e `namespace`. |
-| id (String) | True | ID identità dell&#39;utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |
-| namespace (String) | True | Spazio dei nomi Identity utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aaid |
+| id (String) | True | ID identità dell’utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |
+| namespace (String) | True | Spazio dei nomi Identity utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aiuto |
 | touchpointsDetail (Array di oggetti) | True | Elenco dei dettagli dei punti di contatto che conducono alla conversione ordinata da | occorrenza punto di contatto o marca temporale. |
 | touchpointName (String) | True | Nome del punto di contatto configurato durante la configurazione. <br> **Esempio:** PAID_SEARCH_CLICK |
-| punteggi (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all’interno di questo oggetto, consulta la sezione [punteggi di attribuzione aggregati](#aggregated-attribution-scores) . |
-| touchPoint (oggetto) | True | Metadati dei punti di contatto. Per ulteriori informazioni sui punteggi prodotti all’interno di questo oggetto, consulta la sezione [punteggi aggregati](#aggregated-scores) . |
+| punteggi (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, consulta la sezione [punteggi di attribuzione aggregati](#aggregated-attribution-scores) sezione . |
+| touchPoint (oggetto) | True | Metadati dei punti di contatto. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, consulta la sezione [punteggi aggregati](#aggregated-scores) sezione . |
 
 ### Visualizzazione dei percorsi dei punti non elaborati (interfaccia utente) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell’interfaccia utente di Platform, quindi cerca e seleziona lo schema dei punteggi di attribuzione AI dalla scheda **[!UICONTROL Sfoglia]** .
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell’interfaccia utente di Platform, cerca e seleziona lo schema dei punteggi di attribuzione AI dall’interno di **[!UICONTROL Sfoglia]** scheda .
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, seleziona un campo all&#39;interno della finestra **[!UICONTROL Struttura]** dell&#39;interfaccia utente; viene visualizzata la scheda **[!UICONTROL Proprietà campo]** . All&#39;interno di **[!UICONTROL Proprietà campo]** è il campo percorso che viene mappato sui punteggi non elaborati.
+Quindi, seleziona un campo all’interno di **[!UICONTROL Struttura]** dell&#39;interfaccia utente, **[!UICONTROL Proprietà campo]** viene visualizzata la scheda . Within **[!UICONTROL Proprietà campo]** è il campo percorso che viene mappato sui punteggi non elaborati.
 
 ![Selezionare uno schema](./images/input-output/field_properties.png)
 
@@ -183,7 +186,7 @@ Vedi la tabella seguente per maggiori dettagli su ciascuno di questi punteggi di
 
 **Riferimento Punteggio non elaborato (punteggi di attribuzione)**
 
-La tabella seguente mappa i punteggi di attribuzione ai punteggi non elaborati. Se desideri scaricare i punteggi non elaborati, visita la documentazione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md).
+La tabella seguente mappa i punteggi di attribuzione ai punteggi non elaborati. Se desideri scaricare i punteggi grezzi, visita il [download dei punteggi in Attribution AI](./download-scores.md) documentazione.
 
 | Punteggi di attribuzione | Colonna di riferimento del punteggio non elaborato |
 | --- | --- |
@@ -211,14 +214,14 @@ I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia 
 | geo (Stringa) | Definito dall&#39;utente | True | Posizione geografica in cui è stata consegnata la conversione (placeContext.geo.countryCode) <br> **Esempio**: US |
 | event_type (String) | Definito dall&#39;utente | True | Tipo di evento principale per il record della serie temporale <br> **Esempio**: Conversione a pagamento |
 | media_type (String) | ENUM | False | Descrive se il tipo di supporto è pagato, posseduto o ottenuto. <br> **Esempio**: PAGATO, DI PROPRIETÀ |
-| channel (String) | ENUM | False | La proprietà `channel._type` utilizzata per fornire una classificazione approssimativa di canali con proprietà simili in [!DNL Consumer Experience Event] XDM. <br> **Esempio**: RICERCA |
-| action (String) | ENUM | False | La proprietà `mediaAction` viene utilizzata per fornire un tipo di azione multimediale dell&#39;esperienza. <br> **Esempio**: FAI CLIC SU |
-| campaign_group (String) | Definito dall&#39;utente | True | Nome del gruppo di campagne in cui sono raggruppate più campagne, come &quot;50%_DISCOUNT&quot;. <br> **Esempio**: COMMERCIALE |
+| channel (String) | ENUM | False | La `channel._type` proprietà utilizzata per fornire una classificazione approssimativa di canali con proprietà simili in [!DNL Consumer Experience Event] XDM <br> **Esempio**: RICERCA |
+| action (String) | ENUM | False | La `mediaAction` viene utilizzato per fornire un tipo di azione multimediale dell&#39;evento esperienza. <br> **Esempio**: FAI CLIC SU |
+| campaign_group (String) | Definito dall&#39;utente | True | Nome del gruppo di campagne in cui più campagne sono raggruppate insieme come &#39;50%_DISCOUNT&#39;. <br> **Esempio**: COMMERCIALE |
 | campaign_name (String) | Definito dall&#39;utente | True | Nome della campagna utilizzata per identificare la campagna di marketing come &#39;50%_DISCOUNT_USA&#39; o &#39;50%_DISCOUNT_ASIA&#39;. <br> **Esempio**: Vendita del ringraziamento |
 
 **Riferimento Punteggio grezzo (aggregato)**
 
-La tabella seguente mappa i punteggi aggregati ai punteggi non elaborati. Se desideri scaricare i punteggi non elaborati, visita la documentazione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md). Per visualizzare i percorsi dei punti non elaborati dall&#39;interno dell&#39;interfaccia utente, visita la sezione relativa alla [visualizzazione dei percorsi dei punti non elaborati](#raw-score-path) all&#39;interno di questo documento.
+La tabella seguente mappa i punteggi aggregati ai punteggi non elaborati. Se desideri scaricare i punteggi grezzi, visita il [download dei punteggi in Attribution AI](./download-scores.md) documentazione. Per visualizzare i percorsi dei punti non elaborati dall’interno dell’interfaccia utente, visita la sezione su [visualizzazione dei percorsi di valutazione non elaborati](#raw-score-path) in questo documento.
 
 | Nome colonna | Colonna di riferimento Punteggio non elaborato |
 | --- | --- |
@@ -240,4 +243,4 @@ La tabella seguente mappa i punteggi aggregati ai punteggi non elaborati. Se des
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver preparato i dati e aver impostato tutte le credenziali e gli schemi, inizia seguendo la [Guida utente di Attribution AI](./user-guide.md). Questa guida illustra come creare un’istanza per Attribution AI.
+Dopo aver preparato i dati e aver impostato tutte le credenziali e gli schemi, inizia seguendo [Guida utente di Attribution AI](./user-guide.md). Questa guida illustra come creare un’istanza per Attribution AI.
