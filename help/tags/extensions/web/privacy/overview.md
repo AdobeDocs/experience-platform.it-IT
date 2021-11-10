@@ -1,10 +1,11 @@
 ---
 title: Panoramica dell’estensione Adobe Privacy
-description: Scopri l’estensione Adobe Privacy tag in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri l’estensione tag Adobe Privacy in Adobe Experience Platform.
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
+source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 92%
+source-wordcount: '909'
+ht-degree: 9%
 
 ---
 
@@ -14,96 +15,100 @@ ht-degree: 92%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L&#39;estensione Adobe Privacy fornisce funzionalità per la raccolta e la rimozione degli ID utente assegnati agli utenti finali dalle soluzioni Adobe.
+L’estensione Adobe di tag Privacy consente di raccogliere e rimuovere gli ID utente assegnati agli utenti finali dalle soluzioni Adobe sui dispositivi lato client. Gli ID raccolti possono quindi essere inviati a [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) per accedere o eliminare i dati personali della persona correlata nelle applicazioni Adobe Experience Cloud supportate.
 
-## Configura le soluzioni durante l&#39;installazione
+Questa guida descrive come installare e configurare l’estensione Adobe Privacy nell’interfaccia utente di raccolta dati.
 
-Quando installi l&#39;estensione Adobe Privacy dal catalogo delle estensioni, ti viene richiesto di selezionare le soluzioni che desideri aggiornare. Al momento puoi aggiornare le soluzioni seguenti:
+>[!NOTE]
+>
+>Se preferisci installare queste funzionalità senza utilizzare tag, consulta la [Panoramica della libreria JavaScript sulla privacy](../../../../privacy-service/js-library.md) per i passaggi su come implementare utilizzando il codice non elaborato.
 
-* Analytics (AA)
-* Audience Manager (AAM)
-* Target
-* Visitor Service
-* AdCloud
-* Seleziona una o più soluzioni, quindi fai clic su Update.
-* Dopo aver selezionato e configurato le soluzioni, fai clic su Salva. L&#39;estensione Adobe Privacy viene aggiunta all&#39;elenco delle estensioni installate.
+## Installa e configura l&#39;estensione 
 
-   Le opzioni di ciascuna soluzione sono descritte di seguito.
+Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Estensioni]** nella navigazione a sinistra, seguita dalla **[!UICONTROL Catalogo]** scheda . Utilizza la barra di ricerca per restringere l’elenco delle estensioni disponibili fino a individuare Privacy degli Adobi. Seleziona **[!UICONTROL Installa]** per continuare.
 
-### Analytics
+![Installare l’estensione](../../../images/extensions/privacy/install.png)
 
-![](../../../images/ext-privacy-aa.jpg)
+La schermata successiva ti consente di configurare da quali sorgenti e soluzioni desideri che l’estensione raccolga gli ID. L&#39;estensione supporta le seguenti soluzioni:
 
-Per impostazione predefinita, devi fornire la suite di rapporti immettendo una stringa o selezionando un elemento di dati.
+* Adobe Analytics (AA)
+* Adobe Audience Manager (AAM)
+* Adobe Target
+* Servizio Adobe Experience Cloud Identity (Visitatore o ECID)
+* Adobe Advertising Cloud (AdCloud)
 
-Per configurare altri elementi, fai clic su **[!UICONTROL Scegli un elemento]**, seleziona l’elemento da configurare, quindi fai clic su **[!UICONTROL Aggiungi]** e immetti il parametro richiesto o un elemento dati.
+Seleziona una o più soluzioni, quindi seleziona **[!UICONTROL Aggiorna]**.
 
-### Audience Manager
+![Selezionare le soluzioni](../../../images/extensions/privacy/select-solutions.png)
 
-![](../../../images/ext-privacy-aam.jpg)
+Lo schermo viene aggiornato per mostrare gli input per i parametri di configurazione richiesti in base alle soluzioni selezionate.
 
-Fai clic su **[!UICONTROL Scegli un elemento]**, seleziona l’elemento che desideri configurare, quindi fai clic su **[!UICONTROL Aggiungi]** e inserisci il parametro richiesto o un elemento dati. Al momento, è possibile configurare solo `aamUUIDCookieName`.
+![Proprietà richieste](../../../images/extensions/privacy/required-properties.png)
 
-### Target
+Utilizzando il menu a discesa qui sotto, puoi anche aggiungere alla configurazione parametri aggiuntivi specifici della soluzione.
 
-![](../../../images/ext-privacy-target.jpg)
+![Proprietà facoltative](../../../images/extensions/privacy/optional-properties.png)
 
-Immetti il codice client Target.
+>[!NOTE]
+>
+>Vedi la sezione su [parametri di configurazione](../../../../privacy-service/js-library.md#config-params) nella panoramica della Libreria JavaScript per la privacy per informazioni sui valori di configurazione accettati per ogni soluzione supportata.
 
-### Servizio visitatori
+Dopo aver aggiunto i parametri per le soluzioni selezionate, seleziona **[!UICONTROL Salva]** per salvare la configurazione.
 
-![](../../../images/ext-privacy-visitor.jpg)
+![Proprietà facoltative](../../../images/extensions/privacy/save-config.png)
 
-Immetti il tuo IMS Organization ID.
+## Utilizzo dell&#39;estensione {#using}
 
-### AdCloud
+L’estensione Adobe Privacy fornisce tre tipi di azione che possono essere utilizzati in un [regola](../../../ui/managing-resources/rules.md) quando si verifica un determinato evento e vengono soddisfatte le condizioni seguenti:
 
-![](../../../images/ext-privacy-adcloud.jpg)
+* **[!UICONTROL Recupera identità]**: Le informazioni di identità memorizzate dell&#39;utente vengono recuperate.
+* **[!UICONTROL Rimuovi identità]**: Le informazioni di identità memorizzate dell&#39;utente vengono rimosse.
+* **[!UICONTROL Recupera e rimuovi le identità]**: Le informazioni di identità memorizzate dell&#39;utente vengono recuperate e rimosse.
 
-Non esistono parametri specifici da configurare per AdCloud.
+Per ciascuna delle azioni di cui sopra, è necessario fornire una funzione JavaScript di callback che accetta e gestisce i dati di identità recuperati come parametro di oggetto. Da qui puoi archiviare queste identità, visualizzarle o inviarle al [API Privacy Service](../../../../privacy-service/api/overview.md) come richiesto.
 
-## Configura l&#39;estensione Adobe Privacy
+Quando utilizzi l’estensione tag Privacy di Adobe, devi fornire la funzione di callback richiesta sotto forma di un elemento dati. Consulta la sezione successiva per i passaggi su come configurare questo elemento dati.
+
+### Definire un elemento dati per gestire le identità
+
+Nell’interfaccia utente Raccolta dati, avvia il processo di creazione di un nuovo elemento dati selezionando **[!UICONTROL Elementi dati]** nella navigazione a sinistra, seguita da **[!UICONTROL Aggiungi elemento dati]**. Una volta nella schermata di configurazione, seleziona **[!UICONTROL Core]** per l&#39;estensione e **[!UICONTROL Codice personalizzato]** per il tipo di elemento dati. Da qui, seleziona **[!UICONTROL Open Editor]** nel pannello di destra.
+
+![Seleziona il tipo di elemento dati](../../../images/extensions/privacy/data-element-type.png)
+
+Nella finestra di dialogo visualizzata, definisci una funzione JavaScript che gestirà le identità recuperate. Il callback deve accettare un singolo argomento di tipo oggetto (`ids` nell&#39;esempio seguente). La funzione può quindi gestire gli ID come desideri e può inoltre richiamare qualsiasi variabile e funzione disponibile a livello globale sul tuo sito per un’ulteriore elaborazione.
+
+>[!NOTE]
+>
+>Per ulteriori informazioni sulla struttura del `ids` oggetto che la funzione di callback deve gestire, fare riferimento al [esempi di codice](../../../../privacy-service/js-library.md#samples) fornita nella panoramica della libreria JavaScript per la privacy.
+
+Al termine, seleziona **[!UICONTROL Salva]**.
+
+![Definire la funzione di callback](../../../images/extensions/privacy/define-custom-code.png)
+
+Puoi continuare a creare altri elementi di dati con codice personalizzato se hai bisogno di callback diversi per eventi diversi.
+
+### Creare una regola con un&#39;azione di privacy
+
+Dopo aver configurato un elemento dati di callback per gestire gli ID recuperati, puoi creare una regola che richiama l’estensione Adobe Privacy ogni volta che si verifica un determinato evento sul tuo sito, insieme a qualsiasi altra condizione necessaria.
+
+Quando configuri l’azione per la regola, seleziona **[!UICONTROL Privacy degli Adobi]** per l&#39;estensione . Per il tipo di azione, seleziona una delle [tre funzioni](#using) fornito dall&#39;estensione.
+
+![Seleziona il tipo di azione](../../../images/extensions/privacy/action-type.png)
+
+Il pannello di destra chiede di selezionare un elemento dati che fungerà da callback dell’azione. Seleziona l’icona del database (![Icona database](../../../images/extensions/privacy/database.png)) e scegli dall’elenco l’elemento dati creato in precedenza. Seleziona **[!UICONTROL Mantieni modifiche]** per continuare.
+
+![Seleziona elemento dati](../../../images/extensions/privacy/add-data-element.png)
+
+Da qui puoi continuare a configurare la regola in modo che l’azione Privacy Adobe venga attivata in base agli eventi e alle condizioni richieste. Quando sei soddisfatto, seleziona **[!UICONTROL Salva]**.
+
+![Salva la regola](../../../images/extensions/privacy/save-rule.png)
+
+Ora puoi aggiungere la regola a una libreria da distribuire come build sul sito web per i test. Vedi la panoramica sul [flusso di pubblicazione dei tag](../../../ui/publishing/overview.md) per ulteriori informazioni.
+
+## Disabilita o disinstalla l&#39;estensione
 
 Dopo aver installato l&#39;estensione, puoi disabilitarla o eliminarla. Fai clic su **[!UICONTROL Configura]** nella scheda Adobe Privacy nelle estensioni installate, quindi seleziona **[!UICONTROL Disabilita]** o **[!UICONTROL Disinstalla]**.
 
-## Azioni
+## Passaggi successivi
 
-Le azioni seguenti sono disponibili quando configuri una regola utilizzando l&#39;estensione Adobe Privacy.
-
-### Recupera identità
-
-Quando l&#39;evento e le condizioni vengono soddisfatte, recupera le informazioni di identità memorizzate per il visitatore.
-
-Immetti il nome di una funzione JavaScript a cui desideri trasmettere i dati. Questa funzione o metodo gestisce le identità recuperate. Puoi decidere di memorizzarle, visualizzarle o inviarle all&#39;API Adobe RGPD.
-
-### Rimuovi le identità
-
-Quando l&#39;evento e le condizioni vengono soddisfatte, rimuovi le informazioni di identità memorizzate per il visitatore.
-
-Immetti il nome di una funzione JavaScript a cui desideri trasmettere i dati. Questa funzione o metodo gestisce le identità recuperate. Puoi decidere di memorizzarle, visualizzarle o inviarle all&#39;API Adobe RGPD.
-
-### Recupera ed elimina le identità
-
-Quando l&#39;evento e le condizioni vengono soddisfatte, recupera le informazioni di identità memorizzate per il visitatore, quindi rimuovile.
-
-## Esercitazione: configurazione dell’estensione Privacy
-
-Di seguito è riportato un esempio su come impostare un elemento dati e utilizzarlo con l’estensione Privacy.
-
-1. Crea un elemento dati denominato `privacyFunc`.
-
-   ```JavaScript
-   window.privacyFunc = function(a,b){
-       console.log(a,b);
-   }
-   return window.privacyFunc
-   ```
-
-1. Crea una regola da eseguire al caricamento della libreria (inizio pagina), con un&#39;azione dell&#39;estensione Adobe Privacy. Seleziona `privacyFunc` come elemento dati.
-
-   * **Estensione:** Adobe Privacy
-   * **Tipo azione:** Recupera identità
-Questo tipo di azione visualizza le identità create, rimosse o non rimosse.
-   * **Nome:** Recupera identità
-
-1. Aggiorna la libreria di sviluppo, quindi pubblica ed esegui il test.
+Questa guida riguardava l’utilizzo dell’estensione Adobe Privacy tag nell’interfaccia utente di raccolta dati. Per ulteriori informazioni sulle funzionalità fornite dall&#39;estensione, compresi esempi su come utilizzarla con codice non elaborato, consulta la sezione [Panoramica della libreria JavaScript sulla privacy](../../../../privacy-service/js-library.md) nella documentazione di Privacy Service.
