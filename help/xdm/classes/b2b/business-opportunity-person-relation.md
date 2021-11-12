@@ -2,20 +2,16 @@
 title: Classe di relazione tra persone opportunità aziendali XDM
 description: Questo documento fornisce una panoramica della classe di relazione tra le persone opportunità commerciali XDM in Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Classe di ] relazione tra persone opportunità aziendali XDM (Beta)
+# [!UICONTROL Relazione personale opportunità di business XDM] Classe
 
->[!IMPORTANT]
->
->Questa classe è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-[!UICONTROL XDM Business Opportunity Person ] Relationship è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di una persona associata a un&#39;opportunità aziendale.
+[!UICONTROL Relazione personale opportunità di business XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di una persona associata a un’opportunità di business.
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
@@ -34,4 +30,4 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulta la guida sulle [relazioni di schema in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) per scoprire come questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell&#39;interfaccia utente di Adobe Experience Platform.
+Consulta la guida su [relazioni di schema in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) per scoprire come questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell’interfaccia utente di Adobe Experience Platform.

@@ -2,24 +2,20 @@
 title: Gruppo di campi di schema dei componenti per Business Person XDM
 description: In questo documento viene fornita una panoramica del gruppo di campi dello schema dei componenti Business Person XDM.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '412'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Gruppo di campi ] Componente Business Person XDM (Beta)
+# [!UICONTROL Componenti per Business Person XDM] gruppo di campi schema
 
->[!IMPORTANT]
->
->Questo gruppo di campi è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+[!UICONTROL Componenti per Business Person XDM] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md) che acquisisce più record sorgente per una persona e altri attributi necessari per la segmentazione di una persona.
 
-[!UICONTROL Il ] componente Business Person XDM è un gruppo di campi schema standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che acquisisce più record di origine per una persona e altri attributi richiesti per la segmentazione di una persona.
+Quando viene creato un profilo per una persona attraverso [Profilo cliente in tempo reale](../../../profile/home.md) nell’edizione B2B di Real-time CDP, le informazioni utilizzate per creare quel profilo possono provenire potenzialmente da molti record sorgente. Ad esempio, se una persona lavora per due società diverse, molti sistemi CRM creano una copia intenzionalmente duplicata di quella persona in modo che una copia sia collegata alla società A, mentre l&#39;altra è collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un&#39;unica rappresentazione.
 
-Quando un profilo viene creato per una persona tramite [Profilo cliente in tempo reale](../../../profile/home.md) nell&#39;edizione B2B di Real-time CDP, le informazioni utilizzate per creare tale profilo possono provenire potenzialmente da molti record sorgente. Ad esempio, se una persona lavora per due società diverse, molti sistemi CRM creano una copia intenzionalmente duplicata di quella persona in modo che una copia sia collegata alla società A, mentre l&#39;altra è collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un&#39;unica rappresentazione.
-
-Il gruppo di campi fornisce un campo `personComponents` a livello principale, che è una matrice di oggetti. Ogni oggetto dell&#39;array rappresenta un record sorgente diverso.
+Il gruppo di campi fornisce un livello principale `personComponents` campo, che è una matrice di oggetti. Ogni oggetto dell&#39;array rappresenta un record sorgente diverso.
 
 ![](../../images/field-groups/business-person-components.png)
 

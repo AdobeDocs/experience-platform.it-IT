@@ -2,20 +2,16 @@
 title: Gruppo di campi di schema Dettagli persona aziendale XDM
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli persona commerciale XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 4%
+source-wordcount: '533'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL XDM Business Person ] Detailsschema field group (Beta)
+# [!UICONTROL Dettagli sulle persone aziendali XDM] gruppo di campi schema
 
->[!IMPORTANT]
->
->Questo gruppo di campi è disponibile come parte di Real-time Customer Data Platform B2B Edition, attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-[!UICONTROL Business Person XDM ] Consente di specificare un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che acquisisce informazioni su una persona nel contesto di un&#39;azienda business-to-business (B2B).
+[!UICONTROL Dettagli sulle persone aziendali XDM] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md) che acquisisce informazioni su una persona nel contesto di un&#39;impresa business-to-business (B2B).
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -40,7 +36,7 @@ ht-degree: 4%
 | `b2b.personType` | Stringa | Tipo di persona B2B. |
 | `extSourceSystemAudit` | [Attributi di controllo del sistema di origine esterna](../../data-types/external-source-system-audit-attributes.md) | Se la relazione uomo-lavoro proviene da un sistema di origine esterno, questo oggetto acquisisce gli attributi di controllo per tale sistema. |
 | `extendedWorkDetails` | Oggetto | Acquisisce ulteriori dettagli relativi al lavoro relativi alla persona. |
-| `extendedWorkDetails.assistantDetails` | Oggetto | Acquisisce i seguenti attributi relativi all’assistente della persona: <ul><li>`name`: ([Nome persona](../../data-types/person-name.md)) Nome completo dell’assistente.</li><li>`phone`: ([Numero di telefono](../../data-types/phone-number.md)) Il numero di telefono dell&#39;assistente.</li></ul> |
+| `extendedWorkDetails.assistantDetails` | Oggetto | Acquisisce i seguenti attributi relativi all’assistente della persona: <ul><li>`name`: ([Nome della persona](../../data-types/person-name.md)) Nome completo dell&#39;assistente.</li><li>`phone`: ([Numero di telefono](../../data-types/phone-number.md)) Il numero di telefono dell&#39;assistente.</li></ul> |
 | `extendedWorkDetails.departments` | Matrice di stringhe | Elenco dei nomi dei reparti in cui la persona lavora. |
 | `extendedWorkDetails.jobTitle` | Stringa | Titolo del lavoro della persona. |
 | `extendedWorkDetails.photoUrl` | Stringa | URL di una foto della persona. |
@@ -56,7 +52,7 @@ ht-degree: 4%
 | `workAddress` | [Indirizzo postale](../../data-types/postal-address.md) | L&#39;indirizzo di lavoro della persona. |
 | `workEmail` | [Indirizzo e-mail](../../data-types/email-address.md) | Indirizzo e-mail aziendale della persona. |
 | `workPhone` | [Numero di telefono](../../data-types/phone-number.md) | Il numero di telefono del lavoro della persona. |
-| `identityMap` | Mappa | Campo mappa contenente un set di identità con spazi dei nomi per la persona. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Per ulteriori informazioni sul relativo caso d’uso, consulta la sezione sulle mappe di identità nelle  [nozioni di base sulla ](../../schema/composition.md#identityMap) composizione degli schemi . |
+| `identityMap` | Mappa | Campo mappa contenente un set di identità con spazi dei nomi per la persona. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Vedi la sezione sulle mappe di identità nel [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul relativo caso d’uso. |
 | `organizations` | Matrice di stringhe | Un elenco di nomi di organizzazioni in cui la persona lavora. |
 
 {style=&quot;table-layout:auto&quot;}

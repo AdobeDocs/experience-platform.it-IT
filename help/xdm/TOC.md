@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 12%
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
    * [Definizione del segmento](./classes/segment-definition.md)
-   * Classi B2B (Beta) {#b2b}
+   * Classi B2B {#b2b}
       * [Account aziendale XDM](./classes/b2b/business-account.md)
       * [Relazione personale account aziendale XDM](./classes/b2b/business-account-person-relation.md)
       * [Campagna aziendale XDM](./classes/b2b/business-campaign.md)
@@ -113,10 +113,10 @@ ht-degree: 12%
    * [Informazioni web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
-*  Interfaccia utente  {#ui}
+* [!UICONTROL Schemi] Interfaccia {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplorare le risorse XDM](./ui/explore.md)
-   * Creare e modificare risorse {#resources}
+   * Creare e modificare le risorse {#resources}
       * [Schemi](./ui/resources/schemas.md)
       * [Classi](./ui/resources/classes.md)
       * [Gruppi di campi](./ui/resources/field-groups.md)
@@ -153,7 +153,7 @@ ht-degree: 12%
    * [Creare uno schema nell’API](tutorials/create-schema-api.md)
    * [Definire una relazione di schema nell’interfaccia utente](tutorials/relationship-ui.md)
    * [Definire una relazione di schema nell’API](tutorials/relationship-api.md)
-   * [Definire una relazione di schema in Real-time CDP B2B Edition (Beta)](tutorials/relationship-b2b.md)
+   * [Definire una relazione di schema in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Creare uno schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

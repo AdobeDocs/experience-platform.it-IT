@@ -1,19 +1,15 @@
 ---
-title: Fonti in Real-time Customer Data Platform B2B Edition (Beta)
+title: Fonti in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo delle origini in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8dfeeea7c13802723bdfff48eaa49ba3f2c43d20
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
-# Fonti in Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# Fonti in Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >

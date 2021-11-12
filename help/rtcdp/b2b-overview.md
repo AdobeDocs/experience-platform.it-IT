@@ -1,22 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;b2b;cdp;Customer AI
-title: Panoramica di Real-time CDP B2B Edition (Beta)
+title: Panoramica di Real-time CDP B2B Edition
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Panoramica dell’account Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1092'
-ht-degree: 1%
+source-wordcount: '1072'
+ht-degree: 0%
 
 ---
 
-# Panoramica di Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# Panoramica di Real-time Customer Data Platform B2B Edition
 
 Basato su Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition è progettato appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Riunisce i dati provenienti da più sorgenti e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono agli esperti di marketing di eseguire il targeting preciso di tipi di pubblico specifici e coinvolgerli in tutti i canali disponibili.
 
@@ -26,7 +22,7 @@ Con Real-time CDP B2B Edition, puoi:
 
 * Combina i dati raccolti da più sorgenti in un’unica visualizzazione per creare persone olistiche e profili di account.
 * Arricchisci, segmenta ed esporta tutti i tuoi dati cross-source da un archivio centralizzato di profili account unificati.
-* Gestisci i dati utilizzando gli strumenti di governance dei dati disponibili in ogni fase del processo di centralizzazione, per garantire la conformità dei dati alle normative legali e alle politiche aziendali.
+* Gestisci i dati utilizzando gli strumenti di governance dei dati disponibili in ogni fase del processo di centralizzazione per garantire la conformità dei dati alle normative legali e alle politiche aziendali.
 
 I dettagli più completi sui miglioramenti apportati per Real-time CDP B2B Edition sono suddivisi nelle sezioni seguenti.
 
@@ -81,7 +77,7 @@ Per le aziende con più di un sistema di gestione delle relazioni con i clienti,
 
 ## Passaggi successivi
 
-Ora che conosci meglio i vantaggi per gli addetti al marketing offerti da Real-time CDP B2B Edition e le differenze tra esso e Real-time CDP, puoi imparare ad applicare queste funzioni alla tua organizzazione IMS.
+Ora che conosci meglio i vantaggi per gli addetti al marketing offerti da Real-time CDP B2B Edition e le differenze tra esso e Real-time CDP, puoi scoprire come applicare queste funzioni alla tua organizzazione IMS.
 
 Per comprendere in che modo Real-time CDP B2B Edition può trarre vantaggio dal modello di servizio business-to-business, consulta la seguente documentazione per aiutarti a iniziare:
 

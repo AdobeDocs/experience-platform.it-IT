@@ -3,9 +3,9 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Profilo del cliente in tempo reale in Real-time CDP
 description: Scopri come Real-time Customer Data Platform consente di gestire esperienze coordinate, coerenti e rilevanti per i clienti utilizzando il Profilo cliente in tempo reale.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,7 @@ Profilo cliente in tempo reale consente di visualizzare una visualizzazione olis
 
 Real-time CDP è basato sull’Experience Platform e utilizza molte delle funzioni e funzionalità di base dell’Experience Platform, inclusa la creazione di profili. Queste visualizzazioni aggregate di un singolo cliente riuniscono i dati provenienti da diversi canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per memorizzare i dati dei clienti.
 
-## Miglioramenti al profilo per Real-time CDP, B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+## Miglioramenti al profilo per Real-time CDP, B2B Edition
 
 Oltre alle funzionalità di profilo supportate da Real-time CDP, puoi utilizzare Real-time CDP, B2B Edition per sfogliare informazioni importanti associate a un individuo, ad esempio un account e opportunità. Per saperne di più sui miglioramenti del profilo per Real-time CDP, B2B Edition, inizia leggendo il [guida alla navigazione del profilo](profile-browse.md).
 
@@ -42,4 +38,4 @@ Platform consente di visualizzare facilmente i profili dei clienti e di cercare 
 
 ## Passaggi successivi
 
-Unendo dati provenienti da diverse sorgenti, puoi vedere un’immagine completa di ciascuno dei tuoi clienti, per creare campagne di marketing di nuovo livello. Per informazioni più dettagliate, comprese best practice ed esercitazioni per lavorare con i dati del profilo cliente in tempo reale nell’interfaccia utente e tramite API, consulta [Documentazione del profilo cliente in tempo reale](../../profile/home.md).
+Unendo i dati provenienti da diverse sorgenti, puoi vedere un’immagine completa di ciascuno dei tuoi clienti, per creare campagne di marketing di nuovo livello. Per informazioni più dettagliate, comprese best practice ed esercitazioni per lavorare con i dati del profilo cliente in tempo reale nell’interfaccia utente e tramite API, consulta [Documentazione del profilo cliente in tempo reale](../../profile/home.md).
