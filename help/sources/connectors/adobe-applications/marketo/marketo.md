@@ -5,18 +5,14 @@ title: Connettore Marketo Engage
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del connettore di origine del Marketo Engage, con informazioni sull’autenticazione, la mappatura e la latenza dei dati.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Marketo Engage] connettore
-
->[!IMPORTANT]
->
->La [!DNL Marketo Engage] la sorgente in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# [!DNL Marketo Engage] connettore
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 

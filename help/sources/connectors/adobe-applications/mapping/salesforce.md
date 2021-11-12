@@ -1,38 +1,43 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mappatura campo;mappatura campo;mappatura;marketo;B2B;b2b
-solution: Experience Platform
 title: Campi di mappatura Salesforce
-topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi di origine Salesforce e i campi XDM corrispondenti.
-source-git-commit: 00207ae10979b48d190cbda63aecf55e0f6d0f9c
+source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 13%
+source-wordcount: '279'
+ht-degree: 9%
 
 ---
 
 # [!DNL Salesforce] mappature dei campi
 
-Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesforce] e i relativi campi Experience Data Model (XDM) corrispondenti.
+Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di origine e i campi corrispondenti di Experience Data Model (XDM).
 
 ## Contatto {#contact}
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
-| `AccountId` | `b2b.accountID` |
-| `AccountId` | `personComponents.sourceAccountID` |
+| `AccountId` | `b2b.accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department` | `extendedWorkDetails.departments` |
-| `Email` | `workEmail.address` | Questa è l&#39;identità secondaria. |
+| `Email` | `workEmail.address` | Identità secondaria. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
-| `Id` | `personID` | Questa è l&#39;identità principale |
-| `Id` | `personComponents.sourcePersonID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -73,13 +78,19 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 | `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
-| `Email` | `workEmail.address` | Questa è l&#39;identità secondaria |
+| `Email` | `workEmail.address` | Identità secondaria. |
 | `Email` | `personComponents.workEmail.address` |
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
-| `Id` | `personID` | Questa è l&#39;identità principale |
-| `Id` | `personComponents.sourcePersonID` |
+| `"Salesforce"` | `b2b.personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
+| `Id` | `b2b.personKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
+| `Id` | `personComponents.sourcePersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `LastName` | `person.name.lastName` |
@@ -99,6 +110,8 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 | `Street` | `workAddress.street1` |
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `Suffix` | `person.name.suffix` |
+| `Company` | `b2b.companyName` |
+| `Website` | `b2b.companyWebsite` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -106,10 +119,12 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
+| `"Salesforce"` | `accountKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
-| `BillingCity` | indirizzo | `accountBillingAddress.city` |
+| `BillingCity` | `accountBillingAddress.city` |
 | `BillingCountry` | `accountBillingAddress.country` |
 | `BillingLatitude` | `accountBillingAddress._schema.latitude` |
 | `BillingLongitude` | `accountBillingAddress._schema.longitude` |
@@ -120,7 +135,8 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | funzionalità data.com |
 | `Fax` | `accountFax.number` |
-| `Id` | `accountID` | Questa è l&#39;identità principale |
+| `Id` | `accountKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -132,7 +148,8 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 | `Name` | `accountName` |
 | `NumberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `Ownership` | `accountOwnership` |
-| `ParentId` | `accountParentID` |
+| `ParentId` | `accountParentKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
 | `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
@@ -155,9 +172,14 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
-| `AccountId` | `accountID` | Relazione |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | Relazione. |
 | `Amount` | `opportunityAmount.amount` |
-| `CampaignId` | `campaignID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
 | `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
@@ -166,7 +188,7 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 | `FiscalYear` | `fiscalYear` |
 | `ForecastCategory` | `forecastCategory` |
 | `ForecastCategoryName` | `forecastCategoryName` |
-| `Id` | `opportunityID` | Questa è l&#39;identità principale |
+| `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -187,12 +209,21 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
-| `ContactId` | `personID` | Relazione |
+| `"Salesforce"` | `opportunityPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"Salesforce"` | `personKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
+| `ContactId` | `personKey.sourceID` |
+| `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
-| `Id` | `opportunityPersonID` | Questa è l&#39;identità principale |
+| `Id` | `opportunityPersonKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
-| `OpportunityId` | `opportunityID` | Relazione |
+| `"Salesforce"` | `opportunityKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` |
+| `OpportunityId` | `opportunityKey.sourceID` |
+| `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -201,32 +232,45 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
-| `Id` | `xdm: campaignID` | Questa è l&#39;identità principale |
-| `Name` | `xdm: campaignName` |
-| `ParentId` | `xdm: parentCampaignID` |
-| `Type` | `xdm: campaignType` |
-| `Status` | `xdm: campaignStatus` |
-| `StartDate` | `xdm: campaignStartDate` |
-| `EndDate` | `xdm: campaignEndDate` |
-| `ExpectedRevenue` | `xdm: expectedRevenue.amount` |
-| `BudgetedCost` | `xdm: budgetedCost.amount` |
-| `ActualCost` | `xdm: actualCost.amount` |
-| `ExpectedResponse` | `xdm: expectedResponse` |
-| `IsActive` | `xdm: isActive` |
-| `Description` | `xdm: campaignDescription` |
-| `CreatedDate` | `xdm: extSourceSystemAudit.createdDate` |
-| `LastModifiedDate` | `xdm: extSourceSystemAudit.lastUpdatedDate` |
-| `LastActivityDate` | `xdm: extSourceSystemAudit.lastActivityDate` |
-| `LastViewedDate` | `xdm: extSourceSystemAudit.lastViewedDate` |
-| `LastReferencedDate` | `xdm: extSourceSystemAudit.lastReferencedDate` |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `Id` | `campaignKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `Name` | `campaignName` |
+| `ParentId` | `parentCampaignKey.sourceID` |
+| `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
+| `Type` | `campaignType` |
+| `Status` | `campaignStatus` |
+| `StartDate` | `campaignStartDate` |
+| `EndDate` | `campaignEndDate` |
+| `ExpectedRevenue` | `expectedRevenue.amount` |
+| `BudgetedCost` | `budgetedCost.amount` |
+| `ActualCost` | `actualCost.amount` |
+| `ExpectedResponse` | `expectedResponse` |
+| `IsActive` | `isActive` |
+| `Description` | `campaignDescription` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
 
 ## Membro della campagna {#campaign-member}
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
-| `Id` | `campaignMemberID` | Questa è l&#39;identità principale |
-| `CampaignId` | `campaignID` | Relazione |
-| `LeadOrContactId` | `personID` | Relazione |
+| `"Salesforce"` | `campaignMemberKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `Id` | `campaignMemberKey.sourceID` |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"Salesforce"` | `campaignKey.sourceType` |
+| `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
+| `CampaignId` | `campaignKey.sourceID` |
+| `concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` |
+| `"Salesforce"` | `personKey.sourceType` |
+| `${CRM_ORG_ID}` | `personKey.sourceInstanceID` |
+| `LeadOrContactId` | `personKey.sourceID` |
+| `concat(LeadOrContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `Status` | `memberStatus` |
 | `HasResponded` | `hasResponded` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
@@ -235,4 +279,4 @@ Le tabelle seguenti contengono le mappature tra i campi di origine [!DNL Salesfo
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai acquisito informazioni sulla relazione di mappatura tra i campi di origine [!DNL Salesforce] e i campi XDM corrispondenti. Per avviare il flusso di dati [!DNL Salesforce], consulta l’esercitazione su [creazione di una connessione sorgente [!DNL Salesforce]  .](../../../tutorials/ui/create/crm/salesforce.md)
+Leggendo questo documento, hai acquisito informazioni sulla relazione di mappatura tra [!DNL Salesforce] i campi di origine e i campi XDM corrispondenti. Consulta la documentazione su [creazione di un [!DNL Salesforce] connessione sorgente](../../../connectors/crm/salesforce.md) per ulteriori informazioni.
