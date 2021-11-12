@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketi Engage è l’unica soluzione end-to-end per la gestione dell’esperienza dei clienti (CXM) per il marketing, la pubblicità, l’analisi e il commercio. Ti consente di automatizzare e gestire le attività dalla gestione dei lead CRM e il coinvolgimento dei clienti fino all’attribuzione di marketing e ricavi basata sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,10 @@ La destinazione consente agli esperti di marketing di inviare in push i segmenti
 |---|---|
 | ECID | Spazio dei nomi che rappresenta ECID. Questo namespace può essere indicato anche dai seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Vedi il seguente documento su [ECID](/help/identity-service/ecid.md) per ulteriori informazioni. |
 | E-mail | Spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
+
+>[!NOTE]
+>
+>In [fase di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di destinazione di attivazione, è *obbligatorio* mappare le identità e *facoltativo* per mappare gli attributi. La mappatura di E-mail e/o ECID dalla scheda Namespace Identity è la cosa più importante da fare per garantire che la persona corrisponda in Marketo. La mappatura di e-mail garantisce la percentuale di corrispondenza più elevata.
 
 ## Tipo di esportazione {#export-type}
 
