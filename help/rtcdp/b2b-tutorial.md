@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;b2b;cdp
 solution: Experience Platform
-title: Guida introduttiva ad Real-time Customer Data Platform B2B Edition (Beta)
+title: Guida introduttiva ad Real-time Customer Data Platform B2B Edition
 description: Utilizza questo scenario di esempio come esempio per configurare l’implementazione di Real-time Customer Data Platform B2B Edition.
-source-git-commit: 6d55139325cb32cf0e0aac659f6056b7c5e9157b
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
 
-# Guida introduttiva a Real-time Customer Data Platform B2B Edition (Beta)
+# Guida introduttiva a Real-time Customer Data Platform B2B Edition
 
 Questo documento fornisce un flusso di lavoro end-to-end di alto livello per iniziare a utilizzare Real-time Customer Data Platform (CDP) B2B Edition, utilizzando un esempio di caso d’uso per illustrare concetti chiave.
 

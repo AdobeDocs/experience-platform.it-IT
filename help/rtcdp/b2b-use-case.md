@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;cdp;rtcdp
-title: Esempio di utilizzo per Real-time Customer Data Platform B2B Edition (Beta)
+title: Esempio di utilizzo per Real-time Customer Data Platform B2B Edition
 description: Questo scenario di esempio fornisce un esempio per la configurazione dell’implementazione di Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 1%
+source-wordcount: '1134'
+ht-degree: 0%
 
 ---
 
-# Esempio di utilizzo per Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time CDP Business to Business Edition è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+# Esempio di utilizzo per Real-time Customer Data Platform B2B Edition
 
 Real-time Customer Data Platform B2B Edition amplia le offerte Real-time CDP e Adobe Experience Platform per supportare i dati e i flussi di lavoro B2B. Questo documento fornisce un esempio di caso d&#39;uso che dimostra i vantaggi aggiuntivi forniti da B2B Edition. Sono le seguenti:
 
@@ -30,8 +26,6 @@ Tuttavia, Bodea ha due linee di business diverse. La prima linea di business &qu
 
 Ogni linea di business ha un proprio sistema di vendita: &quot;CRM 1&quot; e &quot;CRM 2&quot;. Entrambi questi sistemi di vendita CRM sono collegati alla propria piattaforma di automazione marketing &quot;Marketo 1&quot; e &quot;Marketo 2&quot;. I dati da CRM 1 vengono sincronizzati solo in Marketo 1 e i dati da CRM2 vengono sincronizzati solo in Marketo 2. In ultima analisi, i loro dati vengono conservati in diversi silos di informazioni aziendali.
 
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
-
 ## Situazione attuale dei dati
 
 Poiché entrambe le linee di attività di Bodea vendono alla società Townsend, i dati aziendali di Townsend sono registrati come due conti separati in ciascun sistema di vendita.
@@ -40,7 +34,7 @@ In Marketo 1, Townsend è registrato come Account 1. Ha due persone correlate (p
 
 In Marketo 2, Townsend è registrato come Account 2. L&#39;account 2 ha anche due persone collegate (p2@townsend.com e p3@townsend.com) e un&#39;opportunità di $900k chiusa (&quot;Opportunity 2&quot;) in CRM 2. Tali dati vengono sincronizzati da CRM 2 a Marketo 2.
 
-Per scopi di integrazione e di controllo aziendale aggiuntivi, Bodea dispone anche di un sistema Master Data Management (MDM) in cui mantiene un record che indica che l&#39;account 1 in Marketo 1 (e CRM 1) e l&#39;account 2 in Marketo 2 (e CRM 2) sono la stessa società.
+Per scopi di integrazione e di controllo aziendale aggiuntivi, Bodea dispone anche di un sistema Master Data Management (MDM) in cui mantiene un record che indica che l&#39;account 1 in Marketo 1 (e CRM 1) e l&#39;account 2 in Marketo 2 (e CRM 2) sono la stessa azienda.
 
 Nell&#39;ultimo mese, `p2@townsend.com` ha visitato la nuova pagina del prodotto e la visita web è stata registrata da Marketo 1.
 
@@ -97,7 +91,7 @@ Leggendo questo documento, ti sono stati presentati i tipi di obiettivi e proble
 
 Per migliorare la comprensione delle funzioni specifiche di B2B, si consiglia di consultare la seguente documentazione:
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Esercitazione end-to-end su Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 - [Fonti in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemi in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [Esempi di segmentazione B2B](./segmentation/b2b.md)
