@@ -6,7 +6,7 @@ title: Configurare un’istanza di Customer AI
 topic-legacy: Instance creation
 description: I servizi intelligenti forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Dopo aver selezionato i set di dati da utilizzare, seleziona la **[!UICONTROL Ag
 
 Selezione dell’icona delle informazioni ![icona info](../images/user-guide/info-icon.png) accanto al set di dati viene aperto il set di dati preview pover.
 
-![Selezionare e cercare il set di dati](../images/user-guide/dataset-info-2.png)
+![Selezionare e cercare il set di dati](../images/user-guide/dataset-info.png)
 
 L’anteprima del set di dati contiene dati quali l’ora dell’ultimo aggiornamento, lo schema di origine e un’anteprima delle prime dieci colonne.
 
@@ -85,8 +85,8 @@ Nell’anteprima del set di dati è presente un valore percentuale di completezz
 >[!NOTE]
 >
 >La completezza del set di dati viene calcolata utilizzando la finestra di formazione massima per Customer AI (un anno). Ciò significa che i dati di età superiore a un anno non vengono presi in considerazione quando visualizzi il valore di completezza del set di dati.
-<!-- training dataset completness needs to change -->
-![Completezza del set di dati](../images/user-guide/dataset-info.png)
+
+![Completezza del set di dati](../images/user-guide/dataset-info-2.png)
 
 ### Selezionare un&#39;identità {#identity}
 
