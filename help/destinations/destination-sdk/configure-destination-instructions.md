@@ -1,31 +1,31 @@
 ---
-description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando l’SDK di destinazione.
-title: Come utilizzare l’SDK di destinazione per configurare una destinazione in streaming
+description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando Destination SDK.
+title: Utilizzare Destination SDK per configurare una destinazione in streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# Come utilizzare l’SDK di destinazione per configurare una destinazione in streaming
+# Utilizzare Destination SDK per configurare una destinazione in streaming
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell’SDK delle destinazioni](./configuration-options.md) e in altri documenti di riferimento API e funzionalità SDK di destinazione per configurare un [destinazione streaming](/help/destinations/destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
+Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell’SDK delle destinazioni](./configuration-options.md) e in altri documenti di riferimento sulle funzionalità e API di Destination SDK per configurare un [destinazione streaming](/help/destinations/destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
 
 >[!NOTE]
 >
->La configurazione di una destinazione batch tramite SDK di destinazione non è al momento supportata.
+>La configurazione di una destinazione batch tramite Destination SDK non è attualmente supportata.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di passare ai passaggi illustrati di seguito, leggere il [Guida introduttiva all’SDK per le destinazioni](./getting-started.md) per informazioni su come ottenere le credenziali di autenticazione necessarie per l’Adobe I/O e altri prerequisiti per l’utilizzo con le API SDK di destinazione.
+Prima di passare ai passaggi illustrati di seguito, leggere il [Introduzione a Destination SDK](./getting-started.md) per informazioni su come ottenere le credenziali di autenticazione necessarie per l’Adobe I/O e altri prerequisiti per l’utilizzo con le API Destination SDK.
 
-## Passaggi per utilizzare le opzioni di configurazione nell’SDK di destinazione per impostare la destinazione {#steps}
+## Passaggi per utilizzare le opzioni di configurazione in Destination SDK per impostare la destinazione {#steps}
 
-![Passaggi illustrativi dell’utilizzo degli endpoint SDK di destinazione](./assets/destination-sdk-steps.png)
+![Passaggi illustrativi dell’utilizzo degli endpoint Destination SDK](./assets/destination-sdk-steps.png)
 
 ## Passaggio 1: Creare una configurazione server e modello {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ Dopo aver creato un modello di trasformazione del messaggio che funziona per te,
 
 ## Passaggio 4: Creare la configurazione dei metadati del pubblico {#create-audience-metadata-configuration}
 
-Per alcune destinazioni, l&#39;SDK di destinazione richiede di configurare una configurazione dei metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando è necessario configurare questa configurazione e su come eseguirla.
+Per alcune destinazioni, Destination SDK richiede di configurare una configurazione dei metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando è necessario configurare questa configurazione e su come eseguirla.
 
 Se utilizzi una configurazione di metadati del pubblico, devi connetterla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
