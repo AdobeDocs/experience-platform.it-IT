@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 12%
+source-wordcount: '741'
+ht-degree: 11%
 
 ---
 
@@ -257,6 +257,25 @@ ht-degree: 12%
    - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
+- [SDK per sorgenti] {#sources-sdk}
+   - [Panoramica](sources-sdk/overview.md)
+   - [Funzionalità SDK di Origini] {#functionality}
+      - [Opzioni di configurazione](sources-sdk/config/config.md)
+      - [Configurare le specifiche di autenticazione](sources-sdk/config/authspec.md)
+      - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
+      - [Configurare la specifica di esplorazione](sources-sdk/config/explorespec.md)
+   - [Tutorial API dell’SDK per origini] {#sdk-tutorials}
+      - [Panoramica dell’API SDK per origini](sources-sdk/api/overview.md)
+      - [Introduzione](sources-sdk/api/getting-started.md)
+      - [Creare una specifica di connessione](sources-sdk/api/create.md)
+      - [Aggiornare una specifica di connessione](sources-sdk/api/update-connection-specs.md)
+      - [Aggiornare una specifica di flusso](sources-sdk/api/update-flow-specs.md)
+      - [Invia l&#39;origine](sources-sdk/api/submit.md)
+   - [Documentare l&#39;origine] {#document}
+      - [Documentare la fonte in Adobe Experience Platform](sources-sdk/documentation/overview.md)
+      - [Utilizza l’interfaccia web GitHub per creare una pagina di documentazione sulle sorgenti](sources-sdk/documentation/github.md)
+      - [Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini](sources-sdk/documentation/text-editor.md)
+      - [Modello self-service della documentazione](sources-sdk/documentation/template.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
