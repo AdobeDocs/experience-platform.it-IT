@@ -2,7 +2,7 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello di metadati estensibili per il pubblico, che puoi configurare in base alle specifiche dell’API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato per Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
+source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello di metadati estensibili per il pubblico, che puoi configurare in base alle specifiche dell’API di marketing. Dopo aver definito, testato e inviato la configurazione, questa verrà utilizzata per Adobe per strutturare le chiamate API alla destinazione.
 
-Puoi configurare la funzionalità descritta in questo documento utilizzando l’endpoint API `/authoring/audience-templates` . Leggi [Operazioni API endpoint per metadati di pubblico](./audience-metadata-api.md) per un elenco completo delle operazioni che puoi eseguire sull&#39;endpoint.
+Puoi configurare la funzionalità descritta in questo documento utilizzando `/authoring/audience-templates` Endpoint API. Leggi [Operazioni API per l’endpoint dei metadati del pubblico](./audience-metadata-api.md) per un elenco completo delle operazioni eseguibili sull&#39;endpoint.
 
 ## Quando utilizzare l’endpoint per la gestione dei metadati del pubblico {#when-to-use}
 
@@ -25,11 +25,11 @@ A seconda della configurazione dell’API, potrebbe essere necessario o meno uti
 
 ## Casi di utilizzo supportati dalla gestione dei metadati del pubblico {#use-cases}
 
-Con il supporto dei metadati del pubblico nell’SDK di Destinazione, quando configuri la destinazione dell’Experience Platform, puoi dare agli utenti di Platform una delle diverse opzioni quando mappano e attivano i segmenti sulla tua destinazione. Puoi controllare le opzioni disponibili per l&#39;utente tramite i parametri nella sezione di mappatura dei segmenti della [configurazione di destinazione](./destination-configuration.md#segment-mapping).
+Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi dare agli utenti di Platform una delle diverse opzioni quando mappano e attivano i segmenti sulla tua destinazione. Puoi controllare le opzioni disponibili per l’utente tramite i parametri nella sezione di mappatura dei segmenti della [configurazione di destinazione](./destination-configuration.md#segment-mapping).
 
 ### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono inserire ID di mappatura
 
-Se disponi di un endpoint API per creare/aggiornare/eliminare segmenti o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare l’SDK di destinazione in modo che corrisponda alle specifiche dell’endpoint di creazione/aggiornamento/eliminazione del segmento. Experience Platform può creare/aggiornare/eliminare programmaticamente segmenti e sincronizzare i metadati di nuovo ad Experience Platform.
+Se disponi di un endpoint API per creare/aggiornare/eliminare segmenti o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint di creazione/aggiornamento/eliminazione del segmento. Experience Platform può creare/aggiornare/eliminare programmaticamente segmenti e sincronizzare i metadati di nuovo ad Experience Platform.
 
 Quando attivi i segmenti sulla destinazione nell’interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente un campo ID mappatura segmento nel flusso di lavoro di attivazione.
 
@@ -47,7 +47,7 @@ Se il sistema di destinazione accetta l’ID del segmento di Experience Platform
 
 Per supportare i casi d’uso elencati sopra, l’Adobe fornisce un modello generico che può essere personalizzato per adattarsi alle specifiche API.
 
-Puoi utilizzare il modello generico per [creare un nuovo modello di pubblico](./audience-metadata-api.md#create) se la tua API supporta:
+È possibile utilizzare il modello generico per [creare un nuovo modello di pubblico](./audience-metadata-api.md#create) se l&#39;API supporta:
 
 * Metodi HTTP: POST, GET, PUT, DELETE, PATCH
 * Tipi di autenticazione: OAuth 1, OAuth 2 con token di aggiornamento, OAuth 2 con token portatore
@@ -59,14 +59,14 @@ Il team di progettazione di Adobe può collaborare con l’utente per espandere 
 
 Questa sezione include tre esempi di configurazioni generiche di metadati del pubblico, per il tuo riferimento, insieme a descrizioni delle sezioni principali della configurazione. Osserva come url, intestazioni, corpo della richiesta e della risposta differiscono tra le tre configurazioni di esempio. Ciò è dovuto alle diverse specifiche dell’API marketing delle tre piattaforme di esempio.
 
-In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.name}}` vengono utilizzati nell&#39;URL e in altri esempi vengono utilizzati nelle intestazioni o nel corpo della richiesta. Dipende veramente dalle specifiche API di marketing.
+In alcuni esempi, campi macro come `{{authData.accessToken}}` o `{{segment.name}}` sono utilizzati nell&#39;URL e in altri esempi sono utilizzati nelle intestazioni o nel corpo della richiesta. Dipende veramente dalle specifiche API di marketing.
 
 | Sezione modello | Descrizione |
 |--- |--- |
 | `create` | Include tutti i componenti richiesti (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, creare programmaticamente segmenti/tipi di pubblico nella piattaforma e sincronizzare le informazioni di nuovo a Adobe Experience Platform. |
 | `update` | Include tutti i componenti richiesti (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, aggiornare programmaticamente segmenti/tipi di pubblico nella piattaforma e sincronizzare le informazioni di nuovo a Adobe Experience Platform. |
 | `delete` | Include tutti i componenti richiesti (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API e eliminare programmaticamente segmenti/tipi di pubblico nella piattaforma. |
-| `validations` | Esegue le convalide per qualsiasi campo nella configurazione del modello prima di effettuare una chiamata all&#39;API partner. Ad esempio, puoi verificare che l’ID account dell’utente sia inserito correttamente. |
+| `validate` | Esegue le convalide per qualsiasi campo nella configurazione del modello prima di effettuare una chiamata all&#39;API partner. Ad esempio, puoi verificare che l’ID account dell’utente sia inserito correttamente. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,7 +79,7 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -118,7 +118,7 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -155,7 +155,7 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {
@@ -375,11 +375,11 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
 }
 ```
 
-Trova le descrizioni di tutti i parametri nel modello nella documentazione di riferimento [Operazioni API per l&#39;endpoint dei metadati del pubblico](./audience-metadata-api.md).
+Trova descrizioni di tutti i parametri nel modello nella documentazione di riferimento [Operazioni API per l’endpoint dei metadati del pubblico](./audience-metadata-api.md).
 
 ## Macro utilizzate nei modelli di metadati del pubblico
 
-Per passare informazioni come ID segmento, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro utilizzabili. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione presenti in questa pagina:
+Per trasmettere informazioni quali ID segmento, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro utilizzabili. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione presenti in questa pagina:
 
 | Macro | Descrizione |
 |--- |--- |
@@ -388,7 +388,7 @@ Per passare informazioni come ID segmento, token di accesso, messaggi di errore 
 | `{{segment.id}}` | Ti consente di accedere all’ID del segmento in Experience Platform. |
 | `{{customerData.accountId}}` | Ti consente di accedere al campo ID account configurato nella configurazione di destinazione. |
 | `{{oauth2ServiceAccessToken}}` | Consente di generare in modo dinamico un token di accesso basato sulla configurazione OAuth 2. |
-| `{{authData.accessToken}}` | Consente di passare il token di accesso all’endpoint API. Utilizza `{{authData.accessToken}}` se l’Experience Platform deve utilizzare token non in scadenza per connettersi alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
+| `{{authData.accessToken}}` | Consente di passare il token di accesso all’endpoint API. Utilizzo `{{authData.accessToken}}` se Experience Platform deve utilizzare token non in scadenza per connettersi alla destinazione, in caso contrario utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
 | `{{body.segments[0].segment.id}}` | Restituisce l&#39;identificatore univoco del pubblico creato, come valore della chiave `externalAudienceId`. |
 | `{{error.message}}` | Restituisce un messaggio di errore che verrà visualizzato agli utenti nell’interfaccia utente di Experience Platform. |
 
