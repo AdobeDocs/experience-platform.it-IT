@@ -3,9 +3,9 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 96%
 
 ---
@@ -61,9 +61,5 @@ L’inoltro di eventi consente ai team di marketing di incrementare la propria a
 * Sequenza di azioni della regola
 
    Nella sezione Azione di una regola, le regole di inoltro eventi vengono sempre eseguite in sequenza. Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere scelta mentre può esserlo nel caso dei tag.
-
-* Versioni del codice JavaScript personalizzato
-
-   I tag utilizzano JavaScript versione es5. La funzione di inoltro degli eventi utilizza la versione es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

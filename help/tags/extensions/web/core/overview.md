@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 91%
+source-wordcount: '5362'
+ht-degree: 90%
 
 ---
 
@@ -542,6 +542,10 @@ In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estension
 
 ### Codice personalizzato
 
+>[!NOTE]
+>
+>ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
+
 Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate.
 
 1. Denomina il codice dell&#39;azione.
@@ -645,6 +649,10 @@ Qualsiasi valore di stringa costante a cui è possibile fare riferimento in azio
 `string`
 
 ### Custom Code
+
+>[!NOTE]
+>
+>ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
 
 JavaScript personalizzato può essere inserito nell&#39;interfaccia utente facendo clic su Open Editor e inserendo il codice nella finestra dell’editor.
 

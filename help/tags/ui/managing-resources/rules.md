@@ -1,10 +1,11 @@
 ---
 title: Regole
-description: Scopri come funzionano le estensioni di tag in Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 82%
+source-wordcount: '1969'
+ht-degree: 99%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 82%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-I tag in Adobe Experience Platform seguono un sistema basato su regole. Cercano l’interazione con l’utente e i dati associati. Quando i criteri descritti nelle tue regole vengono soddisfatti, la regola attiva l&#39;estensione, lo script o il codice lato client identificato.
+I tag in Adobe Experience Platform seguono un sistema basato su regole. Cercano le interazione degli utenti e i relativi dati. Quando i criteri descritti nelle tue regole vengono soddisfatti, la regola attiva l&#39;estensione, lo script o il codice lato client identificato.
 
 Genera le regole per integrare dati e funzionalità di tecnologie marketing e annunci che unificano prodotti diversi in un&#39;unica soluzione.
 
@@ -22,7 +23,7 @@ Genera le regole per integrare dati e funzionalità di tecnologie marketing e an
 
 **Eventi (If):** la regola deve cercare l&#39;evento. Ciò viene definito scegliendo un evento, eventuali condizioni applicabili ed eventuali eccezioni.
 
-**Azioni (Then):** gli attivatori si manifestano dopo che gli eventi di una regola si sono verificati e tutte le condizioni sono state soddisfatte. Una regola di tag può attivare tutte le azioni discrete che desideri e controllare l&#39;ordine in cui si verificano tali azioni. Ad esempio, una singola regola per una pagina di ringraziamento per l&#39;e-commerce può attivare gli strumenti di analisi e i tag di terze parti da una singola regola. Non è necessario creare regole separate per ogni estensione o tag.
+**Azioni (Then):** gli attivatori si manifestano dopo che gli eventi di una regola si sono verificati e tutte le condizioni sono state soddisfatte. Una regola di tag può attivare tutte le azioni discrete che desideri e controllare l’ordine in cui si verificano tali azioni. Ad esempio, una singola regola per una pagina di ringraziamento per l&#39;e-commerce può attivare gli strumenti di analisi e i tag di terze parti da una singola regola. Non è necessario creare regole separate per ogni estensione o tag.
 
 Puoi aggiungere più tipi di evento. Più eventi sono collegati con un operatore OR, pertanto le condizioni della regola saranno valutate se uno qualsiasi degli eventi viene soddisfatto.
 
@@ -36,9 +37,9 @@ Gli eventi con qualsiasi condizione sono la porzione *If* di una regola.
 
 Se si verifica un evento specificato, vengono valutate le condizioni, quindi vengono eseguite le azioni specificate, se necessario.
 
-* **Eventi**: Specifica uno o più eventi che devono aver luogo per attivare la regola. Gli eventi multipli sono collegati da un operatore OR. Uno qualsiasi degli eventi specificati attiva la regola.
+* **Eventi**: specifica uno o più eventi che devono aver luogo affinché la regola venga attivata. Gli eventi multipli sono collegati da un operatore OR. Uno qualsiasi degli eventi specificati attiva la regola.
 
-* **Condizioni**: Limita l’evento configurando tutte le condizioni che devono essere soddisfatte affinché un evento attivi la regola. Un&#39;eccezione è definita come condizione NOT. Condizioni multiple sono collegate da un AND.
+* **Condizioni**: restringi l’evento configurando eventuali condizioni che devono essere soddisfatte affinché l’evento possa attivare la regola. Un&#39;eccezione è definita come condizione NOT. Condizioni multiple sono collegate da un AND.
 
 Gli eventi disponibili dipendono dalle estensioni installate. Per informazioni sugli eventi nell&#39;estensione Core, consulta [Tipi di evento estensione Core](../../extensions/web/core/overview.md#core-extension-event-types).
 
@@ -64,7 +65,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
    >[!IMPORTANT]
    >
-   >In una regola lato client, gli elementi dati sono tokenizzati con un simbolo `%` all’inizio e alla fine del nome. Ad esempio, `%viewportHeight%`. In una regola di inoltro eventi, gli elementi dati vengono token con `{{` all&#39;inizio e `}}` alla fine del nome dell&#39;elemento dati. Ad esempio, `{{viewportHeight}}`.
+   >In una regola lato client, gli elementi dati sono tokenizzati con un simbolo `%` all’inizio e alla fine del nome. Ad esempio, `%viewportHeight%`. In una regola per l’inoltro degli eventi, gli elementi dati vengono tokenizzati, con `{{` all’inizio e `}}` alla fine del nome dell’elemento dati. Ad esempio, `{{viewportHeight}}`.
 
    Per fare riferimento ai dati provenienti dalla rete Edge, il percorso dell’elemento dati deve essere `arc.event._<element>_`.
 
@@ -124,9 +125,9 @@ L&#39;ordinamento delle regole consente di controllare l&#39;ordine di esecuzion
 
 Spesso è importante attivare le regole in un ordine specifico. Esempi: (1) disponi di diverse regole che impostano le variabili [!DNL Analytics] in modo condizionato e devi accertarti che la regola con Invia Beacon sia attivata per ultima. (2) disponi di una regola che attiva [!DNL Target] e di un&#39;altra regola che attiva [!DNL Analytics] e desideri che la regola [!DNL Target] venga eseguita per prima.
 
-In sostanza, la responsabilità di eseguire azioni in ordine è dello sviluppatore di estensione del tipo di evento in uso. Gli sviluppatori di estensioni di Adobe assicurano che le loro estensioni funzionino come previsto. Per le estensioni di terze parti, Adobe fornisce indicazioni agli sviluppatori di estensioni per implementarlo correttamente, ma spetta a loro farlo.
+In sostanza, la responsabilità di eseguire azioni in ordine è dello sviluppatore di estensione del tipo di evento in uso. Gli sviluppatori di estensioni Adobe assicurano che le loro estensioni funzionino come previsto. Per le estensioni di terze parti, Adobe fornisce indicazioni agli sviluppatori per consentire loro di implementarle correttamente, ma spetta a loro metterle in pratica.
 
-L’Adobe consiglia vivamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). La semplicità è la scelta migliore. Ricorda che devi mantenere l&#39;ordine che hai stabilito. Tuttavia, l&#39;Adobe riconosce che ci possono essere casi limite in cui questo sentirà limitativo, quindi sono consentiti altri numeri. I tag supportano numeri compresi tra +/- 2.147.483.648. Puoi anche utilizzare una dozzina di decimali, ma se ti trovi in uno scenario in cui hai necessità di farlo, dovresti ripensare ad alcune delle decisioni che hai preso per arrivare al punto in cui ti trovi.
+Adobe consiglia caldamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). La semplicità è la scelta migliore. Ricorda che devi mantenere l&#39;ordine che hai stabilito. Tuttavia, Adobe riconosce che ci possono essere casi limite in cui questa potrebbe essere una scelta limitativa, per questo sono concessi anche altri numeri. I tag supportano numeri compresi tra +/- 2.147.483.648. Puoi anche utilizzare una dozzina di decimali, ma se ti trovi in uno scenario in cui hai necessità di farlo, dovresti ripensare ad alcune delle decisioni che hai preso per arrivare al punto in cui ti trovi.
 
 >[!IMPORTANT]
 >
@@ -143,23 +144,19 @@ L&#39;ordine di caricamento delle regole dipende dal fatto che l&#39;azione dell
 
 Puoi utilizzare `document.write` tra gli script personalizzati indipendentemente dagli eventi configurati per la regola.
 
-Puoi ordinare diversi tipi di codici personalizzati tra loro. Ad esempio, puoi utilizzare un&#39;azione codice personalizzato JavaScript, poi un&#39;azione codice personalizzato HTML, quindi un&#39;azione codice personalizzato JavaScript. I tag garantiscono che vengano eseguiti in tale ordine.
+Puoi ordinare diversi tipi di codici personalizzati tra loro. Ad esempio, puoi utilizzare un&#39;azione codice personalizzato JavaScript, poi un&#39;azione codice personalizzato HTML, quindi un&#39;azione codice personalizzato JavaScript. I tag assicurano che vengano eseguite in tale ordine.
 
 ## Raggruppamento delle regole
 
-Gli eventi e le condizioni delle regole sono sempre raggruppati nella libreria tag principale. Le azioni possono essere raggruppate nella libreria principale o caricate in ritardo come risorse secondarie, a seconda delle necessità. Il fatto che le azioni siano raggruppate o meno è determinato dal tipo di evento della regola.
+Gli eventi e le condizioni delle regole sono sempre raggruppati nella libreria principale di tag. Le azioni possono essere raggruppate nella libreria principale o caricate in ritardo come risorse secondarie, a seconda delle necessità. Il fatto che le azioni siano raggruppate o meno è determinato dal tipo di evento della regola.
 
 ### Regole con eventi “Core - libreria caricata” o “Core - parte superiore della pagina”
 
 Questi eventi devono essere eseguiti quasi sempre (a meno che le condizioni non vengano valutate come false), quindi per maggiore efficienza vengono raggruppati nella libreria principale, il file a cui fa riferimento il codice da incorporare.
 
-* **JavaScript:** JavaScript è incorporato nella libreria dei tag principale. Lo script personalizzato viene racchiuso in un tag script e scritto nel documento utilizzando `document.write`. Se la regola dispone di più script personalizzati, questi vengono scritti in ordine.
+* **JavaScript:** JavaScript è incorporato nella libreria principale di tag. Lo script personalizzato viene racchiuso in un tag script e scritto nel documento utilizzando `document.write`. Se la regola dispone di più script personalizzati, questi vengono scritti in ordine.
 
-   >[!NOTE]
-   >
-   >I tag utilizzano JavaScript ES5. L&#39;inoltro degli eventi utilizza ES6.
-
-* **HTML:** il codice HTML è incorporato nella libreria tag principale. `document.write` viene utilizzato per scrivere il codice HTML nel documento. Se la regola dispone di più script personalizzati, questi vengono scritti in ordine.
+* **HTML:** il codice HTML è incorporato nella libreria principale di tag. `document.write` viene utilizzato per scrivere il codice HTML nel documento. Se la regola dispone di più script personalizzati, questi vengono scritti in ordine.
 
 ### Regole con qualsiasi altro evento
 
@@ -170,7 +167,7 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 
 ## Sequenza dei componenti della regola {#sequencing}
 
-Il comportamento dell&#39;ambiente di runtime di tag dipende dall&#39;abilitazione o meno di **[!UICONTROL Run rule components in sequence]** per la proprietà.
+Il comportamento dell’ambiente runtime dei tag dipende dall’abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la tua proprietà.
 
 ### Abilitata
 
@@ -188,4 +185,4 @@ Se un’azione ha esito negativo o raggiunge il timeout definito, le azioni succ
 
 Se l’impostazione è disabilitata, quando un evento viene attivato in fase di runtime, le condizioni della regola vengono valutate immediatamente. Più condizioni vengono valutate in parallelo.
 
-Se tutte le condizioni risultano true (e le eccezioni risultano false), le azioni della regola vengono eseguite immediatamente. Le azioni vengono richiamate in ordine, ma i tag non devono attendere il completamento di una prima di chiamare quella successiva. Se le azioni sono sincronizzate, vengono comunque eseguite in ordine. Se una o più azioni sono asincrone, alcune vengono eseguite in parallelo.
+Se tutte le condizioni risultano true (e le eccezioni risultano false), le azioni della regola vengono eseguite immediatamente. Le azioni vengono richiamate in ordine, ma i tag non attendono che un’azione sia completata prima di chiamare quella successiva. Se le azioni sono sincronizzate, vengono comunque eseguite in ordine. Se una o più azioni sono asincrone, alcune vengono eseguite in parallelo.
