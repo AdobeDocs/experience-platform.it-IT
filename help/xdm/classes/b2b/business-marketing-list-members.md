@@ -2,14 +2,18 @@
 title: Classe membri elenco marketing commerciale XDM
 description: Questo documento fornisce una panoramica della classe Membri elenco marketing aziendale XDM in Experience Data Model (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 4%
+source-wordcount: '251'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Membri elenco marketing commerciale XDM] Classe
+
+>[!IMPORTANT]
+>
+>Questa classe è destinata ad essere utilizzata dalle organizzazioni con accesso [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). È necessario avere accesso a Real-time CDP B2B Edition per consentire a questa classe di partecipare [Profilo cliente in tempo reale](../../../profile/home.md).
 
 [!UICONTROL Membri elenco marketing commerciale XDM] è una classe standard Experience Data Model (XDM) che descrive membri, persone o contatti associati a un elenco di marketing.
 

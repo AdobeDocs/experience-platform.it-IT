@@ -2,14 +2,18 @@
 title: Classe di relazione tra le persone dell'account aziendale XDM
 description: Questo documento fornisce una panoramica della classe di relazione tra le persone dell’account aziendale XDM in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
 
 # [!UICONTROL Relazione personale account aziendale XDM] Classe
+
+>[!IMPORTANT]
+>
+>Questa classe è destinata ad essere utilizzata dalle organizzazioni con accesso [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). È necessario avere accesso a Real-time CDP B2B Edition per consentire a questa classe di partecipare [Profilo cliente in tempo reale](../../../profile/home.md).
 
 [!UICONTROL Relazione personale account aziendale XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di una persona associata a un account aziendale.
 
