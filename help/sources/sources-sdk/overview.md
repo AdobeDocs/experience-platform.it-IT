@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK è un set di API di configurazione che ti consente di integrare una sorgente basata su API REST utilizzando l’API del servizio di flusso per Experience Platform i tuoi dati.
 hide: true
 hidefromtoc: true
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -41,17 +41,17 @@ Per ulteriori informazioni sulle origini e per visualizzare un elenco delle dive
 
 Attraverso l’SDK di Origini è possibile integrare la propria origine basata su API REST e trasferire i dati a Platform con [!DNL Flow Service]. L’SDK di Origini consente di integrare una nuova origine con Platform, creando e inviando nuove specifiche di connessione tramite [!DNL Flow Service] API.
 
-Consulta la guida su [creazione di una nuova specifica di connessione](./api/overview.md) per informazioni su come integrare una nuova sorgente in Platform.
+Consulta la guida su [creazione di una nuova specifica di connessione](./api/api-overview.md) per informazioni su come integrare una nuova sorgente in Platform.
 
 ## Documentare l&#39;origine
 
-Una volta creata la sorgente, consulta la sezione [guida alla documentazione](./documentation/overview.md) per istruzioni su come documentare la propria origine attraverso [!DNL GitHub] interfaccia web o tramite il tuo editor di testo.
+Una volta creata la sorgente, consulta la sezione [guida alla documentazione](./documentation/doc-overview.md) per istruzioni su come documentare la propria origine attraverso [!DNL GitHub] interfaccia web o tramite il tuo editor di testo.
 
 ## Processo di alto livello
 
 Il processo dettagliato per configurare l’origine in Experience Platform è descritto di seguito:
 
-* Leggi la sezione [Guida all’API SDK per le sorgenti](./api/overview.md);
+* Leggi la sezione [Guida all’API SDK per le sorgenti](./api/api-overview.md);
    * Leggi la sezione [guida introduttiva](./api/getting-started.md);
    * Segui l’esercitazione su [creazione di una nuova specifica di connessione](./api/create.md);
    * Segui l’esercitazione su [aggiornamento delle specifiche di connessione](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Il processo dettagliato per configurare l’origine in Experience Platform è de
    * Consulta la guida su [configurazione delle specifiche di autenticazione](./config/authspec.md);
    * Consulta la guida su [configurazione delle specifiche di origine](./config/sourcespec.md);
    * Consulta la guida su [configurazione delle specifiche di esplorazione](./config/explorespec.md);
-* Per iniziare a documentare la sorgente, vedi [panoramica sulla creazione della documentazione per l&#39;SDK di Origini](./documentation/overview.md)
+* Per iniziare a documentare la sorgente, vedi [panoramica sulla creazione della documentazione per l&#39;SDK di Origini](./documentation/doc-overview.md)
    * Puoi utilizzarlo [modello di documentazione di origini](./documentation/template.md) strutturare la documentazione;
    * Consulta la guida su [utilizzo dell’interfaccia web GitHub](./documentation/github.md) per i passaggi su come creare la documentazione utilizzando GitHub;
    * Consulta la guida su [utilizzo di un editor di testo](./documentation/text-editor.md) per informazioni su come creare la documentazione utilizzando il computer locale.
