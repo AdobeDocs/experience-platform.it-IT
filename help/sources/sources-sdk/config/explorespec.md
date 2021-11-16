@@ -5,7 +5,7 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -87,4 +87,4 @@ Le specifiche Esplora definiscono i parametri necessari per l&#39;esplorazione e
 
 ## Passaggi successivi
 
-Con le specifiche di esplorazione compilate, è possibile procedere alla creazione di una specifica di connessione completa utilizzando [!DNL Flow Service] API. Consulta la sezione [[!DNL Sources SDK] Guida all’API](../api/api-overview.md) per ulteriori informazioni.
+Con le specifiche di esplorazione compilate, è possibile procedere alla creazione di una specifica di connessione completa utilizzando [!DNL Flow Service] API. Consulta la sezione [[!DNL Sources SDK] Guida all’API](../api/overview.md) per ulteriori informazioni.
