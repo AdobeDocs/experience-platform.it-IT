@@ -4,7 +4,7 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 11%
@@ -257,14 +257,14 @@ ht-degree: 11%
    - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
-- [SDK per sorgenti] {#sources-sdk}
+- [SDK per sorgenti] {#sdk}
    - [Panoramica](sources-sdk/overview.md)
-   - [Funzionalità SDK di Origini] {#functionality}
+   - [Configurazione dell’SDK per le sorgenti] {#config}
       - [Opzioni di configurazione](sources-sdk/config/config.md)
       - [Configurare le specifiche di autenticazione](sources-sdk/config/authspec.md)
       - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
       - [Configurare la specifica di esplorazione](sources-sdk/config/explorespec.md)
-   - [Tutorial API dell’SDK per origini] {#sdk-tutorials}
+   - [Tutorial API dell’SDK per origini] {#sdk-api}
       - [Panoramica dell’API SDK per origini](sources-sdk/api/overview.md)
       - [Introduzione](sources-sdk/api/getting-started.md)
       - [Creare una specifica di connessione](sources-sdk/api/create.md)
