@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per l’SDK di Origini.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ Una risposta corretta restituisce i dettagli della specifica di flusso interroga
 
 ## Passaggi successivi
 
-Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, ora puoi procedere alla verifica e all&#39;invio della nuova origine. Consulta la guida su [verifica e invio di una nuova origine](./overview.md#submit) per ulteriori informazioni.
+Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, ora puoi procedere alla verifica e all&#39;invio della nuova origine. Consulta la guida su [verifica e invio di una nuova origine](./submit.md) per ulteriori informazioni.
