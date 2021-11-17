@@ -5,26 +5,26 @@ title: Endpoint API del registro di controllo
 description: L’endpoint /auditlog nell’API del Registro di sistema dello schema consente di recuperare un elenco cronologico delle modifiche apportate a una risorsa XDM esistente.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7abe27d7fcc461becb0495fcd470eaea031b94bc
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '407'
 ht-degree: 6%
 
 ---
 
 # Endpoint del registro di controllo
 
-Per ogni risorsa Experience Data Model (XDM), il [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L’endpoint `/auditlog` nell’ API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, gruppo di campi dello schema, tipo di dati o schema specificato dall’ID.
+Per ogni risorsa Experience Data Model (XDM), la variabile [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. La `/auditlog` punto finale [!DNL Schema Registry] L’API ti consente di recuperare un registro di controllo per qualsiasi classe, gruppo di campi dello schema, tipo di dati o schema specificato dall’ID.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-L&#39;endpoint `/auditlog` fa parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nella chiamata API riportata di seguito.
+La `/auditlog` l&#39;endpoint fa parte delle chiamate di routine remote (RPC) supportate dal [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nella chiamata API riportata di seguito.
 
 ## Recuperare un registro di controllo per una risorsa
 
-È possibile recuperare un registro di controllo per qualsiasi classe, gruppo di campi, tipo di dati o schema nella Libreria schema specificando l&#39;ID della risorsa nel percorso di una richiesta di GET all&#39;endpoint `/auditlog`.
+È possibile recuperare un registro di controllo per qualsiasi classe, gruppo di campi, tipo di dati o schema all’interno della Libreria schema specificando l’ID della risorsa nel percorso di una richiesta di GET al `/auditlog` punto finale.
 
 **Formato API**
 
@@ -34,17 +34,17 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_ID}` | La `meta:altId` o la codifica URL `$id` della risorsa di cui si desidera recuperare il registro di controllo. |
+| `{RESOURCE_ID}` | La `meta:altId` o con codifica URL `$id` della risorsa di cui si desidera recuperare il registro di controllo. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente recupera il registro di controllo per un gruppo di campi `Restaurant`.
+La richiesta seguente recupera il registro di controllo per uno schema.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,44 +58,72 @@ Una risposta corretta restituisce un elenco cronologico delle modifiche apportat
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-    "auditTrails": [
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+        "xdmType": "schemas",
+        "action": "remove",
+        "path": "/meta:usageCount",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
+      {
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltySunday_ABC",
         "value": {
-          "title": "Brand",
+          "title": "LoyaltySundayABC",
           "description": "",
           "type": "string",
           "isRequired": false,
+          "required": [],
           "meta:xdmType": "string"
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/meta:usageCount",
-        "value": 0
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltyMoxee_XYZ",
+        "value": {
+          "title": "LoyaltyMoxeeXYZ",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "required": [],
+          "meta:xdmType": "string"
+        }
       }
-    ],
-    "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
-    "updated": 1606255582281,
-    "clientId": "{CLIENT_ID}",
-    "sandBoxId": "{SANDBOX_ID}"
+    ]
   }
 ]
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `auditTrails` | Matrice di oggetti, con ogni oggetto che rappresenta una modifica apportata alla risorsa specificata o a una delle relative risorse dipendenti. |
+| `updates` | Matrice di oggetti, con ogni oggetto che rappresenta una modifica apportata alla risorsa specificata o a una delle relative risorse dipendenti. |
 | `id` | La `$id` della risorsa modificata. Questo valore rappresenta in genere la risorsa specificata nel percorso della richiesta, ma può rappresentare una risorsa dipendente se questa è l’origine della modifica. |
+| `xdmType` | Tipo di risorsa modificata. |
 | `action` | Tipo di modifica apportata. |
-| `path` | Una stringa [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) che indica il percorso del campo specifico che è stato modificato o aggiunto. |
+| `path` | A [Puntatore JSON](../../landing/api-fundamentals.md#json-pointer) stringa che indica il percorso del campo specifico modificato o aggiunto. |
 | `value` | Valore assegnato al campo nuovo o aggiornato. |
 
 {style=&quot;table-layout:auto&quot;}
