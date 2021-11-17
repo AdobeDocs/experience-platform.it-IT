@@ -1,63 +1,44 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
+source-git-commit: d34b3480b182b4128bb1626326b0de7bf2809985
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 9%
+source-wordcount: '325'
+ht-degree: 26%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 27 ottobre 2021**
-
-## Aggiornamenti ad Experience Platform
-
-Aggiornamenti ad Experience Platform.
-
-### Interfaccia utente {#ui}
-
-L’interfaccia utente è stata aggiornata con le seguenti modifiche:
-
-| Funzione | Descrizione |
-| --- | --- |
-| Tema scuro | Utilizza lo switch Tema scuro per alternare tra temi chiari e scuri nell’interfaccia di Platform. Lo switch si trova nel profilo utente sotto nome utente ed e-mail. |
-| Attiva/disattiva la navigazione a sinistra | Utilizza l’interruttore di navigazione migliorato nella parte superiore dell’intestazione dell’applicazione per mostrare o nascondere il menu che mostra le funzionalità dell’Experience Platform. Il sistema ricorda l’ultima selezione e mostra solo le funzionalità a cui hai accesso. |
-| Visibilità degli accessi | La barra di navigazione a sinistra mostra solo le funzioni accessibili. Nelle versioni precedenti di Adobe Experience Platform, gli elementi non disponibili erano visibili, anche se non era possibile accedervi. |
-
-Consulta la sezione [Guida all’interfaccia utente di Platform](../../landing/ui-guide.md) per saperne di più.
+**Data di rilascio: 17 novembre 2021**
 
 ## Aggiornamenti alle funzioni esistenti
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [Origini](#sources)
+- [Attribution AI](#attribution-ai)
+- [Customer AI](#customer-ai)
 
-### [!DNL Data Prep] {#data-prep}
+### Attribution AI {#attribution-ai}
 
-[!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto per più set di dati | Attribution AI ora può facilmente acquisire più set di dati direttamente nell’interfaccia utente senza la necessità di mappare e unire ogni set di dati. Questa nuova funzionalità di risparmio di tempo fornisce punteggi più potenti e precisi con dati più ricchi provenienti da più set di dati. |
+| Mappatura del campo del canale multimediale e della campagna | Attribution AI supporta ora la mappatura dei campi del canale multimediale e della campagna. La mappatura dei canali multimediali tra set di dati migliora le informazioni derivate da Attribution AI e consente di ottenere risultati più chiari e facili da interpretare. |
+
+Per ulteriori informazioni sulle Attribution AI, consulta la sezione [Documentazione di Attribution AI](../../intelligent-services/attribution-ai/overview.md).
+
+### Customer AI {#customer-ai}
+
+Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzione  di `contains_key` | La `contains_key` è stata introdotta una funzione che consente di verificare se l&#39;oggetto esiste all&#39;interno dell&#39;origine. Questa funzione sostituisce la `is_set` , che è ora obsoleto. |
-| Messaggi di errore | Messaggi di errore restituiti da `/mappingSets/preview` L’endpoint nell’API di preparazione dati ora è coerente con i messaggi di errore generati durante il runtime. |
+| Supporto per più set di dati | Customer AI ora può facilmente acquisire più set di dati direttamente nell’interfaccia utente senza la necessità di mappare e unire ogni set di dati. Questa nuova funzionalità di risparmio di tempo fornisce punteggi più potenti e precisi con dati più ricchi provenienti da più set di dati. |
+| Attributi di profilo personalizzati | Customer AI supporta ora la definizione di campi di set di dati di profilo personalizzati (con marche temporali) nei dati, oltre ai campi evento standard. L’utilizzo di questa opzione consente di aggiungere attributi di profilo aggiuntivi che ritieni influenti e che possono migliorare la qualità del modello e fornire risultati più precisi |
 
-Consulta la sezione [[!DNL Data Prep] panoramica](../../data-prep/home.md) per ulteriori informazioni su questo servizio.
-
-### Origini {#sources}
-
-Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
-
-L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
-
-| Funzione | Descrizione |
-| --- | --- |
-| [!DNL Amazon S3] miglioramenti alla sorgente | Ora puoi utilizzare la `s3SessionToken` per collegare il [!DNL Amazon S3] su Platform utilizzando credenziali di sicurezza temporanee. Questo token ti consente di fornire accesso temporaneo e a breve termine al tuo [!DNL Amazon S3] risorse per gli utenti in ambienti non attendibili. Consulta la sezione [[!DNL Amazon S3] documentazione](../../sources/connectors/cloud-storage/s3.md#prerequisites) per ulteriori informazioni. |
-| [!DNL Generic REST API] (Beta) | Ora puoi creare una [!DNL Generic REST API] connessione di origine tramite [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) per trasferire dati da un’applicazione REST generica a Platform. Consulta la sezione [[!DNL Generic REST API] panoramica](../../sources/connectors/protocols/generic-rest.md) per ulteriori informazioni. |
-| [!DNL Zoho CRM] (Beta) | Ora puoi creare una [!DNL Zoho CRM] connessione di origine tramite [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o [interfaccia utente](../../sources/tutorials/ui/create/crm/zoho.md) per ottenere i dati dal [!DNL Zoho CRM] a Platform. Consulta la sezione [[!DNL Zoho CRM] panoramica](../../sources/connectors/crm/zoho.md) per ulteriori informazioni. |
-
-Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).
+Per ulteriori informazioni su Customer AI, consulta la sezione [Documentazione di Customer AI](../../intelligent-services/customer-ai/overview.md).
