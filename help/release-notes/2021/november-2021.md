@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di novembre 2021 per Adobe Experience Platform.
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 24%
 
 ---
@@ -26,7 +26,7 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Supporto per più set di dati | Attribution AI ora può facilmente acquisire più set di dati direttamente nell’interfaccia utente senza la necessità di mappare e unire ogni set di dati. Questa nuova funzionalità di risparmio di tempo fornisce punteggi più potenti e precisi con dati più ricchi provenienti da più set di dati. |
-| Mappatura del campo del canale multimediale e della campagna | Attribution AI ora supporta la mappatura dei campi del canale multimediale e della campagna. La mappatura dei canali multimediali tra set di dati migliora le informazioni derivate da Attribution AI e consente di ottenere risultati più chiari e facili da interpretare. |
+| Mappatura del campo del canale multimediale e della campagna | Attribution AI supporta ora la mappatura dei campi del canale multimediale e della campagna. La mappatura dei canali multimediali tra set di dati migliora le informazioni derivate da Attribution AI e consente di ottenere risultati più chiari e facili da interpretare. |
 
 Per ulteriori informazioni sulle Attribution AI, consulta la sezione [Documentazione di Attribution AI](../../intelligent-services/attribution-ai/overview.md).
 
