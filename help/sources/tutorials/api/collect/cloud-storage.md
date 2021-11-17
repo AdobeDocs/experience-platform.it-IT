@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
+source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
@@ -301,7 +301,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
 
 ## Creare un set di dati di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -638,6 +638,10 @@ L’ultimo passo verso la raccolta dei dati di archiviazione cloud è la creazio
 - [ID specifica del flusso di dati](#specs)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
+
+>[!NOTE]
+>
+>Per l’acquisizione batch, ogni flusso di dati successivo seleziona i file da acquisire dalla sorgente in base ai relativi **ultima modifica** timestamp. Ciò significa che i flussi di dati batch selezionano i file dall’origine nuovi o modificati dall’ultima esecuzione del flusso di dati.
 
 Per pianificare un’acquisizione, è innanzitutto necessario impostare il valore dell’ora di inizio in modo che l’ora di inizio sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`oppure `week`. Il valore dell’intervallo indica il periodo tra due acquisizioni consecutive e la creazione di un’acquisizione una tantum non richiede l’impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
 
