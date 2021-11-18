@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione dell’estensione Adobe Experience Cloud Identity Service
-description: Note aggiornate sulla versione dell’estensione tag del servizio Adobe Experience Cloud Identity in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Note aggiornate sulla versione dell’estensione tag Adobe Experience Cloud Identity Service in Adobe Experience Platform.
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 83%
+ht-degree: 96%
 
 ---
 
@@ -14,9 +15,9 @@ ht-degree: 83%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per le note sulla versione del servizio Experience Cloud Identity e non solo sull’estensione tag Adobe Experience Platform, fai riferimento a: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=it)
+Per le note sulla versione del servizio Experience Cloud Identity Service stesso e non solo sull’estensione tag per Adobe Experience Platform, visita: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=it](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=it)
 
-## 3 novembre 2020
+## 3 novembre 2021
 
 ### Estensione Experience Cloud ID 5.2.1
 
@@ -123,7 +124,7 @@ I dettagli dei valori dell’attributo sono reperibili su [web.dev](https://web.
 #### **Funzioni**
 
 * Aggiornamento visitor.js a 4.3
-* È stato aggiunto il tipo di elemento dati per ECID come parte dell’estensione tag
+* È stato aggiunto tipo di elemento dati per ECID come parte dell’estensione tag.
 
    ![](../../../images/ecid-data-element.png)
 
