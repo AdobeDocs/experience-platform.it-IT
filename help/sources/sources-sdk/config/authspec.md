@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # Configurare le specifiche di autenticazione per l&#39;SDK di Origini
 
@@ -180,7 +180,7 @@ L&#39;autenticazione di base è un tipo di autenticazione che consente di accede
 | Proprietà | Descrizione | Esempio |
 | --- | --- | --- |
 | `authSpec.name` | Visualizza il nome del tipo di autenticazione supportato. | `Basic Authentication` |
-| `authSpec.type` | Definisce il tipo di autenticazione supportato dall&#39;origine. | `oAuth2-refresh-code` |
+| `authSpec.type` | Definisce il tipo di autenticazione supportato dall&#39;origine. | `BasicAuthentication` |
 | `authSpec.spec` | Contiene informazioni sullo schema, il tipo di dati e le proprietà dell&#39;autenticazione. |
 | `authSpec.spec.$schema` | Definisce lo schema utilizzato per l&#39;autenticazione. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definisce il tipo di dati dello schema. | `object` |
