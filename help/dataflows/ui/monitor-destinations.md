@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
 ### Il flusso di dati viene eseguito per le destinazioni di streaming
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="Identità attivate"
+>abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="Identità escluse"
+>abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
 
 Per le destinazioni di streaming, l’ [!UICONTROL Corse del flusso di dati] La scheda fornisce un aggiornamento orario per i dati delle metriche in esecuzione nel flusso di dati. Le statistiche più importanti etichettate sono quelle sulle identità.
 
