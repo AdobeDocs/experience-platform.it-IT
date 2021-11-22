@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione in streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ A seconda se si specifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"
 
 ## Passaggio 6: Verificare la destinazione {#test-destination}
 
-Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare la [strumento di prova della destinazione](./create-template.md) per testare l’integrazione tra Adobe Experience Platform e la destinazione.
+Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare la [strumento di prova della destinazione](./test-destination.md) per testare l’integrazione tra Adobe Experience Platform e la destinazione.
 
 Per testare la destinazione devi usare l’interfaccia utente di Experience Platform per creare i segmenti da attivare nella destinazione. Per istruzioni su come creare segmenti in Experience Platform, consulta le due risorse seguenti:
 
