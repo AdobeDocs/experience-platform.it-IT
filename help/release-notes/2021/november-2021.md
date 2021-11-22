@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di novembre 2021 per Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '798'
+ht-degree: 12%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 14%
 Nuove funzioni in Adobe Experience Platform:
 
 - [Edizione B2B di Real-time Customer Data Platform](#B2B)
+- [(Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc](#ad-hoc-activation)
 
 ## Aggiornamenti alle funzioni esistenti
 
@@ -61,6 +63,10 @@ Le classi, i gruppi di campi e i tipi di dati XDM standard B2B sono disponibili 
 | Classi XDM standard B2B | Real-time Customer Data Platform B2B Edition fornisce diversi XDM standard che acquisiscono dettagli su entità di dati B2B essenziali, come account, opportunità, campagne e altro ancora. |
 
 Consulta la sezione [Schemi in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentazione per ulteriori informazioni sull’acquisizione di entità dati B2B.
+
+### (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc {#ad-hoc-activation}
+
+L’API di attivazione ad hoc consente agli addetti al marketing di attivare programmaticamente i segmenti di pubblico nelle destinazioni, in modo rapido ed efficiente, in situazioni in cui è richiesta l’attivazione immediata. L’attivazione ad hoc del pubblico è supportata solo da [destinazioni batch basate su file](../../destinations/destination-types.md#file-based) ed è attualmente in versione beta. Per ulteriori informazioni, consulta la sezione [documentazione API per l’attivazione ad hoc](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 
