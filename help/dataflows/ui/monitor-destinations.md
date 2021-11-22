@@ -6,7 +6,7 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
 workflow-type: tm+mt
 source-wordcount: '1785'
 ht-degree: 0%
@@ -48,13 +48,13 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 ### Il flusso di dati viene eseguito per le destinazioni di streaming
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesactivated"
+>id="platform_destinations_dataflow_identitiesactivated"
 >title="Identità attivate"
 >abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesexcluded"
+>id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identità escluse"
 >abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
@@ -148,7 +148,7 @@ Per impostazione predefinita, i dati visualizzati contengono i tassi di attivazi
 
 Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
