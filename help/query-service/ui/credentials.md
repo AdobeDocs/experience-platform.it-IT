@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
+source-git-commit: 87ec2ab37105aefc52abe102d45fd124492ac79f
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ Adobe Experience Platform Query Service consente di connettersi con client ester
 
 ![](../images/ui/credentials/expiring-credentials.png)
 
-La sezione **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
+La **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 
 - **[!UICONTROL Host]**: Nome dell&#39;host a cui ti connetterai. Per la connessione al servizio query, verrà incluso il nome dell’organizzazione IMS attualmente in uso.
 - **[!UICONTROL Porta]**: Numero di porta dell&#39;host a cui ci si connette.
 - **[!UICONTROL Database]**: Nome del database a cui ci si connette.
 - **[!UICONTROL Nome utente]**: Nome utente che verrà utilizzato per connettersi al servizio query.
 - **[!UICONTROL Password]**: Password da utilizzare per la connessione al servizio query.
-- **[!UICONTROL Comando]** PSQL: Comando che ha inserito automaticamente tutte le informazioni pertinenti per la connessione a Query Service tramite PSQL nella riga di comando.
-- **[!UICONTROL Scade]**: Data di scadenza delle credenziali in scadenza. Le credenziali scadono 24 ore dopo la generazione.
+- **[!UICONTROL Comando PSQL]**: Comando che ha inserito automaticamente tutte le informazioni pertinenti per la connessione a Query Service tramite PSQL nella riga di comando.
+- **[!UICONTROL Scadenza]**: Data di scadenza delle credenziali in scadenza. Le credenziali scadono 24 ore dopo la generazione.
 
 ## Credenziali non in scadenza
 
@@ -42,18 +42,18 @@ Prima di poter generare credenziali non in scadenza, è necessario completare i 
 
 1. Accedi a [Adobe Admin Console](https://adminconsole.adobe.com/) e seleziona l&#39;organizzazione pertinente dalla barra di navigazione superiore.
 2. [Seleziona un profilo di prodotto.](../../access-control/ui/browse.md)
-3. [Configura sia le  **** sandbox che le autorizzazioni  **Manage Query Service** ](../../access-control/ui/permissions.md) Integration per il profilo di prodotto.
-4. [Aggiungi un nuovo utente a un ](../../access-control/ui/users.md) profilo di prodotto per ottenere le autorizzazioni configurate.
-5. [Aggiungi l’utente come ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) amministratore del profilo di prodotto per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
-6. [Aggiungi l’utente come ](https://helpx.adobe.com/enterprise/using/manage-developers.html) sviluppatore del profilo di prodotto per creare un’integrazione.
+3. [Configura entrambe le **Sandbox** e **Gestisci integrazione servizio query** permissions](../../access-control/ui/permissions.md) per il profilo di prodotto.
+4. [Aggiungere un nuovo utente a un profilo di prodotto](../../access-control/ui/users.md) quindi gli vengono concesse le relative autorizzazioni configurate.
+5. [Aggiungi l’utente come amministratore del profilo di prodotto](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
+6. [Aggiungi l’utente come sviluppatore del profilo di prodotto](https://helpx.adobe.com/enterprise/using/manage-developers.html) per creare un’integrazione.
 
-Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione sul [controllo accessi](../../access-control/home.md).
+Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione su [controllo di accesso](../../access-control/home.md).
 
 Tutte le autorizzazioni necessarie sono ora configurate in Adobe Developer Console in modo che l’utente possa utilizzare la funzione delle credenziali in scadenza.
 
 ### Genera credenziali
 
-Per creare un set di credenziali non in scadenza, torna all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra per accedere all’area di lavoro [!UICONTROL Query]. Quindi, selezionare la scheda **[!UICONTROL Credenziali]** seguita da **[!UICONTROL Genera credenziali]**.
+Per creare un set di credenziali non in scadenza, torna all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla navigazione a sinistra per accedere al [!UICONTROL Query] workspace. Quindi, seleziona la **[!UICONTROL Credenziali]** scheda seguita da **[!UICONTROL Genera credenziali]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
@@ -62,7 +62,7 @@ Viene visualizzata una finestra di dialogo che consente di generare le credenzia
 - **[!UICONTROL Nome]**: Nome delle credenziali che si sta generando.
 - **[!UICONTROL Descrizione]**: (Facoltativo) Una descrizione delle credenziali che stai generando.
 - **[!UICONTROL Assegnato a]**: Utente a cui verranno assegnate le credenziali. Questo valore deve essere l&#39;indirizzo e-mail dell&#39;utente che sta creando le credenziali.
-- **[!UICONTROL Password]**  (opzionale) Una password opzionale per le tue credenziali. Se la password non è impostata, Adobe genererà automaticamente una password.
+- **[!UICONTROL Password]** (Facoltativo) Una password opzionale per le tue credenziali. Se la password non è impostata, Adobe genererà automaticamente una password.
 
 Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Genera credenziali]** per generare le credenziali.
 
@@ -70,7 +70,7 @@ Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Genera cre
 
 >[!IMPORTANT]
 >
->Una volta selezionato il pulsante **[!UICONTROL Genera credenziali]**, viene scaricato un file JSON di configurazione nel computer locale. Poiché in Adobe **non** vengono registrate le credenziali generate, è necessario memorizzare in modo sicuro il file scaricato e conservare un record delle credenziali.
+>Una volta che **[!UICONTROL Genera credenziali]** viene selezionato un file JSON di configurazione che viene scaricato nel computer locale. Dal momento che l&#39;Adobe lo fa **not** registrare le credenziali generate, è necessario memorizzare in modo sicuro il file scaricato e conservare un record delle credenziali.
 >
 >Inoltre, se le credenziali non vengono utilizzate per 90 giorni, verranno rimosse.
 
@@ -94,13 +94,13 @@ Quando si modifica una credenziale non in scadenza, viene visualizzato un modale
 
 ![](../images/ui/credentials/update-credentials.png)
 
-Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna account]** per completare l&#39;aggiornamento delle tue credenziali.
+Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna account]** per completare l&#39;aggiornamento delle credenziali.
 
 ## Utilizzo delle credenziali per la connessione a client esterni
 
 È possibile utilizzare le credenziali in scadenza o non in scadenza per connettersi con client esterni, ad esempio Aqua Data Studio, Looker o Power BI. Il metodo di input per queste credenziali varia a seconda del client esterno. Per istruzioni specifiche sull&#39;utilizzo di queste credenziali, consulta la documentazione del client esterno .
 
-L’immagine indica la posizione di ogni parametro trovato nell’interfaccia utente, ad eccezione della password delle credenziali in scadenza. Le credenziali in scadenza vengono fornite dai relativi file di configurazione JSON, ma puoi visualizzarle nella scheda **Credenziali** dell’interfaccia utente.
+L’immagine indica la posizione di ogni parametro trovato nell’interfaccia utente, ad eccezione della password delle credenziali in scadenza. Mentre le credenziali non in scadenza vengono fornite dai relativi file di configurazione JSON, puoi visualizzare le credenziali in scadenza nella sezione **Credenziali** nell’interfaccia utente di .
 
 ![](../images/ui/credentials/expiring-credentials.png)
 
@@ -108,16 +108,16 @@ La tabella seguente delinea i parametri generalmente necessari per la connession
 
 >[!NOTE]
 >
->Quando ci si connette a un host utilizzando credenziali non in scadenza, è comunque necessario utilizzare tutti i parametri elencati nella sezione [!UICONTROL EXPIRING CREDENTIALS] ad eccezione della password e del nome utente.
+>Quando ci si connette a un host utilizzando credenziali non in scadenza, è comunque necessario utilizzare tutti i parametri elencati in [!UICONTROL CREDENZIALI IN SCADENZA] ad eccezione della password e del nome utente.
 
 | Parametro | Descrizione |
 |---|---|
-| Server/Host | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** nella sezione [!UICONTROL CREDENZIALI DI SCADENZA].</ul></li> |
-| Porta | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** nella sezione [!UICONTROL CREDENZIALI IN SCADENZA] . Un valore di esempio per la porta è `80`.</ul></li> |
-| Database | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Database]** nella sezione [!UICONTROL CREDENZIALI IN SCADENZA] . Un valore di esempio per il database è `prod:all`.</ul></li> |
-| Nome utente | Nome utente per l’utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, si tratta di una stringa alfanumerica precedente a `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li><li>Se utilizzi credenziali non in scadenza, questa è una stringa di tua scelta anche se **non può** essere la stessa del valore `technicalAccountID` trovato nel file JSON di configurazione.</li></ul> |
-| Password | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno della sezione [!UICONTROL SCADENZIALI].</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
+| Server/Host | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</ul></li> |
+| Porta | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per la porta è `80`.</ul></li> |
+| Database | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e viene trovato in **[!UICONTROL Database]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per il database è `prod:all`.</ul></li> |
+| Nome utente | Nome utente per l’utente che si connette al client esterno. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle in scadenza. Si presenta sotto forma di una stringa alfanumerica prima `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li></ul> |
+| Password | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Passaggi successivi
 
-Ora che si capisce come funzionano sia le credenziali in scadenza che quelle in scadenza, è possibile utilizzare queste credenziali per connettersi a client esterni. Per ulteriori informazioni dettagliate sui client esterni, leggere la [guida alla connessione dei client a Query Service](../clients/overview.md).
+Ora che si capisce come funzionano sia le credenziali in scadenza che quelle in scadenza, è possibile utilizzare queste credenziali per connettersi a client esterni. Per ulteriori informazioni dettagliate sui clienti esterni, consulta la sezione [guida alla connessione dei client a Query Service](../clients/overview.md).
