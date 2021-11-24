@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
+source-git-commit: aac052502ea9ac0d6fae5839d8af02a077c3d6db
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2076'
 ht-degree: 0%
 
 ---
@@ -188,6 +188,12 @@ Dopo aver fornito i valori appropriati alla pianificazione, seleziona **[!UICONT
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## Fornire i dettagli del flusso di dati
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_alerts_subscribe"
+>title="Iscriviti agli avvisi di origine"
+>abstract="Seleziona questa opzione per abbonarti agli avvisi di notifica per i flussi di dati delle tue sorgenti."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Ulteriori informazioni nella documentazione"
 
 La **[!UICONTROL Dettaglio flusso di dati]** viene visualizzato un passaggio che ti consente di assegnare un nome e una breve descrizione del nuovo flusso di dati.
 
