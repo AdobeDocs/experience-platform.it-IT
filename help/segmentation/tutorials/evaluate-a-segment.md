@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -86,12 +86,11 @@ La valutazione su richiesta consente di creare un processo di segmento per gener
 
 ### Creare un processo di segmento
 
-Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlla come [!DNL Real-time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico.
+Un processo di segmento è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlla come [!DNL Real-time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico. Un processo di segmento deve essere eseguito ogni volta che desideri aggiornare il pubblico attualmente idoneo per la definizione del segmento.
 
 Puoi creare un nuovo processo di segmento effettuando una richiesta di POST al `/segment/jobs` punto finale [!DNL Real-time Customer Profile] API.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida all’endpoint dei processi di segmento](../api/segment-jobs.md#create)
-
 
 ### Cerca lo stato del processo del segmento
 

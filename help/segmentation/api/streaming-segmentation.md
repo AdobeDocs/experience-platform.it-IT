@@ -5,10 +5,10 @@ title: 'Valutare gli eventi in tempo reale con Segmentazione in streaming '
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 2%
+source-wordcount: '1828'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 Per completare richieste specifiche possono essere necessarie intestazioni aggiuntive. Le intestazioni corrette vengono visualizzate in ciascuno degli esempi contenuti in questo documento. Presta particolare attenzione alle richieste di esempio per garantire che tutte le intestazioni richieste siano incluse.
 
-### Tipi di query abilitate per la segmentazione in streaming {#streaming-segmentation-query-types}
+### Tipi di query abilitate per la segmentazione in streaming {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Una definizione di segmento **not** è abilitata per la segmentazione in streami
 - La definizione del segmento include segmenti o caratteristiche Adobe Audience Manager (AAM).
 - La definizione del segmento include più entità (query con più entità).
 
-Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
+Durante la segmentazione in streaming si applicano le seguenti linee guida:
 
 | Tipo di query | Indirizzo |
 | ---------- | -------- |
 | Query a evento singolo | Non ci sono limiti all’intervallo di lookback. |
 | Query con cronologia eventi | <ul><li>L’intervallo di lookback è limitato a **un giorno**.</li><li>Una rigorosa condizione di ordinamento dei tempi **deve** esistono tra gli eventi.</li><li>Sono supportate le query con almeno un evento negato. Tuttavia, l&#39;intero evento **impossibile** sia una negazione.</li></ul> |
+
+Se la definizione di un segmento viene modificata in modo da non soddisfare più i criteri per la segmentazione in streaming, la definizione del segmento passa automaticamente da &quot;Streaming&quot; a &quot;Batch&quot;.
+
+Inoltre, l’annullamento della qualificazione dei segmenti, analogamente alla qualificazione dei segmenti, avviene in tempo reale. Di conseguenza, se un pubblico non è più idoneo per un segmento, verrà immediatamente non qualificato. Ad esempio, se la definizione del segmento richiede &quot;Tutti gli utenti che hanno acquistato scarpe rosse nelle ultime tre ore&quot;, dopo tre ore, tutti i profili inizialmente qualificati per la definizione del segmento non saranno qualificati.
 
 ## Recupera tutti i segmenti abilitati per la segmentazione in streaming
 
@@ -208,7 +212,7 @@ Una risposta corretta restituisce un array di segmenti nell’organizzazione IMS
 
 ## Creare un segmento abilitato per lo streaming
 
-Un segmento viene abilitato automaticamente in streaming se corrisponde a uno dei [tipi di segmentazione in streaming elencati sopra](#streaming-segmentation-query-types).
+Un segmento viene abilitato automaticamente in streaming se corrisponde a uno dei [tipi di segmentazione in streaming elencati sopra](#query-types).
 
 **Formato API**
 
@@ -407,3 +411,31 @@ La stessa operazione può essere utilizzata per disabilitare una pianificazione 
 Ora che hai abilitato segmenti nuovi ed esistenti per la segmentazione in streaming e hai abilitato la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare segmenti abilitati per lo streaming per la tua organizzazione.
 
 Per informazioni su come eseguire azioni simili e lavorare con i segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita il [Guida utente di Segment Builder](../ui/segment-builder.md).
+
+## Appendice
+
+Nella sezione seguente sono elencate le domande frequenti sulla segmentazione in streaming:
+
+### La segmentazione in streaming avviene anche in tempo reale?
+
+Per la maggior parte delle istanze, l’annullamento della segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti in streaming che utilizzano segmenti **not** non sono qualificati in tempo reale, ma non possono essere qualificati dopo 24 ore.
+
+### Su quali dati funziona la segmentazione in streaming?
+
+La segmentazione in streaming funziona su tutti i dati acquisiti tramite un’origine streaming. I segmenti acquisiti utilizzando un’origine basata su batch verranno valutati ogni notte, anche se idonei per la segmentazione in streaming.
+
+### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
+
+Un segmento è definito come segmentazione in batch o in streaming in base a una combinazione di tipo di query e durata della cronologia degli eventi. Un elenco dei segmenti che verranno valutati come segmento in streaming si trova nella sezione [sezione tipi di query per segmentazione in streaming](#query-types).
+
+### Un utente può definire un segmento come segmentazione in batch o in streaming?
+
+Al momento, l’utente non può definire se un segmento viene valutato utilizzando l’acquisizione in batch o in streaming, in quanto il sistema determinerà automaticamente con quale metodo verrà valutato il segmento.
+
+### Perché il numero di segmenti &quot;qualificati totali&quot; continua ad aumentare mentre il numero sotto &quot;Ultimi X giorni&quot; rimane a zero all’interno della sezione dei dettagli del segmento?
+
+Il numero di segmenti qualificati totali viene ricavato dal processo di segmentazione giornaliera, che include i tipi di pubblico idonei per i segmenti batch e in streaming. Questo valore viene visualizzato sia per i segmenti batch che per quelli in streaming.
+
+Il numero sotto &quot;Ultimi X giorni&quot; **only** include i tipi di pubblico qualificati nella segmentazione in streaming, e **only** aumenta se hai inviato dati in streaming nel sistema e conta verso tale definizione di streaming. Questo valore è **only** mostrata per i segmenti in streaming. Di conseguenza, questo valore **possono** viene visualizzato come 0 per i segmenti batch.
+
+Di conseguenza, se vedi che il numero sotto &quot;Ultimi X giorni&quot; è zero, e il grafico a linee è anche pari a zero, hai **not** ha inviato in streaming nel sistema tutti i profili idonei per quel segmento.
