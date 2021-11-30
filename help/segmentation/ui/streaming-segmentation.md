@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -85,8 +85,6 @@ Questa guida utente spiega come funzionano le definizioni dei segmenti abilitate
 Per ulteriori informazioni sull’utilizzo dell’interfaccia utente di Adobe Experience Platform, consulta la sezione [Guida utente alla segmentazione](./overview.md).
 
 ## Appendice
-
-Nella sezione seguente sono elencate le domande frequenti sulla segmentazione in streaming:
 
 Nella sezione seguente sono elencate le domande frequenti sulla segmentazione in streaming:
 
