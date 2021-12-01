@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '735'
 ht-degree: 11%
 
 ---
@@ -257,6 +257,7 @@ ht-degree: 11%
    - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
+   - [Iscriviti agli avvisi di origine](tutorials/ui/alerts.md)
 - SDK per sorgenti {#sdk}
    - [Panoramica](sources-sdk/overview.md)
    - [Opzioni di configurazione](sources-sdk/config/config.md)
