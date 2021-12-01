@@ -3,9 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 >title="Origine del pubblico"
 >abstract="Scegli come sono stati raccolti i dati cliente nel segmento. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Ulteriori informazioni nella documentazione"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origine del pubblico"
+>abstract="Gli inserzionisti raccolgono i dati direttamente dai clienti."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origine del pubblico"
+>abstract="Gli inserzionisti raccolgono i dati direttamente dai loro partner."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origine del pubblico"
+>abstract="Gli inserzionisti raccolgono i dati direttamente dai loro clienti e partner."
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
