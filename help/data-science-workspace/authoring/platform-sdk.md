@@ -5,25 +5,24 @@ title: Authoring dei modelli con l’SDK della piattaforma Adobe Experience Plat
 topic-legacy: SDK authoring
 description: Questa esercitazione fornisce informazioni sulla conversione di data_access_sdk_python nel nuovo Python platform_sdk sia in Python che in R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
-# Authoring del modello con l’SDK Adobe Experience Platform [!DNL Platform]
+# Authoring di modelli con Adobe Experience Platform [!DNL Platform] SDK
 
-Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle seguenti operazioni:
+Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_python` al nuovo Python `platform_sdk` in Python e R. Questa esercitazione fornisce informazioni sulle seguenti operazioni:
 
 - [Creare l’autenticazione](#build-authentication)
 - [Lettura di base dei dati](#basic-reading-of-data)
 - [Scrittura dei dati di base](#basic-writing-of-data)
 
-## Genera autenticazione {#build-authentication}
+## Creare l’autenticazione {#build-authentication}
 
-L’autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform] ed è composta da chiave API, ID organizzazione IMS, un token utente e un token di servizio.
+È necessaria l’autenticazione per effettuare chiamate a [!DNL Adobe Experience Platform]ed è composto da chiave API, ID organizzazione IMS, un token utente e un token di servizio.
 
 ### Pitone
 
@@ -81,7 +80,7 @@ Se il tempo di lettura è troppo lungo, puoi provare a utilizzare una delle segu
 
 >[!NOTE]
 >
->L’organizzazione IMS è impostata all’interno di `client_context`.
+>L’organizzazione IMS è impostata all’interno della `client_context`.
 
 ### Pitone
 
@@ -147,7 +146,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
+Il nuovo [!DNL Platform] L&#39;SDK supporta le seguenti operazioni:
 
 | Funzionamento | Funzione |
 | --------- | -------- |
@@ -159,7 +158,7 @@ Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
 | E (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
-## Filtra per le colonne selezionate {#filter-by-selected-columns}
+## Filtra per colonne selezionate {#filter-by-selected-columns}
 
 Per perfezionare ulteriormente la lettura dei dati, puoi anche filtrare per nome della colonna.
 
@@ -193,11 +192,11 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Scrittura di base dei dati {#basic-writing-of-data}
+## Scrittura dei dati di base {#basic-writing-of-data}
 
 >[!NOTE]
 >
->L’organizzazione IMS è impostata all’interno di `client_context`.
+>L’organizzazione IMS è impostata all’interno della `client_context`.
 
 Per scrivere dati in Python e R, utilizza uno dei seguenti esempi:
 
@@ -222,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Dopo aver configurato il caricatore dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sull&#39;ingegneria delle funzioni, visita la sezione relativa alla [preparazione dei dati e all&#39;ingegneria delle funzioni](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta utilizzando i notebook [!DNL JupyterLab].
+Una volta configurato il `platform_sdk` data loader, i dati vengono preparati e quindi suddivisi in `train` e `val` set di dati. Per informazioni sulla preparazione dei dati e sull&#39;ingegneria delle funzioni, visita la sezione su [preparazione dei dati e ingegneria delle funzioni](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) nell’esercitazione per creare una ricetta utilizzando [!DNL JupyterLab] quaderni.

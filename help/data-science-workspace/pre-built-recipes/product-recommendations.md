@@ -5,11 +5,10 @@ title: Ricetta consigli prodotti
 topic-legacy: overview
 description: La ricetta Recommendations per i prodotti ti consente di fornire consigli di prodotti personalizzati che siano personalizzati in base alle esigenze e agli interessi del cliente. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni su quali prodotti potrebbe essere interessato.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -27,14 +26,14 @@ La ricetta Product Recommendations utilizza l’apprendimento automatico per ana
 
 ## Come inizio?
 
-Per iniziare, segui l&#39;esercitazione Adobe Experience Platform Lab (vedi il link Lab qui sotto). Questa esercitazione ti mostrerà come creare la ricetta Recommendations del prodotto in un blocco appunti Jupyter seguendo il [blocco appunti per ricettare](../jupyterlab/create-a-recipe.md) e implementando la ricetta in [!DNL Experience Platform] [!DNL Data Science Workspace].
+Per iniziare, segui l&#39;esercitazione Adobe Experience Platform Lab (vedi il link Lab qui sotto). Questa esercitazione ti mostrerà come creare la ricetta Recommendations del prodotto in un blocco appunti Jupyter seguendo la [taccuino a ricetta](../jupyterlab/create-a-model.md) e implementazione della ricetta in [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Laboratorio: Prevedere il futuro con Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Risorse Lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Schema dati
 
-Questa ricetta utilizza schemi [XDM personalizzati](../../xdm/schema/field-dictionary.md) per modellare i dati di input e output:
+Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati di input e output:
 
 ### Schema dati di input
 

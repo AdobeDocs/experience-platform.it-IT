@@ -6,8 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Questa guida si concentra su come utilizzare il blocco appunti per l'analisi dei dati esplorativi (EDA) per scoprire i pattern nei dati web, gli eventi aggregati con obiettivo di previsione, i dati aggregati puliti e comprendere il rapporto tra i predicatori e un obiettivo.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
@@ -24,11 +23,11 @@ La seconda parte inizia con l&#39;esecuzione di un&#39;analisi descrittiva sui d
 
 ## Introduzione
 
-Prima di leggere questa guida, consulta la [[!DNL JupyterLab] guida utente](./overview.md) per un’introduzione di alto livello a [!DNL JupyterLab] e il suo ruolo all’interno di Data Science Workspace. Inoltre, se utilizzi i tuoi dati, consulta la documentazione relativa all’ accesso ai dati in [!DNL Jupyterlab] notebook](./access-notebook-data.md). [ Questa guida contiene informazioni importanti sui limiti dei dati del blocco appunti.
+Prima di leggere questa guida, consulta la sezione [[!DNL JupyterLab] guida utente](./overview.md) per un’introduzione di alto livello a [!DNL JupyterLab] e il suo ruolo in Data Science Workspace. Inoltre, se utilizzi dati personali, consulta la documentazione per [accesso ai dati in [!DNL Jupyterlab] notebook](./access-notebook-data.md). Questa guida contiene informazioni importanti sui limiti dei dati del blocco appunti.
 
 Questo blocco appunti utilizza un set di dati midvalue sotto forma di dati Adobe Analytics Experience Events trovati nell&#39;Analysis Workspace di Analytics. Per utilizzare il blocco appunti EDA, è necessario definire la tabella dati con i seguenti valori `target_table` e `target_table_id`. È possibile utilizzare qualsiasi set di dati midvalue.
 
-Per trovare questi valori, segui i passaggi descritti nella sezione [scrivi a un set di dati nella sezione python](./access-notebook-data.md#write-python) della guida all’accesso ai dati JupyterLab . Il nome del set di dati (`target_table`) si trova nella directory del set di dati. Una volta fatto clic con il pulsante destro del mouse sul set di dati per esplorare o scrivere dati in un blocco appunti, nella voce del codice eseguibile viene fornito un ID set di dati (`target_table_id`).
+Per trovare questi valori, segui i passaggi descritti nel [scrivere in un set di dati in pitone](./access-notebook-data.md#write-python) della guida all’accesso ai dati di JupyterLab. Nome del set di dati (`target_table`) si trova nella directory dei set di dati. Una volta fatto clic con il pulsante destro del mouse sul set di dati per esplorare o scrivere dati in un blocco appunti, scegli un ID set di dati (`target_table_id`) viene fornita nella voce di codice eseguibile.
 
 ## Individuazione dei dati
 
@@ -64,11 +63,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Connetti a Adobe Experience Platform [!DNL Query Service]
+### Connessione a Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] su Platform consente di utilizzare SQL in un  [!DNL Python] blocco appunti per accedere ai dati tramite  [Query Service](https://www.adobe.com/go/query-service-home-en). L’accesso ai dati tramite [!DNL Query Service] può essere utile per gestire set di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. È consigliabile che l’esecuzione di query sui dati utilizzando [!DNL Query Service] abbia un limite di tempo di elaborazione di dieci minuti.
+[!DNL JupyterLab] su Platform consente di utilizzare SQL in un [!DNL Python] blocco appunti per accedere ai dati tramite [Servizio query](https://www.adobe.com/go/query-service-home-en). Accesso ai dati tramite [!DNL Query Service] può essere utile per gestire set di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. È consigliabile eseguire query sui dati utilizzando [!DNL Query Service] ha un limite di tempo di elaborazione di dieci minuti.
 
-Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], assicurati di avere familiarità con la [[!DNL Query Service] sintassi SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
+Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], assicurati di avere una comprensione funzionante del [[!DNL Query Service] Sintassi SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Per utilizzare Query Service in JupyterLab, è innanzitutto necessario creare una connessione tra il blocco appunti Python in funzione e il servizio query. Questo può essere ottenuto eseguendo la cella seguente.
 
@@ -78,7 +77,7 @@ qs_connect()
 
 ### Definisci il set di dati midvalues per l’esplorazione
 
-Per iniziare a eseguire query ed esplorare i dati, è necessario fornire una tabella di dati midvalues. Copia e sostituisci i valori `table_name` e `table_id` con i tuoi valori della tabella dati.
+Per iniziare a eseguire query ed esplorare i dati, è necessario fornire una tabella di dati midvalues. Copia e sostituisci `table_name` e `table_id` con valori personalizzati della tabella dati.
 
 ```python
 target_table = "table_name"
@@ -120,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Individuazione del set di dati
 
-Dopo aver configurato tutti i parametri, avviato [!DNL Query Service] e dotato di un intervallo di date, puoi iniziare a leggere le righe di dati. Limitare il numero di righe lette.
+Dopo aver configurato tutti i parametri, inizia [!DNL Query Service]e dispongono di un intervallo di date, puoi iniziare a leggere le righe di dati. Limitare il numero di righe lette.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -285,7 +284,7 @@ iplot(fig)
 
 **I dieci prodotti più visualizzati**
 
-Questa query fornisce un elenco dei primi dieci prodotti visualizzati. Nell’esempio seguente, la funzione `Explode()` viene utilizzata per restituire ogni prodotto dell’oggetto `productlistitems` alla propria riga. Questo ti consente di eseguire una query nidificata per aggregare le visualizzazioni di prodotto per SKU diversi.
+Questa query fornisce un elenco dei primi dieci prodotti visualizzati. Nell’esempio seguente, la `Explode()` viene utilizzata per restituire ogni prodotto nel `productlistitems` obiettare alla propria riga. Questo ti consente di eseguire una query nidificata per aggregare le visualizzazioni di prodotto per SKU diversi.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -369,7 +368,7 @@ threshold = 1
 
 ### Aggregazione dei dati per la creazione di funzioni e obiettivi
 
-Per iniziare l’analisi esplorativa, devi creare un obiettivo a livello di profilo, seguito dall’aggregazione del set di dati. In questo esempio vengono fornite due query. La prima query contiene la creazione di un obiettivo. La seconda query deve essere aggiornata per includere nella prima query tutte le variabili diverse da quelle. È possibile aggiornare la `limit` per la query. Dopo aver eseguito le seguenti query, i dati aggregati sono ora disponibili per l’esplorazione.
+Per iniziare l’analisi esplorativa, devi creare un obiettivo a livello di profilo, seguito dall’aggregazione del set di dati. In questo esempio vengono fornite due query. La prima query contiene la creazione di un obiettivo. La seconda query deve essere aggiornata per includere nella prima query tutte le variabili diverse da quelle. È possibile aggiornare `limit` per la query. Dopo aver eseguito le seguenti query, i dati aggregati sono ora disponibili per l’esplorazione.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -517,7 +516,7 @@ Per identificare gli outliers, in questo esempio viene utilizzato un intervallo 
 
 >[!TIP]
 >
->Per correggere gli scostamenti è necessario comprendere il business e il settore in cui si sta lavorando. A volte, non si può eliminare un&#39;osservazione solo perché è una cosa strana. Gli outlier possono essere osservazioni legittime e sono spesso quelli più interessanti. Per ulteriori informazioni sul rilascio degli outlier, visita il [passaggio di pulizia dati opzionale](#optional-data-clean).
+>Per correggere gli scostamenti è necessario comprendere il business e il settore in cui si sta lavorando. A volte, non si può eliminare un&#39;osservazione solo perché è una cosa aberrante. Gli outlier possono essere osservazioni legittime e sono spesso quelli più interessanti. Per ulteriori informazioni sull&#39;eliminazione degli outlier, visita il [passaggio facoltativo di pulizia dei dati](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -630,7 +629,7 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Dopo aver rimosso le colonne a valore singolo, controlla eventuali errori nelle colonne rimanenti utilizzando il comando `Data.columns` in una nuova cella.
+Una volta rimosse le colonne a valore singolo, controlla le colonne rimanenti per eventuali errori utilizzando `Data.columns` in una nuova cella.
 
 ### Correzione dei valori mancanti
 
@@ -677,10 +676,10 @@ Una volta completati, i dati puliti sono pronti per l’analisi bivariata.
 L’analisi bivariata viene utilizzata per comprendere la relazione tra due set di valori, come le caratteristiche e una variabile target. Poiché i diversi grafici sono relativi a tipi di dati categorici e numerici, questa analisi deve essere effettuata separatamente per ciascun tipo di dati. I grafici seguenti sono consigliati per l’analisi bivariata:
 
 - **Correlazione**: Un coefficiente di correlazione è la misura della forza di una relazione tra due caratteristiche. La correlazione ha valori compresi tra -1 e 1, dove: 1 indica una forte relazione positiva, -1 indica una forte relazione negativa e un risultato pari a zero non indica alcuna relazione.
-- **Grafico a coppie**: I grafici a coppie sono un modo semplice per visualizzare le relazioni tra ciascuna variabile. Produce una matrice di relazioni tra ciascuna variabile nei dati.
+- **Coppia**: I grafici a coppie sono un modo semplice per visualizzare le relazioni tra ciascuna variabile. Produce una matrice di relazioni tra ciascuna variabile nei dati.
 - **Mappa di calore**: Le mappe di calore sono il coefficiente di correlazione per tutte le variabili del set di dati.
-- **Grafici** a scatola: I grafici a scatola sono un modo standardizzato di visualizzare la distribuzione dei dati in base a un riepilogo di cinque numeri (minimo, primo quartile (Q1), mediano, terzo quartile (Q3) e massimo).
-- **Grafico** di conteggio: Un grafico a barre è simile a un istogramma o a un grafico a barre per alcune funzioni categoriche. Mostra il numero di occorrenze di un elemento in base a un determinato tipo di categoria.
+- **Grafici a scatola**: I grafici a scatola sono un modo standardizzato di visualizzare la distribuzione dei dati in base a un riepilogo di cinque numeri (minimo, primo quartile (Q1), mediano, terzo quartile (Q3) e massimo).
+- **Grafico a conteggio**: Un grafico a barre è simile a un istogramma o a un grafico a barre per alcune funzioni categoriche. Mostra il numero di occorrenze di un elemento in base a un determinato tipo di categoria.
 
 Per comprendere la relazione tra la variabile &quot;obiettivo&quot; e i predicatori/funzionalità, i grafici vengono utilizzati in base ai tipi di dati. Per le funzioni numeriche, è necessario utilizzare un grafico a box se la variabile &quot;gol&quot; è categorica, nonché un grafico a coppie e una mappa di calore se la variabile &quot;gol&quot; è numerica.
 
@@ -806,11 +805,11 @@ else:
 
 ## Passaggio facoltativo per la pulizia dei dati {#optional-data-clean}
 
-Per correggere gli scostamenti è necessario comprendere il business e il settore in cui si sta lavorando. A volte, non si può eliminare un&#39;osservazione solo perché è una cosa strana. Gli outlier possono essere osservazioni legittime e sono spesso quelli più interessanti.
+Per correggere gli scostamenti è necessario comprendere il business e il settore in cui si sta lavorando. A volte, non si può eliminare un&#39;osservazione solo perché è una cosa aberrante. Gli outlier possono essere osservazioni legittime e sono spesso quelli più interessanti.
 
-Per ulteriori informazioni sugli outlier e se rilasciarli o meno, leggere questa voce dal [fattore di analisi](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Per ulteriori informazioni sugli outlier e se rilasciarli o meno, leggere questa voce dalla [fattore di analisi](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-Nell&#39;esempio seguente, le celle bloccano e posizionano i punti di dati che sono anomali utilizzando [intervallo interquartile](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+Nell&#39;esempio seguente le celle vengono posizionate in modo da visualizzare i punti dati con valori di eccesso utilizzando [intervallo interquartile](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -832,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Dopo aver completato l&#39;analisi dei dati esplorativi, puoi iniziare a creare un modello. In alternativa, puoi utilizzare i dati e le informazioni derivate per creare una dashboard con strumenti come Power BI.
 
-Adobe Experience Platform separa il processo di creazione del modello in due fasi distinte: Ricette (un&#39;istanza di modello) e Modelli. Per iniziare il processo di creazione delle ricette, visita la documentazione relativa alla [creazione di una ricetta in JupyerLab Notebooks](./create-a-recipe.md). Questo documento contiene informazioni ed esempi per la creazione, la formazione e il punteggio, una ricetta all&#39;interno di [!DNL JupyterLab] Notebook.
+Adobe Experience Platform separa il processo di creazione del modello in due fasi distinte: Ricette (un&#39;istanza di modello) e Modelli. Per iniziare il processo di creazione delle ricette, visita la documentazione di [creazione di una ricetta in JupyerLab Notebooks](./create-a-model.md). Questo documento contiene informazioni ed esempi per la creazione, la formazione e il punteggio, una ricetta all&#39;interno di [!DNL JupyterLab] Libri appunti.

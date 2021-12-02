@@ -5,8 +5,7 @@ title: Ricetta vendite al dettaglio
 topic-legacy: overview
 description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi predefiniti per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare il rapporto tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -32,13 +31,13 @@ La ricetta Retail Sales Forecasting utilizza l&#39;apprendimento automatico per 
 
 ## Come inizio?
 
-Per iniziare, segui questa [esercitazione](../jupyterlab/create-a-recipe.md).
+Per iniziare, segui questo [tutorial](../jupyterlab/create-a-model.md).
 
 Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un blocco appunti Jupyter e all&#39;utilizzo del blocco appunti per creare il flusso di lavoro della ricetta in Adobe Experience Platform.
 
 ## Schema dati
 
-Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
+Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
 | --- | --- |
@@ -57,7 +56,7 @@ Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per m
 
 ## Algoritmo
 
-Innanzitutto, viene caricato il set di dati di formazione nello schema *DSWRetailSales* . Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione di incremento della sfumatura](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il miglioramento della sfumatura utilizza l&#39;idea che gli studenti deboli (almeno leggermente meglio del caso casuale) possono formare una serie di studenti concentrati sul miglioramento delle debolezze dello studente precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
+In primo luogo, il set di dati sulla formazione nel *DSWRetailSales* schema caricato. Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione di incremento della sfumatura](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il miglioramento della sfumatura utilizza l&#39;idea che gli studenti deboli (almeno leggermente meglio del caso casuale) possono formare una serie di studenti concentrati sul miglioramento delle debolezze dello studente precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
 
 Il processo comprende tre elementi: una funzione di perdita, uno studente debole e un modello additivo.
 

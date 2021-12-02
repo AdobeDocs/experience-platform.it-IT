@@ -5,11 +5,10 @@ breadcrumb-title: Guida di Data Science Workspace
 user-guide-description: Utilizza l’apprendimento automatico per sviluppare, addestrare e valutare modelli e ricette con Adobe Sensei e JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 17%
+source-wordcount: '248'
+ht-degree: 15%
 
 ---
 
@@ -25,9 +24,9 @@ ht-degree: 17%
    * [Analizzare i dati](jupyterlab/analyze-your-data.md)
    * [Servizio query](jupyterlab/query-service.md)
    * [Analisi dei dati esplorativi (EDA)](jupyterlab/eda-notebook.md)
-   * [Creare una ricetta](jupyterlab/create-a-recipe.md)
+   * [Creare un modello utilizzando il generatore di ricette](jupyterlab/create-a-model.md)
    * [Collaborare in JupyterLab utilizzando Git](jupyterlab/using-git-for-collaboration.md)
-* API di apprendimento automatico Sensei {#api}
+* API di apprendimento automatico di Sensei {#api}
    * [Introduzione](api/getting-started.md)
    * [Motori](api/engines.md)
    * [MLI (ricette)](api/mlinstances.md)
@@ -41,18 +40,19 @@ ht-degree: 17%
    * [Introduzione](real-time-machine-learning/getting-started.md)
    * [Gestire i blocchi appunti](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guida di riferimento dei nodi](real-time-machine-learning/node-reference.md)
-* Ricette pre-costruite {#pre-built-recipes}
+* Ricette precostruite {#pre-built-recipes}
    * [Ricetta di consigli sul prodotto](pre-built-recipes/product-recommendations.md)
    * [Previsione dell&#39;acquisto di prodotti](pre-built-recipes/product-purchase-prediction.md)
    * [Ricetta di vendita al dettaglio](pre-built-recipes/retail-sales.md)
-* Authoring del modello {#authoring}
+* Authoring di modelli {#authoring}
    * [SDK per l’authoring dei modelli](authoring/sdk.md)
    * [Creare una pipeline di feature](authoring/feature-pipeline.md)
    * [Authoring di modelli con l’SDK di Platform (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
-* Esercitazioni sul modello e sulla ricetta {#models-recipes}
+* Esercitazioni su modello e ricetta {#models-recipes}
    * [Creare e pubblicare un modello di apprendimento automatico](models-recipes/create-publish-model.md)
+   * [Creare schemi e set di dati Luma demo](models-recipes/create-luma-data.md)
    * [Creare lo schema e il set di dati Vendite al dettaglio](models-recipes/create-retails-sales-dataset.md)
    * [Anteprima di schemi e set di dati](models-recipes/preview-schema-data.md)
    * [Creare pacchetti di file sorgente in una ricetta](models-recipes/package-source-files-recipe.md)
