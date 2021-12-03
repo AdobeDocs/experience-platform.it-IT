@@ -5,7 +5,7 @@ title: Panoramica sulla corrispondenza dei segmenti
 topic-legacy: overview
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 1%
@@ -59,7 +59,7 @@ L’elenco dei namespace supportati è il seguente:
 
 È necessario fornire una configurazione di consenso e impostare il relativo valore predefinito su `opt-in` o `opt-out` per un controllo del consenso.
 
-Il controllo del consenso opt-in e opt-out determina se è possibile operare con il consenso per condividere i dati utente per impostazione predefinita. Se l’impostazione predefinita per la configurazione del consenso è impostata su `opt-in`, i dati utente possono essere condivisi, a meno che un utente non rinunci esplicitamente. Se il valore predefinito è impostato su `opt-out`, i dati utente non possono essere condivisi, a meno che un utente non acconsenta esplicitamente.
+Il controllo del consenso opt-in e opt-out determina se è possibile operare con il consenso per condividere i dati utente per impostazione predefinita. Se l’impostazione predefinita per la configurazione del consenso è impostata su `opt-out`, i dati utente possono essere condivisi, a meno che un utente non rinunci esplicitamente. Se il valore predefinito è impostato su `opt-in`, i dati utente non possono essere condivisi, a meno che un utente non acconsenta esplicitamente.
 
 Configurazione del consenso predefinito per [!DNL Segment Match] è impostato su `opt-out`. Per applicare un modello di consenso per i tuoi dati, invia una richiesta e-mail al tuo Adobe Account Manager.
 
