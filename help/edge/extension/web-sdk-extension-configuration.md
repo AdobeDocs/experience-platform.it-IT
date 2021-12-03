@@ -1,27 +1,27 @@
 ---
-title: Configurazione Adobe Experience Platform Web SDK
-description: Scopri l’estensione tag Adobe Experience Platform Web SDK.
+title: Configurare l’estensione Adobe Experience Platform Web SDK
+description: Come configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente di raccolta dati.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 8%
+source-wordcount: '1049'
+ht-degree: 7%
 
 ---
 
-# Panoramica
+# Configurare l’estensione Adobe Experience Platform Web SDK
 
-L’estensione Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
+L’estensione tag Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
 Questo documento illustra come configurare l’estensione nell’interfaccia utente di raccolta dati.
 
-## Configura l&#39;estensione
+## Introduzione
 
-Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente di raccolta dati e seleziona la scheda **[!UICONTROL Estensioni]** . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
+Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente Raccolta dati e seleziona la proprietà **[!UICONTROL Estensioni]** scheda . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
 
 ![](../images/extension/overview/configure.png)
 
-Se non hai ancora installato l&#39;estensione, seleziona la scheda **[!UICONTROL Catalogo]** . Dall’elenco delle estensioni disponibili, trova l’estensione Platform Web SDK e seleziona **[!UICONTROL Installa]**.
+Se non hai ancora installato l&#39;estensione, seleziona la **[!UICONTROL Catalogo]** scheda . Dall’elenco delle estensioni disponibili, trova l’estensione Platform Web SDK e seleziona **[!UICONTROL Installa]**.
 
 ![](../images/extension/overview/install.png)
 
@@ -41,24 +41,24 @@ Il nome dell&#39;estensione viene impostato automaticamente su &quot;[!DNL alloy
 
 ### **[!UICONTROL ID organizzazione IMS]**
 
-L’ [!UICONTROL ID organizzazione IMS] è l’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
+La [!UICONTROL ID organizzazione IMS] è l’organizzazione a cui si desidera inviare i dati in un Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
 
 ### **[!UICONTROL Dominio Edge]**
 
-Il [!UICONTROL Dominio Edge] è il dominio da cui l&#39;estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+La [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
 ## [!UICONTROL Datastream]
 
 Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, viene utilizzato un ID di datastream per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
-Per ulteriori informazioni, consulta la guida su [datastreams](../fundamentals/datastreams.md) .
+Consulta la guida su [datastreams](../fundamentals/datastreams.md) per ulteriori informazioni.
 
 
 ## [!UICONTROL Privacy]
 
 ![](../images/extension/overview/privacy.png)
 
-La sezione [!UICONTROL Privacy] ti consente di configurare in che modo l’SDK gestisce i segnali di consenso degli utenti provenienti dal tuo sito web. Nello specifico, ti consente di selezionare il livello di consenso predefinito che si presume di un utente se non è stata fornita alcuna altra preferenza di consenso esplicito. Il livello di consenso predefinito non viene salvato nel profilo dell’utente. La tabella seguente suddivide ciò che ogni opzione comporta:
+La [!UICONTROL Privacy] La sezione ti consente di configurare in che modo l’SDK gestisce i segnali di consenso degli utenti provenienti dal tuo sito web. Nello specifico, ti consente di selezionare il livello di consenso predefinito che si presume di un utente se non è stata fornita alcuna altra preferenza di consenso esplicito. Il livello di consenso predefinito non viene salvato nel profilo dell’utente. La tabella seguente suddivide ciò che ogni opzione comporta:
 
 | [!UICONTROL Livello di consenso predefinito] | Descrizione |
 | --- | --- |
@@ -85,7 +85,7 @@ Questa opzione consente all’SDK di tentare di memorizzare un identificatore ut
 
 ![](../images/extension/overview/personalization.png)
 
-Se desideri nascondere alcune parti del sito durante il caricamento del contenuto personalizzato, puoi specificare gli elementi da nascondere nell’editor di stili di pre-hiding. Puoi quindi copiare il frammento predefinito fornito all’utente e incollarlo all’interno dell’ `<head>`del sito HTML.
+Se desideri nascondere alcune parti del sito durante il caricamento del contenuto personalizzato, puoi specificare gli elementi da nascondere nell’editor di stili di pre-hiding. Puoi quindi copiare il frammento predefinito fornito e incollarlo all’interno del `<head>`elemento del sito HTML.
 
 ## [!UICONTROL Raccolta dati]
 
@@ -93,15 +93,15 @@ Se desideri nascondere alcune parti del sito durante il caricamento del contenut
 
 ### [!UICONTROL Funzione di callback]
 
-La funzione di callback fornita nell&#39;estensione è anche chiamata [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) nella libreria . Questa funzione ti consente di modificare gli eventi a livello globale prima che vengano inviati ad Adobe Edge Network. Informazioni più dettagliate su come utilizzare questa funzione sono disponibili [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+La funzione di callback fornita nell&#39;estensione è anche chiamata [`onBeforeEventSend` Funzione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) nella biblioteca. Questa funzione ti consente di modificare gli eventi a livello globale prima che vengano inviati ad Adobe Edge Network. Informazioni più dettagliate su come utilizzare questa funzione sono disponibili [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Fare clic sulla raccolta dati]
 
-L&#39;SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata ma può essere disabilitata utilizzando questa opzione. I collegamenti sono anche etichettati come collegamenti di download se contengono una delle espressioni di download elencate nella casella di testo [!UICONTROL Download Link Qualfier] . Adobe offre alcuni qualificatori di collegamento per il download predefiniti, che possono essere modificati in qualsiasi momento.
+L&#39;SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata ma può essere disabilitata utilizzando questa opzione. I collegamenti vengono anche etichettati come collegamenti di download se contengono una delle espressioni di download elencate nella sezione [!UICONTROL Download del qualificatore del collegamento] casella di testo. Adobe offre alcuni qualificatori di collegamento per il download predefiniti, che possono essere modificati in qualsiasi momento.
 
 ### [!UICONTROL Dati contestuali raccolti automaticamente]
 
-Per impostazione predefinita, l’SDK raccoglie alcuni dati contestuali relativi a dispositivi, web, ambiente e contesto. Se desideri visualizzare un elenco delle informazioni raccolte dall&#39;Adobe, puoi trovarlo [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se non si desidera raccogliere questi dati o si desidera raccogliere solo determinate categorie di dati, è possibile modificare queste opzioni.
+Per impostazione predefinita, l’SDK raccoglie alcuni dati contestuali relativi a dispositivi, web, ambiente e contesto. Se desideri visualizzare un elenco delle informazioni raccolte dagli Adobi, puoi trovarle [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se non si desidera raccogliere questi dati o si desidera raccogliere solo determinate categorie di dati, è possibile modificare queste opzioni.
 
 ## [!UICONTROL Impostazioni avanzate]
 
