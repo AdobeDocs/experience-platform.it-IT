@@ -1,11 +1,11 @@
 ---
-description: Nell’ambito dell’SDK di destinazione, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione.
+description: Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione.
 title: Verifica la configurazione di destinazione
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
@@ -13,17 +13,21 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Nell’ambito dell’SDK di destinazione, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggi [Creare e testare un modello di trasformazione dei messaggi](./create-template.md).
+Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggere [Creare e testare un modello di trasformazione dei messaggi](./create-template.md).
 
-Per **verificare se la destinazione è configurata correttamente e per verificare l&#39;integrità dei flussi di dati nella destinazione configurata**, utilizza lo *strumento di test della destinazione*. Con questo strumento, puoi testare la configurazione di destinazione inviando messaggi all’endpoint API REST.
+A **verifica se la destinazione è configurata correttamente e verifica l’integrità dei flussi di dati nella destinazione configurata**, utilizza *Strumento di test della destinazione*. Con questo strumento, puoi testare la configurazione di destinazione inviando messaggi all’endpoint API REST.
 
-Di seguito è illustrato come il test della destinazione si inserisce nel [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) nell&#39;SDK di destinazione:
+Di seguito è illustrato il modo in cui il test della destinazione si inserisce nel [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) in Destination SDK:
 
 ![Grafico in cui il passaggio del test di destinazione si inserisce nel flusso di lavoro di configurazione della destinazione](./assets/test-destination-step.png)
 
-## Strumento di test della destinazione {#destination-testing-tool}
+## Strumento di test della destinazione - Scopo e prerequisiti {#destination-testing-tool}
 
-Utilizza questo strumento per testare la configurazione di destinazione inviando messaggi all&#39;endpoint partner fornito nella [configurazione server](./server-and-template-configuration.md).
+Utilizza lo strumento di test della destinazione per testare la configurazione di destinazione inviando messaggi all&#39;endpoint partner fornito nella [configurazione del server](./server-and-template-configuration.md).
+
+Prima di utilizzare lo strumento, assicurarsi di:
+* Configura la destinazione seguendo i passaggi descritti in [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) e
+* Stabilisci una connessione alla destinazione, come descritto in [Come ottenere l&#39;ID dell&#39;istanza di destinazione](./destination-testing-api.md#get-destination-instance-id).
 
 Con questo strumento, dopo aver configurato la destinazione, puoi:
 * Verifica se la destinazione è configurata correttamente;
@@ -33,20 +37,20 @@ Con questo strumento, dopo aver configurato la destinazione, puoi:
 
 >[!NOTE]
 >
->Per la documentazione completa di riferimento API, leggi [Operazioni API di test di destinazione](./destination-testing-api.md).
+>Per consultare la documentazione completa di riferimento API, leggi [Operazioni API per il test di destinazione](./destination-testing-api.md).
 
 Puoi effettuare chiamate all’endpoint API di test della destinazione con o senza aggiungere profili alla richiesta.
 
-Se non aggiungi profili alla richiesta, Adobe li genererà internamente per te e li aggiungerà alla richiesta. Se desideri generare profili da utilizzare in questa richiesta, consulta il [Riferimento API per la generazione di profili di esempio](./sample-profile-generation-api.md). È necessario generare profili in base allo schema XDM di origine, come mostrato nel [riferimento API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Lo schema di origine è lo [schema di unione](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) della sandbox in uso.
+Se non aggiungi profili alla richiesta, Adobe li genererà internamente per te e li aggiungerà alla richiesta. Se desideri generare profili da utilizzare in questa richiesta, consulta la [Riferimento API per la generazione di profili di esempio](./sample-profile-generation-api.md). È necessario generare profili in base allo schema XDM di origine, come mostrato nella [Riferimento API](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Lo schema di origine è [schema unione](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) della sandbox in uso.
 
 La risposta contiene il risultato dell’elaborazione della richiesta di destinazione. La richiesta comprende tre sezioni principali:
 * La richiesta generata dall&#39;Adobe per la destinazione.
 * Risposta ricevuta dalla destinazione.
-* L’elenco dei profili inviati nella richiesta, siano essi [aggiunti dall’utente nella richiesta](./destination-testing-api.md/#test-with-added-profiles) o generati dall’Adobe se [il corpo della richiesta di test di destinazione era vuoto](./destination-testing-api.md#test-without-adding-profiles).
+* Elenco dei profili inviati nella richiesta, se i profili sono stati [aggiunto da te nella richiesta](./destination-testing-api.md/#test-with-added-profiles)o generato da un Adobe se [il corpo della richiesta di test di destinazione era vuoto](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe può generare più coppie di richieste e risposte. Ad esempio, se invii 10 profili a una destinazione con un valore `maxUsersPerRequest` pari a 7, sarà presente una richiesta con 7 profili e un’altra con 3 profili.
+>Adobe può generare più coppie di richieste e risposte. Ad esempio, se invii 10 profili a una destinazione con un `maxUsersPerRequest` valore 7, ci sarà una richiesta con 7 profili e un’altra richiesta con 3 profili.
 
 **Richiesta di esempio con il parametro profiles nel corpo**
 
@@ -121,7 +125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Risposta di esempio**
 
-Il contenuto del parametro `results.httpCalls` è specifico per l’API REST.
+Tieni presente che il contenuto della `results.httpCalls` è specifico per l’API REST.
 
 ```json
 {
@@ -225,8 +229,8 @@ Il contenuto del parametro `results.httpCalls` è specifico per l’API REST.
 }
 ```
 
-Per una descrizione dei parametri di richiesta e risposta, fai riferimento a [Operazioni API di test di destinazione](./destination-testing-api.md).
+Per una descrizione dei parametri di richiesta e risposta, consulta [Operazioni API per il test di destinazione](./destination-testing-api.md).
 
 ## Passaggi successivi
 
-Dopo aver verificato la destinazione e aver confermato che è configurata correttamente, utilizza l&#39; [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la configurazione ad Adobe per la revisione.
+Dopo aver verificato la destinazione e aver confermato che è configurata correttamente, utilizza il [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la configurazione ad Adobe per la revisione.
