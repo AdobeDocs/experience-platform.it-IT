@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/render`, per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
 title: Operazioni API per i modelli di rendering
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,8 @@ Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per
 ## Eseguire il rendering dei profili esportati in base al modello di trasformazione del messaggio {#render-exported-data}
 
 Puoi eseguire il rendering dei profili esportati effettuando una richiesta POST al `authoring/testing/template/render` e fornisce l&#39;ID di destinazione della configurazione di destinazione e del modello creato utilizzando [endpoint API modello di esempio](./sample-template-api.md).
+
+Puoi iniziare utilizzando un modello semplice che esporta i profili non elaborati senza applicare alcuna trasformazione e quindi passare a un modello più complesso, che applica le trasformazioni ai profili. La sintassi per il modello semplice è la seguente: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -1065,7 +1067,7 @@ Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API SDK di destinazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
