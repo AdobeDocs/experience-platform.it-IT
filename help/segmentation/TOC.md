@@ -4,9 +4,9 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
 feature: Segments
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '163'
 ht-degree: 26%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 26%
    - [Segmentazione degli spigoli](api/edge-segmentation.md)
    - [Esportare i processi](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
-   - [Scheduler](api/schedules.md)
+   - [Pianificazioni](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
    - [Processi dei segmenti](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
@@ -31,11 +31,13 @@ ht-degree: 26%
    - [Panoramica](ui/overview.md)
    - [Dashboard dei segmenti](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
-   - [Corrispondenza segmento](ui/segment-match.md)
    - [Segmentazione degli spigoli](ui/edge-segmentation.md)
    - [Segmentazione streaming](ui/streaming-segmentation.md)
    - [Segmentazione streaming (video)](video/streaming-segmentation-overview.md)
    - [Refactoring dei vincoli di tempo](ui/segment-refactoring.md)
+   - Corrispondenza segmento {#segment-match}
+      - [Panoramica sulla corrispondenza dei segmenti](ui/segment-match/overview.md)
+      - [Risoluzione dei problemi](ui/segment-match/troubleshooting.md)
 - [Approvazione](consents.md)
 - [Segmentazione su più entità](multi-entity-segmentation.md)
 - Lingua della query del profilo {#pql}
