@@ -5,9 +5,9 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 4%
 
 ---
@@ -114,8 +114,8 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera l&#39;ora corrente. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Recupera l&#39;ora Unix corrente. |  | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** La data di input, sotto forma di oggetto ZoningDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Formato in cui si desidera modificare la data.</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-gg HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| long_to_date | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato che si desidera che diventi la marca temporale.</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;aaaa-MM-gg-T’HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
+| format | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** La data di input, sotto forma di oggetto ZoningDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Formato in cui si desidera modificare la data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;aaaa-MM-gg HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
+| dformat | Converte una marca temporale in una stringa di data in base a un formato specificato. | <ul><li>MARCA TEMPORALE: **Obbligatorio** La marca temporale che si desidera formattare. Scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato che si desidera che diventi la marca temporale.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;aaaa-MM-gg-T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** Stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** Stringa che rappresenta il formato della data di origine.**Nota:** Questo **not** rappresenta il formato in cui si desidera convertire la stringa di data. </li><li>DEFAULT_DATE: **Obbligatorio** La data predefinita restituita, se la data fornita è null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** Stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** Stringa che rappresenta il formato della data di origine.**Nota:** Questo **not** rappresenta il formato in cui si desidera convertire la stringa di data. </li></ul> | date(DATA, FORMATO) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-gg HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** Stringa che rappresenta la data.</li></ul> | data(DATA) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
