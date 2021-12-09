@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/destinationInstance/`, per verificare se la destinazione è configurata correttamente e per verificare l'integrità dei dati che fluiscono nella destinazione configurata.
 title: Operazioni API per il test di destinazione
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
+source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 2%
@@ -13,29 +13,29 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Endpoint** API:  `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**Endpoint API**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l’ endpoint API `/authoring/testing/destinationInstance/`, per verificare se la destinazione è configurata correttamente e per verificare l’integrità dei flussi di dati nella destinazione configurata. Per una descrizione delle funzionalità supportate da questo endpoint, leggere [Verifica la configurazione di destinazione](./test-destination.md).
+Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando `/authoring/testing/destinationInstance/` endpoint API per verificare se la destinazione è configurata correttamente e l’integrità dei dati scorre nella destinazione configurata. Per una descrizione delle funzionalità supportate da questo endpoint, leggere [Verifica la configurazione di destinazione](./test-destination.md).
 
 Esegui richieste all’endpoint di test con o senza aggiungere profili alla chiamata . Se non invii profili alla richiesta, Adobe li genererà internamente per te e li aggiungerà alla richiesta.
 
-Puoi utilizzare l’ [API di generazione del profilo di esempio](./sample-profile-generation-api.md) per creare profili da utilizzare nelle richieste per l’API di test di destinazione.
+È possibile utilizzare [API di generazione di profili di esempio](./sample-profile-generation-api.md) per creare profili da utilizzare nelle richieste per l’API di test di destinazione.
 
 ## Come ottenere l&#39;ID dell&#39;istanza di destinazione {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connetti a destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [attiva profili e segmenti a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per ulteriori informazioni. Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint dall&#39;URL quando [esplori una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connessione a destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [attivare profili e segmenti in una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per ulteriori informazioni. Dopo aver stabilito la connessione alla destinazione, ottieni l’ID dell’istanza di destinazione da utilizzare nelle chiamate API a questo endpoint dall’URL quando [esplorazione di una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
    >![Immagine dell&#39;interfaccia utente come ottenere l&#39;ID dell&#39;istanza di destinazione](./assets/get-destination-instance-id.png)
 
 
 ## Guida introduttiva al test della destinazione delle operazioni API {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
 
 ## Verifica la configurazione di destinazione senza aggiungere profili alla chiamata . {#test-without-adding-profiles}
 
-Puoi verificare la configurazione di destinazione effettuando una richiesta di POST all’ endpoint `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e specificando l’ID dell’istanza di destinazione della destinazione che stai testando.
+Puoi verificare la configurazione di destinazione effettuando una richiesta di POST al `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornisce l&#39;ID dell&#39;istanza di destinazione della destinazione che stai testando.
 
 **Formato API**
 
@@ -50,10 +50,10 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Richiesta**
 
-La richiesta seguente chiama l’endpoint API REST della destinazione. La richiesta è configurata dal parametro di query `{DESTINATION_INSTANCE_ID}` .
+La richiesta seguente chiama l’endpoint API REST della destinazione. La richiesta è configurata dalla `{DESTINATION_INSTANCE_ID}` parametro query.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -165,7 +165,7 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme alla risposta API da
 
 ## Verifica la configurazione di destinazione con i profili aggiunti alla chiamata . {#test-with-added-profiles}
 
-Puoi verificare la configurazione di destinazione effettuando una richiesta di POST all’ endpoint `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e specificando l’ID dell’istanza di destinazione della destinazione che stai testando.
+Puoi verificare la configurazione di destinazione effettuando una richiesta di POST al `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` e fornisce l&#39;ID dell&#39;istanza di destinazione della destinazione che stai testando.
 
 **Formato API**
 
@@ -179,10 +179,10 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Richiesta**
 
-La richiesta seguente chiama l’endpoint API REST della destinazione. La richiesta è configurata dai parametri forniti nel payload e dal parametro di query `{DESTINATION_INSTANCE_ID}` .
+La richiesta seguente chiama l’endpoint API REST della destinazione. La richiesta è configurata dai parametri forniti nel payload e dalla `{DESTINATION_INSTANCE_ID}` parametro query.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -321,8 +321,8 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme alla risposta API da
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API SDK di destinazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [richiedi errori di intestazione](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come verificare la destinazione. Ora puoi utilizzare l&#39;Adobe [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione per la tua destinazione.
+Dopo aver letto questo documento, ora sai come verificare la destinazione. Ora puoi utilizzare l’Adobe [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina della documentazione per la destinazione.
