@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione in streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Di seguito è riportato un esempio di configurazione per un modello di destinazione, creato utilizzando `/destinations` Endpoint API. Per ulteriori informazioni su questo modello, consulta [Configurazione della destinazione](./destination-configuration.md).
 
 Per collegare la configurazione del server e del modello nel passaggio 1 a questa configurazione di destinazione, aggiungi l’ID istanza del server e la configurazione del modello come `destinationServerId` qui.
+
+>[!IMPORTANT]
+>
+>Per creare una destinazione configurata correttamente, *deve* aggiungi almeno un&#39;identità di destinazione in `identityNamespaces`, come illustrato di seguito. Se non è configurata alcuna identità di destinazione, gli utenti non potranno passare oltre il [Passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
