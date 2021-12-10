@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,12 @@ Dopo aver creato un segmento abilitato per lo streaming, puoi visualizzare i det
 In particolare, i dettagli **[!UICONTROL dimensione totale del pubblico qualificato]** vengono visualizzati. La **[!UICONTROL Dimensione totale del pubblico qualificato]** mostra il numero totale di tipi di pubblico qualificati dall’ultima esecuzione di processi del segmento completata. Se un lavoro di segmento non è stato completato nelle ultime 24 ore, il numero di tipi di pubblico verrà invece calcolato in base a una stima.
 
 Sotto c’è un grafico a linee che mostra il numero di segmenti qualificati e non qualificati nelle ultime 24 ore. Il menu a discesa può essere regolato in modo da visualizzare le ultime 24 ore, la settimana scorsa o gli ultimi 30 giorni.
+
+>[!NOTE]
+>
+>Un segmento è considerato qualificato se va dall’assenza di stato alla realizzazione o se va dall’uscita alla realizzazione. Un segmento viene considerato non qualificato se va da realizzato a uscito o da esistente a esistente.
+>
+>Ulteriori informazioni su questi stati sono disponibili nella tabella di stato all’interno di [panoramica sulla segmentazione](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
