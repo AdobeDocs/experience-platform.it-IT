@@ -2,9 +2,9 @@
 title: Fonti in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo delle origini in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Real-time Customer Data Platform B2B Edition consente di portare i dati B2B attr
 >[!TIP]
 >
 >Real-time Customer Data Platform B2B Edition offre un’ampia gamma di fonti esterne da cui acquisire i dati, ma non ne dispone di quante sono disponibili per Real-time Customer Data Platform. Per scoprire quali connettori sorgente sono disponibili per la tua organizzazione, puoi visualizzare il catalogo origini nell’interfaccia utente di Platform. Per accedere al catalogo, seleziona **Origini** nel menu di navigazione a sinistra, seleziona **Catalogo**.
+
+Per capire come le sorgenti si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Consulta la sezione [panoramica dei connettori sorgente](../../sources/home.md) per ulteriori informazioni sui tipi di origini disponibili in Adobe Experience Platform.
 

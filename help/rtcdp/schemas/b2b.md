@@ -2,9 +2,9 @@
 title: Schemi in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ Le seguenti classi standard sono fornite in Real-time CDP B2B Edition:
 * [Relazione personale opportunità di business XDM](../../xdm/classes/b2b/business-opportunity-person-relation.md)
 * [Elenco di marketing aziendale XDM](../../xdm/classes/b2b/business-marketing-list.md)
 * [Membri elenco marketing commerciale XDM](../../xdm/classes/b2b/business-marketing-list-members.md)
+
+Per capire come gli schemi si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md).
 
 Per i passaggi necessari per creare una relazione molti-a-uno tra due schemi, consulta l’esercitazione su [definizione delle relazioni dello schema B2B](../../xdm/tutorials/relationship-b2b.md).
 

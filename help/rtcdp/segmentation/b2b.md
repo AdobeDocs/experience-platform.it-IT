@@ -1,17 +1,17 @@
 ---
-title: Panoramica dei casi di utilizzo della segmentazione per Real-time CDP B2B Edition
+title: Casi di utilizzo della segmentazione per Real-time CDP B2B Edition
 description: Panoramica dei vari casi d’uso disponibili in tempo reale CDP B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# Panoramica dei casi di utilizzo della segmentazione per Real-time Customer Data Platform B2B Edition
+# Casi d’uso della segmentazione per Real-time Customer Data Platform B2B Edition
 
-Questo documento fornisce esempi relativi alla segmentazione disponibile per Real-time CDP B2B Edition e a come i diversi tipi di attributi possono essere combinati per i casi d’uso comuni B2B.
+Questo documento fornisce esempi di definizioni di segmenti in Real-time CDP B2B Edition e di come diversi tipi di attributi possono essere combinati per i casi d’uso comuni B2B. Per capire come le destinazioni si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
