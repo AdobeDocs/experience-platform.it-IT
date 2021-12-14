@@ -1,10 +1,11 @@
 ---
 title: Ricerca di risorse nell’API di Reactor
 description: Scopri come cercare le risorse nell’API di Reactor.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -14,9 +15,9 @@ L’endpoint `/search` nell’API di Reactor consente di eseguire query struttur
 
 >[!NOTE]
 >
->Prima di leggere questa guida, fai riferimento alla [guida all&#39;endpoint di ricerca](../endpoints/search.md) per informazioni sulla sintassi di query accettata e su altre linee guida sull&#39;utilizzo.
+>Prima di leggere questa guida, consulta la [guida dell’endpoint “search”](../endpoints/search.md) per informazioni sulla sintassi di query accettata e altre linee guida sull’utilizzo.
 
-## Strategie di query di base
+## Strategie di base per le query
 
 Gli esempi seguenti illustrano alcuni concetti di base per l’utilizzo della funzionalità di ricerca dell’API.
 
@@ -26,7 +27,7 @@ Gli esempi seguenti illustrano alcuni concetti di base per l’utilizzo della fu
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -38,15 +39,15 @@ Gli esempi seguenti illustrano alcuni concetti di base per l’utilizzo della fu
 
 >[!IMPORTANT]
 >
->Normalmente, i valori di ricerca devono corrispondere al tipo di dati oggetto della ricerca. Ad esempio, un valore di query di `evar7` rispetto a un campo intero avrebbe esito negativo. Durante la ricerca in più campi, il requisito del tipo di query viene reso indulgente per evitare errori, ma può produrre risultati indesiderati.
+>Solitamente, i valori di ricerca devono corrispondere al tipo di dati oggetto della ricerca. Ad esempio, non è possibile eseguire una query con un valore `evar7` per un campo di numeri interi. Durante la ricerca in più campi, il requisito del tipo di query è meno rigoroso onde evitare errori, ma può produrre risultati indesiderati.
 
-### Query di ambito per tipi di risorse specifici
+### Definire l’ambito delle query per tipi di risorse specifici
 
 Puoi eseguire una ricerca per un tipo di risorsa specifico fornendo `resource_types` nella richiesta. Ad esempio, per eseguire ricerche in `data_elements` e `rule_components`:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -64,11 +65,11 @@ Puoi eseguire una ricerca per un tipo di risorsa specifico fornendo `resource_ty
 
 ### Ordinare le risposte
 
-La proprietà `sort` può essere utilizzata per ordinare le risposte. Ad esempio, per ordinare per `created_at` con il più recente:
+La proprietà `sort` può essere utilizzata per ordinare le risposte. Ad esempio, per ordinare in base al valore `created_at`, a partire dal più recente:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -91,7 +92,7 @@ La proprietà `sort` può essere utilizzata per ordinare le risposte. Ad esempio
 
 ## Esempi comuni di ricerca
 
-L&#39;esempio seguente illustra pattern di ricerca comuni aggiuntivi.
+L’esempio seguente illustra altri pattern di ricerca comuni.
 
 ### Qualsiasi risorsa con un nome specifico
 
@@ -104,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -114,7 +115,7 @@ curl -X POST \
       }'
 ```
 
-### Qualsiasi risorsa che fa riferimento a &quot;evar7&quot;
+### Qualsiasi risorsa che fa riferimento a “evar7”
 
 ```shell
 curl -X POST \
@@ -125,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -135,7 +136,7 @@ curl -X POST \
       }'
 ```
 
-### Elementi dati di un tipo delegato &quot;codice personalizzato&quot;
+### Elementi dati di tipo delegato “custom-code”
 
 ```shell
 curl -X POST \
@@ -146,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -168,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -190,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -212,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -222,7 +223,7 @@ curl -X POST \
       }'
 ```
 
-### Eseguire una ricerca utilizzando la logica dei termini &quot;OR&quot;
+### Eseguire una ricerca utilizzando la logica “OR”
 
 ```shell
 curl -X POST \
@@ -233,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",

@@ -5,11 +5,10 @@ title: Elencare mappature identità
 topic-legacy: API guide
 description: Una mappatura è una raccolta di tutte le identità in un cluster, per uno spazio dei nomi specificato.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -29,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Richiesta**
 
-Opzione 1: Immetti l’identità come namespace (`nsId`, per ID) e come valore ID (`id`).
+Opzione 1: Fornisci l’identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -40,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: Immetti l’identità come namespace (`ns`, per nome) e come valore ID (`id`).
+Opzione 2: Fornisci l’identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Fornisci l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, consulta la sezione di questo documento relativa a [ottenere l&#39;XID per un&#39;identità](./list-native-id.md).
+Opzione 3: Fornisci l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere un XID di un&#39;identità, consulta la sezione di questo documento che tratta [ottenimento di un XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,7 +63,7 @@ curl -X GET \
 
 ### Ottieni mappature di identità per più identità
 
-Utilizza il metodo `POST` come equivalente batch del metodo `GET` descritto sopra per recuperare le mappature per più identità.
+Utilizza la `POST` come equivalente del lotto `GET` metodo descritto in precedenza per recuperare le mappature per più identità.
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Opzione 1: Fornisci un elenco di XID per i quali recuperare le mappature.
 }
 ```
 
-Opzione 2: Fornisci un elenco di identità come ID compositi, in cui ognuno dei nomi dei valori ID e dello spazio dei nomi per ID dello spazio dei nomi. Questo esempio illustra l’utilizzo di questo metodo durante la sovrascrittura del valore predefinito `graph-type` di &quot;Private Graph&quot;.
+Opzione 2: Fornisci un elenco di identità come ID compositi, in cui ognuno dei nomi dei valori ID e dello spazio dei nomi per ID dello spazio dei nomi. Questo esempio illustra l&#39;utilizzo di questo metodo durante la sovrascrittura dell&#39;impostazione predefinita `graph-type` di &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -116,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp
@@ -146,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se non sono state trovate identità correlate con l’input fornito, viene restituito un codice di risposta `HTTP 204` senza contenuto.
+Se non è stata trovata alcuna identità correlata con l&#39;input fornito, un `HTTP 204` il codice di risposta viene restituito senza contenuto.
 
 **Risposta**
 
@@ -185,8 +184,8 @@ Se non sono state trovate identità correlate con l’input fornito, viene resti
 ```
 
 - `lastAssociationTime`: La marca temporale all’ultima volta che l’identità di input è stata associata a questa identità.
-- `regions`: Fornisce il  `regionId` e  `lastAssociationTime` per il punto in cui è stata visualizzata l&#39;identità.
+- `regions`: Fornisce la `regionId` e `lastAssociationTime` per dove è stata vista l&#39;identità.
 
 ## Passaggi successivi
 
-Procedi all&#39;esercitazione successiva su [elenca i namespace disponibili](./list-namespaces.md).
+Procedi all’esercitazione successiva su [elenco dei namespace disponibili](./list-namespaces.md).

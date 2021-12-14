@@ -5,17 +5,16 @@ title: Creare un batch nell’API
 topic-legacy: developer guide
 description: Puoi creare un batch effettuando una richiesta POST all’endpoint /batch nell’API del catalogo.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Creare un batch
 
-Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzando il valore `id` di un set di dati esistente, puoi creare un batch effettuando una richiesta POST all’endpoint `/batches` nell’ API [!DNL Catalog].
+Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzo della `id` valore di un set di dati esistente, puoi creare un batch effettuando una richiesta di POST al `/batches` punto finale [!DNL Catalog] API.
 
 **Formato API**
 
@@ -31,7 +30,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -40,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `datasetId` | Il `id` del set di dati a cui sarà associato il batch. |
+| `datasetId` | La `id` del set di dati a cui sarà associato il batch. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, inclusa la relativa `id`, una stringa generata dal sistema di sola lettura.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, incluso il relativo `id`, una stringa generata dal sistema di sola lettura.
 
 ```JSON
 {

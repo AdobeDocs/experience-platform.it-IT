@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Panoramica sui set di mappature
 topic-legacy: overview
 description: Scopri come utilizzare i set di mappatura con Adobe Experience Platform Data Prep.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
 
 ---
-
 
 # Panoramica sui set di mappature
 
@@ -20,10 +20,10 @@ Un set di mappature è un set di mappature che trasforma i dati da uno schema al
 
 Questa panoramica richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [Preparazione](./home.md) dati: Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
-- [Flussi di dati](../dataflows/home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
-- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): I metodi con cui i dati possono essere inviati a  [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+- [Preparazione dei dati](./home.md): Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
+- [Flussi di dati](../dataflows/home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, fino a [!DNL Identity] e [!DNL Profile]e a [!DNL Destinations].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): I metodi con cui i dati possono essere inviati a [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
 
 ## Sintassi del set di mappature
 
@@ -33,9 +33,9 @@ Il seguente JSON è un esempio di set di mappature tipico:
 
 ```json
 {
-    "id" : "cbb0da769faa48fcb29e026a924ba29d",
-    "name" : "Demo Mapping Set",
-    "inputSchema" : {
+    "id": "cbb0da769faa48fcb29e026a924ba29d",
+    "name": "Demo Mapping Set",
+    "inputSchema": {
         "id": "a167ff2947ff447ebd8bcf7ef6756232",
         "version": 0
     },
@@ -50,8 +50,8 @@ Il seguente JSON è un esempio di set di mappature tipico:
             "sourceType": "ATTRIBUTE",
             "source": "Id",
             "destination": "_id",
-            "name" : "Id",
-            "description" : "Identifier field"
+            "name": "Id",
+            "description": "Identifier field"
         },
         {
             "sourceType": "ATTRIBUTE",
@@ -74,19 +74,19 @@ Il seguente JSON è un esempio di set di mappature tipico:
 | `inputSchema` | Lo schema XDM per i dati in arrivo. |
 | `outputSchema` | Lo schema XDM a cui verranno trasformati i dati di input per conformarsi. |
 | `mappings` | Matrice di mappature campo-to-campo dallo schema di origine allo schema di destinazione. |
-| `sourceType` | Per ogni mappatura elencata, il relativo attributo `sourceType` indica il tipo di origine da mappare. Può essere tra `ATTRIBUTE`, `STATIC` o `EXPRESSION`: <ul><li> `ATTRIBUTE` viene utilizzato per qualsiasi valore trovato nel percorso di origine. </li><li>`STATIC` viene utilizzato per i valori inseriti nel percorso di destinazione. Questo valore rimane costante e non viene influenzato dallo schema di origine.</li><li> `EXPRESSION` viene utilizzato per un&#39;espressione che verrà risolta durante il runtime. Un elenco di espressioni disponibili si trova nella [guida alle funzioni di mappatura](./functions.md).</li> </ul> |
-| `source` | Per ogni mappatura elencata, l&#39;attributo `source` indica il campo da mappare. Ulteriori informazioni su come configurare la sorgente sono disponibili nella sezione [origini](#sources). |
-| `destination` | Per ogni mappatura elencata, l&#39;attributo `destination` indica il campo o il percorso del campo, in cui verrà inserito il valore estratto dal campo `source`. Ulteriori informazioni su come configurare le destinazioni sono disponibili nella sezione [destinazione](#destination). |
+| `sourceType` | Per ogni mappatura elencata, la `sourceType` attributo indica il tipo di origine da mappare. Può essere uno dei `ATTRIBUTE`, `STATIC`oppure `EXPRESSION`: <ul><li> `ATTRIBUTE` viene utilizzato per qualsiasi valore trovato nel percorso di origine. </li><li>`STATIC` viene utilizzato per i valori inseriti nel percorso di destinazione. Questo valore rimane costante e non viene influenzato dallo schema di origine.</li><li> `EXPRESSION` viene utilizzato per un&#39;espressione che verrà risolta durante il runtime. Un elenco di espressioni disponibili è disponibile nella sezione [guida alle funzioni di mappatura](./functions.md).</li> </ul> |
+| `source` | Per ogni mappatura elencata, la variabile `source` attributo indica il campo da mappare. Per ulteriori informazioni su come configurare la sorgente, consulta la sezione [sezione origini](#sources). |
+| `destination` | Per ogni mappatura elencata, la variabile `destination` attributo indica il campo, o il percorso del campo, in cui il valore estratto dal `source` verrà posizionato il campo . Per ulteriori informazioni su come configurare le destinazioni, consulta la sezione [sezione di destinazione](#destination). |
 | `mappings.name` | (*Facoltativo*) Un nome per la mappatura. |
 | `mappings.description` | (*Facoltativo*) Una descrizione della mappatura. |
 
 ## Configurazione delle origini di mappatura
 
-In una mappatura, il valore `source` può essere un campo, un&#39;espressione o un valore statico. In base al tipo di origine specificato, il valore può essere estratto in vari modi.
+In una mappatura, il `source` può essere un campo, un&#39;espressione o un valore statico. In base al tipo di origine specificato, il valore può essere estratto in vari modi.
 
 ### Campo nei dati delle colonne
 
-Quando mappi un campo nei dati delle colonne, ad esempio un file CSV, utilizza il tipo di origine `ATTRIBUTE` . Se il campo contiene `.` all’interno del nome, utilizza `\` per applicare un escape al valore. Di seguito è riportato un esempio di mappatura:
+Quando mappi un campo nei dati delle colonne, ad esempio un file CSV, utilizza la variabile `ATTRIBUTE` tipo di origine. Se il campo contiene `.` all&#39;interno del nome, utilizza `\` per evitare il valore. Di seguito è riportato un esempio di mappatura:
 
 **File CSV di esempio:**
 
@@ -117,7 +117,7 @@ John Smith, js@example.com
 
 ### Campo nei dati nidificati
 
-Quando mappi un campo nei dati nidificati, ad esempio un file JSON, utilizza il tipo di origine `ATTRIBUTE` . Se il campo contiene `.` all’interno del nome, utilizza `\` per applicare un escape al valore. Di seguito è riportato un esempio di mappatura:
+Quando mappi un campo nei dati nidificati, ad esempio un file JSON, utilizza la variabile `ATTRIBUTE` tipo di origine. Se il campo contiene `.` all&#39;interno del nome, utilizza `\` per evitare il valore. Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -152,7 +152,7 @@ Quando mappi un campo nei dati nidificati, ad esempio un file JSON, utilizza il 
 
 ### Campo all’interno di una matrice
 
-Quando mappi un campo all’interno di una matrice, puoi recuperare un valore specifico utilizzando un indice. A questo scopo, utilizza il tipo di origine `ATTRIBUTE` e l&#39;indice del valore da mappare. Di seguito è riportato un esempio di mappatura:
+Quando mappi un campo all’interno di una matrice, puoi recuperare un valore specifico utilizzando un indice. Per eseguire questa operazione, utilizza la variabile `ATTRIBUTE` tipo di origine e indice del valore da mappare. Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -195,7 +195,7 @@ Quando mappi un campo all’interno di una matrice, puoi recuperare un valore sp
 
 ### Array a matrice o oggetto a oggetto
 
-Utilizzando il tipo di origine `ATTRIBUTE`, è inoltre possibile mappare direttamente un array su un array o su un oggetto. Di seguito è riportato un esempio di mappatura:
+Utilizzo della `ATTRIBUTE` tipo di origine, è inoltre possibile mappare direttamente una matrice a una matrice o a un oggetto a un oggetto. Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -247,7 +247,7 @@ Utilizzando il tipo di origine `ATTRIBUTE`, è inoltre possibile mappare diretta
 
 ### Operazioni iterative sugli array
 
-Utilizzando il tipo di origine `ATTRIBUTE`, è possibile eseguire il ciclo iterativo tra gli array e mapparli su uno schema di destinazione utilizzando un indice di caratteri jolly (`[*]`). Di seguito è riportato un esempio di mappatura:
+Utilizzo della `ATTRIBUTE` tipo di origine, è possibile eseguire un ciclo iterativo tra gli array e mapparli su uno schema di destinazione utilizzando un indice con caratteri jolly (`[*]`). Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -299,7 +299,7 @@ Utilizzando il tipo di origine `ATTRIBUTE`, è possibile eseguire il ciclo itera
 
 ### Valore costante
 
-Se desideri mappare una costante o un valore statico, utilizza il tipo di origine `STATIC` .  Quando si utilizza il tipo di origine `STATIC`, il `source` rappresenta il valore hardcoded che si desidera assegnare al `destination`. Di seguito è riportato un esempio di mappatura:
+Se desideri mappare una costante o un valore statico, utilizza la variabile `STATIC` tipo di origine.  Quando utilizzi `STATIC` tipo di origine, `source` rappresenta il valore hardcoded che si desidera assegnare al `destination`. Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -330,7 +330,7 @@ Se desideri mappare una costante o un valore statico, utilizza il tipo di origin
 
 ### Espressioni
 
-Per mappare un’espressione, utilizza il tipo di origine `EXPRESSION`. Un elenco delle funzioni accettate si trova nella [guida alle funzioni di mappatura](./functions.md). Quando si utilizza il tipo di origine `EXPRESSION`, `source` rappresenta la funzione che si desidera risolvere. Di seguito è riportato un esempio di mappatura:
+Se desideri mappare un’espressione, utilizza la variabile `EXPRESSION` tipo di origine. Un elenco delle funzioni accettate è disponibile nella [guida alle funzioni di mappatura](./functions.md). Quando utilizzi `EXPRESSION` tipo di origine, `source` rappresenta la funzione che si desidera risolvere. Di seguito è riportato un esempio di mappatura:
 
 **File JSON di esempio**
 
@@ -364,11 +364,11 @@ Per mappare un’espressione, utilizza il tipo di origine `EXPRESSION`. Un elenc
 
 ## Configurazione delle destinazioni di mappatura
 
-In una mappatura, il `destination` è la posizione in cui verrà inserito il valore estratto da `source`.
+In una mappatura, il `destination` è la posizione in cui il valore estratto dalla `source` saranno inseriti.
 
 ### Campo a livello principale
 
-Per mappare il valore `source` al livello principale dei dati trasformati, segui l&#39;esempio seguente:
+Quando desideri mappare il `source` al livello principale dei dati trasformati, segui l’esempio seguente:
 
 **File JSON di esempio**
 
@@ -401,7 +401,7 @@ Per mappare il valore `source` al livello principale dei dati trasformati, segui
 
 ### Campo nidificato
 
-Per mappare il valore `source` a un campo nidificato nei dati trasformati, segui l&#39;esempio seguente:
+Quando desideri mappare il `source` in un campo nidificato nei dati trasformati, segui l’esempio seguente:
 
 **File JSON di esempio**
 
@@ -434,7 +434,7 @@ Per mappare il valore `source` a un campo nidificato nei dati trasformati, segui
 
 ### Campo a un indice specifico dell&#39;array
 
-Per mappare il valore `source` a un indice specifico in una matrice nei dati trasformati, segui l&#39;esempio seguente:
+Quando desideri mappare il `source` a un indice specifico in una matrice nei dati trasformati, seguire l&#39;esempio seguente:
 
 **File JSON di esempio**
 
@@ -467,7 +467,7 @@ Per mappare il valore `source` a un indice specifico in una matrice nei dati tra
 
 ### Funzionamento dell&#39;array iterativo
 
-Per eseguire un ciclo iterativo tra array e mappare i valori alla destinazione, è possibile utilizzare un indice di caratteri jolly (`[*]`). Di seguito è riportato un esempio:
+Per eseguire un ciclo iterativo tra array e mappare i valori sulla destinazione, è possibile utilizzare un indice con caratteri jolly (`[*]`). Di seguito è riportato un esempio:
 
 ```json
 {
@@ -517,4 +517,4 @@ Per eseguire un ciclo iterativo tra array e mappare i valori alla destinazione, 
 
 ## Passaggi successivi
 
-Leggendo questo documento, è ora necessario comprendere come vengono costruiti i set di mappature, incluso come configurare le singole mappature all’interno di un set di mappature. Per ulteriori informazioni su altre funzioni di preparazione dei dati, consulta la [Panoramica preparazione dei dati](./home.md). Per informazioni su come utilizzare i set di mappatura all&#39;interno dell&#39;API di preparazione dati, consulta la [Guida per gli sviluppatori di preparazione dati](./api/overview.md).
+Leggendo questo documento, è ora necessario comprendere come vengono costruiti i set di mappature, incluso come configurare le singole mappature all’interno di un set di mappature. Per ulteriori informazioni su altre funzioni di preparazione dei dati, consulta la sezione [Panoramica sulla preparazione dei dati](./home.md). Per informazioni su come utilizzare i set di mappatura all’interno dell’API di preparazione dati, consulta la sezione [Guida per gli sviluppatori di Data Prep](./api/overview.md).

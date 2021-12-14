@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all’API di acquisizione in batch
 description: Questo documento fornisce una guida completa per gli sviluppatori che lavorano con le API di acquisizione batch per Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 5%
@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # Guida per gli sviluppatori per l’acquisizione in batch
 
-Questo documento fornisce una guida completa all&#39;utilizzo di [endpoint API per l&#39;acquisizione batch](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Per una panoramica delle API di acquisizione batch, inclusi prerequisiti e best practice, inizia leggendo la [panoramica dell’API di acquisizione batch](overview.md).
+Questo documento fornisce una guida completa all&#39;utilizzo di [endpoint API per l’acquisizione batch](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Per una panoramica delle API di acquisizione batch, inclusi prerequisiti e best practice, consulta la sezione [panoramica dell’API per l’acquisizione batch](overview.md).
 
-L&#39;appendice di questo documento fornisce informazioni per la [formattazione dei dati da utilizzare per l&#39;acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
+L&#39;appendice di questo documento fornisce informazioni per [formattazione dei dati da utilizzare per l’acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell’ [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’acquisizione dei dati fornisce un’API RESTful tramite la quale puoi eseguire operazioni CRUD di base sui tipi di oggetto supportati.
+Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). L’acquisizione dei dati fornisce un’API RESTful tramite la quale puoi eseguire operazioni CRUD di base sui tipi di oggetto supportati.
 
-Prima di continuare, controlla la [panoramica dell&#39;API di acquisizione batch](overview.md) e la [guida introduttiva](getting-started.md).
+Prima di continuare, controlla la [panoramica dell’API per l’acquisizione batch](overview.md) e [guida introduttiva](getting-started.md).
 
 ## Inserire file JSON
 
@@ -35,7 +35,7 @@ Innanzitutto, devi creare un batch, con JSON come formato di input. Quando crei 
 
 >[!NOTE]
 >
->Gli esempi seguenti sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il flag `isMultiLineJson` . Per ulteriori informazioni, consulta la [guida alla risoluzione dei problemi di inserimento batch](./troubleshooting.md).
+>Gli esempi seguenti sono per JSON a riga singola. Per acquisire JSON con più righe, l’ `isMultiLineJson` Sarà necessario impostare il flag . Per ulteriori informazioni, leggere il [guida alla risoluzione dei problemi di inserimento batch](./troubleshooting.md).
 
 **Formato API**
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -97,7 +97,7 @@ Dopo aver creato un batch, puoi utilizzare l’ID batch dalla risposta di creazi
 
 >[!NOTE]
 >
->Vedi la sezione dell&#39;appendice per un [esempio di un file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
+>Vedi la sezione dell&#39;appendice per un [esempio di file di dati JSON formattati correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -122,7 +122,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Caricare file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare il `batchId` da prima a caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -257,7 +257,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### File di grandi dimensioni completi
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare il `batchId` da prima a caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Inserire file CSV
 
-Per acquisire file CSV, dovrai creare una classe, uno schema e un set di dati che supporti CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, segui le istruzioni fornite nell&#39; [tutorial per la creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
+Per acquisire file CSV, dovrai creare una classe, uno schema e un set di dati che supporti CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, segui le istruzioni fornite in [esercitazione sulla creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Caricare file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare il `batchId` da prima a caricare i file nel batch. Puoi caricare più file nel batch.
 
 >[!NOTE]
 >
->Vedi la sezione dell&#39;appendice per un [esempio di un file di dati CSV formattato correttamente](#data-transformation-for-batch-ingestion).
+>Vedi la sezione dell&#39;appendice per un [esempio di file di dati CSV formattati correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -646,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminare un batch {#delete-a-batch}
 
-È possibile eliminare un batch eseguendo la seguente richiesta POST con il parametro di query `action=REVERT` all’ID del batch da eliminare. Il batch è contrassegnato come &quot;inattivo&quot;, rendendolo idoneo per la raccolta degli oggetti inattivi. Il batch verrà raccolto in modo asincrono, in cui verrà contrassegnato come &quot;eliminato&quot;.
+È possibile eliminare un batch eseguendo la seguente richiesta POST con il `action=REVERT` parametro query all&#39;ID del batch da eliminare. Il batch è contrassegnato come &quot;inattivo&quot;, rendendolo idoneo per la raccolta degli oggetti inattivi. Il batch verrà raccolto in modo asincrono, in cui verrà contrassegnato come &quot;eliminato&quot;.
 
 **Formato API**
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ A volte può essere necessario aggiornare i dati nell’archivio profili della t
 
 Per applicare la patch a un batch è necessario quanto segue:
 
-- **Un set di dati abilitato per gli aggiornamenti di profili e attributi.** Questa operazione viene eseguita tramite i tag del set di dati e richiede l’aggiunta di un  `isUpsert:true` tag specifico all’ `unifiedProfile` array. Per informazioni dettagliate su come creare un set di dati o configurarne uno esistente per l’aggiornamento, segui l’esercitazione [abilitazione di un set di dati per gli aggiornamenti del profilo](../../catalog/datasets/enable-upsert.md).
+- **Un set di dati abilitato per gli aggiornamenti di profili e attributi.** Questo avviene tramite i tag dei set di dati e richiede un `isUpsert:true` aggiungi al `unifiedProfile` array. Per informazioni dettagliate su come creare un set di dati o configurarne uno esistente per l’aggiornamento, segui l’esercitazione per [abilitazione di un set di dati per gli aggiornamenti di profilo](../../catalog/datasets/enable-upsert.md).
 - **Un file Parquet contenente i campi da applicare e i campi di identità per il profilo.** Il formato dei dati per l&#39;applicazione di patch a un batch è simile al normale processo di inserimento batch. L’input richiesto è un file Parquet e, oltre ai campi da aggiornare, i dati caricati devono contenere i campi di identità per poter corrispondere ai dati nell’archivio profili.
 
-Una volta abilitato un set di dati per Profilo e aggiornamento e un file Parquet contenente i campi che si desidera applicare alla patch e i campi di identità necessari, è possibile seguire i passaggi per [acquisizione di file Parquet](#ingest-parquet-files) al fine di completare la patch tramite l’acquisizione batch.
+Una volta che hai abilitato un set di dati per Profilo e aggiornamento e un file Parquet contenente i campi che desideri applicare la patch e i campi di identità necessari, puoi seguire i passaggi per [acquisizione di file di parquet](#ingest-parquet-files) per completare la patch tramite l’acquisizione batch.
 
 ## Riproduci un batch
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Caricare file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare il `batchId` da prima a caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -868,7 +868,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,9 +919,9 @@ La sezione seguente contiene informazioni aggiuntive per l’acquisizione di dat
 
 ### Trasformazione dei dati per l’acquisizione batch
 
-Per acquisire un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati a cui si sta caricando.
+Per acquisire un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve rispettare [Experience Data Model (XDM)](../../xdm/home.md) schema associato al set di dati in fase di caricamento.
 
-Le informazioni su come mappare un file CSV per conformarsi a uno schema XDM si trovano nel documento [trasformazioni di esempio](../../etl/transformations.md), insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
+Le informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili in [trasformazioni campione](../../etl/transformations.md) insieme a un esempio di file di dati JSON formattati correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

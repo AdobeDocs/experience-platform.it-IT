@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a un account Hubs di Azure Event utilizzando l’API del servizio di flusso.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 2%
@@ -149,7 +149,7 @@ curl -X POST \
 | `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione sorgente. |
 | `description` | Valore facoltativo che è possibile fornire per includere ulteriori informazioni sulla connessione sorgente. |
 | `baseConnectionId` | L&#39;ID di connessione del [!DNL Event Hubs] origine generata nel passaggio precedente. |
-| `connectionSpec.id` | ID della specifica di connessione fissa per [!DNL Event Hubs]. Questo ID è : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | ID della specifica di connessione fissa per [!DNL Event Hubs]. Questo ID è: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 | `data.format` | Il formato del [!DNL Event Hubs] dati da acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
 | `params.eventHubName` | Nome del [!DNL Event Hubs] sorgente. |
 | `params.dataType` | Questo parametro definisce il tipo di dati da acquisire. I tipi di dati supportati includono: `raw` e `xdm`. |

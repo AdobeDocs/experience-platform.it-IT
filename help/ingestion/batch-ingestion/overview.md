@@ -5,7 +5,7 @@ title: Panoramica API di acquisizione in batch
 topic-legacy: overview
 description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 6%
@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # Panoramica API per l’acquisizione in batch
 
-L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere dati di profilo provenienti da un file flat (ad esempio un file Parquet) o dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
+L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere dati di profilo provenienti da un file flat (ad esempio un file Parquet) o dati conformi a uno schema noto nel [!DNL Experience Data Model] (XDM).
 
-Il [Riferimento API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fornisce informazioni aggiuntive su queste chiamate API.
+La [Riferimento API per l’acquisizione dei dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fornisce informazioni aggiuntive su queste chiamate API.
 
 Il diagramma seguente illustra il processo di acquisizione batch:
 
@@ -24,7 +24,7 @@ Il diagramma seguente illustra il processo di acquisizione batch:
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell’ [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
+Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ### [!DNL Data Ingestion] prerequisiti
 
@@ -49,15 +49,15 @@ L’inserimento dei dati in batch presenta alcuni vincoli:
 
 >[!NOTE]
 >
->Per caricare un file di dimensioni superiori a 512 MB, è necessario suddividerlo in blocchi più piccoli. Le istruzioni per caricare un file di grandi dimensioni si trovano nella sezione [caricamento di file di grandi dimensioni del documento](#large-file-upload---create-file).
+>Per caricare un file di dimensioni superiori a 512 MB, è necessario suddividerlo in blocchi più piccoli. Le istruzioni per caricare un file di grandi dimensioni si trovano nella sezione [sezione caricamento file di grandi dimensioni del documento](#large-file-upload---create-file).
 
 ### Tipi
 
-Durante l’acquisizione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM su formati diversi, consulta la [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md).
+Durante l’acquisizione dei dati, è importante comprendere come [!DNL Experience Data Model] Gli schemi (XDM) funzionano. Per ulteriori informazioni sulla mappatura dei tipi di campo XDM su formati diversi, consulta la sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md).
 
-È possibile acquisire i dati in modo flessibile: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. Se non è in grado di farlo, il batch non verrà completato con un valore `TypeCompatibilityException`.
+È possibile acquisire i dati in modo flessibile: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un tipo `date` o `date-time`. Di conseguenza, questi valori sono espressi utilizzando [ISO 8061 stringhe formattate](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Tempo formattato in millisecondi (15312639 59000) e vengono convertiti al momento dell’acquisizione al tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un `date` o `date-time` digitare. Di conseguenza, questi valori vengono espressi utilizzando [Stringhe formattate ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tempo Unix formattato in millisecondi (1531263959000) e convertito al momento dell’acquisizione nel tipo XDM di destinazione.
 
 La tabella seguente mostra le conversioni supportate durante l’acquisizione dei dati.
 
@@ -80,7 +80,7 @@ La tabella seguente mostra le conversioni supportate durante l’acquisizione de
 
 ## Mediante l’API
 
-L’ API [!DNL Data Ingestion] ti consente di acquisire dati come batch (un’unità di dati costituita da uno o più file da acquisire come singola unità) in [!DNL Experience Platform] in tre passaggi fondamentali:
+La [!DNL Data Ingestion] L’API ti consente di acquisire i dati come batch (un’unità di dati costituita da uno o più file da acquisire come una singola unità) in [!DNL Experience Platform] in tre fasi di base:
 
 1. Crea un nuovo batch.
 2. Carica i file in un set di dati specifico che corrisponde allo schema XDM dei dati.
@@ -102,7 +102,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{ 
           "datasetId": "{DATASET_ID}" 
       }'
@@ -147,11 +147,11 @@ Puoi caricare i file utilizzando l’API di caricamento file di piccole dimensio
 
 >[!NOTE]
 >
->L’acquisizione in batch può essere utilizzata per aggiornare gradualmente i dati nell’archivio profili. Per ulteriori informazioni, consulta la sezione sull’ [aggiornamento di un batch](#patch-a-batch) nella [guida per gli sviluppatori di inserimento batch](api-overview.md).
+>L’acquisizione in batch può essere utilizzata per aggiornare gradualmente i dati nell’archivio profili. Per ulteriori informazioni, consulta la sezione su [aggiornamento di un batch](#patch-a-batch) in [guida per gli sviluppatori di batch ingestion](api-overview.md).
 
 >[!INFO]
 >
->Gli esempi seguenti utilizzano il formato file [Apache Parquet](https://parquet.apache.org/documentation/latest/) . Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori per l’acquisizione batch](api-overview.md).
+>Gli esempi seguenti utilizzano il [Parquet Apache](https://parquet.apache.org/documentation/latest/) formato di file. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](api-overview.md).
 
 ### Caricamento di file di piccole dimensioni
 
@@ -175,7 +175,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
@@ -258,7 +258,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Completamento batch del segnale
 
-Dopo che tutti i file sono stati caricati nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci [!DNL Catalog] DataSetFile vengono create per i file completati e associate al batch generato in precedenza. Il batch [!DNL Catalog] viene quindi contrassegnato come riuscito, il che attiva i flussi a valle per acquisire i dati disponibili.
+Dopo che tutti i file sono stati caricati nel batch, il batch può essere segnalato per il completamento. Facendo questo, il [!DNL Catalog] Le voci DataSetFile vengono create per i file completati e associate al batch generato in precedenza. La [!DNL Catalog] batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per acquisire i dati disponibili.
 
 **Richiesta**
 
@@ -275,7 +275,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **Risposta**
@@ -402,20 +402,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | ID dell&#39;utente che ha creato o aggiornato il batch. |
 
-Il campo `"status"` mostra lo stato corrente del batch richiesto. I batch possono avere uno dei seguenti stati:
+La `"status"` Il campo indica lo stato corrente del batch richiesto. I batch possono avere uno dei seguenti stati:
 
 ## Stati di inserimento batch
 
 | Stato | Descrizione |
 | ------ | ----------- |
 | Abbandonato | Il batch non è stato completato nell&#39;intervallo di tempo previsto. |
-| Interrotto | Un&#39;operazione di interruzione è stata chiamata **esplicitamente** (tramite l&#39;API di acquisizione in batch) per il batch specificato. Una volta che il batch è in stato &quot;Caricato&quot;, non può essere interrotto. |
+| Interrotto | Operazione di interruzione **esplicitamente** è stato chiamato (tramite l’API di acquisizione batch) per il batch specificato. Una volta che il batch è in stato &quot;Caricato&quot;, non può essere interrotto. |
 | Attivo | Il batch è stato promosso con successo ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot;. |
 | Eliminato | I dati per il batch sono stati rimossi completamente. |
-| Non riuscito | Stato terminale che risulta da una configurazione errata e/o da dati non validi. I dati per un batch non riuscito **non** vengono visualizzati. Questo stato può essere utilizzato in modo intercambiabile con &quot;Failure&quot; (Errore). |
+| Non riuscito | Stato terminale che risulta da una configurazione errata e/o da dati non validi. I dati per un batch con errore **not** si faccia vivo. Questo stato può essere utilizzato in modo intercambiabile con &quot;Failure&quot; (Errore). |
 | Inattivo | La promozione del batch è stata completata, ma è stata ripristinata o è scaduta. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
-| Caricamento | I dati per questo batch vengono caricati e il batch è attualmente **non** pronto per essere promosso. |
+| Caricamento | I dati per questo batch vengono caricati e il batch è attualmente **not** pronti per essere promossi. |
 | Nuovo | I dati per questo batch sono in fase di elaborazione. Tuttavia, a causa di un errore di sistema o temporaneo, il batch non è riuscito - di conseguenza, questo batch viene riprovato. |
 | Staging | La fase di staging del processo di promozione per un batch è completata e il processo di acquisizione è stato eseguito. |
 | Staging | Elaborazione dei dati per il batch in corso. |

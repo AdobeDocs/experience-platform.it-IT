@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: Scopri come collegare Adobe Experience Platform a YOURSOURCE utilizzando l’API del servizio di flusso.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2300'
 ht-degree: 3%
@@ -54,7 +55,7 @@ POST /connections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di base per *GIOVANE* :
+La richiesta seguente crea una connessione di base per *GIOVANE*:
 
 ```shell
 curl -X POST \
@@ -237,7 +238,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di origine per *GIOVANE* :
+La richiesta seguente crea una connessione di origine per *GIOVANE*:
 
 ```shell
 curl -X POST \
@@ -312,7 +313,7 @@ POST /targetConnections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di destinazione per *GIOVANE* :
+La seguente richiesta crea una connessione di destinazione per *GIOVANE*:
 
 ```shell
 curl -X POST \

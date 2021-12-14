@@ -3,20 +3,20 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;diagramma di sistema;diagramma
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 4%
 
 ---
 
-# Utilizzo di [!DNL Adobe Target] con [!DNL Platform Web SDK]
+# Utilizzo [!DNL Adobe Target] con [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] può fornire ed eseguire il rendering di esperienze personalizzate gestite in  [!DNL Adobe Target] sul canale web. Puoi utilizzare un editor WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, il [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le tue attività e esperienze di personalizzazione.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] può fornire ed eseguire il rendering di esperienze personalizzate gestite in [!DNL Adobe Target] al canale web. È possibile utilizzare un editor WYSIWYG, denominato [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (Compositore esperienza visivo), o un’interfaccia non visiva, la [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le tue attività e esperienze di personalizzazione.
 
 >[!IMPORTANT]
 >
->La [documentazione di Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) include argomenti contenenti informazioni specifiche sull’SDK per web di Platform in relazione alle funzioni e alle funzionalità di Target.
+>La [Documentazione di Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) include argomenti contenenti informazioni specifiche sull’SDK per web di Platform in relazione alle funzioni e alle funzionalità di Target.
 
 Le seguenti funzioni sono state testate e sono attualmente supportate in [!DNL Target]:
 
@@ -31,26 +31,26 @@ Le seguenti funzioni sono state testate e sono attualmente supportate in [!DNL T
 
 ## [!DNL Platform Web SDK] diagramma di sistema
 
-Il diagramma seguente ti aiuta a comprendere il flusso di lavoro delle [!DNL Target] e [!DNL Platform Web SDK] decisioni edge.
+Il diagramma seguente illustra il flusso di lavoro di [!DNL Target] e [!DNL Platform Web SDK] decisione edge.
 
 ![Diagramma delle decisioni edge di Adobe Target con Platform Web SDK](./assets/target-platform-web-sdk.png)
 
 | Chiamata | Dettagli |
 | --- | --- |
-| 1 | Il dispositivo carica il [!DNL Platform Web SDK]. Il [!DNL Platform Web SDK] invia una richiesta alla rete perimetrale con dati XDM, l’ID ambiente Datastreams, i parametri passati e l’ID cliente (facoltativo). La pagina (o i contenitori) è prenascosta. |
+| 1 | Il dispositivo carica il [!DNL Platform Web SDK]. La [!DNL Platform Web SDK] invia una richiesta alla rete perimetrale con dati XDM, ID ambiente Datastreams, parametri passati e ID cliente (facoltativo). La pagina (o i contenitori) è prenascosta. |
 | 2 | La rete perimetrale invia la richiesta ai servizi perimetrali per arricchirla con l’ID visitatore, il consenso e altre informazioni contestuali, come la geolocalizzazione e i nomi descrittivi dei dispositivi. |
-| 3 | La rete perimetrale invia la richiesta di personalizzazione arricchita al server Edge [!DNL Target] con l’ID visitatore e i parametri passati. |
-| 4 | Gli script di profilo vengono eseguiti e quindi inseriti nell’archivio dei profili [!DNL Target]. L’archiviazione dei profili recupera i segmenti dalla [!UICONTROL Libreria tipi di pubblico] (ad esempio, i segmenti condivisi da [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
+| 3 | La rete perimetrale invia la richiesta di personalizzazione arricchita al [!DNL Target] con ID visitatore e parametri passati. |
+| 4 | Gli script di profilo vengono eseguiti e quindi inseriti in [!DNL Target] archiviazione dei profili. L’archiviazione dei profili recupera i segmenti dal [!UICONTROL Libreria Pubblico] (ad esempio, segmenti condivisi da [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | In base ai parametri di richiesta URL e ai dati di profilo, [!DNL Target] determina quali attività ed esperienze visualizzare per il visitatore per la visualizzazione della pagina corrente e per le visualizzazioni preacquisite future. [!DNL Target] quindi invia nuovamente questo messaggio alla rete perimetrale. |
 | 6 | a) La rete perimetrale invia nuovamente la risposta di personalizzazione alla pagina, includendo facoltativamente i valori di profilo per ulteriore personalizzazione. Il contenuto personalizzato sulla pagina corrente viene mostrato il più rapidamente possibile senza che venga visualizzato momentaneamente il contenuto predefinito.<br>b) Il contenuto personalizzato per le visualizzazioni mostrate come risultato delle azioni dell’utente in un’applicazione a pagina singola (SPA) viene memorizzato nella cache in modo che possa essere applicato immediatamente senza una chiamata al server aggiuntiva quando vengono attivate le visualizzazioni. <br>c. La rete perimetrale invia l’ID visitatore e altri valori nei cookie, come il consenso, l’ID sessione, l’identità, il controllo dei cookie, la personalizzazione e così via. |
-| 7 | La rete perimetrale inoltra i dettagli [!UICONTROL Analytics for Target] (A4T) (attività, esperienza e metadati di conversione) al server Edge [!DNL Analytics]. |
+| 7 | La rete perimetrale in avanti [!UICONTROL Analytics for Target] (A4T) dettagli (attività, esperienza e metadati di conversione) in [!DNL Analytics] bordo. |
 
-## Abilitazione di [!DNL Adobe Target]
+## Abilitazione [!DNL Adobe Target]
 
 Per abilitare [!DNL Target], procedi come segue:
 
-1. Abilita [!DNL Target] nel tuo [datastream](../../fundamentals/datastreams.md) con il codice client appropriato.
-1. Aggiungi l’opzione `renderDecisions` agli eventi.
+1. Abilita [!DNL Target] nel tuo [datastream](../../fundamentals/datastreams.md) con il codice cliente appropriato.
+1. Aggiungi il `renderDecisions` agli eventi.
 
 Quindi, facoltativamente, puoi anche aggiungere le seguenti opzioni:
 
@@ -59,19 +59,19 @@ Quindi, facoltativamente, puoi anche aggiungere le seguenti opzioni:
 
 ## Utilizzo del Compositore esperienza visivo di Adobe Target
 
-Per utilizzare il Compositore esperienza visivo con un’implementazione [!DNL Platform Web SDK], installa e attiva l’ [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) estensione VEC Helper.
+Per utilizzare il Compositore esperienza visivo con un [!DNL Platform Web SDK] implementazione, installazione e attivazione di [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Estensione VEC Helper.
 
-Per ulteriori informazioni, consulta [Estensione helper del Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) nella *guida Adobe Target*.
+Per ulteriori informazioni, consulta [Estensione helper del Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in *Guida di Adobe Target*.
 
 ## Rendering di contenuti personalizzati
 
-Per ulteriori informazioni, consulta [Rendering del contenuto di personalizzazione](../rendering-personalization-content.md) .
+Vedi [Rendering del contenuto di personalizzazione](../rendering-personalization-content.md) per ulteriori informazioni.
 
 ## Tipi di pubblico in XDM
 
-Quando definisci i tipi di pubblico per le attività [!DNL Target] fornite tramite [!DNL Platform Web SDK], devi definire e utilizzare [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it). Dopo aver definito schemi, classi e gruppi di campi di schema XDM, puoi creare una regola di pubblico [!DNL Target] definita dai dati XDM per il targeting. All&#39;interno di [!DNL Target], i dati XDM vengono visualizzati in [!UICONTROL Audience Builder] come parametro personalizzato. L’XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
+Quando definisci i tipi di pubblico per [!DNL Target] le attività fornite tramite [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it) devono essere definiti e utilizzati. Dopo aver definito schemi, classi e gruppi di campi di schema XDM, è possibile creare un [!DNL Target] regola del pubblico definita dai dati XDM per il targeting. Within [!DNL Target], i dati XDM vengono visualizzati nella sezione [!UICONTROL Audience Builder] come parametro personalizzato. L’XDM viene serializzato utilizzando la notazione del punto (ad esempio, `web.webPageDetails.name`).
 
-Se disponi di attività [!DNL Target] con tipi di pubblico predefiniti che utilizzano parametri personalizzati o un profilo utente, queste non vengono consegnate correttamente tramite l’SDK. Invece di utilizzare parametri personalizzati o il profilo utente, devi invece utilizzare XDM. Tuttavia, esistono campi di targeting del pubblico preconfigurati supportati tramite [!DNL Platform Web SDK] che non richiedono XDM. Questi campi sono disponibili nell’ interfaccia utente [!DNL Target] che non richiede XDM:
+Se [!DNL Target] le attività con tipi di pubblico predefiniti che utilizzano parametri personalizzati o un profilo utente, non vengono consegnati correttamente tramite l’SDK. Invece di utilizzare parametri personalizzati o il profilo utente, devi invece utilizzare XDM. Tuttavia, esistono campi di targeting del pubblico predefiniti supportati tramite il [!DNL Platform Web SDK] che non richiedono XDM. Questi campi sono disponibili nella [!DNL Target] Interfaccia utente che non richiede XDM:
 
 * Libreria di Target
 * Geo
@@ -82,12 +82,11 @@ Se disponi di attività [!DNL Target] con tipi di pubblico predefiniti che utili
 * Origini del traffico
 * Intervallo temporale
 
-Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) nella *guida Adobe Target*.
+Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in *Guida di Adobe Target*.
 
 ### Token di risposta
 
-I token di risposta sono utilizzati principalmente per inviare metadati a terze parti come Google, Facebook, ecc. Vengono restituiti token di risposta
-nel campo `meta` all&#39;interno di `propositions` -> `items`. Ecco un esempio:
+I token di risposta vengono utilizzati principalmente per inviare metadati a terze parti come Google, Facebook, ecc. I token di risposta vengono restituiti nella variabile `meta` campo `propositions` -> `items`. Ecco un esempio:
 
 ```
 {
@@ -110,9 +109,8 @@ nel campo `meta` all&#39;interno di `propositions` -> `items`. Ecco un esempio:
 }
 ```
 
-Per raccogliere i token di risposta, devi abbonarti alla promessa `alloy.sendEvent`, ripeti attraverso `propositions`
-ed estrarre i dettagli da `items` -> `meta`. Ogni `proposition` ha un campo booleano `renderAttempted`
-che indica se è stato eseguito o meno il rendering di `proposition`. Vedi il campione seguente:
+Per raccogliere i token di risposta, devi abbonarti per `alloy.sendEvent` promettere, eseguire iterazioni `propositions`
+ed estrarre i dettagli da `items` -> `meta`. Ogni `proposition` ha `renderAttempted` campo booleano che indica se la `proposition` è stato reso o no. Vedi il campione seguente:
 
 ```
 alloy("sendEvent",
@@ -144,31 +142,31 @@ Quando il rendering automatico è abilitato, la matrice delle proposizioni conti
 
 #### Al caricamento della pagina:
 
-* Compositore basato su moduli `propositions` con il flag `renderAttempted` impostato su `false`
-* Proposizioni basate su Compositore esperienza visivo con il flag `renderAttempted` impostato su `true`
-* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con il flag `renderAttempted` impostato su `true`
+* Basato su Compositore basato su moduli `propositions` con `renderAttempted` flag impostato su `false`
+* Proposizioni basate su Compositore esperienza visivo con `renderAttempted` flag impostato su `true`
+* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con `renderAttempted` flag impostato su `true`
 
 #### On View - change (sulla visualizzazione in cache):
 
-* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con il flag `renderAttempted` impostato su `true`
+* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con `renderAttempted` flag impostato su `true`
 
 Quando il rendering automatico è disabilitato, la matrice delle proposizioni contiene:
 
 #### Al caricamento della pagina:
 
-* Compositore basato su moduli `propositions` con il flag `renderAttempted` impostato su `false`
-* Proposizioni basate su Compositore esperienza visivo con il flag `renderAttempted` impostato su `false`
-* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con il flag `renderAttempted` impostato su `false`
+* Basato su Compositore basato su moduli `propositions` con `renderAttempted` flag impostato su `false`
+* Proposizioni basate su Compositore esperienza visivo con `renderAttempted` flag impostato su `false`
+* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con `renderAttempted` flag impostato su `false`
 
 #### On View - change (sulla visualizzazione in cache):
 
-* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con il flag `renderAttempted` impostato su `false`
+* Proposte basate su Compositore esperienza visivo per una visualizzazione di applicazione a pagina singola con `renderAttempted` flag impostato su `false`
 
 ### Aggiornamento di un singolo profilo
 
-Il [!DNL Platform Web SDK] ti consente di aggiornare il profilo al profilo [!DNL Target] e al [!DNL Platform Web SDK] come evento di esperienza.
+La [!DNL Platform Web SDK] consente di aggiornare il profilo al [!DNL Target] e al [!DNL Platform Web SDK] come evento di esperienza.
 
-Per aggiornare un profilo [!DNL Target], accertati che i dati del profilo vengano passati con quanto segue:
+Per aggiornare un [!DNL Target] , assicurati che i dati del profilo siano trasmessi con quanto segue:
 
 * Sotto `“data {“`
 * Sotto `“__adobe.target”`
@@ -179,9 +177,9 @@ Per aggiornare un profilo [!DNL Target], accertati che i dati del profilo vengan
 | `renderDecisions` | Booleano | Indica al componente di personalizzazione se deve interpretare le azioni DOM |
 | `decisionScopes` | Array `<String>` | Elenco di ambiti per i quali recuperare le decisioni |
 | `xdm` | Oggetto | Dati formattati in XDM che arrivano nell’SDK per web di Platform come evento di esperienza |
-| `data` | Oggetto | Coppie arbitrarie chiave/valore inviate alle soluzioni [!DNL Target] sotto la classe target. |
+| `data` | Oggetto | Coppie chiave/valore arbitrarie inviate a [!DNL Target] soluzioni sotto la classe target. |
 
-Il codice [!DNL Platform Web SDK] tipico che utilizza questo comando è simile al seguente:
+Tipico [!DNL Platform Web SDK] il codice che utilizza questo comando ha il seguente aspetto:
 
 **`sendEvent`con dati di profilo**
 
@@ -211,7 +209,7 @@ alloy("sendEvent", {
 
 ## Richiedi consigli
 
-Nella tabella seguente sono elencati gli attributi [!DNL Recommendations] e se ciascuno di essi è supportato tramite [!DNL Platform Web SDK]:
+Elenco delle tabelle seguenti [!DNL Recommendations] e se ciascuno di essi è supportato tramite il [!DNL Platform Web SDK]:
 
 | Categoria | Attributo | Stato del supporto |
 | --- | --- | --- |
@@ -240,8 +238,8 @@ alloy("sendEvent", {
   data: {
     __adobe: {
       target: {
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }
@@ -250,14 +248,14 @@ alloy("sendEvent", {
 
 ## Eseguire il debug di
 
-mboxTrace e mboxDebug sono stati dichiarati obsoleti. Utilizzare [[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
+mboxTrace e mboxDebug sono stati dichiarati obsoleti. Utilizzo [[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminologia
 
-__Proposizioni:__ in  [!DNL Target], le proposizioni sono correlate all’esperienza selezionata da un’attività.
+__Proposizioni:__ In [!DNL Target], le proposizioni sono correlate all’esperienza selezionata da un’attività .
 
-__Schema:__ lo schema di una decisione è il tipo di offerta in  [!DNL Target].
+__Schema:__ Lo schema di una decisione è il tipo di offerta in [!DNL Target].
 
-__Ambito di applicazione:__ ambito di applicazione della decisione. In [!DNL Target], l&#39;ambito è mBox. L&#39;mBox globale è l&#39;ambito `__view__`.
+__Ambito di applicazione:__ Il campo di applicazione della decisione. In [!DNL Target], l&#39;ambito è mBox. L&#39;mBox globale è il `__view__` ambito di applicazione.
 
-__XDM:__ XDM viene serializzato nella notazione del punto e quindi inserito  [!DNL Target] come parametri mBox.
+__XDM:__ XDM viene serializzato nella notazione del punto e quindi inserito in [!DNL Target] come parametri mBox.

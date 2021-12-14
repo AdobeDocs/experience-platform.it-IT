@@ -5,7 +5,7 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Lunghezza minima dei dati richiesti = finestra di formazione + intervallo di loo
 >
 > La lunghezza minima dei dati richiesti per un&#39;applicazione con configurazioni predefinite è: 2 trimestri (180 giorni) + 56 giorni = 236 giorni.
 
-Esempio :
+Esempio:
 
 - Vuoi attribuire gli eventi di conversione che si sono verificati negli ultimi 90 giorni (3 mesi) e tenere traccia di tutti i punti di contatto che si sono verificati entro 4 settimane prima dell’evento di conversione. La durata dei dati di input dovrebbe estendersi negli ultimi 90 giorni + 28 giorni (4 settimane). La finestra di addestramento è di 90 giorni e l&#39;intervallo di lookback è di 28 giorni per un totale di 118 giorni.
 
@@ -139,7 +139,7 @@ La tabella seguente delinea i campi dello schema nell’output di esempio di pun
 | skuId (String) | True | Unità di conservazione delle scorte (SKU), l&#39;identificativo univoco di un prodotto definito dal fornitore. <br> **Esempio:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Timestamp della conversione. <br> **Esempio:** 2020-06-09T00:01:51.000Z |
 | passThrough (oggetto) | True | Colonne del set di dati Punteggio aggiuntive specificate dall&#39;utente durante la configurazione del modello. |
-| commerce_order_purchaseCity (Stringa) | True | Colonna del set di dati Punteggio aggiuntiva. <br> **Esempio:** città : San Jose |
+| commerce_order_purchaseCity (Stringa) | True | Colonna del set di dati Punteggio aggiuntiva. <br> **Esempio:** città: San Jose |
 | customerProfile (oggetto) | False | Dettagli dell&#39;identità dell&#39;utente utilizzato per generare il modello. |
 | identity (Object) | False | Contiene i dettagli dell&#39;utente utilizzato per creare il modello, ad esempio `id` e `namespace`. |
 | id (String) | True | ID identità dell’utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |

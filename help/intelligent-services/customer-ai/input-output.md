@@ -6,7 +6,7 @@ title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Lunghezza minima dei dati richiesti = popolazione ammissibile + finestra dei ris
 >
 > 30 è il numero minimo di giorni richiesti per la popolazione ammissibile. Se non viene fornito, il valore predefinito è 120 giorni.
 
-Esempi :
+Esempi:
 
 - Desideri prevedere se è probabile che un cliente acquisti un orologio nei prossimi 30 giorni. Desideri inoltre valutare gli utenti che hanno un po&#39; di attività web negli ultimi 60 giorni. In questo caso la lunghezza minima dei dati richiesti = 60 giorni + 30 giorni. La popolazione ammissibile è di 60 giorni e la finestra di risultato è di 30 giorni per un totale di 90 giorni.
 

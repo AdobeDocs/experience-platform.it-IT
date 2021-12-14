@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse necessari per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema e i set di dati Vendite al dettaglio saranno disponibili per te e per i membri della tua organizzazione IMS all’Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -67,11 +67,11 @@ Lo schema e i set di dati Vendite al dettaglio vengono creati automaticamente ut
        kernel_type: Python
    ```
 
-   - `platform_gateway` : Percorso di base per le chiamate API. Non modificare questo valore.
-   - `ims_token` : Le `{ACCESS_TOKEN}` vai qui.
-   - `ingest_data` : Ai fini di questa esercitazione, imposta questo valore come `"True"` per creare gli schemi e i set di dati di vendita al dettaglio. Un valore di `"False"` crea solo gli schemi.
-   - `build_recipe_artifacts` : Ai fini di questa esercitazione, imposta questo valore come `"False"` per impedire che lo script generi un artefatto Ricetta.
-   - `kernel_type` : Tipo di esecuzione dell&#39;artifact Ricetta. Lascia questo valore come `Python` if `build_recipe_artifacts` è impostato come `"False"`in caso contrario, specifica il tipo di esecuzione corretto.
+   - `platform_gateway`: Percorso di base per le chiamate API. Non modificare questo valore.
+   - `ims_token`: Le `{ACCESS_TOKEN}` vai qui.
+   - `ingest_data`: Ai fini di questa esercitazione, imposta questo valore come `"True"` per creare gli schemi e i set di dati di vendita al dettaglio. Un valore di `"False"` crea solo gli schemi.
+   - `build_recipe_artifacts`: Ai fini di questa esercitazione, imposta questo valore come `"False"` per impedire che lo script generi un artefatto Ricetta.
+   - `kernel_type`: Tipo di esecuzione dell&#39;artifact Ricetta. Lascia questo valore come `Python` if `build_recipe_artifacts` è impostato come `"False"`in caso contrario, specifica il tipo di esecuzione corretto.
 
 4. Sotto la `Titles` fornisci le seguenti informazioni in modo appropriato per i dati di esempio Vendite al dettaglio, salva e chiudi il file dopo aver apportato le modifiche. Esempio mostrato di seguito:
 

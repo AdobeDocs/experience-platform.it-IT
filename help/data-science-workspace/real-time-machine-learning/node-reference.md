@@ -5,8 +5,7 @@ title: Riferimento al nodo di apprendimento automatico in tempo reale
 topic-legacy: Nodes reference
 description: Un nodo è l'unità fondamentale di cui si formano i grafici. Ogni nodo esegue un'attività specifica e può essere concatenato utilizzando i collegamenti per formare un grafico che rappresenta una pipeline ML. L'attività eseguita da un nodo rappresenta un'operazione sui dati di input, ad esempio una trasformazione di dati o schemi o un'inferenza di apprendimento automatico. Il nodo restituisce il valore trasformato o dedotto ai nodi successivi.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -25,7 +24,7 @@ La guida seguente illustra le librerie di nodi supportate per il machine learnin
 
 ## Esplorazione dei nodi da utilizzare nella pipeline ML
 
-Copiare il codice seguente in un blocco appunti [!DNL Python] per visualizzare tutti i nodi disponibili per l&#39;uso.
+Copia il seguente codice in un [!DNL Python] per visualizzare tutti i nodi disponibili.
 
 ```python
 from pprint import pprint
@@ -83,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Panda {#pandas}
 
-Il seguente nodo Pandas ti consente di importare qualsiasi metodo `pd.DataFrame` o qualsiasi funzione generale di livello superiore dei panda. Per ulteriori informazioni sui metodi Pandas, consulta la [documentazione sui metodi Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Per ulteriori informazioni sulle funzioni di primo livello, visita la [Guida di riferimento API Pandas per le funzioni generali](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Il seguente nodo Panda consente di importare qualsiasi `pd.DataFrame` o qualsiasi funzione generale di livello superiore dei panda. Per ulteriori informazioni sui metodi Pandas, visita il [Documentazione sui metodi dei panda](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Per ulteriori informazioni sulle funzioni di primo livello, visita il [Guida di riferimento API per i panda per le funzioni generali](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Il nodo seguente utilizza `"import": "map"` per importare il nome del metodo come stringa nei parametri, seguito dall&#39;immissione dei parametri come funzione di mappa. L’esempio seguente lo fa utilizzando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Dopo aver impostato la mappa, puoi impostare `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` in base al fatto che desideri applicare o meno la trasformazione al suo interno. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna deve essere impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di colonna singolo o un elenco di colonne. Specificare le colonne alle quali si desidera applicare la trasformazione. In questo esempio `device` è specificato.
+Il nodo seguente utilizza `"import": "map"` per importare il nome del metodo come stringa nei parametri, quindi inserendo i parametri come funzione mappa. L’esempio seguente lo fa utilizzando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Dopo aver impostato la mappa, puoi scegliere di `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` a seconda che si desideri applicare o meno la trasformazione al suo interno. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna deve essere impostato per essere aggiunto in una versione successiva. Ultima riga `cols` può essere un nome di colonna singolo o un elenco di colonne. Specificare le colonne alle quali si desidera applicare la trasformazione. In questo esempio `device` è specificato.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -116,7 +115,7 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```
@@ -124,16 +123,16 @@ msg6 = model_train.process(msg5)
 | Valore | Descrizione |
 | --- | --- |
 | caratteristiche | Feature di input nel modello (elenco di stringhe). <br> Ad esempio: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| etichetta | Nome della colonna di destinazione (stringa). |
+| label | Nome della colonna di destinazione (stringa). |
 | modalità | Treno/prova (stringa). |
 | model_path | Percorso del modello di salvataggio locale in formato onnx. |
 | params.model | Percorso di importazione assoluto del modello (stringa), ad esempio: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | I parametri ipertestuali del modello sono indicati nella documentazione [Sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) per ulteriori informazioni. |
+| params.model_params | Iperparametri del modello, vedere [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentazione per ulteriori informazioni. |
 | node_instance.process(data_message_from_previous_node) | Il metodo `process()` prende DataMsg dal nodo precedente e applica la trasformazione. Questo dipende dal nodo corrente utilizzato. |
 
 ### Dividere
 
-Usa il seguente nodo per dividere il dataframe in treno e testare passando `train_size` o `test_size`. Questo restituisce un dataframe con un multi-indice. È possibile accedere ai dataframe del treno e del test utilizzando il seguente esempio, `msg5.data.xs(“train”)`.
+Usa il seguente nodo per dividere il dataframe in treno e test passando `train_size` o `test_size`. Questo restituisce un dataframe con un multi-indice. È possibile accedere ai fotogrammi dati del treno e del test utilizzando l&#39;esempio seguente: `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## Passaggi successivi
 
-Il passaggio successivo consiste nel creare nodi da utilizzare per il punteggio di un modello di apprendimento automatico in tempo reale. Per ulteriori informazioni, visita la [Guida utente del notebook Real-time Machine Learning](./rtml-authoring-notebook.md).
+Il passaggio successivo consiste nel creare nodi da utilizzare per il punteggio di un modello di apprendimento automatico in tempo reale. Per ulteriori informazioni, visita il [Guida utente del notebook Real-time Machine Learning](./rtml-authoring-notebook.md).

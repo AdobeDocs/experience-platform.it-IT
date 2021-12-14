@@ -5,11 +5,10 @@ title: Endpoint API per i modelli di query
 topic-legacy: query templates
 description: La documentazione seguente illustra le varie chiamate API che è possibile effettuare utilizzando i modelli di query per l’API del servizio query.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '674'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -17,11 +16,11 @@ ht-degree: 3%
 
 ## Chiamate API di esempio
 
-Ora che conosci le intestazioni da utilizzare, sei pronto per iniziare a effettuare chiamate all’ API [!DNL Query Service]. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare tramite l’ API [!DNL Query Service] . Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettuare chiamate a [!DNL Query Service] API. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupera un elenco di modelli di query
 
-Puoi recuperare un elenco di tutti i modelli di query per la tua organizzazione IMS effettuando una richiesta di GET all’ endpoint `/query-templates` .
+Puoi recuperare un elenco di tutti i modelli di query per la tua organizzazione IMS effettuando una richiesta di GET al `/query-templates` punto finale.
 
 **Formato API**
 
@@ -32,7 +31,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
+| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito. |
 
 **Parametri query**
 
@@ -40,10 +39,10 @@ Di seguito è riportato un elenco dei parametri di query disponibili per elencar
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati per creati in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base all&#39;ordine decrescente creato. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **devono essere in sequenza HTML.** Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L’unico operatore supportato è `==` (uguale a). Ad esempio, `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
+| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L’unico operatore supportato è `==` (uguale a). Ad esempio: `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
 
 **Richiesta**
 
@@ -83,7 +82,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -108,11 +107,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
 
 ### Creare un modello di query
 
-Puoi creare un modello di query effettuando una richiesta POST all’endpoint `/query-templates`.
+È possibile creare un modello di query effettuando una richiesta POST al `/query-templates` punto finale.
 
 **Formato API**
 
@@ -163,7 +162,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -171,11 +170,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
 
 ### Recupera un modello di query specificato
 
-Puoi recuperare un modello di query specifico effettuando una richiesta di GET all’ `/query-templates/{TEMPLATE_ID}` endpoint e fornendo l’ID del modello di query nel percorso della richiesta.
+È possibile recuperare un modello di query specifico effettuando una richiesta di GET al `/query-templates/{TEMPLATE_ID}` e fornisce l’ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -185,7 +184,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | Il valore `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 
@@ -221,7 +220,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -229,11 +228,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
 
 ### Aggiornare un modello di query specificato
 
-È possibile aggiornare un modello di query specifico effettuando una richiesta PUT all&#39;endpoint `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+È possibile aggiornare un modello di query specifico effettuando una richiesta PUT al `/query-templates/{TEMPLATE_ID}` e fornisce l’ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -243,13 +242,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Il valore `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 
 >[!NOTE]
 >
->La richiesta PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrive** il contenuto corrente di tale modello di query.
+>La richiesta di PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrivere** il contenuto corrente di tale modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -293,7 +292,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con le informazi
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -301,11 +300,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con le informazi
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
 
 ### Elimina un modello di query specificato
 
-È possibile eliminare un modello di query specifico effettuando una richiesta DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
+È possibile eliminare un modello di query specifico effettuando una richiesta di DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -315,7 +314,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Il valore `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 
