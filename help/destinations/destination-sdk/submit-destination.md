@@ -1,9 +1,10 @@
 ---
 description: Questa pagina fornisce tutte le informazioni necessarie per la revisione di una destinazione creata con Destination SDK.
 title: Invia per la revisione di una destinazione creata in Destination SDK
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ Fornisci l&#39;ID della richiesta di pubblicazione per la tua destinazione. Per 
 ## Documentazione di destinazione PR (richiesta pull) per le integrazioni prodotte
 
 Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
-
-Le PR di esempio dei partner di integrazione esistenti sono:
-* [Documentazione sulla destinazione Yahoo PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Documentazione sulla destinazione dell&#39;aereo PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## Logo per la destinazione
 

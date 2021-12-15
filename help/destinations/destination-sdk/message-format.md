@@ -2,7 +2,7 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform alle destinazioni.
 title: Formato del messaggio
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 2%
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 Per comprendere il formato del messaggio e la configurazione del profilo e il processo di trasformazione sul lato Adobe, ti preghiamo di acquisire familiarità con i seguenti concetti di Experience Platform:
 
-* **Experience Data Model (XDM)**. [Panoramica ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it) di XDM e   [come creare uno schema XDM in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **Experience Data Model (XDM)**. [Panoramica di XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it) e  [Come creare uno schema XDM in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Classe**. [Creare e modificare le classi nell’interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **IdentityMap**. La mappa identità rappresenta una mappa di tutte le identità dell’utente finale in Adobe Experience Platform. Fai riferimento a `xdm:identityMap` nel [dizionario dei campi XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-* **SegmentMembership**. L&#39;attributo [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM indica di quali segmenti fa parte un profilo. Per i tre valori diversi nel campo `status`, leggere la documentazione sul gruppo di campi [Dettagli appartenenza al segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+* **IdentityMap**. La mappa identità rappresenta una mappa di tutte le identità dell’utente finale in Adobe Experience Platform. Fai riferimento a `xdm:identityMap` in [Dizionario dei campi XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+* **SegmentMembership**. La [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) L’attributo XDM indica di quali segmenti fa parte un profilo. Per i tre valori diversi nel `status` , leggi la documentazione su [Gruppo di campi Dettagli appartenenza segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 ## Panoramica {#overview}
 
-Utilizza il contenuto di questa pagina insieme alle altre opzioni di configurazione [per le destinazioni partner](./configuration-options.md). Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform alle destinazioni. L’altra pagina contiene informazioni specifiche sulla connessione e l’autenticazione alla destinazione.
+Utilizza il contenuto di questa pagina insieme al resto del [opzioni di configurazione per le destinazioni dei partner](./configuration-options.md). Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform alle destinazioni. L’altra pagina contiene informazioni specifiche sulla connessione e l’autenticazione alla destinazione.
 
 Adobe Experience Platform esporta i dati in un numero significativo di destinazioni, in vari formati di dati. Alcuni esempi di tipi di destinazione sono piattaforme pubblicitarie (Google), social network (Facebook) e posizioni di archiviazione cloud (Amazon S3, Azure Event Hubs).
 
 Ad Experience Platform, puoi regolare il formato del messaggio dei profili esportati in modo che corrisponda al formato previsto sul tuo lato. Per comprendere questa personalizzazione, sono importanti i seguenti concetti:
 * Lo schema XDM di origine (1) e di destinazione (2) in Adobe Experience Platform
 * il formato previsto del messaggio sul lato partner (3) e
-* Il livello di trasformazione tra lo schema XDM e il formato del messaggio previsto, che è possibile definire creando un [modello di trasformazione del messaggio](./message-format.md#using-templating).
+* Il livello di trasformazione tra lo schema XDM e il formato del messaggio previsto, che è possibile definire creando un [modello di trasformazione dei messaggi](./message-format.md#using-templating).
 
 ![Schema di trasformazione JSON](./assets/transformations-3-steps.png)
 
@@ -41,11 +41,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Schema XDM di origine (1)**: Questo elemento fa riferimento allo schema utilizzato ad Experience Platform dai clienti. Ad Experience Platform, nel [passaggio di mappatura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) del flusso di lavoro di attivazione della destinazione, i clienti mappano i campi dallo schema di origine allo schema di destinazione della tua destinazione (2).
+**Schema XDM di origine (1)**: Questo elemento fa riferimento allo schema utilizzato ad Experience Platform dai clienti. Ad Experience Platform, nella [fase di mappatura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) del flusso di lavoro di destinazione di attivazione, i clienti mappano i campi dallo schema di origine allo schema di destinazione della tua destinazione (2).
 
-**Schema XDM di Target (2)**: In base allo schema JSON standard (3) del formato previsto della destinazione, puoi definire attributi e identità di profilo nello schema XDM di destinazione. Puoi eseguire questa operazione nella configurazione delle destinazioni, negli oggetti [schemaConfig](./destination-configuration.md#schema-configuration) e [identityName](./destination-configuration.md#identities-and-attributes) .
+**Schema XDM di Target (2)**: In base allo schema JSON standard (3) del formato previsto della destinazione, puoi definire attributi e identità di profilo nello schema XDM di destinazione. Puoi eseguire questa operazione nella configurazione delle destinazioni, nel [schemaConfig](./destination-configuration.md#schema-configuration) e [identityNamespaces](./destination-configuration.md#identities-and-attributes) oggetti.
 
-**Schema JSON standard degli attributi del profilo di destinazione (3)**: Questo elemento rappresenta uno  [schema ](https://json-schema.org/learn/miscellaneous-examples.html) JSON di tutti gli attributi di profilo supportati dalla piattaforma e dei relativi tipi (ad esempio: oggetto, stringa, array). I campi di esempio supportati dalla destinazione possono essere `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e così via. È necessario un [modello di trasformazione del messaggio](./message-format.md#using-templating) per adattare i dati esportati dall&#39;Experience Platform al formato previsto.
+**Schema JSON standard degli attributi del profilo di destinazione (3)**: Questo elemento rappresenta un [Schema JSON](https://json-schema.org/learn/miscellaneous-examples.html) di tutti gli attributi di profilo supportati dalla piattaforma e dei relativi tipi (ad esempio: oggetto, stringa, array). Campi di esempio supportati dalla destinazione `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`e così via. Hai bisogno di un [modello di trasformazione dei messaggi](./message-format.md#using-templating) per adattare i dati esportati da Experience Platform al formato previsto.
 
 In base alle trasformazioni dello schema descritte qui sopra, viene illustrato come cambia una configurazione del profilo tra lo schema XDM di origine e uno schema di esempio sul lato partner:
 
@@ -60,7 +60,7 @@ Per illustrare il processo di trasformazione del profilo, l’esempio seguente u
 
 >[!NOTE]
 >
->Il cliente mappa gli attributi dallo schema XDM di origine allo schema XDM partner nell&#39;interfaccia utente Adobe Experience Platform, nel passaggio **Mapping** del [attiva flusso di lavoro di destinazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+>Il cliente mappa gli attributi dallo schema XDM di origine allo schema XDM del partner nell’interfaccia utente di Adobe Experience Platform, nel **Mappatura** fase [attiva flusso di lavoro di destinazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 Supponiamo che la piattaforma possa ricevere un formato di messaggio come:
 
@@ -89,13 +89,13 @@ Considerando il formato del messaggio, le trasformazioni corrispondenti sono le 
 
 ## Utilizzo di un linguaggio di template per le trasformazioni di identità, attributi e appartenenza ai segmenti {#using-templating}
 
-Adobe utilizza un linguaggio di template simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla destinazione.
+Adobe utilizza un linguaggio modello simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla destinazione.
 
 Questa sezione fornisce diversi esempi di come vengono effettuate queste trasformazioni - dallo schema XDM di input, attraverso il modello e l’output nei formati di payload accettati dalla destinazione. Gli esempi seguenti sono presentati da una complessità crescente, come segue:
 
-1. Semplici esempi di trasformazione. Scopri come la modellazione funziona con semplici trasformazioni per i campi [Attributi del profilo](./message-format.md#attributes), [Iscrizione al segmento](./message-format.md#segment-membership) e [Identità](./message-format.md#identities).
-2. Esempi di modelli più complessi che combinano i campi di cui sopra: [Crea un modello che invia segmenti e identità](./message-format.md#segments-and-identities) e [Crea un modello che invia segmenti, identità e attributi di profilo](./message-format.md#segments-identities-attributes).
-3. Modelli che includono la chiave di aggregazione. Quando utilizzi [un&#39;aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali l&#39;ID segmento, lo stato del segmento o i namespace di identità.
+1. Semplici esempi di trasformazione. Scopri come la templazione funziona con semplici trasformazioni per [Attributi del profilo](./message-format.md#attributes), [Iscrizione al segmento](./message-format.md#segment-membership)e [Identità](./message-format.md#identities) campi.
+2. Esempi di modelli più complessi che combinano i campi di cui sopra: [Creare un modello che invia segmenti e identità](./message-format.md#segments-and-identities) e [Creare un modello che invia segmenti, identità e attributi di profilo](./message-format.md#segments-identities-attributes).
+3. Modelli che includono la chiave di aggregazione. Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri come ID segmento, stato del segmento o spazi dei nomi delle identità.
 
 ### Attributi del profilo {#attributes}
 
@@ -103,7 +103,7 @@ Per trasformare gli attributi di profilo esportati nella destinazione, consulta 
 
 >[!IMPORTANT]
 >
->Per un elenco di tutti gli attributi di profilo disponibili in Adobe Experience Platform, consulta il [dizionario di campo XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
+>Per un elenco di tutti gli attributi di profilo disponibili in Adobe Experience Platform, consulta la sezione [Dizionario dei campi XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
 **Ingresso**
@@ -140,7 +140,7 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -182,8 +182,8 @@ Profilo 2:
 
 ### Iscrizione al segmento {#segment-membership}
 
-L&#39;attributo [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM indica di quali segmenti fa parte un profilo.
-Per i tre valori diversi nel campo `status`, leggere la documentazione sul gruppo di campi [Dettagli appartenenza al segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
+La [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) L’attributo XDM indica di quali segmenti fa parte un profilo.
+Per i tre valori diversi nel `status` , leggi la documentazione su [Gruppo di campi Dettagli appartenenza segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
 **Ingresso**
 
@@ -238,7 +238,7 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -297,7 +297,7 @@ Profilo 2:
 
 ### Identità {#identities}
 
-Per informazioni sulle identità in Experience Platform, consulta la [Panoramica spazio dei nomi identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it).
+Per informazioni sulle identità in Experience Platform, consulta la sezione [Panoramica dello spazio dei nomi identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it).
 
 **Ingresso**
 
@@ -342,7 +342,7 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -480,7 +480,7 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -528,7 +528,7 @@ Profilo 2:
 
 **Risultato**
 
-Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
+La `json` di seguito sono riportati i dati esportati da Adobe Experience Platform.
 
 ```json
 {
@@ -662,7 +662,7 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -720,7 +720,7 @@ Profilo 2:
 
 **Risultato**
 
-Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
+La `json` di seguito sono riportati i dati esportati da Adobe Experience Platform.
 
 ```json
 {
@@ -778,19 +778,19 @@ Il `json` seguente rappresenta i dati esportati da Adobe Experience Platform.
 
 ### Includi chiave di aggregazione nel modello per accedere ai profili esportati raggruppati per vari criteri {#template-aggregation-key}
 
-Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o spazi dei nomi di identità.
+Quando utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o namespace di identità.
 
 Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione di cui sopra, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato fuori da Experience Platform in modo che corrisponda ai limiti di formato e tasso previsti dalla destinazione.
 
 #### Utilizza la chiave di aggregazione ID segmento nel modello {#aggregation-key-segment-id}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione vengono raggruppati per ID segmento. Vedi sotto come puoi accedere all’ID del segmento nel modello.
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e impostare `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione sono raggruppati per ID segmento. Vedi sotto come puoi accedere all’ID del segmento nel modello.
 
 **Ingresso**
 
 Considera i quattro profili seguenti, dove:
-* i primi due fanno parte del segmento con l’ ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* il terzo profilo fa parte del segmento con l’ ID del segmento `8f812592-3f06-416b-bd50-e7831848a31a`
+* i primi due fanno parte del segmento con l’ID del segmento `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* il terzo profilo fa parte del segmento con l’ID del segmento `8f812592-3f06-416b-bd50-e7831848a31a`
 * il quarto profilo fa parte di entrambi i segmenti di cui sopra.
 
 Profilo 1:
@@ -881,9 +881,9 @@ Profilo 4:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Di seguito viene illustrato come `audienceId` viene utilizzato nel modello per accedere agli ID del segmento. In questo esempio si presuppone che si utilizzi `audienceId` per l’appartenenza al segmento nella tassonomia di destinazione. È invece possibile utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
+Di seguito viene illustrato come `audienceId` viene utilizzato nel modello per accedere agli ID del segmento. Questo esempio presuppone che l&#39;utente utilizzi `audienceId` per l’appartenenza al segmento nella tassonomia di destinazione. È invece possibile utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
 
 ```python
 {
@@ -935,7 +935,7 @@ Quando vengono esportati nella destinazione, i profili vengono suddivisi in due 
 
 #### Utilizza la chiave di aggregazione degli alias dei segmenti nel modello {#aggregation-key-segment-alias}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` su true, puoi anche accedere all’alias del segmento nel modello.
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e impostare `includeSegmentId` su true, puoi anche accedere all’alias del segmento nel modello.
 
 Aggiungi la riga sottostante al modello per accedere ai profili esportati raggruppati per alias del segmento.
 
@@ -945,7 +945,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Utilizza la chiave di aggregazione dello stato del segmento nel modello {#aggregation-key-segment-status}
 
-Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e imposti `includeSegmentId` e `includeSegmentStatus` su true, puoi accedere allo stato del segmento nel modello. In questo modo, puoi raggruppare i profili nei messaggi HTTP esportati nella tua destinazione in base al fatto che i profili debbano essere aggiunti o rimossi dai segmenti.
+Se utilizzi [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) e impostare `includeSegmentId` e `includeSegmentStatus` su true, puoi accedere allo stato del segmento nel modello. In questo modo, puoi raggruppare i profili nei messaggi HTTP esportati nella tua destinazione in base al fatto che i profili debbano essere aggiunti o rimossi dai segmenti.
 
 I valori possibili sono:
 
@@ -961,7 +961,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Utilizza la chiave di aggregazione dello spazio dei nomi identità nel modello {#aggregation-key-identity}
 
-Di seguito è riportato un esempio in cui l’ [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione è impostata per aggregare i profili esportati per namespace di identità, nei moduli `"namespaces": ["email", "phone"]` e `"namespaces": ["GAID", "IDFA"]`. Per ulteriori informazioni su questo raggruppamento, fai riferimento al parametro `groups` nel [riferimento API per la configurazione della destinazione](./destination-configuration-api.md) .
+Di seguito è riportato un esempio in cui il [aggregazione configurabile](./destination-configuration.md#configurable-aggregation) nella configurazione di destinazione viene impostato per aggregare i profili esportati in base ai namespace di identità nel modulo `"namespaces": ["email", "phone"]` e `"namespaces": ["GAID", "IDFA"]`. Fai riferimento a `groups` nel [riferimento API per la configurazione della destinazione](./destination-configuration-api.md) per ulteriori informazioni su questo raggruppamento.
 
 **Ingresso**
 
@@ -1033,9 +1033,9 @@ Profilo 2:
 
 >[!IMPORTANT]
 >
->Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nella [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedi il capitolo 9 in [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Per tutti i modelli utilizzati, è necessario evitare i caratteri non validi, ad esempio virgolette doppie `""` prima di inserire il modello nel [configurazione del server di destinazione](./server-and-template-configuration.md#template-specs). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nella [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Nota che `input.aggregationKey.identityNamespaces` viene utilizzato nel modello seguente
+Tieni presente che `input.aggregationKey.identityNamespaces` viene utilizzato nel modello seguente
 
 ```python
 {
@@ -1117,17 +1117,17 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Riferimento: Contesto e funzioni utilizzati nei modelli di trasformazione {#reference}
 
-Il contesto fornito al modello contiene `input` (i profili/dati esportati in questa chiamata) e `destination` (i dati sulla destinazione a cui l’Adobe invia i dati, validi per tutti i profili).
+Il contesto fornito al modello contiene `input`  (i profili/dati esportati in questa chiamata) e `destination` (dati sulla destinazione a cui l’Adobe invia i dati, validi per tutti i profili).
 
 La tabella seguente fornisce una descrizione delle funzioni degli esempi precedenti.
 
 | Funzione | Descrizione |
 |---------|----------|
-| `input.profile` | Il profilo, rappresentato come [JsonNode](http://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM partner menzionato più avanti in questa pagina. |
+| `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM partner menzionato più avanti in questa pagina. |
 | `destination.segmentAliases` | Mappa dagli ID segmento nello spazio dei nomi Adobe Experience Platform agli alias dei segmenti nel sistema del partner. |
 | `destination.segmentNames` | Esegui la mappatura dai nomi dei segmenti nello spazio dei nomi Adobe Experience Platform ai nomi dei segmenti nel sistema del partner. |
-| `addedSegments(listOfSegments)` | Restituisce solo i segmenti che hanno lo stato `realized` o `existing`. |
-| `removedSegments(listOfSegments)` | Restituisce solo i segmenti che hanno lo stato `exited`. |
+| `addedSegments(listOfSegments)` | Restituisce solo i segmenti con stato `realized` o `existing`. |
+| `removedSegments(listOfSegments)` | Restituisce solo i segmenti con stato `exited`. |
 
 <!--
 

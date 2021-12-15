@@ -2,10 +2,10 @@
 description: Questa pagina descrive come eseguire l'autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione di Adobe I/O, un nome sandbox e l’autorizzazione per il controllo degli accessi per l’authoring di destinazione.
 title: Guida introduttiva a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 8356c63688fc57ece2f4e549a9ed0d1cc50f04db
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 2%
+source-wordcount: '597'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ Questa guida utilizza concetti specifici di Platform, come l’organizzazione IM
 
 ## Ottieni le credenziali di autenticazione richieste {#obtain-authentication-credentials}
 
-Destination SDK utilizza [Adobe I/O](https://www.adobe.io/) gateway per l&#39;autenticazione. Per effettuare chiamate API agli endpoint Destination SDK, devi fornire alcune intestazioni nelle chiamate API. Collabora con il team Adobe Exchange per configurare l&#39;autenticazione per l&#39;utente nel [Console per sviluppatori di Adobe](http://console.adobe.io/).
+Destination SDK utilizza [Adobe I/O](https://www.adobe.io/) gateway per l&#39;autenticazione. Per effettuare chiamate API agli endpoint Destination SDK, devi fornire alcune intestazioni nelle chiamate API. Collabora con il team Adobe Exchange per configurare l&#39;autenticazione per l&#39;utente nel [Console per sviluppatori di Adobe](https://developer.adobe.com/console).
 
 Per effettuare correttamente le chiamate agli endpoint API di Destination SDK, segui la [Experience Platform di esercitazione sull’autenticazione](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Avvia l&#39;esercitazione da &quot;[Generare una chiave API, un ID organizzazione IMS e un segreto client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; passo. Il team di Adobe Exchange gestirà i passaggi precedenti. Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste nelle chiamate API di Destination SDK, come mostrato di seguito:
 
