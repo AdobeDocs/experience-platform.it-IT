@@ -1,23 +1,24 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
-title: Crea una nuova specifica di connessione utilizzando l’API del servizio di flusso (Beta)
+title: Create a new connection specification using the Flow Service API (Beta)
 topic-legacy: tutorial
-description: Il seguente documento fornisce passaggi su come creare una specifica di connessione utilizzando l’API del servizio di flusso e integrare una nuova origine tramite l’SDK di Origini.
+description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
+source-git-commit: baa5f95fc8155c6a3f6c2faab99182046f33f49a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 3%
 
 ---
 
-# Crea una nuova specifica di connessione utilizzando [!DNL Flow Service] API (Beta)
+# [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+>Sources SDK is currently in beta and your organization may not have access to it yet. La funzionalità descritta in questa documentazione è soggetta a modifiche.
 
 Una specifica di connessione rappresenta la struttura di un&#39;origine. Contiene informazioni sui requisiti di autenticazione di un&#39;origine, definisce come esplorare e ispezionare i dati di origine e fornisce informazioni sugli attributi di una determinata origine. La `/connectionSpecs` punto finale [!DNL Flow Service] L’API ti consente di gestire in modo programmatico le specifiche di connessione all’interno dell’organizzazione.
 
@@ -31,16 +32,16 @@ Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per
 
 Il primo passaggio nella creazione di una nuova origine attraverso [!DNL Sources SDK] deve coordinarsi con il rappresentante di Adobe e identificare i valori per la sorgente corrispondente **icona**, **descrizione**, **etichetta** e **categoria**.
 
-| Artifact | Descrizione | Esempio |
+| Artifacts | Descrizione | Esempio |
 | --- | --- | --- |
 | Etichetta | Nome della sorgente. | [!DNL MailChimp Members] |
 | Descrizione | Breve descrizione della fonte. | Crea una connessione in entrata diretta al tuo [!DNL Mailchimp Members] per acquisire in Experience Platform sia dati storici che dati pianificati. |
 | Icona | Immagine o logo che rappresenta la tua sorgente. L’icona viene visualizzata nel rendering della sorgente nell’interfaccia utente di Platform. | `mailchimp-members-icon.svg` |
-| Categoria | La categoria della sorgente. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| Categoria | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Copia modello di specifica di connessione
+## Copy connection specification template
 
 Una volta raccolti gli artefatti richiesti, copia e incolla il modello di specifica di connessione sottostante all’editor di testo desiderato, quindi aggiorna gli attributi tra parentesi `{}` con informazioni relative alla tua origine specifica.
 
@@ -293,10 +294,10 @@ Una specifica di connessione può essere divisa in tre parti distinte: le specif
 Per istruzioni su come compilare i valori di ciascuna parte di una specifica di connessione, consultare i documenti seguenti:
 
 * [Configurare le specifiche di autenticazione](../config/authspec.md)
-* [Configurare le specifiche di origine](../config/sourcespec.md)
-* [Configurare la specifica di esplorazione](../config/explorespec.md)
+* [Configure your source specification](../config/sourcespec.md)
+* [Configure your explore specification](../config/explorespec.md)
 
-Con le informazioni sulle specifiche aggiornate, puoi inviare la nuova specifica di connessione effettuando una richiesta di POST al `/connectionSpecs` punto finale [!DNL Flow Service] API.
+`/connectionSpecs`[!DNL Flow Service]
 
 **Formato API**
 
