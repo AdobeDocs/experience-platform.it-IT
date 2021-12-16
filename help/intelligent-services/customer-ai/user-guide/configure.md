@@ -6,9 +6,9 @@ title: Configurare un’istanza di Customer AI
 topic-legacy: Instance creation
 description: I servizi intelligenti forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2608'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Customer AI, come parte di Intelligent Services, consente di generare punteggi d
 
 I servizi intelligenti forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 
-## Imposta l&#39;istanza {#set-up-your-instance}
+## Creare un’istanza {#set-up-your-instance}
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Servizi]** nella navigazione a sinistra. La **[!UICONTROL Servizi]** viene visualizzato il browser e visualizza tutti i servizi disponibili a tua disposizione. Nel contenitore per Customer AI, seleziona **[!UICONTROL Apri]**.
 
@@ -108,7 +108,7 @@ Se in uno spazio dei nomi sono disponibili più identità, accertati di selezion
 >
 > Se non esiste un tipo di identità (namespace) valido per un set di dati, è necessario impostare un&#39;identità primaria e assegnarla a uno spazio dei nomi di identità utilizzando [editor di schemi](../../../xdm/schema/composition.md#identity). Per ulteriori informazioni sugli spazi dei nomi e le identità, visita il [Namespace del servizio Identity](../../../identity-service/namespaces.md) documentazione.
 
-## Definire un obiettivo {#define-a-goal}
+## Definire l&#39;obiettivo {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
@@ -156,9 +156,13 @@ Per impostazione predefinita, i punteggi di propensione vengono generati per tut
 
 Se disponi di informazioni aggiuntive oltre al [campi evento standard](../input-output.md#standard-events) utilizzata da Customer AI per generare punteggi di propensione, viene fornita un’opzione eventi personalizzata. L’utilizzo di questa opzione consente di aggiungere eventi aggiuntivi che ritieni influenti e che possono migliorare la qualità del modello e contribuire a fornire risultati più precisi. Se il set di dati selezionato include eventi personalizzati definiti nello schema, puoi aggiungerli all’istanza.
 
+>[!NOTE]
+>
+> Per una spiegazione dettagliata su come gli eventi personalizzati influiscono sui risultati del punteggio di Customer AI, visita il [Esempio di evento personalizzato](#custom-event) sezione .
+
 ![funzione evento](../images/user-guide/event-feature.png)
 
-Per aggiungere un evento personalizzato, seleziona **[!UICONTROL Aggiungi evento personalizzato]**. Quindi, inserisci un nome evento personalizzato, quindi mappalo sul campo evento nello schema. I nomi degli eventi personalizzati vengono visualizzati al posto del valore dei campi quando si esaminano fattori influenti e altre informazioni. Ciò significa che gli ID utente, gli ID prenotazione, le informazioni sul dispositivo e altri valori personalizzati sono elencati con il nome dell’evento personalizzato anziché con l’ID/valore dell’evento. Questi eventi personalizzati aggiuntivi vengono utilizzati da Customer AI per migliorare la qualità del modello e fornire risultati più precisi.
+Per aggiungere un evento personalizzato, seleziona **[!UICONTROL Aggiungi evento personalizzato]**. Quindi, inserisci un nome evento personalizzato, quindi mappalo sul campo evento nello schema. I nomi degli eventi personalizzati vengono visualizzati al posto del valore dei campi quando si esaminano fattori influenti e altre informazioni. Questo significa che il nome dell’evento personalizzato verrà utilizzato al posto dell’ID/valore dell’evento. Per ulteriori informazioni sulla modalità di visualizzazione degli eventi personalizzati, consulta la sezione [sezione esempio di evento personalizzato](#custom-event). Questi eventi personalizzati aggiuntivi vengono utilizzati da Customer AI per migliorare la qualità del modello e fornire risultati più precisi.
 
 ![Campo Evento personalizzato](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ Puoi definire importanti campi del set di dati di profilo (con marche temporali)
 
 >[!NOTE]
 >
->L’aggiunta di un attributo di profilo personalizzato segue lo stesso flusso di lavoro dell’aggiunta di un evento personalizzato.
+>L’aggiunta di un attributo di profilo personalizzato segue lo stesso flusso di lavoro dell’aggiunta di un evento personalizzato. Analogamente agli eventi personalizzati, gli attributi di profilo personalizzati influiscono sul punteggio del modello nello stesso modo. Per una spiegazione dettagliata, visita la [Esempio di evento personalizzato](#custom-event) sezione .
 
 ![aggiungere un attributo di profilo personalizzato](../images/user-guide/profile-attributes.png)
 
+### Aggiunta di un esempio di evento personalizzato {#custom-event}
+
+Nell’esempio seguente, un evento personalizzato e un attributo di profilo viene aggiunto a un’istanza di Customer AI. L’obiettivo dell’istanza di Customer AI è prevedere la probabilità che un cliente acquisti un altro prodotto Luma nei successivi 60 giorni. Normalmente, i dati del prodotto sono collegati a una SKU del prodotto. In questo caso, la SKU è `prd1013`. Una volta che il modello Customer AI è stato addestrato/valutato, questo SKU può essere collegato a un evento e visualizzato come fattore influente per un bucket di propensione.
+
+Customer AI applica automaticamente la generazione di funzioni quali &quot;Giorni da&quot; o &quot;Conteggi di&quot; rispetto a eventi personalizzati, come **Acquisto a cura di**. Se questo evento è stato considerato un fattore determinante per determinare perché i clienti hanno una propensione elevata, media o bassa, Customer AI lo visualizza come `Days since prd1013 purchase` o `Count of prd1013 purchase`. Creando questo evento come evento personalizzato, puoi assegnare all’evento un nuovo nome che facilita la lettura dei risultati. Ad esempio, `Days since Watch purchase`. Inoltre, Customer AI utilizza questo evento nella sua formazione e valutazione anche se l’evento non è un evento standard. Ciò significa che puoi aggiungere più eventi che ritieni influenti e personalizzare ulteriormente il modello includendo dati come prenotazioni, registri visitatori e altri eventi. L’aggiunta di questi punti dati aumenta ulteriormente l’accuratezza e la precisione del modello Customer AI.
+
+![esempio di evento personalizzato](../images/user-guide/custom-event-name.png)
+
+## Imposta opzioni
+
+Il passaggio Imposta opzioni ti consente di configurare una pianificazione per automatizzare le esecuzioni di previsione, definire esclusioni di previsione per filtrare determinati eventi e attivare/disattivare **[!UICONTROL Profilo]** on/off.
+
 ### Configurare una pianificazione *(facoltativo)* {#configure-a-schedule}
 
-La **[!UICONTROL Avanzate]** viene visualizzato il passaggio . Questo passaggio facoltativo consente di configurare una pianificazione per automatizzare le esecuzioni di previsione, definire esclusioni di previsione per filtrare determinati eventi o selezionare **[!UICONTROL Fine]** se non è necessario nulla.
-
-Imposta una pianificazione del punteggio configurando il **[!UICONTROL Frequenza punteggio]**. È possibile programmare l&#39;esecuzione delle previsioni automatizzate su base settimanale o mensile.
+Per impostare una pianificazione del punteggio, inizia configurando il **[!UICONTROL Frequenza punteggio]**. È possibile programmare l&#39;esecuzione delle previsioni automatizzate su base settimanale o mensile.
 
 ![](../images/user-guide/schedule.png)
 
-### Esclusioni di previsione
+### Esclusioni di previsione *(facoltativo)*
 
-Se il set di dati contiene colonne aggiunte come dati di test, puoi aggiungere tale colonna o evento a un elenco di esclusione selezionando **Aggiungi esclusione** seguito dall’inserimento nel campo da escludere. Questo impedisce la valutazione degli eventi che soddisfano determinate condizioni durante la generazione dei punteggi. Questa funzione può essere utilizzata per filtrare gli input di dati irrilevanti o alcune promozioni.
+Se il set di dati contiene colonne aggiunte come dati di test, puoi aggiungere tale colonna o evento a un elenco di esclusione selezionando **[!UICONTROL Aggiungi esclusione]** seguito dall’inserimento nel campo da escludere. Questo impedisce la valutazione degli eventi che soddisfano determinate condizioni durante la generazione dei punteggi. Questa funzione può essere utilizzata per filtrare gli input o le promozioni di dati irrilevanti.
 
 Per escludere un evento, seleziona **[!UICONTROL Aggiungi esclusione]** e definire l’evento. Per rimuovere un’esclusione, seleziona i puntini di sospensione (**[!UICONTROL ...]**) in alto a destra del contenitore evento, quindi seleziona **[!UICONTROL Rimuovi contenitore]**.
 
@@ -202,7 +216,7 @@ Per escludere un evento, seleziona **[!UICONTROL Aggiungi esclusione]** e defini
 
 L’opzione Profilo consente a Customer AI di esportare i risultati del punteggio in Profilo cliente in tempo reale. La disattivazione di questa opzione impedisce l’aggiunta al profilo dei risultati del punteggio dei modelli. I risultati del punteggio di Customer AI sono ancora disponibili con questa funzione disabilitata.
 
-Quando si utilizza Customer AI per la prima volta, è necessario disattivare questa funzione fino a quando non si è soddisfatti dei risultati di output del modello. Questo impedisce il caricamento di più set di dati di valutazione su Profilo cliente in tempo reale, mentre si ottimizza il modello.
+Quando si utilizza Customer AI per la prima volta, è possibile disattivare questa funzione fino a quando non si è soddisfatti dei risultati di output del modello. Questo impedisce il caricamento di più set di dati di punteggio nei profili cliente durante la regolazione del modello. Una volta terminata la calibrazione del modello, è possibile clonare il modello utilizzando [opzione clone](#set-up-your-instance) dal **Istanze del servizio** pagina. Questo consente di creare una copia del modello e attivare il profilo.
 
 ![Attiva/disattiva profilo](../images/user-guide/advanced-workflow.png)
 
