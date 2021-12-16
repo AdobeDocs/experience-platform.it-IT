@@ -1,14 +1,15 @@
 ---
-title: Segreti di inoltro eventi
+title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente di raccolta dati per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1449'
 ht-degree: 1%
 
 ---
 
-# Segreti di inoltro eventi
+# Configurazione dei segreti nell’inoltro degli eventi
 
 In caso di inoltro, un segreto è una risorsa che rappresenta una credenziale di autenticazione per un altro sistema, che consente lo scambio sicuro di dati. I segreti possono essere creati solo all&#39;interno delle proprietà di inoltro degli eventi.
 
