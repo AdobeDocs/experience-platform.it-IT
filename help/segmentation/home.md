@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -61,18 +61,6 @@ Per ulteriori informazioni sulla segmentazione in streaming, consulta la sezione
 In alternativa a un processo continuo di selezione dei dati, la segmentazione in batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre i tipi di pubblico corrispondenti. Una volta creato, questo segmento viene salvato e memorizzato in modo da poterlo esportare per l’uso.
 
 I segmenti batch vengono valutati automaticamente ogni 24 ore. Se si desidera valutare un segmento batch su richiesta, è possibile utilizzare un processo di segmento. Per ulteriori informazioni sui processi dei segmenti, consulta la sezione [documentazione sui processi di segmento](./api/segment-jobs.md).
-
-**Segmentazione incrementale (beta)**
-
-I segmenti batch vengono valutati ogni 24 ore. Tuttavia, per i segmenti esistenti, la segmentazione incrementale mantiene i segmenti aggiornati fino a un’ora.
-
-La segmentazione incrementale viene eseguita su nuovi dati che arrivano nell’archivio dei profili. Tuttavia, per la segmentazione incrementale si applicano le seguenti avvertenze:
-
-- Per qualsiasi segmento nuovo o modificato di recente, i profili con nuovi dati inizieranno a qualificarsi nella prossima esecuzione incrementale. Tuttavia, i profili senza modifiche recupereranno il successivo processo di segmentazione batch completa.
-- I segmenti con più entità verranno aggiornati nella segmentazione incrementale. In presenza di aggiornamenti di entità, tutti i profili con nuovi dati inizieranno a utilizzarli nella successiva esecuzione incrementale. Tuttavia, i profili senza modifiche recupereranno il successivo processo di segmentazione batch completa.
-- Gli eventi che eliminano la finestra temporale di un segmento verranno riconciliati nel successivo processo di segmentazione batch completa.
-
-Per scoprire come valutare i segmenti, consulta la sezione [esercitazione sulla valutazione dei segmenti](./tutorials/evaluate-a-segment.md).
 
 ### Segmentazione degli spigoli
 
