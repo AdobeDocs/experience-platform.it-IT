@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Google AdWords;parole adwords di google
 solution: Experience Platform
-title: Panoramica del connettore di origine Google AdWords
+title: Panoramica origine di Google AdWords
 topic-legacy: overview
 description: Scopri come collegare Google AdWords a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: fa3b83372db557d7f0aed16303cef4124c7dd897
+source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google AdWords] connettore
+# [!DNL Google AdWords] source
 
 >[!NOTE]
 >
->Il connettore [!DNL Google AdWords] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
+>La [!DNL Google AdWords] la sorgente è in versione beta. Consulta la sezione [Panoramica delle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
-[!DNL Experience Platform] fornisce il supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i fornitori di pubblicità include [!DNL Google AdWords].
+[!DNL Experience Platform] fornisce il supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto ai fornitori di pubblicità include: [!DNL Google AdWords].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
 
-## Connetti [!DNL Google AdWords] alla piattaforma
+## Connetti [!DNL Google AdWords] su Platform
 
-La documentazione seguente fornisce informazioni su come connettersi a [!DNL Google AdWords] Platform utilizzando le API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Google AdWords] su Platform utilizzando le API o l’interfaccia utente:
 
 ### Utilizzo delle API
 
