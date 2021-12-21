@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;connettori sorgente;connettori sorgente;origini;origini dati;origine dati;connessione origine dati
+keywords: Experience Platform;home;argomenti popolari;connettori sorgente;connettore sorgente;origini;origini dati;origine dati;connessione origine dati
 solution: Experience Platform
 title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Experience Platform supporta l’acquisizione di dati da sorgenti in streaming. 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
-- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
 
 ## Controllo degli accessi alle origini durante l’acquisizione dei dati
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare GreenPlum a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: c3a72d5a4aea33f123f81bd416557a9cfe879224
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 | `connectionString` | Stringa di connessione utilizzata per la connessione al [!DNL GreenPlum] istanza. Pattern di stringa di connessione per [!DNL GreenPlum] è `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, fare riferimento a [questo documento GreenPlum](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, fare riferimento a [questo documento GreenPlum](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### Utilizzo delle API di Platform
 
