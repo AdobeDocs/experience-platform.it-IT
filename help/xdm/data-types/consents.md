@@ -4,7 +4,7 @@ title: Tipo di dati consenso e preferenze
 description: Il tipo di dati Consent for Privacy, Personalization and Marketing Preferences (Consenso per privacy, personalizzazione e preferenze di marketing) ha lo scopo di supportare la raccolta di autorizzazioni e preferenze dei clienti generate dalle piattaforme di gestione dei consensi (CMP, Consent Management Platform) e da altre sorgenti dalle operazioni sui dati.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ Il presente documento riguarda la struttura e l&#39;uso previsto dei campi forni
 
 Questo documento richiede una comprensione funzionante di XDM e l&#39;utilizzo degli schemi in [!DNL Experience Platform]. Prima di continuare, controlla la seguente documentazione:
 
-* [Panoramica del sistema XDM](http://www.adobe.com/go/xdm-home-en)
-* [Nozioni di base sulla composizione dello schema](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [Panoramica del sistema XDM](https://www.adobe.com/go/xdm-home-en)
+* [Nozioni di base sulla composizione dello schema](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Struttura del tipo di dati {#structure}
 
@@ -255,7 +255,7 @@ Il seguente JSON mostra un esempio del tipo di dati che [!UICONTROL Consensi e p
 
 Per utilizzare il [!UICONTROL Consensi e preferenze] tipo di dati per acquisire i dati di consenso dai clienti, devi creare un set di dati basato su uno schema che contenga tale tipo di dati.
 
-Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Una volta creato uno schema contenente un campo con [!UICONTROL Consensi e preferenze] tipo di dati, consulta la sezione [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi necessari per creare un set di dati con uno schema esistente.
+Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Una volta creato uno schema contenente un campo con [!UICONTROL Consensi e preferenze] tipo di dati, consulta la sezione [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi necessari per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >

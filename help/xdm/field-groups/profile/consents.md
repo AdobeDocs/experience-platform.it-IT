@@ -4,7 +4,7 @@ title: Gruppo di campi schema Consensi e Preferenze
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Consensi e Preferenze .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ La `adID` il consenso rappresenta il consenso del cliente per sapere se un ID in
 
 Per utilizzare il [!UICONTROL Consensi e preferenze] gruppo di campi per acquisire i dati di consenso dai clienti, devi creare un set di dati basato su uno schema che contiene tale gruppo di campi.
 
-Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Una volta creato uno schema contenente un campo con [!UICONTROL Consensi e preferenze] gruppo di campi, consulta la sezione [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi necessari per creare un set di dati con uno schema esistente.
+Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Una volta creato uno schema contenente un campo con [!UICONTROL Consensi e preferenze] gruppo di campi, consulta la sezione [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi necessari per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >
