@@ -3,7 +3,7 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 9%
@@ -38,7 +38,7 @@ Inoltro di eventi combinato con Adobe Experience Platform [SDK per web](../../..
 
 * Aumenta la trasparenza e il controllo su quali dati vengono inviati dove in tutte le proprietà.
 
-## Differenze tra inoltro eventi e tag
+## Differenze tra inoltro eventi e tag {#differences-from-tags}
 
 In termini di configurazione, l&#39;inoltro degli eventi utilizza molti degli stessi concetti dei tag, ad esempio [regole](../managing-resources/rules.md), [elementi dati](../managing-resources/data-elements.md)e [estensioni](../managing-resources/extensions/overview.md). La differenza principale tra i due può essere riassunta come segue:
 
@@ -47,7 +47,7 @@ In termini di configurazione, l&#39;inoltro degli eventi utilizza molti degli st
 
 Mentre i tag raccolgono i dati evento direttamente dal sito o dall’applicazione mobile nativa tramite gli SDK per web e dispositivi mobili di Platform, l’inoltro degli eventi richiede che i dati evento siano già inviati tramite Platform Edge Network per inviarli alle destinazioni. In altre parole, per utilizzare l’inoltro degli eventi è necessario implementare l’SDK per web o mobile della piattaforma sulla proprietà digitale (tramite tag o codice non elaborato).
 
-### Proprietà
+### Proprietà {#properties}
 
 L’inoltro degli eventi mantiene il proprio archivio di proprietà separate dai tag, che è possibile visualizzare nell’interfaccia utente di raccolta dati selezionando **[!UICONTROL Inoltro eventi]** nella navigazione a sinistra.
 
@@ -61,13 +61,13 @@ L&#39;inoltro degli eventi dispone di un proprio catalogo di estensioni compatib
 
 ![Estensioni dell’inoltro eventi nell’interfaccia utente Raccolta dati](../../images/ui/event-forwarding/overview/extensions.png)
 
-### Elementi dati
+### Elementi dati {#data-elements}
 
 I tipi di elementi dati disponibili nell&#39;inoltro degli eventi sono limitati al catalogo di elementi compatibili [estensioni](#extensions) che le forniscono.
 
 Anche se gli elementi dati stessi vengono creati e configurati nello stesso modo in cui vengono inoltrati gli eventi per i tag, esistono alcune importanti differenze di sintassi quando si tratta di come fanno riferimento ai dati da Platform Edge Network.
 
-#### Riferimento a dati da Platform Edge Network
+#### Riferimento a dati da Platform Edge Network {#edge}
 
 Per fare riferimento ai dati di Platform Edge Network, devi creare un elemento dati che fornisca un percorso valido per tali dati. Quando crei l’elemento dati nell’interfaccia utente, seleziona **[!UICONTROL Core]** per l&#39;estensione e **[!UICONTROL Percorso]** per il tipo .
 
@@ -75,23 +75,23 @@ La **[!UICONTROL Percorso]** il valore dell&#39;elemento dati deve seguire il pa
 
 ![Esempio di un elemento dati di tipo percorso per l&#39;inoltro di eventi](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### Regole
+### Regole {#rules}
 
 La creazione di regole nelle proprietà di inoltro eventi funziona in modo simile ai tag, con la differenza chiave che non è possibile selezionare eventi come componenti regola. Al contrario, una regola di inoltro eventi elabora tutti gli eventi ricevuti dalla [datastream](../../../edge/fundamentals/datastreams.md) e inoltra tali eventi alle destinazioni se sono soddisfatte determinate condizioni.
 
 ![Regole di inoltro eventi nell’interfaccia utente di raccolta dati](../../images/ui/event-forwarding/overview/rules.png)
 
-#### Tokenizzazione dell&#39;elemento dati
+#### Tokenizzazione dell&#39;elemento dati {#tokenization}
 
 Nelle regole dei tag, gli elementi dati vengono token con un `%` all’inizio e alla fine del nome dell’elemento dati (ad esempio: `%viewportHeight%`). Nelle regole di inoltro degli eventi, gli elementi dati vengono invece token con `{{` all&#39;inizio e `}}` alla fine del nome dell’elemento dati (ad esempio: `{{viewportHeight}}`).
 
 ![Esempio di un elemento dati di tipo percorso per l&#39;inoltro di eventi](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### Sequenza di azioni della regola
+#### Sequenza di azioni della regola {#action-sequencing}
 
 La [!UICONTROL Azioni] la sezione di una regola di inoltro eventi viene sempre eseguita in sequenza. Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere eseguita in modo asincrono come può con i tag .
 
-## Segreti
+## Segreti {#secrets}
 
 L’inoltro eventi ti consente di creare, gestire e archiviare segreti che possono essere utilizzati per l’autenticazione ai server a cui stai inviando i dati. Consulta la guida su [segreti](./secrets.md) sui diversi tipi di tipi di segreti disponibili e su come vengono implementati nell’interfaccia utente.
 

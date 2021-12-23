@@ -5,16 +5,16 @@ title: Tipo di dati dell'applicazione
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Application Experience Data Model).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 1%
+source-wordcount: '442'
+ht-degree: 2%
 
 ---
 
-#  Tipo di dati applicazione
+# [!UICONTROL Applicazione] tipo di dati
 
- L’applicazione è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli relativi alle interazioni generate dall’applicazione. Un&#39;applicazione fa riferimento a un&#39;esperienza software, ad esempio un&#39;applicazione mobile o desktop che può essere installata, eseguita, chiusa o disinstallata da un utente finale. Le proprietà di questo tipo di dati non sono destinate a descrivere agenti quali chatbots, plugin basati su browser o altre esperienze che non si applicano alle applicazioni.
+[!UICONTROL Applicazione] è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli relativi alle interazioni generate da un&#39;applicazione. Un&#39;applicazione fa riferimento a un&#39;esperienza software, ad esempio un&#39;applicazione mobile o desktop che può essere installata, eseguita, chiusa o disinstallata da un utente finale. Le proprietà di questo tipo di dati non sono destinate a descrivere agenti quali chatbots, plugin basati su browser o altre esperienze che non si applicano alle applicazioni.
 
 <img src="../images/data-types/application.PNG" width="500" /><br />
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 | `upgrades` | [[!UICONTROL Misura]](./measure.md) | Contiene i dati sull&#39;aggiornamento di un&#39;applicazione installata in precedenza. Questo viene attivato al primo avvio dopo un aggiornamento. |
 | `id` | Stringa | Identificatore univoco dell&#39;applicazione. |
 | `name` | Stringa | Nome dell&#39;applicazione. |
-| `userPerspective` | Stringa | La prospettiva o la relazione fisica tra l’utente e l’app o il marchio al momento dell’evento. La comprensione della prospettiva dell’utente in relazione all’app aiuta a generare con precisione le sessioni, nella maggior parte dei casi in cui non desideri includere eventi `background` e `detached` come parte di una sessione &quot;attiva&quot;. Il valore di questa proprietà deve essere uguale a uno dei valori enum elencati di seguito. <li> `foreground`: L’utente e l’app interagiscono direttamente tra loro. </li> <li> `background`: L’app e l’utente interagiscono indirettamente tra di loro. Ad esempio, l’app potrebbe misurare un valore e aggiornare mentre la schermata è bloccata o un’altra app viene utilizzata in primo piano.  </li> <li> `detached`: Detached indica che l’evento era correlato all’app ma non proveniva direttamente dall’app, ad esempio l’invio di un’e-mail o di una notifica push da un sistema esterno. |
+| `userPerspective` | Stringa | La prospettiva o la relazione fisica tra l’utente e l’app o il marchio al momento dell’evento. La comprensione della prospettiva dell’utente in relazione all’app aiuta a generare con precisione le sessioni, in quanto la maggior parte delle volte non desideri includere `background` e `detached` come parte di una sessione &quot;attiva&quot;. Il valore di questa proprietà deve essere uguale a uno dei valori enum elencati di seguito. <li> `foreground`: L’utente e l’app interagiscono direttamente tra loro. </li> <li> `background`: L’app e l’utente interagiscono indirettamente tra di loro. Ad esempio, l’app potrebbe misurare un valore e aggiornare mentre la schermata è bloccata o un’altra app viene utilizzata in primo piano.  </li> <li> `detached`: Detached indica che l’evento era correlato all’app ma non proveniva direttamente dall’app, ad esempio l’invio di un’e-mail o di una notifica push da un sistema esterno. |
 | `version` | Stringa | Versione dell&#39;applicazione. |
 
 {style=&quot;table-layout:auto&quot;}

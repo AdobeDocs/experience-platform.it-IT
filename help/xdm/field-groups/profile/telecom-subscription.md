@@ -4,20 +4,21 @@ solution: Experience Platform
 title: Gruppo di campi schema sottoscrizione Telecom
 topic-legacy: overview
 description: In questo documento viene fornita una panoramica del gruppo di campi dello schema di sottoscrizione di Telecom.
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 5%
+source-wordcount: '730'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Gruppo di campi ] Sottoscrizione Telecom
+# [!UICONTROL Abbonamento a domicilio] gruppo di campi schema
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Telecom ] Subscriptionè un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che descrive il piano di abbonamento a un cliente per le telecomunicazioni, tra cui prezzi, pacchetti e abbonamenti a singoli prodotti.
+[!UICONTROL Abbonamento a domicilio] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md) che descrive il piano di abbonamento a servizi di telecomunicazione di un cliente, inclusi prezzi, pacchetti e abbonamenti a singoli prodotti.
 
 Il gruppo di campi fornisce un singolo campo di tipo oggetto, `telecomSubscription`, le cui proprietà sono descritte di seguito.
 
@@ -25,12 +26,12 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `telecomSubscripti
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `internetSubscription` | Array di oggetti | Descrive i dettagli del piano di sottoscrizione Internet quali il limite dati, il tipo di connessione e i dettagli della velocità. Per ulteriori informazioni, consulta la sezione [sotto](#internetSubscription) . |
-| `landlineSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento in linea, incluse le funzioni selezionate, i minuti e i piani di composizione. Per ulteriori informazioni, consulta la sezione [sotto](#landlineSubscription) . |
-| `mediaSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento multimediale, compreso il numero di canali e i servizi di streaming inclusi. Per ulteriori informazioni, consulta la sezione [sotto](#mediaSubscription) . |
-| `mobileSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento mobile, tra cui il numero di righe, le tariffe dei dati, i costi e altro ancora. Per ulteriori informazioni, consulta la sezione [sotto](#mobileSubscription) . |
+| `internetSubscription` | Array di oggetti | Descrive i dettagli del piano di sottoscrizione Internet quali il limite dati, il tipo di connessione e i dettagli della velocità. Consulta la sezione [sezione sottostante](#internetSubscription) per ulteriori informazioni. |
+| `landlineSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento in linea, incluse le funzioni selezionate, i minuti e i piani di composizione. Consulta la sezione [sezione sottostante](#landlineSubscription) per ulteriori informazioni. |
+| `mediaSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento multimediale, compreso il numero di canali e i servizi di streaming inclusi. Consulta la sezione [sezione sottostante](#mediaSubscription) per ulteriori informazioni. |
+| `mobileSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento mobile, tra cui il numero di righe, le tariffe dei dati, i costi e altro ancora. Consulta la sezione [sezione sottostante](#mobileSubscription) per ulteriori informazioni. |
 | `primarySubscriber` | [[!UICONTROL Persona]](../../data-types/person.md) | Descrive il proprietario della sottoscrizione. |
-| `bundleName` | Stringa | Acquisisce il nome di qualsiasi tipo di bundle di abbonamento in cui il cliente è iscritto, ad esempio `Internet + Media`. |
+| `bundleName` | Stringa | Acquisisce il nome di qualsiasi tipo di bundle di abbonamento in cui il cliente è iscritto, come `Internet + Media`. |
 | `primaryPartyID` | Stringa | Identificatore della persona principale responsabile dell&#39;abbonamento, che in genere potrebbe essere il numero di telefono del dispositivo. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -42,7 +43,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` viene fornito un array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
+`internetSubscription` viene fornito come array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -51,7 +52,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 | `subscriptionDetails` | [[!UICONTROL Abbonamento a domicilio]](../../data-types/telecom-subscription.md) | Descrive i dettagli generali dell’abbonamento, inclusi la lunghezza dell’abbonamento, le tariffe, lo stato e altro ancora. Descrive i dettagli generali dell’abbonamento, inclusi la lunghezza dell’abbonamento, le tariffe, lo stato e altro ancora. |
 | `connectionType` | Stringa | Tipo di connessione per la sottoscrizione. |
 | `dataCap` | Intero | Limite massimo dati per l’account, in megabyte (MB). |
-| `downloadSpeed` | Intero | Velocità massima di download disponibile per l’abbonamento, in megabyte (MB). |
+| `downloadSpeed` | Intero | La velocità massima di download disponibile per l’abbonamento, in megabyte (MB). |
 | `selfSetup` | Booleano | Indica se un cliente è idoneo per la configurazione di Internet senza la visita di un tecnico. |
 | `uploadSpeed` | Intero | La velocità massima di caricamento disponibile per l’abbonamento, in megabyte (MB). |
 
@@ -59,7 +60,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` viene fornito un array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
+`landlineSubscription` viene fornito come array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -70,7 +71,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 | `callBlocking` | Booleano | Indica se le funzioni di abbonamento a linee fisse includono il blocco delle chiamate. |
 | `callForwarding` | Booleano | Indica se le funzionalità di abbonamento in linea fissa includono l&#39;inoltro delle chiamate. |
 | `callWaiting` | Booleano | Indica se le funzionalità di abbonamento in linea fissa includono l&#39;attesa di chiamata. |
-| `callerID` | Booleano | Indica se le funzionalità di sottoscrizione offline includono l&#39;id chiamante. |
+| `callerID` | Booleano | Indica se le funzionalità di sottoscrizione offline includono l&#39;ID chiamante. |
 | `internationalCalling` | Booleano | Indica se le funzionalità di abbonamento a linee fisse includono la chiamata internazionale. |
 | `minutes` | Intero | Il numero di minuti mensili disponibili nell’abbonamento. |
 | `threeWayCalling` | Booleano | Indica se le funzioni di abbonamento a linee fisse includono la chiamata a tre vie. |
@@ -82,7 +83,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` viene fornito un array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
+`mediaSubscription` viene fornito come array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -96,7 +97,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` viene fornito un array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
+`mobileSubscription` viene fornito come array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
@@ -109,4 +110,3 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 | `portedNumber` | Booleano | Indica se il cliente porta il proprio numero da un altro vettore. |
 
 {style=&quot;table-layout:auto&quot;}
-
