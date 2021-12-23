@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -89,10 +89,12 @@ Seleziona **[!UICONTROL Esportare file completi]** per attivare l’esportazione
    >
    >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Questa limitazione sarà affrontata nelle prossime versioni.
 
-1. Utilizza la **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione.
-   >[!TIP]
+1. Utilizza la **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione. Per le esportazioni giornaliere, la best practice prevede di impostare la data di inizio e di fine in modo che corrisponda alla durata delle campagne nelle piattaforme downstream.
+
+   >[!IMPORTANT]
    >
-   > Per le esportazioni giornaliere, imposta la data di inizio e di fine in modo che corrisponda alla durata delle campagne nelle piattaforme downstream.
+   > Quando si seleziona un intervallo di esportazione, l’ultimo giorno dell’intervallo non viene incluso nelle esportazioni. Ad esempio, se selezioni un intervallo tra il 4 e l’11 gennaio, l’ultima esportazione di file avrà luogo il 10 gennaio.
+
 1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 
@@ -117,10 +119,12 @@ Seleziona **[!UICONTROL Esportare file incrementali]** per attivare un’esporta
    >
    >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementali o completi potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione completa e più aggiornata dei dati di backfill sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’orario di esportazione del primo file dopo le 12:00 GMT del giorno successivo. Questa limitazione sarà affrontata nelle prossime versioni.
 
-1. Utilizza la **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione.
-   >[!TIP]
+1. Utilizza la **[!UICONTROL Data]** selettore per scegliere l’intervallo in cui deve avvenire l’esportazione. È consigliabile impostare la data di inizio e di fine in modo che corrisponda alla durata delle campagne nelle piattaforme downstream.
+
+   >[!IMPORTANT]
    >
-   >Imposta la data di inizio e la data di fine in modo che siano allineate alla durata delle campagne nelle piattaforme downstream.
+   >L’ultimo giorno dell’intervallo non è incluso nelle esportazioni. Ad esempio, se selezioni un intervallo tra il 4 e l’11 gennaio, l’ultima esportazione di file avrà luogo il 10 gennaio.
+
 1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 ### Configurare i nomi dei file {#file-names}
