@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5362'
-ht-degree: 90%
+source-wordcount: '5492'
+ht-degree: 87%
 
 ---
 
@@ -128,9 +128,13 @@ L’evento si attiva se si verifica un tipo di evento personalizzato. Le funzion
 
 L’evento si attiva se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. È possibile selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-L’evento di chiamata diretta bypassa i sistemi di rilevamento degli eventi e di ricerca. Le regole di chiamata diretta sono ideali per le situazioni in cui desideri comunicare a Platform esattamente ciò che sta accadendo. Inoltre, sono ideali quando Platform non è in grado di rilevare un evento nel DOM, ad esempio con Adobe Flash. Specifica la stringa `_satellite.track` nel campo di testo dell’identificatore.
+Un evento di chiamata diretta bypassa i sistemi di rilevamento degli eventi e di ricerca. Le regole di chiamata diretta sono ideali per le situazioni in cui desideri comunicare al sistema esattamente ciò che sta accadendo. Inoltre, sono ideali quando il sistema non è in grado di rilevare un evento nel DOM.
+
+Quando definisci un evento di chiamata diretta, devi specificare una stringa che agirà come identificatore di questo evento. Se [attiva l&#39;azione di chiamata diretta](#direct-call-action) contenente lo stesso identificatore viene attivato, verranno eseguite tutte le regole dell&#39;evento di chiamata diretta in ascolto di tale identificatore.
+
+![Schermata di un evento di chiamata diretta nell’interfaccia utente di raccolta dati](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Trigger Direct Call {#direct-call-action}
+
+Questa azione attiva tutte le regole che utilizzano un [evento di chiamata diretta](#direct-call-event). Durante la configurazione dell’azione, devi fornire la stringa di identificazione per l’evento di chiamata diretta che desideri attivare. Facoltativamente, puoi anche trasmettere dati all’evento di chiamata diretta tramite un `detail` oggetto , che può contenere un set personalizzato di coppie chiave-valore.
+
+![Schermata di un’azione Trigger Direct Call nell’interfaccia utente di Raccolta dati](../../../images/extensions/core/direct-call-action.png)
+
+L&#39;azione viene mappata direttamente sul [`track` metodo](../../../ui/client-side/satellite-object.md?lang=en#track) in `satellite` oggetto , accessibile dal codice lato client.
 
 ## Tipi di elementi di dati dell’estensione Core
 

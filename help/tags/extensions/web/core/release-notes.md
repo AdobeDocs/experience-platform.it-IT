@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 75%
+source-wordcount: '1565'
+ht-degree: 74%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 75%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 4 gennaio 2022
+
+v3.3.0
+
+* Modifica il [Azione Trigger Direct Call](./overview.md#direct-call-action) in modo da poter fornire informazioni sull’evento personalizzato da inviare alle regole di chiamata diretta.
 
 ## 8 ottobre 2021
 
@@ -62,7 +68,7 @@ v3.0.0
 
 * PDCL-6153: Aggiunge il supporto per richiamare in modo affidabile l’URL completo per le azioni del codice personalizzato memorizzate nella cache.
 
-La v3.0.0 dell&#39;estensione Core è associata a modifiche in [v27.2.0 del runtime Web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobi se la società dell&#39;utente supporta la rete CDN Premium.
+La versione 3.0.0 dell’estensione Core è associata a modifiche in [v27.2.0 del runtime web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe se l&#39;azienda dell&#39;utente supporta la rete CDN Premium.
 
 Questo aggiornamento è facoltativo e retrocompatibile per gli utenti senza CDN Premium e obbligatorio per i clienti che hanno abilitato CDN Premium sulla propria azienda.
 
@@ -155,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull&#39;utilizzo dei tag con un CSP [qui](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con un CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
