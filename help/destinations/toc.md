@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '686'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 9%
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
    * [(Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
+   * [Elimina account di destinazione](./api/delete-destination-account.md)
+   * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
 * Guide dell&#39;interfaccia {#ui}
    * [Area di lavoro Destinazioni](./ui/destinations-workspace.md)
    * [Crea una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -162,7 +164,7 @@ ht-degree: 9%
          * [Creare e testare un modello di trasformazione dei messaggi](./destination-sdk/create-template.md)
          * [Verifica la configurazione di destinazione](./destination-sdk/test-destination.md)
    * Operazioni API {#api}
-      * [Riferimento API di Destination SDK (authoring delle destinazioni)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Riferimento API per Destination SDK (authoring delle destinazioni)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Operazioni API per gli endpoint delle destinazioni](./destination-sdk/destination-configuration-api.md)
       * [Operazioni API dell’endpoint server di destinazione](./destination-sdk/destination-server-api.md)
       * [Operazioni API per l’endpoint dei metadati del pubblico](./destination-sdk/audience-metadata-api.md)
@@ -174,7 +176,7 @@ ht-degree: 9%
          * [Operazioni API per il test di destinazione](./destination-sdk/destination-testing-api.md)
          * [Operazioni API per la generazione di profili di esempio](./destination-sdk/sample-profile-generation-api.md)
    * Guide {#guides}
-      * [Utilizzare Destination SDK per configurare una destinazione in streaming](./destination-sdk/configure-destination-instructions.md)
+      * [Utilizza Destination SDK per configurare una destinazione di streaming](./destination-sdk/configure-destination-instructions.md)
       * [Invia per la revisione di una destinazione creata in Destination SDK](./destination-sdk/submit-destination.md)
    * Documentare la destinazione {#document-destination}
       * [Documentare la destinazione in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
