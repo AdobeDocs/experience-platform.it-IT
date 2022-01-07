@@ -1,29 +1,29 @@
 ---
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destination-servers`. Le specifiche del server e del modello per la destinazione possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint comune `/authoring/destination-servers`.
-title: Operazioni API endpoint server di destinazione
+title: Operazioni API dell’endpoint server di destinazione
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '827'
 ht-degree: 6%
 
 ---
 
-# Operazioni API endpoint server di destinazione
+# Operazioni API dell’endpoint server di destinazione
 
 >[!IMPORTANT]
 >
->**Endpoint** API:  `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-In questa pagina sono elencate e descritte tutte le operazioni API che puoi eseguire utilizzando l’endpoint API `/authoring/destination-servers`. Le specifiche del server e del modello per la destinazione possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint comune `/authoring/destination-servers`. Per una descrizione delle funzionalità fornite da questo endpoint, leggere [server e template specs](./server-and-template-configuration.md).
+Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando `/authoring/destination-servers` Endpoint API. Le specifiche del server e del modello per la destinazione possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint comune `/authoring/destination-servers`. Per una descrizione della funzionalità fornita da questo endpoint, leggere [specifiche del server e del modello](./server-and-template-configuration.md).
 
 ## Guida introduttiva alle operazioni API del server di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
 
 ## Creare una configurazione per un server di destinazione {#create}
 
-Puoi creare una nuova configurazione del server di destinazione effettuando una richiesta di POST all’endpoint `/authoring/destination-servers` .
+Puoi creare una nuova configurazione del server di destinazione effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
 **Formato API**
 
@@ -34,7 +34,7 @@ POST /authoring/destination-servers
 
 **Richiesta**
 
-La richiesta seguente crea una nuova configurazione del server di destinazione, configurata dai parametri forniti nel payload. Il payload seguente include tutti i parametri accettati dall’endpoint `/authoring/destination-servers`. Non è necessario aggiungere tutti i parametri alla chiamata e il modello è personalizzabile, in base ai requisiti API.
+La richiesta seguente crea una nuova configurazione del server di destinazione, configurata dai parametri forniti nel payload. Il payload seguente include tutti i parametri accettati dal `/authoring/destination-servers` punto finale. Non è necessario aggiungere tutti i parametri alla chiamata e il modello è personalizzabile, in base ai requisiti API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -68,12 +68,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo ad Adobe. Questo nome non è visibile ai partner o clienti. Esempio `Moviestar destination server`. |
 | `destinationServerType` | Stringa | *Obbligatorio.* `URL_BASED` al momento è l’unica opzione disponibile. |
-| `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizza `PEBBLE_V1` se l&#39;Adobe deve trasformare l&#39;URL nel campo `value` sottostante. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizza `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se disponi di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzo `PEBBLE_V1` se Adobe deve trasformare l’URL nel `value` campo sottostante. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizzo `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui Experience Platform deve connettersi. |
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Le opzioni sono `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con sequenza di caratteri che trasforma i dati dei clienti Platform nel formato previsto dal servizio.  <br> <ul><li> Per informazioni su come scrivere il modello, leggi la sezione [Utilizzo del modello](./message-format.md#using-templating). </li><li> Per ulteriori informazioni sull’escape dei caratteri, consulta la sezione sette](https://tools.ietf.org/html/rfc8259#section-7) dello standard RFC JSON .[ </li><li> Per un esempio di trasformazione semplice, fai riferimento alla trasformazione [Attributi del profilo](./message-format.md#attributes) . </li></ul> |
-| `httpTemplate.contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è molto probabilmente `application/json`. |
+| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con sequenza di caratteri che trasforma i dati dei clienti Platform nel formato previsto dal servizio. <br> <ul><li> Per informazioni su come scrivere il modello, leggi il [Utilizzo della sezione di template](./message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape dei caratteri, consulta la [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di trasformazione semplice, consulta la sezione [Attributi del profilo](./message-format.md#attributes) trasformazione. </li></ul> |
+| `httpTemplate.contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è più probabile `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,7 +83,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configu
 
 ## Elenca configurazioni server di destinazione {#retrieve-list}
 
-Puoi recuperare un elenco di tutte le configurazioni del server di destinazione per la tua organizzazione IMS effettuando una richiesta di GET all’ endpoint `/authoring/destination-servers` .
+Puoi recuperare un elenco di tutte le configurazioni del server di destinazione per la tua organizzazione IMS effettuando una richiesta di GET al `/authoring/destination-servers` punto finale.
 
 **Formato API**
 
@@ -106,7 +106,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Risposta**
 
-La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazioni del server di destinazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Un `instanceId` corrisponde al modello per un server di destinazione. La risposta viene troncata per brevità.
+La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazioni del server di destinazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `instanceId` corrisponde al modello per un server di destinazione. La risposta viene troncata per brevità.
 
 ```json
 {
@@ -184,7 +184,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
 
 ## Aggiornare una configurazione del server di destinazione esistente {#update}
 
-È possibile aggiornare una configurazione del server di destinazione esistente effettuando una richiesta di PUT all&#39;endpoint `/authoring/destination-servers` e fornendo l&#39;ID di istanza della configurazione del server di destinazione che si desidera aggiornare. Nel corpo della chiamata , fornisci la configurazione aggiornata del server di destinazione.
+È possibile aggiornare una configurazione del server di destinazione esistente effettuando una richiesta di PUT al `/authoring/destination-servers` e fornisce l&#39;ID istanza della configurazione del server di destinazione che desideri aggiornare. Nel corpo della chiamata , fornisci la configurazione aggiornata del server di destinazione.
 
 **Formato API**
 
@@ -235,7 +235,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## Recupera una configurazione specifica del server di destinazione {#get}
 
-Puoi recuperare informazioni dettagliate su una configurazione specifica del server di destinazione effettuando una richiesta di GET all’ endpoint `/authoring/destination-servers` e fornendo l’ID di istanza della configurazione del server di destinazione che desideri aggiornare.
+È possibile recuperare informazioni dettagliate su una configurazione specifica del server di destinazione effettuando una richiesta GET al `/authoring/destination-servers` e fornisce l&#39;ID istanza della configurazione del server di destinazione che desideri aggiornare.
 
 **Formato API**
 
@@ -286,7 +286,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Eliminare una configurazione specifica del server di destinazione {#delete}
 
-Puoi eliminare la configurazione del server di destinazione specificata effettuando una richiesta di DELETE all’ endpoint `/authoring/destination-servers` e fornendo l’ID della configurazione del server di destinazione che desideri eliminare nel percorso della richiesta.
+È possibile eliminare la configurazione del server di destinazione specificata effettuando una richiesta di DELETE al `/authoring/destination-servers` e fornisce l’ID della configurazione del server di destinazione che desideri eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -296,7 +296,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | La `id` della configurazione del server di destinazione che desideri eliminare. |
+| `{INSTANCE_ID}` | La `id` della configurazione del server di destinazione da eliminare. |
 
 **Richiesta**
 
@@ -314,8 +314,8 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme a una risposta HTTP 
 
 ## Gestione degli errori API
 
-Gli endpoint API SDK di destinazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [richiedi errori di intestazione](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come configurare il server di destinazione e il modello utilizzando l’endpoint API `/authoring/destination-servers`. Leggi [come utilizzare l&#39;SDK di destinazione per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come configurare il server di destinazione e il modello utilizzando `/authoring/destination-servers` Endpoint API. Leggi [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.

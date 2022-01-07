@@ -2,9 +2,9 @@
 description: Questa pagina descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/credentials`.
 title: Operazioni API per l’endpoint delle credenziali
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '712'
 ht-degree: 5%
 
 ---
@@ -400,8 +400,8 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme a una risposta HTTP 
 
 ## Gestione degli errori API
 
-Gli endpoint API SDK di destinazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora si sa quando utilizzare l&#39;endpoint delle credenziali e come impostare una configurazione delle credenziali utilizzando `/authoring/credentials` endpoint API o `/authoring/destinations` punto finale. Leggi [come utilizzare l&#39;SDK di destinazione per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora si sa quando utilizzare l&#39;endpoint delle credenziali e come impostare una configurazione delle credenziali utilizzando `/authoring/credentials` endpoint API o `/authoring/destinations` punto finale. Leggi [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.

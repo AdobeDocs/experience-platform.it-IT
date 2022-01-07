@@ -2,16 +2,16 @@
 keywords: Experience Platform;api di destinazione;attivazione ad hoc;attivare segmenti ad hoc
 solution: Experience Platform
 title: (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
-description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
+description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
 
@@ -31,7 +31,7 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 >
 >L’attivazione ad hoc del pubblico è supportata solo da [destinazioni batch basate su file](../destination-types.md#file-based).
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 ### Vendite o promozioni Flash
 
@@ -185,4 +185,4 @@ Una risposta corretta restituisce lo stato HTTP 200.
 
 ## Gestione degli errori API
 
-Gli endpoint API SDK di destinazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.

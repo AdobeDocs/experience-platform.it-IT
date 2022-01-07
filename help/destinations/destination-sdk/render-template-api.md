@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/render`, per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
 title: Operazioni API per i modelli di rendering
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -1067,7 +1067,7 @@ Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 

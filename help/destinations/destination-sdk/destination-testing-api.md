@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/destinationInstance/`, per verificare se la destinazione è configurata correttamente e per verificare l'integrità dei dati che fluiscono nella destinazione configurata.
 title: Operazioni API per il test di destinazione
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -321,7 +321,7 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme alla risposta API da
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
