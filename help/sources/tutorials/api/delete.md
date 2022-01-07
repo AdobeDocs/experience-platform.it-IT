@@ -6,142 +6,59 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come eliminare un account utilizzando l’API del servizio di flusso.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '339'
 ht-degree: 2%
 
 ---
 
 # Eliminare un account tramite l’API del servizio di flusso
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+È possibile eliminare account di origine contenenti errori o diventati obsoleti utilizzando la variabile [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
-
-Questa esercitazione descrive i passaggi da seguire per eliminare utilizzando l&#39;API [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Per informazioni su come eliminare un account utilizzando l’API, consulta la seguente esercitazione.
 
 ## Introduzione
 
-Questa esercitazione richiede un ID di connessione valido. Se non disponi di un ID di connessione valido, seleziona il connettore desiderato dalla [panoramica origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questa esercitazione richiede un ID di connessione valido. Se non si dispone di un ID di connessione valido, selezionare il connettore di scelta dal [panoramica di origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
 Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md):  [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per eliminare correttamente una connessione utilizzando l’ API [!DNL Flow Service] .
+## Utilizzo delle API di Platform
 
-### Lettura di chiamate API di esempio
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+## Elimina account
 
-### Raccogli i valori delle intestazioni richieste
+>[!TIP]
+>
+>Prima di eliminare l&#39;account di origine, è necessario eliminare tutti i flussi di dati esistenti associati all&#39;account di origine. Per eliminare i flussi di dati esistenti, consulta l’esercitazione su [eliminazione dei flussi di dati di origini](./delete-dataflows.md).
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Cerca dettagli di connessione
-
->[!NOTE]
->Questa esercitazione utilizza il [connettore sorgente BLOB di Azure](../../connectors/cloud-storage/blob.md) come esempio, ma i passaggi descritti si applicano a uno qualsiasi dei [connettori sorgente disponibili](../../home.md).
-
-Il primo passo per aggiornare le informazioni di connessione consiste nel recuperare i dettagli di connessione utilizzando l’ID di connessione.
+Per eliminare un account, effettua una richiesta DELETE al [!DNL Flow Service] API fornendo l’ID di connessione di base corrispondente all’account da eliminare.
 
 **Formato API**
 
 ```http
-GET /connections/{CONNECTION_ID}
+DELETE /connections/{BASE_CONNECTION_ID}
 ```
 
 | Parametro | Descrizione |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | Valore `id` univoco per la connessione che si desidera recuperare. |
-
-**Richiesta**
-
-Di seguito vengono recuperate le informazioni relative all&#39;ID di connessione.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli correnti della connessione, incluse le relative credenziali, l&#39;identificatore univoco (`id`) e la versione.
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1603514659165,
-            "updatedAt": 1603514659165,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "id": "dd3631cd-d0ea-4fea-b631-cdd0ea6fea21",
-            "name": "Test Azure Blob Connector",
-            "description": "A test connector for Azure Blob",
-            "connectionSpec": {
-                "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "ConnectionString",
-                "params": {
-                    "connectionString": "xxxx"
-                }
-            },
-            "version": "\"07001eed-0000-0200-0000-5f93b1250000\"",
-            "etag": "\"07001eed-0000-0200-0000-5f93b1250000\""
-        }
-    ]
-}
-```
-
-## Elimina connessione
-
-Una volta ottenuto un ID di connessione esistente, esegui una richiesta DELETE all’ API [!DNL Flow Service] .
-
-**Formato API**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | Valore `id` univoco per la connessione che si desidera eliminare. |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | ID di connessione di base dell&#39;account di origine che si desidera eliminare. |
 
 **Richiesta**
 
 ```shell
 curl -X DELETE \
-    'https://platform-int.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform-int.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
@@ -152,6 +69,6 @@ Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) alla co
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente l’ API [!DNL Flow Service] per eliminare gli account esistenti.
+Seguendo questa esercitazione, hai utilizzato correttamente il [!DNL Flow Service] API per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fai riferimento all&#39;esercitazione su [eliminazione di account nell&#39;interfaccia utente](../../tutorials/ui/delete-accounts.md)
+Per i passaggi su come eseguire queste operazioni utilizzando l’interfaccia utente, consulta l’esercitazione su [eliminazione di account nell’interfaccia utente](../../tutorials/ui/delete-accounts.md).
