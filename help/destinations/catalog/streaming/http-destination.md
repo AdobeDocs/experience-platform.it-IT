@@ -3,10 +3,10 @@ keywords: streaming;
 title: connessione HTTP
 description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3bec18f1b7209b1f329dc90aadb597edb6143291
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 3%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ La [!DNL HTTP] La destinazione API è un [!DNL Adobe Experience Platform] destin
 
 Per inviare i dati del profilo a [!DNL HTTP] endpoint, è necessario prima connettersi alla destinazione in [[!DNL Adobe Experience Platform]](#connect-destination).
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 La [!DNL HTTP] La destinazione è destinata ai clienti che devono esportare i dati di profilo XDM e i segmenti di pubblico in segmenti generici [!DNL HTTP] endpoint.
 
@@ -61,6 +61,18 @@ Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profil
 ### Attributi di destinazione {#attributes}
 
 In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
+
+## Comportamento dell’esportazione del profilo {#profile-export-behavior}
+
+Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP, in modo da esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica del segmento o altri eventi significativi. I profili vengono esportati nella destinazione nelle situazioni seguenti:
+
+* L’aggiornamento del profilo è stato attivato da una modifica dell’appartenenza al segmento per almeno uno dei segmenti mappati alla destinazione. Ad esempio, il profilo si è qualificato per uno dei segmenti mappati alla destinazione o è uscito da uno dei segmenti mappati alla destinazione.
+* L&#39;aggiornamento del profilo è stato attivato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo già qualificato per uno dei segmenti mappati alla destinazione è stata aggiunta una nuova identità nell’attributo di mappa identità.
+* L’aggiornamento del profilo è stato attivato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati alla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
+
+In tutti i casi descritti in precedenza, vengono esportati nella destinazione solo i profili in cui si sono verificati aggiornamenti rilevanti. Ad esempio, se un segmento mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono qualificati per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
+
+Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovino le modifiche. Nell’esempio precedente, quindi, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono cambiati.
 
 ## Dati esportati {#exported-data}
 
