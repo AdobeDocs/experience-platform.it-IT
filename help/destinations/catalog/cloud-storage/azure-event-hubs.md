@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: (Beta) [!DNL Azure Event Hubs] connection
 description: Crea una connessione in uscita in tempo reale al tuo [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati dall'Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '752'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ Tieni presente che tutti gli attributi mappati vengono esportati per un profilo,
 
 ## Dati esportati {#exported-data}
 
-Esportazione [!DNL Experience Platform] i dati si aprono in [!DNL Azure Event Hubs] in formato JSON. Ad esempio, l’evento seguente contiene l’attributo di profilo dell’indirizzo e-mail di un pubblico qualificato per un determinato segmento ed uscito da un altro segmento. Le identità di questo potenziale cliente sono ECID e e-mail.
+Esportazione [!DNL Experience Platform] i dati si aprono in [!DNL Azure Event Hubs] in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo qualificato per un determinato segmento ed uscito da un altro segmento e include il nome dell’attributo del profilo, il cognome, la data di nascita e l’indirizzo e-mail personale. Le identità di questo profilo sono ECID ed e-mail.
 
 ```json
 {
