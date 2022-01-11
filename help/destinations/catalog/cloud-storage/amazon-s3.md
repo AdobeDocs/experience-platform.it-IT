@@ -3,9 +3,9 @@ keywords: Amazon S3;destinazione S3;s3;amazon s3
 title: Connessione Amazon S3
 description: Crea una connessione in uscita diretta all’archiviazione S3 di Amazon Web Services (AWS) per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ Crea una connessione in uscita diretta al tuo [!DNL Amazon Web Services] (AWS) A
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="Chiave pubblica RSA"
+>abstract="Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come stringa codificata Base64."
+>text="Learn more in documentation"
 
 Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 

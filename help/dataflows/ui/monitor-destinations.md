@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 - [Destinazioni](../../destinations/home.md): Le destinazioni sono integrazioni predefinite con applicazioni comunemente utilizzate che consentono l’attivazione senza soluzione di continuità dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-## Monitorare i flussi di dati nell’area di lavoro Destinazioni
+## Monitorare i flussi di dati nell’area di lavoro Destinazioni {#monitor-dataflows-in-the-destinations-workspace}
 
 In **[!UICONTROL Destinazioni]** nell’interfaccia utente di Platform, passa alla **[!UICONTROL Sfoglia]** e selezionare il nome di una destinazione che si desidera visualizzare.
 
@@ -45,18 +45,24 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Elaborazione | La `Processing` lo stato indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
-### Il flusso di dati viene eseguito per le destinazioni di streaming
+### Il flusso di dati viene eseguito per le destinazioni di streaming {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Identità attivate"
 >abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identità escluse"
 >abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identità non riuscite"
+>abstract="Numero di singole identità di profilo che non sono riuscite per la destinazione selezionata. Per ulteriori informazioni, controlla la diagnostica degli errori."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
 
 Per le destinazioni di streaming, l’ [!UICONTROL Corse del flusso di dati] La scheda fornisce un aggiornamento orario per i dati delle metriche in esecuzione nel flusso di dati. Le statistiche più importanti etichettate sono quelle sulle identità.
@@ -93,7 +99,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Esecuzione del flusso di dati per le destinazioni batch
+### Esecuzione del flusso di dati per le destinazioni batch {#dataflow-runs-for-batch-destinations}
 
 Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati delle metriche sulle esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
@@ -148,7 +154,7 @@ Per impostazione predefinita, i dati visualizzati contengono i tassi di attivazi
 
 Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, sui record di profilo attivati, sui record di profilo non riusciti, sui record di profilo saltati, sul totale dei flussi di dati non riusciti e sull’ultima data di aggiornamento per queste destinazioni.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
