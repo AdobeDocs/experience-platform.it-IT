@@ -5,17 +5,16 @@ title: Istruzioni preparate nel servizio query
 topic-legacy: prepared statements
 description: In SQL, le istruzioni preparate vengono utilizzate per creare un modello di query o aggiornamenti simili. Adobe Experience Platform Query Service supporta le istruzioni preparate utilizzando una query con parametri.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '374'
 ht-degree: 6%
 
 ---
 
 # Dichiarazioni preparate
 
-In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili. Adobe Experience Platform [!DNL Query Service] supporta le istruzioni preparate utilizzando una query con parametri. Può essere utilizzato per ottimizzare le prestazioni, in quanto non sarà più necessario ripetere l’analisi di una query più e più volte.
+In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili. Adobe Experience Platform [!DNL Query Service] supporta le istruzioni preparate utilizzando una query con parametri. In questo modo è possibile ottimizzare le prestazioni, in quanto non è più necessario ripetere ripetutamente l’analisi di una query.
 
 ## Utilizzo di istruzioni preparate
 
@@ -25,9 +24,9 @@ Quando si utilizzano istruzioni preparate, sono supportate le seguenti sintassi:
 - [ESEGUIRE](#execute)
 - [DEALLOCARE](#deallocate)
 
-### Prepara un&#39;istruzione preparata {#prepare}
+### Preparare una dichiarazione preparata {#prepare}
 
-Questa query SQL salva la query SELECT scritta con il nome specificato come `PLAN_NAME`. Puoi utilizzare le variabili, ad esempio `$1` al posto dei valori effettivi. Questa istruzione preparata verrà salvata durante la sessione corrente. Tieni presente che i nomi dei piani sono **senza** con distinzione maiuscole/minuscole.
+Questa query SQL salva la query SELECT scritta con il nome specificato come `PLAN_NAME`. È possibile utilizzare variabili quali `$1` in sostituzione dei valori effettivi. Questa istruzione preparata verrà salvata durante la sessione corrente. Si prega di notare che i nomi dei piani sono **not** sensibile a maiuscole e minuscole.
 
 #### Formato SQL
 
