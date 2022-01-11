@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti dei profili tramite API
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" al fine di eseguire aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Questa esercitazione descrive il processo di abilitazione di un set di dati con 
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa a questi servizi DNL Platform correlati:
+Questa esercitazione richiede una comprensione approfondita di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa a [!DNL Platform] servizi:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Catalog Service]](../../catalog/home.md): API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].

@@ -4,9 +4,9 @@ title: Abilitare un set di dati per il servizio Profilo e identità utilizzando 
 type: Tutorial
 description: Questa esercitazione mostra come abilitare un set di dati per l’utilizzo con Profilo cliente in tempo reale e il servizio Identity utilizzando le API di Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Questa esercitazione descrive il processo di abilitazione di un set di dati da u
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa a questi servizi DNL Platform correlati:
+Questa esercitazione richiede una comprensione approfondita di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa a [!DNL Platform] servizi:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-time Customer Profile] colmando le identità di diverse fonti di dati che vengono ingerite in [!DNL Platform].
