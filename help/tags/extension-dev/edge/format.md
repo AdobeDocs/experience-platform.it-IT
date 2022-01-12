@@ -1,10 +1,11 @@
 ---
 title: Moduli libreria nelle estensioni Edge
 description: Formatta i moduli della libreria per le estensioni di tag in una proprietà edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 75%
+source-wordcount: '307'
+ht-degree: 92%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 75%
 >
 >Questo documento descrive il formato del modulo libreria per le estensioni Edge. Se stai sviluppando un’estensione web, consulta la guida sulla [formattazione dei moduli di estensione web](../web/format.md).
 
-Un modulo libreria è un pezzo di codice riutilizzabile fornito da un&#39;estensione che viene emessa all&#39;interno della libreria di runtime di tag in Adobe Experience Platform (la libreria che viene eseguita sul nodo Edge). Ad esempio, un tipo di azione `sendBeacon` avrà un modulo libreria che verrà eseguito sul nodo Edge e invierà un beacon.
+Un modulo libreria è un codice riutilizzabile fornito da un’estensione ed emesso all’interno della libreria di tag runtime di Adobe Experience Platform (libreria che viene eseguita sul nodo edge). Ad esempio, un tipo di azione `sendBeacon` avrà un modulo libreria che verrà eseguito sul nodo Edge e invierà un beacon.
 
-Il modulo libreria è strutturato come [modulo CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). In un modulo CommonJS, sono disponibili le seguenti variabili:
+Il modulo libreria è strutturato come [modulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). In un modulo CommonJS, sono disponibili le seguenti variabili:
 
 ## [!DNL require]
 

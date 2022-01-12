@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più sorgenti e di combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare una visualizzazione unificata.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 2%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 |---|---|
-| `op` | Specifica l&#39;operazione da eseguire. Alcuni esempi di altre operazioni di PATCH sono disponibili nella sezione [Documentazione sulle patch JSON](http://jsonpatch.com) |
+| `op` | Specifica l&#39;operazione da eseguire. Alcuni esempi di altre operazioni di PATCH sono disponibili nella sezione [Documentazione sulle patch JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | Percorso del campo da aggiornare. I valori accettati sono: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | Valore su cui impostare il campo specificato. |
 
@@ -632,7 +632,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione appena aggio
 
 ### Sovrascrivi criterio di unione
 
-Un altro modo per modificare un criterio di unione consiste nell&#39;utilizzare una richiesta PUT, che sovrascrive l&#39;intero criterio di unione.
+Un altro modo per modificare un criterio di unione consiste nell’utilizzare una richiesta PUT, che sovrascrive l’intero criterio di unione.
 
 **Formato API**
 

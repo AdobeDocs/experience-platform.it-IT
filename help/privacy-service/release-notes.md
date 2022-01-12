@@ -5,7 +5,7 @@ title: Note sulla versione di Privacy Service
 topic-legacy: release notes
 description: Note aggiornate sulla versione di Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
@@ -47,7 +47,7 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 | [!DNL Privacy Service] rebranding | Il nome precedentemente denominato &quot;Servizio RGPD&quot; è stato rinominato in [!DNL Privacy Service] poiché il servizio è cresciuto per supportare altre normative oltre al RGPD. |
 | Nuovi endpoint API | Percorso di base per [!DNL Privacy Service] L’API è stata aggiornata da `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nuovo obbligatorio `regulation` property | Durante la creazione di nuovi lavori nel [!DNL Privacy Service] API `regulation` la proprietà deve essere fornita nel payload della richiesta per indicare quale regola monitorare il processo in. I valori accettati sono `gdpr` e `ccpa`. Visualizza il documento in [lavori sulla privacy](api/privacy-jobs.md) in [!DNL Privacy Service] Guida all’API per ulteriori informazioni. |
-| Supporto per l’autenticazione Adobe Primetime | [!DNL Privacy Service] ora accetta le richieste di accesso/cancellazione dall’autenticazione di Adobe Primetime, utilizzando `primetimeAuthentication` come valore del prodotto. Consulta la sezione [Documentazione di Primetime Authentication](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) per ulteriori informazioni. |
+| Supporto per l’autenticazione Adobe Primetime | [!DNL Privacy Service] ora accetta le richieste di accesso/cancellazione dall’autenticazione di Adobe Primetime, utilizzando `primetimeAuthentication` come valore del prodotto. Consulta la sezione [Documentazione di Primetime Authentication](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) per ulteriori informazioni. |
 
 ### Miglioramenti
 

@@ -1,10 +1,11 @@
 ---
 title: Viste in estensioni Web
 description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
-ht-degree: 78%
+ht-degree: 99%
 
 ---
 
@@ -26,17 +27,17 @@ Assicurati di includere un tag `doctype` nel file HTML. Generalmente il file HTM
 
 ## Inclusione dello script iframe dei tag
 
-Includi lo script iframe dei tag nell’HTML della visualizzazione:
+Includi lo script per iframe dei tag nell’HTML della vista:
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
 ```
 
-Questo script fornisce un’API di comunicazione per consentire alla visualizzazione di comunicare con l’applicazione tag.
+Questo script fornisce un’API di comunicazione che consente alla vista di comunicare con l’applicazione dei tag.
 
 ## Registrazione con l’API di comunicazione bridge per l’estensione
 
-Una volta caricato lo script iframe, dovrai fornire alcuni metodi ai tag che userà per la comunicazione. Richiama `window.extensionBridge.register` e trasmettilo come oggetto nel modo seguente:
+Una volta caricato lo script per iframe, è necessario fornire ai tag alcuni metodi da utilizzare per la comunicazione. Richiama `window.extensionBridge.register` e trasmettilo come oggetto nel modo seguente:
 
 ```js
 window.extensionBridge.register({
@@ -64,16 +65,16 @@ Il contenuto di ciascun metodo dovrà essere modificato in base ai requisiti spe
 
 ### [!DNL init]
 
-Il metodo `init` viene richiamato dai tag non appena la visualizzazione viene caricata nell’iframe. Verrà trasmesso un singolo argomento (`info`) che dovrà essere un oggetto contenente le seguenti proprietà:
+Il metodo `init` verrà richiamato dai tag non appena la vista sarà stata caricata nell’iframe. Verrà trasmesso un singolo argomento (`info`) che dovrà essere un oggetto contenente le seguenti proprietà:
 
 | Proprietà | Descrizione |
 | --- | --- |
 | `settings` | Oggetto contenente le impostazioni precedentemente salvate dalla vista. Se `settings` corrisponde a `null`, indica che l’utente sta creando le impostazioni iniziali anziché caricare una versione salvata. Se `settings` corrisponde a un oggetto, utilizzalo per compilare la vista, poiché l’utente sta scegliendo di modificare le impostazioni persistenti precedenti. |
 | `extensionSettings` | Impostazioni salvate dalla vista di configurazione dell’estensione. Questa proprietà può essere utile per accedere alle impostazioni dell’estensione in altre viste, diverse da quella di configurazione dell’estensione. Se la vista corrente è quella di configurazione dell’estensione, utilizza `settings`. |
 | `propertySettings` | Oggetto contenente le impostazioni della proprietà. Per informazioni dettagliate sul contenuto di questo oggetto, consulta la [guida agli oggetti “turbine”](../turbine.md#property-settings). |
-| `tokens` | Oggetto contenente token API. Per accedere alle API di Adobe dall’interno della vista, in genere si utilizza un token IMS in `tokens.imsAccess`. Questo token sarà disponibile solo per le estensioni sviluppate da Adobe. Se sei un dipendente Adobe che rappresenta un&#39;estensione creata da Adobe, invia un&#39;e-mail al team di ingegneria della raccolta dati](mailto:reactor@adobe.com) e specifica il nome dell&#39;estensione in modo che possiamo aggiungerla all&#39;elenco Consentiti.[ |
+| `tokens` | Oggetto contenente token API. Per accedere alle API di Adobe dall’interno della vista, in genere si utilizza un token IMS in `tokens.imsAccess`. Questo token viene reso disponibile solo per le estensioni sviluppate da Adobe. Se sei un dipendente di Adobe che rappresenta un’estensione creata da Adobe, invia un’[e-mail al team di progettazione di Data Collection](mailto:reactor@adobe.com) e fornisci il nome dell’estensione in modo che sia possibile aggiungerla all’elenco di estensioni consentite. |
 | `company` | Oggetto contenente una singola proprietà, `orgId`, che rappresenta il tuo Adobe Experience Cloud ID (stringa alfanumerica di 24 caratteri). |
-| `schema` | Oggetto in formato [JSON Schema](http://json-schema.org/). Questo oggetto proviene dal [manifesto dell’estensione](../manifest.md) e può essere utile per convalidare il modulo. |
+| `schema` | Oggetto in formato [JSON Schema](https://json-schema.org/). Questo oggetto proviene dal [manifesto dell’estensione](../manifest.md) e può essere utile per convalidare il modulo. |
 
 La tua vista deve utilizzare queste informazioni per riprodurre e gestire il modulo. Probabilmente dovrai usare solo `info.settings`, ma le altre informazioni vengono fornite nel caso siano necessarie.
 
@@ -95,11 +96,11 @@ Il metodo `getSettings` verrà richiamato dopo che l’utente avrà premuto il p
 * Oggetto contenente le impostazioni basate su quanto immesso dall’utente.
 * Promessa da risolvere successivamente con un oggetto contenente impostazioni basate su quanto immesso dall’utente.
 
-Questo oggetto delle impostazioni verrà successivamente emesso nella libreria di runtime di tag. Il contenuto di questo oggetto è a tua discrezione. L’oggetto deve essere serializzabile e deserializzabile in e da JSON. Valori come funzioni o istanze [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) non soddisfano questi criteri e pertanto non sono consentiti.
+Questo oggetto impostazioni verrà emesso in seguito nella libreria runtime del tag. Il contenuto di questo oggetto è a tua discrezione. L’oggetto deve essere serializzabile e deserializzabile in e da JSON. Valori come funzioni o istanze [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) non soddisfano questi criteri e pertanto non sono consentiti.
 
 ## Riutilizzo delle viste condivise
 
-L’oggetto `window.extensionBridge` dispone di diversi metodi che consentono di sfruttare le visualizzazioni esistenti disponibili tramite i tag, in modo da non doverle riprodurre all’interno della visualizzazione. Sono disponibili i seguenti metodi:
+L’oggetto `window.extensionBridge` dispone di diversi metodi che consentono di sfruttare le viste esistenti disponibili nei tag in modo da non doverle riprodurre all’interno della vista personalizzata. Sono disponibili i seguenti metodi:
 
 ### [!DNL openCodeEditor]
 
@@ -129,7 +130,7 @@ Quando si richiama questo metodo, verrà visualizzata una finestra modale che co
 | Proprietà | Descrizione |
 | --- | --- |
 | `pattern` | Pattern di espressione regolare da utilizzare come valore iniziale del campo del pattern all’interno del tester. Questo generalmente viene fornito quando l’utente modifica un’espressione regolare esistente. In caso contrario, inizialmente il campo del pattern sarà vuoto. |
-| `flags` | Flag di espressione regolare che devono essere utilizzati dal tester. Ad esempio, `gi` potrebbe indicare il flag di corrispondenza globale e il flag di esclusione della distinzione tra maiuscole e minuscole. Questi flag non possono essere modificati dall’utente nel tester, ma vengono utilizzati per dimostrare i flag specifici che l’estensione utilizzerà durante l’esecuzione dell’espressione regolare. Se non vengono speficati, nel test non verrà utilizzato alcun flag. Per ulteriori informazioni sui flag per espressioni regolari, consulta la [documentazione RegExp di MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Un esempio d’uso comune è dato da un’estensione che consente agli utenti di attivare o disattivare la distinzione tra maiuscole e minuscole per un’espressione regolare. Per supportare questo, l’estensione fornisce in genere una casella di controllo all’interno della relativa visualizzazione dell’estensione che, se selezionata, abilita l’insensibilità alle maiuscole/minuscole (rappresentata dal flag `i` ). L’oggetto impostazioni salvato dalla vista deve indicare se la casella di controllo è stata selezionata, affinché il modulo libreria che esegue l’espressione regolare possa sapere se utilizzare il flag `i`. Inoltre, quando la visualizzazione dell&#39;estensione desidera aprire il tester dell&#39;espressione regolare, deve passare il flag `i` se la casella di controllo relativa all&#39;insensibilità alla maiuscole/minuscole è selezionata. Questo consente all’utente di testare correttamente l’espressione regolare con l’opzione di distinzione tra maiuscole e minuscole attivata. |
+| `flags` | Flag di espressione regolare che devono essere utilizzati dal tester. Ad esempio, `gi` potrebbe indicare il flag di corrispondenza globale e il flag di esclusione della distinzione tra maiuscole e minuscole. Questi flag non possono essere modificati dall’utente nel tester, ma vengono utilizzati per dimostrare i flag specifici che l’estensione utilizzerà durante l’esecuzione dell’espressione regolare. Se non vengono speficati, nel test non verrà utilizzato alcun flag. Per ulteriori informazioni sui flag per espressioni regolari, consulta la [documentazione RegExp di MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Un esempio d’uso comune è dato da un’estensione che consente agli utenti di attivare o disattivare la distinzione tra maiuscole e minuscole per un’espressione regolare. In questo caso, generalmente l’estensione fornisce una casella di controllo nella vista dell’estensione che, se selezionata, attiva l’opzione per ignorare l’uso di lettere maiuscole o minuscole (rappresentata dal flag `i`). L’oggetto impostazioni salvato dalla vista deve indicare se la casella di controllo è stata selezionata, affinché il modulo libreria che esegue l’espressione regolare possa sapere se utilizzare il flag `i`. Inoltre, se la vista dell’estensione desidera aprire il tester delle espressioni regolari, se è stata selezionata la casella di controllo per ignorare l’uso di maiuscole/minuscole deve trasmettere il flag `i`. Questo consente all’utente di testare correttamente l’espressione regolare con l’opzione per ignorare l’uso di maiuscole/minuscole abilitata. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -141,15 +142,15 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 Quando si richiama questo metodo, viene visualizzata una finestra modale che consente all’utente di selezionare un elemento dati. Una volta selezionato un elemento dati, la promessa viene risolta con il nome dell’elemento dati selezionato (per impostazione predefinita il nome è racchiuso tra simboli di percentuale). Se l’utente chiude il selettore di elementi senza salvare le modifiche, la promessa non verrà mai risolta.
 
-L&#39;oggetto `options` deve contenere una singola proprietà booleana, `tokenize`. Questa proprietà indica se il nome dell’elemento dati selezionato deve essere racchiuso tra simboli di percentuale prima di risolvere la promessa. Per informazioni sull’utilità di questa proprietà, consulta la sezione relativa agli [elementi dati di supporto](#supporting-data-elements). L’impostazione predefinita di questa opzione è `true`.
+L’oggetto `options` deve contenere una singola proprietà booleana: `tokenize`. Questa proprietà indica se il nome dell’elemento dati selezionato deve essere racchiuso tra simboli di percentuale prima di risolvere la promessa. Per informazioni sull’utilità di questa proprietà, consulta la sezione relativa agli [elementi dati di supporto](#supporting-data-elements). L’impostazione predefinita di questa opzione è `true`.
 
 ## Elementi dati di supporto {#supporting-data-elements}
 
-Le visualizzazioni dispongono probabilmente di campi modulo in cui gli utenti desiderano sfruttare gli elementi dati. Ad esempio, se nella visualizzazione è presente un campo di testo in cui l’utente deve immettere un nome di prodotto, potrebbe non avere senso digitare un valore hardcoded nel campo. Sarà invece preferibile usare un valore dinamico (determinato in fase di esecuzione), e questo sarà possibile tramite l’utilizzo di un elemento dati.
+È probabile che nelle viste siano presenti campi modulo in cui gli utenti vorrebbero sfruttare alcuni elementi dati. Ad esempio, se la vista include un campo di testo in cui si deve immettere il nome di un prodotto, potrebbe non avere senso digitarvi un valore hardcoded. Sarà invece preferibile usare un valore dinamico (determinato in fase di esecuzione), e questo sarà possibile tramite l’utilizzo di un elemento dati.
 
-Ad esempio, supponiamo di voler creare un’estensione che invia un beacon per tenere traccia di una conversione. Supponiamo inoltre che uno dei dati che il beacon invia sia un nome di prodotto. La visualizzazione dell&#39;estensione che consente all&#39;utente di configurare il beacon avrà probabilmente un campo di testo per il nome del prodotto. In genere sarà megliio evitare che l’utente di Platform debba immettere un nome di prodotto statico come “Calzone Oven XL”, perché il nome del prodotto dipenderà dalla pagina da cui verrà inviato il beacon. In situazioni di questo tipo si può ricorrere all’utilizzo di un elemento dati.
+Ad esempio, supponiamo di voler creare un’estensione che invia un beacon per tenere traccia di una conversione. Supponiamo inoltre che uno dei dati che il beacon invia sia un nome di prodotto. La vista della nostra estensione che consente all’utente di configurare il beacon avrà probabilmente un campo di testo per il nome del prodotto. In genere sarà megliio evitare che l’utente di Platform debba immettere un nome di prodotto statico come “Calzone Oven XL”, perché il nome del prodotto dipenderà dalla pagina da cui verrà inviato il beacon. In situazioni di questo tipo si può ricorrere all’utilizzo di un elemento dati.
 
-Se un utente desidera utilizzare l’elemento dati denominato `productname` per il valore del nome del prodotto, può digitare il nome dell’elemento dati racchiuso tra simboli di percentuale (`%productname%`). Ci riferiamo al nome dell’elemento dati con wrapping di segno percentuale come &quot;token elemento dati&quot;. Gli utenti di Platform hanno spesso familiarità con questo costrutto. L’estensione, a sua volta, dovrà salvare il token di elemento dati nell’oggetto `settings` esportato. L’oggetto impostazioni si presenterà quindi così:
+Se un utente desidera utilizzare l’elemento dati denominato `productname` per il valore del nome del prodotto, può digitare il nome dell’elemento dati racchiuso tra simboli di percentuale (`%productname%`). Il nome dell’elemento dati racchiuso tra segni di percentuale è detto “token elemento dati”. Gli utenti di Platform hanno spesso familiarità con questo costrutto. L’estensione, a sua volta, dovrà salvare il token di elemento dati nell’oggetto `settings` esportato. L’oggetto impostazioni si presenterà quindi così:
 
 ```js
 {
@@ -157,7 +158,7 @@ Se un utente desidera utilizzare l’elemento dati denominato `productname` per 
 }
 ```
 
-In fase di runtime, prima di passare l’oggetto settings al modulo libreria, viene eseguita la scansione dell’oggetto settings e tutti i token degli elementi dati vengono sostituiti con i rispettivi valori. Se in fase di esecuzione il valore dell&#39;elemento dati `productname` era `Ceiling Medallion Pro 2000`, l&#39;oggetto impostazioni che verrebbe passato al modulo libreria sarebbe il seguente:
+In fase di runtime, prima di essere passato al modulo libreria, l’oggetto delle impostazioni viene esaminato ed eventuali token di elementi dati vengono sostituiti con i rispettivi valori. Se, in fase di esecuzione, il valore dell’elemento dati `productname` fosse `Ceiling Medallion Pro 2000`, l’oggetto impostazioni trasmesso al modulo libreria sarebbe il seguente:
 
 ```js
 {
@@ -215,7 +216,7 @@ Oppure, supponiamo che l’oggetto impostazioni persistente sia il seguente:
 }
 ```
 
-In questo caso, poiché il valore di `productName` è più di un singolo token di elemento dati, il risultato sarà sempre una stringa. Ciascun token di elemento dati verrà sostituito dal relativo valore dopo essere stato trasmesso a una stringa. Se in fase di esecuzione il valore di `productname` era `Ceiling Medallion Pro` (una stringa) e `modelnumber` era `2000` (un numero), l&#39;oggetto impostazioni risultante passato nel modulo libreria sarebbe:
+In questo caso, poiché il valore di `productName` è più di un singolo token di elemento dati, il risultato sarà sempre una stringa. Ciascun token di elemento dati verrà sostituito dal relativo valore dopo essere stato trasmesso a una stringa. Se, in fase di esecuzione, il valore di `productname` fosse `Ceiling Medallion Pro` (una stringa) e `modelnumber` fosse `2000` (un numero), l’oggetto impostazioni risultante trasmesso al modulo libreria sarebbe:
 
 ```js
 {
@@ -225,4 +226,4 @@ In questo caso, poiché il valore di `productName` è più di un singolo token d
 
 ## Evitare la navigazione
 
-La comunicazione tra la vista dell&#39;estensione e l&#39;interfaccia utente di raccolta dati contenitore è subordinata al fatto che non si verifica alcuna navigazione all&#39;interno della vista dell&#39;estensione. Pertanto, evita di aggiungere alla vista dell’estensione elementi che consentano all’utente di allontanarsi dalla rispettiva pagina HTML. Ad esempio, se all’interno della vista dell’estensione inserisci un collegamento, accertati che questo venga aperto in una nuova finestra del browser (in generale aggiungendo `target="_blank"` al tag di ancoraggio). Se utilizzi un elemento `form` all’interno della vista dell’estensione, assicurati che il modulo non venga mai inviato. L’invio del modulo può avvenire accidentalmente se nel modulo è presente un elemento `button` ma non vi è stato aggiunto `type="button"`. L’invio di un modulo all’interno della vista dell’estensione potrebbe causare l’aggiornamento del documento HTML, con conseguente errore nell’esperienza di utilizzo.
+La comunicazione tra la vista dell’estensione e l’interfaccia utente di Data Collection che la contiene dipende dall’assenza di navigazione all’interno della vista dell’estensione. Pertanto, evita di aggiungere alla vista dell’estensione elementi che consentano all’utente di allontanarsi dalla rispettiva pagina HTML. Ad esempio, se all’interno della vista dell’estensione inserisci un collegamento, accertati che questo venga aperto in una nuova finestra del browser (in generale aggiungendo `target="_blank"` al tag di ancoraggio). Se utilizzi un elemento `form` all’interno della vista dell’estensione, assicurati che il modulo non venga mai inviato. L’invio del modulo può avvenire accidentalmente se nel modulo è presente un elemento `button` ma non vi è stato aggiunto `type="button"`. L’invio di un modulo all’interno della vista dell’estensione potrebbe causare l’aggiornamento del documento HTML, con conseguente errore nell’esperienza di utilizzo.

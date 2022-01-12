@@ -1,10 +1,11 @@
 ---
 title: Moduli libreria nelle estensioni Web
 description: Scopri come formattare i moduli libreria per le estensioni Web in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 72%
+source-wordcount: '378'
+ht-degree: 93%
 
 ---
 
@@ -12,15 +13,15 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta il seguente[documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 >[!IMPORTANT]
 >
 >Questo documento descrive il formato dei moduli libreria per le estensioni web. Se stai sviluppando un’estensione Edge, consulta invece la guida sulla [formattazione dei moduli per estensioni Edge](../edge/format.md).
 
-Un modulo libreria è un pezzo di codice riutilizzabile fornito da un&#39;estensione che viene emessa all&#39;interno della libreria di runtime di tag in Adobe Experience Platform. Questa libreria viene quindi eseguita sul sito web del client. Ad esempio, un tipo di evento `gesture` avrà un modulo libreria che verrà eseguito sul sito web del client e rileverà i movimenti dell’utente.
+Un modulo libreria è una parte di codice riutilizzabile fornito da un’estensione ed emesso all’interno della libreria runtime di tag in Adobe Experience Platform. Questa libreria viene quindi eseguita sul sito web del cliente. Ad esempio, un tipo di evento `gesture` avrà un modulo libreria che verrà eseguito sul sito web del client e rileverà i movimenti dell’utente.
 
-Il modulo libreria è strutturato come [modulo CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1). In un modulo CommonJS, sono disponibili le seguenti variabili:
+Il modulo libreria è strutturato come [modulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). In un modulo CommonJS, sono disponibili le seguenti variabili:
 
 ## [!DNL require]
 
@@ -60,7 +61,7 @@ Si tratta di un’alternativa a `module.exports`, ma il suo utilizzo è più lim
 
 ## Esecuzione e caching
 
-Quando la libreria di runtime di tag viene eseguita, i moduli verranno immediatamente &quot;installati&quot; e le loro esportazioni sono memorizzate nella cache. Nel seguente modulo di esempio:
+Quando viene eseguita la libreria runtime dei tag, i moduli vengono immediatamente “installati” e le relative esportazioni vengono memorizzate nella cache. Nel seguente modulo di esempio:
 
 ```javascript
 console.log('runs on startup');
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` verranno registrati immediatamente, mentre  `runs when necessary` verranno registrati solo una volta che la funzione esportata viene chiamata dal motore di tag. Anche se potrebbe non essere necessario per lo scopo del modulo, è possibile trarne vantaggio eseguendo eventuali configurazioni necessarie prima di esportare la funzione.
+`runs on startup` verrà registrato immediatamente, mentre `runs when necessary` verrà registrato solo dopo che la funzione esportata verrà richiamata dal motore dei tag. Anche se potrebbe non essere necessario per lo scopo del modulo, è possibile trarne vantaggio eseguendo eventuali configurazioni necessarie prima di esportare la funzione.
