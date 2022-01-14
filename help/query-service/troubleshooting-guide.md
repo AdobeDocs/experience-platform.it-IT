@@ -5,16 +5,16 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
+source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '769'
 ht-degree: 4%
 
 ---
 
 # [!DNL Query Service] guida alla risoluzione dei problemi
 
-Questo documento fornisce le risposte alle domande più frequenti sul servizio Query e fornisce un elenco di codici di errore visualizzati di frequente durante l’utilizzo del servizio Query. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, consulta la [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande più frequenti sul servizio Query e fornisce un elenco di codici di errore visualizzati di frequente durante l’utilizzo del servizio Query. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, fai riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ## Domande frequenti
 
@@ -62,7 +62,7 @@ Quando esegui una query con dati della serie temporale, utilizza il filtro della
 
 >[!NOTE]
 >
-> La stringa data **deve essere nel formato**.`yyyy-mm-ddTHH24:MM:SS`
+> Stringa data **deve** nel formato `yyyy-mm-ddTHH24:MM:SS`.
 
 Di seguito è riportato un esempio di utilizzo del filtro timestamp :
 
@@ -77,11 +77,11 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 ### È necessario utilizzare i caratteri jolly, ad esempio * per ottenere tutte le righe dai set di dati?
 
-Non è possibile utilizzare i caratteri jolly per ottenere tutti i dati dalle righe, in quanto Query Service deve essere trattato come un **columnar-store** anziché come sistema di archiviazione tradizionale basato su righe.
+Non è possibile utilizzare i caratteri jolly per ottenere tutti i dati dalle righe, in quanto Query Service deve essere trattato come **columnar-store** piuttosto che un sistema di archiviazione tradizionale basato su righe.
 
-### È necessario utilizzare `NOT IN` nella query SQL?
+### Dovrei utilizzare `NOT IN` nella query SQL?
 
-L&#39;operatore `NOT IN` viene spesso utilizzato per recuperare righe che non si trovano in un&#39;altra tabella o istruzione SQL. Questo operatore può rallentare le prestazioni e può restituire risultati imprevisti se le colonne confrontate accettano `NOT NULL` o se si dispone di un numero elevato di record.
+La `NOT IN` viene spesso utilizzato per recuperare righe che non si trovano in un&#39;altra tabella o istruzione SQL. Questo operatore può rallentare le prestazioni e può restituire risultati imprevisti se le colonne confrontate accettano `NOT NULL`oppure hai un gran numero di documenti.
 
 Invece di utilizzare `NOT IN`, puoi utilizzare `NOT EXISTS` o `LEFT OUTER JOIN`.
 
@@ -97,7 +97,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-Se utilizzi l’operatore `NOT EXISTS` , puoi replicare utilizzando l’operatore `NOT IN` utilizzando la seguente query:
+Se utilizzi `NOT EXISTS` è possibile replicare utilizzando `NOT IN` utilizzando la seguente query:
 
 ```sql
 SELECT ID FROM T1
@@ -105,7 +105,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-In alternativa, se utilizzi l’operatore `LEFT OUTER JOIN` , puoi replicare utilizzando l’operatore `NOT IN` utilizzando la seguente query:
+In alternativa, se utilizzi il `LEFT OUTER JOIN` è possibile replicare utilizzando `NOT IN` utilizzando la seguente query:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -113,11 +113,11 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
-### Qual è l’utilizzo corretto degli operatori `OR` e `UNION`?
+### Qual è l’utilizzo corretto del `OR` e `UNION` operatori?
 
-### Come posso utilizzare correttamente l&#39;operatore `CAST` per convertire i timestamp nelle query SQL?
+### Come si utilizza correttamente il `CAST` per convertire i timestamp nelle query SQL?
 
-Quando utilizzi l’operatore `CAST` per convertire una marca temporale, devi includere sia la data **che l’ora**.
+Quando utilizzi `CAST` per convertire una marca temporale, è necessario includere sia la data **e** tempo.
 
 Ad esempio, se manca il componente tempo , come illustrato di seguito, si verifica un errore:
 
@@ -126,12 +126,16 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-Di seguito viene illustrato l’utilizzo corretto dell’operatore `CAST`:
+Un uso corretto del `CAST` l’operatore è mostrato di seguito:
 
 ```sql
 SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
+
+### Come posso scaricare i risultati della query come file CSV?
+
+Questa non è una funzione che Query Service offre direttamente. Tuttavia, se [!DNL PostgreSQL] il client utilizzato per connettersi al server di database ha la funzionalità , la risposta di una query SELECT può essere scritta e scaricata come file CSV. Fare riferimento alla documentazione dell&#39;utilità o dello strumento di terze parti utilizzato per i chiarimenti su questo processo.
 
 ## Errori API REST
 
@@ -156,7 +160,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 | **53400** | Query | Timeout dell&#39;istruzione | La dichiarazione in diretta ha richiesto più di 10 minuti al massimo |
 | **58000** | Query | Errore di sistema | Errore interno del sistema |
 | **0A000** | Query/Comando | Non supportati | Funzionalità/funzionalità nella query/comando non supportata |
-| **42501** | Query DI TABELLA A DISCESA | Tabella di eliminazione non creata dal servizio query | La tabella che viene eliminata non è stata creata dal servizio query utilizzando l’istruzione `CREATE TABLE` |
+| **42501** | Query DI TABELLA A DISCESA | Tabella di eliminazione non creata dal servizio query | La tabella da eliminare non è stata creata dal servizio query utilizzando `CREATE TABLE` dichiarazione |
 | **42501** | Query DI TABELLA A DISCESA | Tabella non creata dall&#39;utente autenticato | La tabella da eliminare non è stata creata dall&#39;utente attualmente connesso |
 | **42P01** | Query DI TABELLA A DISCESA | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
-| **42P12** | Query DI TABELLA A DISCESA | Nessuna tabella trovata per `dbName`: controlla il`dbName` | Impossibile trovare tabelle nel database corrente |
+| **42P12** | Query DI TABELLA A DISCESA | Nessuna tabella trovata per `dbName`: controlla `dbName` | Impossibile trovare tabelle nel database corrente |
