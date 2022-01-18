@@ -2,10 +2,10 @@
 title: Regole
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 99%
+source-wordcount: '1973'
+ht-degree: 81%
 
 ---
 
@@ -121,22 +121,18 @@ Quando crei o modifichi regole, puoi salvarle e distribuirle nella [libreria att
 
 ## Ordine regole {#rule-ordering}
 
-L&#39;ordinamento delle regole consente di controllare l&#39;ordine di esecuzione per le regole che condividono un evento.
+L&#39;ordinamento delle regole consente di controllare l&#39;ordine di esecuzione per le regole che condividono un evento. Ogni regola contiene un numero intero che determina la sua priorità dell&#39;ordine (il valore predefinito è 50). Le regole che contengono valori più bassi per il loro ordine vengono eseguite prima di quelle con valori più alti.
 
-Spesso è importante attivare le regole in un ordine specifico. Esempi: (1) disponi di diverse regole che impostano le variabili [!DNL Analytics] in modo condizionato e devi accertarti che la regola con Invia Beacon sia attivata per ultima. (2) disponi di una regola che attiva [!DNL Target] e di un&#39;altra regola che attiva [!DNL Analytics] e desideri che la regola [!DNL Target] venga eseguita per prima.
+Considera un set di cinque regole che condividono tutti un evento e hanno priorità predefinita:
 
-In sostanza, la responsabilità di eseguire azioni in ordine è dello sviluppatore di estensione del tipo di evento in uso. Gli sviluppatori di estensioni Adobe assicurano che le loro estensioni funzionino come previsto. Per le estensioni di terze parti, Adobe fornisce indicazioni agli sviluppatori per consentire loro di implementarle correttamente, ma spetta a loro metterle in pratica.
+* Se esiste una regola che desideri eseguire per ultima, puoi modificare quel componente della regola e assegnargli un numero maggiore di 50 (ad esempio, 60).
+* Se vuoi eseguire prima una regola, puoi modificarla e assegnargli un numero inferiore a 50 (ad esempio, 40).
 
-Adobe consiglia caldamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). La semplicità è la scelta migliore. Ricorda che devi mantenere l&#39;ordine che hai stabilito. Tuttavia, Adobe riconosce che ci possono essere casi limite in cui questa potrebbe essere una scelta limitativa, per questo sono concessi anche altri numeri. I tag supportano numeri compresi tra +/- 2.147.483.648. Puoi anche utilizzare una dozzina di decimali, ma se ti trovi in uno scenario in cui hai necessità di farlo, dovresti ripensare ad alcune delle decisioni che hai preso per arrivare al punto in cui ti trovi.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Nella sezione Azione di una regola, le regole lato server vengono eseguite in sequenza. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
+>In ultima analisi, la responsabilità dell’esecuzione delle azioni è dello sviluppatore dell’estensione del tipo di evento utilizzato. Gli sviluppatori di estensioni Adobe assicurano che le loro estensioni funzionino come previsto. Adobe fornisce indicazioni agli sviluppatori di estensioni di terze parti per eseguire correttamente questa operazione, ma non può garantire il modo in cui vengono seguite queste linee guida.
 
-### Situazioni che potrebbero verificarsi con
-
-* Cinque regole condividono un evento. Tutte hanno priorità predefinita. Desidero che una di queste venga eseguita per ultima. È sufficiente modificare tale componente della regola e assegnargli un numero maggiore di 50 (ad esempio, 60).
-* Cinque regole condividono un evento. Tutte hanno priorità predefinita. Desidero che una di queste venga eseguita per prima. È sufficiente modificare tale componente della regola e assegnargli un numero inferiore di 50 (ad esempio, 40).
+Si consiglia vivamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). Poiché l&#39;ordine delle regole deve essere mantenuto manualmente, è consigliabile mantenere lo schema di ordinazione il più semplice possibile. In presenza di casi edge in cui questa restrizione è troppo limitativa, i tag supportano i numeri di ordine delle regole tra +/- 2.147.483.648.
 
 ### Gestione delle regole lato client
 
@@ -146,7 +142,7 @@ Puoi utilizzare `document.write` tra gli script personalizzati indipendentemente
 
 Puoi ordinare diversi tipi di codici personalizzati tra loro. Ad esempio, puoi utilizzare un&#39;azione codice personalizzato JavaScript, poi un&#39;azione codice personalizzato HTML, quindi un&#39;azione codice personalizzato JavaScript. I tag assicurano che vengano eseguite in tale ordine.
 
-## Raggruppamento delle regole
+## Raggruppamento di regole
 
 Gli eventi e le condizioni delle regole sono sempre raggruppati nella libreria principale di tag. Le azioni possono essere raggruppate nella libreria principale o caricate in ritardo come risorse secondarie, a seconda delle necessità. Il fatto che le azioni siano raggruppate o meno è determinato dal tipo di evento della regola.
 
@@ -167,19 +163,21 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 
 ## Sequenza dei componenti della regola {#sequencing}
 
-Il comportamento dell’ambiente runtime dei tag dipende dall’abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la tua proprietà.
+Il comportamento dell’ambiente runtime dei dipende dall’abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la tua proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
+
+>[!IMPORTANT]
+>
+>Questa impostazione determina solo il modo in cui le condizioni e le azioni vengono valutate all&#39;interno di ogni regola e non influisce sulla sequenza in cui le regole stesse vengono eseguite sulla proprietà. Fai riferimento alla sezione precedente su [ordinamento delle regole](#rule-ordering) per ulteriori informazioni su come determinare l’ordine di esecuzione per più regole.
+>
+>In [inoltro eventi](../event-forwarding/overview.md) , le azioni delle regole vengono sempre eseguite in sequenza e questa impostazione non è disponibile. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
 
 ### Abilitata
 
-Se l’impostazione è abilitata, quando un evento viene attivato in fase di runtime, le condizioni e le azioni della regola vengono aggiunte a una coda di elaborazione in base all’ordine definito ed elaborate una alla volta in base al FIFO. Il tag attende il completamento del componente prima di passare a quello successivo.
+Se l’impostazione è abilitata quando un evento viene attivato in fase di runtime, le condizioni e le azioni della regola vengono aggiunte a una coda di elaborazione (in base all’ordine definito) ed elaborate una alla volta in base al criterio FIFO (first in, first out). La regola attende il completamento del componente prima di passare a quello successivo.
 
 Se una condizione risulta false o raggiunge il timeout definito, le condizioni e le azioni successive della regola vengono rimosse dalla coda.
 
 Se un’azione ha esito negativo o raggiunge il timeout definito, le azioni successive della regola vengono rimosse dalla coda. 
-
->[!NOTE]
->
->Con questa impostazione abilitata, tutte le condizioni e le azioni vengono eseguite in modo asincrono, anche se la libreria di tag è stata caricata in modo sincrono.
 
 ### Disabilitata
 
