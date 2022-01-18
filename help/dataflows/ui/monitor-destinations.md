@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,11 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="L’attivazione di destinazione contiene informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Processi dei segmenti"
+>abstract="Il dashboard processi segmento contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
 
 Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
 
