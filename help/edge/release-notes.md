@@ -3,14 +3,20 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 2%
 
 ---
 
 # Note sulla versione
+
+## Versione 2.8.0 - 19 gennaio 2022
+
+* Supporta i selettori DOM ombra per la personalizzazione.
+* Tipi di eventi di personalizzazione rinominati. (`display` e `click` diventare `decisioning.propositionDisplay` e `decisioning.propositionInteract`)
+* È stato risolto un problema a causa del quale le offerte HTML con tag script in linea aggiungevano due volte i tag script alla pagina anche se lo script veniva eseguito una sola volta.
 
 ## Versione 2.7.0 - 26 ottobre 2021
 
@@ -62,10 +68,10 @@ ht-degree: 2%
 * È stato aggiunto il supporto nonce per consentire criteri di sicurezza dei contenuti più rigorosi.
 * È stato aggiunto il supporto per la personalizzazione per le applicazioni a pagina singola.
 * È stata migliorata la compatibilità con altri codici JavaScript on-page che potrebbero essere sovrascritti `window.console` API.
-* Correzione bug: `sendBeacon` non è stato utilizzato quando `documentUnloading` è impostato su `true` o quando i clic sui collegamenti venivano tracciati automaticamente.
+* Correzione bug: `sendBeacon` non è stato utilizzato quando `documentUnloading` è impostato su `true` o quando i clic sul collegamento sono stati tracciati automaticamente.
 * Correzione bug: Un collegamento non viene tracciato automaticamente se l’elemento di ancoraggio contiene contenuto HTML.
 * Correzione bug: Alcuni errori del browser contenenti una sola lettura `message` la proprietà non è stata gestita in modo appropriato e si è verificato un errore diverso.
-* Correzione bug: L&#39;esecuzione dell&#39;SDK all&#39;interno di un iframe genererebbe un errore se la pagina HTML dell&#39;iframe proveniva da un sottodominio diverso da quello della pagina HTML della finestra principale.
+* Correzione bug: L&#39;esecuzione dell&#39;SDK all&#39;interno di un iframe genererebbe un errore se la pagina HTML dell&#39;iframe proveniva da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
 
 ## Versione 2.2.0 - ottobre 2020
 
