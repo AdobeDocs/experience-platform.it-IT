@@ -6,7 +6,7 @@ title: Monitorare i flussi di dati per le sorgenti nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Acquisizione sorgente"
->abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. <br> Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Dettagli dell&#39;esecuzione del dataflow"
->abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. <br> Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
 In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dalla navigazione a sinistra per accedere al [!UICONTROL Monitoraggio] dashboard. La [!UICONTROL Monitoraggio] dashboard contiene metriche e informazioni su tutti i flussi di dati di origine, comprese informazioni sullo stato del traffico dei dati da un’origine a [!DNL Identity Service]e a [!DNL Profile].
@@ -151,7 +151,7 @@ Seleziona **[!UICONTROL Identità]** per visualizzare l’acquisizione in [!UICO
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Elaborazione identità"
->abstract="L’elaborazione delle identità contiene informazioni sui record acquisiti nel servizio Identity, tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati. <br> Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="L’elaborazione delle identità contiene informazioni sui record acquisiti nel servizio Identity, tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
 La [!UICONTROL Elaborazione identità] contiene informazioni sui record acquisiti in [!DNL Identity Service], compreso il numero di identità aggiunte, i grafici creati e i grafici aggiornati.
