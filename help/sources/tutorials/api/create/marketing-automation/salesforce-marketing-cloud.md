@@ -5,54 +5,55 @@ title: Creare una connessione di base del Marketing Cloud Salesforce utilizzando
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform al Marketing Cloud Salesforce utilizzando l’API del servizio di flusso.
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
+source-git-commit: 531d5619e0643b6195abaa53d1708e0368d45871
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
 
-# Creare una connessione di base [!DNL Salesforce Marketing Cloud] utilizzando l&#39;API [!DNL Flow Service]
+# Crea un [!DNL Salesforce Marketing Cloud] connessione di base utilizzando [!DNL Flow Service] API
 
 >[!NOTE]
 >
->L&#39;origine [!DNL Salesforce Marketing Cloud] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo delle sorgenti con etichetta beta, consulta la [panoramica sulle sorgenti](../../../../home.md#terms-and-conditions) .
+>La [!DNL Salesforce Marketing Cloud] la sorgente è in versione beta. Consulta la sezione [panoramica di origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di origini con etichetta beta.
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Salesforce Marketing Cloud] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Salesforce Marketing Cloud] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): L’Experience Platform consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente l’acquisizione di dati da varie sorgenti e allo stesso tempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
-La sezione seguente fornisce informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Salesforce Marketing Cloud] utilizzando l&#39;API [!DNL Flow Service].
+La sezione seguente fornisce informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Salesforce Marketing Cloud] utilizzando [!DNL Flow Service] API.
 
 ### Raccogli credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi a [!DNL Salesforce Marketing Cloud], è necessario fornire le seguenti proprietà di connessione:
+Per [!DNL Flow Service] per connettersi con [!DNL Salesforce Marketing Cloud], è necessario fornire le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `host` | Server host dell&#39;applicazione. Questo è spesso il tuo sottodominio. |
-| `clientId` | L&#39;ID client associato all&#39;applicazione [!DNL Salesforce Marketing Cloud]. |
-| `clientSecret` | Il segreto client associato all&#39;applicazione [!DNL Salesforce Marketing Cloud]. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Salesforce Marketing Cloud] è: `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `host` | Server host dell&#39;applicazione. Questo è spesso il tuo sottodominio. **Nota:** Quando immetti il tuo `host` devi solo specificare il sottodominio e non l’intero URL. Ad esempio, se l&#39;URL host è `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, quindi devi solo entrare `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` come valore host. |
+| `clientId` | L&#39;ID client associato al [!DNL Salesforce Marketing Cloud] applicazione. |
+| `clientSecret` | Il segreto client associato al tuo [!DNL Salesforce Marketing Cloud] applicazione. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Salesforce Marketing Cloud] è: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-Per ulteriori informazioni su come iniziare, consulta questo [[!DNL Salesforce Marketing Cloud] documento](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+Per ulteriori informazioni su come iniziare, consulta questo articolo [[!DNL Salesforce Marketing Cloud] documento](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
 ## Creare una connessione di base
 
 Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Salesforce Marketing Cloud] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Salesforce Marketing Cloud] credenziali di autenticazione come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -62,7 +63,7 @@ POST /connections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di base per [!DNL Salesforce Marketing Cloud]:
+La richiesta seguente crea una connessione di base per [!DNL Salesforce Marketing Cloud]:
 
 ```shell
 curl -X POST \
@@ -84,7 +85,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "cea1c2a08-b722-11eb-8529-0242ac130003",
+            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
             "version": "1.0"
         }
     }'
@@ -92,13 +93,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.clientId` | L&#39;ID client associato all&#39;applicazione [!DNL Salesforce Marketing Cloud]. |
-| `auth.params.clientSecret` | Il segreto client associato all&#39;applicazione [!DNL Salesforce Marketing Cloud]. |
-| `connectionSpec.id` | ID delle specifiche di connessione [!DNL Salesforce Marketing Cloud]: `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | L&#39;ID client associato al [!DNL Salesforce Marketing Cloud] applicazione. |
+| `auth.params.clientSecret` | Il segreto client associato al tuo [!DNL Salesforce Marketing Cloud] applicazione. |
+| `connectionSpec.id` | La [!DNL Salesforce Marketing Cloud] ID specifica di connessione: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione appena creata, incluso l&#39;identificatore di connessione univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
+Una risposta corretta restituisce la nuova connessione appena creata, incluso il relativo identificatore di connessione univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
 
 ```json
 {
@@ -107,4 +108,4 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso l&
 }
 ```
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL Salesforce Marketing Cloud] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID connessione nell’esercitazione successiva per scoprire come [esplorare i sistemi di automazione di marketing utilizzando l’ API del servizio di flusso](../../explore/marketing-automation.md).
+Seguendo questa esercitazione, hai creato un [!DNL Salesforce Marketing Cloud] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID connessione nell’esercitazione successiva per scoprire come [esplorare i sistemi di automazione di marketing utilizzando l’API del servizio di flusso](../../explore/marketing-automation.md).
