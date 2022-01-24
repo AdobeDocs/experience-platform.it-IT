@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
+source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| Abilitata | La `Enabled` lo stato indica che un flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. |
+| Abilitata | The `Enabled` status indicates that a dataflow is active and is exporting data according to the schedule it was provided. |
 | Disabilitata | La `Disabled` lo stato indica che un flusso di dati è inattivo e non esporta alcun dato. |
 | Elaborazione | La `Processing` lo stato indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
@@ -64,6 +64,35 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >title="Identità non riuscite"
 >abstract="Numero di singole identità di profilo che non sono riuscite per la destinazione selezionata. Per ulteriori informazioni, controlla la diagnostica degli errori."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_streaming"
+>title="Dettagli dell&#39;esecuzione del dataflow"
+>abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche ."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received_streaming"
+>title="Profili ricevuti"
+>abstract="Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_streaming"
+>title="Identità attivate"
+>abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_streaming"
+>title="Identità escluse"
+>abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed_streaming"
+>title="Identità non riuscite"
+>abstract="Numero di singole identità di profilo che non sono riuscite per la destinazione selezionata. Per ulteriori informazioni, controlla la diagnostica degli errori."
+>text="Learn more in documentation"
 
 Per le destinazioni di streaming, l’ [!UICONTROL Corse del flusso di dati] La scheda fornisce un aggiornamento orario per i dati delle metriche in esecuzione nel flusso di dati. Le statistiche più importanti etichettate sono quelle sulle identità.
 
@@ -102,15 +131,33 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 ### Esecuzione del flusso di dati per le destinazioni batch {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation"
+>id="platform_monitoring_profiles_received"
+>title="Profili ricevuti"
+>abstract="Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="Dettagli dell&#39;esecuzione del dataflow"
 >abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche ."
 
 >[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
+>id="platform_monitoring_profiles_received_batch"
 >title="Profili ricevuti"
 >abstract="Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated_batch"
+>title="Identità attivate"
+>abstract="The count of individual profile identities successfully activated to the selected destination."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded_batch"
+>title="Identità escluse"
+>abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
+>text="Learn more in documentation"
 
 Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati delle metriche sulle esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
@@ -121,7 +168,7 @@ Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
@@ -134,7 +181,7 @@ Per visualizzare i dettagli di un’esecuzione di un flusso di dati specifico, s
 >
 >Le esecuzioni dei flussi di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un&#39;esecuzione separata del flusso di dati per ogni criterio di unione applicato a un segmento.
 
-La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’elenco dei flussi di dati, visualizza informazioni più specifiche sul flusso di dati:
+The details page for a dataflow, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
 
 - **[!UICONTROL Dimensione dei dati]**: Dimensione del flusso di dati da esportare.
 - **[!UICONTROL File totali]**: Numero totale di file esportati nel flusso di dati.
@@ -142,11 +189,11 @@ La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’e
 
 ![](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona la **[!UICONTROL Identità escluse]** alternare.
+The details page also displays a list of identities that failed and identities that were excluded. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. By default, the list displays the failed identities. To show excluded identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Dashboard del monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
+## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
