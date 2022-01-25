@@ -3,18 +3,15 @@ keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazion
 solution: Experience Platform
 title: Domande frequenti sulla corrispondenza dei segmenti (Beta)
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
-source-git-commit: 81ef2030ff26d2aee146316fcdab41d9311e84c7
+exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
+source-git-commit: 50795be308649052037be62153109eadab02c9a1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Match] domande frequenti (Beta)
-
->[!IMPORTANT]
->
->La corrispondenza del segmento è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
 
 Questa guida fornisce le risposte alle domande sulla privacy e legali spesso relative a Adobe Experience Platform Segment Match.
 
