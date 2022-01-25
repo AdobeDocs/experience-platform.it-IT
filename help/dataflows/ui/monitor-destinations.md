@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| Abilitata | The `Enabled` status indicates that a dataflow is active and is exporting data according to the schedule it was provided. |
+| Abilitata | La `Enabled` lo stato indica che un flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. |
 | Disabilitata | La `Disabled` lo stato indica che un flusso di dati è inattivo e non esporta alcun dato. |
 | Elaborazione | La `Processing` lo stato indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
@@ -137,6 +137,11 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Dettagli dell&#39;esecuzione del dataflow"
+>abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche ."
+
+>[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="Dettagli dell&#39;esecuzione del dataflow"
 >abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche ."
@@ -150,13 +155,13 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identità attivate"
->abstract="The count of individual profile identities successfully activated to the selected destination."
+>abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identità escluse"
->abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
+>abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
 >text="Learn more in documentation"
 
 Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati delle metriche sulle esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
@@ -168,7 +173,7 @@ Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
 - **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
@@ -181,7 +186,7 @@ Per visualizzare i dettagli di un’esecuzione di un flusso di dati specifico, s
 >
 >Le esecuzioni dei flussi di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un&#39;esecuzione separata del flusso di dati per ogni criterio di unione applicato a un segmento.
 
-The details page for a dataflow, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
+La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’elenco dei flussi di dati, visualizza informazioni più specifiche sul flusso di dati:
 
 - **[!UICONTROL Dimensione dei dati]**: Dimensione del flusso di dati da esportare.
 - **[!UICONTROL File totali]**: Numero totale di file esportati nel flusso di dati.
@@ -189,11 +194,11 @@ The details page for a dataflow, in addition to the details shown on the dataflo
 
 ![](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-The details page also displays a list of identities that failed and identities that were excluded. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. By default, the list displays the failed identities. To show excluded identities, select the **[!UICONTROL Identities excluded]** toggle.
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona la **[!UICONTROL Identità escluse]** alternare.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
+## Dashboard del monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
