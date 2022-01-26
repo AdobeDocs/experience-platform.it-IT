@@ -4,9 +4,9 @@ title: Introduzione alle dashboard di Experience Platform
 type: Documentation
 description: Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,19 @@ Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e so
 
 ## Guida introduttiva alle dashboard
 
-Per accedere alle dashboard, passa alla sezione appropriata all’interno dell’interfaccia utente di Platform (UI). Una volta nella sezione , seleziona la scheda **[!UICONTROL Panoramica]** , se non è selezionata automaticamente, per visualizzare il dashboard.
+Per visualizzare e gestire le dashboard, passa a **[!UICONTROL Dashboard]** nell’interfaccia utente di Experience Platform e seleziona la **[!UICONTROL Sfoglia]** per accedere all’inventario del dashboard.
+
+È inoltre possibile accedere alle dashboard accedendo alla sezione appropriata dell’interfaccia utente del dashboard che si desidera visualizzare. Ad esempio, per visualizzare il dashboard relativo ai profili, passa alla **[!UICONTROL Profili]** e seleziona **[!UICONTROL Panoramica]** scheda .
 
 I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un esempio dei dati e i dashboard non vengono aggiornati in tempo reale.
 
 >[!NOTE]
 >
 >Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
+
+## Inventario del dashboard
+
+Per passaggi dettagliati su come utilizzare il **[!UICONTROL Dashboard]** area di lavoro per visualizzare tutte le dashboard disponibili, consulta [guida all’inventario del dashboard](./inventory.md).
 
 ## Dashboard disponibili
 
