@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
+source-git-commit: 9cd9307d54d0950d4f67d5d8cee9c6412a558275
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 10%
+source-wordcount: '708'
+ht-degree: 7%
 
 ---
 
@@ -14,10 +14,12 @@ ht-degree: 10%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
-- [Avvisi](#alerts)
-- [Preparazione dei dati](#data-prep)
-- [Sandbox](#sandboxes)
-- [Servizio di segmentazione](#segmentation)
+- [Avvisi {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [Servizio query {#query-service}](#query-service-query-service)
+- [Sandbox {#sandboxes}](#sandboxes-sandboxes)
+- [Servizio di segmentazione {#segmentation}](#segmentation-service-segmentation)
 
 ## Avvisi {#alerts}
 
@@ -42,6 +44,29 @@ Per ulteriori informazioni sugli avvisi in Platform, consulta [panoramica degli 
 | Esperienza di mappatura consolidata | La nuova interfaccia di mappatura nell’interfaccia utente di Platform offre un’esperienza di mappatura coerente per sfruttare le raccomandazioni di mappatura intelligente, configurare manualmente le regole di mappatura ed eseguire il debug degli errori che si verificano nei set di mappatura. Per ulteriori informazioni, consulta la sezione [[!DNL Data Prep] Guida all’interfaccia utente](../../data-prep/home.md). |
 
 Per ulteriori informazioni su [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] fa cose carine.
+
+| Funzione | Descrizione |
+|---------|-------------|
+| Sottotitoli intelligenti | Un algoritmo di apprendimento automatico fornisce automaticamente informazioni sul profilo e sui dati del pubblico e illustra pattern e tendenze in un periodo di 30-90 giorni o 12 mesi. Le didascalie includono informazioni su <ul><li>Forma generale e statistiche</li><li>Tendenze e modifiche brusche</li><li>Modelli stagionali</li><li>Anomalie impreviste</li></ul> Per ulteriori informazioni, consulta [dashboard dei profili](../../dashboards/guides/profiles.md#profiles-count-trend) e [dashboard segmenti](../../dashboards/guides/segments.md#audience-size-trend) documentazione. |
+| Inventario delle dashboard | Accedi ai rapporti preconfigurati di profili, segmenti e dashboard di destinazioni, comprese eventuali integrazioni installate come PowerBI, in una posizione centralizzata. Per ulteriori informazioni, consulta la sezione [[!DNL Dashboards] panoramica](../../dashboards/home.md). |
+| Modelli di rapporto PowerBI | Crea, personalizza o estende le metriche dai modelli di dati di report di profilo, segmenti e destinazioni utilizzando nuovi grafici PowerBI. Il flusso di lavoro di installazione automatizzata ti consente di condividere le informazioni di marketing all’interno dell’organizzazione dall’ambiente PowerBI. Per ulteriori informazioni, consulta la sezione [[!DNL Dashboards] panoramica](../../dashboards/home.md). |
+
+Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
+
+## Servizio query {#query-service}
+
+[!DNL Query Service] consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento in Profilo cliente in tempo reale.
+
+| Funzione | Descrizione |
+|----------------------|-----------------------|
+| Blocco anonimo | Il costrutto SQL a blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi riutilizzarli ed eseguirli in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, consulta la sezione [Panoramica del servizio query](../../query-service/home.md). |
+| Organizzazione del set di dati | Fornisce una struttura dati coerente e logica per organizzare le risorse dati da utilizzare con Query Service man mano che la quantità di risorse dati all’interno della sandbox cresce. Per ulteriori informazioni, consulta la sezione [Panoramica del servizio query](../../query-service/home.md). |
+
+Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 
