@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1384'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Controllo di accesso per [!DNL Experience Platform] è fornito tramite [Adobe Ad
 
 ## Accedere alla gerarchia di controllo e al flusso di lavoro
 
-Per configurare il controllo di accesso per [!DNL Experience Platform], è necessario disporre dei privilegi di amministratore per un&#39;organizzazione con un [!DNL Experience Platform] integrazione del prodotto. Il ruolo minimo che concede o revoca le autorizzazioni è un amministratore del profilo di prodotto. Altri ruoli di amministratore che possono gestire le autorizzazioni sono gli amministratori di prodotto (possono gestire tutti i profili all’interno di un prodotto) e gli amministratori di sistema (senza restrizioni). Consulta l’articolo Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) per ulteriori informazioni.
+Per configurare il controllo di accesso per [!DNL Experience Platform], è necessario disporre dei privilegi di amministratore per un&#39;organizzazione con un [!DNL Experience Platform] integrazione del prodotto. Il ruolo minimo che concede o revoca le autorizzazioni è un amministratore del profilo di prodotto. Altri ruoli di amministratore che possono gestire le autorizzazioni sono gli amministratori dei prodotti (possono gestire tutti i profili all’interno di un prodotto) e gli amministratori di sistema (senza restrizioni). Consulta l’articolo Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) per ulteriori informazioni.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ La scheda Autorizzazioni all’interno di un profilo di prodotto visualizza le s
 
 Autorizzazioni concesse tramite [!DNL Admin Console] sono ordinati per categoria, con alcune autorizzazioni che consentono l’accesso a diverse funzionalità di basso livello.
 
-La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience Platform] in [!DNL Admin Console], con la descrizione del [!DNL Platform] alle funzionalità a cui concedono l&#39;accesso. Per i passaggi dettagliati su come aggiungere autorizzazioni a un profilo di prodotto, consulta [guida utente per il controllo degli accessi](./ui/overview.md).
+La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience Platform] in [!DNL Admin Console], con la descrizione del [!DNL Platform] alle funzionalità a cui concedono l&#39;accesso. Per passaggi dettagliati su come aggiungere autorizzazioni a un profilo di prodotto, consulta la [guida utente per il controllo degli accessi](./ui/overview.md).
 
 | Categoria | Autorizzazione | Descrizione |
 | --- | --- | --- |
@@ -103,7 +103,7 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Destinations] | [!UICONTROL Gestire le destinazioni] | Accesso a destinazioni in lettura, creazione, modifica e disattivazione. |
 | [!DNL Destinations] | [!UICONTROL Visualizzare le destinazioni] | Accesso in sola lettura alle destinazioni disponibili nel **[!UICONTROL Catalogo]** le destinazioni autenticate nel **[!UICONTROL Sfoglia]** scheda . |
 | [!DNL Destinations] | [!UICONTROL Attivare le destinazioni] | Possibilità di attivare i dati nelle destinazioni attive create. Questa autorizzazione richiede &quot;Visualizza destinazioni&quot; o &quot;Gestisci [!UICONTROL Destinazioni&quot;] da concedere all’utente che attiva le destinazioni. |
-| [!DNL Destinations] | [!UICONTROL Authoring delle destinazioni] | Possibilità di creare destinazioni utilizzando [SDK per destinazione Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Authoring delle destinazioni] | Possibilità di creare destinazioni utilizzando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestisci origini] | Accesso a fonti di lettura, creazione, modifica e disattivazione. |
 | [!DNL Data Ingestion] | [!UICONTROL Visualizza origini] | Accesso in sola lettura alle origini disponibili nel **[!UICONTROL Catalogo]** e le origini autenticate nel **[!UICONTROL Sfoglia]** scheda . |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accesso ai handshakes per creare, accettare e rifiutare i partner per collegare due organizzazioni IMS e consentire [!DNL Segment Match] flussi. |
@@ -112,7 +112,7 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | Governance dei dati | [!UICONTROL Applicare le etichette di utilizzo dei dati] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
 | Governance dei dati | [!UICONTROL Gestire i criteri di utilizzo dei dati] | Accesso a criteri di utilizzo dei dati di lettura, creazione, modifica ed eliminazione. |
 | Governance dei dati | [!UICONTROL Visualizzare i criteri di utilizzo dei dati] | Accesso in sola lettura per i criteri di utilizzo dei dati appartenenti all’organizzazione. |
-| Governance dei dati | [!UICONTROL Visualizza log di controllo] | Accesso in sola lettura alla visualizzazione registrata [registri di controllo](../landing/governance-privacy-security/audit-logs/overview.md) delle attività di Platform. |
+| Governance dei dati | [!UICONTROL Visualizza registro attività utente] | Accesso in sola lettura alla visualizzazione registrata [registri di controllo](../landing/governance-privacy-security/audit-logs/overview.md) delle attività di Platform. |
 | [!DNL Dashboards] | [!UICONTROL Visualizza dashboard di utilizzo della licenza] | Accesso in sola lettura per visualizzare il dashboard di utilizzo della licenza. |
 | [!DNL Dashboards] | [!UICONTROL Gestire dashboard standard] | Aggiungi attributi personalizzati non ancora presenti nel data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Gestire le query] | Accesso alla lettura, alla creazione, alla modifica e all&#39;eliminazione di query SQL strutturate per i dati di Platform. |

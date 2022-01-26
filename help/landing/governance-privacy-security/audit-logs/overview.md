@@ -2,9 +2,9 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
+source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,7 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 
 Quando la funzione è abilitata per l’organizzazione, i registri di controllo vengono raccolti automaticamente quando si verifica l’attività. Non è necessario abilitare manualmente la raccolta di registri.
 
-Per visualizzare ed esportare i registri di controllo, devi disporre dell’autorizzazione di controllo accessi &quot;Visualizza registri di controllo&quot; (disponibile nella categoria &quot;Governance dei dati&quot;). Per informazioni su come gestire le autorizzazioni individuali per le funzionalità di Platform, consulta [documentazione sul controllo degli accessi](../../../access-control/home.md).
+Per visualizzare ed esportare i registri di controllo, è necessario disporre dei **[!UICONTROL Visualizza registro attività utente]** autorizzazione al controllo degli accessi concessa (reperibile sotto [!UICONTROL Governance dei dati] categoria). Per informazioni su come gestire le autorizzazioni individuali per le funzionalità di Platform, consulta [documentazione sul controllo degli accessi](../../../access-control/home.md).
 
 ## Gestione dei registri di controllo nell’interfaccia utente
 
