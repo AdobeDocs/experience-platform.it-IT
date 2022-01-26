@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ La **[!UICONTROL Seleziona schema]** viene visualizzata la finestra di dialogo .
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulle funzioni di mappatura e sui campi calcolati, consulta la [Guida alle funzioni di preparazione dei dati](../../../../../data-prep/functions.md) o [guida ai campi calcolati](../../../../../data-prep/calculated-fields.md).
+In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per i passaggi completi sull’utilizzo dell’interfaccia di mappatura e dei campi calcolati, consulta la sezione [Guida all’interfaccia utente della preparazione dei dati](../../../../../data-prep/ui/mapping.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 

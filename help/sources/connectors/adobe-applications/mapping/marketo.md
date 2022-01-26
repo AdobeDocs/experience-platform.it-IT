@@ -5,7 +5,7 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 
 >[!NOTE]
 >
->La `to_object('ECID',arrays_to_objects('id',explode(ecids)))` il campo di origine è un campo calcolato che deve essere aggiunto utilizzando [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Guarda l’esercitazione su [aggiunta di campi calcolati](../../../../data-prep/calculated-fields.md) per ulteriori informazioni.
+>La `to_object('ECID',arrays_to_objects('id',explode(ecids)))` il campo di origine è un campo calcolato che deve essere aggiunto utilizzando [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Guarda l’esercitazione su [aggiunta di campi calcolati](../../../../data-prep/ui/mapping.md#calculated-fields) per ulteriori informazioni.
 
 ## Passaggi successivi
 

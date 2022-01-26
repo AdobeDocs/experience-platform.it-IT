@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa guida all’interfaccia utente facilita la creazione di una connessione in streaming tramite Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,8 @@ Per utilizzare un set di dati esistente, seleziona **[!UICONTROL Set di dati esi
 
 ### Mappa campi standard
 
-In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulle funzioni di mappatura e sui campi calcolati, consulta la [Guida alle funzioni di preparazione dei dati](../../../../../data-prep/functions.md) o [guida ai campi calcolati](../../../../../data-prep/calculated-fields.md).
+
+In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per i passaggi completi sull’utilizzo dell’interfaccia di mappatura e dei campi calcolati, consulta la sezione [Guida all’interfaccia utente della preparazione dei dati](../../../../../data-prep/ui/mapping.md).
 
 Per aggiungere un nuovo campo di origine, selezionare **[!UICONTROL Aggiungi nuova mappatura]**.
 
