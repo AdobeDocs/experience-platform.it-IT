@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di novembre 2021 per Adobe Experience Platform.
-exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
-source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
+description: Note aggiornate sulla versione di Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: a089ff9c053e46d32b98f94ddaf71d75d29fd4c7
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -50,7 +50,7 @@ Per ulteriori informazioni su Real-time CDP B2B Edition, consulta la sezione [pa
 I nuovi connettori di origine dati e destinazione Marketo inviano i dati di Marketo ai tipi di pubblico di Platform e Platform a Marketo. Disponibile per tutti gli utenti di Platform.
 
 | Funzione | Descrizione |
-|-----------|--------------|
+|----------|-------------|
 | Connettore di origine del Marketo Engage | La [Connettore di origine del Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) consente agli addetti al marketing di inserire facilmente i dati da una o più istanze Marketo nella loro istanza Adobe Experience Platform e fornisce una soluzione completa per la gestione dei lead e per gli esperti di marketing B2B. |
 | Destinazione Marketo Engage | La [Destinazione Marketo](../../destinations/catalog/adobe/marketo-engage.md) consente agli addetti al marketing di inviare in Marketo i segmenti creati in Adobe Experience Platform, dove verranno visualizzati come elenchi statici. |
 
@@ -59,7 +59,7 @@ I nuovi connettori di origine dati e destinazione Marketo inviano i dati di Mark
 Le classi, i gruppi di campi e i tipi di dati XDM standard B2B sono disponibili per tutti gli utenti di Platform.
 
 | Funzione | Descrizione |
-|----------|-------------|
+|-----------|--------------|
 | Classi XDM standard B2B | Real-time Customer Data Platform B2B Edition fornisce diversi XDM standard che acquisiscono dettagli su entità di dati B2B essenziali, come account, opportunità, campagne e altro ancora. |
 
 Consulta la sezione [Schemi in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentazione per ulteriori informazioni sull’acquisizione di entità dati B2B.
@@ -73,7 +73,7 @@ L’API di attivazione ad hoc consente agli addetti al marketing di attivare pro
 Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
 
 | Funzione | Descrizione |
-| ------- | ----------- |
+|-----------|---------------|
 | Supporto per più set di dati | Attribution AI ora può facilmente acquisire più set di dati direttamente nell’interfaccia utente senza la necessità di mappare e unire ogni set di dati. Questa nuova funzionalità consente di risparmiare tempo e fornisce punteggi più potenti e precisi con dati più ricchi provenienti da più set di dati. |
 | Mappatura del campo del canale multimediale e della campagna | Attribution AI supporta ora la mappatura dei campi del canale multimediale e della campagna. La mappatura dei canali multimediali tra set di dati migliora le informazioni derivate da Attribution AI e consente di ottenere risultati più chiari e facili da interpretare. |
 
@@ -86,8 +86,9 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
-| --- | --- |
+|-----------|-------------|
 | Supporto per più set di dati | Customer AI ora può facilmente acquisire più set di dati direttamente nell’interfaccia utente senza la necessità di mappare e unire ogni set di dati. Questa nuova funzionalità consente di risparmiare tempo e fornisce punteggi più potenti e precisi con dati più ricchi provenienti da più set di dati. |
 | Attributi di profilo personalizzati | Customer AI supporta ora la definizione di campi di set di dati di profilo personalizzati (con marche temporali) nei dati, oltre ai campi evento standard. L’utilizzo di questa opzione consente di aggiungere attributi di profilo aggiuntivi che ritieni influenti e che possono migliorare la qualità del modello e fornire risultati più precisi. |
 
 Per ulteriori informazioni su Customer AI, consulta la sezione [Documentazione di Customer AI](../../intelligent-services/customer-ai/overview.md).
+
