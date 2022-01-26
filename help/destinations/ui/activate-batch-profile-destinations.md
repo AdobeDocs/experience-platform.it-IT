@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Utilizza le caselle di controllo a sinistra dei nomi dei segmenti per selezionar
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Pianificazione"
->abstract="Il tipo di esportazione del file (file completi o incrementali) e la pianificazione non possono essere modificati una volta salvato il segmento."
+>abstract="Impostare il tipo di esportazione del file (file completi o incrementali) e la frequenza di esportazione."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Ulteriori informazioni nella documentazione"
 
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni di marketing e archiviazione cloud sotto forma di [!DNL CSV] file. In **[!UICONTROL Pianificazione]** È possibile configurare la pianificazione e i nomi dei file per ciascun segmento che si sta esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
