@@ -1,24 +1,20 @@
 ---
 keywords: personalizzazione mirata; destinazione; destinazione target experience platform;destinazione adobe target;
-title: Connessione Adobe Target (Beta)
-description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
+title: Connessione Adobe Target
+description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
-# Connessione Adobe Target (Beta) {#adobe-target-connection}
+# Connessione Adobe Target {#adobe-target-connection}
 
 ## Panoramica {#overview}
 
->[!IMPORTANT]
->
->La connessione Adobe Target in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-Adobe Target è un’applicazione che fornisce personalizzazione e sperimentazione in tempo reale, 1:1 , basate sull’intelligenza artificiale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
+Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 
 Adobe Target è una connessione di personalizzazione in Adobe Experience Platform.
 
@@ -30,7 +26,7 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 **Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione Adobe Target per un singolo profilo.
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 **Personalizzazione di un banner della home page**
 
