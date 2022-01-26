@@ -5,20 +5,24 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 1%
+source-wordcount: '744'
+ht-degree: 0%
 
 ---
 
-# Guida all’interfaccia utente per la segmentazione dei bordi (versione beta)
+# Guida all’interfaccia utente per la segmentazione dei bordi
+
+>[!NOTE]
+>
+>La segmentazione dei bordi è ora generalmente disponibile per tutti gli utenti di Platform. Se hai creato segmenti edge durante la versione beta, questi segmenti continueranno a essere operativi.
+
+La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Adobe Experience Platform [sul bordo](../../edge/home.md), l’abilitazione di casi d’uso di personalizzazione pagina e pagina successiva.
 
 >[!IMPORTANT]
 >
->La segmentazione dei bordi è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Adobe Experience Platform [sul bordo](../../edge/home.md), l’abilitazione di casi d’uso di personalizzazione pagina e pagina successiva.
+> I dati edge saranno memorizzati in una posizione server perimetrale più vicina a quella in cui sono stati raccolti e possono essere memorizzati in una posizione diversa da quella designata come centro dati hub (o principal) di Adobe Experience Platform.
 
 ## Tipi di query per segmentazione Edge
 
