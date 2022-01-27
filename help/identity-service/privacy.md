@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti popolari
 title: Elaborazione della richiesta di privacy nel servizio Identity
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 0%
 
 ---
-
 
 # Elaborazione della richiesta di privacy in [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ Inoltre, il `include` la matrice del payload della richiesta deve includere i va
 
 La seguente richiesta crea un nuovo processo per la privacy in base al RGPD per i dati di un singolo cliente nel [!DNL Identity] archiviare. Per il cliente vengono forniti due valori di identità nel `userIDs` array; uno che utilizza lo standard `Email` spazio dei nomi dell&#39;identità e l&#39;altro tramite un `ECID` Lo spazio dei nomi include anche il valore di prodotto per [!DNL Identity] (`Identity`) nel `include` array:
 
+>[!TIP]
+>
+>Quando si elimina uno spazio dei nomi personalizzato utilizzando l’API, è necessario specificare il simbolo di identità come spazio dei nomi, anziché come nome visualizzato.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### Utilizzo dell’interfaccia
+
+>[!TIP]
+>
+>Quando si elimina uno spazio dei nomi personalizzato utilizzando l’interfaccia utente, è necessario specificare il simbolo di identità come spazio dei nomi, anziché come nome visualizzato. Inoltre, non è possibile eliminare i namespace personalizzati nell’interfaccia utente per le sandbox non di produzione.
 
 Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL Identità]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati in [!DNL Identity Service].
 
