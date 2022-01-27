@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv su xdm;mappare csv su xdm;guida interfaccia utente;mappatura;mappatura;preparazione dati;preparazione dati;preparazione dei dati;
 title: Guida all’interfaccia utente della preparazione dei dati
 description: Questo documento fornisce istruzioni su come utilizzare le funzioni di preparazione dei dati nell’interfaccia utente di Platform per mappare i file CSV su uno schema XDM.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 1%
@@ -80,18 +81,18 @@ La **[!UICONTROL mappatura]** L’interfaccia di offre uno strumento completo pe
 
 ### Interfaccia di mappatura
 
-L’interfaccia di mappatura include un dashboard che fornisce informazioni sullo stato dei set di mappature nel contesto del flusso di lavoro di acquisizione. Il dashboard visualizza i seguenti dettagli relativi ai set di mappature:
+L’interfaccia di mappatura include una dashboard che fornisce informazioni sullo stato dei campi di mappatura nel contesto del flusso di lavoro di acquisizione. Il dashboard visualizza i seguenti dettagli relativi ai campi di mappatura:
 
 | Proprietà | Descrizione |
 | --- | --- |
 | [!UICONTROL Campi mappati] | Visualizza il numero totale di campi di origine mappati a un campo XDM di destinazione, indipendentemente dagli errori. |
 | [!UICONTROL Campi obbligatori] | Visualizza il numero di campi di mappatura richiesti. |
-| [!UICONTROL Campi di identità] | Visualizza il numero totale di set di mapping definiti come identità. Questi set di mappature sono rappresentati da un&#39;icona di impronta digitale. |
-| [!UICONTROL Errori] | Visualizza il numero di set di mappature errati. |
+| [!UICONTROL Campi di identità] | Visualizza il numero totale di campi di mappatura definiti come identità. Questi campi di mappatura sono rappresentati da un&#39;icona di impronta digitale. |
+| [!UICONTROL Errori] | Visualizza il numero di campi di mappatura errati. |
 
 ![pannello superiore](../images/ui/mapping/top-panel.png)
 
-L’interfaccia di mappatura offre anche un pannello di opzioni selezionabili per interagire meglio o filtrare attraverso i set di mappatura.
+L’interfaccia di mappatura offre anche un pannello di opzioni selezionabili per interagire meglio o filtrare attraverso i campi di mappatura.
 
 ![secondo pannello](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ Le opzioni di filtro sono:
 | [!UICONTROL Campi non mappati] | Questa opzione filtra lo schema di origine per visualizzare solo i campi che devono ancora essere mappati. |
 | [!UICONTROL Campi con raccomandazione] | Questa opzione filtra lo schema di origine per visualizzare solo i campi che contengono consigli di mappatura. |
 
-Seleziona **[!UICONTROL Campi con errori]** per visualizzare tutti i set di mappatura con errori.
+Seleziona **[!UICONTROL Campi con errori]** per visualizzare tutti i campi di mappatura con errori.
 
 ![filter](../images/ui/mapping/filter.png)
 
-Viene visualizzata una visualizzazione isolata di set di mappatura errati, che consente di risolvere gli errori tramite raccomandazioni di mappatura intelligente o tramite la struttura di mappatura manuale.
+Viene visualizzata una visualizzazione isolata dei campi di mappatura errati, che consente di risolvere gli errori tramite raccomandazioni di mappatura intelligente o tramite la struttura di mappatura manuale.
 
 ![campi con errori](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Durante l’anteprima, la colonna Identity ha la priorità come primo campo, in 
 
 ![schermata di anteprima](../images/ui/mapping/preview-screen.png)
 
-Per rimuovere tutti i set di mappatura, seleziona **[!UICONTROL Cancella tutte le mappature]**.
+Per rimuovere tutti i campi di mappatura, seleziona **[!UICONTROL Cancella tutte le mappature]**.
 
 ![chiaro](../images/ui/mapping/clear-all.png)
 
 ### Utilizzo dell&#39;interfaccia di mappatura
 
-Platform fornisce automaticamente raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai casi d’uso o correggere eventuali set di mappatura duplicati per cancellare eventuali errori.
+Platform fornisce automaticamente raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai casi d’uso o correggere eventuali campi di mappatura duplicati per cancellare eventuali errori.
 
 ![interfaccia di mappatura](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ In alternativa, è possibile selezionare **[!UICONTROL Seleziona manualmente]** 
 
 ![pannello rettc](../images/ui/mapping/recc-panel.png)
 
-L’interfaccia di mappatura dello schema di destinazione viene visualizzata nella stessa visualizzazione dei set di mappatura, consentendo di modificare le coppie di mappatura all’interno della stessa schermata. Seleziona il campo di destinazione adatto al tuo caso d’uso o corregge gli errori.
+L’interfaccia di mappatura dello schema di destinazione viene visualizzata nella stessa visualizzazione dei campi di mappatura, consentendo di modificare le coppie di mappatura all’interno della stessa schermata. Seleziona il campo di destinazione adatto al tuo caso d’uso o corregge gli errori.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
