@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ Specifica i valori per la pianificazione e seleziona **[!UICONTROL Successivo]**
 
 >[!NOTE]
 >
->Per l’acquisizione batch, ogni flusso di dati successivo seleziona i file da acquisire dalla sorgente in base ai relativi **ultima modifica** timestamp. Ciò significa che i flussi di dati batch selezionano i file dall’origine nuovi o modificati dall’ultima esecuzione del flusso di dati.
+>Per l’acquisizione batch, ogni flusso di dati successivo seleziona i file da acquisire dalla sorgente in base ai relativi **ultima modifica** timestamp. Ciò significa che i flussi di dati batch selezionano i file dall&#39;origine nuovi o modificati dall&#39;ultima esecuzione del flusso. Inoltre, è necessario assicurarsi che vi sia un intervallo di tempo sufficiente tra il caricamento dei file e un&#39;esecuzione di flusso pianificato, perché i file che non sono completamente caricati sul tuo account di archiviazione cloud prima che il tempo di esecuzione del flusso pianificato potrebbe non essere raccolto per l&#39;acquisizione.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
