@@ -1,9 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 7a0a9d61f5f51ba548b342a24e4fd9869c4abf18
+exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 4%
 
 ---
@@ -43,8 +44,8 @@ Adobe Experience Platform fornisce diverse dashboard attraverso le quali puoi vi
 | Funzione | Descrizione |
 | --- | --- |
 | Sottotitoli intelligenti | Un algoritmo di apprendimento automatico fornisce automaticamente informazioni sul profilo e sui dati del pubblico e illustra pattern e tendenze in un periodo di 30-90 giorni o 12 mesi. Le didascalie includono informazioni su <ul><li>Forma generale e statistiche</li><li>Tendenze e modifiche brusche</li><li>Modelli stagionali</li><li>Anomalie impreviste</li></ul> Per ulteriori informazioni, consulta [dashboard dei profili](../../dashboards/guides/profiles.md#profiles-count-trend) e [dashboard segmenti](../../dashboards/guides/segments.md#audience-size-trend) documentazione. |
-| Inventario delle dashboard | Accedi ai rapporti preconfigurati di profili, segmenti e dashboard di destinazioni, comprese eventuali integrazioni installate come PowerBI, in una posizione centralizzata. Per ulteriori informazioni, consulta la sezione [[!DNL Dashboards] panoramica](../../dashboards/home.md). |
-| Modelli di rapporto PowerBI | Crea, personalizza o estende le metriche dai modelli di dati di report di profilo, segmenti e destinazioni utilizzando nuovi grafici PowerBI. Il flusso di lavoro di installazione automatizzata ti consente di condividere le informazioni di marketing all’interno dell’organizzazione dall’ambiente PowerBI. Per ulteriori informazioni, consulta la sezione [[!DNL Dashboards] panoramica](../../dashboards/home.md). |
+| Inventario delle dashboard | Accedi ai rapporti preconfigurati di profili, segmenti e dashboard di destinazioni, comprese eventuali integrazioni installate come PowerBI, in una posizione centralizzata. Per ulteriori informazioni, consulta la sezione [[!DNL Dashboards] documentazione di inventario](../../dashboards/inventory.md). |
+| Modelli di rapporto PowerBI | Crea, personalizza o estende le metriche dai modelli di dati di report di profilo, segmenti e destinazioni utilizzando nuovi grafici PowerBI. Il flusso di lavoro di installazione automatizzata ti consente di condividere le informazioni di marketing all’interno dell’organizzazione dall’ambiente PowerBI. Per ulteriori informazioni, consulta la sezione [Documentazione del modello di rapporto PowerBI](../../dashboards/integrations/power-bi.md). |
 
 Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
@@ -90,8 +91,8 @@ Per informazioni più generali sulle destinazioni, consulta [panoramica sulle de
 
 | Funzione | Descrizione |
 | --- | --- |
-| Blocco anonimo | Il costrutto SQL a blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi riutilizzarli ed eseguirli in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, consulta la sezione [Panoramica del servizio query](../../query-service/home.md). |
-| Organizzazione del set di dati | Fornisce una struttura dati coerente e logica per organizzare le risorse dati da utilizzare con Query Service man mano che la quantità di risorse dati all’interno della sandbox cresce. Per ulteriori informazioni, consulta la sezione [Panoramica del servizio query](../../query-service/home.md). |
+| Blocco anonimo | Il costrutto SQL a blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi riutilizzarli ed eseguirli in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, consulta la sezione [query di esempio per la documentazione del blocco anonimo](../../query-service/best-practices/anonymous-block.md). |
+| Organizzazione del set di dati | Fornisce una struttura dati coerente e logica per organizzare le risorse dati da utilizzare con Query Service man mano che la quantità di risorse dati all’interno della sandbox cresce. Per ulteriori informazioni, consulta la sezione [organizzare la documentazione delle risorse dati](../../query-service/best-practices/organize-data-assets.md). |
 
 Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
 
@@ -111,7 +112,7 @@ Per ulteriori informazioni sulle sandbox, consulta la sezione [panoramica sulle 
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
