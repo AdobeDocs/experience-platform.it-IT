@@ -1,11 +1,11 @@
 ---
-title: Viste in estensioni Web
+title: Visualizzazioni in estensioni Web
 description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 99%
+source-wordcount: '2083'
+ht-degree: 97%
 
 ---
 
@@ -169,6 +169,10 @@ In fase di runtime, prima di essere passato al modulo libreria, l’oggetto dell
 Per indicare dove può essere utile per l’utente utilizzare gli elementi dati e per facilitarne l’immissione, si consiglia di aggiungere ai campi un pulsante di icona, come illustrato di seguito:
 
 ![campo di elemento dati](../images/data-element-field.png)
+
+>[!NOTE]
+>
+>Per scaricare l’icona appropriata, passa alla [pagina delle icone sull&#39;Adobe Spettro](https://spectrum.adobe.com/page/icons/) e cerca &quot;[!DNL Data]&quot;.
 
 Quando un utente fa clic sul pulsante accanto al campo di testo, richiama `window.extensionBridge.openDataElementSelector` come [indicato sopra](#open-data-element). L’utente potrà quindi scegliere uno degli elementi dati elencati, anziché dover ricordare il nome e immetterlo tra simboli di percentuale. Una volta selezionato un elemento dati, riceverai il nome di tale elemento dati racchiuso tra simboli di percentuale (a meno che l’opzione `tokenize` non sia stata impostata su `false`). È quindi consigliabile compilare il campo di testo con il risultato.
 
