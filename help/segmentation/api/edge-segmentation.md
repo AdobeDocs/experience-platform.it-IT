@@ -5,9 +5,9 @@ title: 'Segmentazione Edge tramite API '
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,8 @@ La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Exper
 >[!IMPORTANT]
 >
 > I dati edge saranno memorizzati in una posizione server perimetrale più vicina a quella in cui sono stati raccolti e possono essere memorizzati in una posizione diversa da quella designata come centro dati hub (o principal) di Adobe Experience Platform.
+>
+> Inoltre, il motore di segmentazione dei bordi rispetterà solo le richieste sul bordo in cui è presente **uno** identità principale contrassegnata, coerente con le identità principali non basate su edge.
 
 ## Introduzione
 
