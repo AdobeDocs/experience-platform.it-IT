@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una
 >
 > * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Attiva segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attivare i segmenti ]**per inviare i segmenti a tale destinazione.
 > * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Elimina](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Elimina ]**pulsante a [remove](delete-destinations.md) una connessione esistente a una destinazione.
-> * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Monitoraggio](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Monitoraggio ]**per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Visualizza nel monitoraggio](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Visualizza nel monitoraggio ]**per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Scheda Sfoglia](../assets/ui/workspace/browse-tab.png)
