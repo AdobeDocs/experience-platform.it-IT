@@ -2,9 +2,9 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di c
 | --- | --- |
 | [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati in base a [categoria](#category). |
 | [!UICONTROL Azione] | Filtrare per azione. Attualmente solo [!UICONTROL Crea] e [!UICONTROL Elimina] le azioni possono essere filtrate. |
-| [!UICONTROL Stato del controllo di accesso] | Filtrare in base al fatto che l&#39;azione sia stata consentita (completata) o negata per mancanza di [controllo di accesso](../../../access-control/home.md) autorizzazioni. |
+| [!UICONTROL Stato] | Filtrare in base al fatto che l&#39;azione sia stata consentita (completata) o negata per mancanza di [controllo di accesso](../../../access-control/home.md) autorizzazioni. |
 | [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
 
 Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione o seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
