@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,16 @@ La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** viene visualizzat
 >[!IMPORTANT]
 >
 >La funzione di supporto della preparazione dei dati per [!DNL Analytics] la sorgente è in versione beta.
+
+Prima di poter mappare il tuo [!DNL Analytics] per eseguire il targeting di uno schema XDM, è innanzitutto necessario selezionare se si utilizza uno schema predefinito o uno schema personalizzato.
+
+Uno schema predefinito crea un nuovo schema per conto dell&#39;utente, contenente [!DNL Analytics] gruppo di campi. Per utilizzare uno schema predefinito, selezionare **[!UICONTROL Schema predefinito]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Con uno schema personalizzato è possibile scegliere qualsiasi schema disponibile per il [!DNL Analytics] dati, purché lo schema abbia [!DNL Analytics] gruppo di campi. Per utilizzare uno schema personalizzato, selezionare **[!UICONTROL Schema personalizzato]**.
+
+![schema personalizzato](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 La [!UICONTROL Mappatura] La pagina fornisce un’interfaccia per mappare i campi di origine ai campi dello schema di destinazione appropriati. Da qui puoi mappare variabili personalizzate a nuovi gruppi di campi dello schema e applicare calcoli supportati da Data Prep. Seleziona uno schema di destinazione per avviare il processo di mappatura.
 
