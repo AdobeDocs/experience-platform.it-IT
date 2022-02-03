@@ -3,41 +3,41 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i flussi di dati. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: d3f1a6a5f3f10b8ccbe73ebc744dc60bbbf1bb07
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 0%
+source-wordcount: '1064'
+ht-degree: 1%
 
 ---
 
 
-# Configurazione di un Datastream
+# Configurare un datastream
 
-La configurazione per Adobe Experience Platform Web SDK è suddivisa tra due posizioni. Il [comando di configurazione](configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client, come il `edgeDomain`. I Datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando una richiesta viene inviata a Adobe Experience Platform Edge Network, viene utilizzato `edgeConfigId` per fare riferimento alla configurazione lato server. Questo consente di aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
+La configurazione per Adobe Experience Platform Web SDK è suddivisa tra due posizioni. La [configura, comando](configuring-the-sdk.md) nell’SDK controlla gli elementi che devono essere gestiti sul client, come il `edgeDomain`. I Datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, la `edgeConfigId` viene utilizzato per fare riferimento alla configurazione lato server. Questo consente di aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
 Per questa funzione è necessario eseguire il provisioning della tua organizzazione. Contatta il tuo Customer Success Manager (CSM) per ricevere l&#39;inserire nell&#39;elenco Consentiti.
 
-## Creazione di una configurazione del Datastream
+## Creare una configurazione del datastream
 
-I Datastreams possono essere creati nell&#39;interfaccia utente di raccolta dati utilizzando lo strumento di configurazione Datastream.
+Puoi creare e gestire i datastreams nell’interfaccia utente Raccolta dati selezionando **[!UICONTROL Datastreams]** nella navigazione a sinistra.
 
 ![navigazione dello strumento datastreams](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->Lo strumento di configurazione dei datastreams è disponibile per i clienti dell’elenco consentiti indipendentemente dal fatto che utilizzino Platform come gestore di tag. Inoltre, gli utenti devono disporre delle autorizzazioni di sviluppo. Per ulteriori informazioni, consulta l’articolo [autorizzazioni utente](../../tags/ui/administration/user-permissions.md) nella documentazione dei tag .
+>Mentre puoi accedere al [!UICONTROL Datastreams] indipendentemente dal fatto che si utilizzino le funzionalità di gestione tag di Platform, è necessario disporre delle autorizzazioni per gli sviluppatori per gestire direttamente i datastreams. Consulta la sezione [autorizzazioni utente](../../tags/ui/administration/user-permissions.md) per ulteriori informazioni, consulta la documentazione sui tag .
 
-Crea un datastream facendo clic su **[!UICONTROL Nuovo Datastream]** nell&#39;area in alto a destra dello schermo. Dopo aver specificato un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente. Le impostazioni disponibili sono descritte di seguito.
+Crea un datastream facendo clic su **[!UICONTROL Nuovo Datastream]** nell’area in alto a destra dello schermo. Dopo aver specificato un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente. Le impostazioni disponibili sono descritte di seguito.
 
-Durante la creazione di un datastream, vengono creati automaticamente tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stage* e *prod*. Corrispondono ai tre ambienti predefiniti per i tag. Quando crei una libreria di tag in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni nei singoli ambienti nel modo desiderato.
+Durante la creazione di un datastream, vengono creati automaticamente tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stadio* e *prod*. Corrispondono ai tre ambienti predefiniti per i tag. Quando crei una libreria di tag in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni nei singoli ambienti nel modo desiderato.
 
-L&#39;ID utilizzato nell&#39;SDK come `edgeConfigId` è un ID composito che specifica la configurazione e l&#39;ambiente (ad esempio, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Se nell’ID composito non è presente alcun ambiente (ad esempio, `stage` nell’esempio precedente), viene utilizzato l’ambiente di produzione.
+L&#39;ID utilizzato nell&#39;SDK come `edgeConfigId` è un ID composito che specifica la configurazione e l’ambiente (ad esempio, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Se nell&#39;ID composito non è presente alcun ambiente (ad esempio, `stage` nell’esempio precedente), viene utilizzato l’ambiente di produzione.
 
 Di seguito sono riportate le impostazioni disponibili per ogni ambiente di configurazione. La maggior parte delle sezioni può essere abilitata o disabilitata. Se disabilitata, le impostazioni vengono salvate ma non sono attive.
 
-## [!UICONTROL Impostazioni ] IDS di terze parti
+## [!UICONTROL ID di terze parti] impostazioni
 
-La sezione ID di terze parti è l’unica sezione sempre attiva. Sono disponibili due impostazioni: &quot;[!UICONTROL Sincronizzazione ID di terze parti abilitata]&quot; e &quot;[!UICONTROL ID contenitore di sincronizzazione ID di terze parti]&quot;.
+La sezione ID di terze parti è l’unica sezione sempre attiva. Sono disponibili due impostazioni: &quot;[!UICONTROL Sincronizzazione ID di terze parti abilitata]&quot; e &quot;[!UICONTROL ID di terze parti ID ID del contenitore di sincronizzazione ID]&quot;.
 
 ![Sezione Identità dell’interfaccia utente di configurazione](../images/datastreams/edge_configuration_identity.png)
 
@@ -53,19 +53,16 @@ Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire 
 
 Le impostazioni elencate qui consentono di inviare dati a Adobe Experience Platform. Abilita questa sezione solo se hai acquistato Adobe Experience Platform.
 
-![Blocco delle impostazioni Adobe Experience Platform](../images/datastreams/edge_configuration_aep.png)
+![Blocco delle impostazioni Adobe Experience Platform](../images/datastreams/platform-config.png)
 
-### [!UICONTROL Sandbox]
-
-Le sandbox sono posizioni in Adobe Experience Platform che consentono ai clienti di isolare i propri dati e implementazioni l’una dall’altra. Per ulteriori dettagli sul loro funzionamento, consulta la [documentazione sulle sandbox](../../sandboxes/home.md).
-
-### [!UICONTROL Ingresso streaming]
-
-Un ingresso in streaming è una sorgente HTTP in Adobe Experience Platform. Questi vengono creati nella scheda &quot;[!UICONTROL Origini]&quot; in Adobe Experience Platform come API HTTP.
-
-### [!UICONTROL Set di dati evento]
-
-I datastreams supportano l&#39;invio di dati a set di dati con uno schema di classe [!UICONTROL Experience Event].
+| Campo | Descrizione |
+| --- | --- |
+| [!UICONTROL Sandbox] | **(Obbligatorio)** Seleziona la sandbox Platform a cui desideri inviare i dati. Le sandbox sono partizioni virtuali in Adobe Experience Platform che ti consentono di isolare i dati e le implementazioni da altre parti della tua organizzazione. Per ulteriori dettagli sul funzionamento, consulta la sezione [documentazione sandbox](../../sandboxes/home.md). |
+| [!UICONTROL Set di dati evento] | **(Obbligatorio)** Seleziona il set di dati della piattaforma a cui verranno inviati i dati evento cliente. Questo schema deve utilizzare [Classe ExperienceEvent XDM](../../xdm/classes/experienceevent.md). |
+| [!UICONTROL Set di dati del profilo] | Seleziona il set di dati della piattaforma a cui verranno inviati i dati degli attributi del cliente. Questo schema deve utilizzare [Classe di profilo individuale XDM](../../xdm/classes/individual-profile.md). |
+| [!UICONTROL Offer Decisioning] | Seleziona questa casella di controllo per abilitare l’Offer decisioning per un’implementazione Platform Web SDK. Consulta la guida su [utilizzo di Offer Decisioning con Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) per ulteriori dettagli sull’implementazione. Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta la [Documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=it). |
+| [!UICONTROL Segmentazione Edge] | Seleziona questa casella di controllo per abilitare [segmentazione dei bordi](../../segmentation/ui/edge-segmentation.md) per questo datastream. Quando l’SDK per web di Platform invia i dati tramite un datastream abilitato per la segmentazione edge, nella risposta vengono restituite tutte le appartenenze al segmento aggiornate per il profilo in questione.<br><br>Questa opzione può essere utilizzata in combinazione con [!UICONTROL Destinazioni personalizzazione] per [casi d’uso per la personalizzazione di pagine successive](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Destinazioni personalizzazione] | Se utilizzato in combinazione con il [!UICONTROL Segmentazione Edge] questa opzione consente al datastream di connettersi a motori di personalizzazione come Adobe Target. Fai riferimento alla documentazione sulle destinazioni per i passaggi specifici su [configurazione delle destinazioni di personalizzazione](../../destinations/ui/configure-personalization-destinations.md). |
 
 ## Impostazioni di Adobe Target
 
@@ -79,19 +76,19 @@ Per configurare Adobe Target, devi fornire un codice client. Gli altri campi son
 
 ### [!UICONTROL Codice client]
 
-ID univoco per un account di destinazione. Per trovarlo, puoi passare a [!UICONTROL Adobe Target] > [!UICONTROL Configurazione] [!UICONTROL Implementazione] > [!UICONTROL modifica impostazioni] accanto al pulsante [!UICONTROL scarica] per [!UICONTROL at.js] o [!UICONTROL  2/>mbox.js]
+ID univoco per un account di destinazione. Per trovare questo, puoi passare a [!UICONTROL Adobe Target] > [!UICONTROL Configurazione]> [!UICONTROL Implementazione] > [!UICONTROL modificare le impostazioni] accanto al [!UICONTROL scaricare] pulsante per [!UICONTROL at.js] o [!UICONTROL mbox.js]
 
 ### [!UICONTROL Token di proprietà]
 
-[!DNL Target] consente ai clienti di controllare le autorizzazioni tramite l’uso delle proprietà. I dettagli sono disponibili nella sezione [Autorizzazioni Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) della documentazione [!DNL Target] .
+[!DNL Target] consente ai clienti di controllare le autorizzazioni tramite l’uso delle proprietà. I dettagli sono disponibili nella sezione [Autorizzazioni Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) della sezione [!DNL Target] documentazione.
 
-Il token di proprietà si trova in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
+Il token di proprietà si trova in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Proprietà]
 
 ### [!UICONTROL ID ambiente di destinazione]
 
-[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Gli ambienti Adobe Target consentono di gestire la tua implementazione in tutte le fasi di sviluppo. Questa impostazione specifica l’ambiente da utilizzare con ogni ambiente.
+[Ambienti](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) in Adobe Target puoi gestire la tua implementazione in tutte le fasi di sviluppo. Questa impostazione specifica l’ambiente da utilizzare con ogni ambiente.
 
-Adobe consiglia di impostarlo in modo diverso per ciascuno degli ambienti `dev`, `stage` e `prod` datastream per semplificare le operazioni. Tuttavia, se hai già definito ambienti Adobe Target, puoi utilizzarli.
+Adobe consiglia di impostarlo in modo diverso per ogni `dev`, `stage`e `prod` ambienti datastream per semplificare le operazioni. Tuttavia, se hai già definito ambienti Adobe Target, puoi utilizzarli.
 
 ## Impostazioni Adobe Audience Manager
 
@@ -101,18 +98,18 @@ Per inviare dati a Adobe Audience Manager è sufficiente abilitare questa sezion
 
 ### [!UICONTROL Destinazioni cookie abilitate]
 
-Consente all&#39;SDK di condividere le informazioni sui segmenti tramite [Cookie Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) (Destinazioni cookie) da [!DNL Audience Manager].
+Consente all’SDK di condividere le informazioni sui segmenti tramite [Destinazioni cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) da [!DNL Audience Manager].
 
 ### [!UICONTROL Destinazioni URL abilitate]
 
-Consente all&#39;SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Questi sono configurati in [!DNL Audience Manager].
+Consente all’SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Sono configurati in [!DNL Audience Manager].
 
 ## Impostazioni di Adobe Analytics
 
-Controlla se i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili in [Panoramica di Analytics](../data-collection/adobe-analytics/analytics-overview.md).
+Controlla se i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella sezione [Panoramica di Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Blocco impostazioni Adobe Analytics](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL ID suite di rapporti]
 
-La suite di rapporti si trova nella sezione Amministratore Adobe Analytics in [!UICONTROL Amministratore > Suite di rapporti]. Se sono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti.
+La suite di rapporti si trova nella sezione Adobe Analytics Admin in [!UICONTROL Amministratore > Suite di rapporti]. Se sono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti.

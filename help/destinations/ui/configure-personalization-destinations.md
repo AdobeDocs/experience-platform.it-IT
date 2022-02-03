@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Scopri come configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # Configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva
-
-## Panoramica {#overview}
 
 Adobe Experience Platform utilizza [segmentazione dei bordi](../../segmentation/ui/edge-segmentation.md) per consentire ai clienti di creare e indirizzare segmenti di pubblico su larga scala in tempo reale.
 
@@ -23,11 +21,15 @@ Questa funzionalità consente di configurare casi d’uso per la personalizzazio
 
 Questo articolo fornisce istruzioni dettagliate su come configurare Experience Platform e le destinazioni di personalizzazione per questi casi d’uso.
 
-## Passaggio 1: Configurare un datastream Experience Platform Web SDK {#configure-datastream}
+## Passaggio 1: Configurare un datastream nell’interfaccia utente Raccolta dati {#configure-datastream}
 
-Il primo passaggio nella configurazione del caso d’uso per la personalizzazione è quello di configurare un [!DNL Web SDK datastream].
+Il primo passaggio nella configurazione della destinazione di personalizzazione è quello di configurare un datastream per l’SDK Web di Experience Platform. Questa operazione viene eseguita nell’interfaccia utente di raccolta dati.
 
-Segui le istruzioni descritte nella sezione [configurazione di datastream](../../edge/fundamentals/datastreams.md) documentazione.
+Durante la configurazione del datastream, in **[!UICONTROL Adobe Experience Platform]** assicurati che entrambe **[!UICONTROL Segmentazione Edge]** e **[!UICONTROL Destinazioni personalizzazione]** sono selezionati.
+
+![Configurazione di Datastream](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+Per ulteriori dettagli su come impostare un datastream, segui le istruzioni descritte nel [Documentazione di Platform Web SDK](../../edge/fundamentals/datastreams.md).
 
 ## Passaggio 2: Configurare la destinazione di personalizzazione {#configure-destination}
 
