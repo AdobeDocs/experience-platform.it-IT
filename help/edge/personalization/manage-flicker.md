@@ -1,31 +1,30 @@
 ---
-title: Gestione di Flicker per esperienze personalizzate tramite Adobe Experience Platform Web SDK
-description: Scopri come utilizzare l’SDK Web per Adobe Experience Platform per gestire lo sfarfallio sulle esperienze utente.
-keywords: target;flicker;prehideStyle;asincrono;asincrono;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Gestione della visualizzazione momentanea di altri contenuti per esperienze personalizzate tramite l’SDK per web di Adobe Experience Platform
+description: Scopri come utilizzare Adobe Experience Platform Web SDK per gestire la visualizzazione momentanea di altri contenuti sulle esperienze utente.
+keywords: target;visualizzazione momentanea;pre-hidingStyle;asincrono;asincrono;
+exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
+source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
+# Gestione della visualizzazione momentanea di altri contenuti
 
-# Gestisci sfarfallio
+Quando tenti di eseguire il rendering del contenuto di personalizzazione, l’SDK deve assicurarsi che non vi sia alcuno sfarfallio. La visualizzazione momentanea di altri contenuti, denominata anche FOOC (Flash di contenuti originali), si verifica quando un contenuto originale viene visualizzato brevemente prima che l’alternativa venga visualizzata durante il test/personalizzazione. L’SDK tenta di applicare gli stili CSS agli elementi della pagina per garantire che tali elementi siano nascosti finché il contenuto di personalizzazione non viene riprodotto correttamente.
 
-Quando si tenta di eseguire il rendering del contenuto di personalizzazione, l’SDK deve assicurarsi che non vi siano sfarfallii. Flicker, detto anche FOOC (Flash di contenuti originali), è quando un contenuto originale viene visualizzato brevemente prima che l’alternativa venga visualizzata durante il test/la personalizzazione. L’SDK tenta di applicare stili CSS agli elementi della pagina per assicurarsi che tali elementi siano nascosti finché il rendering del contenuto di personalizzazione non viene eseguito correttamente.
+La funzionalità di gestione della visualizzazione momentanea di altri contenuti prevede alcune fasi:
 
-La funzionalità di gestione dello sfarfallio prevede alcune fasi:
-
-1. Verifica preliminare
+1. Preconfigurazione
 1. Pre-elaborazione
 1. Rendering
 
-## Verifica preliminare
+## Preconfigurazione
 
-Durante la fase di predisattivazione, l&#39;SDK utilizza l&#39;opzione di configurazione `prehidingStyle` per creare un tag di stile HTML e aggiungerlo al DOM per assicurarsi che parti grandi della pagina siano nascoste. Se non sei sicuro di quali parti della pagina saranno personalizzate, si consiglia di impostare `prehidingStyle` su `body { opacity: 0 !important }`. In questo modo l’intera pagina viene nascosta. Questo, tuttavia, comporta un peggioramento delle prestazioni di rendering della pagina segnalate da strumenti come Lighthouse, Web Page Test, ecc. Per ottenere le migliori prestazioni di rendering della pagina, si consiglia di impostare `prehidingStyle` su un elenco di elementi contenitore che contengono le parti della pagina che verranno personalizzate.
+Durante la fase di pre-hiding, l&#39;SDK utilizza `prehidingStyle` opzione di configurazione per creare un tag stile di HTML e aggiungerlo al DOM per assicurarti che parti importanti della pagina siano nascoste. Se non sei sicuro di quali parti della pagina saranno personalizzate, si consiglia di impostare `prehidingStyle` a `body { opacity: 0 !important }`. In questo modo l’intera pagina viene nascosta. Questo, tuttavia, ha il lato negativo di portare a prestazioni di rendering della pagina peggiori segnalati da strumenti come faro, test di pagina web, ecc. Per ottenere le migliori prestazioni di rendering della pagina, è consigliabile impostare `prehidingStyle` a un elenco di elementi contenitore che contengono le parti della pagina che verranno personalizzate.
 
-Presupponendo di disporre di una pagina HTML come quella riportata di seguito e sapendo che solo gli elementi `bar` e `bazz` contenitori saranno mai personalizzati:
+Supponendo di avere una pagina HTML come quella sottostante e di sapere solo che `bar` e `bazz` Gli elementi contenitore verranno sempre personalizzati:
 
 ```html
 <html>
@@ -47,19 +46,19 @@ Presupponendo di disporre di una pagina HTML come quella riportata di seguito e 
 </html>
 ```
 
-Quindi `prehidingStyle` deve essere impostato su qualcosa come `#bar, #bazz { opacity: 0 !important }`.
+Quindi il `prehidingStyle` deve essere impostato su qualcosa di simile `#bar, #bazz { opacity: 0 !important }`.
 
 ## Pre-elaborazione
 
-La fase di pre-elaborazione viene eseguita una volta che l’SDK ha ricevuto il contenuto personalizzato dal server. Durante questa fase, la risposta viene preelaborata, verificando che gli elementi che devono contenere contenuti personalizzati siano nascosti. Una volta nascosti questi elementi, il tag di stile HTML creato in base all&#39;opzione di configurazione `prehidingStyle` viene rimosso e vengono visualizzati il corpo HTML o gli elementi contenitore nascosti.
+La fase di preelaborazione viene eseguita una volta che l’SDK ha ricevuto il contenuto personalizzato dal server. Durante questa fase, la risposta viene preelaborata, assicurandosi che gli elementi che devono contenere contenuti personalizzati siano nascosti. Una volta nascosti questi elementi, il tag stile di HTML creato in base alla `prehidingStyle` l’opzione di configurazione viene rimossa e vengono visualizzati il corpo di HTML o gli elementi del contenitore nascosto.
 
 ## Rendering
 
-Dopo che il rendering di tutto il contenuto di personalizzazione è stato eseguito correttamente, o in caso di errore, vengono visualizzati tutti gli elementi precedentemente nascosti per essere certi che non ci siano elementi nascosti sulla pagina che erano nascosti dall’SDK.
+Dopo che il rendering di tutti i contenuti di personalizzazione è stato eseguito correttamente o in caso di errore, vengono visualizzati tutti gli elementi nascosti in precedenza per assicurarti che non vi siano elementi nascosti nella pagina che erano nascosti dall’SDK.
 
-## Gestione dello sfarfallio quando l’SDK viene caricato in modo asincrono
+## Gestione della visualizzazione momentanea di altri contenuti quando l&#39;SDK viene caricato in modo asincrono
 
-Si consiglia di caricare sempre l&#39;SDK in modo asincrono per ottenere le migliori prestazioni di rendering delle pagine. Tuttavia, questo ha alcune implicazioni per il rendering di contenuti personalizzati. Quando l’SDK viene caricato in modo asincrono, è necessario utilizzare lo snippet di pregenerazione. Lo snippet di pregenerazione deve essere aggiunto prima dell’SDK nella pagina HTML. Di seguito è riportato un frammento di esempio che nasconde l’intero corpo:
+Si consiglia di caricare sempre l&#39;SDK in modo asincrono per ottenere le migliori prestazioni di rendering della pagina. Tuttavia, questo ha alcune implicazioni per il rendering di contenuti personalizzati. Quando l&#39;SDK viene caricato in modo asincrono, è necessario utilizzare il frammento pre-hiding. Il frammento pre-hiding deve essere aggiunto prima dell&#39;SDK nella pagina HTML. Ecco un frammento di esempio che nasconde l&#39;intero corpo:
 
 ```html
 <script>
@@ -69,8 +68,8 @@ Si consiglia di caricare sempre l&#39;SDK in modo asincrono per ottenere le migl
     var o=e.createElement("style");
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
     setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
+    (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
 </script>
 ```
 
-Per garantire che il corpo HTML o gli elementi del contenitore non siano nascosti per un periodo di tempo prolungato, lo snippet di pregenerazione utilizza un timer che per impostazione predefinita rimuove lo snippet dopo `3000` millisecondi. I `3000` millisecondi rappresentano il tempo massimo di attesa. Se la risposta dal server è stata ricevuta ed elaborata prima, il tag di stile HTML di pre-nascondere viene rimosso il prima possibile.
+Per garantire che il corpo di HTML o gli elementi del contenitore non siano nascosti per un periodo di tempo prolungato, il frammento pre-hiding utilizza un timer che per impostazione predefinita rimuove il frammento dopo `3000` millisecondi. La `3000` millisecondi indica il tempo massimo di attesa. Se la risposta dal server è stata ricevuta ed elaborata prima, il tag stile di HTML che nasconde preventivamente viene rimosso il prima possibile.
