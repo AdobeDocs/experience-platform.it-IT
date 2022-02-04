@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -64,11 +64,30 @@ Per ulteriori informazioni sulle categorie di destinazione e informazioni su cia
 
 ## [!UICONTROL Account] {#accounts}
 
-La **[!UICONTROL Account]** La scheda ti mostra i dettagli delle connessioni stabilite con diverse destinazioni e ti consente di aggiornare i dettagli di connessione esistenti. Vedi [Aggiorna account](update-accounts.md) per istruzioni dettagliate.
+La **[!UICONTROL Account]** La scheda ti mostra i dettagli delle connessioni stabilite con varie destinazioni e ti consente di aggiornare o eliminare i dettagli dell’account esistenti. Vedi la tabella seguente per tutte le informazioni che puoi ottenere su ogni account di destinazione.
+
+>[!TIP]
+>
+> * Seleziona i tre punti nel [!UICONTROL Piattaforma] e utilizza ![Pulsante Attiva segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attivare i segmenti ]**per inviare i segmenti a tale destinazione.
+> * Seleziona i tre punti nel [!UICONTROL Piattaforma] e utilizza ![Pulsante Modifica dettagli](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Modifica dettagli ]**pulsante a [update](update-accounts.md) i dettagli di un account di destinazione esistente.
+> * Seleziona i tre punti nel [!UICONTROL Piattaforma] e utilizza ![Pulsante Elimina](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Elimina ]**pulsante a [delete](delete-destination-account.md) un account di destinazione esistente.
+
+
+![Scheda Account](../assets/ui/workspace/destination-account-options.png)
+
+| Elemento | Descrizione |
+|---|---|
+| [!UICONTROL Piattaforma] | Destinazione per la quale è stata impostata la connessione. |
+| [!UICONTROL Tipo connessione] | Rappresenta il tipo di connessione dell&#39;account al bucket o alla destinazione di archiviazione. A seconda della destinazione, le opzioni di autenticazione sono: <ul><li>Per le destinazioni di marketing e-mail: Può essere S3, FTP o Azure Blob.</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server</li><li>Per le destinazioni di archiviazione cloud Amazon S3: Chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: Autenticazione di base per SFTP</li><li>Autenticazione OAuth 1 o OAuth 2</li><li>Autenticazione token portatore</li></ul> |
+| [!UICONTROL Nome utente] | Il nome utente selezionato nel [connessione guidata destinazione](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Destinazioni] | Rappresenta il numero di flussi di dati di destinazione univoci collegati alle informazioni di base create per una destinazione. |
+| [!UICONTROL Autorizzato] | Data di autorizzazione della connessione a questa destinazione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Sfoglia] {#browse}
 
-La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una connessione. Destinazioni con **[!UICONTROL Abilitato/Disabilitato]** attivata imposta la destinazione rispettivamente su attiva o inattiva. Puoi anche visualizzare le destinazioni in cui scorrono i dati selezionando **[!UICONTROL Segmenti]** > **[!UICONTROL Sfoglia]** e selezionando un segmento da esaminare. Vedi la tabella seguente per tutte le informazioni fornite per ogni destinazione nella scheda Sfoglia:
+La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una connessione. Destinazioni con **[!UICONTROL Abilitato/Disabilitato]** attivata imposta la destinazione rispettivamente su attiva o inattiva. Puoi anche visualizzare le destinazioni in cui scorrono i dati selezionando **[!UICONTROL Segmenti]** > **[!UICONTROL Sfoglia]** e selezionando un segmento da esaminare. Vedi la tabella seguente per tutte le informazioni fornite per ogni destinazione nel [!UICONTROL Sfoglia] scheda:
 
 >[!TIP]
 >
