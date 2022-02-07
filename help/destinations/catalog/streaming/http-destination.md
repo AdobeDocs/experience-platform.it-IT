@@ -3,9 +3,9 @@ keywords: streaming;
 title: Connessione API HTTP
 description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
+source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '1274'
 ht-degree: 1%
 
 ---
@@ -87,21 +87,51 @@ Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profil
 
 In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
 
+## Considerazioni sul prodotto {#product-considerations}
+
+Experience Platform non invia dati agli endpoint HTTP tramite un set fisso di IP statici. Pertanto, Adobe non può fornire un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per la destinazione API HTTP.
+
 ## Comportamento dell’esportazione del profilo {#profile-export-behavior}
 
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP, in modo da esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica del segmento o altri eventi significativi. I profili vengono esportati nella destinazione nelle situazioni seguenti:
 
-* L’aggiornamento del profilo è stato attivato da una modifica dell’appartenenza al segmento per almeno uno dei segmenti mappati alla destinazione. Ad esempio, il profilo si è qualificato per uno dei segmenti mappati alla destinazione o è uscito da uno dei segmenti mappati alla destinazione.
-* L&#39;aggiornamento del profilo è stato attivato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo già qualificato per uno dei segmenti mappati alla destinazione è stata aggiunta una nuova identità nell’attributo di mappa identità.
-* L’aggiornamento del profilo è stato attivato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati alla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
+* L’aggiornamento del profilo è stato determinato da una modifica dell’appartenenza al segmento per almeno uno dei segmenti mappati alla destinazione. Ad esempio, il profilo si è qualificato per uno dei segmenti mappati alla destinazione o è uscito da uno dei segmenti mappati alla destinazione.
+* L&#39;aggiornamento del profilo è stato determinato da una modifica nel [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo già qualificato per uno dei segmenti mappati alla destinazione è stata aggiunta una nuova identità nell’attributo di mappa identità.
+* L&#39;aggiornamento del profilo è stato determinato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati alla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
 
 In tutti i casi descritti in precedenza, vengono esportati nella destinazione solo i profili in cui si sono verificati aggiornamenti rilevanti. Ad esempio, se un segmento mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono qualificati per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
 Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovino le modifiche. Nell’esempio precedente, quindi, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono cambiati.
 
+### Cosa determina un aggiornamento e cosa è incluso nell’esportazione {#what-determines-export-what-is-included}
+
+Per quanto riguarda i dati esportati per un determinato profilo, è importante comprendere i due diversi concetti di *cosa determina un’esportazione di dati nella destinazione API HTTP?* e *quali dati sono inclusi nell&#39;esportazione*.
+
+| Cosa determina un’esportazione di destinazione | Contenuto dell’esportazione di destinazione |
+|---------|----------|
+| <ul><li>Gli attributi e i segmenti mappati fungono da spunta per un aggiornamento della destinazione. Ciò significa che, se uno dei segmenti mappati cambia stato (da null a Realizzato o da Realizzato/Esistente a Uscire) o qualsiasi attributo mappato viene aggiornato, verrà avviata un’esportazione di destinazione.</li><li>Poiché le identità non possono attualmente essere mappate su destinazioni API HTTP, le modifiche apportate a un dato profilo determinano anche le esportazioni di destinazione.</li><li>Una modifica per un attributo è definita come qualsiasi aggiornamento sull&#39;attributo, che sia o meno lo stesso valore. Ciò significa che una sovrascrittura su un attributo viene considerata una modifica anche se il valore stesso non è stato modificato.</li></ul> | <ul><li>Tutti i segmenti (con lo stato di appartenenza più recente), indipendentemente dal fatto che siano mappati nel flusso di dati o meno, sono inclusi nel `segmentMembership` oggetto.</li><li>Tutte le identità nel `identityMap` sono inclusi anche gli oggetti (l&#39;Experience Platform attualmente non supporta la mappatura delle identità nella destinazione API HTTP).</li><li>Solo gli attributi mappati sono inclusi nell’esportazione di destinazione.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tre segmenti sono selezionati nel flusso di dati e quattro attributi sono mappati sulla destinazione.
+
+![Flusso di dati di destinazione API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+<!--
+
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
+
+![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
+
+-->
+
+Un’esportazione di profilo verso la destinazione può essere determinata da un profilo che qualifica o esce da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri segmenti non mappati, se quel particolare profilo è membro di essi. Se un profilo è idoneo per il segmento Cliente con DeLorean Cars ma è anche membro dei segmenti Orologio &quot;Torna al futuro&quot; film e appassionati di fantascienza, allora questi altri due segmenti saranno anche presenti nel `segmentMembership` oggetto dell’esportazione dei dati, anche se non sono mappati nel flusso di dati.
+
+Dal punto di vista degli attributi del profilo, eventuali modifiche ai quattro attributi mappati sopra determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti sul profilo sarà presente nell’esportazione dei dati.
+
 ## Dati esportati {#exported-data}
 
-Esportazione [!DNL Experience Platform] i dati arrivano nel tuo [!DNL HTTP] destinazione in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo qualificato per un determinato segmento ed uscito da un altro segmento e include il nome dell’attributo del profilo, il cognome, la data di nascita e l’indirizzo e-mail personale. Le identità di questo profilo sono ECID ed e-mail.
+Esportazione [!DNL Experience Platform] i dati arrivano nel tuo [!DNL HTTP] destinazione in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo qualificato per un determinato segmento, è membro di altri due segmenti ed è uscita da un altro segmento. L’esportazione include anche il nome dell’attributo del profilo, il cognome, la data di nascita e l’indirizzo e-mail personale. Le identità di questo profilo sono ECID ed e-mail.
 
 ```json
 {
@@ -116,17 +146,25 @@ Esportazione [!DNL Experience Platform] i dati arrivano nel tuo [!DNL HTTP] dest
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
