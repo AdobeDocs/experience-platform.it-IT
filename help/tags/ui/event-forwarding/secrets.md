@@ -2,9 +2,9 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente di raccolta dati per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ La schermata successiva ti consente di modificare il nome e le credenziali del s
 | Tipo di segreto | Nuovo protocollo |
 | --- | --- |
 | [!UICONTROL Token] | Seleziona **[!UICONTROL Segreto Exchange]** per riprovare lo scambio segreto. Questo controllo è disponibile solo quando è presente un ambiente collegato al segreto. |
-| [!UICONTROL HTTP] | Se non è presente alcun ambiente collegato al segreto, seleziona **[!UICONTROL Segreto Exchange]** per scambiare le credenziali con base64. Se un ambiente è collegato, seleziona Seleziona **[!UICONTROL Exchange e Distribuzione di segreti]** per scambiare con base64 e distribuire il segreto a Cloudfare. |
+| [!UICONTROL HTTP] | Se non è presente alcun ambiente collegato al segreto, seleziona **[!UICONTROL Segreto Exchange]** per scambiare le credenziali con base64. Se un ambiente è collegato, seleziona Seleziona **[!UICONTROL Exchange e Distribuzione di segreti]** per scambiare con base64 e distribuire il segreto. |
 | [!UICONTROL OAuth2] | Seleziona **[!UICONTROL Genera token]** per scambiare le credenziali e restituire un token di accesso dal provider di autenticazione. |
 
 ## Elimina un segreto
