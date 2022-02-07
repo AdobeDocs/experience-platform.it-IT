@@ -5,18 +5,18 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
 
 # Notifiche di esecuzione del flusso
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
-[[!DNL Flow Service] Le API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) vengono utilizzate per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di  [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno di [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
 Ad Adobe I/O, Eventi, puoi abbonarti agli eventi e utilizzare i webhook per ricevere notifiche sullo stato delle esecuzioni dei flussi. Queste notifiche contengono informazioni sul successo dell&#39;esecuzione del flusso o sugli errori che hanno contribuito al fallimento di un&#39;esecuzione.
 
@@ -24,19 +24,19 @@ Questo documento fornisce passaggi su come abbonarsi agli eventi, registrare i w
 
 ## Introduzione
 
-Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine il cui flusso viene eseguito da monitorare. Se non hai ancora configurato una connessione di origine, visita la [panoramica origini](./home.md) per configurare l&#39;origine desiderata prima di tornare a questa guida.
+Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine il cui flusso viene eseguito da monitorare. Se non hai ancora configurato una connessione di origine, visita il [panoramica di origini](./home.md) per configurare l’origine scelta prima di tornare a questa guida.
 
-Questo documento richiede anche una comprensione funzionante dei webhook e come collegare un webhook da un&#39;applicazione a un&#39;altra. Fai riferimento alla [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) per un&#39;introduzione ai webhook.
+Questo documento richiede anche una comprensione funzionante dei webhook e come collegare un webhook da un&#39;applicazione a un&#39;altra. Fai riferimento a [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) per un&#39;introduzione ai webhooks.
 
 ## Registra un webhook per le notifiche di esecuzione del flusso
 
-Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare Adobe Developer Console per registrare un webhook nell’integrazione [!DNL Experience Platform].
+Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare Adobe Developer Console per registrare un webhook nel proprio [!DNL Experience Platform] integrazione.
 
-Segui l&#39;esercitazione su [iscriverti a [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
+Segui l’esercitazione su [iscrizione alle notifiche di [!DNL I/O Event]](../observability/alerts/subscribe.md) per passaggi dettagliati su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Notifiche della piattaforma]** come provider di eventi e di selezionare le seguenti sottoscrizioni di eventi:
+>Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Notifiche di Platform]** come provider di eventi e seleziona le seguenti sottoscrizioni di eventi:
 >
 >* **[!UICONTROL Flusso dell&#39;origine di Experience Platform eseguito correttamente]**
 >* **[!UICONTROL Impossibile eseguire il flusso dell&#39;origine di Experience Platform]**
@@ -50,11 +50,11 @@ Una notifica restituisce informazioni quali il numero di processi di acquisizion
 
 >[!IMPORTANT]
 >
->Se durante il processo di creazione del flusso è abilitata l’acquisizione parziale, un flusso che contiene sia l’acquisizione riuscita che quella non riuscita verrà contrassegnato come `sources_flow_run_success` solo se il numero di errori è inferiore alla percentuale di soglia di errore impostata durante il processo di creazione del flusso. Se un&#39;esecuzione di flusso corretta contiene errori, questi verranno comunque inclusi come parte del payload restituito.
+>Se durante il processo di creazione del flusso è abilitata l’acquisizione parziale, un flusso contenente sia l’acquisizione riuscita che quella non riuscita verrà contrassegnato come `sources_flow_run_success` solo se il numero di errori è inferiore alla soglia di errore impostata durante il processo di creazione del flusso. Se un&#39;esecuzione di flusso corretta contiene errori, questi verranno comunque inclusi come parte del payload restituito.
 
 ### Operazione riuscita
 
-Una risposta corretta restituisce un set di `metrics` che definiscono le caratteristiche di un’esecuzione di flusso specifica e `activities` che delineano il modo in cui i dati vengono trasformati.
+Una risposta corretta restituisce un set di `metrics` che definiscono le caratteristiche di un flusso specifico e `activities` che delineano il modo in cui i dati vengono trasformati.
 
 ```json
 {
@@ -147,7 +147,7 @@ Una risposta corretta restituisce un set di `metrics` che definiscono le caratte
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
+              "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -313,11 +313,11 @@ La risposta seguente è un esempio di esecuzione non riuscita del flusso, con un
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui messaggi di errore, consulta l’ [appendice](#errors) .
+>Consulta la sezione [appendice](#errors) per ulteriori informazioni sui messaggi di errore.
 
 ## Passaggi successivi
 
-Ora puoi abbonarti a eventi che ti consentono di ricevere notifiche in tempo reale sugli stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni di flusso e sulle sorgenti, consulta la [panoramica origini](./home.md).
+Ora puoi abbonarti a eventi che ti consentono di ricevere notifiche in tempo reale sugli stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni di flusso e sulle origini, consulta la sezione [panoramica di origini](./home.md).
 
 ## Appendice
 
