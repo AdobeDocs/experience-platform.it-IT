@@ -5,9 +5,9 @@ title: 'Valutare gli eventi in tempo reale con Segmentazione in streaming '
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1834'
 ht-degree: 1%
 
 ---
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Obbligatorio)** Tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `properties.segments` | **(Obbligatorio quando `type` è `batch_segmentation`)** Utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
-| `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. L&#39;esecuzione dei processi può essere pianificata solo una volta al giorno, il che significa che non è possibile pianificare l&#39;esecuzione di un processo più di una volta durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno a 1:00:00 UTC. Per ulteriori informazioni, consulta la sezione [formato di espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione. |
+| `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. L&#39;esecuzione dei processi può essere pianificata solo una volta al giorno, il che significa che non è possibile pianificare l&#39;esecuzione di un processo più di una volta durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno a 1:00:00 UTC. Per ulteriori informazioni, consulta l’appendice [formato di espressione cron](./schedules.md#appendix) all’interno della documentazione sulle pianificazioni all’interno della segmentazione. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato della pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un’organizzazione IMS può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
 **Risposta**
