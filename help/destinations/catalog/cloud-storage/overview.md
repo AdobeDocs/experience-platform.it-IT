@@ -3,7 +3,7 @@ keywords: destinazione di archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può fornire i segmenti come file di dati alle posizioni di archiviazione cloud di Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Experience Platform supporta le seguenti destinazioni di archiviazione clo
 Per inviare segmenti alle destinazioni di archiviazione cloud per le campagne, Platform deve prima connettersi alla destinazione. Consulta la sezione [esercitazione sulla creazione di una destinazione](../../ui/connect-destination.md) informazioni dettagliate sulla configurazione di una nuova destinazione.
 
 
-## Utilizzo di macro per creare una cartella nel percorso di archiviazione {#use-macros}
+## Utilizzare le macro per creare una cartella nel percorso di archiviazione {#use-macros}
 
 >[!NOTE]
 >

@@ -3,9 +3,9 @@ keywords: Amazon S3;destinazione S3;s3;amazon s3
 title: Connessione Amazon S3
 description: Crea una connessione in uscita diretta all’archiviazione S3 di Amazon Web Services (AWS) per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,19 @@ Crea una connessione in uscita diretta al tuo [!DNL Amazon Web Services] (AWS) A
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_bucket"
+>title="Nome blocco"
+>abstract="Deve essere lungo tra 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini ( - ). Non deve essere formattato come indirizzo IP (ad esempio, 192.100.1.1)."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_folderpath"
+>title="Percorso cartella"
+>abstract="Deve contenere solo caratteri A-Z, a-z, 0-9 e può includere i seguenti caratteri speciali: `/!-_.'()"^[]+$%.*"`. Per creare una cartella per file di segmento, inserire la macro /%SEGMENT_NAME% o /%SEGMENT_ID% o /%SEGMENT_NAME%/%SEGMENT_ID% nel campo di testo. Le macro possono essere inserite solo alla fine del percorso della cartella. Visualizzare esempi di macro nella documentazione."
+>text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Utilizzare le macro per creare una cartella nel percorso di archiviazione"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
