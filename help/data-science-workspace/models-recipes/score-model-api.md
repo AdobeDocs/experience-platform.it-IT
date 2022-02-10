@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform;Punteggio di un modello;Data Science Workspace;argomenti popolari;api di apprendimento automatico sensei
 solution: Experience Platform
-title: Punteggio di un modello tramite l’API di apprendimento automatico Sensei
+title: Punteggio di un modello utilizzando l’API di apprendimento automatico di Sensei
 topic-legacy: tutorial
 type: Tutorial
-description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico Sensei per creare un esperimento e un’esecuzione di esperimento.
+description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico di Sensei per creare un esperimento e un’esecuzione di un esperimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
 
 # Punteggio di un modello utilizzando [!DNL Sensei Machine Learning API]
 
-Questa esercitazione ti mostrerà come sfruttare le API per creare un esperimento e un’esecuzione di un esperimento. Per un elenco dettagliato della documentazione API, fai riferimento a [questo documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Questa esercitazione ti mostrerà come sfruttare le API per creare un esperimento e un’esecuzione di un esperimento. Per un elenco di tutti gli endpoint nell&#39;API di apprendimento automatico di Sensei, fai riferimento a [presente documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Creare un esperimento pianificato per il punteggio
 
-Analogamente agli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene eseguita anche includendo una sezione `template` al parametro body. Inoltre, il campo `name` sotto `tasks` nel corpo è impostato come `score`.
+Simile agli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene eseguita anche includendo un `template` al parametro body. Inoltre, la `name` campo sotto `tasks` nel corpo è impostato come `score`.
 
-Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e durerà fino a `endTime`.
+Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e funzionerà fino a `endTime`.
 
 **Richiesta**
 
@@ -110,7 +109,7 @@ Di seguito è riportata la risposta dopo la creazione dell’esperimento pianifi
 
 ### Creare un’esecuzione di un esperimento per il punteggio
 
-Ora, con il modello addestrato, possiamo creare un Experience Run per il punteggio. Il valore del parametro `modelId` è il parametro `id` restituito nella richiesta del modello di GET di cui sopra.
+Ora, con il modello addestrato, possiamo creare un Experience Run per il punteggio. Il valore del `modelId` è il parametro `id` parametro restituito nella richiesta del modello di GET precedente.
 
 **Richiesta**
 
@@ -219,7 +218,7 @@ Poiché sono presenti più esecuzioni di esperimenti per un esperimento specific
 
 ### Arrestare ed eliminare un esperimento pianificato
 
-Per interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, è possibile eseguire questa operazione eseguendo una query su una richiesta DELETE al `{EXPERIMENT_ID}`
+Se desideri interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, può essere eseguito eseguendo una query su una richiesta di DELETE al `{EXPERIMENT_ID}`
 
 **Richiesta**
 
