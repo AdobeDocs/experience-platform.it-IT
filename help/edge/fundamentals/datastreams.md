@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i flussi di dati. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: d3f1a6a5f3f10b8ccbe73ebc744dc60bbbf1bb07
+source-git-commit: 012ebbadc7149747df1414360eca6451836d6bbc
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Le impostazioni elencate qui consentono di inviare dati a Adobe Experience Platf
 
 | Campo | Descrizione |
 | --- | --- |
-| [!UICONTROL Sandbox] | **(Obbligatorio)** Seleziona la sandbox Platform a cui desideri inviare i dati. Le sandbox sono partizioni virtuali in Adobe Experience Platform che ti consentono di isolare i dati e le implementazioni da altre parti della tua organizzazione. Per ulteriori dettagli sul funzionamento, consulta la sezione [documentazione sandbox](../../sandboxes/home.md). |
+| [!UICONTROL Sandbox] | **(Obbligatorio)** Seleziona la sandbox Platform a cui desideri inviare i dati. Le sandbox sono partizioni virtuali in Adobe Experience Platform che ti consentono di isolare i dati e le implementazioni da altre parti della tua organizzazione.<br><br>Una volta creato un datastream, la relativa sandbox non può essere modificata. La [!UICONTROL Sandbox] il campo di selezione non è pertanto disponibile quando si modifica un datastream esistente.<br><br>Per ulteriori dettagli sul ruolo delle sandbox in Experience Platform, consulta la sezione [documentazione sandbox](../../sandboxes/home.md). |
 | [!UICONTROL Set di dati evento] | **(Obbligatorio)** Seleziona il set di dati della piattaforma a cui verranno inviati i dati evento cliente. Questo schema deve utilizzare [Classe ExperienceEvent XDM](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Set di dati del profilo] | Seleziona il set di dati della piattaforma a cui verranno inviati i dati degli attributi del cliente. Questo schema deve utilizzare [Classe di profilo individuale XDM](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Seleziona questa casella di controllo per abilitare l’Offer decisioning per un’implementazione Platform Web SDK. Consulta la guida su [utilizzo di Offer Decisioning con Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) per ulteriori dettagli sull’implementazione. Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta la [Documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=it). |
