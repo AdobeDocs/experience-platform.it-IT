@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
+source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '637'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Leggi [Attivare profili e segmenti nelle destinazioni di richieste di profilo](.
 
 ## Dati esportati {#exported-data}
 
-Se utilizzi [Adobe di tag](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [invio evento completato](../../../edge/extension/event-types.md) La funzionalità e l&#39;azione del codice personalizzato avranno un `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
+Se utilizzi [Tag in Adobe Experience Platform](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [invio evento completato](../../../edge/extension/event-types.md) La funzionalità e l&#39;azione del codice personalizzato avranno un `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
 
 Di seguito è riportato un valore di esempio per `event.destinations` variabile:
 
@@ -85,7 +85,7 @@ Di seguito è riportato un valore di esempio per `event.destinations` variabile:
 ]
 ```
 
-Se non utilizzi [Adobe di tag](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
+Se non utilizzi [Tag](../../../tags/home.md) per implementare l’SDK web di Experience Platform, utilizza l’ [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
 
 La risposta JSON di Adobe Experience Platform può essere analizzata per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del segmento possono essere passati nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di come potrebbe essere specifico per la risposta di destinazione.
 
