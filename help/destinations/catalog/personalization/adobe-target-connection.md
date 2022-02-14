@@ -3,9 +3,9 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 Una società di noleggio e vendita di casa vuole personalizzare la propria home page con un banner, in base alle qualifiche del segmento di clienti in Adobe Experience Platform. L’azienda può selezionare i tipi di pubblico che devono ottenere un’esperienza personalizzata e inviarli ad Adobe Target come criteri di targeting per la loro offerta Target.
 
 ## Collegati alla destinazione {#connect}
+
+>[!IMPORTANT]
+>
+>Prima di creare un [!DNL Adobe Target] connessione, ti consigliamo di leggere la nostra guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"

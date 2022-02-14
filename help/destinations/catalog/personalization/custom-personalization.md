@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,10 @@ Un sito web di noleggio e vendita di casa vuole personalizzare la propria home p
 Utilizzando una destinazione di personalizzazione personalizzata separata per il loro server di annunci, lo stesso sito web può eseguire il targeting della pubblicità sul sito utilizzando un diverso set di segmenti da Adobe Experience Platform come criteri di targeting.
 
 ## Collegati alla destinazione {#connect}
+
+>[!IMPORTANT]
+>
+>Prima di creare una connessione di personalizzazione personalizzata, ti consigliamo di leggere la nostra guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
