@@ -1,10 +1,10 @@
 ---
-title: Confronto di at.js con l’SDK per web di Platform
-description: Scopri in che modo le funzioni di at.js sono paragonabili agli SDK web
+title: Confronto tra at.js e Experience Platform Web SDK
+description: Scopri in che modo le funzioni di at.js si confrontano con Experience Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;diagramma di sistema;diagramma
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 7%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-L&#39;SDK WEB di AEP invia automaticamente una notifica con le offerte eseguite dall&#39;SDK WEB. Questo è un esempio di come si presenta un payload della richiesta di notifica:
+Experience Platform Web SDK invia automaticamente una notifica con le offerte eseguite dall’SDK WEB. Questo è un esempio di come si presenta un payload della richiesta di notifica:
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Utilizzo dell’SDK per web
 
-Per attivare o segnalare una modifica alla visualizzazione di un&#39;applicazione a pagina singola, imposta la `web.webPageDetails.viewName` sotto la `xdm` opzione `sendEvent` comando. L&#39;SDK WEB AEP controllerà la cache di visualizzazione, se sono presenti offerte per `viewName` specificato in `sendEvent` li eseguirà e invierà un evento di notifica della visualizzazione.
+Per attivare o segnalare una modifica alla visualizzazione di un&#39;applicazione a pagina singola, imposta la `web.webPageDetails.viewName` sotto la `xdm` opzione `sendEvent` comando. L’SDK web controllerà la cache di visualizzazione, se sono presenti offerte per `viewName` specificato in `sendEvent` li eseguirà e invierà un evento di notifica della visualizzazione.
 
 **Esempio**
 
