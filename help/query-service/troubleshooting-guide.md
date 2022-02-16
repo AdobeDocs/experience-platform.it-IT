@@ -5,10 +5,10 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ac313e2a23037507c95d6713a83ad5ca07e1cd85
+source-git-commit: 03cd013e35872bcc30c68508d9418cb888d9e260
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 4%
+source-wordcount: '1106'
+ht-degree: 3%
 
 ---
 
@@ -54,6 +54,53 @@ FROM actual_dataset a
 WHERE timestamp >= TO_TIMESTAMP('2021-01-21 12:00:00')
 AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
+```
+
+### Come posso cambiare il fuso orario in e da una marca temporale UTC?
+
+Adobe Experience Platform persiste i dati nel formato di marca temporale UTC (Coordinated Universal Time). Un esempio del formato UTC è `2021-12-22T19:52:05Z`
+
+Query Service supporta funzioni SQL integrate per convertire una data marca temporale in e dal formato UTC. Entrambi i `to_utc_timestamp()` e `from_utc_timestamp()` i metodi richiedono due parametri: marca temporale e fuso orario.
+
+| Parametro | Descrizione |
+|---|---|
+| Marca temporale | La marca temporale può essere scritta in formato UTC o in formato semplice `{year-month-day}` formato. Se non viene fornito alcun orario, il valore predefinito è mezzanotte della mattina del giorno specificato. |
+| Fuso orario | Il fuso orario viene scritto in un `{continent/city})` formato. Deve essere uno dei codici di fuso orario riconosciuti come trovato nella [database TZ di dominio pubblico](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
+#### Converti in timestamp UTC
+
+La `to_utc_timestamp()` interpreta i parametri specificati e li converte **alla marca temporale del fuso orario locale** in formato UTC. Ad esempio, il fuso orario a Seoul, Corea del Sud, è UTC/GMT +9 ore. Fornendo una marca temporale di sola data, il metodo utilizza un valore predefinito di mezzanotte della mattina. La marca temporale e il fuso orario vengono convertiti in formato UTC dall’ora di tale regione a una marca temporale UTC della propria area locale.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+La query restituisce una marca temporale nell’ora locale dell’utente. In questo caso, alle 15.00 del giorno precedente, mentre Seoul è in attesa di 9 ore.
+
+```
+2021-08-30 15:00:00
+```
+
+Un altro esempio, se la marca temporale è stata `2021-07-14 12:40:00.0` per `Asia/Seoul` fuso orario, la marca temporale UTC restituita sarà `2021-07-14 03:40:00.0`
+
+L’output della console fornito nell’interfaccia utente del servizio query è un formato più leggibile dall’utente:
+
+```
+8/30/2021, 3:00 PM
+```
+
+### Converti dalla marca temporale UTC
+
+La `from_utc_timestamp()` interpreta i parametri indicati **dalla marca temporale del fuso orario locale** e fornisce la marca temporale equivalente della regione desiderata in formato UTC. Nell’esempio seguente, l’ora è 2:40 nel fuso orario locale dell’utente. Il fuso orario di Seoul passato come variabile è nove ore prima del fuso orario locale.
+
+```SQL
+SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
+```
+
+La query restituisce una marca temporale in formato UTC per il fuso orario passato come parametro. Il risultato è nove ore prima del fuso orario in cui è stata eseguita la query.
+
+```
+8/31/2021, 11:40 PM
 ```
 
 ### Come posso filtrare i dati della serie temporale?
