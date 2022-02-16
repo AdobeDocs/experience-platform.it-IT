@@ -4,7 +4,7 @@ title: Panoramica sulle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l’invio di campagne e-mail promozionali. Adobe Experience Platform si integra con ESP e consente di attivare segmenti nelle destinazioni di marketing via e-mail.
 
-Platform esporta i segmenti come file `.csv` e li distribuisce nella posizione desiderata. Pianifica l’importazione dei dati nella tua piattaforma di marketing e-mail dal percorso di archiviazione abilitato in [!DNL Platform]. Il processo di importazione dei dati varia a seconda del partner. Leggi gli articoli sulle singole destinazioni per ulteriori informazioni.
+Platform esporta i segmenti come `.csv` e li distribuisce nella posizione desiderata. Pianifica l’importazione dei dati nella piattaforma di marketing e-mail dalla posizione di archiviazione abilitata in [!DNL Platform]. Il processo di importazione dei dati varia a seconda del partner. Leggi gli articoli sulle singole destinazioni per ulteriori informazioni.
 
 ## Destinazioni di marketing e-mail supportate {#supported-destinations}
 
@@ -30,13 +30,13 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 
 ## Connessione a una nuova destinazione di marketing e-mail {#connect-destination}
 
-Per inviare segmenti alle destinazioni di marketing e-mail per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sull&#39;impostazione di una nuova destinazione, consulta l&#39; [esercitazione sulla creazione di una destinazione](../../ui/connect-destination.md) .
+Per inviare segmenti alle destinazioni di marketing e-mail per le campagne, Platform deve prima connettersi alla destinazione. Consulta la sezione [esercitazione sulla creazione di una destinazione](../../ui/connect-destination.md) informazioni dettagliate sulla configurazione di una nuova destinazione.
 
 ## Best practice per attivare i tipi di pubblico nelle destinazioni di marketing via e-mail {#best-practices}
 
 ### Selezione identità {#identity}
 
-Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo di cui si distinguono le identità utente. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
+Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo di cui si distinguono le identità utente. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 |----------------- | ---------------------------|
@@ -70,9 +70,9 @@ Leggi i singoli articoli di destinazione marketing e-mail per scoprire come impo
 
 ## Attivare i segmenti nelle destinazioni di marketing via e-mail {#activate}
 
-Per istruzioni su come attivare i segmenti nelle destinazioni di marketing e-mail, consulta [Attivare i dati sul pubblico per le destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md).
+Per istruzioni su come attivare i segmenti nelle destinazioni di marketing e-mail, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md).
 
 ## Risorse aggiuntive
 
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md)
-* [Creare destinazioni di marketing e-mail e attivare i dati utilizzando l’API del servizio di flusso](../../api/email-marketing.md)
+* [Creare destinazioni di marketing e-mail e attivare i dati utilizzando l’API del servizio di flusso](../../api/connect-activate-batch-destinations.md)
