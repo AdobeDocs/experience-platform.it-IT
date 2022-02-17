@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Le sezioni seguenti illustrano come effettuare richieste di accesso a dati perso
 >
 >Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; [!UICONTROL unione degli ID] digitare. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL unione degli ID] è impostato su &quot;[!UICONTROL Grafico privato]&quot;.
 >
->![](./images/privacy/no-id-stitch.png)
+>![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
 >
 >È inoltre importante notare che il tempo necessario per completare una richiesta di accesso a dati personali non può essere garantito. Se si verificano modifiche nel [!DNL Profile] i dati durante l&#39;elaborazione di una richiesta, indipendentemente dal fatto che tali record siano o meno elaborati, non possono essere garantiti.
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati nel [!DNL Data Lake] o [!DNL Real-time Customer Profile], rispettivamente.
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Viene creata una richiesta di processo di accesso nell’interfaccia utente, con l’opzione Profilo selezionata in Prodotti](./images/privacy/product-value.png)
 
 ## Frammenti di profilo nelle richieste di privacy {#fragments}
 
@@ -138,6 +138,10 @@ Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL
 >Mentre una richiesta di cancellazione corretta rimuove i dati degli attributi raccolti per un cliente (o per un set di clienti), la richiesta non rimuove le associazioni stabilite nel grafico delle identità.
 >
 >Ad esempio, una richiesta di cancellazione che utilizza un `email_id` e `customer_id` rimuove tutti i dati attributo memorizzati in tali ID. Tuttavia, qualsiasi dato successivamente acquisito in base agli stessi `customer_id` saranno ancora associati al `email_id`, poiché l&#39;associazione esiste ancora.
+>
+>Inoltre, Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; [!UICONTROL unione degli ID] digitare. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL unione degli ID] è impostato su &quot;[!UICONTROL Grafico privato]&quot;.
+>
+>![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
 
 Nelle versioni future, [!DNL Platform] invierà conferma a [!DNL Privacy Service] dopo che i dati sono stati fisicamente cancellati.
 
