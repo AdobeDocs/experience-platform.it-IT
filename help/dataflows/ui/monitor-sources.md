@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le sorgenti nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Sorgenti in streaming, ad esempio [Origine API HTTP](../../sources/connectors/streaming/http.md) al momento non sono supportati dal dashboard di monitoraggio. At this moment, you can only use the dashboard to monitor batch sources.
+>Sorgenti in streaming, ad esempio [Origine API HTTP](../../sources/connectors/streaming/http.md) al momento non sono supportati dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
 In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di sorgenti, analizzati all’interno di Experience Platform, e attivati in un’ampia varietà di destinazioni. Platform facilita il processo di tracciamento di questo flusso di dati potenzialmente non lineare grazie alla trasparenza dei flussi di dati.
 
-The monitoring dashboard provides you with a visual representation of the journey of a dataflow. Puoi utilizzare una visualizzazione di monitoraggio aggregato e navigare verticalmente dal livello di origine, a un flusso di dati e a un’esecuzione di un flusso di dati, per visualizzare le metriche corrispondenti che contribuiscono al successo o al fallimento di un flusso di dati. È inoltre possibile utilizzare la capacità di monitoraggio cross-service del dashboard di monitoraggio per monitorare il percorso di un flusso di dati da un&#39;origine a [!DNL Identity Service]e a [!DNL Profile].
+Il dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati. Puoi utilizzare una visualizzazione di monitoraggio aggregato e navigare verticalmente dal livello di origine, a un flusso di dati e a un’esecuzione di un flusso di dati, per visualizzare le metriche corrispondenti che contribuiscono al successo o al fallimento di un flusso di dati. È inoltre possibile utilizzare la capacità di monitoraggio cross-service del dashboard di monitoraggio per monitorare il percorso di un flusso di dati da un&#39;origine a [!DNL Identity Service]e a [!DNL Profile].
 
 Questa esercitazione fornisce passaggi per monitorare il flusso di dati, utilizzando sia la visualizzazione di monitoraggio aggregato che il monitoraggio tra più servizi.
 
@@ -41,7 +41,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Acquisizione sorgente"
->abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="La visualizzazione Acquisizione origine contiene informazioni sullo stato e le metriche dell’attività dati nel servizio Data Lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -50,13 +50,13 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 >abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
-In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dalla navigazione a sinistra per accedere al [!UICONTROL Monitoraggio] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dalla navigazione a sinistra per accedere al [!UICONTROL Monitoraggio] dashboard. La [!UICONTROL Monitoraggio] dashboard contiene metriche e informazioni su tutti i flussi di dati di origine, comprese informazioni sullo stato del traffico dei dati da un’origine a [!DNL Identity Service]e a [!DNL Profile].
 
 Al centro del dashboard è [!UICONTROL Acquisizione sorgente] , che contiene metriche e grafici che visualizzano dati sui record acquisiti e record non riusciti.
 
 ![dashboard di monitoraggio](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
-By default, the data displayed contains ingestion rates from the last 24 hours. Seleziona **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati.
+Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione delle ultime 24 ore. Seleziona **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati.
 
 ![cambia data](../assets/ui/monitor-sources/change-date.png)
 
@@ -64,7 +64,7 @@ Viene visualizzata una finestra a comparsa del calendario che fornisce le opzion
 
 ![regolazione del tempo](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-The graphs are enabled by default and you can disable them to expand the list of sources below. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
+I grafici sono attivati per impostazione predefinita ed è possibile disattivarli per espandere l&#39;elenco delle origini riportate di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
 ![metriche e grafici](../assets/ui/monitor-sources/metrics-graphs.png)
 
@@ -82,15 +82,15 @@ Per ordinare l&#39;elenco delle origini, selezionare **[!UICONTROL Le mie fonti]
 
 ![ordinabile per categoria](../assets/ui/monitor-sources/sort-by-category.png)
 
-To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**.
+Per visualizzare tutti i flussi di dati esistenti in tutte le origini, seleziona **[!UICONTROL Flussi di dati]**.
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
 In alternativa, è possibile inserire una sorgente nella barra di ricerca per isolare una singola sorgente. Una volta identificata la sorgente, seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a per visualizzare un elenco dei relativi flussi di dati attivi.
 
-![search](../assets/ui/monitor-sources/search.png)
+![ricerca](../assets/ui/monitor-sources/search.png)
 
-Viene visualizzato un elenco di flussi di dati. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
+Viene visualizzato un elenco di flussi di dati. Per restringere l’elenco e concentrarsi sui flussi di dati con errori, seleziona **[!UICONTROL Mostra solo errori]**.
 
 ![show-failed-only](../assets/ui/monitor-sources/show-failures-only.png)
 
@@ -98,7 +98,7 @@ Individua il flusso di dati da monitorare, quindi seleziona l’icona del filtro
 
 ![flusso dati](../assets/ui/monitor-sources/dataflow.png)
 
-The dataflow run page displays information on your dataflow&#39;s run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
+La pagina di esecuzione del flusso di dati visualizza informazioni sulla data di inizio dell’esecuzione del flusso di dati, sulle dimensioni dei dati, sullo stato e sulla relativa durata del tempo di elaborazione. Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto all’ora di avvio del flusso di dati per visualizzare i dettagli dell’esecuzione del flusso di dati.
 
 ![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
 
@@ -112,7 +112,7 @@ La [!UICONTROL Errori di esecuzione del flusso di dati] Il pannello visualizza l
 
 Seleziona **[!UICONTROL File]** per ulteriori informazioni.
 
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+![errori di esecuzione del flusso di dati](../assets/ui/monitor-sources/dataflow-run-errors.png)
 
 La [!UICONTROL File] contiene informazioni sul nome e il percorso del file.
 
@@ -140,44 +140,44 @@ Dalla pagina dei flussi di dati, individua un flusso di dati di successo e selez
 
 ![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
 
-The [!UICONTROL Source ingestion] page contains information that confirms the successful ingestion of your dataflow. Da qui, puoi iniziare a monitorare il percorso del flusso di dati dal livello di origine a [!DNL Identity Service]e quindi a [!DNL Profile].
+La [!UICONTROL Acquisizione sorgente] La pagina contiene informazioni che confermano il corretto inserimento del flusso di dati. Da qui, puoi iniziare a monitorare il percorso del flusso di dati dal livello di origine a [!DNL Identity Service]e quindi a [!DNL Profile].
 
 Seleziona **[!UICONTROL Identità]** per visualizzare l’acquisizione in [!UICONTROL Identità] stadio.
 
-![sources](../assets/ui/monitor-sources/sources.png)
+![origini](../assets/ui/monitor-sources/sources.png)
 
-### [!DNL Identity] metrics {#identity-metrics}
+### [!DNL Identity] metriche {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Elaborazione identità"
->abstract="L’elaborazione delle identità contiene informazioni sui record acquisiti nel servizio Identity, tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="La visualizzazione di elaborazione Identity contiene informazioni sui record acquisiti nel servizio Identity, tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="Dettagli dell&#39;esecuzione del dataflow"
->abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
+>abstract="Nella pagina dei dettagli dell’esecuzione del flusso di dati di Identity sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati di Identity, inclusi l’ID organizzazione IMS e l’ID di esecuzione del flusso di dati."
 
 La [!UICONTROL Elaborazione identità] contiene informazioni sui record acquisiti in [!DNL Identity Service], compreso il numero di identità aggiunte, i grafici creati e i grafici aggiornati.
 
 Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto all&#39;ora di avvio del flusso di dati per visualizzare ulteriori informazioni sul [!DNL Identity] esecuzione del flusso di dati.
 
-![identities](../assets/ui/monitor-sources/identities.png)
+![identità](../assets/ui/monitor-sources/identities.png)
 
-| Identity metrics | Descrizione |
+| Metriche di identità | Descrizione |
 | ---------------- | ----------- |
 | [!UICONTROL Record ricevuti] | Numero di record ricevuti da [!DNL Data Lake]. |
 | [!UICONTROL Record non elaborati] | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
 | [!UICONTROL Record saltati] | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga record era presente un solo identificatore. |
-| [!UICONTROL Records ingested] | Il numero di record acquisiti in [!DNL Identity Service]. |
+| [!UICONTROL Record acquisiti] | Il numero di record acquisiti in [!DNL Identity Service]. |
 | [!UICONTROL Record totali] | Il conteggio totale di tutti i record, compresi i record non riusciti, i record saltati, [!DNL Identities] record aggiunti e duplicati. |
 | [!UICONTROL Identità aggiunte] | Numero di nuovi identificatori netti aggiunti a [!DNL Identity Service]. |
-| [!UICONTROL Grafici creati] | The number of net new identity graphs created in [!DNL Identity Service]. |
-| [!UICONTROL Graphs updated] | Numero di grafici di identità esistenti aggiornati con nuovi bordi. |
-| [!UICONTROL Esecuzione del flusso di dati non riuscita] | The number of dataflow runs that failed. |
+| [!UICONTROL Grafici creati] | Numero di nuovi grafici di identità netti creati in [!DNL Identity Service]. |
+| [!UICONTROL Grafici aggiornati] | Numero di grafici di identità esistenti aggiornati con nuovi bordi. |
+| [!UICONTROL Esecuzione del flusso di dati non riuscita] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
 | [!UICONTROL Tempo di elaborazione] | La marca temporale dall’inizio dell’acquisizione al completamento. |
-| [!UICONTROL Stato] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indicates that a dataflow is active and is ingesting data according to the schedule it was provided..</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
+| [!UICONTROL Stato] | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |
 
 La [!UICONTROL Dettagli dell&#39;esecuzione del dataflow] visualizza ulteriori informazioni sul [!DNL Identity] esecuzione del flusso di dati, compreso l’ID organizzazione IMS e l’ID di esecuzione del flusso di dati. In questa pagina vengono visualizzati anche il codice di errore e il messaggio di errore corrispondenti forniti da [!DNL Identity Service], in caso di errori nel processo di acquisizione.
 
@@ -194,7 +194,7 @@ Da [!UICONTROL Elaborazione identità] pagina, seleziona **[!UICONTROL Profili]*
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Elaborazione del profilo"
->abstract="L’elaborazione del profilo contiene informazioni sui record acquisiti nel servizio Profilo, tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo."
+>abstract="La visualizzazione Elaborazione profilo contiene informazioni sui record acquisiti nel servizio Profilo, tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -213,7 +213,7 @@ Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png
 | [!UICONTROL Record ricevuti] | Numero di record ricevuti da [!DNL Data Lake]. |
 | [!UICONTROL Record non elaborati ] | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
 | [!UICONTROL Frammenti di profilo aggiunti] | Numero di nuove reti [!DNL Profile] frammenti aggiunti. |
-| [!UICONTROL Profile fragments updated] | Numero di [!DNL Profile] frammenti aggiornati |
+| [!UICONTROL Frammenti di profilo aggiornati] | Numero di [!DNL Profile] frammenti aggiornati |
 | [!UICONTROL Frammenti di profilo totali] | Numero totale di record scritti in [!DNL Profile], compresi tutti gli [!DNL Profile] frammenti aggiornati e nuovi [!DNL Profile] frammenti creati. |
 | [!UICONTROL Esecuzione del flusso di dati non riuscita] | Numero di esecuzioni del flusso di dati che non sono riuscite. |
 | [!UICONTROL Tempo di elaborazione] | La marca temporale dall’inizio dell’acquisizione al completamento. |

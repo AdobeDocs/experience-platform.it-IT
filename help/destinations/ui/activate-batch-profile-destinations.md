@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2188'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al segmento da 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opzioni di esportazione file"
->abstract="Seleziona Esporta file completi per esportare uno snapshot completo di tutti i profili idonei per il segmento. Seleziona Esporta file incrementali per esportare solo i profili qualificati per il segmento dall’ultima esportazione. La prima esportazione di file incrementali include tutti i profili idonei per il segmento, che agiscono come backfill. I file incrementali futuri includono solo i profili qualificati per il segmento a partire dalla prima esportazione di file incrementali."
+>abstract="Seleziona **Esportare file completi** per esportare uno snapshot completo di tutti i profili idonei per il segmento. Seleziona **Esportare file incrementali** per esportare solo i profili qualificati per il segmento dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i profili idonei per il segmento, che agiscono come backfill. I file incrementali futuri includono solo i profili qualificati per il segmento a partire dalla prima esportazione di file incrementali."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Esportare file incrementali"
 
 Seleziona **[!UICONTROL Esportare file completi]** per attivare l’esportazione di un file contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
@@ -348,7 +348,6 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità, ad esempio un [
 >
 >* I campi vengono utilizzati nella definizione del segmento.
 >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
-
 >
 > Ad esempio, se il campo `person.name.firstName` dispone di alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione; nel passaggio di revisione viene visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, consulta [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 

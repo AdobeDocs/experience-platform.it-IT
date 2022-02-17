@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3205'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Processi dei segmenti"
->abstract="Il dashboard processi segmento contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
+>abstract="La visualizzazione Processi del segmento contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
 
 Per accedere al [!UICONTROL Processi dei segmenti] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Processi dei segmenti]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di valutazione dei segmenti e di esportazione.
 
@@ -226,7 +226,7 @@ Le metriche seguenti sono disponibili per i processi di segmento:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="L’attivazione di destinazione contiene informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche."
+>abstract="La vista di attivazione della destinazione contiene informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche."
 
 Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
 
