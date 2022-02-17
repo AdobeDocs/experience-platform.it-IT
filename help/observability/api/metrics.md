@@ -5,7 +5,7 @@ title: Endpoint API per le metriche
 topic-legacy: developer guide
 description: Scopri come recuperare le metriche di osservabilità in Experience Platform utilizzando l’API Observability Insights .
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 3%
@@ -282,7 +282,7 @@ La tabella seguente delinea le metriche per [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Numero di [!DNL Profile] batch acquisiti per un set di dati o per tutti i set di dati. | ID set di dati |
 | timeseries.profiles.dataset.batchfailed.count | Numero di [!DNL Profile] batch non riusciti per un set di dati o per tutti i set di dati. | ID set di dati |
 | platform.ups.ingest.streaming.request.m1_rate | Frequenza richieste in arrivo. | Organizzazione IMS (**Obbligatorio**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Tasso di successo dell’acquisizione. | Organizzazione IMS (**Obbligatorio**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Tasso di successo dell’acquisizione. | Organizzazione IMS (**Obbligatorio**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Frequenza dei nuovi record acquisiti per un set di dati. | ID set di dati (**Obbligatorio**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per creare una richiesta per un set di dati. | ID set di dati (**Obbligatorio**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp dell’ultima richiesta di creazione record per un set di dati. | ID set di dati (**Obbligatorio**) |
