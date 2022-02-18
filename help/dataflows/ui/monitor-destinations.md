@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3124'
 ht-degree: 0%
 
 ---
@@ -46,24 +46,6 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
 ### Il flusso di dati viene eseguito per le destinazioni di streaming {#dataflow-runs-for-streaming-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Identità attivate"
->abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Identità escluse"
->abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identità non riuscite"
->abstract="Numero di singole identità di profilo che non sono riuscite per la destinazione selezionata. Per ulteriori informazioni, controlla la diagnostica degli errori."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Ulteriori informazioni nella documentazione"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
@@ -129,12 +111,6 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 ![Record di flusso di dati per le destinazioni di streaming](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Esecuzione del flusso di dati per le destinazioni batch {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Profili ricevuti"
->abstract="Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -254,7 +230,7 @@ Usa l’icona a forma di freccia (![icona a forma di freccia](/help/dataflows/as
 
 La **[!UICONTROL Attivazione]** Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
 
 | Metrica | Tipo di destinazione |
 ---------|----------|
