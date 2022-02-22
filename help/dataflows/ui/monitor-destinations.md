@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 18a6a693f664211428d4c153fd9849cc3ac2ee47
+source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
 workflow-type: tm+mt
-source-wordcount: '3124'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -90,8 +90,10 @@ Viene visualizzato un elenco di singole esecuzioni e le relative metriche specif
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
-- **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione del flusso di dati.
+- **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni di flussi di dati, Experience Platform acquisisce le metriche in base all’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Per l’esecuzione del flusso di dati in streaming, se un’esecuzione di un flusso di dati inizia, ad esempio alle 10:30 di sera, la metrica mostra l’ora di inizio alle 10:00 di sera nell’interfaccia utente.
+- **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all&#39;esecuzione del flusso di dati per l&#39;elaborazione.
+   - Per **[!UICONTROL completato]** in esecuzione, la metrica del tempo di elaborazione mostra sempre un’ora.
+   - Per le esecuzioni di flussi di dati che si trovano ancora in una **[!UICONTROL elaborazione]** la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche corrispondenti all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviato alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta chiusa la finestra di elaborazione e lo stato dell&#39;esecuzione del flusso di dati si aggiorna a **completato**, il tempo di elaborazione visualizzato viene modificato in un’ora.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
 - **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse dall’attivazione in base agli attributi mancanti e alla violazione del consenso.
@@ -230,7 +232,7 @@ Usa l’icona a forma di freccia (![icona a forma di freccia](/help/dataflows/as
 
 La **[!UICONTROL Attivazione]** Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
 
 | Metrica | Tipo di destinazione |
 ---------|----------|
