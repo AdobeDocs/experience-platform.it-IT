@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1392'
 ht-degree: 3%
 
 ---
@@ -97,6 +97,7 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Profile Management] | [!UICONTROL Valutare un segmento in un pubblico] | Possibilità di generare profili per un pubblico valutando una definizione di segmento. |
 | [!DNL Identities] | [!UICONTROL Manage Identity Namespaces (Gestisci spazi dei nomi di identità)] | Accesso a spazi dei nomi delle identità di lettura, creazione, modifica ed eliminazione. |
 | [!DNL Identities] | [!UICONTROL Visualizzare gli spazi dei nomi delle identità] | Accesso in sola lettura per i namespace di identità. |
+| [!DNL Identities] | [!UICONTROL Visualizza grafico identità] | Accesso in sola lettura per i grafici di identità. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestire le sandbox] | Accesso alla lettura, alla creazione, alla modifica e all’eliminazione delle sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes (Visualizza sandbox)] | Accesso in sola lettura per le sandbox appartenenti all’organizzazione. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reimpostare una sandbox] | Possibilità di reimpostare una sandbox. |
