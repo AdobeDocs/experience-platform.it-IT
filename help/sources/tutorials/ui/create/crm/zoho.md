@@ -5,18 +5,15 @@ title: Creare una connessione sorgente di gestione delle relazioni con i clienti
 topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Zoho CRM utilizzando l’interfaccia utente Adobe Experience Platform.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '551'
 ht-degree: 1%
 
 ---
 
 # Crea un [!DNL Zoho CRM] connessione sorgente nell’interfaccia utente
-
->[!NOTE]
->
-> La [!DNL Zoho CRM] la sorgente è in versione beta. Consulta la sezione [Panoramica delle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
 
 I connettori di origine in Adobe Experience Platform consentono di acquisire dati CRM di origine esterna su base pianificata. Questa esercitazione fornisce i passaggi per la creazione di un [!DNL Zoho CRM] connettore di origine con [!DNL Platform] interfaccia utente.
 

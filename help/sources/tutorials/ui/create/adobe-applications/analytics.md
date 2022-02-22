@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
+source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -57,10 +57,6 @@ La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** viene visualizzat
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mappatura
-
->[!IMPORTANT]
->
->La funzione di supporto della preparazione dei dati per [!DNL Analytics] la sorgente è in versione beta.
 
 Prima di poter mappare il tuo [!DNL Analytics] per eseguire il targeting di uno schema XDM, è innanzitutto necessario selezionare se si utilizza uno schema predefinito o uno schema personalizzato.
 

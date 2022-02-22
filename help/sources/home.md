@@ -5,7 +5,7 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
+source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Experience Platform supporta l’acquisizione di dati dal sistema locale. Per ul
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di automazione marketing di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
-- [[!DNL MailChimp]](connectors/marketing-automation/mailchimp.md)
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Pagamenti
