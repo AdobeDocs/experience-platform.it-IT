@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '412'
 ht-degree: 13%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 13%
       * [Componenti per Business Person XDM](./field-groups/profile/business-person-components.md)
       * [Dettagli sulle persone aziendali XDM](./field-groups/profile/business-person-details.md)
    * Gruppi di campi evento {#event}
+      * [Estensione completa Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Dettagli di marketing per le campagne](./field-groups/event/campaign-marketing-details.md)
       * [Dettagli canale](./field-groups/event/channel-details.md)
       * [Dettagli Commerce](./field-groups/event/commerce-details.md)
@@ -95,6 +96,7 @@ ht-degree: 13%
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
    * [Impression](./data-types/impressions.md)
+   * [Coppia di valori chiave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Misura](./data-types/measure.md)
    * [Ordine](./data-types/order.md)
