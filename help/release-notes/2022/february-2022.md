@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
+source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 8%
+source-wordcount: '575'
+ht-degree: 7%
 
 ---
 
@@ -33,7 +33,6 @@ Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati 
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
-
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
@@ -52,7 +51,7 @@ Fornire esperienze digitali rilevanti richiede una comprensione completa del cli
 
 Adobe Experience Platform [!DNL Identity Service] consente di ottenere una visione migliore del cliente e del suo comportamento attraverso il collegamento delle identità tra dispositivi e sistemi, per offrire in tempo reale esperienze digitali personali di impatto.
 
-**Nuove funzioni**
+**Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -65,6 +64,8 @@ Per informazioni più generali su [!DNL Identity Service], fare riferimento alla
 Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
 L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+
+**Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
