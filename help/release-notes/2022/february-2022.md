@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -37,7 +38,7 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 
 [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
-**Funzioni aggiornate**
+**Nuova funzionalità**
 
 | Funzione | Descrizione |
 | --- | --- |
