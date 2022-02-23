@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: d939624d222839532f4601ceed8dfa6e291f37aa
+source-git-commit: 0247d43429bb3d4cbf43ba0a94d435d01fbaf7a8
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 18%
+source-wordcount: '151'
+ht-degree: 17%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 18%
 - Best practice {#best-practices}
    - [Indicazioni generali per l’esecuzione delle query](best-practices/writing-queries.md)
    - [Guida all&#39;organizzazione delle risorse dati](./best-practices/organize-data-assets.md)
+   - [Utilizzo delle strutture di dati nidificate](best-practices/nested-data-structures.md)
    - [Deduplicazione dati](best-practices/deduplication.md)
    - [Query Evento esperienza di esempio](best-practices/experience-event-queries.md)
    - [Query Adobe Analytics di esempio](best-practices/adobe-analytics.md)

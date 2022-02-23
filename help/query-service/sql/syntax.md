@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;servizio query;servizio query;sintassi sql;sql;ctas;CTAS;Crea tabella come selezione
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: Sintassi SQL nel servizio query
 topic-legacy: syntax
-description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
+description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
+source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2360'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-e `with_query` è:
+and `with_query` is:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
@@ -88,9 +88,9 @@ e `with_query` è:
 
 Le sottosezioni seguenti forniscono dettagli sulle clausole aggiuntive che è possibile utilizzare nelle query, purché queste seguano il formato descritto sopra.
 
-### Clausola SNAPSHOT
+### SNAPSHOT clause
 
-Questa clausola può essere utilizzata per leggere in modo incrementale i dati su una tabella basata sugli ID snapshot. Un ID snapshot è un indicatore di checkpoint rappresentato da un numero Long-type applicato a una tabella data lake ogni volta che i dati vengono scritti. La `SNAPSHOT` La clausola si collega alla relazione della tabella utilizzata accanto a.
+Questa clausola può essere utilizzata per leggere in modo incrementale i dati su una tabella basata sugli ID snapshot. A snapshot ID is a checkpoint marker represented by a Long-type number that is applied to a data lake table every time data is written to it. The `SNAPSHOT` clause attaches itself to the table relation it is used next to.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -114,13 +114,13 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Si prega di notare che `SNAPSHOT` Questa funzione utilizza un alias di tabella o di tabella, ma non viene eseguita su una sottoquery o una visualizzazione. A `SNAPSHOT` funziona ovunque `SELECT` è possibile applicare una query su una tabella.
+Please note that a `SNAPSHOT` clause works with a table or table alias but not on top of a sub-query or view. A `SNAPSHOT` funziona ovunque `SELECT` è possibile applicare una query su una tabella.
 
-Inoltre, puoi utilizzare `HEAD` e `TAIL` come valori di offset speciali per le clausole snapshot. Utilizzo `HEAD` fa riferimento a un offset prima della prima istantanea, mentre `TAIL` fa riferimento a un offset dopo l&#39;ultima istantanea.
+Inoltre, puoi utilizzare `HEAD` e `TAIL` come valori di offset speciali per le clausole snapshot. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
 >[!NOTE]
 >
->Se esegui una query tra due ID snapshot e lo snapshot iniziale è scaduto, possono verificarsi i due scenari seguenti, a seconda del flag opzionale di comportamento di fallback (`resolve_fallback_snapshot_on_failure`) è impostata:
+>If you are querying between two snapshot IDs and the start snapshot is expired, the following two scenarios can occur, depending if the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
 >
 >- Se è impostato il flag opzionale per il comportamento di fallback, Query Service sceglierà la prima istantanea disponibile, la imposterà come istantanea iniziale e restituirà i dati tra la prima istantanea disponibile e lo snapshot finale specificato. Questi dati sono **inclusivo** della prima istantanea disponibile.
 >
@@ -217,14 +217,37 @@ INSERT INTO table_name select_query
 
 **Esempio**
 
+>[!NOTE]
+>
+>Di seguito è riportato un esempio contraffatto e semplicemente a scopo istruttivo.
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE]
+>[!INFO]
+> 
 > La `SELECT` dichiarazione **non deve** tra parentesi (). Inoltre, lo schema del risultato del `SELECT` l&#39;istruzione deve essere conforme a quella della tabella definita nella `INSERT INTO` istruzione. Puoi fornire un `SNAPSHOT` per leggere i delta incrementali nella tabella di destinazione.
+
+La maggior parte dei campi in uno schema XDM reale non viene trovata a livello principale e SQL non consente l&#39;utilizzo della notazione del punto. Per ottenere un risultato realistico utilizzando campi nidificati, devi mappare ogni campo nel `INSERT INTO` percorso.
+
+A `INSERT INTO` percorsi nidificati, utilizza la sintassi seguente:
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Esempio**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## TABELLA A DISCESA
 
@@ -236,7 +259,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **Parametri**
 
-- `IF EXISTS`: Se viene specificato, non viene generata alcuna eccezione se la tabella lo fa **not** esistono.
+- `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
 
 ## DATABASE DI RILASCIO
 
@@ -252,7 +275,7 @@ DROP DATABASE [IF EXISTS] db_name
 
 ## SCHEMA DI RILASCIO
 
-La `DROP SCHEMA` consente di eliminare uno schema esistente.
+The `DROP SCHEMA` command drops an existing schema.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -260,15 +283,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 **Parametri**
 
-- `IF EXISTS`: Se viene specificato, non viene generata alcuna eccezione se lo schema non lo fa **not** esistono.
+- `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
 
 - `RESTRICT`: Valore predefinito per la modalità. Se viene specificato, lo schema verrà eliminato solo se è **non** contenere eventuali tabelle.
 
-- `CASCADE`: Se viene specificato, lo schema verrà rilasciato insieme a tutte le tabelle presenti nello schema.
+- `CASCADE`: If this is specified, the schema will be dropped along with all the tables present in the schema.
 
-## CREA VISTA
+## CREATE VIEW
 
-La sintassi seguente definisce un `CREATE VIEW` query:
+The following syntax defines a `CREATE VIEW` query:
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -276,7 +299,7 @@ CREATE VIEW view_name AS select_query
 
 **Parametri**
 
-- `view_name`: Nome della visualizzazione da creare.
+- `view_name`: The name of view to be created.
 - `select_query`: A `SELECT` istruzione. La sintassi del `SELECT` è possibile trovare nella [Sezione query SELECT](#select-queries).
 
 **Esempio**
@@ -429,9 +452,9 @@ DECLARE name CURSOR FOR query
 - `name`: Nome del cursore da creare.
 - `query`: A `SELECT` o `VALUES` che fornisce le righe che devono essere restituite dal cursore.
 
-### ESEGUIRE
+### EXECUTE
 
-La `EXECUTE` viene utilizzato per eseguire un&#39;istruzione preparata in precedenza. Poiché le istruzioni preparate esistono solo per la durata di una sessione, l’istruzione preparata deve essere stata creata da un `PREPARE` istruzione eseguita in precedenza nella sessione corrente. Ulteriori informazioni sull’utilizzo delle istruzioni preparate sono disponibili nella sezione [`PREPARE` command](#prepare) sezione .
+The `EXECUTE` command is used to execute a previously prepared statement. Poiché le istruzioni preparate esistono solo per la durata di una sessione, l’istruzione preparata deve essere stata creata da un `PREPARE` istruzione eseguita in precedenza nella sessione corrente. Ulteriori informazioni sull’utilizzo delle istruzioni preparate sono disponibili nella sezione [`PREPARE` command](#prepare) sezione .
 
 Se la `PREPARE` istruzione che ha creato l&#39;istruzione ha specificato alcuni parametri e un set di parametri compatibile deve essere trasmesso a `EXECUTE` istruzione. Se questi parametri non vengono passati, viene generato un errore.
 
@@ -442,11 +465,11 @@ EXECUTE name [ ( parameter ) ]
 **Parametri**
 
 - `name`: Nome dell&#39;istruzione preparata da eseguire.
-- `parameter`: Il valore effettivo di un parametro per l&#39;istruzione preparata. Deve essere un&#39;espressione che produce un valore compatibile con il tipo di dati di questo parametro, come determinato al momento della creazione dell&#39;istruzione preparata.  Se l&#39;istruzione preparata contiene più parametri, questi saranno separati da virgole.
+- `parameter`: Il valore effettivo di un parametro per l&#39;istruzione preparata. Deve essere un&#39;espressione che produce un valore compatibile con il tipo di dati di questo parametro, come determinato al momento della creazione dell&#39;istruzione preparata.  If there are multiple parameters for the prepared statement, they are separated by commas.
 
-### SPIEGARE
+### EXPLAIN
 
-La `EXPLAIN` visualizza il piano di esecuzione per l&#39;istruzione fornita. Il piano di esecuzione mostra come verranno analizzate le tabelle a cui fa riferimento l&#39;istruzione.  Se si fa riferimento a più tabelle, verrà visualizzato quale algoritmo di join viene utilizzato per unire le righe richieste da ogni tabella di input.
+The `EXPLAIN` command displays the execution plan for the supplied statement. Il piano di esecuzione mostra come verranno analizzate le tabelle a cui fa riferimento l&#39;istruzione.  Se si fa riferimento a più tabelle, verrà visualizzato quale algoritmo di join viene utilizzato per unire le righe richieste da ogni tabella di input.
 
 ```sql
 EXPLAIN option statement
@@ -462,7 +485,7 @@ FORMAT { TEXT | JSON }
 **Parametri**
 
 - `ANALYZE`: Se la `option` contiene `ANALYZE`, vengono visualizzati i tempi di esecuzione e altre statistiche.
-- `FORMAT`: Se la `option` contiene `FORMAT`, specifica il formato di output, che può essere `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il parametro predefinito è `TEXT`.
+- `FORMAT`: Se la `option` contiene `FORMAT`, specifica il formato di output, che può essere `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. This parameter defaults to `TEXT`.
 - `statement`: Qualsiasi `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`oppure `CREATE MATERIALIZED VIEW AS` istruzione, di cui si desidera visualizzare il piano di esecuzione.
 
 >[!IMPORTANT]
@@ -576,9 +599,9 @@ SHOW ALL
    - `SERVER_VERSION`: Questo parametro mostra il numero di versione del server.
    - `SERVER_ENCODING`: Questo parametro mostra la codifica del set di caratteri lato server.
    - `LC_COLLATE`: Questo parametro mostra le impostazioni internazionali del database per le regole di confronto (ordinamento del testo).
-   - `LC_CTYPE`: Questo parametro mostra le impostazioni internazionali del database per la classificazione dei caratteri.
+   - `LC_CTYPE`: This parameter shows the database&#39;s locale setting for character classification.
       `IS_SUPERUSER`: Questo parametro mostra se il ruolo corrente dispone di privilegi di utente avanzato.
-- `ALL`: Mostra i valori di tutti i parametri di configurazione con le descrizioni.
+- `ALL`: Show the values of all configuration parameters with descriptions.
 
 **Esempio**
 
@@ -608,7 +631,7 @@ COPY query
 **Parametri**
 
 - `query`: Query da copiare.
-- `format_name`: Formato in cui si desidera copiare la query. La `format_name` può essere uno di `parquet`, `csv`oppure `json`. Per impostazione predefinita, il valore è `parquet`.
+- `format_name`: Formato in cui si desidera copiare la query. The `format_name` can be one of `parquet`, `csv`, or `json`. Per impostazione predefinita, il valore è `parquet`.
 
 >[!NOTE]
 >
@@ -618,7 +641,7 @@ COPY query
 
 La `ALTER TABLE` consente di aggiungere o eliminare vincoli di chiave primaria o esterna e di aggiungere colonne alla tabella.
 
-#### AGGIUNGI O RILASCIA VINCOLO
+#### ADD or DROP CONSTRAINT
 
 Le seguenti query SQL mostrano esempi di aggiunta o rilascio di vincoli a una tabella.
 
