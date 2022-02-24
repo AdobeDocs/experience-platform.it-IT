@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,10 @@ Questa destinazione consente di recuperare le informazioni sui segmenti da Adobe
 ## Prerequisiti {#prerequisites}
 
 Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../edge/home.md) o [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Devi utilizzare uno di questi SDK per utilizzare questa destinazione.
+
+>[!IMPORTANT]
+>
+>Prima di creare una connessione di personalizzazione personalizzata, consulta la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
 ## Tipo di esportazione {#export-type}
 
@@ -39,10 +43,6 @@ Un sito web di noleggio e vendita di casa vuole personalizzare la propria home p
 Utilizzando una destinazione di personalizzazione personalizzata separata per il loro server di annunci, lo stesso sito web può eseguire il targeting della pubblicità sul sito utilizzando un diverso set di segmenti da Adobe Experience Platform come criteri di targeting.
 
 ## Collegati alla destinazione {#connect}
-
->[!IMPORTANT]
->
->Prima di creare una connessione di personalizzazione personalizzata, ti consigliamo di leggere la nostra guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
