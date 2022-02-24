@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/render`, per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
 title: Operazioni API per i modelli di rendering
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -30,7 +30,6 @@ Puoi iniziare utilizzando un modello semplice che esporta i profili non elaborat
 >[!TIP]
 >
 >* L&#39;ID di destinazione da utilizzare qui è la variabile `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando `/destinations` punto finale. Fai riferimento a [operazioni API di configurazione della destinazione](./destination-configuration-api.md#retrieve-list).
-
 
 
 **Formato API**

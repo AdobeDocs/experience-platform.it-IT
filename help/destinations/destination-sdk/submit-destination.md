@@ -1,8 +1,8 @@
 ---
-description: Questa pagina fornisce tutte le informazioni necessarie per la revisione di una destinazione creata con Destination SDK.
+description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione creata utilizzando Destination SDK.
 title: Invia per la revisione di una destinazione creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Prima che la destinazione possa essere pubblicata nel [Catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), devi fornire ad Adobe alcune informazioni sulla destinazione e sui test eseguiti, per garantire agli utenti la migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
-In questa pagina sono elencate tutte le informazioni necessarie per inviare o aggiornare una destinazione creata con Adobe Experience Platform Destination SDK. Per inviare correttamente una destinazione in Adobe Experience Platform, invia un messaggio e-mail a <aepdestsdk@adobe.com> che include:
+In questa pagina sono elencate tutte le informazioni da fornire durante l’invio o l’aggiornamento di una destinazione creata con Adobe Experience Platform Destination SDK. Per inviare correttamente una destinazione in Adobe Experience Platform, invia un messaggio e-mail a <aepdestsdk@adobe.com> che include:
 
 * Una descrizione dei casi di utilizzo risolti dalla destinazione. Questo non è necessario se aggiorni una configurazione di destinazione esistente.
 * Verifica i risultati dopo aver utilizzato l’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe:
@@ -37,6 +37,7 @@ Fornisci una descrizione dei casi d’uso che la tua destinazione risolve per i 
 ## Risultati del test dopo l’utilizzo dell’API di destinazione del test
 
 Fornire i risultati dei test dopo l&#39;utilizzo del [API di destinazione del test](./test-destination.md) per eseguire una chiamata HTTP alla destinazione. Ciò include:
+
 * La richiesta API completa (intestazioni e corpo) effettuata sull&#39;endpoint di destinazione, utilizzando l&#39;API di test.
 * Risposta API ricevuta dall’endpoint di destinazione.
 

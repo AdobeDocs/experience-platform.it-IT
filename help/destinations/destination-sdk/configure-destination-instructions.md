@@ -1,27 +1,23 @@
 ---
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming utilizzando Destination SDK.
-title: Utilizzare Destination SDK per configurare una destinazione in streaming
+title: Utilizza Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Utilizzare Destination SDK per configurare una destinazione in streaming
+# Utilizza Destination SDK per configurare una destinazione di streaming
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell’SDK delle destinazioni](./configuration-options.md) e in altri documenti di riferimento sulle funzionalità e API di Destination SDK per configurare un [destinazione streaming](/help/destinations/destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
-
->[!NOTE]
->
->La configurazione di una destinazione batch tramite Destination SDK non è attualmente supportata.
+Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell’SDK delle destinazioni](./configuration-options.md) e in altri documenti di riferimento sulle funzionalità di Destination SDK e API per configurare un [destinazione streaming](/help/destinations/destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di passare ai passaggi illustrati di seguito, leggere il [Introduzione a Destination SDK](./getting-started.md) per informazioni su come ottenere le credenziali di autenticazione necessarie per l’Adobe I/O e altri prerequisiti per l’utilizzo con le API Destination SDK.
+Prima di passare ai passaggi illustrati di seguito, leggere il [Guida introduttiva alla Destination SDK](./getting-started.md) per informazioni su come ottenere le credenziali di autenticazione necessarie per l’Adobe I/O e altri prerequisiti per l’utilizzo con le API Destination SDK.
 
 ## Passaggi per utilizzare le opzioni di configurazione in Destination SDK per impostare la destinazione {#steps}
 
@@ -29,7 +25,7 @@ Prima di passare ai passaggi illustrati di seguito, leggere il [Introduzione a D
 
 ## Passaggio 1: Creare una configurazione server e modello {#create-server-template-configuration}
 
-Inizia creando un server e una configurazione di modelli utilizzando `/destinations-server` endpoint (lettura [Riferimento API](./destination-server-api.md)). Per ulteriori informazioni sulla configurazione del server e del modello, consulta [Specifiche del server e del modello](./configuration-options.md#server-and-template) nella sezione riferimento.
+Inizia creando un server e una configurazione di modelli utilizzando `/destinations-server` endpoint (lettura [Riferimento API](destination-server-api.md)). Per ulteriori informazioni sulla configurazione del server e del modello, consulta [Specifiche del server e del modello](server-and-template-configuration.md) nella sezione riferimento.
 
 Di seguito è riportato un esempio di configurazione. Tieni presente che il modello di trasformazione del messaggio nel `requestBody.value` il parametro è affrontato al punto 3, [Creare un modello di trasformazione](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Passaggio 2: Creare la configurazione di destinazione {#create-destination-configuration}
 
-Di seguito è riportato un esempio di configurazione per un modello di destinazione, creato utilizzando `/destinations` Endpoint API. Per ulteriori informazioni su questo modello, consulta [Configurazione della destinazione](./destination-configuration.md).
+Di seguito è riportato un esempio di configurazione per un modello di destinazione, creato utilizzando `/destinations` Endpoint API. Per ulteriori informazioni su questa configurazione, consulta [Configurazione della destinazione](./destination-configuration.md).
 
 Per collegare la configurazione del server e del modello nel passaggio 1 a questa configurazione di destinazione, aggiungi l’ID istanza del server e la configurazione del modello come `destinationServerId` qui.
 
@@ -156,11 +152,11 @@ Dopo aver creato un modello di trasformazione del messaggio che funziona per te,
 
 ## Passaggio 4: Creare la configurazione dei metadati del pubblico {#create-audience-metadata-configuration}
 
-Per alcune destinazioni, Destination SDK richiede di configurare una configurazione dei metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando è necessario configurare questa configurazione e su come eseguirla.
+Per alcune destinazioni, Destination SDK richiede di configurare una configurazione di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](./audience-metadata-management.md) per informazioni su quando è necessario configurare questa configurazione e su come eseguirla.
 
 Se utilizzi una configurazione di metadati del pubblico, devi connetterla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
-## Passaggio 5: Creare la configurazione delle credenziali / Configurare l&#39;autenticazione {#set-up-authentication}
+## Passaggio 5: Configurare l’autenticazione {#set-up-authentication}
 
 A seconda se si specifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione di cui sopra, puoi impostare l’autenticazione per la tua destinazione utilizzando `/destination` o `/credentials` punto finale.
 

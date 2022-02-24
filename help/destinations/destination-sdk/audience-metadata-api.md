@@ -2,7 +2,7 @@
 description: Questa pagina descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/audience-templates`.
 title: Operazioni API per l’endpoint dei metadati del pubblico
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 5%
@@ -26,7 +26,6 @@ Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per
 Puoi creare un nuovo modello di pubblico effettuando una richiesta di POST al `/authoring/audience-templates` punto finale.
 
 **Formato API**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
 Puoi aggiornare un modello di pubblico esistente effettuando una richiesta di PUT al `/authoring/audience-templates` e fornisce l’ID istanza del modello di pubblico da aggiornare. Nel corpo della chiamata , fornisci il modello aggiornato.
 
 **Formato API**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Recupera un elenco di modelli di pubblico {#retrieve-list}
 
@@ -430,7 +452,6 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di modelli di m
 Puoi recuperare informazioni dettagliate su un modello di pubblico specifico effettuando una richiesta GET al `/authoring/audience-templates` e fornisce l’ID istanza del modello di pubblico che desideri recuperare.
 
 **Formato API**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
