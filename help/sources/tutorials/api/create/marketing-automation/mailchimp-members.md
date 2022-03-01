@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
-title: Creare un flusso di dati per i membri di MailChimp utilizzando l’API del servizio di flusso
+title: Creare un flusso di dati per i membri di Mailchimp utilizzando l’API del servizio di flusso
 topic-legacy: tutorial
 description: Scopri come collegare Adobe Experience Platform ai membri MailChimp utilizzando l’API del servizio di flusso.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
 workflow-type: tm+mt
 source-wordcount: '2500'
 ht-degree: 3%
 
 ---
 
-# Creare un flusso di dati per [!DNL MailChimp Members] utilizzo dell’API del servizio di flusso
+# Creare un flusso di dati per [!DNL Mailchimp Members] utilizzo dell’API del servizio di flusso
 
-L’esercitazione seguente illustra i passaggi necessari per creare una connessione sorgente e un flusso di dati per [!DNL MailChimp Members] dati a Platform tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+L’esercitazione seguente illustra i passaggi necessari per creare una connessione sorgente e un flusso di dati per [!DNL Mailchimp Members] dati a Platform tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisiti
 
-Prima di poterti connettere [!DNL MailChimp] per Adobe Experience Platform utilizzando il codice di aggiornamento OAuth 2, devi prima recuperare il token di accesso per [!DNL MailChimp.] Consulta la sezione [[!DNL MailChimp] Guida di OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) per istruzioni dettagliate su come trovare il token di accesso.
+Prima di poterti connettere [!DNL Mailchimp] per Adobe Experience Platform utilizzando il codice di aggiornamento OAuth 2, devi prima recuperare il token di accesso per [!DNL MailChimp.] Consulta la sezione [[!DNL Mailchimp] Guida di OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) per istruzioni dettagliate su come trovare il token di accesso.
 
 ## Creare una connessione di base {#base-connection}
 
-Una volta recuperato il [!DNL MailChimp] credenziali di autenticazione, ora puoi avviare il processo di creazione del flusso di dati per portare [!DNL MailChimp Members] a Platform. Il primo passaggio nella creazione di un flusso di dati consiste nel creare una connessione di base.
+Una volta recuperato il [!DNL Mailchimp] credenziali di autenticazione, ora puoi avviare il processo di creazione del flusso di dati per portare [!DNL Mailchimp Members] a Platform. Il primo passaggio nella creazione di un flusso di dati consiste nel creare una connessione di base.
 
 Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-[!DNL MailChimp] supporta sia l’autenticazione di base che il codice di aggiornamento OAuth 2. Per informazioni su come eseguire l’autenticazione con uno dei due tipi di autenticazione, consulta gli esempi seguenti.
+[!DNL Mailchimp] supporta sia l’autenticazione di base che il codice di aggiornamento OAuth 2. Per informazioni su come eseguire l’autenticazione con uno dei due tipi di autenticazione, consulta gli esempi seguenti.
 
-### Crea un [!DNL MailChimp] connessione di base tramite autenticazione di base
+### Crea un [!DNL Mailchimp] connessione di base tramite autenticazione di base
 
-Per creare una [!DNL MailChimp] connessione di base utilizzando l’autenticazione di base, effettuare una richiesta di POST al `/connections` punto finale [!DNL Flow Service] API fornendo le credenziali `host`, `authorizationTestUrl`, `username`e `password`.
+Per creare una [!DNL Mailchimp] connessione di base utilizzando l’autenticazione di base, effettuare una richiesta di POST al `/connections` punto finale [!DNL Flow Service] API fornendo le credenziali `host`, `authorizationTestUrl`, `username`e `password`.
 
 **Formato API**
 
@@ -40,7 +40,7 @@ POST /connections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di base per [!DNL MailChimp]:
+La richiesta seguente crea una connessione di base per [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -51,8 +51,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with basic authentication",
-      "description": "MailChimp Members base connection with basic authentication",
+      "name": "Mailchimp base connection with basic authentication",
+      "description": "Mailchimp Members base connection with basic authentication",
       "connectionSpec": {
           "id": "2e8580db-6489-4726-96de-e33f5f60295f",
           "version": "1.0"
@@ -75,10 +75,10 @@ curl -X POST \
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione e l&#39;approvazione della sorgente tramite [!DNL Flow Service] API. |
 | `auth.specName` | Tipo di autenticazione utilizzato per collegare l’origine a Platform. |
-| `auth.params.host` | URL principale utilizzato per la connessione a [!DNL MailChimp] API. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
+| `auth.params.host` | URL principale utilizzato per la connessione a [!DNL Mailchimp] API. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
 | `auth.params.authorizationTestUrl` | (Facoltativo) L&#39;URL del test di autorizzazione viene utilizzato per convalidare le credenziali durante la creazione di una connessione di base. Se non viene fornito, le credenziali vengono automaticamente controllate durante il passaggio di creazione della connessione di origine. |
-| `auth.params.username` | Il nome utente che corrisponde al tuo [!DNL MailChimp] conto. Questo è necessario per l’autenticazione di base. |
-| `auth.params.password` | La password che corrisponde alla tua [!DNL MailChimp] conto. Questo è necessario per l’autenticazione di base. |
+| `auth.params.username` | Il nome utente che corrisponde al tuo [!DNL Mailchimp] conto. Questo è necessario per l’autenticazione di base. |
+| `auth.params.password` | La password che corrisponde alla tua [!DNL Mailchimp] conto. Questo è necessario per l’autenticazione di base. |
 
 **Risposta**
 
@@ -91,9 +91,9 @@ Una risposta corretta restituisce la nuova connessione di base creata, incluso l
 }
 ```
 
-### Crea un [!DNL MailChimp] connessione di base tramite codice di aggiornamento OAuth 2
+### Crea un [!DNL Mailchimp] connessione di base tramite codice di aggiornamento OAuth 2
 
-Per creare una [!DNL MailChimp] connessione di base tramite il codice di aggiornamento OAuth 2, effettuare una richiesta POST al `/connections` endpoint durante la fornitura delle credenziali `host`, `authorizationTestUrl`e `accessToken`.
+Per creare una [!DNL Mailchimp] connessione di base tramite il codice di aggiornamento OAuth 2, effettuare una richiesta POST al `/connections` endpoint durante la fornitura delle credenziali `host`, `authorizationTestUrl`e `accessToken`.
 
 **Formato API**
 
@@ -103,7 +103,7 @@ POST /connections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di base per [!DNL MailChimp]:
+La richiesta seguente crea una connessione di base per [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -137,7 +137,7 @@ curl -X POST \
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione della sorgente utilizzando [!DNL Flow Service] API. |
 | `auth.specName` | Il tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
-| `auth.params.host` | URL principale utilizzato per la connessione a [!DNL MailChimp] API. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
+| `auth.params.host` | URL principale utilizzato per la connessione a [!DNL Mailchimp] API. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
 | `auth.params.authorizationTestUrl` | (Facoltativo) L&#39;URL del test di autorizzazione viene utilizzato per convalidare le credenziali durante la creazione di una connessione di base. Se non viene fornito, le credenziali vengono automaticamente controllate durante il passaggio di creazione della connessione di origine. |
 | `auth.params.accessToken` | Il token di accesso corrispondente utilizzato per autenticare l&#39;origine. Questo è necessario per l’autenticazione basata su OAuth. |
 
@@ -349,7 +349,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di origine per [!DNL MailChimp]:
+La richiesta seguente crea una connessione di origine per [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -380,10 +380,10 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione sorgente. |
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione sorgente. |
-| `baseConnectionId` | ID connessione di base di [!DNL MailChimp]. Questo ID è stato generato in un passaggio precedente. |
+| `baseConnectionId` | ID connessione di base di [!DNL Mailchimp]. Questo ID è stato generato in un passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente alla tua origine. |
-| `data.format` | Il formato del [!DNL MailChimp] dati da acquisire. |
-| `params.listId` | Noto anche come ID pubblico , il [!DNL MailChimp] L’ID elenco consente il trasferimento di dati di pubblico ad altre integrazioni. |
+| `data.format` | Il formato del [!DNL Mailchimp] dati da acquisire. |
+| `params.listId` | Noto anche come ID pubblico , il [!DNL Mailchimp] L’ID elenco consente il trasferimento di dati di pubblico ad altre integrazioni. |
 
 **Risposta**
 
@@ -424,7 +424,7 @@ POST /targetConnections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di destinazione per [!DNL MailChimp]:
+La seguente richiesta crea una connessione di destinazione per [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -459,7 +459,7 @@ curl -X POST \
 | `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione di destinazione. |
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Lake]. Questo ID fisso è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato del [!DNL MailChimp] i dati che desideri inserire in Platform. |
+| `data.format` | Il formato del [!DNL Mailchimp] i dati che desideri inserire in Platform. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 
@@ -539,7 +539,7 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 
 ## Creare un flusso {#flow}
 
-L&#39;ultimo passo verso [!DNL MailChimp] In Platform viene creato un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
+L&#39;ultimo passo verso [!DNL Mailchimp] In Platform viene creato un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
 
 * [ID connessione di origine](#source-connection)
 * [ID connessione di destinazione](#target-connection)

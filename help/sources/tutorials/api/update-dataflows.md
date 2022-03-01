@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per l’aggiornamento di un flusso di dati, inclusi nome, descrizione e pianificazione, tramite l’API del servizio di flusso.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 3%
 
 ---
 
@@ -26,27 +26,9 @@ Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti c
 * [Origini](../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
 * [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per aggiornare correttamente il flusso di dati utilizzando [!DNL Flow Service] API.
+### Utilizzo delle API di Platform
 
-### Lettura di chiamate API di esempio
-
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
-
-### Raccogli i valori delle intestazioni richieste
-
-Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in Experience Platform, comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ## Ricerca dei dettagli del flusso di dati
 

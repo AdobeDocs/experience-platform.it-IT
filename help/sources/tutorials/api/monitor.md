@@ -6,55 +6,35 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando l’API del servizio di flusso.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 1%
+source-wordcount: '410'
+ht-degree: 2%
 
 ---
 
 # Monitorare i flussi di dati tramite l’API del servizio di flusso
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
-
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
-
 Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Introduzione
+>[!NOTE]
+>
+>Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID flusso di dati valido, seleziona il connettore di scelta dal [panoramica di origini](../../home.md) e segui i passaggi descritti per creare un flusso di dati prima di eseguire questa esercitazione.
 
-Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID flusso di dati valido, seleziona il connettore di scelta dal [panoramica di origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+## Introduzione
 
 Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
 * [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per monitorare correttamente le esecuzioni di flusso utilizzando il [!DNL Flow Service] API.
+### Utilizzo delle API di Platform
 
-### Lettura di chiamate API di esempio
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+## Monitorare i flussi di dati
 
-### Raccogli i valori delle intestazioni richieste
-
-Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Correnze di flusso del monitor
-
-Una volta effettuato un flusso di dati, esegui una richiesta di GET al [!DNL Flow Service] API.
+Per visualizzare lo stato del flusso di dati, invia una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l’ID di flusso corrispondente del flusso del flusso del flusso di dati.
 
 **Formato API**
 

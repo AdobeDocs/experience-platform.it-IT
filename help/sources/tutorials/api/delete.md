@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come eliminare un account utilizzando l’API del servizio di flusso.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti c
 * [Origini](../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
 * [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-## Utilizzo delle API di Platform
+### Utilizzo delle API di Platform
 
 Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
