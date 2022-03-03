@@ -2,10 +2,10 @@
 title: Configurare l’estensione Adobe Experience Platform Web SDK
 description: Come configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente di raccolta dati.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 7%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ La [!UICONTROL ID organizzazione IMS] è l’organizzazione a cui si desidera in
 
 ### **[!UICONTROL Dominio Edge]**
 
-La [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+La [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experience Platform invia e riceve i dati. Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
 ## [!UICONTROL Datastream]
 
