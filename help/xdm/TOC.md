@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guida del sistema Experience Data Model (XDM)
-breadcrumb-title: Guida di Data Model (XDM)
-user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
+breadcrumb-title: Guida di Experience Data Model (XDM)
+user-guide-description: Utilizza i gruppi di campi per classi e schemi di Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 13%
+source-wordcount: '435'
+ht-degree: 16%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 13%
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
+   * [Criterio](./classes/policy.md)
+   * [Prodotto](./classes/product.md)
    * [Definizione del segmento](./classes/segment-definition.md)
    * Classi B2B {#b2b}
       * [Account aziendale XDM](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 13%
       * [Elenco di marketing aziendale XDM](./classes/b2b/business-marketing-list.md)
       * [Membri elenco marketing commerciale XDM](./classes/b2b/business-marketing-list-members.md)
 * Gruppi di campi {#field-groups}
-   * Gruppi di campi del profilo {#profile}
+   * Profilo individuale XDM {#profile}
       * [Dettagli demografici](./field-groups/profile/demographic-details.md)
       * [Consenso IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 13%
       * [Dettagli contatto lavoro](./field-groups/profile/work-contact-details.md)
       * [Componenti per Business Person XDM](./field-groups/profile/business-person-components.md)
       * [Dettagli sulle persone aziendali XDM](./field-groups/profile/business-person-details.md)
-   * Gruppi di campi evento {#event}
+   * ExperienceEvent XDM {#event}
       * [Estensione completa Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Trasferimenti di saldo](./field-groups/event/balance-transfers.md)
       * [Dettagli di marketing per le campagne](./field-groups/event/campaign-marketing-details.md)
+      * [Azioni a schede](./field-groups/event/card-actions.md)
       * [Dettagli canale](./field-groups/event/channel-details.md)
       * [Dettagli Commerce](./field-groups/event/commerce-details.md)
+      * [Dettagli sui depositi](./field-groups/event/deposit-details.md)
       * [Dettagli sul trasferimento dei dispositivi](./field-groups/event/device-trade-in-details.md)
       * [Prenotazione pranzo](./field-groups/event/dining-reservation.md)
       * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 13%
       * [Riserva di volo](./field-groups/event/flight-reservation.md)
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Riserva](./field-groups/event/lodging-reservation.md)
+      * [Dettagli richiesta preventivo](./field-groups/event/quote-request-details.md)
       * [Dettagli prenotazione](./field-groups/event/reservation-details.md)
+      * [Ricerca nel sito di supporto](./field-groups/event/support-site-search.md)
       * [Dettagli aggiornamento](./field-groups/event/upgrade-details.md)
       * [Dettagli di upselling](./field-groups/event/upsell-details.md)
       * [Dettagli Web](./field-groups/event/web-details.md)
+   * Prodotto {#product}
+      * [Catalogo dei prodotti](./field-groups/product/product-catalog.md)
+      * [Categoria di prodotti](./field-groups/product/product-category.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
    * [Applicazione](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 13%
    * [Ambiente](./data-types/environment.md)
    * [Canale esperienza](./data-types/experience-channel.md)
    * [Attributi di controllo del sistema di origine esterna](./data-types/external-source-system-audit-attributes.md)
+   * [Conto finanziario](./data-types/financial-account.md)
    * [Campo di consenso generico](./data-types/consent-field.md)
    * [Campo preferenza marketing generico](./data-types/marketing-field.md)
    * [Campo preferenza marketing generico con sottoscrizioni](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 13%
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
    * [Impression](./data-types/impressions.md)
+   * [Ricerca interna del sito](./data-types/internal-site-search.md)
    * [Coppia di valori chiave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Misura](./data-types/measure.md)

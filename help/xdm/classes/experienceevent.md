@@ -5,9 +5,9 @@ title: Classe ExperienceEvent XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
+source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1797'
 ht-degree: 1%
 
 ---
@@ -65,9 +65,13 @@ Se i dati vengono inviati in streaming a Platform tramite una connessione sorgen
 
 Adobe fornisce diversi gruppi di campi standard da utilizzare con [!DNL XDM ExperienceEvent] classe. Di seguito è riportato un elenco di alcuni gruppi di campi di uso comune per la classe:
 
+* [[!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Trasferimenti di saldo]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Dettagli di marketing per le campagne]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Azioni a schede]](../field-groups/event/card-actions.md)
 * [[!UICONTROL Dettagli canale]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Dettagli Commerce]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Dettagli sui depositi]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL Dettagli sul trasferimento dei dispositivi]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL Prenotazione pranzo]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL Dettagli ID utente finale]](../field-groups/event/enduserids.md)
@@ -75,6 +79,7 @@ Adobe fornisce diversi gruppi di campi standard da utilizzare con [!DNL XDM Expe
 * [[!UICONTROL Riserva di volo]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL Consenso IAB TCF 2.0]](../field-groups/event/iab.md)
 * [[!UICONTROL Riserva]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Dettagli richiesta preventivo]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Dettagli prenotazione]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Dettagli Web]](../field-groups/event/web-details.md)
 
