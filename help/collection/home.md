@@ -5,9 +5,9 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '478'
 ht-degree: 6%
 
 ---
@@ -59,6 +59,10 @@ Platform Edge Network è una rete di server distribuita a livello globale, rapid
 [Inoltro eventi](../tags/ui/event-forwarding/overview.md) può accedere a qualsiasi archivio dati di Experience Platform, consentendoti di trasformare, arricchire e inviare dati a qualsiasi destinazione non Adobe con latenza estremamente bassa e senza aggiungere codice di terze parti al dispositivo client.
 
 ![Inoltro eventi](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>L’inoltro degli eventi è una funzione a pagamento inclusa solo nell’offerta Real-time Customer Data Platform Connections.
 
 ## Passaggi successivi
 
