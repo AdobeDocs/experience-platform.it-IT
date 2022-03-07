@@ -1,12 +1,12 @@
 ---
 title: Configurare il Datastream per l'SDK Web di Experience Platform
-description: 'Scopri come configurare i flussi di dati. '
+description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

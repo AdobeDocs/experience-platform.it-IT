@@ -3,10 +3,10 @@ title: Prerequisiti per l’utilizzo dell’SDK per web di Adobe Experience Plat
 description: Scopri i prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK.
 keywords: dominio di prima parte;CNAME;schema;crea schema;launch;estensione sdk web aep;estensione;id di configurazione;strumento di configurazione;elemento dati;crea elemento dati;oggetto XDM;sendEvent;send Event;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: a9b63d2ad2c1adbd647c0c3a43331cddffa8a04e
+source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Per utilizzare l&#39;SDK per web Adobe Experience Platform, devi prima:
 
-- Effettua il provisioning della tua organizzazione per questa funzione. Se desideri accedere, compila quanto segue [modulo](https://adobe.ly/websdkaccess) e Adobe ti fornirà l’accesso a Datatstreams e Adobe Experience Platform (se necessario). Tieni presente che Adobe ti fornirà l’accesso necessario per l’utilizzo limitato con l’SDK senza costi aggiuntivi.
+- Effettua il provisioning della tua organizzazione per questa funzione. Se desideri accedere, compila quanto segue [modulo](https://adobe.ly/websdkaccess) e Adobe ti fornirà l’accesso a Datastreams e Adobe Experience Platform (se necessario). Tieni presente che Adobe ti fornirà l’accesso necessario per l’utilizzo limitato con l’SDK senza costi aggiuntivi.
 - Si consiglia di abilitare il dominio di prima parte (CNAME). Se disponi già di un CNAME per Adobe Analytics, utilizza questo. Il test nello sviluppo funziona senza un CNAME, ma Adobe consiglia di averne uno prima di passare alla produzione. Sebbene un’implementazione CNAME non fornisca alcun vantaggio in termini di durata dei cookie, può impedire ad alcuni ad blocker e browser meno comuni di bloccare le richieste SDK. In questi casi, l’utilizzo di un CNAME potrebbe impedire l’interruzione della raccolta dati da parte degli utenti che utilizzano questi strumenti.
 
 >[!IMPORTANT]
