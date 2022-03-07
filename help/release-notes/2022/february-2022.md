@@ -2,16 +2,20 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
+source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '732'
 ht-degree: 6%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 23 febbraio 2022**
+**Data di rilascio: 7 marzo 2022**
+
+>[!NOTE]
+>
+>Questa versione è stata spostata dalla data originale del 23 febbraio al 7 marzo.
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
