@@ -3,7 +3,7 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 1%
@@ -70,7 +70,7 @@ Le sottosezioni seguenti descrivono i passaggi di base per la mappatura dei dati
 
 Seleziona **[!UICONTROL Salvare e aggiungere mappature]** dopo aver completato [passaggio di configurazione di base](#configure)e **[!UICONTROL Seleziona dati]** viene visualizzato il passaggio . Da qui, devi fornire un oggetto JSON di esempio che rappresenti la struttura dei dati che intendi inviare a Platform. È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollare l’oggetto non elaborato nella casella di testo fornita.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >L&#39;oggetto JSON deve avere un singolo nodo principale `data` per passare la convalida.
 
