@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 8%
+source-wordcount: '720'
+ht-degree: 6%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 8%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Raccolta dati](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [Origini](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform fornisce più [!DNL dashboards] attraverso cui puoi visualizzare informazioni importanti sui dati della tua organizzazione, come acquisiti durante le istantanee giornaliere.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Nuovi widget per destinazioni standard | I seguenti widget standard consentono di visualizzare diverse metriche correlate alle destinazioni.<ul><li>Segmenti attivati di recente per destinazione. Questo widget visualizza i primi cinque segmenti attivati più di recente in ordine decrescente in base alla destinazione scelta.</li><li>Tendenza della dimensione del pubblico. Questo widget rappresenta la relazione del conteggio del profilo in un periodo di tempo per un segmento mappato a tale account di destinazione.</li><li>Segmenti non mappati per identità. Questo widget elenca i primi cinque segmenti non mappati classificati per numero di identità decrescente per una determinata destinazione e identità.</li><li>Segmenti mappati per identità. Questo widget elenca i primi cinque segmenti mappati. I segmenti sono ordinati da alti a bassi in base ai rispettivi conteggi degli ID sorgente che corrispondono all’ID di destinazione selezionato dal menu a discesa del widget.</li><li>Tipi di pubblico comuni. Questo widget fornisce un elenco dei primi cinque segmenti attivati nell’account di destinazione scelto nella parte superiore della pagina e della destinazione selezionata nel menu a discesa del widget.</li></ul> Per ulteriori informazioni sui widget standard disponibili, consulta la sezione [documentazione del dashboard delle destinazioni.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
 ## Raccolta dati {#data-collection}
 
