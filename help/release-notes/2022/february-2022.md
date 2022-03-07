@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '502'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 8%
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Raccolta dati](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Origini](#sources)
 
@@ -33,18 +32,6 @@ Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati 
 | ID dispositivo di prime parti | Ora puoi inviare i tuoi ID dispositivo a Adobe Experience Platform Edge Network quando raccogli i dati dei clienti tramite l’SDK per web di Platform, fornendo una soluzione alle recenti restrizioni del browser per la durata dei cookie di terze parti. Consulta la guida su [ID dispositivo di prime parti](../../edge/identity/first-party-device-ids.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
-
-**Nuova funzionalità**
-
-| Funzione | Descrizione |
-| --- | --- |
-| [!DNL Data Prep] supporto per il connettore sorgente Adobe Analytics | Il connettore di origine Adobe Analytics supporta ora le funzioni di preparazione dei dati, che consentono di mappare i dati della suite di rapporti di Analytics su uno schema XDM di destinazione durante la creazione di un flusso di dati. Guarda l’esercitazione su [creazione di un connettore sorgente Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per ulteriori informazioni. |
-
-Per ulteriori informazioni su [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
