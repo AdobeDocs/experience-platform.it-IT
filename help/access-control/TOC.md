@@ -4,10 +4,10 @@ user-guide-title: Guida al controllo degli accessi in Adobe Experience Platform
 breadcrumb-title: Guida al controllo degli accessi
 user-guide-description: Sfrutta i profili di prodotto in Adobe Admin Console per collegare gli utenti con autorizzazioni e sandbox.
 feature: Access Control
-source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
+source-git-commit: 5802920e86afd8c53e273d12cc6cb0ffe5c354bb
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 34%
+source-wordcount: '99'
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 34%
 # Controllo degli accessi {#access-control}
 
 * [Panoramica sul controllo degli accessi](home.md)
-* Interfaccia utente di controllo accessi {#ui}
+* Controllo dell&#39;accesso a livello di campo {#flac}
+   * [Panoramica](flac/overview.md)
+* Interfaccia utente per il controllo degli accessi {#ui}
    * [Panoramica](ui/overview.md)
    * [Selezionare un profilo di prodotto](ui/browse.md)
    * [Gestire le autorizzazioni per un profilo di prodotto](ui/permissions.md)
