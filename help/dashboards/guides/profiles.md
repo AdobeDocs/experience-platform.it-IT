@@ -4,10 +4,10 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 0%
+source-wordcount: '2324'
+ht-degree: 1%
 
 ---
 
@@ -43,6 +43,26 @@ Puoi modificare l’aspetto della [!UICONTROL Profili] dashboard selezionando **
 
 Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
 
+## (Beta) Approfondimenti sull’efficienza del profilo {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>La funzionalità Approfondimenti sull’efficienza del profilo è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+
+La [!UICONTROL Efficacia] tab fornisce metriche sulla qualità e la completezza dei dati del profilo attraverso l’uso dei widget di efficacia del profilo. Questi widget illustrano immediatamente la composizione dei profili, le tendenze della completezza nel tempo e le valutazioni della qualità dei dati del profilo.
+
+[Dashboard di efficacia del profilo.](../images/profiles/attributes-quality-assessment.png)
+
+Consulta la sezione [sezione widget efficacia profilo](#profile-efficacy-widgets) per ulteriori informazioni sui widget attualmente disponibili.
+
+Il layout di questo dashboard è personalizzabile anche selezionando [**[!UICONTROL Modifica dashboard]**](../customize/modify.md) dal [!UICONTROL Panoramica] scheda .
+
+## Sfoglia profili {#browse-profiles}
+
+La [!UICONTROL Sfoglia] consente di cercare e visualizzare i profili di sola lettura acquisiti nell’organizzazione IMS. Da qui puoi vedere informazioni importanti appartenenti al profilo relative alle loro preferenze, eventi passati, interazioni e segmenti
+
+Per ulteriori informazioni sulle funzionalità di visualizzazione del profilo fornite nell’interfaccia utente di Platform, consulta la documentazione su [navigazione dei profili in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Unisci criteri {#merge-policies}
 
 Le metriche visualizzate nel [!UICONTROL Profili] Il dashboard si basa sui criteri di unione applicati ai dati del profilo cliente in tempo reale. Quando i dati vengono riuniti da più sorgenti per creare il profilo del cliente, è possibile che contengano valori in conflitto (ad esempio, un set di dati può elencare un cliente come &quot;singolo&quot;, mentre un altro set di dati può elencare il cliente come &quot;sposato&quot;). È compito del criterio di unione determinare quali dati assegnare priorità e visualizzare come parte del profilo.
@@ -56,6 +76,14 @@ Il dashboard selezionerà automaticamente un criterio di unione da visualizzare,
 >Il menu a discesa mostra solo i criteri di unione relativi alla classe di profilo individuale XDM. Tuttavia, se l&#39;organizzazione ha creato più criteri di unione, potrebbe essere necessario scorrere per visualizzare l&#39;elenco completo dei criteri di unione disponibili.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Schemi dell’Unione
+
+La [!UICONTROL Schema dell&#39;unione] dashboard visualizza lo schema di unione per una specifica classe XDM. Selezionando la [!UICONTROL **Classe**] a discesa, puoi visualizzare gli schemi di unione per diverse classi XDM.
+
+Gli schemi unione sono composti da più schemi che condividono la stessa classe e sono stati abilitati per Profile. Consentono di visualizzare in un’unica visualizzazione una fusione di ogni campo contenuto in ogni schema che condivide la stessa classe.
+
+Per ulteriori informazioni, consulta la guida all’interfaccia utente per lo schema dell’unione . [visualizzazione degli schemi di unione nell’interfaccia utente di Platform](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widget e metriche
 
@@ -134,6 +162,59 @@ Per ulteriori informazioni sui frammenti di profilo, inizia leggendo la sezione 
 Per saperne di più sulle identità, visita il [Documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+## (Beta) Widget efficacia profilo {#profile-efficacy-widgets}
+
+>[!IMPORTANT]
+>
+>I widget di efficienza del profilo sono attualmente in versione beta e non sono disponibili per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+
+Adobe fornisce più widget per valutare la completezza dei profili acquisiti disponibili per l’analisi dei dati. I widget di efficacia del profilo possono essere filtrati in base ai criteri di unione. Per modificare il filtro dei criteri di unione, selezionare la[!UICONTROL Profili mediante criteri di unione] dall’elenco a discesa e scegli il criterio appropriato.
+
+Per ulteriori informazioni su ciascuno dei widget di efficacia del profilo, seleziona il nome di un widget dal seguente elenco:
+
+* [[!UICONTROL Valutazione della qualità degli attributi]](#attribute-quality-assessment)
+* [[!UICONTROL Completezza del profilo]](#profile-completeness)
+* [[!UICONTROL Tendenza alla completezza del profilo]](#profile-completeness-trend)
+
+### (Beta) [!UICONTROL Valutazione della qualità degli attributi] {#attribute-quality-assessment}
+
+Questo widget mostra la completezza e la cardinalità di ogni attributo di profilo a partire dall’ultima data di elaborazione. Queste informazioni vengono presentate come una tabella con quattro colonne in cui ogni riga della tabella rappresenta un singolo attributo.
+
+| Colonna | Descrizione |
+|---|---|
+| Attributo | Nome dell&#39;attributo. |
+| Profili | Il numero di profili con questo attributo e riempiti con valori non nulli. |
+| Completezza | Questa percentuale è determinata dal numero totale di profili con questo attributo e riempiti con valori non nulli. Il numero è calcolato dividendo il numero totale di profili per il numero totale di valori non vuoti nei profili per tale attributo. |
+| Cardinalità | Numero totale di **unico** valori non nulli di questo attributo. Viene misurato su tutti i profili. |
+
+![Il widget di valutazione della qualità degli attributi](../images/profiles/attributes-quality-assessment.png)
+
+### (Beta) [!UICONTROL Profili per completezza] {#profile-completeness}
+
+Questo widget crea un grafico a cerchi della completezza del profilo a partire dall’ultima data di elaborazione. La completezza di un profilo viene misurata dalla percentuale di attributi riempiti con valori non nulli tra tutti gli attributi osservati.
+
+Questo widget mostra la proporzione di profili con completezza alta, media o bassa. Per impostazione predefinita, sono configurati tre livelli di completezza:
+
+* Elevata completezza: I profili hanno più del 70% attributi riempiti.
+* Complessità media: I profili hanno meno del 70% e più del 30% di attributi riempiti.
+* Bassa completezza: I profili presentano meno del 30% di attributi compilati.
+
+![I profili per widget di completezza](../images/profiles/profiles-by-completeness.png)
+
+### (Beta) [!UICONTROL Tendenza alla completezza del profilo] {#profile-completeness-trend}
+
+Questo widget crea un grafico a colonne sovrapposto per rappresentare la tendenza della completezza del profilo nel tempo. La completezza è misurata dalla percentuale di attributi riempiti con valori non nulli tra tutti gli attributi osservati. Classifica la completezza del profilo come completezza elevata, media o bassa dall’ultima data di elaborazione.
+
+L’asse x rappresenta il tempo, l’asse y rappresenta il numero di profili e i colori rappresentano i tre livelli di completezza del profilo.
+
+I tre livelli di completezza sono:
+
+* Elevata completezza: I profili hanno più del 70% attributi riempiti.
+* Complessità media: I profili hanno meno del 70% e più del 30% di attributi riempiti.
+* Bassa completezza: I profili presentano meno del 30% di attributi compilati.
+
+![Widget tendenza completezza profili](../images/profiles/profiles-completeness-trend.png)
 
 ## Passaggi successivi
 
