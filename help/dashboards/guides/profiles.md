@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panor
 
 La [!UICONTROL Efficacia] tab fornisce metriche sulla qualità e la completezza dei dati del profilo attraverso l’uso dei widget di efficacia del profilo. Questi widget illustrano immediatamente la composizione dei profili, le tendenze della completezza nel tempo e le valutazioni della qualità dei dati del profilo.
 
-[Dashboard di efficacia del profilo.](../images/profiles/attributes-quality-assessment.png)
+![Dashboard di efficacia del profilo.](../images/profiles/attributes-quality-assessment.png)
 
 Consulta la sezione [sezione widget efficacia profilo](#profile-efficacy-widgets) per ulteriori informazioni sui widget attualmente disponibili.
 
