@@ -1,9 +1,10 @@
 ---
 title: Estendi un campo con enumerazione sfumata
 description: Scopri come estendere un campo enum soft nell’API del Registro di sistema dello schema.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -197,4 +198,4 @@ Dopo aver applicato la modifica, il Registro di sistema dello schema risponde co
 
 ## Passaggi successivi
 
-Questa guida illustra come estendere gli enum soft nell’API del Registro di sistema dello schema. Per ulteriori informazioni su come definire diversi tipi di campi nell’API, consulta la guida su [Vincoli del tipo di campo XDM](../schema/field-constraints.md#define-fields).
+Questa guida illustra come estendere gli enum soft nell’API del Registro di sistema dello schema. Consulta la guida su [definizione di campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.
