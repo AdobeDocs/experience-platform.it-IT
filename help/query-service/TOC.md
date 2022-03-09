@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 19%
 
 ---
@@ -32,12 +32,13 @@ ht-degree: 19%
    - [Indicazioni generali per l’esecuzione delle query](best-practices/writing-queries.md)
    - [Guida all&#39;organizzazione delle risorse dati](./best-practices/organize-data-assets.md)
    - [Utilizzo delle strutture di dati nidificate](best-practices/nested-data-structures.md)
-   - [Deduplicazione dati](best-practices/deduplication.md)
-   - [Query Evento esperienza di esempio](best-practices/experience-event-queries.md)
-   - [Query Adobe Analytics di esempio](best-practices/adobe-analytics.md)
-   - [Query Adobe Target di esempio](best-practices/adobe-target.md)
    - [Query di blocco anonime di esempio](best-practices/anonymous-block.md)
    - [Caricamento incrementale](best-practices/incremental-load.md)
+   - [Deduplicazione dati](best-practices/deduplication.md)
+- Query di esempio {#sample-queries}
+   - [Query Evento esperienza di esempio](sample-queries/experience-event.md)
+   - [Query Adobe Analytics di esempio](sample-queries/adobe-analytics.md)
+   - [Query Adobe Target di esempio](sample-queries/adobe-target.md)
 - Riferimento SQL {#sql}
    - [Panoramica SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)

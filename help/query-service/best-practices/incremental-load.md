@@ -1,15 +1,15 @@
 ---
-title: Query di caricamento incrementale di esempio
+title: Caricamento incrementale nel servizio query
 description: La funzione di caricamento incrementale utilizza sia le funzioni di blocco anonimo che quelle di snapshot per fornire una soluzione in tempo quasi reale per lo spostamento dei dati dal data lake al data warehouse, ignorando al contempo la corrispondenza dei dati.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# Query di caricamento dati incrementali di esempio
+# Carico incrementale nel servizio query
 
 Il modello di progettazione del carico incrementale è una soluzione per la gestione dei dati. Il pattern elabora solo le informazioni nel set di dati che sono state create o modificate dopo l’ultima esecuzione del caricamento.
 

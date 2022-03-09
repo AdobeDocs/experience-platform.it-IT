@@ -1,15 +1,15 @@
 ---
-title: Esempio di query di blocchi anonimi
+title: Blocco anonimo nel servizio query
 description: Il blocco anonimo è una sintassi SQL supportata da Adobe Experience Platform Query Service, che consente di eseguire in modo efficiente una sequenza di query
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-# Query di esempio per il blocco anonimo
+# Blocco anonimo nel servizio query
 
 Adobe Experience Platform Query Service supporta blocchi anonimi. La funzione blocco anonimo consente di catena di una o più istruzioni SQL eseguite in sequenza. Essi consentono inoltre la possibilità di gestire le eccezioni.
 
@@ -60,4 +60,4 @@ $$;
 
 Leggendo questo documento, si ha ora una chiara comprensione dei blocchi anonimi e come sono strutturati. [Per ulteriori informazioni sull’esecuzione delle query](./writing-queries.md), leggi la guida sull’esecuzione della query in Query Service.
 
-Per ulteriori esempi di query che possono essere utilizzate in Query Service, consulta le guide su [Query di esempio di Adobe Analytics](./adobe-analytics.md), [Query di esempio di Adobe Target](./adobe-target.md)oppure [Query di esempio ExperienceEvent](./experience-event-queries.md).
+È inoltre necessario leggere [come viene utilizzato il blocco anonimo con il modello di progettazione del carico incrementale](./incremental-load.md) per aumentare l’efficienza delle query.
