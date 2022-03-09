@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 1%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## Strumenti di terze parti {#third-party-tools}
 
-+++Risposta Questa sezione include informazioni sull&#39;utilizzo di strumenti di terze parti come PSQL e Power BI.
-+++
+Questa sezione include informazioni sull&#39;utilizzo di strumenti di terze parti come PSQL e Power BI.
 
 ### Posso collegare Query Service a uno strumento di terze parti?
 
