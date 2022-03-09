@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Puoi modificare l’aspetto della [!UICONTROL Profili] dashboard selezionando **
 
 Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
 
-## (Beta) Approfondimenti sull’efficienza del profilo {#profile-efficiency-insights}
+## (Beta) Approfondimenti sull’efficacia del profilo {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->La funzionalità Approfondimenti sull’efficienza del profilo è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+>La funzionalità di informazioni sull’efficacia del profilo è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 La [!UICONTROL Efficacia] tab fornisce metriche sulla qualità e la completezza dei dati del profilo attraverso l’uso dei widget di efficacia del profilo. Questi widget illustrano immediatamente la composizione dei profili, le tendenze della completezza nel tempo e le valutazioni della qualità dei dati del profilo.
 
@@ -167,7 +167,7 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 
 >[!IMPORTANT]
 >
->I widget di efficienza del profilo sono attualmente in versione beta e non sono disponibili per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+>I widget di efficacia del profilo sono attualmente in versione beta e non sono disponibili per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 Adobe fornisce più widget per valutare la completezza dei profili acquisiti disponibili per l’analisi dei dati. I widget di efficacia del profilo possono essere filtrati in base ai criteri di unione. Per modificare il filtro dei criteri di unione, selezionare la[!UICONTROL Profili mediante criteri di unione] dall’elenco a discesa e scegli il criterio appropriato.
 
