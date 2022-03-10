@@ -4,9 +4,9 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 >
 >I widget di efficacia del profilo sono attualmente in versione beta e non sono disponibili per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Adobe fornisce più widget per valutare la completezza dei profili acquisiti disponibili per l’analisi dei dati. I widget di efficacia del profilo possono essere filtrati in base ai criteri di unione. Per modificare il filtro dei criteri di unione, selezionare la[!UICONTROL Profili mediante criteri di unione] dall’elenco a discesa e scegli il criterio appropriato.
+Adobe fornisce diversi widget per valutare la completezza dei profili acquisiti disponibili per l’analisi dei dati. I widget di efficacia del profilo possono essere filtrati in base ai criteri di unione. Per modificare il filtro dei criteri di unione, selezionare la[!UICONTROL Profili mediante criteri di unione] dall’elenco a discesa e scegli il criterio appropriato.
 
 Per ulteriori informazioni su ciascuno dei widget di efficacia del profilo, seleziona il nome di un widget dal seguente elenco:
 
@@ -196,9 +196,9 @@ Questo widget crea un grafico a cerchi della completezza del profilo a partire d
 
 Questo widget mostra la proporzione di profili con completezza alta, media o bassa. Per impostazione predefinita, sono configurati tre livelli di completezza:
 
-* Elevata completezza: I profili hanno più del 70% attributi riempiti.
-* Complessità media: I profili hanno meno del 70% e più del 30% di attributi riempiti.
-* Bassa completezza: I profili presentano meno del 30% di attributi compilati.
+* Elevata completezza: I profili presentano più del 70% degli attributi riempiti.
+* Complessità media: I profili hanno meno del 70% e più del 30% degli attributi riempiti.
+* Bassa completezza: I profili presentano meno del 30% degli attributi riempiti.
 
 ![I profili per widget di completezza](../images/profiles/profiles-by-completeness.png)
 
@@ -210,9 +210,9 @@ L’asse x rappresenta il tempo, l’asse y rappresenta il numero di profili e i
 
 I tre livelli di completezza sono:
 
-* Elevata completezza: I profili hanno più del 70% attributi riempiti.
-* Complessità media: I profili hanno meno del 70% e più del 30% di attributi riempiti.
-* Bassa completezza: I profili presentano meno del 30% di attributi compilati.
+* Elevata completezza: I profili presentano più del 70% degli attributi riempiti.
+* Complessità media: I profili hanno meno del 70% e più del 30% degli attributi riempiti.
+* Bassa completezza: I profili presentano meno del 30% degli attributi riempiti.
 
 ![Widget tendenza completezza profili](../images/profiles/profiles-completeness-trend.png)
 
