@@ -1,10 +1,11 @@
 ---
 title: Ambienti
-description: Scopri il concetto degli ambienti tag e il loro funzionamento in Adobe Experience Platform.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+description: Scopri il concetto di ambienti di tag e come funzionano in Adobe Experience Platform.
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
 source-wordcount: '1468'
-ht-degree: 82%
+ht-degree: 98%
 
 ---
 
@@ -20,15 +21,15 @@ Gli ambienti di tag definiscono diversi aspetti chiave delle build della libreri
 * Il dominio e il percorso della build, a seconda dell’host assegnato dell’ambiente.
 * Il formato del file della build, a seconda dell’opzione di archiviazione scelta.
 
-Quando crei una build della libreria , devi assegnarla a un ambiente. Le estensioni, le regole e gli elementi dati della build vengono quindi compilati e inseriti nell’ambiente assegnato. Ogni ambiente fornisce un codice di incorporamento univoco che consente di integrare la build assegnata nel sito.
+Quando crei una build della libreria, devi assegnarla a un ambiente. Le estensioni, le regole e gli elementi dati della build vengono quindi compilati e inseriti nell’ambiente assegnato. Ogni ambiente fornisce un codice di incorporamento univoco che consente di integrare la build assegnata nel sito.
 
 In ciascun ambiente possono esistere artefatti di diversi. In questo modo è possibile sottoporre a test librerie diverse in ambienti diversi quando vengono trasmesse tramite il flusso di lavoro.
 
-Questo documento descrive come installare, configurare e creare ambienti diversi nell’interfaccia utente di Raccolta dati.
+In questo documento sono descritti i passaggi necessari per installare, configurare e creare diversi ambienti nell’interfaccia utente di Data Collection.
 
 ## Tipi di ambiente
 
-I tag supportano tre diversi tipi di ambiente, ciascuno corrispondente a uno stato diverso nel [flusso di lavoro di pubblicazione](./publishing-flow.md):
+I tag supportano tre tipi di ambiente diversi, ciascuno corrispondente a uno stato diverso nel [flusso di lavoro di pubblicazione](./publishing-flow.md):
 
 | Tipo di ambiente | Descrizione |
 | --- | --- |
@@ -36,13 +37,13 @@ I tag supportano tre diversi tipi di ambiente, ciascuno corrispondente a uno sta
 | Staging | Questo ambiente corrisponde alle colonne **Submitted** e **Approved** nel flusso di lavoro di pubblicazione. |
 | Produzione | Questo ambiente corrisponde alla colonna **Published** nel flusso di lavoro di pubblicazione. |
 
-Possono esistere diversi artefatti di  in ciascun ambiente. Ciò ti consente di testare librerie diverse in ambienti diversi mentre le sottoponi al flusso di lavoro di pubblicazione.
+In ciascun ambiente possono esistere artefatti di diversi. Ciò ti consente di testare librerie diverse in ambienti diversi mentre le sottoponi al flusso di lavoro di pubblicazione.
 
 >[!NOTE]
 >
 >A ogni ambiente può essere assegnata una sola build della libreria alla volta. Tuttavia, è previsto che nel corso del tempo un singolo ambiente contenga diverse build man mano che esse vengono spostate nel flusso di lavoro di pubblicazione e che le build vengano ridistribuite tra gli ambienti in base alle esigenze.
 
-## Installazione
+## Installazione {#installation}
 
 Ogni ambiente presenta una serie di istruzioni per connettersi all’applicazione. Per le proprietà web, queste istruzioni forniscono codici di incorporamento. Per le proprietà mobili, tali istruzioni forniscono il codice necessario per creare istanze delle librerie in uso e recuperare la configurazione in fase di esecuzione.
 
@@ -90,7 +91,7 @@ Seleziona **[!UICONTROL Host]** per scegliere dal menu a discesa un host preconf
 
 ![](./images/environments/select-host.png)
 
-Quando viene creata una build, questa viene consegnata alla posizione specificata per l&#39;host assegnato. Per informazioni su come creare e configurare gli host nell’interfaccia utente di raccolta dati, consulta la [panoramica sugli host](./hosts/hosts-overview.md).
+Quando viene creata una build, questa viene consegnata alla posizione specificata per l’host assegnato. Per informazioni su come creare e configurare gli host nell’interfaccia utente di Data Collection, consulta la [panoramica sugli host](./hosts/hosts-overview.md).
 
 ### Impostazione di archiviazione {#archive}
 
@@ -112,13 +113,13 @@ Se utilizzi l’opzione di archiviazione, tutti i file della build vengono conse
 
 ### Codice di incorporamento {#embed-code}
 
-Un codice di incorporamento è un tag `<script>` che deve essere inserito nelle sezioni `<head>` delle pagine del sito web per caricare ed eseguire il codice generato. Ogni configurazione dell’ambiente genera automaticamente il proprio codice di incorporamento, pertanto devi solo copiarlo e incollarlo nel sito sulle pagine in cui desideri che vengano eseguiti i tag.
+Un codice di incorporamento è un tag `<script>` che deve essere inserito nelle sezioni `<head>` delle pagine del sito web per caricare ed eseguire il codice generato. Ogni configurazione dell’ambiente genera automaticamente il proprio codice di incorporamento, pertanto è necessario solo copiarlo e incollarlo nel sito, sulle pagine in cui desideri che vengano eseguiti i tag.
 
-Quando visualizzi le istruzioni di installazione, puoi scegliere se fare in modo che lo script carichi i file della libreria in modo sincrono o asincrono. Questa impostazione non è permanente e non riflette il modo in cui i tag sono stati implementati sul sito. La sua funzione è quella di mostrare come installare l’ambiente nel modo giusto.
+Quando visualizzi le istruzioni di installazione, puoi scegliere se fare in modo che lo script carichi i file della libreria in modo sincrono o asincrono. L’impostazione non è permanente e non riflette il modo in cui i tag sono stati effettivamente implementati sul sito. La sua funzione è quella di mostrare come installare l’ambiente nel modo giusto.
 
 >[!WARNING]
 >
->A seconda del contenuto della libreria di tag, il comportamento delle regole e di altri elementi può variare tra la distribuzione sincrona e asincrona. È quindi importante verificare accuratamente tutte le modifiche apportate.
+>A seconda del contenuto della libreria dei tag, il comportamento delle regole e degli altri elementi può essere con distribuzione sincrona o asincrona. È quindi importante verificare accuratamente tutte le modifiche apportate.
 
 #### Implementazione asincrona
 
@@ -128,7 +129,7 @@ Per ulteriori informazioni su questa impostazione, consulta la guida alla [distr
 
 #### Distribuzione sincrona
 
-Quando il browser legge un codice di incorporamento utilizzando la distribuzione sincrona, recupera la libreria di tag ed esegue tale operazione prima di continuare a caricare la pagina.
+Quando il browser legge un codice di incorporamento utilizzando la distribuzione sincrona, recupera la libreria di tag e la esegue prima di continuare a caricare la pagina.
 
 I codici di incorporamento sincroni sono costituiti da due tag `<script>` che devono essere inseriti all’interno dell’HTML del sito web. Un tag `<script>` va inserito nella sezione `<head>` del documento, mentre l’altro deve essere posizionato immediatamente prima del tag `</body>` di chiusura.
 
@@ -142,7 +143,7 @@ Poiché i codici di incorporamento vengono generati in base alle configurazioni 
 
 >[!WARNING]
 >
->Quando il codice di incorporamento di un ambiente tag cambia, devi aggiornare manualmente i codici di incorporamento nel codice HTML. Per evitare costi di manutenzione, è necessario aggiornare i codici di incorporamento solo se assolutamente necessario.
+>Quando il codice di incorporamento di un ambiente di tag cambia, è necessario aggiornare manualmente i codici di incorporamento nel codice HTML. Per evitare costi di manutenzione, è necessario aggiornare i codici di incorporamento solo se assolutamente necessario.
 
 ## Creare un ambiente
 

@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Aiuto sui tag
+user-guide-title: Guida dei tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '386'
 ht-degree: 87%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 87%
    * [Librerie](./ui/publishing/libraries.md)
    * [Self-hosting delle librerie](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Ripubblicare una libreria](./ui/publishing/republish.md)
+   * [Supporto CDN Premium (Beta)](./ui/publishing/premium-cdn.md)
 * Informazioni sul lato client {#client-side}
    * [Panoramica](./ui/client-side/overview.md)
    * [Implementazione asincrona](./ui/client-side/asynchronous-deployment.md)
