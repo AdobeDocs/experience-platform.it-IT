@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -107,14 +107,6 @@ Una volta che il conteggio dei campi obbligatori raggiunge lo zero e si è soddi
 Dopo aver configurato un nuovo datastream o selezionato uno esistente da visualizzare, viene visualizzata la pagina dei dettagli per quel datastream. Qui puoi trovare ulteriori informazioni sul datastream, compreso il relativo ID.
 
 ![Pagina dei dettagli per un datastream creato](../images/datastreams/view-details.png)
-
-Quando viene creato un datastream, tre ambienti associati vengono creati automaticamente con impostazioni identiche. Questi tre ambienti sono `dev`, `stage`e `prod`, che corrispondono [ambienti predefiniti per i tag](../../tags/ui/publishing/environments.md). Quando si crea una libreria di tag in un `dev` , la libreria utilizza automaticamente il `dev` ambiente dal datastream. È possibile modificare liberamente le impostazioni in singoli ambienti in base alle proprie esigenze.
-
-Nelle implementazioni SDK, un `edgeConfigId` è un ID composito che specifica il datastream e l&#39;ambiente specifico all&#39;interno di tale datastream. Ad esempio, per specificare il `stage` ambiente per un datastream con ID `1c86778b-cdba-4684-9903-750e52912ad1`, utilizza `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->Se nell’ID composito non è presente alcun ambiente, l’ambiente di produzione (`prod`).
 
 Dalla schermata dei dettagli del datastream, puoi [aggiungi servizi](#add-services) per abilitare le funzionalità dei prodotti Adobe Experience Cloud a cui hai accesso.
 
