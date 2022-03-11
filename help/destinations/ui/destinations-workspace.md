@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
@@ -107,8 +107,8 @@ La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una
 | [!UICONTROL Tipo connessione] | Rappresenta il tipo di connessione al bucket di archiviazione o alla destinazione. <ul><li>Per le destinazioni di marketing e-mail: Può essere S3, FTP o [!DNL Azure Blob].</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server.</li><li>Per le destinazioni di streaming: Può essere [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nome utente] | Le credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Dati di attivazione] | Indica il numero di segmenti che vengono attivati nella destinazione. Seleziona questo controllo per ulteriori informazioni sui segmenti attivati. Fai riferimento a [Dati di attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione per ulteriori informazioni sui segmenti attivati. |
-| [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione alla destinazione. |
-| [!UICONTROL Stato] | `Active` oppure `Inactive`. Indica se i dati vengono attivati per questa destinazione. |
+| [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione alla destinazione. Seleziona il simbolo di freccia su/giù per ordinare i flussi di attivazione in base al più recente o al più vecchio. |
+| [!UICONTROL Stato] | `Enabled` oppure `Disabled`. Indica se i dati vengono attivati per questa destinazione. |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
 
