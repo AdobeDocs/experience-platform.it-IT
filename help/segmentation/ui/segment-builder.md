@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2457'
 ht-degree: 1%
 
 ---
@@ -114,6 +114,14 @@ Per aggiungere una nuova regola alla definizione del segmento, trascina un riqua
 >
 >Le ultime modifiche apportate a Adobe Experience Platform hanno aggiornato l’utilizzo del `OR` e `AND` operatori logici tra eventi. Questi aggiornamenti non avranno alcun impatto sui segmenti esistenti. Tuttavia, questi cambiamenti interesseranno tutti gli aggiornamenti successivi ai segmenti esistenti e alle nuove creazioni di segmenti. Per piacere, leggi le [aggiornamento delle costanti temporali](./segment-refactoring.md) per ulteriori informazioni.
 
+Quando selezioni un valore per l&#39;attributo, viene visualizzato un elenco di valori enum che l&#39;attributo può essere.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Se selezioni un valore da questo elenco di enum, il valore viene evidenziato con un bordo pieno. Tuttavia, per i campi che utilizzano `meta:enum` (soft) enum, puoi anche selezionare un valore che è **not** dall&#39;elenco degli enum. Se crei un valore personalizzato, questo verrà evidenziato con un bordo punteggiato e verrà visualizzato un messaggio di avviso che segnala che tale valore non è presente nell’elenco di enum.
+
+![](../images/ui/segment-builder/enum-warning.png)
+
 ### Aggiunta di tipi di pubblico
 
 Puoi trascinare un pubblico da **[!UICONTROL Pubblico]** nell’area di lavoro del generatore di regole per fare riferimento all’appartenenza al pubblico nella nuova definizione del segmento. Questo ti consente di includere o escludere l’appartenenza al pubblico come attributo nella nuova regola del segmento.
@@ -214,7 +222,7 @@ Man mano che crei la definizione del segmento, puoi visualizzare un’anteprima 
 
 >[!NOTE]
 >
->Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; tra 1 e 20 milioni di entità sono utilizzate 1 milione di entità; e per più di 20 milioni di entità viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime dei segmenti sono disponibili nella sezione [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione dei segmenti.
+>Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; tra 1 e 20 milioni di entità sono utilizzate 1 milione di entità; e per più di 20 milioni di entità viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime dei segmenti sono disponibili nella sezione [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione dei segmenti.
 
 ## Passaggi successivi {#next-steps}
 
