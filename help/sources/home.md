@@ -5,7 +5,7 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Ad Experience Platform, è possibile centralizzare i dati raccolti da fonti dive
 
 Le origini in Experience Platform sono raggruppate nelle seguenti categorie:
 
-### Applicazioni di Adobe
+### Applicazioni di Adobe {#adobe-applications}
 
 Experience Platform consente l’acquisizione di dati da altre applicazioni Adobe, tra cui Adobe Analytics e Adobe Audience Manager. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
@@ -38,13 +38,13 @@ Experience Platform consente l’acquisizione di dati da altre applicazioni Adob
 - [[!DNL Marketo Engage] panoramica del connettore](connectors/adobe-applications/marketo/marketo.md)
 - [Crea un [!DNL Marketo Engage] connessione sorgente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connettore
 
-### Archiviazione cloud
+### Archiviazione cloud {#cloud-storage}
 
 Le origini di archiviazione cloud possono importare i tuoi dati in Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini tramite l’interfaccia utente. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
@@ -62,7 +62,7 @@ Le origini di archiviazione cloud possono importare i tuoi dati in Platform senz
 - [[!DNL Oracle Object Storage] connettore](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connettore](connectors/cloud-storage/sftp.md)
 
-### Gestione delle relazioni con i clienti (CRM)
+### Gestione delle relazioni con i clienti (CRM) {#crm}
 
 I sistemi di gestione delle relazioni con i clienti forniscono dati che possono aiutare a creare relazioni con i clienti, che a loro volta creano fidelizzazione e promuovono la fidelizzazione dei clienti. Experience Platform fornisce il supporto per l’acquisizione di dati CRM da [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
@@ -71,14 +71,14 @@ I sistemi di gestione delle relazioni con i clienti forniscono dati che possono 
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Successo del cliente
+### Successo del cliente {#customer-success}
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un’applicazione di successo per clienti di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Salesforce Service Cloud] connettore](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connettore](connectors/customer-success/servicenow.md)
 
-### Database
+### Database {#database}
 
 Experience Platform supporta l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
@@ -101,19 +101,19 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [[!DNL PostgreSQL] connettore](connectors/databases/postgres.md)
 - [[!DNL Snowflake] connettore](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform supporta l’acquisizione di dati da un sistema eCommerce di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Sistema locale
+### Sistema locale {#local-system}
 
 Experience Platform supporta l’acquisizione di dati dal sistema locale. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [Caricamento file locale](connectors/local-system/local-file-upload.md)
 
-### Automazione del marketing
+### Automazione del marketing {#marketing-automation}
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di automazione marketing di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
@@ -121,19 +121,19 @@ Experience Platform fornisce il supporto per l’acquisizione di dati da un sist
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Pagamenti
+### Pagamenti {#payments}
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL PayPal] connettore](connectors/payments/paypal.md)
 
-### Streaming
+### Streaming {#streaming}
 
 Experience Platform supporta l’acquisizione di dati da sorgenti in streaming. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocolli
+### Protocolli {#protocols}
 
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
