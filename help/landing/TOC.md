@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
+source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 22%
+source-wordcount: '236'
+ht-degree: 27%
 
 ---
 
@@ -15,10 +15,11 @@ ht-degree: 22%
 
 * [Panoramica di Platform](home.md)
 * [Panoramica della piattaforma (video)](video/platform-overview.md)
-* [Tutorial su Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Tutorial su Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
 * [Un’esperienza del cliente basata su Platform (video)](video/customer-experience.md)
 * [Dietro le quinte di un’esperienza del cliente basata su Platform (video)](video/customer-experience-bts.md)
 * Introduzione {#getting-started}
+   * [Flusso di lavoro di esempio end-to-end](end-to-end-tutorial.md)
    * [Funzionalità principali (video)](video/key-capabilities.md)
    * [Casi d’uso principali (video)](video/platform-use-cases.md)
    * [Architettura della piattaforma (video)](video/platform-architecture.md)
