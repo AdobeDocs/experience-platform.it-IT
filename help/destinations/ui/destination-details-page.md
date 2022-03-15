@@ -4,10 +4,10 @@ title: Visualizza dettagli destinazione
 description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 2%
+source-wordcount: '708'
+ht-degree: 1%
 
 ---
 
@@ -76,6 +76,10 @@ La tabella seguente illustra i controlli e i dettagli forniti dalla barra a dest
 ## [!UICONTROL Corse del flusso di dati] {#dataflow-runs}
 
 La [!UICONTROL Corse del flusso di dati] La scheda fornisce i dati metriche sulle esecuzioni del flusso di dati sulle destinazioni batch e in streaming. Fai riferimento a [Monitorare i flussi di dati](monitor-dataflows.md) per dettagli e definizioni metriche.
+
+>[!NOTE]
+>
+>La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* la [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
 
 ![Vista delle esecuzioni del flusso di dati](../assets/ui/details-page/dataflow-runs.png)
 
