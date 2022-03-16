@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guida ai servizi intelligenti
 breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 23%
+source-wordcount: '123'
+ht-degree: 22%
 
 ---
 
@@ -24,10 +24,11 @@ ht-degree: 23%
    - [Scopri informazioni](attribution-ai/discover-insights.md)
    - [Scaricare i punteggi](attribution-ai/download-scores.md)
    - [Analizzare i punteggi utilizzando Query Service](attribution-ai/aai-query-service.md)
+   - [Risoluzione dei problemi](attribution-ai/troubleshooting.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
    - [Panoramica](content-commerce-ai/overview.md)
    - [Introduzione](content-commerce-ai/getting-started.md)
-   - API Content and Commerce AI{#api}
+   - API di Content and Commerce AI{#api}
       - [Estrazione colore](content-commerce-ai/api/color-extraction.md)
       - [Estrazione di parole chiave](content-commerce-ai/api/keyword-extraction.md)
       - [Classificazione del testo](content-commerce-ai/api/text-classification.md)
@@ -37,7 +38,7 @@ ht-degree: 23%
    - [Panoramica](customer-ai/overview.md)
    - [Guida introduttiva di Customer AI](customer-ai/getting-started.md)
    - [Ingresso e uscita](customer-ai/input-output.md)
-   - Guide dell&#39;interfaccia utente{#user-guide}
+   - Guide dell&#39;interfaccia{#user-guide}
       - [Configurare un’istanza](customer-ai/user-guide/configure.md)
       - [Scopri informazioni](customer-ai/user-guide/discover-insights.md)
       - [Creare segmenti utilizzando i punteggi di Customer AI](customer-ai/user-guide/create-segment.md)
