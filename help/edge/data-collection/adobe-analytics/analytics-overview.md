@@ -3,9 +3,9 @@ title: Utilizzo di Adobe Analytics con Platform Web SDK
 description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;dati mappati;variabili mappate;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ Adobe Experience Platform [!DNL Web SDK] può inviare dati ad Adobe Analytics. Q
 ## Configurazione
 
 Se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione cliente, Adobe Analytics raccoglie automaticamente i dati che stai inviando. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
+
+## Gruppo di campi XDM
+
+Per facilitare l’acquisizione delle metriche Adobe Analytics più comuni, forniamo un gruppo di campi Analytics da utilizzare. Per ulteriori dettagli su questo schema, consulta la documentazione per [Gruppo di campi dello schema dell’estensione completa Adobe Analytics ExperienceEvent](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Dati mappati automaticamente
 
