@@ -1,14 +1,14 @@
 ---
 keywords: attivare destinazioni di richiesta profilo;attivare dati;destinazioni di richiesta profilo
-title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo (Beta)
+title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Scopri come attivare i dati sul pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di richiesta del profilo.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
+source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,12 @@ Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Fine]
 
 ![Revisione](../assets/ui/activate-profile-request-destinations/review.png)
 
-## Verificare l’attivazione dei segmenti {#verify}
+<!--
 
-Controlla la [documentazione sul monitoraggio della destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni dettagliate su come monitorare il flusso di dati verso le destinazioni.
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
+## Verify segment activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

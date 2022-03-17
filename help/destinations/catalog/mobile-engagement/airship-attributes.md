@@ -3,10 +3,10 @@ keywords: attributi del volo;destinazione del volo
 title: Collegamento Attributi del volo
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come Attributi di pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 0%
+source-wordcount: '802'
+ht-degree: 1%
 
 ---
 
@@ -16,34 +16,45 @@ ht-degree: 0%
 
 [!DNL Airship] è la piattaforma leader di Customer Engagement che ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
-Questa integrazione trasmette i dati del profilo di Adobe in [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
+Questa integrazione trasmette i dati del profilo di Adobe a [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
 
-Per ulteriori informazioni su [!DNL Airship], consulta le [Documenti di navigazione aerea](https://docs.airship.com).
+Per ulteriori informazioni [!DNL Airship], vedi [Documenti di volo](https://docs.airship.com).
 
 >[!TIP]
 >
->Questa pagina della documentazione è stata creata dal team [!DNL Airship]. Per qualsiasi richiesta di informazioni o di aggiornamento, contattali direttamente su [support.airship.com](https://support.airship.com/).
+>Questa pagina della documentazione è stata creata da [!DNL Airship] squadra. Per qualsiasi richiesta di informazioni o di aggiornamento, contattali direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
 
 ## Prerequisiti {#prerequisites}
 
 Prima di inviare i segmenti di pubblico a [!DNL Airship], devi:
 
-* Abilita gli attributi nel tuo progetto [!DNL Airship].
+* Abilitare gli attributi nel [!DNL Airship] progetto.
 * Genera un token portatore per l’autenticazione.
 
 >[!TIP]
 >
->Crea un account [!DNL Airship] tramite [questo collegamento di registrazione](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
+>Crea un [!DNL Airship] account tramite [questo link di registrazione](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
+
+## Tipo e frequenza di esportazione {#export-type-frequency}
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura del campo. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Abilitare gli attributi {#enable-attributes}
 
-Gli attributi di profilo Adobe Experience Platform sono simili agli attributi [!DNL Airship] e possono essere facilmente mappati l’uno sull’altro in Platform utilizzando lo strumento di mappatura illustrato di seguito in questa pagina.
+Gli attributi di profilo Adobe Experience Platform sono simili a [!DNL Airship] e può essere facilmente mappato l’uno sull’altro in Platform utilizzando lo strumento di mappatura illustrato più avanti in questa pagina.
 
-[!DNL Airship] i progetti dispongono di diversi attributi predefiniti e predefiniti. Se disponi di un attributo personalizzato, devi prima definirlo in [!DNL Airship]. Per ulteriori informazioni, consulta [Configurazione e gestione attributi](https://docs.airship.com/tutorials/audience/attributes/) .
+[!DNL Airship] i progetti dispongono di diversi attributi predefiniti e predefiniti. Se disponi di un attributo personalizzato, devi definirlo in [!DNL Airship] prima. Vedi [Impostare e gestire gli attributi](https://docs.airship.com/tutorials/audience/attributes/) per i dettagli.
 
 ## Genera token portatore {#bearer-token}
 
-Vai a **[!UICONTROL Impostazioni]**&quot; **[!UICONTROL API e integrazioni]** nel [Dashboard di navigazione](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu a sinistra.
+Vai a **[!UICONTROL Impostazioni]** &quot; **[!UICONTROL API e integrazioni]** in [Dashboard di bordo](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu a sinistra.
 
 Fai clic su **[!UICONTROL Crea token]**.
 
@@ -51,49 +62,49 @@ Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione attrib
 
 Fai clic su **[!UICONTROL Crea token]** e salva i dettagli come riservati.
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
-Per comprendere meglio come e quando utilizzare la destinazione [!DNL Airship Attributes], di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la [!DNL Airship Attributes] destinazione : di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 ### Caso d&#39;uso n. 1
 
-Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personalizzazione del messaggio e dei contenuti avanzati all’interno di uno qualsiasi dei canali di [!DNL Airship]. Ad esempio, sfrutta i dati di profilo [!DNL Experience Platform] per impostare gli attributi di posizione all’interno di [!DNL Airship]. In questo modo, un marchio dell&#39;hotel potrà mostrare un&#39;immagine della posizione più vicina per ogni utente.
+Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personalizzazione del messaggio e dei contenuti avanzati all’interno di uno dei [!DNL Airship]I canali. Ad esempio, la leva finanziaria [!DNL Experience Platform] dati di profilo per impostare gli attributi di posizione all’interno di [!DNL Airship]. In questo modo, un marchio dell&#39;hotel potrà mostrare un&#39;immagine della posizione più vicina per ogni utente.
 
 ### Caso d&#39;uso n. 2
 
-Utilizza gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con i dati SDK o [!DNL Airship] predittivi. Ad esempio, un rivenditore può creare un segmento con stato di fedeltà e dati di posizione (attributi da Platform) e [!DNL Airship] previsti per l’abbandono dei dati per inviare messaggi altamente mirati agli utenti con stato di fidelizzazione dell’oro che vivono a Las Vegas, NV, e con un’elevata probabilità di esecuzione.
+Utilizzo degli attributi da Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] Profili e combinali con SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un segmento con lo stato fedeltà e i dati di posizione (attributi da Platform) e [!DNL Airship] prevedevano di inviare dati altamente mirati agli utenti in stato di fidelizzazione dell&#39;oro che vivono a Las Vegas, NV, e hanno un&#39;alta probabilità di fiorire.
 
 ## Collegati alla destinazione {#connect}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) .
+Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
-* **[!UICONTROL Token]** portatore: token portatore generato dal  [!DNL Airship] dashboard.
+* **[!UICONTROL Token portatore]**: il token portatore generato da [!DNL Airship] dashboard.
 * **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione.
 * **[!UICONTROL Descrizione]**: immettere una descrizione per la destinazione.
-* **[!UICONTROL Dominio]**: selezionare un centro dati USA o UE, a seconda del centro  [!DNL Airship] dati applicato a questa destinazione.
+* **[!UICONTROL Dominio]**: selezionare un centro dati USA o UE, a seconda di quale [!DNL Airship] data center si applica a questa destinazione.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Per istruzioni sull’attivazione dei segmenti di pubblico a questa destinazione, consulta [Attivare i dati di pubblico per le destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) .
+Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
-[!DNL Airship] Gli attributi possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente a un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail in testo normale (con hash) come identità principale, seleziona il campo e-mail in **[!UICONTROL Attributi di origine]** e mappalo sull’ [!DNL Airship] utente denominato nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come mostrato di seguito.
+[!DNL Airship] Gli attributi possono essere impostati su un canale, che rappresenta l&#39;istanza del dispositivo, ad esempio iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente a un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail in testo normale (senza hash) come identità principale, seleziona il campo e-mail nel **[!UICONTROL Attributi di origine]** e mappare [!DNL Airship] utente con nome nella colonna di destra sotto **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
 
 ![Mapping utente denominato](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Per gli identificatori che devono essere mappati su un canale, cioè un dispositivo, mappati sul canale appropriato in base all&#39;origine. Le immagini seguenti mostrano come vengono create due mappature:
 
-* IDFA iOS Advertising ID to an [!DNL Airship] iOS channel
-* Adobe `fullName` attributo all&#39;attributo [!DNL Airship] &quot;Nome completo&quot;
+* IDFA iOS Advertising ID a un [!DNL Airship] Canale iOS
+* Adobe `fullName` attributo a [!DNL Airship] Attributo &quot;Full Name&quot;
 
 >[!NOTE]
 >
->Utilizza il nome descrittivo visualizzato nel dashboard [!DNL Airship] quando selezioni il campo di destinazione per la mappatura degli attributi.
+>Utilizza il nome descrittivo visualizzato nella [!DNL Airship] dashboard quando selezioni il campo di destinazione per la mappatura degli attributi.
 
 **Mappa identità**
 
@@ -122,4 +133,4 @@ Verifica mappatura:
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, consulta la [Panoramica sulla governance dei dati](../../../data-governance/home.md).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](../../../data-governance/home.md).

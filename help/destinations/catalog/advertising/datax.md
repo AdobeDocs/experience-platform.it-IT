@@ -2,10 +2,10 @@
 title: Connessione Verizon MediaYahoo DataX
 description: DataX è un’infrastruttura globale Verizon Media/Yahoo che ospita vari componenti che consentono a Verizon Media/Yahoo di scambiare dati con i suoi partner esterni in modo sicuro, automatizzato e scalabile.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 2%
+source-wordcount: '651'
+ht-degree: 3%
 
 ---
 
@@ -73,11 +73,18 @@ Verizon Media supporta l’attivazione delle identità descritte nella tabella s
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Esportazione segmento** - stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (E-mail) utilizzati nella destinazione Verizon Media.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
 
-## Casi d’uso {#use-cases}
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (E-mail, GAID, IDFA) utilizzati nella destinazione Verizon Media. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Casi di utilizzo {#use-cases}
 
 Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il targeting di un gruppo di pubblico specifico tenuto fuori dagli indirizzi e-mail in Verizon Media (VMG) possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l&#39;API in tempo quasi reale di VMG.
 

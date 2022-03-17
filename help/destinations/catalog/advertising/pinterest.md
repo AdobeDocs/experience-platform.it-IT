@@ -2,10 +2,10 @@
 title: Connessione all’elenco dei clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 2%
+source-wordcount: '578'
+ht-degree: 3%
 
 ---
 
@@ -39,9 +39,16 @@ In [fase di mappatura](/help/destinations/ui/activate-segment-streaming-destinat
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Esportazione segmento** - stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Elenco clienti Pinterest.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Elenco clienti Pinterest. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casi di utilizzo {#use-cases}
 

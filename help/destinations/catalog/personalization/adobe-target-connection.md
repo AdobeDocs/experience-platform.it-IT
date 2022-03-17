@@ -3,10 +3,10 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 0%
+source-wordcount: '530'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,16 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 >
 >Prima di creare un [!DNL Adobe Target] connessione, leggere la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Richiesta profilo** : richiedi tutti i segmenti mappati nella destinazione Adobe Target per un singolo profilo.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo tutti i segmenti mappati nella destinazione Adobe Target per un singolo profilo. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Casi d’uso {#use-cases}
 

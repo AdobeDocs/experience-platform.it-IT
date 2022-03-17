@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;destinazione risposta oracle
 title: Oracle connessione Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing cross-channel offerte da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 0%
+source-wordcount: '522'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,16 @@ ht-degree: 0%
 
 Per inviare i dati del segmento a [!DNL Oracle Responsys], devi prima [connettersi alla destinazione](#connect-destination) in Adobe Experience Platform e quindi [impostare un’importazione di dati](#import-data-into-responsys) dalla posizione di archiviazione in [!DNL Oracle Responsys].
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Basato su profilo** - si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata Seleziona attributi del [flusso di lavoro di attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ELENCO CONSENTITI di indirizzo IP {#allow-list}
 
@@ -43,12 +50,12 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * Per **[!UICONTROL SFTP con password]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Password]
 * Per **[!UICONTROL SFTP con chiave SSH]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Chiave SSH]
 * Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati sotto **[!UICONTROL Chiave]** sezione . La chiave pubblica deve essere scritta come [!DNL Base64] stringa codificata.

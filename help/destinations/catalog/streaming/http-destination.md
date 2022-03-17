@@ -3,9 +3,9 @@ keywords: streaming;
 title: Connessione API HTTP
 description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,17 @@ Per inviare i dati di profilo agli endpoint HTTP, devi prima [connettersi alla d
 La destinazione HTTP è indirizzata ai clienti che devono esportare i dati di profilo XDM e i segmenti di pubblico in endpoint HTTP generici.
 
 Gli endpoint HTTP possono essere sistemi propri dei clienti o soluzioni di terze parti.
+
+## Tipo e frequenza di esportazione {#export-type-frequency}
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Prerequisiti {#prerequisites}
 

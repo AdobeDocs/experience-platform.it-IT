@@ -3,10 +3,10 @@ keywords: BLOB di Azure;destinazione BLOB;s3;destinazione BLOB di azzurro
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita dal vivo all’archivio BLOB di Azure per esportare periodicamente file di dati CSV da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 1%
+source-wordcount: '474'
+ht-degree: 2%
 
 ---
 
@@ -27,11 +27,22 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 Se disponi già di una [!DNL Blob] destinazione, puoi saltare il resto del documento e procedere all&#39;esercitazione su [attivazione dei segmenti sulla destinazione](../../ui/activate-batch-profile-destinations.md).
 
+## Tipo e frequenza di esportazione {#export-type-frequency}
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
 ## Formati di file supportati {#file-formats}
 
 [!DNL Experience Platform] supporta il seguente formato di file da esportare in [!DNL Blob]:
 
-* Valori separati da delimitatore (DSV): Il supporto per i file di dati formattati DSV è attualmente limitato ai valori separati da virgole. Il supporto per i file DSV generali verrà fornito in futuro.
+* Valori separati da virgole (CSV): Il supporto per i file di dati esportati è attualmente limitato ai valori separati da virgole.
 
 ## Collegati alla destinazione {#connect}
 

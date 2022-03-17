@@ -4,9 +4,9 @@ title: Tipi di destinazione e categorie
 seo-title: Destination types and categories
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: conness
 Le destinazioni di esportazione del profilo ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
 
 * [Destinazioni di esportazione del profilo di streaming](#streaming-profile-export)
-* [Destinazioni basate su file](#file-based)
+* [Destinazioni batch (basate su file)](#file-based)
 
 ### Destinazioni di esportazione del profilo di streaming {#streaming-profile-export}
 
 Le destinazioni di esportazione del profilo in streaming ricevono dati di segmenti e profili come flussi di dati di Experience Platform. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) e [Hub eventi di Azure](catalog/cloud-storage/azure-event-hubs.md) sono esempi di tali destinazioni.
 
-### Destinazioni basate su file {#file-based}
+### Destinazioni batch (basate su file) {#file-based}
 
-Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attributi. [Amazon S3](catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile depositare file contenenti esportazioni di profili.
+Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attributi. [Amazon S3](catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile esportare file contenenti esportazioni di profili.
 
 ## Destinazioni di esportazione dei segmenti in streaming {#streaming-destinations}
 

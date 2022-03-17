@@ -2,10 +2,10 @@
 title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 1%
+source-wordcount: '1066'
+ht-degree: 2%
 
 ---
 
@@ -51,11 +51,22 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Esportazione segmento** - stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nel *DESTINAZIONE* destinazione.
+*Nella tabella, conservare solo le righe corrispondenti alla destinazione. È necessario disporre di una riga per il tipo di esportazione e di una riga per la frequenza di esportazione. Elimina i valori che non si applicano alla destinazione.*
 
-## Casi di utilizzo
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nel *DESTINAZIONE* destinazione. |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Casi d’uso {#use-cases}
 
 Per aiutarti a capire meglio come e quando utilizzare la *DESTINAZIONE* destinazione : di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
@@ -79,7 +90,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 Quando [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) questa destinazione, devi fornire le seguenti informazioni:
 
-*Aggiungi i campi che i clienti devono compilare al momento della configurazione di una nuova destinazione. Questi campi sono specifici della destinazione e dipendono dalla configurazione nell’SDK di Destinazione. I campi della destinazione potrebbero non corrispondere a quelli elencati di seguito.*
+*Aggiungi i campi che i clienti devono compilare al momento della configurazione di una nuova destinazione. Questi campi sono specifici per la destinazione e dipendono dalla configurazione in Destination SDK. I campi della destinazione potrebbero non corrispondere a quelli elencati di seguito.*
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.

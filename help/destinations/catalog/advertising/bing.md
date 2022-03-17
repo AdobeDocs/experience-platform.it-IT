@@ -3,10 +3,10 @@ keywords: 'pubblicità; bing; '
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ La [!DNL Microsoft Bing] La destinazione consente di inviare i dati del profilo 
 
 Per inviare i dati del profilo a [!DNL Microsoft Bing], è innanzitutto necessario connettersi alla destinazione.
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 In qualità di addetto al marketing, voglio essere in grado di utilizzare segmenti generati da [!DNL Microsoft Advertising IDs] per indirizzare gli utenti tramite display advertising attraverso [!DNL Microsoft Advertising] canali.
 
@@ -30,9 +30,20 @@ In qualità di addetto al marketing, voglio essere in grado di utilizzare segmen
 |---|---|
 | MAID | Microsoft Advertising ID |
 
-## Tipo di esportazione {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
 **[!DNL Segment Export]** - stai esportando tutti i membri di un segmento (pubblico) nel [!DNL Microsoft Bing] destinazione.
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) nel [!DNL Microsoft Bing] destinazione. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Prerequisiti {#prerequisites}
 

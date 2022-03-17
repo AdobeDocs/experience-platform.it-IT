@@ -3,10 +3,10 @@ keywords: pubblicità; il banco commerciale; ufficio commerciale pubblicitario
 title: Il collegamento del Trade Desk
 description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 1%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Per inviare i dati del profilo a [!DNL Trade Desk], è innanzitutto necessario connettersi alla destinazione.
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 In qualità di addetto al marketing, voglio essere in grado di utilizzare segmenti generati da [!DNL Trade Desk IDs] o gli ID dispositivo per creare campagne digitali di retargeting o con targeting per il pubblico.
 
@@ -34,9 +34,18 @@ In qualità di addetto al marketing, voglio essere in grado di utilizzare segmen
 | IDFA | [!DNL Apple ID for Advertisers] |
 | ID ufficio commerciale | ID inserzionista nella piattaforma Trade Desk |
 
-## Tipo di esportazione {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** - stai esportando tutti i membri di un segmento (pubblico) nella destinazione.
+## Tipo e frequenza di esportazione {#export-type-frequency}
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) nella destinazione. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Prerequisiti {#prerequisites}
 

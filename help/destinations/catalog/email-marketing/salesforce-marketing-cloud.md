@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;e-mail;destinazioni;salesforce;destinazione salesforce
 title: Collegamento Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 0%
+source-wordcount: '506'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,16 @@ ht-degree: 0%
 
 Per inviare i dati del segmento a [!DNL Salesforce Marketing Cloud], devi prima [collegare la destinazione](#connect-destination) in Platform, e quindi [impostare un’importazione di dati](#import-data-into-salesforce) dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
 
-## Tipo di esportazione {#export-type}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Basato su profilo** - si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto dalla schermata Seleziona attributi del [flusso di lavoro di attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## ELENCO CONSENTITI di indirizzo IP {#allow-list}
 
@@ -43,12 +50,12 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * Per **[!UICONTROL SFTP con password]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Password]
 * Per **[!UICONTROL SFTP con chiave SSH]** connessioni, è necessario fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta]
+   * [!UICONTROL Porta ]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Chiave SSH]
 
