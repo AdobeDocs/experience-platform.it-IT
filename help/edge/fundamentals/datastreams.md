@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Questo documento descrive i passaggi per la configurazione di un datastream nell
 
 >[!NOTE]
 >
->Per poter accedere a questa funzione nell’interfaccia utente, è necessario eseguire il provisioning della tua organizzazione. Se non disponi dell&#39;accesso, contatta il tuo Customer Success Manager (CSM) per inserire l&#39;inserire nell&#39;elenco Consentiti.
+>Per poter accedere a questa funzione nell’interfaccia utente, è necessario eseguire il provisioning della tua organizzazione. Se non hai accesso, compila quanto segue [modulo](http://adobe.ly/websdkaccess) e vi concederemo l&#39;accesso necessario.
 
 ## Accedere al [!UICONTROL Datastreams] workspace
 
