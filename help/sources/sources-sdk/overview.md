@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK è un set di API di configurazione che ti consente di integrare una sorgente basata su API REST utilizzando l’API del servizio di flusso per Experience Platform i tuoi dati.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ Il processo dettagliato per configurare l’origine in Experience Platform è de
    * Consulta la guida su [configurazione delle specifiche di origine](./config/sourcespec.md);
    * Consulta la guida su [configurazione delle specifiche di esplorazione](./config/explorespec.md);
 * Per iniziare a documentare la sorgente, vedi [panoramica sulla creazione della documentazione per l&#39;SDK di Origini](./documentation/doc-overview.md)
-   * Puoi utilizzarlo [modello di documentazione di origini](./documentation/template.md) strutturare la documentazione;
+   * Puoi utilizzarlo [modello di documentazione API di origini](./documentation/template.md) per strutturare la documentazione API;
+   * Puoi utilizzarlo [modello di documentazione dell’interfaccia utente di origini](./documentation/ui-template.md) per strutturare la documentazione dell’interfaccia utente;
    * Consulta la guida su [utilizzo dell’interfaccia web GitHub](./documentation/github.md) per i passaggi su come creare la documentazione utilizzando GitHub;
    * Consulta la guida su [utilizzo di un editor di testo](./documentation/text-editor.md) per informazioni su come creare la documentazione utilizzando il computer locale.
-

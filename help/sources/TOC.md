@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 12%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 12%
    - [Documentare la fonte in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Utilizza l’interfaccia web GitHub per creare una pagina di documentazione sulle sorgenti](sources-sdk/documentation/github.md)
    - [Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini](sources-sdk/documentation/text-editor.md)
-   - [Modello self-service della documentazione](sources-sdk/documentation/template.md)
+   - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
+   - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)

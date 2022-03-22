@@ -6,9 +6,10 @@ topic-legacy: tutorial
 description: Questo documento fornisce passaggi su come utilizzare l’interfaccia web GitHub per creare la documentazione e inviare una richiesta di pull (PR).
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -35,7 +36,11 @@ Una volta completata la forchetta, seleziona **maestro** e inserisci un nome per
 
 ![crea-ramo](../assets/create-branch.png)
 
-Nella struttura di cartelle GitHub dell’archivio con fork, passa alla `experience-platform.en/help/sources/tutorials/api/create/` quindi selezionare la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando documentazione per una nuova origine di archiviazione cloud, seleziona **cloud storage**.
+Nella struttura di cartelle GitHub dell’archivio con fork, passa a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) quindi selezionare la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando documentazione per una nuova origine di archiviazione cloud, seleziona **cloud storage**.
+
+>[!TIP]
+>
+>Se stai creando la documentazione per l&#39;interfaccia utente, passa a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e selezionare la categoria appropriata per l&#39;origine. Per aggiungere le immagini, passa a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) quindi aggiungi le tue schermate al `sdk` cartella.
 
 ![cloud storage](../assets/cloud-storage.png)
 
