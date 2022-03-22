@@ -3,7 +3,7 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Utilizzando una destinazione di personalizzazione personalizzata separata per il
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informazioni sugli ID di datastream"
 >abstract="Questa opzione determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. È necessario configurare un datastream prima di poter configurare la destinazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Scopri come configurare un datastream."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Scopri come configurare un datastream"
 
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
