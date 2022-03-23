@@ -5,18 +5,18 @@ title: Query di esempio per i dati di Adobe Target
 topic-legacy: queries
 description: I dati di Adobe Target vengono trasformati in schema XDM di Experience Event e acquisiti in Experience Platform come set di dati per te. Questo documento contiene query di esempio per l’utilizzo di Query Service con i set di dati Adobe Target.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
 
 # Query di esempio per i dati di Adobe Target
 
-I dati di Adobe Target vengono trasformati in schema XDM di Experience Event e acquisiti in Adobe Experience Platform come set di dati per te. Esistono molti casi d’uso per Adobe Experience Platform Query Service con questi dati e le seguenti query di esempio devono funzionare con i set di dati Adobe Target.
+I dati acquisiti da Adobe Target vengono trasformati in schema XDM di Experience Event e acquisiti in Adobe Experience Platform come set di dati. Adobe Experience Platform Query Service facilita molti casi d’uso per questi dati e le seguenti query di esempio devono funzionare con i set di dati Adobe Target.
 
-Ad Experience Platform, il nome del set di dati creato automaticamente è &quot;Adobe Target Experience Events&quot;. Quando utilizzi questo set di dati con le query, utilizza il nome `adobe_target_experience_events`.
+Ad Experience Platform, il nome di un set di dati creato automaticamente è &quot;Adobe Target Experience Events&quot;. Quando utilizzi questo set di dati con le query, utilizza il nome `adobe_target_experience_events`.
 
 ## Mappatura del campo XDM parziale di alto livello
 
