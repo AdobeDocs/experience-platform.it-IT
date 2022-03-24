@@ -4,9 +4,9 @@ title: Campo Preferenza Di Marketing Generico Con Tipo Di Dati Di Abbonamento
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del campo Preferenze di marketing generiche con tipo di dati XDM sottoscrizioni.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -59,29 +59,31 @@ Alcune aziende consentono ai clienti di effettuare l’opt-in per iscrizioni div
 Il seguente JSON rappresenta un campo di marketing di esempio per un canale di marketing basato su chiamate telefoniche che contiene un `subscriptions` mappa. Ogni chiave nel `subscriptions` rappresenta una sottoscrizione individuale per il canale di marketing. A sua volta, ogni abbonamento contiene un valore di consenso (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ Il seguente JSON rappresenta un campo di marketing di esempio per un canale di m
 
 | Proprietà | Descrizione |
 | --- | --- |
+| `val` | La [valore del consenso](#val) per l’abbonamento. |
 | `type` | Tipo di sottoscrizione. Può trattarsi di una qualsiasi stringa descrittiva, purché non contenga più di 15 caratteri. |
+| `topics` | Array di stringhe che rappresentano le aree di interesse a cui un cliente è iscritto, che possono essere utilizzate per inviare loro contenuti pertinenti. |
 | `subscribers` | Un campo di tipo mappa facoltativo che rappresenta un insieme di identificatori (ad esempio indirizzi e-mail o numeri di telefono) che hanno effettuato la sottoscrizione a una particolare sottoscrizione. Ogni chiave in questo oggetto rappresenta l&#39;identificatore in questione e contiene due sottoproprietà: <ul><li>`time`: Una marca temporale ISO 8601 del momento in cui l’identità è stata sottoscritta, se applicabile.</li><li>`source`: Origine dell&#39;utente che ha effettuato l&#39;abbonamento. Può trattarsi di una qualsiasi stringa descrittiva, purché non contenga più di 15 caratteri.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
