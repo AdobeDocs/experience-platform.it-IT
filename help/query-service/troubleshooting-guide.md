@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,8 @@ Il seguente elenco di risposte alle domande frequenti è suddiviso nelle seguent
 - [Generale](#general)
 - [Esportazione dei dati](#exporting-data)
 - [Strumenti di terze parti](#third-party-tools)
+- [Errori API PostgreSQL](#postgresql-api-errors)
+- [Errori API REST](#rest-api-errors)
 
 ## Domande generali sul servizio Query {#general}
 
@@ -28,7 +30,7 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso disattivare la funzione di completamento automatico nell’editor del servizio query?
 
-++ + N. risposta La disattivazione della funzione di completamento automatico non è attualmente supportata dall&#39;editor.
+++ + N. risposta Turning off the auto-complete feature is not currently supported by the editor.
 +++
 
 ### Perché a volte l’Editor query diventa lento quando scrivo una query?
@@ -38,12 +40,14 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso utilizzare Postman per l’API del servizio query?
 
-+++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione del postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Answer
+Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Guarda il [Guida alla configurazione di Postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
 
-+++Risposta Sì, Query Service applica internamente un limite di 50.000 righe a meno che non venga specificato un limite esplicito all’esterno. Consulta le linee guida [esecuzione di query interattive](./best-practices/writing-queries.md#interactive-query-execution) per ulteriori dettagli.
++++Answer
+Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
 ### Esiste un limite di dimensione dei dati per l&#39;output risultante da una query?
@@ -138,8 +142,8 @@ Consulta la sezione [documentazione relativa al blocco anonimo](./best-practices
 
 +++Risposta Esistono due modi per implementare l’attribuzione personalizzata:
 
-1. Utilizza una combinazione di [Funzioni definite dall&#39;Adobe](./sql/adobe-defined-functions.md) per identificare se le esigenze del caso d’uso sono soddisfatte.
-1. Se il suggerimento precedente non soddisfa il caso d’uso, è necessario utilizzare una combinazione di [funzioni della finestra](./sql/adobe-defined-functions.md#window-functions). Le funzioni finestra visualizzano tutti gli eventi in una sequenza. Consentono inoltre di rivedere i dati storici e possono essere utilizzati in qualsiasi combinazione.
+1. Use a combination of existing [Adobe-defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met.
+1. Se il suggerimento precedente non soddisfa il caso d’uso, è necessario utilizzare una combinazione di [funzioni della finestra](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. Consentono inoltre di rivedere i dati storici e possono essere utilizzati in qualsiasi combinazione.
 +++
 
 ### Posso modellare le mie query in modo da poterle facilmente riutilizzare?
@@ -147,13 +151,13 @@ Consulta la sezione [documentazione relativa al blocco anonimo](./best-practices
 +++Risposta Sì, è possibile modellare le query utilizzando le istruzioni preparate. Le istruzioni preparate possono ottimizzare le prestazioni ed evitare di ripetere ripetutamente l’analisi di una query. Consulta la sezione [documentazione preparata delle dichiarazioni](./sql/prepared-statements.md) per ulteriori dettagli.
 +++
 
-### Come posso recuperare i registri degli errori per una query? {#error-logs}
+### How do I retrieve error logs for a query? {#error-logs}
 
 +++Risposta Per recuperare i registri degli errori per una query specifica, è innanzitutto necessario utilizzare l’API del servizio query per recuperare i dettagli del registro delle query. La risposta HTTP contiene gli ID della query necessari per indagare un errore di query.
 
-Utilizzare il comando GET per recuperare più query. Le informazioni su come effettuare una chiamata all’API sono disponibili nella sezione [documentazione di esempio sulle chiamate API](./api/queries.md#sample-api-calls).
+Use the GET command to retrieve multiple queries. Le informazioni su come effettuare una chiamata all’API sono disponibili nella sezione [documentazione di esempio sulle chiamate API](./api/queries.md#sample-api-calls).
 
-Dalla risposta, identifica la query da esaminare ed effettua un’altra richiesta di GET utilizzando la relativa `id` valore. Le istruzioni complete sono disponibili nella sezione [recuperare una query per documentazione ID](./api/queries.md#retrieve-a-query-by-id).
+Dalla risposta, identifica la query da esaminare ed effettua un’altra richiesta di GET utilizzando la relativa `id` valore. Full instructions can be found in the [retrieve a query by ID documentation](./api/queries.md#retrieve-a-query-by-id).
 
 Una risposta corretta restituisce lo stato HTTP 200 e contiene il `errors` array. La risposta è stata abbreviata per brevità.
 
@@ -318,7 +322,7 @@ Query Service supporta funzioni SQL integrate per convertire una data marca temp
 
 #### Converti in timestamp UTC
 
-La `to_utc_timestamp()` interpreta i parametri specificati e li converte **alla marca temporale del fuso orario locale** in formato UTC. Ad esempio, il fuso orario a Seoul, Corea del Sud, è UTC/GMT +9 ore. Fornendo una marca temporale di sola data, il metodo utilizza un valore predefinito di mezzanotte della mattina. La marca temporale e il fuso orario vengono convertiti in formato UTC dall’ora di tale regione a una marca temporale UTC della propria area locale.
+La `to_utc_timestamp()` interpreta i parametri specificati e li converte **alla marca temporale del fuso orario locale** in formato UTC. Ad esempio, il fuso orario a Seoul, Corea del Sud, è UTC/GMT +9 ore. Fornendo una marca temporale di sola data, il metodo utilizza un valore predefinito di mezzanotte della mattina. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
@@ -434,38 +438,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## Errori API REST
-
-| Codice di stato HTTP | Descrizione | Possibili cause |
-|------------------|-----------------------|----------------------------|
-| 400 | Richiesta errata | Query non valida |
-| 401 | Autenticazione non riuscita | Token di autenticazione non valido |
-| 500 | Errore interno del server | Errore interno del sistema |
-
-## Errori API PostgreSQL
-
-| Codice di errore | Stato connessione | Descrizione | Possibile causa |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | N/D | Tipo di messaggio non supportato | Tipo di messaggio non supportato |
-| **28P01** | Avvio - autenticazione | Password non valida | Token di autenticazione non valido |
-| **28000** | Avvio - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Deve essere `AuthenticationCleartextPassword`. |
-| **42P12** | Avvio - autenticazione | Nessuna tabella trovata | Non sono state trovate tabelle da utilizzare |
-| **42601** | Query | Errore di sintassi | Errore di comando o sintassi non valido |
-| **42P01** | Query | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
-| **42P07** | Query | La tabella esiste | Esiste già una tabella con lo stesso nome (CREATE TABLE) |
-| **53400** | Query | LIMITE supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
-| **53400** | Query | Timeout dell&#39;istruzione | La dichiarazione in diretta ha richiesto più di 10 minuti al massimo |
-| **58000** | Query | Errore di sistema | Errore interno del sistema |
-| **0A000** | Query/Comando | Non supportati | Funzionalità/funzionalità nella query/comando non supportata |
-| **42501** | Query DI TABELLA A DISCESA | Tabella di eliminazione non creata dal servizio query | La tabella da eliminare non è stata creata dal servizio query utilizzando `CREATE TABLE` dichiarazione |
-| **42501** | Query DI TABELLA A DISCESA | Tabella non creata dall&#39;utente autenticato | La tabella da eliminare non è stata creata dall&#39;utente attualmente connesso |
-| **42P01** | Query DI TABELLA A DISCESA | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
-| **42P12** | Query DI TABELLA A DISCESA | Nessuna tabella trovata per `dbName`: controlla `dbName` | Impossibile trovare tabelle nel database corrente |
-
 ## Esportazione dei dati {#exporting-data}
 
 Questa sezione fornisce informazioni sull’esportazione di dati e limiti.
-
 
 ### Esiste un modo per estrarre i dati da Query Service dopo l’elaborazione delle query e salvare i risultati in un file CSV?
 
@@ -524,3 +499,51 @@ Lo scopo di aggiungere il livello del server cache è quello di memorizzare in c
 
 +++Risposta No, la connettività pgAdmin non è supportata. A [elenco dei client di terze parti disponibili e istruzioni su come collegarli a Query Service](./clients/overview.md) si trova nella documentazione.
 +++
+
+## Errori API PostgreSQL {#postgresql-api-errors}
+
+Nella tabella seguente sono riportati i codici di errore PSQL e le relative possibili cause.
+
+| Codice di errore | Stato connessione | Descrizione | Possibile causa |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | N/D | Tipo di messaggio non supportato | Tipo di messaggio non supportato |
+| **28P01** | Avvio - autenticazione | Password non valida | Token di autenticazione non valido |
+| **28000** | Avvio - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Deve essere `AuthenticationCleartextPassword`. |
+| **42P12** | Avvio - autenticazione | Nessuna tabella trovata | Non sono state trovate tabelle da utilizzare |
+| **42601** | Query | Errore di sintassi | Errore di comando o sintassi non valido |
+| **42P01** | Query | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
+| **42P07** | Query | La tabella esiste | Esiste già una tabella con lo stesso nome (CREATE TABLE) |
+| **53400** | Query | LIMITE supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
+| **53400** | Query | Timeout dell&#39;istruzione | La dichiarazione in diretta ha richiesto più di 10 minuti al massimo |
+| **58000** | Query | Errore di sistema | Errore interno del sistema |
+| **0A000** | Query/Comando | Non supportati | Funzionalità/funzionalità nella query/comando non supportata |
+| **42501** | Query DI TABELLA A DISCESA | Tabella di eliminazione non creata dal servizio query | La tabella da eliminare non è stata creata dal servizio query utilizzando `CREATE TABLE` dichiarazione |
+| **42501** | Query DI TABELLA A DISCESA | Tabella non creata dall&#39;utente autenticato | La tabella da eliminare non è stata creata dall&#39;utente attualmente connesso |
+| **42P01** | Query DI TABELLA A DISCESA | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
+| **42P12** | Query DI TABELLA A DISCESA | Nessuna tabella trovata per `dbName`: controlla `dbName` | Impossibile trovare tabelle nel database corrente |
+
+### Perché ho ricevuto un codice di errore 58000 quando si utilizza il metodo history_meta() sulla mia tabella?
+
++++Risposta `history_meta()` viene utilizzato per accedere a uno snapshot da un set di dati. In precedenza, se si eseguiva una query su un set di dati vuoto in Azure Data Lake Storage (ADLS), si riceveva un codice di errore 58000 che indica che il set di dati non esiste. Di seguito è riportato un esempio del vecchio errore di sistema.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Errore. Nessun valore restituito per la query. Questo comportamento è stato corretto per restituire il seguente messaggio:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## Errori API REST {#rest-api-errors}
+
+La tabella seguente fornisce i codici di errore HTTP e le relative possibili cause.
+
+| Codice di stato HTTP | Descrizione | Possibili cause |
+|------------------|-----------------------|----------------------------|
+| 400 | Richiesta errata | Query non valida |
+| 401 | Autenticazione non riuscita | Token di autenticazione non valido |
+| 500 | Errore interno del server | Errore interno del sistema |
