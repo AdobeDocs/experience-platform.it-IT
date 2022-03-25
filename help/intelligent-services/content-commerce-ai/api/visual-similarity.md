@@ -1,15 +1,14 @@
 ---
 keywords: similarità visiva;somiglianza visiva;api ccai
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Somiglianza visiva nell’API Content and Commerce AI
 topic-legacy: Developer guide
 description: Il servizio di somiglianza visiva, quando si fornisce un’immagine, trova automaticamente immagini visivamente simili da un catalogo.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -37,7 +36,7 @@ La richiesta seguente recupera immagini visivamente simili da un catalogo, in ba
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, controlla di disporre del `analyzer_id` corretto. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Verifica di avere il `analyzer_id` prima di fare la tua richiesta. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +75,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L’ ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale dei [!DNL Sensei Content Frameworks] viene utilizzato. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `analyzer_id` | La [!DNL Sensei] ID del servizio in cui viene distribuita la richiesta. Questo ID determina quale tra [!DNL Sensei Content Frameworks] sono utilizzati. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
 | `application-id` | ID dell&#39;applicazione creata. | Sì |
-| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un&#39;immagine. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno della matrice `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata da `data`. | Sì |
+| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un&#39;immagine. Eventuali parametri passati come parte di questa matrice sostituiscono i parametri globali specificati al di fuori della `data` array. È possibile ignorare tutte le proprietà rimanenti descritte in questa tabella all’interno di `data`. | Sì |
 | `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
 | `content` | Contenuto da analizzare dal servizio di somiglianza visiva. Nel caso in cui l&#39;immagine faccia parte del corpo della richiesta, utilizza `-F file=@<filename>` nel comando curl per passare l&#39;immagine, lasciando questo parametro come stringa vuota. <br> Se l&#39;immagine è un file su S3, passa l&#39;url firmato. Quando il contenuto fa parte del corpo della richiesta, l’elenco degli elementi dati deve avere un solo oggetto. Se vengono passati più oggetti, viene elaborato solo il primo oggetto. | Sì |
 | `content-type` | Utilizzato per indicare se l’input fa parte del corpo della richiesta o di un url firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | No |
 | `encoding` | Formato del file dell&#39;immagine di input. Attualmente è possibile elaborare solo immagini JPEG e PNG. Il valore predefinito di questa proprietà è `jpeg`. | No |
 | `threshold` | La soglia del punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizza il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da trasmettere. | No |
 | `historic-metadata` | Matrice che può essere passata ai metadati. | No |
 
 **Risposta**
 
-Una risposta corretta restituisce una matrice `response` che contiene `feature_value` e `feature_name` per ciascuna delle immagini visivamente simili presenti nel catalogo.
+Una risposta corretta restituisce un `response` array che contiene un `feature_value` e `feature_name` per ciascuna delle immagini visivamente simili presenti nel catalogo.
 
 Nella risposta di esempio mostrata di seguito sono state restituite le seguenti immagini visivamente simili:
 

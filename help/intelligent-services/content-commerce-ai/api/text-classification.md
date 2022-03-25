@@ -1,12 +1,11 @@
 ---
 keywords: classificazione del testo;classificazione del testo
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Classificazione del testo nell’API Content and Commerce AI
 topic-legacy: Developer guide
 description: Se si assegna un frammento di testo, il servizio di classificazione del testo può classificarlo in una o più etichette. La classificazione può essere a etichetta singola, a etichetta multipla o gerarchica.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%
@@ -33,7 +32,7 @@ La seguente richiesta classifica il testo da un frammento in base ai parametri d
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, controlla di disporre del `analyzer_id` corretto. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Verifica di avere il `analyzer_id` prima di fare la tua richiesta. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -62,14 +61,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L’ ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale dei [!DNL Sensei Content Frameworks] viene utilizzato. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `analyzer_id` | La [!DNL Sensei] ID del servizio in cui viene distribuita la richiesta. Questo ID determina quale tra [!DNL Sensei Content Frameworks] sono utilizzati. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
 | `application-id` | ID dell&#39;applicazione creata. | Sì |
-| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un documento. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno della matrice `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata da `data`. | Sì |
+| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un documento. Eventuali parametri passati come parte di questa matrice sostituiscono i parametri globali specificati al di fuori della `data` array. È possibile ignorare tutte le proprietà rimanenti descritte in questa tabella all’interno di `data`. | Sì |
 | `language` | Lingua del testo di input. Il valore predefinito è `en`. | No |
 | `content-type` | Utilizzato per indicare se l’input fa parte del corpo della richiesta o di un url firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | No |
-| `encoding` | Formato di codifica del testo di input. Può essere `utf-8` o `utf-16`. Il valore predefinito di questa proprietà è `utf-8`. | No |
+| `encoding` | Formato di codifica del testo di input. Questo può essere `utf-8` o `utf-16`. Il valore predefinito di questa proprietà è `utf-8`. | No |
 | `threshold` | La soglia del punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizza il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. | No |
 | `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
 | `content` | Contenuto utilizzato dal servizio di classificazione del testo. Il contenuto può essere di tipo non elaborato (&quot;inline&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’url firmato. | Sì |

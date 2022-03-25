@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;guida introduttiva;customer ai;argomenti comuni;input ai clienti;output ai clienti
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%

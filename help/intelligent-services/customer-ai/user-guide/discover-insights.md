@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;approfondimenti;customer ai;argomenti popolari;approfondimenti sull'ai clienti
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Scopri informazioni approfondite con Customer AI
 topic-legacy: Discovering insights
 description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 63d6ec7d72b448e9d1bf1da96a1f148838d99cec
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 1%

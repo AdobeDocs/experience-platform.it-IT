@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;panoramica;customer ai;argomenti popolari;panoramica customer ai
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Panoramica di Customer AI
 topic-legacy: Customer AI Overview
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 18%
@@ -52,4 +52,4 @@ Customer AI funziona analizzando i dati esistenti dell’evento esperienza del c
 
 ## Passaggi successivi
 
-Per iniziare, segui la guida [guida introduttiva](./getting-started.md) . Questa guida descrive come impostare tutti i prerequisiti richiesti per Customer AI. Se disponi già di tutte le tue credenziali e i tuoi dati, visita [configurazione di un&#39;istanza di Customer AI](./user-guide/configure.md). Fornisce i passaggi per l’utilizzo di Customer AI.
+Puoi iniziare seguendo le [guida introduttiva](./getting-started.md) guida. Questa guida descrive come impostare tutti i prerequisiti richiesti per Customer AI. Se disponi già di tutte le tue credenziali e dati, visita  [configurazione di un’istanza di Customer AI](./user-guide/configure.md). Fornisce i passaggi per l’utilizzo di Customer AI.

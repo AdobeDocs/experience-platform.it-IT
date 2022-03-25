@@ -1,15 +1,14 @@
 ---
 keywords: OCR;presenza di testo;riconoscimento ottico dei caratteri
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Presenza di testo e riconoscimento ottico dei caratteri
 topic-legacy: Developer guide
 description: Nell’API Content and Commerce AI, il servizio di riconoscimento ottico dei caratteri (OCR, Text Presence / Optical Character Recognition) può indicare se un testo è presente in una determinata immagine. Se il testo è presente, OCR può restituire il testo.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -37,7 +36,7 @@ La richiesta seguente verifica se il testo è presente in base all’immagine di
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, controlla di disporre del `analyzer_id` corretto. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Verifica di avere il `analyzer_id` prima di fare la tua richiesta. Contatta il team beta di Content and Commerce AI per ricevere il tuo `analyzer_id` per questo servizio.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -74,21 +73,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L’ ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale dei [!DNL Sensei Content Frameworks] viene utilizzato. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `analyzer_id` | La [!DNL Sensei] ID del servizio in cui viene distribuita la richiesta. Questo ID determina quale tra [!DNL Sensei Content Frameworks] sono utilizzati. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
 | `application-id` | ID dell&#39;applicazione creata. | Sì |
-| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un’immagine passata. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno della matrice `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata da `data`. | Sì |
+| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un’immagine passata. Eventuali parametri passati come parte di questa matrice sostituiscono i parametri globali specificati al di fuori della `data` array. È possibile ignorare tutte le proprietà rimanenti descritte in questa tabella all’interno di `data`. | Sì |
 | `language` | Lingua del testo di input. Il valore predefinito è `en`. | No |
 | `content-type` | Utilizzato per indicare se l’input fa parte del corpo della richiesta o di un url firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | No |
 | `encoding` | Formato del file dell&#39;immagine di input. Attualmente è possibile elaborare solo immagini JPEG e PNG. Il valore predefinito di questa proprietà è `jpeg`. | No |
 | `threshold` | La soglia del punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizza il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. | No |
 | `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
 | `content` | Il contenuto può essere un’immagine non elaborata (tipo di contenuto &quot;in linea&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’URL firmato. | Sì |
 
 **Risposta**
 
-Una risposta corretta restituisce il testo rilevato nella matrice `feature_value`. Il testo viene letto e restituito dall’alto verso il basso da sinistra a destra. Ciò significa che se è stato rilevato &quot;Amo l&#39;Adobe&quot;, il payload restituisce &quot;I&quot;, &quot;amore&quot; e &quot;Adobe&quot; in oggetti separati. Nell’oggetto ti viene assegnato un `feature_name` che contiene la parola e un `feature_value` che contiene una metrica di affidabilità per quel testo.
+Una risposta corretta restituisce il testo rilevato nel `feature_value` array. Il testo viene letto e restituito dall’alto verso il basso da sinistra a destra. Ciò significa che se è stato rilevato &quot;Amo l&#39;Adobe&quot;, il payload restituisce &quot;I&quot;, &quot;amore&quot; e &quot;Adobe&quot; in oggetti separati. Nell’oggetto viene assegnato un `feature_name` che contiene la parola e un `feature_value` che contiene una metrica di affidabilità per quel testo.
 
 ```json
 {
