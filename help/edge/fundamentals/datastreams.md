@@ -3,22 +3,22 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 1%
 
 ---
 
 # Configurare un datastream
 
-Un datastream rappresenta la configurazione lato server quando si implementano gli SDK per web e dispositivi mobili di Adobe Experience Platform. Mentre il [configura, comando](configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), i datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, la `edgeConfigId` viene utilizzato per fare riferimento al datastream. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
+Un datastream rappresenta la configurazione lato server quando si implementano gli SDK Adobe Experience Platform Web e Mobile. Mentre il [configura, comando](configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), i datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, la `edgeConfigId` viene utilizzato per fare riferimento al datastream. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
 
 Questo documento descrive i passaggi per la configurazione di un datastream nell’interfaccia utente di raccolta dati.
 
 >[!NOTE]
 >
->Per poter accedere a questa funzione nell’interfaccia utente, è necessario eseguire il provisioning della tua organizzazione. Se non hai accesso, compila quanto segue [modulo](http://adobe.ly/websdkaccess) e vi concederemo l&#39;accesso necessario.
+>Per poter accedere a questa funzione nell’interfaccia utente, è necessario eseguire il provisioning della tua organizzazione. Completa quanto segue [modulo](https://adobe.ly/websdkaccess) richiedere l&#39;accesso necessario.
 
 ## Accedere al [!UICONTROL Datastreams] workspace
 
@@ -60,7 +60,7 @@ Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare controlli aggiuntiv
 | [!UICONTROL Cookie ID di prime parti] | Quando questa impostazione è abilitata, indica alla rete Edge di fare riferimento a un cookie specificato durante la ricerca di un [ID dispositivo di prime parti](../identity/first-party-device-ids.md), anziché cercare questo valore nella mappa identità.<br><br>Quando abiliti questa impostazione, devi fornire il nome del cookie in cui deve essere memorizzato l’ID. |
 | [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire l’esecuzione di sincronizzazioni ID diverse in momenti diversi. Quando abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per questo datastream. |
 
-Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi Mobile SDK o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
+Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi l’SDK di Mobile o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
 
 ### Preparazione per la raccolta dei dati {#data-prep}
 
