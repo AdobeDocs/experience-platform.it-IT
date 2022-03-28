@@ -3,9 +3,9 @@ title: Configurare il Datastream per l'SDK Web di Experience Platform
 description: 'Scopri come configurare i Datastreams. '
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
+source-wordcount: '2004'
 ht-degree: 1%
 
 ---
@@ -50,15 +50,25 @@ Se stai configurando questo datastream per l’utilizzo in Experience Platform e
 
 ![Configurazione di base per un datastream](../images/datastreams/configure.png)
 
-Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi l’SDK di Mobile o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
+Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare controlli aggiuntivi per configurare il datastream.
+
+![Opzioni di configurazione avanzate](../images/datastreams/advanced-options.png)
+
+| Impostazione | Descrizione |
+| --- | --- |
+| [!UICONTROL Posizione geografica] | Determina se si verificano ricerche GPS in base all&#39;indirizzo IP dell&#39;utente. Impostazione predefinita **[!UICONTROL Nessuno]** disabilita le ricerche GPS, mentre il **[!UICONTROL Città]** fornisce le coordinate GPS a due posizioni decimali. |
+| [!UICONTROL Cookie ID di prime parti] | Quando questa impostazione è abilitata, indica alla rete Edge di fare riferimento a un cookie specificato durante la ricerca di un [ID dispositivo di prime parti](../identity/first-party-device-ids.md), anziché cercare questo valore nella mappa identità.<br><br>Quando abiliti questa impostazione, devi fornire il nome del cookie in cui deve essere memorizzato l’ID. |
+| [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire l’esecuzione di sincronizzazioni ID diverse in momenti diversi. Quando abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per questo datastream. |
+
+Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi Mobile SDK o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
 
 ### Preparazione per la raccolta dei dati {#data-prep}
 
 >[!IMPORTANT]
 >
->La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK per dispositivi mobili.
+>La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK di Mobile.
 
-Preparazione dati è un servizio di Experience Platform che ti consente di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Quando configuri un datastream abilitato per Platform, puoi utilizzare le funzionalità di preparazione dei dati per mappare i dati di origine su XDM durante l’invio a Platform Edge Network.
+Data Prep è un servizio di Experience Platform che consente di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Quando configuri un datastream abilitato per Platform, puoi utilizzare le funzionalità di preparazione dei dati per mappare i dati di origine su XDM durante l’invio a Platform Edge Network.
 
 Le sottosezioni seguenti descrivono i passaggi di base per la mappatura dei dati all’interno dell’interfaccia utente di raccolta dati. Per una guida completa su tutte le funzionalità di preparazione dei dati, comprese le funzioni di trasformazione per i campi calcolati, consulta la seguente documentazione:
 
@@ -199,16 +209,6 @@ Questo servizio controlla se e come i dati vengono inviati a [inoltro eventi](..
 >[!NOTE]
 >
 >È possibile selezionare **[!UICONTROL Immetti manualmente gli ID]** digitare i nomi delle proprietà e dell’ambiente anziché utilizzare i menu a discesa.
-
-### [!UICONTROL Sincronizzazione ID di terze parti] impostazioni
-
-La sezione ID di terze parti è l’unica sezione sempre attiva. Sono disponibili due impostazioni: &quot;[!UICONTROL Sincronizzazione ID di terze parti abilitata]&quot; e &quot;[!UICONTROL ID di terze parti ID ID del contenitore di sincronizzazione ID]&quot;.
-
-![Sezione Sincronizzazione ID di terze parti dell&#39;interfaccia utente di configurazione](../images/datastreams/third-party-id-sync-config.png)
-
-| Impostazione | Descrizione |
-| --- | --- |
-| [!UICONTROL ID di terze parti ID ID del contenitore di sincronizzazione ID] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire l’esecuzione di sincronizzazioni ID diverse in momenti diversi. Questo controlla quale contenitore di sincronizzazioni ID viene eseguito per questo datastream. |
 
 ## Passaggi successivi
 
