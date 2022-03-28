@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 12%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 12%
    - Automazione del marketing {#marketing-automation}
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
       - [Connettore Mailchimp](connectors/marketing-automation/mailchimp.md)
+      - [Connettore Eloqua Oracle](connectors/marketing-automation/oracle-eloqua.md)
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 12%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campagna MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membri MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -217,7 +219,7 @@ ht-degree: 12%
          - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Archiviazione tabella di Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [Plum verde](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -236,6 +238,7 @@ ht-degree: 12%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Campagne Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Membri di Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)

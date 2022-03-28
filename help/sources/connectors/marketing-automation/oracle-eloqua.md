@@ -1,0 +1,35 @@
+---
+keywords: Experience Platform;casa;argomenti popolari;oracle;eloqua oracle;eloqua eloqua
+solution: Experience Platform
+title: Panoramica del connettore Eloqua Oracle
+topic-legacy: overview
+description: Scopri come collegare Oracle Eloqua a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+source-git-commit: a0c7ba20926d9f55a1f7818374fc6d2b5320820f
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 0%
+
+---
+
+# [!DNL Oracle Eloqua] connettore
+
+Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+
+Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di automazione marketing di terze parti. Il supporto per i fornitori di automazione del marketing include [!DNL Oracle Eloqua].
+
+## ELENCO CONSENTITI di indirizzo IP
+
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Oracle Eloqua] su Platform utilizzando le API o l’interfaccia utente:
+
+## Connetti [!DNL Oracle Eloqua] su Platform tramite API
+
+* [Creare una connessione di base Oracle Eloqua utilizzando l’API del servizio di flusso](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
+* [Esplorare la struttura dati e il contenuto di un’origine di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/explore/marketing-automation.md)
+* [Creare un flusso di dati per un’origine di automazione del marketing utilizzando l’API del servizio di flusso](../../tutorials/api/collect/marketing-automation.md)
+
+## Connetti [!DNL Oracle Eloqua] su Platform tramite l’interfaccia utente
+
+* [Creare una connessione sorgente Oracle Eloqua nell’interfaccia utente](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+* [Creare un flusso di dati per una connessione sorgente di automazione marketing nell’interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md)
