@@ -6,54 +6,53 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando le API di acquisizione dati.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 99f99ad78853236868550d880576b82da2af8878
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '647'
 ht-degree: 2%
 
 ---
 
 # Recupero dei batch non riusciti utilizzando l’API di accesso ai dati
 
-Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l’acquisizione batch, che consente di inserire i dati utilizzando vari tipi di file (come CSV), o l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzando gli endpoint di streaming in tempo reale.
+Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l’acquisizione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), o l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
 
-Questa esercitazione descrive i passaggi per il recupero di informazioni su un batch non riuscito utilizzando le API [!DNL Data Ingestion] .
+Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando [!DNL Data Ingestion] API.
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
-- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati a  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
+- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati a [!DNL Experience Platform].
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- nome x-sandbox: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ### Batch di esempio non riuscito
 
-Questa esercitazione utilizzerà dati di esempio con una marca temporale in formato non corretto che imposta il valore del mese su **00**, come mostrato di seguito:
+Questa esercitazione utilizzerà dati di esempio con una marca temporale in formato non corretto che imposta il valore del mese in modo che sia **00**, come illustrato di seguito:
 
 ```json
 {
@@ -95,13 +94,13 @@ GET /batches/{BATCH_ID}/failed
 **Richiesta**
 
 ```shell
-curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
@@ -186,7 +185,7 @@ Poiché il batch precedentemente acquisito aveva una data-ora non valida, verrà
 
 ## Passaggi successivi
 
-Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch con errori. Per ulteriori informazioni sull&#39;acquisizione batch, consulta la [guida per sviluppatori per l&#39;acquisizione batch](../batch-ingestion/overview.md). Per ulteriori informazioni sull&#39;acquisizione in streaming, consulta l&#39; [esercitazione sulla creazione di una connessione in streaming](../tutorials/create-streaming-connection.md).
+Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch con errori. Per ulteriori informazioni sull’acquisizione in batch, consulta la sezione [guida per gli sviluppatori di batch ingestion](../batch-ingestion/overview.md). Per ulteriori informazioni sull’acquisizione in streaming, consulta la sezione [creazione di un&#39;esercitazione sulla connessione in streaming](../tutorials/create-streaming-connection.md).
 
 ## Appendice
 
@@ -213,7 +212,7 @@ Questo errore viene mostrato se l&#39;ID organizzazione IMS mancante dal payload
 
 ### Schema XDM mancante
 
-Questo errore viene visualizzato se manca `schemaRef` per `xdmMeta`.
+Questo errore viene visualizzato se `schemaRef` per `xdmMeta` è mancante.
 
 ```json
 {
@@ -228,7 +227,7 @@ Questo errore viene visualizzato se manca `schemaRef` per `xdmMeta`.
 
 ### Nome sorgente mancante
 
-Questo errore viene mostrato se nell’intestazione manca `source` .`name`
+Questo errore viene visualizzato se `source` nell’intestazione manca la relativa `name`.
 
 ```json
 {
@@ -244,7 +243,7 @@ Questo errore viene mostrato se nell’intestazione manca `source` .`name`
 
 ### Entità XDM mancante
 
-Questo errore viene mostrato se non è presente `xdmEntity`.
+Questo errore viene visualizzato se non è presente `xdmEntity` presente.
 
 ```json
 {
