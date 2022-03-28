@@ -5,9 +5,9 @@ title: Creare un set di dati utilizzando le API
 topic-legacy: datasets
 description: Questo documento fornisce passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e la compilazione del set di dati utilizzando un file .
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Questa esercitazione utilizza la funzione [Parquet Apache](https://parquet.apache.org/documentation/latest/) formato file per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](../../ingestion/batch-ingestion/api-overview.md)
+>Questa esercitazione utilizza la funzione [Parquet Apache](https://parquet.apache.org/docs/) formato file per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](../../ingestion/batch-ingestion/api-overview.md)
 
 **Risposta**
 

@@ -5,9 +5,9 @@ title: Panoramica API di acquisizione in batch
 topic-legacy: overview
 description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -151,7 +151,7 @@ Puoi caricare i file utilizzando l’API di caricamento file di piccole dimensio
 
 >[!INFO]
 >
->Gli esempi seguenti utilizzano il [Parquet Apache](https://parquet.apache.org/documentation/latest/) formato di file. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](api-overview.md).
+>Gli esempi seguenti utilizzano il [Parquet Apache](https://parquet.apache.org/docs/) formato di file. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](api-overview.md).
 
 ### Caricamento di file di piccole dimensioni
 
