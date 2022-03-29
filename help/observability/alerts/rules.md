@@ -4,9 +4,9 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '785'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,8 @@ Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../i
 | Informazioni sull’esecuzione del flusso di origine | Esecuzione flusso origini completata | Questo avviso viene attivato quando i dati vengono acquisiti correttamente da una connessione sorgente. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di esecuzione del flusso di origini | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati da una connessione sorgente. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Ritardo di acquisizione | Questo avviso viene attivato quando l’elaborazione di un flusso di acquisizione batch richiede più di 150 minuti. |
+| Ritardi, errori ed errori di esecuzione del flusso di origine | Mancanza di ingestione | Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform. |
+| Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di acquisizione | Questo avviso si attiva quando il rapporto tra record non riusciti e tutti i record supera la soglia dello 0,5% |
 
 {style=&quot;table-layout:auto&quot;}
 
