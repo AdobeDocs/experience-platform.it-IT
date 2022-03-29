@@ -2,18 +2,14 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 5%
+source-wordcount: '757'
+ht-degree: 7%
 
 ---
 
-# Registri di controllo (beta)
-
->[!IMPORTANT]
->
->La funzione dei registri di controllo in Adobe Experience Platform è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+# Registri di controllo
 
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare l’attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di controllo&quot;. Questi registri formano un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare efficacemente le politiche di gestione dei dati aziendali e i requisiti normativi.
 
@@ -27,13 +23,18 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 
 | Risorsa | Azioni |
 | --- | --- |
-| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per profilo</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Tipo di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
-| [Destinazione](../../../destinations/home.md) | <ul><li>Attiva</li></ul> |
+| [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attiva set di dati</li><li>Rimozione set di dati</li><li>Attiva profilo</li><li>Rimuovi profilo</li></ul> |
+| [Segmento](../../../segmentation/home.md) | <ul><li>Creare</li><li>Elimina</li><li>Attiva segmento</li><li>Rimozione segmento</li></ul> |
+| [Criteri di unione](../../../profile/merge-policies/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Attributo calcolato](../../../profile/computed-attributes/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Account (Adobe)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 
 ## Accesso ai registri di controllo
 
@@ -47,7 +48,7 @@ Puoi visualizzare i registri di controllo per diverse funzioni di Experience Pla
 
 ![Dashboard dei registri di controllo](../../images/audit-logs/audits.png)
 
-Il sistema visualizza solo i registri di controllo dell’ultimo anno. Tutti i registri che superano questo limite vengono rimossi automaticamente dal sistema.
+I registri di controllo vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare solo per un periodo massimo di 365 giorni.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
@@ -55,7 +56,12 @@ Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a des
 
 ### Filtrare i registri di controllo
 
-Seleziona l’icona funnel (![Icona Filtro](../../images/audit-logs/icon.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
+>[!NOTE]
+>
+>Poiché questa è una nuova funzione, i dati visualizzati risalgono solo a marzo 2022. A seconda della risorsa selezionata, i dati precedenti potrebbero essere disponibili a partire da gennaio 2022.
+
+
+Seleziona l’icona funnel (![Icona Filtro](../../images/audit-logs/icon.png)) per visualizzare un elenco di controlli filtro per limitare i risultati. Vengono visualizzati solo gli ultimi 1000 record, indipendentemente dai vari filtri selezionati.
 
 ![Filtri](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di c
 | --- | --- |
 | [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati in base a [categoria](#category). |
 | [!UICONTROL Azione] | Filtrare per azione. Attualmente solo [!UICONTROL Crea] e [!UICONTROL Elimina] le azioni possono essere filtrate. |
+| [!UICONTROL Utente] | Immetti l’ID utente completo (ad esempio, `johndoe@acme.com`) per filtrare in base all’utente. |
 | [!UICONTROL Stato] | Filtrare in base al fatto che l&#39;azione sia stata consentita (completata) o negata per mancanza di [controllo di accesso](../../../access-control/home.md) autorizzazioni. |
-| [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
+| [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. I dati possono essere esportati con un periodo di lookback di 90 giorni (ad esempio dal 2021-12-15 al 2022-03-15). Questo può variare a seconda del tipo di evento. |
 
 Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione o seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
 
@@ -90,6 +97,10 @@ Tutte le azioni che puoi eseguire nell’interfaccia utente possono essere esegu
 
 Per scoprire come gestire i registri di controllo per le attività in Adobe Admin Console, consulta quanto segue [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Passaggi successivi
+## Passaggi successivi e risorse aggiuntive
 
 Questa guida illustra come gestire i registri di controllo in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Platform, consulta la documentazione su [Informazioni sull’osservabilità](../../../observability/home.md) e [monitoraggio dell’acquisizione dei dati](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Per comprendere meglio i registri di controllo in Experience Platform, guarda il seguente video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
