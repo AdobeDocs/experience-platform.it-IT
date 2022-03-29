@@ -2,9 +2,9 @@
 title: Fonti in Real-time Customer Data Platform B2B Edition
 description: Panoramica del ruolo delle origini in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,6 @@ ht-degree: 0%
 >Se non utilizzi Real-time Customer Data Platform B2B Edition, consulta la sezione [panoramica di origini](./sources-overview.md) invece.
 
 Real-time Customer Data Platform B2B Edition consente di portare i dati B2B attraverso varie fonti, tra cui [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connettore di origine, Salesforce, Amazon S3 e ADLS, tra gli altri. Questa gamma di origini ti offre la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi.
-
->[!TIP]
->
->Real-time Customer Data Platform B2B Edition offre un’ampia gamma di fonti esterne da cui acquisire i dati, ma non ne dispone di quante sono disponibili per Real-time Customer Data Platform. Per scoprire quali connettori sorgente sono disponibili per la tua organizzazione, puoi visualizzare il catalogo origini nell’interfaccia utente di Platform. Per accedere al catalogo, seleziona **Origini** nel menu di navigazione a sinistra, seleziona **Catalogo**.
 
 Per capire come le sorgenti si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
