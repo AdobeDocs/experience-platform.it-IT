@@ -3,9 +3,9 @@ keywords: streaming;
 title: Connessione API HTTP
 description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 1%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 È inoltre possibile utilizzare [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) per impostare un’integrazione e inviare dati di profilo di Experience Platform a un endpoint HTTP.
+
+## inserire nell&#39;elenco Consentiti indirizzo IP {#ip-address-allowlist}
+
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) per l’elenco completo degli IP da inserire nell&#39;elenco Consentiti.
 
 ## Collegati alla destinazione {#connect-destination}
 
@@ -97,10 +100,6 @@ Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profil
 ### Attributi di destinazione {#attributes}
 
 In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
-
-## Considerazioni sul prodotto {#product-considerations}
-
-Experience Platform non invia dati agli endpoint HTTP tramite un set fisso di IP statici. Pertanto, Adobe non può fornire un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per la destinazione API HTTP.
 
 ## Comportamento dell’esportazione del profilo {#profile-export-behavior}
 

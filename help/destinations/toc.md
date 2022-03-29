@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '733'
 ht-degree: 9%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 9%
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Connessione ad Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
-      * [ELENCO CONSENTITI di indirizzo IP](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di archiviazione cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni della Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Estensione Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
@@ -118,7 +118,7 @@ ht-degree: 9%
       * [Collegamento Attributi del volo](./catalog/mobile-engagement/airship-attributes.md)
       * [Collegamento dei tag dell&#39;aeroporto](./catalog/mobile-engagement/airship-tags.md)
       * [Collegamento del freno](./catalog/mobile-engagement/braze.md)
-   * Destinazioni di personalizzazione {#personalization}
+   * Destinazioni Personalization {#personalization}
       * [Panoramica sulle destinazioni di personalizzazione](./catalog/personalization/overview.md)
       * [Connessione Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Estensione Adobe Target](./catalog/personalization/adobe-target.md)
@@ -138,6 +138,7 @@ ht-degree: 9%
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Destinazioni in streaming {#streaming}
       * [ Connessione API HTTP (Beta)](./catalog/streaming/http-destination.md)
+      * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)
    * Destinazioni del sondaggio {#survey}
       * [Panoramica sulle destinazioni del sondaggio](./catalog/survey/overview.md)
       * [Destinazione dell&#39;estensione Foresee](./catalog/survey/foresee.md)

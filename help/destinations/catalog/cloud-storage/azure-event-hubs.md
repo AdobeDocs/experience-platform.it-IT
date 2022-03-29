@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: (Beta) [!DNL Azure Event Hubs] connection
 description: Crea una connessione in uscita in tempo reale al tuo [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati dall'Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
+
+## inserire nell&#39;elenco Consentiti indirizzo IP {#ip-address-allowlist}
+
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi inserire nell&#39;elenco Consentiti per [!DNL Azure Event Hubs] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) per l’elenco completo degli IP da inserire nell&#39;elenco Consentiti.
 
 ## Collegati alla destinazione {#connect}
 

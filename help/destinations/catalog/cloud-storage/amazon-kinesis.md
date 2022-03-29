@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destinazione kinesis;kinesis
 title: (Beta) Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale all’archiviazione Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
+
+## inserire nell&#39;elenco Consentiti indirizzo IP {#ip-address-allowlist}
+
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi inserire nell&#39;elenco Consentiti per [!DNL Amazon Kinesis] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) per l’elenco completo degli IP da inserire nell&#39;elenco Consentiti.
 
 ## Obbligatorio [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
