@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
+source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 7%
+source-wordcount: '1059'
+ht-degree: 6%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 7%
 Nuove funzioni in Adobe Experience Platform:
 
 - [Registri di controllo](#audit-logs)
+- [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -39,6 +40,22 @@ L’Experience Platform ti consente di controllare l’attività dell’utente p
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sui registri di controllo in Platform, consulta [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Account correlati in Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>La funzione Account correlati è disponibile solo per i clienti di Real-Time CDP B2B Edition.
+
+Le imprese B2B spesso presentano le informazioni sui clienti memorizzate in più sistemi, ciascuno dei quali include solo dati parziali o persino in conflitto per la stessa entità aziendale nel mondo reale. Questo crea una grande sfida nell&#39;ottenere una visione accurata dei loro clienti, riducendo così l&#39;efficienza e l&#39;efficacia dei loro sforzi di marketing e vendita B2B. Con il rilascio dei relativi account, [!DNL Real-time CDP B2B] ora mostra un elenco di account simili all’account che stai esplorando. Puoi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi nei segmenti.
+
+Ulteriori informazioni sulla funzione nelle seguenti pagine della documentazione:
+
+- [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-account)
+
+Per ulteriori informazioni su Real-time CDP B2B Edition, consulta la sezione [panoramica](../../rtcdp/overview.md).
 
 ## Avvisi {#alerts}
 
