@@ -4,10 +4,10 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 1%
+source-wordcount: '2572'
+ht-degree: 0%
 
 ---
 
@@ -102,6 +102,10 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tendenza del conteggio dei profili]](#profiles-count-trend)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
 * [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
+* [[!UICONTROL Profili identità singoli]](#single-identity-profiles)
+* [[!UICONTROL Profili non segmentati]](#unsegmented-profiles)
+* [[!UICONTROL Profili non segmentati] Tendenza](#unsegmented-profiles-trend)
+* [[!UICONTROL Profili non segmentati per identità]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Numero di profili] {#profile-count}
 
@@ -135,7 +139,7 @@ Consulta la sezione [sezione sui criteri di unione in precedenza in questo docum
 
 La **[!UICONTROL Tendenza al conteggio dei profili]** in alto a destra del widget viene visualizzato il pulsante &quot;didascalie&quot;. Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didascalie automatiche.
 
-![Scheda della panoramica del profilo che mostra il widget della tendenza del conteggio dei profili con il pulsante delle didascalie evidenziato.](../images/profiles/profile-count-trend-captions.png)
+![Nella scheda Panoramica profilo è visualizzato il widget di tendenza del conteggio dei profili con il pulsante didascalie evidenziato.](../images/profiles/profile-count-trend-captions.png)
 
 Un modello di apprendimento automatico genera automaticamente didascalie per descrivere le tendenze chiave e gli eventi importanti analizzando il grafico e i dati.
 
@@ -162,6 +166,30 @@ Per ulteriori informazioni sui frammenti di profilo, inizia leggendo la sezione 
 Per saperne di più sulle identità, visita il [Documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Profili identità singoli] {#single-identity-profiles}
+
+La [!UICONTROL Profili identità singoli] widget fornisce un conteggio dei profili della tua organizzazione con un solo tipo di ID che ne crea l&#39;identità. Questo tipo di ID può essere un’e-mail o un ECID. Il conteggio del profilo viene generato dai dati contenuti nell&#39;istantanea più recente.
+
+![Widget Singolo profilo identità.](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Profili non segmentati] {#unsegmented-profiles}
+
+La [!UICONTROL Profili non segmentati] widget fornisce il numero totale di tutti i profili non collegati ad alcun segmento. Il numero generato è accurato rispetto all’ultima istantanea e rappresenta l’opportunità di attivazione del profilo in tutta l’organizzazione. Indica inoltre l’opportunità di eliminare i profili che non forniscono un ROI adeguato.
+
+![Il widget Profili non segmentati.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Tendenza dei profili non segmentati] {#unsegmented-profiles-trend}
+
+La [!UICONTROL Tendenza dei profili non segmentati] widget fornisce un grafico a linee illustrativo del numero di profili che non sono collegati ad alcun segmento in un dato periodo di tempo. La tendenza dei profili non associati ad alcun segmento può essere visualizzata su periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. Il conteggio dei profili si riflette sull’asse y e sul tempo sull’asse x.
+
+![Il widget Tendenza Profili non segmentati.](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Profili non segmentati per identità] (#unsegmentation-profiles-by-identity)
+
+La [!UICONTROL Profili non segmentati per identità] widget categorizza il numero totale di profili non segmentati in base al loro identificatore univoco. I dati vengono visualizzati in un grafico a barre per facilitarne il confronto.
+
+![I profili non segmentati per widget di identità.](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (Beta) Widget efficacia profilo {#profile-efficacy-widgets}
 
