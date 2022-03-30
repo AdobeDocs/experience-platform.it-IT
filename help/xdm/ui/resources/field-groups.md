@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
+source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
-
 
 # Creare e modificare i gruppi di campi dello schema nell’interfaccia utente
 
@@ -22,15 +22,15 @@ Adobe Experience Platform fornisce molti gruppi di campi standard che coprono un
 
 ## Prerequisiti
 
-Questa guida richiede una buona comprensione del sistema XDM. Per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema di Experience Platform, fai riferimento alla [panoramica XDM](../../home.md) e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md) per sapere in che modo i gruppi di campi contribuiscono agli schemi XDM.
+Questa guida richiede una buona comprensione del sistema XDM. Fai riferimento a [Panoramica di XDM](../../home.md) introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) per informazioni sul contributo dei gruppi di campi agli schemi XDM.
 
-Sebbene non sia richiesto per questa guida, si consiglia anche di seguire l&#39;esercitazione su [composizione di uno schema nell&#39;interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità di [!DNL Schema Editor].
+Sebbene non sia richiesto per questa guida, è consigliabile seguire anche l’esercitazione su [composizione di uno schema nell’interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità del [!DNL Schema Editor].
 
 ## Crea un nuovo gruppo di campi {#create}
 
-Per creare un nuovo gruppo di campi, è innanzitutto necessario selezionare uno schema a cui aggiungere il gruppo di campi. È possibile scegliere di [creare un nuovo schema](./schemas.md#create) o [selezionare uno schema esistente da modificare](./schemas.md#edit).
+Per creare un nuovo gruppo di campi, è innanzitutto necessario selezionare uno schema a cui aggiungere il gruppo di campi. Puoi scegliere di [creare un nuovo schema](./schemas.md#create) o [selezionare uno schema esistente da modificare](./schemas.md#edit).
 
-Una volta aperto lo schema in [!DNL Schema Editor], seleziona **[!UICONTROL Aggiungi]** accanto alla sezione [!UICONTROL Gruppi di campi] nella barra a sinistra.
+Una volta che lo schema è aperto nel [!DNL Schema Editor], seleziona **[!UICONTROL Aggiungi]** accanto al [!UICONTROL Gruppi di campi] nella barra a sinistra.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
@@ -38,29 +38,33 @@ Viene visualizzata una finestra di dialogo che mostra un elenco dei gruppi di ca
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-Il [!DNL Schema Editor] viene visualizzato nuovamente con il nuovo gruppo di campi elencato nella barra a sinistra. Poiché si tratta di un nuovo gruppo di campi, al momento non fornisce alcun campo allo schema, e quindi l’area di lavoro rimane invariata. Ora puoi iniziare [aggiungendo campi al gruppo di campi](#add-fields).
+La [!DNL Schema Editor] viene nuovamente visualizzato, con il nuovo gruppo di campi elencato nella barra a sinistra. Poiché si tratta di un nuovo gruppo di campi, al momento non fornisce alcun campo allo schema, e quindi l’area di lavoro rimane invariata. Ora puoi iniziare [aggiunta di campi al gruppo di campi](#add-fields).
 
 ## Modificare un gruppo di campi esistente {#edit}
 
 >[!NOTE]
 >
->Solo i gruppi di campi personalizzati definiti dall’organizzazione possono essere modificati e personalizzati completamente. Per i gruppi di campi di base definiti dall’Adobe, solo i nomi visualizzati dei relativi campi possono essere modificati nel contesto dei singoli schemi. Per ulteriori informazioni, consulta la sezione sulla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names) .
+>Solo i gruppi di campi personalizzati definiti dall’organizzazione possono essere modificati e personalizzati completamente. Per i gruppi di campi di base definiti dall’Adobe, solo i nomi visualizzati dei relativi campi possono essere modificati nel contesto dei singoli schemi. Vedi la sezione su [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names) per i dettagli.
 >
->Una volta salvato e utilizzato un gruppo di campi personalizzato in uno schema per l’inserimento dei dati, è possibile apportare solo modifiche aggiuntive al gruppo di campi in seguito. Per ulteriori informazioni, consulta le [regole di evoluzione dello schema](../../schema/composition.md#evolution) .
+>Una volta salvato e utilizzato un gruppo di campi personalizzato in uno schema per l’inserimento dei dati, è possibile apportare solo modifiche aggiuntive al gruppo di campi in seguito. Consulta la sezione [regole di evoluzione dello schema](../../schema/composition.md#evolution) per ulteriori informazioni.
 
-Per modificare un gruppo di campi esistente, è innanzitutto necessario aprire uno schema che utilizzi il gruppo di campi all&#39;interno di [!DNL Schema Editor]. È possibile [selezionare uno schema esistente da modificare](./schemas.md#edit) oppure [creare un nuovo schema](./schemas.md#create) e aggiungere il gruppo di campi in questione.
+Per modificare un gruppo di campi esistente, è innanzitutto necessario aprire uno schema che utilizzi il gruppo di campi all’interno del gruppo [!DNL Schema Editor]. È possibile [selezionare uno schema esistente da modificare](./schemas.md#edit)oppure puoi [creare un nuovo schema](./schemas.md#create) e aggiungere il gruppo di campi in questione.
 
-Una volta aperto lo schema nell&#39;editor, puoi iniziare ad aggiungere i campi [al gruppo di campi](#add-fields).
+Una volta aperto lo schema nell&#39;editor, puoi iniziare [aggiunta di campi al gruppo di campi](#add-fields).
 
 ## Aggiungere campi a un gruppo di campi {#add-fields}
 
-Per aggiungere campi a un gruppo di campi in [!DNL Schema Editor], inizia selezionando il nome del gruppo di campi nella barra a sinistra, quindi seleziona l’icona **più (+)** accanto al nome dello schema nell’area di lavoro.
+>[!NOTE]
+>
+>Questa sezione si concentra sull&#39;aggiunta di campi ai gruppi di campi personalizzati. Per informazioni su come aggiungere campi personalizzati ai gruppi di campi standard, consulta [Guida all’interfaccia utente per gli schemi](./schemas.md#custom-fields-for-standard-groups).
+
+Per aggiungere campi a un gruppo di campi personalizzato nel [!DNL Schema Editor], inizia selezionando il nome del gruppo di campi nella barra a sinistra, quindi seleziona la **più (+)** accanto al nome dello schema nell’area di lavoro.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Un **[!UICONTROL Nuovo campo]** viene visualizzato nell&#39;area di lavoro e la barra a destra viene aggiornata per mostrare i controlli per configurare le proprietà del campo. Per passaggi specifici su come configurare e aggiungere il campo al gruppo di campi, consulta la guida [Definizione dei campi nell’interfaccia utente](../fields/overview.md#define) .
+A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare e aggiungere il campo al gruppo di campi.
 
-Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, selezionare **[!UICONTROL Salva]** per salvare sia lo schema che il gruppo di campi.
+Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, seleziona **[!UICONTROL Salva]** per salvare lo schema e il gruppo di campi.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -68,6 +72,6 @@ Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena 
 
 ## Passaggi successivi
 
-Questa guida illustra come creare e modificare gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questa guida illustra come creare e modificare gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità del [!UICONTROL Schemi] area di lavoro, vedi [[!UICONTROL Schemi] panoramica dell&#39;area di lavoro](../overview.md).
 
-Per informazioni su come gestire i gruppi di campi utilizzando l&#39;API [!DNL Schema Registry], consulta la [guida all&#39;endpoint dei gruppi di campi](../../api/field-groups.md).
+Per scoprire come gestire i gruppi di campi utilizzando [!DNL Schema Registry] API, vedi [guida all’endpoint dei gruppi di campi](../../api/field-groups.md).
