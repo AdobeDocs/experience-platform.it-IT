@@ -5,9 +5,9 @@ title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,7 @@ Una volta aperto lo schema nell&#39;editor, puoi iniziare [aggiunta di campi al 
 
 ## Aggiungere campi a un gruppo di campi {#add-fields}
 
->[!NOTE]
->
->Questa sezione si concentra sull&#39;aggiunta di campi ai gruppi di campi personalizzati. Per informazioni su come aggiungere campi personalizzati ai gruppi di campi standard, consulta [Guida all’interfaccia utente per gli schemi](./schemas.md#custom-fields-for-standard-groups).
-
-Per aggiungere campi a un gruppo di campi personalizzato nel [!DNL Schema Editor], inizia selezionando il nome del gruppo di campi nella barra a sinistra, quindi seleziona la **più (+)** accanto al nome dello schema nell’area di lavoro.
+Aggiunta di campi a un gruppo di campi nel [!DNL Schema Editor], inizia selezionando il nome del gruppo di campi nella barra a sinistra, quindi seleziona la **più (+)** accanto al nome dello schema nell’area di lavoro.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 

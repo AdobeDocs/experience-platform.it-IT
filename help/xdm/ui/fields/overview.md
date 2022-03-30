@@ -5,9 +5,9 @@ title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire campi XDM nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1331'
 ht-degree: 4%
 
 ---
@@ -26,30 +26,25 @@ Sebbene non sia richiesto per questa guida, è consigliabile seguire anche l’e
 
 Per definire nuovi campi XDM nell’interfaccia utente, devi prima aprire uno schema all’interno della [!DNL Schema Editor]. A seconda degli schemi attualmente disponibili nel [!DNL Schema Library], puoi scegliere di [creare un nuovo schema](../resources/schemas.md#create) o [selezionare uno schema esistente da modificare](../resources/schemas.md#edit).
 
-Una volta che hai [!DNL Schema Editor] aperti, i controlli per aggiungere o modificare i campi vengono visualizzati nell’area di lavoro. Tali controlli vengono visualizzati accanto al nome dello schema, nonché a tutti i campi di tipo oggetto definiti nella classe o nel gruppo di campi selezionati.
+Una volta che hai [!DNL Schema Editor] apri, utilizza la barra a sinistra per selezionare la classe o il gruppo di campi per cui desideri definire i campi. Se la risorsa è una risorsa personalizzata definita dall’organizzazione, i controlli per aggiungere o modificare i campi vengono visualizzati nell’area di lavoro. Tali controlli vengono visualizzati accanto al nome dello schema, nonché a tutti i campi di tipo oggetto definiti nella classe o nel gruppo di campi selezionati.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->Se si tenta di aggiungere un campo a un oggetto fornito da un gruppo di campi standard, tale gruppo di campi verrà convertito in un gruppo di campi personalizzato e il gruppo di campi originale non sarà più disponibile. Vedi la sezione su [aggiunta di campi ai gruppi di campi standard](../resources/schemas.md#custom-fields-for-standard-groups) per ulteriori informazioni, consulta la guida dell’interfaccia utente di schemas .
+>Se la classe o il gruppo di campi selezionato è una risorsa di base fornita dall’Adobe, non può essere modificata e pertanto i controlli mostrati sopra non verranno visualizzati. Se lo schema a cui si desidera aggiungere i campi si basa su una classe XDM principale e non contiene gruppi di campi personalizzati, è possibile [creare un nuovo gruppo di campi](../resources/field-groups.md#create) da aggiungere allo schema.
 
 Per aggiungere un nuovo campo alla risorsa, seleziona la **più (+)** accanto al nome dello schema nell’area di lavoro o accanto al campo di tipo oggetto in cui si desidera definire il campo.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-A seconda che si stia aggiungendo un campo direttamente a uno schema o ai relativi gruppi di campi e classi costituenti, i passaggi necessari per aggiungere il campo variano. Il resto del documento illustra come configurare le proprietà di un campo indipendentemente da dove viene visualizzato nello schema. Per ulteriori informazioni sui diversi modi in cui i campi possono essere aggiunti a uno schema, consulta le sezioni seguenti nella guida dell’interfaccia utente degli schemi:
+## Definire un campo per una risorsa {#define}
 
-* [Aggiungi campi ai gruppi di campi](../resources/schemas.md#add-fields)
-* [Aggiunta di campi direttamente a uno schema](../resources/schemas.md#add-individual-fields)
-
-## Definire le proprietà di un campo {#define}
-
-Dopo aver selezionato la **più (+)** icona, un **[!UICONTROL Nuovo campo]** viene visualizzato nell’area di lavoro, all’interno di un oggetto con namespace nell’ID tenant univoco (mostrato come `_tenantId` nell&#39;esempio seguente). Tutti i campi personalizzati aggiunti a uno schema vengono inseriti automaticamente all’interno di questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti dall’Adobe.
+Dopo aver selezionato la **più (+)** icona, un **[!UICONTROL Nuovo campo]** appare nell’area di lavoro, all’interno di un oggetto a livello di radice con namespace nell’ID tenant univoco (mostrato come `_tenantId` nell&#39;esempio seguente). Tutti i campi aggiunti a uno schema tramite classi e gruppi di campi personalizzati vengono inseriti automaticamente in questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti da Adobi.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-Nella barra a destra sotto **[!UICONTROL Proprietà campo]**, puoi configurare i dettagli del nuovo campo. Per ogni campo sono necessarie le seguenti informazioni:
+Nella barra a destra sotto **[!UICONTROL Proprietà campo]**, puoi configurare i dettagli dei nuovi campi. Per ogni campo sono necessarie le seguenti informazioni:
 
 | Proprietà campo | Descrizione |
 | --- | --- |
