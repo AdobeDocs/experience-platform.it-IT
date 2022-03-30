@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Segmenti non mappati per identità]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmenti mappati per identità]](#mapped-segments-by-identity)
 * [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)
+* [[!UICONTROL Conteggio destinazioni]](#destinations-count)
 
 ### [!UICONTROL Destinazioni più utilizzate] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Se il conteggio del profilo mappato del segmento non corrisponde a una deviazion
 Se un segmento all’interno di [!UICONTROL Stato del pubblico mappato] Il widget si discosta di un ampio margine, fai riferimento al grafico delle tendenze delle dimensioni del pubblico e individua il segmento anomalo. La tendenza può fornire ulteriori informazioni sullo stato di salute del segmento.
 
 ![Il widget di stato del pubblico mappato.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Conteggio destinazioni] (#destinations-count)
+
+La [!UICONTROL Conteggio destinazioni] widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e consegnato all&#39;interno del sistema. Questo numero include sia le destinazioni attive che quelle inattive.
+
+Sotto il conteggio totale, seleziona **[!UICONTROL Destinazioni]** per passare alla scheda di ricerca delle destinazioni . In questa pagina sono elencate tutte le destinazioni con le quali hai stabilito una connessione fino ad oggi.
+
+![Il widget Conteggio destinazioni.](../images/destinations/destinations-count.png)
 
 ## Passaggi successivi
 
