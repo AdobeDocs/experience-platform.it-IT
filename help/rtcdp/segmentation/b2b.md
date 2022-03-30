@@ -2,9 +2,9 @@
 title: Casi di utilizzo della segmentazione per Real-time CDP B2B Edition
 description: Panoramica dei vari casi d’uso disponibili in tempo reale CDP B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1247'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questo documento fornisce esempi di definizioni di segmenti in Real-time CDP B2B
 >
 >Gli attributi richiesti per questi casi d’uso di segmentazione sono disponibili solo per i clienti Real-time Customer Data Platform B2B Edition. Se non utilizzi Real-time Customer Data Platform B2B Edition, consulta la sezione [panoramica sulla segmentazione](./segmentation-overview.md) invece.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Prima di poter utilizzare gli attributi di segmentazione per le classi B2B, è necessario completare i seguenti passaggi:
 
@@ -28,7 +28,7 @@ Prima di poter utilizzare gli attributi di segmentazione per le classi B2B, è n
 
 Una volta soddisfatti questi requisiti, puoi combinare questi attributi per i casi d’uso comuni B2B.
 
-## Introduzione
+## Introduzione {#getting-started}
 
 Una volta che gli schemi di unione per le classi B2B hanno relazioni stabilite e sono stati utilizzati per acquisire dati, i loro attributi sono resi disponibili nella barra a sinistra del Generatore di segmenti.
 
@@ -54,52 +54,58 @@ Fai riferimento alla [Schemi nella documentazione di Real-time Customer Data Pla
 
 I casi di utilizzo riportati di seguito forniscono informazioni sulle classi utilizzate per stabilire relazioni tra i diversi schemi per ottenere questi risultati. Questi esempi possono essere utilizzati per creare segmenti personalizzati.
 
-## Esempi di diversi casi di utilizzo
+## Esempi di diversi casi di utilizzo della segmentazione {#use-cases}
 
 I seguenti casi d’uso sono disponibili per la segmentazione con l’edizione B2B. Ogni esempio fornisce una descrizione delle attività del segmento e una descrizione delle classi utilizzate per crearle. Le immagini fornite evidenziano il percorso del file nel [!UICONTROL Attributi] barra laterale che riflette la struttura dello schema. La [!UICONTROL Proprietà del segmento] la sezione a destra della visualizzazione contiene una suddivisione scritta degli attributi del segmento.
 
-### Esempio 1
+### Esempio 1: Trova i &quot;responsabili decisionali&quot; per le opportunità B2B {#find-decision-maker}
 
 Trova tutte le persone che sono il &quot;Decisore&quot; di qualsiasi opportunità. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] la classe e [!UICONTROL Relazione personale opportunità di business XDM] classe.
 
 ![Interfaccia utente che visualizza le impostazioni di esempio 1](../assets/segmentation/example-1.png)
 
-### Esempio 2
+### Esempio 2: Trova profili B2B assegnati a opportunità con un determinato importo in dollari {#find-opportunities-amount}
 
 Trova tutte le persone che sono direttamente assegnate a qualsiasi opportunità di cui l&#39;importo dell&#39;opportunità è superiore all&#39;importo dato ($1 milione). Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Relazione personale opportunità di business XDM] e [!UICONTROL Opportunità aziendali XDM] classe.
 
 ![Interfaccia utente che visualizza le impostazioni di esempio 2](../assets/segmentation/example-2.png)
 
-### Esempio 3
+### Esempio 3: Trova profili B2B assegnati alle opportunità per posizione {#find-opportunities-location}
 
 Trova tutte le persone che sono direttamente assegnate a qualsiasi opportunità in cui l&#39;account si trova in una determinata posizione (Canada). Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Relazione personale opportunità di business XDM] classe, [!UICONTROL Opportunità aziendali XDM] e [!UICONTROL Account aziendale XDM] classe.
 
 ![Interfaccia utente che visualizza le impostazioni di esempio 3](../assets/segmentation/example-3.png)
 
-### Esempio 4
+### Esempio 4: Trova i &quot;responsabili delle decisioni&quot; per opportunità per settore e comportamento di navigazione {#find-industry-browsing-behavior}
 
 Trova tutte le persone che sono un &quot;Decisore&quot; di qualsiasi opportunità in cui il conto è nel settore &quot;Finanza&quot;, e ha visitato la pagina dei prezzi negli ultimi tre giorni. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Relazione personale opportunità di business XDM] classe, [!UICONTROL Opportunità aziendali XDM] e [!UICONTROL Account aziendale XDM] e [!UICONTROL ExperienceEvent XDM] classe.
 
 ![Interfaccia utente che visualizza le impostazioni di esempio 4](../assets/segmentation/example-4.png)
 
-### Esempio 5
+### Esempio 5: Trova profili B2B per opportunità per nome del reparto e importo opportunità {#find-department-opportunity-amount}
 
 Trova tutte le persone che lavorano in un reparto Risorse Umane (HR) e sono legate a qualsiasi account che ha almeno una opportunità aperta per il valore dato (1 milione di dollari) o più. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Account aziendale XDM] e [!UICONTROL Opportunità aziendali XDM] classe.
 
 ![Interfaccia utente che visualizza impostazioni di esempio 5](../assets/segmentation/example-5.png)
 
-### Esempio 6
+### Esempio 6: Trovare profili B2B per titolo di lavoro e ricavi annuali del conto {#find-by-job-title-and-revenue}
 
 Trova tutte le persone il cui titolo professionale è Vice Presidente e sono correlate a qualsiasi conto con entrate annuali pari o superiori al dato importo (100 milioni di dollari) e ha visitato la pagina prezzi almeno 3 volte nell&#39;ultimo mese. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Account aziendale XDM] e [!UICONTROL ExperienceEvent XDM] classe.
 
 ![Interfaccia utente che mostra le impostazioni di esempio 6](../assets/segmentation/example-6.png)
 
-### Esempio 7
+### Esempio 7: Trovare i &quot;decisori&quot; in base allo stato delle opportunità e al comportamento di navigazione {#find-by-opportunity-status-and-browsing-behavior}
 
 Trova tutte le persone che sono un &quot;Decisore&quot; di qualsiasi opportunità persa e ha visitato la pagina dei prezzi nell&#39;ultima settimana. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Relazione personale opportunità di business XDM] classe, [!UICONTROL Opportunità aziendali XDM] e [!UICONTROL ExperienceEvent XDM] classe.
 
 ![Interfaccia utente con impostazioni di esempio 7](../assets/segmentation/example-7.png)
 
-## Passaggi successivi
+### Esempio 8: Utilizzare account correlati per espandere la portata di segmentazione {#related-accounts}
+
+Trova tutte le persone che lavorano in un reparto Risorse Umane (HR) e sono relative a qualsiasi account *o uno dei conti correlati del conto* che ha almeno un&#39;opportunità aperta per un determinato importo (1 milione di dollari) o più. Questo segmento richiede un collegamento tra [!UICONTROL Profilo individuale XDM] classe, [!UICONTROL Account aziendale XDM] e [!UICONTROL Opportunità aziendali XDM] classe.
+
+![Visualizzazione della segmentazione dell&#39;interfaccia utente per gli account correlati](../assets/segmentation/segmentation-related-accounts.png)
+
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questa panoramica, ora hai una comprensione delle possibilità di segmentazione disponibili utilizzando Real-time CDP, B2B Edition. Per ulteriori informazioni sul servizio di segmentazione, consulta il [Documentazione sulla segmentazione](../../segmentation/home.md).
