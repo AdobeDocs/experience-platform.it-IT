@@ -6,18 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: 5829b50a81741cc4883dfa8f4d7d7891b791caf5
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 4%
+source-wordcount: '1223'
+ht-degree: 5%
 
 ---
 
-# Connetti [!DNL Data Landing Zone] a Adobe Experience Platform utilizzando l’API del servizio di flusso
+# Connetti [!DNL Data Landing Zone] a Adobe Experience Platform tramite l’API del servizio di flusso
 
 [!DNL Data Landing Zone] è una struttura di archiviazione dati basata su cloud per l’archiviazione temporanea dei file con provisioning di Adobe Experience Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
 
-Questa esercitazione illustra i passaggi necessari per creare una connessione sorgente [!DNL Data Landing Zone] utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Questa esercitazione fornisce anche istruzioni su come recuperare le [!DNL Data Landing Zone], nonché visualizzare e aggiornare le credenziali.
+Questa esercitazione illustra i passaggi necessari per creare un [!DNL Data Landing Zone] connessione di origine tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Questa esercitazione fornisce anche istruzioni su come recuperare il [!DNL Data Landing Zone], nonché visualizzare e aggiornare le credenziali.
 
 ## Introduzione
 
@@ -26,13 +26,13 @@ Questa guida richiede una buona comprensione dei seguenti componenti dell’Expe
 * [Origini](../../../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente una connessione sorgente [!DNL Data Landing Zone] utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente un [!DNL Data Landing Zone] connessione di origine tramite [!DNL Flow Service] API.
 
-Questa esercitazione richiede anche di leggere la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) per scoprire come eseguire l’autenticazione nelle API di Platform e interpretare le chiamate di esempio fornite nella documentazione.
+Questa esercitazione richiede anche di leggere la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) per scoprire come autenticare le API di Platform e interpretare le chiamate di esempio fornite nella documentazione.
 
 ## Recuperare una zona di destinazione utilizzabile
 
-Il primo passaggio nell’utilizzo delle API per accedere a [!DNL Data Landing Zone] consiste nell’effettuare una richiesta di GET all’ `/landingzone` endpoint dell’ [!DNL Connectors] API fornendo `type=user_drop_zone` come parte dell’intestazione della richiesta.
+Il primo passaggio nell’utilizzo delle API per accedere a [!DNL Data Landing Zone] deve effettuare una richiesta di GET al `/landingzone` punto finale [!DNL Connectors] API fornendo `type=user_drop_zone` come parte dell’intestazione della richiesta.
 
 **Formato API**
 
@@ -42,7 +42,7 @@ GET /connectors/landingzone?type=user_drop_zone
 
 | Intestazioni | Descrizione |
 | --- | --- |
-| `user_drop_zone` | Il tipo `user_drop_zone` consente all’API di distinguere un contenitore di zona di destinazione dagli altri tipi di contenitori disponibili. |
+| `user_drop_zone` | La `user_drop_zone` type consente all’API di distinguere un contenitore di zona di destinazione dagli altri tipi di contenitori disponibili. |
 
 **Richiesta**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta seguente restituisce informazioni su una zona di destinazione, compresi i corrispondenti `containerName` e `containerTTL`.
+La risposta seguente restituisce informazioni su una zona di destinazione, inclusa la corrispondente `containerName` e `containerTTL`.
 
 ```json
 {
@@ -74,9 +74,9 @@ La risposta seguente restituisce informazioni su una zona di destinazione, compr
 | `containerName` | Nome della zona di destinazione recuperata. |
 | `containerTTL` | L’impostazione &quot;time-to-live&quot; applicata ai dati all’interno della zona di destinazione. Tutte le operazioni all’interno di una determinata zona di sbarco vengono eliminate dopo sette giorni. |
 
-## Recupera le credenziali [!DNL Data Landing Zone]
+## Recupera [!DNL Data Landing Zone] credenziali
 
-Per recuperare le credenziali per un [!DNL Data Landing Zone], invia una richiesta di GET all’ endpoint `/credentials` dell’ API [!DNL Connectors].
+Per recuperare le credenziali di un [!DNL Data Landing Zone], invia una richiesta di GET al `/credentials` punto finale [!DNL Connectors] API.
 
 **Formato API**
 
@@ -100,7 +100,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta seguente restituisce le informazioni sulle credenziali per la zona di destinazione, compresi i `SASToken` e `SASUri` correnti, nonché il `storageAccountName` corrispondente al contenitore della zona di destinazione.
+La risposta seguente restituisce le informazioni delle credenziali per la zona di destinazione, incluso l’attuale `SASToken` e `SASUri`, nonché `storageAccountName` corrisponde al contenitore della zona di destinazione.
 
 ```json
 {
@@ -118,9 +118,9 @@ La risposta seguente restituisce le informazioni sulle credenziali per la zona d
 | `SASUri` | URI della firma di accesso condiviso per la zona di destinazione. Questa stringa è una combinazione dell’URI con la zona di destinazione per la quale si sta effettuando l’autenticazione e il relativo token SAS, |
 
 
-## Aggiorna le credenziali [!DNL Data Landing Zone]
+## Aggiorna [!DNL Data Landing Zone] credenziali
 
-Puoi aggiornare il tuo `SASToken` effettuando una richiesta POST all&#39;endpoint `/credentials` dell&#39;API [!DNL Connectors].
+È possibile aggiornare `SASToken` effettuando una richiesta di POST al `/credentials` punto finale [!DNL Connectors] API.
 
 **Formato API**
 
@@ -130,8 +130,8 @@ POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 
 | Intestazioni | Descrizione |
 | --- | --- |
-| `user_drop_zone` | Il tipo `user_drop_zone` consente all’API di distinguere un contenitore di zona di destinazione dagli altri tipi di contenitori disponibili. |
-| `refresh` | L’azione `refresh` ti consente di reimpostare le credenziali della zona di destinazione e di generare automaticamente un nuovo elemento `SASToken`. |
+| `user_drop_zone` | La `user_drop_zone` type consente all’API di distinguere un contenitore di zona di destinazione dagli altri tipi di contenitori disponibili. |
+| `refresh` | La `refresh` consente di ripristinare le credenziali della zona di destinazione e generare automaticamente un nuovo `SASToken`. |
 
 **Richiesta**
 
@@ -149,7 +149,7 @@ curl -X POST \
 
 **Risposta**
 
-La risposta seguente restituisce valori aggiornati per i valori `SASToken` e `SASUri`.
+La risposta seguente restituisce i valori aggiornati per la `SASToken` e `SASUri`.
 
 ```json
 {
@@ -162,7 +162,7 @@ La risposta seguente restituisce valori aggiornati per i valori `SASToken` e `SA
 
 ## Esplorare la struttura e il contenuto dei file della zona di destinazione
 
-Puoi esplorare la struttura dei file e il contenuto della zona di destinazione effettuando una richiesta di GET all’ `connectionSpecs` endpoint dell’ API [!DNL Flow Service] .
+Puoi esplorare la struttura dei file e il contenuto della zona di destinazione effettuando una richiesta di GET al `connectionSpecs` punto finale [!DNL Flow Service] API.
 
 **Formato API**
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di file e cartelle presenti nella directory interrogata. Prendi nota della proprietà `path` del file da caricare, in quanto devi fornirlo nel passaggio successivo per controllarne la struttura.
+Una risposta corretta restituisce un array di file e cartelle presenti nella directory interrogata. Prendi nota della `path` proprietà del file che desideri caricare, in quanto devi fornirlo nel passaggio successivo per esaminarne la struttura.
 
 ```json
 [
@@ -246,7 +246,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce la struttura del file interrogato, inclusi i nomi di tabella e i tipi di dati.
+Una risposta corretta restituisce la struttura del file interrogato, inclusi i nomi dei file e i tipi di dati.
 
 ```json
 {
@@ -309,11 +309,149 @@ Una risposta corretta restituisce la struttura del file interrogato, inclusi i n
 }
 ```
 
+### Utilizzo `determineProperties` per rilevare automaticamente le informazioni sulle proprietà dei file di un [!DNL Data Landing Zone]
+
+È possibile utilizzare `determineProperties` per rilevare automaticamente le informazioni sulla proprietà del contenuto del file [!DNL Data Landing Zone] quando effettui una chiamata GET per esplorare i contenuti e la struttura della tua sorgente.
+
+#### `determineProperties` casi di utilizzo
+
+La tabella seguente illustra diversi scenari che è possibile incontrare quando si utilizza il `determineProperties` eseguire una query del parametro o fornire manualmente informazioni sul file.
+
+| `determineProperties` | `queryParams` | Risposta |
+| --- | --- | --- |
+| True | N/D | Se `determineProperties` viene fornito come parametro di query, quindi si verifica il rilevamento delle proprietà del file e la risposta restituisce un nuovo `properties` che include informazioni sul tipo di file, il tipo di compressione e il delimitatore di colonna. |
+| N/D | True | Se i valori per tipo di file, tipo di compressione e delimitatore di colonna sono forniti manualmente come parte di `queryParams`, vengono quindi utilizzati per generare lo schema e le stesse proprietà vengono restituite come parte della risposta. |
+| True | True | Se entrambe le opzioni vengono eseguite contemporaneamente, viene restituito un errore. |
+| N/D | N/D | Se non viene fornita nessuna delle due opzioni, viene restituito un errore perché non è possibile ottenere le proprietà per la risposta. |
+
+**Formato API**
+
+```http
+GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&determineProperties=true
+```
+
+| Parametro | Descrizione | Esempio |
+| --- | --- | --- |
+| `determineProperties` | Questo parametro di query consente il [!DNL Flow Service] API per rilevare informazioni sulle proprietà del file, tra cui informazioni sul tipo di file, il tipo di compressione e il delimitatore di colonna. | `true` |
+
+**Richiesta**
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/garageWeek/file1&preview=true&determineProperties=true' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce la struttura del file interrogato, inclusi i nomi dei file e i tipi di dati, nonché un `properties` chiave, contenente informazioni su `fileType`, `compressionType`e `columnDelimiter`.
+
++++Clicca su me
+
+```json
+{
+    "properties": {
+        "fileType": "delimited",
+        "compressionType": "tarGzip",
+        "columnDelimiter": "~"
+    },
+    "format": "flat",
+    "schema": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "firstName",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "lastName",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "email",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "birthday",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            }
+        ]
+    },
+    "data": [
+        {
+            "birthday": "1313-0505-19731973",
+            "firstName": "Yvonne",
+            "lastName": "Thilda",
+            "id": "100",
+            "email": "Yvonne.Thilda@yopmail.com"
+        },
+        {
+            "birthday": "1515-1212-19731973",
+            "firstName": "Mary",
+            "lastName": "Pillsbury",
+            "id": "101",
+            "email": "Mary.Pillsbury@yopmail.com"
+        },
+        {
+            "birthday": "0505-1010-19751975",
+            "firstName": "Corene",
+            "lastName": "Joeann",
+            "id": "102",
+            "email": "Corene.Joeann@yopmail.com"
+        },
+        {
+            "birthday": "2727-0303-19901990",
+            "firstName": "Dari",
+            "lastName": "Greenwald",
+            "id": "103",
+            "email": "Dari.Greenwald@yopmail.com"
+        },
+        {
+            "birthday": "1717-0404-19651965",
+            "firstName": "Lucy",
+            "lastName": "Magdalen",
+            "id": "199",
+            "email": "Lucy.Magdalen@yopmail.com"
+        }
+    ]
+}
+```
+
++++
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `properties.fileType` | Il tipo di file corrispondente del file interrogato. I tipi di file supportati sono: `delimited`, `json`e `parquet`. |
+| `properties.compressionType` | Il tipo di compressione corrispondente utilizzato per il file interrogato. I tipi di compressione supportati sono: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `properties.columnDelimiter` | Il delimitatore di colonna corrispondente utilizzato per il file interrogato. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Il valore predefinito è una virgola `(,)`. |
+
+
 ## Creazione di una connessione sorgente
 
 Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati. Una connessione di origine è costituita da informazioni quali l’origine dati, il formato dati e l’ID di connessione di origine necessari per creare un flusso di dati. Un’istanza di connessione di origine è specifica per un tenant e un’organizzazione IMS.
 
-Per creare una connessione sorgente, effettua una richiesta POST all’ endpoint `/sourceConnections` dell’ API [!DNL Flow Service] .
+Per creare una connessione di origine, invia una richiesta POST al `/sourceConnections` punto finale [!DNL Flow Service] API.
 
 
 **Formato API**
@@ -349,7 +487,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della connessione [!DNL Data Landing Zone] di origine. |
+| `name` | Il nome del tuo [!DNL Data Landing Zone] connessione di origine. |
 | `data.format` | Il formato dei dati che desideri inserire in Platform. |
 | `params.path` | Il percorso del file che desideri portare in Platform. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Landing Zone]. Questo ID fisso è: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
@@ -367,4 +505,4 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai recuperato le credenziali [!DNL Data Landing Zone], esplorato la struttura del file per trovare il file che desideri portare a Platform e creato una connessione di origine per iniziare a inserire i dati in Platform. È ora possibile passare all’esercitazione successiva, in cui verrà illustrato come [creare un flusso di dati per portare i dati di archiviazione cloud a Platform utilizzando l’ [!DNL Flow Service] API](../../collect/cloud-storage.md).
+Seguendo questa esercitazione, hai recuperato il tuo [!DNL Data Landing Zone] , ne è stata esplorata la struttura del file per trovare il file che si desidera portare in Platform e è stata creata una connessione di origine per iniziare a inserire i dati in Platform. È ora possibile passare all’esercitazione successiva, in cui verrà illustrato come [creare un flusso di dati per portare i dati di archiviazione cloud a Platform utilizzando [!DNL Flow Service] API](../../collect/cloud-storage.md).
