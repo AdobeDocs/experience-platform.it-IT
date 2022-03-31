@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2596'
 ht-degree: 2%
 
 ---
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | Se viene specificato, non viene generata alcuna eccezione se la tabella lo fa **not** esistono. |
 
+## CREA DATABASE
+
+La `CREATE DATABASE` crea un database ADLS.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DATABASE DI RILASCIO
 
-La `DROP DATABASE` consente di eliminare un database esistente.
+La `DROP DATABASE` elimina il database da un&#39;istanza.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 La `ALTER TABLE` consente di aggiungere o eliminare vincoli di chiave primaria o esterna e di aggiungere colonne alla tabella.
 
+
 #### AGGIUNGI O RILASCIA VINCOLO
 
 Le seguenti query SQL mostrano esempi di aggiunta o rilascio di vincoli a una tabella.
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### AGGIUNGI SCHEMA
+
+La seguente query SQL mostra un esempio di aggiunta di una tabella a un database o a uno schema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Impossibile aggiungere tabelle e viste ADLS ai database/schemi DWH.
+
+
+#### RIMUOVI SCHEMA
+
+La seguente query SQL mostra un esempio di rimozione di una tabella da un database/schema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Le tabelle e le viste DWH non possono essere rimosse dai database/schemi DWH collegati fisicamente.
+
+
+**Parametri**
+
 | Parametri | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### MOSTRA GRUPPI DI DATI
+
+La `SHOW DATAGROUPS` restituisce una tabella di tutti i database associati. Per ogni database la tabella include schema, tipo di gruppo, tipo figlio, nome figlio e ID figlio.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### MOSTRA GRUPPI DI DATI PER LA TABELLA
+
+La `SHOW DATAGROUPS FOR` Il comando &#39;table_name&#39; restituisce una tabella di tutti i database associati che contengono il parametro come figlio. Per ogni database la tabella include schema, tipo di gruppo, tipo figlio, nome figlio e ID figlio.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Parametri**
+
+- `table_name`: Nome della tabella per la quale si desidera trovare i database associati.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
