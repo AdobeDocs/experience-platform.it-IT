@@ -2,7 +2,8 @@
 title: Account correlati in Real-Time CDP B2B Edition
 type: Documentation
 description: Una panoramica e ulteriori informazioni sulla funzione relativa agli account in Experience Platform Real-time CDP B2B.
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 5%
@@ -53,4 +54,4 @@ Consulta la documentazione per ulteriori informazioni sul [come trovare account 
 
 Puoi utilizzare account e account correlati nella segmentazione. La decisione di utilizzare account correlati nelle definizioni dei segmenti dipende dal tuo caso d’uso di marketing. Ad esempio, puoi utilizzare account correlati per campagne di marketing e-mail o pubblicitarie in cui puoi accettare una precisione inferiore in cambio di una portata più ampia.
 
-Vedi [esempio di segmentazione](/help/rtcdp/segmentation/b2b.md#related-account) che utilizza account correlati.
+Vedi [esempio di segmentazione](/help/rtcdp/segmentation/b2b.md#related-accounts) che utilizza account correlati.

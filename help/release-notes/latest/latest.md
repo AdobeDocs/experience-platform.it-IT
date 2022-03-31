@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 6%
@@ -53,7 +53,7 @@ Ulteriori informazioni sulla funzione nelle seguenti pagine della documentazione
 
 - [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-account)
+- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Per ulteriori informazioni su Real-time CDP B2B Edition, consulta la sezione [panoramica](../../rtcdp/overview.md).
 
