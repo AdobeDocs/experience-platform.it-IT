@@ -1,11 +1,12 @@
 ---
 keywords: Indirizzo IP, intervallo IP, destinazioni di elenco consentiti, inserire nell'elenco Consentiti, destinazioni di streaming inserire nell'elenco Consentiti
-title: 'ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming '
+title: inserire nell'elenco Consentiti dell’indirizzo IP per le destinazioni di streaming
 type: Documentation
-description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati dall’Experience Platform all’endpoint API REST HTTP.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati dall’Experience Platform all’endpoint API REST HTTP, all’istanza Kinesis Amazon o Hubs evento di Azure.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
