@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1156'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,18 @@ Nel dashboard Profili viene visualizzata un’istantanea dei dati dell’attribu
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sulle dashboard Profiles , consulta [Panoramica delle dashboard dei profili](../../dashboards/guides/profiles.md).
+
+## Raccolta dati {#data-collection}
+
+Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network, da cui arricchire, trasformare e distribuire a destinazioni Adobi o non Adobi.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Impostazioni del datastream globale | È ora possibile configurare diverse nuove impostazioni globali durante la configurazione di un datastream: posizione geografica, cookie ID di prime parti e sincronizzazione ID di terze parti. Vedi la sezione su [configurazione di un datastream](../../edge/fundamentals/datastreams.md#configure) nella guida dell’interfaccia utente di Datastreams per ulteriori informazioni. |
+
+Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
 ### Dashboard delle destinazioni
 
