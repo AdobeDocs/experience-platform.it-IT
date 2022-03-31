@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;guida introduttiva;ai contenuti;ai e-commerce;contenuto e ai-commerce;estrazione di parole chiave;estrazione di parole chiave
-solution: Intelligent Services
+solution: Experience Platform
 title: Estrazione di parole chiave nell’API Content and Commerce AI
 topic-legacy: Developer guide
 description: Il servizio di estrazione delle parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono al meglio l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%
