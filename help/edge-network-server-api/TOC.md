@@ -5,7 +5,7 @@ user-guide-title: Guida all'API di Adobe Experience Platform Edge Network Server
 breadcrumb-title: Guida all’API di Adobe Experience Platform Edge Network Server
 user-guide-description: 'Interagire con i servizi Experience Cloud tramite l’API server di rete Edge '
 feature: Data Collection
-source-git-commit: a8a6681e878932c03ed9a2e59527e2adc565a28e
+source-git-commit: 8ea9877fd7dc00b4f5e7b1c974bb3743ce4e1356
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 10%
@@ -13,9 +13,9 @@ ht-degree: 10%
 ---
 
 
-# API server di rete Edge {#server-api}
+# API server di rete Edge {#edge-network-server-api}
 
-* API server di rete Edge {#server-api}
+* API server di rete Edge {#edge-network-server-api}
    * [Panoramica](overview.md)
    * [Autenticazione](authentication.md)
    * Raccolta dati {#server-api-data-collection}
