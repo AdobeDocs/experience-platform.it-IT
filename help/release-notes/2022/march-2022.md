@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 6%
@@ -94,18 +94,6 @@ Nel dashboard Profili viene visualizzata un’istantanea dei dati dell’attribu
 
 Per ulteriori informazioni sulle dashboard Profiles , consulta [Panoramica delle dashboard dei profili](../../dashboards/guides/profiles.md).
 
-## Raccolta dati {#data-collection}
-
-Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network, da cui arricchire, trasformare e distribuire a destinazioni Adobi o non Adobi.
-
-**Nuove funzioni**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Impostazioni del datastream globale | È ora possibile configurare diverse nuove impostazioni globali durante la configurazione di un datastream: posizione geografica, cookie ID di prime parti e sincronizzazione ID di terze parti. Vedi la sezione su [configurazione di un datastream](../../edge/fundamentals/datastreams.md#configure) nella guida dell’interfaccia utente di Datastreams per ulteriori informazioni. |
-
-Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
-
 ### Dashboard delle destinazioni
 
 Nel dashboard Destinazioni viene visualizzata un&#39;istantanea delle destinazioni abilitate dall&#39;organizzazione in Experience Platform.
@@ -119,6 +107,18 @@ Nel dashboard Destinazioni viene visualizzata un&#39;istantanea delle destinazio
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sulle dashboard Destinazioni in Platform, consulta [Panoramica delle dashboard delle destinazioni](../../dashboards/guides/destinations.md).
+
+## Raccolta dati {#data-collection}
+
+Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network, da cui arricchire, trasformare e distribuire a destinazioni Adobi o non Adobi.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Impostazioni del datastream globale | È ora possibile configurare diverse nuove impostazioni globali durante la configurazione di un datastream: posizione geografica, cookie ID di prime parti e sincronizzazione ID di terze parti. Vedi la sezione su [configurazione di un datastream](../../edge/fundamentals/datastreams.md#configure) nella guida dell’interfaccia utente di Datastreams per ulteriori informazioni. |
+
+Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
