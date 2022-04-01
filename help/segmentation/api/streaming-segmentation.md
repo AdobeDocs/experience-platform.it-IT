@@ -5,9 +5,9 @@ title: 'Valutare gli eventi in tempo reale con Segmentazione in streaming '
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
+source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1896'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,9 @@ Segmentazione streaming su [!DNL Adobe Experience Platform] consente ai clienti 
 
 >[!NOTE]
 >
->La segmentazione in streaming può essere utilizzata solo per valutare i dati trasmessi in streaming in Platform. In altre parole, i dati acquisiti tramite l’acquisizione batch non verranno valutati tramite la segmentazione in streaming e verranno valutati insieme al lavoro segmentato pianificato ogni sera.
+>La segmentazione in streaming funziona su tutti i dati acquisiti tramite un’origine streaming. I segmenti acquisiti utilizzando un’origine basata su batch verranno valutati ogni notte, anche se idonei per la segmentazione in streaming.
+>
+>Inoltre, i segmenti valutati con la segmentazione in streaming possono variare tra l’appartenenza ideale e l’appartenenza effettiva se il segmento è basato su un altro segmento valutato utilizzando la segmentazione in batch. Ad esempio, se il segmento A è basato sul segmento B e il segmento B viene valutato utilizzando la segmentazione batch, poiché il segmento B viene aggiornato solo ogni 24 ore, il segmento A si allontanerà ulteriormente dai dati effettivi fino a quando non viene sincronizzato nuovamente con l’aggiornamento del segmento B.
 
 ## Introduzione
 
