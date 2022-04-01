@@ -5,10 +5,10 @@ user-guide-title: Raccolta dati di Adobe Experience Platform
 breadcrumb-title: Guida alla raccolta dei dati
 user-guide-description: Abilita la raccolta dati lato client per Adobe Experience Platform Edge Network.
 feature: Data Collection
-source-git-commit: 602617f857800bdc39869f5597bc88ba3ed7f66f
+source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 68%
+source-wordcount: '74'
+ht-degree: 44%
 
 ---
 
@@ -21,3 +21,15 @@ ht-degree: 68%
 - Identificazione visitatore {#visitor-identification}
    - [Panoramica](visitor-identification.md)
    - [Identificazione dei visitatori tramite FPID](visitor-identification-fpid.md)
+- API server di rete Edge {#edge-network-server-api}
+   - [Panoramica](overview.md)
+   - [Autenticazione](authentication.md)
+   - Raccolta dati {#server-api-data-collection}
+      - [Raccolta dati a evento singolo](interactive-data-collection.md)
+      - [Raccolta dati evento batch](non-interactive-data-collection.md)
+   - Interazione con altre soluzioni Adobe {#interacting-other-adobe-solutions}
+      - [Interazione con Adobe Analytics](interacting-adobe-analytics.md)
+      - [Interazione con Adobe Experience Platform](interacting-experience-platform.md)
+   - [Interazione con soluzioni di terze parti](interacting-third-party-solutions.md)
+   - [Gestione degli errori](error-handling.md)
+   - [Risoluzione dei problemi](troubleshooting.md)
