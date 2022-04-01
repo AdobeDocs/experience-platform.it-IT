@@ -1,11 +1,11 @@
 ---
-title: Configurare il Datastream per l'SDK Web di Experience Platform
-description: 'Scopri come configurare i Datastreams. '
-keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;impostazioni Analytics Blockreport id suite;
+title: Configurare un Datastream
+description: Collega l’integrazione Experience Platform SDK lato client con prodotti Adobe e destinazioni di terze parti.
+keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;destinazioni Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;Mapper DM;Mapper sul bordo;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
@@ -60,13 +60,13 @@ Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare controlli aggiuntiv
 | [!UICONTROL Cookie ID di prime parti] | Quando questa impostazione è abilitata, indica alla rete Edge di fare riferimento a un cookie specificato durante la ricerca di un [ID dispositivo di prime parti](../identity/first-party-device-ids.md), anziché cercare questo valore nella mappa identità.<br><br>Quando abiliti questa impostazione, devi fornire il nome del cookie in cui deve essere memorizzato l’ID. |
 | [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire l’esecuzione di sincronizzazioni ID diverse in momenti diversi. Quando abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per questo datastream. |
 
-Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi l’SDK di Mobile o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
+Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei dati a uno schema evento Platform selezionato. Se utilizzi Mobile SDK o non stai configurando il datastream per Platform, seleziona **[!UICONTROL Salva]** prima di passare alla sezione successiva del [aggiunta di servizi al datastream](#add-services).
 
 ### Preparazione per la raccolta dei dati {#data-prep}
 
 >[!IMPORTANT]
 >
->La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK di Mobile.
+>La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK per dispositivi mobili.
 
 Data Prep è un servizio di Experience Platform che consente di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Quando configuri un datastream abilitato per Platform, puoi utilizzare le funzionalità di preparazione dei dati per mappare i dati di origine su XDM durante l’invio a Platform Edge Network.
 
@@ -78,13 +78,78 @@ Le sottosezioni seguenti descrivono i passaggi di base per la mappatura dei dati
 
 #### [!UICONTROL Seleziona dati]
 
-Seleziona **[!UICONTROL Salvare e aggiungere mappature]** dopo aver completato [passaggio di configurazione di base](#configure)e **[!UICONTROL Seleziona dati]** viene visualizzato il passaggio . Da qui, devi fornire un oggetto JSON di esempio che rappresenti la struttura dei dati che intendi inviare a Platform. È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollare l’oggetto non elaborato nella casella di testo fornita.
+Seleziona **[!UICONTROL Salvare e aggiungere mappature]** dopo aver completato [passaggio di configurazione di base](#configure)e **[!UICONTROL Seleziona dati]** viene visualizzato il passaggio . Da qui, devi fornire un oggetto JSON di esempio che rappresenti la struttura dei dati che intendi inviare a Platform.
+
+È necessario creare questo oggetto JSON in modo da mappare le proprietà nel livello dati che si desidera acquisire. Selezionare la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente.
+
+++File JSON di esempio
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >L&#39;oggetto JSON deve avere un singolo nodo principale `data` per passare la convalida.
 
-Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
+È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollare l’oggetto non elaborato nella casella di testo fornita. Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
 
 ![Esempio JSON di dati in arrivo previsti](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ Quindi, seleziona l’icona dello schema (![Icona Schema](../images/datastreams/
 Viene visualizzata nuovamente la pagina di mappatura con la mappatura del campo completata. La **[!UICONTROL Avanzamento mappatura]** aggiornamenti della sezione per riflettere il numero totale di campi mappati correttamente.
 
 ![Campo mappato con avanzamento riflesso](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Se si desidera mappare una matrice di oggetti (nel campo di origine) a una matrice di oggetti diversi (nel campo di destinazione), aggiungere `[*]` dopo il nome della matrice nei percorsi dei campi di origine e di destinazione, come illustrato di seguito.
+>
+>![Mappatura degli oggetti array](../images/datastreams/array-object-mapping.png)
 
 Continua seguendo i passaggi precedenti per mappare il resto dei campi allo schema di destinazione. Anche se non è necessario mappare tutti i campi di origine disponibili, per completare questo passaggio è necessario mappare tutti i campi dello schema di destinazione impostati come necessario. La **[!UICONTROL Campi obbligatori]** contatore indica quanti campi obbligatori non sono ancora stati mappati nella configurazione corrente.
 
