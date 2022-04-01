@@ -5,9 +5,9 @@ title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 topic-legacy: policies
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,18 @@ La governance dei dati di Adobe Experience Platform offre un’interfaccia utent
 
 Questa guida richiede una buona comprensione dei seguenti elementi [!DNL Experience Platform] concetti:
 
-- [Governance dei dati](../home.md)
-- [Criteri di utilizzo dei dati](./overview.md)
+* [Governance dei dati](../home.md)
+* [Criteri di utilizzo dei dati](./overview.md)
 
 ## Visualizza criteri esistenti {#view-policies}
 
 In [!DNL Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Criteri]** per aprire **[!UICONTROL Criteri]** workspace. In **[!UICONTROL Sfoglia]** puoi visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
 
 ![](../images/policies/browse-policies.png)
+
+Se hai accesso ai criteri di consenso (attualmente in versione beta), seleziona la **[!UICONTROL Criteri di consenso]** per visualizzarli nel [!UICONTROL Sfoglia] scheda .
+
+![](../images/policies/consent-policy-toggle.png)
 
 Selezionare un criterio elencato per visualizzarne la descrizione e il tipo. Se è selezionato un criterio personalizzato, vengono visualizzati controlli aggiuntivi per modificare, eliminare o [attiva/disattiva il criterio](#enable).
 
@@ -42,6 +46,14 @@ Selezionare un criterio elencato per visualizzarne la descrizione e il tipo. Se 
 Per creare un nuovo criterio di utilizzo dati personalizzato, selezionare **[!UICONTROL Crea criterio]** nell&#39;angolo in alto a destra del **[!UICONTROL Sfoglia]** nella scheda **[!UICONTROL Criteri]** workspace.
 
 ![](../images/policies/create-policy-button.png)
+
+A seconda che tu faccia parte della versione beta per i criteri di consenso, si verifica una delle seguenti situazioni:
+
+* Se non fai parte della versione beta, vieni immediatamente portato al flusso di lavoro per [creazione di una policy di governance dei dati](#create-governance-policy).
+* Se fai parte della versione beta, una finestra di dialogo fornisce un’opzione aggiuntiva per [creare un criterio di consenso](#consent-policy).
+   ![](../images/policies/choose-policy-type.png)
+
+### Creare un criterio di governance dei dati {#create-governance-policy}
 
 La **[!UICONTROL Crea criterio]** viene visualizzato il flusso di lavoro . Per iniziare, fornisci un nome e una descrizione per il nuovo criterio.
 
@@ -66,6 +78,59 @@ La **[!UICONTROL Revisione]** viene visualizzato un passaggio che consente di es
 La **[!UICONTROL Sfoglia]** viene visualizzata nuovamente la scheda , che ora elenca i criteri appena creati nello stato &quot;Bozza&quot;. Per abilitare il criterio, consulta la sezione successiva.
 
 ![](../images/policies/created-policy.png)
+
+### Creare un criterio di consenso (versione beta) {#consent-policy}
+
+>[!IMPORTANT]
+>
+>I criteri di consenso sono attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso.
+
+Se hai scelto di creare un criterio di consenso, viene visualizzata una nuova schermata che ti consente di configurare il nuovo criterio.
+
+![](../images/policies/consent-policy-dialog.png)
+
+Per utilizzare i criteri di consenso, è necessario che nei dati del profilo siano presenti gli attributi di consenso. Consulta la guida su [elaborazione del consenso in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) per passaggi dettagliati su come includere gli attributi richiesti nello schema di unione.
+
+I criteri di consenso sono formati da due componenti logici:
+
+* **[!UICONTROL Se]**: La condizione che attiverà il controllo dei criteri. Questo può essere basato su una determinata azione di marketing in corso, sulla presenza di determinate etichette di utilizzo dei dati o su una combinazione di entrambe.
+* **[!UICONTROL Then]**: Attributi di consenso che devono essere presenti affinché un profilo sia incluso nell’azione che ha attivato il criterio.
+
+#### Configurare le condizioni
+
+Sotto la **[!UICONTROL Se]** seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Seleziona **[!UICONTROL Visualizza tutto]** e **[!UICONTROL Seleziona etichette]** per visualizzare l’elenco completo delle azioni di marketing e delle etichette disponibili, rispettivamente.
+
+Dopo aver aggiunto almeno una condizione, puoi selezionare **[!UICONTROL Aggiungi condizione]** per continuare ad aggiungere ulteriori condizioni, scegliere il tipo di condizione appropriato dal menu a discesa.
+
+![](../images/policies/add-condition.png)
+
+Se selezioni più di una condizione, puoi utilizzare l’icona visualizzata tra le due per passare dalla relazione condizionale &quot;AND&quot; alla &quot;OR&quot; e viceversa.
+
+![](../images/policies/and-or-selection.png)
+
+#### Selezionare gli attributi di consenso
+
+Sotto la **[!UICONTROL Then]** seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili siano inclusi nell’azione gestita da questo criterio. È possibile scegliere una delle opzioni fornite dall’elenco oppure selezionare **[!UICONTROL Visualizza tutto]** per scegliere l&#39;attributo direttamente dallo schema di unione.
+
+Quando selezioni l&#39;attributo di consenso, scegli i valori per l&#39;attributo per il quale desideri che questo criterio verifichi.
+
+![](../images/policies/select-schema-field.png)
+
+Dopo aver selezionato almeno un attributo di consenso, il **[!UICONTROL Proprietà dei criteri]** aggiornamenti del pannello per mostrare il numero stimato di profili consentiti in questo criterio, inclusa la percentuale del totale archivio profili. Questa stima viene aggiornata automaticamente quando si regola la configurazione dei criteri.
+
+![](../images/policies/audience-preview.png)
+
+Per aggiungere ulteriori attributi di consenso al criterio, seleziona **[!UICONTROL Aggiungi risultato]**.
+
+![](../images/policies/add-result.png)
+
+Puoi continuare ad aggiungere e regolare condizioni e attributi di consenso al criterio in base alle esigenze. Quando la configurazione è soddisfacente, fornisci un nome e una descrizione facoltative per il criterio prima di selezionare **[!UICONTROL Salva]**.
+
+![](../images/policies/name-and-save.png)
+
+Il criterio di consenso viene ora creato e il relativo stato è impostato su [!UICONTROL Disabilitato] per impostazione predefinita. Per abilitare immediatamente il criterio, seleziona la **[!UICONTROL Stato]** attiva la barra a destra.
+
+![](../images/policies/enable-consent-policy.png)
 
 ## Attivare o disattivare un criterio {#enable}
 

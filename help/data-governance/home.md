@@ -5,9 +5,9 @@ title: Panoramica sulla governance dei dati
 topic-legacy: overview
 description: La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno dell’Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Gli amministratori dei dati sono il cuore della governance dei dati. Questo ruol
 
 ### Addetto marketing
 
-Gli addetti al marketing sono il punto finale della governance dei dati. Richiedono i dati dall&#39;infrastruttura di governance dei dati creata da amministratori di dati, scienziati e ingegneri. Gli addetti al marketing includono diverse specialità nell’ambito del marketing, tra cui:
+Gli addetti al marketing sono il punto finale della governance dei dati. Richiedono i dati dall&#39;infrastruttura di governance dei dati creata da amministratori di dati, scienziati e ingegneri. Gli addetti al marketing comprendono diverse specialità nell’ambito del marketing, tra cui:
 
 * Gli analisti di marketing richiedono i dati per consentire la comprensione dei clienti, sia come individui che in gruppi (noti anche come segmenti).
 * Gli esperti marketing e i designer di esperienze utilizzano i dati per progettare nuove esperienze cliente.
@@ -76,15 +76,18 @@ Vedi la panoramica su [etichette di utilizzo dei dati](./labels/overview.md) per
 
 Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform].
 
-Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste un criterio che indica che tipi specifici di dati, come PII (Personally Identifiable Information), non possono essere esportati e un’etichetta &quot;I&quot; (Dati di identità) è stata applicata al set di dati, riceverai una risposta dal [!DNL Policy Service] che indica che è stata violata una policy di utilizzo dei dati.
+Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste una politica che indica che le informazioni personali (PII) non possono essere esportate e un&#39;etichetta &quot;I&quot; (dati di identità) è stata applicata al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che possa esportare il set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, il servizio criteri invia un messaggio che indica che è stato violato un criterio di utilizzo dei dati.
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare i criteri utilizzando [!DNL Policy Service] o [!DNL Experience Platform] interfaccia utente.
+Sono disponibili due tipi di criteri:
+
+* **[!UICONTROL Criteri di governance dei dati]**: Limita l’attivazione dei dati in base all’azione di marketing in corso e alle etichette di utilizzo dei dati in base ai dati in questione.
+* **[!UICONTROL Criterio di consenso] (Beta)**: Filtrare i profili a cui è possibile attivare [destinazioni](../destinations/home.md) in base al consenso o alle preferenze dei clienti.
+
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare i criteri utilizzando [!DNL Policy Service] o [!DNL Experience Platform] interfaccia utente. Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la sezione [panoramica dei criteri](./policies/overview.md).
 
 >[!IMPORTANT]
 >
 >Per impostazione predefinita, tutti i criteri di utilizzo dei dati (inclusi i criteri principali forniti da Adobe) sono disabilitati. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio.
-
-Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la sezione [panoramica dei criteri](./policies/overview.md).
 
 ## Passaggi successivi
 

@@ -5,9 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -31,10 +31,11 @@ Il diagramma seguente illustra come l’implementazione dei criteri viene integr
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica le violazioni dei criteri in base ai seguenti fattori:
+Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica le politiche applicabili in base ai seguenti fattori:
 
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
+<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
 
 >[!NOTE]
 >
@@ -62,9 +63,10 @@ Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribu
 | Fase di derivazione dei dati | Ruolo nell&#39;applicazione delle politiche |
 | --- | --- |
 | Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campo) che definiscono per quali casi d’uso può essere utilizzato l’intero set di dati o campi specifici. Le violazioni dei criteri si verificano se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio. |
-| Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Consulta la sezione [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. |
-| Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
-| Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (a volte denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio di utilizzo dei dati. In altre parole, il caso di utilizzo marketing definito per una destinazione determina quali criteri di utilizzo dei dati sono applicabili a tale destinazione. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili della destinazione di destinazione. |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+| Criteri di unione | I criteri di unione sono le regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Consulta la sezione [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. | | Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (talvolta denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, il caso di utilizzo marketing definito per una destinazione determina quali criteri di utilizzo dei dati e i criteri di consenso sono applicabili a tale destinazione. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili della destinazione di destinazione. |
 
 >[!IMPORTANT]
 >
@@ -75,6 +77,14 @@ Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribu
 Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati nell’interfaccia utente forniscono strumenti utili per esplorare la linea di dati che contribuiscono alla violazione per risolvere il problema. Ulteriori dettagli sono forniti nella sezione successiva.
 
 ## Messaggi di violazione dei criteri {#enforcement}
+
+<!-- (TO INCLUDE FOR PHASE 2)
+The sections below outline the different policy enforcement messages that appear in the Platform UI:
+
+* [Data usage policy violation](#data-usage-violation)
+* [Consent policy evaluation](#consent-policy-evaluation)
+
+### Data usage policy violation {#data-usage-violation} -->
 
 Se si verifica una violazione di criteri durante il tentativo di attivare un segmento (o [apportare modifiche a un segmento già attivato](#policy-enforcement-for-activated-segments)) l&#39;azione viene impedita e viene visualizzato un manifesto che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, la **[!UICONTROL Salva]** viene disattivato per l’entità che stai modificando fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
 
@@ -97,6 +107,20 @@ Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazi
 Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Vista a percorso]**.
 
 ![](../images/enforcement/list-view.png)
+
+<!-- (TO INCLUDE FOR PHASE 2)
+### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+
+Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+ -->
 
 ## Applicazione dei criteri per i segmenti attivati {#policy-enforcement-for-activated-segments}
 

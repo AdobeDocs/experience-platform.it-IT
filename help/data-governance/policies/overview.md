@@ -5,9 +5,9 @@ title: Panoramica dei criteri di utilizzo dei dati
 topic-legacy: policies
 description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentita l’esecuzione di dati all’interno di un Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 0%
 
 Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform].
 
+Sono disponibili due tipi di criteri:
+
+* **[!UICONTROL Criteri di governance dei dati]**: Limita l’attivazione dei dati in base all’azione di marketing in corso e alle etichette di utilizzo dei dati in base ai dati in questione.
+* **[!UICONTROL Criterio di consenso] (Beta)**: Filtrare i profili a cui è possibile attivare [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei clienti
+
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e collegamenti ad ulteriore documentazione per l’utilizzo dei criteri nell’interfaccia utente o API.
 
 ## Azioni di marketing {#marketing-actions}
@@ -23,7 +28,7 @@ Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo
 Le azioni di marketing (o casi di utilizzo del marketing) nel contesto del framework di governance dei dati sono azioni che [!DNL Experience Platform] il consumatore di dati può utilizzare, per i quali la tua organizzazione desidera limitare l’utilizzo dei dati. Di conseguenza, un criterio di utilizzo dei dati è definito come segue:
 
 1. Un’azione di marketing specifica
-2. Le etichette di utilizzo dei dati su cui è limitata l’esecuzione dell’azione
+2. Le condizioni alle quali tale azione è limitata dall&#39;esecuzione
 
 Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se è in vigore un criterio che indica che tipi specifici di dati (come PII (Personally Identifiable Information)) non possono essere esportati e si tenta di esportare un set di dati che contiene un’etichetta &quot;I&quot; (Dati di identità), si riceverà una risposta da [!DNL Policy Service] che indica che è stata violata una policy di utilizzo dei dati.
 
@@ -35,9 +40,9 @@ Quando si verifica un utilizzo dei dati nel servizio dell’organizzazione, è n
 
 >[!NOTE]
 >
->Se utilizzi [!DNL Real-time Customer Data Platform], puoi impostare casi d’uso di marketing sulle destinazioni per automatizzare l’applicazione dei criteri. Visualizza il documento in [Governance dei dati in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) per ulteriori informazioni.
+>Puoi impostare casi d’uso di marketing sulle destinazioni per automatizzare l’applicazione dei criteri. Consulta la sezione [documentazione sulle destinazioni](../../destinations/home.md) per ulteriori informazioni sulle opzioni di configurazione per la destinazione specifica.
 
-Vedi l&#39;appendice di questo documento per un elenco di [azioni di marketing definite da un Adobe disponibili](#core-actions). Puoi anche definire azioni di marketing personalizzate utilizzando [!DNL Policy Service] o [!DNL Experience Platform ]interfaccia utente. Ulteriori informazioni sull’utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
+Vedi l&#39;appendice di questo documento per un elenco di [azioni di marketing definite da un Adobe disponibili](#core-actions). Puoi anche definire azioni di marketing personalizzate utilizzando [!DNL Policy Service] o [!DNL Experience Platform] interfaccia utente. Ulteriori informazioni sull’utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -84,6 +89,6 @@ La tabella seguente descrive le azioni di marketing di base fornite out-of-the-b
 | Targeting e-mail | Un’azione che utilizza i dati nelle campagne di targeting e-mail. |
 | Esportazione verso terzi | Un’azione che esporta i dati a processori ed entità che non hanno relazioni dirette con i clienti. Molti fornitori di dati hanno termini nei contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. |
 | Pubblicità on-site | Un’azione che utilizza i dati per gli annunci onsite, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci pubblicitari. |
-| Personalizzazione on-site | Un’azione che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
+| Personalization on-site | Un’azione che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
 | Corrispondenza segmento | Un’azione che utilizza i dati per Adobe Experience Platform Segment Match (Corrispondenza segmento), che consente a due o più utenti di Platform di scambiare i dati dei segmenti. Attivando i criteri che fanno riferimento a questa azione, puoi limitare i dati utilizzati per la corrispondenza dei segmenti. Ad esempio, se il criterio principale &quot;Limita la condivisione dei dati&quot; è abilitato, qualsiasi dato con un [Etichetta C11](../labels/reference.md#c11) non può essere utilizzato per Segment Match (Corrispondenza segmento). |
-| Personalizzazione a identità singola | Un’azione che richiede l’utilizzo di una singola identità a scopo di personalizzazione anziché unire identità da più sorgenti. |
+| Personalization a identità singola | Un’azione che richiede l’utilizzo di una singola identità a scopo di personalizzazione anziché unire identità da più sorgenti. |
