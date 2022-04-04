@@ -1,11 +1,11 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Documentazione API server di rete Edge
 breadcrumb-title: Documentazione API server di rete Edge
 user-guide-description: Scopri cos’è l’API di Server di rete Edge e come utilizzarla.
 feature: Data Collection
-source-git-commit: 283de3a7dcebae0b5efee11e3ca736f0abe32e1f
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 11%

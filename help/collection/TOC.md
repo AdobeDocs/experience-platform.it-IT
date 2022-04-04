@@ -1,11 +1,11 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Raccolta dati di Adobe Experience Platform
 breadcrumb-title: Guida alla raccolta dei dati
 user-guide-description: Abilita la raccolta dati lato client per Adobe Experience Platform Edge Network.
 feature: Data Collection
-source-git-commit: 4e827ef689b85310cc7d774c94c355a831417e03
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 68%
