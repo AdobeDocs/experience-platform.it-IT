@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
+source-git-commit: 7b4761e42b18b0aa8a54c4d72960b870d5655508
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 19%
 
 ---
@@ -21,24 +21,24 @@ ht-degree: 19%
    - [Query](api/queries.md)
    - [Parametri di connessione](api/connection-parameters.md)
    - [Query pianificate](api/scheduled-queries.md)
-   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
+   - [Viene eseguito per query pianificate](api/runs-scheduled-queries.md)
    - [Modelli di query](api/query-templates.md)
 - Interfaccia utente del servizio query {#ui}
    - [Panoramica dell’interfaccia utente](ui/overview.md)
    - [Guida utente dell’editor delle query](ui/user-guide.md)
-   - [Using Query Service credentials](ui/credentials.md)
+   - [Utilizzo delle credenziali del servizio query](ui/credentials.md)
    - [Generazione di set di dati dai risultati delle query](ui/create-datasets.md)
 - Best practice {#best-practices}
    - [Indicazioni generali per l’esecuzione delle query](best-practices/writing-queries.md)
-   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
+   - [Guida all&#39;organizzazione delle risorse dati](./best-practices/organize-data-assets.md)
    - [Utilizzo delle strutture di dati nidificate](best-practices/nested-data-structures.md)
    - [Blocco anonimo](best-practices/anonymous-block.md)
    - [Caricamento incrementale](best-practices/incremental-load.md)
    - [Deduplicazione dati](best-practices/deduplication.md)
 - Query di esempio {#sample-queries}
    - [Query Evento esperienza di esempio](sample-queries/experience-event.md)
-   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
-   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
+   - [Query Adobe Analytics di esempio](sample-queries/adobe-analytics.md)
+   - [Query Adobe Target di esempio](sample-queries/adobe-target.md)
 - Riferimento SQL {#sql}
    - [Panoramica SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
@@ -49,6 +49,7 @@ ht-degree: 19%
 - Connettere i client al servizio query {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [Visualizzatore Db](./clients/dbvisulaizer.md)
    - [Guardaroba](clients/looker.md)
    - [Postico](clients/postico.md)
    - [Power BI](clients/power-bi.md)

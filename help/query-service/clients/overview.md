@@ -5,8 +5,7 @@ title: Connetti client al servizio query
 topic-legacy: connect
 description: Questo documento spiega come connettersi a Query Service da diverse applicazioni client desktop e come verificare tali connessioni.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 76687d46508ea641ecb6f9b090cea228f8bbe549
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -15,11 +14,12 @@ ht-degree: 0%
 
 # Connetti i client a [!DNL Query Service]
 
-Questa sezione spiega come connettersi a [!DNL Query Service] da diverse applicazioni client desktop e come verificare tali connessioni. [!DNL Query Service] utilizza il  [!DNL PostgreSQL] protocollo, pertanto le istruzioni contenute in questa sezione spiegano come utilizzare  [!DNL PostgreSQL] strumenti e driver per connettersi e scrivere query.
+Questa sezione spiega come connettersi a [!DNL Query Service] da diverse applicazioni client desktop e come verificare tali connessioni. [!DNL Query Service] utilizza [!DNL PostgreSQL] quindi le istruzioni contenute in questa sezione spiegano come utilizzare [!DNL PostgreSQL] strumenti e driver per la connessione e la scrittura di query.
 
 Vengono fornite istruzioni per i seguenti client:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL DbVisualizer]](./dbvisulaizer.md)
 - [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
 - [[!DNL Power BI (PC)]](./power-bi.md)

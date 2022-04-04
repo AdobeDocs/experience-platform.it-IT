@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 87ec2ab37105aefc52abe102d45fd124492ac79f
+source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
 workflow-type: tm+mt
 source-wordcount: '1127'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ La **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 - **[!UICONTROL Comando PSQL]**: Comando che ha inserito automaticamente tutte le informazioni pertinenti per la connessione a Query Service tramite PSQL nella riga di comando.
 - **[!UICONTROL Scadenza]**: Data di scadenza delle credenziali in scadenza. Le credenziali scadono 24 ore dopo la generazione.
 
-## Credenziali non in scadenza
+## Credenziali non in scadenza {#non-expiring-credentials}
 
 È possibile utilizzare le credenziali non in scadenza per impostare una connessione più permanente a un client esterno.
 
@@ -113,7 +113,7 @@ La tabella seguente delinea i parametri generalmente necessari per la connession
 | Parametro | Descrizione |
 |---|---|
 | Server/Host | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</ul></li> |
-| Porta | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per la porta è `80`.</ul></li> |
+| Porta  | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per la porta è `80`.</ul></li> |
 | Database | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e viene trovato in **[!UICONTROL Database]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per il database è `prod:all`.</ul></li> |
 | Nome utente | Nome utente per l’utente che si connette al client esterno. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle in scadenza. Si presenta sotto forma di una stringa alfanumerica prima `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li></ul> |
 | Password | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
