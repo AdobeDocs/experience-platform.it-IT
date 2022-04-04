@@ -1,98 +1,98 @@
 ---
 keywords: SFTP;sftp
-title: SFTP connection
-description: Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+title: Connessione SFTP
+description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
+source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '557'
 ht-degree: 1%
 
 ---
 
-# SFTP connection
+# Connessione SFTP
 
 ## Panoramica {#overview}
 
-Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
-> [!DNL Amazon S3][!DNL Azure Blob]
+> Sebbene Adobe supporti le esportazioni di dati verso server SFTP, le posizioni di archiviazione cloud consigliate per esportare i dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
-## Export type and frequency {#export-type-frequency}
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Export type | **** | [](../../ui/activate-batch-profile-destinations.md#select-attributes) |
-| Export frequency | **** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. [](/help/destinations/destination-types.md#file-based) |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
-![](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Tipo di esportazione basato su profilo SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Connect to the destination {#connect}
+## Collegati alla destinazione {#connect}
 
-[](../../ui/connect-destination.md)
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Parametri di connessione {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
->title="RSA public key"
->abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
+>title="Chiave pubblica RSA"
+>abstract="Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come stringa codificata Base64."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH key"
->abstract="The SSH key requires a Base64 string."
+>title="Chiave SSH"
+>abstract="La chiave SSH richiede una stringa Base64."
 
-[](../../ui/connect-destination.md)
+Quando [collegamento](../../ui/connect-destination.md) a questa destinazione, devi fornire le seguenti informazioni:
 
-#### Authentication information {#authentication-information}
+#### Informazioni di autenticazione {#authentication-information}
 
-****
+Se selezioni la **[!UICONTROL Autenticazione di base]** digita per connetterti al tuo percorso SFTP:
 
-![](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Autenticazione di base della destinazione SFTP](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* ****
-* ****
-* ****
-* **** [!DNL Base64]
-   * Esempio: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+* **[!UICONTROL Host]**: L&#39;indirizzo del percorso di archiviazione SFTP;
+* **[!UICONTROL Nome utente]**: Nome utente per accedere al percorso di archiviazione SFTP;
+* **[!UICONTROL Password]**: Password per accedere al percorso di archiviazione SFTP.
+* **[!UICONTROL Chiave di crittografia]**: Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come [!DNL Base64] stringa codificata.
+   * Esempio: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Di seguito è riportato un esempio di chiave PGP formattata correttamente, con la parte centrale abbreviata per la brevità.
 
-      ![](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![Chiave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
-****
+Se selezioni la **[!UICONTROL SFTP con chiave SSH]** tipo di autenticazione per la connessione al percorso SFTP:
 
-![](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![Autenticazione chiave SSH di destinazione SFTP](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-* ****
-* ****
-* ****
-* ****
-* **** [!DNL Base64]
-   * Esempio: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+* **[!UICONTROL Dominio]**: Inserisci l’indirizzo IP o il nome di dominio del tuo account SFTP
+* **[!UICONTROL Porta]**: La porta utilizzata dal percorso di archiviazione SFTP;
+* **[!UICONTROL Nome utente]**: Nome utente per accedere al percorso di archiviazione SFTP;
+* **[!UICONTROL Chiave SSH]**: Chiave SSH per accedere al percorso di archiviazione SFTP.
+* **[!UICONTROL Chiave di crittografia]**: Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come [!DNL Base64] stringa codificata.
+   * Esempio: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Di seguito è riportato un esempio di chiave PGP formattata correttamente, con la parte centrale abbreviata per la brevità.
 
-      ![](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![Chiave PGP](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Destination details {#destination-details}
+#### Dettagli della destinazione {#destination-details}
 
-After establishing the authentication connection to the SFTP location, provide the following information for the destination:
+Dopo aver stabilito la connessione di autenticazione per la posizione SFTP, fornisci le seguenti informazioni per la destinazione:
 
-![](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Dettagli di destinazione disponibili per la destinazione SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* ****
-* ****
-* ****
+* **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione nell’interfaccia utente di Experience Platform;
+* **[!UICONTROL Descrizione]**: inserire una descrizione della destinazione;
+* **[!UICONTROL Percorso cartella]**: inserisci il percorso della cartella nel percorso SFTP in cui verranno esportati i file.
 
-## Exported data {#exported-data}
+## Dati esportati {#exported-data}
 
-[!DNL SFTP]`.csv` [](../../ui/activate-batch-profile-destinations.md)
+Per [!DNL SFTP] destinazioni, Platform crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione sull’attivazione dei segmenti.
 
-## IP address allow list
+## ELENCO CONSENTITI di indirizzo IP
 
-[](ip-address-allow-list.md)
+Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di archiviazione cloud](ip-address-allow-list.md) se devi aggiungere IP di Adobe a un elenco consentiti.
