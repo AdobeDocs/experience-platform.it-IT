@@ -3,9 +3,9 @@ title: Configurare un Datastream
 description: Collega l’integrazione Experience Platform SDK lato client con prodotti Adobe e destinazioni di terze parti.
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;destinazioni Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;Mapper DM;Mapper sul bordo;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 1%
 
 ---
@@ -66,15 +66,22 @@ Il resto di questa sezione si concentra sui passaggi per eseguire il mapping dei
 
 >[!IMPORTANT]
 >
->La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK per dispositivi mobili.
+>La preparazione dei dati per la raccolta dei dati non è attualmente supportata per le implementazioni SDK di Mobile.
 
 Data Prep è un servizio di Experience Platform che consente di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Quando configuri un datastream abilitato per Platform, puoi utilizzare le funzionalità di preparazione dei dati per mappare i dati di origine su XDM durante l’invio a Platform Edge Network.
 
-Le sottosezioni seguenti descrivono i passaggi di base per la mappatura dei dati all’interno dell’interfaccia utente di raccolta dati. Per una guida completa su tutte le funzionalità di preparazione dei dati, comprese le funzioni di trasformazione per i campi calcolati, consulta la seguente documentazione:
+>[!NOTE]
+>
+>Per una guida completa su tutte le funzionalità di preparazione dei dati, comprese le funzioni di trasformazione per i campi calcolati, consulta la seguente documentazione:
+>
+>* [Panoramica sulla preparazione dei dati](../../data-prep/home.md)
+>* [Funzioni di mappatura della preparazione dei dati](../../data-prep/functions.md)
+>* [Gestione dei formati di dati con Data Prep](../../data-prep/data-handling.md)
 
-* [Panoramica sulla preparazione dei dati](../../data-prep/home.md)
-* [Funzioni di mappatura della preparazione dei dati](../../data-prep/functions.md)
-* [Gestione dei formati di dati con Data Prep](../../data-prep/data-handling.md)
+
+Le sottosezioni seguenti descrivono i passaggi di base per la mappatura dei dati all’interno dell’interfaccia utente di raccolta dati. Per una rapida dimostrazione di questi passaggi, fai riferimento al seguente video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Seleziona dati]
 
