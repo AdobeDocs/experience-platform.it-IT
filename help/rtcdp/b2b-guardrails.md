@@ -2,14 +2,14 @@
 keywords: profilo;profilo cliente in tempo reale;risoluzione dei problemi;protezioni;linee guida;limite;entità;entità primaria;entità dimensione;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;b2b;cdp;
 title: Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: 'Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello di dati relazionali tradizionale. Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i tuoi dati in modo da ottenere prestazioni di sistema ottimali utilizzando Real-time Customer Data Platform B2B Edition. '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
+description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i tuoi dati in modo da ottenere prestazioni di sistema ottimali utilizzando Real-time Customer Data Platform B2B Edition.
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
 

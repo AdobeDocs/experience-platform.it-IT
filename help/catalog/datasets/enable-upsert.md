@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti dei profili tramite API
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" al fine di eseguire aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '991'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 
 Questa esercitazione descrive il processo di abilitazione di un set di dati con funzionalità &quot;upsert&quot; per effettuare aggiornamenti ai dati del profilo cliente in tempo reale. Ciò include passaggi per la creazione di un nuovo set di dati e la configurazione di un set di dati esistente.
 
+>[!NOTE]
+>
+>Il flusso di lavoro upsert funziona solo per l’acquisizione batch. L’acquisizione in streaming è **not** supportato.
+
 ## Introduzione
 
 Questa esercitazione richiede una comprensione approfondita di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa a [!DNL Platform] servizi:
@@ -22,7 +26,7 @@ Questa esercitazione richiede una comprensione approfondita di diversi servizi A
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Catalog Service]](../../catalog/home.md): API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
-- [Acquisizione batch](../../ingestion/batch-ingestion/overview.md)
+- [Acquisizione batch](../../ingestion/batch-ingestion/overview.md): L’API di acquisizione in batch consente di inserire dati in Experience Platform come file batch.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per effettuare correttamente le chiamate alle API di Platform.
 
@@ -102,11 +106,11 @@ Una risposta corretta mostra un array contenente l’ID del set di dati appena c
 
 ## Configurare un set di dati esistente {#configure-an-existing-dataset}
 
-I passaggi seguenti spiegano come configurare un set di dati esistente abilitato per il profilo per la funzionalità di aggiornamento (&quot;upsert&quot;).
+I passaggi seguenti spiegano come configurare un set di dati esistente abilitato per il profilo per la funzionalità di aggiornamento (upsert).
 
 >[!NOTE]
 >
->Per configurare un set di dati abilitato per il profilo esistente per &quot;upsert&quot;, devi prima disabilitare il set di dati per il profilo e quindi riabilitarlo insieme al `isUpsert` tag . Se il set di dati esistente non è abilitato per Profilo, puoi procedere direttamente ai passaggi per [abilitazione del set di dati per Profilo e aggiornamento](#enable-the-dataset). Se non sei sicuro, i passaggi seguenti mostrano come verificare se il set di dati è già abilitato.
+>Per configurare un set di dati abilitato per il profilo esistente per l’aggiornamento, devi prima disabilitare il set di dati per il profilo e quindi riabilitarlo insieme al `isUpsert` tag . Se il set di dati esistente non è abilitato per Profilo, puoi procedere direttamente ai passaggi per [abilitazione del set di dati per Profilo e aggiornamento](#enable-the-dataset). Se non sei sicuro, i passaggi seguenti mostrano come verificare se il set di dati è già abilitato.
 
 ### Controlla se il set di dati è abilitato per Profilo
 
@@ -220,6 +224,7 @@ curl -X PATCH \
 ```
 
 **Risposta**
+
 Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. La `unifiedProfile` Il tag è stato disattivato.
 
 ```json
@@ -270,4 +275,4 @@ Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array conte
 
 ## Passaggi successivi
 
-Il set di dati abilitato per profili e per gli utenti può ora essere utilizzato dai flussi di lavoro di acquisizione in batch e in streaming per apportare aggiornamenti ai dati del profilo. Per ulteriori informazioni sull’acquisizione di dati in Adobe Experience Platform, consulta la sezione [panoramica sull’acquisizione dei dati](../../ingestion/home.md).
+Il tuo profilo e il set di dati abilitato per gli utenti possono ora essere utilizzati dai flussi di lavoro di acquisizione batch per effettuare aggiornamenti ai dati del profilo. Per ulteriori informazioni sull’acquisizione di dati in Adobe Experience Platform, consulta la sezione [panoramica sull’acquisizione dei dati](../../ingestion/home.md).

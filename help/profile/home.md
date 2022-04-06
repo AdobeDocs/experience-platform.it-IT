@@ -4,9 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Per ulteriori informazioni sui criteri di unione e sul loro ruolo all&#39;intern
 
 ### Schemi dell’Unione {#profile-fragments-and-union-schemas}
 
-Una delle caratteristiche principali di [!DNL Real-time Customer Profile] è la capacità di unificare dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un’entità, può fornire una visualizzazione unita di tutti i frammenti di profilo per tale entità nei set di dati, detta &quot;visualizzazione unione&quot; e resa possibile tramite quello che è noto come schema di unione.
+Una delle caratteristiche principali di [!DNL Real-time Customer Profile] è la capacità di unificare dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un’entità, può fornire una visualizzazione unita di tutti i frammenti di profilo per tale entità tra i set di dati, detta &quot;visualizzazione unione&quot; e resa possibile tramite quello che è noto come schema di unione.
 
 Per ulteriori informazioni sugli schemi di unione, tra cui come accedere agli schemi di unione nell’interfaccia utente, visita il [guida all’interfaccia utente per schema unione](ui/union-schema.md).
 
@@ -91,7 +91,7 @@ L’ingresso in tempo reale è possibile tramite un processo chiamato acquisizio
 
 ## Proiezioni del bordo
 
-Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando il [!DNL Real-time Customer Profile] API, fai riferimento alla [guida agli endpoint di proiezione edge](api/edge-projections.md).
+Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando [!DNL Real-time Customer Profile] API, fai riferimento alla [guida agli endpoint di proiezione edge](api/edge-projections.md).
 
 ## Inserimento di dati in [!DNL Profile]
 
@@ -107,7 +107,7 @@ Observability Insights consente di esporre le metriche chiave in Adobe Experienc
 
 ## Aggiorna dati archivio profili
 
-A volte può essere necessario aggiornare i dati nell’archivio profili della tua organizzazione. Ad esempio, potrebbe essere necessario correggere i record o modificare un valore di attributo. Questo può essere fatto tramite l’acquisizione in batch o in streaming e richiede un set di dati abilitato per il profilo configurato con un tag upsert. Per ulteriori informazioni su come configurare un set di dati per gli aggiornamenti degli attributi, consulta l’esercitazione per [abilitazione di un set di dati per profilo e aggiornamento](../catalog/datasets/enable-upsert.md).
+A volte può essere necessario aggiornare i dati nell’archivio profili della tua organizzazione. Ad esempio, potrebbe essere necessario correggere i record o modificare un valore di attributo. Questo può essere fatto tramite l’acquisizione batch e richiede un set di dati abilitato per il profilo configurato con un tag upsert. Per ulteriori informazioni su come configurare un set di dati per gli aggiornamenti degli attributi, consulta l’esercitazione per [abilitazione di un set di dati per profilo e aggiornamento](../catalog/datasets/enable-upsert.md).
 
 ## Governance dei dati e [!DNL Privacy]
 
