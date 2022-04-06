@@ -5,7 +5,7 @@ title: Panoramica dell’interfaccia utente di JupyterLab
 topic-legacy: Overview
 description: JupyterLab è un’interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Offre agli scienziati dei dati un ambiente di sviluppo interattivo per lavorare con i notebook Jupyter, il codice e i dati. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, nonché istruzioni per eseguire azioni comuni.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: aa81dfd3d52b17984a0e9fb3f8863dabc4fa44ef
+source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 3%
@@ -29,7 +29,7 @@ L’elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su Pl
 | **Kernel** | I kernel forniscono il blocco appunti e altri [!DNL JupyterLab] front-end consente di eseguire e analizzare il codice in diversi linguaggi di programmazione. [!DNL Experience Platform] fornisce kernel aggiuntivi per supportare lo sviluppo in [!DNL Python], R, PySpark e [!DNL Spark]. Consulta la sezione [cunicoli](#kernels) per ulteriori dettagli. |
 | **Accesso ai dati** | Accedi ai set di dati esistenti direttamente da [!DNL JupyterLab] con supporto completo per le funzionalità di lettura e scrittura. |
 | **[!DNL Platform]integrazione dei servizi** | Le integrazioni integrate consentono di utilizzare altre [!DNL Platform] servizi direttamente dall&#39;interno [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate viene fornito nella sezione su [Integrazione con altri servizi Platform](#service-integration). |
-| **Autenticazione** | Oltre a <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">Modello di sicurezza integrato di JupyterLab</a>, ogni interazione tra l’applicazione e l’Experience Platform, inclusa la comunicazione da servizio a servizio di Platform, viene crittografata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Autenticazione** | Oltre a <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">Modello di sicurezza integrato di JupyterLab</a>, ogni interazione tra l’applicazione e l’Experience Platform, inclusa la comunicazione da servizio a servizio di Platform, viene crittografata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Librerie di Sviluppo** | In [!DNL Experience Platform], [!DNL JupyterLab] fornisce librerie preinstallate per [!DNL Python], R e PySpark. Consulta la sezione [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
 | **Controller libreria** | Quando le librerie preinstallate non sono in grado di soddisfare le tue esigenze, è possibile installare librerie aggiuntive per Python e R e vengono temporaneamente archiviate in contenitori isolati per mantenere l&#39;integrità dei [!DNL Platform] e tieni i tuoi dati al sicuro. Consulta la sezione [cunicoli](#kernels) per ulteriori dettagli. |
 
