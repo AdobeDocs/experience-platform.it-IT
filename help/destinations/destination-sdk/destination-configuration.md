@@ -2,10 +2,10 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 5%
+source-wordcount: '1787'
+ht-degree: 4%
 
 ---
 
@@ -98,8 +98,8 @@ Questa è un esempio di configurazione di una destinazione di streaming fittizia
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Questa opzione consente di:
    * ID segmento;
    * Stato del segmento;
    * Identità o gruppi di identità.
+
+>[!NOTE]
+>
+>Quando utilizzi l’opzione di aggregazione configurabile per la destinazione, fai attenzione ai valori minimo e massimo che puoi utilizzare per i due parametri `maxBatchAgeInSecs` (minimo 1 800 e massimo 3 600) e `maxNumEventsInBatch` (minimo 1.000, massimo 10.000).
 
 Per spiegazioni dettagliate sui parametri di aggregazione, consulta la [Operazioni degli endpoint API delle destinazioni](./destination-configuration-api.md) pagina di riferimento, in cui è descritto ogni parametro.
 
