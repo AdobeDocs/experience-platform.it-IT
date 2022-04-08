@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform Query Service consente di connettersi con client ester
 
 È possibile utilizzare le credenziali in scadenza per configurare rapidamente una connessione a un client esterno.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![La scheda Credenziali dashboard Query con la sezione Credenziali in scadenza è evidenziata.](../images/ui/credentials/expiring-credentials.png)
 
 La **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 
@@ -55,7 +55,7 @@ Tutte le autorizzazioni necessarie sono ora configurate in Adobe Developer Conso
 
 Per creare un set di credenziali non in scadenza, torna all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla navigazione a sinistra per accedere al [!UICONTROL Query] workspace. Quindi, seleziona la **[!UICONTROL Credenziali]** scheda seguita da **[!UICONTROL Genera credenziali]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![Dashboard delle query con la scheda Credenziali e le credenziali Genera evidenziate.](../images/ui/credentials/generate-credentials.png)
 
 Viene visualizzata una finestra di dialogo che consente di generare le credenziali. Per creare credenziali non in scadenza, è necessario fornire i seguenti dettagli:
 
@@ -66,11 +66,11 @@ Viene visualizzata una finestra di dialogo che consente di generare le credenzia
 
 Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Genera credenziali]** per generare le credenziali.
 
-![](../images/ui/credentials/create-account.png)
+![Viene evidenziata la finestra di dialogo Genera credenziali.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Una volta che **[!UICONTROL Genera credenziali]** viene selezionato un file JSON di configurazione che viene scaricato nel computer locale. Dal momento che l&#39;Adobe lo fa **not** registrare le credenziali generate, è necessario memorizzare in modo sicuro il file scaricato e conservare un record delle credenziali.
+>Quando **[!UICONTROL Genera credenziali]** viene selezionato, un file JSON di configurazione viene scaricato nel computer locale. Dal momento che l&#39;Adobe lo fa **not** registrare le credenziali generate, è necessario memorizzare in modo sicuro il file scaricato e conservare un record delle credenziali.
 >
 >Inoltre, se le credenziali non vengono utilizzate per 90 giorni, verranno rimosse.
 
@@ -82,7 +82,7 @@ Il file JSON di configurazione contiene informazioni quali il nome dell’accoun
 
 Dopo aver salvato le credenziali generate, seleziona **[!UICONTROL Chiudi]**. È ora possibile visualizzare un elenco di tutte le credenziali non in scadenza.
 
-![](../images/ui/credentials/list-credentials.png)
+![La scheda Credenziali dashboard Query con la sezione Credenziali non in scadenza è espansa.](../images/ui/credentials/list-credentials.png)
 
 È possibile modificare o eliminare le credenziali non in scadenza. Per modificare una credenziale non in scadenza, seleziona l’icona a forma di matita (![](../images/ui/credentials/edit-icon.png)). Per eliminare una credenziale non in scadenza, seleziona l’icona Elimina (![](../images/ui/credentials/delete-icon.png)).
 
@@ -92,7 +92,7 @@ Quando si modifica una credenziale non in scadenza, viene visualizzato un modale
 - **[!UICONTROL Descrizione]**: (Facoltativo) Una descrizione delle credenziali che stai generando.
 - **[!UICONTROL Assegnato a]**: Utente a cui verranno assegnate le credenziali. Questo valore deve essere l&#39;indirizzo e-mail dell&#39;utente che sta creando le credenziali.
 
-![](../images/ui/credentials/update-credentials.png)
+![Finestra di dialogo Aggiorna account .](../images/ui/credentials/update-credentials.png)
 
 Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna account]** per completare l&#39;aggiornamento delle credenziali.
 
@@ -112,11 +112,11 @@ La tabella seguente delinea i parametri generalmente necessari per la connession
 
 | Parametro | Descrizione |
 |---|---|
-| Server/Host | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</ul></li> |
-| Porta  | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per la porta è `80`.</ul></li> |
-| Database | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e viene trovato in **[!UICONTROL Database]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per il database è `prod:all`.</ul></li> |
-| Nome utente | Nome utente per l’utente che si connette al client esterno. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle in scadenza. Si presenta sotto forma di una stringa alfanumerica prima `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li></ul> |
-| Password | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
+| **Server/Host** | Il nome del server/host a cui ti connetti. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si presenta sotto forma di `server.adobe.io`. Il valore si trova in **[!UICONTROL Host]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</ul></li> |
+| **Porta** | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per la porta è `80`.</ul></li> |
+| **Database** | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e viene trovato in **[!UICONTROL Database]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . Un valore di esempio per il database è `prod:all`.</ul></li> |
+| **Nome utente** | Nome utente per l’utente che si connette al client esterno. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle in scadenza. Si presenta sotto forma di una stringa alfanumerica prima `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li></ul> |
+| **Password** | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Passaggi successivi
 
