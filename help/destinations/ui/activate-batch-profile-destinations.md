@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
+source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -73,6 +73,16 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al segmento da 
 >title="Opzioni di esportazione file"
 >abstract="Seleziona **Esportare file completi** per esportare uno snapshot completo di tutti i profili idonei per il segmento. Seleziona **Esportare file incrementali** per esportare solo i profili qualificati per il segmento dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i profili idonei per il segmento, che agiscono come backfill. I file incrementali futuri includono solo i profili qualificati per il segmento a partire dalla prima esportazione di file incrementali."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Esportare file incrementali"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Attiva dopo la valutazione dei segmenti"
+>abstract="L’attivazione viene eseguita immediatamente dopo il completamento del processo di segmentazione giornaliera. In questo modo i profili più aggiornati vengono esportati. È necessario spostare questo puntatore nella nuova sezione di catena di attivazione per il collegamento corretto."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Attivazione pianificata"
+>abstract="L&#39;attivazione viene eseguita a un&#39;ora fissa del giorno. È necessario spostare questo puntatore nella nuova sezione di catena di attivazione per il collegamento corretto."
 
 Seleziona **[!UICONTROL Esportare file completi]** per attivare l’esportazione di un file contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
 
