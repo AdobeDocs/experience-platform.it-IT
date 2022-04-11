@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5254f100f59f1edb36e00d1475c2857a525fe79e
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3363'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dettagli dell&#39;esecuzione del dataflow"
 >abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche ."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Il flusso di dati viene eseguito per le destinazioni di streaming"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Il flusso di dati viene eseguito per le destinazioni di streaming"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
