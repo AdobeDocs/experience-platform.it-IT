@@ -1,62 +1,76 @@
 ---
 solution: Experience Platform
-title: Esplorare ed elaborare i dashboard della piattaforma di gestione dei dati grezzi
+title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Query Service
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profili, segmenti e destinazioni in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 1%
+source-wordcount: '848'
+ht-degree: 0%
 
 ---
 
-# Esplorare, verificare ed elaborare i set di dati del dashboard tramite Query Service
+# Esplorare, verificare ed elaborare i set di dati del dashboard utilizzando [!DNL Query Service]
 
-Adobe Experience Platform fornisce informazioni importanti sul profilo, sui segmenti e sulle destinazioni dell’organizzazione tramite dashboard disponibili nell’interfaccia utente di Experience Platform. Puoi quindi utilizzare Adobe Experience Platform Query Service per esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
+Adobe Experience Platform fornisce informazioni importanti sul profilo, sui segmenti e sulle destinazioni dell’organizzazione tramite dashboard disponibili nell’interfaccia utente di Experience Platform. È quindi possibile utilizzare Adobe Experience Platform [!DNL Query Service] per esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
 
-## Guida introduttiva a Query Service
+## Guida introduttiva a [!DNL Query Service]
 
-Adobe Experience Platform Query Service supporta gli addetti al marketing nell’acquisizione di informazioni dai loro dati consentendo l’utilizzo di SQL standard per eseguire query sui dati nel data lake. Query Service offre un’interfaccia utente e un’API che possono essere utilizzati per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovi set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’inserimento nel Profilo cliente in tempo reale.
+Adobe Experience Platform [!DNL Query Service] supporta gli esperti di marketing nell’acquisire informazioni dai propri dati consentendo l’utilizzo di SQL standard per eseguire query sui dati nel data lake. [!DNL Query Service] offre un’interfaccia utente e un’API che possono essere utilizzate per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovi set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’inserimento in Profilo cliente in tempo reale.
 
-Per ulteriori informazioni sul servizio query e sul suo ruolo all&#39;interno di Experience Platform, inizia leggendo la [Panoramica del servizio query](../query-service/home.md).
+Per ulteriori informazioni [!DNL Query Service] e il suo ruolo all&#39;interno dell&#39;Experience Platform, si prega di iniziare leggendo il [[!DNL Query Service] panoramica](../query-service/home.md).
 
-## Set di dati disponibili
+## Accesso ai set di dati disponibili
 
-Puoi utilizzare Query Service per eseguire query sui set di dati non elaborati per le dashboard di profili, segmenti e destinazioni. Nelle sezioni seguenti vengono descritti i set di dati non elaborati disponibili nel data lake.
+È possibile utilizzare [!DNL Query Service] per eseguire query sui set di dati non elaborati per le dashboard di profili, segmenti e destinazioni. Per visualizzare i set di dati disponibili, nell’interfaccia utente di Experience Platform, seleziona **Set di dati** nella navigazione a sinistra per aprire il dashboard Set di dati. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, compreso il nome, lo schema a cui è associato il set di dati e lo stato dell’acquisizione più recente.
+
+![Dashboard di ricerca set di dati con la scheda Set di dati evidenziata nel menu di navigazione a sinistra.](./images/query/browse-datasets.png)
+
+### Set di dati generati dal sistema
+
+>[!IMPORTANT]
+>
+>I set di dati generati dal sistema sono nascosti per impostazione predefinita. Per impostazione predefinita, la [!UICONTROL Sfoglia] La scheda mostra solo i set di dati in cui sono stati acquisiti i dati.
+
+Per visualizzare i set di dati generati dal sistema, seleziona l’icona del filtro (![Icona filtro.](./images/query/filter.png)) situata a sinistra della barra di ricerca.
+
+![La scheda Sfoglia set di dati con l’icona del filtro evidenziata.](./images/query/filter-datasets.png)
+
+Viene visualizzata una barra laterale contenente due pulsanti, [!UICONTROL Incluso nel profilo] e [!UICONTROL Mostra set di dati di sistema]. Seleziona l’interruttore per [!UICONTROL Mostra set di dati di sistema] per includere i set di dati generati dal sistema nell’elenco dei set di dati esplorabili.
+
+![La scheda Sfoglia set di dati con l’opzione Mostra set di dati di sistema evidenziata.](./images/query/show-system-datasets.png)
 
 ### Set di dati degli attributi del profilo
 
 Le informazioni sul dashboard dei profili sono legate ai criteri di unione definiti dall’organizzazione. Per ogni criterio di unione attivo, è disponibile un set di dati di attributi di profilo nel data lake.
 
-La convenzione di denominazione di questi set di dati è **Profilo-Snapshot-Export** seguita da un valore numerico alfanumerico casuale generato dal sistema. Ad esempio: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+La convenzione di denominazione di questi set di dati è **Profilo-Snapshot-Export** seguito da un valore numerico alfanumerico casuale generato dal sistema. Ad esempio: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Per comprendere lo schema completo di ciascun set di dati di esportazione dello snapshot del profilo, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzando il visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell&#39;interfaccia utente di Experience Platform.
+Per comprendere lo schema completo di ciascun set di dati di esportazione dello snapshot del profilo, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
 ![](images/query/profile-attribute.png)
 
 #### Mappatura dei set di dati degli attributi di profilo per unire gli ID dei criteri
 
-Ogni set di dati di attributi di profilo si intitola **Esportazione snapshot di profilo** seguito da un valore numerico alfanumerico casuale generato dal sistema. Ad esempio: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+Il valore alfanumerico assegnato a ciascun set di dati di attributi di profilo generato dal sistema è una stringa casuale mappata a un ID di criteri di unione di uno dei criteri di unione creati dalla tua organizzazione. La mappatura di ciascun ID criterio di unione alla stringa di set di dati dell’attributo di profilo corrispondente viene mantenuta in `adwh_dim_merge_policies` set di dati.
 
-Questo valore alfanumerico è una stringa casuale generata dal sistema e mappata su un ID di criteri di unione di uno dei criteri di unione creati dall&#39;organizzazione. La mappatura di ciascun ID criterio di unione alla relativa stringa di set di dati di attributi di profilo viene mantenuta nel set di dati `adwh_dim_merge_policies`.
-
-Il set di dati `adwh_dim_merge_policies` contiene i campi seguenti:
+La `adwh_dim_merge_policies` Il set di dati contiene i campi seguenti:
 
 * `merge_policy_name`
 * `merge_policy_id`
 * `merge_policy`
 * `dataset_id`
 
-Questo set di dati può essere esplorato utilizzando l’interfaccia utente dell’Editor query in Experience Platform. Per ulteriori informazioni sull’utilizzo dell’editor delle query, consulta la [Guida all’interfaccia utente dell’editor delle query](../query-service/ui/user-guide.md).
+Questo set di dati può essere esplorato utilizzando l’interfaccia utente dell’Editor query in Experience Platform. Per ulteriori informazioni sull’utilizzo dell’editor delle query, consulta [Guida all’interfaccia utente dell’editor delle query](../query-service/ui/user-guide.md).
 
 ### Set di dati dei metadati del segmento
 
 È disponibile un set di dati per metadati del segmento nel lago di dati contenente metadati per ciascuno dei segmenti della tua organizzazione.
 
-La convenzione di denominazione di questo set di dati è **Segmentdefinition-Snapshot-Export** seguita da un valore alfanumerico. Ad esempio: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
+La convenzione di denominazione di questo set di dati è **Segmentdefinition-Snapshot-Export** seguito da un valore numerico alfa. Ad esempio: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Per comprendere lo schema completo di ciascun set di dati per l’esportazione di snapshot di definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzando il visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo di ogni set di dati per l’esportazione di snapshot di definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
@@ -66,13 +80,13 @@ I metadati per tutte le destinazioni attivate della tua organizzazione sono disp
 
 La convenzione di denominazione di questo set di dati è **DIM_Destination**.
 
-Per comprendere lo schema completo del set di dati di destinazione DIM, puoi visualizzare in anteprima ed esplorare il set di dati [utilizzando il visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo del set di dati di destinazione DIM, puoi visualizzare in anteprima ed esplorare il set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
 ## Query di esempio
 
-Le query di esempio seguenti includono SQL di esempio che possono essere utilizzate in Query Service per esplorare, verificare ed elaborare i set di dati non elaborati che alimentano le dashboard.
+Le seguenti query di esempio includono un esempio di SQL che può essere utilizzato in [!DNL Query Service] per esplorare, verificare ed elaborare i set di dati non elaborati che alimentano le dashboard.
 
 ### Numero di profili per identità
 
@@ -126,6 +140,6 @@ Select
 
 ## Passaggi successivi
 
-Leggendo questa guida, ora puoi utilizzare Query Service per eseguire diverse query per esplorare ed elaborare i set di dati non elaborati che alimentano le dashboard di profili, segmenti e destinazioni.
+Leggendo questa guida, puoi ora utilizzare [!DNL Query Service] per eseguire diverse query per esplorare ed elaborare i set di dati non elaborati che alimentano le dashboard di profilo, segmenti e destinazioni.
 
 Per ulteriori informazioni su ogni dashboard e sulle relative metriche, seleziona una dashboard dall’elenco delle dashboard disponibili nella navigazione della documentazione.
