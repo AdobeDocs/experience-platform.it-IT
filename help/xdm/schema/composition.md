@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 3397e0ef79b585b828e794ca5f5d9e4c8ae470aa
+source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
 workflow-type: tm+mt
-source-wordcount: '3850'
+source-wordcount: '3838'
 ht-degree: 0%
 
 ---
@@ -230,7 +230,7 @@ Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincol
 
 >[!NOTE]
 >
->Il tipo di campo &quot;map&quot; consente la creazione di dati con coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe possono essere definite solo a livello di sistema, il che significa che è possibile incontrare una mappa in uno schema definito dal settore o dal fornitore, ma non è disponibile per l’uso nei campi definiti dall’utente. La [Guida per gli sviluppatori API del Registro di sistema dello schema](../api/getting-started.md) contiene ulteriori informazioni sulla definizione dei tipi di campo.
+>Il tipo di campo &quot;map&quot; consente la creazione di dati con coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe si trovano nelle classi XDM standard e nei gruppi di campi, ma è anche possibile definire mappe personalizzate utilizzando l&#39;API del Registro di sistema dello schema. Guarda l’esercitazione su [definizione di campi personalizzati](../tutorials/custom-fields-api.md#maps) per ulteriori informazioni.
 
 ## Esempio di composizione
 
