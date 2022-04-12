@@ -5,9 +5,9 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,13 @@ Le origini di archiviazione cloud possono importare i tuoi dati in Platform senz
 - [[!DNL Google PubSub] connettore](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage] connettore](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connettore](connectors/cloud-storage/sftp.md)
+
+### Consenso e preferenze {#consent}
+
+Experience Platform fornisce il supporto per l’acquisizione di dati da una piattaforma di gestione del consenso e delle preferenze di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### Gestione delle relazioni con i clienti (CRM) {#crm}
 
