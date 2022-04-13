@@ -4,7 +4,7 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Destinazioni create di recente]](#recently-created-destinations)
 * [[!UICONTROL Segmenti attivati di recente]](#recently-activated-segments)
 * [[!UICONTROL Segmenti attivati di recente per destinazione]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trends)
+* [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
 * [[!UICONTROL Segmenti non mappati per identità]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmenti mappati per identità]](#mapped-segments-by-identity)
 * [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)

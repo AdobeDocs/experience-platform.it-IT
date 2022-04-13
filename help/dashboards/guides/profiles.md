@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 0%
@@ -232,7 +232,7 @@ Questo widget mostra la proporzione di profili con completezza alta, media o bas
 
 ### (Beta) [!UICONTROL Tendenza alla completezza del profilo] {#profile-completeness-trend}
 
-Questo widget crea un grafico a colonne sovrapposto per rappresentare la tendenza della completezza del profilo nel tempo. La completezza è misurata dalla percentuale di attributi riempiti con valori non nulli tra tutti gli attributi osservati. Classifica la completezza del profilo come completezza elevata, media o bassa dall’ultima data di elaborazione.
+Questo widget crea un grafico a superfici sovrapposte per rappresentare la tendenza della completezza del profilo nel tempo. La completezza è misurata dalla percentuale di attributi riempiti con valori non nulli tra tutti gli attributi osservati. Classifica la completezza del profilo come completezza elevata, media o bassa dall’ultima data di elaborazione.
 
 L’asse x rappresenta il tempo, l’asse y rappresenta il numero di profili e i colori rappresentano i tre livelli di completezza del profilo.
 
