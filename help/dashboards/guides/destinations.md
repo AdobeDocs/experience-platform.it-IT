@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget rappresenta la
 Il secondo menu a discesa elenca ogni segmento disponibile che può essere inviato all’account di destinazione scelto nella parte superiore del dashboard.
 
 ![Il widget di tendenza della dimensione del pubblico.](../images/destinations/audience-size-trend.png)
+
+La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce un [!UICONTROL Sottotitoli] in alto a destra del widget. Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didascalie automatiche. Un modello di apprendimento automatico genera automaticamente didascalie per descrivere le tendenze chiave e gli eventi importanti analizzando il grafico e i dati dei segmenti.
+
+![Finestra di dialogo delle didascalie automatiche per il widget di tendenza Dimensione pubblico.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Segmenti non mappati per identità] {#unmapped-segments-by-identity}
 
