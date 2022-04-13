@@ -1,9 +1,10 @@
 ---
 title: Definire i campi XDM nell’API del Registro di sistema dello schema
 description: Scopri come definire campi diversi durante la creazione di risorse personalizzate Experience Data Model (XDM) nell’API del Registro di sistema dello schema.
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio 
 <table style="table-layout:auto">
   <tr>
     <th>Tipo XDM</th>
-    <th>Proprietà facoltative</th>
+    <th>Optional properties</th>
     <th>Esempio</th>
   </tr>
   <tr>
@@ -133,10 +134,15 @@ Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio 
   <tr>
     <td>[!UICONTROL Array]</td>
     <td></td>
-    <td>Matrice di tipi scalari di base (ad esempio stringhe):
+    <td>An array of basic scalar types (e.g. strings):
       <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "array", "items": { "type": "string" } }</pre>
-      Matrice di oggetti definita da un altro schema:<br/>
+"sampleField": {
+  "type": "array",
+  "items": {
+    "type": "string"
+  }
+}</pre>
+      An array of objects defined by another schema:<br/>
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "array", "items": { "$ref": "https://ns.adobe.com/xdm/data/paymentitem" } }</pre>
     </td>
@@ -155,7 +161,7 @@ Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio 
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>Un campo di tipo mappa è essenzialmente un campo di tipo oggetto con un set di chiavi non vincolato. Come gli oggetti, le mappe hanno un <code>type</code> valore <code>object</code>, ma <code>meta:xdmType</code> è impostato esplicitamente su <code>map</code>.<br><br>Una mappa <strong>non deve</strong> definire le proprietà. It <strong>deve</strong> definire un singolo <code>additionalProperties</code> schema per descrivere il tipo di valori contenuti nella mappa (ogni mappa può contenere un solo tipo di dati). La <code>type</code> deve essere <code>string</code> o <code>integer</code>.<br/><br/>Un campo mappa con valori di tipo stringa:
+    <td>Un campo di tipo mappa è essenzialmente un campo di tipo oggetto con un set di chiavi non vincolato. Like objects, maps have a <code>type</code> value of <code>object</code>, but their <code>meta:xdmType</code> is explicitly set to <code>map</code>.<br><br>Una mappa <strong>non deve</strong> definire le proprietà. It <strong>deve</strong> definire un singolo <code>additionalProperties</code> schema per descrivere il tipo di valori contenuti nella mappa (ogni mappa può contenere un solo tipo di dati). The <code>type</code> value must be either <code>string</code> or <code>integer</code>.<br/><br/>A map field with string-type values:
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "object", "meta:xdmType": "map", "additionalProperties":{ "type": "string" } }</pre>
     Per ulteriori informazioni sulla creazione di tipi di mappa personalizzati in XDM, consulta la sezione seguente.
@@ -165,16 +171,18 @@ Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio 
 
 ## Creazione di tipi di mappa personalizzati {#maps}
 
-Per supportare in modo efficiente i dati &quot;simili a mappe&quot; in XDM, gli oggetti possono essere annotati con un `meta:xdmType` impostato su `map` per chiarire che un oggetto deve essere gestito come se il set di chiavi non fosse vincolato. XDM pone le seguenti restrizioni all&#39;utilizzo di questo hint di archiviazione:
+Per supportare in modo efficiente i dati &quot;simili a mappe&quot; in XDM, gli oggetti possono essere annotati con un `meta:xdmType` impostato su `map` per chiarire che un oggetto deve essere gestito come se il set di chiavi non fosse vincolato. I dati acquisiti nei campi mappa devono utilizzare le chiavi stringa e solo i valori stringa o interi (come determinato da `additionalProperties.type`).
 
-* I tipi di mappa DEVONO essere di tipo `object`
-* I tipi di mappa NON DEVONO avere proprietà definite (in altre parole, definiscono oggetti &quot;vuoti&quot;)
-* I tipi di mappa DEVONO includere un singolo `additionalProperties` schema che descrive i valori che possono essere inseriti all&#39;interno della mappa
+XDM pone le seguenti restrizioni all&#39;utilizzo di questo hint di archiviazione:
+
+* I tipi di mappa DEVONO essere di tipo `object`.
+* I tipi di mappa NON DEVONO avere proprietà definite (in altre parole, definiscono oggetti &quot;vuoti&quot;).
+* I tipi di mappa DEVONO includere `additionalProperties.type` campo che descrive i valori che possono essere inseriti all&#39;interno della mappa, `string` o `integer`.
 
 Assicurati di utilizzare i campi di tipo mappa solo quando è assolutamente necessario, in quanto presentano i seguenti svantaggi prestazionali:
 
-* Il tempo di risposta da Adobe Experience Platform Query Service si degrada da tre secondi a dieci secondi per 100 milioni di record
-* Le mappe devono avere meno di 16 chiavi, altrimenti rischiano un ulteriore deterioramento
+* Il tempo di risposta da Adobe Experience Platform Query Service degrada da tre secondi a dieci secondi per 100 milioni di record.
+* Le mappe devono avere meno di 16 chiavi, altrimenti rischiano un ulteriore deterioramento.
 
 L’interfaccia utente di Platform presenta inoltre delle limitazioni nell’estrazione delle chiavi dei campi di tipo mappa. Mentre i campi di tipo oggetto possono essere espansi, le mappe vengono visualizzate come un singolo campo.
 
