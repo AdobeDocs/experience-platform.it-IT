@@ -7,9 +7,9 @@ description: Scopri come collegare Adobe Experience Platform a YOURSOURCE utiliz
 hide: true
 hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2300'
+source-wordcount: '2296'
 ht-degree: 3%
 
 ---
@@ -289,7 +289,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 

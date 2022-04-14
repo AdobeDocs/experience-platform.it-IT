@@ -3,9 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;OneTrust
 solution: Experience Platform
 title: (Beta) Crea un flusso di dati per un’origine di integrazione OneTrust utilizzando l’API del servizio di flusso
 description: Scopri come collegare Adobe Experience Platform all’integrazione OneTrust utilizzando l’API del servizio di flusso.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 2%
 
 ---
@@ -6794,7 +6795,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](../../../../../xdm/api/schemas.md).
 
@@ -7786,4 +7787,3 @@ curl -X DELETE \
 Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto.
 
 Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) alla connessione.
-

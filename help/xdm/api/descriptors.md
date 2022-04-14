@@ -5,9 +5,9 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: fecd57dde028dbcfa6b6f4481e6c2215ced36d4f
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1626'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ La `/descriptors` punto finale [!DNL Schema Registry] L’API ti consente di ges
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recupera un elenco di descrittori {#list}
 
