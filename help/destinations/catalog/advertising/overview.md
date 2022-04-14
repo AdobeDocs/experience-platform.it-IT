@@ -5,9 +5,9 @@ seo-title: Advertising destinations overview
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,12 @@ Quando ti connetti a una destinazione pubblicitaria, i tipi di pubblico vengono 
 
 Attualmente, Experience Platform supporta le destinazioni pubblicitarie elencate di seguito.
 
-Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
+Per comprendere la differenza tra connessioni ed estensioni, vedi [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
 
 ### Connessioni
 
-* [Connessione Google Display e Video 360](google-dv360.md)
+* [(Beta) Connessione dei criteri](criteo.md)
+* [Connessione Google Display &amp; Video 360](google-dv360.md)
 * [Connessione Google Ads](google-ads-destination.md)
 * [Connessione Google Ad Manager](google-ad-manager.md)
 * [Connessione Customer Match di Google](google-customer-match.md)
@@ -48,11 +49,11 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Estensione facebook Pixel](facebook-pixel.md)
 * [Estensione Flashtalk OneTag](flashtalking.md)
 * [Estensione Google Ads](google-ads-extension.md)
-* [Estensione Google Gtag](gtag-advertising.md)
+* [Estensione tag Google](gtag-advertising.md)
 * [Estensione linkedIn Insight Tag](linkedin.md)
 * [Estensione pinterest Conversion Tracking](pinterest-extension.md)
 * [Estensione tag twitter Universal Website](twitter-uwt.md)
 
 ## Connessione a una nuova destinazione pubblicitaria {#connect-destination}
 
-Per inviare segmenti alle destinazioni pubblicitarie per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sull&#39;impostazione di una nuova destinazione, consulta l&#39; [esercitazione sulla creazione di una destinazione](../../ui/connect-destination.md) .
+Per inviare segmenti alle destinazioni pubblicitarie per le campagne, Platform deve prima connettersi alla destinazione. Consulta la sezione [esercitazione sulla creazione di una destinazione](../../ui/connect-destination.md) informazioni dettagliate sulla configurazione di una nuova destinazione.

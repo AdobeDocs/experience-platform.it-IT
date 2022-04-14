@@ -4,10 +4,10 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -52,6 +52,7 @@ ht-degree: 9%
       * [Estensione Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Estensione Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Estensione ramo](./catalog/advertising/branch.md)
+      * [(Beta) Connessione dei criteri](./catalog/advertising/criteo.md)
       * [Estensione DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Estensione facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Estensione Flashtalk OneTag](./catalog/advertising/flashtalking.md)
@@ -118,7 +119,7 @@ ht-degree: 9%
       * [Collegamento Attributi del volo](./catalog/mobile-engagement/airship-attributes.md)
       * [Collegamento dei tag dell&#39;aeroporto](./catalog/mobile-engagement/airship-tags.md)
       * [Collegamento del freno](./catalog/mobile-engagement/braze.md)
-   * Destinazioni Personalization {#personalization}
+   * Destinazioni di personalizzazione {#personalization}
       * [Panoramica sulle destinazioni di personalizzazione](./catalog/personalization/overview.md)
       * [Connessione Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Estensione Adobe Target](./catalog/personalization/adobe-target.md)
