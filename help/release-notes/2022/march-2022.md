@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1193'
 ht-degree: 6%
 
 ---
@@ -117,6 +117,7 @@ Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati 
 | Funzione | Descrizione |
 | --- | --- |
 | Impostazioni del datastream globale | È ora possibile configurare diverse nuove impostazioni globali durante la configurazione di un datastream: posizione geografica, cookie ID di prime parti e sincronizzazione ID di terze parti. Vedi la sezione su [configurazione di un datastream](../../edge/fundamentals/datastreams.md#configure) nella guida dell’interfaccia utente di Datastreams per ulteriori informazioni. |
+| [API server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con Experience Platform Edge Network utilizzando un nuovo endpoint autenticato per fornire supporto a diversi casi d’uso di raccolta, personalizzazione, pubblicità e marketing dei dati. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
