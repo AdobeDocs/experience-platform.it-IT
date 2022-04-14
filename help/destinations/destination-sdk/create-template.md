@@ -1,10 +1,10 @@
 ---
-description: Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi.
+description: Come parte dell’Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi.
 title: Creare e testare un modello di trasformazione dei messaggi
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi. Per informazioni su come verificare la destinazione, consulta [Verifica la configurazione di destinazione](./test-destination.md).
+Come parte dell’Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi. Per informazioni su come verificare la destinazione, consulta [Verifica la configurazione di destinazione](./test-destination.md).
 
 A **creare e testare un modello di trasformazione dei messaggi** tra lo schema di destinazione in Adobe Experience Platform e il formato del messaggio supportato dalla destinazione, utilizza *Strumento per la creazione di modelli* descritto più avanti.  Ulteriori informazioni sulla trasformazione dei dati tra lo schema di origine e di destinazione nel [documento con formato messaggio](./message-format.md#using-templating).
 
-Di seguito è illustrato come creare e testare un modello di trasformazione dei messaggi si adatta all’interno di [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) in Destination SDK:
+Di seguito è illustrato come creare e testare un modello di trasformazione dei messaggi si adatta all’interno di [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) nella Destination SDK:
 
 ![Grafico in cui il passaggio crea modello si inserisce nel flusso di lavoro di configurazione della destinazione](./assets/create-template-step.png)
 
 ## Perché è necessario creare e testare un modello di trasformazione dei messaggi {#why-create-message-transformation-template}
 
-Uno dei primi passi nella creazione della destinazione in Destination SDK è pensare a come il formato dei dati per l’appartenenza al segmento, le identità e gli attributi di profilo viene trasformato quando si esporta da Adobe Experience Platform alla destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione nel [documento con formato messaggio](./message-format.md#using-templating).
+Uno dei primi passi nella creazione della destinazione in Destination SDK consiste nel pensare a come il formato dei dati per l’appartenenza al segmento, le identità e gli attributi di profilo viene trasformato quando si esporta da Adobe Experience Platform alla destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione nel [documento con formato messaggio](./message-format.md#using-templating).
 
 Affinché la trasformazione abbia successo, è necessario fornire un modello di trasformazione, simile a questo esempio: [Creare un modello che invia segmenti, identità e attributi di profilo](./message-format.md#segments-identities-attributes).
 
@@ -40,6 +40,7 @@ Prima di essere pronti per creare il modello, assicurati di completare i passagg
    * Utilizzo `maxUsersPerRequest` con un valore maggiore di uno se desideri che una chiamata API alla destinazione includa più profili, insieme alle relative qualifiche dei segmenti, identità e attributi di profilo.
 2. [Creare una configurazione di destinazione](./destination-configuration-api.md#create) e aggiungi l&#39;ID della configurazione del server di destinazione in `destinationDelivery.destinationServerId`.
 3. [Ottieni l&#39;ID della configurazione di destinazione](./destination-configuration-api.md#retrieve-list) che hai appena creato, in modo da poterlo utilizzare nello strumento di creazione del modello.
+4. Comprendere [quali funzioni e filtri è possibile utilizzare](./supported-functions.md) nel modello di trasformazione del messaggio.
 
 ## Come utilizzare l’API del modello di esempio e l’API del modello di rendering per creare un modello per la destinazione {#iterative-process}
 
