@@ -2,9 +2,10 @@
 keywords: Experience Platform;identità;servizio di identità;risoluzione dei problemi;protezioni;linee guida;limite;
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tasso per i dati del servizio Identity per facilitare l’uso ottimale del grafico di identità.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 3%
 
 ---
@@ -30,7 +31,7 @@ La tabella seguente delinea i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| Numero di identità in un grafico | 150 | Il grafico dell’identità non verrà aggiornato una volta raggiunto il limite. |
+| Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Il grafico dell’identità non verrà aggiornato una volta raggiunto il limite. |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di grafici | Nessuna | Non vi sono limiti al numero di grafici di identità che è possibile creare. |
