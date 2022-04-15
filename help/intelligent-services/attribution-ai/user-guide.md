@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2331'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Nell’anteprima del set di dati è presente un valore percentuale di completezz
 
 ### Selezionare un&#39;identità {#identity}
 
-Affinché più set di dati si possano unire tra loro, devi selezionare un tipo di identità (noto anche come &quot;namespace identità&quot;) e un valore di identità all’interno dello spazio dei nomi. Se hai assegnato più di un campo come identità all’interno dello schema sotto lo stesso spazio dei nomi, tutti i valori di identità assegnati vengono visualizzati nel menu a discesa Identità preceduto dallo spazio dei nomi, ad esempio `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+È ora possibile unire più set di dati tra loro in base alla mappa identità (campo ). È necessario selezionare un tipo di identità (noto anche come &quot;spazio dei nomi identità&quot;) e un valore di identità all’interno di tale spazio dei nomi. Se hai assegnato più di un campo come identità all’interno dello schema sotto lo stesso spazio dei nomi, tutti i valori di identità assegnati vengono visualizzati nel menu a discesa Identità preceduto dallo spazio dei nomi, ad esempio `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Affinché più set di dati si possano unire tra loro, devi selezionare un tipo d
 
 Per selezionare un&#39;identità, selezionare il valore sottolineato che si trova nella colonna identità. Viene visualizzato il puntatore di selezione di un&#39;identità.
 
-![seleziona lo stesso namespace](./images/user-guide/identity-type.png)
+![seleziona lo stesso namespace](./images/user-guide/aai-identity-map.png)
 
 Se in uno spazio dei nomi sono disponibili più identità, accertati di selezionare il campo di identità corretto per il caso d’uso. Ad esempio, due identità e-mail sono disponibili all’interno dello spazio dei nomi e-mail, un messaggio e-mail aziendale e personale. A seconda del caso d’uso, è più probabile che un’e-mail personale venga compilata ed è più utile nelle singole previsioni. Ciò significa che puoi selezionare `EMAIL (personalEmail.address)` come la tua identità.
 
-![Chiave del set di dati non selezionata](./images/user-guide/select-identity.png)
+![Chiave del set di dati non selezionata](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Esistono tre diversi tipi di dati di input utilizzati per definire gli eventi:
 
 ### Definire gli eventi di conversione {#define-conversion-events}
 
-Per definire un evento di conversione, devi assegnare un nome all’evento e selezionare il tipo di evento selezionando la **Immettere il nome del campo** menu a discesa.
+Per definire un evento di conversione, devi assegnare un nome all’evento e selezionare il tipo di evento selezionando il set di dati e il campo dalla **Selezionare un set di dati e un campo** menu a discesa.
 
-![menu a discesa sì](./images/user-guide/conversion_event_2.png)
+![menu a discesa sì](./images/user-guide/define-conversion-events.png)
 
 Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a destra di tale evento. Il secondo menu a discesa viene utilizzato per fornire ulteriore contesto all’evento attraverso le operazioni. Per questo evento di conversione, l’operazione predefinita *esiste* viene utilizzato.
 
@@ -133,6 +133,8 @@ Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a de
 >Una stringa sotto il tuo *nome conversione* viene aggiornato mentre definisci l’evento.
 
 ![nessun menu a discesa](./images/user-guide/conversion_event_1.png)
+
+Successivamente, puoi selezionare un set di dati combinato generato dalla combinazione di tutti i set di dati di input nel passaggio precedente. In alternativa, puoi selezionare una colonna basata su singoli set di dati dal **Selezionare un set di dati e un campo** menu a discesa.
 
 La **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** i pulsanti vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che stai definendo, potrebbe essere necessario utilizzare il **[!UICONTROL Aggiungi evento]** e **[!UICONTROL Aggiungi gruppo]** per fornire ulteriore contesto.
 
