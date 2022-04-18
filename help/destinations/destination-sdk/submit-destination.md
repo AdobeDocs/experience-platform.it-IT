@@ -2,10 +2,10 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione creata utilizzando Destination SDK.
 title: Invia per la revisione di una destinazione creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,14 @@ In questa pagina sono elencate tutte le informazioni da fornire durante l’invi
 * (Solo per integrazioni prodotte) una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
 * Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni Experience Platform.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione di destinazione è di 5 giorni lavorativi.
+>* Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione di destinazione è di cinque giorni lavorativi.
+>
+>* Se il team di Adobe richiede di eseguire eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, è necessario inviare un’altra richiesta di pubblicazione di destinazione dopo aver effettuato gli aggiornamenti.
+>
+>* Anche dopo che la destinazione è attiva nel catalogo di Experience Platform, se hai bisogno di apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione per far sì che gli aggiornamenti si riflettano nelle configurazioni.
+
 
 Puoi trovare informazioni dettagliate su ogni elemento nelle sezioni seguenti:
 
