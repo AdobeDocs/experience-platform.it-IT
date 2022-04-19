@@ -1,14 +1,14 @@
 ---
-keywords: 'pubblicità; critico; '
+keywords: pubblicità; critico;
 title: Connessione del criterio
 description: Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Connessione dei criteri
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da Criteo. Attualmente si tratta di un prodotto beta. Per qualsiasi domanda o richiesta di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
+>Questa pagina della documentazione è stata creata da Criteo. Attualmente si tratta di un prodotto beta e la funzionalità è soggetta a modifiche. Per qualsiasi domanda o richiesta di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l&#39;internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
 
@@ -24,7 +24,11 @@ Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze p
 
 * È necessario disporre di un account utente amministratore su [Centro di gestione dei criteri](https://marketing.criteo.com).
 * Avrai bisogno del tuo ID inserzionista Criteo (chiedi al tuo contatto Criteo se non hai questo ID).
-* Criteo accetta solo le e-mail SHA-256 e di testo normale (da trasformare in SHA-256 prima dell’invio). Non inviare alcun PII (Dati personali identificabili, come i nomi o i numeri di telefono dei singoli).
+
+## Limitazioni  {#limitations}
+
+* Criteo al momento non supporta la rimozione di utenti dal pubblico.
+* Solo i criteri accettano [!DNL SHA-256]e-mail con hash e di testo normale (da trasformare in [!DNL SHA-256] prima dell’invio). Non inviare alcun PII (Dati personali identificabili, come i nomi o i numeri di telefono dei singoli).
 
 ![Prerequisiti](../../assets/catalog/advertising/criteo/prerequisites.png)
 
