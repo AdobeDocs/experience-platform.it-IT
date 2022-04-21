@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destinazione kinesis;kinesis
 title: (Beta) Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale all’archiviazione Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,16 @@ Per ulteriori informazioni sul controllo dell&#39;accesso per [!DNL Kinesis] flu
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmentnames"
+>title="Includi nomi dei segmenti"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmenttimestamps"
+>title="Includi marche temporali del segmento"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
 
 Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 

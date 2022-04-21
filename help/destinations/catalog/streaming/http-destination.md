@@ -3,9 +3,9 @@ title: Connessione API HTTP (Beta)
 keywords: streaming;
 description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,36 @@ Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Pl
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Tipo di credenziali client"
+>abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta o **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza gli esempi nella documentazione."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="Intestazioni"
+>abstract="Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato: `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="Endpoint HTTP"
+>abstract="URL dell’endpoint HTTP a cui desideri inviare i dati del profilo."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="Includi nomi dei segmenti"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="Includi marche temporali del segmento"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Parametri query"
+>abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
 
 Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
