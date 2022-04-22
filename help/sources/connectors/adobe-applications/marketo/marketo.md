@@ -5,9 +5,9 @@ title: Connettore Marketo Engage
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del connettore di origine del Marketo Engage, con informazioni sull’autenticazione, la mappatura e la latenza dei dati.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,9 @@ Per connettersi [!DNL Marketo] su Platform, devi prima recuperare i valori per l
 
 Vedi i passaggi descritti nel [Autenticazione del connettore sorgente Marketo](./marketo-auth.md) per recuperare le credenziali.
 
-## Configurare la condivisione del pubblico di Adobe Experience Cloud
+## Configurare la mappatura dell&#39;organizzazione Adobe
 
-Prima di poter stabilire set di mappature per [!DNL Marketo], devi prima configurare Adobe Experience Cloud Audience Sharing. Per i passaggi dettagliati su come completare questa procedura, consulta la guida su [configurazione di Adobe Experience Cloud Audience Sharing per [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Prima di poter stabilire set di mappature per [!DNL Marketo], devi prima impostare Adobe Organization Mapping. Per i passaggi dettagliati su come completare questa procedura, consulta la guida su [configurazione di Adobe Organization Mapping per [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Experience Data Model (XDM)
 
