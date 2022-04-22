@@ -2,9 +2,9 @@
 title: Documentare la destinazione in Adobe Experience Platform
 description: Istruzioni dettagliate per creare una pagina di documentazione per la destinazione in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -20,24 +20,25 @@ Questa sezione della documentazione include:
 
 * Istruzioni dettagliate per creare una pagina di documentazione per la nuova destinazione;
 * Un modello da compilare per la destinazione;
-* [Istruzioni generali sull’uso di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Istruzioni specifiche per l’Adobe Sapore Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions)  (l’Adobe Sapore Markdown è molto simile al normale Markdown).
+* [Istruzioni generali sull’utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
+* [Istruzioni specifiche per l’Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (il sapore Adobe Markdown è molto simile al normale Markdown).
+* A [pagina delle best practice](./authoring-best-practices.md) per facilitare la creazione di una pagina di documentazione per la pagina di destinazione, che soddisfi gli standard Experienci Platform di qualità della documentazione.
 
 ## Prerequisiti {#prerequisites}
 
 Per creare la documentazione per la destinazione in base alle istruzioni contenute in questo articolo, sono necessari i seguenti elementi:
 
-* **Un account** GitHub. Iscriviti a [GitHub](https://github.com/) se non hai ancora un account.
-* **Desktop GitHub**. Se scegli di [creare la documentazione nell&#39;ambiente locale](./work-in-local-environment.md), devi utilizzare [GitHub Desktop](https://desktop.github.com/).
+* **Un account GitHub**. Iscriviti a [GitHub](https://github.com/) se non avete ancora un account.
+* **Desktop GitHub**. Se selezioni [creare la documentazione nell’ambiente locale](./work-in-local-environment.md), è necessario utilizzare [Desktop GitHub](https://desktop.github.com/).
 * L&#39;integrazione con Adobe deve trovarsi in una fase di test con la destinazione distribuita in un ambiente di staging in Adobe Experience Platform.
 
 ## Istruzioni di alto livello per creare la documentazione per la destinazione in Adobe Experience Platform {#high-level-instructions}
 
-Ad alto livello, per creare la documentazione per la destinazione, è necessario [creare un fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) dell&#39;archivio della documentazione di Adobe Experience Platform e modificare il [modello di documentazione fornito](./self-service-template.md) in un nuovo ramo. Utilizza il modello fornito dall’Adobe per creare una nuova pagina di destinazione. Apri una richiesta di pull (PR) quando sei pronto. Le istruzioni per eseguire questa operazione sono più avanti, in [Passaggi per creare la nuova pagina di destinazione](./documentation-instructions.md#steps-to-create-docs-page).
+Ad un livello elevato, per creare la documentazione per la tua destinazione, devi [creare un fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) dell’archivio della documentazione di Adobe Experience Platform e modifica il [modello di documentazione fornito](./self-service-template.md) in un nuovo ramo. Utilizza il modello fornito dall’Adobe per creare una nuova pagina di destinazione. Apri una richiesta di pull (PR) quando sei pronto. Le istruzioni per eseguire questa operazione sono più avanti, in [Passaggi per creare la nuova pagina di destinazione](./documentation-instructions.md#steps-to-create-docs-page).
 
 >[!TIP]
 >
->Consulta [Indicazioni sulla scrittura per Adobe Documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) per alcuni suggerimenti di scrittura rapida utilizzati dal team di documentazione di Adobe durante l&#39;authoring della documentazione.
+>Vedi [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) per alcuni suggerimenti di scrittura rapida utilizzati dal team della documentazione di Adobe durante l’authoring della documentazione.
 
 <!--
 
@@ -48,9 +49,9 @@ Ad alto livello, per creare la documentazione per la destinazione, è necessario
 
 ## Modello di documentazione {#documentation-template}
 
-Per aiutarti a creare la pagina della documentazione, Adobe ha precompilato un [modello di documentazione](./self-service-template.md). Di seguito, trovi istruzioni su come modificare il modello e aprire una richiesta di pull. Il team di documentazione di Adobe esaminerà e pubblicherà la documentazione per la nuova destinazione.
+Per aiutarti a creare la pagina della documentazione, Adobe ha precompilato un [modello di documentazione](./self-service-template.md) per te. Di seguito, trovi istruzioni su come modificare il modello e aprire una richiesta di pull. Il team di documentazione di Adobe esaminerà e pubblicherà la documentazione per la nuova destinazione.
 
-[Scarica il modello qui ](assets/yourdestination-template.zip) e decomprimi il file per estrarre il  `yourdestination.md` file.
+[Scarica il modello qui](assets/yourdestination-template.zip) e decomprimi il file per estrarre il `yourdestination.md` file.
 
 Di seguito sono riportate ulteriori istruzioni sull’utilizzo del modello per creare la pagina della documentazione.
 
