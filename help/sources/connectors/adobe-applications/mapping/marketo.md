@@ -5,16 +5,20 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 9%
+source-wordcount: '608'
+ht-degree: 8%
 
 ---
 
 # [!DNL Marketo Engage] mappature dei campi
 
 Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] set di dati e i campi XDM (Experience Data Model) corrispondenti.
+
+>[!TIP]
+>
+>Tutto [!DNL Marketo] set di dati eccetto `Activities` supporto `isDeleted`. I flussi di dati esistenti includeranno automaticamente `isDeleted`, ma acquisirà solo il flag per i nuovi dati acquisiti. Se desideri applicare il flag a tutti i dati storici, devi arrestare i flussi di dati esistenti e ricrearli con la nuova mappatura. Se rimuovi `isDeleted`, non potrai più accedere alla funzionalità . È fondamentale che la mappatura venga mantenuta dopo la compilazione automatica.
 
 ## Attività {#activities}
 
@@ -118,6 +122,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -148,6 +153,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,6 +183,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,6 +199,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -206,6 +214,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relazione |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -235,6 +244,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,6 +278,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -286,6 +297,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -338,6 +350,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Questo è un campo calcolato. |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
