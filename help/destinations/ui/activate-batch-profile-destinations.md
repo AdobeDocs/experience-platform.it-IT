@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
+source-git-commit: a4c70c00bf2c44abc292d189de013eb1a243bdb0
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -77,12 +77,12 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al segmento da 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Attiva dopo la valutazione dei segmenti"
->abstract="L’attivazione viene eseguita immediatamente dopo il completamento del processo di segmentazione giornaliera. In questo modo i profili più aggiornati vengono esportati. È necessario spostare questo puntatore nella nuova sezione di catena di attivazione per il collegamento corretto."
+>abstract="L’attivazione viene eseguita immediatamente dopo il completamento del processo di segmentazione giornaliera. In questo modo i profili più aggiornati vengono esportati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Attivazione pianificata"
->abstract="L&#39;attivazione viene eseguita a un&#39;ora fissa del giorno. È necessario spostare questo puntatore nella nuova sezione di catena di attivazione per il collegamento corretto."
+>abstract="L&#39;attivazione viene eseguita a un&#39;ora fissa del giorno."
 
 Seleziona **[!UICONTROL Esportare file completi]** per attivare l’esportazione di un file contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
 
