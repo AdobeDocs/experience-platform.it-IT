@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 11%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 11%
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
+      - [Connettore quadrato](connectors/payments/square.md)
    - Protocolli {#protocols}
       - [Connettore OData generico](connectors/protocols/odata.md)
       - [Connettore API REST generico](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 11%
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
+         - [Quadrato](tutorials/api/create/payments/square.md)
       - Protocolli {#protocols}
          - [OData generico](tutorials/api/create/protocols/odata.md)
          - [API REST generica](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 11%
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
+         - [Quadrato](tutorials/ui/create/payments/square.md)
       - Protocolli {#protocols}
          - [OData generico](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
