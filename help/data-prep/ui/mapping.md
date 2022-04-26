@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file c
 title: Guida all’interfaccia utente della preparazione dei dati
 description: Questo documento fornisce istruzioni su come utilizzare le funzioni di preparazione dei dati nell’interfaccia utente di Platform per mappare i file CSV su uno schema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -168,6 +168,34 @@ La **[!UICONTROL Crea campo calcolato]** viene visualizzato il pannello . La fin
 Puoi aggiungere manualmente campi, funzioni e operatori utilizzando l’editor espressioni al centro. Seleziona l’editor per iniziare a creare un’espressione. Al termine, seleziona **[!UICONTROL Salva]** per procedere.
 
 ![create-calculate-field](../images/ui/mapping/create-calculated-field.png)
+
+### Mappatura importazione {#import}
+
+Puoi riutilizzare la mappatura di un flusso di dati esistente per ridurre il tempo di configurazione manuale dell’inserimento dei dati e limitare gli errori. Seleziona **[!UICONTROL Mappatura importazione]** per riutilizzare una mappatura esistente.
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+La [!UICONTROL Mappatura importazione] viene visualizzata una finestra che fornisce un elenco di flussi di dati tra cui scegliere.
+
+Seleziona l’icona di anteprima per visualizzare in anteprima la mappatura del flusso di dati selezionato.
+
+![mappatura elenco](../images/ui/mapping/list-mapping.png)
+
+La finestra di anteprima consente di controllare la mappatura esistente prima di importarla nel flusso di dati. Una volta verificata la mappatura, puoi selezionare **[!UICONTROL Indietro]** per tornare all&#39;elenco dei flussi di dati ed esaminare un altro set di mappature, oppure puoi selezionare **[!UICONTROL Seleziona]** per procedere.
+
+![mappatura in anteprima](../images/ui/mapping/preview-mapping.png)
+
+In alternativa, è possibile selezionare la mappatura da importare dalla finestra elenco dei flussi di dati. Seleziona il flusso di dati contenente la mappatura da importare, quindi seleziona **[!UICONTROL Seleziona]** per procedere.
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+L’interfaccia viene aggiornata con la mappatura importata.
+
+>[!NOTE]
+>
+>Tutti i set di mappatura esistenti stabiliti o i consigli di mappatura ML vengono sostituiti dalla mappatura importata da un flusso di dati esistente.
+
+![importato dalla mappatura](../images/ui/mapping/mapping-imported.png)
 
 Seleziona **[!UICONTROL Anteprima dati]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 
