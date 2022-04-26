@@ -4,9 +4,9 @@ description: Scopri come aggiungere individualmente i campi dai gruppi di campi 
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->I flussi di lavoro descritti in questo documento sono attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+>I flussi di lavoro descritti in questo documento beta sono ora generalmente disponibili in Adobe Experience Platform. Per informazioni aggiornate sui flussi di lavoro basati su campi nell’Editor di schema, consulta [Guida all’interfaccia utente per gli schemi](./resources/schemas.md) invece. Questa guida verrà presto rimossa.
 
 Adobe Experience Platform fornisce un solido set di prodotti standardizzati [gruppi di campi](../schema/composition.md#field-group) da utilizzare negli schemi Experience Data Model (XDM). La struttura e la semantica dietro questi gruppi di campi sono accuratamente studiate per soddisfare una vasta gamma di casi d&#39;uso di segmentazione e altre applicazioni a valle in Platform. Puoi anche definire gruppi di campi personalizzati per soddisfare esigenze aziendali specifiche.
 
