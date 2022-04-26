@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati del profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. Questo richiede l’utilizzo dell’API di profilo per creare un processo del sistema di profili o per eliminare una richiesta.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%
@@ -14,19 +14,19 @@ ht-degree: 3%
 
 # Endpoint dei processi del sistema del profilo (richieste di eliminazione)
 
-Adobe Experience Platform consente di acquisire dati da più sorgenti e di creare profili affidabili per i singoli clienti. I dati acquisiti in [!DNL Platform] vengono memorizzati in [!DNL Data Lake] e, se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati anche nell’ [!DNL Real-time Customer Profile] archivio dati. Talvolta può essere necessario eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. È necessario utilizzare l’ API [!DNL Real-time Customer Profile] per creare un processo di sistema [!DNL Profile] o `delete request` che può essere modificato, monitorato o rimosso se necessario.
+Adobe Experience Platform consente di acquisire dati da più sorgenti e di creare profili affidabili per i singoli clienti. Dati acquisiti in [!DNL Platform] è memorizzato in [!DNL Data Lake]e se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati nella [!DNL Real-time Customer Profile] anche i dati archiviati. Talvolta può essere necessario eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. È necessario utilizzare [!DNL Real-time Customer Profile] API per creare un [!DNL Profile] lavoro di sistema, oppure `delete request`, che possono anche essere modificati, monitorati o rimossi, se necessario.
 
 >[!NOTE]
 >
->Se stai tentando di eliminare set di dati o batch da [!DNL Data Lake], visita la [Panoramica del servizio catalogo](../../catalog/home.md) per ulteriori informazioni.
+>Se stai tentando di eliminare set di dati o batch dal [!DNL Data Lake], visitare il [Panoramica del servizio catalogo](../../catalog/home.md) per ulteriori informazioni.
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Visualizza richieste di eliminazione
 
-Una richiesta di cancellazione è un processo asincrono di lunga durata, il che significa che l’organizzazione potrebbe eseguire più richieste di eliminazione contemporaneamente. Per visualizzare tutte le richieste di eliminazione attualmente in esecuzione nell’organizzazione, puoi eseguire una richiesta di GET all’endpoint `/system/jobs`.
+Una richiesta di cancellazione è un processo asincrono di lunga durata, il che significa che l’organizzazione potrebbe eseguire più richieste di eliminazione contemporaneamente. Per visualizzare tutte le richieste di eliminazione attualmente in esecuzione nell’organizzazione, puoi eseguire una richiesta di GET al `/system/jobs` punto finale.
 
 Puoi inoltre utilizzare parametri di query facoltativi per filtrare l’elenco delle richieste di eliminazione restituite nella risposta. Per utilizzare più parametri, separa ciascun parametro utilizzando una e commerciale (`&`).
 
@@ -42,7 +42,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 | `start` | Offset la pagina dei risultati restituiti, in base al tempo di creazione della richiesta. Esempio: `start=4` |
 | `limit` | Limita il numero di risultati restituiti. Esempio: `limit=10` |
 | `page` | Restituisce una pagina specifica di risultati, in base al tempo di creazione della richiesta. Esempio: `page=2` |
-| `sort` | Ordinare i risultati in base a un campo specifico in ordine crescente (`asc`) o decrescente (`desc`). Il parametro di ordinamento non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=batchId:asc` |
+| `sort` | Ordina i risultati per un campo specifico in ascendente (`asc`) o decrescente (`desc`). Il parametro di ordinamento non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=batchId:asc` |
 
 **Richiesta**
 
@@ -93,14 +93,14 @@ La risposta include un array &quot;children&quot; con un oggetto per ogni richie
 | Proprietà | Descrizione |
 |---|---|
 | `_page.count` | Numero totale di richieste. Questa risposta è stata troncata per lo spazio. |
-| `_page.next` | Se esiste una pagina aggiuntiva di risultati, visualizza la pagina successiva di risultati sostituendo il valore ID in una [richiesta di ricerca](#view-a-specific-delete-request) con il valore `"next"` fornito. |
+| `_page.next` | Se esiste una pagina aggiuntiva di risultati, visualizza la pagina successiva di risultati sostituendo il valore ID in un [richiesta di ricerca](#view-a-specific-delete-request) con `"next"` valore fornito. |
 | `jobType` | Tipo di processo da creare. In questo caso, restituirà sempre `"DELETE"`. |
 | `status` | Lo stato della richiesta di eliminazione. I valori possibili sono `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Un oggetto che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi di elaborazione della richiesta oppure il tempo di completamento della richiesta (`"timeTakenInSec"`). |
+| `metrics` | Un oggetto che include il numero di record elaborati (`"recordsProcessed"`) e il tempo (in secondi) in cui la richiesta è stata elaborata, o quanto tempo ha richiesto il completamento della richiesta (`"timeTakenInSec"`). |
 
 ## Creare una richiesta di cancellazione {#create-a-delete-request}
 
-L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta POST all&#39;endpoint `/systems/jobs`, dove l&#39;ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
+L’avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta di POST al `/systems/jobs` endpoint, in cui l’ID del set di dati o del batch da eliminare è fornito nel corpo della richiesta.
 
 ### Eliminare un set di dati
 
@@ -129,11 +129,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| `dataSetId` | **(Obbligatorio)** L’ID del set di dati da eliminare. |
+| `dataSetId` | **(Obbligatorio)** ID del set di dati da eliminare. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione creata, incluso un ID univoco generato dal sistema e di sola lettura per la richiesta. Può essere utilizzato per cercare la richiesta e controllarne lo stato. La `status` della richiesta al momento della creazione è `"NEW"` fino a quando non inizia l’elaborazione. La `dataSetId` nella risposta deve corrispondere alla `dataSetId` inviata nella richiesta.
+Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione creata, incluso un ID univoco generato dal sistema e di sola lettura per la richiesta. Può essere utilizzato per cercare la richiesta e controllarne lo stato. La `status` per la richiesta al momento della creazione è `"NEW"` fino all&#39;inizio dell&#39;elaborazione. La `dataSetId` nella risposta deve corrispondere al `dataSetId` inviato nella richiesta.
 
 ```json
 {
@@ -160,7 +160,7 @@ Per eliminare un batch, l’ID batch deve essere incluso nel corpo della richies
 >
 > Il motivo per cui non è possibile eliminare i batch per i set di dati basati su schemi di record è perché i batch di set di dati di tipo record sovrascrivono i record precedenti e quindi non possono essere &quot;annullati&quot; o eliminati. L’unico modo per rimuovere l’impatto dei batch errati per i set di dati basati sugli schemi di record è quello di riacquisire il batch con i dati corretti al fine di sovrascrivere i record errati.
 
-Per ulteriori informazioni sul comportamento dei record e delle serie temporali, consulta la sezione sui comportamenti dei dati XDM](../../xdm/home.md#data-behaviors) nella panoramica [!DNL XDM System] .[
+Per ulteriori informazioni sul comportamento dei record e delle serie temporali, consulta la sezione [sezione sui comportamenti dati XDM](../../xdm/home.md#data-behaviors) in [!DNL XDM System] panoramica.
 
 **Formato API**
 
@@ -185,11 +185,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| `batchId` | **(Obbligatorio)** L&#39;ID del batch da eliminare. |
+| `batchId` | **(Obbligatorio)** ID del batch da eliminare. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione creata, incluso un ID univoco generato dal sistema e di sola lettura per la richiesta. Può essere utilizzato per cercare la richiesta e controllarne lo stato. La `"status"` della richiesta al momento della creazione è `"NEW"` fino a quando non inizia l’elaborazione. Il valore `"batchId"` nella risposta deve corrispondere al valore `"batchId"` inviato nella richiesta.
+Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione creata, incluso un ID univoco generato dal sistema e di sola lettura per la richiesta. Può essere utilizzato per cercare la richiesta e controllarne lo stato. La `"status"` per la richiesta al momento della creazione è `"NEW"` fino all&#39;inizio dell&#39;elaborazione. La `"batchId"` nella risposta deve corrispondere al `"batchId"` valore inviato nella richiesta.
 
 ```json
 {
@@ -226,7 +226,7 @@ Se tenti di avviare una richiesta di eliminazione per un batch di set di dati di
 
 ## Visualizza una richiesta di cancellazione specifica {#view-a-specific-delete-request}
 
-Per visualizzare una richiesta di cancellazione specifica, inclusi dettagli come il suo stato, puoi eseguire una richiesta di ricerca (GET) all’ endpoint `/system/jobs` e includere l’ID della richiesta di eliminazione nel percorso.
+Per visualizzare una richiesta di eliminazione specifica, compresi dettagli quali il suo stato, puoi eseguire una richiesta di ricerca (GET) al `/system/jobs` e include nel percorso l&#39;ID della richiesta di eliminazione.
 
 **Formato API**
 
@@ -236,12 +236,12 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parametro | Descrizione |
 |---|---|
-| `{DELETE_REQUEST_ID}` | **(Obbligatorio)** L&#39;ID della richiesta di cancellazione che desideri visualizzare. |
+| `{DELETE_REQUEST_ID}` | **(Obbligatorio)** ID della richiesta di cancellazione da visualizzare. |
 
 **Richiesta**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -251,7 +251,7 @@ curl -X POST \
 
 **Risposta**
 
-La risposta fornisce i dettagli della richiesta di cancellazione, compreso lo stato aggiornato. L’ID della richiesta di cancellazione nella risposta (il valore `"id"`) deve corrispondere all’ID inviato nel percorso della richiesta.
+La risposta fornisce i dettagli della richiesta di cancellazione, compreso lo stato aggiornato. L’ID della richiesta di eliminazione nella risposta (il `"id"` value) deve corrispondere all&#39;ID inviato nel percorso della richiesta.
 
 ```json
 {
@@ -270,13 +270,13 @@ La risposta fornisce i dettagli della richiesta di cancellazione, compreso lo st
 |---|---|
 | `jobType` | Il tipo di processo da creare, in questo caso restituirà sempre `"DELETE"`. |
 | `status` | Lo stato della richiesta di eliminazione. Valori possibili: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Matrice che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi di elaborazione della richiesta oppure il tempo di completamento della richiesta (`"timeTakenInSec"`). |
+| `metrics` | Matrice che include il numero di record elaborati (`"recordsProcessed"`) e il tempo (in secondi) in cui la richiesta è stata elaborata, o quanto tempo ha richiesto il completamento della richiesta (`"timeTakenInSec"`). |
 
-Una volta che lo stato della richiesta di cancellazione è `"COMPLETED"`, puoi confermare che i dati sono stati eliminati tentando di accedere ai dati eliminati utilizzando l’API di accesso ai dati. Per istruzioni su come utilizzare l&#39;API di accesso ai dati per accedere a set di dati e batch, consulta la [documentazione sull&#39;accesso ai dati](../../data-access/home.md).
+Una volta che lo stato della richiesta di cancellazione è `"COMPLETED"` puoi confermare che i dati sono stati eliminati tentando di accedere ai dati eliminati utilizzando l’API di accesso ai dati. Per istruzioni su come utilizzare l’API di accesso ai dati per accedere ai set di dati e ai batch, consulta la sezione [Documentazione di accesso ai dati](../../data-access/home.md).
 
 ## Rimuovere una richiesta di cancellazione
 
-[!DNL Experience Platform] consente di eliminare una richiesta precedente, che può essere utile per una serie di motivi, tra cui se il processo di eliminazione non è stato completato o è rimasto bloccato nella fase di elaborazione. Per rimuovere una richiesta di cancellazione, è possibile eseguire una richiesta di DELETE all’ endpoint `/system/jobs` e includere l’ID della richiesta di eliminazione che si desidera rimuovere nel percorso della richiesta.
+[!DNL Experience Platform] consente di eliminare una richiesta precedente, che può essere utile per una serie di motivi, tra cui se il processo di eliminazione non è stato completato o è rimasto bloccato nella fase di elaborazione. Per rimuovere una richiesta di cancellazione, è possibile eseguire una richiesta DELETE al `/system/jobs` e includere l&#39;ID della richiesta di eliminazione che si desidera rimuovere nel percorso della richiesta.
 
 **Formato API**
 
@@ -305,4 +305,4 @@ Una richiesta di eliminazione corretta restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che conosci i passaggi necessari per eliminare i set di dati e i batch da [!DNL Profile Store] all’interno [!DNL Experience Platform], puoi eliminare in modo sicuro i dati aggiunti in modo errato o di cui la tua organizzazione non ha più bisogno. Ricorda che una richiesta di cancellazione non può essere annullata, pertanto devi solo eliminare i dati di cui sei sicuro che non hai bisogno ora e che non ne avrai bisogno in futuro.
+Ora che conosci i passaggi necessari per eliminare set di dati e batch [!DNL Profile Store] entro [!DNL Experience Platform], puoi eliminare in modo sicuro i dati aggiunti erroneamente o di cui l’organizzazione non ha più bisogno. Ricorda che una richiesta di cancellazione non può essere annullata, pertanto devi solo eliminare i dati di cui sei sicuro che non hai bisogno ora e che non ne avrai bisogno in futuro.
