@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
@@ -46,11 +46,17 @@ Sotto la **[!UICONTROL Applicazioni di Adobe]** categoria, seleziona **[!UICONTR
 
 ### Seleziona dati
 
-La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** viene visualizzato il passaggio . Seleziona **[!UICONTROL Suite di rapporti]** per iniziare a creare una connessione di origine per i dati della suite di rapporti di Analytics, quindi seleziona la suite di rapporti da acquisire. Le suite di rapporti che non sono selezionabili sono già state acquisite, in questa sandbox o in una sandbox diversa. Seleziona **[!UICONTROL Successivo]** per procedere.
+La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** fornisce un elenco di [!DNL Analytics] i dati della suite di rapporti con cui creare una connessione sorgente.
+
+È possibile acquisire una suite di rapporti utilizzando un solo flusso di dati attivo. Non può essere utilizzato in più flussi di dati. Inoltre, una suite di rapporti deve appartenere alla stessa area dell’istanza sandbox di Platform in cui viene creata la connessione sorgente. È già stata assimilata una suite di rapporti non selezionabile, in questa sandbox o in un’altra sandbox.
+
+È possibile creare più connessioni in-bound per inserire più suite di rapporti nella stessa sandbox. Se le suite di rapporti hanno schemi diversi per le variabili (ad esempio eVar o eventi), devono essere mappate a campi specifici nei gruppi di campi personalizzati ed evitare conflitti di dati utilizzando [Preparazione dei dati](../../../../../data-prep/ui/mapping.md). Le suite di rapporti possono essere aggiunte a un solo sandbox.
 
 >[!NOTE]
 >
->È possibile effettuare più connessioni in-bound per inserire più suite di rapporti, tuttavia con Real-time Customer Data Platform può essere utilizzata una sola suite di rapporti alla volta.
+>I dati provenienti da più suite di rapporti possono essere abilitati per Profilo dati cliente in tempo reale solo se non ci sono conflitti di dati, come due proprietà personalizzate (eVar, elenchi e proprietà) che hanno un significato diverso, non possono essere mappati sullo stesso attributo in XDM.
+
+Per creare un [!DNL Analytics] connessione sorgente, seleziona una suite di rapporti e seleziona **[!UICONTROL Successivo]** per procedere.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** viene visualizzat
 
 >[!IMPORTANT]
 >
->Supporto della preparazione dei dati per [!DNL Analytics] la sorgente è attualmente in versione beta. La funzione e la documentazione sono soggette a modifiche.
+>Le trasformazioni di Data Prep possono aggiungere latenza al flusso di dati complessivo. La latenza aggiuntiva aggiunta varia in base alla complessità della logica di trasformazione.
 
 Prima di poter mappare il tuo [!DNL Analytics] per eseguire il targeting di uno schema XDM, è innanzitutto necessario selezionare se si utilizza uno schema predefinito o uno schema personalizzato.
 
