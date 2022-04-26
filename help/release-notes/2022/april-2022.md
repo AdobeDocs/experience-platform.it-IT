@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Le note sulla versione di aprile 2022 per Adobe Experience Platform.
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 3%
+source-wordcount: '1045'
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 3%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Flussi di dati](#dataflows)
 - [Experience Data Model (XDM)](#xdm)
+
+## Flussi di dati {#dataflows}
+
+In Platform, i dati vengono acquisiti da diverse sorgenti, analizzati all’interno del sistema e attivati in un’ampia gamma di destinazioni. Platform facilita il processo di tracciamento di questo flusso di dati potenzialmente non lineare grazie alla trasparenza dei flussi di dati.
+
+I flussi di dati sono una rappresentazione dei processi che spostano i dati in Platform. Questi flussi di dati sono configurati tra diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati dal servizio Identity e dal profilo cliente in tempo reale prima di essere infine attivati nelle destinazioni.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Dashboard dei segmenti | Ora puoi utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per i segmenti. Per ulteriori informazioni, consulta la guida su [monitoraggio dei segmenti nell’interfaccia utente](../../dataflows/ui/monitor-segments.md) |
+
+Per informazioni più generali sui flussi di dati, consulta [panoramica dei dataflows](../../dataflows/home.md). Per ulteriori informazioni sulla segmentazione, consulta la sezione [panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -70,3 +85,4 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+

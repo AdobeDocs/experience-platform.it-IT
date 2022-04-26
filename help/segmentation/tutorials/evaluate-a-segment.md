@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Valutare e accedere ai risultati dei segmenti
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md).
+Questo documento fornisce un&#39;esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Introduzione
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+Questa esercitazione richiede una comprensione approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Consente di creare segmenti di pubblico da [!DNL Real-time Customer Profile] dati.
@@ -46,7 +46,7 @@ Tutte le richieste di POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
 
 - Tipo di contenuto: application/json
 
-## Valutare un segmento
+## Valutare un segmento {#evaluate-a-segment}
 
 Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valutarlo tramite una valutazione programmata o on demand.
 
@@ -68,7 +68,7 @@ Effettuando una richiesta POST al `/config/schedules` endpoint, puoi creare una 
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida agli endpoint programmati](../api/schedules.md#create)
 
-### Enable a schedule
+### Abilita pianificazione
 
 Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che il `state` è impostata su `active` nel corpo della richiesta create (POST). Puoi abilitare una pianificazione (imposta la `state` a `active`) effettuando una richiesta PATCH al `/config/schedules` e l’ID della pianificazione nel percorso.
 
@@ -130,19 +130,19 @@ L’esempio seguente mostra cosa `segmentMembership` l’attributo è simile a c
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `lastQualificationTime` | La marca temporale in cui è stata rilasciata l’asserzione dell’appartenenza al segmento e il profilo è entrato o uscito dal segmento. |
-| `status` | Lo stato della partecipazione al segmento come parte della richiesta corrente. Must be equal to one of the following known values: <ul><li>`existing`: L’entità continua a trovarsi nel segmento.</li><li>`realized`: L&#39;entità sta entrando nel segmento.</li><li>`exited`: L&#39;entità sta uscendo dal segmento.</li></ul> |
+| `status` | Lo stato della partecipazione al segmento come parte della richiesta corrente. Deve essere uguale a uno dei seguenti valori noti: <ul><li>`existing`: L’entità continua a trovarsi nel segmento.</li><li>`realized`: L&#39;entità sta entrando nel segmento.</li><li>`exited`: L&#39;entità sta uscendo dal segmento.</li></ul> |
 
 ## Accedere ai risultati dei segmenti
 
-The results of a segment job can be accessed in one of two ways: you can access individual profiles or export an entire audience to a dataset.
+È possibile accedere ai risultati di un processo di segmento in uno dei due modi seguenti: puoi accedere a singoli profili o esportare un intero pubblico in un set di dati.
 
 Le sezioni seguenti descrivono più dettagliatamente queste opzioni.
 
 ## Cercare un profilo
 
-Se conosci il profilo specifico a cui desideri accedere, puoi farlo utilizzando il [!DNL Real-time Customer Profile] API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
+Se conosci il profilo specifico a cui desideri accedere, puoi farlo utilizzando il [!DNL Real-time Customer Profile] API. I passaggi completi per accedere ai singoli profili sono disponibili nella sezione [Accedere ai dati del profilo cliente in tempo reale tramite l’API del profilo](../../profile/api/entities.md) esercitazione.
 
-## Export a segment {#export}
+## Esportare un segmento {#export}
 
 Dopo che un processo di segmentazione è stato completato correttamente (il valore di `status` attribute is &quot;SUCCEEDED&quot;), puoi esportare il pubblico in un set di dati a cui è possibile accedere e su cui agisce.
 

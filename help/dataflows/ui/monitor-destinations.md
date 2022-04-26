@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 0%
 
 ---
@@ -164,29 +164,6 @@ La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’e
 Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona la **[!UICONTROL Identità escluse]** alternare.
 
 ![Record di flusso di dati per destinazioni batch](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Dashboard dei processi dei segmenti di monitoraggio {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Processi dei segmenti"
->abstract="La visualizzazione Processi del segmento contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
-
-Per accedere al [!UICONTROL Processi dei segmenti] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Processi dei segmenti]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di valutazione dei segmenti e di esportazione.
-
-![Dashboard di monitoraggio dei processi dei segmenti](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Utilizza la [!UICONTROL Processi dei segmenti] dashboard per capire se la valutazione e l’esportazione del profilo avviene in tempo e senza eccezioni, in modo che i servizi a valle per l’attivazione della destinazione possano avere i dati del profilo più recenti valutati.
-
-Le metriche seguenti sono disponibili per i processi di segmento:
-
-| Metrica | Descrizione |
----------|----------|
-| **[!UICONTROL Processo del segmento]** | Indica il nome del processo del segmento. |
-| **[!UICONTROL Tipo]** | Indica il tipo di processo del segmento: esportazione o valutazione. Nota che in entrambi i casi il processo del segmento valuta o esporta *tutto* segmenti appartenenti a un’organizzazione. |
-| **[!UICONTROL Inizio processo]** | Data e ora di inizio del processo del segmento. |
-| **[!UICONTROL Fine del processo]** | La data e l’ora in cui il processo del segmento è stato completato. |
-| **[!UICONTROL Stato]** | Lo stato del processo completato - successo o non riuscito. |
 
 ## Dashboard del monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
 
