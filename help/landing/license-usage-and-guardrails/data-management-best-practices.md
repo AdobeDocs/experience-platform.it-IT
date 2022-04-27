@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licenze;licenze;best practice
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
 description: Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -193,7 +194,7 @@ La tabella seguente illustra l’elenco delle funzionalità attualmente disponib
 | [Filtri di preparazione dei dati di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Applica [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione |
 | [Filtri del connettore sorgente Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Applicare filtri di connessione all’origine di Audience Manager per escludere i dati non necessari dall’acquisizione |
 | [Filtri dati Alloy SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Applicare filtri di lega per escludere i dati non necessari dall’acquisizione |
-| [Filtri dati lato server](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | Applica [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione.  Consulta la documentazione su [eventi e condizioni](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) per ulteriori informazioni. |
+| [Filtri dati di inoltro eventi](../../tags/ui/event-forwarding/overview.md) | Applicare lato server [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione.  Consulta la documentazione su [regole tag](../../tags/ui/managing-resources/rules.md) per ulteriori informazioni. |
 | [Interfaccia utente del dashboard per l’utilizzo della licenza](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Visualizzare un&#39;istantanea dei dati relativi alla licenza dell&#39;organizzazione, ad Experience Platform |
 | [API rapporto di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) | Invia i set di dati che contribuiscono maggiormente al pubblico indirizzabile |
 | [API per report dei profili sconosciuti](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Restituisce l’impatto dell’applicazione di TTL pseudonimo per soglie temporali diverse |
