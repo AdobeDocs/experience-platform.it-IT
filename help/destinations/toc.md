@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
+source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 8%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 8%
    * [Modificare i flussi di dati di attivazione](./ui/edit-activation.md)
    * [Eliminare le destinazioni](./ui/delete-destinations.md)
    * [Monitorare i flussi di dati](./ui/monitor-dataflows.md)
+   * [Iscriviti agli avvisi di destinazione nel contesto](ui/alerts.md)
 * Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
    * Destinazioni di Adobe{#adobe}

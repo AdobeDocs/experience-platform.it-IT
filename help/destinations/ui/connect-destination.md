@@ -4,9 +4,9 @@ title: Crea una nuova connessione di destinazione
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per la connessione a una destinazione in Adobe Experience Platform
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
@@ -19,40 +19,44 @@ Prima di poter inviare i dati sul pubblico a una destinazione, è necessario imp
 
 ## Crea una nuova connessione di destinazione {#setup}
 
-1. Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]** .
+1. Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, quindi seleziona la **[!UICONTROL Catalogo]** scheda .
 
    ![Pagina del catalogo](../assets/ui/connect-destinations/catalog.png)
 
-1. A seconda che si disponga di una connessione esistente alla destinazione, è possibile visualizzare un pulsante **[!UICONTROL Configurazione]** o un pulsante **[!UICONTROL Attiva segmenti]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attiva segmenti]** e **[!UICONTROL Imposta]**, consulta la sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+1. A seconda che tu disponga di una connessione esistente alla destinazione, puoi visualizzare una **[!UICONTROL Configurazione]** o **[!UICONTROL Attivare i segmenti]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Attivare i segmenti]** e **[!UICONTROL Configurazione]**, fare riferimento alla [Catalogo](../ui/destinations-workspace.md#catalog) sezione della documentazione dell’area di lavoro di destinazione.
 
-   Seleziona **[!UICONTROL Imposta]** o **[!UICONTROL Attiva segmenti]**, a seconda del pulsante disponibile.
+   Seleziona o **[!UICONTROL Configurazione]** o **[!UICONTROL Attivare i segmenti]**, a seconda del pulsante disponibile.
 
    ![Pagina del catalogo](../assets/ui/connect-destinations/set-up.png)
 
    ![Attivare i segmenti](../assets/ui/connect-destinations/activate-segments.png)
 
-1. Se hai selezionato **[!UICONTROL Imposta]**, passa al passaggio successivo.
+1. Se hai selezionato **[!UICONTROL Configurazione]**, passa al passaggio successivo.
 
-   Se hai selezionato **[!UICONTROL Attiva segmenti]**, ora puoi visualizzare un elenco delle connessioni di destinazione esistenti.
+   Se hai selezionato **[!UICONTROL Attivare i segmenti]**, puoi visualizzare un elenco delle connessioni di destinazione esistenti.
 
-   Selezionare **[!UICONTROL Configura nuova destinazione]**.
+   Seleziona **[!UICONTROL Configurare una nuova destinazione]**.
 
    ![Configurare una nuova destinazione](../assets/ui/connect-destinations/configure-new-destination.png)
 
-1. Immetti i dettagli di connessione della piattaforma di destinazione, quindi seleziona **[!UICONTROL Connetti a destinazione]**.
+1. Immetti i dettagli della connessione alla piattaforma di destinazione, quindi seleziona **[!UICONTROL Connetti alla destinazione]**.
 
    >[!NOTE]
    >
-   >L&#39;immagine seguente è utilizzata solo a scopo illustrativo. I dettagli della connessione di destinazione variano tra le destinazioni. Per informazioni dettagliate sui dettagli di connessione per la destinazione, consulta la sezione **Parametri di connessione** in ogni pagina [catalogo di destinazione](../catalog/overview.md) (ad esempio, [Customer Match di Google](..//catalog/advertising/google-customer-match.md#parameters)).
+   >L&#39;immagine seguente è utilizzata solo a scopo illustrativo. I dettagli della connessione di destinazione variano tra le destinazioni. Per informazioni dettagliate sui dettagli di connessione per la destinazione, consulta **Parametri di connessione** sezione in ogni [catalogo di destinazione](../catalog/overview.md) (ad esempio, [Customer Match di Google](..//catalog/advertising/google-customer-match.md#parameters)).
 
    ![Connetti alla destinazione](../assets/ui/connect-destinations/connect-destination.png)
+
+1. (Facoltativo) Seleziona gli avvisi del flusso di dati di destinazione a cui desideri abbonarti. Puoi abbonarti agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al successo o all’errore dell’esecuzione del flusso. Vedi [Iscriviti agli avvisi di destinazione nel contesto](alerts.md) per informazioni dettagliate sugli avvisi relativi al flusso di dati di destinazione.
+
+   ![Immagine dell’interfaccia utente che mostra le opzioni di abbonamento per gli avvisi di destinazione contestuali](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
 1. Seleziona **[!UICONTROL Avanti]**.
 
    ![Connetti alla destinazione](../assets/ui/connect-destinations/next.png)
 
-1. Seleziona le azioni di marketing applicabili ai dati da esportare nella destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md) .
+1. Seleziona le azioni di marketing applicabili ai dati da esportare nella destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la sezione [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md) pagina.
 
    ![Selezionare le azioni di marketing](../assets/ui/connect-destinations/governance.png)
 
-1. Seleziona **[!UICONTROL Salva e esci]** per salvare la configurazione di destinazione, oppure seleziona **[!UICONTROL Avanti]** per procedere con i dati del pubblico [flusso di attivazione](activation-overview.md).
+1. Seleziona **[!UICONTROL Salva ed esci]** per salvare la configurazione di destinazione, oppure seleziona **[!UICONTROL Successivo]** per passare ai dati sul pubblico [flusso di attivazione](activation-overview.md).

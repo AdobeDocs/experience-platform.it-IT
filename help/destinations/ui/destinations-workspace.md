@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1156'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ La **[!UICONTROL Account]** La scheda ti mostra i dettagli delle connessioni sta
 
 {style=&quot;table-layout:auto&quot;}
 
-## [!UICONTROL Sfoglia] {#browse}
+## [!UICONTROL Sfogliare] {#browse}
 
 La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una connessione. Destinazioni con **[!UICONTROL Abilitato/Disabilitato]** attivata imposta la destinazione rispettivamente su attiva o inattiva. Puoi anche visualizzare le destinazioni in cui scorrono i dati selezionando **[!UICONTROL Segmenti]** > **[!UICONTROL Sfoglia]** e selezionando un segmento da esaminare. Vedi la tabella seguente per tutte le informazioni fornite per ogni destinazione nel [!UICONTROL Sfoglia] scheda:
 
@@ -94,6 +94,7 @@ La **[!UICONTROL Sfoglia]** visualizza le destinazioni con cui hai stabilito una
 > * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Attiva segmenti](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Attivare i segmenti ]**per inviare i segmenti a tale destinazione.
 > * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Elimina](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Elimina ]**pulsante a [remove](delete-destinations.md) una connessione esistente a una destinazione.
 > * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Pulsante Visualizza nel monitoraggio](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Visualizza nel monitoraggio ]**per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Seleziona i tre punti nel [!UICONTROL Nome] e utilizza ![Iscriviti agli avvisi ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Iscriviti agli avvisi ]**per abbonarti agli avvisi del flusso di dati di destinazione. Puoi abbonarti a avvisi per ricevere messaggi relativi allo stato, al successo o all’errore dell’esecuzione del flusso. Vedi [Iscriviti agli avvisi di destinazione nel contesto](alerts.md) per informazioni dettagliate sugli avvisi relativi al flusso di dati di destinazione.
 
 
 ![Scheda Sfoglia](../assets/ui/workspace/browse-tab.png)
