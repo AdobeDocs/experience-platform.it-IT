@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Le note sulla versione di aprile 2022 per Adobe Experience Platform.
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 4%
+source-wordcount: '2260'
+ht-degree: 3%
 
 ---
 
@@ -14,12 +14,28 @@ ht-degree: 4%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Flussi di dati](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Edizione B2B di Real-time Customer Data Platform](#B2B)
 - [Origini](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un’azienda utilizzando configurazioni a livello di business senza la necessità di competenze scientifiche in materia di dati.
+
+Attribution AI e Customer AI consentono ai clienti di configurare modelli AI/ML avanzati per l’attribuzione di marketing e la propensione dei clienti. La funzione Multi-set di dati consente ai clienti di inserire più set di dati al momento della configurazione del modello senza la necessità di unire e preparare i dati in anticipo.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto per set di dati multipli | La funzione Set di dati multipli supporta ora tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare la mappa di identità ed eventuali ID associati, purché nei set di dati sia presente uno spazio dei nomi di identità comune. Attribution AI supporta i seguenti schemi: Adobe Analytics, Evento Di Esperienza, Evento Di Esperienza Del Consumatore. Customer AI supporta tutti questi schemi e lo schema Adobe Audience Manager. Per ulteriori informazioni sul supporto di più set di dati in Attribution AI e Customer AI, consulta [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) e [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Nuove metriche di valutazione del modello in Customer AI | I nuovi grafici Gain in Customer AI consentono agli esperti di marketing di determinare le dimensioni del gruppo di destinazione in base ai loro obiettivi di budget e ROI. I nuovi grafici di incremento misurano la qualità del modello, fornendo una migliore visibilità nell’incremento che otterrebbero con il targeting casuale. Per ulteriori informazioni, consulta la sezione [scoprire informazioni approfondite con Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) documento. |
+
+Per ulteriori informazioni su [!DNL Intelligent Services], vedi [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
