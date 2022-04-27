@@ -2,10 +2,10 @@
 title: Classe membri elenco marketing commerciale XDM
 description: Questo documento fornisce una panoramica della classe Membri elenco marketing aziendale XDM in Experience Data Model (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 3%
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL Membri elenco marketing commerciale XDM] è una classe standard Experience Data Model (XDM) che descrive membri, persone o contatti associati a un elenco di marketing.
 
-![](../../images/classes/b2b/business-marketing-list-members.png)
+![Struttura della classe Membri elenco marketing aziendale XDM visualizzata nell&#39;interfaccia utente](../../images/classes/b2b/business-marketing-list-members.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 3%
 | `marketingListMemberKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per l&#39;entità di appartenenza all&#39;elenco di marketing. |
 | `personKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per la persona che è membro dell&#39;elenco di marketing. |
 | `_id` | Stringa | Identificatore univoco del record. Si tratta di un valore generato dal sistema e separato dal `marketingListMemberID`. |
+| `isDeleted` | Booleano | Indica se l&#39;entità membro dell&#39;elenco di marketing è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `marketingListID` | Stringa | Un ID univoco per l&#39;elenco di marketing. |
 | `marketingListMemberID` | Stringa | Un ID univoco per l’entità di appartenenza all’elenco di marketing. |
 | `personId` | Stringa | Un ID univoco per la persona. |

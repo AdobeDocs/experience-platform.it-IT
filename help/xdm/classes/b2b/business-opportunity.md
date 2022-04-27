@@ -2,10 +2,10 @@
 title: Classe opportunità di business XDM
 description: Questo documento fornisce una panoramica della classe Opportunità aziendale XDM in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL Opportunità aziendali XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di un’opportunità aziendale.
 
-![](../../images/classes/b2b/business-opportunity.png)
+![Struttura della classe Opportunità aziendale XDM visualizzata nell&#39;interfaccia utente](../../images/classes/b2b/business-opportunity.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 5%
 | `opportunityKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per l&#39;entità opportunità. |
 | `_id` | Stringa | Identificatore univoco del record. Si tratta di un valore generato dal sistema e separato dal `opportunityID`. |
 | `accountID` | Stringa | Un ID univoco per l&#39;account a cui è associata questa opportunità. |
+| `isDeleted` | Booleano | Indica se l&#39;entità dell&#39;elenco di marketing è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `opportunityDescription` | Stringa | Descrizione dell&#39;opportunità. |
 | `opportunityID` | Stringa | Un ID univoco per l&#39;entità opportunità. |
 | `opportunityName` | Stringa | Nome dell&#39;opportunità. |

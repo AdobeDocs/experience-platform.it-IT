@@ -2,10 +2,10 @@
 title: Classe di relazione tra le persone dell'account aziendale XDM
 description: Questo documento fornisce una panoramica della classe di relazione tra le persone dell’account aziendale XDM in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 4%
+source-wordcount: '444'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL Relazione personale account aziendale XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di una persona associata a un account aziendale.
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![Struttura della classe Relazione tra persone dell&#39;account aziendale XDM visualizzata nell&#39;interfaccia utente](../../images/classes/b2b/business-account-person-relation.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
@@ -30,12 +30,14 @@ ht-degree: 4%
 | `accountPersonID` | Stringa | Identificatore univoco per l&#39;entità relazione conto-persona. |
 | `currencyCode` | Stringa | Codice valuta ISO 4217 utilizzato per il rapporto tra il conto e la persona. |
 | `isActive` | Booleano | Indica se la relazione tra l&#39;account e la persona è attiva. |
+| `isDeleted` | Booleano | Indica se la relazione account-persona è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `isDirect` | Booleano | Indica se si tratta di una relazione diretta tra l&#39;account e la persona. |
 | `isPrimary` | Booleano | Indica se la persona è il contatto principale su questo account. |
 | `personID` | Stringa | Identificatore univoco per la persona nella relazione account-persona. |
-| `personRole` | Stringa | Il ruolo della persona nella relazione account-persona. |
+| `personRoles` | Matrice di stringhe | Elenca i ruoli della persona nella relazione account-persona. |
 | `relationEndDate` | DateTime | Data di fine del rapporto tra l’account e la persona. |
 | `relationStartDate` | DateTime | Data di inizio della relazione tra l&#39;account e la persona. |
+| `relationshipSource` | Stringa | Origine della relazione conto-persona. |
 
 {style=&quot;table-layout:auto&quot;}
 

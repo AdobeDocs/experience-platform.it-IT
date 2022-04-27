@@ -2,9 +2,9 @@
 title: Classe campagna aziendale XDM
 description: Questo documento fornisce una panoramica della classe Business Campaign XDM in Experience Data Model (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '239'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL Campagna aziendale XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste per una campagna aziendale.
 
-![](../../images/classes/b2b/business-campaign.png)
+![Struttura della classe Business Campaign XDM visualizzata nell’interfaccia utente](../../images/classes/b2b/business-campaign.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
@@ -31,4 +31,6 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Consulta la guida su [relazioni di schema in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) per scoprire come questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell’interfaccia utente di Adobe Experience Platform.
+Per scoprire in che modo questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell’interfaccia utente di Adobe Experience Platform, consulta la guida in [relazioni di schema in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)
+
+Per ulteriori campi compatibili con questa classe, vedere il riferimento al gruppo di campi per [[!UICONTROL Dettagli della campagna aziendale XDM]](../../field-groups/b2b-campaign/details.md).

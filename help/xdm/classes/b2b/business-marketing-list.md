@@ -2,10 +2,10 @@
 title: Classe elenco marketing aziendale XDM
 description: Questo documento fornisce una panoramica della classe XDM Business Marketing List in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
@@ -17,13 +17,14 @@ ht-degree: 4%
 
 [!UICONTROL Elenco di marketing aziendale XDM] è una classe standard Experience Data Model (XDM) che acquisisce le proprietà minime richieste di un elenco di marketing. Gli elenchi di marketing ti consentono di assegnare priorità ai clienti potenziali che hanno più probabilità di acquistare il tuo prodotto.
 
-![](../../images/classes/b2b/business-marketing-list.png)
+![Struttura della classe XDM Business Marketing List visualizzata nell&#39;interfaccia utente](../../images/classes/b2b/business-marketing-list.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `extSourceSystemAudit` | [[!UICONTROL Attributi di controllo del sistema di origine esterna]](../../data-types/external-source-system-audit-attributes.md) | Se l’elenco di marketing proviene da un sistema di origine esterno, questo oggetto acquisisce gli attributi di controllo per tale sistema. |
 | `marketingListKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per l&#39;entità elenco marketing. |
 | `_id` | Stringa | Identificatore univoco del record. Si tratta di un valore generato dal sistema e separato dal `marketingListID`. |
+| `isDeleted` | Booleano | Indica se l&#39;entità dell&#39;elenco di marketing è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `marketingListDescription` | Stringa | Descrizione dell’elenco di marketing. |
 | `marketingListID` | Stringa | Un ID univoco per l’entità elenco marketing. |
 | `marketingListName` | Stringa | Nome dell&#39;elenco di marketing. |
