@@ -1,10 +1,10 @@
 ---
-title: Tags Troubleshooting Guide
+title: Guida alla risoluzione dei problemi dei tag
 description: Risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
+source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1049'
 ht-degree: 80%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](./term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](./term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento contiene le risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 
@@ -94,16 +94,16 @@ La maggior parte dei clienti Adobe sfrutta funzioni di piattaforme web più mode
 
 Sì! I tag ora supportano proprietà e configurazioni mobili per i nuovi [SDK per dispositivi mobili](https://sdkdocs.com) di Adobe Experience Platform, per implementare la raccolta e la distribuzione dei dati in un ambiente app mobile nativo. Per ulteriori informazioni, consulta la [documentazione](https://sdkdocs.com).
 
-## Why is the UI saying there was an error loading my account?
+## Perché l&#39;interfaccia utente dice che si è verificato un errore durante il caricamento del mio account?
 
-If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. [](./ui/administration/manage-permissions.md)
+Se ricevi un messaggio che indica che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Consulta la guida su [gestione delle autorizzazioni](./ui/administration/manage-permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere l’accesso all’interfaccia utente di raccolta dati.
 
-## Why can&#39;t I add any properties in the UI?
+## Perché non posso aggiungere proprietà nell’interfaccia utente?
 
-If you cannot create any new properties when logged in to the Data Collection UI, it means that your account does not belong to a product profile that has the Manage Properties right.
+Se non riesci a creare nuove proprietà quando hai effettuato l’accesso all’interfaccia utente di raccolta dati, significa che il tuo account non appartiene a un profilo di prodotto con i permessi di gestione proprietà.
 
-[](./ui/administration/manage-permissions.md) [](./ui/administration/user-permissions.md)
+Consulta la guida su [gestione delle autorizzazioni](./ui/administration/manage-permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console in modo da concedere l’autorizzazione Gestione proprietà . Per ulteriori informazioni sui diversi diritti per i tag, consulta la panoramica su [autorizzazioni utente per i tag](./ui/administration/user-permissions.md).
 
 ## Cosa succede se ho altre domande?
 
-[](https://adobe.com/go/launchme)[](http://join.connectionsdevs.chat)
+Se hai altre domande, puoi fare [Pagina della community Adobe Experience Platform Data Collection](https://adobe.com/go/launchme) ad Experience League, o unisciti al [Slack ufficiale per sviluppatori di tag](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
