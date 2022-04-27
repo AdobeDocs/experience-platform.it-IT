@@ -1,22 +1,22 @@
 ---
-title: Connessione API HTTP (Beta)
+title: Connessione API HTTP
 keywords: streaming;
-description: La destinazione API HTTP in Adobe Experience Platform ti consente di inviare dati di profilo a endpoint HTTP di terze parti.
+description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 1%
+source-wordcount: '2296'
+ht-degree: 0%
 
 ---
 
-# Connessione API HTTP (Beta)
+# Connessione API HTTP
+
+## Panoramica {#overview}
 
 >[!IMPORTANT]
 >
->La destinazione API HTTP in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-## Panoramica {#overview}
+> Questa destinazione è disponibile solo per [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 La destinazione API HTTP è un [!DNL Adobe Experience Platform] destinazione di streaming che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 
@@ -24,7 +24,7 @@ Per inviare i dati di profilo agli endpoint HTTP, devi prima [connettersi alla d
 
 ## Casi d’uso {#use-cases}
 
-La destinazione HTTP è indirizzata ai clienti che devono esportare i dati di profilo XDM e i segmenti di pubblico in endpoint HTTP generici.
+La destinazione HTTP API ti consente di esportare i dati di profilo XDM e i segmenti di pubblico in endpoint HTTP generici. In questo caso, puoi eseguire analisi personalizzate o eseguire altre operazioni necessarie sui dati del profilo esportati fuori dall’Experience Platform.
 
 Gli endpoint HTTP possono essere sistemi propri dei clienti o soluzioni di terze parti.
 
@@ -34,24 +34,34 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Prerequisiti {#prerequisites}
 
->[!IMPORTANT]
->
->Per abilitare la funzionalità beta di destinazione dell’API HTTP per la tua azienda, contatta i rappresentanti di Adobe o l’Assistenza clienti Adobe.
-
 Per utilizzare la destinazione API HTTP per esportare i dati da Experience Platform, è necessario soddisfare i seguenti prerequisiti:
 
 * È necessario disporre di un endpoint HTTP che supporti l’API REST.
 * L’endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Fai riferimento a [dati esportati](#exported-data) per un esempio dello schema di output dell&#39;Experience Platform.
 * L&#39;endpoint HTTP deve supportare le intestazioni.
-* L&#39;endpoint HTTP deve supportare [Credenziali client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticazione. Questo requisito è valido quando la destinazione API HTTP è nella fase beta.
-* Le credenziali client devono essere incluse nel corpo delle richieste POST all’endpoint , come illustrato nell’esempio seguente.
+
+>[!TIP]
+>
+> È inoltre possibile utilizzare [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) per impostare un’integrazione e inviare dati di profilo di Experience Platform a un endpoint HTTP.
+
+## inserire nell&#39;elenco Consentiti indirizzo IP {#ip-address-allowlist}
+
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) per l’elenco completo degli IP da inserire nell&#39;elenco Consentiti.
+
+## Tipi di autenticazione supportati {#supported-authentication-types}
+
+La destinazione API HTTP supporta diversi tipi di autenticazione per l’endpoint HTTP:
+
+* endpoint HTTP senza autenticazione;
+* autenticazione del token portatore;
+* [Credenziali client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticazione con il modulo corpo, con [!DNL client ID], [!DNL client secret] e [!DNL grant type] nel corpo della richiesta HTTP, come illustrato nell’esempio seguente.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -61,22 +71,74 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-È inoltre possibile utilizzare [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) per impostare un’integrazione e inviare dati di profilo di Experience Platform a un endpoint HTTP.
+* [Credenziali client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) con autorizzazione di base, con intestazione di autorizzazione contenente URL codificati [!DNL client ID] e [!DNL client secret].
 
-## inserire nell&#39;elenco Consentiti indirizzo IP {#ip-address-allowlist}
+```shell
+curl --location --request POST 'https://some-api.com/token' \
+--header 'Authorization: Basic base64(clientId:clientSecret)' \
+--header 'Content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+--data-urlencode 'grant_type=client_credentials'
+```
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [ELENCO CONSENTITI di indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) per l’elenco completo degli IP da inserire nell&#39;elenco Consentiti.
+* [concessione password OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## Collegati alla destinazione {#connect-destination}
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-### Parametri di connessione {#parameters}
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Quando ti connetti a questa destinazione, devi fornire le seguenti informazioni:
+
+### Informazioni di autenticazione {#authentication-information}
+
+#### Autenticazione token portatore {#bearer-token-authentication}
+
+Se selezioni la **[!UICONTROL Token portatore]** tipo di autenticazione per la connessione all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
+
+![Immagine della schermata dell’interfaccia utente in cui è possibile connettersi alla destinazione dell’API HTTP utilizzando l’autenticazione del token portatore](../../assets/catalog/http/http-api-authentication-bearer.png)
+
+* **[!UICONTROL Token portatore]**: inserisci il token portatore da autenticare nel percorso HTTP.
+
+#### Nessuna autenticazione {#no-authentication}
+
+Se selezioni la **[!UICONTROL Nessuno]** tipo di autenticazione per la connessione all&#39;endpoint HTTP:
+
+![Immagine della schermata dell’interfaccia utente in cui è possibile connettersi alla destinazione dell’API HTTP senza autenticazione](../../assets/catalog/http/http-api-authentication-none.png)
+
+Quando selezioni questa autenticazione aperta, devi solo selezionare **[!UICONTROL Connetti alla destinazione]** e viene stabilita la connessione all&#39;endpoint.
+
+#### Autenticazione con password OAuth 2 {#oauth-2-password-authentication}
+
+Se selezioni la **[!UICONTROL Password OAuth 2]** tipo di autenticazione per la connessione all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
+
+![Immagine della schermata dell’interfaccia utente in cui è possibile connettersi alla destinazione dell’API HTTP utilizzando OAuth 2 con autenticazione tramite password](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+
+* **[!UICONTROL URL token di accesso]**: L’URL sul tuo lato che rilascia token di accesso e, facoltativamente, aggiorna i token.
+* **[!UICONTROL ID client]**: La [!DNL client ID] che il sistema assegna a Adobe Experience Platform.
+* **[!UICONTROL Segreto client]**: La [!DNL client secret] che il sistema assegna a Adobe Experience Platform.
+* **[!UICONTROL Nome utente]**: Nome utente per accedere all’endpoint HTTP.
+* **[!UICONTROL Password]**: Password per accedere all’endpoint HTTP.
+
+#### Autenticazione credenziali client OAuth 2 {#oauth-2-client-credentials-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo di credenziali client"
 >abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta o **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza gli esempi nella documentazione."
+
+Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazione per la connessione all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
+
+![Immagine della schermata dell’interfaccia utente in cui è possibile connettersi alla destinazione dell’API HTTP utilizzando OAuth 2 con autenticazione delle credenziali client](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+* **[!UICONTROL URL token di accesso]**: L’URL sul tuo lato che rilascia token di accesso e, facoltativamente, aggiorna i token.
+* **[!UICONTROL ID client]**: La [!DNL client ID] che il sistema assegna a Adobe Experience Platform.
+* **[!UICONTROL Segreto client]**: La [!DNL client secret] che il sistema assegna a Adobe Experience Platform.
+* **[!UICONTROL Tipo di credenziali client]**: Seleziona il tipo di concessione delle credenziali client OAuth2 supportata dall’endpoint:
+   * **[!UICONTROL Corpo del modulo codificato]**: In questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviato a destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione .
+   * **[!UICONTROL Autorizzazione di base]**: In questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *in `Authorization` header* dopo essere stato codificato base64 e inviato alla tua destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione .
+
+### Dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -103,27 +165,23 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >title="Parametri query"
 >abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
 
-Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
+Dopo aver stabilito la connessione di autenticazione per l’endpoint HTTP, fornisci le seguenti informazioni per la destinazione:
 
-* **[!UICONTROL httpEndpoint]**: la [!DNL URL] dell’endpoint HTTP a cui desideri inviare i dati del profilo.
-   * Facoltativamente, puoi aggiungere parametri di query al [!UICONTROL httpEndpoint] [!DNL URL].
-* **[!UICONTROL authEndpoint]**: la [!DNL URL] dell’endpoint HTTP utilizzato per [!DNL OAuth2] autenticazione.
-* **[!UICONTROL ID client]**: la [!DNL clientID] utilizzato nel [!DNL OAuth2] credenziali client.
-* **[!UICONTROL Segreto client]**: la [!DNL clientSecret] utilizzato nel [!DNL OAuth2] credenziali client.
+![Immagine della schermata dell’interfaccia utente che mostra i campi completati per i dettagli della destinazione HTTP](../../assets/catalog/http/http-api-destination-details.png)
 
-   >[!NOTE]
-   >
-   >Solo [!DNL OAuth2] le credenziali client sono attualmente supportate.
-
-* **[!UICONTROL Nome]**: immetti un nome in base al quale riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: inserisci una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Intestazioni personalizzate]**: inserisci le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato: `header1:value1,header2:value2,...headerN:valueN`.
-
-   >[!IMPORTANT]
-   >
-   >L&#39;implementazione corrente richiede almeno un&#39;intestazione personalizzata. Questa limitazione verrà risolta in un aggiornamento futuro.
+* **[!UICONTROL Nome]**: Inserisci un nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: Immetti una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Intestazioni]**: Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato: `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL Endpoint HTTP]**: URL dell’endpoint HTTP a cui desideri inviare i dati del profilo.
+* **[!UICONTROL Parametri query]**: Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Includi nomi dei segmenti]**: Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Includi marche temporali del segmento]**: Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
@@ -160,6 +218,10 @@ Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tr
 Un’esportazione di profilo verso la destinazione può essere determinata da un profilo che qualifica o esce da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri segmenti non mappati, se quel particolare profilo è membro di essi. Se un profilo è idoneo per il segmento Cliente con DeLorean Cars ma è anche membro dei segmenti Orologio &quot;Torna al futuro&quot; film e appassionati di fantascienza, allora questi altri due segmenti saranno anche presenti nel `segmentMembership` oggetto dell’esportazione dei dati, anche se non sono mappati nel flusso di dati.
 
 Dal punto di vista degli attributi del profilo, eventuali modifiche ai quattro attributi mappati sopra determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti sul profilo sarà presente nell’esportazione dei dati.
+
+## Recupero dati storici {#historical-data-backfill}
+
+Quando aggiungi un nuovo segmento a una destinazione esistente o quando crei una nuova destinazione e mappi segmenti su di essa, Experience Platform esporta i dati storici di qualificazione dei segmenti alla destinazione. Profili qualificati per il segmento *prima* il segmento aggiunto alla destinazione viene esportato nella destinazione entro circa un’ora.
 
 ## Dati esportati {#exported-data}
 
@@ -217,3 +279,50 @@ Esportazione [!DNL Experience Platform] i dati arrivano nel tuo [!DNL HTTP] dest
   }
 }
 ```
+
+Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle impostazioni dell’interfaccia utente selezionate nel flusso di destinazione di connessione per il **[!UICONTROL Includi nomi dei segmenti]** e **[!UICONTROL Includi marche temporali del segmento]** opzioni:
+
++++ L’esempio di esportazione dei dati riportato di seguito include i nomi dei segmenti nel `segmentMembership` sezione
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ L’esempio di esportazione dei dati riportato di seguito include le marche temporali del segmento nel `segmentMembership` sezione
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Limiti e nuovo criterio {#limits-retry-policy}
+
+Nel 95% del tempo, Experience Platform tenta di offrire una latenza di throughput inferiore a 10 minuti per i messaggi inviati con successo con una velocità inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+
+In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta due volte di inviare le richieste all’endpoint.

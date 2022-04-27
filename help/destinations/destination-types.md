@@ -4,9 +4,9 @@ title: Tipi di destinazione e categorie
 seo-title: Destination types and categories
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni Adobe Experience Platform.
 
-## Tipi di destinazione
+## Tipi di destinazione {#destination-types}
 
 In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione del profilo e le destinazioni di esportazione del segmento.
 
@@ -25,16 +25,28 @@ In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: conness
 
 **[!UICONTROL Esportazione profilo]** e **[!UICONTROL Esportazione segmento streaming]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta segmenti e profili qualificati nelle destinazioni.
 
-## Destinazioni di esportazione del profilo
+## Destinazioni di esportazione del profilo {#profile-export}
 
 Le destinazioni di esportazione del profilo ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
 
-* [Destinazioni di esportazione del profilo di streaming](#streaming-profile-export)
+* [Destinazioni di esportazione del profilo in streaming (destinazioni aziendali)](#streaming-profile-export)
 * [Destinazioni batch (basate su file)](#file-based)
 
-### Destinazioni di esportazione del profilo di streaming {#streaming-profile-export}
+### Destinazioni di esportazione del profilo in streaming (destinazioni aziendali) {#streaming-profile-export}
 
-Le destinazioni di esportazione del profilo in streaming ricevono dati di segmenti e profili come flussi di dati di Experience Platform. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) e [Hub eventi di Azure](catalog/cloud-storage/azure-event-hubs.md) sono esempi di tali destinazioni.
+>[!IMPORTANT]
+>
+>Le destinazioni Enterprise o le destinazioni di esportazione del profilo in streaming sono disponibili per [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) Solo clienti.
+
+Utilizza i connettori dati di destinazione Enterprise per fornire profili Real-time Customer Data Platform in tempo quasi reale a sistemi interni o ad altri sistemi di terze parti per la sincronizzazione dei dati, l’analisi e ulteriori casi d’uso di arricchimento dei profili.
+
+Queste destinazioni ricevono dati di segmenti e profili come flussi di dati di Experience Platform.
+
+Le destinazioni aziendali includono:
+
+* [Destinazione API HTTP](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Hub eventi di Azure](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Destinazioni batch (basate su file) {#file-based}
 
@@ -42,7 +54,7 @@ Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attri
 
 ## Destinazioni di esportazione dei segmenti in streaming {#streaming-destinations}
 
-Le destinazioni di esportazione dei segmenti ricevono dati Experienci Platform sui segmenti. Queste destinazioni utilizzano ID segmento o ID utente. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)e sono esempi di tali destinazioni.
+Le destinazioni di esportazione dei segmenti ricevono dati Experienci Platform sui segmenti. Queste destinazioni utilizzano ID segmento o ID utente. Pubblicità e destinazioni social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)oppure [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
 
 ## Esportazione di profili e destinazioni di esportazione di segmenti - panoramica video {#video}
 

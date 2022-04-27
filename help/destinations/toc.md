@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 8%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 8%
       * [Estensione Yext Conversion Tracking](./catalog/analytics/yext.md)
    * Destinazioni di archiviazione cloud {#cloud-storage}
       * [Panoramica delle destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
-      * [(Beta) Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Connessione ad Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Connessione hub eventi di Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
       * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di archiviazione cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 8%
       * [Connessione linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Destinazioni in streaming {#streaming}
-      * [ Connessione API HTTP (Beta)](./catalog/streaming/http-destination.md)
+      * [Connessione API HTTP](./catalog/streaming/http-destination.md)
       * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)
    * Destinazioni del sondaggio {#survey}
       * [Panoramica sulle destinazioni del sondaggio](./catalog/survey/overview.md)
