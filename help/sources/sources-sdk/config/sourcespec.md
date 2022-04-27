@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Configurare le specifiche di autenticazione per l'SDK di Origini
+title: Configurare le specifiche di origine per l'SDK di Origini
 topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
