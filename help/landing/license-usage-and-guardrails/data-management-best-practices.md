@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licen
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
 description: Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2531'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,8 @@ Sono disponibili diversi rapporti per comprendere la composizione dell’archivi
 
 * **API rapporto di sovrapposizione set di dati**: Espone i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Puoi utilizzare questo rapporto per identificare quale [!DNL ExperienceEvent] set di dati per cui impostare un TTL. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) per ulteriori informazioni.
 * **API del rapporto di sovrapposizione identità**: Espone i namespace di identità che contribuiscono maggiormente al pubblico indirizzabile. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) per ulteriori informazioni.
-* **API per report dei profili sconosciuti**: Espone l’impatto dell’applicazione di TTL pseudonimo per soglie di tempo diverse. Puoi utilizzare questo rapporto per identificare quale soglia TTL pseudonimo applicare. Guarda l’esercitazione su [generazione del rapporto profili sconosciuti](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) per ulteriori informazioni.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+-->
 
 #### [!DNL ExperienceEvent] TTL set di dati {#dataset-ttl}
 
@@ -197,7 +198,6 @@ La tabella seguente illustra l’elenco delle funzionalità attualmente disponib
 | [Filtri dati di inoltro eventi](../../tags/ui/event-forwarding/overview.md) | Applicare lato server [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione.  Consulta la documentazione su [regole tag](../../tags/ui/managing-resources/rules.md) per ulteriori informazioni. |
 | [Interfaccia utente del dashboard per l’utilizzo della licenza](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Visualizzare un&#39;istantanea dei dati relativi alla licenza dell&#39;organizzazione, ad Experience Platform |
 | [API rapporto di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) | Invia i set di dati che contribuiscono maggiormente al pubblico indirizzabile |
-| [API per report dei profili sconosciuti](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Restituisce l’impatto dell’applicazione di TTL pseudonimo per soglie temporali diverse |
 | [API del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Invia i namespace di identità che contribuiscono maggiormente al pubblico indirizzabile |
 
 {style=&quot;table-layout:auto&quot;}
