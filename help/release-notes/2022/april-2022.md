@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Le note sulla versione di aprile 2022 per Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
+source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
 workflow-type: tm+mt
-source-wordcount: '2379'
+source-wordcount: '2493'
 ht-degree: 3%
 
 ---
@@ -84,14 +84,31 @@ Per ulteriori informazioni su [!DNL Data Prep], vedi [[!DNL Data Prep] panoramic
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| [Avvisi contestuali per i flussi di dati di destinazione](../../destinations/ui/alerts.md) | È ora possibile abbonarsi agli avvisi durante la creazione di un flusso di dati di destinazione, per ricevere messaggi di avviso relativi allo stato, al successo o all’errore dell’esecuzione del flusso di dati. Puoi scegliere di ricevere avvisi nell’interfaccia utente di Experience Platform o tramite e-mail. |
+| Connettori di destinazione aziendali avanzati | Sono ora disponibili in genere tre connettori di destinazione aziendali: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilità generale dei connettori di destinazione aziendali include tutte le funzionalità offerte in precedenza nella fase Beta e altro ancora: <ul><li>Nuove funzionalità di autenticazione, tra cui [Firma di accesso condiviso negli hub eventi di Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e altro [tipi di autenticazione](../../destinations/catalog/streaming/http-destination.md#authentication-information) (token portatori, OAuth 2) nella destinazione API HTTP;</li><li>[Backfill dei dati del profilo storico](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (invio di profili storici qualificati per il segmento quando è stato attivato per la prima volta);</li><li>Le metriche delle esecuzioni dei flussi di dati sono ora supportate per queste destinazioni;</li><li>[Metadati dei segmenti aggiuntivi](../../destinations/catalog/streaming/http-destination.md#destination-details) inclusi nel payload dei dati, compresi i nomi dei segmenti e le marche temporali dei segmenti;</li><li>Supporto per [indirizzi IP statici](/help/destinations/catalog/streaming/ip-address-allow-list.md) per i clienti che devono inserire nell&#39;elenco Consentiti Experience Platform.</li></ul> |
+| Avvisi contestuali per i flussi di dati di destinazione | Ora puoi [effettuare la sottoscrizione agli avvisi](../../destinations/ui/alerts.md) durante la creazione di un flusso di dati di destinazione, per ricevere messaggi di avviso relativi allo stato, al successo o all’errore dell’esecuzione del flusso di dati. Puoi scegliere di ricevere avvisi nell’interfaccia utente di Experience Platform o tramite e-mail. |
+
+<!--
+
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
+-->
 
 **Nuove destinazioni**
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Collega e attiva i dati alla piattaforma pubblicitaria Criteo. |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Collega e attiva i dati alla piattaforma Sendgrid per le e-mail transazionali e di marketing. |
+| [!DNL Criteo] | Collegare e attivare i dati al [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) piattaforma pubblicitaria. |
+| [!DNL Sendgrid] | Collegare e attivare i dati al [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) piattaforma per le e-mail transazionali e di marketing. |
+
+Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
