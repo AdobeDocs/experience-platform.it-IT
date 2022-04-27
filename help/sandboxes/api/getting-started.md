@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;guida per gli sviluppatori sandbox
 solution: Experience Platform
-title: Guida all’API per sandbox
+title: Guida introduttiva all’API Sandbox
 topic-legacy: developer guide
 description: L’API Sandbox consente agli sviluppatori di gestire in modo programmatico le sandbox in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 5%
 
 ---
 
-# Guida all’API per sandbox
+# Guida introduttiva all’API Sandbox
 
 Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione.
 
 Questa guida per gli sviluppatori descrive i passaggi necessari per utilizzare l’API Sandbox per gestire le sandbox in Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 
-## Guida introduttiva all’API Sandbox
+## Prerequisiti
 
-Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni di amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo l’ [endpoint sandbox disponibili](./available.md) per elencare le sandbox attive per l’utente corrente. Per ulteriori informazioni, ad Experience Platform, su come assegnare le autorizzazioni sandbox, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
+Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni di amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo le [endpoint sandbox disponibili](./available.md) per elencare le sandbox attive per l’utente corrente. Consulta la sezione [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni su come assegnare le autorizzazioni sandbox, ad Experience Platform.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulla [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ### Raccogli i valori delle intestazioni richieste
 
-Questa guida richiede di aver completato l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di Platform. Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Questa guida richiede il completamento della [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di Platform. Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -36,7 +36,7 @@ Questa guida richiede di aver completato l’ [esercitazione sull’autenticazio
 
 Oltre alle intestazioni di autenticazione, tutte le richieste richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà effettuata l&#39;operazione:
 
-* nome x-sandbox: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT e PATCH) richiedono un’intestazione aggiuntiva:
 
