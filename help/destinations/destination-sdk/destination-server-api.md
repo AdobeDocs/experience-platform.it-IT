@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destination-servers`. Le specifiche del server e del modello per la destinazione possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint comune `/authoring/destination-servers`.
 title: Operazioni API dell’endpoint server di destinazione
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1382'
 ht-degree: 5%
 
 ---
@@ -82,11 +82,13 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configu
 
 ## Creare una configurazione per un server di destinazione basato su file {#create-file-based}
 
-### Esempio: creare una configurazione per un server di destinazione SFTP
-
 >[!IMPORTANT]
 >
 >Il supporto per la destinazione basata su file in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+
+### Configurazione di esempio del server di destinazione SFTP {#sftp-server-sample}
+
++++Visualizza un esempio per un [!DNL SFTP] configurazione del server di destinazione
 
 Puoi creare una nuova configurazione del server di destinazione SFTP effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
 +++
 
-+++Esempio: creare una configurazione per un server di destinazione Amazon S3
+### [!DNL Amazon S3] configurazione di esempio del server di destinazione {#s3-server-sample}
 
->[!IMPORTANT]
->
->Il supporto per la destinazione basata su file in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
++++Visualizza un esempio per un [!DNL Amazon S3] configurazione del server di destinazione
 
 Puoi creare una nuova configurazione del server di destinazione Amazon S3 effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
 +++
 
-+++Esempio: creare una configurazione per un server di destinazione BLOB di Azure
+### [!DNL Azure Blob] configurazione di esempio del server di destinazione {#blob-server-sample}
 
->[!IMPORTANT]
->
->Il supporto per la destinazione basata su file in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
++++Visualizza un esempio per un [!DNL Azure Blob] configurazione del server di destinazione
 
 Puoi creare una nuova configurazione del server di destinazione BLOB di Azure effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
 **Formato API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
 +++
 
-+++Esempio: creare una configurazione per un server di destinazione Azure Data Lake Storage (ADLS)
+### [!DNL Azure Data Lake Storage] configurazione di esempio del server di destinazione {#adls-server-sample}
 
->[!IMPORTANT]
->
->Il supporto per la destinazione basata su file in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
++++Visualizza un esempio per un [!DNL Azure Data Lake Storage (ADLS)] configurazione del server di destinazione
 
 Puoi creare una nuova configurazione del server di destinazione ADLS effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
 **Formato API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
 +++
 
-+++Esempio: creare una configurazione per un server di destinazione DLZ (Data Landing Zone)
+### [!DNL Data Landing Zone] Configurazione di esempio del server di destinazione (DLZ) {#dlz-server-sample}
 
->[!IMPORTANT]
->
->Il supporto per la destinazione basata su file in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
++++Visualizza un esempio per un [!DNL Data Landing Zone (DLZ)] configurazione del server di destinazione
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione file sicura basata su cloud per l’importazione di file in Platform. Consulta
+[!DNL Data Landing Zone] ([!DNL DLZ]) è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione file sicura basata su cloud per l’importazione di file in Platform.
 
 Puoi creare una nuova configurazione del server di destinazione DLZ effettuando una richiesta di POST al `/authoring/destination-servers` punto finale.
 
 **Formato API**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ Puoi recuperare un elenco di tutte le configurazioni del server di destinazione 
 
 **Formato API**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di configurazio
 
 **Formato API**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Formato API**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -831,7 +819,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
    }
 }
 ```
-
 
 ## Eliminare una configurazione specifica del server di destinazione {#delete}
 
