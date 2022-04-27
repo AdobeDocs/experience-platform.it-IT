@@ -3,9 +3,9 @@ keywords: pubblicità; il banco commerciale; ufficio commerciale pubblicitario
 title: Il collegamento del Trade Desk
 description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
@@ -73,6 +77,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
    * **[!UICONTROL America Latina]**
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

@@ -3,9 +3,9 @@ keywords: attributi del volo;destinazione del volo
 title: Collegamento Attributi del volo
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come Attributi di pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -76,6 +76,10 @@ Utilizzo degli attributi da Adobe Experience Platform per arricchire ulteriormen
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ### Parametri di connessione {#parameters}
@@ -88,6 +92,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Dominio]**: selezionare un centro dati USA o UE, a seconda di quale [!DNL Airship] data center si applica a questa destinazione.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

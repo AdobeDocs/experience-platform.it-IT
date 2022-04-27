@@ -6,14 +6,18 @@ seo-title: Activation overview
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform a vari tipi di destinazioni.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: f4ae6831569e8a5b458c42f76810212174f04811
+source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
 
 # Panoramica di Activation
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Adobe Experience Platform supporta un’ampia gamma di destinazioni. Il flusso di lavoro di attivazione del pubblico varia a seconda delle destinazioni, in base al tipo di dati del pubblico che supportano e alla frequenza dell’esportazione dei dati.
 

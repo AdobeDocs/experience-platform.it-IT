@@ -6,10 +6,10 @@ description: Questo documento tratta la creazione di destinazioni di streaming u
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '2021'
-ht-degree: 3%
+source-wordcount: '2067'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,14 @@ ht-degree: 3%
 >[!NOTE]
 >
 >La [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] le destinazioni in Platform sono attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+
+>[!IMPORTANT]
+> 
+>Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions).
+>
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions).
+>
+>Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati di Adobe Experience Platform e creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) o [Hub eventi di Azure](../catalog/cloud-storage/azure-event-hubs.md)), crea un flusso di dati per la nuova destinazione creata e attiva i dati per la nuova destinazione creata.
 
@@ -593,7 +601,7 @@ La risposta restituita deve includere nel `transformations` i segmenti e gli att
 }
 ```
 
-## Utilizzo delle raccolte Postman per connettersi alle destinazioni in streaming  {#collections}
+## Utilizzo delle raccolte Postman per connettersi alle destinazioni di streaming  {#collections}
 
 Per collegarti alle destinazioni di streaming descritte in questa esercitazione in modo più semplice, puoi utilizzare [[!DNL Postman]](https://www.postman.com/).
 
@@ -614,9 +622,9 @@ Per connettersi correttamente alle destinazioni utilizzando l&#39;allegato [!DNL
 
 * Scarica e installa [!DNL Postman];
 * [Scarica](../assets/api/streaming-destination/DestinationPostmanCollection.zip) e decomprimere le raccolte allegate;
-* Importa le raccolte dalle loro cartelle corrispondenti in Postman;
+* Importare le raccolte dalle cartelle corrispondenti in Postman;
 * Compila le variabili d&#39;ambiente secondo le istruzioni del presente articolo;
-* Esegui il [!DNL API] richieste di Postman, basate sulle istruzioni contenute in questo articolo.
+* Esegui il [!DNL API] richieste da Postman, basate sulle istruzioni contenute in questo articolo.
 
 ## Passaggi successivi
 

@@ -3,9 +3,9 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
@@ -69,6 +73,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Istanza endpoint]**: chiedi [!DNL Braze] rappresenta l&#39;istanza dell&#39;endpoint da utilizzare.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

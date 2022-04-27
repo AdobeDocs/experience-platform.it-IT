@@ -2,10 +2,10 @@
 title: Connessione twitter Custom Audiences
 description: Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di ricommercializzazione pertinenti attivando i tuoi tipi di pubblico generati in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 3%
+source-wordcount: '669'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,6 @@ Prima di configurare il [!DNL Twitter Custom Audiences] controlla i seguenti pre
 
 1. Le [!DNL Twitter Ads] l&#39;account deve essere idoneo per la pubblicità. Nuovo [!DNL Twitter Ads] gli account non sono ammessi alla pubblicità nelle prime due settimane dalla loro creazione.
 2. Il tuo account utente Twitter per il quale hai autorizzato l&#39;accesso in [!DNL Twitter Audience Manager] devono avere *[!DNL Partner Audience Manager]* autorizzazione abilitata.
-
 
 ## Identità supportate {#supported-identities}
 
@@ -55,6 +54,10 @@ Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea camp
 
 ## Connetti alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
@@ -66,6 +69,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL ID account]**: Le [!DNL Twitter Ads] ID account. Questo si trova nella [!DNL Twitter Ads] impostazioni.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

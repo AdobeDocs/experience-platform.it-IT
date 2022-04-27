@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Connessione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Crea una connessione in uscita dal vivo al server SFTP per esportare periodicame
 
 >[!IMPORTANT]
 >
-> Sebbene Adobe supporti le esportazioni di dati verso server SFTP, le posizioni di archiviazione cloud consigliate per esportare i dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
+> Sebbene Experience Platform supporti le esportazioni di dati verso server SFTP, le posizioni di archiviazione cloud consigliate per esportare i dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -34,6 +34,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ![Tipo di esportazione basato su profilo SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Collegati alla destinazione {#connect}
+
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
@@ -88,6 +92,14 @@ Dopo aver stabilito la connessione di autenticazione per la posizione SFTP, forn
 * **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione nell’interfaccia utente di Experience Platform;
 * **[!UICONTROL Descrizione]**: inserire una descrizione della destinazione;
 * **[!UICONTROL Percorso cartella]**: inserisci il percorso della cartella nel percorso SFTP in cui verranno esportati i file.
+
+## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
+Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ## Dati esportati {#exported-data}
 

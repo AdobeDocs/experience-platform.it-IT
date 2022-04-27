@@ -3,9 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1713'
 ht-degree: 2%
 
 ---
@@ -120,6 +120,10 @@ Prima di poter utilizzare il `Extern_ID` spazio dei nomi a cui inviare i dati [!
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 Il video seguente illustra anche i passaggi per configurare un [!DNL Facebook] destinazione e attivazione dei segmenti.
@@ -160,6 +164,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="Origine del pubblico"
 >abstract="Gli inserzionisti raccolgono i dati direttamente dai loro clienti e partner."
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

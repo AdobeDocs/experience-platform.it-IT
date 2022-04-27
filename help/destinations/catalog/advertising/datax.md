@@ -2,9 +2,9 @@
 title: Connessione Verizon MediaYahoo DataX
 description: DataX è un’infrastruttura globale Verizon Media/Yahoo che ospita vari componenti che consentono a Verizon Media/Yahoo di scambiare dati con i suoi partner esterni in modo sicuro, automatizzato e scalabile.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -90,6 +90,10 @@ Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il t
 
 ## Connetti alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 ![Scheda di destinazione Yahoo DataX nell’interfaccia utente di Platform](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -103,6 +107,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL ID MDM]**: Questo è un identificatore univoco in Yahoo DataX ed è un campo obbligatorio per l&#39;impostazione delle esportazioni di dati a questa destinazione. Se non conosci questo ID, contatta il tuo account manager Yahoo Data X.  Con gli ID MDM, i dati possono essere limitati per l&#39;uso solo con un certo set di utenti esclusivi (come i dati di prime parti per gli inserzionisti).
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti in una destinazione](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico nelle destinazioni.
 

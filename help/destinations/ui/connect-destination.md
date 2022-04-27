@@ -4,14 +4,18 @@ title: Crea una nuova connessione di destinazione
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per la connessione a una destinazione in Adobe Experience Platform
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Crea una nuova connessione di destinazione
+
+>[!IMPORTANT]
+> 
+>Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 ## Panoramica {#overview}
 

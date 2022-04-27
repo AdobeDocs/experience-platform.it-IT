@@ -3,9 +3,9 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '895'
 ht-degree: 2%
 
 ---
@@ -87,6 +87,10 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 Il video seguente illustra anche i passaggi per configurare un [!DNL LinkedIn Matched Audiences] destinazione e attivazione dei segmenti.
@@ -106,6 +110,10 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL ID account]**: le [!DNL LinkedIn Campaign Manager Account ID]. Puoi trovare questo ID nel tuo [!DNL LinkedIn Campaign Manager] conto.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

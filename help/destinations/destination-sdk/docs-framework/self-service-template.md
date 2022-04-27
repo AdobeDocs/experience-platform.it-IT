@@ -2,10 +2,10 @@
 title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 2%
+source-wordcount: '1311'
+ht-degree: 1%
 
 ---
 
@@ -90,6 +90,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Collegati alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
 ### Autentica a destinazione {#authenticate}
@@ -115,6 +119,10 @@ Per configurare i dettagli della destinazione, compila i campi richiesti e selez
 * **[!UICONTROL ID account]**: Le *YourDestination* ID account.
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

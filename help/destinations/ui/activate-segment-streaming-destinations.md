@@ -6,14 +6,18 @@ seo-title: Activate audience data to streaming segment export destinations
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 # Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 ## Panoramica {#overview}
 

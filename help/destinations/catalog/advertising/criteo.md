@@ -3,9 +3,9 @@ keywords: pubblicità; critico;
 title: Connessione del criterio
 description: Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 36da42b184450cfaf12b097f982234d628681430
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '824'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,10 @@ Quando i visitatori abbandonano il tuo sito web, ricorda loro cosa si stanno per
 
 ## Connetti a Criteo {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Autentica secondo criterio
@@ -96,6 +100,10 @@ Dopo l&#39;autenticazione alla destinazione, compila i seguenti parametri di con
 | ID inserzionista | ID inserzionista criterio della tua organizzazione. Per ottenere queste informazioni, contatta il tuo account manager Criteo. | Sì |
 
 ## Attiva i segmenti in questa destinazione {#activate-segments}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

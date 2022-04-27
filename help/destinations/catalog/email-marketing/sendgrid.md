@@ -2,13 +2,13 @@
 keywords: e-mail;e-mail;e-mail;destinazioni;sendgrid;destinazione sendgrid
 title: Connessione SendGrid
 description: La destinazione SendGrid ti consente di esportare i dati di prime parti e attivarli all’interno di SendGrid per le tue esigenze aziendali.
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL SendGrid] connection
 
@@ -74,6 +74,11 @@ I team di marketing che utilizzano SendGrid possono creare una mailing list all�
 
 ## Connetti alla destinazione {#connect}
 
+>[!IMPORTANT]
+> 
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+
+
 Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). I passaggi specifici di questa destinazione sono illustrati in dettaglio di seguito.
 
 1. All&#39;interno di [!DNL Adobe Experience Platform] console, passa a **Destinazioni**.
@@ -101,6 +106,10 @@ Quando [configurazione](https://experienceleague.adobe.com/docs/experience-platf
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 

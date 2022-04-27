@@ -6,14 +6,22 @@ description: Istruzioni dettagliate per utilizzare l’API del servizio Flusso p
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3129'
 ht-degree: 2%
 
 ---
 
 # Connettersi a destinazioni batch e attivare i dati utilizzando l’API del servizio di flusso
+
+>[!IMPORTANT]
+> 
+>Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions).
+>
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions).
+>
+>Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Questa esercitazione illustra come utilizzare l’API del servizio di flusso per creare un batch [archiviazione cloud](../catalog/cloud-storage/overview.md) o [destinazione di e-mail marketing](../catalog/email-marketing/overview.md), crea un flusso di dati per la destinazione appena creata ed esporta i dati per la destinazione appena creata tramite file CSV.
 
