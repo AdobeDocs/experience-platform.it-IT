@@ -6,9 +6,9 @@ title: Configurare un’istanza di Customer AI
 topic-legacy: Instance creation
 description: I servizi intelligenti forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Fornisci i valori richiesti e seleziona **[!UICONTROL Successivo]** per continua
 
 ## Seleziona dati {#select-data}
 
-Per progettazione, Customer AI utilizza i dati di Adobe Analytics, Adobe Audience Manager, Experience Event e Consumer Experience Event per calcolare i punteggi di propensione. Quando selezioni un set di dati, vengono elencati solo quelli compatibili con Customer AI. Per selezionare un set di dati, seleziona il (**+**) accanto al nome del set di dati o seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Utilizza l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
+Per progettazione, Customer AI utilizza i dati di Adobe Analytics, Adobe Audience Manager, Experience Events in generale e Consumer Experience Event per calcolare i punteggi di propensione. Quando selezioni un set di dati, vengono elencati solo quelli compatibili con Customer AI. Per selezionare un set di dati, seleziona il (**+**) accanto al nome del set di dati o seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Utilizza l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
 
 ![Selezionare e cercare il set di dati](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ Nell’anteprima del set di dati è presente un valore percentuale di completezz
 
 ### Selezionare un&#39;identità {#identity}
 
-Affinché più set di dati si possano unire tra loro, devi selezionare un tipo di identità (noto anche come &quot;namespace identità&quot;) e un valore di identità all’interno dello spazio dei nomi. Se hai assegnato più di un campo come identità all’interno dello schema sotto lo stesso spazio dei nomi, tutti i valori di identità assegnati vengono visualizzati nel menu a discesa Identità preceduto dallo spazio dei nomi, ad esempio `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+È ora possibile unire più set di dati tra loro in base alla mappa identità (campo ). È necessario selezionare un tipo di identità (noto anche come &quot;spazio dei nomi identità&quot;) e un valore di identità all’interno di tale spazio dei nomi. Se hai assegnato più di un campo come identità all’interno dello schema sotto lo stesso spazio dei nomi, tutti i valori di identità assegnati vengono visualizzati nel menu a discesa Identità preceduto dallo spazio dei nomi, ad esempio `EMAIL (personalEmail.address)` o `EMAIL (workEmail.address)`.
+
+[seleziona lo stesso namespace](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ Affinché più set di dati si possano unire tra loro, devi selezionare un tipo d
 
 Per selezionare un&#39;identità, selezionare il valore sottolineato che si trova nella colonna identità. Viene visualizzato il puntatore di selezione di un&#39;identità.
 
-![seleziona lo stesso namespace](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[seleziona lo stesso namespace](../images/user-guide/cai-identity-namespace.png)
 
 Se in uno spazio dei nomi sono disponibili più identità, accertati di selezionare il campo di identità corretto per il caso d’uso. Ad esempio, due identità e-mail sono disponibili all’interno dello spazio dei nomi e-mail, un messaggio e-mail aziendale e personale. A seconda del caso d’uso, è più probabile che un’e-mail personale venga compilata ed è più utile nelle singole previsioni. Ciò significa che `EMAIL (personalEmail.address)` viene selezionata come identità.
 
@@ -116,7 +119,8 @@ La **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un passaggio che
 
 Per creare un obiettivo, seleziona **[!UICONTROL Immettere il nome del campo]** seguito da un campo dell’elenco a discesa. Seleziona il secondo input, una clausola per la condizione dell&#39;evento, quindi facoltativamente fornisci il valore target per completare l&#39;evento. È possibile configurare altri eventi selezionando **[!UICONTROL Aggiungi evento]**. Infine, completa l&#39;obiettivo applicando un intervallo di tempo di previsione in numero di giorni, quindi seleziona **[!UICONTROL Successivo]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Si verificherà e non si verificherà
 
@@ -124,7 +128,8 @@ Quando definisci l’obiettivo, puoi selezionare l’opzione **[!UICONTROL Si ve
 
 Ad esempio, se desideri impostare un’app per prevedere se un cliente effettuerà un acquisto, puoi selezionare **[!UICONTROL Si verificherà]** seguito da **[!UICONTROL Tutti]** e quindi inserisci **commerce.purchased.id** (o un campo simile) e **[!UICONTROL esiste]** come operatore.
 
-![si verifica](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![si verifica](../images/user-guide/cai-will-occur.png)
 
 Tuttavia, in alcuni casi può essere utile prevedere se un evento non si verifica in un determinato intervallo di tempo. Per configurare un obiettivo con questa opzione, seleziona **[!UICONTROL Non si verificherà]** dall’elenco a discesa di livello superiore.
 

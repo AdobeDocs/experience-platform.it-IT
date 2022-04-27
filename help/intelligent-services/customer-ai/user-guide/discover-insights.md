@@ -6,9 +6,9 @@ title: Scopri informazioni approfondite con Customer AI
 topic-legacy: Discovering insights
 description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '2079'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, selezi
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
-## Metriche di riepilogo delle prestazioni {#performance-metrics}
+## Prestazioni storiche {#historical-performance}
 
 La **[!UICONTROL Riepilogo delle prestazioni]** La scheda mostra i tassi di abbandono o di conversione effettivi, separati in ciascuno dei periodi di tolleranza valutati da Customer AI.
 
@@ -192,6 +192,37 @@ La metà inferiore del **[!UICONTROL Riepilogo delle prestazioni]** visualizza i
 A seconda di se si prevede l’abbandono o la conversione, l’ [!UICONTROL Distribuzione dei punteggi] Il grafico mostra la distribuzione dei profili generati/convertiti e non eseguiti/non convertiti in ogni incremento.
 
 ![punteggio individuale](../images/insights/scoring_tab.png)
+
+## Valutazione del modello {#model-evaluation}
+
+Oltre a tenere traccia dei risultati previsti ed effettivi nel tempo nella scheda Prestazioni cronologiche, gli esperti di marketing dispongono di una maggiore trasparenza rispetto alla qualità del modello nella scheda Valutazione modello . È possibile utilizzare i grafici Incremento e Guadagno per determinare le differenze nell’utilizzo di un modello predittivo rispetto al targeting casuale. Inoltre, puoi determinare quanti risultati positivi verrebbero acquisiti a ogni riduzione del punteggio. Questo è utile per la segmentazione e per allineare il ritorno sull’investimento con le azioni di marketing.
+
+### Grafico a comparsa
+
+![grafico a discesa](../images/user-guide/lift-chart.png)
+
+Il grafico di incremento misura il miglioramento dell’utilizzo di un modello predittivo invece del targeting casuale.
+
+Gli indicatori del modello di alta qualità includono:
+
+- Valori di incremento elevati nei primi decili. Ciò significa che il modello è in grado di identificare gli utenti con la più alta propensione a intraprendere l&#39;azione di interesse.
+- Valori di incremento decrescente. Ciò significa che i clienti con punteggi più elevati hanno più probabilità di intraprendere un’azione di interesse rispetto alle persone con punteggi più bassi.
+
+### Grafico a torta
+
+![grafico a comparsa](../images/user-guide/gains-chart.png)
+
+Il grafico dei guadagni cumulativi misura la percentuale di risultati positivi acquisiti dai punteggi di targeting al di sopra di una certa soglia. Dopo aver ordinato i clienti per punteggio di propensione da alto a basso, la popolazione è divisa in decili - 10 gruppi di dimensioni uguali. Un modello perfetto catturerebbe tutti i risultati positivi nei decili con punteggio più alto. Un metodo di targeting casuale di base acquisisce risultati positivi proporzionalmente alle dimensioni del gruppo - il targeting del 30% degli utenti acquisirebbe il 30% dei risultati.
+
+Gli indicatori del modello di alta qualità includono:
+
+- I guadagni cumulativi si avvicinano rapidamente al 100%.
+- La curva cumulativa dei guadagni per il modello è più vicina all&#39;angolo superiore sinistro del grafico.
+- Il grafico degli incrementi cumulativi può essere utilizzato per determinare i tagli di punteggio per la segmentazione e il targeting. Ad esempio, se il modello acquisisce il 70% dei risultati positivi nei primi 2 decili di punteggio, il targeting degli utenti con PercentileScore > 80 dovrebbe catturare circa il 70% dei risultati positivi.
+
+### AUC (Area sotto la curva)
+
+L’AUC riflette l’intensità della relazione tra la classificazione per punteggio e l’occorrenza dell’obiettivo previsto. Un **AUC** 0,5 significa che il modello non è migliore di una stima casuale. Un **AUC** di 1 significa che il modello può prevedere perfettamente chi intraprenderà l&#39;azione pertinente.
 
 ## Passaggi successivi
 
