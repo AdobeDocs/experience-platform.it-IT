@@ -3,7 +3,7 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Profilo del cliente in tempo reale in Real-time CDP
 description: Scopri come Real-time Customer Data Platform consente di gestire esperienze coordinate, coerenti e rilevanti per i clienti utilizzando il Profilo cliente in tempo reale.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Real-time CDP è basato sull’Experience Platform e utilizza molte delle funzio
 
 ## Miglioramenti al profilo per Real-time CDP, B2B Edition
 
-Oltre alle funzionalità di profilo supportate da Real-time CDP, puoi utilizzare Real-time CDP, B2B Edition per sfogliare informazioni importanti associate a un individuo, ad esempio un account e opportunità. Per saperne di più sui miglioramenti del profilo per Real-time CDP, B2B Edition, inizia leggendo il [guida alla navigazione del profilo](profile-browse.md).
+Oltre alle funzionalità di profilo supportate da Real-time CDP, puoi utilizzare Real-time CDP, B2B Edition per sfogliare informazioni importanti associate a un individuo, ad esempio un account e opportunità. Per ulteriori informazioni sui miglioramenti dei profili per Real-time CDP, B2B Edition, inizia leggendo il [guida alla navigazione del profilo](profile-browse.md).
 
 ## Identità e spazi dei nomi delle identità
 
