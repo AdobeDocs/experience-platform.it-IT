@@ -3,7 +3,7 @@ title: Connessione API HTTP
 keywords: streaming;
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -92,6 +92,11 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 ### Informazioni di autenticazione {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Tipo di credenziali client"
+>abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta o **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza gli esempi nella documentazione."
+
 #### Autenticazione token portatore {#bearer-token-authentication}
 
 Se selezioni la **[!UICONTROL Token portatore]** tipo di autenticazione per la connessione all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
@@ -121,11 +126,6 @@ Se selezioni la **[!UICONTROL Password OAuth 2]** tipo di autenticazione per la 
 * **[!UICONTROL Password]**: Password per accedere all’endpoint HTTP.
 
 #### Autenticazione credenziali client OAuth 2 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Tipo di credenziali client"
->abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta o **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza gli esempi nella documentazione."
 
 Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazione per la connessione all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
 
