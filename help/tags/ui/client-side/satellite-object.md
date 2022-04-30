@@ -2,10 +2,10 @@
 title: Riferimento agli oggetti satellite
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che puoi eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 83%
+source-wordcount: '1291'
+ht-degree: 79%
 
 ---
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 Nell’esempio fornito, se esiste un elemento dati con un nome corrispondente, verrà restituito il suo valore. Se non esiste alcun elemento di dati corrispondente, eseguirà una verifica per vedere se in precedenza è stata impostata una variabile personalizzata con un nome corrispondente utilizzando `_satellite.setVar()`. Se si trova una variabile personalizzata corrispondente, verrà restituito il relativo valore.
 
-Tieni presente che, in molti campi del modulo nell’interfaccia utente di Data Collection, puoi utilizzare la sintassi `%%` per fare riferimento alle variabili, riducendo la necessità di chiamate a `_satellite.getVar()`. Ad esempio, se utilizzi %product% accederai al valore dell&#39;elemento di dati o della variabile personalizzata del prodotto.
+>[!NOTE]
+>
+>Puoi utilizzare la percentuale (`%`) per fare riferimento a variabili per molti campi del modulo nell’interfaccia utente Raccolta dati, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, utilizzando `%product%` accede al valore dell’elemento dati prodotto o della variabile personalizzata.
+
+Quando un evento attiva una regola, puoi passare la regola corrispondente `event` oggetto in `_satellite.getVar()` così:
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
@@ -133,7 +142,7 @@ Registra un avviso nella console del browser. Il messaggio viene visualizzato in
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. Questa è una copia esposta della libreria js-cookie di terze parti. Per informazioni sull&#39;utilizzo più avanzato di questa libreria, consulta la [documentazione js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. Questa è una copia esposta della libreria js-cookie di terze parti. Per informazioni sull&#39;utilizzo più avanzato di questa libreria, consulta la sezione [documentazione js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Imposta un cookie {#cookie-set}
 
@@ -147,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Nel vecchio metodo [`setCookie`](#setCookie) di impostazione dei cookie, il terzo argomento (facoltativo) di questa chiamata di funzione era un numero intero che indicava il time-to-live (TTL) del cookie in giorni. In questo nuovo metodo, un oggetto &quot;attributes&quot; viene accettato come terzo argomento. Per impostare un TTL per un cookie utilizzando il nuovo metodo, è necessario fornire una proprietà `expires` nell&#39;oggetto attributes e impostarla sul valore desiderato. Questo è dimostrato nell&#39;esempio seguente.
+>Nel vecchio [`setCookie`](#setCookie) metodo di impostazione dei cookie, il terzo argomento (facoltativo) di questa chiamata di funzione era un numero intero che indicava il time-to-live (TTL) del cookie in giorni. In questo nuovo metodo, un oggetto &quot;attributes&quot; viene accettato come terzo argomento. Per impostare un TTL per un cookie utilizzando il nuovo metodo, è necessario fornire un `expires` nell&#39;oggetto attributes e impostarlo sul valore desiderato. Questo è dimostrato nell&#39;esempio seguente.
 
 **Esempio**
 
@@ -247,7 +256,7 @@ L&#39;oggetto contiene le proprietà seguenti:
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | ID dell&#39;ambiente. |
-| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging` e `production`. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging`e `production`. |
 
 ## `notify`
 
