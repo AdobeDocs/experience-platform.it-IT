@@ -1,10 +1,11 @@
 ---
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 78%
+ht-degree: 98%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 78%
 
 Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 
-Un singolo elemento dati è una variabile il cui valore può essere mappato alle stringhe di query, agli URL, ai valori dei cookie, alle variabili JavaScript e così via. È possibile fare riferimento a questo valore in base al nome della variabile in Adobe Experience Platform. Questa raccolta di elementi dati diventa il dizionario dati definiti che è possibile utilizzare per creare le regole (eventi, condizioni e azioni). Questo dizionario dati viene condiviso tra i tag per l&#39;utilizzo con qualsiasi estensione aggiunta alla proprietà.
+Un singolo elemento dati è una variabile il cui valore può essere mappato alle stringhe di query, agli URL, ai valori dei cookie, alle variabili JavaScript e così via. Puoi fare riferimento a questo valore per mezzo del suo nome variabile attraverso Adobe Experience Platform. Questa raccolta di elementi dati diventa il dizionario dati definiti che è possibile utilizzare per creare le regole (eventi, condizioni e azioni). Questo dizionario dati viene condiviso tra diversi tag in modo che possa essere utilizzato con altre estensioni aggiunte alla proprietà.
 
 >[!IMPORTANT]
 >
@@ -26,9 +27,9 @@ Durante la creazione di regole è possibile utilizzare gli elementi dati il più
 
 Il concetto di elementi dati riutilizzabili è molto potente e dovrebbe essere utilizzato come best practice.
 
-Ad esempio, se esiste un modo particolare con cui fai riferimento a nomi di pagina o ID prodotto o acquisisci informazioni dai parametri delle stringhe query da un collegamento di marketing affiliato o da [!DNL AdWords] e così via, puoi creare un dizionario dati (elementi dati) ottenendo informazioni dalla sua origine e quindi utilizzarli in varie regole di tag.
+Ad esempio, se usi un modo particolare per fare riferimento a nomi di pagina o ID prodotti, oppure per acquisire informazioni dai parametri delle stringhe query da un collegamento di affiliate marketing o da [!DNL AdWords] e così via, puoi creare un dizionario dati (elementi dati) ottenendo informazioni da origini diverse e quindi utilizzare tali dati in varie regole di tag.
 
-Utilizzando il nome della pagina come esempio, supponi di utilizzare uno schema specifico per il nome della pagina facendo riferimento a un livello di dati, un elemento `document.title` o un tag titolo all&#39;interno del sito Web. I tag in Adobe Experience Platform ti consentono di creare un elemento dati come singolo punto di riferimento per quel particolare punto di dati. Puoi quindi utilizzare questo elemento dati in qualsiasi regola che debba fare riferimento al nome della pagina. Se per qualche motivo decidi di cambiare il modo in cui si fa riferimento al nome della pagina (ad esempio, finora hai fatto riferimento a `document.title`, ma adesso vuoi farlo a un particolare livello di dati), non è necessario cambiare molte regole diverse per modificare tale riferimento. È sufficiente modificare il riferimento una volta nell&#39;elemento dati e tutte le regole che fanno riferimento a tale elemento dati vengono aggiornate automaticamente.
+Utilizzando il nome della pagina come esempio, supponi di utilizzare uno schema specifico per il nome della pagina facendo riferimento a un livello di dati, un elemento `document.title` o un tag titolo all&#39;interno del sito Web. I tag in Adobe Experience Platform consentono di creare un elemento dati come singolo punto di riferimento per quel particolare punto di dati. Puoi quindi utilizzare questo elemento dati in qualsiasi regola che debba fare riferimento al nome della pagina. Se per qualche motivo decidi di cambiare il modo in cui si fa riferimento al nome della pagina (ad esempio, finora hai fatto riferimento a `document.title`, ma adesso vuoi farlo a un particolare livello di dati), non è necessario cambiare molte regole diverse per modificare tale riferimento. È sufficiente modificare il riferimento una volta nell&#39;elemento dati e tutte le regole che fanno riferimento a tale elemento dati vengono aggiornate automaticamente.
 
 >[!NOTE]
 >
@@ -59,7 +60,7 @@ Gli elementi dati sono i blocchi di creazione per le regole. Gli elementi dati c
 1. Denomina l&#39;elemento dati.
 1. Seleziona un&#39;estensione e digita.
 
-   I tipi di elementi dati disponibili sono determinati dall&#39;estensione. Per informazioni sui tipi disponibili con l&#39;estensione tag core, consulta [Tipi di elementi dati](data-elements.md#types-of-data-elements).
+   I tipi di elementi dati disponibili sono determinati dall&#39;estensione. Per informazioni sui tipi disponibili con l’estensione tag Core, consulta [Tipi di elementi dati](data-elements.md#types-of-data-elements).
 
 1. Fornisci tutte le informazioni necessarie sul tipo scelto nei campi forniti.
 1. (Facoltativo) Immetti un valore predefinito.
@@ -86,7 +87,7 @@ Gli elementi dati sono i blocchi di creazione per le regole. Gli elementi dati c
 
 1. Seleziona **[!UICONTROL Salva]**.
 
-Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria attiva](../publishing/libraries.md#active-library). In questo modo la tua libreria viene salvata immediatamente e viene eseguita una build. Viene visualizzato lo stato della build. Puoi anche creare una nuova libreria dal menu a discesa [!UICONTROL Libreria attiva] .
+Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria attiva](../publishing/libraries.md#active-library). In questo modo la tua libreria viene salvata immediatamente e viene eseguita una build. Viene visualizzato lo stato della build. Puoi anche creare una nuova libreria dal menu a discesa [!UICONTROL Libreria attiva].
 
 ## Tipi di elementi dati {#types-of-data-elements}
 
@@ -119,7 +120,7 @@ if (window.location.pathname == '/') {
 }
 ```
 
-Il codice personalizzato può accettare l’oggetto `event` dalla regola chiamante come argomento. Questo consente al codice di leggere il valore qui.
+Il codice personalizzato può accettare l’oggetto `event` dalla regola chiamante come argomento. Il codice potrà quindi leggerne il valore.
 
 **Esempio:**
 
@@ -131,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 Puoi utilizzarlo negli script personalizzati con la sintassi dell’oggetto `_satellite`:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Quando utilizzi la notazione `%..%` , devi solo specificare il nome dell’elemento dati. Non c’è bisogno di specificare `event`.
+Quando si utilizza la percentuale (`%`), devi solo specificare il nome dell’elemento dati. Non c’è bisogno di specificare `event`.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### DOM attribute
 
@@ -155,7 +161,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una qualsiasi delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori. In questo modo, puoi fare riferimento all’elemento dati in tutte le tue regole e, se l’origine dei dati dovesse cambiare, devi solo modificare il riferimento all’origine (l’elemento dati) in un’unica posizione nell’interfaccia utente Raccolta dati.
+Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori. In questo modo, puoi fare riferimento all’elemento dati in tutte le tue regole e, se l’origine dei dati dovesse cambiare, dovrai modificare solo il riferimento all’origine (l’elemento dati) in un’unica posizione nell’interfaccia utente di Data Collection.
 
 Ad esempio, supponiamo che il markup contenga una variabile JavaScript denominata `Page_Name`, come segue:
 
@@ -178,7 +184,7 @@ Se utilizzi un oggetto raccolta dati come parte del livello dati, è sufficiente
 
 Immetti il nome dell’elemento di archiviazione locale nel campo [!UICONTROL Nome elemento di archiviazione locale].
 
-La memorizzazione locale offre ai browser un modo per memorizzare informazioni da pagina a pagina ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). L&#39;archiviazione locale funziona molto come i cookie, ma è molto più grande e flessibile.
+La memorizzazione locale offre ai browser un modo per memorizzare informazioni da pagina a pagina ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). L’archiviazione locale funziona in modo simile ai cookie, ma è molto più grande e flessibile.
 
 Utilizza il campo fornito per specificare il valore creato per un elemento di archiviazione locale, ad esempio `lastProductViewed.`
 
@@ -230,7 +236,7 @@ L&#39;archiviazione della sessione è simile all&#39;archiviazione locale, fatta
 
 ### Comportamento dei visitatori
 
-Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportamento comuni per arricchire la logica all’interno di regole o altre soluzioni Platform.
+Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportamento comuni per arricchire una logica all’interno di regole o altre soluzioni Platform.
 
 Seleziona uno dei seguenti attributi di comportamento dei visitatori:
 
@@ -247,11 +253,11 @@ Alcuni casi d&#39;uso comuni includono:
 * Mostra un sondaggio dopo che un visitatore è stato sul sito per cinque minuti
 * Se si tratta della pagina di destinazione della visita, compila una metrica [!DNL Analytics]
 * Mostra una nuova offerta al visitatore dopo X conteggi delle sessioni
-* Visualizza una newsletter registrata se si tratta di un nuovo visitatore
+* Visualizza l’annuncio per iscriversi a una newsletter, se si tratta di un nuovo visitatore
 
 ## Elementi dati incorporati
 
-È necessario creare un elemento dati personalizzato nell’interfaccia utente Raccolta dati se in precedenza si utilizzava uno dei seguenti elementi dati:
+È necessario creare un elemento dati personalizzato nell’interfaccia utente di Data Collection se in precedenza era stato utilizzato uno dei seguenti elementi dati:
 
 * URI
 * Protocollo
