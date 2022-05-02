@@ -2,9 +2,9 @@
 title: Blocco anonimo nel servizio query
 description: Il blocco anonimo è una sintassi SQL supportata da Adobe Experience Platform Query Service, che consente di eseguire in modo efficiente una sequenza di query
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 Adobe Experience Platform Query Service supporta blocchi anonimi. La funzione blocco anonimo consente di catena di una o più istruzioni SQL eseguite in sequenza. Essi consentono inoltre la possibilità di gestire le eccezioni.
 
 La funzione blocco anonimo è un modo efficiente per eseguire una sequenza di operazioni o query. La catena di query all’interno del blocco può essere salvata come modello e pianificata per l’esecuzione in un determinato momento o intervallo. Queste query possono essere utilizzate per scrivere e aggiungere dati per creare un nuovo set di dati e in genere vengono utilizzate quando si dispone di una dipendenza.
+
+>[!IMPORTANT]
+>
+>La pianificazione delle query tramite blocchi anonimi è attualmente possibile solo tramite [!DNL Query Service] API. Consulta la documentazione per [istruzioni complete sulla pianificazione delle query tramite API](../api/scheduled-queries.md).
 
 La tabella fornisce una suddivisione delle sezioni principali del blocco: esecuzione e gestione delle eccezioni. Le sezioni sono definite dalle parole chiave `BEGIN`, `END`e `EXCEPTION`.
 

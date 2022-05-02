@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso disattivare la funzione di completamento automatico nell’editor del servizio query?
 
-++ + N. risposta Turning off the auto-complete feature is not currently supported by the editor.
+++ + N. risposta La disattivazione della funzione di completamento automatico non è attualmente supportata dall&#39;editor.
 +++
 
 ### Perché a volte l’Editor query diventa lento quando scrivo una query?
@@ -40,14 +40,12 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso utilizzare Postman per l’API del servizio query?
 
-+++Answer
-Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Guarda il [Guida alla configurazione di Postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione del postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
 
-+++Answer
-Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++Risposta Sì, Query Service applica internamente un limite di 50.000 righe a meno che non venga specificato un limite esplicito all’esterno. Consulta le linee guida [esecuzione di query interattive](./best-practices/writing-queries.md#interactive-query-execution) per ulteriori dettagli.
 +++
 
 ### Esiste un limite di dimensione dei dati per l&#39;output risultante da una query?
@@ -142,8 +140,8 @@ Consulta la sezione [documentazione relativa al blocco anonimo](./best-practices
 
 +++Risposta Esistono due modi per implementare l’attribuzione personalizzata:
 
-1. Use a combination of existing [Adobe-defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met.
-1. Se il suggerimento precedente non soddisfa il caso d’uso, è necessario utilizzare una combinazione di [funzioni della finestra](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. Consentono inoltre di rivedere i dati storici e possono essere utilizzati in qualsiasi combinazione.
+1. Utilizza una combinazione di [Funzioni definite dall&#39;Adobe](./sql/adobe-defined-functions.md) per identificare se le esigenze del caso d’uso sono soddisfatte.
+1. Se il suggerimento precedente non soddisfa il caso d’uso, è necessario utilizzare una combinazione di [funzioni della finestra](./sql/adobe-defined-functions.md#window-functions). Le funzioni finestra visualizzano tutti gli eventi in una sequenza. Consentono inoltre di rivedere i dati storici e possono essere utilizzati in qualsiasi combinazione.
 +++
 
 ### Posso modellare le mie query in modo da poterle facilmente riutilizzare?
@@ -151,13 +149,13 @@ Consulta la sezione [documentazione relativa al blocco anonimo](./best-practices
 +++Risposta Sì, è possibile modellare le query utilizzando le istruzioni preparate. Le istruzioni preparate possono ottimizzare le prestazioni ed evitare di ripetere ripetutamente l’analisi di una query. Consulta la sezione [documentazione preparata delle dichiarazioni](./sql/prepared-statements.md) per ulteriori dettagli.
 +++
 
-### How do I retrieve error logs for a query? {#error-logs}
+### Come posso recuperare i registri degli errori per una query? {#error-logs}
 
 +++Risposta Per recuperare i registri degli errori per una query specifica, è innanzitutto necessario utilizzare l’API del servizio query per recuperare i dettagli del registro delle query. La risposta HTTP contiene gli ID della query necessari per indagare un errore di query.
 
-Use the GET command to retrieve multiple queries. Le informazioni su come effettuare una chiamata all’API sono disponibili nella sezione [documentazione di esempio sulle chiamate API](./api/queries.md#sample-api-calls).
+Utilizzare il comando GET per recuperare più query. Le informazioni su come effettuare una chiamata all’API sono disponibili nella sezione [documentazione di esempio sulle chiamate API](./api/queries.md#sample-api-calls).
 
-Dalla risposta, identifica la query da esaminare ed effettua un’altra richiesta di GET utilizzando la relativa `id` valore. Full instructions can be found in the [retrieve a query by ID documentation](./api/queries.md#retrieve-a-query-by-id).
+Dalla risposta, identifica la query da esaminare ed effettua un’altra richiesta di GET utilizzando la relativa `id` valore. Le istruzioni complete sono disponibili nella sezione [recuperare una query per documentazione ID](./api/queries.md#retrieve-a-query-by-id).
 
 Una risposta corretta restituisce lo stato HTTP 200 e contiene il `errors` array. La risposta è stata abbreviata per brevità.
 
@@ -259,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Risposta prima, controlla i registri per scoprire i dettagli dell’errore. La sezione Domande frequenti su [ricerca di errori nei registri](#error-logs) fornisce ulteriori informazioni su come eseguire questa operazione.
 
 È inoltre necessario consultare la documentazione per informazioni su come eseguire [query pianificate nell’interfaccia utente](./ui/user-guide.md#scheduled-queries) e [API](./api/scheduled-queries.md).
+
+Di seguito è riportato un elenco di considerazioni per le query pianificate quando si utilizza il [!DNL Query Editor]. Non si applicano al [!DNL Query Service] API:<br/>È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.<br/>You **impossibile** aggiungi una pianificazione a una query con parametri.<br/>Query pianificate **impossibile** contiene un blocco anonimo.<br/>È possibile pianificare solo **uno** modello di query utilizzando l’interfaccia utente. Se desideri aggiungere ulteriori pianificazioni a un modello di query, dovrai utilizzare l’API . Se una pianificazione è già stata aggiunta utilizzando l’API , non potrai aggiungere altre pianificazioni utilizzando l’interfaccia utente .
 +++
 
 ### Cosa significa l’errore &quot;Limite di sessione raggiunto&quot;?
@@ -322,7 +322,7 @@ Query Service supporta funzioni SQL integrate per convertire una data marca temp
 
 #### Converti in timestamp UTC
 
-La `to_utc_timestamp()` interpreta i parametri specificati e li converte **alla marca temporale del fuso orario locale** in formato UTC. Ad esempio, il fuso orario a Seoul, Corea del Sud, è UTC/GMT +9 ore. Fornendo una marca temporale di sola data, il metodo utilizza un valore predefinito di mezzanotte della mattina. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
+La `to_utc_timestamp()` interpreta i parametri specificati e li converte **alla marca temporale del fuso orario locale** in formato UTC. Ad esempio, il fuso orario a Seoul, Corea del Sud, è UTC/GMT +9 ore. Fornendo una marca temporale di sola data, il metodo utilizza un valore predefinito di mezzanotte della mattina. La marca temporale e il fuso orario vengono convertiti in formato UTC dall’ora di tale regione a una marca temporale UTC della propria area locale.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
