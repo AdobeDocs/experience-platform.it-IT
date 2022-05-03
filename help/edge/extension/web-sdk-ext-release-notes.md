@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54211c6166552ac86382d08da80fde3d9dad1257
+source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1343'
 ht-degree: 46%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 46%
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento illustra le note sulla versione per l&#39;estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK stesso, consulta la sezione [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Versione 2.11.2 - 3 maggio 2022
+
+Contiene la versione 2.10.1 della libreria Adobe Experience Platform Web SDK.
 
 ## Versione 2.11.1 - 22 aprile 2022
 
