@@ -4,9 +4,9 @@ title: Dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Per passare al [!UICONTROL Segmenti] nell’interfaccia utente di Platform, sele
 
 Puoi modificare l’aspetto della [!UICONTROL Segmenti] dashboard selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere al **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
-Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
+Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [Panoramica della libreria Widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
 
 ## Selezionare un segmento
 
@@ -63,14 +63,17 @@ La data e l’ora &quot;ultimo aggiornamento&quot; di un widget mostrano quando 
 
 ## Widget standard
 
-Adobe fornisce più widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai tuoi segmenti. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, si prega di iniziare leggendo [panoramica della libreria widget](../customize/widget-library.md).
+Adobe fornisce più widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai tuoi segmenti. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, si prega di iniziare leggendo [Panoramica della libreria Widget](../customize/widget-library.md).
 
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
 * [[!UICONTROL Dimensione del pubblico]](#audience-size)
-* [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
 * [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
+* [[!UICONTROL Ordine di attivazione del pubblico]](#audience-activation-order)
+* [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
+* [[!UICONTROL Tendenza al cambiamento della dimensione del pubblico]](#audience-size-change-trend)
+* [[!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL Dimensione del pubblico] {#audience-size}
 
@@ -79,18 +82,6 @@ La **[!UICONTROL Dimensione del pubblico]** widget visualizza il numero totale d
 Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo il [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
-
-La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce informazioni sul numero totale di profili nel segmento acquisiti durante l’istantanea giornaliera, negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo widget mostra come la dimensione del segmento potrebbe essere cambiata nel tempo, in quanto i nuovi profili si qualificano o escono dal segmento.
-
-Per ulteriori informazioni sulla valutazione dei segmenti e su come i profili si qualificano e si ritirano dai segmenti, consulta [Documentazione del servizio di segmentazione](../../segmentation/home.md).
-
-![La panoramica dei segmenti mostra il widget di tendenza della dimensione del pubblico.](../images/segments/audience-size-trend-captions.png)
-
-La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce un [!UICONTROL Sottotitoli] in alto a destra del widget. Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didascalie automatiche. Un modello di apprendimento automatico genera automaticamente didascalie per descrivere le tendenze chiave e gli eventi importanti analizzando il grafico e i dati dei segmenti.
-
-![Finestra di dialogo delle didascalie automatiche per il widget di tendenza Dimensione pubblico.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL Sovrapposizione identità] {#identity-overlap}
 
@@ -108,9 +99,37 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 
 La **[!UICONTROL Profili per identità]** widget visualizza la suddivisione delle identità in tutti i profili uniti nel segmento selezionato. Il numero totale di profili per identità può essere superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associate più identità. In altre parole, l’aggiunta dei valori mostrati per ogni identità può avere un totale superiore alla dimensione totale del pubblico nel segmento, perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associate più identità.
 
+Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didascalie automatiche.
+
+![Finestra di dialogo dei profili per didascalie di identità.](../images/segments/profiles-by-identity.png)
+
+Un modello di apprendimento automatico genera automaticamente informazioni sui dati analizzando la distribuzione complessiva e le dimensioni chiave dei dati.
+
 Per saperne di più sulle identità, visita il [Documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL Ordine di attivazione del pubblico] {#audience-activation-order}
+
+La [!UICONTROL Ordine di attivazione del pubblico] widget fornisce una tabella a tre colonne in cui sono elencati i [!UICONTROL nome della destinazione], [!UICONTROL piattaforma]e l&#39;attivazione [!UICONTROL date] del pubblico. L&#39;elenco è ordinato da alto a basso in base al recente e può contenere fino a 10 righe.
+
+![Il widget dell&#39;ordine di attivazione del pubblico.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
+
+La [!UICONTROL Tendenza delle dimensioni del pubblico] widget fornisce un grafico a linee illustrativo del numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento in un determinato periodo di tempo. La tendenza della dimensione del pubblico può essere visualizzata per periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. La dimensione del pubblico si riflette sull’asse y e il tempo sull’asse x.
+
+![Il widget di tendenza della dimensione del pubblico.](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL Tendenza al cambiamento della dimensione del pubblico] {#audience-size-change-trend}
+
+Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili qualificati per un dato segmento tra le istantanee giornaliere più recenti. Il segmento scelto per l’analisi viene selezionato dal menu a discesa della panoramica. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. La dimensione del pubblico si riflette sull’asse y e il tempo sull’asse x.
+
+![Il widget di tendenza della modifica della dimensione del pubblico.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità] {#audience-size-trend-by-identity}
+
+Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base al tipo di identità scelto dal menu a discesa del widget. Il segmento utilizzato per l’analisi viene selezionato dal menu a discesa della panoramica. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget.
+
+![La tendenza della dimensione del pubblico in base al widget di identità.](../images/segments/audience-size-trend-by-identity.png)
 
 ## Passaggi successivi
 

@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Per passare al dashboard delle destinazioni nell’interfaccia utente di Platfor
 
 Puoi modificare l’aspetto del dashboard delle destinazioni selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere al **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
-Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
+Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [Panoramica della libreria Widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
 
 ## Widget standard
 
-Adobe fornisce diversi widget standard che puoi utilizzare per visualizzare diverse metriche correlate alle destinazioni e valutare la completezza dei segmenti disponibili per l’analisi dei dati. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, si prega di iniziare leggendo [panoramica della libreria widget](../customize/widget-library.md).
+Adobe fornisce diversi widget standard che puoi utilizzare per visualizzare diverse metriche correlate alle destinazioni e valutare la completezza dei segmenti disponibili per l’analisi dei dati. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, si prega di iniziare leggendo [Panoramica della libreria Widget](../customize/widget-library.md).
 
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
@@ -56,6 +56,9 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Segmenti mappati per identità]](#mapped-segments-by-identity)
 * [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)
 * [[!UICONTROL Conteggio destinazioni]](#destinations-count)
+* [[!UICONTROL Stato della destinazione]](#destination-status)
+* [[!UICONTROL Destinazioni attive per piattaforma di destinazione]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Tipi di pubblico attivati per tutte le destinazioni]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinazioni più utilizzate] {#most-used-destinations}
 
@@ -164,6 +167,28 @@ La [!UICONTROL Conteggio destinazioni] widget fornisce il numero totale di endpo
 Sotto il conteggio totale, seleziona **[!UICONTROL Destinazioni]** per passare alla scheda di ricerca delle destinazioni . In questa pagina sono elencate tutte le destinazioni con le quali hai stabilito una connessione fino ad oggi.
 
 ![Il widget Conteggio destinazioni.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Stato della destinazione] {#destination-status}
+
+La [!UICONTROL Stato della destinazione] widget visualizza il numero totale di destinazioni abilitate come una singola metrica e utilizza un grafico ad anello per illustrare la differenza proporzionale tra destinazioni abilitate e disabilitate.
+
+I singoli conteggi per le destinazioni abilitate o disabilitate vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
+
+![Il widget Stato di destinazione.](../images/destinations/destination-status.png)
+
+### [!UICONTROL Destinazioni attive per piattaforma di destinazione] {#active-destinations-by-destination-platform}
+
+Il widget fornisce una tabella a due colonne per mostrare un elenco di piattaforme di destinazione attive e il numero totale di destinazioni attive per ciascuna piattaforma di destinazione. L’elenco delle piattaforme di destinazione è ordinato da alto a basso.
+
+![Destinazioni attive per widget della piattaforma di destinazione.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] {#activated-audiences-across-all-destinations}
+
+La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget fornisce il numero totale di tipi di pubblico attivati in tutte le destinazioni in un’unica metrica. Questo numero è preciso rispetto all&#39;istantanea più recente.
+
+![Il pubblico attivato in tutte le destinazioni widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Seleziona **[!UICONTROL Tipi di pubblico]** per passare alle destinazioni [!UICONTROL Sfoglia] scheda . Questa pagina fornisce un elenco di tutte le destinazioni abilitate e una varietà di metriche rilevanti. Consulta la documentazione per [ulteriori informazioni [!UICONTROL Sfoglia] scheda](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Passaggi successivi
 
