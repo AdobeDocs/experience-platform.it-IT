@@ -3,7 +3,7 @@ title: Panoramica dell’estensione Core per l’inoltro degli eventi
 description: Scopri l’estensione Core per l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 98%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 Nel codice personalizzato, è possibile utilizzare anche l’oggetto `ruleStash`.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 L’oggetto `ruleStash` raccoglie ogni risultato dai moduli di azione.
 
 Ogni estensione dispone di un proprio namespace. Ad esempio, se l’estensione è denominata `send-beacon`, tutti i risultati delle azioni `send-beacon` vengono memorizzati nel namespace `ruleStash['send-beacon']`.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 Il namespace è univoco per ciascuna estensione e ha il valore `undefined` all’inizio.
 
