@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1329'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine C
 
 >[!NOTE]
 >
->Per creare un flusso di dati, devi già disporre di un ID di connessione di base valido con una delle seguenti origini di gestione delle relazioni con i clienti su Platform:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Per creare un flusso di dati, devi già disporre di un ID di connessione di base valido con un&#39;origine CRM. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#customer-relationship-management) per un elenco delle origini di gestione delle relazioni con i clienti con cui è possibile creare una connessione di base.
 
 ## Introduzione
 

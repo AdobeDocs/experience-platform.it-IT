@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di successo cliente e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1327'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID di connessione di base valido con una delle seguenti origini di successo cliente su Platform:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>Per creare un flusso di dati, devi già disporre di un ID di connessione di base valido con un&#39;origine di successo cliente. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#customer-success) per un elenco delle origini di successo dei clienti con cui è possibile creare una connessione di base.
 
 ## Introduzione
 

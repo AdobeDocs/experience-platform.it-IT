@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione di pagamento e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1325'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, devi già disporre di un ID di connessione di base valido con una delle seguenti origini di pagamento su Platform:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>Per creare un flusso di dati, è necessario disporre già di un ID di connessione di base valido con un&#39;origine dei pagamenti. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#payments) per un elenco delle origini di pagamento con cui è possibile creare una connessione di base.
 
 ## Introduzione
 

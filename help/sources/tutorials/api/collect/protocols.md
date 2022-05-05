@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione protocolli e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID di connessione di base valido con una delle seguenti origini protocolli su Platform:<ul><li>[OData generico](../create/protocols/odata.md)</li><li>[REST generico](../create/protocols/generic-rest.md)</li></ul>
+>Per creare un flusso di dati, è necessario disporre già di un ID di connessione di base valido con un&#39;origine dei protocolli. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#protocols) per un elenco delle origini di protocolli con cui è possibile creare una connessione di base.
 
 ## Introduzione
 

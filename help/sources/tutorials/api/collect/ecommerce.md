@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1266'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un valore valido [!DNL Shopify] ID connessione base. Se non disponi di questo ID, consulta i passaggi su come [creare un [!DNL Shopify] connessione di base](../create/ecommerce/shopify.md) prima di provare a eseguire questa esercitazione.
+>Per creare un flusso di dati, è necessario disporre già di un ID di connessione di base valido con un&#39;origine E-commerce. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#ecommerce) per un elenco delle origini di E-commerce con cui è possibile creare una connessione di base.
 
 ## Introduzione
 
