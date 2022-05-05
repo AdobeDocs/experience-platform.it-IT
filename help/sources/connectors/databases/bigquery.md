@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
-title: Panoramica del connettore di origine Google BigQuery
+title: Panoramica del connettore sorgente BigQuery Google
 topic-legacy: overview
 description: Scopri come collegare Google BigQuery a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-# (Beta) Connettore [!DNL Google BigQuery]
+# (Beta) [!DNL Google BigQuery] connettore
 
 >[!NOTE]
 >
->Il [!DNL Google BigQuery] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
+>La [!DNL Google BigQuery] è in versione beta. Consulta la sezione [Panoramica delle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
@@ -24,33 +24,33 @@ Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo 
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
 
 ## Prerequisiti
 
-La sezione seguente fornisce ulteriori informazioni sulla configurazione dei prerequisiti necessaria per creare una connessione sorgente [!DNL Google BigQuery].
+La sezione seguente fornisce ulteriori informazioni sulla configurazione dei prerequisiti necessaria per creare un [!DNL Google BigQuery] connessione di origine.
 
-### Genera le tue credenziali [!DNL Google BigQuery]
+### Genera il tuo [!DNL Google BigQuery] credenziali
 
-Per connettersi a [!DNL Google BigQuery] Platform, è necessario generare valori per le seguenti credenziali:
+Connessione [!DNL Google BigQuery] in Platform, devi generare valori per le seguenti credenziali:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `project` | Il progetto è l’entità organizzativa a livello di base per le risorse [!DNL Google Cloud], incluso [!DNL Google BigQuery]. |
-| `clientID` | L’ID client è la metà delle tue credenziali [!DNL Google BigQuery] OAuth 2.0. |
-| `clientSecret` | Il segreto client è l’altra metà delle tue credenziali [!DNL Google BigQuery] OAuth 2.0. |
+| `project` | Il progetto è l’entità organizzativa a livello di base per il tuo [!DNL Google Cloud] risorse, comprese [!DNL Google BigQuery]. |
+| `clientID` | L&#39;ID cliente è la metà del tuo [!DNL Google BigQuery] Credenziali OAuth 2.0. |
+| `clientSecret` | Il segreto cliente è l&#39;altra metà del tuo [!DNL Google BigQuery] Credenziali OAuth 2.0. |
 | `refreshToken` | Il token di aggiornamento ti consente di ottenere nuovi token di accesso per la tua API. I token di accesso hanno una durata limitata e possono scadere nel corso del progetto. Puoi utilizzare il token di aggiornamento per l’autenticazione e richiedere token di accesso successivi per il progetto, se necessario. |
 
-Per istruzioni dettagliate su come generare le credenziali OAuth 2.0 per le API [!DNL Google], consulta la seguente [[!DNL Google] guida all’autenticazione OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
+Per istruzioni dettagliate su come generare le credenziali OAuth 2.0 per [!DNL Google] API, vedi quanto segue [[!DNL Google] Guida all’autenticazione di OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
 
-## Connetti [!DNL Google BigQuery] alla piattaforma
+## Connetti [!DNL Google BigQuery] su Platform
 
-La documentazione seguente fornisce informazioni su come connettersi a [!DNL Google BigQuery] Platform utilizzando le API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Google BigQuery] su Platform utilizzando le API o l’interfaccia utente:
 
 ### Utilizzo delle API
 
 - [Creare una connessione di base Google BigQuery utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/bigquery.md)
-- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ### Utilizzo dell’interfaccia

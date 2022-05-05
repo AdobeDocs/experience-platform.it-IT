@@ -5,9 +5,10 @@ title: Creare una connessione di base Eloqua di Oracle utilizzando l’API del s
 topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform ad Oracle Eloqua utilizzando l’API del servizio di flusso.
-source-git-commit: 423f0efc3c0d9fb38cb8d1b16b885e1eddc23e72
+exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -111,7 +112,5 @@ Una risposta corretta restituisce i dettagli della nuova connessione di base cre
 
 Seguendo questa esercitazione, hai creato un [!DNL Oracle Eloqua] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
 
-* [Esplorare la struttura e il contenuto di una sorgente di automazione di marketing utilizzando [!DNL Flow Service] API](../../explore/marketing-automation.md)
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
 * [Crea un flusso di dati per trasferire i dati di automazione del marketing a Platform utilizzando [!DNL Flow Service] API](../../collect/marketing-automation.md)
-
-

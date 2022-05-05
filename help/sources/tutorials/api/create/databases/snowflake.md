@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform al Snowflake utilizzando l’API del servizio di flusso.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '532'
 ht-degree: 2%
 
 ---
@@ -104,4 +104,7 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso il
 }
 ```
 
-Seguendo questa esercitazione, hai creato un [!DNL Snowflake] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID connessione nell’esercitazione successiva per scoprire come [esplorare i database utilizzando l’API del servizio di flusso](../../explore/database-nosql.md).
+Seguendo questa esercitazione, hai creato un [!DNL Snowflake] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creare un flusso di dati per trasferire i dati di database a Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)

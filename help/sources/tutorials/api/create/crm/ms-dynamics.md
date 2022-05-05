@@ -6,18 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Platform a un account Microsoft Dynamics utilizzando l’API del servizio di flusso.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '639'
 ht-degree: 2%
 
 ---
 
-# Creare una connessione di base [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]
+# Crea un [!DNL Microsoft Dynamics] connessione di base utilizzando [!DNL Flow Service] API
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Microsoft Dynamics] (in seguito denominata &quot;[!DNL Dynamics]&quot;) utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Microsoft Dynamics] (in appresso denominato &quot;[!DNL Dynamics]&quot;) utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -26,36 +26,36 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 * [Origini](../../../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettere correttamente Platform a un account Dynamics utilizzando l’ API [!DNL Flow Service] .
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegare correttamente Platform a un account Dynamics utilizzando [!DNL Flow Service] API.
 
 ### Raccogli credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi a [!DNL Dynamics], è necessario fornire i valori per le seguenti proprietà di connessione:
+Per [!DNL Flow Service] per connettersi a [!DNL Dynamics], è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `serviceUri` | L&#39;URL del servizio dell&#39;istanza [!DNL Dynamics]. |
-| `username` | Il nome utente dell&#39;account utente [!DNL Dynamics]. |
-| `password` | Password per il tuo account [!DNL Dynamics]. |
-| `servicePrincipalId` | L&#39;ID client del tuo account [!DNL Dynamics]. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
+| `serviceUri` | L’URL di servizio della [!DNL Dynamics] istanza. |
+| `username` | Nome utente per il [!DNL Dynamics] account utente. |
+| `password` | La password [!DNL Dynamics] conto. |
+| `servicePrincipalId` | L&#39;ID cliente del tuo [!DNL Dynamics] conto. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
 | `servicePrincipalKey` | Chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizza l’entità del servizio e l’autenticazione basata sulle chiavi. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Dynamics] è: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Dynamics] è: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
 Per ulteriori informazioni su come iniziare, visita [questo [!DNL Dynamics] documento](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
 Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Dynamics] come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Dynamics] credenziali di autenticazione come parte dei parametri della richiesta.
 
-### Creare una connessione di base [!DNL Dynamics] utilizzando l&#39;autenticazione di base
+### Crea un [!DNL Dynamics] connessione di base tramite autenticazione di base
 
-Per creare una connessione di base [!DNL Dynamics] utilizzando l’autenticazione di base, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `username` e `password` della connessione.
+Per creare una [!DNL Dynamics] connessione di base utilizzando l’autenticazione di base, effettuare una richiesta di POST al [!DNL Flow Service] API fornendo al contempo i valori per la connessione `serviceUri`, `username`e `password`.
 
 **Formato API**
 
@@ -93,14 +93,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.serviceUri` | URI di servizio associato all&#39;istanza [!DNL Dynamics]. |
-| `auth.params.username` | Il nome utente associato al tuo account [!DNL Dynamics]. |
-| `auth.params.password` | La password associata al tuo account [!DNL Dynamics]. |
-| `connectionSpec.id` | ID delle specifiche di connessione [!DNL Dynamics]: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `auth.params.serviceUri` | L&#39;URI di servizio associato al [!DNL Dynamics] istanza. |
+| `auth.params.username` | Il nome utente associato al tuo [!DNL Dynamics] conto. |
+| `auth.params.password` | La password associata al [!DNL Dynamics] conto. |
+| `connectionSpec.id` | La [!DNL Dynamics] ID specifica di connessione: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione appena creata, incluso l’identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
+Una risposta corretta restituisce la nuova connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
 
 ```json
 {
@@ -109,9 +109,9 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso l�
 }
 ```
 
-### Creare una connessione di base [!DNL Dynamics] utilizzando l&#39;autenticazione basata sulle chiavi dell&#39;entità servizio
+### Crea un [!DNL Dynamics] connessione di base tramite autenticazione basata su chiave dell&#39;entità servizio
 
-Per creare una connessione di base [!DNL Dynamics] utilizzando l’autenticazione basata sulle chiavi dell’entità servizio, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `servicePrincipalId` e `servicePrincipalKey`.
+Per creare una [!DNL Dynamics] connessione di base utilizzando l&#39;autenticazione basata su chiave principale del servizio, effettuare una richiesta di POST al [!DNL Flow Service] API fornendo al contempo i valori per la connessione `serviceUri`, `servicePrincipalId`e `servicePrincipalKey`.
 
 **Formato API**
 
@@ -149,14 +149,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.serviceUri` | URI di servizio associato all&#39;istanza [!DNL Dynamics]. |
-| `auth.params.servicePrincipalId` | L&#39;ID client del tuo account [!DNL Dynamics]. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
+| `auth.params.serviceUri` | L&#39;URI di servizio associato al [!DNL Dynamics] istanza. |
+| `auth.params.servicePrincipalId` | L&#39;ID cliente del tuo [!DNL Dynamics] conto. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
 | `auth.params.servicePrincipalKey` | Chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizza l’entità del servizio e l’autenticazione basata sulle chiavi. |
-| `connectionSpec.id` | ID delle specifiche di connessione [!DNL Dynamics]: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | La [!DNL Dynamics] ID specifica di connessione: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione appena creata, incluso l’identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
+Una risposta corretta restituisce la nuova connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
 
 ```json
 {
@@ -167,4 +167,7 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso l�
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL Dynamics] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva quando imparerai a [esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso](../../explore/crm.md).
+Seguendo questa esercitazione, hai creato un [!DNL Microsoft Dynamics] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creare un flusso di dati per portare i dati CRM in Platform utilizzando [!DNL Flow Service] API](../../collect/crm.md)

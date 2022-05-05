@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Zoho CRM utilizzando l’API del servizio di flusso.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -123,4 +123,7 @@ Una risposta corretta restituisce i dettagli della nuova connessione di base cre
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un [!DNL Zoho CRM] connessione di base utilizzando [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID nell&#39;esercitazione successiva per scoprire come [esplorare i sistemi CRM utilizzando l’API del servizio di flusso](../../explore/crm.md).
+Seguendo questa esercitazione, hai creato un [!DNL Zoho] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creare un flusso di dati per portare i dati CRM in Platform utilizzando [!DNL Flow Service] API](../../collect/crm.md)

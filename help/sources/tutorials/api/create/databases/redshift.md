@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Amazon Redshift utilizzando l’API del servizio di flusso.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: c0d750ef61ad2e295568cccabca5c52a758997c2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
@@ -114,4 +114,7 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso il
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un [!DNL Amazon Redshift] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID connessione nell’esercitazione successiva per scoprire come [esplorare i database o i sistemi NoSQL utilizzando l&#39;API del servizio di flusso](../../explore/database-nosql.md).
+Seguendo questa esercitazione, hai creato un [!DNL Amazon Redshift] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creare un flusso di dati per trasferire i dati di database a Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)

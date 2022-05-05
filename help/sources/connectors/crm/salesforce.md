@@ -5,10 +5,10 @@ title: Panoramica del connettore di origine Salesforce
 topic-legacy: overview
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '897'
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,7 @@ Una richiesta corretta crea i namespace e gli schemi B2B in base alle specifiche
 La documentazione seguente fornisce informazioni su come connettersi [!DNL Salesforce] su Platform utilizzando le API o l’interfaccia utente:
 
 - [Creare una connessione di base Salesforce utilizzando l’API del servizio di flusso](../../tutorials/api/create/crm/salesforce.md)
-- [Esplorare la struttura dati e il contenuto di un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/explore/crm.md)
+- [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine CRM utilizzando l’API del servizio di flusso](../../tutorials/api/collect/crm.md)
 
 ## Connetti [!DNL Salesforce] su Platform tramite l’interfaccia utente

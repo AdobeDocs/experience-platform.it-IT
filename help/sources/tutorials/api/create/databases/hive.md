@@ -6,54 +6,54 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Apache Hive su Azure HDInsights a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
-# Crea una connessione di base [!DNL Apache Hive] su [!DNL Azure HDInsights] utilizzando l&#39;API [!DNL Flow Service]
+# Crea un [!DNL Apache Hive] su [!DNL Azure HDInsights] connessione di base utilizzando [!DNL Flow Service] API
 
 >[!NOTE]
 >
->Il connettore [!DNL Apache Hive] su [!DNL Azure HDInsights] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
+>La [!DNL Apache Hive] su [!DNL Azure HDInsights] connettore in versione beta. Consulta la sezione [Panoramica delle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Apache Hive] su [!DNL Azure HDInsights] (in seguito denominata &quot;[!DNL Hive]&quot;) utilizzando l&#39;API [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Apache Hive] su [!DNL Azure HDInsights] (in appresso denominato &quot;[!DNL Hive]&quot;) utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Hive] utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Hive] utilizzando [!DNL Flow Service] API.
 
 ### Raccogli credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi a [!DNL Hive], è necessario fornire i valori per le seguenti proprietà di connessione:
+Per [!DNL Flow Service] per connettersi con [!DNL Hive], è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `host` | L&#39;indirizzo IP o il nome host del server [!DNL Hive]. |
-| `username` | Nome utente utilizzato per accedere al server [!DNL Hive]. |
+| `host` | Indirizzo IP o nome host del [!DNL Hive] server. |
+| `username` | Nome utente utilizzato per accedere [!DNL Hive] server. |
 | `password` | La password corrispondente all&#39;utente. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Hive] è: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Hive] è: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento Hive](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Per ulteriori informazioni su come iniziare, consulta [documento Hive](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) .
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
 Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-Per creare un ID di connessione di base, invia una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Hive] come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Hive] credenziali di autenticazione come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -63,7 +63,7 @@ POST /connections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di base per [!DNL Hive]:
+La richiesta seguente crea una connessione di base per [!DNL Hive]:
 
 ```shell
 curl -X POST \
@@ -91,12 +91,12 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione associata all&#39;account [!DNL Hive]. |
-| `connectionSpec.id` | ID delle specifiche di connessione [!DNL Hive]: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `auth.params.connectionString` | La stringa di connessione associata alla [!DNL Hive] conto. |
+| `connectionSpec.id` | La [!DNL Hive] ID specifica di connessione: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso l’identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
+Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
 
 ```json
 {
@@ -107,4 +107,7 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL Hive] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per scoprire come [esplorare i database utilizzando l&#39;API del servizio di flusso](../../explore/database-nosql.md).
+Seguendo questa esercitazione, hai creato un [!DNL Apache Hive] su [!DNL Azure HDInsights] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+
+* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Creare un flusso di dati per trasferire i dati di database a Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)

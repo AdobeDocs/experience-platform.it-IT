@@ -5,9 +5,9 @@ title: Panoramica del connettore sorgente Amazon Redshift
 topic-legacy: overview
 description: Scopri come collegare Amazon Redshift a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 600b216932a7d19440534c4b190fb2f3766c8785
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
 
-La documentazione seguente fornisce informazioni su come connettersi a [!DNL Amazon Redshift] Platform utilizzando le API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Amazon Redshift] su Platform utilizzando le API o l’interfaccia utente:
 
-## Connetti [!DNL Amazon Redshift] alla piattaforma utilizzando le API
+## Connetti [!DNL Amazon Redshift] su Platform tramite API
 
 - [Creare una connessione di base Amazon Redshift utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/redshift.md)
-- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
-## Connetti [!DNL Amazon Redshift] alla piattaforma utilizzando l’interfaccia utente
+## Connetti [!DNL Amazon Redshift] su Platform tramite l’interfaccia utente
 
 - [Creare una connessione sorgente Amazon Redshift nell&#39;interfaccia utente](../../tutorials/ui/create/databases/redshift.md)
 - [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)

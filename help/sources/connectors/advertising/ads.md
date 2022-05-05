@@ -5,9 +5,9 @@ title: Panoramica origine di Google AdWords
 topic-legacy: overview
 description: Scopri come collegare Google AdWords a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Googl
 
 ### Utilizzo delle API
 
-- [Creare una connessione di base Google AdWords utilizzando l’API del servizio di flusso](../../tutorials/api/create/advertising/ads.md)
-- [Esplorare la struttura dati e il contenuto di un’origine pubblicitaria utilizzando l’API del servizio di flusso](../../tutorials/api/explore/advertising.md)
-- [Creare un flusso di dati per un’origine pubblicitaria utilizzando l’API del servizio di flusso](../../tutorials/api/collect/advertising.md)
+* [Creare una connessione di base Google AdWords utilizzando l’API del servizio di flusso](../../tutorials/api/create/advertising/ads.md)
+* [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
+* [Creare un flusso di dati per un’origine pubblicitaria utilizzando l’API del servizio di flusso](../../tutorials/api/collect/advertising.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare una connessione sorgente Google AdWords nell’interfaccia utente](../../tutorials/ui/create/advertising/ads.md)
-- [Creare un flusso di dati per una connessione a un’origine pubblicitaria nell’interfaccia utente](../../tutorials/ui/dataflow/advertising.md)
+* [Creare una connessione sorgente Google AdWords nell’interfaccia utente](../../tutorials/ui/create/advertising/ads.md)
+* [Creare un flusso di dati per una connessione a un’origine pubblicitaria nell’interfaccia utente](../../tutorials/ui/dataflow/advertising.md)

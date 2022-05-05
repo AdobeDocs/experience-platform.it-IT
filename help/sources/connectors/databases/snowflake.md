@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine del Snowflake
 topic-legacy: overview
 description: Scopri come collegare un Snowflake a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Snowf
 ## Connetti [!DNL Snowflake] su Platform tramite API
 
 - [Creare una connessione di base del Snowflake utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/snowflake.md)
-- [Esplorare la struttura dati e il contenuto di un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
+- [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL Snowflake] su Platform tramite l’interfaccia utente

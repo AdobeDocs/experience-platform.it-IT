@@ -1,101 +1,72 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;archiviazione cloud;archiviazione cloud
-solution: Experience Platform
-title: Esplorare un sistema di storage ad alta voce utilizzando l’API del servizio di flusso
-topic-legacy: overview
+title: Esplorare cartelle di archiviazione cloud utilizzando l’API del servizio di flusso
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare un sistema di archiviazione cloud di terze parti.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 2%
+source-wordcount: '663'
+ht-degree: 3%
 
 ---
 
-# Esplorare un sistema di archiviazione cloud utilizzando l&#39;API [!DNL Flow Service]
+# Esplora le cartelle di archiviazione cloud utilizzando [!DNL Flow Service] API
 
-Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) per esplorare un sistema di archiviazione cloud di terze parti.
+Questa esercitazione fornisce passaggi su come esplorare e visualizzare in anteprima la struttura e il contenuto dell&#39;archiviazione cloud utilizzando [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+
+>[!NOTE]
+>
+>Per esplorare l&#39;archiviazione cloud, è necessario disporre già di un ID di connessione di base valido per un&#39;origine di archiviazione cloud. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#cloud-storage) per un elenco delle origini di archiviazione cloud con cui è possibile creare una connessione di base.
 
 ## Introduzione
 
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../home.md):  [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un sistema di archiviazione cloud utilizzando l’ [!DNL Flow Service] API .
+### Utilizzo delle API di Platform
 
-### Ottenere un ID di connessione
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
 
-Per esplorare un archivio cloud di terze parti utilizzando le API [!DNL Platform], è necessario disporre di un ID di connessione valido. Se non si dispone già di una connessione per lo storage con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
+## Esplora le cartelle di archiviazione cloud
 
-* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
-* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
-* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
-* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
-* [[!DNL FTP]](../create/cloud-storage/ftp.md)
-* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
-* [HDFS](../create/cloud-storage/hdfs.md)
-* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
-* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
+È possibile recuperare informazioni sulla struttura delle cartelle di archiviazione cloud effettuando una richiesta di GET al [!DNL Flow Service] API fornendo l&#39;ID di connessione di base della sorgente.
 
-### Lettura di chiamate API di esempio
-
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
-
-### Raccogli i valori delle intestazioni richieste
-
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
-
-## Esplora l&#39;archiviazione cloud
-
-Utilizzando l’ID di connessione per l’archiviazione cloud, puoi esplorare file e directory eseguendo richieste GET. Quando esegui richieste di GET per esplorare l’archiviazione cloud, devi includere i parametri di query elencati nella tabella seguente:
+Quando esegui richieste di GET per esplorare l’archiviazione cloud, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `objectType` | Tipo di oggetto da esplorare. Imposta questo valore come: <ul><li>`folder`: Esplorare una directory specifica</li><li>`root`: Esplora la directory principale.</li></ul> |
 | `object` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il suo valore rappresenta il percorso della directory che desideri esplorare. |
 
-Utilizza la seguente chiamata per trovare il percorso del file da inserire in [!DNL Platform]:
 
 **Formato API**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=root
-GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONNECTION_ID}` | ID di connessione per il connettore di origine dell&#39;archiviazione cloud. |
+| `{BASE_CONNECTION_ID}` | ID di connessione di base dell&#39;origine di archiviazione cloud. |
 | `{PATH}` | Percorso di una directory. |
 
 **Richiesta**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'http://platform.adobe.io/data/foundation/flowservice/connections/dc3c0646-5e30-47be-a1ce-d162cb8f1f07/explore?objectType=folder&object=root' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un array di file e cartelle presenti nella directory interrogata. Prendi nota della proprietà `path` del file che desideri caricare, in quanto devi fornirlo nel passaggio successivo per controllarne la struttura.
+Una risposta corretta restituisce un array di file e cartelle presenti nella directory interrogata. Prendi nota della `path` proprietà del file che desideri caricare, in quanto devi fornirlo nel passaggio successivo per esaminarne la struttura.
 
 ```json
 [
@@ -127,22 +98,22 @@ Una risposta corretta restituisce un array di file e cartelle presenti nella dir
 
 Per esaminare la struttura del file di dati dall’archiviazione cloud, esegui una richiesta di GET fornendo il percorso del file e digita come parametro di query.
 
-È possibile esaminare la struttura di un file di dati dall&#39;origine di archiviazione cloud eseguendo una richiesta di GET fornendo il percorso e il tipo del file. Puoi anche controllare diversi tipi di file come CSV, TSV o JSON compresso e delimitare i file specificando i relativi tipi di file come parte dei parametri di query.
+È possibile esaminare la struttura di un file di dati dall&#39;origine di archiviazione cloud eseguendo una richiesta di GET fornendo il percorso e il tipo del file. Puoi anche controllare diversi tipi di file come CSV, TSV o JSON compresso e delimitare i file specificando i rispettivi tipi di file come parte dei parametri di query.
 
 **Formato API**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | ID di connessione del connettore di origine dell&#39;archiviazione cloud. |
+| `{BASE_CONNECTION_ID}` | ID di connessione del connettore di origine dell&#39;archiviazione cloud. |
 | `{FILE_PATH}` | Percorso del file da esaminare. |
 | `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati sono:<ul><li>DELIMITATO</code>: Valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li>JSON</code>: Notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li>PARQUET</code>: Parquet Apache. I file di parquet devono essere conformi a XDM.</li></ul> |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi che possono essere utilizzati per filtrare i risultati. Per ulteriori informazioni, consulta la sezione sui [parametri di query](#query) . |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi che possono essere utilizzati per filtrare i risultati. Vedi la sezione su [parametri di query](#query) per ulteriori informazioni. |
 
 **Richiesta**
 
@@ -186,7 +157,7 @@ Una risposta corretta restituisce la struttura del file interrogato, inclusi i n
 
 ## Utilizzo dei parametri di query {#query}
 
-L&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supporta l&#39;utilizzo di parametri di query per visualizzare in anteprima ed esaminare diversi tipi di file.
+La [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supporta l’utilizzo di parametri di query per visualizzare in anteprima ed esaminare diversi tipi di file.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
@@ -195,4 +166,4 @@ L&#39; [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/r
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il tuo sistema di archiviazione cloud, trovato il percorso del file che desideri portare in [!DNL Platform] e ne hai visualizzato la struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere dati dall&#39;archiviazione cloud e inserirli in Platform](../collect/cloud-storage.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema di archiviazione cloud, trovato il percorso del file a cui desideri accedere [!DNL Platform]e ne ha visualizzato la struttura. Puoi utilizzare queste informazioni nell’esercitazione successiva per [raccogliere dati dall’archivio cloud e inserirli in Platform](../collect/cloud-storage.md).
