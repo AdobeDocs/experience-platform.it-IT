@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1549'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,9 @@ Per informazioni su come effettuare correttamente le chiamate alle API di Platfo
 
 ## Creazione di una connessione sorgente {#source}
 
-È possibile creare una connessione sorgente effettuando una richiesta di POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
+È possibile creare una connessione sorgente effettuando una richiesta di POST al `sourceConnections` punto finale [!DNL Flow Service] API fornendo l&#39;ID di connessione di base, il percorso del file di origine che si desidera acquisire e l&#39;ID di specifica di connessione corrispondente della sorgente.
 
-Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
+Quando crei una connessione di origine, devi anche definire un valore enum per l&#39;attributo del formato dati.
 
 Utilizza i seguenti valori enum per le origini basate su file:
 
@@ -52,22 +52,13 @@ Utilizza i seguenti valori enum per le origini basate su file:
 
 Per tutte le origini basate su tabella, impostare il valore su `tabular`.
 
-- [Creazione di una connessione sorgente tramite file delimitati personalizzati](#using-custom-delimited-files)
-- [Creazione di una connessione sorgente tramite file compressi](#using-compressed-files)
-
 **Formato API**
 
 ```http
 POST /sourceConnections
 ```
 
-### Creazione di una connessione sorgente tramite file delimitati personalizzati {#using-custom-delimited-files}
-
 **Richiesta**
-
-È possibile acquisire un file delimitato con un delimitatore personalizzato specificando un `columnDelimiter` come proprietà. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene fornita, viene visualizzata una virgola `(,)` viene utilizzato come valore predefinito.
-
-Nell&#39;esempio seguente viene creata una connessione di origine per un tipo di file delimitato utilizzando valori separati da tabulazioni.
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `baseConnectionId` | ID di connessione univoco del sistema di archiviazione cloud di terze parti a cui si accede. |
-| `data.format` | Valore enum che definisce l’attributo del formato dati. |
-| `data.columnDelimiter` | È possibile utilizzare qualsiasi carattere di delimitazione di colonna singolo per raccogliere file flat. Questa proprietà è necessaria solo per l’acquisizione di file CSV o TSV. |
+| `baseConnectionId` | ID di connessione di base dell&#39;origine di archiviazione cloud. |
+| `data.format` | Il formato dei dati che desideri inserire in Platform. I valori supportati sono: `delimited`, `JSON`e `parquet`. |
+| `data.properties` | (Facoltativo) Un insieme di proprietà che è possibile applicare ai dati durante la creazione di una connessione sorgente. |
+| `data.properties.columnDelimiter` | (Facoltativo) Un delimitatore di colonna a carattere singolo che è possibile specificare quando si raccolgono file flat. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene fornito, viene visualizzata una virgola (`,`) viene utilizzato come valore predefinito. **Nota**: La `columnDelimiter` può essere utilizzata solo durante l’acquisizione di file delimitati. |
+| `data.properties.encoding` | (Facoltativo) Proprietà che definisce il tipo di codifica da utilizzare per l’acquisizione dei dati in Platform. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: La `encoding` è disponibile solo durante l’acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
+| `data.properties.compressionType` | (Facoltativo) Proprietà che definisce il tipo di file compresso per l’acquisizione. I tipi di file compressi supportati sono: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`. **Nota**: La `compressionType` può essere utilizzata solo durante l’acquisizione di file delimitati o JSON. |
 | `params.path` | Percorso del file di origine a cui si accede. |
-| `connectionSpec.id` | ID delle specifiche di connessione associato al sistema di archiviazione cloud di terze parti specifico. Consulta la sezione [appendice](#appendix) per un elenco degli ID delle specifiche di connessione. |
-
-**Risposta**
-
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuova connessione sorgente creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Creazione di una connessione sorgente tramite file compressi {#using-compressed-files}
-
-**Richiesta**
-
-Puoi anche acquisire file JSON compressi o delimitati specificandone i valori `compressionType` come proprietà. L’elenco dei tipi di file compressi supportati è:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-Nell&#39;esempio seguente viene creata una connessione sorgente per un file delimitato compresso utilizzando un `gzip` tipo di file.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `data.properties.compressionType` | Determina il tipo di file compresso da acquisire. Questa proprietà è necessaria solo durante l’acquisizione di file JSON compressi o delimitati. |
+| `connectionSpec.id` | ID della specifica di connessione associata alla specifica origine di archiviazione cloud. Consulta la sezione [appendice](#appendix) per un elenco degli ID delle specifiche di connessione. |
 
 **Risposta**
 

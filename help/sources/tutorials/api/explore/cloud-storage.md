@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti comuni;archiviazione cloud;archivia
 title: Esplorare cartelle di archiviazione cloud utilizzando l’API del servizio di flusso
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare un sistema di archiviazione cloud di terze parti.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 3%
+source-wordcount: '699'
+ht-degree: 2%
 
 ---
 
@@ -106,6 +106,7 @@ Per esaminare la struttura del file di dati dall’archiviazione cloud, esegui u
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parametro | Descrizione |
@@ -119,7 +120,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -163,6 +164,7 @@ La [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refer
 | --------- | ----------- |
 | `columnDelimiter` | Il valore a carattere singolo specificato come delimitatore di colonna per esaminare i file CSV o TSV. Se il parametro non viene fornito, il valore predefinito è una virgola `(,)`. |
 | `compressionType` | Un parametro di query obbligatorio per l’anteprima di un file JSON o delimitato compresso. I file compressi supportati sono: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | Definisce il tipo di codifica da utilizzare per il rendering dell’anteprima. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: La `encoding` è disponibile solo durante l’acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
 
 ## Passaggi successivi
 
