@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: b5c9dd966e14739e570105892becd39990d9acfb
+source-git-commit: 2afb51fc8391dd9f60f86300e0b85fbdc38009ba
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 18%
+source-wordcount: '159'
+ht-degree: 20%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 18%
 # Servizio query Adobe Experience Platform {#query}
 
 - [Panoramica del servizio query](home.md)
-- [Guida rapida](quickstart.md)
+- Introduzione {#get-started}
+   - [Prerequisiti](get-started/prerequisites.md)
+   - [Caso d’uso](get-started/use-case.md)
 - API del servizio query {#api}
    - [Introduzione](api/getting-started.md)
    - [Query](api/queries.md)
