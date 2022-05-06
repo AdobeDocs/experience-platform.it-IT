@@ -3,7 +3,7 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;diagramma di sistema;diagramma
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 4%
@@ -35,7 +35,7 @@ Il diagramma seguente illustra il flusso di lavoro di [!DNL Target] e [!DNL Plat
 
 ![Diagramma delle decisioni edge di Adobe Target con Platform Web SDK](./assets/target-platform-web-sdk.png)
 
-| Chiamata | Dettagli |
+| Effettua la chiamata | Dettagli |
 | --- | --- |
 | 1 | Il dispositivo carica il [!DNL Platform Web SDK]. La [!DNL Platform Web SDK] invia una richiesta alla rete perimetrale con dati XDM, ID ambiente Datastreams, parametri passati e ID cliente (facoltativo). La pagina (o i contenitori) è prenascosta. |
 | 2 | La rete perimetrale invia la richiesta ai servizi perimetrali per arricchirla con l’ID visitatore, il consenso e altre informazioni contestuali, come la geolocalizzazione e i nomi descrittivi dei dispositivi. |
@@ -88,7 +88,7 @@ Per ulteriori informazioni, consulta [Categorie di pubblico](https://experiencel
 
 I token di risposta vengono utilizzati principalmente per inviare metadati a terze parti come Google, Facebook, ecc. I token di risposta vengono restituiti nella variabile `meta` campo `propositions` -> `items`. Ecco un esempio:
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ I token di risposta vengono utilizzati principalmente per inviare metadati a ter
 Per raccogliere i token di risposta, devi abbonarti per `alloy.sendEvent` promettere, eseguire iterazioni `propositions`
 ed estrarre i dettagli da `items` -> `meta`. Ogni `proposition` ha `renderAttempted` campo booleano che indica se la `proposition` è stato reso o no. Vedi il campione seguente:
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ Tipico [!DNL Platform Web SDK] il codice che utilizza questo comando ha il segue
 
 **`sendEvent`con dati di profilo**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **Come inviare gli attributi del profilo ad Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ Elenco delle tabelle seguenti [!DNL Recommendations] e se ciascuno di essi è su
 
 **Come inviare gli attributi di Recommendations ad Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
