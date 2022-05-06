@@ -4,7 +4,7 @@ title: Genera il rapporto di sovrapposizione del set di dati
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione dei set di dati utilizzando l’API del profilo cliente in tempo reale.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -13,21 +13,21 @@ ht-degree: 1%
 
 # Genera il rapporto di sovrapposizione dei set di dati
 
-Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’ [!DNL Profile] archivio dell’organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile (profili).
+Il rapporto di sovrapposizione del set di dati fornisce visibilità nella composizione dell’organizzazione [!DNL Profile] archivia esponendo i set di dati che contribuiscono maggiormente al pubblico di destinazione (profili).
 
 Oltre a fornire approfondimenti sui tuoi dati, questo rapporto può aiutarti a intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio per impostare un limite di vita di alcuni dati.
 
-Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione dei set di dati utilizzando l’ [!DNL Real-time Customer Profile] API e interpretare i risultati per la tua organizzazione.
+Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione del set di dati utilizzando [!DNL Real-time Customer Profile] API e interpreta i risultati per la tua organizzazione.
 
 ## Introduzione
 
-Per utilizzare le API di Adobe Experience Platform, devi prima completare l&#39; [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per raccogliere i valori necessari per le intestazioni richieste. Per ulteriori informazioni sulle API di Experience Platform, consulta la [guida introduttiva alle API di Platform](../../landing/api-guide.md) .
+Per utilizzare le API di Adobe Experience Platform, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per raccogliere i valori necessari per le intestazioni richieste. Per ulteriori informazioni sulle API di Experience Platform, consulta la sezione [guida introduttiva alla documentazione sulle API di Platform](../../landing/api-guide.md).
 
 Le intestazioni richieste per tutte le chiamate API in questa esercitazione sono:
 
-* `Authorization: Bearer {ACCESS_TOKEN}`: L&#39; `Authorization` intestazione richiede un token di accesso preceduto dalla parola  `Bearer`. È necessario generare un nuovo valore token di accesso ogni 24 ore.
-* `x-api-key: {API_KEY}`: Il  `API Key` è anche noto come  `Client ID` e è un valore che deve essere generato solo una volta.
-* `x-gw-ims-org-id: {IMS_ORG}`: Il  `IMS Org` è anche noto come  `Organization ID` e deve essere generato solo una volta.
+* `Authorization: Bearer {ACCESS_TOKEN}`: La `Authorization` l&#39;intestazione richiede un token di accesso preceduto dalla parola `Bearer`. È necessario generare un nuovo valore token di accesso ogni 24 ore.
+* `x-api-key: {API_KEY}`: La `API Key` è noto anche come `Client ID` e è un valore che deve essere generato una sola volta.
+* `x-gw-ims-org-id: {ORG_ID}`: La `IMS Org` è noto anche come `Organization ID` e deve essere generato una sola volta.
 
 Dopo aver completato l’esercitazione sull’autenticazione e aver raccolto i valori per le intestazioni richieste, puoi iniziare a effettuare chiamate all’API del cliente in tempo reale.
 
@@ -37,14 +37,14 @@ Se hai familiarità con l’utilizzo della riga di comando, puoi utilizzare la s
 
 **Richiesta**
 
-La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+La richiesta seguente utilizza il `date` per restituire il report più recente per la data specificata.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-04-19 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 | Parametro | Descrizione |
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione del set di dati. Il rapporto include un oggetto `data` contenente elenchi di set di dati separati da virgole e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il rapporto, consulta la sezione sull’ [interpretazione dei dati del rapporto di sovrapposizione dei set di dati](#interpret-the-report) più avanti in questa esercitazione.
+Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione del set di dati. Il rapporto include `data` , contenente elenchi di set di dati separati da virgole e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il rapporto, consulta la sezione [interpretazione dei dati del rapporto di sovrapposizione del set di dati](#interpret-the-report) più avanti in questa esercitazione.
 
 ```json
 {
@@ -66,21 +66,21 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovra
 }
 ```
 
-### Genera report di sovrapposizione set di dati utilizzando Postman
+### Genera report di sovrapposizione dei set di dati utilizzando Postman
 
-Postman è una piattaforma collaborativa per lo sviluppo delle API ed è utile per visualizzare le chiamate API. Può essere scaricato gratuitamente dal sito web [Postman](https://www.postman.com) e fornisce un&#39;interfaccia utente facile da usare per eseguire le chiamate API. Le seguenti schermate utilizzano l’interfaccia Postman .
+Postman è una piattaforma collaborativa per lo sviluppo delle API ed è utile per visualizzare le chiamate API. Può essere scaricato gratuitamente dal [Sito web Postman](https://www.postman.com) e fornisce un’interfaccia utente di facile utilizzo per l’esecuzione di chiamate API. Le seguenti schermate utilizzano l’interfaccia Postman .
 
 **Richiesta**
 
-Per richiedere il report di sovrapposizione dei set di dati utilizzando Postman, completa i seguenti passaggi:
+Per richiedere il rapporto di sovrapposizione dei set di dati tramite Postman, completa i seguenti passaggi:
 
 * Utilizzando il menu a discesa , seleziona GET come tipo di richiesta.
-* Immetti le intestazioni richieste nella colonna `KEY` :
+* Immetti le intestazioni richieste nel `KEY` colonna:
    * `Authorization`
    * `x-api-key`
    * `x-gw-ims-org-id`
-* Immetti i valori generati durante l&#39;autenticazione nella colonna `VALUE` , sostituendo le parentesi graffe (`{{ }}`) ed eventuali contenuti tra parentesi graffe.
-* Immetti il percorso della richiesta con o senza il parametro opzionale `date`:
+* Immetti i valori generati durante l&#39;autenticazione nel `VALUE` , sostituendo le parentesi graffe (`{{ }}`) e qualsiasi contenuto tra parentesi graffe.
+* Immetti il percorso della richiesta con o senza l&#39;opzione opzionale `date` parametro:
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
    oppure
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD`
@@ -95,7 +95,7 @@ Al termine del tipo di richiesta, delle intestazioni, dei valori e del percorso,
 
 **Risposta**
 
-Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione del set di dati. Il rapporto include un oggetto `data` contenente elenchi di set di dati separati da virgole e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il rapporto, consulta la sezione sull’ [interpretazione dei dati del rapporto di sovrapposizione dei set di dati](#interpret-the-report).
+Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione del set di dati. Il rapporto include `data` , contenente elenchi di set di dati separati da virgole e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il rapporto, consulta la sezione [interpretazione dei dati del rapporto di sovrapposizione del set di dati](#interpret-the-report).
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
@@ -109,7 +109,7 @@ La `reportTimestamp` corrisponde alla data fornita nella richiesta API o, se non
 
 ### Elenco degli ID dei set di dati
 
-L&#39;oggetto `data` include combinazioni univoche di ID di set di dati come elenchi separati da virgole con il rispettivo conteggio di profilo per quella combinazione di set di dati.
+La `data` l&#39;oggetto include combinazioni univoche di ID di set di dati come elenchi separati da virgole con il rispettivo conteggio di profilo per quella combinazione di set di dati.
 
 >[!NOTE]
 >
@@ -127,9 +127,9 @@ Questo rapporto fornisce le seguenti informazioni:
 
 * Esistono 123 profili composti da dati provenienti dai seguenti set di dati: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Esistono 454.412 profili composti da dati provenienti da questi due set di dati: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
-* Esistono 107 profili costituiti solo da dati del set di dati `5eeda0032af7bb19162172a7`.
+* Ci sono 107 profili che sono costituiti solo da dati provenienti da un set di dati `5eeda0032af7bb19162172a7`.
 * L’organizzazione dispone di un totale di 454.642 profili.
 
 ## Passaggi successivi
 
-Dopo aver completato questa esercitazione, ora puoi generare il rapporto di sovrapposizione dei set di dati utilizzando l’API Profilo cliente in tempo reale. Per ulteriori informazioni sull’utilizzo dei dati di profilo sia nell’API che nell’interfaccia utente di Experience Platform, consulta la [documentazione della panoramica del profilo](../home.md).
+Dopo aver completato questa esercitazione, ora puoi generare il rapporto di sovrapposizione dei set di dati utilizzando l’API Profilo cliente in tempo reale. Per ulteriori informazioni sull’utilizzo dei dati di profilo sia nell’API che nell’interfaccia utente di Experience Platform, consulta la sezione [Documentazione sulla panoramica del profilo](../home.md).

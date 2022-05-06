@@ -5,8 +5,7 @@ title: Endpoint API per motori
 topic-legacy: Developer guide
 description: I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l'ingegneria delle funzioni o entrambe.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
@@ -21,7 +20,7 @@ I motori sono le basi per i modelli di apprendimento automatico in Data Science 
 
 >[!TIP]
 >
->Se non disponi di un URL Docker, visita il tutorial [Crea un pacchetto di file sorgente in una ricetta](../models-recipes/package-source-files-recipe.md) per una guida dettagliata alla creazione di un URL host Docker.
+>Se non disponi di un URL Docker, visita il [Creare pacchetti di file sorgente in una ricetta](../models-recipes/package-source-files-recipe.md) esercitazione dettagliata sulla creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema Docker sono necessarie per caricare un file Recipe in pacchetto, inclusi l&#39;URL host Docker, il nome utente e la password. Puoi cercare queste informazioni eseguendo la seguente richiesta GET:
 
@@ -37,17 +36,17 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema Docker, inclusi l’URL Docker (`host`), il nome utente (`username`) e la password (`password`).
+Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema Docker, incluso l’URL Docker (`host`), nome utente (`username`) e password (`password`).
 
 >[!NOTE]
 >
->La password Docker cambia ogni volta che il `{ACCESS_TOKEN}` viene aggiornato.
+>La password del Docker cambia ogni volta che il tuo `{ACCESS_TOKEN}` è aggiornato.
 
 ```json
 {
@@ -74,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -105,14 +104,14 @@ curl -X POST \
 
 **Richiedi PySpark/Scala**
 
-Quando si effettua una richiesta per le ricette PySpark, le `executionType` e `type` sono &quot;PySpark&quot;. Quando si effettua una richiesta di ricette Scala, le `executionType` e `type` sono &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala viene utilizzato Spark:
+Quando effettui una richiesta per le ricette PySpark, la `executionType` e `type` è &quot;PySpark&quot;. Quando si effettua una richiesta di ricette Scala, la `executionType` e `type` è &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala viene utilizzato Spark:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -215,14 +214,14 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `algorithm` | L’algoritmo utilizzato, imposta questo valore su `fp` (pipeline di funzioni). |
+| `algorithm` | Imposta questo valore su `fp` (pipeline di funzioni). |
 | `name` | Nome desiderato per il motore di pipeline della funzione. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come nome della composizione. |
 | `description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come descrizione della composizione. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
 | `mlLibrary` | Campo necessario per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
 | `artifacts.default.image.location` | Posizione dell’immagine Docker. È supportato solo Azure ACR o Public (non autenticato) Dockerhub. |
 | `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | I parametri del file di configurazione `pipeline.json`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Le `pipeline.json` parametri del file di configurazione. |
 
 **Risposta**
 
@@ -255,7 +254,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del nuovo mot
 
 ## Recupera un elenco di motori
 
-È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -272,7 +271,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -349,7 +348,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -388,7 +387,7 @@ Puoi modificare e aggiornare un motore esistente sovrascrivendo le sue propriet�
 
 >[!NOTE]
 >
->Per garantire il successo di questa richiesta di PUT, si consiglia prima di eseguire una richiesta di GET a [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET a [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiornerà il nome e la descrizione di un motore quando queste proprietà sono inizialmente disponibili:
 
@@ -426,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -494,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

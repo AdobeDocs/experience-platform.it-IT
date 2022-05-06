@@ -5,7 +5,7 @@ title: Endpoint API per i processi di privacy
 topic-legacy: developer guide
 description: Scopri come gestire i processi relativi alla privacy per le applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 3%
@@ -52,7 +52,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Risposta**
@@ -100,12 +100,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [
@@ -154,7 +154,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `companyContexts` **(Obbligatorio)** | Matrice contenente informazioni di autenticazione per la tua organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell&#39;identificatore.</li></ul>È **obbligatorio** che uno degli identificatori utilizza `imsOrgId` come `namespace`con `value` contenente l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per prodotto (ad esempio, `Campaign`), che identifica un’integrazione con un’applicazione Adobe appartenente alla tua organizzazione. I valori potenziali includono nomi account, codici client, ID tenant o altri identificatori di applicazione. |
-| `users` **(Obbligatorio)** | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un’unica richiesta è possibile fornire un massimo di 1000 ID utente. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. A seconda delle azioni che si desidera eseguire, questa matrice deve includere `access`, `delete`o entrambi.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità è costituita da un `namespace`, `value`e un qualificatore dello spazio dei nomi (`type`). Consulta la sezione [appendice](appendix.md) per ulteriori dettagli su queste proprietà richieste.</li></ul> Per una spiegazione più dettagliata `users` e `userIDs`, vedi [guida alla risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
+| `users` **(Obbligatorio)** | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. È possibile fornire un massimo di 1000 ID utente in un’unica richiesta. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. A seconda delle azioni che si desidera eseguire, questa matrice deve includere `access`, `delete`o entrambi.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità è costituita da un `namespace`, `value`e un qualificatore dello spazio dei nomi (`type`). Consulta la sezione [appendice](appendix.md) per ulteriori dettagli su queste proprietà richieste.</li></ul> Per una spiegazione più dettagliata `users` e `userIDs`, vedi [guida alla risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obbligatorio)** | Matrice di prodotti Adobe da includere nell’elaborazione. Se questo valore è mancante o altrimenti vuoto, la richiesta verrà rifiutata. Includere solo i prodotti con cui l’organizzazione dispone di un’integrazione. Vedi la sezione su [valori di prodotto accettati](appendix.md) nell&#39;appendice per ulteriori informazioni. |
 | `expandIDs` | Una proprietà facoltativa che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l’elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
@@ -246,7 +246,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Risposta**

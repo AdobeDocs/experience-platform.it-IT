@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
@@ -96,7 +96,7 @@ Le istruzioni dettagliate sulla creazione di un processo di anteprima sono dispo
 
 La stima e l’anteprima dei processi vengono eseguite in modo asincrono, in quanto il completamento di query diverse può richiedere tempi diversi. Una volta avviata una query, puoi utilizzare le chiamate API per recuperare (GET) lo stato corrente della stima o dell’anteprima mentre progredisce.
 
-Utilizzo della [!DNL Segmentation Service] API, puoi cercare lo stato corrente di un processo di anteprima in base al suo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. Per cercare lo stato corrente di un processo di anteprima, leggi la sezione su [recupero di una sezione del processo di anteprima](../api/previews-and-estimates.md#get-preview) nella guida anteprime e stime endpoint . Per cercare lo stato corrente di un processo di stima, leggere la sezione su [recupero di un processo di stima](../api/previews-and-estimates.md#get-estimate) nella guida anteprime e stime endpoint .
+Utilizzo della [!DNL Segmentation Service] API, puoi cercare lo stato corrente di un processo di anteprima in base al relativo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. Per cercare lo stato corrente di un processo di anteprima, leggi la sezione su [recupero di una sezione del processo di anteprima](../api/previews-and-estimates.md#get-preview) nella guida anteprime e stime endpoint . Per cercare lo stato corrente di un processo di stima, leggere la sezione su [recupero di un processo di stima](../api/previews-and-estimates.md#get-estimate) nella guida anteprime e stime endpoint .
 
 
 ## Passaggi successivi

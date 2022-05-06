@@ -5,7 +5,7 @@ title: Guida introduttiva a Content and Commerce AI
 topic-legacy: Getting started
 description: Content and Commerce AI utilizza le API di Adobe I/O. Per effettuare chiamate alle API di Adobe I/O e all’integrazione della console I/O, devi prima completare l’esercitazione sull’autenticazione.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -28,11 +28,11 @@ Il completamento dell’esercitazione di autenticazione fornisce i valori per ci
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Creare un ambiente Postman (facoltativo)
 
-Dopo aver configurato il progetto e l’API in Adobe Developer Console, è possibile scaricare un file di ambiente per Postman. Sotto **[!UICONTROL API]** nella barra a sinistra del progetto, seleziona **[!UICONTROL Content and Commerce AI]**. Viene visualizzata una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Seleziona **Scarica per Postman** per scaricare un file JSON utilizzato per configurare l’ambiente postman.
+Dopo aver configurato il progetto e l’API in Adobe Developer Console, puoi scaricare un file di ambiente per Postman. Sotto **[!UICONTROL API]** nella barra a sinistra del progetto, seleziona **[!UICONTROL Content and Commerce AI]**. Viene visualizzata una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Seleziona **Scarica per Postman** per scaricare un file JSON utilizzato per configurare l’ambiente postman.
 
 ![scaricare per postman](./images/add-to-postman.png)
 

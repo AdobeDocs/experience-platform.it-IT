@@ -6,7 +6,7 @@ title: Guida introduttiva di Customer AI
 topic-legacy: Getting started
 description: Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Il download dei punteggi di Customer AI viene effettuato tramite una combinazion
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 

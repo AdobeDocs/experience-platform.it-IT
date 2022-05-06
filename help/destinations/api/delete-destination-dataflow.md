@@ -5,7 +5,7 @@ title: Eliminare un flusso di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Scopri come eliminare i flussi di dati per le destinazioni in batch e in streaming utilizzando l’API del servizio di flusso.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
@@ -74,7 +74,7 @@ curl -X DELETE \
     'https://platform.adobe.io/data/foundation/flowservice/flows/455fa81b-f290-4222-94b6-540a73e3fbc2' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

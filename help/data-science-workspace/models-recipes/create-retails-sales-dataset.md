@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse necessari per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema e i set di dati Vendite al dettaglio saranno disponibili per te e per i membri della tua organizzazione IMS all’Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
 - Autorizzazione a effettuare [!DNL Experience Platform] Chiamate API. Completa il [Autenticazione e accesso alle API Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per ottenere i seguenti valori al fine di completare correttamente questa esercitazione:
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Segreto client: `{CLIENT_SECRET}`
    - Certificato client: `{PRIVATE_KEY}`
 - File di dati di esempio e di origine per [Ricetta vendite al dettaglio](../pre-built-recipes/retail-sales.md). Scarica le risorse necessarie per questo e altri [!DNL Data Science Workspace] esercitazioni dal [Archivio Git pubblico Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ Lo schema e i set di dati Vendite al dettaglio vengono creati automaticamente ut
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

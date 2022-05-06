@@ -1,8 +1,8 @@
 ---
-description: Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione.
+description: Come parte dell’Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione.
 title: Verifica la configurazione di destinazione
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggere [Creare e testare un modello di trasformazione dei messaggi](./create-template.md).
+Come parte dell’Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggere [Creare e testare un modello di trasformazione dei messaggi](./create-template.md).
 
 A **verifica se la destinazione è configurata correttamente e verifica l’integrità dei flussi di dati nella destinazione configurata**, utilizza *Strumento di test della destinazione*. Con questo strumento, puoi testare la configurazione di destinazione inviando messaggi all’endpoint API REST.
 
-Di seguito è illustrato il modo in cui il test della destinazione si inserisce nel [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) in Destination SDK:
+Di seguito è illustrato il modo in cui il test della destinazione si inserisce nel [flusso di lavoro di configurazione della destinazione](./configure-destination-instructions.md) nella Destination SDK:
 
 ![Grafico in cui il passaggio del test di destinazione si inserisce nel flusso di lavoro di configurazione della destinazione](./assets/test-destination-step.png)
 
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

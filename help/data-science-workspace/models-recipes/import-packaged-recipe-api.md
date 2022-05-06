@@ -1,22 +1,21 @@
 ---
 keywords: Experience Platform;importazione di ricetta confezionata;Data Science Workspace;argomenti popolari;ricette;api;apprendimento automatico sensei;crea motore
 solution: Experience Platform
-title: Importare una ricetta imballata utilizzando l’API di apprendimento automatico Sensei
+title: Importare una composizione in pacchetto utilizzando l’API di apprendimento automatico di Sensei
 topic-legacy: tutorial
 type: Tutorial
-description: Questa esercitazione utilizza l’API di apprendimento automatico Sensei per creare un motore, noto anche come Ricetta nell’interfaccia utente.
+description: Questa esercitazione utilizza l'API di apprendimento automatico di Sensei per creare un motore, noto anche come Ricetta nell'interfaccia utente.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
-# Importare una ricetta confezionata utilizzando l’API di apprendimento automatico Sensei
+# Importare una ricetta confezionata utilizzando l’API di apprendimento automatico di Sensei
 
-Questa esercitazione utilizza [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [motore](../api/engines.md), noto anche come Ricetta nell&#39;interfaccia utente.
+Questa esercitazione utilizza la funzione [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [Motore](../api/engines.md), nota anche come Ricetta nell’interfaccia utente di .
 
 Prima di iniziare, è importante notare che Adobe Experience Platform [!DNL Data Science Workspace] utilizza termini diversi per fare riferimento a elementi simili all’interno dell’API e dell’interfaccia utente. I termini API vengono utilizzati in questa esercitazione e la tabella seguente illustra i termini correlati:
 
@@ -33,14 +32,14 @@ Un motore contiene algoritmi e logica di apprendimento automatico per risolvere 
 
 ## Introduzione
 
-Questa esercitazione richiede un file composizione compilato sotto forma di URL Docker. Segui l&#39;esercitazione [Crea un pacchetto di file di origine in un&#39;esercitazione Recipe](./package-source-files-recipe.md) per creare un file Recipe in pacchetto o fornisci il tuo.
+Questa esercitazione richiede un file composizione compilato sotto forma di URL Docker. Segui [Creare pacchetti di file di origine in una composizione](./package-source-files-recipe.md) esercitazione per creare un file composizione in pacchetto o fornire il proprio.
 
 - `{DOCKER_URL}`: Un indirizzo URL a un&#39;immagine Docker di un servizio intelligente.
 
-Questa esercitazione richiede di aver completato l&#39; [esercitazione Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API [!DNL Platform] . Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
+Questa esercitazione richiede di aver completato il [Esercitazione sull’autenticazione a Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate a [!DNL Platform] API. Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 - `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.
-- `{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+- `{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
 - `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.
 
 ## Creare un motore
@@ -53,7 +52,7 @@ Per creare un motore con un file Ricetta in pacchetto memorizzato in un contenit
 
 >[!CAUTION]
 >
-> Se utilizzi [!DNL Python] o R, utilizza la richiesta seguente. Se utilizzi PySpark o Scala, utilizza l’esempio di richiesta PySpark/Scala situato sotto l’esempio Python/R.
+> Se utilizzi [!DNL Python] o R utilizza la richiesta seguente. Se utilizzi PySpark o Scala, utilizza l’esempio di richiesta PySpark/Scala situato sotto l’esempio Python/R.
 
 **Formato API**
 
@@ -69,7 +68,7 @@ curl -X POST \
     -H 'Authorization: {ACCESS_TOKEN}' \
     -H 'X-API-KEY: {API_KEY}' \
     -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H `x-sandbox-name: {SANDBOX_NAME}` \
     -F 'engine={
         "name": "Retail Sales Engine Python",
@@ -89,10 +88,10 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------  | ----------- |
-| `engine.name` | Nome desiderato per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell&#39;interfaccia utente [!DNL Data Science Workspace] come nome della composizione. |
-| `engine.description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell&#39;interfaccia utente [!DNL Data Science Workspace] come descrizione della composizione. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire una descrizione. |
+| `engine.name` | Nome desiderato per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare in [!DNL Data Science Workspace] interfaccia utente come nome della composizione. |
+| `engine.description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare in [!DNL Data Science Workspace] interfaccia utente come descrizione della composizione. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire una descrizione. |
 | `engine.type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui viene sviluppata l’immagine Docker. Quando viene fornito un URL Docker per creare un motore, `type` è `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
-| `artifacts.default.image.location` | Il tuo `{DOCKER_URL}` va qui. Un URL Docker completo ha la seguente struttura: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `artifacts.default.image.location` | Le `{DOCKER_URL}` vai qui. Un URL Docker completo ha la seguente struttura: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Un nome aggiuntivo per il file immagine Docker. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire un nome di file immagine Docker aggiuntivo. |
 | `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui viene sviluppata l’immagine Docker. Quando viene fornito un URL Docker per creare un motore, `executionType` è `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 
@@ -103,7 +102,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -140,7 +139,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -172,7 +171,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso l’identificatore univoco (`id`). L&#39;esempio di risposta seguente è per un motore [!DNL Python]. I tasti `executionType` e `type` cambiano in base al POST fornito.
+Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso l’identificatore univoco (`id`). L’esempio di risposta seguente è relativo a un [!DNL Python] Motore. La `executionType` e `type` le chiavi cambiano in base al POST in dotazione.
 
 ```json
 {
@@ -199,8 +198,8 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-Una risposta corretta mostra un payload JSON con le informazioni relative al motore appena creato. La chiave `id` rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Assicurati che l&#39;identificatore del motore sia salvato prima di continuare con i passaggi successivi.
+Una risposta corretta mostra un payload JSON con le informazioni relative al motore appena creato. La `id` key rappresenta l’identificatore univoco del motore ed è necessario nell’esercitazione successiva per creare un’istanza MLI. Assicurati che l&#39;identificatore del motore sia salvato prima di continuare con i passaggi successivi.
 
 ## Passaggi successivi {#next-steps}
 
-Hai creato un motore utilizzando l’API ed è stato ottenuto un identificatore univoco del motore come parte del corpo della risposta. Puoi utilizzare questo identificatore del motore nell&#39;esercitazione successiva per imparare a [creare, addestrare e valutare un modello utilizzando l&#39;API](./train-evaluate-model-api.md).
+Hai creato un motore utilizzando l’API ed è stato ottenuto un identificatore univoco del motore come parte del corpo della risposta. Puoi usare questo identificatore del motore nell’esercitazione successiva per scoprire come [creare, addestrare e valutare un modello utilizzando l’API](./train-evaluate-model-api.md).

@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi di acquisizione in batch
 topic-legacy: troubleshooting
 description: Questa documentazione risponderà alle domande frequenti relative alle API di acquisizione di dati in batch di Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Il formato di input deve essere specificato al momento della creazione del batch
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -65,7 +65,7 @@ Affinché i dati vengano visualizzati nel set di dati, il batch deve essere cont
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -77,7 +77,7 @@ Per acquisire JSON con più righe, l’ `isMultiLineJson` Il flag deve essere im
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -147,7 +147,7 @@ Una volta che un batch è stato segnalato per la promozione batch, l&#39;avanzam
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -161,7 +161,7 @@ Con questa richiesta riceverai una risposta simile a questa:
 ```json
 {
     "{BATCH_ID}":{
-        "imsOrg":"{IMS_ORG}",
+        "imsOrg":"{ORG_ID}",
         "created":1494349962314,
         "createdClient":"{API_KEY}",
         "createdUser":"{USER_ID}",
@@ -271,6 +271,6 @@ Esistono due motivi per cui le metriche potrebbero non essere disponibili nel ba
 | 106 | Il file del set di dati è vuoto. |
 | 118 | Il file CSV contiene una riga di intestazione vuota. |
 | 200 | Il batch è stato accettato per l&#39;elaborazione e passerà a uno stato finale, ad esempio Attivo o Errore. Una volta inviato, il batch può essere monitorato utilizzando `GetBatch` punto finale. |
-| 400 | Richiesta non valida. Restituito se sono presenti blocchi mancanti o sovrapposti in un batch. |
+| 400 | Richiesta errata. Restituito se sono presenti blocchi mancanti o sovrapposti in un batch. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

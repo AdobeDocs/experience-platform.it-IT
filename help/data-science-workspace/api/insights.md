@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;approfondimenti;API di apprendimento automatico sensei
+keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;informazioni;api di apprendimento automatico sensei
 solution: Experience Platform
 title: Endpoint API Insights
 topic-legacy: Developer guide
 description: Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali visualizzando le metriche di valutazione pertinenti.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -19,7 +18,7 @@ Gli approfondimenti contengono metriche utilizzate per consentire a uno scienzia
 
 ## Recupera un elenco di informazioni approfondite
 
-Puoi recuperare un elenco di informazioni approfondite eseguendo una singola richiesta di GET all’endpoint di insights.  Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+Puoi recuperare un elenco di informazioni approfondite eseguendo una singola richiesta di GET all’endpoint di insights.  Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -34,13 +33,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include un elenco di approfondimenti e ogni insight ha un identificatore univoco ( `id` ). Inoltre, riceverai `context` , che contiene gli identificatori univoci associati a tali informazioni specifiche a seguito dei dati relativi agli eventi e alle metriche Approfondimenti .
+Una risposta corretta restituisce un payload che include un elenco di approfondimenti e ogni insight ha un identificatore univoco ( `id` ). Inoltre riceverai `context` che contiene gli identificatori univoci associati a tali informazioni specifiche a seguito dei dati relativi agli eventi e alle metriche Approfondimenti .
 
 ```json
 {
@@ -109,7 +108,7 @@ Una risposta corretta restituisce un payload che include un elenco di approfondi
 
 ## Recuperare un Insight specifico
 
-Per cercare una particolare informazione, effettua una richiesta GET e fornisci un `{INSIGHT_ID}` valido nel percorso della richiesta. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+Per cercare una particolare informazione, effettuare una richiesta GET e fornire una valida `{INSIGHT_ID}` nel percorso della richiesta. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -119,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{INSIGHT_ID}` | Identificatore univoco di un&#39;analisi approfondita di Sensei. |
+| `{INSIGHT_ID}` | Identificatore univoco di un insight Sensei. |
 
 **Richiesta**
 
@@ -128,13 +127,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include l’identificatore univoco di insights (`id`). Inoltre riceverai `context` , che contiene gli identificatori univoci associati alle informazioni particolari risultanti dagli eventi Approfondimenti e dai dati delle metriche.
+Una risposta corretta restituisce un payload che include l’identificatore univoco delle informazioni (`id`). Inoltre riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono i dati relativi agli eventi e alle metriche Approfondimenti .
 
 ```json
 {
@@ -200,7 +199,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
@@ -230,7 +229,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituirà un payload con un tag `{INSIGHT_ID}` e tutti i parametri forniti nella richiesta iniziale.
+Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` e tutti i parametri forniti nella richiesta iniziale.
 
 ```json
 {
@@ -265,7 +264,7 @@ Una risposta corretta restituirà un payload con un tag `{INSIGHT_ID}` e tutti i
 
 ## Recupera un elenco di metriche predefinite per gli algoritmi
 
-Puoi recuperare un elenco di tutte le metriche dell’algoritmo e predefinite eseguendo una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettua una richiesta di GET e fornisci un `{ALGORITHM}` valido nel percorso della richiesta.
+Puoi recuperare un elenco di tutte le metriche dell’algoritmo e predefinite eseguendo una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta di GET e fornire una valida `{ALGORITHM}` nel percorso della richiesta.
 
 **Formato API**
 
@@ -287,13 +286,13 @@ curl -X GET \
   'https://platform.adobe.io/data/sensei/insights/metrics?algorithm={ALGORITHM}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include l’ `algorithm` identificatore univoco e un array di metriche predefinite.
+Una risposta corretta restituisce un payload che include `algorithm` identificatore univoco e array di metriche predefinite.
 
 ```json
 {

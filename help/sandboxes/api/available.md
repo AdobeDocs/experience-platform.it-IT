@@ -5,10 +5,10 @@ title: Endpoint API per le sandbox disponibili
 topic-legacy: developer guide
 description: È possibile elencare le sandbox disponibili per l’utente corrente effettuando una richiesta GET all’endpoint sandbox disponibile.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
+| `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Consulta la sezione [documento appendice](./appendix.md#query) per un elenco dei parametri disponibili. |
 
 **Richiesta**
 
@@ -37,12 +37,12 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di sandbox disponibili per l’utente corrente, inclusi dettagli quali `name`, `title`, `state` e `type`.
+Una risposta corretta restituisce un elenco di sandbox disponibili per l’utente corrente, inclusi dettagli quali `name`, `title`, `state`e `type`.
 
 ```json
 {

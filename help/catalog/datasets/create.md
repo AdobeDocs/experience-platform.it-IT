@@ -5,7 +5,7 @@ title: Creare un set di dati utilizzando le API
 topic-legacy: datasets
 description: Questo documento fornisce passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e la compilazione del set di dati utilizzando un file .
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
@@ -78,7 +78,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -105,7 +105,7 @@ Il formato dell’oggetto di risposta dipende dall’intestazione Accept inviata
         "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -196,7 +196,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name":"LoyaltyMembersDataset",
@@ -243,7 +243,7 @@ Il corpo della richiesta include un campo &quot;datasetId&quot; il cui valore è
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'accept: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -260,7 +260,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di ris
 ```JSON
 {
     "id": "5d01230fc78a4e4f8c0c6b387b4b8d1c",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "updated": 1552694873602,
     "status": "loading",
     "created": 1552694873602,
@@ -386,7 +386,7 @@ Una risposta positiva restituisce un oggetto con il relativo `status` attributo 
 ```JSON
 {
     "5b7129a879323401ef2a6486": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "created": 1534142888068,
         "createdClient": "{CREATED_CLIENT}",
         "createdUser": "{CREATED_BY}",
@@ -418,7 +418,7 @@ Una risposta negativa restituisce un oggetto con il valore di `"failed"` nella s
 ```JSON
 {
     "5b96ce65badcf701e51f075d": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "status": "failed",
         "relatedObjects": [
             {

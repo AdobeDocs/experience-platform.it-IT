@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di gestire in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, rendendo i dati giusti immediatamente disponibili e costantemente aggiornati man mano che avvengono le modifiche. Questo avviene tramite l'uso di edge, un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Endpoint di destinazioni e configurazioni di proiezione Edge
 
-Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate sull’utilizzo dell’API [!DNL Real-time Customer Profile] per lavorare con le proiezioni edge, incluse destinazioni e configurazioni.
+Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate sull’utilizzo di [!DNL Real-time Customer Profile] API per lavorare con proiezioni edge, incluse destinazioni e configurazioni.
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
 
 >[!NOTE]
 >
->Le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione `Content-Type`. In questo documento vengono utilizzati più `Content-Type`. Presta particolare attenzione alle intestazioni nelle chiamate di esempio per assicurarti di utilizzare la `Content-Type` corretta per ogni richiesta.
+>Le richieste che contengono un payload (POST, PUT, PATCH) richiedono un `Content-Type` intestazione. Più di uno `Content-Type` viene utilizzato in questo documento. Presta particolare attenzione alle intestazioni nelle chiamate di esempio per assicurarti di utilizzare la `Content-Type` per ogni richiesta.
 
 ## Destinazioni di proiezione
 
@@ -30,7 +30,7 @@ Una proiezione può essere indirizzata a uno o più bordi specificando le posizi
 
 ### Elenca tutte le destinazioni
 
-Puoi elencare le destinazioni edge già create per la tua organizzazione effettuando una richiesta di GET all’ endpoint `/config/destinations` .
+Puoi elencare le destinazioni edge già create per la tua organizzazione effettuando una richiesta di GET al `/config/destinations` punto finale.
 
 **Formato API**
 
@@ -45,13 +45,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-La risposta include un array `projectionDestinations` con i dettagli di ogni destinazione mostrati come un singolo oggetto all&#39;interno dell&#39;array. Se non è stata configurata alcuna proiezione, l&#39;array `projectionDestinations` restituisce vuoto.
+La risposta include un `projectionDestinations` array con i dettagli di ogni destinazione mostrati come un singolo oggetto all&#39;interno dell&#39;array. Se non è stata configurata alcuna proiezione, la `projectionDestinations` restituisce empty.
 
 >[!NOTE]
 >
@@ -105,13 +105,13 @@ La risposta include un array `projectionDestinations` con i dettagli di ogni des
 | Proprietà | Descrizione |
 |---|---|
 | `_links.self.href` | Al livello principale, corrisponde al percorso utilizzato per effettuare la richiesta GET. All&#39;interno di ogni singolo oggetto di destinazione, questo percorso può essere utilizzato in una richiesta di GET per cercare direttamente i dettagli di una destinazione specifica. |
-| `id` | All&#39;interno di ogni oggetto di destinazione, il `"id"` mostra l&#39;ID univoco generato dal sistema di sola lettura per la destinazione. Questo ID viene utilizzato quando si fa riferimento a una destinazione specifica e quando si creano configurazioni di proiezione. |
+| `id` | All&#39;interno di ogni oggetto di destinazione, il `"id"` mostra l’ID univoco generato dal sistema di sola lettura per la destinazione. Questo ID viene utilizzato quando si fa riferimento a una destinazione specifica e quando si creano configurazioni di proiezione. |
 
-Per ulteriori informazioni sugli attributi di una singola destinazione, consulta la sezione sulla [creazione di una destinazione](#create-a-destination) che segue.
+Per ulteriori informazioni sugli attributi di una singola destinazione, consulta la sezione [creazione di una destinazione](#create-a-destination) segue.
 
 ### Creare una destinazione {#create-a-destination}
 
-Se la destinazione desiderata non esiste già, è possibile creare una nuova destinazione di proiezione effettuando una richiesta POST all&#39;endpoint `/config/destinations`.
+Se la destinazione desiderata non esiste già, è possibile creare una nuova destinazione di proiezione effettuando una richiesta POST al `/config/destinations` punto finale.
 
 **Formato API**
 
@@ -125,14 +125,14 @@ Nella richiesta seguente viene creata una nuova destinazione Edge.
 
 >[!NOTE]
 >
->La richiesta di POST per creare una destinazione richiede un’intestazione `Content-Type` specifica, come illustrato di seguito. Se si utilizza un&#39;intestazione `Content-Type` errata, si verifica un errore di stato HTTP 415 (tipo di supporto non supportato).
+>La richiesta di POST per creare una destinazione richiede un `Content-Type` , come illustrato di seguito. Utilizzo di un errore `Content-Type` l’intestazione restituisce un errore di stato HTTP 415 (tipo di supporto non supportato).
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/destinations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json; version=1' \
   -d '{
@@ -180,7 +180,7 @@ Una risposta corretta restituisce i dettagli della nuova destinazione Edge creat
 
 ### Visualizzare una destinazione
 
-Se conosci l&#39;ID univoco di una destinazione di proiezione, puoi eseguire una richiesta di ricerca per visualizzarne i dettagli. A questo scopo, invia una richiesta GET all’ endpoint `/config/destinations` e include l’ID della destinazione nel percorso della richiesta.
+Se conosci l&#39;ID univoco di una destinazione di proiezione, puoi eseguire una richiesta di ricerca per visualizzarne i dettagli. A tal fine, invia una richiesta GET al `/config/destinations` e include l&#39;ID della destinazione nel percorso della richiesta.
 
 **Formato API**
 
@@ -201,13 +201,13 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/destinations/9d66c06e-c745-480c-b64c-1d5234d25f4b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-L&#39;oggetto response mostra i dettagli della destinazione di proiezione. L&#39;attributo `id` deve corrispondere all&#39;ID della destinazione di proiezione fornita nella richiesta.
+L&#39;oggetto response mostra i dettagli della destinazione di proiezione. La `id` L&#39;attributo deve corrispondere all&#39;ID della destinazione di proiezione fornita nella richiesta.
 
 ```json
 {
@@ -227,7 +227,7 @@ L&#39;oggetto response mostra i dettagli della destinazione di proiezione. L&#39
 
 ### Aggiornare una destinazione
 
-È possibile aggiornare una destinazione esistente effettuando una richiesta di PUT all’ endpoint `/config/destinations` e includendo l’ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione sta essenzialmente riscrivendo la destinazione, pertanto gli stessi attributi devono essere forniti nel corpo della richiesta come vengono forniti durante la creazione di una nuova destinazione.
+È possibile aggiornare una destinazione esistente effettuando una richiesta di PUT al `/config/destinations` e l’ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione sta essenzialmente riscrivendo la destinazione, pertanto gli stessi attributi devono essere forniti nel corpo della richiesta come vengono forniti durante la creazione di una nuova destinazione.
 
 >[!CAUTION]
 >
@@ -245,18 +245,18 @@ PUT /config/destinations/{DESTINATION_ID}
 
 **Richiesta**
 
-La richiesta seguente aggiorna la destinazione esistente in modo da includere una seconda posizione (`dataCenters`).
+La richiesta seguente aggiorna la destinazione esistente in modo che includa una seconda posizione (`dataCenters`).
 
 >[!IMPORTANT]
 >
->La richiesta PUT richiede un’intestazione `Content-Type` specifica, come illustrato di seguito. Se si utilizza un&#39;intestazione `Content-Type` errata, si verifica un errore di stato HTTP 415 (tipo di supporto non supportato).
+>La richiesta PUT richiede uno specifico `Content-Type` , come illustrato di seguito. Utilizzo di un errore `Content-Type` l’intestazione restituisce un errore di stato HTTP 415 (tipo di supporto non supportato).
 
 ```shell
 curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionDestination+json' \
   -d '{
@@ -272,11 +272,11 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 |---|---|
-| `currentVersion` | Versione corrente della destinazione esistente. Il valore dell&#39;attributo `version` quando si esegue una richiesta di ricerca per la destinazione. |
+| `currentVersion` | Versione corrente della destinazione esistente. Il valore del `version` quando si esegue una richiesta di ricerca per la destinazione. |
 
 **Risposta**
 
-La risposta include i dettagli aggiornati della destinazione, compreso il relativo ID e la nuova `version` della destinazione.
+La risposta include i dettagli aggiornati della destinazione, compreso il relativo ID e il nuovo `version` della destinazione.
 
 ```json
 {
@@ -297,7 +297,7 @@ La risposta include i dettagli aggiornati della destinazione, compreso il relati
 
 ### Eliminare una destinazione
 
-Se l’organizzazione non richiede più una destinazione di proiezione, può essere eliminata effettuando una richiesta di DELETE all’endpoint `/config/destinations` e includendo l’ID della destinazione da eliminare nel percorso della richiesta.
+Se l’organizzazione non richiede più una destinazione di proiezione, può essere eliminata effettuando una richiesta DELETE al `/config/destinations` e l’ID della destinazione che desideri eliminare nel percorso della richiesta.
 
 >[!CAUTION]
 >
@@ -321,7 +321,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/destinations/8b90ce19-e7dd-403a-ae24-69683a6674e7 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -331,11 +331,11 @@ La richiesta di eliminazione restituisce lo stato HTTP 204 (nessun contenuto) e 
 
 ## Configurazioni di proiezione
 
-Le configurazioni di proiezione forniscono informazioni su quali dati dovrebbero essere disponibili su ciascun bordo. Invece di proiettare uno schema [!DNL Experience Data Model] completo (XDM) sul bordo, una proiezione fornisce solo dati specifici, o campi, dallo schema. La tua organizzazione può definire più di una configurazione di proiezione per ogni schema XDM.
+Le configurazioni di proiezione forniscono informazioni su quali dati dovrebbero essere disponibili su ciascun bordo. Piuttosto che proiettare un [!DNL Experience Data Model] (XDM) schema al bordo, una proiezione fornisce solo dati specifici, o campi, dallo schema. La tua organizzazione può definire più di una configurazione di proiezione per ogni schema XDM.
 
 ### Elenca tutte le configurazioni di proiezione
 
-È possibile elencare tutte le configurazioni di proiezione create per la propria organizzazione effettuando una richiesta di GET all&#39;endpoint `/config/projections`. È inoltre possibile aggiungere parametri facoltativi al percorso della richiesta per accedere alle configurazioni di proiezione per uno schema specifico o cercare una proiezione singola in base al nome.
+Puoi elencare tutte le configurazioni di proiezione create per la tua organizzazione effettuando una richiesta di GET al `/config/projections` punto finale. È inoltre possibile aggiungere parametri facoltativi al percorso della richiesta per accedere alle configurazioni di proiezione per uno schema specifico o cercare una proiezione singola in base al nome.
 
 **Formato API**
 
@@ -352,24 +352,24 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 >[!NOTE]
 >
->`schemaName` è richiesto quando si utilizza il  `name` parametro , in quanto il nome di una configurazione di proiezione è univoco solo nel contesto di una classe di schema.
+>`schemaName` è necessario quando si utilizza il `name` come nome della configurazione di proiezione è univoco solo nel contesto di una classe di schema.
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate tutte le configurazioni di proiezione associate alla classe di schema [!DNL Experience Data Model] [!DNL XDM Individual Profile]. Per ulteriori informazioni su XDM e sul suo ruolo all&#39;interno di [!DNL Platform], leggere la [Panoramica del sistema XDM](../../xdm/home.md).
+Nella richiesta seguente sono elencate tutte le configurazioni di proiezione associate al [!DNL Experience Data Model] classe schema, [!DNL XDM Individual Profile]. Per ulteriori informazioni su XDM e sul suo ruolo in [!DNL Platform], per favore inizia leggendo il [Panoramica del sistema XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di configurazioni di proiezione all&#39;interno dell&#39;attributo radice `_embedded`, contenuto nell&#39;array `projectionConfigs`. Se non sono state apportate configurazioni di proiezione per la tua organizzazione, la matrice `projectionConfigs` sarà vuota.
+Una risposta corretta restituisce un elenco di configurazioni di proiezione all&#39;interno della radice `_embedded` attributo contenuto nel `projectionConfigs` array. Se non è stata effettuata alcuna configurazione di proiezione per la tua organizzazione, la `projectionConfigs` array vuoto.
 
 ```json
 {
@@ -437,14 +437,14 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->La richiesta di POST per creare una configurazione richiede un’intestazione `Content-Type` specifica, come illustrato di seguito. Se si utilizza un&#39;intestazione `Content-Type` errata, si verifica un errore di stato HTTP 415 (tipo di supporto non supportato).
+>La richiesta di POST per creare una configurazione richiede un `Content-Type` , come illustrato di seguito. Utilizzo di un errore `Content-Type` l’intestazione restituisce un errore di stato HTTP 415 (tipo di supporto non supportato).
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
@@ -456,7 +456,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| `selector` | Una stringa contenente un elenco di proprietà all&#39;interno dello schema da replicare ai bordi. Le best practice per lavorare con i selettori sono disponibili nella sezione [Selettori](#selectors) di questo documento. |
+| `selector` | Una stringa contenente un elenco di proprietà all&#39;interno dello schema da replicare ai bordi. Le best practice per lavorare con i selettori sono disponibili nella sezione [Selettori](#selectors) sezione di questo documento. |
 | `name` | Un nome descrittivo per la nuova configurazione di proiezione. |
 | `destinationId` | Identificatore della destinazione perimetrale a cui verranno proiettati i dati. |
 
@@ -502,15 +502,15 @@ Una risposta corretta restituisce i dettagli della configurazione di proiezione 
 
 ## Selettori {#selectors}
 
-Un selettore è un elenco separato da virgole di nomi di campi XDM. In una configurazione di proiezione, il selettore designa le proprietà da includere nelle proiezioni. Il formato del valore del parametro `selector` è liberamente basato sulla sintassi XPath. Di seguito è riportato un riepilogo della sintassi supportata, con ulteriori esempi di riferimento.
+Un selettore è un elenco separato da virgole di nomi di campi XDM. In una configurazione di proiezione, il selettore designa le proprietà da includere nelle proiezioni. Il formato del `selector` Il valore del parametro è liberamente basato sulla sintassi XPath. Di seguito è riportato un riepilogo della sintassi supportata, con ulteriori esempi di riferimento.
 
 ### Sintassi supportata
 
 * Utilizzare le virgole per selezionare più campi. Non utilizzare spazi.
 * Utilizzare la notazione del punto per selezionare i campi nidificati.
    * Ad esempio, per selezionare un campo denominato `field` nidificato all’interno di un campo denominato `foo`, utilizza il selettore `foo.field`.
-* Se si include un campo contenente campi secondari, anche tutti i campi secondari vengono proiettati per impostazione predefinita. Tuttavia, puoi filtrare i campi secondari restituiti utilizzando le parentesi `"( )"`.
-   * Ad esempio, `addresses(type,city.country)` restituisce solo il tipo di indirizzo e il paese in cui si trova la città dell&#39;indirizzo per ciascun elemento della matrice `addresses`.
+* Se si include un campo contenente campi secondari, anche tutti i campi secondari vengono proiettati per impostazione predefinita. Tuttavia, è possibile filtrare i campi secondari restituiti utilizzando le parentesi `"( )"`.
+   * Ad esempio: `addresses(type,city.country)` restituisce solo il tipo di indirizzo e il paese in cui si trova la città dell&#39;indirizzo per ogni `addresses` elemento array.
    * L&#39;esempio precedente è equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
@@ -524,11 +524,11 @@ Un selettore è un elenco separato da virgole di nomi di campi XDM. In una confi
 
 ### Esempi del parametro del selettore
 
-Gli esempi seguenti mostrano parametri di esempio `selector`, seguiti dai valori strutturati che rappresentano.
+Gli esempi seguenti mostrano un esempio `selector` , seguiti dai valori strutturati che rappresentano.
 
 **person.lastName**
 
-Restituisce il sottocampo `lastName` dell&#39;oggetto `person` nella risorsa richiesta.
+Restituisce il `lastName` sottocampo della `person` nella risorsa richiesta.
 
 ```json
 {
@@ -540,7 +540,7 @@ Restituisce il sottocampo `lastName` dell&#39;oggetto `person` nella risorsa ric
 
 **indirizzi**
 
-Restituisce tutti gli elementi della matrice `addresses`, inclusi tutti i campi di ciascun elemento, ma nessun altro campo.
+Restituisce tutti gli elementi nel `addresses` array, inclusi tutti i campi in ciascun elemento, ma nessun altro campo.
 
 ```json
 {
@@ -567,7 +567,7 @@ Restituisce tutti gli elementi della matrice `addresses`, inclusi tutti i campi 
 
 **person.lastName,addresses**
 
-Restituisce il campo `person.lastName` e tutti gli elementi della matrice `addresses`.
+Restituisce il `person.lastName` e tutti gli elementi nel `addresses` array.
 
 ```json
 {
@@ -624,7 +624,7 @@ Restituisce solo il campo city per tutti gli elementi della matrice indirizzi.
 
 **indirizzi(tipo, città)**
 
-Restituisce solo i valori dei campi `type` e `city` per ogni elemento della matrice `addresses`. Tutti gli altri campi secondari contenuti in ciascun elemento `addresses` vengono filtrati.
+Restituisce solo i valori del `type` e `city` campi per ogni elemento nel `addresses` array. Tutti gli altri sottocampi contenuti in ciascuno `addresses` gli elementi vengono filtrati.
 
 ```json
 {
@@ -649,4 +649,4 @@ Restituisce solo i valori dei campi `type` e `city` per ogni elemento della matr
 
 ## Passaggi successivi
 
-Questa guida illustra i passaggi necessari per configurare proiezioni e destinazioni, incluso come formattare correttamente il parametro `selector` . Ora puoi creare nuove destinazioni e configurazioni di proiezione specifiche per le esigenze della tua organizzazione.
+Questa guida illustra i passaggi necessari per configurare proiezioni e destinazioni, tra cui come formattare correttamente il `selector` parametro . Ora puoi creare nuove destinazioni e configurazioni di proiezione specifiche per le esigenze della tua organizzazione.

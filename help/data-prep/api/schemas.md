@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Endpoint API per gli schemi
 topic-legacy: schemas
 description: 'Puoi utilizzare l’endpoint `/schemas` nell’API Adobe Experience Platform per recuperare, creare e aggiornare programmaticamente gli schemi da utilizzare con Mapper in Platform. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -16,19 +15,19 @@ ht-degree: 3%
 
 # Endpoint degli schemi
 
-Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quanto si desidera acquisire. Puoi utilizzare l’endpoint `/schemas` per creare, elencare e ottenere schemi personalizzati da utilizzare con Mapper in Platform a livello di programmazione.
+Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quanto si desidera acquisire. È possibile utilizzare `/schemas` per creare, elencare e ottenere schemi personalizzati da utilizzare con Mapper in Platform a livello di programmazione.
 
 >[!NOTE]
 >
->Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set Mapper e di mappatura. Per creare schemi accessibili da altri servizi Platform, leggere la [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md).
+>Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set Mapper e di mappatura. Per creare schemi accessibili da altri servizi Platform, consulta la sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md).
 
 ## Ottieni tutti gli schemi
 
-Puoi recuperare un elenco di tutti gli schemi mappatore disponibili per la tua organizzazione IMS effettuando una richiesta di GET all’endpoint `/schemas` .
+Puoi recuperare un elenco di tutti gli schemi mappatore disponibili per la tua organizzazione IMS effettuando una richiesta di GET al `/schemas` punto finale.
 
 **Formato API**
 
-L’endpoint `/schemas` supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere sia i parametri `start` che `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
+La `/schemas` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere entrambi i `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciale (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -41,7 +40,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | `{LIMIT}` | **Obbligatorio**. Specifica il numero di schemi restituiti. |
 | `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina di risultati, imposta il valore su `start=0`. |
 | `{NAME}` | Filtra lo schema in base al nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarla in ordine crescente o decrescente rispettivamente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
 
 **Richiesta**
 
@@ -50,7 +49,7 @@ La richiesta seguente recupera gli ultimi due schemi creati per la tua organizza
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -134,7 +133,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco degli schemi ri
 
 ## Creare uno schema
 
-È possibile creare uno schema su cui eseguire la convalida effettuando una richiesta POST all&#39;endpoint `/schemas`. Esistono tre modi per creare uno schema: invio di uno [schema JSON](https://json-schema.org/) utilizzando dati di esempio o facendo riferimento a uno schema XDM esistente.
+È possibile creare uno schema su cui eseguire la convalida effettuando una richiesta di POST al `/schemas` punto finale. Esistono tre modi per creare uno schema: invio di un [Schema JSON](https://json-schema.org/), utilizzando dati di esempio o facendo riferimento a uno schema XDM esistente.
 
 ```http
 POST /schemas
@@ -144,13 +143,13 @@ POST /schemas
 
 **Richiesta**
 
-La richiesta seguente ti consente di creare uno schema inviando un [Schema JSON](https://json-schema.org/).
+La seguente richiesta ti consente di creare uno schema inviando un [Schema JSON](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -189,7 +188,7 @@ La richiesta seguente ti consente di creare uno schema utilizzando dati di esemp
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -254,7 +253,7 @@ La richiesta seguente ti consente di creare uno schema facendo riferimento a uno
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -271,7 +270,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | Nome dello schema che si desidera creare. |
 | `schemaRef.id` | ID dello schema a cui si fa riferimento. |
-| `schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella [guida per gli sviluppatori del Registro di sistema ](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [guida per gli sviluppatori del registro di sistema](../../xdm/api/schemas.md#lookup) |
 
 **Risposta**
 
@@ -286,7 +285,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
     "id": "4b64daa51b774cb2ac21b61d80125ed0",
     "version": 0,
     "name": "schemaName",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{IMS_ORG}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
+    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{ORG_ID}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96",
         "contentType": "application/vnd.adobe.xed+json;version=1.0"
@@ -312,7 +311,7 @@ La seguente richiesta ti consente di creare uno schema da un file JSON caricato.
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: multipart/form-data' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -F 'file=@{PATH_TO_FILE}.json'
@@ -336,7 +335,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
 
 ## Recupera uno schema specifico
 
-È possibile recuperare informazioni su uno schema specifico effettuando una richiesta di GET all&#39;endpoint `/schemas` e fornendo l&#39;ID dello schema che si desidera recuperare nel percorso della richiesta.
+È possibile recuperare informazioni su uno schema specifico effettuando una richiesta di GET al `/schemas` e fornisce l’ID dello schema che desideri recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -355,7 +354,7 @@ La richiesta seguente recupera informazioni sullo schema specificato.
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

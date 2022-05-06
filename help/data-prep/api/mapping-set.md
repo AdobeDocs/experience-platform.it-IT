@@ -5,25 +5,24 @@ title: Endpoint API per set di mappature
 topic-legacy: mapping sets
 description: Puoi utilizzare l'endpoint `/mappingSets` nell'API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '807'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Endpoint di mapping
 
-I set di mapping possono essere utilizzati per definire il modo in cui i dati di uno schema di origine vengono mappati su quello di uno schema di destinazione. Puoi utilizzare l’endpoint `/mappingSets` nell’API di preparazione dati per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
+I set di mapping possono essere utilizzati per definire il modo in cui i dati di uno schema di origine vengono mappati su quello di uno schema di destinazione. È possibile utilizzare `/mappingSets` nell’API di preparazione dati per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
 
 ## Set di mappature elenco
 
-Puoi recuperare un elenco di tutti i set di mappatura per la tua organizzazione IMS effettuando una richiesta di GET all’ endpoint `/mappingSets` .
+Puoi recuperare un elenco di tutti i set di mappatura per la tua organizzazione IMS effettuando una richiesta di GET al `/mappingSets` punto finale.
 
 **Formato API**
 
-L’endpoint `/mappingSets` supporta diversi parametri di query per filtrare i risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere sia i parametri `start` che `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
+La `/mappingSets` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere entrambi i `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciale (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -37,7 +36,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | `{LIMIT}` | (**Obbligatorio**) Specifica il numero di set di mapping restituiti. |
 | `{START}` | (**Obbligatorio**) Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina di risultati, imposta il valore su `start=0`. |
 | `{NAME}` | Filtra i set di mappatura per nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarla in ordine crescente o decrescente rispettivamente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
 | `{EXPAND_SCHEMA}` | Valore booleano che determina se lo schema di output completo viene restituito come parte della risposta. |
 
 **Richiesta**
@@ -48,7 +47,7 @@ La richiesta seguente recupererà gli ultimi due set di mappature all’interno 
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -167,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Creare un set di mappatura
 
-Puoi creare un nuovo set di mappatura effettuando una richiesta POST all’endpoint `/mappingSets` .
+Puoi creare un nuovo set di mappature effettuando una richiesta di POST al `/mappingSets` punto finale.
 
 **Formato API**
 
@@ -184,7 +183,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -219,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | ID dello schema XDM a cui si fa riferimento. |
-| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md#lookup). |
+| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md#lookup). |
 | `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall&#39;origine alla destinazione. |
 | `mappings.source` | La posizione da cui desideri mappare i dati. |
 | `mappings.destination` | Posizione in cui si desidera mappare i dati. |
@@ -241,7 +240,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul set 
 
 ## Convalida mappature
 
-Puoi verificare che le mappature funzionino correttamente effettuando una richiesta POST all’endpoint `/mappingSets/validate` .
+Puoi verificare che le mappature funzionino correttamente effettuando una richiesta POST al `/mappingSets/validate` punto finale.
 
 **Formato API**
 
@@ -258,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -315,7 +314,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni di conva
 
 ## Anteprima dei dati per le mappature
 
-Puoi visualizzare in anteprima a cosa saranno mappati i tuoi dati effettuando una richiesta POST all’endpoint `/mappingSets/preview` .
+Puoi visualizzare in anteprima a cosa saranno mappati i tuoi dati effettuando una richiesta di POST al `/mappingSets/preview` punto finale.
 
 **Formato API**
 
@@ -330,7 +329,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
 {
@@ -392,9 +391,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un&#39;anteprima dei dat
 ]
 ```
 
-## Cercare un set di mappatura
+## Cercare un set di mappature
 
-Puoi recuperare un set di mappatura specifico fornendo il relativo ID nel percorso di una richiesta di GET all’ endpoint `/mappingSets` . Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappature specificata.
+Puoi recuperare un set di mappatura specifico fornendo il relativo ID nel percorso di una richiesta GET al `/mappingSets` punto finale. Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappature specificata.
 
 **Formato API**
 
@@ -406,7 +405,7 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Obbligatorio**) L&#39;ID del set di mappature che si desidera recuperare. |
+| `{MAPPING_SET_ID}` | (**Obbligatorio**) L&#39;ID del set di mappature che desideri recuperare. |
 | `{EXPAND_SCHEMA}` | Parametro di query booleano che determina se restituire lo schema di output come parte della risposta. |
 | `{VERSION}` | Parametro di query integer che determina la versione del set di mappatura da recuperare. |
 
@@ -418,7 +417,7 @@ La richiesta seguente recupera informazioni dettagliate su un set di mappature s
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -538,7 +537,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
                 }
             },
             "version": "1.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/89abc189258b1cb1a816d8f2b2341a6d98000ed8f4008305"
         },
         "schemaRef": {
@@ -585,7 +584,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Aggiornare un set di mappature
 
-È possibile aggiornare un set di mappatura fornendo il relativo ID nel percorso di una richiesta `PUT` all&#39;endpoint `mappingSets`.
+Puoi aggiornare un set di mappatura fornendo il relativo ID nel percorso di un `PUT` richiesta al `mappingSets` punto finale.
 
 **Formato API**
 
@@ -604,7 +603,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -832,7 +831,7 @@ La richiesta seguente restituisce tutte le mappature nel set di mappature specif
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -936,7 +935,7 @@ La richiesta seguente recupera informazioni su una mappatura specifica nel set d
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

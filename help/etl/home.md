@@ -5,7 +5,7 @@ title: Sviluppo di integrazioni ETL per Adobe Experience Platform
 topic-legacy: overview
 description: La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 1%
@@ -60,7 +60,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
@@ -123,7 +123,7 @@ GET /catalog/dataSets?{filter1}={value1},{value2}&{filter2}={value3}
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&properties=name,description,schemaRef" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -189,7 +189,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F274f17bc5807ff307a046bab1489fb18 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
@@ -241,7 +241,7 @@ GET /catalog/{"schema" property without the "@"}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/person?expansion=xdm" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -308,7 +308,7 @@ GET /catalog/dataSets?limit={value}&properties={value}
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=1&properties=files" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -339,7 +339,7 @@ GET /catalog/dataSets/{DATASET_ID}/views/{VIEW_ID}/files
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -354,7 +354,7 @@ La risposta include l&#39;ID del file di set di dati come proprietà di livello 
     "194e89b976494c9c8113b968c27c1472-1": {
         "batchId": "194e89b976494c9c8113b968c27c1472",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -366,7 +366,7 @@ La risposta include l&#39;ID del file di set di dati come proprietà di livello 
     "14d5758c107443e1a83c714e56ca79d0-1": {
         "batchId": "14d5758c107443e1a83c714e56ca79d0",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -378,7 +378,7 @@ La risposta include l&#39;ID del file di set di dati come proprietà di livello 
     "ea40946ac03140ec8ac4f25da360620a-1": {
         "batchId": "ea40946ac03140ec8ac4f25da360620a",
         "dataSetViewId": "5bf479a654f52014cfffe7f1",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "availableDates": {},
         "createdUser": "{USER_ID}",
         "createdClient": "{API_KEY}",
@@ -406,7 +406,7 @@ GET /export/files/{DATASET_FILE_ID}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac03140ec8ac4f25da360620a-1" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -442,7 +442,7 @@ GET /export/files/{FILE_ID}?path={FILE_NAME}.{FILE_FORMAT}
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac03140ec8ac4f25da360620a-1?path=samplefile.parquet" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -471,7 +471,7 @@ GET /catalog/dataSets/{DATASET_ID}
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3da7d0c00000798f68" \
 -H "accept: application/json" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
+-H "x-gw-ims-org-id: {ORG_ID}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-api-key: {API_KEY}"
@@ -514,7 +514,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "Accept: application/json" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
@@ -528,7 +528,7 @@ Una volta ottenuto l&#39;ID per il batch che stai cercando (`{BATCH_ID}`), è po
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -543,7 +543,7 @@ Utilizzo dell&#39;ID univoco di un file (`{FILE_ID`), [[!DNL Data Access API]](h
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -559,7 +559,7 @@ La [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/refere
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FILE_ID}?path=filename1.csv" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -587,7 +587,7 @@ Una volta elaborati i dati, lo strumento ETL restituirà i dati a [!DNL Experien
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
@@ -609,7 +609,7 @@ Ingresso dati [!DNL Experience Platform] devono essere scritti sotto forma di fi
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id:{IMS_ORG}" \
+  -H "x-gw-ims-org-id:{ORG_ID}" \
   -H "Authorization:Bearer ACCESS_TOKEN" \
   -H "x-api-key: API_KEY" \
   -H "content-type: application/octet-stream" \
@@ -626,7 +626,7 @@ I dati verranno prima trasferiti nella posizione di staging su Adobe Experience 
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -647,7 +647,7 @@ Prima di eseguire nuove attività nello strumento ETL, è necessario assicurarsi
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&sort=desc:created" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -659,7 +659,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "CLIENT_USER_ID@AdobeID",
@@ -681,7 +681,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
   -H "Accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
@@ -693,7 +693,7 @@ La risposta seguente mostra un &quot;successo&quot;:
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "{CREATED_USER}",
@@ -712,7 +712,7 @@ In caso di errore, gli &quot;errori&quot; possono essere estratti dalla risposta
 
 ```json
 "{BATCH_ID}": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1494349962314,
     "createdClient": "{API_KEY}",
     "createdUser": "{CREATED_USER}",

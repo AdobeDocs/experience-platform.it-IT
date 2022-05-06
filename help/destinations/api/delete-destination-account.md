@@ -5,7 +5,7 @@ title: Eliminare un account di destinazione utilizzando l’API del servizio di 
 type: Tutorial
 description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio di flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
@@ -97,7 +97,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/connections/c8622ec7-7d94-44a5-a35a-ffcc6bdcc384' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -118,7 +118,7 @@ A successful response returns the current details of your connection including i
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "Airship Attributes",
             "description": "test account connection to Airship Attributes destination",
             "connectionSpec": {
@@ -171,7 +171,7 @@ curl -X DELETE \
     'https://platform.adobe.io/data/foundation/flowservice/connections/c8622ec7-7d94-44a5-a35a-ffcc6bdcc384' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

@@ -5,21 +5,20 @@ title: Endpoint API per gli schemi
 topic-legacy: schemas
 description: Puoi utilizzare l'endpoint `/function` nell'API di Adobe Experience Platform per convalidare le espressioni di mappatura e elencare le funzioni disponibili per i set di mappatura.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 # Endpoint delle funzioni
 
-Le funzioni del set di mappature consentono di trasformare i dati tra schemi di origine e di destinazione. Puoi utilizzare l’endpoint `/languages/el` per convalidare le espressioni e ottenere un elenco di tutte le funzioni disponibili per il set di mappature.
+Le funzioni del set di mappature consentono di trasformare i dati tra schemi di origine e di destinazione. È possibile utilizzare `/languages/el` per convalidare le espressioni e ottenere un elenco di tutte le funzioni disponibili per il set di mappature.
 
 ## Convalidare espressioni
 
-Puoi verificare se l’espressione corrente è valida effettuando una richiesta POST all’endpoint `/languages/el/validate` .
+Puoi verificare se l’espressione corrente è valida effettuando una richiesta POST al `/languages/el/validate` punto finale.
 
 **Formato API**
 
@@ -34,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -55,7 +54,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con lo stato di convalida de
 
 ## Funzioni set di mappatura elenco
 
-È possibile recuperare un elenco di tutte le funzioni del set di mappature disponibili effettuando una richiesta di GET all&#39;endpoint `/languages/el/functions`.
+È possibile recuperare un elenco di tutte le funzioni del set di mappature disponibili effettuando una richiesta di GET al `/languages/el/functions` punto finale.
 
 **Formato API**
 
@@ -69,7 +68,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -120,7 +119,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di tutte le fu
 
 ## Elenca operatori set di mappature
 
-È possibile recuperare un elenco di tutti gli operatori del set di mappature disponibili effettuando una richiesta di GET all&#39;endpoint `/languages/el/operators`.
+Puoi recuperare un elenco di tutti gli operatori del set di mappature disponibili effettuando una richiesta di GET al `/languages/el/operators` punto finale.
 
 **Formato API**
 
@@ -134,7 +133,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

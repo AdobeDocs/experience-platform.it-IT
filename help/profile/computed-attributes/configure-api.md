@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un gruppo di campi personalizzati che conterrà il campo dell’attributo calcolato.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%
@@ -20,11 +20,11 @@ ht-degree: 2%
 
 Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un gruppo di campi dello schema personalizzato che conterrà il campo dell’attributo calcolato. È consigliabile creare uno schema e un gruppo di campi &quot;Attributi calcolati&quot; separati in cui l’organizzazione può aggiungere qualsiasi attributo da utilizzare come attributi calcolati. Questo consente alla tua organizzazione di separare in modo pulito lo schema degli attributi calcolati da altri schemi utilizzati per l’inserimento dei dati.
 
-Il flusso di lavoro in questo documento illustra come utilizzare l’API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un gruppo di campi personalizzato. Questo documento contiene un codice di esempio specifico per gli attributi calcolati, tuttavia fai riferimento alla [Guida API del Registro di sistema dello schema](../../xdm/api/overview.md) per informazioni dettagliate sulla definizione dei gruppi di campi e degli schemi utilizzando l&#39;API.
+Il flusso di lavoro in questo documento illustra come utilizzare l’API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un gruppo di campi personalizzato. Questo documento contiene un codice di esempio specifico per gli attributi calcolati, tuttavia si prega di fare riferimento al [Guida all’API del registro dello schema](../../xdm/api/overview.md) per informazioni dettagliate sulla definizione di gruppi di campi e schemi tramite l’API.
 
 ## Creare un gruppo di campi attributi calcolati
 
-Per creare un gruppo di campi utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/fieldgroups` e fornendo i dettagli del gruppo di campi nel corpo della richiesta. Per informazioni dettagliate sull&#39;utilizzo dei gruppi di campi tramite l&#39;API del Registro di sistema dello schema, fare riferimento alla [guida dell&#39;endpoint API dei gruppi di campi](../../xdm/api/field-groups.md).
+Per creare un gruppo di campi utilizzando l’API del Registro di sistema dello schema, invia innanzitutto una richiesta di POST `/tenant/fieldgroups` e fornendo i dettagli del gruppo di campi nel corpo della richiesta. Per informazioni dettagliate sull’utilizzo dei gruppi di campi tramite l’API del Registro di sistema dello schema, consulta [guida all’endpoint API per i gruppi di campi](../../xdm/api/field-groups.md).
 
 **Formato API**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Risposta**
 
-Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del gruppo di campi appena creato, inclusi i campi `$id`, `meta:altIt` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del gruppo di campi appena creato, incluso il `$id`, `meta:altIt`e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
 
 ```json
 {
@@ -120,7 +120,7 @@ Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un
 
 ## Aggiorna gruppo di campi con attributi calcolati aggiuntivi
 
-Poiché sono necessari più attributi calcolati, è possibile aggiornare il gruppo di campi attributi calcolati con attributi aggiuntivi effettuando una richiesta di PUT all&#39;endpoint `/tenant/fieldgroups`. Questa richiesta richiede di includere l’ID univoco del gruppo di campi creato nel percorso e tutti i nuovi campi che si desidera aggiungere nel corpo.
+Poiché sono necessari più attributi calcolati, è possibile aggiornare il gruppo di campi attributi calcolati con attributi aggiuntivi effettuando una richiesta di PUT al gruppo di campi `/tenant/fieldgroups` punto finale. Questa richiesta richiede di includere l’ID univoco del gruppo di campi creato nel percorso e tutti i nuovi campi che si desidera aggiungere nel corpo.
 
-Per ulteriori informazioni sull&#39;aggiornamento di un gruppo di campi utilizzando l&#39;API del Registro di sistema dello schema, fare riferimento alla [guida dell&#39;endpoint API dei gruppi di campi](../../xdm/api/field-groups.md).
+Per ulteriori informazioni sull’aggiornamento di un gruppo di campi utilizzando l’API del Registro di sistema dello schema, consulta [guida all’endpoint API per i gruppi di campi](../../xdm/api/field-groups.md).
 
 **Formato API**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **Richiesta**
 
-Questa richiesta aggiunge nuovi campi relativi alle informazioni `purchaseSummary` .
+Questa richiesta aggiunge nuovi campi correlati a `purchaseSummary` informazioni.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ Una risposta corretta restituisce i dettagli del gruppo di campi aggiornato.
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ Una risposta corretta restituisce i dettagli del gruppo di campi aggiornato.
 
 ## Creare uno schema abilitato per il profilo
 
-Per creare uno schema utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/schemas` e fornendo i dettagli dello schema nel corpo della richiesta. Lo schema deve essere abilitato anche per [!DNL Profile] e deve essere visualizzato come parte dello schema di unione per la classe dello schema.
+Per creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, inizia effettuando una richiesta di POST al `/tenant/schemas` e fornendo i dettagli dello schema nel corpo della richiesta. Lo schema deve essere abilitato anche per [!DNL Profile] e vengono visualizzati come parte dello schema di unione per la classe schema.
 
-Per ulteriori informazioni sugli schemi e sugli schemi di unione abilitati per [!DNL Profile], consulta la [[!DNL Schema Registry] Guida API](../../xdm/api/overview.md) e la [documentazione di base sulla composizione dello schema](../../xdm/schema/composition.md).
+Per ulteriori informazioni su [!DNL Profile]schemi abilitati e schemi di unione, si prega di rivedere [[!DNL Schema Registry] Guida all’API](../../xdm/api/overview.md) e [documentazione di base sulla composizione dello schema](../../xdm/schema/composition.md).
 
 **Formato API**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema che fa riferimento a `computedAttributesFieldGroup` creato in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitato per lo schema di unione profili (utilizzando l’array `meta:immutableTags`). Per istruzioni dettagliate su come creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API degli schemi](../../xdm/api/schemas.md).
+La richiesta seguente crea un nuovo schema che fa riferimento al `computedAttributesFieldGroup` creato in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitato per lo schema di unione profili (utilizzando `meta:immutableTags` array). Per istruzioni dettagliate su come creare uno schema utilizzando l’API del Registro di sistema dello schema, consulta [Guida all’endpoint API per schemi](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -366,7 +366,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli dello schema appena creato, inclusi `$id`, `meta:altId` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli dello schema appena creato, tra cui `$id`, `meta:altId`e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
 
 ```json
 {
@@ -400,7 +400,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 
 ## Passaggi successivi
 
-Dopo aver creato uno schema e un gruppo di campi in cui verranno memorizzati gli attributi calcolati, puoi creare l’attributo calcolato utilizzando l’endpoint API `/computedattributes`. Per passaggi dettagliati per la creazione di un attributo calcolato nell&#39;API, segui i passaggi descritti nella [guida all&#39;endpoint API degli attributi calcolati](ca-api.md) .
+Ora che hai creato uno schema e un gruppo di campi in cui verranno memorizzati gli attributi calcolati, puoi creare l&#39;attributo calcolato utilizzando `/computedattributes` Endpoint API. Per passaggi dettagliati per la creazione di un attributo calcolato nell’API, segui i passaggi forniti nella [guida all’endpoint API degli attributi calcolati](ca-api.md).

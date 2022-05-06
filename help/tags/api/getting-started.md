@@ -2,7 +2,7 @@
 title: Guida introduttiva all’API di Reactor
 description: Scopri come iniziare a utilizzare l’API di Reactor, compresi i passaggi per generare le credenziali di accesso richieste.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 97%
@@ -15,7 +15,7 @@ Per utilizzare l’[API di Reactor](https://www.adobe.io/experience-platform-api
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Questa guida illustra come utilizzare Adobe Developer Console per raccogliere i valori per ciascuna di queste intestazioni, in modo da poter iniziare a effettuare chiamate all’API di Reactor.
 
@@ -27,11 +27,11 @@ Prima di poter generare i valori di autenticazione per l’API di Reactor, devi 
 
 Utilizzando Adobe Developer Console, è necessario generare le tre credenziali di accesso seguenti:
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Una volta generati, l’ID organizzazione IMS (`{IMS_ORG}`) e la chiave API (`{API_KEY}`) possono essere riutilizzati nelle chiamate API future. Il token di accesso (`{ACCESS_TOKEN}`) è invece temporaneo e deve essere rigenerato ogni 24 ore.
+Una volta generati, l’ID organizzazione IMS (`{ORG_ID}`) e la chiave API (`{API_KEY}`) possono essere riutilizzati nelle chiamate API future. Il token di accesso (`{ACCESS_TOKEN}`) è invece temporaneo e deve essere rigenerato ogni 24 ore.
 
 I passaggi per generare questi valori sono descritti in dettaglio di seguito.
 
@@ -70,13 +70,13 @@ Seleziona i profili di prodotto desiderati dall’elenco, quindi seleziona **Sav
 Una volta aggiunta l’API al progetto, la pagina del progetto viene nuovamente visualizzata nella pagina Experience Platform Reactor API. Da qui, scorri verso il basso fino alla sezione **Service Account (JWT)** (Account di servizio (JWT)), che fornisce le seguenti credenziali di accesso necessarie in tutte le chiamate all’API di Reactor:
 
 * **CLIENT ID**: l’ID client è il valore `{API_KEY}` obbligatorio che deve essere fornito nell’intestazione `x-api-key`.
-* **ORGANIZATION ID**: l’ID organizzazione è il valore `{IMS_ORG}` che deve essere utilizzato nell’intestazione `x-gw-ims-org-id`.
+* **ORGANIZATION ID**: l’ID organizzazione è il valore `{ORG_ID}` che deve essere utilizzato nell’intestazione `x-gw-ims-org-id`.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### Autenticazione per ogni sessione
 
-Ora che disponi dei valori `{API_KEY}` e `{IMS_ORG}`, nel passaggio finale verrà generato un valore `{ACCESS_TOKEN}`.
+Ora che disponi dei valori `{API_KEY}` e `{ORG_ID}`, nel passaggio finale verrà generato un valore `{ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ In caso di esito positivo, la risposta restituisce un nuovo token di accesso, ol
 
 ## Passaggi successivi
 
-Seguendo i passaggi descritti in questo tutorial, dovresti disporre di valori validi per `{IMS_ORG}`, `{API_KEY}` e `{ACCESS_TOKEN}`. Ora puoi testare questi valori utilizzandoli in una semplice richiesta cURL all’API di Reactor.
+Seguendo i passaggi descritti in questo tutorial, dovresti disporre di valori validi per `{ORG_ID}`, `{API_KEY}` e `{ACCESS_TOKEN}`. Ora puoi testare questi valori utilizzandoli in una semplice richiesta cURL all’API di Reactor.
 
 Per prima cosa, prova ad effettuare una chiamata API per [elencare tutte le aziende](./endpoints/companies.md#list).
 

@@ -5,8 +5,7 @@ title: Endpoint API per le istanze mobili
 topic-legacy: Developer guide
 description: Un'istanza MLI è un'associazione di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
@@ -15,13 +14,13 @@ ht-degree: 4%
 
 # Endpoint MLInases
 
-Un&#39;istanza MLI è un&#39;associazione di un [motore](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+Un&#39;istanza MLI è un&#39;associazione di un esistente [Motore](./engines.md) con un set appropriato di configurazioni che definisca eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
-## Crea un&#39;istanza MLI {#create-an-mlinstance}
+## Creare un&#39;istanza MLI {#create-an-mlinstance}
 
-Puoi creare un’istanza MLI eseguendo una richiesta POST fornendo al contempo un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
+Puoi creare un’istanza MLI eseguendo una richiesta POST fornendo al contempo un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e un set appropriato di configurazioni predefinite.
 
-Se l&#39;ID del motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, fai riferimento alle sezioni dell&#39;appendice sulle configurazioni delle risorse [PySpark e Spark](./appendix.md#resource-config) e [Python CPU e GPU](./appendix.md#cpu-gpu-config).
+Se l&#39;ID del motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Fare riferimento alle sezioni dell&#39;appendice [Configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [Configurazioni CPU e GPU Python](./appendix.md#cpu-gpu-config) per ulteriori informazioni.
 
 **Formato API**
 
@@ -36,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -84,7 +83,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso l’identificatore univoco (`id`).
+Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -131,7 +130,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’istanz
 
 ## Recupera un elenco di istanze MLI
 
-È possibile recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -143,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzato per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
 **Richiesta**
@@ -153,7 +152,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -218,7 +217,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -276,7 +275,7 @@ Puoi aggiornare un’istanza MLI esistente sovrascrivendo le sue proprietà tram
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, ti consigliamo prima di eseguire una richiesta di GET a [recuperare l’istanza MLI per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET a [recupera l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiornerà i parametri di formazione e valutazione di un MLInance quando queste proprietà sono inizialmente disponibili:
 
@@ -330,7 +329,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -425,7 +424,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -460,7 +459,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

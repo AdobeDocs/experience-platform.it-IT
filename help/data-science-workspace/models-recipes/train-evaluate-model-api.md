@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform;formazione e valutazione;Data Science Workspace;argomenti popolari;Sensei Machine Learning API
+keywords: Experience Platform;formazione e valutazione;Data Science Workspace;argomenti comuni;API di apprendimento automatico di Sensei
 solution: Experience Platform
 title: Formazione e valutazione di un modello utilizzando l’API di apprendimento automatico di Sensei
 topic-legacy: tutorial
 type: Tutorial
-description: Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
+description: Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API di apprendimento automatico di Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 1%
 
 ---
 
-# Addestra e valuta un modello utilizzando l’ API [!DNL Sensei Machine Learning]
+# Treni e valuta un modello utilizzando [!DNL Sensei Machine Learning] API
 
 
-Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API. Per un elenco dettagliato della documentazione API, fai riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) .
+Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API. Fai riferimento a [presente documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
 
 ## Prerequisiti
 
-Per creare un motore, è necessario addestrare e valutare un modello utilizzando l&#39;API ](./import-packaged-recipe-api.md).[
+Segui [Importare una composizione in pacchetto utilizzando l’API](./import-packaged-recipe-api.md) per la creazione di un motore, necessario per addestrare e valutare un modello utilizzando l’API.
 
-Per iniziare a effettuare chiamate API, segui l&#39; [Experience Platform tutorial di autenticazione API](https://www.adobe.com/go/platform-api-authentication-en) .
+Segui [Experience Platform di esercitazione sull’autenticazione API](https://www.adobe.com/go/platform-api-authentication-en) per iniziare a effettuare chiamate API.
 
 Dall’esercitazione dovresti avere i seguenti valori:
 
 - `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.
-- `{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+- `{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
 - `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.
 
 - Collegamento a un&#39;immagine Docker di un servizio intelligente
@@ -52,7 +51,7 @@ Utilizzeremo le API per creare un Experience Run per la formazione. Per questa e
 
 ### Creare un&#39;istanza MLI
 
-La creazione di un&#39;istanza MLI può essere effettuata utilizzando la richiesta seguente. Utilizzerai il `{ENGINE_ID}` restituito durante la creazione di un motore dal tutorial [Importa una composizione in pacchetto utilizzando l&#39;API](./import-packaged-recipe-ui.md).
+La creazione di un&#39;istanza MLI può essere effettuata utilizzando la richiesta seguente. Verrà utilizzato il `{ENGINE_ID}` restituito durante la creazione di un motore dal [Importare una composizione in pacchetto utilizzando l’API](./import-packaged-recipe-ui.md) esercitazione.
 
 **Richiesta**
 
@@ -62,12 +61,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
 `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: La configurazione della nostra istanza MLI. L’esempio che utilizziamo nel nostro tutorial è mostrato qui:
 
@@ -124,9 +123,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Nell’array `{JSON_PAYLOAD}` vengono definiti i parametri utilizzati per la formazione e il punteggio nell’array `tasks`. Il `{ENGINE_ID}` è l&#39;ID del motore che si desidera utilizzare e il campo `tag` è un parametro facoltativo utilizzato per identificare l&#39;istanza.
+>In `{JSON_PAYLOAD}`, definiamo i parametri utilizzati per la formazione e il punteggio nel `tasks` array. La `{ENGINE_ID}` è l&#39;ID del motore che desideri utilizzare e il `tag` field è un parametro facoltativo utilizzato per identificare l&#39;istanza.
 
-La risposta contiene il `{INSTANCE_ID}` che rappresenta l’istanza MLI creata. È possibile creare più istanze modello MLI con diverse configurazioni.
+La risposta contiene il `{INSTANCE_ID}` che rappresenta l&#39;istanza MLI creata. È possibile creare più istanze modello MLI con diverse configurazioni.
 
 **Risposta**
 
@@ -173,12 +172,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
 `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Oggetto di esperimento creato. L’esempio che utilizziamo nel nostro tutorial è mostrato qui:
@@ -220,7 +219,7 @@ La risposta dalla creazione dell’esperimento si presenta così.
 
 Vengono utilizzati gli esperimenti pianificati in modo che non sia necessario creare ogni singolo esperimento eseguito tramite una chiamata API. Forniamo invece tutti i parametri necessari durante la creazione dell’esperimento e ogni esecuzione verrà creata periodicamente.
 
-Per indicare la creazione di un esperimento pianificato, è necessario aggiungere una sezione `template` nel corpo della richiesta. In `template` sono inclusi tutti i parametri necessari per le esecuzioni di pianificazione, ad esempio `tasks`, che indicano quale azione e `schedule`, che indica la tempistica delle esecuzioni pianificate.
+Per indicare la creazione di un esperimento pianificato, è necessario aggiungere un `template` nel corpo della richiesta. In `template`, sono inclusi tutti i parametri necessari per le esecuzioni di pianificazione, ad esempio `tasks`, che indicano l&#39;azione, e `schedule`, che indica la tempistica delle esecuzioni programmate.
 
 **Richiesta**
 
@@ -229,12 +228,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
 `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Set di dati da registrare. L’esempio che utilizziamo nel nostro tutorial è mostrato qui:
@@ -267,7 +266,7 @@ curl -X POST \
 }
 ```
 
-Quando creiamo un esperimento, il corpo `{JSON_PAYLOAD}` deve contenere il parametro `mlInstanceId` o il parametro `mlInstanceQuery`. In questo esempio, un esperimento pianificato richiama un&#39;esecuzione ogni 20 minuti, impostata nel parametro `cron` , a partire da `startTime` fino a `endTime`.
+Quando creiamo un Esperimento, il corpo, `{JSON_PAYLOAD}`, deve contenere `mlInstanceId` o `mlInstanceQuery` parametro . In questo esempio, un esperimento pianificato richiama un’esecuzione ogni 20 minuti, impostato nel `cron` , a partire dal `startTime` fino al `endTime`.
 
 **Risposta**
 
@@ -307,7 +306,7 @@ Quando creiamo un esperimento, il corpo `{JSON_PAYLOAD}` deve contenere il param
 
 ### Creare un&#39;esecuzione di un esperimento per la formazione
 
-Con la creazione di un’entità Sperimento, è possibile creare ed eseguire un’esecuzione di formazione utilizzando la chiamata di seguito. Sarà necessario il `{EXPERIMENT_ID}` e specificare il `mode` che si desidera attivare nel corpo della richiesta.
+Con la creazione di un’entità Sperimento, è possibile creare ed eseguire un’esecuzione di formazione utilizzando la chiamata di seguito. Avrai bisogno di `{EXPERIMENT_ID}` e dire cosa `mode` desideri attivarsi nel corpo della richiesta.
 
 **Richiesta**
 
@@ -316,13 +315,13 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
 `{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento di cui desideri eseguire il targeting. Questo si trova nella risposta durante la creazione del tuo esperimento.\
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
 `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Per creare un&#39;esecuzione di formazione, è necessario includere quanto segue nel corpo:
@@ -333,7 +332,7 @@ curl -X POST \
 }
 ```
 
-È inoltre possibile ignorare i parametri di configurazione includendo un array `tasks`:
+Puoi anche sovrascrivere i parametri di configurazione includendo un `tasks` array:
 
 ```JSON
 {
@@ -352,7 +351,7 @@ curl -X POST \
 }
 ```
 
-Riceverai la seguente risposta che ti informerà della `{EXPERIMENT_RUN_ID}` e della configurazione in `tasks`.
+Riceverai la seguente risposta che ti informerà della `{EXPERIMENT_RUN_ID}` e la configurazione in `tasks`.
 
 **Risposta**
 
@@ -378,7 +377,7 @@ Riceverai la seguente risposta che ti informerà della `{EXPERIMENT_RUN_ID}` e d
 
 ### Recuperare lo stato di Experience Run
 
-Lo stato dell&#39;esecuzione dell&#39;esperimento può essere interrogato con `{EXPERIMENT_RUN_ID}`.
+Lo stato dell’esecuzione dell’esperimento può essere interrogato con il `{EXPERIMENT_RUN_ID}`.
 
 **Richiesta**
 
@@ -386,19 +385,19 @@ Lo stato dell&#39;esecuzione dell&#39;esperimento può essere interrogato con `{
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
 `{EXPERIMENT_ID}`: L&#39;ID che rappresenta l&#39;esperimento.\
 `{EXPERIMENT_RUN_ID}`: L&#39;ID che rappresenta l&#39;esecuzione dell&#39;esperimento.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
 `{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.
 
 **Risposta**
 
-La chiamata GET fornirà lo stato nel parametro `state` come mostrato di seguito:
+La chiamata di GET fornirà lo stato nel `state` come mostrato di seguito:
 
 ```JSON
 {
@@ -434,12 +433,12 @@ La chiamata GET fornirà lo stato nel parametro `state` come mostrato di seguito
 `{EXPERIMENT_RUN_ID}`: L&#39;ID che rappresenta l&#39;esecuzione dell&#39;esperimento.\
 `{EXPERIMENT_ID}`: L&#39;ID che rappresenta l&#39;esperimento a cui si riferisce l&#39;esecuzione dell&#39;esperimento.
 
-Oltre allo stato `DONE` , altri stati includono:
+Oltre al `DONE` stati, altri stati includono:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Per ottenere ulteriori informazioni, i registri dettagliati si trovano sotto il parametro `tasklogs` .
+Per ulteriori informazioni, consulta i registri dettagliati nella sezione `tasklogs` parametro .
 
 ### Recuperare il modello addestrato
 
@@ -451,12 +450,12 @@ Al fine di ottenere il modello addestrato creato sopra durante l&#39;addestramen
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_RUN_ID}`: L&#39;ID corrispondente all&#39;esecuzione dell&#39;esperimento di cui desideri eseguire il targeting. Questo si trova nella risposta durante la creazione dell’esecuzione dell’esperimento.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
 
 La risposta rappresenta il modello addestrato creato.
 
@@ -490,7 +489,7 @@ La risposta rappresenta il modello addestrato creato.
 
 ### Arrestare ed eliminare un esperimento pianificato
 
-Per interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, è possibile eseguire questa operazione eseguendo una query su una richiesta DELETE al `{EXPERIMENT_ID}`
+Se desideri interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, può essere eseguito eseguendo una query su una richiesta di DELETE al `{EXPERIMENT_ID}`
 
 **Richiesta**
 
@@ -498,12 +497,12 @@ Per interrompere l’esecuzione di un esperimento pianificato prima del relativo
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento.\
 `{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{IMS_ORG}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -523,4 +522,4 @@ Di seguito è riportata la notifica della cancellazione dell’esperimento.
 
 ## Passaggi successivi
 
-Questa esercitazione spiega come utilizzare le API per creare un motore, un esperimento, esecuzioni di esperimenti pianificate e modelli addestrati. Nell&#39; [esercizio successivo](./score-model-api.md), effettuerai le previsioni assegnando un punteggio a un nuovo set di dati utilizzando il modello addestrato con le prestazioni migliori.
+Questa esercitazione spiega come utilizzare le API per creare un motore, un esperimento, esecuzioni di esperimenti pianificate e modelli addestrati. In [esercizio successivo](./score-model-api.md), effettuerai previsioni assegnando un punteggio a un nuovo set di dati utilizzando il modello qualificato con le prestazioni migliori.

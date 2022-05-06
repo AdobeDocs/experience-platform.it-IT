@@ -1,7 +1,8 @@
 ---
 title: Endpoint “companies”
 description: Scopri come effettuare chiamate all’endpoint /companies nell’API di Reactor.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 97%
@@ -39,7 +40,7 @@ curl -X GET \
   https://reactor.adobe.io/companies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -57,7 +58,7 @@ In caso di esito positivo, la risposta restituisce l’elenco delle aziende a cu
       "attributes": {
         "created_at": "2020-08-13T17:13:30.667Z",
         "name": "Example Company",
-        "org_id": "{IMS_ORG}",
+        "org_id": "{ORG_ID}",
         "updated_at": "2020-08-13T17:13:30.667Z",
         "token": "d5a4f682bbae",
         "cjm_enabled": false,
@@ -129,7 +130,7 @@ curl -X GET \
   https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -146,7 +147,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’azienda.
     "attributes": {
       "created_at": "2020-08-13T17:13:30.667Z",
       "name": "Example Company",
-      "org_id": "{IMS_ORG}",
+      "org_id": "{ORG_ID}",
       "updated_at": "2020-08-13T17:13:30.667Z",
       "token": "d5a4f682bbae",
       "cjm_enabled": false,

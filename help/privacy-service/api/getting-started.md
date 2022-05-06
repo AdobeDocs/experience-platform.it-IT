@@ -3,10 +3,10 @@ title: Guida introduttiva all’API di Privacy Service
 description: Scopri come eseguire l’autenticazione nell’API di Privacy Service e come interpretare le chiamate API di esempio nella documentazione.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 6dcbf2df46ba35104abd9c4e6412799e77c9c49f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '669'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -26,23 +26,23 @@ Per effettuare chiamate all’API Privacy Service, devi prima raccogliere le cre
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Ciò comporta l’ottenimento delle autorizzazioni per gli sviluppatori per Adobe Experience Platform in Adobe Admin Console e la generazione delle credenziali in Adobe Developer Console.
 
 ### Accesso degli sviluppatori a Experience Platform
 
-Per ottenere l’accesso degli sviluppatori a [!DNL Platform], segui i passaggi iniziali in [Experience Platform di esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Una volta raggiunto il passaggio &quot;Generate access credentials in Adobe Developer Console&quot; (Genera credenziali di accesso in Developer Console), torna a questa esercitazione per generare le credenziali specifiche di Privacy Service.
+Per ottenere l’accesso degli sviluppatori a [!DNL Platform], segui i passaggi iniziali in [Experience Platform di esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Una volta raggiunto il passaggio &quot;Generate access credentials in Adobe Developer Console&quot; (Genera credenziali di accesso in Console), torna a questa esercitazione per generare le credenziali specifiche di Privacy Service.
 
 ### Generare le credenziali di accesso
 
 Utilizzando Adobe Developer Console, è necessario generare le tre credenziali di accesso seguenti:
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Le `{IMS_ORG}` e `{API_KEY}` deve essere generato solo una volta e può essere riutilizzato nelle chiamate API future. Tuttavia, il tuo `{ACCESS_TOKEN}` è temporaneo e deve essere rigenerato ogni 24 ore.
+Le `{ORG_ID}` e `{API_KEY}` deve essere generato solo una volta e può essere riutilizzato nelle chiamate API future. Tuttavia, il tuo `{ACCESS_TOKEN}` è temporaneo e deve essere rigenerato ogni 24 ore.
 
 I passaggi per generare questi valori sono descritti in dettaglio di seguito.
 
@@ -69,19 +69,19 @@ La coppia di chiavi viene generata automaticamente e un file ZIP contenente una 
 Una volta aggiunta l’API al progetto, la pagina del progetto viene nuovamente visualizzata nella pagina **Panoramica API di Privacy Service** pagina. Da qui, scorri verso il basso fino al **[!UICONTROL Account di servizio (JWT)]** , che fornisce le seguenti credenziali di accesso necessarie in tutte le chiamate all’API di Privacy Service:
 
 * **[!UICONTROL ID CLIENT]**: L’ID client è il `{API_KEY}` per deve essere fornito nell’intestazione x-api-key.
-* **[!UICONTROL ID ORGANIZZAZIONE]**: L&#39;ID organizzazione è il `{IMS_ORG}` valore che deve essere utilizzato nell’intestazione x-gw-ims-org-id.
+* **[!UICONTROL ID ORGANIZZAZIONE]**: L&#39;ID organizzazione è il `{ORG_ID}` valore che deve essere utilizzato nell’intestazione x-gw-ims-org-id.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
 #### Autenticazione per ogni sessione
 
-L&#39;ultima credenziale richiesta da raccogliere è la tua `{ACCESS_TOKEN}`, utilizzato nell’intestazione Autorizzazione . A differenza dei valori per `{API_KEY}` e `{IMS_ORG}`, per continuare a utilizzare , è necessario generare un nuovo token ogni 24 ore [!DNL Platform] API.
+L&#39;ultima credenziale richiesta da raccogliere è la tua `{ACCESS_TOKEN}`, utilizzato nell’intestazione Autorizzazione . A differenza dei valori per `{API_KEY}` e `{ORG_ID}`, per continuare a utilizzare , è necessario generare un nuovo token ogni 24 ore [!DNL Platform] API.
 
 Per generare una nuova `{ACCESS_TOKEN}`, apri la chiave privata scaricata in precedenza e incolla il suo contenuto nella casella di testo accanto a **[!UICONTROL Genera token di accesso]** prima di selezionare **[!UICONTROL Genera token]**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo negli Appunti. Questo valore viene utilizzato per l’intestazione Autorizzazione richiesta e deve essere fornito nel formato `Bearer {ACCESS_TOKEN}`.
+Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo negli Appunti. Questo valore viene utilizzato per l&#39;intestazione Autorizzazione richiesta e deve essere fornito nel formato `Bearer {ACCESS_TOKEN}`.
 
 ![](../images/api/getting-started/generated-access-token.png)
 

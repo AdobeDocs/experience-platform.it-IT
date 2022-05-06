@@ -5,10 +5,10 @@ title: Endpoint API query
 topic-legacy: queries
 description: Nelle sezioni seguenti sono descritte le chiamate dettagliate che è possibile effettuare utilizzando l’endpoint /query nell’API del servizio query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## Chiamate API di esempio
 
-Nelle sezioni seguenti sono descritte le chiamate che puoi effettuare utilizzando l’endpoint `/queries` nell’ API [!DNL Query Service] . Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Nelle sezioni seguenti vengono descritte le chiamate che è possibile effettuare utilizzando `/queries` punto finale [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupera un elenco di query
 
-È possibile recuperare un elenco di tutte le query per l’organizzazione IMS effettuando una richiesta di GET all’endpoint `/queries`.
+Puoi recuperare un elenco di tutte le query per la tua organizzazione IMS effettuando una richiesta di GET al `/queries` punto finale.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito.
+- `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito.
 
 **Parametri query**
 
@@ -37,12 +37,12 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l’ele
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati per creati in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base all&#39;ordine decrescente creato. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **devono essere in sequenza HTML.** Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state` e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
-| `excludeSoftDeleted` | Indica se includere una query che è stata eliminata tramite soft. Ad esempio, `excludeSoftDeleted=false` includerà **query** eliminate soft. (*Booleano, valore predefinito: true*) |
-| `excludeHidden` | Indica se visualizzare query non basate su utenti. Se questo valore viene impostato su false, **includerà** query non basate su utenti, come le definizioni CURSOR, FETCH o query con metadati. (*Booleano, valore predefinito: true*) |
+| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (inferiore a), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da), e `~` (contiene). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
+| `excludeSoftDeleted` | Indica se includere una query che è stata eliminata tramite soft. Ad esempio: `excludeSoftDeleted=false` sarà **include** query eliminate soft. (*Valore booleano predefinito: true*) |
+| `excludeHidden` | Indica se visualizzare query non basate su utenti. Se questo valore viene impostato su false, verrà **include** query non basate su utenti, ad esempio definizioni CURSOR, FETCH o query con metadati. (*Valore booleano predefinito: true*) |
 
 **Richiesta**
 
@@ -51,7 +51,7 @@ La richiesta seguente recupera la query più recente creata per la tua organizza
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -119,7 +119,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query per l
 
 ### Creare una query
 
-Puoi creare una nuova query effettuando una richiesta POST all’endpoint `/queries`.
+Puoi creare una nuova query effettuando una richiesta POST al `/queries` punto finale.
 
 **Formato API**
 
@@ -135,7 +135,7 @@ La seguente richiesta crea una nuova query configurata dai valori forniti nel pa
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli della query appena creata. Al termine dell’attivazione della query e dopo l’esecuzione corretta, la `state` passerà da `SUBMITTED` a `SUCCESS`.
+Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli della query appena creata. Al termine dell’attivazione della query e dell’esecuzione della query, la `state` cambia da `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` per [annullare la query creata](#cancel-a-query).
+>Puoi utilizzare il valore di `_links.cancel` a [annulla query creata](#cancel-a-query).
 
 ### Recupera una query per ID
 
-È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET all&#39;endpoint `/queries` e fornendo il valore `id` della query nel percorso della richiesta.
+È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il valore `id` della query da recuperare. |
+| `{QUERY_ID}` | La `id` valore della query da recuperare. |
 
 **Richiesta**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -269,11 +269,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` per [annullare la query creata](#cancel-a-query).
+>Puoi utilizzare il valore di `_links.cancel` a [annulla query creata](#cancel-a-query).
 
 ### Annullare una query
 
-Puoi richiedere di eliminare una query specificata effettuando una richiesta PATCH all’endpoint `/queries` e fornendo il valore `id` della query nel percorso della richiesta.
+È possibile richiedere l’eliminazione di una query specificata effettuando una richiesta di PATCH al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il valore `id` della query da annullare. |
+| `{QUERY_ID}` | La `id` valore della query da annullare. |
 
 
 **Richiesta**
@@ -294,7 +294,7 @@ Questa richiesta API utilizza la sintassi della patch JSON per il relativo paylo
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

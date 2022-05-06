@@ -5,7 +5,7 @@ title: Guida all’API di controllo degli accessi
 topic-legacy: developer guide
 description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie funzionalità di Platform utilizzando Adobe Admin Console. Le sezioni seguenti forniscono informazioni aggiuntive che gli sviluppatori dovranno conoscere per effettuare correttamente le chiamate all’API del Registro di sistema dello schema.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: b1edea734f58762cfa895f768ea8e2969fdd5c02
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 

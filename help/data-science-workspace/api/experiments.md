@@ -5,8 +5,7 @@ title: Endpoint API per gli esperimenti
 topic-legacy: Developer guide
 description: Lo sviluppo e la formazione dei modelli avviene a livello di Esperimento, dove un Esperimento è costituito da un’istanza MLI, da percorsi di formazione e da percorsi di valutazione.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%
@@ -38,7 +37,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
     -d '{
@@ -70,7 +69,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 }
 ```
 
-## Creazione ed esecuzione di un&#39;esecuzione di formazione o punteggio {#experiment-training-scoring}
+## Creazione ed esecuzione di un&#39;esecuzione di formazione o valutazione {#experiment-training-scoring}
 
 Puoi creare esecuzioni di formazione o di punteggio eseguendo una richiesta di POST e fornendo un ID di esperimento valido e specificando l’attività di esecuzione. Le esecuzioni di valutazione possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione corretta di un&#39;esecuzione di formazione inizializzerà la procedura di formazione del modello e il suo completamento con successo genererà un modello addestrato. La generazione di modelli addestrati sostituirà quelli esistenti in precedenza, in modo tale che un esperimento possa utilizzare un solo modello addestrato in un dato momento.
 
@@ -91,7 +90,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
     -d '{
@@ -101,11 +100,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Imposta questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle funzioni. |
+| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Imposta questo valore come `train` per la formazione, `score` per il punteggio, oppure `featurePipeline` per la pipeline delle funzioni. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri di formazione o punteggio predefiniti ereditati e l’ID univoco dell’esecuzione (`{RUN_ID}`).
+Una risposta corretta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri di formazione o punteggio predefiniti ereditati, e l’ID univoco dell’esecuzione (`{RUN_ID}`).
 
 ```json
 {
@@ -134,7 +133,7 @@ Una risposta corretta restituisce un payload contenente i dettagli della nuova e
 
 ## Recupera un elenco di esperimenti
 
-È possibile recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLI eseguendo una singola richiesta di GET e fornendo un ID istanza MLI valido come parametro di query. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLI eseguendo una singola richiesta di GET e fornendo un ID istanza MLI valido come parametro di query. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 
 **Formato API**
@@ -155,13 +154,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di Esperimenti che condividono lo stesso ID istanza MLI (`{MLINSTANCE_ID}`).
+Una risposta corretta restituisce un elenco di Esperimenti che condividono lo stesso ID istanza (`{MLINSTANCE_ID}`).
 
 ```json
 {
@@ -219,7 +218,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -243,7 +242,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 ## Recupera un elenco di esecuzioni di esperimenti
 
-Puoi recuperare un elenco di esecuzioni di formazione o di punteggio appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco completo dei parametri di query disponibili, consulta la sezione dell’appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+Puoi recuperare un elenco di esecuzioni di formazione o di punteggio appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco completo dei parametri di query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parametro | Descrizione |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un ID esperimento valido. |
-| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzato per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
 **Richiesta**
@@ -272,13 +271,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs?property=mode==train \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, compreso l’ID di esecuzione dell’esperimento (`{RUN_ID}`).
+Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei loro dettagli, compreso l’ID di esecuzione dell’esperimento (`{RUN_ID}`).
 
 ```json
 {
@@ -308,7 +307,7 @@ Puoi aggiornare un esperimento esistente sovrascrivendo le sue proprietà tramit
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, ti consigliamo prima di eseguire una richiesta di GET per [recuperare l’esperimento per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET a [recuperare l’esperimento per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiorna il nome di un esperimento quando queste proprietà sono inizialmente disponibili:
 
@@ -341,7 +340,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiments.v1.json' \
     -d '{
@@ -394,7 +393,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -429,7 +428,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

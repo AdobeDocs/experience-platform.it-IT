@@ -5,7 +5,7 @@ title: Endpoint API per la valutazione dei criteri
 topic-legacy: developer guide
 description: Una volta create le azioni di marketing e definiti i criteri, puoi utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l'azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 # Endpoint di valutazione delle politiche
 
-Una volta create le azioni di marketing e definite le policy, puoi utilizzare l’ [!DNL Policy Service] API per valutare se eventuali criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
+Una volta create le azioni di marketing e definite le policy, puoi utilizzare [!DNL Policy Service] API per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 
-Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` partecipano alla valutazione. Tuttavia, puoi utilizzare il parametro di query `?includeDraft=true` per includere i criteri `DRAFT` nella valutazione.
+Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` partecipare alla valutazione. Tuttavia, puoi utilizzare il parametro di query `?includeDraft=true` per includere `DRAFT` politiche di valutazione.
 
 Le richieste di valutazione possono essere effettuate in uno dei tre modi seguenti:
 
@@ -26,11 +26,11 @@ Le richieste di valutazione possono essere effettuate in uno dei tre modi seguen
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+Gli endpoint API utilizzati in questa guida fanno parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
 
 ## Valutare le violazioni dei criteri utilizzando le etichette di utilizzo dei dati {#labels}
 
-Puoi valutare le violazioni dei criteri in base alla presenza di un set specifico di etichette di utilizzo dei dati utilizzando il parametro di query `duleLabels` in una richiesta di GET.
+Puoi valutare le violazioni dei criteri in base alla presenza di un set specifico di etichette di utilizzo dei dati utilizzando il `duleLabels` parametro query in una richiesta GET.
 
 **Formato API**
 
@@ -41,8 +41,8 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da sottoporre a test rispetto a un set di etichette di utilizzo dei dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
-| `{LABELS_LIST}` | Un elenco separato da virgole di nomi di etichette di utilizzo dei dati su cui eseguire il test dell’azione di marketing. Ad esempio: `duleLabels=C1,C2,C3`<br><br>I nomi delle etichette sono sensibili all&#39;uso di maiuscole e minuscole. Assicurati di utilizzare le maiuscole/minuscole corrette quando le inserisci nel parametro `duleLabels` . |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da sottoporre a test rispetto a un set di etichette di utilizzo dei dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una [Richiesta di GET all’endpoint delle azioni di marketing](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | Un elenco separato da virgole di nomi di etichette di utilizzo dei dati su cui eseguire il test dell’azione di marketing. Ad esempio: `duleLabels=C1,C2,C3`<br><br>I nomi delle etichette fanno distinzione tra maiuscole e minuscole. Assicurati di utilizzare le maiuscole/minuscole corrette quando le inserisci nel `duleLabels` parametro . |
 
 **Richiesta**
 
@@ -50,27 +50,27 @@ La richiesta di esempio seguente valuta un’azione di marketing rispetto alle e
 
 >[!IMPORTANT]
 >
->Tieni presente gli operatori `AND` e `OR` nelle espressioni dei criteri. Nell’esempio seguente, se nella richiesta fosse stata visualizzata solo l’etichetta (`C1` o `C3`), l’azione di marketing non avrebbe violato questo criterio. Per restituire i criteri violati sono necessarie entrambe le etichette (`C1` e `C3`). Assicurati di valutare attentamente i criteri e di definirli con la stessa attenzione.
+>Tieni presente che `AND` e `OR` nelle espressioni dei criteri. Nell’esempio seguente, se una delle due etichette (`C1` o `C3`) era apparsa da sola nella richiesta, l&#39;azione di marketing non avrebbe violato questa politica. Prende entrambe le etichette (`C1` e `C3`) per restituire la politica violata. Assicurati di valutare attentamente i criteri e di definirli con la stessa attenzione.
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta include una matrice `violatedPolicies` che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing sulle etichette fornite. Se non vengono violati i criteri, la matrice `violatedPolicies` sarà vuota.
+Una risposta corretta include un `violatedPolicies` array, che contiene i dettagli dei criteri violati in seguito all&#39;esecuzione dell&#39;azione di marketing sulle etichette fornite. Se non vengono violate le politiche, la `violatedPolicies` array vuoto.
 
 ```JSON
 {
     "timestamp": 1551134846737,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io/marketingActions/custom/sampleMarketingAction",
     "duleLabels": [
         "C1",
@@ -103,7 +103,7 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550703519823,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -123,7 +123,7 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
 
 ## Valutare le violazioni dei criteri utilizzando i set di dati {#datasets}
 
-Puoi valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. A questo scopo, esegui una richiesta POST all’ endpoint `/constraints` per una specifica azione di marketing e fornisci un elenco di ID di set di dati all’interno del corpo della richiesta.
+Puoi valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. A questo scopo, esegui una richiesta POST al `/constraints` endpoint per una specifica azione di marketing e fornisce un elenco di ID di set di dati all’interno del corpo della richiesta.
 
 **Formato API**
 
@@ -134,18 +134,18 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da sottoporre a test per uno o più set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da sottoporre a test per uno o più set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una [Richiesta di GET all’endpoint delle azioni di marketing](./marketing-actions.md#list). |
 
 **Richiesta**
 
-La seguente richiesta esegue l&#39;azione di marketing `crossSiteTargeting` rispetto a un set di tre set di dati per valutare eventuali violazioni dei criteri.
+La seguente richiesta esegue `crossSiteTargeting` azione di marketing rispetto a un set di tre set di dati per valutare eventuali violazioni dei criteri.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -166,19 +166,19 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `entityType` | Il tipo di entità il cui ID è indicato nella proprietà di pari livello `entityId`. Attualmente, l’unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati su cui eseguire il test dell’azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all’ endpoint `/dataSets` nell’ API [!DNL Catalog Service] . Per ulteriori informazioni, consulta la guida sull’ [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md) . |
+| `entityType` | Il tipo di entità il cui ID è indicato nel pari livello `entityId` proprietà. Attualmente, l&#39;unico valore accettato è `dataSet`. |
+| `entityId` | ID di un set di dati su cui eseguire il test dell’azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET al `/dataSets` punto finale [!DNL Catalog Service] API. Consulta la guida su [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md) per ulteriori informazioni. |
 
 **Risposta**
 
-Una risposta corretta include una matrice `violatedPolicies` che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing sui set di dati specificati. Se non vengono violati i criteri, la matrice `violatedPolicies` sarà vuota.
+Una risposta corretta include un `violatedPolicies` array, che contiene i dettagli dei criteri violati in seguito all&#39;esecuzione dell&#39;azione di marketing rispetto ai set di dati specificati. Se non vengono violate le politiche, la `violatedPolicies` array vuoto.
 
 ```JSON
 {
     "timestamp": 1556324277895,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C1",
@@ -324,7 +324,7 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1551141210463,
             "createdClient": "{CREATED_CLIENT}",
             "createdUser": "{CREATED_USER}",
@@ -344,8 +344,8 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `duleLabels` | L&#39;oggetto response include una matrice `duleLabels` che contiene un elenco consolidato di tutte le etichette presenti nei set di dati specificati. Questo elenco include etichette a livello di set di dati e di campo su tutti i campi all’interno del set di dati. |
-| `discoveredLabels` | La risposta include anche un array `discoveredLabels` contenente oggetti per ogni set di dati, che mostra `datasetLabels` suddivisi in etichette a livello di set di dati e di campi. Ogni etichetta a livello di campo mostra il percorso del campo specifico con tale etichetta. |
+| `duleLabels` | L&#39;oggetto response include un `duleLabels` array che contiene un elenco consolidato di tutte le etichette presenti nei set di dati specificati. Questo elenco include etichette a livello di set di dati e di campo su tutti i campi all’interno del set di dati. |
+| `discoveredLabels` | La risposta include anche un `discoveredLabels` array contenente oggetti per ogni set di dati, che mostra `datasetLabels` suddivisi in etichette a livello di set di dati e di campo. Ogni etichetta a livello di campo mostra il percorso del campo specifico con tale etichetta. |
 
 ## Valutare le violazioni dei criteri utilizzando campi di set di dati specifici {#fields}
 
@@ -353,8 +353,8 @@ Una risposta corretta include una matrice `violatedPolicies` che contiene i dett
 
 Quando si valutano i criteri utilizzando i campi set di dati, tenere presente quanto segue:
 
-* **I nomi dei campi fanno distinzione tra maiuscole e minuscole**: Quando forniscono i campi, devono essere scritti esattamente come compaiono nel set di dati (ad esempio,  `firstName` vs  `firstname`).
-* **Ereditarietà** etichetta set di dati: I singoli campi in un set di dati ereditano tutte le etichette applicate a livello di set di dati. Se le valutazioni dei criteri non restituiscono come previsto, assicurati di verificare la presenza di eventuali etichette ereditate dal livello del set di dati fino ai campi, oltre a quelle applicate a livello di campo.
+* **I nomi dei campi sono sensibili all’uso di maiuscole e minuscole**: Quando forniscono i campi, devono essere scritti esattamente come compaiono nel set di dati (ad esempio, `firstName` vs `firstname`).
+* **Ereditarietà delle etichette del set di dati**: I singoli campi in un set di dati ereditano tutte le etichette applicate a livello di set di dati. Se le valutazioni dei criteri non restituiscono come previsto, assicurati di verificare la presenza di eventuali etichette ereditate dal livello del set di dati fino ai campi, oltre a quelle applicate a livello di campo.
 
 **Formato API**
 
@@ -365,11 +365,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da testare su un sottoinsieme di campi di set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da testare su un sottoinsieme di campi di set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una [Richiesta di GET all’endpoint delle azioni di marketing](./marketing-actions.md#list). |
 
 **Richiesta**
 
-La richiesta seguente verifica l’azione di marketing `crossSiteTargeting` su un set specifico di campi appartenenti a tre set di dati. Il payload è simile a una richiesta di valutazione [che coinvolge solo set di dati](#datasets), aggiungendo campi specifici per ogni set di dati da cui raccogliere le etichette.
+La richiesta seguente verifica l’azione di marketing `crossSiteTargeting` su un set specifico di campi appartenenti a tre set di dati. Il payload è simile a un [richiesta di valutazione che coinvolge solo i set di dati](#datasets), aggiunta di campi specifici per ogni set di dati da cui raccogliere le etichette.
 
 ```shell
 curl -X POST \
@@ -377,7 +377,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {
@@ -414,22 +414,22 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `entityType` | Il tipo di entità il cui ID è indicato nella proprietà di pari livello `entityId`. Attualmente, l’unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati i cui campi devono essere valutati rispetto all’azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all’ endpoint `/dataSets` nell’ API [!DNL Catalog Service] . Per ulteriori informazioni, consulta la guida sull’ [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md) . |
-| `entityMeta.fields` | Matrice di percorsi per campi specifici all’interno dello schema del set di dati, fornita sotto forma di stringhe JSON Pointer. Per informazioni dettagliate sulla sintassi accettata per queste stringhe, consulta la sezione su [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) nella guida Principi di base delle API . |
+| `entityType` | Il tipo di entità il cui ID è indicato nel pari livello `entityId` proprietà. Attualmente, l&#39;unico valore accettato è `dataSet`. |
+| `entityId` | ID di un set di dati i cui campi devono essere valutati rispetto all’azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET al `/dataSets` punto finale [!DNL Catalog Service] API. Consulta la guida su [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md) per ulteriori informazioni. |
+| `entityMeta.fields` | Matrice di percorsi per campi specifici all’interno dello schema del set di dati, fornita sotto forma di stringhe JSON Pointer. Vedi la sezione su [Puntatore JSON](../../landing/api-fundamentals.md#json-pointer) nella guida Principi di base API per i dettagli sulla sintassi accettata per queste stringhe. |
 
 **Risposta**
 
-Una risposta corretta include una matrice `violatedPolicies` che contiene i dettagli dei criteri violati in seguito all’esecuzione dell’azione di marketing sui campi del set di dati forniti. Se non vengono violati i criteri, la matrice `violatedPolicies` sarà vuota.
+Una risposta corretta include un `violatedPolicies` array, che contiene i dettagli dei criteri violati in seguito all’esecuzione dell’azione di marketing rispetto ai campi del set di dati forniti. Se non vengono violate le politiche, la `violatedPolicies` array vuoto.
 
-Confrontando la risposta di esempio riportata di seguito alla risposta [che coinvolge solo i set di dati](#datasets), l&#39;elenco delle etichette raccolte è più breve. Sono stati ridotti anche i `discoveredLabels` per ogni set di dati, in quanto includono solo i campi specificati nel corpo della richiesta. Inoltre, il criterio precedentemente violato `Targeting Ads or Content` richiede la presenza di entrambe le etichette `C4 AND C6` e non viene più violato come indicato dalla matrice vuota `violatedPolicies`.
+Confronto della risposta di esempio riportata di seguito con [risposta che coinvolge solo i set di dati](#datasets), l’elenco delle etichette raccolte è più breve. La `discoveredLabels` anche per ogni set di dati sono stati ridotti, in quanto includono solo i campi specificati nel corpo della richiesta. Inoltre, la politica precedentemente violata `Targeting Ads or Content` richiede entrambi `C4 AND C6` le etichette da presentare, e quindi non sono più violate come indicato dal vuoto `violatedPolicies` array.
 
 ```JSON
 {
     "timestamp": 1556325503038,
     "clientId": "{CLIENT_ID}",
     "userId": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting",
     "duleLabels": [
         "C2",
@@ -524,7 +524,7 @@ Confrontando la risposta di esempio riportata di seguito alla risposta [che coin
 
 ## Valutare le politiche in blocco {#bulk}
 
-L’endpoint `/bulk-eval` ti consente di eseguire più processi di valutazione in una singola chiamata API.
+La `/bulk-eval` l’endpoint ti consente di eseguire più processi di valutazione in una singola chiamata API.
 
 **Formato API**
 
@@ -534,18 +534,18 @@ POST /bulk-eval
 
 **Richiesta**
 
-Il payload di una richiesta di valutazione in blocco deve essere un array di oggetti; uno per ogni processo di valutazione da eseguire. Per i processi che valutano in base ai set di dati e ai campi, è necessario fornire una matrice `entityList`. Per i processi che valutano in base alle etichette di utilizzo dei dati, è necessario fornire una matrice `labels`.
+Il payload di una richiesta di valutazione in blocco deve essere un array di oggetti; uno per ogni processo di valutazione da eseguire. Per i lavori che valutano in base a set di dati e campi, un `entityList` deve essere fornito l&#39;array. Per i lavori che valutano in base alle etichette di utilizzo dei dati, un `labels` deve essere fornito l&#39;array.
 
 >[!WARNING]
 >
->Se un processo di valutazione elencato contiene sia una matrice `entityList` che `labels`, si verifica un errore. Se desideri valutare la stessa azione di marketing in base sia ai set di dati che alle etichette, devi includere processi di valutazione separati per quell’azione di marketing.
+>Se un qualsiasi processo di valutazione elencato contiene entrambi `entityList` e `labels` array, si verificherà un errore. Se desideri valutare la stessa azione di marketing in base sia ai set di dati che alle etichette, devi includere processi di valutazione separati per quell’azione di marketing.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -579,10 +579,10 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `evalRef` | URI dell’azione di marketing da testare su etichette o set di dati per violazioni dei criteri. |
-| `includeDraft` | Per impostazione predefinita, solo le politiche abilitate partecipano alla valutazione. Se `includeDraft` è impostato su `true`, parteciperanno anche i criteri in stato `DRAFT`. |
-| `labels` | Matrice di etichette di utilizzo dei dati su cui eseguire il test dell’azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una  `entityList` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando set di dati e/o campi, è necessario includere un oggetto separato nel payload della richiesta che contiene una matrice `entityList`. |
-| `entityList` | Matrice di set di dati e (facoltativamente) campi specifici all’interno di tali set di dati per verificare l’azione di marketing rispetto a .<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una  `labels` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload della richiesta che contiene un array `labels`. |
-| `entityType` | Il tipo di entità su cui eseguire il test dell’azione di marketing. Attualmente, è supportato solo `dataSet`. |
+| `includeDraft` | Per impostazione predefinita, solo le politiche abilitate partecipano alla valutazione. Se `includeDraft` è impostato su `true`, i criteri in `DRAFT` Vi parteciperà anche lo status. |
+| `labels` | Matrice di etichette di utilizzo dei dati su cui eseguire il test dell’azione di marketing.<br><br>**IMPORTANTE**: Quando utilizzi questa proprietà, un `entityList` La proprietà NON deve essere inclusa nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando set di dati e/o campi, è necessario includere un oggetto separato nel payload della richiesta che contiene un `entityList` array. |
+| `entityList` | Matrice di set di dati e (facoltativamente) campi specifici all’interno di tali set di dati per verificare l’azione di marketing rispetto a .<br><br>**IMPORTANTE**: Quando utilizzi questa proprietà, un `labels` La proprietà NON deve essere inclusa nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload della richiesta che contiene un `labels` array. |
+| `entityType` | Il tipo di entità su cui eseguire il test dell’azione di marketing. Attualmente, solo `dataSet` è supportato. |
 | `entityId` | ID di un set di dati su cui eseguire il test dell’azione di marketing. |
 | `entityMeta.fields` | (Facoltativo) Un elenco di campi specifici all’interno del set di dati su cui eseguire il test dell’azione di marketing. |
 
@@ -598,7 +598,7 @@ Una risposta corretta restituisce una serie di risultati di valutazione; uno per
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -615,7 +615,7 @@ Una risposta corretta restituisce una serie di risultati di valutazione; uno per
       "timestamp": 1595866566165,
       "clientId": "{CLIENT_ID}",
       "userId": "{USER_ID}",
-      "imsOrg": "{IMS_ORG}",
+      "imsOrg": "{ORG_ID}",
       "sandboxName": "prod",
       "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
       "duleLabels": [
@@ -663,7 +663,7 @@ Una risposta corretta restituisce una serie di risultati di valutazione; uno per
             ]
           },
           "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
-          "imsOrg": "{IMS_ORG}",
+          "imsOrg": "{ORG_ID}",
           "created": 1529696681413,
           "createdClient": "{CLIENT_ID}",
           "createdUser": "{USER_ID}",
@@ -682,6 +682,6 @@ Una risposta corretta restituisce una serie di risultati di valutazione; uno per
 ]
 ```
 
-## Valutazione dei criteri per [!DNL Real-time Customer Profile]
+## Valutazione politica per [!DNL Real-time Customer Profile]
 
-L’ API [!DNL Policy Service] può essere utilizzata anche per verificare la presenza di violazioni dei criteri che coinvolgono l’utilizzo di segmenti [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta l’esercitazione sull’ [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md) .
+La [!DNL Policy Service] L’API può anche essere utilizzata per verificare la presenza di violazioni dei criteri che coinvolgono l’utilizzo di [!DNL Real-time Customer Profile] segmenti. Guarda l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md) per ulteriori informazioni.

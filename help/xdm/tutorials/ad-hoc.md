@@ -6,7 +6,7 @@ description: In circostanze specifiche, potrebbe essere necessario creare uno sc
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 4%
@@ -15,22 +15,22 @@ ht-degree: 4%
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono spazi dei nomi per l’utilizzo solo da un singolo set di dati. Questo è denominato schema &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di inserimento dati per [!DNL Experience Platform], inclusi l’acquisizione di file CSV e la creazione di determinati tipi di connessioni sorgente.
+In circostanze specifiche può essere necessario creare un [!DNL Experience Data Model] (XDM) schema con campi con spazi dei nomi assegnati solo da un singolo set di dati. Questo è denominato schema &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di inserimento dati per [!DNL Experience Platform], inclusa l’acquisizione di file CSV e la creazione di alcuni tipi di connessioni sorgente.
 
-Questo documento fornisce passaggi generali per la creazione di uno schema ad hoc utilizzando l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/). È progettato per essere utilizzato insieme ad altre esercitazioni [!DNL Experience Platform] che richiedono la creazione di uno schema ad-hoc come parte del loro flusso di lavoro. Ognuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
+Questo documento fornisce passaggi generali per la creazione di uno schema ad hoc utilizzando [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/). È destinato ad essere utilizzato in combinazione con altri [!DNL Experience Platform] esercitazioni che richiedono la creazione di uno schema ad hoc come parte del loro flusso di lavoro. Ognuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione del sistema [!DNL Experience Data Model] (XDM). Prima di avviare questa esercitazione, consulta la seguente documentazione XDM:
+Questa esercitazione richiede una comprensione approfondita dei [!DNL Experience Data Model] Sistema (XDM). Prima di avviare questa esercitazione, consulta la seguente documentazione XDM:
 
-- [Panoramica](../home.md) del sistema XDM: Panoramica di alto livello di XDM e della sua implementazione in  [!DNL Experience Platform].
-- [Nozioni di base sulla composizione](../schema/composition.md) dello schema: Panoramica dei componenti di base degli schemi XDM.
+- [Panoramica del sistema XDM](../home.md): Panoramica di alto livello di XDM e della sua implementazione in [!DNL Experience Platform].
+- [Nozioni di base sulla composizione dello schema](../schema/composition.md): Panoramica dei componenti di base degli schemi XDM.
 
-Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per fare richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
+Prima di avviare questa esercitazione, controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare correttamente le chiamate al [!DNL Schema Registry] API. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 
 ## Creare una classe ad hoc
 
-Il comportamento dei dati di uno schema XDM è determinato dalla classe sottostante. Il primo passaggio nella creazione di uno schema ad-hoc consiste nel creare una classe basata sul comportamento `adhoc` . A questo scopo, invia una richiesta POST all’endpoint `/tenant/classes` .
+Il comportamento dei dati di uno schema XDM è determinato dalla classe sottostante. Il primo passaggio nella creazione di uno schema ad hoc consiste nel creare una classe basata sui `adhoc` comportamento. A questo scopo, invia una richiesta POST al `/tenant/classes` punto finale.
 
 **Formato API**
 
@@ -40,11 +40,11 @@ POST /tenant/classes
 
 **Richiesta**
 
-La richiesta seguente crea una nuova classe XDM, configurata dagli attributi forniti nel payload. Fornendo una proprietà `$ref` impostata su `https://ns.adobe.com/xdm/data/adhoc` nella matrice `allOf`, questa classe eredita il comportamento `adhoc`. La richiesta definisce anche un oggetto `_adhoc` , che contiene i campi personalizzati per la classe .
+La richiesta seguente crea una nuova classe XDM, configurata dagli attributi forniti nel payload. Fornendo un `$ref` proprietà impostata su `https://ns.adobe.com/xdm/data/adhoc` in `allOf` array, questa classe eredita `adhoc` comportamento. La richiesta definisce anche un `_adhoc` oggetto , che contiene i campi personalizzati per la classe .
 
 >[!NOTE]
 >
->I campi personalizzati definiti in `_adhoc` variano a seconda del caso d’uso dello schema ad-hoc. Fai riferimento al flusso di lavoro specifico nell’esercitazione appropriata per i campi personalizzati richiesti in base al caso d’uso.
+>I campi personalizzati definiti in `_adhoc` variano a seconda del caso di utilizzo dello schema ad-hoc. Fai riferimento al flusso di lavoro specifico nell’esercitazione appropriata per i campi personalizzati richiesti in base al caso d’uso.
 
 ```shell
 curl -X POST \
@@ -52,7 +52,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"New ad-hoc class",
@@ -83,14 +83,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `$ref` | Il comportamento dei dati per la nuova classe. Per le classi ad-hoc, questo valore deve essere impostato su `https://ns.adobe.com/xdm/data/adhoc`. |
+| `$ref` | Il comportamento dei dati per la nuova classe. Per le classi ad hoc, questo valore deve essere impostato su `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Oggetto che contiene i campi personalizzati per la classe, espressi come coppie chiave-valore di nomi di campo e tipi di dati. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il nome dell&#39;oggetto `properties._adhoc` con un GUID che è un identificatore univoco di sola lettura generato dal sistema per la classe. Anche l’attributo `meta:datasetNamespace` viene generato automaticamente e incluso nella risposta.
+Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il `properties._adhoc` nome dell&#39;oggetto con un GUID che è un identificatore univoco di sola lettura generato dal sistema per la classe. La `meta:datasetNamespace` Anche l’attributo viene generato automaticamente e incluso nella risposta.
 
 ```json
 {
@@ -133,7 +133,7 @@ Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il 
     ],
     "meta:containerId": "tenant",
     "meta:datasetNamespace": "_6395cbd58812a6d64c4e5344f7b9120f",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createdDate": 1557527784822,
@@ -153,7 +153,7 @@ Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il 
 
 ## Creare uno schema ad hoc
 
-Dopo aver creato una classe ad-hoc, puoi creare un nuovo schema che implementa tale classe effettuando una richiesta POST all&#39;endpoint `/tenant/schemas`.
+Dopo aver creato una classe ad hoc, puoi creare un nuovo schema che implementa tale classe effettuando una richiesta di POST al `/tenant/schemas` punto finale.
 
 **Formato API**
 
@@ -163,7 +163,7 @@ POST /tenant/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema, fornendo un riferimento (`$ref`) al `$id` della classe ad-hoc creata in precedenza nel relativo payload.
+La seguente richiesta crea un nuovo schema, fornendo un riferimento (`$ref`) al `$id` della classe ad-hoc creata in precedenza nel relativo payload.
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "title":"New Schema",
@@ -187,7 +187,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dello schema appena creato, incluso il relativo `$id` di sola lettura generato dal sistema.
+Una risposta corretta restituisce i dettagli dello schema appena creato, incluso quello generato dal sistema, di sola lettura `$id`.
 
 ```json
 {
@@ -212,7 +212,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
         "https://ns.adobe.com/xdm/data/adhoc"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createdDate": 1557528570542,
@@ -228,7 +228,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
 
 >[!NOTE]
 >
->Questo passaggio è facoltativo. Se non desideri esaminare la struttura del campo dello schema ad-hoc, puoi passare alla sezione [passi successivi](#next-steps) alla fine di questa esercitazione.
+>Questo passaggio è facoltativo. Se non desideri esaminare la struttura del campo dello schema ad-hoc, puoi passare alla [passaggi successivi](#next-steps) alla fine di questa esercitazione.
 
 Una volta creato lo schema ad-hoc, puoi effettuare una richiesta di ricerca (GET) per visualizzare lo schema nel relativo modulo espanso. Questa operazione viene eseguita utilizzando l’intestazione Accept appropriata nella richiesta GET, come illustrato di seguito.
 
@@ -240,13 +240,13 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema ad-hoc a cui si desidera accedere. |
+| `{SCHEMA_ID}` | L’URL è codificato `$id` URI o `meta:altId` dello schema ad-hoc a cui desideri accedere. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente utilizza l&#39;intestazione Accept `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Tieni presente che quando recuperi una risorsa specifica da [!DNL Schema Registry], l’intestazione Accept della richiesta deve includere la versione principale della risorsa in questione.
+La richiesta seguente utilizza l’intestazione Accept `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Tieni presente che quando recuperi una risorsa specifica dalla [!DNL Schema Registry], l’intestazione Accept della richiesta deve includere la versione principale della risorsa in questione.
 
 ```shell
 curl -X GET \
@@ -254,7 +254,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -280,7 +280,7 @@ Una risposta corretta restituisce i dettagli dello schema, inclusi tutti i campi
         "https://ns.adobe.com/xdm/data/adhoc"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "properties": {
         "_6395cbd58812a6d64c4e5344f7b9120f": {
@@ -310,6 +310,6 @@ Una risposta corretta restituisce i dettagli dello schema, inclusi tutti i campi
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai creato correttamente un nuovo schema ad-hoc. Se sei stato portato in questo documento come parte di un’altra esercitazione, ora puoi utilizzare il `$id` dello schema ad-hoc per completare il flusso di lavoro come indicato.
+Seguendo questa esercitazione, hai creato correttamente un nuovo schema ad-hoc. Se sei stato portato a questo documento come parte di un’altra esercitazione, ora puoi utilizzare la funzione `$id` dello schema ad-hoc per completare il flusso di lavoro come indicato.
 
-Per ulteriori informazioni sulle operazioni con l&#39;API [!DNL Schema Registry], consulta la [guida per gli sviluppatori](../api/getting-started.md).
+Per ulteriori informazioni sull’utilizzo delle [!DNL Schema Registry] API, fai riferimento al [guida per sviluppatori](../api/getting-started.md).

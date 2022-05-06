@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 9%
@@ -20,7 +20,7 @@ Questo documento spiega passo-passo come accedere a un account sviluppatore di A
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 Per mantenere la sicurezza delle applicazioni e degli utenti, tutte le richieste alle API di Adobe I/O devono essere autenticate e autorizzate utilizzando standard come OAuth e JSON Web Token (JWT). Per generare il token di accesso personale, viene utilizzato un JWT con informazioni specifiche per il cliente.
 
@@ -43,7 +43,7 @@ Devi anche disporre di un Adobe ID per completare questa esercitazione. Se non d
 
 ## Acquisisci ad Experience Platform l’accesso degli sviluppatori e degli utenti
 
-Prima di creare integrazioni su Adobe Developer Console, il tuo account deve disporre delle autorizzazioni per sviluppatori e utenti per un profilo di prodotto di Experience Platform in Adobe Admin Console.
+Prima di creare integrazioni sulla console Adobe Developer, il tuo account deve disporre delle autorizzazioni per sviluppatori e utenti per un profilo di prodotto di Experience Platform in Adobe Admin Console.
 
 ### Accesso per sviluppatori
 
@@ -61,7 +61,7 @@ Le [!DNL Admin Console] l’amministratore deve anche aggiungerti come utente al
 >
 >Se si segue questo documento dal [Guida all’API di Privacy Service](../privacy-service/api/getting-started.md), ora puoi tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
 
-Dopo aver ricevuto dallo sviluppatore e dall’utente l’accesso a Platform tramite [!DNL Admin Console], il passaggio successivo consiste nel generare il `{IMS_ORG}` e `{API_KEY}` credenziali in Adobe Developer Console. Queste credenziali devono essere generate una sola volta e possono essere riutilizzate nelle chiamate API future di Platform.
+Dopo aver ricevuto dallo sviluppatore e dall’utente l’accesso a Platform tramite [!DNL Admin Console], il passaggio successivo consiste nel generare il `{ORG_ID}` e `{API_KEY}` credenziali in Adobe Developer Console. Queste credenziali devono essere generate una sola volta e possono essere riutilizzate nelle chiamate API future di Platform.
 
 ### Aggiungere un Experience Platform a un progetto
 
@@ -86,7 +86,7 @@ Da qui, segui i passaggi descritti nell’esercitazione su [aggiunta di un’API
 Una volta aggiunta l’API al progetto, la **[!UICONTROL API Experience Platform]** nella pagina del progetto vengono visualizzate le seguenti credenziali richieste in tutte le chiamate alle API di Experience Platform:
 
 * `{API_KEY}` ([!UICONTROL ID client])
-* `{IMS_ORG}` ([!UICONTROL ID organizzazione])
+* `{ORG_ID}` ([!UICONTROL ID organizzazione])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -118,7 +118,7 @@ La pagina viene aggiornata per mostrare il JWT generato, insieme a un comando cU
 
 ## Generare un token di accesso
 
-Una volta generato un JWT, puoi utilizzarlo in una chiamata API per generare il tuo `{ACCESS_TOKEN}`. A differenza dei valori per `{API_KEY}` e `{IMS_ORG}`, per continuare a utilizzare le API di Platform, è necessario generare un nuovo token ogni 24 ore.
+Una volta generato un JWT, puoi utilizzarlo in una chiamata API per generare il tuo `{ACCESS_TOKEN}`. A differenza dei valori per `{API_KEY}` e `{ORG_ID}`, per continuare a utilizzare le API di Platform, è necessario generare un nuovo token ogni 24 ore.
 
 **Richiesta**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Risposta**
@@ -197,7 +197,7 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 ## Utilizzare Postman per autenticare e testare le chiamate API
 
-[Postman](https://www.postman.com/) è uno strumento popolare che consente agli sviluppatori di esplorare e testare le API RESTful. Questo [Media post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descrive come impostare Postman per eseguire automaticamente l’autenticazione JWT e utilizzarla per utilizzare le API di Platform.
+[Postman](https://www.postman.com/) è uno strumento popolare che consente agli sviluppatori di esplorare e testare le API RESTful. Questo [Media post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descrive come configurare Postman per eseguire automaticamente l’autenticazione JWT e utilizzarla per utilizzare le API di Platform.
 
 ## Passaggi successivi
 

@@ -1,19 +1,19 @@
 ---
-title: Add Suggested Values to a Field
-description: Learn how to add suggested values to a string field in the Schema Registry API.
+title: Aggiungere valori consigliati a un campo
+description: Scopri come aggiungere valori consigliati a un campo stringa nell’API del Registro di sistema dello schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# Add suggested values to a field
+# Aggiungere valori consigliati a un campo
 
-In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values. However, you can also also define a set of suggested values for a string field without enforcing them as constraints.
+In Experience Data Model (XDM), un campo enum rappresenta un campo stringa vincolato a un sottoinsieme di valori predefinito. I campi Enum possono fornire una convalida per garantire che i dati acquisiti siano conformi a un set di valori accettati. Tuttavia, è anche possibile definire un set di valori consigliati per un campo stringa senza forzarli.
 
-[](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)`enum``meta:enum`
+In [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), i valori vincolati per un campo enum sono rappresentati da un `enum` mentre un `meta:enum` L&#39;oggetto fornisce nomi visualizzati descrittivi per tali valori:
 
 ```json
 "exampleStringField": {
@@ -32,9 +32,9 @@ In Experience Data Model (XDM), an enum field represents a string field that is 
 }
 ```
 
-`meta:enum``enum`
+Per i campi enum, il Registro di sistema dello schema non consente `meta:enum` da estendere oltre i valori di cui `enum`, poiché il tentativo di acquisire valori stringa al di fuori di tali vincoli non passerebbe la convalida.
 
-`enum``meta:enum`
+In alternativa, è possibile definire un campo stringa che non contiene un `enum` utilizza solo `meta:enum` oggetto per indicare i valori consigliati:
 
 ```json
 "exampleStringField": {
@@ -48,31 +48,31 @@ In Experience Data Model (XDM), an enum field represents a string field that is 
 }
 ```
 
-`enum``meta:enum` This tutorial covers how to add suggested values to standard and custom string fields in the Schema Registry API.
+Poiché la stringa non ha un `enum` array per definire vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori. Questa esercitazione illustra come aggiungere valori consigliati ai campi stringa standard e personalizzati nell’API del Registro di sistema dello schema.
 
 ## Prerequisiti
 
-This guide assumes you are familiar with the elements of schema composition in XDM and how to use the Schema Registry API to create and edit XDM resources. Please refer to the following documentation if you require an introduction:
+Questa guida presuppone che tu abbia familiarità con gli elementi della composizione dello schema in XDM e che sia in grado di utilizzare l’API del Registro di sistema dello schema per creare e modificare le risorse XDM. Per un’introduzione, fai riferimento alla seguente documentazione:
 
-* [Basics of schema composition](../schema/composition.md)
-* [Schema Registry API guide](../api/overview.md)
+* [Nozioni di base sulla composizione dello schema](../schema/composition.md)
+* [Guida all’API del registro dello schema](../api/overview.md)
 
-## Add suggested values to a standard field
+## Aggiungere valori consigliati a un campo standard
 
-`meta:enum`[](../api/descriptors.md#friendly-name)
+Per estendere `meta:enum` di un campo stringa standard, è possibile creare un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per il campo in questione in uno schema specifico.
 
 >[!NOTE]
 >
->Suggested values for string fields can only be added at the schema level. `meta:enum`
+>I valori consigliati per i campi stringa possono essere aggiunti solo a livello di schema. In altre parole, l&#39;estensione del `meta:enum` di un campo standard in uno schema non influisce sugli altri schemi che utilizzano lo stesso campo standard.
 
-`eventType`[](../classes/experienceevent.md)`sourceSchema`
+La seguente richiesta aggiunge valori consigliati allo standard `eventType` (fornito dal [Classe ExperienceEvent XDM](../classes/experienceevent.md)) per lo schema identificato in `sourceSchema`:
 
 ```curl
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -96,7 +96,7 @@ curl -X POST \
       }'
 ```
 
-After applying the descriptor, the Schema Registry responds with the following when retrieving the schema (response truncated for space):
+Dopo aver applicato il descrittore, il Registro di sistema dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per lo spazio):
 
 ```json
 {
@@ -118,7 +118,7 @@ After applying the descriptor, the Schema Registry responds with the following w
 
 >[!NOTE]
 >
->`meta:enum`
+>Se il campo standard contiene già valori in `meta:enum`, i nuovi valori del descrittore non sovrascrivono i campi esistenti e vengono aggiunti al loro posto:
 >
 >
 ```json
@@ -135,27 +135,27 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-## Add suggested values to a custom field
+## Aggiungere valori consigliati a un campo personalizzato
 
-`meta:enum`
+Per estendere `meta:enum` di un campo personalizzato, è possibile aggiornare la classe principale, il gruppo di campi o il tipo di dati del campo tramite una richiesta PATCH.
 
 >[!WARNING]
 >
->`meta:enum` If you do not want changes to propagate across schemas, consider creating a new custom resource instead:
+>A differenza dei campi standard, l’ `meta:enum` di un campo personalizzato influisce su tutti gli altri schemi che utilizzano tale campo. Se non desideri che le modifiche si propaghino tra gli schemi, considera invece la creazione di una nuova risorsa personalizzata:
 >
->* [](../api/classes.md#create)
->* [](../api/field-groups.md#create)
->* [](../api/data-types.md#create)
+>* [Creare una classe personalizzata](../api/classes.md#create)
+>* [Creare un gruppo di campi personalizzato](../api/field-groups.md#create)
+>* [Creare un tipo di dati personalizzato](../api/data-types.md#create)
 
 
-`meta:enum`
+La seguente richiesta aggiorna il `meta:enum` di un campo &quot;livello fedeltà&quot; fornito da un tipo di dati personalizzato:
 
 ```curl
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes/_{TENANT_ID}.datatypes.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -173,7 +173,7 @@ curl -X PATCH \
       ]'
 ```
 
-After applying the change, the Schema Registry responds with the following when retrieving the schema (response truncated for space):
+Dopo aver applicato la modifica, il Registro di sistema dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per lo spazio):
 
 ```json
 {
@@ -198,4 +198,4 @@ After applying the change, the Schema Registry responds with the following when 
 
 ## Passaggi successivi
 
-This guide covered how to add suggested values to string fields in the Schema Registry API. [](./custom-fields-api.md)
+Questa guida illustra come aggiungere valori consigliati ai campi stringa nell’API del Registro di sistema dello schema. Consulta la guida su [definizione di campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.

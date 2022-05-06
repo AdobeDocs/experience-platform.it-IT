@@ -6,7 +6,8 @@ topic-legacy: developer guide
 description: Questo documento fornisce un’introduzione alle informazioni sui prerequisiti che è necessario conoscere prima di tentare di creare una nuova origine utilizzando l’SDK di Origini.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: ba131442-ff20-4854-87fe-918aa313382d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -40,7 +41,7 @@ Per effettuare chiamate alle API di Platform, devi prima completare l’ [eserci
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le risorse in Platform, comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 

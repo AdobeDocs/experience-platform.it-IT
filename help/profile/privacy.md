@@ -5,7 +5,7 @@ title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 0%
@@ -69,13 +69,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [

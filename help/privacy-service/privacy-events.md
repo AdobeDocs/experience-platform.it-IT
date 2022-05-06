@@ -5,9 +5,9 @@ title: Iscriviti agli eventi Privacy Service
 topic-legacy: privacy events
 description: Scopri come abbonarti agli eventi di Privacy Service utilizzando un webhook preconfigurato.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -36,13 +36,13 @@ Prima di avviare questa esercitazione, controlla la seguente documentazione di P
 
 ## Registrare un webhook a [!DNL Privacy Service Events]
 
-Per ricevere [!DNL Privacy Service Events], è necessario utilizzare Adobe Developer Console per registrare un webhook nel [!DNL Privacy Service] integrazione.
+Per ricevere [!DNL Privacy Service Events], è necessario utilizzare la console Adobe Developer per registrare un webhook nel tuo [!DNL Privacy Service] integrazione.
 
-Segui l’esercitazione su [abbonamento a [!DNL I/O Event] Notifiche](../observability/alerts/subscribe.md) per passaggi dettagliati su come eseguire questa operazione. Assicurati di scegliere **[!UICONTROL Eventi Privacy Service]** come provider di eventi per accedere agli eventi elencati sopra.
+Segui l’esercitazione su [iscrizione alle notifiche di [!DNL I/O Event]](../observability/alerts/subscribe.md) per passaggi dettagliati su come eseguire questa operazione. Assicurati di scegliere **[!UICONTROL Eventi Privacy Service]** come provider di eventi per accedere agli eventi elencati sopra.
 
 ## Ricezione [!DNL Privacy Service Event] Notifiche
 
-Dopo aver registrato correttamente i processi webhook e privacy eseguiti, puoi iniziare a ricevere le notifiche degli eventi. Questi eventi possono essere visualizzati utilizzando il webhook stesso o selezionando **[!UICONTROL Debug Tracing]** in Adobe Developer Console, nella panoramica sulla registrazione degli eventi del progetto.
+Dopo aver registrato correttamente i processi webhook e privacy eseguiti, puoi iniziare a ricevere le notifiche degli eventi. Questi eventi possono essere visualizzati utilizzando il webhook stesso o selezionando **[!UICONTROL Debug Tracing]** nella panoramica sulla registrazione degli eventi del progetto in Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -57,7 +57,7 @@ Il seguente JSON è un esempio di [!DNL Privacy Service Event] payload di notifi
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

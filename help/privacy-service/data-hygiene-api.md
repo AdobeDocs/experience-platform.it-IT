@@ -4,7 +4,7 @@ description: Scopri come correggere o eliminare programmaticamente i dati person
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 2%
@@ -27,11 +27,11 @@ Questa sezione fornisce un’introduzione ai concetti di base che devi conoscere
 
 ### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate all’API di igiene dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API di Privacy Service. Per generare i valori per ciascuna delle intestazioni richieste per l&#39;API di Privacy Service, segui la [guida introduttiva](./api/getting-started.md) , come illustrato di seguito:
+Per effettuare chiamate all’API di igiene dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API di Privacy Service. Segui [guida introduttiva](./api/getting-started.md) affinché l’API di Privacy Service generi valori per ciascuna delle intestazioni richieste per l’API di igiene dati, come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -39,7 +39,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Lettura di chiamate API di esempio
 
-Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
+Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Creare un processo di eliminazione
 
@@ -53,20 +53,20 @@ POST /jobs
 
 **Richiesta**
 
-Il payload della richiesta è strutturato in modo simile a quello di una richiesta di [eliminazione nell&#39;API Privacy Service](./api/privacy-jobs.md#access-delete). Include un array `users` i cui oggetti rappresentano gli utenti i cui dati devono essere eliminati.
+Il payload della richiesta è strutturato in modo simile a quello di un [elimina la richiesta nell’API di Privacy Service](./api/privacy-jobs.md#access-delete). Include un `users` array i cui oggetti rappresentano gli utenti i cui dati devono essere eliminati.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "companyContexts": [
           {
             "namespace": "imsOrgID",
-            "value": "{IMS_ORG}"
+            "value": "{ORG_ID}"
           }
         ],
         "users": [
@@ -107,8 +107,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `companyContexts` | Matrice contenente informazioni di autenticazione per la tua organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: Deve essere impostato su `imsOrgID`.</li><li>`value`: Il tuo ID organizzazione IMS. Si tratta dello stesso valore fornito nell&#39;intestazione `x-gw-ims-org-id` .</li></ul> |
-| `users` | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera eliminare. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità contiene le seguenti proprietà: <ul><li>`namespace`: Il  [namespace ](../identity-service/namespaces.md) identity associato all&#39;ID. Può trattarsi di un [namespace standard](./api/appendix.md#standard-namespaces) riconosciuto da Platform oppure di uno spazio dei nomi personalizzato definito dall’organizzazione. Il tipo di spazio dei nomi utilizzato deve riflettersi nella proprietà `type` .</li><li>`value`: Il valore di identità.</li><li>`type`: Deve essere impostato su  `standard` se utilizzi uno spazio dei nomi riconosciuto a livello globale o  `custom` se utilizzi uno spazio dei nomi definito dall’organizzazione.</li></ul></li></ul> |
+| `companyContexts` | Matrice contenente informazioni di autenticazione per la tua organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: Deve essere impostato su `imsOrgID`.</li><li>`value`: Il tuo ID organizzazione IMS. Si tratta dello stesso valore fornito nel `x-gw-ims-org-id` intestazione.</li></ul> |
+| `users` | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera eliminare. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità contiene le seguenti proprietà: <ul><li>`namespace`: La [spazio dei nomi identità](../identity-service/namespaces.md) associato all&#39;ID. Questo può essere un [spazio dei nomi standard](./api/appendix.md#standard-namespaces) riconosciuto da Platform oppure può essere uno spazio dei nomi personalizzato definito dall’organizzazione. Il tipo di spazio dei nomi utilizzato deve riflettersi nel `type` proprietà.</li><li>`value`: Il valore di identità.</li><li>`type`: Deve essere impostato su `standard` se si utilizza uno spazio dei nomi riconosciuto a livello globale, oppure `custom` se utilizzi uno spazio dei nomi definito dall’organizzazione.</li></ul></li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

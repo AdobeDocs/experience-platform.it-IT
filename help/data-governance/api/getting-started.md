@@ -5,7 +5,7 @@ title: Guida introduttiva all’API del servizio criteri
 topic-legacy: developer guide
 description: L’API del servizio criteri consente di creare e gestire varie risorse relative alla governance dei dati di Adobe Experience Platform. Questo documento fornisce un’introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all’API del servizio criteri.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%
@@ -35,7 +35,7 @@ La documentazione API richiede anche di aver completato la [esercitazione sull&#
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti alla governance dei dati, sono isolati in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 

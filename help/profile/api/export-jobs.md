@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Il Profilo del cliente in tempo reale consente di creare una singola visualizzazione dei singoli clienti all’interno di Adobe Experience Platform raggruppando i dati provenienti da più sorgenti, inclusi i dati degli attributi e i dati comportamentali. I dati del profilo possono quindi essere esportati in un set di dati per un’ulteriore elaborazione.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 2%
@@ -58,7 +58,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Profile Data Export",
@@ -104,7 +104,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields": "identities.id,personalEmail.address",
@@ -174,7 +174,7 @@ Una risposta corretta restituisce un set di dati popolato con dati di profilo co
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -204,7 +204,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -254,7 +254,7 @@ La risposta include un `records` oggetto contenente i processi di esportazione c
           "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
       },
       "updateTime": 1538616233239,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538615973895
     },
     {
@@ -309,7 +309,7 @@ La risposta include un `records` oggetto contenente i processi di esportazione c
           "batchId": ""
       },
       "updateTime": 1538573922551,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538573416687
     }
   ],
@@ -346,7 +346,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -393,7 +393,7 @@ curl -X GET \
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -423,7 +423,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

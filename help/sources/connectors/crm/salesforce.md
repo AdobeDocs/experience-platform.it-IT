@@ -5,7 +5,7 @@ title: Panoramica del connettore di origine Salesforce
 topic-legacy: overview
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 1%
@@ -60,7 +60,7 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sulla c
 | `PRIVATE_KEY` | Credenziale utilizzata per autenticare il [!DNL Postman] istanza alle API di Experience Platform. Consulta l’esercitazione sulla configurazione di Developer Console e [configurazione di Developer Console e [!DNL Postman]](../../../landing/postman.md) per istruzioni su come recuperare il tuo {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziale utilizzata per l’integrazione con Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Il sistema Identity Management (IMS) fornisce il framework per l’autenticazione ai servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso e viene sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Guarda l’esercitazione su [configurazione di Developer Console e [!DNL Postman]](../../../landing/postman.md) per istruzioni su come recuperare `{IMS_ORG}` informazioni. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Guarda l’esercitazione su [configurazione di Developer Console e [!DNL Postman]](../../../landing/postman.md) per istruzioni su come recuperare `{ORG_ID}` informazioni. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nome della partizione sandbox virtuale in uso. | `prod` |
 | `TENANT_ID` | Un ID utilizzato per garantire che le risorse create siano spaccate correttamente e contenute all’interno dell’organizzazione IMS. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | L&#39;endpoint URL a cui si effettua la chiamata API. Questo valore è fisso e viene sempre impostato su: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

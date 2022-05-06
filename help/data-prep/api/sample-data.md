@@ -4,26 +4,25 @@ solution: Experience Platform
 title: Endpoint API per i dati di esempio
 topic-legacy: sample data
 description: 'Puoi utilizzare l''endpoint `/amples` nell''API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i dati di esempio di mappatura. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
 
 # Endpoint dati di esempio
 
-I dati di esempio possono essere utilizzati durante la creazione di uno schema per il set di mappatura. Puoi utilizzare l’endpoint `/samples` nell’API di preparazione dati per recuperare, creare e aggiornare programmaticamente i dati di esempio.
+I dati di esempio possono essere utilizzati durante la creazione di uno schema per il set di mappatura. È possibile utilizzare `/samples` nell’API di preparazione dati per recuperare, creare e aggiornare programmaticamente i dati di esempio.
 
 ## Elenca dati di esempio
 
-Puoi recuperare un elenco di tutti i dati di esempio di mappatura per la tua organizzazione IMS effettuando una richiesta di GET all’ endpoint `/samples` .
+Puoi recuperare un elenco di tutti i dati di esempio di mappatura per la tua organizzazione IMS effettuando una richiesta di GET al `/samples` punto finale.
 
 **Formato API**
 
-L’endpoint `/samples` supporta diversi parametri di query per filtrare i risultati. Al momento è necessario includere sia i parametri `start` che `limit` come parte della richiesta.
+La `/samples` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Al momento è necessario includere entrambi i `start` e `limit` come parte della richiesta.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -42,7 +41,7 @@ La seguente richiesta recupererà gli ultimi due dati di esempio di mappatura al
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -88,7 +87,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sugli ul
 
 ## Creare dati di esempio
 
-Puoi creare dati di esempio effettuando una richiesta POST all’endpoint `/samples` .
+Puoi creare dati di esempio effettuando una richiesta POST al `/samples` punto finale.
 
 ```http
 POST /samples
@@ -101,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -129,7 +128,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuov
 
 ## Crea dati di esempio caricando un file
 
-È possibile creare dati di esempio utilizzando un file effettuando una richiesta POST all&#39;endpoint `/samples/upload`.
+È possibile creare dati di esempio utilizzando un file effettuando una richiesta di POST al `/samples/upload` punto finale.
 
 **Formato API**
 
@@ -144,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
@@ -168,7 +167,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuov
 
 ## Cercare un oggetto dati di esempio specifico
 
-È possibile cercare un oggetto specifico di dati di esempio fornendo il relativo ID nel percorso di una richiesta di GET all&#39;endpoint `/samples`.
+Puoi cercare un oggetto specifico di dati di esempio fornendo il relativo ID nel percorso di una richiesta di GET al `/samples` punto finale.
 
 **Formato API**
 
@@ -186,7 +185,7 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +208,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni dell’o
 
 ## Aggiornare dati di esempio
 
-È possibile aggiornare un oggetto dati di esempio specifico fornendo il relativo ID nel percorso di una richiesta PUT all&#39;endpoint `/samples` .
+È possibile aggiornare un oggetto dati di esempio specifico fornendo il relativo ID nel percorso di una richiesta PUT al `/samples` punto finale.
 
 **Formato API**
 
@@ -229,7 +228,7 @@ La richiesta seguente aggiorna i dati di esempio specificati. Nello specifico, a
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {

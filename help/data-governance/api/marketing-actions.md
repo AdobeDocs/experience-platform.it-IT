@@ -5,7 +5,7 @@ title: Endpoint API per le azioni di marketing
 topic-legacy: developer guide
 description: Un’azione di marketing, nel contesto della governance dei dati di Adobe Experience Platform, è un’azione eseguita da un consumatore di dati di Experience Platform per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Un’azione di marketing, nel contesto della governance dei dati di Adobe Experience Platform, è un’azione che [!DNL Experience Platform] prende i dati del consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Puoi gestire le azioni di marketing per la tua organizzazione utilizzando la variabile `/marketingActions` endpoint nell&#39;API del servizio criteri.
+Puoi gestire le azioni di marketing per la tua organizzazione utilizzando la `/marketingActions` endpoint nell&#39;API del servizio criteri.
 
 ## Introduzione
 
@@ -42,7 +42,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -65,7 +65,7 @@ Una risposta corretta restituisce i dettagli di ogni azione di marketing recuper
         {
             "name": "sampleMarketingAction",
             "description": "Marketing Action description.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550714012088,
             "createdClient": "string",
             "createdUser": "string",
@@ -81,7 +81,7 @@ Una risposta corretta restituisce i dettagli di ogni azione di marketing recuper
         {
             "name": "newMarketingAction",
             "description": "Another marketing action.",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550793833224,
             "createdClient": "string",
             "createdUser": "string",
@@ -129,7 +129,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -141,7 +141,7 @@ L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso
 {
     "name": "combineData",
     "description": "Combine multiple data sources together.",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550793805590,
     "createdClient": "string",
     "createdUser": "string",
@@ -179,7 +179,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -201,7 +201,7 @@ Una risposta corretta restituisce i dettagli dell’azione di marketing. Se è s
 {
     "name": "crossSiteTargeting",
     "description": "Perform targeting on information obtained across multiple web sites.",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550713341915,
     "createdClient": "string",
     "createdUser": "string",
@@ -241,7 +241,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

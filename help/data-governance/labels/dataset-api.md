@@ -5,7 +5,7 @@ title: 'Gestire le etichette di utilizzo dei dati per i set di dati utilizzando 
 topic-legacy: developer guide
 description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: ef711b1cbe0664f556e19ff6c64e9803d3cb1a21
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 2%
@@ -45,7 +45,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -56,7 +56,7 @@ Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al
 ```json
 {
   "AEP:dataset:5abd49645591445e1ba04f87": {
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "labels": [ "C1", "C2", "C3", "I1", "I2" ],
     "optionalLabels": [
       {
@@ -109,7 +109,7 @@ curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \

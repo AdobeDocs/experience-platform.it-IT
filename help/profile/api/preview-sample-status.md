@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Endpoint API di anteprima dello stato del campione (anteprima profilo)
 description: Utilizzando l’endpoint di stato di esempio di anteprima, parte dell’API Profilo cliente in tempo reale, puoi visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, elencare la distribuzione del profilo per set di dati e per identità e generare rapporti che mostrano sovrapposizione di set di dati, sovrapposizione di identità e profili sconosciuti.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2882'
 ht-degree: 1%
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 Adobe Experience Platform consente di acquisire dati dei clienti da più sorgenti per creare un profilo solido e unificato per ciascuno dei singoli clienti. Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale.
 
-I risultati di questo lavoro di esempio possono essere visualizzati utilizzando l’ `/previewsamplestatus` endpoint , parte dell’API Profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare più rapporti al fine di acquisire visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando l’ endpoint API `/previewsamplestatus` .
+I risultati di questo processo di esempio possono essere visualizzati utilizzando `/previewsamplestatus` endpoint , parte dell’API del profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare più rapporti al fine di acquisire visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando `/previewsamplestatus` Endpoint API.
 
 >[!NOTE]
 >
->Sono disponibili endpoint di stima e anteprima nell’API del servizio di segmentazione di Adobe Experience Platform che consentono di visualizzare informazioni di riepilogo sulle definizioni dei segmenti per assicurarsi di isolare il pubblico previsto. Per trovare i passaggi dettagliati per l’utilizzo dell’anteprima dei segmenti e degli endpoint di stima, visita la [guida alle anteprime e agli endpoint di stima](../../segmentation/api/previews-and-estimates.md), parte della guida per gli sviluppatori API [!DNL Segmentation].
+>Sono disponibili endpoint di stima e anteprima nell’API del servizio di segmentazione di Adobe Experience Platform che consentono di visualizzare informazioni di riepilogo sulle definizioni dei segmenti per assicurarsi di isolare il pubblico previsto. Per trovare i passaggi dettagliati per l’utilizzo dell’anteprima dei segmenti e degli endpoint di stima, visita il [guida alle anteprime e alle stime degli endpoint](../../segmentation/api/previews-and-estimates.md)parte del [!DNL Segmentation] Guida per gli sviluppatori API.
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
 
 ## Frammenti di profilo e profili uniti
 
@@ -32,20 +32,20 @@ Ogni singolo profilo cliente è composto da più frammenti di profilo che sono s
 
 Quando i frammenti di profilo vengono acquisiti in Platform, vengono uniti (in base a un criterio di unione) per creare un singolo profilo per quel cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
 
-Per ulteriori informazioni sui profili e il loro ruolo all&#39;interno dell&#39;Experience Platform, inizia leggendo la [Panoramica sul profilo cliente in tempo reale](../home.md).
+Per ulteriori informazioni sui profili e il loro ruolo all’interno dell’Experience Platform, ti preghiamo di iniziare leggendo il [Panoramica del profilo cliente in tempo reale](../home.md).
 
 ## Modalità di attivazione del processo di esempio
 
-Poiché i dati abilitati per Profilo cliente in tempo reale vengono acquisiti in [!DNL Platform], vengono memorizzati nell’archivio dati Profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzato:
+Quando i dati sono abilitati per il profilo cliente in tempo reale, vengono acquisiti in [!DNL Platform], viene memorizzato nell’archivio dati Profilo . Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzato:
 
-* Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
-* Per **l&#39;acquisizione batch**, entro 15 minuti dal corretto inserimento di un batch nell&#39;archivio profili, se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo puoi visualizzare in anteprima il processo di esempio più recente, oltre a elencare la distribuzione dei profili per set di dati e per namespace di identità.
+* Per **flussi di lavoro dati**, viene effettuato un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+* Per **ingestione in batch** entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo puoi visualizzare in anteprima il processo di esempio più recente, oltre a elencare la distribuzione dei profili per set di dati e per namespace di identità.
 
-Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profiles] dell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, visita la [[!DNL Profile] guida all&#39;interfaccia utente](../ui/user-guide.md).
+Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche all’interno di [!UICONTROL Profili] nell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo utilizzando l’interfaccia utente, visita il [[!DNL Profile] Guida all’interfaccia utente](../ui/user-guide.md).
 
 ## Visualizza lo stato dell’ultimo esempio {#view-last-sample-status}
 
-Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus` per visualizzare i dettagli dell’ultimo processo di esempio riuscito eseguito per l’organizzazione IMS. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili, o il numero totale di profili di cui la tua organizzazione dispone all’interno dell’Experience Platform.
+Puoi eseguire una richiesta GET al `/previewsamplestatus` per visualizzare i dettagli dell’ultimo processo di esempio eseguito correttamente per l’organizzazione IMS. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili, o il numero totale di profili di cui la tua organizzazione dispone all’interno dell’Experience Platform.
 
 Il conteggio dei profili viene generato dopo l’unione dei frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, quando i frammenti di profilo vengono uniti restituiscono un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
 
@@ -64,7 +64,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -74,7 +74,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio eseguito corr
 
 >[!NOTE]
 >
->In questo esempio di risposta, `numRowsToRead` e `totalRows` sono uguali tra loro. A seconda del numero di profili di cui dispone l’organizzazione nell’Experience Platform, ciò potrebbe accadere. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` come numero minore, perché rappresenta il campione come sottoinsieme del numero totale di profili (`totalRows`).
+>In questo esempio di risposta, `numRowsToRead` e `totalRows` sono uguali tra loro. A seconda del numero di profili di cui dispone l’organizzazione nell’Experience Platform, ciò potrebbe accadere. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` è il numero più piccolo perché rappresenta il campione come sottoinsieme del numero totale di profili (`totalRows`).
 
 ```json
 {
@@ -107,13 +107,13 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio eseguito corr
 | `totalRows` | Numero totale di profili uniti nell’Experience Platform, noto anche come &quot;conteggio dei profili&quot;. |
 | `lastBatchId` | ID acquisizione ultimo batch. |
 | `status` | Stato dell’ultimo campione. |
-| `samplingRatio` | Rapporto tra i profili uniti campionati (`numRowsToRead`) e i profili uniti totali (`totalRows`), espresso in percentuale in formato decimale. |
+| `samplingRatio` | Rapporto dei profili fusi campionati (`numRowsToRead`) ai profili uniti totali (`totalRows`), espressa come percentuale in formato decimale. |
 | `mergeStrategy` | Strategia di unione utilizzata nel campione. |
 | `lastSampledTimestamp` | Data e ora dell’ultimo esempio riuscito. |
 
 ## Elencare la distribuzione dei profili per set di dati
 
-Per visualizzare la distribuzione dei profili per set di dati, puoi eseguire una richiesta GET all’endpoint `/previewsamplestatus/report/dataset` .
+Per visualizzare la distribuzione dei profili per set di dati, puoi eseguire una richiesta GET al `/previewsamplestatus/report/dataset` punto finale.
 
 **Formato API**
 
@@ -128,20 +128,20 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+La richiesta seguente utilizza il `date` per restituire il report più recente per la data specificata.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Risposta**
 
-La risposta include un array `data` contenente un elenco di oggetti set di dati. La risposta mostrata è stata troncata per mostrare tre set di dati.
+La risposta include un `data` array, contenente un elenco di oggetti set di dati. La risposta mostrata è stata troncata per mostrare tre set di dati.
 
 >[!NOTE]
 >
@@ -194,21 +194,21 @@ La risposta include un array `data` contenente un elenco di oggetti set di dati.
 | Proprietà | Descrizione |
 |---|---|
 | `sampleCount` | Il numero totale di profili uniti campionati con questo ID di set di dati. |
-| `samplePercentage` | La `sampleCount` come percentuale del numero totale di profili uniti campionati (il valore `numRowsToRead` come restituito nel [stato dell&#39;ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
+| `samplePercentage` | La `sampleCount` in percentuale del numero totale di profili uniti inclusi nel campione (il `numRowsToRead` come restituito nel [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
 | `fullIDsCount` | Il numero totale di profili uniti con questo ID di set di dati. |
-| `fullIDsPercentage` | La `fullIDsCount` come percentuale del numero totale di profili uniti (il valore `totalRows` restituito nel [stato dell&#39;ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
+| `fullIDsPercentage` | La `fullIDsCount` come percentuale del numero totale di profili uniti (il `totalRows` come restituito nel [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
 | `name` | Nome del set di dati, come fornito durante la creazione del set di dati. |
 | `description` | Descrizione del set di dati, come fornito durante la creazione del set di dati. |
 | `value` | ID del set di dati. |
 | `streamingIngestionEnabled` | Se il set di dati è abilitato per l’acquisizione in streaming. |
 | `createdUser` | ID utente dell’utente che ha creato il set di dati. |
-| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+| `reportTimestamp` | La marca temporale del rapporto. Se `date` è stato fornito durante la richiesta. Il report restituito è per la data fornita. Se no `date` viene fornito il rapporto più recente. |
 
 ## Distribuzione dei profili in base allo spazio dei nomi identità
 
-Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace di identità in tutti i profili uniti nel tuo archivio profili. Ciò include sia le identità standard fornite da Adobe, sia le identità personalizzate definite dalla tua organizzazione.
+Puoi eseguire una richiesta GET al `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace identità in tutti i profili uniti nel tuo archivio profili. Ciò include sia le identità standard fornite da Adobe, sia le identità personalizzate definite dalla tua organizzazione.
 
-Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, inizia leggendo la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md).
+Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per saperne di più, inizia leggendo il [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -227,20 +227,20 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente non specifica un parametro `date` e pertanto restituisce il rapporto più recente.
+La richiesta seguente non specifica un `date` e restituirà quindi la relazione più recente.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Risposta**
 
-La risposta include un array `data` con singoli oggetti contenenti i dettagli di ogni namespace. La risposta mostrata è stata troncata per mostrare quattro namespace.
+La risposta include un `data` array, con singoli oggetti contenenti i dettagli di ogni spazio dei nomi. La risposta mostrata è stata troncata per mostrare quattro namespace.
 
 ```json
 {
@@ -293,21 +293,21 @@ La risposta include un array `data` con singoli oggetti contenenti i dettagli di
 | Proprietà | Descrizione |
 |---|---|
 | `sampleCount` | Numero totale di profili uniti campionati nello spazio dei nomi. |
-| `samplePercentage` | La `sampleCount` come percentuale dei profili uniti campionati (il valore `numRowsToRead` come restituito nel [stato dell&#39;ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
-| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+| `samplePercentage` | La `sampleCount` come percentuale dei profili uniti campionati (il `numRowsToRead` come restituito nel [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
+| `reportTimestamp` | La marca temporale del rapporto. Se `date` è stato fornito durante la richiesta. Il report restituito è per la data fornita. Se no `date` viene fornito il rapporto più recente. |
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
-| `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il valore `totalRows` restituito nello stato [ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con i namespace utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è indicato anche come [!UICONTROL simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
-| `value` | Il valore `id` per lo spazio dei nomi. Questo si può trovare quando si utilizzano i namespace utilizzando l’ [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | La `fullIDsCount` come percentuale del totale dei profili uniti (il `totalRows` come restituito nel [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
+| `code` | La `code` per lo spazio dei nomi . Questo si può trovare quando si utilizzano i namespace utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) e viene anche indicato come [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita il [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
+| `value` | La `id` per lo spazio dei nomi. Questo si può trovare quando si utilizzano i namespace utilizzando [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
 ## Genera il rapporto di sovrapposizione dei set di dati
 
 Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Oltre a fornire informazioni approfondite sui dati, questo rapporto può essere utile per ottimizzare l’utilizzo della licenza, ad esempio per impostare un TTL per alcuni set di dati.
 
-Puoi generare il rapporto di sovrapposizione dei set di dati eseguendo una richiesta di GET all’ endpoint `/previewsamplestatus/report/dataset/overlap` .
+Puoi generare il rapporto di sovrapposizione del set di dati eseguendo una richiesta GET al `/previewsamplestatus/report/dataset/overlap` punto finale.
 
-Per istruzioni dettagliate su come generare il rapporto di sovrapposizione dei set di dati utilizzando la riga di comando o l’interfaccia utente Postman, consulta l’ [esercitazione sulla generazione del rapporto di sovrapposizione dei set di dati](../tutorials/dataset-overlap-report.md).
+Per istruzioni dettagliate su come generare il rapporto di sovrapposizione dei set di dati utilizzando la riga di comando o l’interfaccia utente di Postman, consulta [esercitazione sulla generazione del rapporto di sovrapposizione dei set di dati](../tutorials/dataset-overlap-report.md).
 
 **Formato API**
 
@@ -322,14 +322,14 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+La richiesta seguente utilizza il `date` per restituire il report più recente per la data specificata.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Risposta**
@@ -349,12 +349,12 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovra
 
 | Proprietà | Descrizione |
 |---|---|
-| `data` | L&#39;oggetto `data` contiene elenchi di set di dati separati da virgole e i rispettivi conteggi dei profili. |
-| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+| `data` | La `data` l&#39;oggetto contiene elenchi di set di dati separati da virgole e i rispettivi conteggi dei profili. |
+| `reportTimestamp` | La marca temporale del rapporto. Se `date` è stato fornito durante la richiesta. Il report restituito è per la data fornita. Se no `date` viene fornito il rapporto più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione del set di dati
 
-I risultati del rapporto possono essere interpretati dai set di dati e dai conteggi dei profili nella risposta. Considera l&#39;oggetto report di esempio `data` seguente:
+I risultati del rapporto possono essere interpretati dai set di dati e dai conteggi dei profili nella risposta. Prendi in considerazione il seguente rapporto di esempio `data` oggetto:
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -366,14 +366,14 @@ Questo rapporto fornisce le seguenti informazioni:
 
 * Esistono 123 profili composti da dati provenienti dai seguenti set di dati: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Esistono 454.412 profili composti da dati provenienti da questi due set di dati: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
-* Esistono 107 profili costituiti solo da dati del set di dati `5eeda0032af7bb19162172a7`.
+* Ci sono 107 profili che sono costituiti solo da dati provenienti da un set di dati `5eeda0032af7bb19162172a7`.
 * L’organizzazione dispone di un totale di 454.642 profili.
 
 ## Genera il rapporto di sovrapposizione dello spazio dei nomi identità
 
 Il rapporto di sovrapposizione dello spazio dei nomi di identità fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i namespace di identità che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Ciò include sia i namespace di identità standard forniti dall’Adobe, sia i namespace di identità personalizzati definiti dall’organizzazione.
 
-Puoi generare il rapporto di sovrapposizione dello spazio dei nomi di identità eseguendo una richiesta di GET all’ endpoint `/previewsamplestatus/report/namespace/overlap` .
+Puoi generare il rapporto di sovrapposizione dello spazio dei nomi di identità eseguendo una richiesta di GET al `/previewsamplestatus/report/namespace/overlap` punto finale.
 
 **Formato API**
 
@@ -388,14 +388,14 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+La richiesta seguente utilizza il `date` per restituire il report più recente per la data specificata.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Risposta**
@@ -443,15 +443,15 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovra
 
 | Proprietà | Descrizione |
 |---|---|
-| `data` | L’oggetto `data` contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi di identità e dei rispettivi conteggi dei profili. |
-| Codici dei namespace | Il `code` è un formato breve per ciascun nome dello spazio dei nomi di identità. È possibile trovare una mappatura di ciascun `code` nel relativo `name` utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Nell’interfaccia utente di Experience Platform, il simbolo `code` è anche denominato [!UICONTROL simbolo di identità] . Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
-| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+| `data` | La `data` l’oggetto contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi di identità e dei rispettivi conteggi dei profili. |
+| Codici dei namespace | La `code` è un modulo breve per ogni nome dello spazio dei nomi di identità. Una mappatura di ciascuno `code` a `name` si può trovare utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). La `code` è anche indicato come [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita il [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
+| `reportTimestamp` | La marca temporale del rapporto. Se `date` è stato fornito durante la richiesta. Il report restituito è per la data fornita. Se no `date` viene fornito il rapporto più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione dello spazio dei nomi identità
 
 I risultati del rapporto possono essere interpretati dalle identità e dai conteggi dei profili nella risposta. Il valore numerico di ogni riga indica quanti profili sono composti da quell’esatta combinazione di spazi dei nomi di identità standard e personalizzati.
 
-Prendi in considerazione il seguente estratto dall&#39;oggetto `data` :
+Prendi in considerazione il seguente estratto dal `data` oggetto:
 
 ```json
   "AAID,ECID,Email,crmid": 142,
@@ -461,15 +461,15 @@ Prendi in considerazione il seguente estratto dall&#39;oggetto `data` :
 
 Questo rapporto fornisce le seguenti informazioni:
 
-* Sono disponibili 142 profili composti da `AAID`, `ECID` e `Email` identità standard, nonché da uno spazio dei nomi di identità `crmid` personalizzato.
-* Sono disponibili 24 profili composti da `AAID` e `ECID` spazi dei nomi di identità.
-* Esistono 6.565 profili che includono solo un&#39;identità `ECID`.
+* Sono disponibili 142 profili composti da `AAID`, `ECID`e `Email` identità standard e personalizzate `crmid` spazio dei nomi identità.
+* Sono disponibili 24 profili composti da `AAID` e `ECID` spazi dei nomi delle identità.
+* Esistono 6.565 profili che includono solo un `ECID` identità.
 
 ## Genera il report dei profili sconosciuti
 
 Puoi ottenere un’ulteriore visibilità nella composizione dell’archivio profili dell’organizzazione tramite il rapporto dei profili sconosciuti. Un &quot;profilo sconosciuto&quot; si riferisce a qualsiasi profilo inattivo o non vincolato per un determinato periodo di tempo. Un profilo &quot;unstitched&quot; è un profilo che contiene un solo frammento di profilo, mentre un profilo &quot;inattivo&quot; è qualsiasi profilo che non ha aggiunto nuovi eventi per il periodo di tempo specificato. Il rapporto dei profili sconosciuti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
 
-Puoi generare il rapporto dei profili sconosciuti eseguendo una richiesta di GET all’endpoint `/previewsamplestatus/report/unknownProfiles` .
+Puoi generare il rapporto sui profili sconosciuti effettuando una richiesta di GET al `/previewsamplestatus/report/unknownProfiles` punto finale.
 
 **Formato API**
 
@@ -486,7 +486,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Risposta**
@@ -495,7 +495,7 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto dei prof
 
 >[!NOTE]
 >
->Ai fini della presente guida, il rapporto è stato troncato per includere solo i periodi di tempo `"120days"` e &quot;`7days`&quot;. Il rapporto completo sui profili sconosciuti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
+>Ai fini della presente guida, il rapporto è stato troncato per includere solo `"120days"` e &quot;`7days`&quot; periodi di tempo. Il rapporto completo sui profili sconosciuti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
 
 ```json
 {
@@ -547,20 +547,20 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto dei prof
 
 | Proprietà | Descrizione |
 |---|---|
-| `data` | L&#39;oggetto `data` contiene le informazioni restituite per il report dei profili sconosciuti. |
+| `data` | La `data` l&#39;oggetto contiene le informazioni restituite per il report dei profili sconosciuti. |
 | `totalNumberOfProfiles` | Numero totale di profili univoci nell’archivio profili. Equivale al conteggio del pubblico indirizzabile. Include profili noti e sconosciuti. |
 | `totalNumberOfEvents` | Numero totale di ExperienceEvents nell’archivio profili. |
 | `unknownProfiles` | Un oggetto contenente un raggruppamento di profili sconosciuti (non uniti e inattivi) per periodo di tempo. Il rapporto dei profili sconosciuti fornisce una suddivisione dei profili per periodi di tempo di 7, 30, 60, 90 e 120 giorni. |
 | `countOfProfiles` | Il conteggio dei profili sconosciuti per il periodo di tempo o il conteggio dei profili sconosciuti per lo spazio dei nomi. |
 | `eventsAssociated` | Il numero di ExperienceEvents per l&#39;intervallo di tempo o il numero di eventi per lo spazio dei nomi. |
-| `nsDistribution` | Un oggetto contenente singoli namespace di identità con la distribuzione di profili ed eventi sconosciuti per ogni namespace. Nota: Aggiungendo insieme il totale `countOfProfiles` per ogni namespace di identità nell&#39;oggetto `nsDistribution` è uguale a `countOfProfiles` per il periodo di tempo. Lo stesso vale per `eventsAssociated` per namespace e per il totale `eventsAssociated` per periodo di tempo. |
+| `nsDistribution` | Un oggetto contenente singoli namespace di identità con la distribuzione di profili ed eventi sconosciuti per ogni namespace. Nota: Aggiunta insieme del totale `countOfProfiles` per ogni namespace di identità nel `nsDistribution` è uguale a `countOfProfiles` per il periodo di tempo. Lo stesso vale per `eventsAssociated` per namespace e totale `eventsAssociated` per periodo di tempo. |
 | `reportTimestamp` | La marca temporale del rapporto. |
 
 ### Interpretazione del rapporto sui profili sconosciuti
 
 I risultati del rapporto possono fornire informazioni sul numero di profili inattivi e non uniti di cui dispone l’organizzazione all’interno del relativo archivio profili.
 
-Prendi in considerazione il seguente estratto dall&#39;oggetto `data` :
+Prendi in considerazione il seguente estratto dal `data` oggetto:
 
 ```json
   "7days": {
@@ -592,5 +592,5 @@ Questo rapporto fornisce le seguenti informazioni:
 
 ## Passaggi successivi
 
-Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint della stima e dell’anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l&#39;API di segmentazione, visita la [guida all&#39;anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint della stima e dell’anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l’API di segmentazione, visita il [guida all’anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
 

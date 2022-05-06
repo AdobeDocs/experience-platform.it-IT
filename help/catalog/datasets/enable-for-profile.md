@@ -4,7 +4,7 @@ title: Abilitare un set di dati per il servizio Profilo e identità utilizzando 
 type: Tutorial
 description: Questa esercitazione mostra come abilitare un set di dati per l’utilizzo con Profilo cliente in tempo reale e il servizio Identity utilizzando le API di Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [eserc
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un `Content-Type` intestazione. Il valore corretto per questa intestazione viene mostrato nelle richieste di esempio, se necessario.
 
@@ -75,7 +75,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields":[],
@@ -130,7 +130,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -140,7 +140,7 @@ curl -X GET \
 {
     "5b020a27e7040801dedbf46e": {
         "name": "Commission Program Events DataSet",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
@@ -210,7 +210,7 @@ curl -X PATCH \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },

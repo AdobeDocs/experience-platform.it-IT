@@ -5,19 +5,18 @@ title: Creare un namespace personalizzato nell’API del servizio Identity
 topic-legacy: API guide
 description: Utilizzando l’API dello spazio dei nomi identità, puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Creare uno spazio dei nomi personalizzato nell’API del servizio Identity
 
-Utilizzando l’API [!DNL Identity Namespace], puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
+Utilizzo della [!DNL Identity Namespace] API, puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
 
-Per raccomandazioni sulla creazione di spazi dei nomi personalizzati, consulta la [documentazione sulle domande frequenti del servizio Identity](../troubleshooting-guide.md).
+Per consigli sulla creazione di spazi dei nomi personalizzati, consulta [Domande frequenti sul servizio Identity](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Procedi all&#39;esercitazione successiva su [elencare l&#39;ID nativo di un&#39;identità](./list-native-id.md)
+Procedi all’esercitazione successiva su [elenco dell&#39;ID nativo di un&#39;identità](./list-native-id.md)

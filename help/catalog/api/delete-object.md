@@ -5,21 +5,20 @@ title: Eliminare un oggetto nell’API
 topic-legacy: developer guide
 description: È possibile eliminare un oggetto Catalog fornendo il relativo ID nel percorso di una richiesta DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '207'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Eliminare un oggetto nell’API
 
-È possibile eliminare un oggetto [!DNL Catalog] fornendo il relativo ID nel percorso di una richiesta DELETE.
+È possibile eliminare un [!DNL Catalog] fornendo il proprio ID nel percorso di una richiesta DELETE.
 
 >[!WARNING]
 >
->Presta particolare attenzione durante l’eliminazione degli oggetti, poiché questa operazione non può essere annullata e potrebbe causare modifiche di interruzione altrove in [!DNL Experience Platform].
+>Presta particolare attenzione durante l’eliminazione degli oggetti, poiché questa operazione non può essere annullata e può produrre modifiche di interruzione altrove in [!DNL Experience Platform].
 
 **Formato API**
 
@@ -29,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->L’endpoint `DELETE /batches/{ID}` è stato dichiarato obsoleto. Per eliminare un batch, devi utilizzare l&#39; [API di acquisizione batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>La `DELETE /batches/{ID}` l&#39;endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare il [API di acquisizione in batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di oggetto [!DNL Catalog] da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera aggiornare. |
 
 **Richiesta**
@@ -45,7 +44,7 @@ curl -X DELETE \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -61,4 +60,4 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenent
 
 >[!NOTE]
 >
->Se nessun oggetto [!DNL Catalog] corrisponde all’ID fornito nella richiesta, è comunque possibile che si riceva un codice di stato HTTP 200, ma l’array di risposta sarà vuoto.
+>Se no [!DNL Catalog] Gli oggetti corrispondono all’ID fornito nella richiesta. È comunque possibile che venga ricevuto un codice di stato HTTP 200, ma l’array di risposta sarà vuoto.

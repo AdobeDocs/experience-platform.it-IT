@@ -5,7 +5,7 @@ title: namespace e schemi B2B
 topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore sorgente B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # namespace e schemi B2B
 
-Questo documento fornisce informazioni sull&#39;impostazione sottostante per i namespace e gli schemi da utilizzare con le origini B2B. Questo documento fornisce anche dettagli sull&#39;impostazione dell&#39;utility di automazione Postman necessaria per generare spazi dei nomi e schemi B2B.
+Questo documento fornisce informazioni sull&#39;impostazione sottostante per i namespace e gli schemi da utilizzare con le origini B2B. Questo documento fornisce inoltre dettagli sull&#39;impostazione dell&#39;utility di automazione Postman necessaria per la generazione di spazi dei nomi e schemi B2B.
 
 >[!IMPORTANT]
 >
@@ -44,7 +44,7 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sulla c
 | `PRIVATE_KEY` | Credenziale utilizzata per autenticare il [!DNL Postman] istanza alle API di Experience Platform. Consulta l’esercitazione sulla configurazione di Developer Console e [configurazione di Developer Console e [!DNL Postman]](../../../../landing/postman.md) per istruzioni su come recuperare il tuo {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziale utilizzata per l’integrazione con Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Il sistema Identity Management (IMS) fornisce il framework per l’autenticazione ai servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso e viene sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Guarda l’esercitazione su [configurazione di Developer Console e [!DNL Postman]](../../../../landing/postman.md) per istruzioni su come recuperare `{IMS_ORG}` informazioni. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Guarda l’esercitazione su [configurazione di Developer Console e [!DNL Postman]](../../../../landing/postman.md) per istruzioni su come recuperare `{ORG_ID}` informazioni. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nome della partizione sandbox virtuale in uso. | `prod` |
 | `TENANT_ID` | Un ID utilizzato per garantire che le risorse create siano spaccate correttamente e contenute all’interno dell’organizzazione IMS. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | L&#39;endpoint URL a cui si effettua la chiamata API. Questo valore è fisso e viene sempre impostato su: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
