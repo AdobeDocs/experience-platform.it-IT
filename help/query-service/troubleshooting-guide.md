@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso utilizzare Postman per l’API del servizio query?
 
-+++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione del postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione del postman](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate su come impostare un progetto nella console Adobe Developer e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 Questa sezione fornisce informazioni sull’esportazione di dati e limiti.
 
-### Esiste un modo per estrarre i dati da Query Service dopo l’elaborazione delle query e salvare i risultati in un file CSV?
+### Esiste un modo per estrarre i dati da Query Service dopo l’elaborazione delle query e salvare i risultati in un file CSV? {#export-csv}
 
 ++ + Risposta Sì. I dati possono essere estratti da Query Service e c&#39;è anche l&#39;opzione per memorizzare i risultati in formato CSV tramite un comando SQL.
 
