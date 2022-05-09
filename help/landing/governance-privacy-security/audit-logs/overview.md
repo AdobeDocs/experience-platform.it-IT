@@ -1,11 +1,11 @@
 ---
 title: Panoramica dei registri di controllo
-description: Scopri come i registri di controllo ti consentono di vedere chi ha eseguito le azioni in Adobe Experience Platform.
+description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 7%
+source-wordcount: '767'
+ht-degree: 10%
 
 ---
 
@@ -35,6 +35,8 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 | [Attributo calcolato](../../../profile/computed-attributes/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Account (Adobe)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Modello di query](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Query pianificata](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 
 ## Accesso ai registri di controllo
 
