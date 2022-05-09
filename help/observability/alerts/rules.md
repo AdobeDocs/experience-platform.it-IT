@@ -4,9 +4,9 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '811'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,8 @@ Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../i
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di esecuzione del flusso di origini | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati da una connessione sorgente. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Ritardo di acquisizione | Questo avviso viene attivato quando l’elaborazione di un flusso di acquisizione batch richiede più di 150 minuti. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Mancanza di ingestione | Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform. |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di acquisizione | Questo avviso si attiva quando il rapporto tra record non riusciti e tutti i record supera la soglia dello 0,5% |
+| Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di acquisizione | Questo avviso si attiva quando il rapporto tra record non riusciti e tutti i record supera la soglia dello 0,5%. |
+| Ritardi, errori ed errori di esecuzione del flusso di origine | Il tasso di Skippage supera la soglia | Questo avviso viene attivato quando il rapporto tra gli ID saltati e gli ID totali supera una soglia. |
 
 {style=&quot;table-layout:auto&quot;}
 
