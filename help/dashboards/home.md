@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Introduzione alle dashboard di Experience Platform
+title: Panoramica delle dashboard
 type: Documentation
 description: Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---

@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
 source-wordcount: '2976'
 ht-degree: 0%
@@ -102,7 +102,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Profili tendenza aggiunta]](#profiles-added-trend)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
 * [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
-* [[!UICONTROL Profili identità singoli]](#single-identity-profiles)
+* [[!UICONTROL Profili di identità singoli]](#single-identity-profiles)
 * [[!UICONTROL Profili non segmentati]](#unsegmented-profiles)
 * [[!UICONTROL Tendenza dei profili non segmentati]](#unsegmented-profiles-trend)
 * [[!UICONTROL Profili non segmentati per identità]](#unsegmented-profiles-by-identity)
@@ -177,7 +177,7 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 
 ![](../images/profiles/identity-overlap.png)
 
-### [!UICONTROL Profili identità singoli] {#single-identity-profiles}
+### [!UICONTROL Profili di identità singoli] {#single-identity-profiles}
 
 La [!UICONTROL Profili identità singoli] widget fornisce un conteggio dei profili della tua organizzazione con un solo tipo di ID che ne crea l&#39;identità. Questo tipo di ID può essere un’e-mail o un ECID. Il conteggio del profilo viene generato dai dati contenuti nell&#39;istantanea più recente.
 
