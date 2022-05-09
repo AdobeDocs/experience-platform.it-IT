@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mappatura campo;mappatura campo;mappatura;marketo;B2B;b2b
 title: Campi di mappatura Salesforce
 description: Le tabelle seguenti contengono le mappature tra i campi di origine Salesforce e i campi XDM corrispondenti.
-source-git-commit: d0efc8ffab33029c9c3ff69456b634b4ef737b1a
+exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
+source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 9%
@@ -180,7 +181,7 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID` |
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
-| `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
+| `CloseDate` | `expectedCloseDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription` |
 | `ExpectedRevenue` | `expectedRevenue.amount` |
