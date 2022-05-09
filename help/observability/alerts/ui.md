@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;intervallo di date
+keywords: Experience Platform;home;popular topics;date range
 title: Guida all’interfaccia utente degli avvisi
-description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
+description: Learn how to manage alerts in the Experience Platform user interface.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: ed18ecea98497e0c20d44617436a013bf83b69d2
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,15 @@ L’interfaccia utente di Adobe Experience Platform ti consente di visualizzare 
 
 >[!NOTE]
 >
->Per un&#39;introduzione agli avvisi nell&#39;Experience Platform, consulta la [panoramica degli avvisi](./overview.md).
+>Per un&#39;introduzione agli avvisi nell&#39;Experience Platform, vedi [panoramica degli avvisi](./overview.md).
 
-Per iniziare, seleziona **[!UICONTROL Avvisi]** nel menu di navigazione a sinistra.
+Per iniziare, seleziona **[!UICONTROL Avvisi]** nella navigazione a sinistra.
 
 ![](../images/alerts/ui/workspace.png)
 
 ## Gestire le regole di avviso
 
-La scheda **[!UICONTROL Sfoglia]** elenca le regole disponibili che possono attivare un avviso.
+La **[!UICONTROL Sfoglia]** elenca le regole disponibili che possono attivare un avviso.
 
 ![](../images/alerts/ui/rules.png)
 
@@ -33,13 +33,31 @@ Seleziona una regola dall’elenco per visualizzarne la descrizione e i parametr
 
 ![](../images/alerts/ui/rule-details.png)
 
-Selezionare i puntini di sospensione (**...**) accanto al nome di una regola e un elenco a discesa visualizza i controlli per abilitare o disabilitare l’avviso (a seconda dello stato corrente) e per effettuare o annullare l’abbonamento alle notifiche e-mail dell’avviso.
+Seleziona i puntini di sospensione (**...**) accanto al nome di una regola e un elenco a discesa visualizza i controlli per abilitare o disabilitare l’avviso (a seconda dello stato corrente) e per effettuare o annullare l’abbonamento alle notifiche e-mail dell’avviso.
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
-## Visualizzare la cronologia degli avvisi
+## Abilitare gli avvisi e-mail
 
-La scheda **[!UICONTROL Cronologia]** mostra la cronologia degli avvisi ricevuti per la tua organizzazione, inclusa la regola che ha attivato l’avviso, la data di attivazione e la data di risoluzione (se applicabile).
+Le notifiche di avviso possono essere inviate direttamente all’e-mail.
+
+Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) located in the top ribbon on the right to display notifications and announcements. Nel menu a discesa visualizzato, seleziona l’icona ingranaggio (![icona ingranaggio](../images/alerts/ui/cog-icon.png)) per accedere alla pagina delle preferenze di Experience Cloud.
+
+![](../images/alerts/ui/edit-preferences.png)
+
+La **Profilo** viene visualizzata la scheda . Seleziona la **[!UICONTROL Notifiche]** nel menu di navigazione a sinistra per accedere alle preferenze degli avvisi e-mail.
+
+![](../images/alerts/ui/profile.png)
+
+Scorri fino a **E-mail** nella parte inferiore della pagina e seleziona **[!UICONTROL Notifiche istantanee]**
+
+![](../images/alerts/ui/notifications.png)
+
+Gli avvisi a cui ti sei iscritto verranno ora inviati all’indirizzo e-mail connesso al tuo account Adobe ID.
+
+## View alert history
+
+La **[!UICONTROL Cronologia]** La scheda mostra la cronologia degli avvisi ricevuti per la tua organizzazione, inclusa la regola che ha attivato l’avviso, la data di attivazione e la data di risoluzione (se applicabile).
 
 ![](../images/alerts/ui/history.png)
 
@@ -49,4 +67,4 @@ Seleziona un avviso elencato e nella barra a destra vengono visualizzati altri d
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica su come visualizzare e gestire gli avvisi nell’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità del servizio, consulta la panoramica su [Observability Insights](../home.md) .
+This document provided an overview of how to view and manage alerts in the Platform UI. See the overview on [Observability Insights](../home.md) for more information on the service&#39;s capabilities.
