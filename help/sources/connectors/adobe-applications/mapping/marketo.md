@@ -5,7 +5,7 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 5118a12dee0adf17e755003361ca841be99da62b
+source-git-commit: 0db94891f9ba49e451d78843d08b7201ac6de8fa
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 8%
@@ -257,6 +257,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `id` | `opportunityKey.sourceID` |
 | `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
+| `iif(mktoCdpAccountOrgld != null && mktoCdpAccountOrgld != "",to_object("sourceTyPe","Marketo","sourcelnstancelD","631-STS-900","sourcelD",concat(mktoCdpAccountOrgld,".mkto_org"),"sourceKey",concat(mktoCdpAccountOrgId,".mkto_org@631-STS-900.Marketo")), null)` | `accountKey` |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
