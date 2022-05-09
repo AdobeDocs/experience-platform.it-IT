@@ -5,7 +5,7 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
+source-git-commit: 5118a12dee0adf17e755003361ca841be99da62b
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 8%
@@ -338,7 +338,7 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 | `state` | `workAddress.state` |
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
-| `company` | `organizations` |
+| `company` | `organizations` / `b2b.companyName` |
 | `leadScore` | `personComponents.personScore` |
 | `leadSource` | `personComponents.personSource` |
 | `leadStatus` | `personComponents.personStatus` |
