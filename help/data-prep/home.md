@@ -5,9 +5,9 @@ title: Panoramica sulla preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,30 +27,34 @@ Data Prep applica anche diverse convalide di dati intrinseci per garantire che l
 
 >[!NOTE]
 >
->A meno che il messaggio risultante non sia XDM valido, eventuali errori di trasformazione in Preparazione dati imposteranno tali attributi su `null`, mentre il resto della riga verrà acquisito. Se la riga restituisce un valore XDM non valido, la riga **non** verrà assimilata. In entrambi i casi, l&#39;errore sarà documentato.
+>A meno che il messaggio risultante non sia XDM valido, eventuali errori di trasformazione in Preparazione dati imposteranno gli attributi su `null`, mentre il resto della riga verrà acquisito. Se la riga restituisce un valore XDM non valido, la riga verrà **not** essere ingeriti. In entrambi i casi, l&#39;errore sarà documentato.
 
 ## Mappatura
 
 Una mappatura è un&#39;associazione di un attributo di input o di un campo calcolato a un attributo XDM. Un singolo attributo può essere mappato su più attributi XDM creando mappature individuali.
 
-Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md).
+Per ulteriori informazioni sulle diverse funzioni di mappatura, consulta la sezione [guida alle funzioni di mappatura](./functions.md).
 
 ### Campi calcolati
 
 I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione per facilitarne il riferimento.
 
-Per ulteriori informazioni sui campi calcolati, consulta la [guida ai campi calcolati](./functions.md#calculated-fields).
+Per ulteriori informazioni sui campi calcolati, consulta la sezione [guida ai campi calcolati](./functions.md#calculated-fields).
 
 ## Set di mappature
 
 Un set di mappature che trasformano uno schema in un altro è noto collettivamente come set di mappature. Viene creato un singolo set di mappatura come parte di ciascun flusso di dati. Un set di mappatura è parte integrante dei flussi di dati e viene creato, modificato e monitorato come parte dei flussi di dati.
 
-Per ulteriori informazioni sui set di mappatura, tra cui come utilizzare i campi all&#39;interno di un set di mappatura, consulta la [guida ai set di mappatura](./mapping-set.md). Per informazioni su come creare un set di mappatura e utilizzare altre chiamate API relative ai set di mappatura, consulta la sezione del set di mappatura nella [guida per gli sviluppatori](./api/mapping-set.md).
+Per ulteriori informazioni sui set di mappatura, tra cui come utilizzare i campi all’interno di un set di mappatura, consulta la sezione [guida al set di mappature](./mapping-set.md). Per informazioni su come creare un set di mappatura e utilizzare altre chiamate API relative ai set di mappatura, consulta la sezione del set di mappatura in [guida per sviluppatori](./api/mapping-set.md).
 
 ## Gestione del formato dati
 
-Data Prep può gestire in modo affidabile diversi formati di dati acquisiti in Platform. Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, leggere la [panoramica sulla gestione del formato dati](./data-handling.md).
+Data Prep può gestire in modo affidabile diversi formati di dati acquisiti in Platform. Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, consulta la sezione [panoramica sulla gestione del formato dati](./data-handling.md).
+
+## Invia aggiornamenti parziali delle righe utilizzando [!DNL Data Prep]
+
+Streaming degli upsers in [!DNL Data Prep] consente di inviare aggiornamenti parziali delle righe a [!DNL Profile Service] durante la creazione e la creazione di nuovi collegamenti di identità con una singola richiesta API. Per ulteriori informazioni su come eseguire lo streaming degli upsers in [!DNL Data Prep], consulta il documento in [invio di aggiornamenti di riga parziali](./upserts.md).
 
 ## Passaggi successivi
 
-Questo documento illustra le nozioni di base sulla preparazione dei dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, consulta la [guida alla gestione del formato dei dati](./data-handling.md#dates). Per informazioni su come utilizzare l&#39;API di preparazione dati, leggi la [Guida per gli sviluppatori di preparazione dati](api/overview.md).
+Questo documento illustra le nozioni di base sulla preparazione dei dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, consulta la sezione [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, consulta la sezione [guida alla gestione del formato dati](./data-handling.md#dates). Per informazioni su come utilizzare l’API di preparazione dei dati, leggi la sezione [Guida per gli sviluppatori di Data Prep](api/overview.md).
