@@ -1,139 +1,172 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;applicazione automatica;applicazione basata su API;governance dei dati
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
-title: Applicazione automatica dei criteri
+title: Automatic Policy Enforcement
 topic-legacy: guide
-description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
+description: This document covers how data usage policies are automatically enforced when activating segments to destinations in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
+source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
 
-# Applicazione automatica delle regole
+# Automatic policy enforcement
 
-Una volta etichettati i dati e definiti i criteri di utilizzo, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo in caso di violazioni.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
 
 ## Prerequisiti
 
-Questa guida richiede una buona comprensione dei servizi Platform coinvolti nell’applicazione automatica. Per ulteriori informazioni, consulta la seguente documentazione prima di continuare con questa guida:
+This guide requires a working understanding of the Platform services involved in automatic enforcement. Please refer to the following documentation to learn more before continuing with this guide:
 
-* [Governance dei dati di Adobe Experience Platform](../home.md): Il framework tramite il quale Platform applica la conformità all’utilizzo dei dati tramite l’uso di etichette e criteri.
-* [Profilo cliente in tempo reale](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): Il motore di segmentazione in [!DNL Platform] utilizzato per creare segmenti di pubblico dai profili cliente in base ai comportamenti e agli attributi dei clienti.
-* [Destinazioni](../../destinations/home.md): Le destinazioni sono integrazioni predefinite con applicazioni comunemente utilizzate che consentono l’attivazione senza soluzione di continuità dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
+* [](../home.md)
+* [](../../profile/home.md)
+* [](../../segmentation/home.md)[!DNL Platform]
+* [](../../destinations/home.md)
 
-## Flusso di applicazione {#flow}
+## Enforcement flow {#flow}
 
-Il diagramma seguente illustra come l’implementazione dei criteri viene integrata nel flusso di dati dell’attivazione dei segmenti:
+The following diagram illustrates how policy enforcement is integrated into the data flow of segment activation:
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica le politiche applicabili in base ai seguenti fattori:
+[!DNL Policy Service]
 
-* Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
-* Scopo di marketing della destinazione.
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* The data usage labels applied to fields and datasets within the segment to be activated.
+* The marketing purpose of the destination.
+* (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies.
 
 >[!NOTE]
 >
->Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione si verifica solo nelle seguenti condizioni:
+>If there are data usage labels that have only been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation only occurs under the following conditions:
 >
->* I campi vengono utilizzati nella definizione del segmento.
->* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
+>* The fields are used in the segment definition.
+>* The fields are configured as projected attributes for the target destination.
 
 
-## Linea di dati {#lineage}
+## Data lineage {#lineage}
 
-La derivazione dei dati svolge un ruolo chiave nel modo in cui i criteri vengono applicati in Platform. In termini generali, la derivazione di dati si riferisce all&#39;origine di un insieme di dati e a ciò che gli accade (o a dove si muove) nel tempo.
+Data lineage plays a key role in how policies are enforced in Platform. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time.
 
-Nel contesto della governance dei dati, la derivazione consente alle etichette di utilizzo dei dati di propagarsi dai set di dati ai servizi a valle che utilizzano i loro dati, ad esempio Profilo cliente in tempo reale e destinazioni. Questo consente di valutare e applicare i criteri in diversi punti chiave del percorso di dati tramite Platform e fornisce contesto ai consumatori di dati sul motivo per cui si è verificata una violazione dei criteri.
+In the context of Data Governance, lineage enables data usage labels to propagate from datasets to downstream services that consume their data, such as Real-time Customer Profile and destinations. This allows policies to be evaluated and enforced at several key points in the data&#39;s journey through Platform, and provides context to data consumers as to why a policy violation occurred.
 
-Ad Experience Platform, l&#39;applicazione delle politiche riguarda la seguente linea di demarcazione:
+In Experience Platform, policy enforcement is concerned with the following lineage:
 
-1. I dati vengono acquisiti in Platform e memorizzati in **set di dati**.
-1. I profili dei clienti sono identificati e costruiti a partire da tali set di dati unendo frammenti di dati in base alla **criterio di unione**.
-1. I gruppi di profili sono suddivisi in **segmenti** basati su attributi comuni.
-1. I segmenti vengono attivati a valle **destinazioni**.
+1. ****
+1. ****
+1. ****
+1. ****
 
-Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribuire alla violazione di un criterio, come descritto nella tabella seguente:
+Each stage in the above timeline represents an entity that may contribute to policy enforcement, as outlined in the table below:
 
-| Fase di derivazione dei dati | Ruolo nell&#39;applicazione delle politiche |
+| Data lineage stage | Role in policy enforcement |
 | --- | --- |
-| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campo) che definiscono per quali casi d’uso può essere utilizzato l’intero set di dati o campi specifici. Le violazioni dei criteri si verificano se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio. |
-| Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Consulta la sezione [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. |
-| Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
-| Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (a volte denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, il caso di utilizzo marketing definito per una destinazione determina quali criteri di utilizzo dei dati e i criteri di consenso sono applicabili a tale destinazione. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili della destinazione di destinazione. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Set di dati | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br> If you have access to consent policies (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. |
+| Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. [](../../profile/merge-policies/overview.md) |
+| Segmento | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination&#39;s applicable policies, based on its marketing use case. |
+| Destinazione | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br><br><br> |
 
 >[!IMPORTANT]
 >
->Alcuni criteri di utilizzo dei dati possono specificare due o più etichette con una relazione AND. Ad esempio, un criterio potrebbe limitare un’azione di marketing se le etichette `C1` E `C2` sono presenti entrambi, ma non limitano la stessa azione se è presente solo una di queste etichette.
+>Some data usage policies may specify two or more labels with an AND relationship. `C1``C2`
 >
->Quando si tratta di applicazione automatica, il framework per la governance dei dati non considera l’attivazione di segmenti separati a una destinazione come una combinazione di dati. Pertanto, l&#39;esempio `C1 AND C2` policy **NOT** applicata se queste etichette sono incluse in segmenti separati. Al contrario, questo criterio viene applicato solo quando entrambe le etichette sono presenti nello stesso segmento al momento dell’attivazione.
+>When it comes to automatic enforcement, the Data Governance framework does not consider the activation of separate segments to a destination as a combination of data. `C1 AND C2`**** Instead, this policy is only enforced when both labels are present in the same segment upon activation.
 
-Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati nell’interfaccia utente forniscono strumenti utili per esplorare la linea di dati che contribuiscono alla violazione per risolvere il problema. Ulteriori dettagli sono forniti nella sezione successiva.
+When policy violations occur, the resulting messages that appear in the UI provide useful tools for exploring the violation&#39;s contributing data lineage to help resolve the issue. More details are provided in the next section.
 
-## Messaggi di violazione dei criteri {#enforcement}
+## Policy enforcement messages {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
 The sections below outline the different policy enforcement messages that appear in the Platform UI:
 
 * [Data usage policy violation](#data-usage-violation)
 * [Consent policy evaluation](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### Data usage policy violation {#data-usage-violation}
 
-Se si verifica una violazione di criteri durante il tentativo di attivare un segmento (o [apportare modifiche a un segmento già attivato](#policy-enforcement-for-activated-segments)) l&#39;azione viene impedita e viene visualizzato un manifesto che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, la **[!UICONTROL Salva]** viene disattivato per l’entità che stai modificando fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
+[](#policy-enforcement-for-activated-segments) ****
 
-Seleziona una violazione di criteri nella colonna a sinistra del puntatore per visualizzare i dettagli relativi a tale violazione.
+Select a policy violation in the popover&#39;s left column to display details for that violation.
 
 ![](../images/enforcement/violation-policy-select.png)
 
-Il messaggio di violazione fornisce un riepilogo del criterio violato, incluse le condizioni che il criterio è configurato per controllare, l&#39;azione specifica che ha attivato la violazione e un elenco di possibili risoluzioni del problema.
+The violation message provides a summary of the policy that was violated, including the conditions the policy is configured to check for, the specific action that triggered the violation, and a list of possible resolutions for the issue.
 
 ![](../images/enforcement/violation-summary.png)
 
-Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazione di dati che consente di visualizzare quali set di dati, criteri di unione, segmenti e destinazioni sono stati coinvolti nella violazione dei criteri. L’entità che stai modificando viene evidenziata nel grafico, indicando quale punto del flusso sta causando la violazione. Puoi selezionare un nome di entità all’interno del grafico per aprire la pagina dei dettagli dell’entità in questione.
+A data lineage graph is displayed below the violation summary, allowing you to visualize which datasets, merge policies, segments, and destinations were involved in the policy violation. The entity that you are currently changing is highlighted in the graph, indicating which point in the flow is causing the violation to occur. You can select an entity name within the graph to open the details page for the entity in question.
 
 ![](../images/enforcement/data-lineage.png)
 
-È inoltre possibile utilizzare **[!UICONTROL Filtro]** icona (![](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. Affinché i dati possano essere visualizzati, è necessario selezionare almeno due categorie.
+****![](../images/enforcement/filter.png) At least two categories must be selected in order for data to be displayed.
 
 ![](../images/enforcement/lineage-filter.png)
 
-Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Vista a percorso]**.
+**** ****
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
 ### Consent policy evaluation (Beta) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
 >Consent policies are currently in beta and your organization may not have access to them yet.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+[](../policies/user-guide.md#consent-policy)
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+#### Pre-activation evaluation
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
+****[](../../destinations/ui/activation-overview.md)****
 
-## Applicazione dei criteri per i segmenti attivati {#policy-enforcement-for-activated-segments}
+![](../images/enforcement/view-applied-policies.png)
 
-L’applicazione dei criteri si applica ancora ai segmenti dopo che sono stati attivati, limitando le modifiche a un segmento o alla sua destinazione che si traducono in una violazione dei criteri. A causa di come [derivazione dati](#lineage) agisce nell&#39;applicazione dei criteri; una delle seguenti azioni può potenzialmente determinare una violazione:
+A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the activated segments.
 
-* Aggiornamento delle etichette di utilizzo dei dati
-* Modifica dei set di dati per un segmento
-* Modifica dei predicati dei segmenti
-* Modifica delle configurazioni di destinazione
+![](../images/enforcement/consent-policy-check.png)
 
-Se una delle azioni precedenti causa una violazione, tale azione non viene salvata e viene visualizzato un messaggio di violazione dei criteri, garantendo che i segmenti attivati continuino a rispettare i criteri di utilizzo dei dati in fase di modifica.
+The dialog shows the consented audience for one segment at a time. To view the policy evaluation for a different segment, use the dropdown menu above the diagram to select one from the list.
+
+![](../images/enforcement/segment-switcher.png)
+
+Use the left rail to switch between the applicable consent policies for the selected segment. 
+
+![](../images/enforcement/policy-switcher.png)
+
+The diagram displays the overlap between three groups of profiles:
+
+1. Profiles that qualify for the selected segment
+1. Profiles that qualify for the selected consent policy
+1. 
+
+The profiles that qualify for all three of the above groups represent the consented audience for the selected segment, summarized in the right rail.
+
+![](../images/enforcement/summary.png)
+
+Hover over one of the audiences in the diagram to show the number of profiles it contains.
+
+![](../images/enforcement/highlight-segment.png)
+
+The consented audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
+
+![](../images/enforcement/consented-audience.png)
+
+#### Flow run enforcement
+
+When data is activated to a destination, the flow run details show the number of identities that were excluded due to active consent policies.
+
+![](../images/enforcement/dataflow-run-enforcement.png)
+
+## Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
+
+Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. [](#lineage)
+
+* Updating data usage labels
+* Changing datasets for a segment
+* Changing segment predicates
+* Changing destination configurations
+
+If any of the above actions triggers a violation, that action is prevented from being saved and a policy violation message is displayed, ensuring that your activated segments continue to comply with data usage policies when being modified.
 
 ## Passaggi successivi
 
-In questo documento è stato illustrato il funzionamento, ad Experience Platform, dell&#39;applicazione automatica delle regole. Per informazioni su come integrare programmaticamente l’applicazione dei criteri nelle applicazioni utilizzando le chiamate API, consulta la guida su [Implementazione basata su API](./api-enforcement.md).
+This document covered how automatic policy enforcement works in Experience Platform. [](./api-enforcement.md)
