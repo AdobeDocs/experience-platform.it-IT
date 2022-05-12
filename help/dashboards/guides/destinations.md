@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2538'
 ht-degree: 0%
 
 ---
@@ -55,12 +55,19 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Segmenti non mappati per identità]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmenti mappati per identità]](#mapped-segments-by-identity)
 * [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)
+* [[!UICONTROL Stato del pubblico mappato]](#mapped-audience-health)
 * [[!UICONTROL Conteggio destinazioni]](#destinations-count)
 * [[!UICONTROL Stato della destinazione]](#destination-status)
 * [[!UICONTROL Destinazioni attive per piattaforma di destinazione]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Tipi di pubblico attivati per tutte le destinazioni]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Destinazioni più utilizzate] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="Destinazioni più utilizzate"
+>abstract="Questo widget visualizza le destinazioni più attive della tua organizzazione in base al numero di segmenti mappati. Questi numeri sono precisi al momento dell&#39;ultima istantanea. Questa classificazione fornisce informazioni sulle destinazioni attualmente più utilizzate, evidenziando quelle che potrebbero essere sottoutilizzate."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Destinazioni più utilizzate]** widget visualizza le principali destinazioni della tua organizzazione in base al numero di segmenti mappati, a partire dall&#39;ultima istantanea. Questa classificazione fornisce informazioni sulle destinazioni che vengono utilizzate, mostrando al contempo quelle che potrebbero essere sottoutilizzate.
 
@@ -74,6 +81,12 @@ Selezionando il nome di una destinazione dall&#39;elenco mostrato sul widget, po
 
 ### [!UICONTROL Destinazioni create di recente] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="Destinazioni create di recente"
+>abstract="Questo widget visualizza un elenco delle destinazioni configurate più di recente all&#39;interno della tua organizzazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Ulteriori informazioni dalla documentazione"
+
 La **[!UICONTROL Destinazioni create di recente]** widget consente di visualizzare un elenco delle destinazioni configurate più di recente della tua organizzazione.
 
 La data di creazione mostrata corrisponde all’ultima istantanea giornaliera. In altre parole, se crei una nuova destinazione, questa verrà visualizzata nell’elenco solo dopo l’acquisizione dello snapshot successivo.
@@ -85,6 +98,12 @@ Per ulteriori informazioni su come configurare tipi specifici di destinazioni, v
 ![](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segmenti attivati di recente] {#recently-activated-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="Segmenti attivati di recente"
+>abstract="Questo widget fornisce un elenco dei segmenti mappati più di recente a una destinazione. Questo elenco fornisce un’istantanea dei segmenti e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Segmenti attivati di recente]** widget fornisce un elenco dei segmenti mappati più di recente a una destinazione. Questo elenco fornisce un’istantanea dei segmenti e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate.
 
@@ -98,6 +117,12 @@ Per ulteriori informazioni sull’utilizzo dei segmenti in Experience Platform, 
 
 ### [!UICONTROL Segmenti attivati di recente per destinazione] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="Segmenti attivati di recente per destinazione"
+>abstract="Questo widget visualizza i primi cinque segmenti attivati più di recente in ordine decrescente in base alla destinazione scelta nel menu a discesa della panoramica."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Ulteriori informazioni dalla documentazione"
+
 La **[!UICONTROL Segmenti attivati di recente per destinazione]** widget visualizza i primi cinque segmenti attivati più di recente in ordine decrescente in base alla destinazione scelta nel menu a discesa della panoramica. È simile al [!UICONTROL Segmenti attivati di recente] widget, ma i dati visualizzati **only** si applica alla destinazione selezionata.
 
 Questo widget contiene due metriche: il nome del segmento e la data dell’ultima attivazione del segmento nella destinazione. I dati visualizzati sono corretti a partire dall&#39;ultima istantanea giornaliera.
@@ -107,6 +132,12 @@ Per visualizzare i dettagli di un segmento, seleziona il nome di un segmento dal
 ![I segmenti sono stati attivati di recente per widget di destinazione.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="Tendenza delle dimensioni del pubblico"
+>abstract="Questo widget illustra il numero di profili contenuti nel segmento, che viene inviato quotidianamente all&#39;account di destinazione. Il primo menu a discesa regola il periodo di tempo per la tendenza del pubblico. Il secondo menu a discesa dei widget seleziona il segmento per l’analisi. La destinazione viene scelta dal menu a discesa della panoramica."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget rappresenta la relazione del conteggio di profilo in un periodo di tempo per un segmento mappato a tale account di destinazione. Il widget utilizza un grafico a linee per illustrare il numero di profili contenuti nel segmento, che vengono inviati quotidianamente all’account di destinazione.
 
@@ -122,6 +153,12 @@ La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce un [!
 
 ### [!UICONTROL Segmenti non mappati per identità] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="Segmenti non mappati per identità"
+>abstract="Questo widget elenca i primi cinque **non mappato** i segmenti sono classificati in base al conteggio delle identità decrescente per una determinata destinazione e identità. Gli ID filtro elencati nel menu a discesa del widget cambiano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="Ulteriori informazioni dalla documentazione"
+
 La **[!UICONTROL Segmenti non mappati per identità]** elenchi dei primi cinque **non mappato** i segmenti sono classificati in base al conteggio delle identità decrescente per una determinata destinazione e identità. Evidenzia i segmenti che sono i più vantaggiosi da mappare all’account di destinazione scelto in base all’ID scelto.
 
 Il menu a discesa ID destinazione filtra i segmenti disponibili. Gli ID filtro elencati nel menu a discesa variano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica.
@@ -132,13 +169,25 @@ La colonna identità conta il numero di ID sorgente all’interno del segmento c
 
 ### [!UICONTROL Segmenti mappati per identità] {#mapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="Segmenti mappati per identità"
+>abstract="Questo widget fornisce un elenco dei primi cinque **mappato** segmenti. L’elenco è ordinato da alto a basso in base al numero di ID sorgente contenuti nei segmenti. L&#39;ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili nel menu a discesa del widget dipendono dalla destinazione scelta nella parte superiore del dashboard della panoramica."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Ulteriori informazioni dalla documentazione"
+
 Questo widget fornisce un elenco dei primi cinque **mappato** segmenti. L’elenco è ordinato da alto a basso in base al numero di ID sorgente contenuti nei segmenti. L&#39;ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili nel menu a discesa nel widget vengono modificati in base al filtro dell’account di destinazione scelto nella parte superiore del dashboard della panoramica.
 
 ![I segmenti mappati per widget di identità.](../images/destinations/mapped-segments-by-identity.png)
 
 La **[!UICONTROL Segmenti mappati per identità]** Il widget evidenzia immediatamente la probabilità di riuscire a eseguire il targeting delle opportunità di profilo per una campagna all&#39;interno della destinazione selezionata. Una campagna con targeting efficiente non dipende dal numero di profili inviati alla destinazione, ma dal numero di ID sorgente che probabilmente verranno confrontati con gli ID di destinazione per fornire dati utili e fruibili.
 
-### Tipi di pubblico comuni
+### Tipi di pubblico comuni {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="Tipi di pubblico comuni"
+>abstract="Questo widget fornisce un elenco dei primi cinque segmenti attivati nell’account di destinazione scelto nella parte superiore della pagina e della destinazione selezionata nel menu a discesa del widget. L’elenco dei segmenti viene ordinato in base a come sono stati attivati di recente. Il segmento attivato più di recente viene visualizzato nella parte superiore."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Tipi di pubblico comuni]** widget fornisce un elenco dei primi cinque segmenti attivati nell’account di destinazione selezionato nella parte superiore della pagina e della destinazione selezionata nel menu a discesa del widget. L’elenco dei segmenti viene ordinato in base a come sono stati attivati di recente. Il segmento attivato più di recente viene visualizzato nella parte superiore.
 
@@ -146,7 +195,13 @@ La [!UICONTROL DIMENSIONE DEL PUBBLICO] fornisce il conteggio totale dei profili
 
 ![Il widget Pubblico comune.](../images/destinations/common-audiences.png)
 
-### Stato del pubblico mappato
+### Stato del pubblico mappato {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="Stato del pubblico mappato"
+>abstract="Questo widget fornisce un elenco di fino a 20 segmenti mappati il cui numero totale di profili si discosta di almeno un fattore di deviazione standard dalla dimensione media del pubblico mappata a tale destinazione nei 30 giorni. Fornisce una metrica calcolata per la dispersione delle dimensioni del pubblico dalla media negli ultimi 30 giorni. Le dimensioni del pubblico sono ordinate da alto a basso."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Ulteriori informazioni dalla documentazione"
 
 Il widget fornisce un elenco di fino a 20 segmenti mappati il cui profilo totale conta, a partire dall’ultima istantanea giornaliera, un fattore di almeno una deviazione standard rispetto alla dimensione media del pubblico mappata a tale destinazione nei 30 giorni successivi.
 
@@ -161,6 +216,12 @@ Se un segmento all’interno di [!UICONTROL Stato del pubblico mappato] Il widge
 ![Il widget di stato del pubblico mappato.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Conteggio destinazioni] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="Conteggio destinazioni"
+>abstract="Questo widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e consegnato all&#39;interno del sistema. Questo numero include sia le destinazioni attive che quelle inattive."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Ulteriori informazioni dalla documentazione"
 
 La [!UICONTROL Conteggio destinazioni] widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e consegnato all&#39;interno del sistema. Questo numero include sia le destinazioni attive che quelle inattive.
 
