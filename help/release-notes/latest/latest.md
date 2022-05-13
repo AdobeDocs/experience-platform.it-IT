@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
+source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
-source-wordcount: '2804'
-ht-degree: 3%
+source-wordcount: '2916'
+ht-degree: 5%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 3%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Flussi di dati](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [Edizione B2B di Real-time Customer Data Platform](#B2B)
 - [Origini](#sources)
 
@@ -171,17 +171,31 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 
 Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un’azienda utilizzando configurazioni a livello di business senza la necessità di competenze scientifiche in materia di dati.
+I servizi AI/ML consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un’azienda utilizzando configurazioni a livello di business senza la necessità di competenze scientifiche in materia di dati.
 
-Attribution AI e Customer AI consentono ai clienti di configurare modelli AI/ML avanzati per l’attribuzione di marketing e la propensione dei clienti. La funzione Multi-set di dati consente ai clienti di inserire più set di dati al momento della configurazione del modello senza la necessità di unire e preparare i dati in anticipo.
+### Attribution AI
+
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per set di dati multipli | La funzione Set di dati multipli supporta ora tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare la mappa di identità ed eventuali ID associati, purché nei set di dati sia presente uno spazio dei nomi di identità comune. Attribution AI supporta i seguenti schemi: Adobe Analytics, Evento Di Esperienza, Evento Di Esperienza Del Consumatore. Customer AI supporta tutti questi schemi e lo schema Adobe Audience Manager. Per ulteriori informazioni sul supporto di più set di dati in Attribution AI e Customer AI, consulta [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) e [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Supporto per set di dati multipli | La funzione Set di dati multipli supporta ora tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare la mappa di identità ed eventuali ID associati, purché nei set di dati sia presente uno spazio dei nomi di identità comune. Attribution AI supporta i seguenti schemi: Adobe Analytics, Evento Di Esperienza, Evento Di Esperienza Del Consumatore. Per ulteriori informazioni sul supporto di più set di dati in Attribution AI, consulta la sezione [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
+
+Per ulteriori informazioni su [!DNL Intelligent Services], vedi [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
+
+### Customer AI
+
+Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto per set di dati multipli | La funzione Set di dati multipli supporta ora tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare la mappa di identità ed eventuali ID associati, purché nei set di dati sia presente uno spazio dei nomi di identità comune. Customer AI supporta i seguenti schemi: Adobe Analytics, Experience Event, Consumer Experience Event e lo schema Adobe Audience Manager. Per ulteriori informazioni sul supporto di più set di dati in Customer AI, consulta [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nuove metriche di valutazione del modello in Customer AI | I nuovi grafici Gain in Customer AI consentono agli esperti di marketing di determinare le dimensioni del gruppo di destinazione in base ai loro obiettivi di budget e ROI. I nuovi grafici di incremento misurano la qualità del modello, fornendo una migliore visibilità nell’incremento che otterrebbero con il targeting casuale. Per ulteriori informazioni, consulta la sezione [scoprire informazioni approfondite con Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) documento. |
 
 Per ulteriori informazioni su [!DNL Intelligent Services], vedi [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
