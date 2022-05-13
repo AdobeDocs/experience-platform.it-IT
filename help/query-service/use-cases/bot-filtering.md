@@ -1,9 +1,10 @@
 ---
 title: Filtro bot in Query Service con apprendimento automatico
 description: Questo documento fornisce una panoramica sull’utilizzo di Query Service e machine learning per determinare l’attività di bot e filtrare le loro azioni in base al traffico dei visitatori del sito web online.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
@@ -164,6 +165,6 @@ Il modello di esempio è stato determinato con un alto grado di precisione in ba
 
 ## Passaggi successivi
 
-Leggendo questo documento si ha una migliore comprensione di come utilizzare Query Service e machine learning per determinare e filtrare l&#39;attività bot.
+Leggendo questo documento si ha una migliore comprensione di come utilizzare [!DNL Query Service] e l&#39;apprendimento automatico per determinare e filtrare l&#39;attività bot.
 
-Altri documenti che dimostrano i vantaggi di [!DNL Query Service] per informazioni aziendali strategiche della tua organizzazione, consulta l’esempio di caso d’uso abbandonato.
+Altri documenti che dimostrano i vantaggi di [!DNL Query Service] le informazioni strategiche aziendali della tua organizzazione sono le seguenti: [caso d&#39;uso del browser abbandonato](./abandoned-browse.md) esempio.

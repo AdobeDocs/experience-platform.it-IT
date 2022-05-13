@@ -2,9 +2,9 @@
 title: Integrazione del registro di controllo del servizio query
 description: I registri di controllo del servizio query conservano i record per varie azioni dell’utente per creare un audit trail per la risoluzione dei problemi o per rispettare le politiche di gestione dei dati aziendali e i requisiti normativi. Questa esercitazione fornisce una panoramica delle funzioni del registro di controllo specifiche di Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Le categorie del registro di controllo fornite da [!DNL Query Service] sono le s
 |---|---|
 | [!UICONTROL Query pianificata] | Questa categoria ti consente di controllare le pianificazioni create, aggiornate o eliminate in [!DNL Query Service]. |
 | [!UICONTROL Modello di query] | Questa categoria ti consente di controllare le varie azioni (creazione, aggiornamento ed eliminazione) eseguite in un modello di query. |
-| [!UICONTROL Query] | Questa categoria ti consente di controllare le esecuzioni delle query. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Eseguire un [!DNL Query Service] registro di controllo {#perform-an-audit-log}
 
