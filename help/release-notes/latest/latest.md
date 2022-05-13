@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2804'
 ht-degree: 3%
 
 ---
@@ -32,8 +32,10 @@ Le dashboard forniscono opzioni di reporting preconfigurate per i dati dell’or
 
 I seguenti widget sono disponibili tramite la libreria Widget sulle rispettive dashboard. Per ulteriori informazioni, consulta la documentazione . [come aggiungere widget tramite la libreria Widget](../../dashboards/customize/widget-library.md).
 
-| Funzione | Dashboard di | Descrizione |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Nuovi widget**
+
+| Widget | Dashboard di | Descrizione |
+| ------ | --------- | ----------- |
 | [!UICONTROL Profili tendenza aggiunta] | Profili | Questo widget utilizza un grafico a linee per illustrare il numero totale di profili uniti aggiunti quotidianamente all’archivio profili negli ultimi 30 giorni, 90 giorni o 12 mesi. |
 | [!UICONTROL Tipi di pubblico mappati sullo stato di destinazione] | Profili | Questo widget visualizza il numero totale di tipi di pubblico mappati e non mappati in un’unica metrica e utilizza un grafico ad anello per illustrare la differenza proporzionale tra i loro totali. |
 | [!UICONTROL Dimensione del pubblico] | Profili | Questo widget fornisce una tabella a due colonne in cui sono elencati fino a 20 segmenti e il numero totale di tipi di pubblico contenuti in ciascun segmento. L’elenco dipende dal criterio di unione applicato e ordinato da alto a basso in base al numero totale di tipi di pubblico. |
@@ -46,6 +48,14 @@ I seguenti widget sono disponibili tramite la libreria Widget sulle rispettive d
 | [!UICONTROL Tendenza delle dimensioni del pubblico] | Segmenti | Questo widget fornisce un’illustrazione grafico a linee per il numero totale di profili che soddisfano i criteri di qualsiasi definizione di segmento per periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza al cambiamento della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili qualificati per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. |
+
+**Nuove funzioni**
+
+| Funzione | Dashboard di | Descrizione |
+| ------- | --------- | ----------- |
+| Pulizia dell’appartenenza al segmento di profilo orfano | Profili e utilizzo della licenza | Il Servizio profili ora rimuove quotidianamente i membri del segmento rimasti per fornire una rappresentazione più precisa dei profili nel sistema. Questa pulizia si verifica dopo l’eliminazione di tutti i frammenti di profilo per un determinato profilo. Questo può mostrare un calo nella metrica &quot;Pubblico di riferimento&quot; nel dashboard dell’utilizzo della licenza e può mostrare un calo nella metrica &quot;Conteggio profili&quot; nel dashboard Profilo, dal momento che queste metriche includevano frammenti di segmento di avanzo prima di questa versione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni, consulta la documentazione . [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)e [[!DNL Segments]](../../dashboards/guides/segments.md) dashboard.
 

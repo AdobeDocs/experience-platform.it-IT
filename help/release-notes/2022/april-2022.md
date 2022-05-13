@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Le note sulla versione di aprile 2022 per Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 3%
 
 ---
@@ -49,11 +49,13 @@ I seguenti widget sono disponibili tramite la libreria Widget sulle rispettive d
 | [!UICONTROL Tendenza al cambiamento della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili qualificati per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. |
 
-**Nuove funzioni**
+**Nuove funzioni** {#new-features}
 
 | Funzione | Dashboard di | Descrizione |
 | ------- | --------- | ----------- |
 | Pulizia dell’appartenenza al segmento di profilo orfano | Profili e utilizzo della licenza | Il Servizio profili ora rimuove quotidianamente i membri del segmento rimasti per fornire una rappresentazione più precisa dei profili nel sistema. Questa pulizia si verifica dopo l’eliminazione di tutti i frammenti di profilo per un determinato profilo. Questo può mostrare un calo nella metrica &quot;Pubblico di riferimento&quot; nel dashboard dell’utilizzo della licenza e può mostrare un calo nella metrica &quot;Conteggio profili&quot; nel dashboard Profilo, dal momento che queste metriche includevano frammenti di segmento di avanzo prima di questa versione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni, consulta la documentazione . [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)e [[!DNL Segments]](../../dashboards/guides/segments.md) dashboard.
 
