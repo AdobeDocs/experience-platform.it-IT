@@ -4,9 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '2046'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 
 Il rapporto tra Profilo cliente in tempo reale e altri servizi all’interno di Experience Platform è evidenziato nel diagramma seguente:
 
-![](images/profile-overview/profile-in-platform.png)
+![Il rapporto tra Profilo cliente in tempo reale e altri servizi in Adobe Experience Platform. Questo diagramma mostra che Profile è uno dei componenti core di Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ## Informazioni sui profili
 
 [!DNL Real-time Customer Profile] unisce i dati di diversi sistemi aziendali e fornisce l’accesso a tali dati sotto forma di profili cliente con eventi relativi a serie temporali. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali. Nelle sezioni seguenti sono evidenziati alcuni dei concetti fondamentali che è necessario comprendere per creare e gestire in modo efficace i profili all’interno di Platform.
+
+### Composizione entità profilo
+
+Un profilo cliente in tempo reale è composto da un&#39;entità principale, denominata **entità principale** e varie entità di supporto. L’entità principale è composta da caratteristiche, comportamenti e appartenenze a segmenti di un profilo. Altre entità consentono al motore di segmentazione di utilizzare dati al di fuori dell’entità primaria del profilo e includono quanto segue:
+
+- **Entità dimensionale**: L’entità utilizzata per semplificare il processo di modellazione dei dati per le informazioni condivise tra eventi o record di profilo. Questa è nota anche come entità di ricerca o di classificazione.
+- **Entità B2B**: Entità che descrivono la relazione del profilo con gli account business-to-business e le opportunità.
+
+![Diagramma che illustra la composizione dell’entità profilo.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>Poiché le entità dimensionali e B2B esistono solo al di fuori dell’entità primaria, queste vengono utilizzate solo per la segmentazione batch.
 
 ### Archiviazione dati profilo
 
@@ -91,7 +104,7 @@ L’ingresso in tempo reale è possibile tramite un processo chiamato acquisizio
 
 ## Proiezioni del bordo
 
-Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando [!DNL Real-time Customer Profile] API, fai riferimento alla [guida agli endpoint di proiezione edge](api/edge-projections.md).
+Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando il [!DNL Real-time Customer Profile] API, fai riferimento alla [guida agli endpoint di proiezione edge](api/edge-projections.md).
 
 ## Inserimento di dati in [!DNL Profile]
 
@@ -115,9 +128,9 @@ La governance dei dati è una serie di strategie e tecnologie utilizzate per ges
 
 Per quanto riguarda l’accesso ai dati, la governance dei dati svolge un ruolo chiave all’interno di [!DNL Experience Platform] a vari livelli:
 
-* Etichette per l’uso dei dati
-* Criteri di accesso ai dati
-* Controllo degli accessi ai dati per le azioni di marketing
+- Etichette per l’uso dei dati
+- Criteri di accesso ai dati
+- Controllo degli accessi ai dati per le azioni di marketing
 
 La governance dei dati è gestita in diversi punti. ad esempio per decidere in quali dati acquisire [!DNL Platform] e quali dati sono accessibili dopo l’acquisizione per una determinata azione di marketing. Per ulteriori informazioni, inizia leggendo il [panoramica sulla governance dei dati](../data-governance/home.md).
 
