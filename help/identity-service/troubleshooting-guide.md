@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio Identity
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,7 @@ Le identità sono referenziate nelle chiamate API dalla loro identità composita
 
 ## In che modo il servizio Identity gestisce le informazioni personali identificabili (PII)?
 
-Il servizio Identity crea un hash di crittografia potente e unidirezionale di PII prima di valori persistenti. I dati di identità negli spazi dei nomi &quot;Telefono&quot; e &quot;E-mail&quot; vengono automaticamente crittografati con SHA-256, con i valori &quot;E-mail&quot; automaticamente convertiti in minuscole prima dell’hashing.
-
-## È necessario crittografare tutti i dati PII prima di inviarli a Platform?
-
-Non è necessario crittografare manualmente i dati PII prima di acquisirli in Platform. Applicando la `I1` l’etichetta di utilizzo dei dati in tutti i campi di dati applicabili, Platform converte automaticamente questi campi in valori ID con hash al momento dell’acquisizione.
-
-Per i passaggi su come applicare e gestire le etichette di utilizzo dei dati, consulta la [esercitazione sulle etichette per l&#39;utilizzo dei dati](../data-governance/labels/user-guide.md).
+Il servizio Identity dispone di spazi dei nomi standard per supportare l’inserimento di valori di identità con hash per i numeri di telefono e le e-mail. Tuttavia, l’utente è responsabile dell’hash dei valori. Per ulteriori informazioni sull’hash dei dati acquisiti in Platform, consulta la sezione [[!DNL Data Prep] guida alle funzioni di mappatura](../data-prep/functions.md#hashing).
 
 ## Ci sono delle considerazioni quando si usano gli hashing delle identità basate su PII?
 

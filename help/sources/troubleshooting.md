@@ -5,16 +5,16 @@ title: Risoluzione dei problemi di Origini
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 5f42c6ade63244c5c0bca2d6f879e43014474a83
+source-git-commit: b55097b6e7cd49166f68d0c86b788cd36ebdebab
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
-# (Beta) Guida alla risoluzione dei problemi di Origini
+# Guida alla risoluzione dei problemi di Origini
 
-Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli riscontrati in tutte le API [!DNL Platform], consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altre [!DNL Platform] servizi, compresi quelli incontrati in tutti [!DNL Platform] API, fai riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ## Domande frequenti
 
@@ -44,7 +44,7 @@ Di seguito è riportato un elenco di vincoli da tenere in considerazione per i f
 - I nomi di directory e file non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
 - I seguenti caratteri URL riservati devono essere correttamente preceduti: `! ' ( ) ; @ & = + $ , % # [ ]`
 - I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
-- Caratteri di percorso URL non validi. I punti di codice come `\uE000`, mentre sono validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti alcuni caratteri ASCII o Unicode, come caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che governano le stringhe Unicode in HTTP/1.1, consulta [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Caratteri di percorso URL non validi. Punti di codice come `\uE000`, anche se valido nei nomi file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti alcuni caratteri ASCII o Unicode, come caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che governano le stringhe Unicode in HTTP/1.1 vedi [RFC 2616, sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - I seguenti nomi di file non sono consentiti: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (..) e due caratteri punto (.).
 - Il numero massimo di file per batch è 1500, con una dimensione batch massima pari a 100 GB.
 - Il numero massimo di proprietà o campi per riga è 10.000.
@@ -56,11 +56,11 @@ I tipi di dati supportati includono numeri interi, stringhe, booleani, oggetti d
 
 ### Quali formati di data e ora sono supportati?
 
-Origini supporta un&#39;ampia varietà di formati di datetime durante l&#39;acquisizione dei dati. Ulteriori informazioni sui formati datetime supportati sono disponibili nella sezione delle date della [guida alla gestione del formato dati](../data-prep/data-handling.md#dates) nella documentazione Data Prep .
+Origini supporta un&#39;ampia varietà di formati di datetime durante l&#39;acquisizione dei dati. Ulteriori informazioni sui formati datetime supportati sono disponibili nella sezione date del [guida alla gestione del formato dati](../data-prep/data-handling.md#dates) nella documentazione Data Prep .
 
 ### Come si formattano gli array in file CSV, JSON e Parquet?
 
-I file JSON e Parquet supportano gli array in modo nativo. Per le strutture piatte, come i CSV, gli array non sono supportati. Tuttavia, le stringhe con più valori possono essere suddivise in un array utilizzando funzioni di preparazione dei dati come esplodi e join. Ulteriori informazioni su queste funzioni di preparazione dei dati sono disponibili nella [guida alle funzioni di preparazione dei dati](../data-prep/functions.md#string)
+I file JSON e Parquet supportano gli array in modo nativo. Per le strutture piatte, come i CSV, gli array non sono supportati. Tuttavia, le stringhe con più valori possono essere suddivise in un array utilizzando funzioni di preparazione dei dati come esplodi e join. Ulteriori informazioni su queste funzioni di preparazione dei dati sono disponibili nella sezione [guida alle funzioni di preparazione dei dati](../data-prep/functions.md#string)
 
 ### Quali origini supportano l’acquisizione parziale?
 
@@ -68,7 +68,7 @@ Tutte le origini di acquisizione batch supportano l’acquisizione parziale. Tut
 
 ### Quando dovrei usare l’acquisizione parziale?
 
-L’acquisizione parziale deve essere utilizzata se **non** presenta vincoli, ad esempio se l’intero file viene acquisito in Platform. In alternativa, è necessario utilizzare l’acquisizione parziale se non si desidera acquisire dati che potrebbero contenere errori al suo interno.
+L’acquisizione parziale deve essere utilizzata se **not** presenta vincoli, ad esempio l’acquisizione dell’intero file in Platform. In alternativa, è necessario utilizzare l’acquisizione parziale se non si desidera acquisire dati che potrebbero contenere errori al suo interno.
 
 ### Qual è la tipica soglia di errore di acquisizione parziale?
 
@@ -76,4 +76,4 @@ Non esiste una &quot;soglia di errore tipica&quot; per l’acquisizione parziale
 
 ### Quanto tempo è necessario per l’aggiornamento dello stato di un’esecuzione di flusso dopo la creazione di un nuovo flusso di dati?
 
-Le esecuzioni del flusso non vengono generate istantaneamente e possono richiedere circa due o tre minuti per l’aggiornamento dopo il `startTime` designato. Il controllo dello stato di un’esecuzione di flusso, subito dopo la creazione di un nuovo flusso di dati, non restituisce informazioni sull’ `lastRunDetails` dell’esecuzione di flusso, in quanto non è ancora successo. Si consiglia di consentire la generazione del flusso di dati per alcuni minuti prima di controllare lo stato dell’esecuzione del flusso.
+Le esecuzioni del flusso non vengono generate istantaneamente e possono richiedere circa due o tre minuti per l’aggiornamento dopo che è stato designato `startTime`. Il controllo dello stato di un&#39;esecuzione di flusso, subito dopo la creazione di un nuovo flusso di dati, non restituisce informazioni sul `lastRunDetails` come non è ancora successo. Si consiglia di consentire la generazione del flusso di dati per alcuni minuti prima di controllare lo stato dell’esecuzione del flusso.
