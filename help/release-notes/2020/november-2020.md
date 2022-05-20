@@ -1,13 +1,13 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform 11 novembre 2020
+title: Note sulla versione di Adobe Experience Platform - Novembre 2020
+description: Note sulla versione di novembre 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2184'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ Per ulteriori informazioni, consulta la sezione [panoramica sulle sandbox](../..
 
 [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -116,7 +116,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 | Microsoft Bing | La destinazione Microsoft Bing consente di eseguire campagne digitali di retargeting e mirate per il pubblico in Microsoft Display Advertising. |
 | Il banco commerciale | Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile. |
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |

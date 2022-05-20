@@ -1,15 +1,15 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform 11 marzo 2020
+title: Note sulla versione di Adobe Experience Platform - Marzo 2020
+description: Note sulla versione di marzo 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 7%
+source-wordcount: '855'
+ht-degree: 6%
 
 ---
 
@@ -31,7 +31,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 La governance dei dati di Adobe Experience Platform è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all&#39;interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di accesso ai dati e controllo dell’accesso ai dati per le azioni di marketing.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Per ulteriori informazioni sulla governance dei dati, consulta la sezione [Panor
 
 Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] fornisce diverse alternative per l’acquisizione dei dati, tra cui API Batch, API Streaming, connettori di Adobe nativi, partner di integrazione dei dati o l’interfaccia utente Adobe Experience Platform.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 |------- | -----------|
@@ -87,7 +87,7 @@ Fornire esperienze digitali rilevanti richiede una comprensione completa del cli
 
 Adobe Experience Platform [!DNL Identity Service] consente di ottenere una visione migliore del cliente e del suo comportamento attraverso il collegamento delle identità tra dispositivi e sistemi, per offrire in tempo reale esperienze digitali personali di impatto.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -105,7 +105,7 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso 
 
 [!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |

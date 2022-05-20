@@ -1,14 +1,14 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform 8 aprile 2020
+title: Note sulla versione di Adobe Experience Platform - Aprile 2020
+description: Le note sulla versione di aprile 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '983'
 ht-degree: 10%
 
 ---
@@ -50,7 +50,7 @@ La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base de
 
 XDM è una specifica documentata pubblicamente progettata per migliorare il potere delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che offre informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -74,7 +74,7 @@ Per iniziare a utilizzare la governance dei dati è necessaria una comprensione 
 
 Il framework per la governance dei dati semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati tramite [!DNL Experience Platform] interfaccia utente e [!DNL Policy Service] API.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | -----------| ---------- |
@@ -106,7 +106,7 @@ Per ulteriori informazioni, consulta la sezione [Panoramica sulle destinazioni](
 
 Nuovi regolamenti legali e organizzativi danno agli utenti il diritto di accedere ai propri dati o di cancellarli dagli archivi dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un’API RESTful e un’interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso e cancellazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -126,7 +126,7 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso 
 
 [!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |

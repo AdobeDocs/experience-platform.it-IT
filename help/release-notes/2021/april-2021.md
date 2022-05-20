@@ -1,17 +1,16 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform per il 21 aprile 2021.
+title: Note sulla versione di Adobe Experience Platform - Aprile 2021
+description: Le note sulla versione di aprile 2021 per Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 10%
+source-wordcount: '888'
+ht-degree: 9%
 
 ---
-
 
 # Note sulla versione di Adobe Experience Platform
 
@@ -29,14 +28,14 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la modifica della mappatura per i flussi di dati esistenti | Ora puoi aggiornare i set di mappatura di un flusso di dati esistente. Non è possibile aggiornare i set di mappatura per i flussi di dati pianificati per un’acquisizione una tantum. Questa funzione non è supportata per le API HTTP, Adobe Analytics, Adobe Audience Manager e [!DNL Marketo Engage]. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiornamento dei flussi di dati di origini nell’interfaccia utente](../../sources/tutorials/ui/update-dataflows.md). |
-| Supporto per l’acquisizione in streaming | È ora possibile utilizzare le funzioni di preparazione dei dati durante la creazione di una connessione sorgente di streaming. Per ulteriori informazioni, consulta l’esercitazione su [creazione di una connessione sorgente di streaming nell’interfaccia utente](../../sources/tutorials/ui/create/streaming/http.md). |
+| Supporto per la modifica della mappatura per i flussi di dati esistenti | Ora puoi aggiornare i set di mappatura di un flusso di dati esistente. Non è possibile aggiornare i set di mappatura per i flussi di dati pianificati per un’acquisizione una tantum. Questa funzione non è supportata per le API HTTP, Adobe Analytics, Adobe Audience Manager e [!DNL Marketo Engage]. Per ulteriori informazioni, consulta l’esercitazione su [aggiornamento dei flussi di dati di origini nell’interfaccia utente](../../sources/tutorials/ui/update-dataflows.md). |
+| Supporto per l’acquisizione in streaming | È ora possibile utilizzare le funzioni di preparazione dei dati durante la creazione di una connessione sorgente di streaming. Per ulteriori informazioni, consulta l’esercitazione su [creazione di una connessione sorgente in streaming nell’interfaccia utente](../../sources/tutorials/ui/create/streaming/http.md). |
 
-Per ulteriori informazioni, consulta la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+Per ulteriori informazioni, consulta la sezione [[!DNL Data Prep] panoramica](../../data-prep/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -44,7 +43,7 @@ Experience Data Model (XDM) è una specifica open-source progettata per migliora
 
 | Funzione | Descrizione |
 | --- | --- |
-| Raccomandazioni in base allo schema per settore | Quando si selezionano le classi e i gruppi di campi dello schema nell’interfaccia utente dell’Editor di schema, è possibile utilizzare un nuovo filtro per visualizzare i componenti standard consigliati in base al settore specifico. Consulta la documentazione sui [modelli di dati del settore](https://www.adobe.com/go/xdm-industry-erds-en) per ulteriori informazioni su come questi componenti si relazionano tra loro per diversi casi d&#39;uso del settore. |
+| Raccomandazioni in base allo schema per settore | Quando si selezionano le classi e i gruppi di campi dello schema nell’interfaccia utente dell’Editor di schema, è possibile utilizzare un nuovo filtro per visualizzare i componenti standard consigliati in base al settore specifico. Consulta la documentazione su [modelli di dati del settore](https://www.adobe.com/go/xdm-industry-erds-en) per ulteriori informazioni su come questi componenti si relazionano tra loro per diversi casi d’uso nel settore. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -58,9 +57,9 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 | ------- | ----------- |
 | Supporto per i dati di Adobe Analytics | È stata aggiornata la funzionalità per supportare i set di dati Adobe Analytics tramite il connettore di origine Analytics senza la necessità di ETL dei dati per conformarsi allo schema CEE (Consumer Experience Event). |
 | Supporto per i dati Adobe Audience Manager | È stata aggiornata la funzionalità per supportare i set di dati Adobe Audience Manager tramite il connettore di origine Audience Manager senza la necessità di ETL dei dati per conformarsi allo schema CEE (Consumer Experience Event). |
-| Riepilogo delle prestazioni del modello | Customer AI dispone ora di una [scheda di riepilogo delle prestazioni del modello](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) nella pagina delle informazioni sull&#39;istanza del servizio. La scheda Prestazioni del modello mostra tutti i tassi di conversione e di abbandono effettivi. Questo ti permette di decifrare e capire cosa succede in ogni tuo blocco di propensione. |
+| Riepilogo delle prestazioni del modello | L’intelligenza artificiale del cliente ora ha un [scheda riepilogo prestazioni modello](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) nella pagina approfondimenti dell’istanza del servizio. La scheda Prestazioni del modello mostra tutti i tassi di conversione e di abbandono effettivi. Questo ti permette di decifrare e capire cosa succede in ogni tuo blocco di propensione. |
 
-Per ulteriori informazioni sui set di dati supportati, consulta la [[!DNL Intelligent Services] documentazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md).
+Per ulteriori informazioni sui set di dati supportati, consulta la sezione [[!DNL Intelligent Services] documentazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md).
 
 ### Attribution AI
 
@@ -70,21 +69,21 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 | ------- | ----------- |
 | Supporto per i dati di Adobe Analytics | È stata aggiornata la funzionalità per supportare i set di dati Adobe Analytics tramite il connettore di origine Analytics senza la necessità di ETL dei dati per conformarsi allo schema CEE (Consumer Experience Event). |
 
-Per ulteriori informazioni sui set di dati supportati, consulta la [[!DNL Intelligent Services] documentazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md).
+Per ulteriori informazioni sui set di dati supportati, consulta la sezione [[!DNL Intelligent Services] documentazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dai dati [!DNL Real-time Customer Profile]. Questi segmenti sono configurati e mantenuti a livello centrale su Platform, rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su Platform, rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Funzioni di aggregazione aggiuntive | Le funzioni di conteggio sono state aggiunte nel Generatore di segmenti. Le funzioni di conteggio consentono di contare il numero di volte in cui l’evento specificato è stato eseguito. Ulteriori informazioni sulle funzioni di conteggio sono disponibili nella sezione delle funzioni di conteggio della [guida del Generatore di segmenti](../../segmentation/ui/segment-builder.md#count-functions) |
+| Funzioni di aggregazione aggiuntive | Le funzioni di conteggio sono state aggiunte nel Generatore di segmenti. Le funzioni di conteggio consentono di contare il numero di volte in cui l’evento specificato è stato eseguito. Ulteriori informazioni sulle funzioni di conteggio sono disponibili nella sezione delle funzioni di conteggio del [Guida al Generatore di segmenti](../../segmentation/ui/segment-builder.md#count-functions) |
 
-Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -94,7 +93,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Ora puoi creare una connessione sorgente [!DNL Marketo Engage] utilizzando l’interfaccia utente per inserire i dati B2B in Platform e aggiornarli utilizzando le applicazioni connesse a Platform. Per ulteriori informazioni, consulta la [[!DNL Marketo Engage] documentazione del connettore di origine](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Beta) | Ora puoi creare una [!DNL Marketo Engage] connessione di origine tramite l’interfaccia utente per portare i dati B2B in Platform e tenerli aggiornati utilizzando le applicazioni connesse a Platform. Per ulteriori informazioni, consulta la sezione [[!DNL Marketo Engage] documentazione del connettore di origine](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Sorgenti beta che si spostano in GA | Le seguenti origini sono state promosse dalla versione beta a GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
-Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md).
+Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).

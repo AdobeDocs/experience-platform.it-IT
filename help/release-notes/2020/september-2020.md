@@ -1,13 +1,13 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform 9 settembre 2020
+title: Note sulla versione di Adobe Experience Platform - Settembre 2020
+description: Le note sulla versione di settembre 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '863'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 La governance dei dati di Adobe Experience Platform è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all&#39;interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di accesso ai dati e controllo dell’accesso ai dati per le azioni di marketing.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -42,7 +42,7 @@ Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance
 
 In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -66,7 +66,7 @@ Consulta la sezione [[!DNL Observability Insights] panoramica](../../observabili
 
 Diverse normative legali e organizzative consentono agli utenti di accedere o cancellare i propri dati personali dagli archivi dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un’API RESTful e un’interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso e cancellazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -74,7 +74,7 @@ Diverse normative legali e organizzative consentono agli utenti di accedere o ca
 
 Consulta la sezione [Panoramica di Privacy Service](../../privacy-service/home.md) per ulteriori informazioni sul servizio.
 
-## Profilo cliente in tempo reale {#profile}
+## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 
@@ -90,7 +90,7 @@ Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfac
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -105,11 +105,11 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso 
 
 [!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Mappatura automatica | [!DNL Platform] fornisce consigli intelligenti per la mappatura automatica durante il flusso di lavoro di acquisizione dei dati, in base a uno schema o a un set di dati di destinazione selezionato dall’utente. Puoi regolare manualmente le regole di mappatura automatica flessibili in base ai tuoi casi d’uso. |
+| Mappatura automatica | [!DNL Platform] fornisce consigli intelligenti per la mappatura automatica durante il flusso di lavoro di acquisizione dei dati, in base a uno schema di destinazione o a un set di dati selezionati dall’utente. Puoi regolare manualmente le regole di mappatura automatica flessibili in base ai tuoi casi d’uso. |
 | Miglioramenti UX | Gli utenti possono accedere alle azioni della tabella in linea per accedere più facilmente alle azioni principali, ad esempio aggiungere dati, modificare la pianificazione e aggiungere segmenti. Consulta la sezione [monitoraggio dei flussi di dati](../../sources/tutorials/ui/monitor.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).

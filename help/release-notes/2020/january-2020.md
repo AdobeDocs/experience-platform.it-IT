@@ -1,15 +1,14 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform 15 gennaio 2020
+title: Note sulla versione di Adobe Experience Platform - Gennaio 2020
+description: Le note sulla versione di gennaio 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '888'
+ht-degree: 9%
 
 ---
 
@@ -24,52 +23,52 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 * [[!DNL Sources]](#sources)
 * [[!DNL Destinations]](#destinations)
 
-## [!DNL Experience Data Model] Sistema (XDM)  {#xdm}
+## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
-La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
+La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base della [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 
 XDM è una specifica documentata pubblicamente progettata per migliorare il potere delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che offre informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
-| Restrizioni di tipo campo per i campi della gerarchia uguale | Dopo aver definito un campo XDM come un determinato tipo, tutti gli altri campi con lo stesso nome e la stessa gerarchia devono utilizzare lo stesso tipo di campo, indipendentemente dalle classi o dai gruppi di campi dello schema in cui sono utilizzati. Ad esempio, se un gruppo di campi per la classe XDM [!DNL Profile] contiene un campo `profile.age` di tipo &quot;integer&quot;, un gruppo di campi simile per XDM [!DNL ExperienceEvent] non può avere un campo `profile.age` di tipo &quot;string&quot;. Per utilizzare un tipo di campo diverso, il campo deve avere una gerarchia diversa rispetto al campo definito in precedenza (ad esempio, `profile.person.age`). Questa funzione ha lo scopo di evitare conflitti quando gli schemi vengono riuniti in un’unione. Anche se il vincolo non influisce retroattivamente sugli schemi esistenti, si consiglia vivamente di rivedere gli schemi per i conflitti di tipo campo e modificarli in base alle necessità. |
+| Restrizioni di tipo campo per i campi della gerarchia uguale | Dopo aver definito un campo XDM come un determinato tipo, tutti gli altri campi con lo stesso nome e la stessa gerarchia devono utilizzare lo stesso tipo di campo, indipendentemente dalle classi o dai gruppi di campi dello schema in cui sono utilizzati. Ad esempio, se un gruppo di campi per XDM [!DNL Profile] la classe contiene `profile.age` campo di tipo &quot;integer&quot;, un gruppo di campi simile per XDM [!DNL ExperienceEvent] non può avere `profile.age` campo di tipo &quot;string&quot;. Per utilizzare un tipo di campo diverso, il campo deve avere una gerarchia diversa rispetto al campo definito in precedenza, ad esempio `profile.person.age`). Questa funzione ha lo scopo di evitare conflitti quando gli schemi vengono riuniti in un’unione. Anche se il vincolo non influisce retroattivamente sugli schemi esistenti, si consiglia vivamente di rivedere gli schemi per i conflitti di tipo campo e modificarli in base alle necessità. |
 | Convalida dei campi con distinzione tra maiuscole e minuscole | I campi personalizzati sullo stesso livello devono avere nomi diversi, a prescindere dalle maiuscole. Ad esempio, se aggiungi un campo personalizzato denominato &quot;Email&quot;, non puoi aggiungere un altro campo personalizzato allo stesso livello denominato &quot;email&quot;. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni sull&#39;utilizzo di XDM tramite l&#39;API [!DNL Schema Registry] e l&#39;interfaccia utente [!DNL Schema Editor], consulta la [documentazione di sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni sull’utilizzo di XDM con [!DNL Schema Registry] API e [!DNL Schema Editor] interfaccia utente, leggere [Documentazione del sistema XDM](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Nuovi regolamenti legali e organizzativi danno agli utenti il diritto di accedere o cancellare i propri dati personali dagli archivi dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un’API RESTful e un’interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service] puoi inviare richieste di accesso e cancellazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
+Nuovi regolamenti legali e organizzativi danno agli utenti il diritto di accedere ai propri dati o di cancellarli dagli archivi dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un’API RESTful e un’interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso e cancellazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
-| [!DNL Privacy Service] rebranding | Il nome precedentemente denominato &quot;Servizio RGPD&quot; è stato rinominato in [!DNL Privacy Service] in quanto il servizio è cresciuto per supportare altre normative oltre al RGPD. |
-| Nuovi endpoint API | Il percorso di base per l&#39;API [!DNL Privacy Service] è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
-| Nuova proprietà `regulation` obbligatoria | Durante la creazione di nuovi lavori nell&#39;API [!DNL Privacy Service], è necessario fornire una proprietà `regulation` nel payload della richiesta per indicare il regolamento in cui tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
-| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta richieste di accesso/eliminazione da Adobe  [!DNL Primetime Authentication], utilizzando  `primetimeAuthentication` come valore del prodotto. |
+| [!DNL Privacy Service] rebranding | Il nome precedentemente denominato &quot;Servizio RGPD&quot; è stato rinominato in [!DNL Privacy Service] poiché il servizio è cresciuto per supportare altre normative oltre al RGPD. |
+| Nuovi endpoint API | Percorso di base per [!DNL Privacy Service] L’API è stata aggiornata da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
+| Nuovo obbligatorio `regulation` property | Durante la creazione di nuovi lavori nel [!DNL Privacy Service] API `regulation` la proprietà deve essere fornita nel payload della richiesta per indicare quale regola monitorare il processo in. I valori accettati sono `gdpr` e `ccpa`. |
+| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta richieste di accesso/cancellazione da Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore del prodotto. |
 | Miglioramenti all’interfaccia utente di Privacy Service | Pagine separate per il tracciamento dei processi per i regolamenti RGPD e CCPA. Nuovo elenco a discesa **Regulation Type (Tipo di regolamento) **per passare dai dati di tracciamento per RGPD e CCPA. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni su [!DNL Privacy Service], leggere la [panoramica di Privacy Service](../../privacy-service/home.md).
+Per ulteriori informazioni [!DNL Privacy Service], si prega di iniziare leggendo il [Panoramica di Privacy Service](../../privacy-service/home.md).
 
-## Fonti {#sources}
+## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
@@ -82,19 +81,19 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso 
 | Categoria | Autorizzazione | Descrizione |
 |--- | --- | ---|
 | Acquisizione dei dati | Gestisci origini | Accesso a fonti di lettura, creazione, modifica e disattivazione. |
-| Acquisizione dei dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalog]** e alle origini autenticate nella scheda **[!UICONTROL Browse]** . |
+| Acquisizione dei dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nel **[!UICONTROL Catalogo]** e le origini autenticate nel **[!UICONTROL Sfoglia]** scheda . |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md)
+Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md)
 
 ## Destinazioni {#destinations}
 
 In [Real-time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
@@ -105,11 +104,11 @@ In [Real-time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni p
 | Categoria | Autorizzazione | Descrizione |
 |--- | --- | ---|
 | Destinazioni | Gestire le destinazioni | Accesso a destinazioni in lettura, creazione, modifica e disattivazione. |
-| Destinazioni | Visualizzare le destinazioni | Accesso in sola lettura alle destinazioni disponibili nella scheda **[!UICONTROL Catalog]** e alle destinazioni autenticate nella scheda **Sfoglia** . |
+| Destinazioni | Visualizzare le destinazioni | Accesso in sola lettura alle destinazioni disponibili nel **[!UICONTROL Catalogo]** le destinazioni autenticate nel **Sfoglia** scheda . |
 | Destinazioni | Attivare le destinazioni | Possibilità di attivare i dati sulle destinazioni. Questa autorizzazione richiede l’aggiunta di &quot;Gestisci destinazioni&quot; o &quot;Visualizza destinazioni&quot; al profilo di prodotto. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni, consulta la [Panoramica sulle destinazioni](../../destinations/home.md) .
+Consulta la sezione [Panoramica sulle destinazioni](../../destinations/home.md) per ulteriori informazioni.

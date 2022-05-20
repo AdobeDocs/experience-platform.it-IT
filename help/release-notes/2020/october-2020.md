@@ -1,14 +1,13 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di Experience Platform - Ottobre 2020
+title: Note sulla versione di Adobe Experience Platform - Ottobre 2020
+description: Le note sulla versione di ottobre 2020 per Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1016'
 ht-degree: 4%
 
 ---
@@ -31,50 +30,50 @@ Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Funzione  di `is_set` | La funzione `is_set` ti consente di verificare la presenza di un attributo all’interno dei dati di origine. `is_set` può essere utilizzato in combinazione con  `is_empty` per controllare sia la presenza dell&#39;attributo sia la presenza del valore all&#39;interno dell&#39;attributo. |
-| Funzione  di `get_values` | La funzione `get_values` ti consente di ottenere i valori dalla mappa di input per una determinata chiave. |
+| Funzione  di `is_set` | La `is_set` consente di controllare la presenza di un attributo all&#39;interno dei dati di origine. `is_set` può essere utilizzato in combinazione con `is_empty` per verificare sia la presenza dell’attributo sia la presenza del valore all’interno dell’attributo. |
+| Funzione  di `get_values` | La `get_values` consente di ottenere i valori dalla mappa di input per una determinata chiave. |
 
-Per ulteriori informazioni, leggere la [Panoramica preparazione dati](../../data-prep/home.md).
+Per ulteriori informazioni, leggere il [Panoramica sulla preparazione dei dati](../../data-prep/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile] puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Aggiunte API di anteprima del profilo | L’API di anteprima del profilo (`/previewsamplestatus`) ora include la possibilità di visualizzare una suddivisione dei frammenti di profilo totali nell’organizzazione IMS e di visualizzare la distribuzione dei frammenti di profilo tra i namespace dell’identità. |
+| Aggiunte API di anteprima del profilo | API di anteprima del profilo (`/previewsamplestatus`) ora include la possibilità di visualizzare una suddivisione dei frammenti di profilo totali nell’organizzazione IMS e di visualizzare la distribuzione dei frammenti di profilo tra i namespace dell’identità. |
 | Aggiornamenti della visualizzazione dello schema dell&#39;unione | Nell’interfaccia utente di Experience Platform, gli utenti possono trovare più facilmente informazioni su tutti gli schemi e i set di dati che contribuiscono allo schema dell’unione, nonché attributi chiave di superficie come i campi di identità e relazione. Questi aggiornamenti migliorano la possibilità di risolvere e convalidare la corretta configurazione dei profili, la corretta unione delle identità e il corretto inserimento dei dati. |
 
-Per ulteriori informazioni su [!DNL Real-time Customer Profile], compresi i tutorial e le best practice per l’utilizzo dei dati [!DNL Profile], consulta la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni su [!DNL Real-time Customer Profile], incluse esercitazioni e best practice per l’utilizzo di [!DNL Profile] dati, leggere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dai dati [!DNL Real-time Customer Profile]. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione di Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Rimozione del limite di segmentazione in streaming | Il limite di sette giorni per il periodo di lookback è stato rimosso. |
 
-Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md)
+Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md)
 
-## Fonti {#sources}
+## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto dell’autenticazione SSH per SFTP | Puoi collegare il tuo account SFTP a [!DNL Platform] utilizzando le chiavi SSH RSA/DSA aperte. Per ulteriori informazioni, consulta la [Panoramica SFTP](../../sources/connectors/cloud-storage/sftp.md) . |
-| Miglioramenti UX | Puoi abilitare il set di dati per [!DNL Profile] durante il processo di inserimento dei dati. Per ulteriori informazioni, consulta l’ esercitazione [flusso di lavoro flusso di lavoro per l’archiviazione cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
+| Supporto dell’autenticazione SSH per SFTP | Puoi collegare il tuo account SFTP a [!DNL Platform] utilizzo delle chiavi SSH aperte RSA/DSA. Consulta la sezione [Panoramica SFTP](../../sources/connectors/cloud-storage/sftp.md) per ulteriori informazioni. |
+| Miglioramenti UX | Puoi abilitare il set di dati per [!DNL Profile] durante il processo di inserimento dei dati. Consulta la sezione [flusso di lavoro flusso di lavoro per l’archiviazione cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) esercitazione per ulteriori informazioni. |
 
-Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md).
+Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).
 
 ## Time to Value {#time-to-value}
 
@@ -107,7 +106,7 @@ La mappatura automatica, l’anteprima della mappatura e l’aggiornamento dell�
 
 Un visualizzatore di profili intuitivo per gli addetti al marketing con funzioni di personalizzazione ti aiuta a comprendere la composizione di un profilo da utilizzare nei casi di segmentazione, pianificazione e attivazione. Il flusso di lavoro consolidato idrata il profilo in modo controllato ed efficiente fornendo un flusso di lavoro graduale per i criteri di unione.
 
-- Visualizza ogni singolo profilo in un visualizzatore di profili avanzato che visualizza una dashboard con personalizzazione completa, consentendo il raggruppamento di dati cross-channel in base agli obiettivi aziendali dell’addetto al marketing.
+- Visualizza ogni singolo profilo in un visualizzatore di profili avanzato che visualizza una dashboard con personalizzazione completa, abilitando dati raggruppati tra canali in base agli obiettivi aziendali dell’addetto al marketing.
 - Modifica gli attributi standard e personalizzati nel widget Informazioni di base, in base alle esigenze aziendali.
 - Personalizzare i widget con gli attributi del profilo cliente in tempo reale utilizzando il selettore dello schema di unione. Lo schema di unione viene derivato dai modelli di dati sottostanti utilizzati nell’inserimento dei dati di profilo.
 

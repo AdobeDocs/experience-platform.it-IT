@@ -1,10 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
+title: Note sulla versione di Adobe Experience Platform - Ottobre 2021
+description: Note sulla versione di ottobre 2021 per Adobe Experience Platform.
+exl-id: 8f8bcb24-6478-4281-9362-9559158384af
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 9%
+source-wordcount: '455'
+ht-degree: 6%
 
 ---
 
