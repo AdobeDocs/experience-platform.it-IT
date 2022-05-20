@@ -5,9 +5,9 @@ title: Glossario delle etichette di utilizzo dei dati
 topic-legacy: labels
 description: Questo documento delinea tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '2053'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,8 @@ Un tipo di dati che si può considerare sensibili può essere di diversi tipi di
 | --- | --- |
 | **S1** | Dati che specificano latitudine e longitudine utilizzabili per determinare la posizione precisa di un dispositivo. |
 | **S2** | Dati che possono essere utilizzati per determinare un&#39;area geografica ampiamente definita. |
+| **PSPD** | Dati personali sensibili consentiti (PSPD) si riferisce a dati che sono contrattualmente autorizzati dall’Adobe a caricare che sono considerati &quot;sensibili&quot;, &quot;categorie speciali di dati&quot; o un termine simile utilizzato dalle leggi applicabili. Ciò esclude specificamente le informazioni sulla salute protetta (PHI) e altri dati sanitari regolamentati. |
+| **RHD** | Dati che si riferiscono a informazioni sulla salute protetta (PHI) o informazioni su un paziente che l&#39;Adobe consente contrattualmente di caricare. |
 
 ## Appendice
 
