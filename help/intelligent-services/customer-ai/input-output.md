@@ -6,9 +6,9 @@ title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '3096'
 ht-degree: 0%
 
 ---
@@ -264,6 +264,10 @@ Quando configuri una nuova istanza di AI del cliente, `audienceName` e `audience
 ## Dati di output di Customer AI
 
 Customer AI genera diversi attributi per singoli profili ritenuti idonei. Esistono due modi per utilizzare il punteggio (output) in base al provisioning eseguito. Se disponi di un set di dati abilitato per il profilo cliente in tempo reale, puoi utilizzare informazioni provenienti dal profilo cliente in tempo reale nel [Generatore di segmenti](../../segmentation/ui/segment-builder.md). Se non hai un set di dati abilitato per il profilo, puoi [scaricare l&#39;output di Customer AI](./user-guide/download-scores.md) set di dati disponibile sul data lake.
+
+Puoi trovare il set di dati di output in **Set di dati** in Platform. Tutti i set di dati di output di Customer AI iniziano con il nome **Punteggi di Customer AI - Nome_dell_app** mentre tutti gli schemi di output di Customer AI iniziano con il nome **Schema di Customer AI - Nome_dell_app**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >

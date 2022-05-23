@@ -7,7 +7,7 @@ topic-legacy: Customer AI Overview
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 18%
@@ -46,7 +46,7 @@ Il seguente video è progettato per supportare la tua comprensione di Customer A
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## Come funziona?
+## Come funziona
 
 Customer AI funziona analizzando i dati esistenti dell’evento esperienza del consumatore per prevedere i punteggi di propensione di abbandono o conversione. L’Adobe si rende conto che la definizione di abbandono e conversione non è uniforme in tutti i casi d’uso e, per questo motivo, puoi definire obiettivi di destinazione personalizzati come un insieme di condizioni. Puoi configurare l’obiettivo previsto purché l’evento di interesse sia presente nei dati dell’evento di esperienza del consumatore di input.
 
