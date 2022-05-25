@@ -4,7 +4,7 @@ description: Scopri come utilizzare l’API server di rete Edge per interagire c
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: raccolta dei dati; uscita; analisi; API di rete Adobe Experience Platform Edge;analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -19,7 +19,7 @@ La raccolta dati di Adobe Analytics funziona traducendo i dati XDM in un formato
 
 È inoltre possibile [mappare manualmente i valori XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) alle variabili Analytics legacy.
 
-Per consentire ad Adobe Analytics di ricevere dati dall’API del server, devi [configurare il datastream](../edge/fundamentals/datastreams.md#adobe-analytics-settings) per inoltrare gli eventi ad Adobe Analytics, immettendo l’ID suite di rapporti nella pagina di configurazione del datastream.
+Per consentire ad Adobe Analytics di ricevere dati dall’API del server, devi [configurare il datastream](../edge/datastreams/overview.md#adobe-analytics-settings) per inoltrare gli eventi ad Adobe Analytics, immettendo l’ID suite di rapporti nella pagina di configurazione del datastream.
 
 ![Configurazione di Adobe Analytics Datastream](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Richiesta {#request}
 
-L&#39;esempio seguente include diversi valori mappati automaticamente dal `_experience.analytics` gruppo di campi. Include anche livelli di dati basati su JSON. Sebbene questi livelli dati non possano essere mappati automaticamente, è possibile utilizzarli [Preparazione per la raccolta dei dati](../edge/fundamentals/datastreams.md#data-prep) per mappare questi valori su uno schema contenente gruppi di campi a cui si fa riferimento in precedenza.
+L&#39;esempio seguente include diversi valori mappati automaticamente dal `_experience.analytics` gruppo di campi. Include anche livelli di dati basati su JSON. Sebbene questi livelli dati non possano essere mappati automaticamente, è possibile utilizzarli [Preparazione per la raccolta dei dati](../edge/datastreams/data-prep.md) per mappare questi valori su uno schema contenente gruppi di campi a cui si fa riferimento in precedenza.
 
 Tutti i valori mappati dagli utenti a tali campi verranno automaticamente mappati ai valori Analytics appropriati, come se fossero inclusi nella richiesta API.
 

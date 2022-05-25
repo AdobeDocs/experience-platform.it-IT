@@ -2,13 +2,13 @@
 title: Sincronizzazione dei profili in tempo reale per mbox3rdPartyId
 description: Scopri come utilizzare mbox3rdPartyId con Adobe Experience Platform Web SDK.
 keywords: personalizzazione;target;adobe target;renderdecisions;sendEvent;mbox3rdPartyId;
-source-git-commit: 439f26177837e985ef95e972c3102cc2db37d539
+exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
-
 
 # Che cosa è `mbox3rdPartyId`
 
@@ -21,8 +21,8 @@ Quando un visitatore accede al sito di un’azienda, in genere l’azienda crea 
 
 ### Passaggio 1: Configura le `Target Third Party ID Namespace`
 
-Configura le `Target Third Party ID Namespace` nel tuo [Datastream](../../fundamentals/datastreams.md), utilizzando lo spazio dei nomi ID che si desidera utilizzare come ID di terze parti mbox.
-[Ulteriori informazioni sui namespace ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+Configura le `Target Third Party ID Namespace` nel tuo [Datastream](../../datastreams/overview.md), utilizzando lo spazio dei nomi ID che si desidera utilizzare come ID di terze parti mbox.
+[Ulteriori informazioni sui namespace ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it)
 
 ![](assets/mbox3rdpartyid.png)
 
@@ -45,5 +45,3 @@ alloy("sendEvent", {
   }
 });
 ```
-
-

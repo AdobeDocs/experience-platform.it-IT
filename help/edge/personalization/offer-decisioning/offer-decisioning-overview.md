@@ -3,10 +3,10 @@ title: Utilizzo di Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o l’API di Offer Decisioning.
 keywords: offer decisioning;decisione;SDK web;Platform Web SDK;offerte personalizzate;distribuire offerte;consegna offerte;personalizzazione offerte;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Platform [!DNL Web SDK] può fornire ed eseguire il rendering d
 
    ![](assets/decision-scope-copy.png)
 
-* **Datastreams:** Per ulteriori informazioni, leggere il [datastreams](../../fundamentals/datastreams.md) documentazione.
+* **Datastreams:** Per ulteriori informazioni, leggere il [datastreams](../../datastreams/overview.md) documentazione.
 
 * **Identità**: Per ulteriori informazioni, consulta questa documentazione che illustra come [L’SDK per web di Platform utilizza il servizio Identity](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Web SDK] può fornire ed eseguire il rendering d
 
 Per abilitare l’Offer decisioning, esegui le seguenti operazioni:
 
-1. Abilitazione di Adobe Experience Platform nel [datastream](../../fundamentals/datastreams.md) e selezionare la casella &quot;Offer decisioning&quot;
+1. Abilitazione di Adobe Experience Platform nel [datastream](../../datastreams/overview.md) e selezionare la casella &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 

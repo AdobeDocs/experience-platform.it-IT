@@ -5,7 +5,7 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Le tecnologie di raccolta dati fornite da Experience Platform si concentrano sul
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tag](../tags/home.md)
-* [Datastream](../edge/fundamentals/datastreams.md)
+* [Stream di dati](../edge/datastreams/overview.md)
 * [Inoltro eventi](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ La compressione di queste librerie velocizza la raccolta dei dati e consolida le
 
 ## Rete e datastreams di Platform Edge {#edge}
 
-Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi configurare [datastreams](../edge/fundamentals/datastreams.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
+Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi configurare [datastreams](../edge/datastreams/overview.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
 
 ![Datastreams e soluzioni Adobe](./images/home/adobe-solutions.png)
 

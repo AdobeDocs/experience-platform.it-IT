@@ -2,7 +2,7 @@
 title: Configurare l’estensione Adobe Experience Platform Web SDK
 description: Come configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente di raccolta dati.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -51,7 +51,7 @@ La [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experienc
 
 Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, viene utilizzato un ID di datastream per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
-Consulta la guida su [datastreams](../fundamentals/datastreams.md) per ulteriori informazioni.
+Consulta la guida su [datastreams](../datastreams/overview.md) per ulteriori informazioni.
 
 
 ## [!UICONTROL Privacy]

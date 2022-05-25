@@ -1,7 +1,8 @@
 ---
 title: Gruppo di campi schema di estensione completa Adobe Analytics ExperienceEvent
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema di estensione completa Adobe Analytics ExperienceEvent.
-source-git-commit: bfdcee33fb2cbd28039633d1d981149c40aa1d68
+exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 7%
@@ -102,4 +103,4 @@ Ogni oggetto even utilizza [[!UICONTROL Misura]](../../data-types/measure.md) ti
 
 Questo documento ha trattato la struttura e il caso d&#39;uso del gruppo di campi dell&#39;estensione Analytics. Per ulteriori dettagli sul gruppo di campi stesso, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-Se utilizzi questo gruppo di campi per raccogliere dati di Analytics tramite l’SDK per web di Adobe Experience Platform, consulta la guida in [configurazione di un datastream](../../../edge/fundamentals/datastreams.md) per scoprire come mappare i dati su XDM sul lato server.
+Se utilizzi questo gruppo di campi per raccogliere dati di Analytics tramite l’SDK per web di Adobe Experience Platform, consulta la guida in [configurazione di un datastream](../../../edge/datastreams/overview.md) per scoprire come mappare i dati su XDM sul lato server.
