@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: 1d49e7d1adcccc012f4d189f8cfba8bbdc895894
+source-git-commit: 36202327f0885309fa6790d2eb0ec6cfa9bb8780
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 20%
+source-wordcount: '171'
+ht-degree: 19%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 20%
    - [Query Adobe Target di esempio](sample-queries/adobe-target.md)
 - Governance dei dati {#data-governance}
    - [Guida al registro di controllo](data-governance/audit-log-guide.md)
+   - [Identità nei set di dati di schemi ad hoc](data-governance/ad-hoc-schema-identities.md)
 - Riferimento SQL {#sql}
    - [Panoramica SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
