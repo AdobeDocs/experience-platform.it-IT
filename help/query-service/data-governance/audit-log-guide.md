@@ -2,9 +2,9 @@
 title: Integrazione del registro di controllo del servizio query
 description: I registri di controllo del servizio query conservano i record per varie azioni dell’utente per creare un audit trail per la risoluzione dei problemi o per rispettare le politiche di gestione dei dati aziendali e i requisiti normativi. Questa esercitazione fornisce una panoramica delle funzioni del registro di controllo specifiche di Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ Le categorie del registro di controllo fornite da [!DNL Query Service] sono le s
 
 | Categoria | Descrizione |
 |---|---|
-| [!UICONTROL Query pianificata] | Questa categoria ti consente di controllare le pianificazioni create, aggiornate o eliminate in [!DNL Query Service]. |
+| [!UICONTROL Query] | Questa categoria ti consente di controllare le esecuzioni delle query. |
 | [!UICONTROL Modello di query] | Questa categoria ti consente di controllare le varie azioni (creazione, aggiornamento ed eliminazione) eseguite in un modello di query. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Query pianificata] | Questa categoria ti consente di controllare le pianificazioni create, aggiornate o eliminate in [!DNL Query Service]. |
 
 ## Eseguire un [!DNL Query Service] registro di controllo {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ I dati del registro di controllo restituiti contengono le seguenti informazioni 
 | Nome colonna | Descrizione |
 |---|---|
 | [!UICONTROL Marca temporale] | Data e ora esatte dell’azione eseguita in un `month/day/year hour:minute AM/PM` formato. |
-| [!UICONTROL Nome risorsa] | Il valore per [!UICONTROL Nome risorsa] Il campo dipende dalla categoria selezionata come filtro. Quando utilizzi [!UICONTROL Query pianificata] categoria **nome della pianificazione**. Quando utilizzi [!UICONTROL Modello di query] questa è la categoria **nome modello**. |
+| [!UICONTROL Nome risorsa] | Il valore per [!UICONTROL Nome risorsa] Il campo dipende dalla categoria selezionata come filtro. Quando utilizzi [!UICONTROL Query pianificata] categoria **nome della pianificazione**. Quando utilizzi [!UICONTROL Modello di query] questa è la categoria **nome modello**. Quando utilizzi [!UICONTROL Query] questa è la categoria **session ID** |
 | [!UICONTROL Categoria] | Questo campo corrisponde alla categoria selezionata dall’utente nel menu a discesa del filtro. |
 | [!UICONTROL Azione] | Può essere creato, eliminato, aggiornato o eseguito. Le azioni disponibili dipendono dalla categoria selezionata come filtro. |
 | [!UICONTROL Utente] | Questo campo fornisce l’ID utente che ha eseguito la query. |
@@ -53,13 +53,25 @@ I dati del registro di controllo restituiti contengono le seguenti informazioni 
 >
 >Maggiori dettagli di query vengono forniti scaricando i risultati del registro in formato CSV o JSON, rispetto a quelli visualizzati per impostazione predefinita nel dashboard del registro di controllo.
 
+## Pannello Dettagli
+
 Seleziona una riga di risultati del registro di controllo per aprire un pannello dei dettagli a destra della schermata.
 
 ![Controlla la scheda del registro attività del dashboard con il pannello dei dettagli evidenziato.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->Il pannello dei dettagli può essere utilizzato per trovare il [!UICONTROL ID risorsa]. Il valore del [!UICONTROL ID risorsa] cambia a seconda della categoria utilizzata nel controllo di audit. Quando utilizzi [!UICONTROL Modello di query] la categoria [!UICONTROL ID risorsa] è **ID modello**. Quando utilizzi [!UICONTROL Query pianificata] la categoria [!UICONTROL ID risorsa] è  **ID pianificazione**.
+Il pannello dei dettagli può essere utilizzato per trovare il [!UICONTROL ID risorsa] e [!UICONTROL Stato dell’evento].
+
+Il valore del [!UICONTROL ID risorsa] cambia a seconda della categoria utilizzata nel controllo di audit.
+
+* Quando utilizzi [!UICONTROL Query] la categoria [!UICONTROL ID risorsa] è  **session ID**.
+* Quando utilizzi [!UICONTROL Modello di query] la categoria [!UICONTROL ID risorsa] è **ID modello** e con prefisso `[!UICONTROL templateID:]`.
+* Quando utilizzi [!UICONTROL Query pianificata] la categoria [!UICONTROL ID risorsa] è  **ID pianificazione** e con prefisso `[!UICONTROL scheduleID:]`.
+
+Il valore del [!UICONTROL Stato dell’evento] cambia a seconda della categoria utilizzata nel controllo di audit.
+
+* Quando utilizzi [!UICONTROL Query] la categoria [!UICONTROL Stato dell’evento] fornisce un elenco di tutti **ID query** eseguito dall’utente all’interno di tale sessione.
+* Quando utilizzi [!UICONTROL Modello di query] la categoria [!UICONTROL Stato dell’evento] fornisce **nome modello** come prefisso per lo stato dell’evento.
+* Quando utilizzi [!UICONTROL Pianificazione query] la categoria [!UICONTROL Stato dell’evento] fornisce **nome della pianificazione** come prefisso per lo stato dell’evento.
 
 ## Filtri disponibili per [!DNL Query Service] categorie del registro di controllo {#available-filters}
 
@@ -68,9 +80,9 @@ I filtri disponibili variano a seconda della categoria selezionata nel menu a di
 | Filtro | Descrizione |
 |---|---|
 | Categoria | Consulta la sezione [[!DNL Query Service] categorie del registro di controllo](#audit-log-categories) per un elenco completo delle categorie disponibili. |
-| Azione | Quando si fa riferimento a [!DNL Query Service] categorie di controllo, l&#39;aggiornamento è un **modifica del modulo esistente**, elimina è **rimozione del programma o del modello**, crea **creazione di una nuova pianificazione o di un nuovo modello** e execute esegue una query. |
+| Azione | Quando si fa riferimento a [!DNL Query Service] categorie di controllo, l&#39;aggiornamento è un **modifica del modulo esistente**, elimina è **rimozione del programma o del modello**, crea **creazione di una nuova pianificazione o di un nuovo modello** e execute is **esecuzione di una query**. |
 | Utente | Immetti l’ID utente completo (ad esempio, johndoe@acme.com) per filtrare in base all’utente. |
-| Stato | Questo filtro non si applica al [!DNL Query Service] registri di controllo. La [!UICONTROL Consenti], [!UICONTROL Completato]e [!UICONTROL Errore] le opzioni non filtrano i risultati, mentre [!UICONTROL Nega] l’opzione verrà rimossa **tutto** registri. |
+| Stato | La [!UICONTROL Consenti], [!UICONTROL Completato]e [!UICONTROL Errore] le opzioni filtrano i registri in base a &quot;Status&quot; o &quot;Event Status&quot;, mentre il [!UICONTROL Nega] l’opzione verrà rimossa **tutto** registri. |
 | Data | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
 
 ## Passaggi successivi
