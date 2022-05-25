@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '781'
 ht-degree: 11%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 11%
    - Successo cliente {#customer-success}
       - [Connettore cloud del servizio Salesforce](connectors/customer-success/salesforce-service-cloud.md)
       - [Connettore ServiceNow](connectors/customer-success/servicenow.md)
+      - [Connettore Zendesk](connectors/customer-success/zendesk.md)
    - Database {#databases}
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
@@ -123,6 +124,7 @@ ht-degree: 11%
       - Successo cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Database {#databases}
          - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive su Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -221,6 +223,7 @@ ht-degree: 11%
       - Successo del cliente {#customer-success}
          - [Cloud di servizi Salesforce](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Database {#databases}
          - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive su Azure HDInsights](tutorials/ui/create/databases/hive.md)
