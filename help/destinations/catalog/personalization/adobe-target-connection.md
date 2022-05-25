@@ -3,9 +3,9 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '752'
 ht-degree: 1%
 
 ---
@@ -20,11 +20,13 @@ Adobe Target è una connessione di personalizzazione in Adobe Experience Platfor
 
 ## Prerequisiti {#prerequisites}
 
-Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../edge/home.md). Devi usare questo SDK per usare questa destinazione.
+Durante la configurazione della connessione Adobe Target a [utilizzare un ID datastream](#parameters), è necessario disporre del [Adobe Experience Platform Web SDK](../../../edge/home.md) implementato.
+
+La configurazione della connessione Adobe Target senza l’utilizzo di un ID datastream non richiede l’implementazione dell’SDK web.
 
 >[!IMPORTANT]
 >
->Prima di creare un [!DNL Adobe Target] connessione, leggere la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
+>Prima di creare un [!DNL Adobe Target] connessione, leggere la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform. Per la personalizzazione della stessa pagina e della pagina successiva è necessario utilizzare un ID di archivio dati per configurare la connessione Adobe Target.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -48,8 +50,8 @@ Una società di noleggio e vendita di casa vuole personalizzare la propria home 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Informazioni sugli ID di datastream"
->abstract="Questa opzione determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. È necessario configurare un datastream prima di poter configurare la destinazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Scopri come configurare un datastream"
+>abstract="Questa opzione determina in quale datastream di raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo i datastreams con la configurazione di Target abilitata. Per utilizzare la segmentazione Edge, è necessario selezionare un ID datastream. Selezionando Nessuno vengono disattivati tutti i casi d’uso che utilizzano la segmentazione dei bordi."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Ulteriori informazioni sulla selezione dei datastreams."
 
 >[!IMPORTANT]
 > 
@@ -65,7 +67,12 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * **Nome**: Compila il nome preferito per questa destinazione.
 * **Descrizione**: Inserisci una descrizione per la destinazione. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione. Questo campo è facoltativo.
-* **ID Datastream**: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Vedi [Configurazione di un datastream](../../../edge/datastreams/overview.md) per ulteriori dettagli.
+* **ID Datastream**: Questo determina in quale datastream di raccolta dati i segmenti saranno inclusi. Il menu a discesa mostra solo i datastreams con la destinazione Target abilitata. Vedi [configurazione di un datastream](../../../edge/datastreams/overview.md#target) per informazioni dettagliate su come configurare un datastream per Adobe Target.
+   * **[!UICONTROL Nessuno]**: Seleziona questa opzione se hai bisogno di configurare la personalizzazione Adobe Target ma non puoi implementare il [Experience Platform Web SDK](../../../edge/home.md). Quando utilizzi questa opzione, i segmenti esportati da Experience Platform a Target supportano solo la personalizzazione a sessione successiva e la segmentazione edge viene disabilitata. Per ulteriori informazioni, consulta la tabella seguente.
+
+| Nessun datastream selezionato | Datastream selezionato |
+|---|---|
+| <ul><li>[Segmentazione degli spigoli](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere i segmenti alla connessione Adobe Target solo per la sandbox di produzione.</li><li>Per configurare la personalizzazione di sessione successiva senza utilizzare un ID di datastream, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione dei bordi funziona come previsto.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere segmenti e attributi utilizzando l’API del servizio di flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2419'
 ht-degree: 2%
 
 ---
@@ -484,8 +484,8 @@ curl -X PATCH \
             "schedule":{
                "startDate":"2022-01-05",
                "frequency":"DAILY",
-               "endData":"2022-03-10"
-               "startTime":"16:00",
+               "triggerType": "AFTER_SEGMENT_EVAL",
+               "endDate":"2022-03-10"
             }
          }
       }
@@ -504,6 +504,7 @@ curl -X PATCH \
 | `exportMode` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona `"DAILY_FULL_EXPORT"` (Mostra origine dati) o `"FIRST_FULL_THEN_INCREMENTAL"` (Blocca selezione). Per ulteriori informazioni sulle due opzioni, consulta [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione sull’attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il segmento deve iniziare l’esportazione dei profili nella tua destinazione. |
 | `frequency` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si seleziona la `"DAILY_FULL_EXPORT"` nella modalità `frequency` selettore. <br> Obbligatorio. <br> <ul><li>Seleziona `"AFTER_SEGMENT_EVAL"` per eseguire il processo di attivazione immediatamente dopo il completamento del processo di segmentazione batch giornaliero di Platform. In questo modo, quando il processo di attivazione viene eseguito, i profili più aggiornati vengono esportati nella destinazione.</li><li>Seleziona `"SCHEDULED"` per far sì che il processo di attivazione venga eseguito a un orario fisso. In questo modo i dati del profilo di Experience Platform vengono esportati allo stesso tempo ogni giorno, ma i profili esportati potrebbero non essere i più aggiornati, a seconda che il processo di segmentazione del batch sia stato completato prima dell’avvio del processo di attivazione. Quando selezioni questa opzione, devi anche aggiungere una `startTime` per indicare l’ora in UTC in cui devono essere eseguite le esportazioni giornaliere.</li></ul> |
 | `endDate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile quando si seleziona `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del segmento smettono di essere esportati nella destinazione. |
 | `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona l’ora in cui i file contenenti i membri del segmento devono essere generati ed esportati nella destinazione. |
 
@@ -639,6 +640,112 @@ Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi ver
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
+
+Vedi gli esempi seguenti per ulteriori esempi di componenti di segmenti che puoi aggiornare in un flusso di dati.
+
+## Aggiorna la modalità di esportazione di un segmento da programmato a dopo la valutazione del segmento {#update-export-mode}
+
++++ Fai clic su per visualizzare un esempio in cui l’esportazione di un segmento viene aggiornata dall’attivazione giornaliera in un dato momento all’attivazione ogni giorno dopo il completamento del processo di segmentazione batch di Platform.
+
+Il segmento viene esportato ogni giorno alle 16:00 UTC.
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+Il segmento viene esportato ogni giorno dopo il completamento del processo di segmentazione batch giornaliero.
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "AFTER_SEGMENT_EVAL",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
+
+## Aggiornare il modello di nome file per includere campi aggiuntivi nel nome file {#update-filename-template}
+
++++ Fare clic per visualizzare un esempio in cui il modello di nome file viene aggiornato per includere campi aggiuntivi nel nome del file
+
+I file esportati contengono il nome di destinazione e l’ID del segmento di Experience Platform
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+I file esportati contengono il nome di destinazione, l’ID del segmento di Experience Platform, la data e l’ora in cui il file è stato generato dall’Experience Platform e il testo personalizzato aggiunto alla fine dei file.
+
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_%this is custom text%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
 
 ## Aggiungere un attributo di profilo a un flusso di dati {#add-profile-attribute}
 

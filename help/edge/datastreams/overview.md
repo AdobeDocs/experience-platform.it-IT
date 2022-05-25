@@ -3,7 +3,7 @@ title: Panoramica dei Datastreams
 description: Connetti l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;destinazioni Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;Mapper DM;Mapper sul bordo;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 4ad80d8198f86010291532a9e6b9cd564abf6d15
+source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
 workflow-type: tm+mt
 source-wordcount: '1686'
 ht-degree: 2%
@@ -84,7 +84,7 @@ Le sottosezioni seguenti descrivono le opzioni di configurazione per ogni serviz
 >
 >Ogni configurazione del servizio contiene un **[!UICONTROL Abilitato]** attiva automaticamente quando il servizio è selezionato. Per disabilitare il servizio selezionato per questo datastream, seleziona il **[!UICONTROL Abilitato]** scattare di nuovo.
 
-### Impostazioni di Adobe Analytics
+### Impostazioni di Adobe Analytics {#analytics}
 
 Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella guida all&#39;indirizzo [invio di dati ad Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -94,7 +94,7 @@ Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. U
 | --- | --- |
 | [!UICONTROL ID suite di rapporti] | **(Obbligatorio)** ID della suite di rapporti di Analytics a cui desideri inviare i dati. Questo ID si trova nell&#39;interfaccia utente di Adobe Analytics in [!UICONTROL Amministratore] > [!UICONTROL ReportSuites]. Se sono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti. |
 
-### Impostazioni Adobe Audience Manager
+### Impostazioni Adobe Audience Manager {#audience-manager}
 
 Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Manager. Tutto ciò che è necessario per inviare dati ad Audience Manager è quello di abilitare questa sezione. Le altre impostazioni sono facoltative ma incoraggiate.
 
@@ -105,7 +105,7 @@ Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Mana
 | [!UICONTROL Destinazioni cookie abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [destinazioni cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) da [!DNL Audience Manager]. |
 | [!UICONTROL Destinazioni URL abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) da [!DNL Audience Manager]. |
 
-### Impostazioni Adobe Experience Platform
+### Impostazioni Adobe Experience Platform {#aep}
 
 >[!IMPORTANT]
 >
@@ -127,7 +127,7 @@ Questo servizio controlla se e come i dati vengono inviati a Adobe Experience Pl
 | [!UICONTROL Segmentazione Edge] | Seleziona questa casella di controllo per abilitare [segmentazione dei bordi](../../segmentation/ui/edge-segmentation.md) per questo datastream. Quando l’SDK invia i dati tramite un datastream abilitato per la segmentazione edge, nella risposta vengono restituite tutte le appartenenze di segmenti aggiornate per il profilo in questione.<br><br>Questa opzione può essere utilizzata in combinazione con [!UICONTROL Destinazioni personalizzazione] per [casi d’uso per la personalizzazione di pagine successive](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL Destinazioni personalizzazione] | Se utilizzato in combinazione con il [!UICONTROL Segmentazione Edge] questa opzione consente al datastream di connettersi a motori di personalizzazione come Adobe Target. Fai riferimento alla documentazione sulle destinazioni per i passaggi specifici su [configurazione delle destinazioni di personalizzazione](../../destinations/ui/configure-personalization-destinations.md). |
 
-### Impostazioni di Adobe Target
+### Impostazioni di Adobe Target {#target}
 
 Questo servizio controlla se e come i dati vengono inviati ad Adobe Target.
 

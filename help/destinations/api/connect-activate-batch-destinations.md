@@ -6,10 +6,10 @@ description: Istruzioni dettagliate per utilizzare l’API del servizio Flusso p
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '3129'
-ht-degree: 3%
+source-wordcount: '3334'
+ht-degree: 2%
 
 ---
 
@@ -1003,6 +1003,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "SCHEDULED",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
@@ -1037,10 +1038,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | Obbligatorio. Seleziona `"DAILY_FULL_EXPORT"` (Mostra origine dati) o `"FIRST_FULL_THEN_INCREMENTAL"` (Blocca selezione). Per ulteriori informazioni sulle due opzioni, consulta [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione sull’attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il segmento deve iniziare l’esportazione dei profili nella tua destinazione. |
 | `frequency` | Obbligatorio. <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `endDate` | Non applicabile quando si seleziona `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del segmento smettono di essere esportati nella destinazione. |
-| `startTime` | Obbligatorio. Seleziona l’ora in cui i file contenenti i membri del segmento devono essere generati ed esportati nella destinazione. |
+| `triggerType` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si seleziona la `"DAILY_FULL_EXPORT"` nella modalità `frequency` selettore. <br> Obbligatorio. <br> <ul><li>Seleziona `"AFTER_SEGMENT_EVAL"` per eseguire il processo di attivazione immediatamente dopo il completamento del processo di segmentazione batch giornaliero di Platform. In questo modo, quando il processo di attivazione viene eseguito, i profili più aggiornati vengono esportati nella destinazione.</li><li>Seleziona `"SCHEDULED"` per far sì che il processo di attivazione venga eseguito a un orario fisso. In questo modo i dati del profilo di Experience Platform vengono esportati allo stesso tempo ogni giorno, ma i profili esportati potrebbero non essere i più aggiornati, a seconda che il processo di segmentazione del batch sia stato completato prima dell’avvio del processo di attivazione. Quando selezioni questa opzione, devi anche aggiungere una `startTime` per indicare l’ora in UTC in cui devono essere eseguite le esportazioni giornaliere.</li></ul> |
+| `endDate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile quando si seleziona `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del segmento smettono di essere esportati nella destinazione. |
+| `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona l’ora in cui i file contenenti i membri del segmento devono essere generati ed esportati nella destinazione. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+> Vedi [Aggiornare i componenti di un segmento in un flusso di dati](/help/destinations/api/update-destination-dataflows.md#update-segment) per scoprire come aggiornare vari componenti (modello di nome file, tempo di esportazione e così via) dei segmenti esportati.
 
 **Risposta**
 
