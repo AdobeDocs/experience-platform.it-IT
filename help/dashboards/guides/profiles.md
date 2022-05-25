@@ -4,9 +4,9 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
+source-wordcount: '3761'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,8 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Dimensione del pubblico]](#audiences-size)
 * [[!UICONTROL Tendenza al conteggio dei profili]](#profile-count-trend)
 * [[!UICONTROL Singoli profili di identità per identità]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Sovrapposizione del pubblico per criterio di unione]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Tendenza di modifica del conteggio dei profili in base all&#39;identità]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL Numero di profili] {#profile-count}
 
@@ -127,7 +129,7 @@ Consulta la sezione [sezione sui criteri di unione in precedenza in questo docum
 >
 >La [!UICONTROL Numero di profili] widget può mostrare un numero diverso dal conteggio del profilo mostrato sul [!UICONTROL Sfoglia] nella scheda [!UICONTROL Profili] per diversi motivi. Il motivo più comune è che [!UICONTROL Sfoglia] fa riferimento al numero totale di profili uniti in base ai criteri di unione predefiniti della tua organizzazione, mentre la [!UICONTROL Numero di profili] Il widget fa riferimento al numero totale di profili uniti in base al criterio di unione selezionato per la visualizzazione nel dashboard.
 >
->Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale nel widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale sul widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
@@ -290,6 +292,25 @@ Questo widget utilizza un grafico a barre per illustrare il numero totale di pro
 Passa il puntatore del mouse sopra le singole barre per visualizzare una finestra di dialogo che descrive il conteggio totale dei profili per un’identità.
 
 ![I profili di identità singola per widget di identità.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Sovrapposizione del pubblico per criterio di unione] {#audience-overlap-by-merge-policy}
+
+Questo widget utilizza un diagramma di Venn per visualizzare la sovrapposizione di due segmenti selezionati. Il criterio di unione viene selezionato dal menu a discesa della panoramica nella parte superiore della pagina e i segmenti da analizzare sono selezionati da due menu a discesa all’interno del widget. Il numero totale di profili contenuti nella definizione del segmento pertinente può essere visto passando il cursore su un cerchio o sull’intersezione.
+
+Quando il widget visualizza il crossover visivo delle definizioni dei segmenti, puoi ottimizzare la strategia di segmentazione studiando le somiglianze tra le definizioni dei segmenti.
+
+![Dashboard dei profili dell&#39;interfaccia utente della piattaforma con il menu a discesa dei criteri di unione e gli elenchi a discesa dei segmenti dei widget evidenziati.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL Tendenza di modifica del conteggio dei profili in base all&#39;identità] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+Questo widget filtra il conteggio dei profili in base a un&#39;identità di origine selezionata e ai criteri di unione, quindi illustra la modifica del numero per diversi periodi utilizzando un grafico a linee. Il criterio di unione viene selezionato dal menu a discesa della panoramica nella parte superiore della pagina, l’identità sorgente e il periodo di tempo sono selezionati dai menu a discesa dei widget. La tendenza può essere visualizzata per periodi di 30 giorni, 90 giorni e 12 mesi.
+
+Questo widget ti aiuta a gestire le tue esigenze di attivazione di destinazione dimostrando il pattern di crescita dei profili filtrati da un’identità richiesta.
+
+![La tendenza del conteggio dei profili cambia in base al widget di identità.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Beta) Widget efficacia profilo {#profile-efficacy-widgets}
 

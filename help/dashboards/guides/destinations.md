@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Stato della destinazione]](#destination-status)
 * [[!UICONTROL Destinazioni attive per piattaforma di destinazione]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Tipi di pubblico attivati per tutte le destinazioni]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Tipi di pubblico attivati]](#activated-audiences)
 
 ### [!UICONTROL Destinazioni più utilizzate] {#most-used-destinations}
 
@@ -250,6 +251,18 @@ La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget forni
 ![Il pubblico attivato in tutte le destinazioni widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Seleziona **[!UICONTROL Tipi di pubblico]** per passare alle destinazioni [!UICONTROL Sfoglia] scheda . Questa pagina fornisce un elenco di tutte le destinazioni abilitate e una varietà di metriche rilevanti. Consulta la documentazione per [ulteriori informazioni [!UICONTROL Sfoglia] scheda](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Tipi di pubblico attivati] {#activated-audiences}
+
+Questo widget fornisce una singola metrica per il numero totale di tipi di pubblico attivati in una destinazione.
+
+![Il widget Pubblico attivato.](../images/destinations/activated-audiences.png)
+
+Seleziona **[!UICONTROL Tipi di pubblico]** per passare alla pagina dei dettagli del dashboard delle destinazioni. La [!UICONTROL Dati di attivazione] visualizza un elenco dei segmenti mappati alla destinazione, con la relativa data di inizio e la data di fine (se applicabile), e altre informazioni rilevanti per l’esportazione dei dati, ad esempio tipo di esportazione, pianificazione e frequenza. Per visualizzare i dettagli di un particolare segmento, selezionane il nome dall’elenco.
+
+![La pagina dei dettagli del dashboard delle destinazioni con la scheda Dati di attivazione evidenziata.](../images/destinations/activation-data-tab.png)
+
+Questo widget ti aiuta a capire il valore delle destinazioni in base al numero di tipi di pubblico attivati a colpo d&#39;occhio. Offre inoltre un facile accesso a informazioni più dettagliate per ulteriori analisi.
 
 ## Passaggi successivi
 

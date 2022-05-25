@@ -4,9 +4,9 @@ title: Dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
 * [[!UICONTROL Tendenza al cambiamento della dimensione del pubblico]](#audience-size-change-trend)
 * [[!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità]](#audience-size-trend-by-identity)
+* [[!UICONTROL Sovrapposizione del pubblico]](#audience-overlap)
 
 ### [!UICONTROL Dimensione del pubblico] {#audience-size}
 
@@ -162,6 +163,14 @@ Questo widget fornisce un grafico a linee che illustra la differenza nel numero 
 Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base al tipo di identità scelto dal menu a discesa del widget. Il segmento utilizzato per l’analisi viene selezionato dal menu a discesa della panoramica. Il periodo di analisi delle tendenze può essere visualizzato in 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget.
 
 ![La tendenza della dimensione del pubblico in base al widget di identità.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Sovrapposizione del pubblico] {#audience-overlap}
+
+Questo widget rappresenta il numero di profili da due segmenti che soddisfano i criteri per entrambe le definizioni di segmenti. I segmenti utilizzati per il confronto vengono selezionati dai menu a discesa dei widget. Il numero totale di profili contenuti nella definizione del segmento pertinente può essere visto passando il cursore su un cerchio o sull’intersezione del diagramma di Venn.
+
+Questo widget consente di ottimizzare la strategia di segmentazione visualizzando le somiglianze nei risultati delle definizioni dei segmenti.
+
+![Il widget di sovrapposizione pubblico.](../images/segments/audience-overlap.png)
 
 ## Passaggi successivi
 
