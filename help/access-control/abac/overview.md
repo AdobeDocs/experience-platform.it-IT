@@ -5,9 +5,9 @@ description: Questo documento fornisce informazioni sul controllo degli accessi 
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 4ac69f614d878cd3c3b9f47e41dedbc6f09288ac
+source-git-commit: 70c0ba81c682fd512c24265f12d1fef6ca14b34e
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1575'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
+>Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
-Il controllo dell&#39;accesso basato su attributi consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere un valore esistente, ad esempio la geolocalizzazione o il reparto di una persona. Gli attributi possono anche essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema.
+Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
 
 Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
 
-Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente specifici con accesso solo a campi specifici e solo a dati specifici corrispondenti a tali campi.
+Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
 
 ## Terminologia di controllo degli accessi basata su attributi
 
@@ -30,7 +30,7 @@ Il controllo dell&#39;accesso basato su attributi include i seguenti componenti:
 
 | Terminologia | Definizione |
 | --- | --- |
-| Attributi | Gli attributi sono gli identificatori che indicano la correlazione tra un utente e le risorse di Platform a cui hanno accesso. Gli attributi possono essere un valore esistente, ad esempio la geolocalizzazione o il reparto di una persona. Gli attributi possono anche essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. |
+| Attributi | Gli attributi sono gli identificatori che indicano la correlazione tra un utente e le risorse di Platform a cui hanno accesso. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti. |
 | Etichette | Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Le etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta della modalità di gestione dei dati. Le best practice incoraggiano l’etichettatura dei dati non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform. |
 | Autorizzazioni | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione dei set di dati. |
 | Set di autorizzazioni | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
@@ -46,11 +46,13 @@ Il controllo dell&#39;accesso basato su attributi include i seguenti componenti:
 >
 >Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, invece dei profili di prodotto in Adobe Admin Console, per gestire le autorizzazioni per utenti, funzionalità, etichette e altre risorse dell’organizzazione.
 
-Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni, funzionalità e oggetti all’interno di un’applicazione di prodotto. Tramite le Autorizzazioni puoi creare e gestire i ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, consulta la guida alle autorizzazioni .
+Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+
+Tramite Autorizzazioni puoi creare e gestire ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, consulta la sezione [Guida alle autorizzazioni](ui/browse.md).
 
 ## API di controllo dell&#39;accesso basato su attributi
 
-L’API per il controllo degli accessi basata sugli attributi consente di gestire in modo programmatico ruoli, criteri e prodotti all’interno di Platform utilizzando le API.
+L’API per il controllo degli accessi basata sugli attributi consente di gestire in modo programmatico ruoli, criteri e prodotti all’interno di Platform utilizzando le API. Per ulteriori informazioni, consulta la guida su [utilizzo dell’API per gestire le configurazioni di controllo accessi basate su attributi](api/overview.md).
 
 ## Controllo degli accessi basato su attributi in Adobe Experience Platform
 
