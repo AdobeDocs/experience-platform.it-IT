@@ -84,7 +84,7 @@ Le sottosezioni seguenti descrivono le opzioni di configurazione per ogni serviz
 >
 >Ogni configurazione del servizio contiene un **[!UICONTROL Abilitato]** attiva automaticamente quando il servizio è selezionato. Per disabilitare il servizio selezionato per questo datastream, seleziona il **[!UICONTROL Abilitato]** scattare di nuovo.
 
-### Impostazioni di Adobe Analytics {#analytics}
+### Impostazioni di Adobe Analytics
 
 Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella guida all&#39;indirizzo [invio di dati ad Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -94,7 +94,7 @@ Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. U
 | --- | --- |
 | [!UICONTROL ID suite di rapporti] | **(Obbligatorio)** ID della suite di rapporti di Analytics a cui desideri inviare i dati. Questo ID si trova nell&#39;interfaccia utente di Adobe Analytics in [!UICONTROL Amministratore] > [!UICONTROL ReportSuites]. Se sono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti. |
 
-### Impostazioni Adobe Audience Manager {#audience-manager}
+### Impostazioni Adobe Audience Manager
 
 Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Manager. Tutto ciò che è necessario per inviare dati ad Audience Manager è quello di abilitare questa sezione. Le altre impostazioni sono facoltative ma incoraggiate.
 
@@ -105,7 +105,7 @@ Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Mana
 | [!UICONTROL Destinazioni cookie abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [destinazioni cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) da [!DNL Audience Manager]. |
 | [!UICONTROL Destinazioni URL abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) da [!DNL Audience Manager]. |
 
-### Impostazioni Adobe Experience Platform {#aep}
+### Impostazioni Adobe Experience Platform
 
 >[!IMPORTANT]
 >
