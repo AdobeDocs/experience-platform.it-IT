@@ -4,7 +4,7 @@ user-guide-title: Guida all’igiene dei dati
 breadcrumb-title: Guida all’igiene dei dati
 user-guide-description: Gestisci le richieste di dati dei consumatori per rispettare le normative legali sulla privacy come RGPD e CCPA.
 feature: Privacy
-source-git-commit: b119cc56701a0e6038a31e032b7134fb5d0fbbad
+source-git-commit: adce89e5601daf18fe9cacb704a787472262db41
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 3%
