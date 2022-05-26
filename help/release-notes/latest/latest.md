@@ -73,7 +73,7 @@ L’Experience Platform ti consente di controllare l’attività dell’utente p
 
 | Funzione | Nome | Descrizione | | — | — | — | | Risorse aggiunte | <ul><li> Criteri di controllo accesso </li><li> Ruolo </li><li> Registri di controllo </li><li> Ordine del lavoro </li><li> Spazio dei nomi identità </li><li> Grafico di identità </li><li> Query </li><li> Set di dati </li><li> Flusso dei dati di origine </li></ul> | Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività. Se la funzione è abilitata, non è necessario abilitare manualmente la raccolta dei registri. |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 Per ulteriori informazioni sui registri di controllo in Platform, consulta [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
