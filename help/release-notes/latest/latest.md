@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -71,9 +71,11 @@ L’Experience Platform ti consente di controllare l’attività dell’utente p
 
 **Funzioni aggiornate**
 
-| Funzione | Nome | Descrizione | | — | — | — | | Risorse aggiunte | <ul><li> Criteri di controllo accesso </li><li> Ruolo </li><li> Registri di controllo </li><li> Ordine del lavoro </li><li> Spazio dei nomi identità </li><li> Grafico di identità </li><li> Query </li><li> Set di dati </li><li> Flusso dei dati di origine </li></ul> | Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività. Se la funzione è abilitata, non è necessario abilitare manualmente la raccolta dei registri. |
+| Funzione | Nome | Descrizione |
+| --- | --- | --- |
+| Risorse aggiunte | <ul><li> Criteri di controllo accesso </li><li> Ruolo </li><li> Registri di controllo </li><li> Ordine del lavoro </li><li> Spazio dei nomi identità </li><li> Grafico di identità </li><li> Query </li><li> Set di dati </li><li> Flusso dei dati di origine </li></ul> | Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività. Se la funzione è abilitata, non è necessario abilitare manualmente la raccolta dei registri. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sui registri di controllo in Platform, consulta [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
