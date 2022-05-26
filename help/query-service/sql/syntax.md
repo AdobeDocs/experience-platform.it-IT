@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >Il percorso di output completo sarà `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### TABELLA ALTERNATIVA
+### TABELLA ALTERNATIVA {#alter-table}
 
 La `ALTER TABLE` consente di aggiungere o eliminare vincoli di chiave primaria o esterna e di aggiungere colonne alla tabella.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >Lo schema della tabella deve essere univoco e non deve essere condiviso tra più tabelle. Inoltre, lo spazio dei nomi è obbligatorio per i vincoli di chiave primaria.
 
+#### Aggiungi o rilascia identità principali e secondarie
+
+La `ALTER TABLE` consente di aggiungere o eliminare vincoli per le colonne della tabella di identità primaria e secondaria direttamente tramite SQL.
+
+Negli esempi seguenti vengono aggiunte un&#39;identità principale e un&#39;identità secondaria tramite l&#39;aggiunta di vincoli.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+È inoltre possibile rimuovere le identità eliminando i vincoli, come illustrato nell’esempio seguente.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Per informazioni più dettagliate, consulta il documento sull’impostazione delle identità in un set di dati ad hoc .
+
 #### AGGIUNGI COLONNA
 
 Le seguenti query SQL mostrano esempi di aggiunta di colonne a una tabella.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Tipi di dati supportati
+
+Nella tabella seguente sono elencati i tipi di dati accettati per l’aggiunta di colonne a una tabella con [!DNL Postgres SQL], XDM e [!DNL Accelerated Database Recovery] (ADR) in SQL di Azure.
+
+| — | Client PSQL | XDM | ADR | Descrizione |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Tipo di dati numerico utilizzato per memorizzare interi di grandi dimensioni compresi tra -9.223.372.036.854.775.807 e 9.223.372.036.854.775.807 in 8 byte. |
+| 2 | `integer` | `int4` | `integer` | Tipo di dati numerico utilizzato per memorizzare numeri interi compresi tra -2.147.483.648 e 2.147.483.647 in 4 byte. |
+| 3 | `smallint` | `int2` | `smallint` | Tipo di dati numerico utilizzato per memorizzare numeri interi compresi tra -32.768 e 215-1 32.767 in 2 byte. |
+| 4 | `tinyint` | `int1` | `tinyint` | Tipo di dati numerico utilizzato per memorizzare numeri interi compresi tra 0 e 255 in 1 byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Tipo di dati carattere di dimensioni variabili. `varchar` viene utilizzato al meglio quando le dimensioni delle voci dei dati della colonna variano notevolmente. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` e `FLOAT` sono sinonimi validi per `DOUBLE PRECISION`. `double precision` è un tipo di dati a virgola mobile. I valori a virgola mobile vengono memorizzati in 8 byte. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` è un sinonimo valido per `double precision`.`double precision` è un tipo di dati a virgola mobile. I valori a virgola mobile vengono memorizzati in 8 byte. |
+| 8 | `date` | `date` | `date` | La `date` il tipo di dati è costituito da valori di data del calendario memorizzati a 4 byte senza informazioni sulle marche temporali. L&#39;intervallo di date valide è compreso tra 01-01-0001 e 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Tipo di dati utilizzato per memorizzare un istante nel tempo espresso come data e ora del giorno del calendario. `datetime` include i qualificatori di: anno, mese, giorno, ora, secondo e frazione. A `datetime` La dichiarazione può includere qualsiasi sottoinsieme di queste unità temporali che sono unite in quella sequenza, o anche includere una sola unità di tempo. |
+| 10 | `char(len)` | `string` | `char(len)` | La `char(len)` viene utilizzato per indicare che l&#39;elemento è un carattere a lunghezza fissa. |
 
 #### AGGIUNGI SCHEMA
 
