@@ -3,7 +3,7 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Una società di noleggio e vendita di casa vuole personalizzare la propria home 
 >id="platform_destinations_target_datastream"
 >title="Informazioni sugli ID di datastream"
 >abstract="Questa opzione determina in quale datastream di raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo i datastreams con la configurazione di Target abilitata. Per utilizzare la segmentazione Edge, è necessario selezionare un ID datastream. Selezionando Nessuno vengono disattivati tutti i casi d’uso che utilizzano la segmentazione dei bordi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Ulteriori informazioni sulla selezione dei datastreams."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Ulteriori informazioni sulla selezione dei datastreams"
 
 >[!IMPORTANT]
 > 
