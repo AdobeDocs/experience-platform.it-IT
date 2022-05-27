@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 7%
+source-wordcount: '1593'
+ht-degree: 6%
 
 ---
 
@@ -136,6 +136,7 @@ Experience Platform fornisce una suite di tecnologie che ti consentono di raccog
 | Importa regole di mappatura del datastream | Quando si imposta la preparazione dei dati per la raccolta, è possibile [importare le regole di mappatura di un datastream esistente](../../edge/datastreams/data-prep.md#import-mapping) anziché configurare manualmente ogni mappatura campo. |
 | Supporto per la mappatura del datasteam per l&#39;SDK di Mobile | È ora possibile configurare la preparazione dei dati per la raccolta dei dati sui datastreams destinati all’utilizzo con Experience Platform Mobile SDK. |
 | Supporto per la mappatura del datasteam per gli oggetti XDM | Mappare oggetti XDM oltre agli oggetti livello dati quando [configurazione della preparazione dei dati per la raccolta dei dati](../../edge/datastreams/data-prep.md#select-data). |
+| Integrazione con i flussi di dati | Utilizza il catalogo origini in Platform per accedere ai dati su Platform Edge Network, inclusa la preparazione dei dati per la raccolta dei dati e il supporto migliorato per gli avvisi relativi alla preparazione dei dati. Consulta la sezione [Panoramica della raccolta dati di Adobe](../../sources/connectors/adobe-applications/data-collection.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
@@ -238,7 +239,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Funzione | Descrizione |
 | --- | --- |
 | Versione beta di [!DNL Zendesk] source | Utilizza la [!DNL Zendesk] origine per acquisire i dati di utenti, agenti e organizzazioni dal tuo [!DNL Zendesk] istanza per [!DNL Profile] arricchimento. Consulta la sezione [[!DNL Zendesk] panoramica di origine](../../sources/connectors/customer-success/zendesk.md) per ulteriori informazioni. |
-| Supporto per la raccolta dati di Adobe | Utilizza il catalogo delle sorgenti per accedere ai dati di Data Collection Experience Edge , compresa la preparazione dei dati per la raccolta dei dati e il supporto migliorato per gli avvisi sui dati provenienti da Data Prep. Consulta la sezione [Panoramica della raccolta dati di Adobe](../../sources/connectors/adobe-applications/data-collection.md) per ulteriori informazioni. |
+| Supporto per la raccolta dati di Adobe | Utilizza il catalogo origini in Platform per accedere ai dati su Platform Edge Network, inclusa la preparazione dei dati per la raccolta dei dati e il supporto migliorato per gli avvisi relativi alla preparazione dei dati. Consulta la sezione [Panoramica della raccolta dati di Adobe](../../sources/connectors/adobe-applications/data-collection.md) per ulteriori informazioni. |
 | Supporto per l’acquisizione di file con `ISO-8859-1` encoding | Utilizza la `encoding` parametro per l’acquisizione `ISO-8859-1` file codificati con una sorgente di archiviazione cloud su Platform utilizzando [!DNL Flow Service] API. Consulta la guida su [creazione di una connessione sorgente di archiviazione cloud](../../sources/tutorials/api/collect/cloud-storage.md) per ulteriori informazioni. |
 
 {style=&quot;table-layout:auto&quot;}
