@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
+source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 6%
+source-wordcount: '1685'
+ht-degree: 7%
 
 ---
 
@@ -20,16 +20,29 @@ ht-degree: 6%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Avvisi](#alerts)
 - [Registri di audit](#audit-logs)
 - [Dashboard](#dashbaords)
 - [Raccolta dati](#data-collection)
-
 <!-- - [Data Governance](#data-governance) -->
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio query](#query-service)
 - [Origini](#sources)
+
+## Avvisi {#alerts}
+
+L’Experience Platform ti consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. Puoi abbonarti a diverse regole di avviso tramite [!UICONTROL Avvisi] nell’interfaccia utente di Platform e può scegliere di ricevere messaggi di avviso all’interno dell’interfaccia utente stessa o tramite notifiche e-mail.
+
+**Funzioni aggiornate**
+
+| Funzione | Regola di avviso | Descrizione |
+| --- | --- | --- |
+| Nuova regola di avviso | Il tasso di Skippage supera la soglia | È ora possibile utilizzare l’avviso per ricevere notifiche quando il flusso di dati delle origini supera le soglie di identità. Vedi la panoramica su [regole di avviso](../../observability/alerts/rules.md) per l’elenco aggiornato dei tipi di avviso. |
+
+{style=&quot;table-layout:auto&quot;}
+
 
 <!-- ## Attribute-based access control {#abac}
 
