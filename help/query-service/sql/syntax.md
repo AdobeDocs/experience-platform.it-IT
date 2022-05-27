@@ -5,7 +5,7 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
+source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
 workflow-type: tm+mt
 source-wordcount: '3050'
 ht-degree: 2%
@@ -765,7 +765,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Per informazioni più dettagliate, consulta il documento sull’impostazione delle identità in un set di dati ad hoc .
+Visualizza il documento in [impostazione delle identità in un set di dati ad hoc](../data-governance/ad-hoc-schema-identities.md) per informazioni più dettagliate.
 
 #### AGGIUNGI COLONNA
 
