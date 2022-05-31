@@ -2,11 +2,9 @@
 title: Guida all’interfaccia utente per l’igiene dei dati
 description: Scopri come gestire le attività di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ Per accedere all’area di lavoro, seleziona **[!UICONTROL Igiene dei dati]** ne
 
 ![Immagine che mostra [!UICONTROL Igiene dei dati] Area di lavoro nell’interfaccia utente di Platform](../images/ui/overview/home.png)
 
-Da qui è possibile sfogliare gli ordini di lavoro esistenti e creare nuove richieste di igiene dei dati. Per ulteriori informazioni, consulta le sezioni seguenti di questa guida:
+Da qui è possibile sfogliare gli ordini di lavoro esistenti e configurare nuove operazioni di igiene dei dati. Per ulteriori informazioni, consulta le sezioni seguenti di questa guida:
 
 * [Sfoglia gli ordini di lavoro esistenti](./browse.md)
-* [Elimina dati consumer](./delete-consumer.md)
 * [Gestione del tempo di vita (TTL) per i set di dati](./ttl.md)

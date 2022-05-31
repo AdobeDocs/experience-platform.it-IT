@@ -2,11 +2,9 @@
 title: Panoramica sull'igiene dei dati
 description: Adobe Experience Platform Data Hygiene consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 0%
 
 Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni complesse e di grandi dimensioni sui dati al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che i dati vengano utilizzati come previsto, vengono aggiornati quando è necessario correggere i dati errati e vengono eliminati quando i criteri organizzativi lo ritengono necessario.
 
-Le funzionalità di igiene dei dati di Platform ti consentono di gestire i dati archiviati dei clienti attraverso l’eliminazione programmatica di record e set di dati dei clienti.
+Le funzionalità di igiene dei dati di Platform ti consentono di gestire i dati di consumo memorizzati tramite l’eliminazione programmatica dei set di dati.
 
 ## [!UICONTROL Igiene dei dati] Area di lavoro dell&#39;interfaccia utente
 
-La [!UICONTROL Igiene dei dati] Workspace nell’interfaccia utente di Platform consente di configurare e pianificare le operazioni di igiene dei dati e di verificare che i record vengano mantenuti come previsto.
+La [!UICONTROL Igiene dei dati] Workspace nell’interfaccia utente di Platform consente di configurare e pianificare le operazioni di igiene dei dati, per garantire che i record vengano mantenuti come previsto.
 
 Per passaggi dettagliati sulla gestione delle attività di igiene dei dati nell’interfaccia utente, consulta [Guida all’interfaccia utente per l’igiene dei dati](./ui/overview.md).
 

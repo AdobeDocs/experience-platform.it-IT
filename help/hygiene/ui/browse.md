@@ -2,16 +2,14 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-hide: true
-hidefromtoc: true
-source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
+source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 2%
+source-wordcount: '413'
+ht-degree: 1%
 
 ---
 
-# Sfoglia gli ordini di lavoro per l&#39;igiene dei dati
+# Sfoglia gli ordini di lavoro per l&#39;igiene dei dati {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
@@ -23,7 +21,7 @@ ht-degree: 2%
 >
 >Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Shield per il settore sanitario.
 
-Quando una richiesta di igiene dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. Un ordine di lavoro rappresenta un processo specifico di igiene dei dati (ad esempio l&#39;eliminazione dei dati dei consumatori), che include il suo stato attuale e altri dettagli correlati.
+Quando una richiesta di igiene dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. Un ordine di lavoro rappresenta un processo specifico di igiene dei dati, ad esempio un orario di vita pianificato (TTL) per un set di dati, che include il suo stato attuale e altri dettagli correlati.
 
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti nell’interfaccia utente di Adobe Experience Platform.
 
@@ -33,23 +31,20 @@ Quando accedi per la prima volta al **[!UICONTROL Igiene dei dati]** nell’inte
 
 ![Immagine che mostra [!UICONTROL Igiene dei dati] Area di lavoro nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
 
-L&#39;elenco mostra solo gli ordini di lavoro per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** visualizzare un elenco delle attività di eliminazione dei consumatori e **[!UICONTROL Set di dati]** per visualizzare un elenco delle pianificazioni TTL (time-to-live) per i set di dati.
+<!-- The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
 
-![Immagine che mostra [!UICONTROL Set di dati] scheda](../images/ui/browse/dataset-tab.png)
+![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png) -->
 
 Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/funnel-icon.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
 
 ![Immagine dei filtri dell&#39;ordine di lavoro visualizzati](../images/ui/browse/filters.png)
 
-A seconda della scheda che stai visualizzando, sono disponibili diversi filtri:
-
-| Filtro | Categoria | Descrizione |
-| --- | --- | --- |
-| [!UICONTROL Stato] | [!UICONTROL Consumatore] &amp; [!UICONTROL Set di dati] | Filtrare in base allo stato corrente dell&#39;ordine di lavoro. |
-| [!UICONTROL Data di creazione] | [!UICONTROL Consumatore] | Filtra in base alla data in cui è stata effettuata la richiesta di eliminazione del consumatore. |
-| [!UICONTROL Data di creazione] | [!UICONTROL Set di dati] | Filtra in base alla data in cui è stata effettuata la richiesta di eliminazione del consumatore. |
-| [!UICONTROL Data di eliminazione] | [!UICONTROL Set di dati] | Filtra in base alla data di eliminazione pianificata dal TTL. |
-| [!UICONTROL Data di aggiornamento] | [!UICONTROL Set di dati] | Filtra in base alla data dell’ultimo aggiornamento del TTL del set di dati. Le creazioni e le scadenza TTL vengono conteggiate come aggiornamenti. |
+| Filtro | Descrizione |
+| --- | --- |
+| [!UICONTROL Stato] | Filtrare in base allo stato corrente dell&#39;ordine di lavoro. |
+| [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stata effettuata la richiesta TTL del set di dati. |
+| [!UICONTROL Data di eliminazione] | Filtra in base alla data di eliminazione pianificata dal TTL. |
+| [!UICONTROL Data di aggiornamento] | Filtra in base alla data dell’ultimo aggiornamento del TTL del set di dati. Le creazioni e le scadenza TTL vengono conteggiate come aggiornamenti. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -59,22 +54,21 @@ Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagl
 
 ![Immagine che mostra un ID ordine di lavoro selezionato](../images/ui/browse/select-work-order.png)
 
-A seconda del tipo di ordine di lavoro selezionato, vengono fornite informazioni e controlli diversi. Questi sono trattati nelle sezioni seguenti.
+<!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Dettagli di cancellazione del consumatore
+### Consumer delete details
 
-<!-- (Not available for initial release)
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Consumer delete response"
 >abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
--->
 
-I dettagli di una richiesta di cancellazione del consumatore sono di sola lettura e presentano gli attributi di base, come lo stato corrente e il tempo trascorso dalla richiesta.
 
-![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di eliminazione del consumatore](../images/ui/browse/consumer-delete-details.png)
+The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
-### Dettagli TTL set di dati
+![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
+
+### Dataset TTL details -->
 
 La pagina dei dettagli di un set di dati TTL fornisce informazioni sui suoi attributi di base, inclusa la data di scadenza pianificata nei giorni rimanenti prima dell’eliminazione. Nella barra a destra è possibile utilizzare i controlli per modificare o annullare il TTL.
 
@@ -82,7 +76,4 @@ La pagina dei dettagli di un set di dati TTL fornisce informazioni sui suoi attr
 
 ## Passaggi successivi
 
-Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consulta la seguente documentazione:
-
-* [Eliminare un consumatore](./delete-consumer.md)
-* [Pianificare un TTL di set di dati](./ttl.md)
+Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consulta la guida su [pianificazione di un TTL set di dati](./ttl.md).
