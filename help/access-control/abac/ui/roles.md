@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;ABAC
 title: Controllo dell'accesso basato su attributi Crea un ruolo
-description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Questo documento fornisce informazioni sulla gestione dei ruoli tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---

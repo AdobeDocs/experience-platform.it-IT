@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;ABAC
 title: Autorizzazioni per la gestione dei ruoli per il controllo degli accessi basato su attributi
-description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
