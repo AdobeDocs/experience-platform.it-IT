@@ -5,9 +5,9 @@ title: Gestione dei formati di dati con Data Prep
 topic-legacy: overview
 description: Questo documento offre una panoramica della gestione dei diversi tipi di dati in Preparazione dati.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '575'
 ht-degree: 13%
 
 ---
@@ -82,7 +82,7 @@ Nella tabella seguente sono illustrate le lettere del pattern definite per le st
 | Simbolo | Significato | Presentazione | Esempio |
 | ------ | ------- | ------------ | ------- |
 | G | L&#39;era | Testo | AD; Anno Domini; A |
-| Y | Anno, basato sulla settimana ISO | Numero | 1996; 96 |
+| S | Anno, basato sulla settimana ISO | Numero | 1996; 96 |
 | y | L&#39;anno | Numero | 2004; 04 |
 | M/L | Mese dell&#39;anno | Numero/Testo | 7; 07; Lug; luglio; J |
 | w | Settimana dell&#39;anno | Numero | 27 |
@@ -106,3 +106,7 @@ Nella tabella seguente sono illustrate le lettere del pattern definite per le st
 | V | ID fuso orario | Testo | America/Los Angeles |
 | O | Offset fuso orario | Testo | GMT+8 |
 | Q/q | Trimestre dell’anno | Numero/Testo | 3; 03; Q3; 3° trimestre |
+
+## Mappe {#maps}
+
+Le mappe non sono attualmente supportate in [!DNL Data Prep].

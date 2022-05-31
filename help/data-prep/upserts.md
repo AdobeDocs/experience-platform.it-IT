@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Alle Righe Al Servizio Profilo Utilizzando Data Prep
 description: Questo documento fornisce informazioni su come inviare aggiornamenti parziali delle righe al Servizio profili utilizzando Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
+source-git-commit: 93c95fce45dc034c0b9c53d9893a8e38e752ec0f
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 Di seguito è riportato un elenco delle limitazioni note da considerare durante lo streaming degli upsers con [!DNL Data Prep]:
 
 * Il metodo upserts in streaming deve essere utilizzato solo quando si inviano aggiornamenti di riga parziali a [!DNL Profile Service]. Gli aggiornamenti parziali delle righe sono **not** consumato da data lake.
-* Il metodo upserts in streaming non supporta l’aggiornamento, la sostituzione e la rimozione delle identità. Le identità possono essere aggiunte solo utilizzando `identity: create` funzionamento.
+* Il metodo upserts in streaming non supporta l’aggiornamento, la sostituzione e la rimozione delle identità. Se non esistono, vengono create nuove identità. Di conseguenza, `identity` deve sempre essere impostata per creare. Se esiste già un&#39;identità, l&#39;operazione è un no-op.
 * Il metodo upserts in streaming supporta attualmente solo attributi e oggetti con valore singolo primitivo (come numeri interi, date, marche temporali e stringhe). Il metodo upserts in streaming non supporta la sostituzione, l’aggiunta o la sovrascrittura di attributi di array e indici di array specifici.
 
 ## Passaggi successivi
