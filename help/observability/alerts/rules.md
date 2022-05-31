@@ -4,7 +4,7 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 3%
@@ -29,7 +29,6 @@ Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../i
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Ritardo di acquisizione | Questo avviso viene attivato quando l’elaborazione di un flusso di acquisizione batch richiede più di 150 minuti. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Mancanza di ingestione | Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform. |
 | Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di acquisizione | Questo avviso si attiva quando il rapporto tra record non riusciti e tutti i record supera la soglia dello 0,5%. |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Il tasso di Skippage supera la soglia | Questo avviso viene attivato quando il rapporto tra gli ID saltati e gli ID totali supera una soglia. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ Le seguenti regole di avviso sono specifiche per [destinazioni](../../destinatio
 | Informazioni sull’esecuzione del flusso di destinazione | Esecuzione flusso di destinazione completata | Questo avviso viene attivato quando un segmento viene attivato correttamente in una destinazione. |
 | Ritardi, errori ed errori di esecuzione del flusso di destinazione | Ritardo esecuzione flusso di destinazione | Questo avviso viene attivato quando un’esecuzione del flusso di destinazione richiede più di 150 minuti per attivare un segmento. |
 | Ritardi, errori ed errori di esecuzione del flusso di destinazione | Errore di esecuzione del flusso di destinazione | Questo avviso si attiva quando si verifica un errore durante l&#39;attivazione di un segmento a una destinazione. |
+| Ritardi, errori ed errori di esecuzione del flusso di destinazione | Il tasso di Skippage supera la soglia | Questo avviso si attiva quando il rapporto tra ID ignorati e ID totali supera una soglia. |
 
 {style=&quot;table-layout:auto&quot;}
 
