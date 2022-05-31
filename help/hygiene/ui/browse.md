@@ -4,9 +4,9 @@ description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti i
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
+source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >id="platform_hygiene_workorders"
 >title="ID ordine di lavoro"
 >abstract="Quando una richiesta di igiene dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico di igiene dei dati, che include il suo stato attuale e altri dettagli correlati. A ogni ordine di lavoro viene assegnato automaticamente il proprio ID univoco al momento della creazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
