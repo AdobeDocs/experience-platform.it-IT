@@ -5,10 +5,10 @@ description: Questo documento fornisce informazioni sul controllo degli accessi 
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,17 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
+
+Le autorizzazioni sono l’area di Adobe Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+
+Con le autorizzazioni, puoi configurare:
+
+* [Etichette](./labels.md)
+* [Autorizzazioni](./permissions.md)
+* [Criteri](./permissions.md)
+* [Ruoli](./roles.md)
+* [Sandbox](./sandboxes.md)
+* [Utenti](./users.md)
 
 Per accedere alle autorizzazioni di controllo degli accessi basate su attributi per [!DNL Experience Cloud], devi essere un amministratore per la tua organizzazione con una sottoscrizione a [!DNL Experience Cloud]. Sebbene Adobe supporti gerarchie di amministratori flessibili per le organizzazioni, per configurare le autorizzazioni è necessario essere un amministratore di prodotto per Adobe Experience Platform. Consulta l’articolo Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) per ulteriori informazioni.
 

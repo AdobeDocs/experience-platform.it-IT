@@ -5,9 +5,9 @@ description: Questo documento fornisce informazioni sul controllo degli accessi 
 hide: true
 hidefromtoc: true
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
+
+Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+
+Tramite Autorizzazioni puoi creare e gestire ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Immediatamente dopo [creazione di un nuovo ruolo](#create-a-new-role), viene restituita la **[!UICONTROL Ruoli]** scheda . Se stai modificando le autorizzazioni per un ruolo esistente, seleziona il ruolo dal **[!UICONTROL Ruoli]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare un ruolo.
 
