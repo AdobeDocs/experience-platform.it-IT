@@ -5,9 +5,9 @@ title: Panoramica sulla preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ Data Prep può gestire in modo affidabile diversi formati di dati acquisiti in P
 ## Invia aggiornamenti parziali delle righe utilizzando [!DNL Data Prep]
 
 Streaming degli upsers in [!DNL Data Prep] consente di inviare aggiornamenti parziali delle righe a [!DNL Profile Service] durante la creazione e la creazione di nuovi collegamenti di identità con una singola richiesta API. Per ulteriori informazioni su come eseguire lo streaming degli upsers in [!DNL Data Prep], consulta il documento in [invio di aggiornamenti di riga parziali](./upserts.md).
+
+## Controllo dell&#39;accesso basato su attributi in [!DNL Data Prep]
+
+Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi.
+
+Il controllo dell&#39;accesso basato su attributi consente di mappare solo gli attributi a cui hai accesso. Gli attributi a cui non hai accesso non possono essere utilizzati nelle mappature pass-through e nei campi calcolati. Pertanto, se non si dispone dell&#39;accesso a un campo obbligatorio, non è possibile salvare correttamente una mappatura. Inoltre, non è possibile eseguire il mapping di oggetti o array di oggetti se non si dispone dell&#39;accesso a uno degli attributi figlio. Tuttavia, è possibile eseguire il mapping di altri elementi all&#39;interno dell&#39;array di oggetti o dell&#39;oggetto singolarmente.
+
+Consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 
