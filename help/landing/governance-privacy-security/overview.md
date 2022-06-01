@@ -5,10 +5,9 @@ title: Panoramica su governance, privacy e sicurezza
 topic-legacy: overview
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati relativi all’esperienza raccolti per rispettare le tue pratiche commerciali, gli obblighi legali e il processo di sviluppo.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -33,15 +32,15 @@ La governance dei dati è un concetto essenziale che si intreccia con ogni funzi
 
 In qualità di servizio Platform, la governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui l’etichettatura dell’utilizzo dei dati, le politiche di utilizzo dei dati, l’applicazione delle regole e la derivazione dei dati.
 
-Per ulteriori informazioni, consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) .
+Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 ### Catalogo e set di dati {#catalog}
 
-Servizio catalogo è il sistema di registrazione per la posizione e la derivazione dei dati all’interno di Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
+Servizio catalogo è il sistema di registrazione per la posizione dei dati e la derivazione all’interno di Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 
 Il catalogo organizza i dati acquisiti nei set di dati, con ogni set di dati contenente i metadati che possono essere utilizzati per etichettare e classificare i dati in esso contenuti.
 
-Per ulteriori informazioni sul servizio, consulta la [Panoramica del servizio catalogo](../../catalog/home.md) . Per informazioni su come gestire i set di dati in Experience Platform, consulta la [panoramica dei set di dati](../../catalog/datasets/overview.md).
+Consulta la sezione [Panoramica del servizio catalogo](../../catalog/home.md) per ulteriori informazioni sul servizio. Per scoprire come gestire i set di dati in Experience Platform, consulta la sezione [panoramica dei set di dati](../../catalog/datasets/overview.md).
 
 ## Privacy {#privacy}
 
@@ -53,25 +52,29 @@ Le normative sulla privacy legale, come il Regolamento generale sulla protezione
 
 Adobe Experience Platform Privacy Service fornisce un’API RESTful e un’interfaccia utente per gestire queste richieste. Con Privacy Service puoi inviare richieste di accesso o cancellazione di dati di clienti privati o personali da applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-Per ulteriori informazioni, consulta la sezione [Panoramica di Privacy Service](../../privacy-service/home.md) .
+Consulta la sezione [Panoramica di Privacy Service](../../privacy-service/home.md) per ulteriori informazioni.
 
 ### Elaborazione del consenso {#consent}
 
 Molte normative legali sulla privacy hanno introdotto requisiti per il consenso attivo e specifico in relazione alla raccolta dei dati, alla personalizzazione e ad altri casi d’uso del marketing. Per soddisfare questi requisiti, l’Experience Platform ti consente di acquisire le informazioni sul consenso nei profili dei singoli clienti e di utilizzarle come fattore determinante per l’utilizzo dei dati di ciascun cliente nei flussi di lavoro della piattaforma a valle.
 
-Per informazioni su come elaborare i dati sul consenso e sulle preferenze dei clienti utilizzando lo standard Adobe, consulta la panoramica sull’ [elaborazione del consenso in Experience Platform](./consent/adobe/overview.md).
+Per informazioni su come elaborare i dati sul consenso e sulle preferenze dei clienti utilizzando lo standard Adobe, consulta la panoramica su [elaborazione del consenso in Experience Platform](./consent/adobe/overview.md).
 
-Per informazioni su come elaborare i dati di consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica sul supporto [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
+Per informazioni su come elaborare i dati di consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica su [Supporto IAB TCF 2.0 in Platform](./consent/iab/overview.md).
 
 ## Sicurezza {#security}
 
 L’integrità e la sicurezza dei dati sono indispensabili per la tua attività e questo rischio richiede funzionalità di sicurezza leader del settore. Per soddisfare questa sfida, Platform offre diversi strumenti per la protezione delle operazioni sui dati.
 
+### Crittografia dei dati
+
+Tutti i dati della piattaforma sono crittografati in transito e a riposo. Visualizza il documento in [crittografia dei dati in Platform](./encryption.md) per ulteriori informazioni.
+
 ### Controllo degli accessi {#access-control}
 
 Experience Platform utilizza Adobe Admin Console per fornire un controllo degli accessi basato sui ruoli a varie funzionalità di Platform. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 
-Per ulteriori informazioni, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
+Consulta la sezione [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni.
 
 ### Sandbox {#sandboxes}
 
@@ -79,7 +82,7 @@ Experience Platform è progettato per arricchire le applicazioni di esperienza d
 
 Al fine di soddisfare la necessità di flessibilità di sviluppo, Experience Platform fornisce sandbox che suddividono una singola istanza Platform in ambienti virtuali separati per consentire di sviluppare le applicazioni di esperienza digitale in base al proprio ciclo di vita di sviluppo.
 
-Per ulteriori informazioni, consulta la [panoramica sulle sandbox](../../sandboxes/home.md) .
+Consulta la sezione [panoramica sulle sandbox](../../sandboxes/home.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 
