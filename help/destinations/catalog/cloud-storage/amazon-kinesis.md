@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;destinazione kinesis;kinesis
 title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale all’archiviazione Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -98,6 +98,15 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 ### Informazioni di autenticazione {#authentication-information}
 
+Inserisci i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
+
+![Immagine della schermata dell’interfaccia utente che mostra i campi completati per i dettagli di autenticazione di Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services]chiave di accesso e chiave segreta**: In [!DNL Amazon Web Services], genera un `access key - secret access key` per concedere a Platform l’accesso al tuo [!DNL Amazon Kinesis] conto. Ulteriori informazioni nel [Documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Regione]**: Indicare quale [!DNL Amazon Web Services] da regione a flusso di dati.
+
+### Dettagli della destinazione {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Includi nomi dei segmenti"
@@ -107,15 +116,6 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Includi marche temporali del segmento"
 >abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
-
-Inserisci i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
-
-![Immagine della schermata dell’interfaccia utente che mostra i campi completati per i dettagli di autenticazione di Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services]chiave di accesso e chiave segreta**: In [!DNL Amazon Web Services], genera un `access key - secret access key` per concedere a Platform l’accesso al tuo [!DNL Amazon Kinesis] conto. Ulteriori informazioni nel [Documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Regione]**: Indicare quale [!DNL Amazon Web Services] da regione a flusso di dati.
-
-### Dettagli della destinazione {#destination-details}
 
 Dopo aver stabilito la connessione di autenticazione per la destinazione Amazon Kinesis, fornisci le seguenti informazioni per la destinazione:
 

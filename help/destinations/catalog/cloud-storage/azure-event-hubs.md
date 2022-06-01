@@ -3,7 +3,7 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: Connessione hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale al tuo [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati dall'Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -71,16 +71,6 @@ Se selezioni la **[!UICONTROL Autenticazione standard]** digita per connettersi 
 
 #### Autenticazione SAS (Shared Access Signature) {#sas-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Includi nomi dei segmenti"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Includi marche temporali del segmento"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
-
 ![Immagine della schermata dell’interfaccia utente che mostra i campi completati per i dettagli di autenticazione standard degli hub eventi di Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 Se selezioni la **[!UICONTROL Autenticazione standard]** digita per connettersi all’endpoint HTTP, immetti i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
@@ -91,6 +81,16 @@ Se selezioni la **[!UICONTROL Autenticazione standard]** digita per connettersi 
 * **[!UICONTROL Namespace]**: Riempi il tuo [!DNL Azure Event Hubs] spazio dei nomi. Scopri [!DNL Azure Event Hubs] spazi dei nomi nel [Documentazione di Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### Dettagli della destinazione {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Includi nomi dei segmenti"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Includi marche temporali del segmento"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
 
 Dopo aver stabilito la connessione di autenticazione per la destinazione Hubs evento di Azure, fornisci le seguenti informazioni per la destinazione:
 
