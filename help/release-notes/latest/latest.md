@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
+source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2409'
 ht-degree: 5%
 
 ---
@@ -254,6 +254,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | --- | --- |
 | Controllo dell&#39;accesso basato su attributi nelle origini | È ora possibile gestire e controllare l’accesso ai singoli campi e attributi di origine durante l’acquisizione. **Nota**: Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata. |
 | Versione beta di [!DNL Zendesk] source | Utilizza la [!DNL Zendesk] origine per acquisire i dati di utenti, agenti e organizzazioni dal tuo [!DNL Zendesk] istanza per [!DNL Profile] arricchimento. Consulta la sezione [[!DNL Zendesk] panoramica di origine](../../sources/connectors/customer-success/zendesk.md) per ulteriori informazioni. |
+| Disponibilità generale di B2B [!DNL Microsoft Dynamics] source | Ora puoi utilizzare la [!DNL Microsoft Dynamics] origine per l’acquisizione di oggetti B2B come account, opportunità, campagne, elenchi di marketing e membri di elenchi di marketing. Consulta la sezione [[!DNL Microsoft Dynamics] panoramica di origine](../../sources/connectors/crm/ms-dynamics.md) per ulteriori informazioni. |
 | Supporto per la raccolta dati di Adobe | Utilizza il catalogo origini in Platform per accedere ai dati su Platform Edge Network, inclusa la preparazione dei dati per la raccolta dei dati e il supporto migliorato per gli avvisi relativi alla preparazione dei dati. Consulta la sezione [Panoramica della raccolta dati di Adobe](../../sources/connectors/adobe-applications/data-collection.md) per ulteriori informazioni. |
 | Supporto per l’acquisizione di file con `ISO-8859-1` encoding | Utilizza la `encoding` parametro per l’acquisizione `ISO-8859-1` file codificati con una sorgente di archiviazione cloud su Platform utilizzando [!DNL Flow Service] API. Consulta la guida su [creazione di una connessione sorgente di archiviazione cloud](../../sources/tutorials/api/collect/cloud-storage.md) per ulteriori informazioni. |
 
