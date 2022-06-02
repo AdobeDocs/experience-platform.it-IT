@@ -5,9 +5,9 @@ title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 topic-legacy: labels
 description: Questa guida descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno dell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ La **[!UICONTROL Mostra etichette ereditate]** per impostazione predefinita, l�
 
 ![Nascondere le etichette ereditate](../images/labels/inherited-labels.png)
 
-## Gestione delle etichette a livello di campo
+## Gestire le etichette a livello di campo del set di dati
 
 Continua del flusso di lavoro per [aggiunta e modifica di etichette di utilizzo dati a livello di set di dati](#add-labels), puoi anche gestire le etichette a livello di campo all’interno della **[!UICONTROL Governance dei dati]** area di lavoro per quel set di dati.
 
@@ -99,6 +99,12 @@ Puoi ripetere questi passaggi per continuare ad aggiungere e modificare etichett
 ![Selezionare più campi per applicare etichette a livello di campo contemporaneamente.](../images/labels/multiple-fields.png)
 
 È importante ricordare che l’ereditarietà si sposta solo dall’alto verso il basso (set di dati → campi), il che significa che le etichette applicate a livello di campo non vengono propagate ad altri campi o set di dati.
+
+## Gestione delle etichette a livello di schema
+
+È possibile aggiungere etichette direttamente a uno schema o più campi all&#39;interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
+
+Guarda l’esercitazione su [gestione delle etichette a livello di schema](../../xdm/tutorials/labels.md) per ulteriori informazioni.
 
 ## Gestire le etichette personalizzate
 
