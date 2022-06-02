@@ -1,19 +1,19 @@
 ---
 title: Connessione Adobe Advertising Cloud DSP
-description: 'Adobe Advertising Cloud DSP è una destinazione integrata per [!DNL Adobe Real-time Customer Data Profile], che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e con gli utenti per l’attivazione della campagna.  '
-source-git-commit: 2b1e74a704003bbbf1d72e4a01b2fb9f9c8d22ca
+description: Adobe Advertising Cloud DSP è una destinazione integrata per [!DNL Adobe Real-time Customer Data Profile], che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e con gli utenti per l’attivazione della campagna.
+exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
+source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '954'
 ht-degree: 1%
 
 ---
-
 
 # Connessione Adobe Advertising Cloud DSP
 
 ## Panoramica {#overview}
 
-La destinazione Advertising Cloud DSP ti consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e gli utenti per l’attivazione della campagna con DSP.<!-- To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Segments from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html). -->
+Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) la destinazione ti consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e gli utenti per l’attivazione della campagna con DSP. Per ulteriori informazioni sull’integrazione di Real-Time CDP con DSP, consulta [Informazioni sull’attivazione dei segmenti autenticati da Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Un&#39;agenzia media con un account DSP sta conducendo una campagna di retargeti
 
 * DSP le impostazioni a livello di account e di campagna per abilitare la condivisione dei segmenti con [!DNL LiveRamp RampID], che tradurrà i dati dei clienti in [!DNL RampIDs] per creare segmenti mirabili. Il team del tuo account DSP eseguirà questa configurazione.
 * L&#39;ID organizzazione Experience Cloud per l&#39;account Experience Platform. Puoi trovare il tuo ID sul tuo [!DNL Real-Time CDP] pagina del profilo utente.
-* A [!DNL Real-Time CDP] sorgente in DSP<!-- [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) --> per ricevere i segmenti per l’attivazione della campagna. Il team dell&#39;account DSP creerà l&#39;origine utilizzando l&#39;ID organizzazione Experience Cloud.
-* Chiave sorgente per l’account DSP o l’inserzionista, generata quando un [!DNL Real-Time CDP] viene creato in DSP<!-- [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Il team del tuo account DSP condividerà questa chiave con te. Lo utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising Cloud DSP, come [spiegato di seguito](#authenticate).
+* A [[!DNL Real-Time CDP] sorgente in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) per ricevere i segmenti per l’attivazione della campagna. Il team dell&#39;account DSP creerà l&#39;origine utilizzando l&#39;ID organizzazione Experience Cloud.
+* Chiave sorgente per l’account DSP o l’inserzionista, generata quando un [[!DNL Real-Time CDP] viene creato in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Il team del tuo account DSP condividerà questa chiave con te. Lo utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising Cloud DSP, come [spiegato di seguito](#authenticate).
 * Dati del cliente costituiti da e-mail o e-mail con hash.
 
 ## Identità supportate {#supported-identities}
@@ -72,7 +72,7 @@ Per connettersi alla destinazione, segui le istruzioni per [creare una connessio
 
 Per connettersi alla destinazione, fornisci il seguente parametro nel [!UICONTROL Tipo di connessione] , quindi seleziona **[!UICONTROL Connetti alla destinazione]**.:
 
-* **[!UICONTROL Chiave account o inserzionista]**: Questo [!UICONTROL Chiave sorgente] viene generato quando un [!DNL Real-Time CDP] viene creata nell&#39;interfaccia utente DSP<!-- [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Dopo la creazione dell’origine, il team DSP dell’account condividerà la chiave con te.
+* **[!UICONTROL Chiave account o inserzionista]**: Questo [!UICONTROL Chiave sorgente] viene generato quando un [[!DNL Real-Time CDP] viene creata nell&#39;interfaccia utente DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Dopo la creazione dell’origine, il team DSP dell’account condividerà la chiave con te.
 
 ![Campo del tipo di connessione](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
