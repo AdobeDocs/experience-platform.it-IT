@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1746'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,17 @@ Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../da
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Sfoglia {#browse}
+## Sfogliare {#browse}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Abbandono"
+>abstract="L’abbandono rappresenta la percentuale di profili che cambiano all’interno di una definizione di segmento rispetto all’ultima esecuzione del processo di segmento."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Metodo di valutazione"
+>abstract="I metodi di valutazione per i segmenti includono batch, streaming e edge."
 
 Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per l’organizzazione IMS.
 
@@ -65,7 +75,7 @@ La suddivisione mostra un grafico a barre che mostra la percentuale di profili c
 
 L’abbandono rappresenta la percentuale di profili che cambiano all’interno di una definizione di segmento rispetto all’ultima esecuzione del processo di segmento, mentre il conteggio del profilo rappresenta il numero totale di profili idonei per il segmento.
 
-Il metodo di valutazione può essere in streaming o batch. I segmenti in streaming vengono valutati costantemente man mano che i dati entrano nel sistema. I segmenti batch vengono valutati in base a una pianificazione impostata.
+Il metodo di valutazione può essere in streaming, batch o edge. I segmenti in streaming vengono valutati costantemente man mano che i dati entrano nel sistema. I segmenti batch vengono valutati in base a una pianificazione impostata. I segmenti Edge vengono valutati in tempo reale, consentendo gli stessi casi di utilizzo per la personalizzazione della pagina e di quella successiva.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 

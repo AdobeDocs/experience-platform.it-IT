@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2612'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,12 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Blocchi di generazione della definizione del segmento
+## Blocchi di generazione della definizione del segmento {#building-blocks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Campi"
+>abstract="I tre tipi di campi che compongono un segmento sono attributi, eventi e tipi di pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe Profilo individuale XDM, gli eventi ti consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi dati XDM ExperienceEvent e i tipi di pubblico consentono di utilizzare i tipi di pubblico importati da fonti esterne."
 
 Gli elementi di base delle definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -210,7 +215,19 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà del segmento
+## Proprietà del segmento {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Proprietà del segmento"
+>abstract="Nella sezione delle proprietà del segmento viene visualizzata una stima delle dimensioni del segmento risultante, che mostra il numero di profili qualificati rispetto al numero totale di profili. Ciò ti consente di regolare la definizione del segmento in base alle necessità prima di creare il pubblico stesso."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Aggiorna stime"
+>abstract="Puoi aggiornare le stime del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per il segmento proposto. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Ulteriori informazioni dalla documentazione"
+
 
 Quando si crea una definizione di segmento, la **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima della dimensione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
