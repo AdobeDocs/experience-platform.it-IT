@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 87%
+source-wordcount: '392'
+ht-degree: 86%
 
 ---
 
@@ -119,6 +119,9 @@ ht-degree: 87%
       * [!DNL BrightCove] tracciamento video {#brightcove}
          * [Panoramica](./extensions/web/brightcove/overview.md)
          * [Note sulla versione](./extensions/web/brightcove/release-notes.md)
+      * Livello dati Google {#google-data-layer}
+         * [Panoramica](./extensions/web/google-data-layer/overview.md)
+         * [Note sulla versione](./extensions/web/google-data-layer/release-notes.md)
       * Estensione di tracciamento di video [!DNL YouTube] {#youtube}
          * [Panoramica](./extensions/web/youtube/overview.md)
          * [Note sulla versione](./extensions/web/youtube/release-notes.md)
