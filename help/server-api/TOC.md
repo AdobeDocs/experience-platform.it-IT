@@ -5,10 +5,10 @@ user-guide-title: Documentazione API del server di rete Edge
 breadcrumb-title: Documentazione API del server di rete Edge
 user-guide-description: Scopri cos’è l’API del server di rete Edge e come utilizzarla.
 feature: Data Collection
-source-git-commit: c6ecd493bd8366d49ca0b9dd851c92c5ce732d18
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 55%
+source-wordcount: '63'
+ht-degree: 58%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 55%
 * Interazione con altre soluzioni Adobe {#interacting-other-adobe-solutions}
    * [Interazione con Adobe Analytics](interacting-adobe-analytics.md)
 * Personalizzazione {#personalization}
-   * [Recuperare il contenuto di personalizzazione dalle soluzioni Adobe](personalization-overview.md)
+   * [Panoramica sulla personalizzazione](personalization-overview.md)
    * [Personalizzazione tramite Offer decisioning](personalization-offer-decisioning.md)
    * [Personalizzazione tramite Adobe Target](personalization-target.md)
 * [Gestione degli errori](error-handling.md)

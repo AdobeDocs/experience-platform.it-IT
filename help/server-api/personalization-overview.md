@@ -1,19 +1,17 @@
 ---
-title: Recuperare il contenuto di personalizzazione da altre soluzioni Adobe
+title: Panoramica sulla personalizzazione
 description: Scopri come utilizzare l’API di Adobe Experience Platform Edge Network Server per recuperare contenuti personalizzati dalle soluzioni di personalizzazione Adobe
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: personalizzazione; api del server; Adobe Experience Platform Edge Network; recuperare la personalizzazione
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 9%
 
 ---
 
 
-# Recuperare il contenuto di personalizzazione dalle soluzioni Adobe
-
-## Panoramica {#overview}
+# Panoramica sulla personalizzazione
 
 Con la [!DNL Server API], puoi recuperare contenuti personalizzati dalle soluzioni di personalizzazione Adobe, tra cui [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) e [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -138,7 +136,7 @@ Il contenuto personalizzato recuperato dalle soluzioni di personalizzazione vien
 **Formato API**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Richiesta {#request}
