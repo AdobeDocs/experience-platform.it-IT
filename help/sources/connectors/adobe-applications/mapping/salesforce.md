@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mapp
 title: Campi di mappatura Salesforce
 description: Le tabelle seguenti contengono le mappature tra i campi di origine Salesforce e i campi XDM corrispondenti.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 93b6782bbb9ec25c720633a38c41cb70c251f017
+source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 9%
@@ -100,7 +100,6 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 | `LeadSource` | `personComponents.personSource` |
 | `Latitude` | `workAddress._schema.latitude` |
 | `Longitude` | `workAddress._schema.longitude` |
-| `MiddleName` | `person.name.middleName` |
 | `Name` | `person.name.fullName` |
 | `PostalCode` | `workAddress.postalCode` |
 | `Salutation` | `person.name.courtesyTitle` |
