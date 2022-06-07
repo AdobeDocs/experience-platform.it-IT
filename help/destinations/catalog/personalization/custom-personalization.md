@@ -2,10 +2,8 @@
 keywords: personalizzazione personalizzata; destinazione; destinazione personalizzata di experience platform;
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
-hide: true
-hidefromtoc: true
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 7ac7f533bb8547865b53892d371059aa60d2232e
+source-git-commit: a5c5aec99402d0d46278d28a7fcb5090299d2312
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
