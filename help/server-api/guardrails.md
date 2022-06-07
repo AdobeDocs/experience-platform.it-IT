@@ -1,47 +1,31 @@
 ---
-title: Accordi e obiettivi a livello di servizio
-description: Scopri come configurare l’autenticazione per l’API server di rete Edge
-seo-description: Learn how to configure authentication for the Edge Network Server API
+title: Garanzie delle prestazioni
+description: Scopri come utilizzare l’API server in protezioni delle prestazioni ottimali
 keywords: raccolta dati;raccolta;rete Edge;api;sla;slt;livelli di servizio
-hide: true
-hidefromtoc: true
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
 
 
-# Guardrail
+# Garanzie delle prestazioni
 
 ## Panoramica {#overview}
 
-L&#39;Adobe utilizzerà gli sforzi commercialmente rilevanti per fare [!DNL Server API] disponibile entro una percentuale mensile di uptime di almeno il 99,9% per ogni regione, durante qualsiasi ciclo di fatturazione mensile.
+Le protezioni delle prestazioni definiscono i limiti di utilizzo relativi ai casi di utilizzo dell’API server. Il superamento dei limiti di prestazione descritti in questo articolo potrebbe comportare un degrado delle prestazioni.
+
+L&#39;Adobe non è responsabile del deterioramento delle prestazioni causato da limiti di utilizzo superati. I clienti che superano costantemente le protezioni delle prestazioni possono richiedere una capacità di elaborazione aggiuntiva per evitare il deterioramento delle prestazioni.
 
 ## Definizioni
 
 * **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale delle richieste elaborate da Experience Adobe Experience Platform Edge Network che non generano errori e si riferiscono solo alle API di rete Adobe Experience Platform Edge fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo è considerato disponibile al 100%.
 * **Percentuale mensile di uptime** per una determinata regione è calcolata come la media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
 * Un **a monte** è un servizio dietro la rete Adobe Edge, abilitato per un datastream specifico, come Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
-* A **richiesta** inviato all&#39;API server è definito come una o più unità di richiesta.
 * A **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e a monte configurato per un datastream.
+* A **richiesta** è un singolo messaggio inviato da un&#39;applicazione di proprietà del cliente al [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
 * Un **errore** è qualsiasi richiesta che non riesce a causa di una rete Adobe Experience Platform Edge [errore del servizio interno](error-handling.md).
-
-## Obiettivi interni
-
-I team tecnici di Adobe implementano procedure di telemetria in tempo reale, monitoraggio e scalabilità per garantire i seguenti obiettivi:
-
-* Meno dell&#39;1% delle richieste HTTP restituite `5xx` errori negli ultimi cinque minuti
-* Meno dell’1% delle connessioni a monte restituiscono un errore negli ultimi cinque minuti
-* La capacità del tenant viene raddoppiata in meno di 10 minuti dal momento in cui viene raggiunto un limite.
-
-## Esclusioni degli accordi a livello di servizio
-
-L’impegno a livello di servizio descritto sopra non si applica ad eventuali problemi di indisponibilità o prestazioni causati dai seguenti eventi:
-
-* Fattori al di fuori del nostro ragionevole controllo, compreso l’accesso a Internet o problemi correlati al di fuori dell’infrastruttura di Adobe.
-* Qualsiasi abuso del [!DNL Server API], come definito dai limiti indicati di seguito.
 
 ## Limiti di servizio
 
@@ -80,4 +64,3 @@ La tabella seguente mostra i valori limite predefiniti. Se hai bisogno di limiti
 >[!NOTE]
 >
 >A seconda del payload stesso, i formati binari sono generalmente più compatti del 20-40%, consentendo di inviare più dati rispetto a JSON in formato testo normale. Contatta il tuo rappresentante dell’Assistenza clienti se hai bisogno di una maggiore capacità per i tuoi datastreams.
-
