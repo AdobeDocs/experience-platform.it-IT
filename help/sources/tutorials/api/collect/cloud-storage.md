@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1586'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,8 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Facoltativo) Un delimitatore di colonna a carattere singolo che è possibile specificare quando si raccolgono file flat. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene fornito, viene visualizzata una virgola (`,`) viene utilizzato come valore predefinito. **Nota**: La `columnDelimiter` può essere utilizzata solo durante l’acquisizione di file delimitati. |
 | `data.properties.encoding` | (Facoltativo) Proprietà che definisce il tipo di codifica da utilizzare per l’acquisizione dei dati in Platform. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: La `encoding` è disponibile solo durante l’acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
 | `data.properties.compressionType` | (Facoltativo) Proprietà che definisce il tipo di file compresso per l’acquisizione. I tipi di file compressi supportati sono: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`. **Nota**: La `compressionType` può essere utilizzata solo durante l’acquisizione di file delimitati o JSON. |
-| `params.path` | Percorso del file di origine a cui si accede. |
+| `params.path` | Percorso del file di origine a cui si accede. Questo parametro punta a un singolo file o a un&#39;intera cartella. |
+| `params.type` | Tipo di file del file di dati di origine che si sta acquisendo. Tipo di utilizzo `file` per acquisire un singolo file e utilizzare il tipo `folder` per acquisire un’intera cartella. |
 | `connectionSpec.id` | ID della specifica di connessione associata alla specifica origine di archiviazione cloud. Consulta la sezione [appendice](#appendix) per un elenco degli ID delle specifiche di connessione. |
 
 **Risposta**
