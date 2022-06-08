@@ -4,9 +4,9 @@ description: Scopri come eliminare i record consumer nell’interfaccia utente d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Se desideri eliminare i dati dei consumatori da tutti i set di dati, seleziona *
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identità principale"
->abstract="Un&#39;identità primaria è un attributo che, ad Experience Platform, collega un record al profilo di un consumatore. Il campo di identità principale per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna, devi fornire il tipo (o namespace) per l’identità principale del consumatore, ad Experience Cloud &quot;e-mail&quot; per gli indirizzi e-mail e &quot;ecid&quot; per gli ID. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="Un&#39;identità primaria è un attributo che, ad Experience Platform, collega un record al profilo di un consumatore. Il campo di identità principale per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o namespace) per l’identità principale del consumatore, ad esempio `email` per gli indirizzi e-mail e `ecid` ad Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valore identità"
->abstract="In questa colonna è necessario fornire il valore per l&#39;identità principale del consumatore, che deve corrispondere al tipo di identità fornito nella colonna a sinistra. Se il tipo di identità principale è &quot;e-mail&quot;, il valore deve essere l’indirizzo e-mail del consumatore. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="In questa colonna è necessario fornire il valore per l&#39;identità principale del consumatore, che deve corrispondere al tipo di identità fornito nella colonna a sinistra. Se il tipo di identità principale è `email`, il valore deve essere l’indirizzo e-mail del consumatore. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
 Quando si eliminano i dati dei consumatori, è necessario fornire informazioni di identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base alla **identità principale** campo definito dallo schema del set di dati.
 
