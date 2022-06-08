@@ -4,9 +4,9 @@ description: Scopri come eliminare i record consumer nell’interfaccia utente d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -144,4 +144,10 @@ Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro e viene visua
 
 Questo documento illustra come eliminare i record dei consumatori nell’interfaccia utente di Experience Platform. Per informazioni su come eseguire altre attività di igiene dei dati nell’interfaccia utente, consulta [panoramica dell&#39;interfaccia utente per l&#39;igiene dei dati](./overview.md).
 
-Per scoprire come eliminare i record dei consumatori utilizzando l’API di igiene dei dati, consulta [guida all’endpoint dell’ordine di lavoro](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
