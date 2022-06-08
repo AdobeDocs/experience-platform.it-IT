@@ -4,7 +4,7 @@ description: Scopri come eliminare i record consumer nell’interfaccia utente d
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Se desideri eliminare i dati dei consumatori da tutti i set di dati, seleziona *
 >
 >Selezione della **[!UICONTROL Tutti i set di dati]** L’opzione può causare un tempo maggiore per l’operazione di eliminazione e potrebbe non causare un’eliminazione accurata dei record.
 
-## Fornire le identità dei consumatori {#identities}
+## Fornire le identità dei consumatori {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
