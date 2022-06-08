@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
 workflow-type: tm+mt
-source-wordcount: '3050'
+source-wordcount: '3042'
 ht-degree: 2%
 
 ---
@@ -724,28 +724,34 @@ La `ALTER TABLE` consente di aggiungere o eliminare vincoli di chiave primaria o
 Le seguenti query SQL mostrano esempi di aggiunta o rilascio di vincoli a una tabella.
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Parametri | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
-| `constraint_name` | Nome del vincolo che si desidera aggiungere o eliminare. |
 | `column_name` | Nome della colonna a cui si sta aggiungendo un vincolo. |
 | `referenced_table_name` | Nome della tabella a cui fa riferimento la chiave esterna. |
 | `primary_column_name` | Nome della colonna a cui fa riferimento la chiave esterna. |
 
+
 >[!NOTE]
 >
->Lo schema della tabella deve essere univoco e non deve essere condiviso tra più tabelle. Inoltre, lo spazio dei nomi è obbligatorio per i vincoli di chiave primaria.
+>Lo schema della tabella deve essere univoco e non deve essere condiviso tra più tabelle. Inoltre, lo spazio dei nomi è obbligatorio per i vincoli di chiave primaria, identità primaria e identità.
 
 #### Aggiungi o rilascia identità principali e secondarie
 
