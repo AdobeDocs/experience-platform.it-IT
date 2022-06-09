@@ -2,13 +2,13 @@
 title: Garanzie delle prestazioni
 description: Scopri come utilizzare l’API server in protezioni delle prestazioni ottimali
 keywords: raccolta dati;raccolta;rete Edge;api;sla;slt;livelli di servizio
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # Garanzie delle prestazioni
 
@@ -20,12 +20,12 @@ L&#39;Adobe non è responsabile del deterioramento delle prestazioni causato da 
 
 ## Definizioni
 
-* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale delle richieste elaborate da Experience Adobe Experience Platform Edge Network che non generano errori e si riferiscono solo alle API di rete Adobe Experience Platform Edge fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo è considerato disponibile al 100%.
+* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale delle richieste elaborate da Experience Platform Edge Network che non generano errori e si riferiscono solo alle API di rete Edge fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo è considerato disponibile al 100%.
 * **Percentuale mensile di uptime** per una determinata regione è calcolata come la media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
-* Un **a monte** è un servizio dietro la rete Adobe Edge, abilitato per un datastream specifico, come Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
+* Un **a monte** è un servizio dietro la rete Edge, abilitato per un datastream specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
 * A **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e a monte configurato per un datastream.
 * A **richiesta** è un singolo messaggio inviato da un&#39;applicazione di proprietà del cliente al [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
-* Un **errore** è qualsiasi richiesta che non riesce a causa di una rete Adobe Experience Platform Edge [errore del servizio interno](error-handling.md).
+* Un **errore** è qualsiasi richiesta che non riesce a causa di una rete Edge [errore del servizio interno](error-handling.md).
 
 ## Limiti di servizio
 
