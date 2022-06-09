@@ -4,9 +4,9 @@ description: Scopri come configurare l’autenticazione per l’API di Adobe Exp
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: raccolta dei dati; autenticazione; API di rete Adobe Experience Platform Edge; autorizzazione
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '648'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 ## Panoramica
 
-La [!DNL Adobe Experience Platform Edge Network Server API] gestisce la raccolta di dati autenticati e non autenticati, a seconda dell’origine degli eventi e del dominio di raccolta API.
+La [!DNL Edge Network Server API] gestisce la raccolta di dati autenticati e non autenticati, a seconda dell’origine degli eventi e del dominio di raccolta API.
 
-Per ogni richiesta, il [!DNL Server API] verifica il datastream `access_type` impostazione.
+Per ogni richiesta, il [!DNL Server API] verifica il datastream [!DNL access type] impostazione. Utilizzando questa impostazione, i clienti possono configurare un datastream per accettare dati autenticati o sia autenticati che non autenticati. Per impostazione predefinita, vengono accettati entrambi i tipi di dati.
 
-Utilizzando questa impostazione, i clienti possono configurare un datastream per accettare dati autenticati o sia autenticati che non autenticati. Per impostazione predefinita, vengono accettati entrambi i tipi di dati.
+Per informazioni dettagliate sulla configurazione del tipo di accesso a datastream, consulta la documentazione su come [creare e configurare un datastream](../edge/datastreams/overview.md#create).
 
-Di seguito è riportato un riepilogo del comportamento, basato sul `access_type` configurazione e l&#39;endpoint in cui viene ricevuta la richiesta.
+Di seguito è riportato un riepilogo del comportamento, in base al datastream [!DNL Access Type] configurazione e l&#39;endpoint in cui viene ricevuta la richiesta.
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | mista (predefinito) | Non autentica la richiesta | Autentica la richiesta |
 | autenticato | Autentica la richiesta | Autentica la richiesta |
@@ -36,7 +36,7 @@ Prima di poter effettuare chiamate al [!DNL Server API], assicurati di soddisfar
 
 * Hai un account organizzazione IMS con accesso a Adobe Experience Platform.
 * Il tuo account Experience Platform ha `developer` e `user` ruoli abilitati per il profilo di prodotto API di Adobe Experience Platform. Contatta il tuo [Admin Console](../access-control/home.md) amministratore per abilitare questi ruoli per il tuo account.
-* Lei ha un Adobe ID. Se non disponi di un Adobe ID, passa alla pagina [Console per sviluppatori di Adobe](https://developer.adobe.com/console) e crea un nuovo account.
+* Lei ha un Adobe ID. Se non disponi di un Adobe ID, passa alla pagina [Console Adobe Developer](https://developer.adobe.com/console) e crea un nuovo account.
 
 ## Raccogli credenziali {#credentials}
 
