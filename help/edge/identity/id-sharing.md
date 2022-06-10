@@ -2,13 +2,13 @@
 title: Condivisione di ID da mobile a web e tra domini diversi
 description: Scopri come mantenere gli ID visitatore da dispositivi mobili a proprietà web e tra domini diversi
 keywords: identità;mobile;id;condivisione;dominio;tra domini diversi;sdk;piattaforma;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
-
 
 # Condivisione di ID da mobile a web e tra domini diversi
 
@@ -32,9 +32,11 @@ Un rivenditore di tecnologia desidera migliorare il rapporto sulle attività dei
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare la condivisione di ID da mobile a web e tra più domini, devi eseguire l’aggiornamento a [!DNL Web SDK] versione 2.11.0 o successiva.
+Per utilizzare la condivisione di ID da mobile a web e tra più domini, devi utilizzare [!DNL Web SDK] versione 2.11.0 o successiva.
 
 Per le implementazioni mobili di Edge Network, questa funzione è supportata nel [Identità per rete Edge](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) estensione che inizia con la versione 1.1.0 (iOS e Android).
+
+Questa funzione è compatibile anche con [!DNL VisitorAPI.js] versione 1.7.0 o successiva.
 
 ## Condivisione di ID da mobile a web {#mobile-to-web}
 
