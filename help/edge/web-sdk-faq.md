@@ -2,9 +2,9 @@
 title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Risposte alle domande più frequenti sull'SDK Web di Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
@@ -160,6 +160,10 @@ Sì, attualmente l&#39;SDK per web utilizza da 1 a 4 cookie a seconda dell&#39;i
 **kndctr_orgid_personalization:** Questo cookie include informazioni sulla sessione utilizzate da Adobe Target per personalizzare le pagine web.
 
 **kndctr_orgid_permission check:** Questo cookie basato su sessione segnala al server di cercare il lato server delle preferenze di consenso.
+
+Quando utilizzi l’SDK per web, la rete Edge imposta uno o più cookie di cui sopra. La rete Edge imposta tutti i cookie con `secure` e `sameSite="none"` attributi.
+
+Se al momento disponi di sezioni sicure e non sicure sul tuo sito web, ciò potrebbe interferire con l&#39;identificazione dell&#39;utente. Quando un utente passa da una sezione protetta del sito a una sezione non protetta, la rete Edge genera un nuovo `ECID` con la richiesta.
 
 ## Quali browser supporta Adobe Experience Platform Web SDK?
 
