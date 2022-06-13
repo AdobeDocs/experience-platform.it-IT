@@ -3,14 +3,32 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 1%
+source-wordcount: '1169'
+ht-degree: 2%
 
 ---
 
+
 # Note sulla versione
+
+Questo documento illustra le note sulla versione dell’SDK Web per Adobe Experience Platform.
+Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Note sulla versione dell’estensione del tag SDK per web](extension/web-sdk-ext-release-notes.md).
+
+## Versione 2.11.0 - 13 giugno 2022
+
+**Nuove funzioni**
+
+* È ora possibile fornire esperienze personalizzate con maggiore precisione, condividendo ID visitatore tra app mobili e contenuti web per dispositivi mobili, e tra domini diversi. Consulta la sezione [documentazione dedicata](identity/id-sharing.md) per saperne di più.
+* Ora è possibile eseguire il rendering o l&#39;esecuzione di un array di proposizioni da [!DNL Adobe Target] nelle applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza dell’analisi. Consulta la sezione [documentazione dedicata](personalization/rendering-personalization-content.md#applypropositions) per saperne di più.
+* Sono state aggiunte ulteriori informazioni alla sezione `getLibraryInfo` Compresi i comandi disponibili e la configurazione finale per l&#39;istanza.
+
+**Correzioni e miglioramenti**
+
+* Sono state aggiornate le impostazioni dei cookie da utilizzare `sameSite="none"` e `secure` flag su [!DNL HTTPS] pagine.
+* È stato risolto un problema a causa del quale il contenuto personalizzato non veniva applicato correttamente quando si utilizzava il comando `eq` pseudo selettore.
+* È stato risolto un problema in cui `localTimezoneOffset` potrebbe non riuscire a convalidare l&#39;Experience Platform.
 
 ## Versione 2.10.1 - 3 maggio 2022
 
