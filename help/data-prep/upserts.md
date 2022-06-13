@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Alle Righe Al Servizio Profilo Utilizzando Data Prep
 description: Questo documento fornisce informazioni su come inviare aggiornamenti parziali delle righe al Servizio profili utilizzando Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 93c95fce45dc034c0b9c53d9893a8e38e752ec0f
+source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
+source-wordcount: '1205'
+ht-degree: 1%
 
 ---
 
@@ -250,6 +250,7 @@ Di seguito è riportato un elenco delle limitazioni note da considerare durante 
 * Il metodo upserts in streaming deve essere utilizzato solo quando si inviano aggiornamenti di riga parziali a [!DNL Profile Service]. Gli aggiornamenti parziali delle righe sono **not** consumato da data lake.
 * Il metodo upserts in streaming non supporta l’aggiornamento, la sostituzione e la rimozione delle identità. Se non esistono, vengono create nuove identità. Di conseguenza, `identity` deve sempre essere impostata per creare. Se esiste già un&#39;identità, l&#39;operazione è un no-op.
 * Il metodo upserts in streaming supporta attualmente solo attributi e oggetti con valore singolo primitivo (come numeri interi, date, marche temporali e stringhe). Il metodo upserts in streaming non supporta la sostituzione, l’aggiunta o la sovrascrittura di attributi di array e indici di array specifici.
+* Il metodo degli aggiornamenti in streaming al momento non supporta [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=it) e [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## Passaggi successivi
 
