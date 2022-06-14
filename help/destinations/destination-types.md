@@ -4,9 +4,9 @@ title: Tipi di destinazione e categorie
 seo-title: Destination types and categories
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: conness
 
 ## Connessioni {#connections}
 
-**[!UICONTROL Esportazione profilo]** e **[!UICONTROL Esportazione segmento streaming]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta segmenti e profili qualificati nelle destinazioni.
+**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione segmento streaming]** e **[!DNL Edge Personalization]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta segmenti e profili qualificati nelle destinazioni.
 
 ## Destinazioni di esportazione del profilo {#profile-export}
 
@@ -55,6 +55,12 @@ Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attri
 ## Destinazioni di esportazione dei segmenti in streaming {#streaming-destinations}
 
 Le destinazioni di esportazione dei segmenti ricevono dati Experienci Platform sui segmenti. Queste destinazioni utilizzano ID segmento o ID utente. Pubblicità e destinazioni social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)oppure [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
+
+## Destinazioni di personalizzazione Edge {#edge-personalization-destinations}
+
+Le destinazioni di personalizzazione Edge in Experience Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destinazione di personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare i tuoi clienti per i casi d’uso di personalizzazione della stessa pagina e della pagina successiva.
+
+Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Esportazione di profili e destinazioni di esportazione di segmenti - panoramica video {#video}
 
