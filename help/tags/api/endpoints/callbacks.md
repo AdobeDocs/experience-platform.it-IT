@@ -2,10 +2,10 @@
 title: Endpoint “callbacks”
 description: Scopri come effettuare chiamate all’endpoint /callbacks nell’API di Reactor.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
 source-wordcount: '621'
-ht-degree: 99%
+ht-degree: 96%
 
 ---
 
@@ -205,6 +205,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -262,12 +263,12 @@ In caso di esito positivo, la risposta restituisce i dettagli del nuovo callback
 
 ## Aggiornare un callback
 
-Puoi aggiornare un callback includendo il relativo ID nel percorso di una richiesta PUT.
+Puoi aggiornare un callback includendo il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
 ```http
-PUT /callbacks/{CALLBACK_ID}
+PATCH /callbacks/{CALLBACK_ID}
 ```
 
 | Parametro | Descrizione |
@@ -281,15 +282,17 @@ PUT /callbacks/{CALLBACK_ID}
 La richiesta seguente aggiorna la matrice `subscriptions` per un callback esistente.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
+            "url": "https://www.example.net",
             "subscriptions": [
               "rule.created",
               "build.created"
@@ -369,7 +372,9 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Risposta**
