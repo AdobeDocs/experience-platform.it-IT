@@ -3,9 +3,9 @@ title: Eseguire il rendering di contenuti personalizzati utilizzando l’SDK per
 description: Scopri come eseguire il rendering di contenuti personalizzati con l’SDK per web di Adobe Experience Platform.
 keywords: personalizzazione;renderdecisions;sendEvent;decisionScopes;proposizioni;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### Gestione della visualizzazione momentanea di altri contenuti
 
 L’SDK fornisce funzionalità per [gestisci visualizzazione momentanea](../personalization/manage-flicker.md) durante il processo di personalizzazione.
+
+## Proposizioni di rendering nelle applicazioni a pagina singola senza incrementare le metriche {#applypropositions}
+
+La `applyPropositions` consente di eseguire il rendering o l&#39;esecuzione di un array di proposizioni da [!DNL Target] nelle applicazioni a pagina singola, senza incrementare il [!DNL Analytics] e [!DNL Target] metriche. Questo aumenta l’accuratezza dei rapporti.
+
+>[!IMPORTANT]
+>
+>Se le proposte per `__view__` l’ambito è stato sottoposto a rendering al caricamento della pagina, i relativi `renderAttempted` Il flag viene impostato su `true`. La `applyPropositions` il comando non rieseguirà il rendering del `__view__` proposte di ambito che hanno `renderAttempted: true` bandiera.
+
+### Caso d&#39;uso 1: Rendering delle proposte di visualizzazione di applicazioni a pagina singola
+
+Il caso d’uso descritto nell’esempio seguente riproduce le proposte di visualizzazione carrello precedentemente recuperate e sottoposte a rendering senza inviare notifiche di visualizzazione.
+
+Nell’esempio seguente, la `sendEvent` viene attivato in seguito a una modifica della visualizzazione e salva l&#39;oggetto risultante in una costante.
+
+Successivamente, quando la visualizzazione o un componente viene aggiornato, il `applyPropositions` viene chiamato, con le proposizioni del precedente `sendEvent` per eseguire nuovamente il rendering delle proposte di visualizzazione.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Caso d&#39;uso 2: Proposte di rendering prive di selettore
+
+Questo caso d’uso si applica alle offerte di attività create utilizzando [!DNL Target Form-based Experience Composer].
+
+Devi fornire il selettore, l’azione e l’ambito nella `applyPropositions` chiama.
+
+Supportato `actionTypes` sono:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Se non fornisci metadati per un ambito decisionale, le proposte associate non verranno sottoposte a rendering.
