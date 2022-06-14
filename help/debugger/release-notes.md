@@ -4,14 +4,26 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform Debugger
+
+## Versione 1.3.2 - 9 giugno 2022
+
+* È stato aggiunto un avatar predefinito al momento dell’accesso dell’utente.
+* È stata aggiunta l’evidenziazione della sintassi agli oggetti JSON nei registri.
+
+## Versione 1.3.1 - 24 maggio 2022
+
+* Dipendenze aggiornate.
+* È stato risolto un problema di Analytics a causa del quale gli hit post-elaborazione non potevano essere abilitati.
+* È stato risolto un problema che causava la connessione del debugger alla finestra di accesso di Adobe.
+* È stato risolto un problema di AT.js a causa del quale i messaggi di registro non venivano visualizzati in Debugger.
 
 ## Versione 1.3.0 - 28 gennaio 2022
 
