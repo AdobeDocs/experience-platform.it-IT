@@ -5,9 +5,9 @@ title: Panoramica sulla governance dei dati
 topic-legacy: overview
 description: La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno dell’Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Un esempio di azione di marketing potrebbe essere il desiderio di esportare un s
 Sono disponibili due tipi di criteri:
 
 * **[!UICONTROL Criteri di governance dei dati]**: Limita l’attivazione dei dati in base all’azione di marketing in corso e alle etichette di utilizzo dei dati in base ai dati in questione.
-* **[!UICONTROL Criterio di consenso] (Beta)**: Filtrare i profili a cui è possibile attivare [destinazioni](../destinations/home.md) in base al consenso o alle preferenze dei clienti.
+* **[!UICONTROL Criterio di consenso]**: Filtrare i profili a cui è possibile attivare [destinazioni](../destinations/home.md) in base al consenso o alle preferenze dei clienti.
 
 Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare i criteri utilizzando [!DNL Policy Service] o [!DNL Experience Platform] interfaccia utente. Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la sezione [panoramica dei criteri](./policies/overview.md).
 

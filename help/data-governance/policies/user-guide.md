@@ -5,9 +5,9 @@ title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 topic-legacy: policies
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ In [!DNL Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Criter
 
 ![](../images/policies/browse-policies.png)
 
-Se hai accesso ai criteri di consenso (attualmente in versione beta), seleziona la **[!UICONTROL Criteri di consenso]** per visualizzarli nel [!UICONTROL Sfoglia] scheda .
+Se hai accesso ai criteri di consenso, seleziona la **[!UICONTROL Criteri di consenso]** per visualizzarli nel [!UICONTROL Sfoglia] scheda .
 
 ![](../images/policies/consent-policy-toggle.png)
 

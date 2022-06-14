@@ -5,9 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1696'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] veri
 
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
-* (Beta) I profili che hanno acconsentito all’inclusione nell’attivazione del segmento in base ai criteri di consenso configurati.
+* I profili che hanno acconsentito all’inclusione nell’attivazione del segmento in base ai criteri di consenso configurati.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribu
 
 | Fase di derivazione dei dati | Ruolo nell&#39;applicazione delle politiche |
 | --- | --- |
-| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campo) che definiscono per quali casi d’uso può essere utilizzato l’intero set di dati o campi specifici. Le violazioni dei criteri si verificano se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio.<br><br>Anche gli attributi di consenso raccolti dai clienti vengono memorizzati nei set di dati. Se hai accesso ai criteri di consenso (attualmente in versione beta), tutti i profili che non soddisfano i requisiti di attributi di consenso dei tuoi criteri verranno esclusi dai segmenti attivati in una destinazione. |
+| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campo) che definiscono per quali casi d’uso può essere utilizzato l’intero set di dati o campi specifici. Le violazioni dei criteri si verificano se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio.<br><br>Anche gli attributi di consenso raccolti dai clienti vengono memorizzati nei set di dati. Se hai accesso ai criteri di consenso, tutti i profili che non soddisfano i requisiti di attributo di consenso dei tuoi criteri verranno esclusi dai segmenti attivati in una destinazione. |
 | Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Consulta la sezione [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. |
 | Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
 | Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (a volte denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, l’azione di marketing definita per una destinazione determina quali criteri di utilizzo dei dati e i criteri di consenso sono applicabili a tale destinazione.<br><br>Le violazioni dei criteri di utilizzo dei dati si verificano se attivi un segmento le cui etichette di utilizzo sono limitate per l’azione di marketing della destinazione.<br><br>(Beta) Quando un segmento viene attivato, tutti i profili che non contengono gli attributi di consenso richiesti per l’azione di marketing (come definito dai criteri di consenso) vengono esclusi dal pubblico attivato. |

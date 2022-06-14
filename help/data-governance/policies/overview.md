@@ -5,9 +5,9 @@ title: Panoramica dei criteri di utilizzo dei dati
 topic-legacy: policies
 description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentita l’esecuzione di dati all’interno di un Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Affinché le etichette per l’utilizzo dei dati supportino efficacemente la con
 Sono disponibili due tipi di criteri:
 
 * **[!UICONTROL Criteri di governance dei dati]**: Limita l’attivazione dei dati in base all’azione di marketing in corso e alle etichette di utilizzo dei dati in base ai dati in questione.
-* **[!UICONTROL Criterio di consenso] (Beta)**: Filtrare i profili a cui è possibile attivare [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei clienti
+* **[!UICONTROL Criterio di consenso]**: Filtrare i profili a cui è possibile attivare [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei clienti
 
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e collegamenti ad ulteriore documentazione per l’utilizzo dei criteri nell’interfaccia utente o API.
 
@@ -89,6 +89,6 @@ La tabella seguente descrive le azioni di marketing di base fornite out-of-the-b
 | Targeting e-mail | Un’azione che utilizza i dati nelle campagne di targeting e-mail. |
 | Esportazione verso terzi | Un’azione che esporta i dati a processori ed entità che non hanno relazioni dirette con i clienti. Molti fornitori di dati hanno termini nei contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. |
 | Pubblicità on-site | Un’azione che utilizza i dati per gli annunci onsite, inclusa la selezione e la consegna di annunci pubblicitari sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci pubblicitari. |
-| Personalization on-site | Un’azione che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
+| Personalizzazione on-site | Un’azione che utilizza i dati per la personalizzazione dei contenuti sul sito. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
 | Corrispondenza segmento | Un’azione che utilizza i dati per Adobe Experience Platform Segment Match (Corrispondenza segmento), che consente a due o più utenti di Platform di scambiare i dati dei segmenti. Attivando i criteri che fanno riferimento a questa azione, puoi limitare i dati utilizzati per la corrispondenza dei segmenti. Ad esempio, se il criterio principale &quot;Limita la condivisione dei dati&quot; è abilitato, qualsiasi dato con un [Etichetta C11](../labels/reference.md#c11) non può essere utilizzato per Segment Match (Corrispondenza segmento). |
-| Personalization a identità singola | Un’azione che richiede l’utilizzo di una singola identità a scopo di personalizzazione anziché unire identità da più sorgenti. |
+| Personalizzazione a identità singola | Un’azione che richiede l’utilizzo di una singola identità a scopo di personalizzazione anziché unire identità da più sorgenti. |
