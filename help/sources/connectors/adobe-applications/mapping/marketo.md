@@ -5,9 +5,9 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '713'
 ht-degree: 7%
 
 ---
@@ -21,6 +21,8 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 >Tutto [!DNL Marketo] set di dati eccetto `Activities` supporto `isDeleted`. I flussi di dati esistenti includeranno automaticamente `isDeleted`, ma acquisirà solo il flag per i nuovi dati acquisiti. Se desideri applicare il flag a tutti i dati storici, devi arrestare i flussi di dati esistenti e ricrearli con la nuova mappatura. Se rimuovi `isDeleted`, non potrai più accedere alla funzionalità . È fondamentale che la mappatura venga mantenuta dopo la compilazione automatica.
 
 ## Attività {#activities}
+
+La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le attività standard, devi aggiornare lo schema utilizzando [utilità di generazione automatica dello schema](../marketo/marketo-namespaces.md) perché se crei una nuova `activities` Flusso di dati senza aggiornare lo schema, i modelli di mappatura non riusciranno, in quanto i nuovi campi di destinazione non saranno presenti nello schema. Se scegli di non aggiornare lo schema, puoi comunque creare un nuovo flusso di dati e ignorare eventuali errori. Tuttavia, eventuali campi nuovi o aggiornati non verranno acquisiti in Platform.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
