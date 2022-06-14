@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Customer Match di Google consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti su proprietà possedute e gestite da Google, come ad esempio Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * **[!UICONTROL Nome]**: specificare un nome per la connessione di destinazione
 * **[!UICONTROL Descrizione]**: fornire una descrizione per la connessione di destinazione
-* **[!UICONTROL ID account]**: il tuo ID cliente Google. Il formato dell&#39;ID è xxx-xxx-xxxx.
+* **[!UICONTROL ID account]**: le [ID cliente Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Il formato dell&#39;ID è xxx-xxx-xxxx. Se utilizzi [!DNL Google Ads Manager Account (My Client Center)], non utilizzare l&#39;ID account manager. Utilizza la [ID cliente Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en) invece.
 
 >[!IMPORTANT]
 >
