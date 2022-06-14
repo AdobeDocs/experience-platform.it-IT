@@ -5,9 +5,9 @@ title: Creare e modificare schemi nell’interfaccia utente
 description: Scopri le nozioni di base su come creare e modificare schemi nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2895'
 ht-degree: 0%
 
 ---
@@ -221,6 +221,12 @@ Dopo aver applicato le modifiche, il nuovo campo viene visualizzato nello spazio
 ![Campo aggiunto all’oggetto standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## Abilitare uno schema per il profilo cliente in tempo reale {#profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_enableforprofile"
+>title="Abilitare uno schema per il profilo"
+>abstract="Quando uno schema è abilitato per Profilo, tutti i set di dati creati da questo schema partecipano a Profilo cliente in tempo reale, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta utilizzato uno schema per acquisire dati in Profilo, non può essere disabilitato."
+>text="See the documentation for more information on enabling a schema for Profile."
 
 [Profilo cliente in tempo reale](../../../profile/home.md) unisce i dati provenienti da fonti diverse per creare una visione completa di ogni singolo cliente. Se si desidera che i dati acquisiti da uno schema partecipino a questo processo, è necessario abilitare lo schema da utilizzare in [!DNL Profile].
 

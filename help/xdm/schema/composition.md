@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3881'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,12 @@ Tutti gli schemi XDM descrivono i dati che possono essere classificati come reco
 Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione di identità di un oggetto, tratta dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
 
 ### [!UICONTROL Identità] {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="Identità negli schemi"
+>abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafico delle identità per ogni singolo utente e creare profili cliente."
+>text="See the documentation for more information on identities in schemas."
 
 Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola visualizzazione unificata di una singola entità. Pertanto, è importante, quando pensi agli schemi, pensare alle identità dei clienti e a quali campi può essere utilizzato per identificare un soggetto indipendentemente da dove i dati potrebbero provenire.
 

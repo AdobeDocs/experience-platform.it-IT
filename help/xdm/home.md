@@ -5,9 +5,9 @@ title: Panoramica del sistema XDM
 topic-legacy: overview
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), basato su un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '2076'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,12 @@ Per ulteriori informazioni su come gestire e interagire con gli schemi in Platfo
 
 ## Comportamenti dei dati nel sistema XDM {#data-behaviors}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_behavior"
+>title="Comportamenti dei dati"
+>abstract="I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto, mentre gli schemi di serie temporali acquisiscono un&#39;istantanea del sistema al momento dell&#39;esecuzione di un&#39;azione. Gli schemi ad hoc acquisiscono campi che sono spazi dei nomi da utilizzare solo per un singolo set di dati."
+>text="See the documentation for more information on data behaviors in Platform."
+
 I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in tre tipi di comportamento:
 
 * **Record**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
@@ -59,7 +65,7 @@ I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in
 
 Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema quando viene creato per la prima volta. Le classi XDM descrivono il numero minimo di proprietà che uno schema deve contenere per rappresentare un particolare comportamento di dati.
 
-Anche se è possibile definire le proprie classi all&#39;interno di [!DNL Schema Registry], si consiglia di utilizzare le classi standard **[!UICONTROL Profilo individuale XDM]** e **[!UICONTROL ExperienceEvent XDM]** per i dati registrati e per le serie temporali, rispettivamente. Queste classi sono descritte più dettagliatamente di seguito.
+Anche se puoi definire le tue classi all&#39;interno di [!DNL Schema Registry], si consiglia di utilizzare le classi standard **[!UICONTROL Profilo individuale XDM]** e **[!UICONTROL ExperienceEvent XDM]** per i dati registrati e per le serie temporali, rispettivamente. Queste classi sono descritte più dettagliatamente di seguito.
 
 >[!NOTE]
 >
@@ -109,7 +115,7 @@ Una volta creato uno schema e creato un set di dati che fa riferimento a tale sc
 
 Fai riferimento a [Panoramica del servizio query](../query-service/home.md) per ulteriori informazioni sul servizio.
 
-### Profilo cliente in tempo reale
+### Real-time Customer Profile
 
 Profilo cliente in tempo reale fornisce un profilo consumatore centralizzato per una gestione delle esperienze mirata e personalizzata. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché account con marca temporale utilizzabili per eventi che coinvolgono il singolo utente che si sono verificati in uno dei sistemi utilizzati con Experience Platform.
 
