@@ -5,9 +5,9 @@ title: Connettore Marketo Engage
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del connettore di origine del Marketo Engage, con informazioni sull’autenticazione, la mappatura e la latenza dei dati.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,10 @@ Vedi i passaggi descritti nel [Autenticazione del connettore sorgente Marketo](.
 ## Configurare la mappatura dell&#39;organizzazione Adobe
 
 Prima di poter stabilire set di mappature per [!DNL Marketo], devi prima impostare Adobe Organization Mapping. Per i passaggi dettagliati su come completare questa procedura, consulta la guida su [configurazione di Adobe Organization Mapping per [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Imposta spazi dei nomi B2B e utilità di generazione automatica dello schema
+
+Quindi, utilizza lo spazio dei nomi B2B e l’utility di generazione automatica dello schema per configurare la console per sviluppatori Platform e l’ambiente Postman. Questo ti consente di compilare automaticamente i namespace e gli schemi B2B. Per istruzioni dettagliate, consulta la guida su [configurazione dei namespace B2B e dell&#39;utility di generazione automatica dello schema](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
+source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ Questa esercitazione fornisce i passaggi per la creazione di un [!DNL Marketo En
 
 Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
+* [Utility di generazione automatica di spazi dei nomi B2B e schemi](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): L&#39;utility di generazione automatica dei namespace B2B e dello schema consente di utilizzare [!DNL Postman] generare automaticamente valori per i namespace e gli schemi B2B. Devi prima completare i namespace e gli schemi B2B prima di creare un [!DNL Marketo] connessione di origine e flusso di dati.
 * [Origini](../../../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
    * [Creare e modificare schemi nell’interfaccia utente](../../../../../xdm/ui/resources/schemas.md): Scopri come creare e modificare schemi nell’interfaccia utente di .
