@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+source-git-commit: 1d1d070de0a62c42cdda3f021cafad731a73709b
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 86%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 86%
    * [Panoramica](./ui/event-forwarding/overview.md)
    * [Introduzione](./ui/event-forwarding/getting-started.md)
    * [Configurazione dei segreti](./ui/event-forwarding/secrets.md)
+   * [Monitoraggio](./ui/event-forwarding/monitoring.md)
 * Amministrazione {#admin}
    * [Panoramica](./ui/administration/overview.md)
    * [Aziende e proprietà](./ui/administration/companies-and-properties.md)
