@@ -4,9 +4,9 @@ title: (Beta) Creare una connessione sorgente a più pannelli nell’interfaccia
 description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 >id="platform_sources_mixpanel_timezone"
 >title="Imposta un fuso orario per l’acquisizione da pannello multiplo"
 >abstract="Il fuso orario deve essere lo stesso dell’impostazione del fuso orario del profilo Mixpanel, perché Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Il pannello misto regolerà il relativo fuso orario in modo da coordinarsi con il fuso orario del progetto prima di registrare l’evento in un archivio dati Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Ulteriori informazioni nella documentazione"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Ulteriori informazioni nella documentazione"
 
 Dopo l’autenticazione della sorgente, specifica l’ID e il fuso orario del progetto, quindi seleziona **[!UICONTROL Seleziona]**.
 
