@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine Salesforce
 topic-legacy: overview
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,7 @@ Per informazioni dettagliate sulle regole di mappatura dei campi tra [!DNL Sales
 - [Ruoli di contatto opportunità](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campagne](../adobe-applications/mapping/salesforce.md#campaign)
 - [Membri della campagna](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [Relazione di contatto dell&#39;account](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Imposta la [!DNL Salesforce] utilità di generazione automatica dello spazio dei nomi e dello schema
 
