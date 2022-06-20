@@ -5,9 +5,9 @@ title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 5%
 
 ---
@@ -138,6 +138,7 @@ Il formato della risposta dipende dal `Accept` intestazione inviata nella richie
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw con `$ref` e `allOf`, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e `allOf` risolto, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e `allOf` risolti, descrittori inclusi. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` e `allOf` risolto, con titoli e descrizioni. I campi obsoleti sono indicati con un `meta:status` attributo `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

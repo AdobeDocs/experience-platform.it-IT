@@ -5,9 +5,9 @@ title: Guida introduttiva all’API del Registro di sistema dello schema
 description: Questo documento fornisce un'introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all'API del Registro di sistema dello schema.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -211,6 +211,7 @@ Nella tabella seguente è riportato un elenco di elementi compatibili `Accept` i
 | `application/vnd.adobe.xed-notext+json; version=1` | XDM non elaborato con `$ref` e `allOf`. Nessun titolo o descrizione. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributi e `allOf` risolto. Nessun titolo o descrizione. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributi e `allOf` risolto. I descrittori sono inclusi. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` e `allOf` risolto, con titoli e descrizioni. I campi obsoleti sono indicati con un `meta:status` attributo `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -5,9 +5,9 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -311,7 +311,7 @@ Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. |
+| `@type` | Il tipo di descrittore da definire. Per un descrittore di identità, questo valore deve essere impostato su `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, usa &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
@@ -347,7 +347,7 @@ I descrittori di nomi descrittivi consentono a un utente di modificare `title`, 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. |
+| `@type` | Il tipo di descrittore da definire. Per un descrittore di nome descrittivo, questo valore deve essere impostato su `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, usa &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
@@ -377,7 +377,7 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. |
+| `@type` | Il tipo di descrittore da definire. Per un descrittore di relazione, questo valore deve essere impostato su `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso del campo nello schema di origine in cui viene definita la relazione. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;). |
@@ -386,7 +386,6 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 | `xdm:destinationProperty` | Percorso facoltativo di un campo di destinazione nello schema di destinazione. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da qualsiasi campo contenente un descrittore di identità di riferimento corrispondente (vedere di seguito). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Descrittore di identità di riferimento
 
@@ -404,8 +403,32 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. |
+| `@type` | Il tipo di descrittore da definire. Per un descrittore di identità di riferimento, questo valore deve essere impostato su `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso del campo nello schema di origine in cui viene definito il descrittore. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:identityNamespace` | Codice dello spazio dei nomi identità per la proprietà sorgente. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Descrittore di campo obsoleto
+
+È possibile [deprecazione di un campo all’interno di una risorsa XDM personalizzata](../tutorials/field-deprecation.md#custom) aggiungendo un `meta:status` attributo impostato su `deprecated` al settore in questione. Tuttavia, se desideri deprecare i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare un descrittore di campo obsoleto allo schema in questione per ottenere lo stesso effetto. Utilizzo della [corretto `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), puoi quindi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell’API.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `@type` | Tipo di descrittore. Per un descrittore di deprecazione del campo, è necessario impostare questo valore su `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` dello schema a cui si applica il descrittore. |
+| `xdm:sourceVersion` | Versione dello schema a cui si applica il descrittore. Deve essere impostato su `1`. |
+| `xdm:sourceProperty` | Percorso della proprietà all&#39;interno dello schema a cui si applica il descrittore. Se si desidera applicare il descrittore a più proprietà, è possibile fornire un elenco di percorsi sotto forma di array (ad esempio, `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}
