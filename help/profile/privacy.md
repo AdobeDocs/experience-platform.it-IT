@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL
 
 >[!IMPORTANT]
 >
->Mentre una richiesta di cancellazione corretta rimuove i dati degli attributi raccolti per un cliente (o per un set di clienti), la richiesta non rimuove le associazioni stabilite nel grafico delle identità.
+>Se viene effettuata una richiesta di cancellazione per Profilo (`ProfileService`) ma non il servizio Identity (`identity`), il processo risultante rimuove i dati degli attributi raccolti per un cliente (o set di clienti) ma non rimuove le associazioni stabilite nel grafico delle identità.
 >
 >Ad esempio, una richiesta di cancellazione che utilizza un `email_id` e `customer_id` rimuove tutti i dati attributo memorizzati in tali ID. Tuttavia, qualsiasi dato successivamente acquisito in base agli stessi `customer_id` saranno ancora associati al `email_id`, poiché l&#39;associazione esiste ancora.
 >
