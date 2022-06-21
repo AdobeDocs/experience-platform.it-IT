@@ -2,9 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: (Beta) Creare una connessione sorgente a più pannelli nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
+exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 2%
