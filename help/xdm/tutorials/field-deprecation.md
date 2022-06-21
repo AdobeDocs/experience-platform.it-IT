@@ -1,16 +1,18 @@
 ---
 title: Campo XDM obsoleto
 description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) nell’API del Registro di sistema dello schema.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 6%
 
 ---
 
 # Campo XDM obsoleto
 
-In Experience Data Model (XDM), puoi rendere obsoleto un campo all’interno di uno schema o di una risorsa personalizzata utilizzando l’ [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM.
+In Experience Data Model (XDM), puoi rendere obsoleto un campo all’interno di uno schema o di una risorsa personalizzata utilizzando l’ [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Se un campo viene deprecato, viene nascosto dalle interfacce utente downstream, ad esempio [!UICONTROL Profili] area di lavoro e Customer Journey Analytics, ma in caso contrario si tratta di una modifica non interrompere e non influisce negativamente sui flussi di dati esistenti.
+
+Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM.
 
 ## Introduzione
 
