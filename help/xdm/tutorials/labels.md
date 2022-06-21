@@ -1,9 +1,10 @@
 ---
 title: Gestire le etichette di utilizzo dei dati per uno schema
 description: Scopri come aggiungere etichette per l’utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ Un’etichetta applicata a un campo dello schema indica i criteri di utilizzo ap
 
 Mentre le etichette possono essere applicate ai singoli set di dati (e ai campi all’interno di tali set di dati), puoi anche applicare etichette a livello di schema. Quando le etichette vengono applicate direttamente a uno schema, vengono propagate a tutti i set di dati esistenti e futuri basati su tale schema.
 
+Inoltre, qualsiasi etichetta di campo aggiunta in uno schema si propaga a tutti gli altri schemi che utilizzano lo stesso campo da una classe o gruppo di campi condivisi. Questo consente di garantire che le regole di utilizzo per campi simili siano coerenti per l’intero modello dati.
+
 Questa esercitazione descrive i passaggi per aggiungere etichette a uno schema utilizzando l’Editor di schema nell’interfaccia utente di Platform.
 
 ## Introduzione
@@ -32,7 +35,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 ## Selezionare uno schema o un campo a cui aggiungere le etichette
 
-Le etichette possono essere applicate solo agli schemi e non possono essere aggiunte ai componenti che compongono tali schemi (classi, gruppi di campi e tipi di dati). Per iniziare ad aggiungere etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell’Editor di schema.
+Per iniziare ad aggiungere etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell’Editor di schema.
 
 Per modificare le etichette di un singolo campo, è possibile selezionare il campo nell’area di lavoro, quindi selezionare **[!UICONTROL Gestisci accesso]** nella barra a destra.
 
