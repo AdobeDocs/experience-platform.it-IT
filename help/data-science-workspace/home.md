@@ -5,7 +5,7 @@ title: Panoramica di Data Science Workspace
 topic-legacy: overview
 description: Questa guida fornisce una panoramica dei concetti chiave relativi a Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Tutti i dati in Adobe Experience Platform sono conformi a uno schema XDM standar
 Se non trovi immediatamente i dati necessari, ma esistono al di fuori di Adobe Experience Platform, è relativamente semplice acquisire set di dati aggiuntivi, che si trasformeranno anche nello schema XDM standard.\
 È possibile utilizzare [!DNL Jupyter Notebook] per semplificare la pre-elaborazione dei dati, possibilmente a partire da un modello di blocco appunti o da un blocco appunti utilizzato in precedenza per la propensione all&#39;acquisto.
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### Creare la ricetta
 
