@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dei set di dati
 topic-legacy: datasets
 description: Scopri come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ Questa guida utente richiede una buona comprensione dei seguenti componenti di A
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri sull&#39;utilizzo dei dati dei clienti.
 
-## Visualizzare i set di dati
+## Visualizzare i set di dati {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Numeri negativi nell’attività dei set di dati"
+>abstract="I numeri negativi nei record acquisiti indicano che un utente ha eliminato alcuni batch in un intervallo di tempo selezionato."
+>text="Learn more in documentation"
 
 In [!DNL Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra per aprire il **[!UICONTROL Set di dati]** dashboard. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, compreso il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione di acquisizione più recente.
 
