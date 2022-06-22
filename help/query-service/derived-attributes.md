@@ -1,7 +1,9 @@
 ---
 title: Attributi derivati
 description: Gli attributi derivati ti consentono di calcolare gli attributi con cadenza regolare ed eventualmente di pubblicare questi attributi derivati in Profilo cliente in tempo reale come attributi di profilo. Questo documento fornisce una panoramica sull’utilizzo di Query Service per creare attributi derivati da utilizzare con i dati del profilo.
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 1%
