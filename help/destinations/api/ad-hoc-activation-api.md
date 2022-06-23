@@ -1,23 +1,25 @@
 ---
 keywords: Experience Platform;api di destinazione;attivazione ad hoc;attivare segmenti ad hoc
 solution: Experience Platform
-title: (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
+title: Attivare i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che avvengono prima dell’attivazione.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
+source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1488'
 ht-degree: 2%
 
 ---
 
-# (Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc
+# Attivare i segmenti di pubblico su richiesta per destinazioni batch tramite l’API di attivazione ad hoc
 
 >[!IMPORTANT]
 >
->La [!DNL ad-hoc activation API] in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+>Dopo aver completato la fase Beta, la [!DNL ad-hoc activation API] è ora generalmente disponibile (GA) per tutti i clienti Experience Platform. Nella versione GA, l’API è stata aggiornata alla versione 2. Passaggio 4 ([Ottieni l&#39;ID più recente del processo di esportazione del segmento](#segment-export-id)) non è più richiesto, in quanto l’API non richiede più l’ID di esportazione.
+>
+>Vedi [Esegui il processo di attivazione ad hoc](#activation-job) per ulteriori informazioni, fai clic qui sotto.
 
 ## Panoramica {#overview}
 
@@ -37,7 +39,6 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 
 Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc Experience Platform, il team marketing può esportare segmenti su richiesta e inviare rapidamente e-mail promozionali alla base clienti.
 
-
 ### Eventi attuali o novità
 
 Un hotel si aspetta il tempo inclemente nei giorni successivi, e la squadra vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc Experience Platform per esportare segmenti su richiesta e avvisare gli ospiti.
@@ -46,12 +47,11 @@ Un hotel si aspetta il tempo inclemente nei giorni successivi, e la squadra vuol
 
 I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare segmenti su richiesta, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e assicurarsi che tutto funzioni correttamente.
 
-
 ## Guardrail {#guardrails}
 
 Quando utilizzi l’API di attivazione ad-hoc, ricorda le seguenti protezioni.
 
-* Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 20 segmenti. Se si tenta di attivare più di 20 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
+* Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 80 segmenti. Se si tenta di attivare più di 80 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
 * I processi di attivazione ad hoc non possono essere eseguiti in parallelo con quelli pianificati [processi di esportazione dei segmenti](../../segmentation/api/export-jobs.md). Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione del segmento pianificato sia stato completato. Vedi [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni su come monitorare lo stato dei flussi di attivazione. Ad esempio, se il flusso di dati di attivazione mostra una **[!UICONTROL Elaborazione]** attendi che termini prima di eseguire il processo di attivazione ad-hoc.
 * Non eseguire più di un processo di attivazione ad hoc simultaneo per segmento.
 
@@ -96,7 +96,11 @@ Ciò include l&#39;accesso al flusso di lavoro di attivazione, la selezione dei 
 * [Utilizza l’interfaccia utente di Platform per creare un flusso di attivazione per le destinazioni di esportazione del profilo batch](../ui/activate-batch-profile-destinations.md)
 * [Utilizza l’API del servizio di flusso per connettersi alle destinazioni di esportazione del profilo batch e attivare i dati](../api/connect-activate-batch-destinations.md)
 
-## Passaggio 4: Ottieni l&#39;ID più recente del processo di esportazione del segmento {#segment-export-id}
+## Passaggio 4: Ottieni l’ID più recente del processo di esportazione del segmento (non richiesto nella v2) {#segment-export-id}
+
+>[!IMPORTANT]
+>
+>Nella versione v2 dell’API di attivazione ad hoc non è necessario ottenere l’ID più recente del processo di esportazione del segmento. Puoi saltare questo passaggio e passare a quello successivo.
 
 Dopo aver configurato un flusso di attivazione per la destinazione batch, i processi di segmentazione pianificati iniziano automaticamente ogni 24 ore.
 
@@ -127,9 +131,48 @@ Una volta completato il processo di esportazione del segmento, puoi attivare l�
 
 >[!NOTE]
 >
->Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 20 segmenti. Se si tenta di attivare più di 20 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
+>Attualmente, ogni processo di attivazione ad-hoc può attivare fino a 80 segmenti. Se si tenta di attivare più di 80 segmenti per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
 
-### Richiesta
+### Richiesta {#request}
+
+>[!IMPORTANT]
+>
+>È obbligatorio includere `Accept: application/vnd.adobe.adhoc.activation+json; version=2` nella richiesta per utilizzare la v2 dell’API di attivazione ad-hoc.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
+--header 'x-gw-ims-org-id: 5555467B5D8013E50A494220@AdobeOrg' \
+--header 'Authorization: Bearer {{token}}' \
+--header 'x-sandbox-id: 6ef74723-3ee7-46a4-b747-233ee7a6a41a' \
+--header 'x-sandbox-name: {sandbox-id}' \
+--header 'Accept: application/vnd.adobe.adhoc.activation+json; version=2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "activationInfo":{
+      "destinationId1":[
+         "segmentId1",
+         "segmentId2"
+      ],
+      "destinationId2":[
+         "segmentId2",
+         "segmentId3"
+      ]
+   }
+}'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | ID delle istanze di destinazione in cui desideri attivare i segmenti. Puoi ottenere questi ID dall’interfaccia utente di Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e fai clic sulla riga di destinazione desiderata per visualizzare l’ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la sezione [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID dei segmenti che desideri attivare nella destinazione selezionata. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### Richiesta con ID esportazione (da dichiarare obsoleto) {#request-deprecated}
+
+>[!IMPORTANT]
+>
+>**Tipo di richiesta obsoleto**. Questo tipo di esempio descrive il tipo di richiesta per la versione 1 dell&#39;API. Nella versione v2 dell’API di attivazione ad hoc non è necessario includere l’ID del processo di esportazione del segmento più recente.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
@@ -161,7 +204,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | ID dei segmenti che desideri attivare nella destinazione selezionata. |
 | <ul><li>`exportId1`</li></ul> | L&#39;ID restituito nella risposta del [esportazione di segmenti](../../segmentation/api/export-jobs.md#retrieve-list) lavoro. Vedi [Passaggio 4: Ottieni l&#39;ID più recente del processo di esportazione del segmento](#segment-export-id) per istruzioni su come trovare questo ID. |
 
-### Risposta
+{style=&quot;table-layout:auto&quot;}
+
+### Risposta {#response}
 
 Una risposta corretta restituisce lo stato HTTP 200.
 
@@ -183,7 +228,21 @@ Una risposta corretta restituisce lo stato HTTP 200.
 | `order` | ID della destinazione in cui è stato attivato il segmento. |
 | `statusURL` | URL di stato del flusso di attivazione. Puoi tenere traccia dell’avanzamento del flusso utilizzando [API del servizio di flusso](../../sources/tutorials/api/monitor.md). |
 
+{style=&quot;table-layout:auto&quot;}
 
-## Gestione degli errori API
+## Gestione degli errori API {#api-error-handling}
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+
+### Codici di errore API e messaggi specifici per l’API di attivazione ad hoc {#specific-error-messages}
+
+Quando utilizzi l’API di attivazione ad hoc, puoi trovare messaggi di errore specifici per questo endpoint API. Rivedi la tabella per capire come affrontarle quando vengono visualizzate.
+
+| Messaggio di errore | Risoluzione |
+|---------|----------|
+| Esecuzione già in corso per il segmento `segment ID` per ordine `dataflow ID` con run id `flow run ID` | Questo messaggio di errore indica che è attualmente in corso un flusso di attivazione ad hoc per un segmento. Attendere il completamento del processo prima di attivare nuovamente il processo di attivazione. |
+| Segmenti `<segment name>` non fanno parte di questo flusso di dati o non rientrano nell&#39;intervallo di pianificazione! | Questo messaggio di errore indica che i segmenti selezionati per l’attivazione non sono mappati al flusso di dati o che la pianificazione di attivazione impostata per i segmenti è scaduta o non ancora iniziata. Controlla se il segmento è effettivamente mappato al flusso di dati e verifica che la pianificazione di attivazione del segmento si sovrapponga alla data attuale. |
+
+## Informazioni correlate {#related-information}
+
+* [Connettersi a destinazioni batch e attivare i dati utilizzando l’API del servizio di flusso](/help/destinations/api/connect-activate-batch-destinations.md)
