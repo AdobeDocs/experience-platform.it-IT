@@ -6,9 +6,9 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,7 @@ Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 
 - **[!UICONTROL Avvio esecuzione flusso di dati]**: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Segmento]**: Nome del segmento associato a ogni esecuzione del flusso di dati.
 - **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata come parte dell&#39;esecuzione del flusso di dati. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
