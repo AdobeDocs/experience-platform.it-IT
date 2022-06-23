@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destinations`.
 title: Operazioni degli endpoint API delle destinazioni
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 5%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 La richiesta seguente crea una nuova configurazione di destinazione dello streaming, configurata dai parametri forniti nel payload. Il payload seguente include tutti i parametri per le destinazioni di streaming accettate dal `/authoring/destinations` punto finale. Non è necessario aggiungere tutti i parametri alla chiamata e il modello è personalizzabile, in base ai requisiti API.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 La seguente richiesta crea una nuova [!DNL Amazon S3] configurazione di destinazione basata su file, configurata dai parametri forniti nel payload. Il payload seguente include tutti i parametri per le destinazioni basate su file accettate dal `/authoring/destinations` punto finale. Non è necessario aggiungere tutti i parametri alla chiamata e il modello è personalizzabile, in base ai requisiti API.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",

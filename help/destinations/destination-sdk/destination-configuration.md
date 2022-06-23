@@ -2,7 +2,7 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -271,6 +271,7 @@ Utilizza la `maxUsersPerRequest` per specificare il numero massimo di profili ch
 Questa opzione funziona meglio se preferisci prendere batch di grandi dimensioni, con migliaia di profili sulla stessa chiamata. Questa opzione ti consente inoltre di aggregare i profili esportati in base a regole di aggregazione complesse.
 
 Questa opzione consente di:
+
 * Imposta il tempo massimo e il numero massimo di profili da aggregare prima che venga effettuata una chiamata API alla destinazione.
 * Aggrega i profili esportati mappati alla destinazione in base a:
    * ID segmento;

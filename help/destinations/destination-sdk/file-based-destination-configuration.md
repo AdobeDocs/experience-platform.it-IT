@@ -1,9 +1,10 @@
 ---
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: (Beta) Opzioni di configurazione della destinazione basata su file per Destination SDK
-source-git-commit: 5186e90b850f1e75ec358fa01bfb8a5edac29277
+exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2304'
 ht-degree: 5%
 
 ---
@@ -278,7 +279,7 @@ Puoi configurare la funzionalità descritta in questo documento utilizzando `/au
    },
    "batchConfig":{
       "allowMandatoryFieldSelection":true,
-      "allowJoinKeyFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
          "DAILY_FULL_EXPORT",
@@ -290,11 +291,20 @@ Puoi configurare la funzionalità descritta in questo documento utilizzando `/au
          "EVERY_6_HOURS",
          "EVERY_8_HOURS",
          "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+         "ONCE"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    },
    "backfillHistoricalProfileData":true
 }
@@ -324,7 +334,7 @@ Questa sezione nella configurazione delle destinazioni genera il [Configurare un
 
 A seconda di quale [opzione di autenticazione](authentication-configuration.md##supported-authentication-types) indica nella `authType` la pagina dell’Experience Platform viene generata per gli utenti come segue:
 
-### Autenticazione Amazon S3
+### Autenticazione Amazon S3 {#s3}
 
 Quando si configura il tipo di autenticazione Amazon S3, gli utenti devono immettere le credenziali S3.
 
@@ -352,7 +362,7 @@ Quando configuri l’SFTP con il tipo di autenticazione chiave SSH, gli utenti d
 
 Usa questa sezione per chiedere agli utenti di compilare campi personalizzati, specifici per la tua destinazione, quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform.
 
-Nell’esempio seguente: `customerDataFields` richiede agli utenti di immettere un nome per la loro destinazione e di fornire un [!DNL Amazon S3] nome del bucket e percorso della cartella, nonché un tipo di compressione e un formato di file.
+Nell’esempio seguente: `customerDataFields` richiede agli utenti di immettere un nome per la loro destinazione e di fornire un [!DNL Amazon S3] nome del bucket e percorso della cartella, nonché un tipo di compressione, un formato di file e diverse altre opzioni di esportazione del file.
 
 ```json
  "customerDataFields":[
@@ -649,6 +659,7 @@ Utilizza i parametri in `schemaConfig` per abilitare il passaggio di mappatura d
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+}
 ```
 
 | Parametro | Tipo | Descrizione |
@@ -722,37 +733,96 @@ Ad esempio, i clienti possono mappare un [!DNL Platform] [!DNL IDFA] spazio dei 
 Questa sezione fa riferimento alle impostazioni di esportazione dei file nella configurazione precedente che l’Adobe deve utilizzare per la destinazione nell’interfaccia utente di Adobe Experience Platform.
 
 ```json
- "batchConfig":{
-      "allowMandatoryFieldSelection":true,
-      "allowDedupeKeyFieldSelection":true,
-      "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+"batchConfig":{
+   "allowMandatoryFieldSelection":true,
+   "allowDedupeKeyFieldSelection":true,
+   "defaultExportMode":"DAILY_FULL_EXPORT",
+   "allowedExportMode":[
+      "DAILY_FULL_EXPORT",
+      "FIRST_FULL_THEN_INCREMENTAL"
+   ],
+   "allowedScheduleFrequency":[
+      "DAILY",
+      "EVERY_3_HOURS",
+      "EVERY_6_HOURS",
+      "EVERY_8_HOURS",
+      "EVERY_12_HOURS",
+      "ONCE"
+   ],
+   "defaultFrequency":"DAILY",
+   "defaultStartTime":"00:00",
+   "filenameConfig":{
+      "allowedFilenameAppendOptions":[
+         "SEGMENT_NAME",
+         "DESTINATION_INSTANCE_ID",
+         "DESTINATION_INSTANCE_NAME",
+         "ORGANIZATION_NAME",
+         "SANDBOX_NAME",
+         "DATETIME",
+         "CUSTOM_TEXT"
       ],
-      "allowedScheduleFrequency":[
-         "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+      "defaultFilenameAppendOptions":[
+         "SEGMENT_ID",
+         "DATETIME"
       ],
-      "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
    }
+}
 ```
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare quali attributi di profilo sono obbligatori. Il valore predefinito è `false`. Vedi [Attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes) per ulteriori informazioni. |
 | `allowDedupeKeyFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare le chiavi di deduplicazione. Il valore predefinito è `false`.  Vedi [Chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#deduplication-keys) per ulteriori informazioni. |
-| `defaultExportMode` | Enum | Definisce la modalità di esportazione predefinita dei file. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Il valore predefinito è `DAILY_FULL_EXPORT`. Consulta la sezione [documentazione di attivazione batch](../ui/activate-batch-profile-destinations.md#scheduling) per informazioni sulla pianificazione delle esportazioni dei file. |
+| `defaultExportMode` | Enum | Definisce la modalità di esportazione predefinita dei file. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Il valore predefinito è `DAILY_FULL_EXPORT`. Consulta la sezione [documentazione di attivazione batch](../ui/activate-batch-profile-destinations.md#scheduling) per informazioni sulla pianificazione delle esportazioni dei file. |
 | `allowedExportModes` | Elenco | Definisce le modalità di esportazione dei file disponibili per i clienti. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione del file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | Enum | Definisce la frequenza di esportazione predefinita del file.Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Il valore predefinito è `DAILY`. |
+| `defaultFrequency` | Enum | Definisce la frequenza di esportazione predefinita del file.Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
 | `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file 24 ore su 24. Il valore predefinito è &quot;00:00&quot;. |
+| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro dei nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi di file esportati (ID segmento, nome organizzazione, data e ora dell’esportazione e altri). Quando si imposta `defaultFilename`, evitare di duplicare le macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall’ordine in cui vengono definite le macro, l’interfaccia utente Experience Platform le visualizza sempre nell’ordine indicato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` L&#39;elenco deve contenere almeno una macro. |
+| `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro con nome file predefinito preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi file predefiniti per i file esportati. Questi non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` viene aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
+
+
+### Configurazione del nome file {#file-name-configuration}
+
+Utilizzare le macro di configurazione del nome file per definire i nomi di file esportati da includere. Le macro nella tabella seguente descrivono gli elementi presenti nell’interfaccia utente di [configurazione del nome file](../ui/activate-batch-profile-destinations.md#file-names) schermo.
+
+Come best practice, includi sempre `SEGMENT_ID` nei nomi dei file esportati. Gli ID dei segmenti sono univoci, pertanto includerli nel nome del file è il modo migliore per garantire che anche i nomi dei file siano univoci.
+
+| Macro | Etichetta dell’interfaccia utente | Descrizione | Esempio |
+|---|---|---|---|
+| `DESTINATION` | [!UICONTROL Destinazione] | Nome della destinazione nell’interfaccia utente. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL ID segmento] | ID segmento univoco generato dalla piattaforma | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nome segmento] | Nome del segmento definito dall’utente | Sottoscrittore VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID destinazione] | ID univoco generato dalla piattaforma dell’istanza di destinazione | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nome destinazione] | Nome definito dall&#39;utente dell&#39;istanza di destinazione. | La mia destinazione pubblicitaria 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Nome organizzazione] | Nome dell&#39;organizzazione del cliente in Adobe Experience Platform. | Nome organizzazione |
+| `SANDBOX_NAME` | [!UICONTROL Nome sandbox] | Nome della sandbox utilizzata dal cliente. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Data e ora] | `DATETIME` e `TIMESTAMP` entrambi definiscono quando è stato generato il file, ma in formati diversi. <br><br><ul><li>`DATETIME` utilizza il formato seguente: YYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilizza il formato Unix a 10 cifre. </li></ul> `DATETIME` e `TIMESTAMP` si escludono a vicenda e non possono essere utilizzati contemporaneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Testo personalizzato] | Testo personalizzato definito dall’utente da includere nel nome del file. Non può essere utilizzato in `defaultFilename`. | Testo_Personalizzato |
+| `TIMESTAMP` | [!UICONTROL Data e ora] | Timestamp a 10 cifre dell’ora in cui è stato generato il file, in formato Unix. | 1652131584 |
+
+
+![Immagine dell’interfaccia utente che mostra la schermata di configurazione del nome file con macro preselezionate](assets/file-name-configuration.png)
+
+L&#39;esempio mostrato nell&#39;immagine precedente utilizza la seguente configurazione di macro del nome file:
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename": "%DESTINATION%"
+}
+```
+
 
 ## Qualifiche di profilo storiche {#profile-backfill}
 
