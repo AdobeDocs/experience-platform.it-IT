@@ -6,10 +6,10 @@ description: Istruzioni dettagliate per utilizzare l’API del servizio Flusso p
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 67f1ba46a9d570d3d494b126a83e6ca3ace1c727
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3420'
+ht-degree: 2%
 
 ---
 
@@ -1026,7 +1026,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Proprietà | Descrizione |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Nell’URL, utilizza l’ID del flusso di dati creato nel passaggio precedente. |
-| `{ETAG}` | Utilizza il tag ottenuto nel passaggio precedente. |
+| `{ETAG}` | Ottieni il `{ETAG}` dalla risposta nel passaggio precedente, [Creare un flusso di dati](#create-dataflow). Il formato di risposta nel passaggio precedente è evitato dalle virgolette. È necessario utilizzare i valori non preceduti nell’intestazione della richiesta. Vedi l&#39;esempio seguente: <br> <ul><li>Esempio di risposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valore da utilizzare nella richiesta: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Il valore etag viene aggiornato con ogni aggiornamento corretto di un flusso di dati. |
 | `{SEGMENT_ID}` | Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID dei segmenti per i segmenti che desideri attivare, vedi [recuperare una definizione di segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Ad esempio, `"person.lastName"` |
 | `op` | La chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`e `remove`. Per aggiungere un segmento a un flusso di dati, utilizza il `add` funzionamento. |
@@ -1236,7 +1236,11 @@ La risposta restituita deve includere nel `transformations` i segmenti e gli att
 ]
 ```
 
-## Passaggi successivi
+## Gestione degli errori API {#api-error-handling}
+
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform per ulteriori informazioni sull’interpretazione delle risposte agli errori.
+
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai collegato Platform a una delle tue destinazioni preferite per l’archiviazione cloud o il marketing via e-mail e hai impostato un flusso di dati sulla rispettiva destinazione per esportare i file di dati. I dati in uscita possono ora essere utilizzati nella destinazione per campagne e-mail, pubblicità mirata e molti altri casi d’uso. Per ulteriori dettagli, consulta le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio di flusso:
 

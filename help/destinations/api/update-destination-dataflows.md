@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere segmenti e attributi utilizzando l’API del servizio di flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2408'
 ht-degree: 2%
 
 ---
@@ -856,8 +856,8 @@ Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi ver
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) e [errori di intestazione della richiesta](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform per ulteriori informazioni sull’interpretazione delle risposte agli errori.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai imparato ad aggiornare vari componenti di un flusso di dati di destinazione, come aggiungere o rimuovere segmenti o attributi di profilo utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sulle destinazioni, consulta la sezione [panoramica sulle destinazioni](../home.md).

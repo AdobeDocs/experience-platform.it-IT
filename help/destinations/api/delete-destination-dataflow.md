@@ -5,9 +5,9 @@ title: Eliminare un flusso di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Scopri come eliminare i flussi di dati per le destinazioni in batch e in streaming utilizzando l’API del servizio di flusso.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (nessun contenuto) e un corp
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform per ulteriori informazioni sull’interpretazione delle risposte agli errori.
 
 ## Passaggi successivi {#next-steps}
 

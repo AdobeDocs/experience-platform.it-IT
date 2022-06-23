@@ -7,9 +7,9 @@ landing-page-description: Trova le risposte alle domande frequenti e una guida p
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1851'
 ht-degree: 4%
 
 ---
@@ -34,11 +34,11 @@ Per ulteriori informazioni sulla formattazione delle richieste API, visita la gu
 
 ## Qual è la mia organizzazione IMS? {#what-is-my-ims-organization}
 
-Un’organizzazione IMS è un Adobe di rappresentazione di un cliente. Tutte le soluzioni di Adobe con licenza sono integrate con questa organizzazione clienti. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l’accesso agli sviluppatori. ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l’organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto obbligatoria come intestazione in tutte le richieste API. Questo ID può essere trovato attraverso [Console per sviluppatori di Adobe](https://www.adobe.com/go/devs_console_ui): in **Integrazioni** , passa alla **Panoramica** sezione per qualsiasi integrazione particolare per trovare l’ID in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedi [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+Un’organizzazione IMS è un Adobe di rappresentazione di un cliente. Tutte le soluzioni di Adobe con licenza sono integrate con questa organizzazione clienti. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l’accesso agli sviluppatori. ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l’organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto obbligatoria come intestazione in tutte le richieste API. Questo ID può essere trovato attraverso [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui): in **Integrazioni** , passa alla **Panoramica** sezione per qualsiasi integrazione particolare per trovare l’ID in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedi [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 
-Una chiave API è necessaria come intestazione in tutte le richieste API. Può essere trovato attraverso [Console per sviluppatori di Adobe](https://www.adobe.com/go/devs_console_ui). Nella console, nella **Integrazioni** , passa alla **Panoramica** per un’integrazione specifica e troverai la chiave in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedi [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+Una chiave API è necessaria come intestazione in tutte le richieste API. Può essere trovato attraverso [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Nella console, nella **Integrazioni** , passa alla **Panoramica** per un’integrazione specifica e troverai la chiave in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedi [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Come posso ottenere un token di accesso? {#how-do-i-get-an-access-token}
 
@@ -62,7 +62,7 @@ Per informazioni dettagliate sui parametri di query disponibili per un servizio 
 
 Molte operazioni di PATCH in [!DNL Platform] Utilizzo delle API [Puntatore JSON](https://tools.ietf.org/html/rfc6901) stringhe per indicare le proprietà JSON da aggiornare. In genere sono inclusi nei payload di richiesta utilizzando [Patch JSON](https://tools.ietf.org/html/rfc6902) formato. Consulta la sezione [Guida di base sulle API](api-fundamentals.md) per informazioni dettagliate sulla sintassi richiesta per queste tecnologie.
 
-## Posso usare Postman per effettuare chiamate a [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Posso utilizzare Postman per effettuare chiamate a [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
 [Postman](https://www.postman.com/) è uno strumento utile per visualizzare le chiamate alle API RESTful. La [Guida introduttiva all’API di Platform](api-guide.md) contiene un video e istruzioni per l’importazione di raccolte Postman. Inoltre, viene fornito un elenco di raccolte Postman per ogni servizio.
 
@@ -109,7 +109,7 @@ Tutte le chiamate API in [!DNL Platform] richiede intestazioni di richiesta spec
 
 Questo messaggio di errore viene visualizzato quando viene visualizzata una `Authorization` intestazione mancante da una richiesta API. Assicurati che l’intestazione Autorizzazione sia inclusa con un token di accesso valido prima di riprovare.
 
-### Il token OAuth non è valido
+### Il token OAuth non è valido {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ Questo messaggio di errore viene visualizzato quando viene visualizzata una `Aut
 
 Questo messaggio di errore viene visualizzato quando il token di accesso fornito nel `Authorization` intestazione non valida. Assicurati che il token sia stato immesso correttamente oppure [genera un nuovo token](https://www.adobe.com/go/platform-api-authentication-en) nella console Adobe I/O.
 
-### Chiave API obbligatoria
+### Chiave API obbligatoria {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ Questo messaggio di errore viene visualizzato quando il token di accesso fornito
 
 Questo messaggio di errore viene visualizzato quando viene visualizzata un&#39;intestazione di chiave API (`x-api-key`) manca da una richiesta API. Assicurati che l’intestazione sia inclusa con una chiave API valida prima di riprovare.
 
-### Chiave API non valida
+### Chiave API non valida {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ Questo messaggio di errore viene visualizzato quando viene visualizzata un&#39;i
 
 Questo messaggio di errore viene visualizzato quando viene visualizzato il valore dell&#39;intestazione della chiave API fornita (`x-api-key`) non è valida. Assicurati di aver immesso correttamente la chiave prima di riprovare. Se non conosci la tua chiave API, puoi trovarlo nella [Console Adobe I/O](https://console.adobe.io): in **Integrazioni** , passa alla **Panoramica** per un’integrazione specifica per trovare la chiave API in **Credenziali client**.
 
-
-### Intestazione mancante
+### Intestazione mancante {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ Questo messaggio di errore viene visualizzato quando viene visualizzato il valor
 
 Questo messaggio di errore viene visualizzato quando un&#39;intestazione org IMS (`x-gw-ims-org-id`) manca da una richiesta API. Assicurati che l’intestazione sia inclusa con l’ID della tua organizzazione IMS prima di riprovare.
 
-### Profilo non valido
+### Profilo non valido {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ Questo messaggio di errore viene visualizzato quando un&#39;intestazione org IMS
 
 Questo messaggio di errore viene visualizzato quando l&#39;utente o l&#39;integrazione di Adobe I/O (identificata da [token di accesso](#how-do-i-get-an-access-token) in `Authorization` header) non è autorizzato a effettuare chiamate a [!DNL Experience Platform] API per l’organizzazione IMS fornita nella `x-gw-ims-org-id` intestazione. Assicurati di aver fornito l’ID corretto per la tua organizzazione IMS nell’intestazione prima di riprovare. Se non conosci il tuo ID organizzazione, puoi trovarlo nella [Console Adobe I/O](https://console.adobe.io): in **Integrazioni** , passa alla **Panoramica** per un’integrazione specifica per trovare l’ID in **Credenziali client**.
 
-### Tipo di contenuto valido non specificato
+### Errore di aggiornamento del tag {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+Puoi ricevere un errore di tag se un’altra chiamata API ha apportato una modifica a un’entità di origine o di destinazione come flusso, connessione, connettore di origine o connessione di destinazione. A causa di una mancata corrispondenza della versione, la modifica che stai tentando di apportare non verrà applicata all’ultima versione dell’entità.
+
+Per risolvere questo problema, devi recuperare nuovamente l’entità, accertarti che le modifiche siano compatibili con la nuova versione dell’entità, quindi inserisci il nuovo tag nella `If-Match` e infine effettua la chiamata API .
+
+### Tipo di contenuto valido non specificato {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ Questo messaggio di errore viene visualizzato quando l&#39;utente o l&#39;integr
 
 Questo messaggio di errore viene visualizzato quando una richiesta di POST, PUT o PATCH presenta una richiesta non valida o mancante `Content-Type` intestazione. Verifica che l’intestazione sia inclusa nella richiesta e che il relativo valore sia `application/json`.
 
-### Area utente mancante
+### Area utente mancante {#user-region-is-missing}
 
 ```json
 {
