@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 8%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 8%
       * [Connessione Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Estensione Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Connessione Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [Connessione Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [(Beta) Connessione Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connessione Customer Match di Google](./catalog/advertising/google-customer-match.md)
       * [Connessione Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Estensione tag Google](./catalog/advertising/gtag-advertising.md)
