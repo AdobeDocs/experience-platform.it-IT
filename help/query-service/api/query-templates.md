@@ -3,11 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;modelli di 
 solution: Experience Platform
 title: Endpoint API per i modelli di query
 topic-legacy: query templates
-description: La documentazione seguente illustra le varie chiamate API che è possibile effettuare utilizzando i modelli di query per l’API del servizio query.
+description: Questa guida descrive le varie chiamate API del modello di query che puoi effettuare utilizzando l’API del servizio query.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 ## Chiamate API di esempio
 
-Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettuare chiamate a [!DNL Query Service] API. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+
+Consulta la sezione [Documentazione sui modelli di query dell’interfaccia utente](../ui/query-templates.md) per informazioni sulla creazione di modelli tramite l’interfaccia utente di Experience Platform.
 
 ### Recupera un elenco di modelli di query
 

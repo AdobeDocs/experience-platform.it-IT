@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1625'
 ht-degree: 1%
 
 ---
@@ -135,6 +135,10 @@ Per eliminare una pianificazione, seleziona **[!UICONTROL Eliminare una pianific
 ### Salvataggio delle query {#saving-queries}
 
 [!DNL Query Editor] fornisce una funzione di salvataggio che ti consente di salvare una query e lavorarci in un secondo momento. Per salvare una query, seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando **[!UICONTROL Dettagli query]** pannello.
+
+>[!NOTE]
+>
+>Le query denominate e salvate con l’Editor query sono disponibili come modelli all’interno del dashboard Query [!UICONTROL Sfoglia] scheda . Consulta la sezione [documentazione dei modelli](./query-templates.md) per ulteriori informazioni.
 
 ### Come trovare le query precedenti {#previous-queries}
 
