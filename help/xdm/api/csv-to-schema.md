@@ -1,9 +1,10 @@
 ---
 title: Endpoint API per conversione da modello CSV a schema
 description: L’endpoint /rpc/csv2schema nell’API del Registro di sistema dello schema consente di utilizzare modelli CSV per creare automaticamente schemi Experience Data Model (XDM).
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 6%
 
 ---
@@ -14,7 +15,7 @@ La `/rpc/csv2schema` punto finale [!DNL Schema Registry] L’API ti consente di 
 
 ## Introduzione
 
-La `/rpc/csv2schema` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+La `/rpc/csv2schema` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API Adobe Experience Platform.
 
 La `/rpc/csv2schema` l&#39;endpoint fa parte delle chiamate di routine remote (RPC) supportate dal [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nelle chiamate API riportate di seguito.
 
