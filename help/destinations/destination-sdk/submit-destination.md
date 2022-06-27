@@ -1,17 +1,21 @@
 ---
-description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione creata utilizzando Destination SDK.
-title: Invia per la revisione di una destinazione creata in Destination SDK
+description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione di prodotto creata utilizzando Destination SDK.
+title: Invia per la revisione di una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
-# Invia per la revisione di una destinazione creata in Destination SDK
+# Invia per la revisione di una destinazione prodotta creata in Destination SDK
 
 ## Panoramica {#overview}
+
+>[!IMPORTANT]
+>
+>Il processo qui documentato è necessario solo per i partner che inviano destinazioni prodotte (pubbliche). Se crei una destinazione privata per tuo uso, non devi produrre e condividere questi materiali con Adobe.
 
 Prima che la destinazione possa essere pubblicata nel [Catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), devi fornire ad Adobe alcune informazioni sulla destinazione e sui test eseguiti, per garantire agli utenti la migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
@@ -22,7 +26,7 @@ In questa pagina sono elencate tutte le informazioni da fornire durante l’invi
    * Chiamata API effettuata all&#39;endpoint di destinazione.
    * Risposta API ricevuta dall’endpoint di destinazione.
 * Prova di aver inviato una richiesta di pubblicazione di destinazione per la destinazione utilizzando [API di pubblicazione della destinazione](./destination-publish-api.md).
-* (Solo per integrazioni prodotte) una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
+* Una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
 * Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni Experience Platform.
 
 >[!IMPORTANT]
