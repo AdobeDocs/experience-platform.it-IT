@@ -3,7 +3,7 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 9%
@@ -67,7 +67,7 @@ I tipi di elementi dati disponibili nell&#39;inoltro degli eventi sono limitati 
 
 Anche se gli elementi dati stessi vengono creati e configurati nello stesso modo in cui vengono inoltrati gli eventi per i tag, esistono alcune importanti differenze di sintassi quando si tratta di come fanno riferimento ai dati da Platform Edge Network.
 
-#### Riferimento a dati da Platform Edge Network {#edge}
+#### Riferimento a dati da Platform Edge Network {#data-element-path}
 
 Per fare riferimento ai dati di Platform Edge Network, devi creare un elemento dati che fornisca un percorso valido per tali dati. Quando crei l’elemento dati nell’interfaccia utente, seleziona **[!UICONTROL Core]** per l&#39;estensione e **[!UICONTROL Percorso]** per il tipo .
 
