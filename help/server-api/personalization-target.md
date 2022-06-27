@@ -1,14 +1,13 @@
 ---
 title: Personalizzazione tramite Adobe Target
-description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target
-keywords: personalizzazione; api del server; Adobe Experience Platform Edge Network; recuperare personalizzazione;target;adobe target
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
-
 
 # Personalizzazione tramite Adobe Target
 

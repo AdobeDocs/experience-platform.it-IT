@@ -1,16 +1,16 @@
 ---
-title: Garanzie delle prestazioni
-description: Scopri come utilizzare l’API server in protezioni delle prestazioni ottimali
+title: Garanzie delle prestazioni per API server di rete Edge
+description: Scopri come utilizzare l’API server in protezioni delle prestazioni ottimali.
 keywords: raccolta dati;raccolta;rete Edge;api;sla;slt;livelli di servizio
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
 
-# Garanzie delle prestazioni
+# Garanzie delle prestazioni per API server di rete Edge
 
 ## Panoramica {#overview}
 
