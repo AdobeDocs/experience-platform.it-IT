@@ -1,17 +1,15 @@
 ---
 description: Il servizio Destinazioni in Adobe Experience Platform utilizza modelli di configurazione per diversi componenti che creano la funzionalità Destinazioni. Combinati, questi componenti consentono ad Experience Platform di connettersi ai partner di destinazione, inviare messaggi personalizzati e attivare i dati di profilo nell’ecosistema digitale.
-seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
-seo-title: Configuration options in Destination SDK
-title: Opzioni di configurazione nell’SDK di destinazione
+title: Opzioni di configurazione in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 1%
 
 ---
 
-# Opzioni di configurazione nell’SDK di destinazione
+# Opzioni di configurazione in Destination SDK
 
 ## Panoramica {#overview}
 
@@ -24,11 +22,11 @@ Il servizio Destinazioni in Adobe Experience Platform utilizza modelli di config
 * **Configurazione dell’autenticazione**: Queste impostazioni definiscono il modo in cui gli utenti Adobe Experience Platform si connettono alla tua destinazione.
 * **Configurazione dei metadati del pubblico**: Questo modello ti consente di configurare il modo in cui i tipi di pubblico/segmenti vengono creati, aggiornati o eliminati a livello di programmazione nella destinazione.
 
-![Modelli e configurazioni dell’SDK di destinazione](./assets/self-service-configuration.png)
+![Destination SDK modelli e configurazioni](./assets/self-service-configuration.png)
 
 ## Collegamenti correlati {#related-links}
 
-Le pagine seguenti forniscono ulteriori dettagli sulle funzionalità e sulle opzioni di configurazione disponibili nell’SDK di destinazione e sulle operazioni API corrispondenti che puoi eseguire.
+Le pagine seguenti forniscono ulteriori dettagli sulle funzionalità e sulle opzioni di configurazione disponibili in Destination SDK e sulle operazioni API corrispondenti che puoi eseguire.
 
 | Descrizione funzionalità | Riferimento API |
 |--- |--- |

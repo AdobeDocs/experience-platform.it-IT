@@ -2,11 +2,9 @@
 keywords: modificare l'attivazione, modificare la destinazione, modificare la destinazione
 title: Modificare i flussi di dati di attivazione
 type: Tutorial
-seo-title: Edit activation dataflows
 description: Segui i passaggi descritti in questo articolo per modificare un flusso di dati di attivazione esistente in Adobe Experience Platform.
-seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

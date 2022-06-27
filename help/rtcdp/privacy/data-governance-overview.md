@@ -1,14 +1,12 @@
 ---
 keywords: governance dei dati rtcdp;governance dei dati rtcdp;governance dei dati dei profili dei clienti in tempo reale
 title: Panoramica sulla governance dei dati
-seo-title: Data Governance in Real-time Customer Data Platform
 description: 'La governance dei dati ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. '
-seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -56,7 +54,7 @@ Visualizza il documento in [applicazione automatica delle politiche](../../data-
 
 ## Passaggi successivi
 
-Ora che hai introdotto le funzioni chiave di governance dei dati su Real-time CDP e come [!DNL Experience Platform] consente loro di continuare con [documentazione per la governance dei dati su Adobe Experience Platform](../../data-governance/home.md). La documentazione fornisce panoramiche dei concetti fondamentali sulla governance dei dati e flussi di lavoro dettagliati per la gestione delle etichette e dei criteri di utilizzo dei dati.
+Ora che hai introdotto le funzioni chiave di governance dei dati su Real-time CDP e come [!DNL Experience Platform] consente loro di continuare con [documentazione per la governance dei dati su Adobe Experience Platform](../../data-governance/home.md). La documentazione fornisce panoramiche dei concetti fondamentali sulla governance dei dati, nonché flussi di lavoro dettagliati per la gestione delle etichette e dei criteri di utilizzo dei dati.
 
 Il video seguente fornisce una panoramica della governance dei dati in Real-time CDP, incluso l’utilizzo di casi d’uso di marketing su destinazioni e flussi di lavoro di esempio per diversi scenari:
 

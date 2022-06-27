@@ -1,74 +1,71 @@
 ---
-keywords: panoramica delle metriche; panoramica delle metriche rtcdp
-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
-seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
+keywords: panoramica delle metriche; Panoramica sulle metriche rtcdp
+title: Home page e dashboard di Real-time Customer Data Platform
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
-seo-description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 4%
+source-wordcount: '619'
+ht-degree: 2%
 
 ---
 
-
 # [!DNL Real-time Customer Data Platform] home page e dashboard
 
-La home page della piattaforma CDP (Real-time Customer Data Platform), che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
+La home page di Real-time Customer Data Platform (Real-time CDP), che include un dashboard delle metriche, viene visualizzata quando accedi a Real-time CDP.
 
-La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
+La home page è solo una delle posizioni in cui vengono visualizzate le schede metriche. Real-time CDP fornisce schede metriche per tutta l’esperienza. Queste metriche ti informano sui dati, sul profilo e sui segmenti di pubblico nel sistema.
 
 ![immagine](assets/home.png)
 
-Se non sono presenti dati nel sistema al momento dell&#39;accesso a CDP in tempo reale, il dashboard nella pagina principale non viene visualizzato. In questo caso, la pagina principale fornisce materiale didattico per la prima esperienza utente. Quando si raccolgono i dati, ovvero <!--sources-->insiemi di dati, profili, segmenti e destinazioni vengono creati e i dati scorrono nel sistema, il dashboard si aggiorna automaticamente per visualizzare le informazioni su tali dati<!-- in metric cards-->.
+Se non sono presenti dati nel sistema quando si accede a Real-time CDP, il dashboard nella home page non viene visualizzato. In questo caso, la home page fornisce materiale di apprendimento per una prima esperienza utente. Come vengono raccolti i dati, in altre parole come <!--sources-->set di dati, profili, segmenti e destinazioni vengono creati e i dati scorrono nel sistema. Il dashboard si aggiorna automaticamente per visualizzare le informazioni relative a tali dati<!-- in metric cards-->.
 
-## Visualizzazione dashboard pagina iniziale
+## Vista dashboard della pagina Home
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
-Il dashboard è diviso in <!-- two areas.-->:
+Il dashboard è diviso in<!-- two areas.-->:
 
-* **La** classifica compare nella parte superiore del dashboard. La classifica mostra il numero di set di dati, profili, segmenti e destinazioni nel sistema.
+* **La classifica** si trova nella parte superiore del dashboard. La classifica mostra il numero di set di dati, profili, segmenti e destinazioni nel sistema.
 
    ![immagine](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Elementi recenti** elenca i cinque set di dati, le origini, i segmenti e le destinazioni più recenti aggiunti al sistema.
+* **Articoli recenti** elenca i cinque set di dati, le origini, i segmenti e le destinazioni più recenti aggiunti al sistema.
 
    ![immagine](assets/recent.png)
 
-Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti della Piattaforma dati cliente in tempo reale.
+Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti di Real-time Customer Data Platform.
 
 ### Set di dati
 
-Il contatore **[!UICONTROL Datasets]** mostra il numero di set di dati nel sistema e la quantità di dati in [!DNL Platform]. Questo contatore viene aggiornato quando viene creato un set di dati.
+La **[!UICONTROL Set di dati]** contatore mostra il numero di set di dati nel sistema e la quantità di dati in [!DNL Platform]. Questo contatore viene aggiornato quando viene creato un set di dati.
 
-Per ulteriori informazioni sui set di dati, vedere la [panoramica dei set di dati](../catalog/datasets/overview.md).
+Per ulteriori informazioni sui set di dati, consulta la sezione [panoramica dei set di dati](../catalog/datasets/overview.md).
 
 ### Profili
 
-Il numero **[!UICONTROL Profiles]** mostra il numero totale di persone con profili in [!DNL Real-time Customer Profile]. Non include frammenti di profilo. Questa è la tua audience completa indirizzabile.
+La **[!UICONTROL Profili]** count mostra il numero totale di persone con profili nel [!DNL Real-time Customer Profile]. Non include frammenti di profilo. Questo è il tuo pubblico totalmente indirizzabile.
 
-Questo conteggio utilizza il [criterio di unione ](profile/merge-policies.md) predefinito impostato nella configurazione del criterio di unione nel profilo unificato.
+Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione dei criteri di unione nel profilo unificato.
 
 Il numero di profili viene aggiornato una volta ogni 24 ore.
 
-Per ulteriori informazioni sui profili, vedere [Una vista unificata del cliente in CDP in tempo reale](profile/profile-overview.md).
+Per ulteriori informazioni sui profili, consulta [Visualizzazione unificata del cliente in Real-time CDP](profile/profile-overview.md).
 
 ### Segmenti
 
-**[!UICONTROL Segments]** mostra il numero totale di segmenti creati per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuovi segmenti.
+**[!UICONTROL Segmenti]** mostra il numero totale di segmenti creati per l’organizzazione. Questo numero viene aggiornato quando vengono creati nuovi segmenti.
 
-Per ulteriori informazioni sui segmenti, vedere [Panoramica del servizio di segmentazione](segmentation/segmentation-overview.md).
+Per ulteriori informazioni sui segmenti, vedi [Panoramica del servizio di segmentazione](segmentation/segmentation-overview.md).
 
 ### Destinazioni
 
-**[!UICONTROL Destinations]** mostra il numero totale di destinazioni create per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuove destinazioni.
+**[!UICONTROL Destinazioni]** mostra il numero totale di destinazioni create per l&#39;organizzazione. Questo numero viene aggiornato quando vengono create nuove destinazioni.
 
-Per ulteriori informazioni sulle destinazioni, vedere [Panoramica delle destinazioni](destinations/overview.md).
+Per ulteriori informazioni sulle destinazioni, vedi [Panoramica sulle destinazioni](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -106,32 +103,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Set di dati recenti
 
-La scheda **[!UICONTROL Recent datasets]** mostra i cinque set di dati più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo set di dati.
+La **[!UICONTROL Set di dati recenti]** la scheda mostra i cinque set di dati più recenti creati all’interno dell’organizzazione. Questo elenco viene aggiornato quando viene creato un nuovo set di dati.
 
-Selezionare un dataset per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL View all]** per visualizzare l&#39;elenco dei set di dati. Da qui potete selezionare una sorgente specifica per i dettagli.
+Seleziona un set di dati per visualizzare i dettagli dell’elemento, oppure **[!UICONTROL Visualizza tutto]** per visualizzare l’elenco dei set di dati. Da qui puoi selezionare una sorgente specifica per i dettagli.
 
-Per ulteriori informazioni sui set di dati, vedere la [panoramica dei set di dati](../catalog/datasets/overview.md).
+Per ulteriori informazioni sui set di dati, consulta la sezione [panoramica dei set di dati](../catalog/datasets/overview.md).
 
 ### Fonti recenti
 
-La scheda delle metriche **[!UICONTROL Recent sources]** mostra le cinque origini più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato quando viene creata una nuova origine.
+La **[!UICONTROL Fonti recenti]** la scheda metrica mostra le cinque origini più recenti create all’interno dell’organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova origine.
 
-Selezionate un&#39;origine per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL View all]** per visualizzare l&#39;elenco delle origini. Da qui potete selezionare una sorgente specifica per i dettagli.
+Selezionare un&#39;origine per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL Visualizza tutto]** per visualizzare l&#39;elenco delle origini. Da qui puoi selezionare una sorgente specifica per i dettagli.
 
-Per ulteriori informazioni sulle origini, vedere [Panoramica delle origini](sources/sources-overview.md).
+Per ulteriori informazioni sulle origini, consulta [Panoramica delle origini](sources/sources-overview.md).
 
 ### Segmenti recenti
 
-La scheda delle metriche **[!UICONTROL Recent segments]** mostra i cinque segmenti più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo segmento.
+La **[!UICONTROL Segmenti recenti]** la scheda metrica mostra i cinque segmenti più recenti creati all’interno dell’organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo segmento.
 
-Selezionate un segmento per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL View all]** per visualizzare informazioni su altri segmenti.
+Seleziona un segmento per visualizzare i dettagli dell’elemento, oppure **[!UICONTROL Visualizza tutto]** per visualizzare informazioni su più segmenti.
 
-Per ulteriori informazioni sui segmenti, vedere [Panoramica del servizio di segmentazione](segmentation/segmentation-overview.md).
+Per ulteriori informazioni sui segmenti, vedi [Panoramica del servizio di segmentazione](segmentation/segmentation-overview.md).
 
 ### Destinazioni recenti
 
-La scheda delle metriche **[!UICONTROL Recent destinations]** mostra le cinque destinazioni più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova destinazione.
+La **[!UICONTROL Destinazioni recenti]** la scheda metrica mostra le cinque destinazioni più recenti create all’interno dell’organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova destinazione.
 
-Selezionate una destinazione per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL View all]** per visualizzare informazioni su altre destinazioni.
+Selezionare una destinazione per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL Visualizza tutto]** per visualizzare informazioni su più destinazioni.
 
-Per ulteriori informazioni sulle destinazioni, vedere [Panoramica delle destinazioni](destinations/overview.md).
+Per ulteriori informazioni sulle destinazioni, vedi [Panoramica sulle destinazioni](destinations/overview.md).
