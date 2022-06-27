@@ -2,10 +2,10 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '1787'
-ht-degree: 4%
+source-wordcount: '1790'
+ht-degree: 5%
 
 ---
 
@@ -291,6 +291,8 @@ Per spiegazioni dettagliate sui parametri di aggregazione, consulta la [Operazio
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. <br> <ul><li> `true`: [!DNL Platform] invia i profili utente storici qualificati per il segmento prima che il segmento venga attivato. </li><li> `false`: [!DNL Platform] include solo i profili utente qualificati per il segmento dopo l’attivazione del segmento. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Come questa configurazione connette tutte le informazioni necessarie per la destinazione {#connecting-all-configurations}
 

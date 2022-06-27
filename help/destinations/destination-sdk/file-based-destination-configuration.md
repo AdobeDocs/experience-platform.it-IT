@@ -2,9 +2,9 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: (Beta) Opzioni di configurazione della destinazione basata su file per Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2313'
 ht-degree: 5%
 
 ---
@@ -788,6 +788,7 @@ Questa sezione fa riferimento alle impostazioni di esportazione dei file nella c
 | `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro con nome file predefinito preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi file predefiniti per i file esportati. Questi non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` viene aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ### Configurazione del nome file {#file-name-configuration}
 
@@ -808,6 +809,7 @@ Come best practice, includi sempre `SEGMENT_ID` nei nomi dei file esportati. Gli
 | `CUSTOM_TEXT` | [!UICONTROL Testo personalizzato] | Testo personalizzato definito dall’utente da includere nel nome del file. Non può essere utilizzato in `defaultFilename`. | Testo_Personalizzato |
 | `TIMESTAMP` | [!UICONTROL Data e ora] | Timestamp a 10 cifre dell’ora in cui è stato generato il file, in formato Unix. | 1652131584 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ![Immagine dell’interfaccia utente che mostra la schermata di configurazione del nome file con macro preselezionate](assets/file-name-configuration.png)
 
@@ -840,6 +842,8 @@ L&#39;esempio mostrato nell&#39;immagine precedente utilizza la seguente configu
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. <br> <ul><li> `true`: [!DNL Platform] invia i profili utente storici qualificati per il segmento prima che il segmento venga attivato. </li><li> `false`: [!DNL Platform] include solo i profili utente qualificati per il segmento dopo l’attivazione del segmento. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Come questa configurazione connette tutte le informazioni necessarie per la destinazione {#connecting-all-configurations}
 
