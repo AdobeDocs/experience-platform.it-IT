@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API Streaming Ingestion supportano due modalità di convalida, sincrone e asincrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '917'
 ht-degree: 4%
 
 ---
@@ -59,6 +59,10 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 - Formato
 
 ## Convalida sincrona
+
+>[!WARNING]
+>
+>La `syncValidation` il parametro query è disponibile solo per l&#39;endpoint con messaggio singolo e non può essere utilizzato per l&#39;endpoint batch.
 
 La convalida sincrona è un metodo di convalida che fornisce un feedback immediato sui motivi per cui un’acquisizione non è riuscita. Tuttavia, in caso di errore, i record con errore di convalida vengono eliminati e non possono essere inviati a valle. Di conseguenza, la convalida sincrona deve essere utilizzata solo durante il processo di sviluppo. Durante la convalida sincrona, i chiamanti vengono informati del risultato della convalida XDM e, in caso di errore, del motivo dell’errore.
 
