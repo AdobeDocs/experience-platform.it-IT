@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Autorizzazioni per la gestione dei ruoli per il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
+
+>[!IMPORTANT]
+>
+>Il controllo di accesso utilizza l&#39;ID utente (un ID univoco interno assegnato a un utente) per concedere le autorizzazioni. Quando un&#39;organizzazione viene migrata da Adobe ID a Business ID, tutte le autorizzazioni impostate per i suoi utenti andranno perse perché l&#39;ID utente cambia e il controllo degli accessi utilizza l&#39;ID utente appena generato. Se la tua organizzazione viene migrata a Business ID, contatta il tuo rappresentante di Adobe per migrare il tuo ID utente da Adobe ID a Business ID.
 
 Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 

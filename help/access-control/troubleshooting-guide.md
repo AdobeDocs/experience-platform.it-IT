@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi di controllo degli accessi
 topic-legacy: troubleshooting guide
 description: Questo documento fornisce le risposte alle domande più frequenti sul controllo degli accessi in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ Se non si dispone delle autorizzazioni di accesso per una particolare [!DNL Plat
 Le autorizzazioni sono raggruppate e suddivise in categorie dalla [!DNL Platform] funzionalità a cui si applicano (ad esempio [!DNL Data Management] e [!DNL Profile Management]). Per un elenco completo delle autorizzazioni disponibili e dei gruppi a cui appartengono, consulta la sezione [sezione autorizzazioni](home.md#permissions) nella panoramica sul controllo accessi.
 
 Consulta la sezione [panoramica sul controllo degli accessi](home.md) per ulteriori informazioni su come fornire un controllo dell&#39;accesso basato sui ruoli.
+
+## Cosa succede alle autorizzazioni dopo la migrazione da Adobe IO a Business ID?
+
+Il controllo di accesso utilizza l&#39;ID utente (un ID univoco interno assegnato a un utente) per concedere le autorizzazioni. Quando un&#39;organizzazione viene migrata da Adobe ID a Business ID, tutte le autorizzazioni impostate per i suoi utenti andranno perse perché l&#39;ID utente cambia e il controllo degli accessi utilizza l&#39;ID utente appena generato. Se la tua organizzazione viene migrata a Business ID, contatta il tuo rappresentante di Adobe per migrare il tuo ID utente da Adobe ID a Business ID.
