@@ -3,10 +3,10 @@ keywords: 'pubblicità; bing; '
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -73,15 +73,22 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="ID mappatura"
+>abstract="Immetti l’ID del segmento Bing numerico a cui desideri mappare il segmento selezionato. Se il [!UICONTROL ID mappatura] non corrisponde a un ID segmento nella destinazione Bing, i dati del pubblico previsti non verranno visualizzati nel tuo account Bing."
+
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
-In [Pianificazione del segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) a questo punto, devi mappare manualmente i segmenti sul loro ID o nome descrittivo corrispondente nella destinazione.
+In [Pianificazione del segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) a questo punto, devi mappare manualmente i segmenti sul loro ID segmento numerico corrispondente nella [!DNL Bing] destinazione. Compila l’ID del segmento numerico da [!DNL Bing] in [!UICONTROL ID mappatura] campo .
 
-Quando mappi segmenti, ti consigliamo di utilizzare la funzione [!DNL Platform] nome del segmento o una sua forma più breve, per facilità d’uso. Tuttavia, l’ID o il nome del segmento nella destinazione non deve necessariamente corrispondere a quello nella [!DNL Platform] conto. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
+![Immagine dell’interfaccia utente che mostra la schermata di mappatura dei segmenti con un esempio di ID mappatura Bing](../../assets/catalog/advertising/bing/mapping-id.png)
+
+Se il [!UICONTROL ID mappatura] non corrisponde a un ID segmento nella destinazione Bing, i dati del pubblico previsti non verranno visualizzati nel tuo account Bing.
 
 ## Dati esportati {#exported-data}
 
