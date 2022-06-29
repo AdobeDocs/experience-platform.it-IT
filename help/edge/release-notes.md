@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 2%
 
 Questo documento illustra le note sulla versione dell’SDK Web per Adobe Experience Platform.
 Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Note sulla versione dell’estensione del tag SDK per web](extension/web-sdk-ext-release-notes.md).
+
+## Versione 2.12.0 - 29 giugno 2022
+
+* Modifica le richieste in Edge Network per utilizzare il `cluster` hint di posizione cookie come parte dell’URL. In questo modo gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) a metà sessione hanno lo stesso perimetro e lo stesso profilo di personalizzazione.
+* Rafforzare le funzioni configurate nella risposta del comando getLibraryInfo.
 
 ## Versione 2.11.0 - 13 giugno 2022
 
@@ -88,7 +93,7 @@ Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Not
 
 ## Versione 2.4.0 - marzo 2021
 
-* L&#39;SDK può ora essere [installato come pacchetto npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
+* L&#39;SDK può ora essere [installato come pacchetto npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=it).
 * È stato aggiunto il supporto per un `out` opzione quando [configurazione del consenso predefinito](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), che rilascia tutti gli eventi finché non viene ricevuto il consenso (il `pending` mette in coda gli eventi e li invia una volta ricevuto il consenso).
 * La [callback onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) può ora essere utilizzato per impedire l’invio di un evento.
 * Ora utilizza un gruppo di campi di schema XDM anziché `meta.personalization` quando si inviano eventi relativi a contenuti personalizzati di cui si sta eseguendo il rendering o si fa clic su di essi.
