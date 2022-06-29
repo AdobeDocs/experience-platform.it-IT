@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Dopo aver creato un segmento abilitato per lo streaming, puoi visualizzare i det
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-In particolare, i dettagli **[!UICONTROL dimensione totale del pubblico qualificato]** vengono visualizzati. La **[!UICONTROL Dimensione totale del pubblico qualificato]** mostra il numero totale di tipi di pubblico qualificati dall’ultima esecuzione di processi del segmento completata. Se un lavoro di segmento non è stato completato nelle ultime 24 ore, il numero di tipi di pubblico verrà invece calcolato in base a una stima.
+In particolare, **[!UICONTROL Totale qualificato]** viene visualizzata una metrica che mostra il numero totale di tipi di pubblico qualificati, in base a valutazioni batch e in streaming per questo segmento.
 
-Sotto c’è un grafico a linee che mostra il numero di segmenti qualificati e non qualificati nelle ultime 24 ore. Il menu a discesa può essere regolato in modo da visualizzare le ultime 24 ore, la settimana scorsa o gli ultimi 30 giorni.
+Sotto c’è un grafico a linee che mostra il numero di nuovi tipi di pubblico aggiornati nelle ultime 24 ore utilizzando il metodo di valutazione in streaming. Il menu a discesa può essere regolato in modo da visualizzare le ultime 24 ore, la settimana scorsa o gli ultimi 30 giorni. La **[!UICONTROL Nuovo pubblico aggiornato]** è basato sulla modifica della dimensione del pubblico durante l’intervallo di tempo selezionato, come valutato dalla segmentazione in streaming. Questa metrica non include il pubblico qualificato totale dalla valutazione batch di segmenti giornalieri.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Sotto c’è un grafico a linee che mostra il numero di segmenti qualificati e n
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Per ulteriori informazioni sulla valutazione dell’ultimo segmento, seleziona la bolla di informazioni.
+Puoi trovare ulteriori informazioni sulla valutazione dell’ultimo segmento selezionando la bolla di informazioni accanto a **[!UICONTROL Totale qualificato]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
