@@ -5,10 +5,10 @@ title: Panoramica dell’acquisizione in streaming
 topic-legacy: overview
 description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
+source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 2%
+source-wordcount: '348'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +40,7 @@ Per ulteriori informazioni sull’abilitazione di un set di dati per [!DNL Profi
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
-| Real-time Customer Profile | &lt; 15 minuti, al 95° percentile |
+| Real-time Customer Profile | &lt; 1 minuto |
 | Lago dati | &lt; 60 minuti |
 
 ## Richiesta per secondi (RPS) guida sull’acquisizione in streaming
