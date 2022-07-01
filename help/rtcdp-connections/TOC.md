@@ -5,15 +5,15 @@ user-guide-title: Connessioni Real-time Customer Data Platform
 breadcrumb-title: Connessioni Real-time Customer Data Platform
 user-guide-description: Abilita la raccolta dati lato client per Adobe Experience Platform Edge Network.
 feature: Data Collection
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 32%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Connessioni Real-time Customer Data Platform {#collection}
+# Connessioni Real-time Customer Data Platform {#rtcdp-connections}
 
 - [Panoramica delle connessioni RTCDP](home.md)
 - [Panoramica completa](e2e.md)
