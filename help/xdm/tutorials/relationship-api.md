@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro schema;schema;schema;schemi;schemi;schemi;relazione;relazione;descrittore di relazione;descrittore di relazione;identità di riferimento;identità di riferimento;
-solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l’API del Registro di sistema dello schema
 description: Questo documento fornisce un'esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall'organizzazione utilizzando l'API del Registro di sistema dello schema.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1367'
 ht-degree: 3%
 
 ---
@@ -110,13 +109,13 @@ Registrare `$id` i valori dei due schemi tra cui si desidera definire una relazi
 
 ## Definire un campo di riferimento per lo schema di origine
 
-All&#39;interno di [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo di identità principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un gruppo di campi dello schema con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un `type` valore di &quot;[!DNL string]&quot;.
+All&#39;interno di [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo di identità principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un gruppo di campi dello schema con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un `type` valore `string`.
 
 >[!IMPORTANT]
 >
->A differenza dello schema di destinazione, lo schema di origine non può utilizzare la propria identità primaria come campo di riferimento.
+>Lo schema di origine non può utilizzare la propria identità primaria come campo di riferimento.
 
-In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo che funge da identità principale dello schema e pertanto funge anche da campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere assegnato un nuovo gruppo di campi che aggiunge un nuovo campo allo schema: `favoriteHotel`.
+In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo che funge da identità principale dello schema. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non ha un campo dedicato da utilizzare come riferimento a `hotelId`, quindi è necessario creare un gruppo di campi personalizzato per aggiungere un nuovo campo allo schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Creare un descrittore di identità di riferimento {#reference-identity}
 
-Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se vengono utilizzati come riferimento da altri schemi in una relazione. Dal momento che `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; si riferisce al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `hotelId` deve essere fornito un descrittore di identità di riferimento.
+Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se vengono utilizzati come riferimento a un altro schema in una relazione. Dal momento che `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; si riferisce al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve essere fornito un descrittore di identità di riferimento.
 
-Crea un descrittore di riferimento per lo schema di destinazione effettuando una richiesta di POST al `/tenant/descriptors` punto finale.
+Crea un descrittore di riferimento per lo schema di origine effettuando una richiesta di POST al `/tenant/descriptors` punto finale.
 
 **Formato API**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La seguente richiesta crea un descrittore di riferimento per il `hotelId` nello schema di destinazione &quot;[!DNL Hotels]&quot;.
+La seguente richiesta crea un descrittore di riferimento per il `favoriteHotel` nello schema di origine &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. Per i descrittori di riferimento il valore deve essere &quot;xdm:descriptorReferenceIdentity&quot;. |
-| `xdm:sourceSchema` | La `$id` URL dello schema di destinazione. |
-| `xdm:sourceVersion` | Numero di versione dello schema di destinazione. |
-| `sourceProperty` | Percorso del campo di identità principale dello schema di destinazione. |
-| `xdm:identityNamespace` | Spazio dei nomi identità del campo di riferimento. Deve essere lo stesso namespace utilizzato quando si definisce il campo come identità principale dello schema. Consulta la sezione [panoramica dello spazio dei nomi identità](../../identity-service/home.md) per ulteriori informazioni. |
+| `@type` | Il tipo di descrittore da definire. Per i descrittori di riferimento il valore deve essere `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | La `$id` URL dello schema di origine. |
+| `xdm:sourceVersion` | Numero di versione dello schema di origine. |
+| `sourceProperty` | Percorso del campo nello schema di origine che verrà utilizzato per fare riferimento all&#39;identità primaria dello schema di destinazione. |
+| `xdm:identityNamespace` | Spazio dei nomi identità del campo di riferimento. Deve essere lo stesso spazio dei nomi dell&#39;identità principale dello schema di destinazione. Consulta la sezione [panoramica dello spazio dei nomi identità](../../identity-service/home.md) per ulteriori informazioni. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del descrittore di riferimento appena creato per lo schema di destinazione.
+Una risposta corretta restituisce i dettagli del nuovo descrittore di riferimento creato per il campo di origine.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ Una risposta corretta restituisce i dettagli del descrittore di riferimento appe
 
 ## Creare un descrittore di relazione {#create-descriptor}
 
-I descrittori di relazione stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di destinazione. Una volta definito un descrittore di riferimento per lo schema di destinazione, è possibile creare un nuovo descrittore di relazione effettuando una richiesta POST al `/tenant/descriptors` punto finale.
+I descrittori di relazione stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di destinazione. Una volta definito un descrittore di identità di riferimento per il campo appropriato nello schema di origine, è possibile creare un nuovo descrittore di relazione effettuando una richiesta POST al `/tenant/descriptors` punto finale.
 
 **Formato API**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo descrittore di relazione, con &quot;[!DNL Loyalty Members]&quot; come schema di origine e &quot;[!DNL Legacy Loyalty Members]&quot; come schema di destinazione.
+La seguente richiesta crea un nuovo descrittore di relazione, con &quot;[!DNL Loyalty Members]&quot; come schema di origine e &quot;[!DNL Hotels]&quot; come schema di destinazione.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da creare. La `@type` il valore per i descrittori di relazione è &quot;xdm:descriptorOneToOne&quot;. |
+| `@type` | Il tipo di descrittore da creare. La `@type` il valore per i descrittori di relazione è `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | La `$id` URL dello schema di origine. |
 | `xdm:sourceVersion` | Numero di versione dello schema di origine. |
 | `xdm:sourceProperty` | Percorso del campo di riferimento nello schema di origine. |
 | `xdm:destinationSchema` | La `$id` URL dello schema di destinazione. |
 | `xdm:destinationVersion` | Numero di versione dello schema di destinazione. |
-| `xdm:destinationProperty` | Percorso del campo di riferimento nello schema di destinazione. |
+| `xdm:destinationProperty` | Percorso del campo di identità principale nello schema di destinazione. |
 
 {style=&quot;table-layout:auto&quot;}
 

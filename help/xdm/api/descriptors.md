@@ -5,9 +5,9 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1839'
 ht-degree: 4%
 
 ---
@@ -389,7 +389,7 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 
 #### Descrittore di identità di riferimento
 
-I descrittori di identità di riferimento forniscono un contesto di riferimento all’identità principale di un campo di schema, consentendo di farvi riferimento da campi di altri schemi. I campi devono essere già etichettati con un descrittore di identità prima di poter essere applicati a un descrittore di riferimento.
+I descrittori di identità di riferimento forniscono un contesto di riferimento all’identità principale di un campo di schema, consentendo di farvi riferimento da campi di altri schemi. Lo schema di destinazione deve avere già un campo di identità principale definito prima che possa essere fatto riferimento da altri schemi tramite questo descrittore.
 
 ```json
 {
@@ -406,7 +406,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 | `@type` | Il tipo di descrittore da definire. Per un descrittore di identità di riferimento, questo valore deve essere impostato su `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
-| `xdm:sourceProperty` | Percorso del campo nello schema di origine in cui viene definito il descrittore. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;). |
+| `xdm:sourceProperty` | Percorso del campo nello schema di origine che verrà utilizzato per fare riferimento allo schema di destinazione. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Codice dello spazio dei nomi identità per la proprietà sorgente. |
 
 {style=&quot;table-layout:auto&quot;}
