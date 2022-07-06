@@ -2,10 +2,10 @@
 title: Riferimento per il test di configurazione
 description: Scopri in che modo la funzione di controllo verifica le configurazioni in Adobe Experience Platform Debugger.
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
-source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
+source-git-commit: 797d4f305b4a6884ada4e0619beadff6a45ab42d
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 65%
+source-wordcount: '740'
+ht-degree: 66%
 
 ---
 
@@ -30,8 +30,8 @@ I test di configurazione eseguono la ricerca di impostazioni, valori o potenzial
 | Launch - I tag di terze parti vengono caricati in modo asincrono dopo l’evento DOM ready | 3 | Per trovare un equilibrio tra una buona esperienza utente e la raccolta di dati accurati, i tag di terze parti devono essere attivati al DOM ready. In questo modo gli script di tracciamento verranno eseguiti senza influire sulle funzionalità del sito. | Per risolvere questo problema, regola tutte le regole che eseguono pixel di terze parti in modo che si attivino in corrispondenza di DOM Ready.<br><br>[Informazioni aggiuntive](../../tags/ui/managing-resources/rules.md) |
 | Servizio Experience Cloud ID - Versione più recente | 2 | Nelle pagine non è in esecuzione la versione più recente della libreria di codici del servizio Visitor ID,  visitorAPI.js. Le librerie di codici che alimentano le tecnologie Experience Cloud vengono costantemente aggiornate e modificate al fine di trarre vantaggio dai miglioramenti delle prestazioni e fornire le funzionalità più recenti. | Installa la versione più recente della libreria del servizio Visitor ID.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/library.html) |
 | Launch - Versione più recente | 2 | Nelle pagine non è in esecuzione la versione più recente della libreria di codici dei tag (Turbine). Le librerie di codici che alimentano le tecnologie Experience Cloud vengono costantemente aggiornate e modificate al fine di trarre vantaggio dai miglioramenti delle prestazioni e fornire le funzionalità più recenti. | Ricrea e pubblica la libreria di tag.<br><br>[Informazioni aggiuntive](../../tags/quick-start/quick-start.md) |
-| Target - Versione più recente | 2 | Nelle pagine non è in esecuzione la versione più recente della libreria di codici di Target. Le librerie di codici che alimentano le tecnologie Experience Cloud vengono costantemente aggiornate e modificate al fine di trarre vantaggio dai miglioramenti delle prestazioni e fornire le funzionalità più recenti. | Installa la versione più recente della libreria Target.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - mboxDefault precede mboxCreate | 5 | L’utilizzo corretto di  mboxCreate è simile al seguente:<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | Accertati di includere un  `<div class="mboxDefault"></div>` prima di richiamare mboxCreate(). at.js non ne aggiungerà uno.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - DOCTYPE valido | 5 | È stato rilevato un DOCTYPE non valido. In questo scenario non verrà attivata alcuna mbox.  Per at.js, il DOCTYPE deve essere in modalità Standard oppure Target non funzionerà. | Aggiorna il DOCTYPE nella pagina.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/faq-at-js/target-atjs-faq.html) |
+| Target - Versione più recente | 2 | Nelle pagine non è in esecuzione la versione più recente della libreria di codici di Target. Le librerie di codici che alimentano le tecnologie Experience Cloud vengono costantemente aggiornate e modificate al fine di trarre vantaggio dai miglioramenti delle prestazioni e fornire le funzionalità più recenti. | Installa la versione più recente della libreria Target.<br><br>[Informazioni aggiuntive](https://developer.adobe.com/target/implement/client-side/) |
+| Target - mboxDefault precede mboxCreate | 5 | L’utilizzo corretto di  mboxCreate è simile al seguente:<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | Accertati di includere un  `<div class="mboxDefault"></div>` prima di richiamare mboxCreate(). at.js non ne aggiungerà uno.<br><br>[Informazioni aggiuntive](https://developer.adobe.com/target/implement/client-side/) |
+| Target - DOCTYPE valido | 5 | È stato rilevato un DOCTYPE non valido. In questo scenario non verrà attivata alcuna mbox.  Per at.js, il DOCTYPE deve essere in modalità Standard oppure Target non funzionerà. | Aggiorna il DOCTYPE nella pagina.<br><br>[Informazioni aggiuntive](https://developer.adobe.com/target/implement/client-side/atjs/target-atjs-faq/) |
 
 {style=&quot;table-layout:auto&quot;}
