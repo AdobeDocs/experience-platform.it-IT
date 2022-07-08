@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3992'
 ht-degree: 0%
 
 ---
@@ -131,19 +131,27 @@ La tabella seguente suddivide le modifiche supportate durante la modifica di sch
 
 | Modifiche supportate | Interruzione delle modifiche (non supportata) |
 | --- | --- |
-| <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Introduzione di nuovi campi obbligatori*</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li><li>Abilitazione dello schema per partecipare al profilo</li></ul> | <ul><li>Rimozione di campi definiti in precedenza</li><li>Ridenominazione o ridefinizione dei campi esistenti</li><li>Rimozione o limitazione dei valori di campo supportati in precedenza</li><li>Spostamento di campi esistenti in una posizione diversa nella struttura</li><li>Eliminazione dello schema</li><li>Disabilitazione dello schema dalla partecipazione al profilo</li></ul> |
+| <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Introduzione dei nuovi campi obbligatori*</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li><li>Abilitazione dello schema per partecipare al profilo</li></ul> | <ul><li>Rimozione di campi definiti in precedenza</li><li>Ridenominazione o ridefinizione dei campi esistenti</li><li>Rimozione o limitazione dei valori di campo supportati in precedenza</li><li>Spostamento di campi esistenti in una posizione diversa nella struttura</li><li>Eliminazione dello schema</li><li>Disabilitazione dello schema dalla partecipazione al profilo</li></ul> |
 
-\**Fai riferimento a [sottosezione](#post-ingestion-required-fields) per considerazioni importanti sulla definizione di nuovi campi obbligatori.*
+\**Fai riferimento alla sezione seguente per considerazioni importanti su [impostazione di nuovi campi obbligatori](#post-ingestion-required-fields).*
 
-#### Impostazione dei campi come obbligatori dopo l’acquisizione {#post-ingestion-required-fields}
+### Campi obbligatori
+
+I singoli campi dello schema possono essere [contrassegnato come obbligatorio](../ui/fields/required.md), il che significa che tutti i record acquisiti devono contenere dati in tali campi per poter passare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può essere utile per garantire che tutti i record acquisiti partecipino al Profilo del cliente in tempo reale, mentre l’impostazione di un campo di marca temporale come richiesto assicura che tutti gli eventi della serie temporale siano conservati cronologicamente.
+
+>[!IMPORTANT]
+>
+>Indipendentemente dal fatto che un campo dello schema sia obbligatorio o meno, Platform non accetta `null` o valori vuoti per qualsiasi campo acquisito. Se in un record o in un evento non è presente alcun valore per un particolare campo, la chiave per tale campo deve essere esclusa dal payload di acquisizione.
+
+#### Impostazione dei campi come richiesto dopo l’acquisizione {#post-ingestion-required-fields}
 
 Se un campo è stato utilizzato per l’acquisizione dei dati e non è stato impostato originariamente come richiesto, per alcuni record potrebbe essere presente un valore null per tale campo. Se si imposta questo campo come obbligatorio dopo l&#39;acquisizione, tutti i record futuri devono contenere un valore per questo campo anche se i record storici possono essere nulli.
 
-Quando imposti come obbligatorio un campo precedentemente facoltativo, tieni presente quanto segue:
+Quando si imposta un campo precedentemente facoltativo, tenere presente quanto segue:
 
 1. Se esegui una query dei dati storici e scrivi i risultati in un nuovo set di dati, alcune righe avranno esito negativo perché contengono valori null per il campo richiesto.
 1. Se il campo partecipa a [Profilo cliente in tempo reale](../../profile/home.md) e i dati vengono esportati prima di impostarli come necessario, potrebbe essere nullo per alcuni profili.
-1. Puoi utilizzare l’API del Registro di sistema dello schema per visualizzare un registro delle modifiche con marca temporale per tutte le risorse XDM in Platform, inclusi i nuovi campi obbligatori. Consulta la guida [endpoint del registro di controllo](../api/audit-log.md) per ulteriori informazioni.
+1. Puoi utilizzare l’API del Registro di sistema dello schema per visualizzare un registro delle modifiche con marca temporale per tutte le risorse XDM in Platform, compresi i nuovi campi obbligatori. Consulta la guida [endpoint del registro di controllo](../api/audit-log.md) per ulteriori informazioni.
 
 ### Schemi e acquisizione dati
 
