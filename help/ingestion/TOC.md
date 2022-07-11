@@ -4,10 +4,10 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
 feature: Data Ingestion
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 19%
+source-wordcount: '128'
+ht-degree: 23%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 19%
    - [Recupera batch non riusciti](quality/retrieve-failed-batches.md)
    - [Convalida dell’acquisizione in streaming](quality/streaming-validation.md)
    - [Notifiche di acquisizione dei dati](quality/subscribe-events.md)
+- [Guardrail per l’inserimento dei dati](guardrails.md)
 - [Connettori sorgente](source-connectors.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)

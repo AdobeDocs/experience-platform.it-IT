@@ -5,10 +5,10 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 1%
+source-wordcount: '7428'
+ht-degree: 0%
 
 ---
 
@@ -30,11 +30,11 @@ ht-degree: 1%
 
 **Adobe Admin Console**: Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni ai prodotti Adobe e l’accesso per la tua organizzazione. Tramite la console, gli amministratori possono concedere a gruppi di utenti autorizzazioni di accesso per varie funzionalità di Platform, ad esempio &quot;Gestisci set di dati&quot;, &quot;Visualizza set di dati&quot; o &quot;Gestisci profili&quot;.
 
-**Adobe Experience Platform**: Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
+**Adobe Experience Platform**: Adobe Experience Platform standardizza dati e contenuti a livello aziendale, fornendo profili di consumo in tempo reale, consentendo la scienza dei dati e accelerando la velocità dei contenuti per stimolare la personalizzazione dell’esperienza nel percorso di clienti.
 
 **Servizio query Adobe Experience Platform**: Consente agli analisti di dati di eseguire query su eventi e profili da utilizzare in analisi e machine learning. Con Query Service, gli scienziati e gli analisti dei dati possono richiamare tutti i loro set di dati memorizzati in Experience Platform (inclusi i dati comportamentali, i POS (Point-of-sale), la gestione delle relazioni con i clienti (Customer Relationship Management, CRM) e molto altro) ed eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
 
-**Adobe Experience Platform Segmentation Service**: Enables building segments and generating audiences from your Real-time Customer Profile data. These audiences can then be exported to their own datasets within the Data Lake.
+**Servizio di segmentazione di Adobe Experience Platform**: Abilita la creazione di segmenti e la generazione di tipi di pubblico dai dati del profilo cliente in tempo reale. Questi tipi di pubblico possono quindi essere esportati nei propri set di dati all’interno del Data Lake.
 
 **Adobe Intelligent Services**: I servizi intelligenti come Attribution AI e Customer AI sono modelli di apprendimento automatico basati su intelligenza artificiale progettati appositamente e che richiedono Experienci Platform per funzionare e funzionare.
 
@@ -110,25 +110,25 @@ ht-degree: 1%
 
 **Etichetta del contratto C1**: A `C1` l’etichetta di utilizzo dei dati del contratto specifica che i dati possono essere esportati da Adobe Experience Cloud solo in un modulo aggregato senza includere identificatori di dispositivo o singoli. Ad esempio, i dati provenienti dai social network.
 
-**Etichetta del contratto C2**: A `C2` l’etichetta di utilizzo dei dati del contratto specifica i dati che non possono essere esportati in una terza parte. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social networks contracts often restrict the transfer of data you receive from them. C2 è più restrittivo di C1, che richiede solo l&#39;aggregazione e dati anonimi.
+**Etichetta del contratto C2**: A `C2` l’etichetta di utilizzo dei dati del contratto specifica i dati che non possono essere esportati in una terza parte. Alcuni fornitori di dati hanno termini nei loro contratti che vietano l&#39;esportazione di dati da dove sono stati originariamente raccolti. Ad esempio, i contratti di social network spesso limitano il trasferimento dei dati che ricevi da loro. C2 è più restrittivo di C1, che richiede solo l&#39;aggregazione e dati anonimi.
 
 **Etichetta del contratto C3**: A `C3` l’etichetta di utilizzo dei dati del contratto specifica i dati che non possono essere combinati o altrimenti utilizzati con informazioni direttamente identificabili. Alcuni fornitori di dati hanno termini nei loro contratti che vietano la combinazione o l&#39;uso di tali dati con informazioni direttamente identificabili. Ad esempio, i contratti per i dati provenienti da reti di annunci, server di annunci e fornitori di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di dati direttamente identificabili.
 
 **Etichetta del contratto C4**: A `C4` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting di annunci o contenuti, sia sul sito che tra siti diversi. C4 è l&#39;etichetta più restrittiva in quanto comprende le etichette C5, C6 e C7.
 
-**Etichetta del contratto C5**: A `C5` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting intersito di contenuti o annunci basati su interessi. Interest-based targeting, or personalization, occurs if the following three conditions are met: The data collected on-site is used to make inferences about a user&#39;s interest; is used in another context such as on another site or app; and is used to select which content or ads are served based on those inferences.
+**Etichetta del contratto C5**: A `C5` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting intersito di contenuti o annunci basati su interessi. Il targeting basato sugli interessi, o personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: I dati raccolti sul sito sono utilizzati per trarre conclusioni sull&#39;interesse dell&#39;utente; è utilizzato in un altro contesto, ad esempio su un altro sito o app; e viene utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
 
-**Etichetta del contratto C6**: A `C6` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci sul sito. On-site ad targeting includes the selection and delivery of advertisements on your organization’s websites, or apps or to measure the delivery and effectiveness of such advertisements. Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito relativi all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati visualizzati, e se gli utenti hanno intrapreso azioni relative all&#39;annuncio, come la selezione di un annuncio o l&#39;effettuazione di un acquisto.
+**Etichetta del contratto C6**: A `C6` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci sul sito. Il targeting degli annunci in sito include la selezione e la consegna di annunci sui siti web o sulle app della tua organizzazione o per misurare la consegna e l’efficacia di tali annunci. Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito relativi all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati visualizzati, e se gli utenti hanno intrapreso azioni relative all&#39;annuncio, come la selezione di un annuncio o l&#39;effettuazione di un acquisto.
 
 **Etichetta del contratto C7**: A `C7` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting in sito del contenuto. Il targeting dei contenuti in sito include la selezione e la distribuzione di contenuti sui siti web o sulle app della tua organizzazione o per misurare la consegna e l’efficacia di tali contenuti. Ciò include informazioni raccolte in precedenza sull’interesse degli utenti per la selezione del contenuto, l’elaborazione dei dati su quale contenuto è stato visualizzato, la frequenza o la durata della visualizzazione, quando e dove è stato visualizzato, e se gli utenti hanno eseguito azioni correlate al contenuto, ad esempio la selezione del contenuto.
 
-**C8 contract label**: A `C8` contract data usage label specifies that data cannot be used for measurement of your organization’s websites or apps. Questo non include il targeting basato sugli interessi, ovvero la raccolta di informazioni sull’utilizzo di questo servizio per personalizzare successivamente contenuti e/o pubblicità in altri contesti.
+**Etichetta del contratto C8**: A `C8` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per la misurazione dei siti web o delle app dell’organizzazione. Questo non include il targeting basato sugli interessi, ovvero la raccolta di informazioni sull’utilizzo di questo servizio per personalizzare successivamente contenuti e/o pubblicità in altri contesti.
 
-**C9 contract label**: A `C9` contract data usage label specifies that data cannot be used in data-science workflows. Some contracts include explicit prohibitions on data used for data science. Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
+**Etichetta del contratto C9**: A `C9` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati nei flussi di lavoro di scienza dei dati. Alcuni contratti includono divieti espliciti sui dati utilizzati per la scienza dei dati. A volte tali termini sono formulati in termini che vietano l’uso di dati per l’intelligenza artificiale (AI), l’apprendimento automatico (ML) o la modellazione.
 
-**C10 contract label**: A `C10` contract data usage label specifies that data cannot be used for stitched identity activation. Alcuni criteri di utilizzo dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. La `C10` l’etichetta viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;grafico privato&quot;.
+**Etichetta del contratto C10**: A `C10` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per l’attivazione dell’identità unita. Alcuni criteri di utilizzo dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. La `C10` l’etichetta viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;grafico privato&quot;.
 
-**Created Date column**: Selecting a Created Date column is an option when specifying third-party data via a source connection. Quando la strategia di salvataggio dell’aggiunta è selezionata e lo schema del set di dati contiene più campi data, è necessario scegliere dallo schema disponibile per specificare una colonna chiave Data creazione. L’opzione Data creazione non è disponibile quando si seleziona la strategia di salvataggio per la sovrascrittura.
+**Colonna Data creazione**: Quando si seleziona una colonna Data creazione , è possibile specificare dati di terze parti tramite una connessione di origine. Quando la strategia di salvataggio dell’aggiunta è selezionata e lo schema del set di dati contiene più campi data, è necessario scegliere dallo schema disponibile per specificare una colonna chiave Data creazione. L’opzione Data creazione non è disponibile quando si seleziona la strategia di salvataggio per la sovrascrittura.
 
 **Crea tabella come selezione**: Crea tabella come selezione (CTAS) è un comando SQL che, se eseguito come parte di una query SQL completa e valida, istruirà [!DNL Query Service] per mantenere i risultati della query in un set di dati. Puoi creare un nuovo set di risultati, sovrascrivere i risultati precedenti o aggiungere i risultati precedenti.
 
@@ -196,7 +196,7 @@ ht-degree: 1%
 
 **Catalogo di destinazione**: Un catalogo di destinazione è un elenco di destinazioni disponibili, ad Experience Platform.
 
-**Direct call rules**: In the context of tags, a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
+**Regole di chiamata diretta**: Nel contesto dei tag, una regola di chiamata diretta è una regola che viene eseguita quando viene chiamata direttamente dalla pagina, bypassando i sistemi di rilevamento degli eventi e di ricerca.
 
 **Nome visualizzato**: In Experience Data Model (XDM), un nome visualizzato è un nome descrittivo per un campo visualizzato nell’interfaccia utente.
 
@@ -214,21 +214,21 @@ ht-degree: 1%
 
 **Ambiente**: Nel contesto dei tag, un ambiente è un insieme di istruzioni di distribuzione che specifica la consegna host e il formato di file di una build. Una libreria deve essere associata a un ambiente prima di poter essere generata.
 
-**Error diagnostics**: Error diagnostics enable the generation of detailed error messages for ingested batches. The error threshold allows you to configure the percentage of acceptable errors before a batch fails.
+**Diagnostica degli errori**: La diagnostica degli errori consente di generare messaggi di errore dettagliati per i batch acquisiti. La soglia di errore consente di configurare la percentuale di errori accettabili prima che un batch non riesca.
 
-**Event**: In the context of tags, an event is a specific type of rule component, which is a trigger that occurs on a client device to begin the execution of a rule.
+**Evento**: Nel contesto dei tag, un evento è un tipo specifico di componente regola, che è un trigger che si verifica su un dispositivo client per avviare l&#39;esecuzione di una regola.
 
-**Event entities**: In the context of data modeling, event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su [!DNL XDM ExperienceEvent] classe.
+**Entità evento**: Nel contesto della modellazione dei dati, le entità evento rappresentano concetti relativi alle azioni che un cliente può intraprendere, agli eventi di sistema o a qualsiasi altro concetto in cui desideri tenere traccia dei cambiamenti nel tempo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su [!DNL XDM ExperienceEvent] classe.
 
-**Events**: Events are the behavior data associated with a profile.
+**Eventi**: Gli eventi sono i dati di comportamento associati a un profilo.
 
-**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) è un framework open-source che utilizza schemi standard per unificare i dati da utilizzare con le applicazioni Experience Platform e Adobe Experience Cloud. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) è un framework open-source che utilizza schemi standard per unificare i dati da utilizzare con le applicazioni Experience Platform e Adobe Experience Cloud. XDM standardizza il modo in cui i dati sono strutturati e accelera e semplifica il processo di acquisizione di informazioni da massicce quantità di dati.
 
-**Experiment**: An experiment is the process of creating a trained model by training the instance with a sample portion of live production data. This is different from a trained model that is tested against a holdout test dataset. Questo è anche diverso dal concetto di esperimento in alcuni framework di apprendimento automatico in cui significa in realtà un progetto di modellazione campione.
+**Esperimento**: Un esperimento è il processo di creazione di un modello addestrato formando l&#39;istanza con una porzione campione di dati di produzione live. Questo è diverso da un modello addestrato che viene testato rispetto a un set di dati di test holdout. Questo è anche diverso dal concetto di esperimento in alcuni framework di apprendimento automatico in cui significa in realtà un progetto di modellazione campione.
 
-**Evento esperienza**: Un evento esperienza rappresenta un’istantanea del sistema quando si verifica un’interazione o un evento correlato a un’esperienza del cliente. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
+**Evento esperienza**: Un evento esperienza rappresenta un’istantanea del sistema quando si verifica un’interazione o un evento correlato a un’esperienza del cliente. Gli eventi di esperienza sono documenti di fatto immutabili di ciò che è accaduto e rappresentano ciò che è accaduto senza aggregazione o interpretazione. In Experience Data Model (XDM), questo concetto viene acquisito da [!DNL XDM ExperienceEvent] classe.
 
-**Export full file**: An export file containing a full snapshot of all profile qualifications for the selected segment.
+**Esporta file completo**: Un file di esportazione contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
 
 **Esportare file incrementali**: Una serie di file esportati in cui il primo file è uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato e i file successivi sono qualifiche di profilo incrementali rispetto all’esportazione precedente.
 
@@ -257,6 +257,8 @@ ht-degree: 1%
 **Geofence**: Un recinto geografico è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area.
 
 **RGPD (Regolamento generale sulla protezione dei dati)**: Il Regolamento generale sulla protezione dei dati (RGPD) è un quadro giuridico che stabilisce le linee guida per la raccolta e il trattamento di informazioni personali di persone all’interno dell’Unione europea (UE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dei singoli e copre tutte le aziende che si occupano dei dati dei cittadini dell&#39;UE.
+
+**Guardrail**: Le guardrail sono soglie che forniscono indicazioni sull’utilizzo dei dati e del sistema, sull’ottimizzazione delle prestazioni e sull’eliminazione di errori o risultati imprevisti in Adobe Experience Platform. I guardrail possono fare riferimento all&#39;uso o al consumo di dati e al trattamento in relazione alle autorizzazioni per le licenze.
 
 ## H
 
@@ -298,9 +300,9 @@ ht-degree: 1%
 
 **[!DNL Intelligent Services]**: [!DNL Intelligent Services] quali [!DNL Attribution AI] e [!DNL Customer AI] sono modelli di apprendimento automatico basati su intelligenza artificiale che richiedono l’esecuzione e il funzionamento di Experienci Platform (o applicazioni integrate in Platform come Real-time Customer Data Platform).
 
-**Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met:
+**Targeting o personalizzazione basati su interessi**: Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti:
 
-1. Data collected on-site is used to make inferences about a user&#39;s interest.
+1. I dati raccolti sul sito vengono utilizzati per fare deduzioni sull&#39;interesse dell&#39;utente.
 1. I dati vengono utilizzati in un altro contesto, ad esempio su un altro sito o app (fuori sito).
 1. I dati vengono utilizzati per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
 
@@ -316,7 +318,7 @@ ht-degree: 1%
 
 **Libreria**: Nel contesto dei tag , una libreria è un set di regole di business che contiene istruzioni sul comportamento della libreria di tag sul dispositivo client.
 
-**Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate.
+**Entità di ricerca**: Nel contesto della modellazione dei dati, le entità di ricerca rappresentano concetti che possono riferirsi a una singola persona, ma che non possono essere utilizzati direttamente per identificare l’individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate.
 
 ## M
 
@@ -326,7 +328,7 @@ ht-degree: 1%
 
 **Attributo obbligatorio**: Casella di controllo abilitata dall’utente che assicura che tutti i record di profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail.
 
-**Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination.
+**Mappatura**: La mappatura dei dati è il processo di mappatura dei campi dei dati di origine su campi di destinazione correlati in una destinazione.
 
 **Azione di marketing**: Nel framework di governance dei dati, un’azione di marketing (nota anche come caso d’uso del marketing) è un’azione eseguita da un consumatore di dati di Experience Platform, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
@@ -400,7 +402,7 @@ ht-degree: 1%
 
 **Frammento di profilo**: Un frammento di profilo è l’informazione di profilo per una sola identità inclusa nell’elenco di identità esistenti per un particolare cliente.
 
-**Profile ID**: A profile ID is an auto-generated identifier associated with an identity type and represents a profile.
+**ID profilo**: Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo.
 
 **Proprietà**: Nel contesto dei tag, una proprietà è un contenitore per tutto ciò che è necessario per distribuire un set di tag.
 
@@ -408,7 +410,7 @@ ht-degree: 1%
 
 **Query**: Le query sono richieste di dati da tabelle di database.
 
-**Query Editor**: Query Editor is a tool for writing, validating, and submitting SQL statements in [!DNL Query Service].
+**Editor query**: Query Editor è uno strumento per scrivere, convalidare e inviare istruzioni SQL in [!DNL Query Service].
 
 ## R
 
@@ -542,6 +544,6 @@ ht-degree: 1%
 
 **Sistema XDM**: XDM System rappresenta il framework che rende operativi gli schemi XDM da utilizzare nei servizi di Experience Platform a valle.
 
-## Y
+## S
 
 ## Z
