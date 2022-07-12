@@ -2,18 +2,24 @@
 title: Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
 
-# Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
+# Definire una relazione molti-a-uno tra due schemi in Real-time Customer Data Platform B2B Edition
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_reference_schema"
+>title="Schema di riferimento"
+>abstract="Selezionare lo schema con cui si desidera stabilire una relazione. A seconda della classe dello schema, potrebbe avere anche relazioni esistenti con altre entità nel contesto B2B."
+>text="See the documentation to learn how B2B schema classes relate to each other."
 
 >[!NOTE]
 >
->Se non utilizzi Real-time Customer Data Platform B2B Edition, consulta la guida su [creazione di una relazione non B2B](./relationship-ui.md) invece.
+>Se non utilizzi Real-time Customer Data Platform B2B Edition o desideri creare una relazione uno-a-uno, consulta la guida su [creazione di una relazione uno-a-uno](./relationship-ui.md) invece.
 
 Real-time Customer Data Platform B2B Edition fornisce diverse classi Experience Data Model (XDM) che acquisiscono entità dati B2B fondamentali, tra cui [account](../classes/b2b/business-account.md), [opportunità](../classes/b2b/business-opportunity.md), [campagne](../classes/b2b/business-campaign.md)e altro ancora. Creando schemi basati su queste classi e abilitandoli per l’utilizzo in [Profilo cliente in tempo reale](../../profile/home.md), è possibile unire dati provenienti da origini diverse in una rappresentazione unificata denominata schema di unione.
 
@@ -45,7 +51,13 @@ Le relazioni dello schema sono rappresentate da un campo dedicato all’interno 
 
 ### Informazioni sulle identità nelle relazioni B2B
 
-Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite e devono essere abilitati per [!DNL Real-time Customer Profile]. Quando imposti un’identità primaria per un’entità B2B, ricorda che gli ID di entità basati su stringhe possono sovrapporsi se li raccogli tra sistemi o posizioni diversi, il che potrebbe causare conflitti di dati in Platform.
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_identity_namespace"
+>title="Spazio dei nomi identità di riferimento"
+>abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione."
+>text="See the documentation to learn more about identities in B2B relationships."
+
+Per stabilire una relazione, lo schema di destinazione deve avere un&#39;identità principale definita. Quando imposti un’identità primaria per un’entità B2B, ricorda che gli ID di entità basati su stringhe possono sovrapporsi se li raccogli tra sistemi o posizioni diversi, il che potrebbe causare conflitti di dati in Platform.
 
 Per questo motivo, tutte le classi B2B standard contengono campi &quot;chiave&quot; conformi alla [[!UICONTROL Origine B2B] tipo di dati](../data-types/b2b-source.md). Questo tipo di dati fornisce campi per un identificatore di stringa per l’entità B2B, insieme ad altre informazioni contestuali sull’origine dell’identificatore. Uno di questi campi, `sourceKey`concatena i valori degli altri campi del tipo di dati per produrre un identificatore completamente univoco per l’entità. Questo campo deve sempre essere utilizzato come identità principale per gli schemi di entità B2B.
 
@@ -60,6 +72,7 @@ A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni sche
 ### [!DNL Opportunities] schema
 
 Lo schema di origine &quot;[!DNL Opportunities]&quot; si basa sul [!UICONTROL Opportunità aziendali XDM] classe. Uno dei campi forniti dalla classe, `opportunityKey`, funge da identificatore per lo schema. In particolare, `sourceKey` campo `opportunityKey` viene impostato come identità principale dello schema in uno spazio dei nomi personalizzato denominato [!DNL B2B Opportunity].
+
 Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-time Customer Profile].
 
 ![Schema opportunità](../images/tutorials/relationship-b2b/opportunities.png)
@@ -72,11 +85,23 @@ Lo schema di destinazione &quot;[!DNL Accounts]&quot; si basa sul [!UICONTROL Ac
 
 ## Definire un campo di relazione per lo schema di origine {#relationship-field}
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_current"
+>title="Nome di relazione dallo schema corrente"
+>abstract="Etichetta che descrive la relazione dallo schema corrente allo schema di riferimento (ad esempio, &quot;Account correlato&quot;). Questa etichetta viene utilizzata in Profilo e segmentazione per fornire contesto ai dati provenienti da entità B2B correlate."
+>text="See the documentation to learn more about building B2B schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_reference"
+>title="Nome di relazione dallo schema di riferimento"
+>abstract="Etichetta che descrive la relazione dallo schema di riferimento allo schema corrente (ad esempio, &quot;Opportunità correlate&quot;). Questa etichetta viene utilizzata in Profilo e segmentazione per fornire contesto ai dati provenienti da entità B2B correlate."
+>text="See the documentation to learn more about building B2B schema relationships."
+
 Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che faccia riferimento all’identità primaria dello schema di destinazione. Le classi B2B standard includono campi chiave sorgente dedicati per le entità business comunemente correlate. Ad esempio, il [!UICONTROL Opportunità aziendali XDM] la classe contiene i campi della chiave di origine di un account correlato (`accountKey`) e una campagna correlata (`campaignKey`). Tuttavia, puoi anche aggiungere altri [!UICONTROL Origine B2B] allo schema utilizzando i gruppi di campi personalizzati se sono necessari più componenti di quelli predefiniti.
 
 >[!NOTE]
 >
->Attualmente, è possibile definire solo relazioni molti-a-uno da uno schema di origine a uno schema di destinazione. Per le relazioni uno-a-molti, è necessario definire il campo di relazione nello schema che rappresenta i &quot;molti&quot;.
+>Attualmente, è possibile definire solo relazioni a uno e a uno solo da uno schema di origine a uno schema di destinazione. Per le relazioni uno-a-molti, è necessario definire il campo di relazione nello schema che rappresenta i &quot;molti&quot;.
 
 Per impostare un campo di relazione, seleziona l’icona a forma di freccia (![Icona a freccia](../images/tutorials/relationship-b2b/arrow.png)) accanto al campo in questione all’interno dell’area di lavoro. Nel caso di [!DNL Opportunities] schema, è `accountKey.sourceKey` poiché l&#39;obiettivo è stabilire una relazione molti-a-uno con un account.
 
