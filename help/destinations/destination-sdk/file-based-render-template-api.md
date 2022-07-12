@@ -1,9 +1,9 @@
 ---
 description: Questa pagina spiega come utilizzare l’endpoint /authoring/testing/template/render per visualizzare l’aspetto dei campi di dati del cliente formattati definiti nella configurazione di destinazione.
 title: Convalida dei campi del cliente formattati
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 Una risposta corretta restituisce un `HTTP 200 OK` e il corpo include valori generati in modo casuale per i campi modelli.
 
-Questa risposta ha lo scopo di aiutarti a convalidare la struttura corretta dei campi dati del cliente, ad esempio i nomi dei bucket o i percorsi delle cartelle.
+Questa risposta può essere utile per convalidare la struttura corretta dei campi dati del cliente, ad esempio i nomi dei bucket o i percorsi delle cartelle.
 
 
 ```json

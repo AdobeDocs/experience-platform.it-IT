@@ -1,9 +1,9 @@
 ---
 title: (Beta) Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i segmenti di pubblico da Experience Platform.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1012'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,12 @@ Per configurare i dettagli della destinazione, compila i campi richiesti e selez
 >[!IMPORTANT]
 > 
 >L’inserimento di un ID account Snapchat Ad errato o non valido causerà un errore nell’attivazione dei segmenti. Verifica di aver inserito l&#39;ID account annuncio corretto.
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

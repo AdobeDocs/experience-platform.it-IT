@@ -1,7 +1,7 @@
 ---
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per visualizzare i dettagli completi dei risultati dei test. Questo endpoint API restituisce lo stesso risultato ottenuto quando si utilizza l’API del servizio di flusso per monitorare i flussi di dati.
 title: Visualizza i risultati dettagliati dell’attivazione
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Prima di poter utilizzare il `/testing/destinationInstance` endpoint, assicurars
 
 Una volta che [convalidata la configurazione della destinazione](file-based-destination-testing-api.md), puoi visualizzare i risultati dettagliati dell’attivazione effettuando una richiesta di GET al `authoring/testing/destinationInstance/` e fornisce l’ID dell’istanza di destinazione della destinazione che stai testando, e gli ID dell’esecuzione di flusso dei segmenti attivati.
 
-Puoi trovare l’URL API completo da utilizzare nella sezione `results` restituita nella [risposta della chiamata di prova di destinazione](file-based-destination-testing-api.md).
+Puoi trovare l’URL API completo da utilizzare nella `results` restituita nella [risposta della chiamata di prova di destinazione](file-based-destination-testing-api.md).
 
 **Formato API**
 
