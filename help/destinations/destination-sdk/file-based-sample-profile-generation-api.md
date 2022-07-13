@@ -1,9 +1,9 @@
 ---
 description: Questa pagina spiega come utilizzare l’endpoint API /sample-profiles da Destination SDK per generare profili di esempio basati su uno schema di origine. Puoi utilizzare questi profili di esempio per testare la configurazione di destinazione basata su file.
 title: Generare profili di esempio in base a uno schema di origine
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 3%
 
 ---
@@ -108,7 +108,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con il numero specificato di
 | -------- | ----------- |
 | `segmentMembership` | Un oggetto map che descrive le appartenenze al segmento del singolo utente. Per ulteriori informazioni su `segmentMembership`, leggi [Dettagli di appartenenza al segmento](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Una marca temporale dell’ultima volta che il profilo è qualificato per il segmento. |
-| `status` | Indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
+| `status` | Campo stringa che indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
 | `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un singolo utente, insieme ai relativi namespace associati. Per ulteriori informazioni su `identityMap`, vedi [base della composizione dello schema](../../xdm/schema/composition.md#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
