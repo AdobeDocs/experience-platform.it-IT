@@ -5,9 +5,9 @@ title: Panoramica del sistema XDM
 topic-legacy: overview
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), basato su un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2087'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Per ulteriori informazioni su come gestire e interagire con gli schemi in Platfo
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamenti dei dati"
->abstract="I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto, mentre gli schemi di serie temporali acquisiscono un&#39;istantanea del sistema al momento dell&#39;esecuzione di un&#39;azione. Gli schemi ad hoc acquisiscono campi che sono spazi dei nomi da utilizzare solo per un singolo set di dati."
->text="See the documentation for more information on data behaviors in Platform."
+>abstract="I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto, mentre gli schemi di serie temporali acquisiscono un&#39;istantanea del sistema al momento dell&#39;esecuzione di un&#39;azione. Gli schemi ad hoc acquisiscono campi che sono spazi dei nomi da utilizzare solo per un singolo set di dati. Per ulteriori informazioni sui comportamenti dei dati in Platform, consulta la documentazione ."
 
 I dati destinati ad essere utilizzati in Experience Platform sono raggruppati in tre tipi di comportamento:
 

@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:i
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identità negli schemi"
->abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafico delle identità per ogni singolo utente e creare profili cliente."
->text="See the documentation for more information on identities in schemas."
+>abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafico delle identità per ogni singolo utente e creare profili cliente. Per ulteriori informazioni sulle identità negli schemi, consulta la documentazione ."
 
 Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola visualizzazione unificata di una singola entità. Pertanto, è importante, quando pensi agli schemi, pensare alle identità dei clienti e a quali campi può essere utilizzato per identificare un soggetto indipendentemente da dove i dati potrebbero provenire.
 
@@ -169,6 +168,11 @@ Gli schemi sono composti con la seguente formula:
 
 ### Classe {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Classe"
+>abstract="Ogni schema è basato su una singola classe. La classe definisce il comportamento dello schema e le proprietà comuni che tutti gli schemi basati su tale classe devono contenere. Consulta la documentazione per ulteriori informazioni su come le classi sono coinvolte nella composizione dello schema."
+
 La composizione di uno schema inizia con l’assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
 La classe di uno schema determina quali gruppi di campi saranno idonei per essere utilizzati in tale schema. Questo viene discusso più dettagliatamente nella sezione [sezione successiva](#field-group).
@@ -182,6 +186,11 @@ La schermata seguente illustra come le classi sono rappresentate nell’interfac
 Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare riferimento alla sezione [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, puoi fare riferimento alla guida su [esplorazione dei componenti XDM](../ui/explore.md) se preferisci visualizzare le risorse nell’interfaccia utente di .
 
 ### Gruppo di campi {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Gruppo di campi"
+>abstract="I gruppi di campi sono componenti riutilizzabili che consentono di estendere gli schemi con attributi aggiuntivi. La maggior parte dei gruppi di campi è compatibile solo con determinate classi. È possibile utilizzare i gruppi di campi standard definiti in Adobe oppure definire manualmente i gruppi di campi personalizzati. Consulta la documentazione per ulteriori informazioni sul coinvolgimento dei gruppi di campi nella composizione dello schema."
 
 Un gruppo di campi è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni quali dettagli personali, preferenze alberghiere o indirizzo. I gruppi di campi devono essere inclusi come parte di uno schema che implementa una classe compatibile.
 

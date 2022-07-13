@@ -6,9 +6,9 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Relazioni dello schema"
->abstract="Gli schemi appartenenti a classi diverse possono essere collegati contestualmente tramite campi di relazione, per creare regole di segmentazione più complesse."
->text="See the documentation for more information on schema relationships."
+>abstract="Gli schemi appartenenti a classi diverse possono essere collegati contestualmente tramite campi di relazione, per creare regole di segmentazione più complesse. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Schema di riferimento"
->abstract="Selezionare lo schema con cui si desidera stabilire una relazione. Questo schema può essere una classe diversa dallo schema corrente."
->text="See the documentation for more information on schema relationships."
+>abstract="Selezionare lo schema con cui si desidera stabilire una relazione. Questo schema può essere una classe diversa dallo schema corrente. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Spazio dei nomi identità di riferimento"
->abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione."
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->Per i passaggi su come creare una relazione molti-a-uno in Real-time Customer Data Platform B2B Edition, consulta la guida su [creazione di relazioni B2B](./relationship-b2b.md).
+>abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
 
 La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all’interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) ti consentono di ottenere informazioni complesse sui dati dei clienti.
 
 Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema dell&#39;unione e [!DNL Real-time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che fa riferimento all&#39;identità di uno schema di destinazione.
 
 Questo documento fornisce un&#39;esercitazione per definire una relazione tra due schemi che utilizzano l&#39;Editor di schema nel [!DNL Experience Platform] interfaccia utente. Per i passaggi sulla definizione delle relazioni tra schemi utilizzando l’API, consulta l’esercitazione su [definizione di una relazione utilizzando l’API del Registro di sistema dello schema](relationship-api.md).
+
+>[!NOTE]
+>
+>Per i passaggi su come creare una relazione molti-a-uno in Real-time Customer Data Platform B2B Edition, consulta la guida su [creazione di relazioni B2B](./relationship-b2b.md).
 
 ## Introduzione
 
