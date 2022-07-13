@@ -3,12 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;spazio dei nomi;spazio dei
 solution: Experience Platform
 title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
-description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
+description: Gli spazi dei nomi di identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 1%
+source-wordcount: '1627'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,13 @@ Ad esempio, due frammenti di profilo possono contenere ID primari diversi, ma co
 
 ![](images/identity-service-stitching.png)
 
-### Tipi di identità
+### Tipi di identità {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="Specificare il tipo di identità"
+>abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafico dell&#39;identità. Gli identificatori non personali non verranno memorizzati e tutti gli altri tipi di identità verranno memorizzati."
+>text="Learn more in documentation"
 
 I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi identità e controlla se i dati sono persistenti o meno nel grafico identità, nonché eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non personale** segui lo stesso comportamento di unione di uno spazio dei nomi e del relativo valore ID a un cluster di grafico delle identità. I dati non vengono uniti quando si utilizza **Identificatore non personale**.
 
@@ -70,14 +76,14 @@ I seguenti namespace standard vengono forniti per l’utilizzo da parte di tutte
 | Telefono (E.164) | Spazio dei nomi che rappresenta i numeri di telefono non elaborati che devono essere crittografati in formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata, un prefisso locale e un numero di telefono. Ad esempio: `(+)(country code)(area code)(phone number)`. |
 | Telefono (SHA256) | Spazio dei nomi che rappresenta i numeri di telefono che devono essere hashing utilizzando SHA-256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
 | Telefono (SHA-256_E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati che devono essere contraddistinti da hash utilizzando sia il formato SHA256 che E.164. |
-| TNTID | Spazio dei nomi che rappresenta Adobe Target. Vedi il seguente documento su [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) per ulteriori informazioni. |
+| TNTID | Spazio dei nomi che rappresenta Adobe Target. Vedi il seguente documento su [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=it) per ulteriori informazioni. |
 | Windows AID | Spazio dei nomi che rappresenta un ID pubblicitario di Windows. Vedi il seguente documento su [ID pubblicità Windows](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) per ulteriori informazioni. |
 
 ### Visualizzare i namespace delle identità
 
 Per visualizzare i namespace delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identità]** nella navigazione a sinistra e seleziona **[!UICONTROL Sfoglia]**.
 
-![navigare](./images/browse.png)
+![navigazione](./images/browse.png)
 
 Nell’interfaccia principale della pagina viene visualizzato un elenco di spazi dei nomi delle identità, con informazioni sui nomi, i simboli di identità, la data dell’ultimo aggiornamento e se si tratta di uno spazio dei nomi standard o personalizzato. La barra a destra contiene informazioni su [!UICONTROL Forza del grafico di identità].
 

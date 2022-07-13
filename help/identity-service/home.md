@@ -5,9 +5,9 @@ title: Panoramica del servizio Identity
 topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Con [!DNL Identity Service], puoi:
 
 - Assicurati che i tuoi clienti ricevano un’esperienza coerente, personalizzata e pertinente attraverso ogni interazione.
 - Unisci diverse identità da diverse fonti e crea una visione completa dei tuoi clienti.
-- Utilizza un grafico delle identità per mappare diversi namespace delle identità, fornendo una rappresentazione visiva di come i clienti interagiscono con il tuo marchio su diversi canali.
+- Utilizza un grafico di identità per mappare diversi namespace di identità, fornendo una rappresentazione visiva di come i clienti interagiscono con il tuo marchio su diversi canali.
 
 ## Introduzione
 
@@ -54,7 +54,7 @@ Considera un esempio quotidiano del rapporto di un consumatore con il tuo marchi
 
 Essenzialmente, [!DNL Identity Service] consente di creare un quadro completo del cliente, aggregando dati correlati che potrebbero altrimenti essere dispersi tra sistemi diversi. Le relazioni di identità che [!DNL Identity Service] definisce e gestisce il profilo cliente in tempo reale per creare un quadro completo di un cliente e delle sue interazioni con il tuo marchio. Per ulteriori informazioni, consulta la sezione [Panoramica del profilo cliente in tempo reale](../profile/home.md).
 
-### Casi di utilizzo
+### Casi d’uso
 
 Esempi di [!DNL Identity Service] le implementazioni includono:
 
@@ -63,10 +63,21 @@ Esempi di [!DNL Identity Service] le implementazioni includono:
 - Una banca può preferire il &quot;numero di conto&quot; nei set di dati offline, ad esempio le transazioni di ramo. Possono dipendere dall’&quot;ID di accesso&quot; nei set di dati online, perché la maggior parte dei visitatori verrebbe autenticata durante la visita.
 - I clienti possono inoltre disporre di ID proprietari univoci, ad esempio GUID o altri identificatori univoci universalmente.
 
-## Namespace Identity
+## Spazio dei nomi identità {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Namespace Identity"
+>abstract="Uno spazio dei nomi di identità serve a distinguere il contesto o il tipo di un&#39;identità. Ad esempio, un&#39;identità distingue &quot;nome&quot;<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valori identità"
+>abstract="Un valore di identità è un identificatore che rappresenta una singola, organizzazione o risorsa univoca. Il contesto o il tipo di identità che il valore rappresenta è definito da uno spazio dei nomi di identità corrispondente. Quando i dati dei record corrispondono a diversi frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere. Quando i dati dei record corrispondono a frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere."
+>text="Learn more in documentation"
 
 Se hai chiesto a una persona &quot;Qual è il tuo ID?&quot; senza ulteriore contesto, sarebbe difficile per loro fornire una risposta utile. Per la stessa logica, un valore stringa che rappresenta un valore di identità, sia che si tratti di un ID generato dal sistema o di un indirizzo e-mail, è completo solo se viene fornito con un qualificatore che fornisce il contesto del valore stringa: lo spazio dei nomi identity.
-
 
 I clienti possono interagire con il tuo marchio tramite una combinazione di canali online e offline, il che può comportare la sfida di riconciliare queste interazioni frammentate in un’unica identità del cliente.
 
@@ -127,7 +138,7 @@ Durante il processo di acquisizione in streaming, [!DNL Identity Service ]estrae
 
 ### Inserire dati in [!DNL Identity Service]
 
-[!DNL Identity Service] consuma dati conformi a XDM inviati ad Experience Platform da [ingestione in batch](../ingestion/batch-ingestion/overview.md) o [acquisizione in streaming](../ingestion/streaming-ingestion/overview.md).
+[!DNL Identity Service] consuma i dati conformi a XDM inviati ad Experience Platform da [ingestione in batch](../ingestion/batch-ingestion/overview.md) o [acquisizione in streaming](../ingestion/streaming-ingestion/overview.md).
 
 Il video seguente è pensato per comprendere meglio il servizio Identity. Questo video illustra come etichettare i campi dati come identità, acquisire i dati di identità e verificare che siano stati inseriti nei grafici privati del servizio Adobe Experience Platform Identity.
 
