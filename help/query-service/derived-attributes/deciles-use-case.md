@@ -1,9 +1,7 @@
 ---
 title: 'Caso di utilizzo degli attributi derivati basati su dispositivi mobili '
 description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare attributi derivati basati su decile da utilizzare con i dati del profilo.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
