@@ -2,7 +2,7 @@
 title: Supporto per il controllo degli accessi basato su attributi per gli schemi ad hoc
 description: Una guida per limitare l’accesso ai campi dati negli schemi ad hoc generati tramite Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Per aggiungere un’etichetta dati, passa a [!UICONTROL Schemi] scheda Sfoglia d
 >
 >Gli schemi ad hoc non vengono visualizzati per impostazione predefinita nell’inventario degli schemi.
 
-## Scopri schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Platform
+## Scopri schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Platform {#discover-ad-hoc-schemas}
 
 Per abilitare la visualizzazione di schemi ad hoc nell’interfaccia utente di Platform, seleziona l’icona del filtro (![Icona filtro.](../images/data-governance/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi adhoc] nella barra a sinistra visualizzata.
 
