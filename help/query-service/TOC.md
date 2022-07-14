@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: b93221a9611de719d5194c387d582e77a162a1fd
+source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '199'
 ht-degree: 17%
 
 ---
@@ -44,7 +44,9 @@ ht-degree: 17%
    - [Blocco anonimo](best-practices/anonymous-block.md)
    - [Caricamento incrementale](best-practices/incremental-load.md)
    - [Deduplicazione dati](best-practices/deduplication.md)
-- [Attributi derivati](derived-attributes.md)
+- Attributi derivati {#derived-attributes}
+   - [Panoramica](derived-attributes/overview.md)
+   - [Caso di utilizzo dei decibel](derived-attributes/deciles-use-case.md)
 - Query di esempio {#sample-queries}
    - [Query Evento esperienza di esempio](sample-queries/experience-event.md)
    - [Query Adobe Analytics di esempio](sample-queries/adobe-analytics.md)

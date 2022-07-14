@@ -4,10 +4,10 @@ title: Esempio di caso d’uso per il servizio query Adobe Experience Platform
 topic-legacy: tutorial
 description: Un esempio end-to-end per dimostrare la versatilità e i vantaggi di Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Questo documento e la relativa presentazione video forniscono un flusso di lavoro end-to-end di alto livello che illustra come Adobe Experience Platform [!DNL Query Service] offre vantaggi per le informazioni strategiche di business della tua organizzazione. Utilizzando come esempio un caso di utilizzo di abbandono navigazione, questa guida illustra i seguenti concetti chiave:
 
-* L&#39;importanza fondamentale del trattamento dei dati per massimizzare il potenziale di Adobe Experience Platform
+* L&#39;importanza fondamentale del trattamento dei dati per massimizzare il potenziale di Adobe Experience Platform.
 * Modi per creare la query in base all’architettura dati esistente.
 * Assicurati la qualità dei dati che soddisfi le tue esigenze e i metodi per attenuare eventuali carenze.
 * Il processo per pianificare l’esecuzione di una query a una frequenza impostata da utilizzare a valle nella segmentazione e nelle destinazioni per la personalizzazione.
@@ -26,7 +26,7 @@ Questo documento e la relativa presentazione video forniscono un flusso di lavor
 Questa dimostrazione del flusso di lavoro si basa su diversi servizi Adobe Experience Platform. Se desideri seguire questa procedura, è consigliabile avere una buona comprensione delle seguenti funzioni e servizi:
 
 * La [nozioni di base sulla composizione dello schema di Experience Data Model (XDM)](../../xdm/schema/composition.md)
-* Come fare per [creare set di dati e acquisire dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* Come fare per [creare set di dati e acquisire dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it)
 * Come fare per [Acquisizione di dati tramite il connettore di origine Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=it)
 * [Segmentazione](../../segmentation/home.md)
 * [Destinazioni](../../destinations/home.md)
