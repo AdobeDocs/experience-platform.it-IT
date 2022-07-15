@@ -2,9 +2,9 @@
 title: Connessione Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP è una destinazione integrata per [!DNL Adobe Real-time Customer Data Profile], che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e con gli utenti per l’attivazione della campagna.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Un&#39;agenzia media con un account DSP sta conducendo una campagna di retargeti
 
 ## Prerequisiti {#prerequisites}
 
-* DSP le impostazioni a livello di account e di campagna per abilitare la condivisione dei segmenti con [!DNL LiveRamp RampID], che tradurrà i dati dei clienti in [!DNL RampIDs] per creare segmenti mirabili. Il team del tuo account DSP eseguirà questa configurazione.
+* DSP le impostazioni a livello di account e di campagna per abilitare la condivisione dei segmenti con [!DNL LiveRamp RampID], che tradurrà i dati dei clienti in [!DNL RampIDs] per creare segmenti mirabili. Il team del tuo account DSP eseguirà questa configurazione. [!DNL RampID] è disponibile tramite una partnership tra DSP e [!DNL LiveRamp]e non hai bisogno del tuo [!DNL LiveRamp] per utilizzarlo.
 * L&#39;ID organizzazione Experience Cloud per l&#39;account Experience Platform. Puoi trovare il tuo ID sul tuo [!DNL Real-Time CDP] pagina del profilo utente.
 * A [[!DNL Real-Time CDP] sorgente in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) per ricevere i segmenti per l’attivazione della campagna. Il team dell&#39;account DSP creerà l&#39;origine utilizzando l&#39;ID organizzazione Experience Cloud.
 * Chiave sorgente per l’account DSP o l’inserzionista, generata quando un [[!DNL Real-Time CDP] viene creato in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Il team del tuo account DSP condividerà questa chiave con te. Lo utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising Cloud DSP, come [spiegato di seguito](#authenticate).
