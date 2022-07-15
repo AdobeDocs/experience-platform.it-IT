@@ -4,12 +4,12 @@ title: Guardrail predefiniti per i dati del profilo cliente in tempo reale
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello di dati relazionali tradizionale. Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i dati del profilo in modo da ottenere prestazioni di sistema ottimali. '
+description: 'Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su insights comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello dati ibrido altamente denormalizzato che differisce dal modello dati relazionale tradizionale.
 
-Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i dati del profilo in modo da ottenere prestazioni di sistema ottimali. Quando si esaminano le seguenti protezioni, si presume che i dati siano stati modellati correttamente. Se hai domande su come modellare i tuoi dati, contatta il tuo rappresentante del servizio clienti.
+In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali. Quando si esaminano le seguenti protezioni, si presume che i dati siano stati modellati correttamente. Se hai domande su come modellare i tuoi dati, contatta il tuo rappresentante del servizio clienti.
 
 >[!NOTE]
 >

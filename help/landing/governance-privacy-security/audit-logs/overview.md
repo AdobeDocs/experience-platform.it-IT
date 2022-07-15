@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ In un certo senso, un registro di controllo comunica **chi** eseguito **cosa** e
 
 Questo documento tratta i registri di controllo di Platform, incluso come visualizzarli e gestirli nell’interfaccia utente o nell’API.
 
-## Tipi di eventi acquisiti dai registri di controllo {#category}
+## Tipi di eventi acquisiti dai registri di audit {#category}
 
 La tabella seguente indica le azioni sulle quali le risorse vengono registrate dai registri di controllo:
 

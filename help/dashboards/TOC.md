@@ -7,7 +7,7 @@ feature: Dashboards
 source-git-commit: 058f1cf5aa0ea134f276d1b3bc7064195fb252f1
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 32%
+ht-degree: 35%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 32%
    * [Profili](guides/profiles.md)
    * [Segmenti](guides/segments.md)
    * [Destinazioni](guides/destinations.md)
-   * [Utilizzo della licenza](guides/license-usage.md)
+   * [Utilizzo delle licenze](guides/license-usage.md)
 * Personalizzare le dashboard {#customize}
    * [Panoramica sulla personalizzazione](customize/overview.md)
    * [Modificare le dashboard](customize/modify.md)

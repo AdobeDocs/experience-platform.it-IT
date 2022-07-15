@@ -33,7 +33,7 @@ ht-degree: 15%
    * [Esperimenti](api/experiments.md)
    * [Modelli](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Informazioni approfondite](api/insights.md)
+   * [Insights](api/insights.md)
    * [Appendice](api/appendix.md)
 * Ricette precostruite {#pre-built-recipes}
    * [Ricetta di consigli sul prodotto](pre-built-recipes/product-recommendations.md)

@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Guida alle informazioni sull’osservabilità
+user-guide-title: Guida di Observability Insights
 user-guide-description: Monitora le attività di Platform mediante l’uso di metriche statistiche e notifiche di eventi.
 feature: Observability
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14

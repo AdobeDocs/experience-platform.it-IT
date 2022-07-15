@@ -7,7 +7,7 @@ feature: Data Governance
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 32%
 # Governance dei dati di Adobe Experience Platform {#data-governance}
 
 * [Panoramica sulla governance dei dati](home.md)
-* Etichette per l&#39;uso dei dati {#labels}
+* Etichette di utilizzo dati {#labels}
    * [Panoramica](labels/overview.md)
    * [Glossario delle etichette](labels/reference.md)
    * [Gestire le etichette nell’interfaccia utente](labels/user-guide.md)
@@ -24,7 +24,7 @@ ht-degree: 32%
    * [Panoramica](policies/overview.md)
    * [Gestire i criteri nell’interfaccia utente](policies/user-guide.md)
    * [Creare un criterio nell’API](policies/create.md)
-* Applicazione dei criteri {#enforcement}
+* Applicazione delle politiche {#enforcement}
    * [Panoramica](enforcement/overview.md)
    * [Applicazione automatica](enforcement/auto-enforcement.md)
    * [Implementazione basata su API](enforcement/api-enforcement.md)

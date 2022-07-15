@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licenze;licenze;best practice
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
-description: Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
+description: Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
 source-wordcount: '2531'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform è un sistema aperto che trasforma i dati in solidi pr
 
 Platform offre licenze che stabiliscono il numero di profili che puoi creare e la quantità di dati che puoi inserire. Data la capacità di inserire qualsiasi origine, volume o cronologia di dati, è possibile superare le autorizzazioni per le licenze man mano che i volumi di dati aumentano.
 
-Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
+Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 
 ## Informazioni sull’archiviazione dati di Adobe Experience Platform
 
@@ -37,7 +37,7 @@ La **Archivio profili** è il luogo in cui vengono creati i profili dei clienti 
 >
 >Accesso al [!DNL Data Lake] può dipendere dallo SKU del prodotto acquistato. Per ulteriori informazioni sugli SKU dei prodotti, contatta il tuo rappresentante Adobe.
 
-## Utilizzo della licenza {#license-usage}
+## Utilizzo delle licenze {#license-usage}
 
 Quando si concede l’Experience Platform di licenza, l’utente dispone di diritti di utilizzo della licenza che variano a seconda della SKU:
 

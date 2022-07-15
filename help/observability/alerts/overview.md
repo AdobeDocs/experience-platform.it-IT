@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;intervallo di date
 title: Panoramica degli avvisi
-description: Scopri gli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
+description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # Panoramica sugli avvisi
 
-Adobe Experience Platform ti consente di abbonarti a avvisi basati su eventi relativi alle attività Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39; [[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro o se si sono verificati errori.
+Adobe Experience Platform ti consente di abbonarti a avvisi basati su eventi relativi alle attività Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling [[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine all’interno di un flusso di lavoro o se si sono verificati errori.
 
 Quando viene raggiunto un certo set di condizioni nelle operazioni di Platform (ad esempio un potenziale problema in caso di superamento di una soglia), Platform può inviare messaggi di avviso a tutti gli utenti dell’organizzazione che si sono abbonati. Questi messaggi possono ripetersi in un intervallo di tempo predefinito fino alla risoluzione dell’avviso.
 
@@ -54,7 +54,7 @@ Gli avvisi possono essere ricevuti e gestiti tramite due canali:
 
 ### Eventi I/O {#events}
 
-Gli avvisi possono essere inviati a un webhook configurato per facilitare l&#39;automazione efficiente del monitoraggio delle attività. Per ricevere avvisi tramite webhook, è necessario registrare il webhook per gli avvisi relativi alla piattaforma in Adobe Developer Console. Per passaggi specifici, consulta la guida sull’ [abbonamento alle notifiche degli eventi di Adobe I/O](./subscribe.md) .
+Gli avvisi possono essere inviati a un webhook configurato per facilitare l&#39;automazione efficiente del monitoraggio delle attività. Per ricevere avvisi tramite webhook, è necessario registrare il webhook per gli avvisi Platform in Adobe Developer Console. Consulta la guida su [sottoscrizione ad Adobi I/O notifiche evento](./subscribe.md) per passaggi specifici.
 
 ### Interfaccia utente della piattaforma {#ui}
 
@@ -67,23 +67,23 @@ Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario c
 | Autorizzazione | Descrizione |
 | --- | --- |
 | Visualizzare gli avvisi | Consente di visualizzare i messaggi di avviso ricevuti. |
-| Visualizza cronologia avvisi* | Consente di visualizzare la cronologia degli avvisi ricevuti tramite la scheda [!UICONTROL Avvisi]. |
-| Gestisci avvisi* | Consente di abilitare e disabilitare le regole di avviso tramite la scheda [!UICONTROL Avvisi] . |
-| Risolvi avvisi* | Consente di risolvere gli avvisi attivati tramite la scheda [!UICONTROL Avvisi] . |
+| Visualizza cronologia avvisi* | Consente di visualizzare la cronologia degli avvisi ricevuti tramite [!UICONTROL Avvisi] scheda . |
+| Gestisci avvisi* | Consente di abilitare e disabilitare le regole di avviso tramite la [!UICONTROL Avvisi] scheda . |
+| Risolvi avvisi* | Consente di risolvere gli avvisi attivati tramite [!UICONTROL Avvisi] scheda . |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Per accedere alla scheda [!UICONTROL Avvisi], è necessario concedere anche l&#39;autorizzazione Visualizza avvisi in combinazione con una delle altre autorizzazioni.*
+**Per accedere al [!UICONTROL Avvisi] È inoltre necessario disporre dell’autorizzazione Visualizza avvisi in combinazione con una delle altre autorizzazioni.*
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come gestire le autorizzazioni in Platform, consulta la [documentazione sul controllo accessi](../../access-control/ui/overview.md).
+>Per ulteriori informazioni su come gestire le autorizzazioni in Platform, consulta la [documentazione sul controllo degli accessi](../../access-control/ui/overview.md).
 
-Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona della campana (![Icona campana](../images/alerts/overview/icon.png)) nell&#39;angolo in alto a destra.
+Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona della campana (![Icona Bell](../images/alerts/overview/icon.png)) nell’angolo in alto a destra.
 
 ![](../images/alerts/overview/ui.png)
 
-Inoltre, la scheda [!UICONTROL Avvisi] nell’interfaccia utente consente ai singoli utenti di iscriversi a tipi di avvisi specifici e consente agli amministratori di abilitare o disabilitare completamente le regole di avviso. Per ulteriori informazioni sulla gestione degli avvisi, consulta la [guida all’interfaccia utente](./ui.md) .
+Inoltre, il [!UICONTROL Avvisi] La scheda nell’interfaccia utente consente ai singoli utenti di effettuare l’abbonamento a specifici tipi di avvisi e consente agli amministratori di abilitare o disabilitare completamente le regole di avviso. Consulta la sezione [Guida all’interfaccia utente](./ui.md) per ulteriori informazioni sulla gestione degli avvisi.
 
 ## Passaggi successivi
 

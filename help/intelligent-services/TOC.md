@@ -7,7 +7,7 @@ user-guide-description: Utilizza i servizi di intelligenza artificiale per gener
 source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 - [Panoramica di Intelligent Services](home.md)
 - [Preparare i dati da utilizzare in Intelligent Services](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- IA per l’attribuzione {#attribution-ai}
    - [Panoramica](attribution-ai/overview.md)
    - [Guida introduttiva ad Attribution AI](attribution-ai/getting-started.md)
    - [Ingresso e uscita](attribution-ai/input-output.md)

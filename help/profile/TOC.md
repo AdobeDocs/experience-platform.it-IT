@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 18%
    * [Proiezioni del bordo](api/edge-projections.md)
    * [Entità ([!DNL Profile] accesso)](api/entities.md)
    * [Processi di esportazione ([!DNL Profile] esportazione)](api/export-jobs.md)
-   * [Anteprima stato campione ([!DNL Profile] anteprima)](api/preview-sample-status.md)
+   * [Stato del campione di anteprima ([!DNL Profile] anteprima)](api/preview-sample-status.md)
    * [[!DNL Profile] processi di sistema (richieste di eliminazione)](api/profile-system-jobs.md)
 * Interfaccia utente profilo {#ui}
    * [[!DNL Profile] Guida all’interfaccia utente](ui/user-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 18%
    * [API attributi calcolati](computed-attributes/ca-api.md)
    * [Configurare un campo attributo calcolato](computed-attributes/configure-api.md)
    * [Espressioni di esempio](computed-attributes/expressions.md)
-* Criteri di unione {#merge-policies}
+* Unisci criteri {#merge-policies}
    * [Panoramica](merge-policies/overview.md)
    * [API dei criteri di unione](api/merge-policies.md)
    * [Guida all’interfaccia utente per i criteri di unione](merge-policies/ui-guide.md)
@@ -46,7 +46,7 @@ ht-degree: 18%
    * [Aggiungere dati al profilo cliente in tempo reale](tutorials/add-profile-data.md)
    * [Configurare un set di dati per il profilo](tutorials/dataset-configuration.md)
    * [Genera il rapporto di sovrapposizione dei set di dati](tutorials/dataset-overlap-report.md)
-   * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+   * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
 * [Elaborazione delle richieste di privacy](privacy.md)
 * [[!DNL Profile] guida alla risoluzione dei problemi](troubleshooting.md)
 * [Riferimento API del profilo](https://www.adobe.com/go/profile-apis-en)
