@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;destinazione risposta oracle
 title: Oracle connessione Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing cross-channel offerte da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -75,6 +75,12 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 - **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

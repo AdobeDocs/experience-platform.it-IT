@@ -3,9 +3,9 @@ title: Connessione API HTTP
 keywords: streaming;
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2374'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazio
    * **[!UICONTROL Corpo del modulo codificato]**: In questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviato a destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione .
    * **[!UICONTROL Autorizzazione di base]**: In questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *in `Authorization` header* dopo essere stato codificato base64 e inviato alla tua destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione .
 
-### Dettagli della destinazione {#destination-details}
+### Compila i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazio
 >title="Parametri query"
 >abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
 
-Dopo aver stabilito la connessione di autenticazione per l’endpoint HTTP, fornisci le seguenti informazioni per la destinazione:
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 ![Immagine della schermata dell’interfaccia utente che mostra i campi completati per i dettagli della destinazione HTTP](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ Dopo aver stabilito la connessione di autenticazione per l’endpoint HTTP, forn
 * **[!UICONTROL Parametri query]**: Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Includi nomi dei segmenti]**: Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Includi marche temporali del segmento]**: Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

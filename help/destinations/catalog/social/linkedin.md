@@ -3,10 +3,10 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 2%
+source-wordcount: '1041'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +91,7 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 > 
 >Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
 Il video seguente illustra anche i passaggi per configurare un [!DNL LinkedIn Matched Audiences] destinazione e attivazione dei segmenti.
 
@@ -101,13 +101,31 @@ Il video seguente illustra anche i passaggi per configurare un [!DNL LinkedIn Ma
 >
 >L&#39;interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta la sezione [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Parametri di connessione {#parameters}
+### Autentica a destinazione {#authenticate}
 
-Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
+1. Trova il [!DNL LinkedIn Matched Audiences] destinazione nel catalogo di destinazione e selezionare **[!UICONTROL Configurazione]**.
+2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
+   ![Autenticazione in LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. Immetti le tue credenziali LinkedIn e seleziona **Accesso**.
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: le [!DNL LinkedIn Campaign Manager Account ID]. Puoi trovare questo ID nel tuo [!DNL LinkedIn Campaign Manager] conto.
+### Compila i dettagli della destinazione {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="ID account"
+>abstract="L’ID del tuo account LinkedIn Campaign Manager. Puoi trovare questo ID nel tuo account LinkedIn Campaign Manager."
+
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
+
+* **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ID account]**: Le [!DNL LinkedIn Campaign Manager Account ID]. Puoi trovare questo ID nel tuo [!DNL LinkedIn Campaign Manager] conto.
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

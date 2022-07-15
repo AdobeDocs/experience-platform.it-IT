@@ -2,10 +2,10 @@
 title: Connessione twitter Custom Audiences
 description: Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di ricommercializzazione pertinenti attivando i tuoi tipi di pubblico generati in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 2%
+source-wordcount: '812'
+ht-degree: 3%
 
 ---
 
@@ -58,15 +58,33 @@ Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea camp
 > 
 >Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
-### Parametri di connessione {#parameters}
+### Autentica a destinazione {#authenticate}
 
-Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
+1. Trova il [!DNL Twitter Custom Audiences] destinazione nel catalogo di destinazione e selezionare **[!UICONTROL Configurazione]**.
+2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
+   ![Autenticazione in LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. Immetti le tue credenziali Twitter e seleziona **Accesso**.
+
+### Compila i dettagli della destinazione {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_twitter_accountid"
+>title="ID account"
+>abstract="Il tuo ID account Twitter Ads. Questo si trova nelle impostazioni di Twitter Ads."
+
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID account]**: Le [!DNL Twitter Ads] ID account. Questo si trova nella [!DNL Twitter Ads] impostazioni.
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
@@ -78,7 +96,7 @@ Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmen
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
 
 ## Risorse aggiuntive {#additional-resources}
 

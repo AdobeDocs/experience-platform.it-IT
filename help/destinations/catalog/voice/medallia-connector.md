@@ -1,13 +1,13 @@
 ---
 title: Connessione Medallia
 description: Attiva profili per sondaggi Medallia mirati e raccolta di feedback per comprendere meglio le esigenze e le aspettative dei clienti.
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1102'
 ht-degree: 1%
 
 ---
-
 
 # Connessione Medallia
 
@@ -70,7 +70,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 > 
 >Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
 ### Autentica a destinazione {#authenticate}
 
@@ -84,7 +84,7 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e 
 
 ### Compila i dettagli della destinazione {#destination-details}
 
-Per configurare i dettagli della destinazione, compila i campi richiesti e seleziona **[!UICONTROL Successivo]**.
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -92,6 +92,12 @@ Per configurare i dettagli della destinazione, compila i campi richiesti e selez
 * **[!UICONTROL Importa nome API]**: Ottieni dal tuo team di consegna Medallia. Nome dell’API di importazione Medallia (noto anche come Feed Web) da utilizzare in questa connessione. Puoi attivare diversi segmenti su diverse API di importazione per attivare diversi programmi di sondaggio.
 
 ![Immagine che mostra la schermata dei dettagli della destinazione per questa destinazione.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

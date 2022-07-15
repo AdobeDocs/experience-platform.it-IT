@@ -3,9 +3,9 @@ keywords: pubblicità; critico;
 title: Connessione del criterio
 description: Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '1005'
 ht-degree: 2%
 
 ---
@@ -102,6 +102,12 @@ Dopo l&#39;autenticazione alla destinazione, compila i seguenti parametri di con
 | Versione API | Versione API del criterio. Selezionare Anteprima. | Sì |
 | ID inserzionista | ID inserzionista criterio della tua organizzazione. Per ottenere queste informazioni, contatta il tuo account manager Criteo. | Sì |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] della tua organizzazione. Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] o per ottenere ulteriori informazioni [!DNL GUM] sincronizzazione, se necessario. | Sì, ogni volta [!DNL GUM ID] è fornito come identificatore |
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate-segments}
 

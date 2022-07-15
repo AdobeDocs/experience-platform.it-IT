@@ -3,9 +3,9 @@ keywords: Amazon S3;destinazione S3;s3;amazon s3
 title: Connessione Amazon S3
 description: Crea una connessione in uscita diretta all’archiviazione S3 di Amazon Web Services (AWS) per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f3f713848c7796c95d5326eba8a2e75f36704fd0
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '753'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 > 
 >Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autentica a destinazione {#authenticate}
 
@@ -54,8 +54,6 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e 
 
 ### Compila i dettagli della destinazione {#destination-details}
 
-Per configurare i dettagli della destinazione, compila i campi richiesti e seleziona **[!UICONTROL Successivo]**.
-
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="Nome blocco"
@@ -67,6 +65,8 @@ Per configurare i dettagli della destinazione, compila i campi richiesti e selez
 >abstract="Deve contenere solo caratteri A-Z, a-z, 0-9 e può includere i seguenti caratteri speciali: `/!-_.'()"^[]+$%.*"`. Per creare una cartella per file di segmento, inserire la macro `/%SEGMENT_NAME%` o `/%SEGMENT_ID%` o `/%SEGMENT_NAME%/%SEGMENT_ID%` nel campo di testo. Le macro possono essere inserite solo alla fine del percorso della cartella. Visualizzare esempi di macro nella documentazione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Utilizzare le macro per creare una cartella nel percorso di archiviazione"
 
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
+
 * **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione.
 * **[!UICONTROL Descrizione]**: immettere una descrizione della destinazione.
 * **[!UICONTROL Nome blocco]**: immetti il nome della [!DNL Amazon S3] bucket utilizzato da questa destinazione.
@@ -75,6 +75,12 @@ Per configurare i dettagli della destinazione, compila i campi richiesti e selez
 >[!TIP]
 >
 >Nel flusso di lavoro di destinazione di connessione puoi creare una cartella personalizzata nell’archivio Amazon S3 per file di segmento esportato. Leggi [Utilizzare le macro per creare una cartella nel percorso di archiviazione](overview.md#use-macros) per istruzioni.
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ### Obbligatorio [!DNL Amazon S3] permissions {#required-s3-permission}
 

@@ -2,9 +2,9 @@
 title: Connessione Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP è una destinazione integrata per [!DNL Adobe Real-time Customer Data Profile], che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e con gli utenti per l’attivazione della campagna.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1026'
 ht-degree: 1%
 
 ---
@@ -78,12 +78,18 @@ Per connettersi alla destinazione, fornisci il seguente parametro nel [!UICONTRO
 
 ### Compila i dettagli della destinazione {#destination-details}
 
-Per configurare i dettagli della destinazione, compila i campi richiesti nella sezione [!UICONTROL Dettagli della destinazione] , quindi seleziona **[!UICONTROL Successivo]**.
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 
 ![Campi di dettaglio della destinazione](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

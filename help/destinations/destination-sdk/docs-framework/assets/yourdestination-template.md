@@ -1,25 +1,19 @@
 ---
-title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
+title: Modello self-service // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
+
 
 # Connessione YourDestination {#your-destination}
 
 *Passando al modello, sostituisci o elimina tutti i paragrafi in corsivo (a partire da questo).*
 
 *Per iniziare, aggiorna i metadati (titolo e descrizione) nella parte superiore della pagina. Ignora tutte le istanze di UICONTROL in questa pagina. Questo è un tag che aiuta i nostri processi di traduzione automatica a tradurre correttamente la pagina nelle diverse lingue supportate. Dopo l’invio verranno aggiunti dei tag alla documentazione.*
-
->[!IMPORTANT]
->
->* Compila tutte le sezioni di questo modello, nell&#39;ordine in cui sono descritte nel modello.
->* Questo modello viene aggiornato raramente, in base al feedback del partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato il [versione più recente del modello](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## Panoramica {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 1%
 
 Per aiutarti a capire meglio come e quando utilizzare la *YourDestination* destinazione : di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### Caso d&#39;uso n. 1 {#use-case-1}
+### Caso d&#39;uso n. 1
 
 *Per le piattaforme di messaggistica mobile:*
 
 *Una piattaforma di noleggio e vendita di casa vuole inviare notifiche mobili ai dispositivi Android e iOS dei clienti per far sapere che ci sono 100 annunci aggiornati nell&#39;area in cui hanno precedentemente cercato un noleggio.*
 
-### Caso d&#39;uso n. 2 {#use-case-2}
+### Caso d&#39;uso n. 2
 
 *Per le piattaforme di social network:*
 
@@ -102,7 +96,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-![Schermata di esempio che mostra come eseguire l’autenticazione nella destinazione](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Aggiungi un collegamento qui a una o più schermate di esempio che mostrano agli utenti come effettuare l’autenticazione nella destinazione](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Token portatore]**: Compila il token portatore per l’autenticazione alla destinazione.
 
@@ -112,7 +106,7 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e 
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata di esempio che mostra come inserire i dettagli della destinazione](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Aggiungi un collegamento qui a una o più schermate di esempio che mostrano agli utenti come inserire i dettagli della tua destinazione](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -130,7 +124,7 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 ## Esportazione di dati / Convalida esportazione dati {#exported-data}
 
@@ -176,7 +170,7 @@ Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmen
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 ## Risorse aggiuntive {#additional-resources}
 

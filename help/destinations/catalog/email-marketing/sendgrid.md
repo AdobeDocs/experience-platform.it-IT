@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni;sendgrid;destinazione sendgrid
 title: Connessione SendGrid
 description: La destinazione SendGrid ti consente di esportare i dati di prime parti e attivarli all’interno di SendGrid per le tue esigenze aziendali.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -78,8 +78,9 @@ I team di marketing che utilizzano SendGrid possono creare una mailing list all�
 > 
 >Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). I passaggi specifici di questa destinazione sono illustrati in dettaglio di seguito.
+### Autentica a destinazione {#authenticate}
 
 1. All&#39;interno di [!DNL Adobe Experience Platform] console, passa a **Destinazioni**.
 
@@ -96,7 +97,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Parametri di connessione {#parameters}
+### Compila i dettagli della destinazione {#destination-details}
 
 Quando [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) questa destinazione, devi fornire le seguenti informazioni:
 
@@ -104,6 +105,12 @@ Quando [configurazione](https://experienceleague.adobe.com/docs/experience-platf
 * **[!UICONTROL Descrizione]**: Una descrizione facoltativa che ti aiuterà a identificare questa destinazione in futuro.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

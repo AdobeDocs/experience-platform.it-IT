@@ -3,9 +3,9 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '909'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,12 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 |---|---|
 | <ul><li>[Segmentazione degli spigoli](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere i segmenti alla connessione Adobe Target solo per la sandbox di produzione.</li><li>Per configurare la personalizzazione di sessione successiva senza utilizzare un ID di datastream, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione dei bordi funziona come previsto.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
 
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
@@ -99,4 +105,4 @@ Adobe Target legge i dati del profilo da Adobe Experience Platform Edge Network,
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).

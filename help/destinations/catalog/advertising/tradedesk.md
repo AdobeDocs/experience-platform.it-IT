@@ -3,10 +3,10 @@ keywords: pubblicità; il banco commerciale; ufficio commerciale pubblicitario
 title: Il collegamento del Trade Desk
 description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 3%
+source-wordcount: '676'
+ht-degree: 2%
 
 ---
 
@@ -75,6 +75,12 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
    * **[!UICONTROL America del Nord Est]**
    * **[!UICONTROL America del Nord occidentale]**
    * **[!UICONTROL America Latina]**
+
+### Abilitare gli avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
