@@ -6,7 +6,7 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
+source-git-commit: 4a9511f055854ab574aca46f44acf155b0c16af6
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 0%
@@ -173,13 +173,13 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >title="Activation"
 >abstract="La vista di attivazione della destinazione contiene informazioni sullo stato di attivazione del segmento e sulle metriche prelevate da Profilo cliente in tempo reale per generare identità univoche."
 
-Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
-
 >[!NOTE]
 >
 >- La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* la [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
 >- Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) le destinazioni, le identità escluse al momento non vengono visualizzate.
 
+
+Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
 
 Utilizza la [!UICONTROL Destinazioni] dashboard per ottenere un’idea generale dello stato dei flussi di attivazione. Inizia ottenendo informazioni a livello aggregato per tutte le destinazioni batch e in streaming, quindi approfondisci le visualizzazioni dettagliate per i flussi di dati, le esecuzioni dei flussi di dati e i segmenti attivati per un&#39;analisi approfondita dei dati di attivazione. Le schermate nel [!UICONTROL Monitoraggio] dashboard fornisce informazioni fruibili attraverso metriche e descrizioni degli errori per aiutarti a risolvere eventuali problemi che potrebbero insorgere negli scenari di attivazione.
 
