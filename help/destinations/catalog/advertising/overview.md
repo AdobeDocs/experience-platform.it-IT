@@ -3,9 +3,9 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni;piattaforme
 title: Panoramica sulle destinazioni pubblicitarie
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Collega Adobe Experience Platform a piattaforme pubblicitarie di terze parti come piattaforme lato domanda (DSP), piattaforme lato offerta (SSP), reti pubblicitarie e condividi tipi di pubblico pseudonimi con queste piattaforme.
+Collega Adobe Experience Platform a piattaforme pubblicitarie come piattaforme lato domanda (DSP), piattaforme lato offerta (SSP) e reti pubblicitarie per condividere pubblici noti e pseudonimi con queste piattaforme.
 
 Quando ti connetti a una destinazione pubblicitaria, i tipi di pubblico vengono inviati come ID alla piattaforma di destinazione, dove sono mappati su un ID noto dalla piattaforma di destinazione.
 
@@ -26,6 +26,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedi [Connessioni](
 
 ### Connessioni
 
+* [Connessione Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
 * [(Beta) Connessione dei criteri](criteo.md)
 * [Connessione Google Display &amp; Video 360](google-dv360.md)
 * [Connessione Google Ads](google-ads-destination.md)
