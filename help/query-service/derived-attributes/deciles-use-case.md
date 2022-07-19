@@ -1,7 +1,8 @@
 ---
-title: 'Caso di utilizzo degli attributi derivati basati su dispositivi mobili '
+title: Caso di utilizzo degli attributi derivati basati su dispositivi mobili
 description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare attributi derivati basati su decile da utilizzare con i dati del profilo.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -59,7 +60,7 @@ Nella tabella seguente sono visualizzati i dati di esempio contenuti nella `_pro
 
 >[!NOTE]
 >
->Per brevità, l’ID del tenore `_profilefoundationreportingstg` è stato omesso dall&#39;inizio dello spazio dei nomi nei titoli delle colonne e nelle menzioni successive in tutto il documento.
+>Per brevità, l’ID tenant `_profilefoundationreportingstg` è stato omesso dall&#39;inizio dello spazio dei nomi nei titoli delle colonne e nelle menzioni successive in tutto il documento.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ Esegui la query per compilare il set di dati decile. È inoltre possibile salvar
 ## Passaggi successivi
 
 Il caso d’uso di esempio fornito sopra evidenzia i passaggi per rendere disponibili gli attributi decile nel Profilo del cliente in tempo reale. Questo consente al servizio di segmentazione, tramite un’interfaccia utente o un’API RESTful, di generare tipi di pubblico in base a questi bucket decile. Consulta la sezione [Panoramica del servizio di segmentazione](../../segmentation/home.md) per informazioni su come creare, valutare e accedere ai segmenti.
-
