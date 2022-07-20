@@ -5,9 +5,9 @@ title: Postman in Adobe Experience Platform
 topic-legacy: api guide
 description: Questo documento contiene passaggi che descrivono come impostare un ambiente Postman, importare raccolte Postman e un elenco di raccolte disponibili per ogni servizio Platform.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ La seguente guida video illustra la creazione e la configurazione dell’ambient
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Raccolte postali {#collections}
+## Raccolte Postman {#collections}
 
 Una cartella contenente tutte le raccolte Postman disponibili si trova da, visitando il [Experience Platform Postman: esempi dell’archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, un link di raccolta Postman può essere trovato in ogni singolo file swagger nel [Documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O.
 
@@ -32,7 +32,7 @@ Per scaricare una raccolta Postman, seleziona **[!DNL Raw]** dalla pagina GitHub
 
 ## Importare una raccolta Postman {#import}
 
-Per utilizzare un [Collezione Postman](#collections), è necessario che sia configurato un ambiente. Una volta completata la configurazione dell’ambiente, seleziona la **[!DNL Manage Environments]** nell’angolo in alto a destra.
+Per utilizzare un [Raccolta Postman](#collections), è necessario che sia configurato un ambiente. Una volta completata la configurazione dell’ambiente, seleziona la **[!DNL Manage Environments]** nell’angolo in alto a destra.
 
 ![gestione selettore ambiente](./images/api-guide/environment-selector.png)
 
@@ -52,9 +52,9 @@ Per ulteriori informazioni sull’interfaccia utente di Postman e sulle sue funz
 
 >[!WARNING]
 >
->Come indicato nell&#39;insieme Postman di generazione dei token di accesso Adobe I/O, i metodi di generazione indicati sono adatti per **uso non di produzione**. La firma locale carica una libreria JavaScript da un host di terze parti e la firma remota invia la chiave privata a un servizio Web di proprietà e gestito da Adobe. Sebbene Adobe non memorizzi questa chiave privata, le chiavi di produzione non devono mai essere condivise con nessuno.
+>Come indicato nella raccolta Postman di Identity Management Service (IMS), i metodi di generazione indicati sono adatti per **uso non di produzione**. La firma locale carica una libreria JavaScript da un host di terze parti e la firma remota invia la chiave privata a un servizio Web di proprietà e gestito da Adobe. Sebbene Adobe non memorizzi questa chiave privata, le chiavi di produzione non devono mai essere condivise con nessuno.
 
-Il video seguente utilizza la [Raccolta di generazione token di accesso di Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) che può essere scaricato dall’archivio GitHub pubblico.
+Il video seguente utilizza la [Raccolta Postman del servizio Identity Management (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) che può essere scaricato dall’archivio GitHub pubblico.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
