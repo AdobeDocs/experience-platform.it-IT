@@ -3,9 +3,9 @@ title: Utilizzo di Adobe Analytics con Platform Web SDK
 description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;dati mappati;variabili mappate;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] mappa automaticamente molte variab
 
 ## Dati mappati manualmente
 
-Tutti i dati raccolti dalla rete perimetrale sono accessibili tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
+È possibile accedere a qualsiasi dato non mappato automaticamente dalla rete perimetrale tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
 
 Se avevi uno schema simile a questo.
 
