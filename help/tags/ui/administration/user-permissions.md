@@ -2,9 +2,9 @@
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1311'
 ht-degree: 23%
 
 ---
@@ -21,7 +21,7 @@ Questa guida fornisce una panoramica dei diversi tipi di autorizzazioni disponib
 
 >[!NOTE]
 >
->Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l’esercitazione su [gestione delle autorizzazioni per i tag](./manage-permissions.md).
+>Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l’esercitazione su [gestione delle autorizzazioni per la raccolta dati](../../../rtcdp-connections/permissions.md).
 
 ## Tipi di autorizzazione
 
@@ -66,7 +66,7 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 
 | Diritto dell&#39;azienda | Descrizione |
 | --- | --- |
-| **Gestisci proprietà** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare nuove proprietà</li><li>Modificare metadati e impostazioni a livello di proprietà</li><li>Elimina proprietà</li></ul>Generalmente, gli amministratori eseguono questo ruolo. Per ulteriori informazioni, consulta la [documentazione sulle proprietà](companies-and-properties.md) . |
+| **Gestisci proprietà** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare nuove proprietà</li><li>Modificare metadati e impostazioni a livello di proprietà</li><li>Elimina proprietà</li></ul>Generalmente, gli amministratori eseguono questo ruolo. Consulta la sezione [documentazione sulle proprietà](companies-and-properties.md) per ulteriori informazioni. |
 | **Sviluppa estensioni** | Consente di creare e modificare pacchetti di estensione di proprietà dell&#39;azienda, incluse versioni private e richieste di versioni pubbliche. |
 | **Gestire le configurazioni dell’app** | Questa opzione è disponibile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso ai messaggi in-app e push per dispositivi mobili.  Questo consente di gestire le app conosciute da Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio di messaggistica Firebase Cloud e il servizio Apple Push Notification. |
 
@@ -121,4 +121,4 @@ Nella tabella seguente sono riportati alcuni esempi dei tipi di ruoli che potres
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica delle autorizzazioni disponibili per i tag in Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida sulla [gestione delle autorizzazioni per gli utenti](./manage-permissions.md).
+Questo documento fornisce una panoramica delle autorizzazioni disponibili per i tag in Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida su [gestione delle autorizzazioni utente per la raccolta dati](../../../rtcdp-connections/permissions.md).
