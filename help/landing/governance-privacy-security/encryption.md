@@ -3,7 +3,7 @@ title: Crittografia dei dati in Adobe Experience Platform
 topic-legacy: data protection
 description: Scopri come i dati vengono crittografati in transito e nel resto in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 5%
@@ -24,7 +24,7 @@ Tutti i dati in transito tra Platform e qualsiasi componente esterno vengono ese
 
 In generale, i dati vengono inseriti in Platform in tre modi:
 
-* [Raccolta dati](../../rtcdp-connections/home.md) Le funzionalità consentono a siti web e applicazioni mobili di inviare dati a Platform Edge Network per la gestione temporanea e la preparazione all’acquisizione.
+* [Raccolta dati](../../collection/home.md) Le funzionalità consentono a siti web e applicazioni mobili di inviare dati a Platform Edge Network per la gestione temporanea e la preparazione all’acquisizione.
 * [Connettori sorgente](../../sources/home.md) i dati vengono inviati direttamente a Platform dalle applicazioni Adobe Experience Cloud e da altre origini dati aziendali.
 * Gli strumenti ETL non di Adobe (estrazione, trasformazione, caricamento) inviano i dati al [API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per il consumo.
 

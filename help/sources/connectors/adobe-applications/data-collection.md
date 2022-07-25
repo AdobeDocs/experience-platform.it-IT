@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;origine;raccolta d
 title: Raccolta dati di Adobe
 description: Questo documento fornisce una panoramica dell’origine di raccolta dati di Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Un datastream è una configurazione che indica alla rete Edge in cui desideri in
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Per i passaggi completi sull’utilizzo dell’interfaccia utente di raccolta dati, consulta [panoramica della raccolta dati end-to-end](../../../rtcdp-connections/e2e.md).
+Per i passaggi completi sull’utilizzo dell’interfaccia utente di raccolta dati, consulta [panoramica della raccolta dati end-to-end](../../../collection/e2e.md).
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai imparato ad accedere all’interfaccia utente di raccolta dati utilizzando l’area di lavoro origini. Per ulteriori informazioni sulla raccolta dei dati, consulta la sezione [Panoramica sulla raccolta dati](../../../rtcdp-connections/e2e.md).
+Leggendo questo documento, hai imparato ad accedere all’interfaccia utente di raccolta dati utilizzando l’area di lavoro origini. Per ulteriori informazioni sulla raccolta dei dati, consulta la sezione [Panoramica sulla raccolta dati](../../../collection/e2e.md).

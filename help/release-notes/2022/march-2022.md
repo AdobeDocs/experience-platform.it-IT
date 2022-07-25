@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2022
 description: Note sulla versione di marzo 2022 per Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -117,7 +117,7 @@ Platform fornisce una suite di tecnologie che ti consentono di raccogliere dati 
 | Impostazioni del datastream globale | È ora possibile configurare diverse nuove impostazioni globali durante la configurazione di un datastream: posizione geografica, cookie ID di prime parti e sincronizzazione ID di terze parti. Vedi la sezione su [configurazione di un datastream](../../edge/datastreams/overview.md#create) nella guida dell’interfaccia utente di Datastreams per ulteriori informazioni. |
 | [API del server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con Experience Platform Edge Network utilizzando un nuovo endpoint autenticato per fornire supporto a diversi casi d’uso di raccolta, personalizzazione, pubblicità e marketing dei dati. |
 
-Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../rtcdp-connections/home.md).
+Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
 ## Servizio query {#query-service}
 

@@ -2,7 +2,7 @@
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 23%
@@ -21,7 +21,7 @@ Questa guida fornisce una panoramica dei diversi tipi di autorizzazioni disponib
 
 >[!NOTE]
 >
->Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l’esercitazione su [gestione delle autorizzazioni per la raccolta dati](../../../rtcdp-connections/permissions.md).
+>Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l’esercitazione su [gestione delle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
 
 ## Tipi di autorizzazione
 
@@ -121,4 +121,4 @@ Nella tabella seguente sono riportati alcuni esempi dei tipi di ruoli che potres
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica delle autorizzazioni disponibili per i tag in Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida su [gestione delle autorizzazioni utente per la raccolta dati](../../../rtcdp-connections/permissions.md).
+Questo documento fornisce una panoramica delle autorizzazioni disponibili per i tag in Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida su [gestione delle autorizzazioni utente per la raccolta dati](../../../collection/permissions.md).
