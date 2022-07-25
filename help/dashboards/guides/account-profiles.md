@@ -1,7 +1,8 @@
 ---
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sui profili account B2B della tua organizzazione.
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -42,7 +43,7 @@ La [!UICONTROL Sfoglia] La scheda ti consente di cercare e visualizzare i profil
 
 Seleziona la [!UICONTROL ID profilo] dai risultati visualizzati nel [!UICONTROL Sfoglia] per aprire [!UICONTROL Dettagli] per il profilo dell’account.
 
-![Nella scheda Sfoglia Profili account sono visualizzati i risultati e l’ID profilo è evidenziato.](../images/account-profiles/account-profiles-browse-tab.png) —>
+![Nella scheda Sfoglia Profili account sono visualizzati i risultati e l’ID profilo è evidenziato.](../images/account-profiles/account-profiles-browse-tab.png)
 
 Le informazioni sul profilo dell&#39;account visualizzate nel [!UICONTROL Dettagli] è stata unita una scheda da più frammenti di profilo per formare una singola vista del singolo account. Consulta la documentazione su [esplorazione dei profili account in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) per ulteriori informazioni sulle funzionalità di visualizzazione del profilo account nell’interfaccia utente di Platform.
 
