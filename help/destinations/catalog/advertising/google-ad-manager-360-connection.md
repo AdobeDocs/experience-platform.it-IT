@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci pubblicitari sui loro siti web, tramite video e nelle app per dispositivi mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 4f57574bc17f43406df800358c7320372eb197d0
+source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,10 @@ Per configurare i dettagli della destinazione, compila i campi obbligatori e fac
 * **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
 * **[!UICONTROL Nome blocco]**: Immetti il nome della [!DNL Google Cloud Storage] bucket utilizzato da questa destinazione.
 * **[!UICONTROL Percorso cartella]**: Immettere il percorso della cartella di destinazione che ospiterà i file esportati.
+* **[!UICONTROL ID account]**: Compila l&#39;ID del tuo account con [!DNL Google]. Può essere il tuo codice di rete o il tuo ID di collegamento del pubblico. In genere si tratta di un ID a otto cifre.
+* **[!UICONTROL Tipo di conto]**: Seleziona un’opzione, a seconda dell’account con Google:
+   * Utilizzo `DFP by Google` per [!DNL DoubleClick] per gli editori
+   * Utilizzo `AdX buyer` per [!DNL Google AdX]
 
 ### Abilitare gli avvisi {#enable-alerts}
 
