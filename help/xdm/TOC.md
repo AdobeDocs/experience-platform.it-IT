@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Utilizza i gruppi di campi per classi e schemi di Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
+source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '503'
 ht-degree: 15%
 
 ---
@@ -25,14 +25,19 @@ ht-degree: 15%
       * [Panoramica](./schema/industries/overview.md)
       * [Vendita al dettaglio](./schema/industries/retail.md)
       * [Servizi finanziari](./schema/industries/financial.md)
+      * [Medicale](./schema/industries/healthcare.md)
       * [Telecomunicazioni](./schema/industries/telecom.md)
       * [Viaggi e ospitalità](./schema/industries/travel-hospitality.md)
    * [Dizionario dei campi XDM](schema/field-dictionary.md)
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
+   * [Medicina](./classes/medication.md)
+   * [Pagatore](./classes/payer.md)
+   * [Pianificare](./classes/plan.md)
    * [Criterio](./classes/policy.md)
    * [Prodotto](./classes/product.md)
+   * [Provider](./classes/provider.md)
    * [Definizione del segmento](./classes/segment-definition.md)
    * Classi B2B {#b2b}
       * [Account aziendale XDM](./classes/b2b/business-account.md)
@@ -45,12 +50,13 @@ ht-degree: 15%
       * [Membri elenco marketing commerciale XDM](./classes/b2b/business-marketing-list-members.md)
 * Gruppi di campi {#field-groups}
    * Profilo individuale XDM {#profile}
+      * [Consensi e preferenze](./field-groups/profile/consents.md)
       * [Dettagli demografici](./field-groups/profile/demographic-details.md)
       * [Consenso IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Dettagli dei membri del settore sanitario](./field-groups/profile/healthcare-member-details.md)
       * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dati di contatto personali](./field-groups/profile/personal-contact-details.md)
-      * [Consensi e preferenze](./field-groups/profile/consents.md)
       * [Dettagli di appartenenza al segmento](./field-groups/profile/segmentation.md)
       * [Abbonamento a domicilio](./field-groups/profile/telecom-subscription.md)
       * [Dettagli contatto lavoro](./field-groups/profile/work-contact-details.md)
@@ -58,6 +64,8 @@ ht-degree: 15%
       * [Dettagli sulle persone aziendali XDM](./field-groups/profile/business-person-details.md)
    * ExperienceEvent XDM {#event}
       * [Estensione completa Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Dettagli sulla pubblicità](./field-groups/event/advertising-details.md)
+      * [Dettagli applicazione](./field-groups/event/application-details.md)
       * [Trasferimenti di saldo](./field-groups/event/balance-transfers.md)
       * [Dettagli di marketing per le campagne](./field-groups/event/campaign-marketing-details.md)
       * [Azioni a schede](./field-groups/event/card-actions.md)
@@ -73,6 +81,7 @@ ht-degree: 15%
       * [Riserva](./field-groups/event/lodging-reservation.md)
       * [Dettagli richiesta preventivo](./field-groups/event/quote-request-details.md)
       * [Dettagli prenotazione](./field-groups/event/reservation-details.md)
+      * [Dettagli Sitetool](./field-groups/event/sitetool-details.md)
       * [Ricerca nel sito di supporto](./field-groups/event/support-site-search.md)
       * [Dettagli aggiornamento](./field-groups/event/upgrade-details.md)
       * [Dettagli di upselling](./field-groups/event/upsell-details.md)
@@ -81,11 +90,19 @@ ht-degree: 15%
       * [Dettagli della campagna aziendale XDM](./field-groups/b2b-campaign/details.md)
    * Membri di una campagna aziendale XDM {#b2b-campaign-members}
       * [Dettagli dei membri della campagna aziendale XDM](./field-groups/b2b-campaign-members/details.md)
+   * Medicina {#medication}
+      * [Medicina sanitaria](./field-groups/medication/healthcare-medication.md)
+   * Pianificare {#plan}
+      * [Dettagli sul piano sanitario](./field-groups/plan/healthcare-plan-details.md)
    * Prodotto {#product}
       * [Catalogo dei prodotti](./field-groups/product/product-catalog.md)
       * [Categoria di prodotti](./field-groups/product/product-category.md)
+   * Provider {#provider}
+      * [Fornitore sanitario](./field-groups/provider/healthcare-provider.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
+   * [Dettagli account](./data-types/account-details.md)
+   * [Pausa annunci](./data-types/ad-break.md)
    * [Applicazione](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Dettagli del browser](./data-types/browser-details.md)
@@ -111,6 +128,7 @@ ht-degree: 15%
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
    * [Impression](./data-types/impressions.md)
+   * [Dettagli di implementazione](./data-types/implementation-details.md)
    * [Ricerca interna del sito](./data-types/internal-site-search.md)
    * [Coppia di valori chiave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
