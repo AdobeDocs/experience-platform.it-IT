@@ -3,9 +3,9 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Guida all’interfaccia utente del profilo account
 description: Utilizzando i profili account, Real-time Customer Data Platform B2B Edition consente di unificare le informazioni account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,14 @@ ht-degree: 0%
 I profili account ti consentono di unificare le informazioni dell’account da più sorgenti. Questa visualizzazione unificata di un account riunisce dati provenienti da diversi canali di marketing e dai diversi sistemi che la tua organizzazione sta attualmente utilizzando per memorizzare le informazioni sull’account del cliente. Questo documento fornisce una guida all’interazione con i profili account tramite le funzionalità Real-time CDP e B2B Edition disponibili nell’interfaccia utente di Adobe Experience Platform (UI).
 
 Per ulteriori informazioni sulla modalità di creazione dei profili account nell’ambito del flusso di lavoro B2B, consulta la sezione [esercitazione end-to-end](../b2b-tutorial.md).
+
+## Panoramica sui profili account (#account-profiles-overview)
+
+Per una panoramica del profilo account, inizia selezionando **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra. Sotto la [!UICONTROL Panoramica] il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
+
+![Scheda Panoramica](images/b2b-account-profile-overview.png)
+
+Per ulteriori informazioni sul dashboard dei profili account, consulta [Dashboard dei profili account](../../dashboards/guides/account-profiles.md) documentazione.
 
 ## Sfoglia profili account {#browse-account-profiles}
 
