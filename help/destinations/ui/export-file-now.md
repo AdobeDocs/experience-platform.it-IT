@@ -2,11 +2,10 @@
 title: (Beta) Esportazione di file on-demand in destinazioni batch tramite l’interfaccia utente Experience Platform
 type: Tutorial
 description: Scopri come esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: ff0fe836b2bb181ae4395f1d04c04b8e51a5bac6
+exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
+source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -16,6 +15,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >La **[!UICONTROL Esporta file ora]** in Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+>Contatta il tuo rappresentante di Adobe per accedere a questa funzionalità.
 
 >[!IMPORTANT]
 > 
