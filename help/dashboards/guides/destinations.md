@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Segmenti non mappati per identità]](#unmapped-segments-by-identity)
 * [[!UICONTROL Segmenti mappati per identità]](#mapped-segments-by-identity)
 * [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)
+* [[!UICONTROL Tipi di pubblico mappati]](#mapped-audiences)
 * [[!UICONTROL Stato del pubblico mappato]](#mapped-audience-health)
 * [[!UICONTROL Conteggio destinazioni]](#destinations-count)
 * [[!UICONTROL Stato della destinazione]](#destination-status)
@@ -195,6 +196,14 @@ La **[!UICONTROL Tipi di pubblico comuni]** widget fornisce un elenco dei primi 
 La [!UICONTROL DIMENSIONE DEL PUBBLICO] fornisce il conteggio totale dei profili di ciascun segmento elencato.
 
 ![Il widget Pubblico comune.](../images/destinations/common-audiences.png)
+
+### Tipi di pubblico mappati {#mapped-audiences}
+
+La [!UICONTROL Tipi di pubblico mappati] widget visualizza il numero totale di tipi di pubblico mappati che possono essere attivati nella destinazione selezionata nella parte superiore della pagina.
+
+Seleziona **[!UICONTROL Segmenti]** per passare al dashboard Segmenti [!UICONTROL Sfoglia] scheda . In questa area di lavoro viene visualizzato un elenco di tutte le definizioni dei segmenti per la tua organizzazione.
+
+![Il widget Pubblico mappato.](../images/destinations/mapped-audiences.png)
 
 ### Stato del pubblico mappato {#mapped-audience-health}
 
