@@ -4,9 +4,9 @@ description: L’endpoint /workorder nell’API di igiene dati ti consente di ge
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Shield per il settore sanitario.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
 
 La `/workorder` L’endpoint nell’API di igiene dati ti consente di gestire in modo programmatico le attività di eliminazione per le identità dei consumatori in Adobe Experience Platform.
 

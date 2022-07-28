@@ -2,9 +2,9 @@
 title: Endpoint API Time-to-Live (TTL) del set di dati
 description: L’endpoint /ttl nell’API di igiene dati ti consente di pianificare programmaticamente i TTL dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1313'
 ht-degree: 7%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Shield per il settore sanitario.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
 
 La `/ttl` l’endpoint nell’API di igiene dati consente di pianificare i protocolli time-to-live (TTL) per i set di dati in Adobe Experience Platform.
 
