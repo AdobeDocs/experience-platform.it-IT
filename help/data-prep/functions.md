@@ -5,9 +5,9 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
-source-wordcount: '4175'
+source-wordcount: '4286'
 ht-degree: 3%
 
 ---
@@ -164,13 +164,10 @@ Per informazioni sulla funzione di copia dell’oggetto, consulta la sezione . [
 | join_array | Combina gli array tra loro. | <ul><li>ARRAY: **Obbligatorio** Matrice a cui si aggiungono gli elementi.</li><li>VALORI: Matrice da aggiungere alla matrice padre.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&quot;a&quot;, &quot;b&quot;], [&#39;c&#39;], [&quot;d&quot;, &quot;e&quot;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prende un elenco di input e lo converte in un array. | <ul><li>INCLUDE_NULLS: **Obbligatorio** Un valore booleano per indicare se includere o meno i valori Null nell&#39;array di risposta.</li><li>VALORI: **Obbligatorio** Gli elementi da convertire in una matrice.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Restituisce le dimensioni dell’input. | <ul><li>INGRESSO: **Obbligatorio** L&#39;oggetto di cui si sta tentando di trovare le dimensioni.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| upsert_array_append | Questa funzione viene utilizzata per aggiungere tutti gli elementi dell&#39;intero array di input alla fine dell&#39;array in Profile. Questa funzione è **only** applicabile durante gli aggiornamenti. Se utilizzata nel contesto di inserti, questa funzione restituisce l&#39;input così come è. | <ul><li>ARRAY: **Obbligatorio** Matrice da aggiungere all&#39;array nel profilo.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi di una matrice. Questa funzione è **only** applicabile durante gli aggiornamenti. Se utilizzata nel contesto di inserti, questa funzione restituisce l&#39;input così come è. | <ul><li>ARRAY: **Obbligatorio** Matrice per sostituire la matrice nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
-
-<!--
-| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
--->
 
 ### Operatori logici {#logical-operators}
 
