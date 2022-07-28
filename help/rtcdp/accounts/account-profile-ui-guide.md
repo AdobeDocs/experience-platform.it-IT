@@ -3,9 +3,9 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Guida all’interfaccia utente del profilo account
 description: Utilizzando i profili account, Real-time Customer Data Platform B2B Edition consente di unificare le informazioni account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
+source-git-commit: e94753236623343dcd739ff65c18248c1112f361
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Per ulteriori informazioni sulla modalità di creazione dei profili account nell
 
 ## Panoramica dei profili account {#account-profiles-overview}
 
-Per una panoramica del profilo account, inizia selezionando **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra. Sotto la [!UICONTROL Panoramica] il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
+Seleziona **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra per visualizzare la panoramica dei profili account. Sotto la [!UICONTROL Panoramica] il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
 
-![Scheda Panoramica](images/b2b-account-profile-overview.png)
+![Scheda Panoramica che mostra i widget](images/b2b-account-profile-overview.png)
 
-Per ulteriori informazioni sul dashboard dei profili account, consulta [Dashboard dei profili account](../../dashboards/guides/account-profiles.md) documentazione.
+Consulta la documentazione sul [[!UICONTROL Profili account]] ((../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni.
 
 ## Sfoglia profili account {#browse-account-profiles}
 
