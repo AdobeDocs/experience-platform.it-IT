@@ -4,9 +4,9 @@ title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,13 @@ La [!UICONTROL Destinazioni] nel dashboard viene visualizzata un’istantanea de
 
 Per passare al dashboard delle destinazioni nell’interfaccia utente di Platform, seleziona **[!UICONTROL Destinazioni]** nella barra a sinistra, seleziona la **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
+La data e l’ora dell’istantanea più recente vengono visualizzate nella parte superiore della [!UICONTROL Panoramica] accanto al menu a discesa di destinazione . Tutti i dati dei widget sono accurati a partire da quella data e ora. La marca temporale dello snapshot è fornita in UTC; non si trova nel fuso orario del singolo utente o organizzazione.
+
 >[!NOTE]
 >
 >Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, la [!UICONTROL Destinazioni] dashboard [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] nel menu di navigazione a sinistra viene visualizzata la [!UICONTROL Catalogo] scheda . Per ulteriori informazioni sulle [!UICONTROL Catalogo] , fai riferimento alla [[!UICONTROL Destinazioni] guida all’area di lavoro](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![Panoramica delle destinazioni dell’interfaccia utente di Platform con l’istantanea più recente evidenziata.](../images/destinations/snapshot-timestamp.png)
 
 ### Modifica del dashboard delle destinazioni
 

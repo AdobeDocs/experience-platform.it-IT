@@ -3,9 +3,9 @@ keywords: piattaforma;destinazioni;area di lavoro destinazioni;area di lavoro;ui
 title: Area di lavoro Destinazioni
 description: 'L’area di lavoro Destinazioni è composta da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Vista sistema. Sono descritti nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ La **[!UICONTROL Panoramica]** visualizza la scheda [!UICONTROL Destinazioni] da
 >
 >Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, la [!UICONTROL Destinazioni] dashboard [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] nel menu di navigazione a sinistra viene visualizzata la [[!UICONTROL Catalogo] scheda](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![Scheda Panoramica della dashboard Destinazioni .](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalogo] {#catalog}
 

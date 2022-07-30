@@ -4,7 +4,7 @@ title: Come ottenere e concedere autorizzazioni di accesso per Experienci Platfo
 type: Documentation
 description: Consente agli utenti di visualizzare, modificare e aggiornare le dashboard di Experience Platform tramite Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 7%
@@ -56,7 +56,7 @@ La seguente matrice di controllo accessi fornisce un raggruppamento delle autori
 | [!DNL Dashboards] [!DNL Inventory] <br/>(scheda Sfoglia) | ATTIVATO | N/D | N/D | N/D |
 | [!DNL Dashboards] [!DNL Integrations] scheda <br/>(utilizzato per installare Power BI) | ATTIVATO | **Almeno un** | N/D | N/D |
 | Pulsante Power BI Install e flusso di lavoro | ATTIVATO | N/D | **OBBLIGATORIO** | N/D |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>Possibilità di modificare gli schemi di widget e di aggiungere nuovi attributi per la personalizzazione dei widget | **Gestione dashboard standard RICHIESTO** | **OBBLIGATORIO (per ciascun dashboard)** | N/D | N/D |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashboard.<br/>Possibilità di modificare gli schemi di widget e di aggiungere nuovi attributi per la personalizzazione dei widget | **Gestione dashboard standard RICHIESTO** | **OBBLIGATORIO (per ciascun dashboard)** | N/D | N/D |
 | [!DNL License Usage Dashboard] | N/D | N/D | N/D | ATTIVATO |
 
 {style=&quot;table-layout:auto&quot;}

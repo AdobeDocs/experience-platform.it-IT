@@ -1,7 +1,8 @@
 ---
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 0%
@@ -56,7 +57,7 @@ La [!UICONTROL Seleziona dati] viene visualizzata la finestra di dialogo . Selez
 >
 >Le dashboard definite dall&#39;utente supportano attualmente solo il modello dati di profilo. Saranno supportate più opzioni.
 
-![Finestra di dialogo Seleziona dati.](./images/user-defined-dashboards/select-data-dialog.png)
+![Finestra di dialogo Seleziona dati .](./images/user-defined-dashboards/select-data-dialog.png)
 
 L’elenco di anteprima fornisce dettagli sulle tabelle contenute nel modello dati. La tabella seguente fornisce una descrizione dei campi colonna e dei relativi valori potenziali.
 
@@ -68,9 +69,9 @@ L’elenco di anteprima fornisce dettagli sulle tabelle contenute nel modello da
 
 Seleziona **[!UICONTROL Successivo]** per confermare la scelta del modello dati. Nella vista successiva viene visualizzato un elenco delle tabelle disponibili nella barra a sinistra. Selezionare una tabella per visualizzare un raggruppamento completo dei dati contenuti nella tabella selezionata.
 
-La [!UICONTROL Anteprima] il pannello contiene schede per [!UICONTROL Record di esempio] e [!UICONTROL Attributi].The [!UICONTROL Record di esempio] In una vista tabulata, la scheda fornisce un sottoinsieme dei record della tabella selezionata. La [!UICONTROL Attributi] scheda fornisce il nome dell’attributo, il tipo di dati e la tabella di origine per ogni attributo associato alla tabella selezionata.
+La [!UICONTROL Anteprima] il pannello contiene schede per [!UICONTROL Record di esempio] e [!UICONTROL Attributi]. La [!UICONTROL Record di esempio] In una vista tabulata, la scheda fornisce un sottoinsieme dei record della tabella selezionata. La [!UICONTROL Attributi] scheda fornisce il nome dell’attributo, il tipo di dati e la tabella di origine per ogni attributo associato alla tabella selezionata.
 
-Seleziona una tabella dall’elenco disponibile nella barra a sinistra per fornire i dati del widget e seleziona [!UICONTROL Seleziona] per tornare al compositore widget.
+Seleziona una tabella dall’elenco disponibile nella barra a sinistra per fornire i dati del widget e seleziona **[!UICONTROL Seleziona]** per tornare al compositore widget.
 
 ![Finestra di dialogo Seleziona dati con selezione evidenziata.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ I widget possono essere riorganizzati e ridimensionati in questa area di lavoro.
 Leggendo questo documento è possibile comprendere meglio come creare un dashboard personalizzato e come creare, modificare e aggiornare widget personalizzati per tale dashboard.
 
 Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per [profiles](./guides/profiles.md#standard-widgets), [segmenti](./guides/segments.md#standard-widgets)e [destinazioni](./guides/destinations.md#standard-widgets) dashboard, consultare l’elenco dei widget standard nella relativa documentazione.
-
-
-
-
