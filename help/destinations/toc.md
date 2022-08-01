@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '925'
 ht-degree: 7%
 
 ---
@@ -205,6 +205,12 @@ ht-degree: 7%
       * [Utilizza Destination SDK per configurare una destinazione di streaming](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Utilizza Destination SDK per configurare una destinazione basata su file](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Invia per la revisione di una destinazione creata in Destination SDK](./destination-sdk/submit-destination.md)
+      * Configurare destinazioni basate su file {#configure-file-based-destinations}
+         * [(Beta) Configura una destinazione Amazon S3 con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [(Beta) Configura una destinazione Amazon S3 con nome file personalizzato e opzioni di formattazione](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [(Beta) Configura una destinazione Azure Blob Storage con opzioni di formattazione file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [(Beta) Configura una destinazione Azure Data Lake Storage con opzioni di formattazione dei file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Beta) Configura una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Riferimenti {#reference}
       * [Limitazione della velocità e nuovi tentativi per le destinazioni di streaming](./destination-sdk/rate-limiting-retry-policy.md)
       * [Funzioni di trasformazione supportate](./destination-sdk/supported-functions.md)
