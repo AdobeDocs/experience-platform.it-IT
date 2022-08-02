@@ -2,10 +2,10 @@
 title: Endpoint “hosts”
 description: Scopri come effettuare chiamate all’endpoint /hosts nell’API di Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 99%
+source-wordcount: '821'
+ht-degree: 92%
 
 ---
 
@@ -211,6 +211,7 @@ curl -X POST \
             "username": "John Doe",
             "encrypted_private_key": "{PRIVATE_KEY}",
             "server": "https://example.com",
+            "skip_symlinks": true,
             "path": "assets",
             "port": 22
           },
@@ -227,6 +228,7 @@ curl -X POST \
 | `attributes.path` | Percorso da aggiungere all’URL `server`. |
 | `attributes.port` | Numero intero che indica la porta server specifica da utilizzare. |
 | `attributes.server` | URL host per il server. |
+| `attributes.skip_symlinks`<br><br>(Solo per host SFTP) | Per impostazione predefinita, tutti gli host SFTP utilizzano collegamenti simbolici (symlink) per fare riferimento alle build delle librerie salvate sul server. Tuttavia, non tutti i server supportano l’utilizzo di symlink. Quando questo attributo è incluso e impostato su `true`, l’host utilizza un’operazione di copia per aggiornare direttamente le risorse della build anziché utilizzare i collegamenti simbolici. |
 | `attributes.username` | Nome utente facoltativo per l’autenticazione. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `hosts`. |
 
@@ -248,6 +250,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del nuovo host cre
       "path": "assets",
       "port": 22,
       "status": "pending",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:07.033Z",
       "username": "John Doe"
@@ -337,6 +340,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’host aggior
       "path": null,
       "port": null,
       "status": "succeeded",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:45.696Z",
       "username": null
