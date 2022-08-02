@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy in Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei propri dati personali come delineato dalle normative legali e organizzative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti archiviati nel Data Lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -148,9 +148,9 @@ La sezione seguente illustra come effettuare richieste di privacy per [!DNL Data
 
 ### Utilizzo dell’interfaccia
 
-Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati nel [!DNL Data Lake] o [!DNL Real-time Customer Profile], rispettivamente.
+Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati nel [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Immagine che mostra il prodotto Data Lake selezionato nella finestra di dialogo per la creazione della richiesta di accesso a dati personali](./images/privacy/product-value.png)
 
 ### Mediante l’API
 

@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,7 @@ Le sezioni seguenti illustrano come effettuare richieste di accesso a dati perso
 
 >[!IMPORTANT]
 >
->Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; [!UICONTROL unione degli ID] digitare. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL unione degli ID] è impostato su &quot;[!UICONTROL Grafico privato]&quot;.
->
->![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
+>Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Vedi la sezione su [limitazioni dei criteri di unione](#merge-policy-limitations) per ulteriori informazioni.
 >
 >È inoltre importante notare che il tempo necessario per completare una richiesta di accesso a dati personali non può essere garantito. Se si verificano modifiche nel [!DNL Profile] i dati durante l&#39;elaborazione di una richiesta, indipendentemente dal fatto che tali record siano o meno elaborati, non possono essere garantiti.
 
@@ -60,7 +58,11 @@ Quando crei richieste di lavoro nell&#39;API, qualsiasi ID fornito in `userIDs` 
 >
 >Potrebbe essere necessario fornire più di un ID per ciascun cliente, a seconda del grafico delle identità e della distribuzione dei frammenti di profilo nei set di dati di Platform. Vedi la sezione successiva [frammenti di profilo](#fragments) per ulteriori informazioni.
 
-Inoltre, il `include` la matrice del payload della richiesta deve includere i valori di prodotto per i diversi archivi di dati in cui viene effettuata la richiesta. Quando si effettuano richieste a [!DNL Data Lake], la matrice deve includere il valore &quot;ProfileService&quot;.
+Inoltre, il `include` la matrice del payload della richiesta deve includere i valori di prodotto per i diversi archivi di dati in cui viene effettuata la richiesta. Per eliminare i dati del profilo associati a un&#39;identità, la matrice deve includere il valore `ProfileService`. Per eliminare le associazioni del grafico delle identità del cliente, l&#39;array deve includere il valore `identity`.
+
+>[!NOTE]
+>
+>Vedi la sezione su [richieste di profilo e richieste di identità](#profile-v-identity) più avanti in questo documento per informazioni più dettagliate sugli effetti dell&#39;uso `ProfileService` e `identity` all&#39;interno del `include` array.
 
 La seguente richiesta crea un nuovo processo di privacy per i dati di un singolo cliente nel [!DNL Profile] archiviare. Per il cliente vengono forniti due valori di identità nel `userIDs` array; uno che utilizza lo standard `Email` spazio dei nomi di identità e l&#39;altro utilizzando un `Customer_ID` spazio dei nomi. Include inoltre il valore del prodotto per [!DNL Profile] (`ProfileService`) nel `include` array:
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ Uno dei set di dati utilizza `customer_id` come identificatore principale, mentr
 
 Per garantire che le richieste di privacy elaborino tutti gli attributi del cliente rilevanti, devi fornire i valori di identità principali per tutti i set di dati applicabili in cui tali attributi possono essere memorizzati (fino a un massimo di nove ID per cliente). Consulta la sezione sui campi di identità nella sezione [nozioni di base sulla composizione dello schema](../xdm/schema/composition.md#identity) per ulteriori informazioni sui campi generalmente contrassegnati come identità.
 
-## Elimina elaborazione richiesta
+## Elimina elaborazione richiesta {#delete}
 
 Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. I record vengono quindi rimossi dal [!DNL Data Lake] o [!DNL Profile] una volta che il processo di privacy è stato completato. Mentre il processo di eliminazione è ancora in elaborazione, i dati vengono eliminati tramite software e non sono quindi accessibili da nessuno [!DNL Platform] servizio. Fai riferimento a [[!DNL Privacy Service] documentazione](../privacy-service/home.md#monitor) per ulteriori informazioni sul tracciamento degli stati dei processi.
 
->[!IMPORTANT]
->
->Se viene effettuata una richiesta di cancellazione per Profilo (`ProfileService`) ma non il servizio Identity (`identity`), il processo risultante rimuove i dati degli attributi raccolti per un cliente (o set di clienti) ma non rimuove le associazioni stabilite nel grafico delle identità.
->
->Ad esempio, una richiesta di cancellazione che utilizza un `email_id` e `customer_id` rimuove tutti i dati attributo memorizzati in tali ID. Tuttavia, qualsiasi dato successivamente acquisito in base agli stessi `customer_id` saranno ancora associati al `email_id`, poiché l&#39;associazione esiste ancora.
->
->Inoltre, Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; [!UICONTROL unione degli ID] digitare. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL unione degli ID] è impostato su &quot;[!UICONTROL Grafico privato]&quot;.
->
->![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
-
 Nelle versioni future, [!DNL Platform] invierà conferma a [!DNL Privacy Service] dopo che i dati sono stati fisicamente cancellati.
 
+### Richieste di profilo e richieste di identità {#profile-v-identity}
+
+Se viene effettuata una richiesta di cancellazione per Profilo (`ProfileService`) ma non il servizio Identity (`identity`), il processo risultante rimuove i dati degli attributi raccolti per un cliente (o set di clienti) ma non rimuove le associazioni stabilite nel grafico delle identità.
+
+Ad esempio, una richiesta di cancellazione che utilizza un `email_id` e `customer_id` rimuove tutti i dati attributo memorizzati in tali ID. Tuttavia, qualsiasi dato successivamente acquisito in base agli stessi `customer_id` saranno ancora associati al `email_id`, poiché l&#39;associazione esiste ancora.
+
+Per rimuovere il profilo e tutte le associazioni di identità per un dato cliente, assicurati di includere sia il servizio Profilo che il servizio Identity come prodotti di destinazione nelle richieste di eliminazione.
+
+### Limiti dei criteri di unione {#merge-policy-limitations}
+
+Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con **[!DNL None]** come [!UICONTROL unione degli ID] digitare. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL unione degli ID] è impostato su [!UICONTROL Grafico privato].
+>![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
+>
 ## Passaggi successivi
 
 Leggendo questo documento, ti sono stati introdotti i concetti importanti relativi all’elaborazione delle richieste di privacy in [!DNL Experience Platform]. Si consiglia di continuare a leggere la documentazione fornita in questa guida per approfondire la comprensione su come gestire i dati di identità e creare processi di privacy.
