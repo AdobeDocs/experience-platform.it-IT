@@ -4,8 +4,8 @@ description: Scopri l’estensione tag Adobe Audience Manager in Adobe Experienc
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

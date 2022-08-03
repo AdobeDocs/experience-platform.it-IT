@@ -5,8 +5,8 @@ description: Utilizza questo scenario di esempio per capire come configurare la 
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

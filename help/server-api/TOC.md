@@ -7,8 +7,8 @@ user-guide-description: L’API server di Adobe Experience Platform Edge permett
 feature: Data Collection
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 64%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

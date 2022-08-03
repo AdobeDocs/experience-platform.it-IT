@@ -20,7 +20,7 @@ ht-degree: 38%
    - [Introduzione](./api/getting-started.md)
    - [Funzioni](./api/functions.md)
    - [Set di mappature](./api/mapping-set.md)
-- Interfaccia {#ui}
+- Interfaccia utente {#ui}
    - [Guida all’interfaccia utente della preparazione dei dati](./ui/mapping.md)
 - [Gestione dei formati di dati](./data-handling.md)
 - [Set di mappature](mapping-set.md)

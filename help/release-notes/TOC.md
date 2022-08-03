@@ -5,8 +5,8 @@ breadcrumb-title: Note sulla versione di Platform
 user-guide-description: Note sulla versione mensili per Adobe Experience Platform.
 source-git-commit: 4b06f3fccb0010efd374142a13a4a91d12ae0a00
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 93%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

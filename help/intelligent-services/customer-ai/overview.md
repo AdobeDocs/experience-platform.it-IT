@@ -9,8 +9,8 @@ landing-page-description: Customer AI viene utilizzato per generare punteggi di 
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 26%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

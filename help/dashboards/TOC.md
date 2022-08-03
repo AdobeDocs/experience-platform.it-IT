@@ -6,8 +6,8 @@ user-guide-description: Visualizza i dati di Experience Platform in dashboard pe
 feature: Dashboards
 source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 33%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

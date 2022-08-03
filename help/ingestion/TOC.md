@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 23%
+ht-degree: 25%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 23%
    - [Streaming di più messaggi](tutorials/streaming-multiple-messages.md)
 - Qualità e monitoraggio dei dati{#quality}
    - [Panoramica](quality/overview.md)
-   - [Monitorare l’acquisizione di dati](quality/monitor-data-ingestion.md)
+   - [Monitoraggio dell’acquisizione di dati](quality/monitor-data-ingestion.md)
    - [Recupera diagnostica errori](quality/error-diagnostics.md)
    - [Recupera batch non riusciti](quality/retrieve-failed-batches.md)
    - [Convalida dell’acquisizione in streaming](quality/streaming-validation.md)

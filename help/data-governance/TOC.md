@@ -6,8 +6,8 @@ user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’
 feature: Data Governance
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 36%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

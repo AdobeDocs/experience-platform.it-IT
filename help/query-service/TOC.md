@@ -6,8 +6,8 @@ user-guide-description: Utilizza SQL standard per eseguire query sui dati in Pla
 feature: Queries
 source-git-commit: 1fe657ac698dd4fcce84902d85b582a9ed7fd4ac
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
