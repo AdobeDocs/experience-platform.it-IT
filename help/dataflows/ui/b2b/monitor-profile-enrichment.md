@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Monitorare i processi di arricchimento dei profili
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 1%
 
 ---
 
-# Monitorare i processi di arricchimento dei profili nell’interfaccia utente (#monitor-profile-arricchment)
+# Monitorare i processi di arricchimento dei profili nell’interfaccia utente {#monitor-profile-enrichment}
 
 Utilizza la [!UICONTROL Arricchimento del profilo] dashboard per capire se i processi di arricchimento dei profili sono stati eseguiti e completati correttamente e per visualizzare le metriche di base per misurare l’efficacia degli arricchimenti.
 
@@ -38,7 +38,7 @@ Le metriche seguenti sono disponibili per i processi correlati di arricchimento 
 | **[!UICONTROL Stato]** | Indica lo stato (riuscito, non riuscito o elaborazione) del processo di account correlato. |
 | **[!UICONTROL Messaggio]** | Indica un messaggio di errore o di avviso per una particolare esecuzione di un processo. |
 
-## Lead per l’arricchimento del profilo corrispondente all’account (#lead-to-account-matching)
+## Lead per l’arricchimento del profilo corrispondente al conto {#lead-to-account-matching}
 
 La [!UICONTROL Corrispondenza lead a conto] il dashboard mostra le metriche di base e lo stato giornaliero di esecuzione dei processi specifico per [Corrispondenza lead a conto](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) arricchimento del profilo.
 
