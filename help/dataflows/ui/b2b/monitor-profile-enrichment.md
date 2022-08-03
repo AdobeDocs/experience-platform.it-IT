@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i processi di arricchimento dei profili
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Utilizza la [!UICONTROL Arricchimento del profilo] dashboard per capire se i pro
 
 In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dalla navigazione a sinistra per accedere al [!UICONTROL Monitoraggio] dashboard. Nel selettore di visualizzazione, seleziona **Flusso B2B** per visualizzare gli elementi del dashboard specifici per [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  La [!UICONTROL Monitoraggio] Il dashboard include le metriche di base dell&#39;esecuzione riuscita più recente e lo stato del processo giornaliero fino a 90 giorni nel passato.
 
-## Arricchimento del profilo degli account correlati (#correlato-account)
+## Arricchimento del profilo di account correlati {#related-accounts}
 
 La [!UICONTROL Account correlati] il dashboard mostra le metriche di base e lo stato del processo giornaliero specifico per [Account correlati](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) arricchimento del profilo.
 
