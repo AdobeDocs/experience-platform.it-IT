@@ -3,9 +3,9 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Guida all’interfaccia utente del profilo account
 description: Utilizzando i profili account, Real-time Customer Data Platform B2B Edition consente di unificare le informazioni account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,26 @@ Seleziona **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione 
 ![Scheda Panoramica che mostra i widget](images/b2b-account-profile-overview.png)
 
 Consulta la documentazione sul [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni.
+
+## Configurare la corrispondenza lead per account {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Solo gli amministratori di AI B2B possono abilitare, disabilitare e configurare il servizio di corrispondenza dei lead a account. Dopo aver disabilitato il servizio, i risultati corrispondenti verranno eliminati entro 24 ore.
+
+Per configurare la corrispondenza tra lead e account, seleziona **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra. Sulla **[!UICONTROL Panoramica]** scheda , seleziona **[!UICONTROL Impostazioni]** in alto a destra.
+
+![Seleziona impostazioni](images/b2b-configuring-accounts-profile.png)
+
+La **[!UICONTROL Impostazioni account]** viene visualizzata la finestra di dialogo . Da qui seleziona la **[!UICONTROL Abilita corrispondenza lead-to-account]** attiva/disattiva la funzione. Utilizza il menu a discesa per selezionare **[!UICONTROL Giornaliero]** per **[!UICONTROL Corrispondenza cadenza]** impostazione. Infine, seleziona il **[!UICONTROL Criteri corrispondenti]** opzioni seguite da **[!UICONTROL Salva]** per confermare le impostazioni e tornare al **[!UICONTROL Profili account]** schermo.
+
+>[!NOTE]
+>
+> Impossibile utilizzare l&#39;indirizzo come unico criterio corrispondente. È necessario selezionare uno o più degli altri criteri di corrispondenza.
+
+![Configurare le impostazioni account](images/b2b-configuring-account-settings.png)
+
+Per ulteriori informazioni sulla corrispondenza del lead al conto, consulta [Panoramica sulla corrispondenza degli account lead per Real-time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Sfoglia profili account {#browse-account-profiles}
 
