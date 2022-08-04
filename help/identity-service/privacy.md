@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari
 title: Elaborazione della richiesta di privacy nel servizio Identity
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Questo documento tratta i concetti essenziali relativi all’elaborazione delle 
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di accesso a dati personali per l’archivio dati di Identity in Experience Platform. Se prevedi anche di effettuare richieste di privacy per Platform Data Lake o [!DNL Real-time Customer Profile], consulta la guida su [elaborazione delle richieste di privacy in Data Lake](../catalog/privacy.md) e alla guida [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di accesso a dati personali per l’archivio dati di Identity in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati nel lago dati](../catalog/privacy.md) e alla guida [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -105,6 +105,17 @@ Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezio
 ## Elimina elaborazione richiesta
 
 Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. L’eliminazione della singola identità si basa sul namespace e/o sul valore ID fornito. Inoltre, la cancellazione avviene per tutte le sandbox associate a una determinata organizzazione IMS.
+
+A seconda che tu abbia incluso anche Profilo cliente in tempo reale (`ProfileService`) e il lago dati (`aepDataLake`) come prodotti nella richiesta di accesso a dati personali per il servizio Identity (`identity`), diversi set di dati relativi all&#39;identità vengono rimossi dal sistema in momenti potenzialmente diversi:
+
+| Prodotti inclusi | Effetti |
+| --- | --- |
+| `identity` only | Il grafico dell’identità associato all’identità fornita viene eliminato immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. Il profilo creato da quel grafico di identità rimane, ma non verrà aggiornato man mano che vengono acquisiti nuovi dati, poiché le associazioni di identità vengono rimosse. Anche i dati associati al profilo rimangono nel lago dati. |
+| `identity` e `ProfileService` | Il grafico delle identità e il relativo profilo associato vengono eliminati immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. I dati associati al profilo rimangono nel data lake. |
+| `identity` e `aepDataLake` | Il grafico dell’identità associato all’identità fornita viene eliminato immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. Il profilo creato da quel grafico di identità rimane, ma non verrà aggiornato man mano che vengono acquisiti nuovi dati, poiché le associazioni di identità vengono rimosse.<br><br>Quando il prodotto data lake risponde che la richiesta è stata ricevuta e sta attualmente elaborando, i dati associati al profilo vengono eliminati in modo morbido e non sono quindi accessibili da alcun [!DNL Platform] servizio. Una volta completato il lavoro, i dati vengono rimossi completamente dal data lake. |
+| `identity`, `ProfileService`, e `aepDataLake` | Il grafico delle identità e il relativo profilo associato vengono eliminati immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione.<br><br>Quando il prodotto data lake risponde che la richiesta è stata ricevuta e sta attualmente elaborando, i dati associati al profilo vengono eliminati in modo morbido e non sono quindi accessibili da alcun [!DNL Platform] servizio. Una volta completato il lavoro, i dati vengono rimossi completamente dal data lake. |
+
+Fai riferimento a [[!DNL Privacy Service] documentazione](../privacy-service/home.md#monitor) per ulteriori informazioni sul tracciamento degli stati dei processi.
 
 ## Passaggi successivi
 
