@@ -5,9 +5,9 @@ title: Panoramica sulla preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ Per ulteriori informazioni sulle diverse funzioni di mappatura, consulta la sezi
 I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione per facilitarne il riferimento.
 
 Per ulteriori informazioni sui campi calcolati, consulta la sezione [guida ai campi calcolati](./functions.md#calculated-fields).
+
+### Caratteri speciali di escape
+
+È possibile applicare un escape ai caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportate da questo meccanismo. Quando interagisci con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per evitare i caratteri speciali. Ad esempio: `address` è un oggetto che contiene l&#39;attributo `street.name`, che può essere successivamente indicato come `address.street\.name` anziché `address.street.name`.
 
 ## Set di mappature
 

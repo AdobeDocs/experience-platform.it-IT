@@ -3,9 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;
 title: Guida alla risoluzione dei problemi di preparazione dei dati
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sulla preparazione dei dati di Adobe Experience Platform.
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ Di seguito è riportato un elenco delle domande frequenti su [!DNL Data Prep] e 
 Se le colonne sono contrassegnate come **Obbligatorio** sono annullati a causa di problemi di trasformazione, quindi la riga non verrà assimilata. Quando l’acquisizione parziale dei dati è abilitata, puoi impostare la soglia di tali rifiuti prima che l’intero flusso non riesca. Se l’attributo nullizzato non ha influito sulle convalide a livello di schema, la riga continuerà a essere assimilata.
 
 Vengono rifiutate anche tutte le righe non valide anche senza errori di trasformazione. Ad esempio, un flusso di acquisizione dati potrebbe avere una mappatura pass through (nessuna logica di trasformazione) per un campo obbligatorio e non esiste alcun valore in entrata per tale attributo. Questa riga verrà rifiutata.
+
+### Come posso evitare i caratteri speciali in un campo?
+
+È possibile applicare un escape ai caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportate da questo meccanismo. Quando interagisci con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per evitare i caratteri speciali. Ad esempio: `address` è un oggetto che contiene l&#39;attributo `street.name`, che può essere successivamente indicato come `address.street\.name` anziché `address.street.name`.
