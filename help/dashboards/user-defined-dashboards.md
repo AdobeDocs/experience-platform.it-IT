@@ -2,9 +2,9 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Le dashboard di Adobe Experience Platform consentono di accelerare le informazioni e personalizzare la visualizzazione tramite la funzione dashboard definita dall’utente. Questa funzione ti consente di creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave pertinenti per la tua organizzazione.
 
-## Introduzione
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Per visualizzare le dashboard in Adobe Experience Platform è necessario disporre delle autorizzazioni appropriate abilitate. Per piacere, leggi le [documentazione sulle autorizzazioni delle dashboard](./permissions.md#available-permissions) per scoprire come consentire agli utenti di visualizzare, modificare e aggiornare le dashboard di Experience Platform tramite Adobe Admin Console. Se non disponi dei privilegi di amministratore per la tua organizzazione, contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Creare dashboard personalizzati
 
 Per creare un dashboard personalizzato, prima di tutto, accedi all’inventario del dashboard. Seleziona **[!UICONTROL Dashboard]** dalla navigazione a sinistra dell’interfaccia utente di Platform, seguita da **[!UICONTROL Crea dashboard]**.
 
-Per ulteriori informazioni sulle dashboard preconfigurate disponibili, consulta [panoramica dell&#39;inventario del dashboard](./inventory.md).
+![Inventario del dashboard con dashboard nella navigazione a sinistra e &quot;Crea dashboard&quot; evidenziato.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->Aggiungendo un dashboard personalizzato, l’elenco delle dashboard preconfigurate viene rimosso dall’inventario del dashboard. Al contrario, l’inventario del dashboard comprende solo dashboard definiti dall’utente.
-
-![Inventario del dashboard con &quot;Crea dashboard&quot; evidenziato.](./images/user-defined-dashboards/create-dashboard.png)
+Prima di aggiungere una dashboard personalizzata, l’inventario delle dashboard è vuoto e visualizza un messaggio &quot;Nessun dashboard trovato&quot;. messaggio. Una volta create, tutte le dashboard definite dall’utente sono elencate nell’inventario del dashboard.
 
 La [!UICONTROL Crea dashboard] viene visualizzata la finestra di dialogo . Inserisci un nome descrittivo e descrittivo per la raccolta di widget che intendi creare e seleziona **[!UICONTROL Salva]**.
 
@@ -85,9 +83,9 @@ Il modello dati e la tabella attualmente selezionata vengono visualizzati nella 
 >
 >Per modificare il modello dati selezionato, seleziona l’icona a forma di matita (![Icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png)) nella barra a sinistra.
 
-Seleziona i puntini di sospensione (`...`) accanto al nome di un attributo per aggiungere un attributo all&#39;asse X o Y.
+Seleziona l’icona Aggiungi (./images/user-defined-dashboards/add-icon.png) accanto al nome di un attributo per aggiungere un attributo all&#39;asse X o Y.
 
-![Il compositore di widget con il menu a discesa dei puntini di sospensione evidenziato per aggiungere attributi a un asse di widget.](./images/user-defined-dashboards/attributes-dropdown.png)
+![Il compositore di widget con il menu a discesa Aggiungi icona evidenziato per aggiungere attributi a un asse di widget.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Quindi, seleziona il tipo di grafico o grafico dal [!UICONTROL Indicatori] menu a discesa per generare una visualizzazione di anteprima delle impostazioni correnti del widget. In [!UICONTROL Proprietà] nella barra a destra dello schermo, immetti un nome per il widget nel [!UICONTROL Titolo del widget] campo di testo.
 
