@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in streaming.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ Per attivare i dati nelle destinazioni, è necessario aver completato l&#39;oper
 
 1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, quindi seleziona la **[!UICONTROL Catalogo]** scheda .
 
-   ![Scheda Catalogo di destinazione](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Immagine che mostra la scheda del catalogo di destinazione.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Seleziona **[!UICONTROL Attivare i segmenti]** sulla scheda corrispondente alla destinazione in cui desideri attivare i segmenti, come illustrato di seguito.
 
-   ![Pulsante Attiva segmenti](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Immagine che evidenzia il controllo di attivazione segmenti nella scheda del catalogo delle destinazioni.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. Seleziona la connessione di destinazione che desideri utilizzare per attivare i segmenti, quindi seleziona **[!UICONTROL Successivo]**.
 
-   ![Seleziona destinazione](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![Immagine che mostra una selezione di due destinazioni a cui è possibile connettersi.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Passa alla sezione successiva in [seleziona i segmenti](#select-segments).
 
@@ -45,11 +45,11 @@ Per attivare i dati nelle destinazioni, è necessario aver completato l&#39;oper
 
 Utilizza le caselle di controllo a sinistra dei nomi dei segmenti per selezionare i segmenti che desideri attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
 
-![Selezionare segmenti](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona segmenti del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## Selezionare gli attributi del profilo {#select-attributes}
 
-Seleziona gli attributi di profilo da inviare alla destinazione.
+In **[!UICONTROL Mappatura]** seleziona gli attributi di profilo da inviare alla destinazione.
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembers
 * Se la `segmentMembership.status` campo selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
 * Se la `segmentMembership.status` campo non selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
-![attributi consigliati](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![Immagine che mostra gli attributi precompilati e consigliati nella fase di mappatura.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. In **[!UICONTROL Seleziona attributi]** pagina, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
 
-   ![Aggiungi nuova mappatura](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Immagine che evidenzia il controllo Aggiungi nuovo campo nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Seleziona la freccia a destra del **[!UICONTROL Campo schema]** voce.
 
-   ![Selezionare il campo di origine](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![Immagine che evidenzia come selezionare un campo sorgente nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. In **[!UICONTROL Seleziona campo]** seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   ![Seleziona la pagina del campo di origine](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Immagine che mostra una selezione di campi XDM selezionabili come campi di origine.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. Per aggiungere altre mappature, ripeti i passaggi da 1 a 3, quindi seleziona **[!UICONTROL Successivo]**.
@@ -84,11 +84,11 @@ Sulla **[!UICONTROL Revisione]** per visualizzare un riepilogo della selezione. 
 >
 >In questo passaggio, Adobe Experience Platform verifica la presenza di violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di un criterio. Non puoi completare il flusso di lavoro di attivazione dei segmenti finché non avrai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedi [Applicazione delle politiche](../../rtcdp/privacy/data-governance-overview.md#enforcement) nella sezione documentazione sulla governance dei dati .
 
-![violazione dei criteri dei dati](../assets/common/data-policy-violation.png)
+![Immagine che mostra una violazione dei criteri per i dati nel passaggio di revisione.](../assets/common/data-policy-violation.png)
 
 Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
-![Revisione](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Immagine che mostra il passaggio di revisione del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## Verificare l’attivazione dei segmenti {#verify}
 
