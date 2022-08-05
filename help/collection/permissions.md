@@ -2,10 +2,10 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 7%
+source-wordcount: '1311'
+ht-degree: 6%
 
 ---
 
@@ -70,19 +70,36 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l&#3
 >
 >Per ulteriori informazioni su come queste autorizzazioni influiscono sulle funzionalità dei tag, incluse le strategie di amministrazione per scenari comuni, consulta la documentazione sui tag in [autorizzazioni utente](../tags/ui/administration/user-permissions.md).
 
-## Gestione delle autorizzazioni per la raccolta dati di Adobe Experience Platform {#manage}
+## Gestire le autorizzazioni {#manage}
 
->[!IMPORTANT]
->
->Questa sezione descrive solo come gestire le autorizzazioni per il prodotto Adobe Experience Platform Data Collection in Admin Console. Tuttavia, i passaggi per la gestione delle autorizzazioni nel prodotto Adobe Experience Platform sono simili.
->
->Consulta la sezione [guida all’interfaccia utente per il controllo degli accessi](../access-control/ui/overview.md) per istruzioni dettagliate sulla gestione delle autorizzazioni di Platform. A seconda degli SKU del prodotto a cui la tua organizzazione ha accesso, potresti non disporre di tutte le autorizzazioni disponibili.
+Come indicato nella sezione precedente, le autorizzazioni per la raccolta dati sono gestite tramite due denominazioni di prodotto nell’Admin Console: **Adobe Experience Platform** e **Raccolta dati Adobe Experience Platform**.
 
-Per gestire le autorizzazioni per la raccolta dati, accedi a [Admin Console](https://adminconsole.adobe.com/) e seleziona **[!UICONTROL Prodotti]** dalla navigazione superiore. Da qui, seleziona la scheda per **[!UICONTROL Raccolta dati Adobe Experience Platform]**.
+Per gestire queste autorizzazioni, accedi a [Admin Console](https://adminconsole.adobe.com/) e seleziona **[!UICONTROL Prodotti]** dalla navigazione superiore. Da qui, seleziona la scheda prodotto per le autorizzazioni da configurare. Fai riferimento alle sottosezioni seguenti per i passaggi su come gestire le autorizzazioni rilevanti per ciascun prodotto nell’Admin Console:
+
+* [Autorizzazioni Adobe Experience Platform](#manage-platform)
+* [Autorizzazioni di raccolta dati Adobe Experience Platform](#manage-collection)
+
+### Gestire le autorizzazioni in Adobe Experience Platform {#manage-platform}
+
+Da **[!UICONTROL Prodotti]** visualizza in Admin Console, seleziona **[!UICONTROL Raccolta dati Adobe Experience Platform]**. Seleziona il profilo di prodotto per il quale desideri modificare le autorizzazioni, quindi passa al **[!UICONTROL Autorizzazioni]** scheda .
+
+Per accedere alle funzioni di raccolta dati, devi abilitare tutte le autorizzazioni nel **[!UICONTROL Sandbox]**, **[!UICONTROL Modellazione dati]**, **[!UICONTROL Identity Management]** e **[!UICONTROL Raccolta dati]** categorie.
+
+![Immagine che mostra la scheda di prodotto Raccolta dati nell’Admin Console](./images/permissions/platform-permission-card.png)
+
+Consulta la sezione [guida all’interfaccia utente per il controllo degli accessi](../access-control/ui/overview.md) per istruzioni dettagliate sulla gestione delle autorizzazioni di Platform.
+
+>[!NOTE]
+>
+>A seconda degli SKU del prodotto a cui la tua organizzazione ha accesso, potresti non disporre di tutte le autorizzazioni Platform disponibili.
+
+### Gestire le autorizzazioni in Raccolta dati di Adobe Experience Platform {#manage-collection}
+
+Da **[!UICONTROL Prodotti]** visualizza in Admin Console, seleziona **[!UICONTROL Raccolta dati Adobe Experience Platform]**.
 
 ![Immagine che mostra la scheda di prodotto Raccolta dati nell’Admin Console](./images/permissions/data-collection-card.png)
 
-### Selezionare o creare un profilo di prodotto
+#### Selezionare o creare un profilo di prodotto
 
 La schermata successiva mostra un elenco dei profili di prodotto disponibili per la raccolta dati nell’organizzazione, il profilo predefinito è **[!DNL Default Data Collection All Access]**. Puoi scegliere di modificare il profilo di prodotto predefinito, se lo desideri, oppure puoi selezionare **[!UICONTROL Nuovo profilo]** per crearne una. Se nella tua organizzazione sono presenti più ruoli o gruppi di utenti che richiedono diversi livelli di accesso, devi creare un profilo di prodotto separato per ciascuno di essi.
 
@@ -92,7 +109,7 @@ Dopo aver selezionato o creato un profilo di prodotto, puoi utilizzare la funzio
 
 ![Immagine che mostra la scheda autorizzazioni per un Admin Console di profilo di prodotto](./images/permissions/edit-permission-categories.png)
 
-### Modificare le autorizzazioni per il profilo di prodotto {#edit-permissions}
+#### Modificare le autorizzazioni per il profilo di prodotto {#edit-permissions}
 
 Quando modifichi le autorizzazioni per un profilo, le autorizzazioni disponibili sono elencate nella colonna a sinistra, mentre quelle incluse nel profilo sono elencate nella colonna a destra. Seleziona le autorizzazioni elencate per spostarle tra le due colonne.
 
@@ -110,7 +127,7 @@ La visualizzazione del profilo di prodotto viene nuovamente visualizzata con le 
 
 ![Immagine che mostra le autorizzazioni aggiunte per il profilo di prodotto](./images/permissions/permissions-added.png)
 
-### Assegnare utenti al profilo prodotto {#assign-users}
+#### Assegnare utenti al profilo prodotto {#assign-users}
 
 Per assegnare gli utenti al profilo di prodotto (e concedere loro le autorizzazioni configurate del profilo), seleziona la **[!UICONTROL Utenti]** scheda , seguita da **[!UICONTROL Aggiungi utente]**.
 
