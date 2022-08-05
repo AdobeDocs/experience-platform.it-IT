@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file c
 title: Guida all’interfaccia utente della preparazione dei dati
 description: Questo documento fornisce istruzioni su come utilizzare le funzioni di preparazione dei dati nell’interfaccia utente di Platform per mappare i file CSV su uno schema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ Al termine, seleziona l’icona dello schema per chiudere l’interfaccia dello 
 
 #### Campi calcolati {#calculated-fields}
 
-I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione per facilitarne il riferimento.
+I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione per facilitarne il riferimento. I campi calcolati hanno una lunghezza massima di 4096 caratteri.
 
 Per creare un campo calcolato, seleziona **[!UICONTROL Nuovo tipo di campo]** quindi seleziona **[!UICONTROL Aggiungi campo calcolato]**
 
