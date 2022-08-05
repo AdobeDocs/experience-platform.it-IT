@@ -1,9 +1,10 @@
 ---
 title: Best practice di authoring
 description: Scopri quali regole e suggerimenti devi seguire quando crei la pagina della documentazione di destinazione, per assicurarti che soddisfi gli standard di qualità della documentazione di Adobe Experience Platform.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,15 @@ Questa pagina descrive le regole da seguire quando [creazione della documentazio
 * Non includere osservazioni e stime nella documentazione del prodotto.
 * Nella documentazione di Experience Platform, gli autori di Adobe utilizzano **formattazione grassetto** per fare riferimento ai controlli dell’interfaccia utente, come riportato di seguito:
    * Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, quindi seleziona la **[!UICONTROL Catalogo]** scheda . Visualizzare un esempio di come i controlli dell’interfaccia utente sono documentati in un [esercitazione sulle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+
+## Stile di scrittura
+
+>[!IMPORTANT]
+>
+>Leggi [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) prima di iniziare a creare la pagina della documentazione di destinazione.
+
+* Mantieni le tue frasi brevi e arrivi al punto velocemente. Se la tua frase è lunga più di 20 parole o usa più virgole, considera la possibilità di suddividerla in frasi separate. Le frasi con più di 20 parole di lunghezza possono essere particolarmente impegnative per i lettori.
+* Non essere eccessivamente educata. Evita di usare &quot;per favore&quot; o &quot;gentilmente fai ...&quot; nella documentazione tecnica.
 
 ## Collegamento {#linking}
 
