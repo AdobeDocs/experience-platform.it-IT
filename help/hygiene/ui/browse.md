@@ -2,10 +2,10 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 1%
+source-wordcount: '484'
+ht-degree: 2%
 
 ---
 
@@ -41,10 +41,10 @@ Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Stato] | Filtrare in base allo stato corrente dell&#39;ordine di lavoro. |
-| [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stata effettuata la richiesta TTL del set di dati. |
-| [!UICONTROL Data di eliminazione] | Filtra in base alla data di eliminazione pianificata dal TTL. |
-| [!UICONTROL Data di aggiornamento] | Filtra in base alla data dell’ultimo aggiornamento del TTL del set di dati. Le creazioni e le scadenza TTL vengono conteggiate come aggiornamenti. |
+| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavoro:<ul><li>**[!UICONTROL Completato]**: Il processo è stato completato.</li><li>**[!UICONTROL In sospeso]**: Il processo è stato creato ma non è ancora stato eseguito. A [richiesta TTL (time-to-live) del set di dati](./ttl.md) assume questo stato prima della data di eliminazione pianificata. Una volta che la data di eliminazione arriva, lo stato si aggiorna a [!UICONTROL In esecuzione] a meno che il lavoro non venga annullato in anticipo.</li><li>**[!UICONTROL In esecuzione]**: Il processo è stato avviato ed è attualmente in fase di elaborazione.</li><li>**[!UICONTROL Annullato]**: Il processo è stato annullato come parte di una richiesta utente manuale.</li></ul> |
+| [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stato effettuato l’ordine di lavoro. |
+| [!UICONTROL Data di scadenza] | Filtra le richieste TTL in base alla data di eliminazione pianificata per il set di dati in questione. |
+| [!UICONTROL Data di aggiornamento] | Filtra le richieste TTL in base al momento dell’ultimo aggiornamento dell’ordine di lavoro. Le creazioni e le scadenza TTL vengono conteggiate come aggiornamenti. |
 
 {style=&quot;table-layout:auto&quot;}
 
