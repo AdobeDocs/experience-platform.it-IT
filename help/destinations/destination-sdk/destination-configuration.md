@@ -2,7 +2,7 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 4%
@@ -285,7 +285,7 @@ Questa opzione consente di:
 
 >[!NOTE]
 >
->Quando utilizzi l’opzione di aggregazione configurabile per la destinazione, fai attenzione ai valori minimo e massimo che puoi utilizzare per i due parametri `maxBatchAgeInSecs` (minimo 1 800 e massimo 3 600) e `maxNumEventsInBatch` (minimo 1.000, massimo 10.000).
+>Quando utilizzi l’opzione di aggregazione configurabile per la destinazione, fai attenzione ai valori minimo e massimo che puoi utilizzare per i due parametri `maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600) e `maxNumEventsInBatch` (minimo 1.000, massimo 10.000).
 
 Per spiegazioni dettagliate sui parametri di aggregazione, consulta la [Operazioni degli endpoint API delle destinazioni](./destination-configuration-api.md) pagina di riferimento, in cui è descritto ogni parametro.
 
