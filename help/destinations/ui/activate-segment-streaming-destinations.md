@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione dei segme
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ Alcune destinazioni di streaming di segmenti richiedono di selezionare gli attri
 >id="platform_destinations_activate_applytransformation"
 >title="Applica trasformazione"
 >abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Ulteriori informazioni nella documentazione"
 
 Quando mappi attributi di origine con hash non crittografati su attributi di destinazione per cui si prevede di eseguire l’hashing della destinazione (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla il **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi di origine all’attivazione.
 
@@ -95,7 +94,6 @@ Quando mappi attributi di origine con hash non crittografati su attributi di des
 >id="platform_destinations_activate_enddate"
 >title="End date (Data di fine)"
 >abstract="L’aggiunta di una data di fine per la pianificazione dei segmenti non è disponibile."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Ulteriori informazioni nella documentazione"
 
 Per impostazione predefinita, la [!UICONTROL Pianificazione del segmento] mostra solo i segmenti appena selezionati selezionati selezionati nel flusso di attivazione corrente.
 

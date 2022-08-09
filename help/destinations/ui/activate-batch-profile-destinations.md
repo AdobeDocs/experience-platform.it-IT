@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ Utilizza le caselle di controllo a sinistra dei nomi dei segmenti per selezionar
 >id="platform_destinations_activate_schedule"
 >title="Pianificazione"
 >abstract="Utilizza l’icona a forma di matita per impostare il tipo di esportazione del file (file completi o incrementali) e la frequenza di esportazione."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Ulteriori informazioni nella documentazione"
 
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni di marketing e archiviazione cloud sotto forma di [!DNL CSV] file. In **[!UICONTROL Pianificazione]** È possibile configurare la pianificazione e i nomi dei file per ciascun segmento che si sta esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
 
@@ -221,7 +220,6 @@ Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembers
 >id="platform_destinations_activate_mandatorykey"
 >title="Informazioni sugli attributi obbligatori"
 >abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione . Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Ulteriori informazioni nella documentazione"
 
 Un attributo obbligatorio è una casella di controllo abilitata dall’utente che assicura che tutti i record del profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail. &#x200B;
 
@@ -237,7 +235,6 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 >id="platform_destinations_activate_deduplicationkey"
 >title="Informazioni sulle chiavi di deduplicazione"
 >abstract="Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. Seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. La mancata selezione di una chiave di deduplicazione può causare la presenza di voci di profilo duplicate nei file di esportazione."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Ulteriori informazioni nella documentazione"
 
 Una chiave di deduplicazione è una chiave primaria definita dall’utente che determina l’identità in base alla quale gli utenti desiderano che i loro profili vengano deduplicati. &#x200B;
 

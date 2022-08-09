@@ -3,9 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,6 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine del pubblico"
 >abstract="Scegli come sono stati raccolti i dati cliente nel segmento. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Ulteriori informazioni nella documentazione"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
