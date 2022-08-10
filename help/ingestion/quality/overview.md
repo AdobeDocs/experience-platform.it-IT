@@ -5,10 +5,9 @@ title: Qualità dei dati
 topic-legacy: overview
 description: Il seguente documento fornisce un riepilogo dei controlli e dei comportamenti di convalida supportati per l’acquisizione in batch e in streaming in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '425'
 ht-degree: 5%
 
 ---
@@ -30,7 +29,7 @@ Adobe Experience Platform fornisce garanzie ben definite per la completezza, l�
 
 ## Comportamenti di convalida supportati
 
-L’acquisizione in batch e in streaming impedisce che i dati non riusciti vadano a valle spostando i dati errati per il recupero e l’analisi in [!DNL Data Lake]. L’acquisizione dei dati fornisce le seguenti convalide per l’acquisizione in batch e in streaming.
+L’acquisizione in batch e in streaming impedisce che i dati non riusciti passino a valle spostando i dati errati per il recupero e l’analisi in [!DNL Data Lake]. L’acquisizione dei dati fornisce le seguenti convalide per l’acquisizione in batch e in streaming.
 
 ### Acquisizione batch
 
@@ -38,7 +37,7 @@ Le seguenti convalide vengono eseguite per l’acquisizione batch:
 
 | Area di convalida | Descrizione |
 | --------------- | ----------- |
-| Schema | Assicura che lo schema sia **non** vuoto e contenga un riferimento allo schema dell&#39;unione, come segue: `"meta:immutableTags": ["union"]` |
+| Schema | Assicura che lo schema sia **not** vuoto e contiene un riferimento allo schema unione, come segue: `"meta:immutableTags": ["union"]` |
 | `identityField` | Assicura che siano definiti tutti i descrittori di identità validi. |
 | `createdUser` | Assicura che l&#39;utente che ha acquisito il batch possa acquisire il batch. |
 
@@ -48,7 +47,7 @@ Le seguenti convalide vengono eseguite per l’acquisizione in streaming:
 
 | Area di convalida | Descrizione |
 | --------------- | ----------- |
-| Schema | Assicura che lo schema sia **non** vuoto e contenga un riferimento allo schema dell&#39;unione, come segue: `"meta:immutableTags": ["union"]` |
+| Schema | Assicura che lo schema sia **not** vuoto e contiene un riferimento allo schema unione, come segue: `"meta:immutableTags": ["union"]` |
 | `identityField` | Assicura che siano definiti tutti i descrittori di identità validi. |
 | JSON | Assicura che il JSON sia valido. |
 | Organizzazione IMS | Assicura che l’organizzazione IMS indicata sia un’organizzazione valida. |
@@ -56,4 +55,15 @@ Le seguenti convalide vengono eseguite per l’acquisizione in streaming:
 | Set di dati | Assicura che il set di dati sia specificato, abilitato e non sia stato rimosso. |
 | Header | Verifica che l’intestazione sia specificata ed è valida. |
 
-Ulteriori informazioni sul modo in cui [!DNL Platform] monitora e convalida i dati sono disponibili nella [documentazione sui flussi di dati di monitoraggio](./monitor-data-ingestion.md).
+Ulteriori informazioni su come [!DNL Platform] controlla e convalida i dati nella [documentazione sul monitoraggio dei flussi di dati](./monitor-data-ingestion.md).
+
+## Convalida del valore dell’identità
+
+La tabella seguente illustra le regole esistenti da seguire per garantire la corretta convalida del valore di identità.
+
+| Namespace | Regola di convalida | Comportamento del sistema quando la regola viene violata |
+| --- | --- | --- |
+| ECID | <ul><li>Il valore di identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore di identità di un ECID deve essere costituito solo da numeri.</li></ul> | <ul><li>Se il valore di identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità di ECID contiene caratteri non numerici, il record viene ignorato.</li></ul> |
+| Non ECID | Il valore di identità non può superare i 1024 caratteri. | Se il valore di identità supera i 1024 caratteri, il record viene ignorato. |
+
+Per ulteriori informazioni su [!DNL Identity Service] guardrail, vedere [[!DNL Identity Service] panoramica delle protezioni](../../identity-service/guardrails.md).
