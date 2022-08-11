@@ -1,14 +1,23 @@
 ---
 title: Note sulla versione per l’estensione Common Analytics Plugins
-description: Note aggiornate sulla versione dell’estensione tag Common Analytics Plugins in Adobe Experience Platform.
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
+description: Note aggiornate sulla versione per l’estensione tag Common Analytics Plugins in Adobe Experience Platform.
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 92%
+source-wordcount: '329'
+ht-degree: 93%
 
 ---
 
 # Note sulla versione di Common Analytics Plugins
+
+## 03 giugno 2022
+
+### Estensione Common Analytics Plugins 3.0.7
+
+#### Funzioni
+
+I plug-in che impostano i cookie ora utilizzano il flag Secure
 
 ## 23 giugno 2021
 
