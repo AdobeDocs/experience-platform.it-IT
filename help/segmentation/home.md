@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -46,25 +46,47 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l’API,
 >
 >Inoltre, se il valore TTL (time-to-live) è abilitato nel set di dati, ciò potrebbe influenzare l’appartenenza del segmento creato. Per ulteriori informazioni su TTL e su come può influenzare la segmentazione, consulta la sezione [Guida TTL del servizio profili](../profile/apply-ttl.md).
 
-## Valutare i segmenti
+## Valutare i segmenti {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Metodi di valutazione"
+>abstract="Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge."
 
 Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge.
 
-### Segmentazione streaming
+### Segmentazione streaming {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Valutazione in streaming"
+>abstract="Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
 
 La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
 Per ulteriori informazioni sulla segmentazione in streaming, consulta la sezione [documentazione sulla segmentazione in streaming](./api/streaming-segmentation.md).
 
-### Segmentazione in batch
+### Segmentazione in batch {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Valutazione batch"
+>abstract="In alternativa a un processo continuo di selezione dei dati, la segmentazione in batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre i tipi di pubblico corrispondenti. Una volta creato, il segmento viene salvato e memorizzato in modo da poterlo esportare per l’uso."
 
 In alternativa a un processo continuo di selezione dei dati, la segmentazione in batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre i tipi di pubblico corrispondenti. Una volta creato, questo segmento viene salvato e memorizzato in modo da poterlo esportare per l’uso.
 
 I segmenti batch vengono valutati automaticamente ogni 24 ore. Se si desidera valutare un segmento batch su richiesta, è possibile utilizzare un processo di segmento. Per ulteriori informazioni sui processi dei segmenti, consulta la sezione [documentazione sui processi di segmento](./api/segment-jobs.md).
 
-### Segmentazione degli spigoli
+### Segmentazione degli spigoli {#edge}
 
-La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform su Experience Edge, abilitando casi d’uso di personalizzazione della pagina e della pagina successiva.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Valutazione Edge"
+>abstract="La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform su Experience Edge, consentendo casi d’uso di personalizzazione per pagine uguali e successive."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guida all’interfaccia utente per la segmentazione dei bordi"
+
+La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform [su Experience Edge](../edge/home.md), abilitare i casi d’uso per la personalizzazione della pagina e di quella successiva.
 
 Per ulteriori informazioni sulla segmentazione dei bordi, consulta la sezione [Documentazione API](./api/edge-segmentation.md) o [Documentazione dell’interfaccia utente](./ui/edge-segmentation.md).
 
