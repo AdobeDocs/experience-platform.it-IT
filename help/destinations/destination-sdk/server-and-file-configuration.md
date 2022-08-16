@@ -2,9 +2,9 @@
 description: Le specifiche di configurazione del server e del file per le destinazioni basate su file possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint /destination-server.
 title: (Beta) Opzioni di configurazione per specifiche del server di destinazione basate su file
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 13%
 
 ---
@@ -284,10 +284,6 @@ Questa sezione descrive le impostazioni di formattazione del file per l&#39;espo
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ Questa sezione descrive le impostazioni di formattazione del file per l&#39;espo
 | `csvOptions.timestampFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la stringa che indica un formato di marca temporale. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere di escape del virgolette. | `\` quando i caratteri di escape e virgolette sono diversi. `\0` quando il carattere di escape e virgolette sono gli stessi. |
 | `csvOptions.emptyValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione stringa di un valore vuoto. | `""` |
-| `csvOptions.lineSep.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Definisce il separatore di riga da utilizzare per la scrittura. La lunghezza massima è di 1 carattere. | `\n` |
 | `maxFileRowCount` | Facoltativo | Numero massimo di righe che il file esportato può contenere. Configuralo in base ai requisiti di dimensione del file della piattaforma di destinazione. | N/D |
 
 {style=&quot;table-layout:auto&quot;}
