@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione dell’estensione Adobe Target
-description: Note aggiornate sull’estensione tag di Adobe Target in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Note aggiornate sulla versione dell’estensione tag Adobe Target in Adobe Experience Platform.
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 74%
+source-wordcount: '520'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +14,13 @@ ht-degree: 74%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 16 settembre 2021
+
+### Estensione Adobe Target 0.11.4
+
+* Aggiornato alla versione 1.8.3 di at.js
+* Aggiunto `SameSite=None` e `Secure` attributi durante l’impostazione dei cookie
 
 ## 24 luglio 2020
 
@@ -42,7 +50,7 @@ ht-degree: 74%
 * In precedenza, la libreria ECID effettuava due chiamate di blocco prima che at.js potesse riportare le esperienze. Ora effettua una sola chiamata, migliorando notevolmente le prestazioni.
 
 >[!NOTE]
->Aggiorna l’estensione tag ECID per Adobe Experience Platform alla versione 4.4.1 per sfruttare questo miglioramento delle prestazioni.
+>Aggiorna l’estensione tag ECID per Adobe Experience Platform alla versione 4.4.1 per approfittare di questo miglioramento delle prestazioni.
 
 ## 31 luglio 2019
 
@@ -74,7 +82,7 @@ ht-degree: 74%
 
 #### **Funzioni**
 
-* Estensione aggiornata per utilizzare at.js 1.7.0 con funzionalità Opt-in per la privacy supportata tramite tag per controllare come e quando viene attivato il tag di Target. Controlla la documentazione sui tag su come impostare l&#39;implementazione di Opt-in. Possibilità di personalizzare se un parametro mbox con un valore vuoto deve essere inviato a Target o no.
+* Aggiornamento dell’estensione per l’utilizzo di at.js 1.7.0 con funzionalità di consenso alla privacy supportata tramite tag per controllare come e quando viene attivato il tag Target. Consulta la documentazione sui tag per scoprire come impostare l’implementazione del consenso. Possibilità di personalizzare se un parametro mbox con un valore vuoto deve essere inviato a Target o no.
 
 ## 23 gennaio 2019
 
@@ -140,7 +148,7 @@ ht-degree: 74%
 
 #### **Correzioni di bug**
 
-* È stato corretto un errore nell’estensione Adobe Target che impediva a Visual Experience Composer di visualizzare la pagina quando distribuita tramite tag.
+* È stato risolto un errore nell’estensione Adobe Target che impediva al compositore esperienze visivo di rendere visibile una pagina nascosta nel caso di implementazione tramite tag.
 
 ## 8 febbraio 2018
 
