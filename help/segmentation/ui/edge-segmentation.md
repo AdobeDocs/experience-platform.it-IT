@@ -5,7 +5,7 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -30,7 +30,7 @@ La segmentazione dei bordi è la capacità di valutare istantaneamente i segment
 
 Attualmente è possibile valutare solo i tipi di query selezionati con la segmentazione edge. Le sezioni seguenti forniscono un elenco dei tipi di query che possono essere valutati con la segmentazione edge e quelli che non sono attualmente supportati.
 
-### Tipi di query supportati
+### Tipi di query supportati {#query-types}
 
 Una query può essere valutata con segmentazione edge se soddisfa uno dei criteri descritti nella tabella seguente.
 

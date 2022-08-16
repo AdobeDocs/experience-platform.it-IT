@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -106,10 +106,6 @@ La segmentazione in streaming funziona su tutti i dati acquisiti tramite un’or
 ### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
 
 Un segmento è definito come segmentazione in batch o in streaming in base a una combinazione di tipo di query e durata della cronologia degli eventi. Un elenco dei segmenti che verranno valutati come segmento in streaming si trova nella sezione [sezione tipi di query per segmentazione in streaming](#query-types).
-
-### Un utente può definire un segmento come segmentazione in batch o in streaming?
-
-Al momento, l’utente non può definire se un segmento viene valutato utilizzando l’acquisizione in batch o in streaming, in quanto il sistema determinerà automaticamente con quale metodo verrà valutato il segmento.
 
 ### Perché il numero di segmenti &quot;qualificati totali&quot; continua ad aumentare mentre il numero sotto &quot;Ultimi X giorni&quot; rimane a zero all’interno della sezione dei dettagli del segmento?
 
