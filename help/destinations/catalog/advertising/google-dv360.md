@@ -3,9 +3,9 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Connessione Google Display & Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento utilizzato per eseguire il retargeting e campagne digitali mirate al pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!NOTE]
 >
->L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Display & Video 360] in Platform. Prima di creare una destinazione, assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da Google.
+>L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Display & Video 360] in Platform. Assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
+>L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario rivedere il processo di inserimento nell’elenco Consentiti e procedere con i passaggi successivi.
 
 Prima di creare il [!DNL Google Display & Video 360] in Platform, devi contattare Google per richiedere l’inserimento di un Adobe nell’elenco dei provider di dati consentiti e l’aggiunta del tuo account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
 
