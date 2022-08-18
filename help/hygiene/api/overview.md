@@ -2,9 +2,9 @@
 title: Guida all’API per l’igiene dei dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
 
-L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform, nonché di pianificare i protocolli TTL (time-to-live) per i set di dati. Questa guida descrive i passaggi preliminari all’utilizzo dell’API e fornisce collegamenti a documentazione più specifica per l’endpoint.
+L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform, nonché di pianificare le date di scadenza per i set di dati. Questa guida descrive i passaggi preliminari all’utilizzo dell’API e fornisce collegamenti a documentazione più specifica per l’endpoint.
 
 ## Introduzione
 
@@ -43,9 +43,9 @@ Questo documento fornisce un esempio di chiamata API per dimostrare come formatt
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Tempo di vita (TTL) per i set di dati
+## Scadenza set di dati
 
-Un TTL di set di dati è un’azione ritardata &quot;elimina un set di dati&quot;. Creando un TTL, si specifica un’ora futura in cui il set di dati deve essere eliminato. Consulta la sezione [guida all’endpoint TTL del set di dati](./ttl.md) per informazioni sulla pianificazione dei TTL dei set di dati nell’API.
+La scadenza di un set di dati è un’azione ritardata &quot;elimina un set di dati&quot;. Creando una scadenza di un set di dati, stai specificando un&#39;ora futura in cui quel set di dati deve essere eliminato. Consulta la sezione [guida all’endpoint di scadenza dei set di dati](./dataset-expiration.md) per informazioni sulla pianificazione delle scadenze dei set di dati nell’API.
 
 ## Passaggi successivi
 
