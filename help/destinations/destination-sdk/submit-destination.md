@@ -2,7 +2,7 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione di prodotto creata utilizzando Destination SDK.
 title: Invia per la revisione di una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -15,7 +15,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Il processo qui documentato è necessario solo per i partner che inviano destinazioni prodotte (pubbliche). Se crei una destinazione privata per tuo uso, non devi produrre e condividere questi materiali con Adobe.
+>* Il processo qui documentato è necessario solo per i partner che inviano destinazioni prodotte (pubbliche). Se crei una destinazione privata per tuo uso, non devi produrre e condividere questi materiali con Adobe.
+>
+>* Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione di destinazione è di cinque giorni lavorativi.
+>
+>* Se il team di Adobe richiede di eseguire eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, è necessario inviare un’altra richiesta di pubblicazione di destinazione dopo aver effettuato gli aggiornamenti.
+>
+>* Anche dopo che la destinazione è attiva nel catalogo di Experience Platform, se hai bisogno di apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione per far sì che gli aggiornamenti si riflettano nelle configurazioni.
+
 
 Prima che la destinazione possa essere pubblicata nel [Catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), devi fornire ad Adobe alcune informazioni sulla destinazione e sui test eseguiti, per garantire agli utenti la migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
@@ -28,15 +35,6 @@ In questa pagina sono elencate tutte le informazioni da fornire durante l’invi
 * Prova di aver inviato una richiesta di pubblicazione di destinazione per la destinazione utilizzando [API di pubblicazione della destinazione](./destination-publish-api.md).
 * Una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
 * Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni Experience Platform.
-
->[!IMPORTANT]
->
->* Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione di destinazione è di cinque giorni lavorativi.
->
->* Se il team di Adobe richiede di eseguire eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, è necessario inviare un’altra richiesta di pubblicazione di destinazione dopo aver effettuato gli aggiornamenti.
->
->* Anche dopo che la destinazione è attiva nel catalogo di Experience Platform, se hai bisogno di apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione per far sì che gli aggiornamenti si riflettano nelle configurazioni.
-
 
 Puoi trovare informazioni dettagliate su ogni elemento nelle sezioni seguenti:
 
