@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l’API,
 >title="Metodi di valutazione"
 >abstract="Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge."
 
-Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge.
-
-### Segmentazione streaming {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Valutazione in streaming"
->abstract="Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge."
+>abstract="La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
+
+Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge.
+
+### Segmentazione streaming {#streaming}
 
 La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
