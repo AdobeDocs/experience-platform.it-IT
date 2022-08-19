@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorare i processi di arricchimento dei profili
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,23 @@ Le metriche seguenti sono disponibili per i processi di arricchimento dei profil
 | **[!UICONTROL Ultima esecuzione riuscita]** | Indica la data e l&#39;ora dell&#39;ultimo lead riuscito per l&#39;esecuzione del processo di corrispondenza del conto. |
 | **[!UICONTROL Stato]** | Indica lo stato (riuscito, non riuscito o elaborazione) del processo di corrispondenza del conto clienti lead a. |
 
+## Arricchimento del profilo di punteggio predittivo del lead e del conto {#predictive-lead-to-account-scoring}
+
+La [!UICONTROL Punteggio predittivo di lead e account] il dashboard mostra le metriche di base e lo stato giornaliero di esecuzione dei processi specifico per [Punteggio predittivo di lead e account](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) arricchimento del profilo.
+
+![Arricchimento del profilo di punteggio predittivo del lead e del conto](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+Le metriche seguenti sono disponibili per i processi di arricchimento del profilo di lead predittivi e di punteggio dell’account:
+
+| Metrica | Descrizione |
+| --------- | ---------- |
+| **[!UICONTROL Inizio processo]** | Indica la data e l&#39;ora di inizio dell&#39;esecuzione del processo di valutazione predittiva del lead e del conto. |
+| **[!UICONTROL Tempo di elaborazione]** | Tempo totale impiegato per il completamento del processo. |
+| **[!UICONTROL Nome punteggio]** | Nome del punteggio del processo. |
+| **[!UICONTROL Tipo di profilo]** | Il tipo di punteggio: <ul><li>Utente</li><li>Account</li></ul>. |
+| **[!UICONTROL Tipo di processo]** | Tipo di processo:<ul><li>Punteggio</li><li>Formazione</li>. |
+| **[!UICONTROL Stato]** | Indica lo stato (riuscito, non riuscito o elaborazione) del processo di valutazione predittiva del lead e del conto. |
+
 ## Controlli dell&#39;interfaccia utente {#ui-controls}
 
 Questa sezione descrive diverse opzioni dell’interfaccia utente nell’interfaccia di monitoraggio, che consentono di filtrare le metriche visualizzate sulla pagina.
@@ -79,3 +96,4 @@ Seguendo questa esercitazione, ora puoi monitorare e comprendere correttamente l
 * [Account correlati in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lead per corrispondenza account in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Punteggio predittivo di lead e account in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

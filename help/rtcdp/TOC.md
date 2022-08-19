@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-source-git-commit: 375f0c8a221540553b05aa1d5fb188a31e43f3e8
+source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 27%
 
 ---
 
@@ -48,6 +48,9 @@ ht-degree: 0%
 * Servizi AI/ML Real-time CDP B2B Edition {#b2b-cdp-ai-ml}
    * [Account correlati](b2b-ai-ml-services/related-accounts.md)
    * [Corrispondenza lead a conto](b2b-ai-ml-services/lead-to-account-matching.md)
+   * Punteggio predittivo di lead e account {#predictive-lead-and-account-scoring-intro}
+      * [Panoramica del punteggio predittivo per lead e account](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Gestire il punteggio predittivo per lead e account](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemi {#schemas}
    * [Panoramica sugli schemi](schemas/overview.md)
    * [Schemi in Real-time CDP B2B Edition](schemas/b2b.md)
