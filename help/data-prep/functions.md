@@ -5,7 +5,7 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
+source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -126,7 +126,6 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | zone_date_to_zone | Converte una data da un fuso orario a un altro. | <ul><li>DATA: **Obbligatorio** Data in cui si sta tentando di convertire.</li><li>ZONA: **Obbligatorio** Il fuso orario in cui si sta tentando di convertire la data.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style=&quot;table-layout:auto&quot;}
-&#x200B;
 
 ### Gerarchie - Oggetti {#objects}
 
