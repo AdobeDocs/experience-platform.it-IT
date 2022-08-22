@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;editor query;editor query;editor query;editor query;editor query;editor query;
 solution: Experience Platform
-title: Guida all’interfaccia utente del servizio query
+title: Guida alle credenziali del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%

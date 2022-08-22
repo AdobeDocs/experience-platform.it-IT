@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;api;controllo degli accessi basato su attributi;controllo degli accessi basato su attributi
 solution: Experience Platform
-title: Endpoint API per criteri
+title: Endpoint API per i criteri di controllo di accesso
 description: L'endpoint /policy nell'API di controllo accessi basato su attributi consente di gestire i criteri in Adobe Experience Platform a livello di programmazione.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
 
-# Endpoint criteri
+# Endpoint dei criteri di controllo di accesso
 
 >[!IMPORTANT]
 >
 >Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
-Le politiche sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono sostituire altri criteri. La `/policies` l’endpoint nell’API di controllo accessi basata sugli attributi ti consente di gestire i criteri in modo programmatico, incluse informazioni sulle regole che li governano e sulle rispettive condizioni dell’oggetto.
+Le politiche di controllo degli accessi sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. Questi criteri possono essere locali o globali e possono sostituire altri criteri. La `/policies` l’endpoint nell’API di controllo accessi basata sugli attributi ti consente di gestire i criteri in modo programmatico, incluse informazioni sulle regole che li governano e sulle rispettive condizioni dell’oggetto.
+
+>[!IMPORTANT]
+>
+>Questo endpoint non deve essere confuso con `/policies` punto finale [API per la governance dei dati](../../../data-governance/api/policies.md), che viene utilizzato per gestire i criteri di utilizzo dei dati.
 
 ## Introduzione
 

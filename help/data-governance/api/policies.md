@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;applicazione basata su API;governance dei dati
 solution: Experience Platform
-title: Endpoint API per criteri
+title: Endpoint API per i criteri di utilizzo dei dati
 topic-legacy: developer guide
 description: I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono il tipo di azioni di marketing che puoi o da cui ti sono limitate, eseguendo dati all’interno di un Experience Platform. L’endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di utilizzo dei dati.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 3%
+source-wordcount: '1840'
+ht-degree: 4%
 
 ---
 
-# Endpoint criteri
+# Endpoint dei criteri di utilizzo dati
 
-I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform]. La `/policies` punto finale [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di utilizzo dei dati per l’organizzazione.
+I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform]. La `/policies` punto finale [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di utilizzo dei dati per l’organizzazione.
+
+>[!IMPORTANT]
+>
+>Questo endpoint non deve essere confuso con `/policies` punto finale [API di controllo accessi](../../access-control/abac/api/policies.md), che viene utilizzato per gestire i criteri di controllo accessi.
 
 ## Introduzione
 

@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;processi di esportazione;api;
 solution: Experience Platform
-title: Endpoint API per i processi di esportazione
+title: Endpoint API per i processi di esportazione dei segmenti
 topic-legacy: developer guide
 description: I processi di esportazione sono processi asincroni utilizzati per mantenere i membri dei segmenti di pubblico nei set di dati. Puoi utilizzare l’endpoint /export/jobs nell’API del servizio di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare programmaticamente i processi di esportazione.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1682'
 ht-degree: 2%
 
 ---
 
-# Endpoint per processi di esportazione
+# Endpoint per processi di esportazione del segmento
 
 I processi di esportazione sono processi asincroni utilizzati per mantenere i membri dei segmenti di pubblico nei set di dati. È possibile utilizzare `/export/jobs` endpoint nell’API di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare programmaticamente i processi di esportazione.
 
