@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 >id="platform_dashboards_segments_audiencesize"
 >title="Dimensione del pubblico"
 >abstract="Questo widget visualizza il numero totale di profili uniti all’interno del segmento selezionato. Questo numero dipende dal criterio di unione applicato ai dati ed è corretto al momento dell&#39;istantanea più recente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Dimensione del pubblico]** widget visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione dei criteri di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni individuo nel segmento.
 
@@ -96,7 +95,6 @@ Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo il [
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Tendenza delle dimensioni del pubblico"
 >abstract="Questo widget fornisce informazioni sul numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento, acquisita durante l’istantanea giornaliera, per gli ultimi 30 giorni, 90 giorni o 12 mesi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce un grafico a linee illustrativo del numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento in un determinato periodo di tempo. La tendenza della dimensione del pubblico può essere visualizzata per periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. La dimensione del pubblico si riflette sull’asse y e il tempo sull’asse x.
 
@@ -151,7 +149,6 @@ Questo widget consente di ottimizzare la strategia di segmentazione visualizzand
 >id="platform_dashboards_segments_identityoverlap"
 >title="Sovrapposizione identità"
 >abstract="Questo widget mostra la sovrapposizione di profili nel segmento contenente entrambe le identità selezionate. I cerchi mostrano la dimensione relativa di ogni identità. Il numero di profili contenenti entrambi i namespace è rappresentato dalla sovrapposizione tra i cerchi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Sovrapposizione identità]** Il widget visualizza un diagramma di Venn, o diagramma di set, che mostra la sovrapposizione di profili nel segmento contenente più identità.
 
@@ -169,7 +166,6 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profili per identità"
 >abstract="Questo widget visualizza la suddivisione delle identità per ogni profilo unito nel segmento selezionato."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Ulteriori informazioni dalla documentazione"
 
 La **[!UICONTROL Profili per identità]** widget visualizza la suddivisione delle identità in ogni profilo unito del segmento selezionato. Il numero totale di profili per identità può essere superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associate più identità. In altre parole, l’aggiunta dei valori mostrati per ogni identità può avere un totale superiore alla dimensione totale del pubblico nel segmento, perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associate più identità.
 
