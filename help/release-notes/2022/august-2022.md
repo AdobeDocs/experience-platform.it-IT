@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2022
 description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
-source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
+source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '942'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 6%
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Preparazione dei dati](#data-prep)
+- [Experience Data Model (XDM)](#xdm)
 - [Origini](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -30,6 +31,38 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+
+**Nuovi componenti XDM**
+
+| Tipo di componente | Nome | Descrizione |
+| --- | --- | --- |
+| Schema globale | [[!UICONTROL Schema di entità AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Descrive le entità denormalizzate per Adobe Journey Optimizer. |
+| Classe | [[!UICONTROL Entità di esecuzione AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | Descrive le entità di esecuzione Adobe Journey Optimizer da utilizzare nella segmentazione. |
+| Gruppo di campi | [[!UICONTROL Oggetti di lavoro Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Gruppo di campi wrapper che fa riferimento a tutti i gruppi di campi specifici dell’oggetto di livello inferiore per Adobe Workfront. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Componenti XDM aggiornati**
+
+| Tipo di componente | Nome | Descrizione |
+| --- | --- | --- |
+| Gruppo di campi | [[!UICONTROL Campi comuni evento evento passaggio Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
+| Gruppo di campi | [[!UICONTROL Dettagli di appartenenza al segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL Profilo individuale XDM], questo gruppo di campi può ora essere utilizzato anche negli schemi in base alla classe Business Account XDM. |
+| Gruppo di campi | (Multipli) | Diversi gruppi di campi relativi alle attività Marketo B2B sono stati aggiornati allo stato stabile. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1593/files) per i dettagli. |
+| Gruppo di campi | (Multipli) | Sono stati aggiornati diversi gruppi di campi correlati al meteo per correggere gli errori che si verificavano per `uvIndex` e `sunsetTime`. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1602/files) per i dettagli. |
+| Tipo di dati | [[!UICONTROL Voce dell’elenco dei prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Una nuova proprietà `productImageUrl` è stato aggiunto. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati QE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nuova proprietà `framesPerSecond` è stato aggiunto. |
+| Tipo di dati | [[!UICONTROL Informazioni sulla sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. `meta:enum` e `description` Sono stati inoltre aggiornati i campi . |
+| Tipi di dati e gruppi di campi | (Multipli) | Diversi tipi di dati multimediali e gruppi di campi dispongono di nuovi campi e descrizioni aggiornate. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1582/files) per i dettagli. |
+| (Tutto) | (Multipli) | Tutti gli oggetti dello schema che contengono un `enum` contiene ora anche un `meta:enum` campo per indicare i valori di visualizzazione per ciascun vincolo. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) per i dettagli. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Origini {#sources}
 
