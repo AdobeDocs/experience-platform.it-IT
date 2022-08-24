@@ -5,10 +5,10 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ Puoi configurare i punti di contatto utilizzando tutti i campi consigliati di se
 | --- | --- |
 | Campo identità principale | Punto di contatto / Conversione |
 | Marca temporale | Punto di contatto / Conversione |
-| Channel._type | Punto di contatto |
+| Channel._Tipo | Punto di contatto |
 | Channel.mediaAction | Punto di contatto |
 | Channel.mediaType | Punto di contatto |
 | Marketing.trackingCode | Punto di contatto |
@@ -234,6 +234,12 @@ La tabella seguente mappa i punteggi aggregati ai punteggi non elaborati. Se des
 | action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | nome_campagna | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI utilizza solo dati aggiornati per l’ulteriore formazione e il punteggio. Allo stesso modo, quando si richiede di eliminare i dati, Attribution AI rifiuta di utilizzare i dati eliminati.
+> - Per facilitare la conformità ai requisiti RGPD in Attribution AI, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accesso ed eliminazione dei loro dati nel data lake, nel servizio Identity e nel profilo cliente in tempo reale.
+> - Tutti i dati sono crittografati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Passaggi successivi {#next-steps}

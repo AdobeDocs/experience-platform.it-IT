@@ -6,9 +6,9 @@ title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '3096'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -283,6 +283,13 @@ La tabella seguente descrive i vari attributi trovati nell’output di Customer 
 | Tipo di tendenza | Il tipo di propensione selezionato. |
 | Data punteggio | Data in cui si è verificato il punteggio. |
 | Fattori influenti | Motivi previsti sul motivo per cui un profilo è probabile che si converta o si abbandono. I fattori sono formati dai seguenti attributi:<ul><li>Codice: L’attributo di profilo o di comportamento che influenza positivamente il punteggio previsto di un profilo. </li><li>Valore: Il valore dell’attributo di profilo o di comportamento.</li><li>Importanza: Indica il peso del profilo o dell’attributo comportamentale sul punteggio previsto (basso, medio, alto)</li></ul> |
+
+>[!NOTE]
+>
+> - Customer AI utilizza solo dati aggiornati per ulteriore formazione e valutazione. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.
+> - Per facilitare la conformità ai requisiti RGPD in Customer AI, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accesso ed eliminazione dei loro dati nel data lake, nel servizio Identity e nel profilo cliente in tempo reale.
+> - Tutti i dati sono crittografati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md)
+
 
 ## Passaggi successivi {#next-steps}
 

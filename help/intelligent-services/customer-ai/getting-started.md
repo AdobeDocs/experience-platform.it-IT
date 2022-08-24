@@ -6,9 +6,9 @@ title: Guida introduttiva di Customer AI
 topic-legacy: Getting started
 description: Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,12 @@ Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifi
 ### Lettura di chiamate API di esempio
 
 Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md) nella guida alla risoluzione dei problemi di Experience Platform.
+
+## Autorizzazioni
+
+Quando si utilizza il controllo di accesso, la **Visualizzare Customer AI** e **Gestire l’intelligenza artificiale del cliente** i privilegi concedono l’accesso a diverse funzionalità di Customer AI. La **Gestire l’intelligenza artificiale del cliente** L&#39;autorizzazione consente di: **creare**,**update**, **delete**, **abilita** oppure **disable** un&#39;istanza mentre **Visualizzare Customer AI** consente di leggerlo o visualizzarlo. La **creare**, **update** e **delete** le azioni vengono registrate dai registri di controllo.
+
+Consulta la documentazione per informazioni [assegnazione di autorizzazioni per il controllo degli accessi](../../../help/access-control/home.md) o come [utilizzare i registri di controllo per monitorare l’accesso e l’attività](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Passaggi successivi
 

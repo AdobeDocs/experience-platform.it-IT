@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,6 +261,36 @@ Per garantire che il modello sia il più accurato possibile, è importante addes
 Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Seleziona **[!UICONTROL Ok]** da reindirizzare al **[!UICONTROL Istanze del servizio]** in cui puoi vedere la tua istanza di servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
+
+### Controllo dell’accesso basato su attributi
+
+>[!IMPORTANT]
+>
+>Il controllo dell&#39;accesso basato su attributi è attualmente disponibile solo in una versione limitata.
+
+[Controllo dell&#39;accesso basato su attributi](../../../help/access-control/abac/overview.md) è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
+
+Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
+
+Grazie al controllo degli accessi basato sugli attributi, gli amministratori possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali identificabili (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
+
+A causa del controllo degli accessi basato sugli attributi, alcuni campi e funzionalità potrebbero avere accesso limitato e non essere disponibili per alcune istanze del servizio Attribution AI. Ad esempio, &quot;Identity&quot;, &quot;Score Definition&quot; e &quot;Clone&quot;.
+
+Nella parte superiore dell’area di lavoro Attribution AI **pagina approfondimenti**, i dettagli visualizzati nella barra laterale hanno accesso limitato.
+
+![Area di lavoro Attribution AI con i campi con restrizioni dello schema evidenziato.](./images/user-guide/access-restricted.png)
+
+Se selezioni set di dati con schemi limitati nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** accanto al nome del set di dati viene visualizzato un avviso con il messaggio: [!UICONTROL Sono escluse le informazioni limitate].
+
+![L’area di lavoro Attribution AI con i campi con restrizioni dei set di dati selezionati con i risultati degli schemi con restrizioni evidenziati.](./images/user-guide/restricted-info-excluded.png)
+
+Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** viene visualizzato un avviso che informa che [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nell’anteprima del set di dati.]
+
+![L&#39;area di lavoro Attribution AI con i campi con restrizioni dei risultati dello schema visualizzato in anteprima è evidenziata.](./images/user-guide/restricted-dataset-preview.png)
+
+Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
+
+![L’area di lavoro Attribution AI con i campi limitati dei risultati dell’istanza evidenziata.](./images/user-guide/information-not-displayed.png)
 
 ## Passaggi successivi
 
