@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Configurare l’esplorazione delle specifiche per l’SDK di Origini
+title: Configurare l'esplorazione delle specifiche per le origini self-service (SDK batch)
 topic-legacy: overview
-description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '258'
 ht-degree: 2%
 
 ---
 
-
-# Configurare l’esplorazione delle specifiche per l’SDK di Origini
+# Configurare l&#39;esplorazione delle specifiche per le origini self-service (SDK batch)
 
 Le specifiche Esplora definiscono i parametri necessari per l&#39;esplorazione e l&#39;ispezione degli oggetti contenuti nella sorgente. Le specifiche Esplora definiscono anche il formato di risposta restituito quando gli oggetti vengono esplorati ed ispezionati.
 
@@ -87,4 +85,4 @@ Le specifiche Esplora definiscono i parametri necessari per l&#39;esplorazione e
 
 ## Passaggi successivi
 
-Con le specifiche di esplorazione compilate, è possibile procedere alla creazione di una specifica di connessione completa utilizzando [!DNL Flow Service] API. Consulta la sezione [[!DNL Sources SDK] Guida all’API](../api/api-overview.md) per ulteriori informazioni.
+Con le specifiche di esplorazione compilate, è possibile procedere alla creazione di una specifica di connessione completa utilizzando [!DNL Flow Service] API. Consulta la sezione [Guida all’API di Origini self-service (SDK per batch)](../api/api-overview.md) per ulteriori informazioni.

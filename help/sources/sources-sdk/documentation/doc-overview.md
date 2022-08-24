@@ -4,21 +4,15 @@ solution: Experience Platform
 title: Documentare la tua origine
 topic-legacy: overview
 description: Il passaggio finale prima che la nuova sorgente possa essere resa attiva in Adobe Experience Platform è quello di documentare la nuova sorgente.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Documentare l&#39;origine
-
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
 
 Il passaggio finale prima che la nuova origine possa essere impostata in Adobe Experience Platform è documentare la nuova origine.
 

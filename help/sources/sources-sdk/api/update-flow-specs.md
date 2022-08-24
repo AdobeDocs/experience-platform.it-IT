@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso (Beta)
+title: Aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso
 topic-legacy: developer guide
-description: Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per l’SDK di Origini.
-hide: true
-hidefromtoc: true
+description: Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per le origini self-service (SDK batch).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
 
-# Aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+# Aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API
 
 Dopo aver generato un nuovo ID di specifica di connessione, devi aggiungere questo ID a una specifica di flusso per creare un flusso di dati.
 
 Le specifiche di flusso contengono informazioni che definiscono un flusso, inclusi gli ID di connessione di origine e di destinazione supportati, le specifiche di trasformazione necessarie per essere applicate ai dati e i parametri di pianificazione necessari per generare un flusso. È possibile modificare le specifiche di flusso utilizzando `/flowSpecs` punto finale.
 
-Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API per l’SDK di Origini.
+Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API per origini self-service (SDK batch).
 
 ## Introduzione
 

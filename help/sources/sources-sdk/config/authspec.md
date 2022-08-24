@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Configurare le specifiche di autenticazione per l'SDK di Origini
+title: Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
 topic-legacy: overview
-description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
-hide: true
-hidefromtoc: true
+description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Configurare le specifiche di autenticazione per l&#39;SDK di Origini
+# Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
 
 Le specifiche di autenticazione definiscono come gli utenti Adobe Experience Platform possono connettersi alla tua origine.
 
@@ -21,7 +19,7 @@ La `authSpec` contiene informazioni sui parametri di autenticazione necessari pe
 
 ## Specifiche di autenticazione
 
-Attualmente, [!DNL Sources SDK] supporta i codici di aggiornamento OAuth 2 e l’autenticazione di base. Vedi le tabelle seguenti per informazioni sull’utilizzo di un codice di aggiornamento OAuth 2 e sull’autenticazione di base
+Origini self-service (SDK batch) supporta i codici di aggiornamento OAuth 2 e l’autenticazione di base. Vedi le tabelle seguenti per informazioni sull’utilizzo di un codice di aggiornamento OAuth 2 e sull’autenticazione di base
 
 ### Codice di aggiornamento OAuth 2
 
@@ -36,10 +34,6 @@ Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazio
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"

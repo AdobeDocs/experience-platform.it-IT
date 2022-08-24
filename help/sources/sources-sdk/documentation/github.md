@@ -4,13 +4,11 @@ solution: Experience Platform
 title: Utilizzare l’interfaccia Web GitHub per creare una pagina di documentazione sulle origini
 topic-legacy: tutorial
 description: Questo documento fornisce passaggi su come utilizzare l’interfaccia web GitHub per creare la documentazione e inviare una richiesta di pull (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,19 +34,19 @@ Una volta completata la forchetta, seleziona **maestro** e inserisci un nome per
 
 ![crea-ramo](../assets/create-branch.png)
 
-Nella struttura di cartelle GitHub dell’archivio con fork, passa a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) quindi selezionare la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando documentazione per una nuova origine di archiviazione cloud, seleziona **cloud storage**.
+Nella struttura di cartelle GitHub dell’archivio con fork, passa a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) quindi selezionare la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando documentazione per una nuova origine CRM, seleziona **crm**.
 
 >[!TIP]
 >
 >Se stai creando la documentazione per l&#39;interfaccia utente, passa a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e selezionare la categoria appropriata per l&#39;origine. Per aggiungere le immagini, passa a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) quindi aggiungi le tue schermate al `sdk` cartella.
 
-![cloud storage](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Viene visualizzata una cartella delle origini di archiviazione cloud esistenti. Per aggiungere documentazione per una nuova sorgente, seleziona **Aggiungi file** quindi seleziona **Crea nuovo file** dal menu a discesa visualizzato.
+Viene visualizzata una cartella delle origini CRM esistenti. Per aggiungere documentazione per una nuova sorgente, seleziona **Aggiungi file** quindi seleziona **Crea nuovo file** dal menu a discesa visualizzato.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Assegnare un nome al file sorgente `YOURSOURCE.md` dove YOURSOURCE è il nome della sorgente in Platform. Ad esempio, se la tua azienda è [!DNL Mailchimp], quindi il nome del file deve essere `mailchimp.md`.
+Assegnare un nome al file sorgente `YOURSOURCE.md` dove YOURSOURCE è il nome della sorgente in Platform. Ad esempio, se la tua azienda è ACME CRM, il tuo nome file deve essere `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

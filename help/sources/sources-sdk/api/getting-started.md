@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
-title: Guida introduttiva all'SDK per sorgenti (Beta)
+title: Guida introduttiva alle origini self-service (SDK batch)
 topic-legacy: developer guide
-description: Questo documento fornisce un’introduzione alle informazioni sui prerequisiti che è necessario conoscere prima di tentare di creare una nuova origine utilizzando l’SDK di Origini.
-hide: true
-hidefromtoc: true
+description: Questo documento fornisce un’introduzione alle informazioni sui prerequisiti da conoscere prima di tentare di creare una nuova origine utilizzando Origini self-service (SDK batch).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# Guida introduttiva all&#39;SDK per sorgenti (Beta)
+# Guida introduttiva alle origini self-service (SDK batch)
 
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
-
-L’SDK per sorgenti consente di integrare la propria origine basata su REST per portare i dati in Adobe Experience Platform. Questo documento fornisce un&#39;introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Origini self-service (Batch SDK) consente di integrare la propria origine basata su REST per portare i dati batch in Adobe Experience Platform. Questo documento fornisce un&#39;introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prerequisiti
 
-Per utilizzare l’SDK per sorgenti, devi assicurarti di avere accesso a una sandbox organizzazione IMS con provisioning di origini Adobe Experience Platform.
+Per utilizzare Origini self-service (SDK batch), devi assicurarti di avere accesso a una sandbox organizzazione IMS con provisioning di origini Adobe Experience Platform.
 
 Questa guida richiede anche una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
@@ -33,7 +27,7 @@ Questa guida richiede anche una buona comprensione dei seguenti componenti di Ad
 
 ## Lettura di chiamate API di esempio
 
-L&#39;SDK per le sorgenti e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Origini self-service (SDK batch) e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Raccogli i valori delle intestazioni richieste
 
@@ -57,4 +51,4 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Passaggi successivi
 
-Per iniziare a creare una nuova origine con l’SDK di Origini, consulta l’esercitazione su [creazione di una nuova origine](./create.md).
+Per iniziare a creare una nuova origine con Origini self-service (SDK batch), consulta l’esercitazione su [creazione di una nuova origine](./create.md).

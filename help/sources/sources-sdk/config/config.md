@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Opzioni di configurazione nell’SDK Origini
+title: Opzioni di configurazione in Origini self-service (SDK batch)
 topic-legacy: overview
-description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l'SDK di Origini.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '297'
 ht-degree: 1%
 
 ---
 
-# Opzioni di configurazione nell’SDK Origini
+# Opzioni di configurazione in Origini self-service (SDK batch)
 
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
-
-Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare l&#39;SDK di Origini.
+Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 
 ## Specifica di connessione
 
-Le specifiche di connessione restituiscono le proprietà del connettore di un&#39;origine. Includono specifiche di autenticazione relative alla creazione delle connessioni di base e di origine e un ID di specifica di connessione fisso assegnato a una particolare origine. Le specifiche di connessione sono indipendenti dall’organizzazione IMS e dal tenant. Una specifica di connessione tipica contiene informazioni di base su una determinata origine, oltre a tre sezioni distinte: `authSpec`, `sourceSpec`e `exploreSpec`.
+Le specifiche di connessione restituiscono le proprietà del connettore di un&#39;origine. Includono specifiche di autenticazione relative alla creazione delle connessioni di base e di origine e un ID di specifica di connessione fisso assegnato a una particolare origine. Le specifiche di connessione sono agnostiche del tenant e dell’organizzazione. Una specifica di connessione tipica contiene informazioni di base su una determinata origine, oltre a tre sezioni distinte: `authSpec`, `sourceSpec`e `exploreSpec`.
 
 | Specifiche | Descrizione |
 | --- | --- |
@@ -41,5 +36,3 @@ Per istruzioni su come compilare i valori di ciascuna parte di una specifica di 
 * [Configurare le specifiche di autenticazione](./authspec.md)
 * [Configurare le specifiche di origine](./sourcespec.md)
 * [Configurare la specifica di esplorazione](./explorespec.md)
-
-

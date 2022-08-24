@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione sulle sorgenti
 topic-legacy: tutorial
 description: Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione relativa all’origine e inviare una richiesta di pull (PR).
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '650'
 ht-degree: 3%
 
 ---
@@ -71,7 +70,7 @@ Quindi, immetti `Adobe Markdown Authoring` nella barra di ricerca, quindi selezi
 
 ![installare](../assets/install.png)
 
-Con il computer locale pronto, scarica il [modello di documentazione di origini](../assets/template.zip) ed estrarre il file in `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] rappresenta la categoria scelta. Ad esempio, se si sta creando un&#39;origine di archiviazione cloud, selezionare la cartella di archiviazione cloud.
+Con il computer locale pronto, scarica il [modello di documentazione di origini](../assets/template.zip) ed estrarre il file in `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] rappresenta la categoria scelta. Ad esempio, se si sta creando un&#39;origine di database, selezionare la cartella di database.
 
 Infine, segui le istruzioni descritte nel modello e modifica il modello con le informazioni rilevanti relative alla tua origine.
 

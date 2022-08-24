@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Guida all’API dell’SDK per sorgenti (Beta)
+title: Guida all’API per le sorgenti self-service (SDK per batch)
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del processo di creazione di una nuova origine, inclusi i passaggi su come recuperare, scrivere e inviare una nuova specifica di connessione utilizzando l’API Servizio di flusso.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
-# Guida all’API dell’SDK per sorgenti (Beta)
-
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+# Guida all’API per le sorgenti self-service (SDK per batch)
 
 Questo documento fornisce una panoramica del processo di creazione di una nuova origine, inclusi i passaggi su come scrivere e inviare una nuova specifica di connessione utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie sorgenti all’interno di Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consente di impostare con facilità le connessioni sorgente a vari provider di dati. Queste connessioni di origine consentono di autenticare i sistemi di terze parti, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-La [!DNL Flow Service] L’API fornisce diversi endpoint che consentono di gestire in modo programmatico le specifiche di connessione e flusso per una nuova origine che si sta integrando tramite l’SDK di Origini.
+La [!DNL Flow Service] API fornisce diversi endpoint che consentono di gestire in modo programmatico le specifiche di connessione e flusso per una nuova origine che si sta integrando tramite Origini self-service (SDK batch).
 
 ## Creare una nuova specifica di connessione
 
@@ -50,4 +45,4 @@ Per inviare ad Experience Platform l&#39;origine per l&#39;integrazione, devi pr
 
 ## Passaggi successivi
 
-Per iniziare a utilizzare [!DNL Flow Service] API e crea una nuova sorgente tramite l’SDK di Origini, leggi la sezione [guida introduttiva](./getting-started.md) quindi seleziona una delle guide dell’endpoint per scoprire come utilizzare endpoint specifici.
+Per iniziare a utilizzare [!DNL Flow Service] API e crea una nuova origine tramite Origini self-service (SDK batch), leggi il [guida introduttiva](./getting-started.md) quindi seleziona una delle guide dell’endpoint per scoprire come utilizzare endpoint specifici.

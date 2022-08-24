@@ -1,24 +1,19 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Invia la tua origine (Beta)
+title: Invia origine
 topic-legacy: overview
-description: Il seguente documento fornisce passaggi su come testare e verificare una nuova origine utilizzando l’API del servizio di flusso e integrare una nuova origine tramite l’SDK di Origini.
-hide: true
-hidefromtoc: true
-source-git-commit: 274784a5b82d12497f7437fdeaf665dd64224c2d
+description: Il seguente documento fornisce passaggi su come testare e verificare una nuova origine utilizzando l’API del servizio di flusso e integrare una nuova origine tramite Origini self-service (SDK batch).
+exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Invia la tua fonte (Beta)
+# Invia l&#39;origine
 
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
-
-Il passaggio finale per integrare la nuova origine in Adobe Experience Platform utilizzando [!DNL Sources SDK] per verificare la fonte. Una volta completata la procedura, puoi inviare la nuova origine contattando il rappresentante di Adobe.
+L&#39;ultimo passaggio per integrare la nuova origine in Adobe Experience Platform utilizzando Origini self-service (SDK batch) consiste nel testare l&#39;origine per la verifica. Una volta completata la procedura, puoi inviare la nuova origine contattando il rappresentante di Adobe.
 
 Il seguente documento fornisce passaggi su come verificare ed eseguire il debug dell&#39;origine utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -27,13 +22,13 @@ Il seguente documento fornisce passaggi su come verificare ed eseguire il debug 
 * Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 * Per informazioni su come generare le credenziali per le API di Platform, consulta l’esercitazione su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md).
 * Per informazioni su come impostare [!DNL Postman] per le API di Platform, consulta l’esercitazione su [configurazione di Developer Console e [!DNL Postman]](../../../landing/postman.md).
-* Per facilitare il processo di test e debug, scarica il [[!DNL Sources SDK] raccolta e ambiente di verifica qui](../assets/sdk-verification.zip) e segui i passaggi descritti di seguito.
+* Per facilitare il processo di test e debug, scarica il [Raccolta e ambiente di verifica di Origini self-service qui](../assets/sdk-verification.zip) e segui i passaggi descritti di seguito.
 
 ## Verificare la sorgente
 
-Per testare la sorgente, è necessario eseguire la [[!DNL Sources SDK] raccolta e ambiente di verifica](../assets/sdk-verification.zip) su [!DNL Postman] fornendo le variabili di ambiente appropriate relative all’origine.
+Per testare la sorgente, è necessario eseguire la [Raccolta e ambiente di verifica di Origini self-service](../assets/sdk-verification.zip) su [!DNL Postman] fornendo le variabili di ambiente appropriate relative all’origine.
 
-Per avviare il test, devi prima impostare la raccolta e l’ambiente su [!DNL Postman]. Quindi, specifica l&#39;ID della specifica di connessione da verificare. Questo ID deve essere lo stesso generato con [!DNL Sources SDK].
+Per avviare il test, devi prima impostare la raccolta e l’ambiente su [!DNL Postman]. Quindi, specifica l&#39;ID della specifica di connessione da verificare.
 
 ### Specifica `authSpecName`
 

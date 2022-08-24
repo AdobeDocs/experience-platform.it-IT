@@ -2,9 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Modello di documentazione self-service per l’interfaccia utente
 description: Scopri come creare una connessione sorgente YOURSOURCE utilizzando l’interfaccia utente di Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 1%

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso (Beta)
+title: Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
 topic-legacy: developer guide
 description: È possibile aggiornare le proprietà di una specifica di connessione tramite un'operazione PUT.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso (Beta)
+# Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
 
 È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta di PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta di POST.
 

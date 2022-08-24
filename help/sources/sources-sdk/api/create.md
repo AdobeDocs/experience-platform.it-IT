@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
-title: Crea una nuova specifica di connessione utilizzando l’API del servizio di flusso (Beta)
+title: Creare una nuova specifica di connessione utilizzando l’API del servizio di flusso
 topic-legacy: tutorial
-description: Il seguente documento fornisce passaggi su come creare una specifica di connessione utilizzando l’API del servizio di flusso e integrare una nuova origine tramite l’SDK di Origini.
-hide: true
-hidefromtoc: true
+description: Il seguente documento fornisce passaggi su come creare una specifica di connessione utilizzando l’API del servizio di flusso e integrare una nuova origine tramite Origini self-service.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Crea una nuova specifica di connessione utilizzando [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->L&#39;SDK di Origini è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità descritta in questa documentazione è soggetta a modifiche.
+# Crea una nuova specifica di connessione utilizzando [!DNL Flow Service] API
 
 Una specifica di connessione rappresenta la struttura di un&#39;origine. Contiene informazioni sui requisiti di autenticazione di un&#39;origine, definisce come esplorare e ispezionare i dati di origine e fornisce informazioni sugli attributi di una determinata origine. La `/connectionSpecs` punto finale [!DNL Flow Service] L’API ti consente di gestire in modo programmatico le specifiche di connessione all’interno dell’organizzazione.
 
-Il documento seguente illustra i passaggi necessari per creare una specifica di connessione utilizzando [!DNL Flow Service] e integra una nuova sorgente tramite l&#39;SDK di Origini.
+Il documento seguente illustra i passaggi necessari per creare una specifica di connessione utilizzando [!DNL Flow Service] e integra una nuova sorgente tramite Sorgenti self-service (SDK batch).
 
 ## Introduzione
 
@@ -30,16 +24,37 @@ Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per
 
 ## Raccogli artifact
 
-Il primo passaggio nella creazione di una nuova origine attraverso [!DNL Sources SDK] deve coordinarsi con il rappresentante di Adobe e identificare i valori per la sorgente corrispondente **icona**, **descrizione**, **etichetta** e **categoria**.
+Per creare una nuova origine batch utilizzando Origini self-service, è innanzitutto necessario coordinarsi con Adobe, richiedere un archivio Git privato e allinearsi con Adobe sui dettagli relativi all’etichetta, alla descrizione, alla categoria e all’icona per la propria origine.
 
-| Artifact | Descrizione | Esempio |
+Una volta fornito, devi strutturare il tuo archivio Git privato come segue:
+
+* Origini
+   * {your_source}
+      * Artifact
+         * {your_source}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| Artifact (nomi di file) | Descrizione | Esempio |
 | --- | --- | --- |
-| Etichetta | Nome della sorgente. | [!DNL MailChimp Members] |
-| Descrizione | Breve descrizione della fonte. | Crea una connessione in entrata diretta al tuo [!DNL Mailchimp Members] per acquisire in Experience Platform sia dati storici che dati pianificati. |
-| Icona | Immagine o logo che rappresenta la tua sorgente. L’icona viene visualizzata nel rendering della sorgente nell’interfaccia utente di Platform. | `mailchimp-members-icon.svg` |
-| Categoria | La categoria della sorgente. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | Nome della sorgente. Questa cartella deve contenere tutti gli artefatti relativi all’origine, all’interno dell’archivio Git privato. | `mailchimp-members` |
+| {your_source}-category.txt | La categoria a cui appartiene l&#39;origine, formattata come file di testo. L&#39;elenco delle categorie di origine disponibili supportate da Origini self-service (SDK batch) include: <ul><li>Advertising</li><li>Analytics</li><li>Consenso e preferenze</li><li>CRM</li><li>Successo del cliente</li><li>Database</li><li>e-commerce</li><li>Automazione del marketing</li><li>Pagamenti</li><li>Protocolli</li></ul> **Nota**: Se ritieni che la tua fonte non rientri in nessuna delle categorie di cui sopra, contatta il tuo rappresentante di Adobe per discutere. | `mailchimp-members-category.txt` All’interno del file, specifica la categoria della sorgente, ad esempio: `marketingAutomation`. |
+| {your_source}-description.txt | Breve descrizione della fonte. | [!DNL Mailchimp Members] è una sorgente di automazione di marketing che può essere utilizzata per [!DNL Mailchimp Members] dati ad Experience Platform. |
+| {your_source}-icon.svg | Immagine da utilizzare per rappresentare la tua origine nel catalogo origini Experienci Platform. Questa icona deve essere un file SVG. |
+| {your_source}-label.txt | Il nome della sorgente come dovrebbe apparire nel catalogo delle sorgenti di Experience Platform. | Membri di Mailchimp |
+| {your_source}-connectionSpec.json | Un file JSON contenente le specifiche di connessione della tua origine. Questo file non è inizialmente necessario in quanto verranno compilate le specifiche di connessione durante il completamento di questa guida. | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Durante il periodo di prova della specifica di connessione, al posto dei valori chiave, è possibile utilizzare `text` nella specifica di connessione.
+
+Dopo aver aggiunto i file necessari all’archivio Git privato, devi quindi creare una richiesta di pull (PR) da rivedere, ad Adobe. Quando il PR viene approvato e unito, ti verrà fornito un ID che può essere utilizzato per la specifica di connessione per fare riferimento all’etichetta, alla descrizione e all’icona della tua origine.
+
+Quindi, segui i passaggi descritti di seguito per configurare le specifiche di connessione. Per ulteriori informazioni sulle diverse funzionalità che è possibile aggiungere all’origine, ad esempio la pianificazione avanzata, lo schema personalizzato o diversi tipi di impaginazione, consulta la guida in [configurazione delle specifiche di origine](../config/sourcespec.md).
 
 ## Copia modello di specifica di connessione
 
@@ -68,10 +83,6 @@ Una volta raccolti gli artefatti richiesti, copia e incolla il modello di specif
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ Una volta raccolti gli artefatti richiesti, copia e incolla il modello di specif
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",
