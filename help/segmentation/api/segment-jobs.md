@@ -5,9 +5,9 @@ title: Endpoint API per i processi di segmento
 topic-legacy: developer guide
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire i processi di segmento a livello di programmazione per la tua organizzazione.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1511'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience P
 
 ## Recupera un elenco di processi di segmento {#retrieve-list}
 
-Puoi recuperare un elenco di tutti i processi di segmento per la tua organizzazione IMS effettuando una richiesta di GET al `/segment/jobs` punto finale.
+Puoi recuperare un elenco di tutti i processi di segmento per la tua organizzazione effettuando una richiesta di GET al `/segment/jobs` punto finale.
 
 **Formato API**
 
@@ -57,7 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione IMS specificata come JSON. La risposta seguente restituisce un elenco di tutti i processi di segmento riusciti per l’organizzazione IMS.
+Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione IMS specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di segmenti all’interno del processo del segmento.
+
+**Minore o uguale a 1500 segmenti nel processo del segmento**
+
+Se hai meno di 1500 segmenti in esecuzione nel tuo processo di segmento, verrà visualizzato un elenco completo di tutti i segmenti all’interno del `children.segments` attributo.
 
 >[!NOTE]
 >
@@ -164,6 +168,102 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 }
 ```
 
+**Più di 1500 segmenti**
+
+Se hai più di 1500 segmenti da eseguire nel tuo lavoro di segmento, la `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutti i segmenti vengono valutati.
+
+>[!NOTE]
+>
+>La risposta seguente è stata troncata per lo spazio e mostrerà solo il primo lavoro restituito.
+
+```json
+{
+    "_page": {
+        "totalCount": 14,
+        "pageSize": 14
+    },
+    "children": [
+        {
+            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "sandbox": {
+                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "profileInstanceId": "ups",
+            "source": "scheduler",
+            "status": "SUCCEEDED",
+            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+            "computeJobId": 8811,
+            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+            "segments": [
+                {
+                    "segmentId": "*",
+                }
+            ],
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 1573203617195,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 778460
+                },
+                "profileSegmentationTime": {
+                    "startTimeInMs": 1573204266727,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 128928
+                },
+                "totalProfiles": 13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
+                },
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+                }
+            },
+            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "properties": {
+                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+            },
+            "_links": {
+                "cancel": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "DELETE"
+                },
+                "checkStatus": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "GET"
+                }
+            },
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    ],
+    "_links": {
+        "next": {}
+    }
+}
+```
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
@@ -189,6 +289,10 @@ Puoi creare un nuovo processo di segmento effettuando una richiesta di POST al `
 POST /segment/jobs
 ```
 
+Quando crei un nuovo processo di segmento, la richiesta e la risposta variano a seconda del numero di segmenti all’interno del processo di segmento.
+
+**Minore o uguale a 1500 segmenti nel processo del segmento**
+
 **Richiesta**
 
 ```shell
@@ -198,12 +302,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-[
-  {
-    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-  }
-]'
+ -d '[
+    {
+        "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    }
+ ]'
 ```
 
 | Proprietà | Descrizione |
@@ -212,12 +315,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo del segmento appena creato.
+Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul processo del segmento appena creato.
 
 ```json
 {
-    "id": "d3b4a50d-dfea-43eb-9fca-557ea53771fd",
-    "imsOrgId": "{ORG_ID}",
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -225,43 +328,82 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
         "default": true
     },
     "profileInstanceId": "ups",
-    "source": "api",
-    "status": "NEW",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
     "segments": [
         {
-            "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+            "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
-                "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                "id": "7863c010-e092-41c8-ae5e-9e533186752e",
                 "expression": {
                     "type": "PQL",
-                    "format": "pql/text",
+                    "format": "pql/json",
                     "value": "workAddress.country = \"US\""
                 },
-                "mergePolicyId": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                 "mergePolicy": {
-                    "id": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                     "version": 1
                 }
             }
         }
     ],
-    "requestId": "Hw1jdAHeuWHVKVxcAPFrLCbbjkriDl9v",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
     "_links": {
         "cancel": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "DELETE"
         },
         "checkStatus": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "GET"
         }
     },
-    "updateTime": 1579304260000,
-    "creationTime": 1579304260897,
-    "updateEpoch": 1579304260
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
 }
 ```
 
@@ -272,6 +414,126 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 | `segments` | Oggetto che contiene informazioni sulle definizioni dei segmenti per cui è in esecuzione il processo di segmento. |
 | `segments.segment.id` | ID della definizione del segmento fornita. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
+
+**Più di 1500 segmenti**
+
+**Richiesta**
+
+>[!NOTE]
+>
+>Anche se puoi creare un lavoro di segmento con più di 1500 segmenti, è **altamente non consigliato**.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ]
+ }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `schema.name` | Nome dello schema per i segmenti. |
+| `segments.segmentId` | Quando esegui un processo di segmento con più di 1500 segmenti, dovrai passare `*` come ID del segmento per indicare che desideri eseguire un processo di segmentazione con tutti i segmenti. |
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo del segmento appena creato.
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento appena creato. |
+| `status` | Lo stato corrente del processo del segmento. Poiché il processo del segmento è stato appena creato, lo stato sarà sempre `NEW`. |
+| `segments` | Oggetto che contiene informazioni sulle definizioni dei segmenti per cui è in esecuzione il processo di segmento. |
+| `segments.segment.id` | La `*` significa che questo processo del segmento è in esecuzione per tutti i segmenti all’interno della tua organizzazione. |
 
 ## Recupera un processo di segmento specifico {#get}
 
@@ -299,7 +561,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo del segmento specificato.
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo del segmento specificato.  Tuttavia, la risposta varia a seconda del numero di segmenti all’interno del processo del segmento.
+
+**Minore o uguale a 1500 segmenti nel processo del segmento**
+
+Se hai meno di 1500 segmenti in esecuzione nel tuo processo di segmento, verrà visualizzato un elenco completo di tutti i segmenti all’interno del `children.segments` attributo.
 
 ```json
 {
@@ -361,6 +627,87 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
+**Più di 1500 segmenti**
+
+Se hai più di 1500 segmenti da eseguire nel tuo lavoro di segmento, la `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutti i segmenti vengono valutati.
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "SUCCEEDED",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
@@ -403,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento richiesti.
+Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore del `children.segments` l’attributo varia a seconda che il processo del segmento sia in esecuzione per più di 1500 segmenti.
 
 >[!NOTE]
 >
@@ -444,20 +791,7 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                    "segment": {
-                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                        "expression": {
-                            "type": "PQL",
-                            "format": "pql/json",
-                            "value": "{PQL_EXPRESSION}"
-                        },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                        "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                            "version": 1
-                        }
-                    }
+                    "segmentId": "*"
                 }
             ],
             "updateTime": 1573204395000,

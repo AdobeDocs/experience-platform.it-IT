@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 'Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 5%
@@ -109,9 +109,9 @@ Le protezioni descritte in questa sezione si riferiscono al numero e alla natura
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 | --- | --- | --- | --- |
-| Segmenti per sandbox | 10.000 | Morbido | Un’organizzazione può avere più di 10.000 segmenti in totale, purché ci siano meno di 10.000 segmenti in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti può influire sulle prestazioni del sistema. |
+| Segmenti per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti in totale, purché ci siano meno di 4000 segmenti in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti può influire sulle prestazioni del sistema. |
 | Segmenti in streaming per sandbox | 500 | Morbido | Un’organizzazione può disporre di più di 500 segmenti di streaming in totale, purché ci siano meno di 500 segmenti di streaming in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti di streaming potrebbe influire sulle prestazioni del sistema. |
-| Segmenti batch per sandbox | 10.000 | Morbido | Un’organizzazione può avere più di 10.000 segmenti batch in totale, purché ci siano meno di 10.000 segmenti batch in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti batch può influire sulle prestazioni del sistema. |
+| Segmenti batch per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti batch in totale, purché ci siano meno di 4000 segmenti batch in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti batch può influire sulle prestazioni del sistema. |
 
 {style=&quot;table-layout:auto&quot;}
 
