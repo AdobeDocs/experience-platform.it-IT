@@ -5,9 +5,9 @@ title: Endpoint API di pianificazione
 topic-legacy: developer guide
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience P
 
 ## Recupera un elenco di pianificazioni {#retrieve-list}
 
-Puoi recuperare un elenco di tutte le pianificazioni per la tua organizzazione IMS effettuando una richiesta di GET al `/config/schedules` punto finale.
+Puoi recuperare un elenco di tutte le pianificazioni per la tua organizzazione effettuando una richiesta di GET al `/config/schedules` punto finale.
 
 **Formato API**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Richiesta**
 
-La seguente richiesta recupererà le ultime dieci pianificazioni pubblicate nell’organizzazione IMS.
+La seguente richiesta recupererà le ultime dieci pianificazioni pubblicate all’interno della tua organizzazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
