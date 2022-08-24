@@ -2,13 +2,13 @@
 keywords: e-mail;e-mail;e-mail;destinazioni;salesforce;api salesforce destinazione marketing cloud
 title: (API) Connessione al Marketing Cloud Salesforce
 description: La destinazione del Marketing Cloud Salesforce (precedentemente nota come ExactTarget) ti consente di esportare i dati del tuo account e attivarli all’interno del Marketing Cloud Salesforce per le tue esigenze aziendali.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] connection
 
@@ -48,7 +48,7 @@ Vai alla Salesforce [processo](https://www.salesforce.com/in/form/signup/freetri
 
 #### Crea un campo personalizzato all’interno di Salesforce {#prerequisites-custom-field}
 
-Crea l&#39;attributo personalizzato di tipo `Text Area Long` quale Experience Platform utilizzerà per aggiornare lo stato del segmento all’interno del Marketing Cloud Salesforce.
+È necessario creare un attributo personalizzato del tipo `Text Area Long`, che verrà utilizzato dall’Experience Platform per aggiornare lo stato del segmento all’interno del Marketing Cloud Salesforce. Nel flusso di lavoro per attivare i segmenti sulla destinazione , nella **[Pianificazione del segmento](#schedule-segment-export-example)** in questo passaggio, utilizzerai l’attributo personalizzato come ID di mappatura per ogni segmento attivato.
 
 Consulta la documentazione del Marketing Cloud Salesforce per [creare campi personalizzati](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) se hai bisogno di ulteriori informazioni.
 
@@ -72,6 +72,8 @@ Prendi nota degli elementi seguenti prima di eseguire l’autenticazione nella d
 | --- | --- | --- |
 | <ul><li>Prefisso Marketing Cloud Salesforce</li></ul> | Vedi [Prefisso dominio Marketing Cloud Salesforce](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) per ulteriori indicazioni. | <ul><li>Se il tuo dominio è come indicato di seguito, devi utilizzare il valore evidenziato.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>ID client</li><li>Segreto client</li></ul> | Fai riferimento a [Documentazione di Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) se hai bisogno di ulteriori informazioni. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identità supportate {#supported-identities}
 
@@ -140,18 +142,18 @@ Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmen
 
 ### Considerazioni ed esempi di mappatura {#mapping-considerations-example}
 
-Per inviare correttamente i dati del pubblico da Adobe Experience Platform alla destinazione del Marketing Cloud Salesforce, devi passare attraverso il passaggio di mappatura dei campi . La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM sui campi di destinazione del Marketing Cloud Salesforce, effettua le seguenti operazioni:
+Per inviare correttamente i dati del pubblico da Adobe Experience Platform alla destinazione del Marketing Cloud Salesforce, devi passare attraverso il passaggio di mappatura dei campi . La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM sui campi di destinazione del Marketing Cloud Salesforce, segui i passaggi riportati di seguito.
 
-Elenco di mappature attributi che possono essere configurate per il [API REST Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) è riportato di seguito. La destinazione utilizza il [API REST per definizione set di attributi di ricerca Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) per recuperare gli attributi definiti in Salesforce per i contatti e specifici per il tuo account.
+Elenco di mappature attributo che è possibile impostare per [API REST Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) è riportato di seguito. La destinazione utilizza il [API REST per definizione set di attributi di ricerca Salesforce](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) per recuperare gli attributi definiti in Salesforce per i contatti e specifici per il tuo account.
 
 >[!IMPORTANT]
 > 
 > Anche se i nomi degli attributi sono uguali al tuo account Salesforce, le mappature per `contactKey` e `personalEmail.address` sono obbligatori.
 
-1. Nel passaggio Mappatura , fai clic su **[!UICONTROL Aggiungi nuova mappatura]**, verrà visualizzata una nuova riga di mappatura sullo schermo.
+1. Nel passaggio Mappatura , fai clic su **[!UICONTROL Aggiungi nuova mappatura]**. È ora possibile visualizzare una nuova riga di mappatura sullo schermo.
    ![Aggiungi nuova mappatura](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. Nella finestra seleziona campo di origine, quando selezioni il campo di origine scegli la **[!UICONTROL Seleziona attributi]** e aggiungi le mappature desiderate.
+1. Nella finestra seleziona campo di origine, quando selezioni il campo di origine, scegli la **[!UICONTROL Seleziona attributi]** e aggiungi le mappature desiderate.
    ![Mappatura origine](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
 1. Nella finestra seleziona il campo di destinazione, seleziona il campo di destinazione e scegli la **[!UICONTROL Seleziona spazio dei nomi identità]** e aggiungi le mappature desiderate.
@@ -172,7 +174,7 @@ Elenco di mappature attributi che possono essere configurate per il [API REST Sa
 
 ### Pianificare l’esportazione dei segmenti e l’esempio {#schedule-segment-export-example}
 
-Quando si eseguono le [Esportazione di segmenti programmata](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) devi mappare manualmente i segmenti di Platform sull’attributo personalizzato in Salesforce.
+Quando si eseguono le [Esportazione di segmenti programmata](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) a questo punto, devi mappare manualmente i segmenti di Platform sull’attributo personalizzato in Salesforce.
 
 A questo scopo, seleziona ogni segmento, quindi inserisci l’attributo personalizzato corrispondente da Salesforce nel **[!UICONTROL ID mappatura]** campo .
 
@@ -233,4 +235,3 @@ Quando controlli un’esecuzione di un flusso di dati, se vedi il messaggio di e
 * Fai riferimento a [Prezzi di coinvolgimento Marketing Cloud Salesforce](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) pagina a *Scarica il grafico di confronto Full Edition* come pdf che descrive i limiti imposti dal tuo piano.
 * La [Panoramica API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) dettagli pagina: limiti aggiuntivi.
 * È disponibile un elemento KB che raccoglie questi dettagli [qui](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20be%20added%20in, interazione%20with%20the%20REST%2DAPI).
-
