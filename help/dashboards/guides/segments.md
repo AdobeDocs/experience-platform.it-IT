@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Sovrapposizione del pubblico]](#audience-overlap)
 * [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
+* [[!UICONTROL Attivazioni pianificate]](#scheduled-activations)
 
 ### [!UICONTROL Dimensione del pubblico] {#audience-size}
 
@@ -176,6 +177,14 @@ Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didasca
 Un modello di apprendimento automatico genera automaticamente informazioni sui dati analizzando la distribuzione complessiva e le dimensioni chiave dei dati.
 
 Per saperne di più sulle identità, visita il [Documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+
+### Attivazioni pianificate {#scheduled-activations}
+
+La [!UICONTROL Attivazioni pianificate] widget fornisce una visualizzazione tabularizzata delle destinazioni attivate più di recente. La tabella include la piattaforma di destinazione, il nome del flusso di attivazione a questa destinazione e la data di inizio e di fine dell’attivazione per il segmento selezionato. Se non è stata fornita una data di fine per l’attivazione, viene visualizzato come [!UICONTROL In corso]. Il segmento da analizzare viene selezionato dal menu a discesa nella parte superiore della pagina.
+
+Il widget consente di scoprire subito dove e quando il pubblico viene attivato e rende più trasparenti le attivazioni duplicate o non necessarie. Queste informazioni accumulate evidenziano anche dove sono state escluse eventuali attivazioni.
+
+![Il widget delle attivazioni pianificate.](../images/segments/scheduled-activations.png)
 
 ## Passaggi successivi
 
