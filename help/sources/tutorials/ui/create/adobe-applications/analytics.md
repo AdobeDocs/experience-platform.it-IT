@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente Adobe Analytics nell’interfaccia utente [!DNL Analytics] Trasferisci i dati della suite in Adobe Experience Platform.
+Questa esercitazione fornisce passaggi per creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati della suite di rapporti Adobe Analytics in Adobe Experience Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una comprensione approfondita dei seguenti componenti dell&#39;Experience Platform:
 
 * [Sistema Experience Data Model (XDM)](../../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
 * [Profilo cliente in tempo reale](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -30,7 +30,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 È importante comprendere i seguenti termini chiave utilizzati in questo documento:
 
 * **Attributo standard**: Gli attributi standard sono tutti gli attributi predefiniti di Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nel [!DNL Analytics] dati di origine e [!DNL Analytics] gruppi di campi dello schema.
-* **Attributo personalizzato**: Gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire per il loro utilizzo da suite di rapporti a suite di rapporti. Gli attributi personalizzati includono eVar, prop ed elenchi. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sulle eVar.
+* **Attributo personalizzato**: Gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire per quanto riguarda l’utilizzo da suite di rapporti a suite di rapporti. Gli attributi personalizzati includono eVar, prop ed elenchi. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sulle eVar.
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: Gli attributi che provengono da gruppi di campi creati dai clienti sono tutti definiti dall’utente e non sono considerati attributi standard o personalizzati.
 * **Nomi descrittivi**: I nomi descrittivi sono etichette fornite dall&#39;utente per variabili personalizzate in un [!DNL Analytics] implementazione. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sui nomi descrittivi.
 
@@ -48,13 +48,17 @@ Sotto la **[!UICONTROL Applicazioni di Adobe]** categoria, seleziona **[!UICONTR
 
 La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** fornisce un elenco di [!DNL Analytics] i dati della suite di rapporti con cui creare una connessione sorgente.
 
-È possibile acquisire una suite di rapporti utilizzando un solo flusso di dati attivo. Non può essere utilizzato in più flussi di dati. Inoltre, una suite di rapporti deve appartenere alla stessa area dell’istanza sandbox di Platform in cui viene creata la connessione sorgente. È già stata assimilata una suite di rapporti non selezionabile, in questa sandbox o in un’altra sandbox.
+Una suite di rapporti è un contenitore di dati che costituisce la base di [!DNL Analytics] rapporti. Un&#39;organizzazione può avere molte suite di rapporti, ciascuna contenente set di dati diversi.
+
+È possibile acquisire suite di rapporti da qualsiasi regione (Stati Uniti, Regno Unito o Singapore) purché siano mappate nella stessa organizzazione dell’istanza sandbox di Experience Platform in cui viene creata la connessione sorgente. È possibile acquisire una suite di rapporti utilizzando un solo flusso di dati attivo. Una suite di rapporti non selezionabile è già stata assimilata, nella sandbox che stai utilizzando o in un’altra sandbox.
 
 È possibile creare più connessioni in-bound per inserire più suite di rapporti nella stessa sandbox. Se le suite di rapporti hanno schemi diversi per le variabili (ad esempio eVar o eventi), devono essere mappate a campi specifici nei gruppi di campi personalizzati ed evitare conflitti di dati utilizzando [Preparazione dei dati](../../../../../data-prep/ui/mapping.md). Le suite di rapporti possono essere aggiunte a un solo sandbox.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->I dati provenienti da più suite di rapporti possono essere abilitati per Profilo dati cliente in tempo reale solo se non ci sono conflitti di dati, come due proprietà personalizzate (eVar, elenchi e proprietà) che hanno un significato diverso, non possono essere mappati sullo stesso attributo in XDM.
+>I dati provenienti da più suite di rapporti possono essere abilitati per Profilo dati cliente in tempo reale solo se non sono presenti conflitti di dati, ad esempio due proprietà personalizzate (eVar, elenchi e proprietà) che hanno un significato diverso.
 
 Per creare un [!DNL Analytics] connessione sorgente, seleziona una suite di rapporti e seleziona **[!UICONTROL Successivo]** per procedere.
 

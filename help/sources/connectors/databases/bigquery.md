@@ -5,18 +5,14 @@ title: Panoramica del connettore sorgente BigQuery Google
 topic-legacy: overview
 description: Scopri come collegare Google BigQuery a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Google BigQuery] connettore
-
->[!NOTE]
->
->La [!DNL Google BigQuery] è in versione beta. Consulta la sezione [Panoramica delle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
@@ -40,6 +36,7 @@ Connessione [!DNL Google BigQuery] in Platform, devi generare valori per le segu
 | `clientID` | L&#39;ID cliente è la metà del tuo [!DNL Google BigQuery] Credenziali OAuth 2.0. |
 | `clientSecret` | Il segreto cliente è l&#39;altra metà del tuo [!DNL Google BigQuery] Credenziali OAuth 2.0. |
 | `refreshToken` | Il token di aggiornamento ti consente di ottenere nuovi token di accesso per la tua API. I token di accesso hanno una durata limitata e possono scadere nel corso del progetto. Puoi utilizzare il token di aggiornamento per l’autenticazione e richiedere token di accesso successivi per il progetto, se necessario. |
+| `largeResultsDataSetId` | Il pre-creato  [!DNL Google BigQuery] ID set di dati necessario per abilitare il supporto per set di risultati di grandi dimensioni. |
 
 Per istruzioni dettagliate su come generare le credenziali OAuth 2.0 per [!DNL Google] API, vedi quanto segue [[!DNL Google] Guida all’autenticazione di OAuth 2.0](https://developers.google.com/identity/protocols/oauth2).
 
