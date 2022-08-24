@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -292,23 +292,26 @@ ht-degree: 11%
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
    - [Iscriviti agli avvisi di origine](tutorials/ui/alerts.md)
-- SDK per sorgenti {#sdk}
+- Sorgenti self-service (SDK batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
-   - [Opzioni di configurazione](sources-sdk/config/config.md)
-   - [Configurare le specifiche di autenticazione](sources-sdk/config/authspec.md)
-   - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
-   - [Configurare la specifica di esplorazione](sources-sdk/config/explorespec.md)
-   - [Panoramica dell’API SDK per origini](sources-sdk/api/api-overview.md)
-   - [Introduzione](sources-sdk/api/getting-started.md)
-   - [Creare una specifica di connessione](sources-sdk/api/create.md)
-   - [Aggiornare una specifica di connessione](sources-sdk/api/update-connection-specs.md)
-   - [Aggiornare una specifica di flusso](sources-sdk/api/update-flow-specs.md)
-   - [Invia l&#39;origine](sources-sdk/api/submit.md)
-   - [Documentare la fonte in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-   - [Utilizza l’interfaccia web GitHub per creare una pagina di documentazione sulle sorgenti](sources-sdk/documentation/github.md)
-   - [Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini](sources-sdk/documentation/text-editor.md)
-   - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
-   - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
+   - Configurare le specifiche di connessione {#config}
+      - [Opzioni di configurazione](sources-sdk/config/config.md)
+      - [Configurare le specifiche di autenticazione](sources-sdk/config/authspec.md)
+      - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
+      - [Configurare la specifica di esplorazione](sources-sdk/config/explorespec.md)
+   - Guida all’API di Origini self-service (SDK per batch) {#self-serve-api}
+      - [Panoramica API di Origini self-service (SDK per batch)](sources-sdk/api/api-overview.md)
+      - [Introduzione](sources-sdk/api/getting-started.md)
+      - [Creare una specifica di connessione](sources-sdk/api/create.md)
+      - [Aggiornare una specifica di connessione](sources-sdk/api/update-connection-specs.md)
+      - [Aggiornare una specifica di flusso](sources-sdk/api/update-flow-specs.md)
+      - [Invia l&#39;origine](sources-sdk/api/submit.md)
+   - Guida alla documentazione {#documentation}
+      - [Documentare la fonte in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Utilizza l’interfaccia web GitHub per creare una pagina di documentazione sulle sorgenti](sources-sdk/documentation/github.md)
+      - [Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini](sources-sdk/documentation/text-editor.md)
+      - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
+      - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)

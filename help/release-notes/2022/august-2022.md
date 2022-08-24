@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2022
 description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
+source-git-commit: 30aa5db39d63c238a3f70e48f6a88e8885b1f3ee
 workflow-type: tm+mt
-source-wordcount: '1811'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +15,10 @@ ht-degree: 6%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
-
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Preparazione dei dati](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Profilo cliente in tempo reale](#profile)
 - [Servizio di segmentazione](#segmentation)
@@ -35,7 +36,7 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <li> Attribution AI supporta ora la definizione dei ruoli utente e dei criteri di accesso per la gestione [permissions](../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li> <li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette.Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici corrispondenti a tali campi.</li> <li>[Igiene dei dati](../../help/hygiene/home.md) le funzionalità di Attribution AI ti consentono di utilizzare solo dati aggiornati per ulteriore formazione e valutazione. Allo stesso modo, quando si richiede di eliminare i dati, Attribution AI rifiuta di utilizzare i dati eliminati.</li><li>Attribution AI sfrutta i set di dati di Platform. Per facilitare la conformità ai requisiti RGPD, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accedere e cancellare i loro dati dal data lake, dal servizio Identity e dal profilo cliente in tempo reale. Tutti i dati sono crittografati in transito e a riposo.</li> |
+| Supporto per la privacy | <li>Attribution AI supporta ora la definizione dei ruoli utente e dei criteri di accesso per la gestione [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto.</li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li>Attraverso [controllo dell&#39;accesso basato sugli attributi](../../../help/access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette.Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>[Igiene dei dati](../../../help/hygiene/home.md) le funzionalità di Attribution AI ti consentono di utilizzare solo dati aggiornati per ulteriore formazione e valutazione. Allo stesso modo, quando si richiede di eliminare i dati, Attribution AI rifiuta di utilizzare i dati eliminati.</li><li>Attribution AI sfrutta i set di dati di Platform. Per facilitare la conformità ai requisiti RGPD, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accedere e cancellare i loro dati dal data lake, dal servizio Identity e dal profilo cliente in tempo reale. Tutti i dati sono crittografati in transito e a riposo.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +52,7 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <li> Customer AI supporta ora la definizione di ruoli utente e di criteri di accesso da gestire [permissions](../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li> <li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.</li> <li>[Igiene dei dati](../../help/hygiene/home.md) Le funzionalità di Customer AI consentono di utilizzare solo dati aggiornati per ulteriori formazione e valutazioni. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.</li><li>Customer AI sfrutta i set di dati di Platform. Per facilitare la conformità ai requisiti RGPD, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accedere e cancellare i loro dati dal data lake, dal servizio Identity e dal profilo cliente in tempo reale. Tutti i dati sono crittografati in transito e a riposo.</li> |
+| Supporto per la privacy | <li>Customer AI supporta ora la definizione di ruoli utente e di criteri di accesso da gestire [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto.</li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>[Igiene dei dati](../../../help/hygiene/home.md) Le funzionalità di Customer AI consentono di utilizzare solo dati aggiornati per ulteriori formazione e valutazioni. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.</li><li>Customer AI sfrutta i set di dati di Platform. Per facilitare la conformità ai requisiti RGPD, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accedere e cancellare i loro dati dal data lake, dal servizio Identity e dal profilo cliente in tempo reale. Tutti i dati sono crittografati in transito e a riposo.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,6 +85,32 @@ Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoram
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Nuove destinazioni**
+
+| Destinazione | Descrizione |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) è una piattaforma di esecuzione delle vendite con i dati di interazione tra buyer e venditori B2B più diffusi al mondo e importanti investimenti in tecnologie di intelligenza artificiale proprietaria per tradurre i dati di vendita in informazioni. [!DNL Outreach] consente alle organizzazioni di automatizzare l&#39;impegno di vendita e di agire sulla base dell&#39;intelligenza dei ricavi per migliorare l&#39;efficienza, la prevedibilità e la crescita. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -123,6 +150,7 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 
 | Funzione | Descrizione |
 | ------- | ----------- |
+| Limite rigido dei criteri di unione | Platform applicherà ora un limite rigido di **cinque** unione di criteri per sandbox. Se la sandbox dispone attualmente di più di cinque criteri di unione, verrà **not** è possibile creare nuovi criteri di unione fino a quando la sandbox non dispone di meno di cinque criteri di unione. |
 | Pulizia attributo edge del profilo orfano | Per tutte le organizzazioni, il servizio di profilo ora rimuove quotidianamente gli attributi edge rimanenti dell’area di attività dell’utente per fornire una rappresentazione più accurata dei profili nel sistema. Questa pulizia si verifica dopo l’eliminazione di tutti i frammenti di profilo per un determinato profilo e dovrebbe influenzare i profili che vengono uniti dai set di dati in cui `com_adobe_aep_profile_region_dataset` è contrassegnato come `true`. Questo può mostrare un calo nella metrica &quot;Pubblico di riferimento&quot; nel dashboard dell’utilizzo della licenza e può mostrare un calo nella metrica &quot;Conteggio profili&quot; nel dashboard del profilo, poiché queste metriche includevano frammenti di attributi di margine residuo prima di questa versione. |
 
 {style=&quot;table-layout:auto&quot;}
