@@ -6,8 +6,8 @@ user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette
 feature: Sources
 source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '820'
+ht-degree: 11%
 
 ---
 
