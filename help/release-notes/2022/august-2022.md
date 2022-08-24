@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2022
 description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
-source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
+source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '1246'
 ht-degree: 6%
 
 ---
@@ -16,6 +16,8 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Preparazione dei dati](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
+- [Profilo cliente in tempo reale](#profile)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -63,6 +65,30 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+
+## Profilo cliente in tempo reale {#profile}
+
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Pulizia attributo edge del profilo orfano | Per tutte le organizzazioni, il servizio di profilo ora rimuove quotidianamente gli attributi edge rimanenti dell’area di attività dell’utente per fornire una rappresentazione più accurata dei profili nel sistema. Questa pulizia si verifica dopo l’eliminazione di tutti i frammenti di profilo per un determinato profilo e dovrebbe influenzare i profili che vengono uniti dai set di dati in cui `com_adobe_aep_profile_region_dataset` è contrassegnato come `true`. Questo può mostrare un calo nella metrica &quot;Pubblico di riferimento&quot; nel dashboard dell’utilizzo della licenza e può mostrare un calo nella metrica &quot;Conteggio profili&quot; nel dashboard del profilo, poiché queste metriche includevano frammenti di attributi di margine residuo prima di questa versione. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati del profilo, consulta la sezione [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+
+## Servizio di segmentazione {#segmentation}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto per 4000 segmenti | Tutte le organizzazioni con Platform ora possono supportare fino a 4000 definizioni di segmenti. Per ulteriori informazioni su come questa modifica influisce sulle API dei processi di segmento, consulta la sezione [guida all’endpoint del processo del segmento](../../segmentation/api/segment-jobs.md) |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
