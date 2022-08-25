@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2705'
+ht-degree: 1%
 
 ---
 
@@ -262,7 +262,7 @@ Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]**
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
 
-### Controllo dell’accesso basato su attributi
+## Controllo dell’accesso basato su attributi
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ A causa del controllo degli accessi basato sugli attributi, alcuni campi e funzi
 
 Nella parte superiore dell’area di lavoro Attribution AI **pagina approfondimenti**, i dettagli visualizzati nella barra laterale hanno accesso limitato.
 
-![Area di lavoro Attribution AI con i campi con restrizioni dello schema evidenziato.](./images/user-guide/access-restricted.png)
+![Area di lavoro Attribution AI con i campi dello schema limitati evidenziati.](./images/user-guide/access-restricted.png)
 
 Se selezioni set di dati con schemi limitati nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** accanto al nome del set di dati viene visualizzato un avviso con il messaggio: [!UICONTROL Sono escluse le informazioni limitate].
 
-![L’area di lavoro Attribution AI con i campi con restrizioni dei set di dati selezionati con i risultati degli schemi con restrizioni evidenziati.](./images/user-guide/restricted-info-excluded.png)
+![Area di lavoro Attribution AI con i campi set di dati limitati evidenziati.](./images/user-guide/restricted-info-excluded.png)
 
 Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** viene visualizzato un avviso che informa che [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nell’anteprima del set di dati.]
 
-![L&#39;area di lavoro Attribution AI con i campi con restrizioni dei risultati dello schema visualizzato in anteprima è evidenziata.](./images/user-guide/restricted-dataset-preview.png)
+![Risultati evidenziati nell’area di lavoro di Attribution AI con i campi dello schema con anteprima limitata.](./images/user-guide/restricted-dataset-preview.png)
 
 Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
 

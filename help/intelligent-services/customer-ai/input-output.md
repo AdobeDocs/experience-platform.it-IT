@@ -6,9 +6,9 @@ title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3154'
 ht-degree: 0%
 
 ---
@@ -286,7 +286,6 @@ La tabella seguente descrive i vari attributi trovati nell’output di Customer 
 
 >[!NOTE]
 >
-> - Customer AI utilizza solo dati aggiornati per ulteriore formazione e valutazione. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.
 > - Per facilitare la conformità ai requisiti RGPD in Customer AI, puoi utilizzare Adobe Experience Platform Privacy Service per configurare i protocolli per soddisfare le richieste dei clienti di accesso ed eliminazione dei loro dati nel data lake, nel servizio Identity e nel profilo cliente in tempo reale.
 > - Tutti i dati sono crittografati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md)
 

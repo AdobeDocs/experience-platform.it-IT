@@ -6,7 +6,7 @@ title: Configurare un’istanza di Customer AI
 topic-legacy: Instance creation
 description: I servizi AI/ML forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
 workflow-type: tm+mt
 source-wordcount: '3088'
 ht-degree: 0%
@@ -248,7 +248,7 @@ Se l&#39;istanza viene creata correttamente, un&#39;esecuzione di previsione vie
 
 Seguendo questa sezione, hai configurato un&#39;istanza di Customer AI ed eseguito un&#39;esecuzione di previsione. Al completamento dell’esecuzione, le informazioni con punteggio vengono automaticamente compilate nei profili con punteggi previsti se l’opzione di attivazione del profilo è abilitata. Attendi fino a 24 ore prima di continuare la sezione successiva di questa esercitazione.
 
-### Controllo dell’accesso basato su attributi
+## Controllo dell’accesso basato su attributi
 
 >[!IMPORTANT]
 >
