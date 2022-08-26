@@ -3,9 +3,9 @@ title: Utilizzo di Adobe Analytics con Platform Web SDK
 description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;dati mappati;variabili mappate;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] mappa automaticamente molte variab
 
 ## Dati mappati manualmente
 
-È possibile accedere a qualsiasi dato non mappato automaticamente dalla rete perimetrale tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
+Qualsiasi dato non mappato automaticamente dal [!DNL Edge Network] è accessibile tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
 
 Se avevi uno schema simile a questo.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Ecco un esempio di regola di elaborazione che utilizzerebbe questi dati.
 
 ![Interfaccia delle regole di elaborazione](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Con la raccolta Experience Edge, tutti gli eventi vengono inviati ad Analytics e a qualsiasi altro servizio configurato per il tuo datastream. Ad esempio, se hai configurato Analytics e Target come servizi e effettui chiamate separate per la personalizzazione e per Analytics, entrambi gli eventi verranno inviati ad Analytics e a Target. Questi eventi verranno registrati nel reporting di Analytics e possono influenzare metriche come il tasso di mancato recapito.
