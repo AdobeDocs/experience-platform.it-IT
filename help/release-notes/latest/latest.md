@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 7%
+source-wordcount: '2094'
+ht-degree: 6%
 
 ---
 
@@ -90,17 +90,13 @@ Per ulteriori informazioni [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 
-<!--
+**Funzioni nuove o aggiornate**
 
-**New or updated features**
-
-| Feature | Description |
+| Funzione | Descrizione |
 | ----------- | ----------- |
-|  ||
+| (Beta) Supporto della personalizzazione basato su attributi per le destinazioni di personalizzazione | Con il rilascio beta della personalizzazione basata sugli attributi, vedrai due nuove schede nel [catalogo di destinazione](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda Adobe Target V1, il connettore Target V2 aggiunge un [fase di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi di profilo in Adobe Target, abilitando la personalizzazione basata sugli attributi nella stessa pagina e nella pagina successiva.</li><li>**[!UICONTROL Personalizzazione Personalizzata Con Attributi]**: Questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla **[!UICONTROL Personalizzazione personalizzata]**, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore aggiunge un [fase di mappatura](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi di profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione basata su attributi per la stessa pagina e la pagina successiva.</li></ul> <br> Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** per la destinazione è necessario utilizzare [API server di rete Edge](../../server-api/overview.md) per la raccolta dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **Nuove destinazioni**
 
