@@ -3,14 +3,33 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazioni esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare le informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale basata sull’appartenenza al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # Connessione di personalizzazione personalizzata {#custom-personalization-connection}
+
+## Passaggio alla destinazione {#changelog}
+
+Con il rilascio beta del **[!UICONTROL Personalizzazione personalizzata]** connettore di destinazione, potrebbero essere presenti due **[!UICONTROL Personalizzazione personalizzata]** nel catalogo delle destinazioni.
+
+La **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** al momento il connettore è in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla **[!UICONTROL Personalizzazione personalizzata]**, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore aggiunge un [fase di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi di profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione basata su attributi per la stessa pagina e la pagina successiva.
+
+>[!IMPORTANT]
+>
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** per la destinazione è necessario utilizzare [API server di rete Edge](/help/server-api/overview.md) per la raccolta dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
+>
+>Se per l’integrazione utilizzi già l’SDK per web o Mobile, puoi recuperare gli attributi tramite l’API server in due modi:
+>
+> * Aggiungi un’integrazione lato server che recupera gli attributi tramite l’API server.
+> * Aggiorna la configurazione lato client con un codice JavaScript personalizzato per recuperare gli attributi tramite l&#39;API server.
+>
+> Se non segui i requisiti di cui sopra, la personalizzazione si baserà solo sull’appartenenza al segmento, identica all’esperienza offerta dal **[!UICONTROL Personalizzazione personalizzata]** connettore.
+
+![Immagine delle due schede di destinazione Personalizzazione personalizzata in visualizzazione affiancata.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Panoramica {#overview}
 
@@ -30,7 +49,7 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 ## Casi d’uso {#use-cases}
 
-La [!DNL Custom personalization connection] consente di utilizzare piattaforme partner per la personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), sfruttando anche le funzionalità di raccolta e segmentazione dei dati di Experience Platform Edge Network, per migliorare l’esperienza di personalizzazione dei clienti.
+La [!DNL Custom Personalization Connection] consente di utilizzare piattaforme partner per la personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché i sistemi proprietari (ad esempio, CMS interno), sfruttando al contempo le funzionalità di raccolta e segmentazione dei dati di Experience Platform Edge Network, per fornire ai clienti un’esperienza di personalizzazione più approfondita.
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata sul sito.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Risposta di esempio per [!UICONTROL Personalizzazione Personalizzata Con Attributi]
+
+Quando utilizzi **[!UICONTROL Personalizzazione Personalizzata Con Attributi]**, la risposta API sarà simile a quella riportata di seguito.
+
+La differenza tra **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** e **[!UICONTROL Personalizzazione personalizzata]** è l&#39;inclusione della `attributes` nella risposta API.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Utilizzo e governance dei dati {#data-usage-governance}
 

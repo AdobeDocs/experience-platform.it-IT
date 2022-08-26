@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo
 type: Tutorial
 description: Scopri come attivare i dati sul pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di richiesta del profilo.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i dati del pubblico nelle destinazioni di richiesta del profilo Adobe Experience Platform. Esempi di destinazioni di richieste di profilo sono le [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) connessioni.
+Questo articolo spiega il flusso di lavoro necessario per attivare i dati del pubblico nelle destinazioni di richiesta del profilo Adobe Experience Platform. Se utilizzati insieme con [segmentazione dei bordi](../../segmentation/ui/edge-segmentation.md), queste destinazioni abilitano casi d’uso per la personalizzazione della stessa pagina e della pagina successiva sulle proprietà web. Ulteriori informazioni [abilitare i casi d’uso per la personalizzazione tra pagine e pagine successive](/help/destinations/ui/configure-personalization-destinations.md).
+
+Esempi di destinazioni di richieste di profilo sono le [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) connessioni.
 
 ## Prerequisiti {#prerequisites}
 
-Per attivare i dati nelle destinazioni, è necessario aver completato l&#39;operazione [connesso a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai alla [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+Per attivare i dati nelle destinazioni, è necessario aver completato l&#39;operazione [connesso a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai alla [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni di personalizzazione supportate e configura la destinazione che desideri utilizzare.
 
 ### Criterio di unione dei segmenti {#merge-policy}
 
@@ -35,7 +37,7 @@ Attualmente, le destinazioni di richiesta del profilo supportano solo l’attiva
 
    ![Scheda Catalogo di destinazione](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attivare i segmenti]** sulla scheda corrispondente alla destinazione in cui desideri attivare i segmenti, come illustrato di seguito.
+1. Seleziona **[!UICONTROL Attivare i segmenti]** sulla scheda corrispondente alla destinazione di personalizzazione in cui desideri attivare i segmenti, come illustrato di seguito.
 
    ![Pulsanti Attiva](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ Attualmente, le destinazioni di richiesta del profilo supportano solo l’attiva
 Utilizza le caselle di controllo a sinistra dei nomi dei segmenti per selezionare i segmenti che desideri attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
 
 ![Selezionare segmenti](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## (Beta) Mappatura attributi {#map-attributes}
+
+>[!IMPORTANT]
+>
+>La fase di mappatura, che abilita la personalizzazione basata sugli attributi per [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [destinazioni di personalizzazione generiche](/help/destinations/catalog/personalization/custom-personalization.md), è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. Questa documentazione è soggetta a modifiche.
+
+Seleziona gli attributi in base ai quali desideri abilitare i casi di utilizzo della personalizzazione per gli utenti. Ciò significa che se il valore di un attributo cambia o se viene aggiunto un attributo a un profilo, quel profilo diventerà membro del segmento e verrà attivato nella destinazione di personalizzazione.
+
+L’aggiunta di attributi è facoltativa e puoi comunque procedere al passaggio successivo e abilitare la personalizzazione della stessa pagina e della pagina successiva senza selezionare gli attributi. Se non aggiungi attributi in questo passaggio, la personalizzazione si verificherà comunque in base alle qualifiche di appartenenza del segmento e di mappa di identità per i profili.
+
+![Immagine che mostra la fase di mappatura con un attributo selezionato](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+Per aggiungere attributi, seleziona la **[!UICONTROL Aggiungi nuovo campo]** controlla e cerca o passa al campo dell’attributo XDM desiderato, come mostrato di seguito.
+
+![Registrazione su schermo che mostra come selezionare un attributo XDM nella fase di mappatura](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## Esportazione di segmenti programmata {#scheduling}
 
