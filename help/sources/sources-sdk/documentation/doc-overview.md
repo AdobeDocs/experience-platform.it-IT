@@ -5,7 +5,7 @@ title: Documentare la tua origine
 topic-legacy: overview
 description: Il passaggio finale prima che la nuova sorgente possa essere resa attiva in Adobe Experience Platform è quello di documentare la nuova sorgente.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Per creare una documentazione di alto livello per la sorgente, devi creare un fo
 
 Puoi anche scaricare i modelli di documentazione seguenti:
 
-* [Modello di documentazione API](../assets/template.zip)
+* [Modello di documentazione API](../assets/api-template.zip)
 * [Modello di documentazione dell’interfaccia utente](../assets/ui-template.zip)
 
 ## Creare la nuova pagina sorgente
