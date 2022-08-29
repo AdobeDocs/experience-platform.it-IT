@@ -2,10 +2,10 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 2%
+source-wordcount: '517'
+ht-degree: 1%
 
 ---
 
@@ -49,6 +49,11 @@ Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/
 {style=&quot;table-layout:auto&quot;}
 
 ## Visualizza i dettagli di un ordine di lavorazione
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="Stato per servizio"
+>abstract="Le richieste di igiene dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. In questa sezione viene illustrato lo stato di elaborazione corrente della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 
