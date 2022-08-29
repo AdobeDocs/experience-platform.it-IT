@@ -4,10 +4,10 @@ title: Configurare le specifiche di autenticazione per le origini self-service (
 topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '525'
+ht-degree: 2%
 
 ---
 
@@ -105,7 +105,6 @@ Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazio
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazio
 
 ### Autenticazione di base
 
-L&#39;autenticazione di base è un tipo di autenticazione che consente di accedere all&#39;applicazione utilizzando una combinazione dell&#39;URL host dell&#39;applicazione, del nome utente dell&#39;account e della password dell&#39;account.
+L&#39;autenticazione di base è un tipo di autenticazione che consente di accedere all&#39;applicazione utilizzando una combinazione del nome utente dell&#39;account e della password dell&#39;account.
 
 ```json
 {
@@ -148,10 +147,6 @@ L&#39;autenticazione di base è un tipo di autenticazione che consente di accede
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ L&#39;autenticazione di base è un tipo di autenticazione che consente di accede
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ L&#39;autenticazione di base è un tipo di autenticazione che consente di accede
 | `authSpec.spec.type` | Definisce il tipo di dati dello schema. | `object` |
 | `authSpec.spec.description` | Visualizza ulteriori informazioni specifiche per il tipo di autenticazione. |
 | `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l&#39;autenticazione. |
-| `authSpec.spec.properties.host` | L&#39;URL host dell&#39;applicazione. |
 | `authSpec.spec.properties.username` | Il nome utente dell&#39;account associato all&#39;applicazione. |
 | `authSpec.spec.properties.password` | La password dell&#39;account associata all&#39;applicazione. |
-| `authSpec.spec.required` | Specifica i campi richiesti come valori obbligatori da inserire in Platform. | `host` |
+| `authSpec.spec.required` | Specifica i campi richiesti come valori obbligatori da inserire in Platform. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]

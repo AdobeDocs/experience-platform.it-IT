@@ -4,7 +4,7 @@ title: Configurare le specifiche di origine per le origini self-service (SDK bat
 topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 1%
@@ -48,7 +48,8 @@ Consulta la sezione [appendice](#source-spec) per un esempio di specifica di ori
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -69,6 +70,7 @@ Consulta la sezione [appendice](#source-spec) per un esempio di specifica di ori
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -336,6 +338,7 @@ Di seguito è riportata una specifica di origine completata utilizzando [!DNL Ma
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },
