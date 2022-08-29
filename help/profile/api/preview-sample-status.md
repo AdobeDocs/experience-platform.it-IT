@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;anteprima;esempio
 title: Endpoint API di anteprima dello stato del campione (anteprima profilo)
-description: Utilizzando l’endpoint di stato di esempio di anteprima, parte dell’API Profilo cliente in tempo reale, puoi visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, elencare la distribuzione del profilo per set di dati e per identità e generare rapporti che mostrano sovrapposizione di set di dati, sovrapposizione di identità e profili sconosciuti.
+description: L’endpoint di stato di esempio dell’anteprima dell’API del profilo cliente in tempo reale consente di visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano sovrapposizione di set di dati, sovrapposizione di identità e profili non uniti.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 1%
 
 ---
@@ -465,25 +465,25 @@ Questo rapporto fornisce le seguenti informazioni:
 * Sono disponibili 24 profili composti da `AAID` e `ECID` spazi dei nomi delle identità.
 * Esistono 6.565 profili che includono solo un `ECID` identità.
 
-## Genera il report dei profili sconosciuti
+## Generare il rapporto sui profili non uniti
 
-Puoi ottenere un’ulteriore visibilità nella composizione dell’archivio profili dell’organizzazione tramite il rapporto dei profili sconosciuti. Un &quot;profilo sconosciuto&quot; si riferisce a qualsiasi profilo inattivo o non vincolato per un determinato periodo di tempo. Un profilo &quot;unstitched&quot; è un profilo che contiene un solo frammento di profilo, mentre un profilo &quot;inattivo&quot; è qualsiasi profilo che non ha aggiunto nuovi eventi per il periodo di tempo specificato. Il rapporto dei profili sconosciuti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
+Puoi ottenere un’ulteriore visibilità nella composizione dell’archivio profili dell’organizzazione tramite il rapporto dei profili non uniti. Un profilo &quot;unstitched&quot; è un profilo che contiene un solo frammento di profilo. Un profilo &quot;sconosciuto&quot; è un profilo associato a spazi dei nomi di identità pseudonimi, ad esempio `ECID` e `AAID`. I profili sconosciuti sono inattivi, il che significa che non hanno aggiunto nuovi eventi per il periodo di tempo specificato. Il rapporto dei profili non uniti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
 
-Puoi generare il rapporto sui profili sconosciuti effettuando una richiesta di GET al `/previewsamplestatus/report/unknownProfiles` punto finale.
+Puoi generare il rapporto dei profili non uniti eseguendo una richiesta di GET al `/previewsamplestatus/report/unstitchedProfiles` punto finale.
 
 **Formato API**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Richiesta**
 
-La richiesta seguente restituisce il report dei profili sconosciuti.
+La richiesta seguente restituisce il rapporto dei profili non uniti.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Risposta**
 
-Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto dei profili sconosciuti.
+Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto dei profili non uniti.
 
 >[!NOTE]
 >
->Ai fini della presente guida, il rapporto è stato troncato per includere solo `"120days"` e &quot;`7days`&quot; periodi di tempo. Il rapporto completo sui profili sconosciuti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
+>Ai fini della presente guida, il rapporto è stato troncato per includere solo `"120days"` e &quot;`7days`&quot; periodi di tempo. Il rapporto completo sui profili non uniti fornisce una suddivisione dei profili per un periodo di 7, 30, 60, 90 e 120 giorni.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto dei prof
 
 | Proprietà | Descrizione |
 |---|---|
-| `data` | La `data` l&#39;oggetto contiene le informazioni restituite per il report dei profili sconosciuti. |
-| `totalNumberOfProfiles` | Numero totale di profili univoci nell’archivio profili. Equivale al conteggio del pubblico indirizzabile. Include profili noti e sconosciuti. |
+| `data` | La `data` l&#39;oggetto contiene le informazioni restituite per il rapporto dei profili non uniti. |
+| `totalNumberOfProfiles` | Numero totale di profili univoci nell’archivio profili. Equivale al conteggio del pubblico indirizzabile. Include profili noti e non uniti. |
 | `totalNumberOfEvents` | Numero totale di ExperienceEvents nell’archivio profili. |
-| `unknownProfiles` | Un oggetto contenente un raggruppamento di profili sconosciuti (non uniti e inattivi) per periodo di tempo. Il rapporto dei profili sconosciuti fornisce una suddivisione dei profili per periodi di tempo di 7, 30, 60, 90 e 120 giorni. |
-| `countOfProfiles` | Il conteggio dei profili sconosciuti per il periodo di tempo o il conteggio dei profili sconosciuti per lo spazio dei nomi. |
+| `unstitchedProfiles` | Un oggetto contenente una suddivisione dei profili non uniti per periodo di tempo. Il rapporto dei profili non uniti fornisce una suddivisione dei profili per periodi di tempo di 7, 30, 60, 90 e 120 giorni. |
+| `countOfProfiles` | Il conteggio dei profili non uniti per il periodo di tempo o il conteggio dei profili non uniti per lo spazio dei nomi. |
 | `eventsAssociated` | Il numero di ExperienceEvents per l&#39;intervallo di tempo o il numero di eventi per lo spazio dei nomi. |
-| `nsDistribution` | Un oggetto contenente singoli namespace di identità con la distribuzione di profili ed eventi sconosciuti per ogni namespace. Nota: Aggiunta insieme del totale `countOfProfiles` per ogni namespace di identità nel `nsDistribution` è uguale a `countOfProfiles` per il periodo di tempo. Lo stesso vale per `eventsAssociated` per namespace e totale `eventsAssociated` per periodo di tempo. |
+| `nsDistribution` | Un oggetto contenente singoli namespace di identità con la distribuzione di profili ed eventi non uniti per ogni namespace. Nota: Aggiunta insieme del totale `countOfProfiles` per ogni namespace di identità nel `nsDistribution` è uguale a `countOfProfiles` per il periodo di tempo. Lo stesso vale per `eventsAssociated` per namespace e totale `eventsAssociated` per periodo di tempo. |
 | `reportTimestamp` | La marca temporale del rapporto. |
 
-### Interpretazione del rapporto sui profili sconosciuti
+### Interpretazione del rapporto dei profili non uniti
 
 I risultati del rapporto possono fornire informazioni sul numero di profili inattivi e non uniti di cui dispone l’organizzazione all’interno del relativo archivio profili.
 
@@ -586,9 +586,9 @@ Prendi in considerazione il seguente estratto dal `data` oggetto:
 Questo rapporto fornisce le seguenti informazioni:
 
 * Esistono 1.782 profili che contengono un solo frammento di profilo e non hanno nuovi eventi negli ultimi sette giorni.
-* Sono presenti 29.151 ExperienceEvents associati ai 1.782 profili sconosciuti.
-* Sono presenti 1.734 profili sconosciuti che contengono un singolo frammento di profilo dallo spazio dei nomi identità di ECID.
-* Sono presenti 28.591 eventi associati ai 1.734 profili sconosciuti che contengono un singolo frammento di profilo dallo spazio dei nomi identità di ECID.
+* Sono presenti 29.151 ExperienceEvents associati ai 1.782 profili non uniti.
+* Esistono 1.734 profili non uniti contenenti un singolo frammento di profilo dallo spazio dei nomi identità di ECID.
+* Sono presenti 28.591 eventi associati ai 1.734 profili non uniti che contengono un singolo frammento di profilo dallo spazio dei nomi identità di ECID.
 
 ## Passaggi successivi
 
