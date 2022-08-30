@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,10 @@ Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [Panor
 Il dashboard seleziona automaticamente un segmento da visualizzare, tuttavia puoi modificare il segmento utilizzando il menu a discesa o il selettore di segmenti.
 
 Per scegliere un segmento diverso, seleziona il menu a discesa accanto al nome del segmento o utilizza il selettore del segmento per aprire la finestra di dialogo di selezione del segmento.
+
+>[!IMPORTANT]
+>
+>Nell’elenco dei segmenti selezionabili vengono visualizzati solo i segmenti con un conteggio di profilo superiore a zero.
 
 ![](../images/segments/change-segment.png)
 
