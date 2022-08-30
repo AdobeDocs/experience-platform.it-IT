@@ -4,9 +4,9 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ Tutte le dimensioni del pubblico nel sistema vengono ordinate da un pubblico di 
 Se il conteggio del profilo mappato del segmento non corrisponde a una deviazione standard rispetto alla dimensione media del profilo mappato negli ultimi 30 giorni, indica un’anomalia nel sistema e deve essere analizzata.
 
 Se un segmento all’interno di [!UICONTROL Stato del pubblico mappato] Il widget si discosta di un ampio margine, fai riferimento al grafico delle tendenze delle dimensioni del pubblico e individua il segmento anomalo. La tendenza può fornire ulteriori informazioni sullo stato di salute del segmento.
+
+>[!NOTE]
+>
+>La dimensione predefinita del widget di stato del pubblico mappato può ostruire le informazioni della tabella. Modifica le dimensioni del widget per migliorare la leggibilità dei nomi dei segmenti e dei titoli delle colonne mappati. Per informazioni su come modificare la documentazione delle dashboard, consulta [come ridimensionare un widget](../customize/modify.md).
 
 ![Il widget di stato del pubblico mappato.](../images/destinations/mapped-audience-health.png)
 
