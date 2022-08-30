@@ -3,10 +3,10 @@ title: Panoramica dei Datastreams
 description: Connetti l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;destinazioni Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;Mapper DM;Mapper sul bordo;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1728'
+ht-degree: 2%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 0%
 Un datastream rappresenta la configurazione lato server quando si implementano gli SDK per web e dispositivi mobili di Adobe Experience Platform. Mentre il [configura, comando](../fundamentals/configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), i datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, la `edgeConfigId` viene utilizzato per fare riferimento al datastream. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
 
 Questo documento descrive i passaggi per la configurazione di un datastream nell’interfaccia utente di raccolta dati.
-
->[!NOTE]
->
->Per poter accedere a questa funzione nell’interfaccia utente, è necessario eseguire il provisioning della tua organizzazione. Completa quanto segue [modulo](https://adobe.ly/websdkaccess) richiedere l&#39;accesso necessario. Per gestire i datastreams, il tuo account utente deve essere aggiunto a un profilo di prodotto per i tag in [!DNL Adobe Experience Platform].
 
 ## Accedere al [!UICONTROL Datastreams] workspace
 
