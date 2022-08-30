@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,37 @@ Per ridurre al minimo il tempo di sviluppo, è consigliabile sviluppare le query
 
 - **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella che desideri `SELECT` da, quindi utilizzare i tasti freccia per passare alla tabella desiderata e premere **Invio**. Una volta selezionata una tabella, la funzione di completamento automatico riconoscerà i campi presenti nella tabella.
 
-![Immagine](../images/ui/query-editor/tables-auto.png)
+![L’interfaccia della riga di comando dell’Editor query che visualizza suggerimenti a discesa.](../images/ui/query-editor/tables-auto.png)
+
+### (Beta) Interruttore automatico di configurazione dell’interfaccia utente {#auto-complete}
+
+>[!IMPORTANT]
+>
+>L’interruttore di configurazione dell’interfaccia utente completa automatica è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+
+La [!DNL Query Editor] suggerisce automaticamente potenziali parole chiave SQL insieme ai dettagli di tabella o colonna per la query durante la scrittura. La funzione di completamento automatico è attivata per impostazione predefinita e può essere disabilitata o abilitata in qualsiasi momento selezionando la [!UICONTROL Completamento automatico sintassi] passa all’Editor query in alto a destra.
+
+L&#39;impostazione di configurazione del completamento automatico è per utente e ricordata per gli accessi consecutivi per quell&#39;utente.
+
+![Editor query con la sintassi auto-complete evidenziata.](../images/ui/query-editor/auto-complete-toggle.png)
+
+La disattivazione di questa funzione impedisce l’elaborazione di diversi comandi di metadati e fornisce consigli che in genere sfruttano la velocità dell’autore durante la modifica delle query.
+
+Quando si utilizza l&#39;interruttore per attivare la funzione di completamento automatico, dopo una breve pausa diventano disponibili suggerimenti consigliati per i nomi di tabella e colonna e per le parole chiave SQL. Un messaggio di successo nella console sotto l’Editor query indica che la funzione è attiva.
+
+Se disattivi la funzione di completamento automatico, è necessario un aggiornamento della pagina per rendere effettiva la funzione. Quando disattivi la finestra di dialogo di conferma, vengono visualizzate tre opzioni [!UICONTROL Completamento automatico sintassi] interruttore :
+
+- [!UICONTROL Annulla]
+- [!UICONTROL Salva modifiche e aggiorna]
+- [!UICONTROL Aggiorna senza salvare le modifiche]
+
+>[!IMPORTANT]
+>
+>Se si scrive o si modifica una query durante la disattivazione di questa funzione, è necessario salvare le modifiche apportate alla query prima di aggiornare la pagina o tutti i progressi andranno persi.
+
+![Finestra di dialogo di conferma per disattivare la funzione di completamento automatico.](../images/ui/query-editor/confirmation-dialog.png)
+
+Selezionare l&#39;opzione appropriata per disattivare la funzione di completamento automatico.
 
 ### Rilevamento degli errori {#error-detection}
 
