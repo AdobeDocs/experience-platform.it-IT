@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di richiesta del profilo
 type: Tutorial
 description: Scopri come attivare i dati sul pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di richiesta del profilo.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,23 @@ L’aggiunta di attributi è facoltativa e puoi comunque procedere al passaggio 
 
 ![Immagine che mostra la fase di mappatura con un attributo selezionato](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-Per aggiungere attributi, seleziona la **[!UICONTROL Aggiungi nuovo campo]** controlla e cerca o passa al campo dell’attributo XDM desiderato, come mostrato di seguito.
+### Selezionare gli attributi di origine {#select-source-attributes}
 
-![Registrazione su schermo che mostra come selezionare un attributo XDM nella fase di mappatura](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+Per aggiungere gli attributi di origine, seleziona la **[!UICONTROL Aggiungi nuovo campo]** sul controllo **[!UICONTROL Campo di origine]** cerca o fai clic sul campo dell’attributo XDM desiderato, come illustrato di seguito.
+
+![Registrazione su schermo che mostra come selezionare un attributo di destinazione nella fase di mappatura](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Selezionare gli attributi di destinazione {#select-target-attributes}
+
+>[!NOTE]
+>
+>Alcune destinazioni richiedono di selezionare solo gli attributi di origine, mentre altre richiedono sia gli attributi di origine che quelli di destinazione.
+>
+>Attualmente, il [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) la destinazione richiede solo gli attributi di origine, mentre [Personalizzazione personalizzata con attributi](../catalog/personalization/custom-personalization.md) richiede gli attributi di origine e di destinazione.
+
+Per aggiungere gli attributi di destinazione, seleziona la **[!UICONTROL Aggiungi nuovo campo]** sul controllo **[!UICONTROL Campo di destinazione]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
+
+![Registrazione su schermo che mostra come selezionare un attributo XDM nella fase di mappatura](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Esportazione di segmenti programmata {#scheduling}
 
