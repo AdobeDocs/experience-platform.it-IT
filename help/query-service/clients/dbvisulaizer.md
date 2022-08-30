@@ -5,9 +5,9 @@ title: Collegare DbVisualizer al servizio query
 topic-legacy: connect
 description: Questo documento illustra i passaggi necessari per la connessione di DbVisualizer con Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
+source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -40,12 +40,13 @@ Dall&#39;area di lavoro Connessione database, selezionare la **[!DNL Properties]
 
 ![Area di lavoro Connessione al database con la scheda delle proprietà evidenziata.](../images/clients/dbvisualizer/driver-properties.png)
 
-Le tre proprietà necessarie del driver sono riportate nella tabella seguente.
+Per abilitare l’utilizzo di SSL con DBVisualizer, si consiglia di utilizzare le proprietà del driver riportate nella tabella seguente.
 
 | Proprietà | Descrizione |
 | ------ | ------ |
 | `PGHOST` | Nome host per [!DNL PostgreSQL] server. Questo valore è il tuo Experience Platform [!UICONTROL Host] credenziale. |
-| `SSL` | Questo controlla l’utilizzo dei requisiti SSL. You **deve** utilizza il valore `require` per abilitare questo requisito. |
+| `ssl` | Definire il valore SSL `1` per abilitare l’utilizzo di SSL. |
+| `sslmode` | Questo controlla l’utilizzo dei requisiti SSL. You **deve** utilizza il valore `require` per abilitare questo requisito. |
 | `user` | Il nome utente connesso al database è il tuo ID organizzazione. È una stringa alfanumerica che termina in `@adobe.org` |
 
 >[!IMPORTANT]

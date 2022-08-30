@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
+source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -64,11 +64,7 @@ Per ridurre al minimo il tempo di sviluppo, è consigliabile sviluppare le query
 
 ![L’interfaccia della riga di comando dell’Editor query che visualizza suggerimenti a discesa.](../images/ui/query-editor/tables-auto.png)
 
-### (Beta) Interruttore automatico di configurazione dell’interfaccia utente {#auto-complete}
-
->[!IMPORTANT]
->
->L’interruttore di configurazione dell’interfaccia utente completa automatica è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+### Interruttore di configurazione dell’interfaccia utente con completamento automatico {#auto-complete}
 
 La [!DNL Query Editor] suggerisce automaticamente potenziali parole chiave SQL insieme ai dettagli di tabella o colonna per la query durante la scrittura. La funzione di completamento automatico è attivata per impostazione predefinita e può essere disabilitata o abilitata in qualsiasi momento selezionando la [!UICONTROL Completamento automatico sintassi] passa all’Editor query in alto a destra.
 
