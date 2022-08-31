@@ -2,10 +2,10 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 1%
 
 ---
 
@@ -55,25 +55,29 @@ Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/
 >title="Stato per servizio"
 >abstract="Le richieste di igiene dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. In questa sezione viene illustrato lo stato di elaborazione corrente della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="Numero di identità"
+>abstract="Numero di identità richieste per l&#39;eliminazione nell&#39;ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="Risposta di cancellazione del consumatore"
+>abstract="Quando un processo di eliminazione del consumatore riceve una risposta dal sistema, questi messaggi vengono visualizzati sotto la **[!UICONTROL Risultato]** sezione . Se si verifica un problema durante l&#39;elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti verranno visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 
 ![Immagine che mostra un ID ordine di lavoro selezionato](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni sui suoi attributi di base, inclusa la data di scadenza pianificata nei giorni rimanenti prima dell’eliminazione. Nella barra a destra, puoi utilizzare i controlli per modificare o annullare la scadenza.
 
