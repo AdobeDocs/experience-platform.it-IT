@@ -2,9 +2,9 @@
 title: Gestire le etichette di utilizzo dei dati per uno schema
 description: Scopri come aggiungere etichette per l’utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
    * [Editor di schema](../ui/overview.md): Scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Fornisce l’infrastruttura per applicare restrizioni di utilizzo dei dati sulle operazioni di Platform, utilizzando criteri che definiscono quali azioni di marketing possono (o non possono) essere eseguite sui dati etichettati.
 
-## Selezionare uno schema o un campo a cui aggiungere le etichette
+## Selezionare uno schema o un campo a cui aggiungere le etichette {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Modifica delle etichette di governance"
+>abstract="Applicare un&#39;etichetta a un campo dello schema per indicare i criteri di utilizzo applicati ai dati contenuti in quel campo specifico."
 
 Per iniziare ad aggiungere etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell’Editor di schema.
 

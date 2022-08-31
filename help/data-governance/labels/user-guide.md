@@ -5,9 +5,9 @@ title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 topic-legacy: labels
 description: Questa guida descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno dell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ Puoi ripetere questi passaggi per continuare ad aggiungere e modificare etichett
 
 Guarda l’esercitazione su [gestione delle etichette a livello di schema](../../xdm/tutorials/labels.md) per ulteriori informazioni.
 
-## Gestire le etichette personalizzate
+## Gestire le etichette personalizzate {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Create labels (Creare etichette)"
+>abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
 
 Puoi creare etichette di utilizzo personalizzate all’interno di **[!UICONTROL Criteri]** nell&#39;area di lavoro [!DNL Experience Platform] Interfaccia utente. Seleziona **[!UICONTROL Criteri]** nella navigazione a sinistra, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco delle etichette esistenti. Da qui, seleziona **[!UICONTROL Crea etichetta]**.
 
