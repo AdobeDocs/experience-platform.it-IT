@@ -4,9 +4,9 @@ title: Guida al dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 1%
 
 ---
@@ -171,9 +171,9 @@ La **[!UICONTROL Tendenza di modifica del conteggio dei profili]** in alto a des
 
 ![Nella scheda Panoramica profilo è visualizzato il widget di tendenza della modifica del conteggio dei profili con il pulsante didascalie evidenziato.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Un modello di apprendimento automatico genera automaticamente didascalie per descrivere le tendenze chiave e gli eventi importanti analizzando il grafico e i dati.
+Un modello di apprendimento automatico genera automaticamente didascalie per descrivere le tendenze chiave e gli eventi importanti analizzando il grafico e i dati. Le annotazioni vengono aggiunte al grafico in base alle didascalie. Selezionate una didascalia per attivare l’annotazione corrispondente.
 
-![Finestra di dialogo delle didascalie automatiche per il widget di tendenza della modifica del conteggio dei profili.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![Finestra di dialogo delle didascalie automatiche per il widget di tendenza della modifica del conteggio dei profili.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Tendenza di modifica del conteggio dei profili in base all&#39;identità] {#profiles-count-change-trend-by-identity}
 
