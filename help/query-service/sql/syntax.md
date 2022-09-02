@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 2%
 
 ---
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 La `EXPLAIN` visualizza il piano di esecuzione per l&#39;istruzione fornita. Il piano di esecuzione mostra come verranno analizzate le tabelle a cui fa riferimento l&#39;istruzione.  Se si fa riferimento a più tabelle, verrà visualizzato quale algoritmo di join viene utilizzato per unire le righe richieste da ogni tabella di input.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Dove `option` può essere uno dei seguenti:
+Utilizza la `FORMAT` con la parola chiave `EXPLAIN` per definire il formato della risposta.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parametri | Descrizione |
 | ------ | ------ |
-| `ANALYZE` | Se la `option` contiene `ANALYZE`, vengono visualizzati i tempi di esecuzione e altre statistiche. |
-| `FORMAT` | Se la `option` contiene `FORMAT`, specifica il formato di output, che può essere `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il parametro predefinito è `TEXT`. |
+| `FORMAT` | Utilizza la `FORMAT` per specificare il formato di output. Le opzioni disponibili sono `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il parametro predefinito è `TEXT`. |
 | `statement` | Qualsiasi `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`oppure `CREATE MATERIALIZED VIEW AS` istruzione, di cui si desidera visualizzare il piano di esecuzione. |
 
 >[!IMPORTANT]
 >
->Tieni presente che l’istruzione viene effettivamente eseguita quando `ANALYZE` viene utilizzata l&#39;opzione . Nonostante `EXPLAIN` elimina qualsiasi output `SELECT` restituite, gli altri effetti collaterali dell&#39;istruzione si verificano come di consueto.
+>Qualsiasi output che `SELECT` l&#39;istruzione potrebbe restituire viene scartata quando viene eseguita con `EXPLAIN` keyword. Altri effetti collaterali dell&#39;istruzione avvengono come al solito.
 
 **Esempio**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
