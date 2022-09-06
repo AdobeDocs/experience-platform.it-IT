@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK è un set di API di configurazione che ti consente di configurare pattern di integrazione di destinazione, ad Experience Platform per distribuire i dati di pubblico e profilo all’endpoint, in base ai dati e ai formati di autenticazione scelti. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2e2ed880650ad6823b60819e36081540a35ab727
+source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '708'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ L’accesso alle Destination SDK varia a seconda dello stato in cui si è partne
 ---------|----------|
 | Fornitore di software indipendente (ISV) | Partecipa a [Programma di scambio Adobe](https://partners.adobe.com/exchangeprogram/experiencecloud.html) e richiedere il provisioning di una sandbox Experience Platform per accedere a Destination SDK. |
 | Integratore di sistema (SI) | Devi essere a livello Gold o Platinum nel [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html)e otterrai un Experience Platform di sandbox predisposto e l’accesso a Destination SDK. |
-| Experience Platform del cliente sul [Pacchetto di attivazione](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) o [Pacchetto Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Per impostazione predefinita, puoi accedere alle sandbox e alla Destination SDK di Experience Platform, per creare destinazioni private per la tua organizzazione. |
+| Experience Platform del cliente sul [Pacchetto Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Per impostazione predefinita, puoi accedere alle sandbox e alla Destination SDK di Experience Platform, per creare destinazioni private per la tua organizzazione. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -74,10 +74,10 @@ Il processo per configurare la destinazione nell’Experience Platform è descri
 2. [Richiesta di provisioning di una sandbox di Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) e abilita l&#39;autorizzazione di authoring di destinazione.
 3. Genera la tua integrazione. Segui le istruzioni contenute nella documentazione del prodotto per configurare [destinazioni di streaming](./configure-destination-instructions.md) o [destinazioni basate su file (beta)](./configure-file-based-destination-instructions.md).
 4. Verifica l’integrazione. Segui le istruzioni riportate nella documentazione del prodotto per eseguire il test [destinazioni di streaming](./test-destination.md) o [destinazioni basate su file (beta)](./file-based-destination-testing-overview.md).
-5. Se sei un ISV o un SI che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), [invia integrazione](./submit-destination.md) ad Adobe, la revisione (il tempo di risposta standard è di cinque giorni lavorativi).
+5. Se sei un ISV o un SI che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), [invia integrazione](./submit-destination.md) per la revisione di Adobe (il tempo di risposta standard è di cinque giorni lavorativi).
 6. Se sei un ISV o un SI che crea un’integrazione di prodotto, utilizza il [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto sull’Experience League della destinazione.
 7. Per le integrazioni prodotte, una volta approvata da Adobe, l’integrazione verrà visualizzata nella [catalogo Experience Platform](/help/destinations/catalog/overview.md).
-8. Per aggiornare l’integrazione, segui lo stesso processo.
+8. Se desideri aggiornare l’integrazione, segui lo stesso processo.
 
 ## Riferimenti {#reference}
 
