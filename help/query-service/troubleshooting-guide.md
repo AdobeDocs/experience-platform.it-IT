@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Posso utilizzare Postman per l’API del servizio query?
 
-+++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione del postman](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto in Adobe Developer Console e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione di Postman](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate su come impostare un progetto nella console Adobe Developer e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++Risposta Query Service fornisce diverse funzioni integrate di supporto SQL per estendere le funzionalità SQL. Consulta il documento per un elenco completo delle [Funzioni SQL supportate da Query Service](./sql/spark-sql-functions.md).
 +++
 
+### Sono tutti nativi [!DNL Spark SQL] funzioni supportate o sono utenti limitati al solo wrapper [!DNL Spark SQL] funzioni fornite dall&#39;Adobe?
+
++++Risposta Ancora, non tutte le open source [!DNL Spark SQL] funzioni testate sui dati di data lake. Una volta testati e confermati, verranno aggiunti all’elenco supportato. Fai riferimento alla [elenco dei supportati [!DNL Spark SQL] Funzioni](./sql/spark-sql-functions.md) per verificare la presenza di una funzione specifica.
++++
+
+### Gli utenti possono definire le proprie funzioni definite dall’utente (UDF, User Definers) utilizzabili tra altre query?
+
++++Risposta A causa di considerazioni sulla sicurezza dei dati, la definizione personalizzata delle FDU non è consentita.
++++
+
 ### Cosa devo fare se la query pianificata non riesce?
 
 +++Risposta prima, controlla i registri per scoprire i dettagli dell’errore. La sezione Domande frequenti su [ricerca di errori nei registri](#error-logs) fornisce ulteriori informazioni su come eseguire questa operazione.
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Posso creare un set di dati utilizzando una query CTAS con un nome di sottolineatura doppio come quelli visualizzati nell’interfaccia utente? Ad esempio: `test_table_001`.
+
++++Risposta No, si tratta di una limitazione intenzionale tra gli Experienci Platform che si applica a tutti i servizi Adobe, incluso Query Service. Un nome con due caratteri di sottolineatura è accettabile come nome di schema e set di dati, ma il nome della tabella per il set di dati può contenere un solo carattere di sottolineatura.
++++
+
 ## Esportazione dei dati {#exporting-data}
 
 Questa sezione fornisce informazioni sull’esportazione di dati e limiti.
@@ -462,6 +477,25 @@ FROM <table_name>
 ++ + N. risposta Al momento non è disponibile alcuna funzione per l’estrazione dei dati acquisiti.
 +++
 
+### Perché il connettore dati Analytics non restituisce dati?
+
++++Risposta Una causa comune di questo problema è l&#39;esecuzione di query sui dati della serie temporale senza filtro temporale. Esempio:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Deve essere scritto come segue:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Strumenti di terze parti {#third-party-tools}
 
 Questa sezione include informazioni sull&#39;utilizzo di strumenti di terze parti come PSQL e Power BI.
@@ -473,7 +507,13 @@ Questa sezione include informazioni sull&#39;utilizzo di strumenti di terze part
 
 ### Esiste un modo per collegare Query Service una volta per un utilizzo continuo con uno strumento di terze parti?
 
-+++Risposta Sì, i client desktop di terze parti possono essere collegati a Query Service tramite una configurazione unica di credenziali non in scadenza. Le credenziali non in scadenza possono essere generate da un utente autorizzato e le riceveranno in un file JSON scaricato sul computer locale. Completo [istruzioni su come creare e scaricare credenziali non in scadenza](./ui/credentials.md#non-expiring-credentials) si trova nella documentazione.
++++Risposta Sì, i client desktop di terze parti possono essere collegati a Query Service tramite una configurazione unica di credenziali non in scadenza. Le credenziali non in scadenza possono essere generate da un utente autorizzato e ricevute in un file JSON scaricato automaticamente nel computer locale. Completo [istruzioni su come creare e scaricare credenziali non in scadenza](./ui/credentials.md#non-expiring-credentials) si trova nella documentazione.
++++
+
+### Perché le mie credenziali non in scadenza non funzionano?
+
++++Risposta Il valore per le credenziali non in scadenza sono gli argomenti concatenati dal `technicalAccountID` e `credential` tratto dal file JSON di configurazione. Il valore della password assume la forma di: `{{technicalAccountId}:{credential}}`.
+Consulta la documentazione per ulteriori informazioni su come [connettersi a client esterni con credenziali](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Che tipo di editor SQL di terze parti posso collegare a Query Service Editor?
