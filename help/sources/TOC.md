@@ -4,7 +4,7 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 11%
@@ -34,7 +34,7 @@ ht-degree: 11%
          - [Guida all’autenticazione Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [namespace e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
-      - [Connettore Google AdWords](connectors/advertising/ads.md)
+      - [Connettore Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Connettore a pannello multiplo](connectors/analytics/mixpanel.md)
    - archiviazione cloud {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 11%
 - Esercitazioni API {#api-tutorials}
    - Creare una connessione di base {#create}
       - Pubblicità {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/api/create/analytics/mixpanel.md)
       - archiviazione cloud {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 11%
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Pubblicità {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/ui/create/analytics/mixpanel.md)
       - archiviazione cloud {#cloud-storage}
