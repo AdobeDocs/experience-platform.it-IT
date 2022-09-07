@@ -4,11 +4,11 @@ title: Guardrail predefiniti per i dati del profilo cliente in tempo reale
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali. '
+description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 5%
 
 ---
@@ -139,7 +139,7 @@ In questo documento sono presenti diverse protezioni che fanno riferimento a &qu
 
 ### Unisci criteri {#merge-policies}
 
-Quando si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi al singolo cliente che compaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un singolo profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo dell&#39;utente. Per ulteriori informazioni sui criteri di unione, iniziare leggendo il [panoramica dei criteri di unione](merge-policies/overview.md).
+Quando si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi al singolo cliente che compaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un singolo profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo dell&#39;utente. È consentito un massimo di cinque (5) criteri di unione per organizzazione. Per ulteriori informazioni sui criteri di unione, consulta la sezione [panoramica dei criteri di unione](merge-policies/overview.md).
 
 ### Set di dati suite di rapporti Adobe Analytics in Platform {#aa-datasets}
 
