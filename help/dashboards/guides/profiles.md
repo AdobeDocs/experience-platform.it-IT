@@ -4,9 +4,9 @@ title: Guida al dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,14 @@ Puoi modificare l’aspetto della [!UICONTROL Profili] dashboard selezionando **
 
 Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [Panoramica della libreria Widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
 
+### Aggiungi widget {#add-widget}
+
+Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria dei widget e visualizzare un elenco dei widget disponibili da aggiungere al dashboard.
+
+![Panoramica del dashboard Profili con il widget di aggiunta evidenziato.](../images/profiles/profiles-overview-add-widget.png)
+
+Dalla libreria dei widget è possibile sfogliare la selezione di widget per segmenti standard e personalizzati.Per informazioni su come aggiungere i widget, consulta la documentazione della libreria dei widget su come [aggiungere un widget](../customize/widget-library.md#add-widgets).
+
 ## (Beta) Approfondimenti sull’efficacia del profilo {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Il dashboard selezionerà automaticamente un criterio di unione da utilizzare. I
 
 >[!NOTE]
 >
->Il menu a discesa mostra solo i criteri di unione relativi alla classe di profilo individuale XDM. Tuttavia, se l&#39;organizzazione ha creato più criteri di unione, potrebbe essere necessario scorrere per visualizzare l&#39;elenco completo dei criteri di unione disponibili.
+>Il menu a discesa mostra solo i criteri di unione che utilizzano `_xdm.context.profile` schema. Tuttavia, se l&#39;organizzazione ha creato più criteri di unione, può essere necessario scorrere per visualizzare l&#39;elenco completo dei criteri di unione disponibili.
 
-![](../images/profiles/select-merge-policy.png)
+![La scheda Panoramica dei profili con il menu a discesa dei criteri di unione evidenziato.](../images/profiles/select-merge-policy.png)
 
 ## Schemi dell’Unione
 
@@ -131,7 +139,7 @@ Consulta la sezione [sezione sui criteri di unione in precedenza in questo docum
 >
 >La [!UICONTROL Numero di profili] widget può mostrare un numero diverso dal conteggio del profilo mostrato sul [!UICONTROL Sfoglia] nella scheda [!UICONTROL Profili] per diversi motivi. Il motivo più comune è che [!UICONTROL Sfoglia] fa riferimento al numero totale di profili uniti in base ai criteri di unione predefiniti della tua organizzazione, mentre la [!UICONTROL Numero di profili] Il widget fa riferimento al numero totale di profili uniti in base al criterio di unione selezionato per la visualizzazione nel dashboard.
 >
->Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale sul widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale nel widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 

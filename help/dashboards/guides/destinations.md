@@ -4,9 +4,9 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La [!UICONTROL Destinazioni] nel dashboard viene visualizzata un’istantanea de
 >
 >Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
 
-## Esplorazione del dashboard delle destinazioni
+## Esplora [!UICONTROL Destinazioni] dashboard {#explore}
 
 Per passare al dashboard delle destinazioni nell’interfaccia utente di Platform, seleziona **[!UICONTROL Destinazioni]** nella barra a sinistra, seleziona la **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
@@ -37,11 +37,19 @@ La data e l’ora dell’istantanea più recente vengono visualizzate nella part
 
 ![Panoramica delle destinazioni dell’interfaccia utente di Platform con l’istantanea più recente evidenziata.](../images/destinations/snapshot-timestamp.png)
 
-### Modifica del dashboard delle destinazioni
+### Modifica la [!UICONTROL Destinazioni] dashboard {#modify}
 
-Puoi modificare l’aspetto del dashboard delle destinazioni selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere al **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
+Seleziona **[!UICONTROL Modifica dashboard]** per modificare l’aspetto del dashboard delle destinazioni. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla libreria dei widget. Dalla libreria dei widget, puoi esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
-Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [Panoramica della libreria Widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
+Fai riferimento alla [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) documentazione per ulteriori informazioni.
+
+### Aggiungi widget {#add-widget}
+
+Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria dei widget e visualizzare un elenco dei widget disponibili da aggiungere al dashboard.
+
+![Panoramica del dashboard Destinazioni con il widget Aggiungi evidenziato.](../images/destinations/destinations-overview-add-widget.png)
+
+Dalla libreria dei widget, puoi selezionare i widget per segmenti standard e personalizzati. Per informazioni su come aggiungere i widget, consulta la documentazione della libreria dei widget su come [aggiungere un widget](../customize/widget-library.md#add-widgets).
 
 ## Widget standard {#standard-widgets}
 
@@ -80,7 +88,7 @@ Il numero di segmenti mappati visualizzati nella colonna del conteggio dei segme
 
 Selezionando il nome di una destinazione dall&#39;elenco mostrato sul widget, potrai accedere ai dettagli della destinazione come collegati dal **[!UICONTROL Sfoglia]** scheda . Puoi anche selezionare **[!UICONTROL Visualizza tutto]** per passare al **[!UICONTROL Sfoglia]** , quindi seleziona il nome di una destinazione per visualizzarne i dettagli.
 
-![](../images/destinations/most-used-destinations.png)
+![La scheda Panoramica del dashboard Destinazioni con il widget Destinazioni più utilizzate evidenziato.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Destinazioni create di recente] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Selezionando il nome di una destinazione dall&#39;elenco mostrato sul widget, po
 
 Per ulteriori informazioni su come configurare tipi specifici di destinazioni, visita il [documentazione sulle destinazioni](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![La scheda Panoramica del dashboard Destinazioni con il widget Destinazioni create di recente evidenziata.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segmenti attivati di recente] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Selezionando il nome di un segmento dall’elenco visualizzato sul widget, passe
 
 Per ulteriori informazioni sull’utilizzo dei segmenti in Experience Platform, inizia leggendo il [Panoramica del servizio di segmentazione](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![La scheda Panoramica del dashboard Destinazioni con il widget Segmenti attivati di recente evidenziata.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Segmenti attivati di recente per destinazione] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Questo widget contiene due metriche: il nome del segmento e la data dell’ultim
 
 Per visualizzare i dettagli di un segmento, seleziona il nome di un segmento dall’elenco visualizzato.
 
-![I segmenti sono stati attivati di recente per widget di destinazione.](../images/destinations/recently-activated-segments-by-destination.png)
+![I segmenti attivati di recente per widget di destinazione.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
 
