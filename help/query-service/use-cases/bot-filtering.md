@@ -2,9 +2,9 @@
 title: Filtro bot in Query Service con apprendimento automatico
 description: Questo documento fornisce una panoramica sull’utilizzo di Query Service e machine learning per determinare l’attività di bot e filtrare le loro azioni in base al traffico dei visitatori del sito web online.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,12 @@ Questo esempio utilizza [!DNL Jupyter Notebook] come ambiente di sviluppo. Sebbe
 
 I due attributi utilizzati per estrarre i dati per il rilevamento di bot sono:
 
-* ID Marketing Cloud (MCID): Questo fornisce un ID universale e costante che identifica i visitatori in tutte le soluzioni Adobe.
+* ID visitatore di Experience Cloud (ECID, noto anche come MCID): Questo fornisce un ID universale e costante che identifica i visitatori in tutte le soluzioni Adobe.
 * Timestamp: Questo fornisce l’ora e la data in formato UTC quando si è verificata un’attività sul sito web.
+
+>[!NOTE]
+>
+>L&#39;uso di `mcid` si trova ancora nei riferimenti dello spazio dei nomi all’ID visitatore Experience Cloud come mostrato nell’esempio seguente.
 
 L&#39;istruzione SQL seguente fornisce un esempio iniziale per identificare l&#39;attività bot. L&#39;istruzione presuppone che se un visitatore esegue 50 clic in un minuto, l&#39;utente è un bot.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-L’espressione filtra gli MCID di tutti i visitatori che soddisfano la soglia ma non risolve i picchi di traffico derivanti da altri intervalli.
+L&#39;espressione filtra gli ECID (`mcid`) di tutti i visitatori che soddisfano la soglia ma non soddisfano i picchi di traffico di altri intervalli.
 
 ## Migliorare il rilevamento dei bot con l&#39;apprendimento automatico
 
@@ -53,7 +57,7 @@ L&#39;istruzione SQL iniziale può essere perfezionata per diventare una query d
 
 L’istruzione di esempio viene espansa da un minuto con fino a 60 clic, per includere periodi di cinque minuti e 30 minuti con conteggi di clic rispettivamente di 300 e 1800.
 
-L&#39;istruzione example raccoglie il numero massimo di clic per ogni MCID nelle varie durate. L’istruzione iniziale è stata espansa per includere periodi di un minuto (60 secondi), di 5 minuti (300 secondi) e di un’ora (cioè 1800 secondi).
+L&#39;istruzione example raccoglie il numero massimo di clic per ogni ECID (`mcid`) nelle varie durate. L’istruzione iniziale è stata espansa per includere periodi di un minuto (60 secondi), di 5 minuti (300 secondi) e di un’ora (cioè 1800 secondi).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -167,4 +171,4 @@ Il modello di esempio è stato determinato con un alto grado di precisione in ba
 
 Leggendo questo documento si ha una migliore comprensione di come utilizzare [!DNL Query Service] e l&#39;apprendimento automatico per determinare e filtrare l&#39;attività bot.
 
-Altri documenti che dimostrano i vantaggi di [!DNL Query Service] le informazioni strategiche aziendali della tua organizzazione sono le seguenti: [caso d&#39;uso del browser abbandonato](./abandoned-browse.md) esempio.
+Altri documenti che dimostrano i vantaggi di [!DNL Query Service] le informazioni strategiche aziendali della tua organizzazione sono [caso d&#39;uso del browser abbandonato](./abandoned-browse.md) esempio.

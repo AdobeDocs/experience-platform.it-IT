@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Questo documento delinea dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ Query inviate tramite [!DNL Query Service] Le API vengono eseguite in modo non i
 ## Accesso a un campo specifico all’interno di un oggetto
 
 Per accedere a un campo all’interno di un oggetto nella query, è possibile utilizzare la notazione del punto (`.`) o la notazione parentesi graffa (`[]`). L&#39;istruzione SQL seguente utilizza la notazione del punto per scorrere il `endUserIds` fino a `mcid` oggetto.
+
+>[!NOTE]
+>
+>L’ID Experience Cloud (ECID) è noto anche come MCID e continua a essere utilizzato nei namespace.
 
 ```sql
 SELECT endUserIds._experience.mcid

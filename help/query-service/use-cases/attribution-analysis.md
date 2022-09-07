@@ -1,9 +1,10 @@
 ---
 title: Analisi di attribuzione
 description: Questo documento spiega come utilizzare Query Service per creare una tecnica di misurazione dell’efficacia del marketing basata sul modello di attribuzione del marketing di primo e ultimo contatto.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 1%
 
 ---
@@ -68,6 +69,10 @@ I risultati per le query di attribuzione sono forniti nella variabile `first_tou
 L’attribuzione di primo contatto attribuisce il 100% della responsabilità di un esito positivo al canale iniziale rilevato dal consumatore. Questo esempio SQL viene utilizzato per evidenziare l&#39;interazione che ha portato a una serie successiva di azioni del cliente.
 
 La query seguente restituisce il valore di attribuzione del primo contatto e i dettagli del canale nel target [!DNL Experience Event] set di dati. Restituisce anche un `struct` oggetto per il canale selezionato con il primo valore di contatto, la marca temporale e l’attribuzione per ogni riga.
+
+>[!NOTE]
+>
+>L’ID Experience Cloud (ECID) è noto anche come MCID e continua a essere utilizzato nei namespace.
 
 **Sintassi della query**
 
