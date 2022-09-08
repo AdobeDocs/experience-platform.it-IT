@@ -2,7 +2,7 @@
 title: Segreti nell'API del reattore
 description: Scopri le basi di come configurare i segreti nell’API di Reactor da utilizzare nell’inoltro degli eventi.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -107,11 +107,11 @@ Segreti con un `type_of` valore `oauth2-google` richiede il seguente attributo i
 | --- | --- | --- |
 | `scopes` | Array | Elenca gli ambiti dei prodotti Google per l’autenticazione. Sono supportati i seguenti ambiti:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Dopo aver creato il `oauth2-google` segreto, la risposta include un `meta.token_url` proprietà. Devi copiare e incollare questo URL in un browser per completare il flusso di autenticazione di Google.
+Dopo aver creato il `oauth2-google` segreto, la risposta include un `meta.authorization_url` proprietà. Devi copiare e incollare questo URL in un browser per completare il flusso di autenticazione di Google.
 
 #### Riautorizzare un `oauth2-google` segreto
 
-L’URL di autorizzazione per un `oauth2-google` Il segreto scade un’ora dopo la creazione del segreto (come indicato da `meta.token_url_expires_at`). Dopo questo periodo, il segreto deve essere nuovamente autorizzato per rinnovare il processo di autenticazione.
+L’URL di autorizzazione per un `oauth2-google` Il segreto scade un’ora dopo la creazione del segreto (come indicato da `meta.authorization_url_expires_at`). Dopo questo periodo, il segreto deve essere nuovamente autorizzato per rinnovare il processo di autenticazione.
 
 Fai riferimento a [guida all’endpoint segreti](../endpoints/secrets.md#reauthorize) per informazioni dettagliate su come autorizzare nuovamente un `oauth2-google` segreto effettuando una richiesta PATCH all’API Reactor.
 
