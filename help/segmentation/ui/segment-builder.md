@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3082'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Aggiorna stime"
 >abstract="Puoi aggiornare le stime del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per il segmento proposto. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Ulteriori informazioni dalla documentazione"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
 Quando si crea una definizione di segmento, la **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima della dimensione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 

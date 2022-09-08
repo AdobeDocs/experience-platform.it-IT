@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../da
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Metodo di valutazione"
 >abstract="I metodi di valutazione per i segmenti includono batch, streaming e edge."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Aggiungi tutti i segmenti alla pianificazione"
+>abstract="Abilitare l’inclusione di tutti i segmenti di valutazione batch nell’aggiornamento pianificato giornaliero alle 3:30 UTC. Disabilita la rimozione di tutti i segmenti dall&#39;aggiornamento pianificato."
 
 Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per l’organizzazione IMS.
 
