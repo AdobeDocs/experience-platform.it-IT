@@ -2,9 +2,9 @@
 title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 1%
 
 ---
@@ -131,6 +131,13 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+
+### Mappare attributi e identità {#map}
+
+*Aggiungi informazioni sulle mappature supportate tra i campi di origine e di destinazione nel passaggio Mappatura del flusso di lavoro di attivazione. La destinazione potrebbe supportare l’esportazione di attributi di profilo, spazi dei nomi di identità o entrambi. Alcuni campi potrebbero essere obbligatori. Gli attributi di destinazione possono essere predefiniti o personalizzati. Richiama le avvertenze importanti e utilizza esempi, preferibilmente con screenshot. Di seguito sono riportati due esempi di pagine di destinazione utilizzabili come riferimento:*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Esportazione di dati / Convalida esportazione dati {#exported-data}
 

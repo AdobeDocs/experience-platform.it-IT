@@ -2,7 +2,7 @@
 title: Connessione Pega Customer Decision Hub
 description: Utilizza la destinazione Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati di appartenenza al segmento a Pega Customer Decision Hub per le decisioni di prossima azione.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
+source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 1%
@@ -102,7 +102,7 @@ Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profil
 
 In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe consiglia di selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
 
-### Esempio di mappatura: attivazione degli aggiornamenti dei profili in [!DNL Pega Customer Decision Hub]
+### Esempio di mappatura: attivazione degli aggiornamenti dei profili in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Di seguito è riportato un esempio di corretta mappatura dell’identità durante l’esportazione dei profili in [!DNL Pega Customer Decision Hub].
 
