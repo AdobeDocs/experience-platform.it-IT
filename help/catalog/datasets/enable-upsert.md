@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti dei profili tramite API
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" al fine di eseguire aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1015'
 ht-degree: 2%
 
 ---
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | Parametro | Descrizione |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | ID di un set di dati da esaminare. |
 
 **Richiesta**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ Sotto la `tags` puoi vedere che `unifiedProfile` è presente con il valore `enab
 
 ### Disattiva il set di dati per il profilo
 
-Per configurare un set di dati abilitato per il profilo per gli aggiornamenti, devi prima disabilitare il `unifiedProfile` e quindi riattivarlo accanto al tag `isUpsert` tag . Questa operazione viene eseguita utilizzando due richieste PATCH, una volta per disabilitare e una per riabilitare.
+Per configurare un set di dati abilitato per il profilo per gli aggiornamenti, devi prima disabilitare il `unifiedProfile` e `unifiedIdentity` e quindi riattivarli insieme ai tag `isUpsert` tag . Questa operazione viene eseguita utilizzando due richieste PATCH, una volta per disabilitare e una per riabilitare.
 
 >[!WARNING]
 >
->I dati acquisiti nel set di dati quando è disattivato non verranno acquisiti nell’archivio profili. Si consiglia di evitare di acquisire dati nel set di dati fino a quando non viene riabilitato per Profilo.
+>I dati acquisiti nel set di dati quando è disattivato non verranno acquisiti nell’archivio profili. Evita di acquisire i dati nel set di dati fino a quando non è stato riabilitato per Profilo.
 
 **Formato API**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parametro | Descrizione |
-|---|---|
-| `{DATASET_ID}` | ID di un set di dati da aggiornare. |
+| --------- | ----------- |
+| `{DATASET_ID}` | ID del set di dati da aggiornare. |
 
 **Richiesta**
 
-Il primo corpo della richiesta di PATCH include un `path` a `unifiedProfile` impostazione `value` a `enabled:false` per disabilitare il tag .
+Il primo corpo della richiesta di PATCH include un `path` a `unifiedProfile` e `path` a `unifiedIdentity`, impostando `value` a `enabled:false` per entrambi i percorsi per disabilitare i tag.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Risposta**
 
-Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. La `unifiedProfile` Il tag è stato disattivato.
+Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. La `unifiedProfile` e `unifiedIdentity` I tag sono stati disattivati.
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | Parametro | Descrizione |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | ID di un set di dati da aggiornare. |
 
 **Richiesta**
 
-Il corpo della richiesta include un `path` a `unifiedProfile` impostazione `value` per includere `enabled` e `isUpsert` tag, entrambi impostati su `true`.
+Il corpo della richiesta include un `path` a `unifiedProfile` impostazione `value` per includere `enabled` e `isUpsert` tag, entrambi impostati su `true`e `path` a `unifiedIdentity` impostazione `value` per includere `enabled` è impostato su `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Risposta**
-Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. La `unifiedProfile` Il tag è stato ora abilitato e configurato per gli aggiornamenti degli attributi.
+
+Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. La `unifiedProfile` tag e `unifiedIdentity` Il tag è stato ora abilitato e configurato per gli aggiornamenti degli attributi.
 
 ```json
 [
