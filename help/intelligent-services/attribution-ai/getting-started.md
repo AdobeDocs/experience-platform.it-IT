@@ -5,10 +5,10 @@ title: Guida introduttiva ad Attribution AI
 topic-legacy: Getting started
 description: Le guide seguenti richiedono una comprensione dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di Attribution AI. Prima di iniziare le esercitazioni, controlla i seguenti documenti.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: a14f857f87482e1468211152976530c718d56e38
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -52,7 +52,7 @@ Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifi
 
 Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## ## RGPD e crittografia {#gdpr-and-encryption}
+## Controllo degli accessi {#access-control}
 
 Quando si utilizza un controllo di accesso basato su ruoli, la **Visualizza Attribution AI** e **Gestione Attribution AI** i privilegi concedono l’accesso a diverse funzionalità di Attribution AI. La **Gestione Attribution AI** consente di: **creare**, **clone**, **modifica**, **delete**, **abilita** oppure **disable** un&#39;istanza mentre **Visualizza Attribution AI** consente di: **read** o **visualizzare** . La **creare**, **modifica** e **delete** le azioni vengono registrate dai registri di controllo.
 
