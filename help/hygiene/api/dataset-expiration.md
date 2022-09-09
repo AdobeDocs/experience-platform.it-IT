@@ -2,10 +2,10 @@
 title: Endpoint API per le scadenze del set di dati
 description: L’endpoint /ttl nell’API di igiene dati ti consente di pianificare programmaticamente la scadenza dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 7%
+source-wordcount: '1405'
+ht-degree: 6%
 
 ---
 
@@ -26,6 +26,10 @@ La scadenza di un set di dati è solo un’operazione di eliminazione ritardata 
 In qualsiasi momento prima dell’avvio dell’eliminazione del set di dati, puoi annullare la scadenza o modificarne il tempo di attivazione. Dopo aver annullato la scadenza di un set di dati, puoi riaprirlo impostando una nuova scadenza.
 
 Una volta avviata l’eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing`e non può essere ulteriormente modificato. Il set di dati stesso può essere recuperabile per un massimo di sette giorni, ma solo tramite un processo manuale avviato tramite una richiesta di servizio Adobe. Durante l’esecuzione della richiesta, il data lake, il servizio Identity e il profilo cliente in tempo reale iniziano processi separati per rimuovere il contenuto del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza è contrassegnata come `executed`.
+
+>[!WARNING]
+>
+>Se un set di dati è impostato per la scadenza, devi modificare manualmente tutti i flussi di dati che potrebbero acquisire dati in tale set di dati in modo che i flussi di lavoro downstream non ne risentano.
 
 ## Introduzione
 
