@@ -4,10 +4,10 @@ user-guide-title: Guida alla governance dei dati di Adobe Experience Platform
 breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri.
 feature: Data Governance
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: c84926fe88ab02503220ca377170521077dc517e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '96'
+ht-degree: 35%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Governance dei dati di Adobe Experience Platform {#data-governance}
 
 * [Panoramica sulla governance dei dati](home.md)
+* [Guida completa](./e2e.md)
 * Etichette di utilizzo dati {#labels}
    * [Panoramica](labels/overview.md)
    * [Glossario delle etichette](labels/reference.md)
