@@ -1,10 +1,11 @@
 ---
 title: Browser supportati
 description: Elenco di più browser compatibili con un tag runtime di Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 39%
+source-wordcount: '142'
+ht-degree: 87%
 
 ---
 
@@ -19,18 +20,17 @@ Il runtime di tag in Adobe Experience Platform (consegnato ai siti web dei clien
 - Chrome (più recente)
 - Safari (più recente)
 - Firefox (più recente)
-- IE (10 e versioni successive)
 - Edge (più recente)
 - iOS Safari (più recente)
 - Android Chrome (più recente)
 
 Anche eventuale codice di estensione incluso nel runtime dovrebbe supportare questi browser.
 
-L’interfaccia utente di raccolta dati è progettata per supportare i seguenti browser:
+L’interfaccia utente di Data Collection è progettata per supportare i seguenti browser:
 
 - Chrome (più recente)
 - Safari (più recente)
 - Firefox (più recente)
 - Edge (più recente)
 
-Anche qualsiasi codice di estensione visualizzato in nell’interfaccia utente di raccolta dati dovrebbe sforzarsi di supportare questi browser.
+Questi stessi browser dovrebbero essere supportati anche da eventuali codici di estensione visualizzati all’interno dell’interfaccia utente di Data Collection.
