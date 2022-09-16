@@ -5,7 +5,7 @@ title: Creare una connessione sorgente Campagne MailChimp tramite l’interfacci
 topic-legacy: tutorial
 description: Scopri come collegare Adobe Experience Platform a Campagne MailChimp tramite l’interfaccia utente di Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -31,9 +31,9 @@ La [!DNL Mailchimp Campaigns] source supporta sia il codice di aggiornamento OAu
 
 ### Codice di aggiornamento OAuth 2
 
-| Credenziali | Descrizione |
+| Credenziali  | Descrizione |
 | --- | --- |
-| Host | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
+| Domain | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
 | URL del test di autorizzazione | L’URL del test di autorizzazione viene utilizzato per convalidare le credenziali quando si connette [!DNL Mailchimp] su Platform. In caso contrario, le credenziali vengono controllate automaticamente durante il passaggio di creazione della connessione di origine. |
 | Token di accesso | Il token di accesso corrispondente utilizzato per autenticare l&#39;origine. Questo è necessario per l’autenticazione basata su OAuth. |
 
@@ -41,9 +41,9 @@ Per ulteriori informazioni sull’utilizzo di OAuth 2 per l’autenticazione del
 
 ### Autenticazione di base
 
-| Credenziali | Descrizione |
+| Credenziali  | Descrizione |
 | --- | --- |
-| Host | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
+| Dominio | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
 | Nome utente | Il nome utente che corrisponde al tuo account MailChimp. Questo è necessario per l’autenticazione di base. |
 | Password | La password che corrisponde al tuo account MailChimp. Questo è necessario per l’autenticazione di base. |
 
@@ -73,13 +73,13 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 
 #### Autenticazione tramite OAuth 2
 
-Per utilizzare OAuth 2, seleziona [!UICONTROL Codice di aggiornamento OAuth 2], fornisci valori per l’host, l’URL del test di autorizzazione e il token di accesso, quindi seleziona **[!UICONTROL Connetti alla sorgente]**. Consentire alcuni istanti per la convalida delle credenziali, quindi selezionare **[!UICONTROL Successivo]** per procedere.
+Per utilizzare OAuth 2, seleziona [!UICONTROL Codice di aggiornamento OAuth 2], fornire valori per il dominio, l&#39;URL del test di autorizzazione e il token di accesso, quindi selezionare **[!UICONTROL Connetti alla sorgente]**. Consentire alcuni istanti per la convalida delle credenziali, quindi selezionare **[!UICONTROL Successivo]** per procedere.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### Autenticazione tramite autenticazione di base
 
-Per utilizzare l&#39;autenticazione di base, seleziona [!UICONTROL Autenticazione di base], fornire i valori per l&#39;host, il nome utente e la password, quindi selezionare **[!UICONTROL Connetti alla sorgente]**. Consentire alcuni istanti per la convalida delle credenziali, quindi selezionare **[!UICONTROL Successivo]** per procedere.
+Per utilizzare l&#39;autenticazione di base, seleziona [!UICONTROL Autenticazione di base], fornire i valori per il dominio, il nome utente e la password, quindi selezionare **[!UICONTROL Connetti alla sorgente]**. Consentire alcuni istanti per la convalida delle credenziali, quindi selezionare **[!UICONTROL Successivo]** per procedere.
 
 ![base](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 

@@ -5,9 +5,9 @@ title: Creare un flusso di dati per Zendesk utilizzando l’API del servizio di 
 topic-legacy: tutorial
 description: Scopri come collegare Adobe Experience Platform a Zendesk utilizzando l’API del servizio di flusso.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1996'
 ht-degree: 2%
 
 ---
@@ -35,6 +35,7 @@ Per accedere al tuo [!DNL Zendesk] account su Platform, devi fornire i valori pe
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
+| `subdomain` | Dominio univoco associato al tuo account. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Token API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Per ulteriori informazioni sull&#39;autenticazione della [!DNL Zendesk] sorgente, vedi [[!DNL Zendesk] panoramica di origine](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione e l&#39;approvazione della sorgente tramite [!DNL Flow Service] API. |
 | `auth.specName` | Il tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
 | `auth.params.` | Contiene le credenziali necessarie per autenticare l&#39;origine. |
+| `auth.params.subdomain` | Dominio univoco associato al tuo account. Il formato del sottodominio è `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | Il token di accesso corrispondente utilizzato per autenticare l&#39;origine. Questo è necessario per l’autenticazione basata su OAuth. |
 
 **Risposta**

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connet
 title: (Beta) Creare una connessione sorgente a più pannelli nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,6 @@ Per connettersi [!DNL Mixpanel] in Platform, devi fornire valori per le seguenti
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Host | La [!DNL Mixpanel] endpoint API per l’esportazione di dati non elaborati. Consulta la sezione [!DNL Raw Data Export API] nella sezione [Documentazione di riferimento API per i pannelli misti](https://developer.mixpanel.com/reference/overview) per ulteriori informazioni. | `https://data.mixpanel.com` |
 | Nome utente | Il nome utente dell&#39;account del servizio che corrisponde al tuo [!DNL Mixpanel] conto. Consulta la sezione [[!DNL Mixpanel] documentazione degli account di servizio](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) per ulteriori informazioni. | `Test8.6d4ee7.mp-service-account` |
 | Password | La password dell&#39;account di servizio che corrisponde alla tua [!DNL Mixpanel] conto. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | ID progetto | Le [!DNL Mixpanel] ID progetto. Questo ID è necessario per creare una connessione sorgente. Consulta la sezione [[!DNL Mixpanel] documentazione sulle impostazioni del progetto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e [[!DNL Mixpanel] guida alla creazione e alla gestione dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) per ulteriori informazioni. | `2384945` |

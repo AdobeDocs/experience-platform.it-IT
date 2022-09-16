@@ -5,10 +5,11 @@ title: (Beta) Creare una connessione di origine OneTrust nell’interfaccia uten
 topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente OneTrust utilizzando l’interfaccia utente Adobe Experience Platform.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 1%
+source-wordcount: '527'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +37,7 @@ Per connettersi [!DNL OneTrust Integration] su Platform, devi fornire i valori p
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Host | L&#39;ambiente da cui [!DNL OneTrust Integration] i dati devono essere estratti da . | `https://uat.onetrust.com/` |
+| Nome host | L&#39;ambiente da cui [!DNL OneTrust Integration] i dati devono essere estratti da . | `https://uat.onetrust.com/` |
 | URL del test di autorizzazione | (Facoltativo) L&#39;URL del test di autorizzazione viene utilizzato per convalidare le credenziali durante la creazione di una connessione di base. Se non viene fornito, le credenziali vengono automaticamente controllate durante il passaggio di creazione della connessione di origine. |  |
 | Token di accesso | Il token di accesso che corrisponde al tuo [!DNL OneTrust Integration] conto. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
