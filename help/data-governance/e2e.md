@@ -1,9 +1,9 @@
 ---
 title: Guida completa alla governance dei dati
 description: Segui la procedura completa per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Nella schermata successiva, seleziona le azioni di marketing per le quali questo
 
 ![Immagine che mostra un’azione di marketing da assegnare a un criterio nell’interfaccia utente](./images/e2e/select-marketing-action.png)
 
-Nella schermata finale viene visualizzato un riepilogo dei dettagli del criterio e delle azioni per le quali verranno limitate le etichette. Seleziona **[!UICONTROL Fine]** per creare e abilitare il criterio.
+Nella schermata finale viene visualizzato un riepilogo dei dettagli del criterio e delle azioni per le quali verranno limitate le etichette. Seleziona **[!UICONTROL Fine]** per creare il criterio.
 
 ![Immagine che mostra la configurazione dei criteri confermata nell’interfaccia utente](./images/e2e/confirm-policy.png)
 
