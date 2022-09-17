@@ -4,9 +4,9 @@ title: Guida end-to-end per il controllo dell'accesso basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ Una volta disponibili i privilegi di amministratore, vai a [Adobe Experience Clo
 Viene visualizzata l’area di lavoro Autorizzazioni per l’interfaccia utente di Platform, che si apre nella **[!UICONTROL Ruoli]** pagina.
 
 ## Applicare etichette a un ruolo {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="Cosa sono le etichette?"
+>abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce diverse etichette per l’utilizzo dei dati &quot;core&quot; definite da Adobi, che coprono un’ampia gamma di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette &quot;S&quot; sensibili come RHD (Regulated Health Data) consentono di classificare i dati che si riferiscono a Protected Health Information (PHI). Puoi anche definire etichette personalizzate che soddisfano le esigenze della tua organizzazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Panoramica delle etichette di utilizzo dei dati"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Crea nuova etichetta"
+>abstract="Puoi creare etichette personalizzate per adattarle alle esigenze della tua organizzazione. Le etichette personalizzate possono essere utilizzate per applicare ai dati sia le configurazioni di governance dei dati che di controllo degli accessi."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Gestire le etichette personalizzate"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Cosa sono i ruoli?"
+>abstract="I ruoli sono modi per classificare i tipi di utenti che interagiscono con l’istanza Platform e costituiscono blocchi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Gestire i ruoli"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Crea nuovo ruolo"
+>abstract="Puoi creare un nuovo ruolo per classificare meglio gli utenti che accedono all’istanza di Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta RHD a tale ruolo, in modo da consentire al team di marketing interno di accedere alle informazioni sulla salute protetta (PHI). In alternativa, è anche possibile creare un ruolo per un&#39;agenzia esterna e negare l&#39;accesso di ruolo ai dati PHI non applicando l&#39;etichetta RHD a quel ruolo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Creare un nuovo ruolo"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Panoramica del ruolo"
+>abstract="Nella finestra di dialogo panoramica ruolo vengono visualizzate le risorse e le sandbox a cui un determinato ruolo può accedere."
 
 I ruoli sono modi per classificare i tipi di utenti che interagiscono con l’istanza Platform e costituiscono blocchi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 
@@ -117,6 +146,34 @@ La **[!UICONTROL Modificare le etichette]** viene visualizzata una finestra di d
 Ripeti i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
 
 ## Creare un criterio di controllo degli accessi {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Che cosa sono le politiche?"
+>abstract="Le politiche sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. A ogni organizzazione viene fornito un criterio predefinito che è necessario attivare per definire regole per risorse quali segmenti e campi dello schema. I criteri predefiniti non possono essere modificati o eliminati. Tuttavia, i criteri predefiniti possono essere attivati o disattivati."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Gestire i criteri"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Creare un criterio"
+>abstract="Crea un criterio per definire le azioni che gli utenti possono e non possono eseguire sui segmenti e sui campi dello schema."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Creare un criterio"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Configurare le azioni ammissibili e non ammissibili per una politica"
+>abstract="Seleziona Consenti accesso a per configurare le azioni consentite che gli utenti possono eseguire rispetto alle risorse. Seleziona nega l’accesso a per configurare azioni non consentite che gli utenti non possono eseguire in base alle risorse."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modificare un criterio"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Configurare le autorizzazioni per una risorsa"
+>abstract="Una risorsa è la risorsa o l’oggetto a cui un utente può o non può accedere. Le risorse possono essere segmenti o schemi. Puoi configurare le autorizzazioni di scrittura, lettura o eliminazione per segmenti e campi dello schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Modifica condizioni"
+>abstract="Applicare istruzioni condizionali al criterio per configurare l’accesso degli utenti a determinate risorse. Seleziona abbina tutto per richiedere agli utenti di avere ruoli con le stesse etichette di una risorsa per poter accedere. Seleziona fai clic su &quot;abbina&quot; per richiedere agli utenti di avere un ruolo con una sola etichetta che corrisponda a una risorsa. Le etichette possono essere definite come etichette di base o personalizzate, con etichette di base che rappresentano le etichette create e fornite da etichette Adobi e personalizzate che rappresentano le etichette create per la tua organizzazione."
 
 I criteri di controllo degli accessi sfruttano le etichette per definire quali ruoli utente hanno accesso a risorse specifiche di Platform. I criteri possono essere locali o globali e possono sostituire altri criteri. In questo esempio, l’accesso ai campi e ai segmenti dello schema verrà negato in tutte le sandbox agli utenti che non hanno le etichette corrispondenti nel campo dello schema.
 
