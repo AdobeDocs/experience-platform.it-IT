@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;sorgenti;connettori;connettori sorgente;so
 title: Creare una connessione sorgente Zendesk nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Zendesk utilizzando l’interfaccia utente Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -33,7 +33,7 @@ Per accedere al tuo [!DNL Zendesk] account su Platform, devi fornire i valori pe
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Subdomain | Dominio univoco specifico dell&#39;account creato durante il processo di registrazione. | `https://yoursubdomain.zendesk.com` |
+| Subdomain | Dominio univoco specifico dell&#39;account creato durante il processo di registrazione. | `yoursubdomain` |
 | Token di accesso | Token API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Per ulteriori informazioni sull&#39;autenticazione della [!DNL Zendesk] sorgente, vedi [[!DNL Zendesk] panoramica di origine](../../../../connectors/customer-success/zendesk.md).
