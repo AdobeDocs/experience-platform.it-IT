@@ -2,14 +2,24 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
+source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 12%
+source-wordcount: '920'
+ht-degree: 11%
 
 ---
 
-# Registri di controllo
+# Registri di controllo {#audit-logs}
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_actions"
+>title="Azioni principali"
+>abstract="Questo widget mostra i principali tipi di azioni che sono state eseguite in Experience Platform nell&#39;intervallo di tempo selezionato. Per visualizzare l’elenco completo delle azioni registrate in Platform, seleziona **Audit** nella navigazione a sinistra."
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_users"
+>title="Utenti principali"
+>abstract="Questo widget mostra gli utenti che hanno eseguito il maggior numero di azioni in Experience Platform entro l&#39;intervallo temporale selezionato. Per visualizzare l’elenco completo delle azioni registrate in Platform, seleziona **Audit** nella navigazione a sinistra."
 
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare l’attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di controllo&quot;. Questi registri formano un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare efficacemente le politiche di gestione dei dati aziendali e i requisiti normativi.
 
