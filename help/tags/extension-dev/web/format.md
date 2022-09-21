@@ -2,7 +2,7 @@
 title: Moduli libreria nelle estensioni Web
 description: Scopri come formattare i moduli libreria per le estensioni Web in Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 93%
@@ -23,7 +23,7 @@ Un modulo libreria è una parte di codice riutilizzabile fornito da un’estensi
 
 Il modulo libreria è strutturato come [modulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules). In un modulo CommonJS, sono disponibili le seguenti variabili:
 
-## [!DNL require]
+## `require`
 
 È disponibile una funzione `require` che consente di accedere a:
 
@@ -37,7 +37,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 È disponibile una variabile gratuita denominata `module` che consente di esportare l’API del modulo.
 
@@ -47,7 +47,7 @@ Esempio di utilizzo:
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports`
 
 È disponibile una variabile gratuita denominata `exports` che consente di esportare l’API del modulo.
 
