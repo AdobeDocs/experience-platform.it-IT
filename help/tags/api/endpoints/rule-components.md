@@ -2,9 +2,9 @@
 title: Endpoint “rule_components”
 description: Scopri come effettuare chiamate all’endpoint /rule_components nell’API di Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1205'
 ht-degree: 99%
 
 ---
@@ -15,7 +15,7 @@ Nei tag di raccolta dati, le [regole](./rules.md) controllano il comportamento d
 
 >[!NOTE]
 >
->Questo documento illustra come gestire i componenti regola nell’API di Reactor. Per informazioni dettagliate su come interagire con le regole e i componenti delle regole nell’interfaccia di Data Collection, consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
+>Questo documento illustra come gestire i componenti regola nell’API di Reactor. Per informazioni dettagliate su come interagire con le regole e i componenti delle regole nell’interfaccia di , consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
 
 I componenti delle regole hanno tre tipi di base:
 

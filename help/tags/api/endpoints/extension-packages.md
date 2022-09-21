@@ -2,10 +2,10 @@
 title: Endpoint “extension_packages”
 description: Scopri come effettuare chiamate all’endpoint /extension_packages nell’API di Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 73%
+source-wordcount: '956'
+ht-degree: 71%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 73%
 
 Un pacchetto di estensione rappresenta un’[estensione](./extensions.md) creata da uno sviluppatore di estensioni. Un pacchetto di estensione definisce funzionalità aggiuntive che possono essere rese disponibili agli utenti di tag. Nella maggior parte dei casi queste funzionalità si presentano sotto forma di [componenti regola](./rule-components.md) (eventi, condizioni e azioni) e di [elementi dati](./data-elements.md), ma possono anche includere moduli principali e moduli condivisi.
 
-I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di Data Collection per consentire agli utenti di eseguire l’installazione. L’aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un’estensione con un collegamento al pacchetto di estensione.
+I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di raccolta dati e nell’interfaccia utente di Adobe Experience Platform per consentire agli utenti di eseguire l’installazione. L’aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un’estensione con un collegamento al pacchetto di estensione.
 
 Un pacchetto di estensione appartiene all’[azienda](./companies.md) dello sviluppatore che lo ha creato.
 

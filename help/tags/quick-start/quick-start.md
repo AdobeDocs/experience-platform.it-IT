@@ -1,10 +1,11 @@
 ---
 title: Guida rapida
-description: Scopri come iniziare rapidamente a usare i tag in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+description: Scopri come iniziare a usare i tag in Adobe Experience Platform.
+exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 42%
+source-wordcount: '1527'
+ht-degree: 92%
 
 ---
 
@@ -14,9 +15,9 @@ ht-degree: 42%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-I tag sono la tecnologia di nuova generazione di Adobe Experience Platform per la gestione dei tag. È stata creata per supportare un ecosistema aperto e sostenibile in cui chiunque può creare integrazioni che i clienti di Adobe possono distribuire ai propri siti. Si tratta di una prima applicazione API, in modo che tutto ciò che puoi fare tramite l&#39;interfaccia utente tu possa anche farlo a livello di programmazione tramite un&#39;API.
+I tag sono la tecnologia di nuova generazione di Adobe Experience Platform per la gestione dei tag. È stata creata per supportare un ecosistema aperto e sostenibile, in cui chiunque può creare integrazioni che i clienti Adobe possono distribuire ai propri siti. Si tratta di una prima applicazione API, in modo che tutto ciò che puoi fare tramite l&#39;interfaccia utente tu possa anche farlo a livello di programmazione tramite un&#39;API.
 
-Flusso di lavoro dei tag di base:
+Flusso di lavoro di base dei tag:
 
 1. Configurare gruppi e utenti.
 2. Accedere.
@@ -28,33 +29,33 @@ Flusso di lavoro dei tag di base:
 
 ## 1. Configurare gruppi e utenti
 
-I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente sono gestite tramite l&#39;Admin Console con altri prodotti e soluzioni Adobe da [!DNL Creative Cloud], [!DNL Document Cloud] e dall&#39;Experience Cloud.
+I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente sono gestite tramite Admin Console con altri prodotti e soluzioni Adobe da [!DNL Creative Cloud], [!DNL Document Cloud] ed Experience Cloud.
 
-I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione dispone dell’accesso all’interfaccia utente di raccolta dati, i singoli utenti non possono eseguire alcuna operazione finché non vengono espressamente concessi loro alcuni diritti da parte dell’amministratore organizzazione.
+I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione dispone dell’accesso alla raccolta dati, i singoli utenti non possono eseguire alcuna operazione finché un amministratore non concede loro esplicitamente alcuni diritti.
 
-Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per tag, consulta il documento [autorizzazioni utente](../ui/administration/user-permissions.md) .
+Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, consulta [guida alle autorizzazioni per la raccolta dati](../../collection/permissions.md).
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di raccolta dati. Per farlo, vai direttamente alla [schermata di accesso di Experience Cloud](https://experiencecloud.adobe.com) e seleziona l&#39;interfaccia utente di raccolta dati dalla scheda Accesso rapido.
+Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o di raccolta dati. Per farlo, vai direttamente alla [Experience Cloud di schermata di accesso](https://experience.adobe.com/)e selezionando **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
->Se disponi di un singolo account con diritti per più organizzazioni, l’organizzazione può essere modificata selezionando il nome dell’organizzazione nella barra di controllo nella parte superiore della schermata e scegliendo un’organizzazione diversa dall’elenco a discesa.
+>Se disponi di un singolo account con diritti per più organizzazioni, puoi cambiare organizzazione selezionandone il nome nella barra di controllo nella parte superiore della schermata e scegliendo un’altra organizzazione dall’elenco a discesa.
 
 ## 3. Creare una proprietà
 
-Dopo aver effettuato l’accesso all’interfaccia utente Raccolta dati, la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
+Dopo aver effettuato l’accesso all’interfaccia utente di , la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
 
 Per ulteriori informazioni sulla creazione delle proprietà, vedi [Creazione di una proprietà](../ui/administration/companies-and-properties.md).
 
 ## 4. Installare le estensioni
 
-Un&#39;estensione è un&#39;integrazione generata da Adobe o un partner Adobe che aggiunge opzioni nuove e infinite per i tag che puoi distribuire sui tuoi siti. Se pensi a un tag come a un sistema operativo, le estensioni sono le app installate per eseguire le operazioni specifiche necessarie.
+Un’estensione è un’integrazione creata da Adobe o da un partner di Adobe che offre opzioni nuove e infinite per i tag che puoi implementare nei tuoi siti. Se pensi a un tag come a un sistema operativo, le estensioni sono le app che puoi installare per eseguire specifiche operazioni.
 
-Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/web/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L&#39;estensione Core è generata da Adobe per fornire un set predefinito solido di tipi di elementi dati per i livelli dati e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
+Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/web/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L’estensione Core è creata da Adobe per fornire un set predefinito solido di tipi di elementi dati per il livello di dati, e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
 
-Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali per fornire assistenza con [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul sito? Guarda Clicktale. Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Creare elementi dati e regole
 
@@ -66,7 +67,7 @@ Gli **elementi dati** sono indicatori per le informazioni da raccogliere e invia
 * Sessione e archiviazione locale
 * Tutto il resto
 
-Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente di raccolta dati per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione su [Elementi dati](../ui/managing-resources/data-elements.md) .
+Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente di per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione sugli [elementi dati](../ui/managing-resources/data-elements.md).
 
 Le **regole** sono il nucleo logico della tua implementazione e controllano cosa, quando, dove e come si trovano i tag sul sito. Definisci un evento, imposta condizioni ed eccezioni, quindi definisci le azioni e l&#39;ordine. Infine, pubblica le modifiche per vedere i risultati. Per ulteriori informazioni, vedi [Regole](../ui/managing-resources/rules.md).
 
@@ -78,21 +79,21 @@ Le build dei tag non vengono mai pubblicate automaticamente. Ogni set di modific
 
 È importante comprendere la relazione tra la pagina web, la posizione di hosting e i tag.
 
-1. Il server host fornisce una posizione per pubblicare la build. La build stessa contiene i file JavaScript richiesti dalla libreria .
+1. Il server host fornisce una posizione per pubblicare la build. La build stessa contiene i file JavaScript richiesti dalla libreria.
 
-   Ogni ambiente ha una relazione con un host e l&#39;host fornisce un endpoint che indica dove distribuire la build. L’host può appartenere a una sola proprietà, anche se una proprietà può avere molti host.
+   Ogni ambiente ha una relazione con un host e l’host fornisce un endpoint che indica dove distribuire la build. L’host può appartenere a una sola proprietà, anche se una proprietà può avere diversi host.
 
-2. Un codice di incorporamento viene fornito nel tag `<script>` del modulo che viene inserito nelle sezioni `<head>` del sito web HTML.
+2. Un codice di incorporamento viene fornito come tag `<script>` da inserire nelle sezioni `<head>` del sito web HTML.
 
-   Quando crei un ambiente e alleghi un host, l’ambiente genera automaticamente un codice di incorporamento univoco che ti consente di integrare la build assegnata nel sito. Il codice `<script>` viene utilizzato per distribuire la build della libreria in fase di esecuzione.
+   Quando crei un ambiente e alleghi un host, l’ambiente genera automaticamente un codice di incorporamento univoco che ti permette di integrare nel tuo sito la relativa build assegnata. Il codice `<script>` viene utilizzato per distribuire la build della libreria in fase di esecuzione.
 
-3. Quando un utente esplora il sito, il tag `<script>` del codice di incorporamento recupera la build dal server host ed esegue le azioni definite all&#39;interno del browser.
+3. Quando un utente esplora il sito, il tag `<script>` di codice da incorporare recupera la build dal server host ed esegue le azioni definite nel browser.
 
 ### Host
 
-Un host è una connessione tra una proprietà tag e la posizione di hosting. I tag supportano attualmente l’hosting gestito da Adobe tramite un host [!DNL Akamai] o l’hosting autonomo tramite un host SFTP. Ogni volta che crei una build, i tag si collegano al server definito dall&#39;host e distribuiscono la build.
+Un host è una connessione tra una proprietà tag e la posizione di hosting. I tag supportano attualmente l’hosting gestito da Adobe tramite un host [!DNL Akamai] o hosting autonomo tramite un host SFTP. Quando crei una build, i tag si connettono al server definito dall’host e distribuiscono la build.
 
-Se utilizzi l’hosting autonomo, una build tag può essere inviata direttamente ai tuoi server tramite SFTP oppure puoi inviarla a [!DNL Akamai] e scaricarla utilizzando l’opzione Archivio dell’ambiente.
+Se desideri effettuare il self-host, una build di tag può inviare direttamente tutto al server tramite SFTP oppure puoi inviarlo tu stesso a [!DNL Akamai] e scaricarlo utilizzando l’opzione Archivio dell’ambiente.
 
 Per ulteriori informazioni, vedi [Host](../ui/publishing/hosts/hosts-overview.md).
 
@@ -100,10 +101,10 @@ Per ulteriori informazioni, vedi [Host](../ui/publishing/hosts/hosts-overview.md
 
 Ogni libreria viene creata all&#39;interno di un ambiente. Un ambiente definisce la modalità di visualizzazione della build quando viene pubblicata. Puoi specificare:
 
-* **Host:** Ogni ambiente richiede un host che determina l&#39;endpoint in cui verranno inviate tutte le build create in questo ambiente.
-* **Archivio:** l&#39;impostazione predefinita consiste nell&#39;implementare la build come file minified .js. Se utilizzi un codice personalizzato, puoi avere più file che si riferiscono l’uno all’altro. Questi possono essere combinati in un singolo file zip e crittografati.
+* **Host:** ogni ambiente richiede un host che determini l’endpoint in cui verranno inviate tutte le build create in questo ambiente.
+* **Archivio:** l’impostazione predefinita consiste nel distribuire la build come file .js minimizzato. Se utilizzi un codice personalizzato, puoi avere più file che sfanno riferimento l’uno all’altro. Questi possono essere combinati in un singolo file zip e crittografati.
 
-Dopo aver salvato l&#39;ambiente, genera il codice da incorporare che puoi copiare e incollare nel sito Web. Il codice di incorporamento non funzionerà finché non avrai creato una libreria e generato una build. Per ulteriori informazioni, vedi [Ambienti](../ui/publishing/environments.md).
+Dopo aver salvato l&#39;ambiente, genera il codice da incorporare che puoi copiare e incollare nel sito Web. Il codice da incorporare non funzionerà finché non avrai creato una libreria e prodotto una build. Per ulteriori informazioni, vedi [Ambienti](../ui/publishing/environments.md).
 
 ### Pubblicare una build in Dev
 
@@ -117,7 +118,7 @@ Il processo di pubblicazione è descritto nei passaggi seguenti.
 
 ## 7. Promuovere a produzione
 
-Dopo aver testato la build nell’ambiente di sviluppo, assicurati di creare l’area di visualizzazione e gli ambienti di produzione e di inserire i codici incorporati nelle posizioni necessarie. A questo scopo, puoi riutilizzare gli host esistenti.
+Dopo aver testato la build nell’ambiente di sviluppo, assicurati di creare l’area di visualizzazione e gli ambienti di produzione e di inserire i codici da incorporare nelle posizioni appropriate. A questo scopo, puoi riutilizzare gli host esistenti.
 
 La promozione di una libreria completamente accessibile alla produzione in genere richiede il coordinamento tra persone diverse con i permessi appropriati.
 
@@ -131,8 +132,8 @@ Per ulteriori informazioni sui diversi stati e opzioni disponibili durante il pr
 
 ## Risorse aggiuntive
 
-Per ulteriori informazioni sui tag, consulta le risorse seguenti:
+Per ulteriori informazioni, consulta le seguenti risorse:
 
-* **[Community](https://forums.adobe.com/community/experience-cloud/platform/launch)** di raccolta dati: Fai e rispondi alle domande, invia idee, vota quelle degli altri. Accedi con il tuo Adobe ID.
-* **[Documenti](https://developer.adobelaunch.com/)** per sviluppatori: Partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare API di tag
-* **[Panoramica](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=it)** dei Tutorials: Questi documenti ti introducono a concetti di tag quali l’inoltro di eventi e l’SDK per dispositivi mobili nelle app Android.
+* **[Community di Data Collection](https://forums.adobe.com/community/experience-cloud/platform/launch)**: fai domande e rispondi, invia idee e vota quelle degli altri. Accedi con il tuo Adobe ID.
+* **[Documentazione per sviluppatori](https://developer.adobelaunch.com/)**: partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare le API dei tag.
+* **[Panoramica dei tutorial](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=it)**: questi documenti presentano i concetti relativi ai tag, inclusi l’inoltro degli eventi e Mobile SDK per app Android.

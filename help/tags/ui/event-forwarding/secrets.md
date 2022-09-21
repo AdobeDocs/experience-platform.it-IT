@@ -1,10 +1,10 @@
 ---
 title: Configurazione dei segreti nell’inoltro degli eventi
-description: Scopri come configurare i segreti nell’interfaccia utente di raccolta dati per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
+description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1633'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Al momento sono disponibili tre tipi di segreto supportati:
 
 {style=&quot;table-layout:auto&quot;}
 
-Questa guida fornisce una panoramica di alto livello su come configurare i segreti per un inoltro di eventi ([!UICONTROL Bordo]) nell&#39;interfaccia utente Raccolta dati.
+Questa guida fornisce una panoramica di alto livello su come configurare i segreti per un inoltro di eventi ([!UICONTROL Bordo]) nell’interfaccia utente Experience Platform o nell’interfaccia utente di raccolta dati.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Questa guida fornisce una panoramica di alto livello su come configurare i segre
 
 ## Prerequisiti
 
-Questa guida presuppone che tu abbia già familiarità con le modalità di gestione delle risorse per i tag e l’inoltro degli eventi nell’interfaccia utente della raccolta dati, inclusa la modalità di creazione di un elemento dati e di una regola di inoltro degli eventi. Consulta la guida su [gestione delle risorse](../managing-resources/overview.md) se hai bisogno di un’introduzione.
+Questa guida presuppone che tu abbia già familiarità con le modalità di gestione delle risorse per i tag e l’inoltro di eventi nell’interfaccia utente, inclusa la modalità di creazione di un elemento dati e una regola di inoltro eventi. Consulta la guida su [gestione delle risorse](../managing-resources/overview.md) se hai bisogno di un’introduzione.
 
 È inoltre necessario avere una conoscenza approfondita del flusso di pubblicazione per tag e inoltro eventi, tra cui come aggiungere risorse a una libreria e installare una build sul sito web per il test. Consulta la sezione [panoramica sulla pubblicazione](../publishing/overview.md) per ulteriori dettagli.
 
 ## Creare un segreto {#create}
 
-Per creare un segreto, accedi all’interfaccia utente di raccolta dati e apri la proprietà di inoltro eventi in cui desideri aggiungere il segreto. Quindi, seleziona **[!UICONTROL Segreti]** nella navigazione a sinistra, seguita da **[!UICONTROL Crea nuovo segreto]**.
+Per creare un segreto, seleziona **[!UICONTROL Inoltro eventi]** nel menu di navigazione a sinistra, apri la proprietà di inoltro eventi in cui desideri aggiungere il segreto. Quindi, seleziona **[!UICONTROL Segreti]** nella navigazione a sinistra, seguita da **[!UICONTROL Crea nuovo segreto]**.
 
 ![Crea nuovo segreto](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Per creare un segreto HTTP, seleziona **[!UICONTROL HTTP semplice]** dal **[!UIC
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Per creare un segreto OAuth 2, seleziona **[!UICONTROL OAuth 2]** dal **[!UICONTROL Tipo]** a discesa. Nei campi visualizzati di seguito, fornisci [[!UICONTROL ID client] e [!UICONTROL Segreto client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), nonché [[!UICONTROL URL token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) per l’integrazione con OAuth. La [!UICONTROL URL token] Nell’interfaccia utente Raccolta dati è presente una concatenazione tra l’host del server di autorizzazione e il percorso del token.
+Per creare un segreto OAuth 2, seleziona **[!UICONTROL OAuth 2]** dal **[!UICONTROL Tipo]** a discesa. Nei campi visualizzati di seguito, fornisci [[!UICONTROL ID client] e [!UICONTROL Segreto client]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), nonché [[!UICONTROL URL token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) per l’integrazione con OAuth. La [!UICONTROL URL token] nell’interfaccia utente è una concatenazione tra l’host del server di autorizzazione e il percorso del token.
 
 ![Segreto OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Assegnando più segreti a un singolo elemento dati e includendolo in una regola,
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire i segreti nell’interfaccia utente di raccolta dati. Per informazioni su come interagire con i segreti utilizzando l’API di Reactor, consulta la [guida all’endpoint segreti](../../api/endpoints/secrets.md).
+Questa guida illustra come gestire i segreti nell’interfaccia utente di . Per informazioni su come interagire con i segreti utilizzando l’API di Reactor, consulta la [guida all’endpoint segreti](../../api/endpoints/secrets.md).

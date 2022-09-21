@@ -1,10 +1,11 @@
 ---
 title: Tipi di condizioni per le estensioni Edge
 description: Scopri come definire un modulo libreria per tipi di condizione per un’estensione Edge in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 53%
+source-wordcount: '412'
+ht-degree: 68%
 
 ---
 
@@ -28,10 +29,10 @@ Questo documento illustra come definire i tipi di condizioni per un&#39;estensio
 
 I tipi di condizione sono in genere costituiti dai seguenti elementi:
 
-1. Visualizzazione nell’interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
+1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e valutare una condizione.
 
-Ad esempio, se desideri valutare se l&#39;utente si trova sull&#39;host `example.com`, il modulo potrebbe avere questo aspetto.
+Ad esempio, per valutare se l’utente si trova sull’host `example.com`, il modulo potrebbe presentarsi così.
 
 ```js
 module.exports = (context) => {
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Se si desidera rendere il nome host configurabile dall&#39;utente per consentire l&#39;input di un nome host e salvarlo nell&#39;oggetto settings, l&#39;oggetto potrebbe avere un aspetto simile a questo esempio.
+Se si desidera rendere il nome host configurabile dall’utente per consentire l’input di un nome host e salvarlo nell’oggetto impostazioni, l’oggetto potrebbe essere simile a questo esempio.
 
 ```js
 {
@@ -62,7 +63,7 @@ module.exports = (context) => {
 Il risultato restituito da un modulo condizione può essere uno dei seguenti:
 
 1. Un valore booleano (`true` o `false`).
-1. Una [promessa](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) che restituisce un valore booleano una volta risolta.
+1. Una [promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) che restituisce un valore booleano una volta risolta.
 
 ## Contesto del modulo Libreria
 

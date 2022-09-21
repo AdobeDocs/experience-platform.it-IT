@@ -2,9 +2,9 @@
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire le build della libreria a un server SFTP protetto e con hosting autonomo.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a0f22bad4a18936ba7c59d3747f8dd34f3de5ca4
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 38%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Adobe Experience Platform ti consente di distribuire le build della libreria tag a un server SFTP protetto che ospiti, fornendo un maggiore controllo sulla modalità di archiviazione e gestione delle build. Questa guida illustra come impostare un host SFTP per una proprietà tag nell’interfaccia utente di raccolta dati.
+Adobe Experience Platform ti consente di distribuire le build della libreria tag a un server SFTP protetto che ospiti, fornendo un maggiore controllo sulla modalità di archiviazione e gestione delle build. Questa guida illustra come impostare un host SFTP per una proprietà tag nell’interfaccia utente di Experience Platform o nell’interfaccia utente di raccolta dati.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Per informazioni più dettagliate, consulta il seguente articolo Medium su [come
 
 ## Creare un host SFTP {#create}
 
-Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Host]** nella navigazione a sinistra, seguita da **[!UICONTROL Aggiungi host]**.
+Seleziona **[!UICONTROL Host]** nella navigazione a sinistra, seguita da **[!UICONTROL Aggiungi host]**.
 
 ![Immagine che mostra il pulsante Aggiungi host selezionato nell’interfaccia utente](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

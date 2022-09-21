@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Adobe Privacy
 description: Scopri l’estensione tag Adobe Privacy in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '901'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 L’estensione Adobe di tag Privacy consente di raccogliere e rimuovere gli ID utente assegnati agli utenti finali dalle soluzioni Adobe sui dispositivi lato client. Gli ID raccolti possono quindi essere inviati a [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) per accedere o eliminare i dati personali della persona correlata nelle applicazioni Adobe Experience Cloud supportate.
 
-Questa guida descrive come installare e configurare l’estensione Adobe Privacy nell’interfaccia utente di raccolta dati.
+Questa guida illustra come installare e configurare l’estensione Adobe Privacy nell’interfaccia utente di Experience Platform o nell’interfaccia utente di raccolta dati.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Questa guida descrive come installare e configurare l’estensione Adobe Privacy
 
 ## Installa e configura l&#39;estensione 
 
-Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Estensioni]** nella navigazione a sinistra, seguita dalla **[!UICONTROL Catalogo]** scheda . Utilizza la barra di ricerca per restringere l’elenco delle estensioni disponibili fino a individuare Privacy degli Adobi. Seleziona **[!UICONTROL Installa]** per continuare.
+Seleziona **[!UICONTROL Estensioni]** nella navigazione a sinistra, seguita dalla **[!UICONTROL Catalogo]** scheda . Utilizza la barra di ricerca per restringere l’elenco delle estensioni disponibili fino a individuare Privacy degli Adobi. Seleziona **[!UICONTROL Installa]** per continuare.
 
 ![Installare l’estensione](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Quando utilizzi l’estensione tag Privacy di Adobe, devi fornire la funzione di
 
 ### Definire un elemento dati per gestire le identità
 
-Nell’interfaccia utente Raccolta dati, avvia il processo di creazione di un nuovo elemento dati selezionando **[!UICONTROL Elementi dati]** nella navigazione a sinistra, seguita da **[!UICONTROL Aggiungi elemento dati]**. Una volta nella schermata di configurazione, seleziona **[!UICONTROL Core]** per l&#39;estensione e **[!UICONTROL Codice personalizzato]** per il tipo di elemento dati. Da qui, seleziona **[!UICONTROL Open Editor]** nel pannello di destra.
+Avvia il processo di creazione di un nuovo elemento dati selezionando **[!UICONTROL Elementi dati]** nella navigazione a sinistra, seguita da **[!UICONTROL Aggiungi elemento dati]**. Una volta nella schermata di configurazione, seleziona **[!UICONTROL Core]** per l&#39;estensione e **[!UICONTROL Codice personalizzato]** per il tipo di elemento dati. Da qui, seleziona **[!UICONTROL Open Editor]** nel pannello di destra.
 
 ![Seleziona il tipo di elemento dati](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Dopo aver installato l&#39;estensione, puoi disabilitarla o eliminarla. Fai clic
 
 ## Passaggi successivi
 
-Questa guida riguardava l’utilizzo dell’estensione Adobe Privacy tag nell’interfaccia utente di raccolta dati. Per ulteriori informazioni sulle funzionalità fornite dall&#39;estensione, compresi esempi su come utilizzarla con codice non elaborato, consulta la sezione [Panoramica della libreria JavaScript sulla privacy](../../../../privacy-service/js-library.md) nella documentazione di Privacy Service.
+Questa guida riguardava l’utilizzo dell’estensione tag Privacy Adobe nell’interfaccia utente di . Per ulteriori informazioni sulle funzionalità fornite dall&#39;estensione, compresi esempi su come utilizzarla con codice non elaborato, consulta la sezione [Panoramica della libreria JavaScript sulla privacy](../../../../privacy-service/js-library.md) nella documentazione di Privacy Service.

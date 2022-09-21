@@ -1,10 +1,11 @@
 ---
 title: Tipi di elementi dati per le estensioni Edge
-description: Scopri come definire un modulo di libreria di tipo elemento dati per un’estensione tag in una proprietà edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come definire un modulo libreria data-element-type per un’estensione tag in una proprietà edge.
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 31%
+source-wordcount: '439'
+ht-degree: 51%
 
 ---
 
@@ -22,13 +23,13 @@ Questo documento illustra come definire i tipi di elementi dati per un’estensi
 
 >[!IMPORTANT]
 >
->Se stai sviluppando un&#39;estensione web, consulta invece la guida sui tipi di elementi dati [per estensioni web](../web/data-element-types.md) .
+>Se stai sviluppando un’estensione web, consulta la guida in [tipi di elementi dati per estensioni web](../web/data-element-types.md) invece.
 >
 >Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con il modo in cui sono integrati nelle estensioni edge. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. Visualizzazione nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni per l’elemento dati.
+1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni per l’elemento dati.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
 
 Se desideri consentire agli utenti di recuperare una parte di dati dal livello dati personalizzato, il modulo potrebbe avere un aspetto simile a questo esempio.
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Se si desidera che i dati restituiti per il livello dati siano configurabili dall&#39;utente Adobe Experience Platform, è possibile consentire all&#39;utente di immettere un nome chiave e quindi salvare il nome nell&#39;oggetto `settings`. L’oggetto potrebbe presentarsi così.
+Se desideri che il nome dell’elemento nell’archiviazione locale possa essere configurato dall’utente di Adobe Experience Platform, puoi consentire agli utenti di immettere un nome chiave e quindi di salvarlo nell’oggetto `settings`. L’oggetto potrebbe presentarsi così.
 
 ```js
 {

@@ -1,10 +1,11 @@
 ---
 title: Panoramica dell’estensione Adobe Target v2
-description: Scopri l’estensione tag Adobe Target v2 in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri le caratteristiche dell’estensione Tag di Adobe Target v2 in Adobe Experience Platform.
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 71%
+source-wordcount: '1356'
+ht-degree: 94%
 
 ---
 
@@ -30,17 +31,17 @@ Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore su
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target solo quando viene aggiunta per la prima volta, pertanto tutte le impostazioni devono essere gestite nell’interfaccia utente di raccolta dati se sono necessari aggiornamenti aggiuntivi.
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target solo quando viene aggiunta per la prima volta; pertanto, in caso di aggiornamenti aggiuntivi, tutte le impostazioni dovranno essere gestite nell’interfaccia di 
 
 Sono disponibili le seguenti configurazioni:
 
 #### Codice client
 
-Il codice client è l&#39;identificatore account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato utilizzando gli elementi dati.
+Il codice client è l&#39;identificatore account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato tramite elementi di dati.
 
 #### ID organizzazione
 
-Questo ID collega l&#39;implementazione al tuo account Adobe Experience Cloud. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato utilizzando gli elementi dati.
+Questo ID collega l&#39;implementazione al tuo account Adobe Experience Cloud. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato tramite elementi di dati.
 
 #### Dominio server
 
@@ -64,13 +65,13 @@ L&#39;estensione Target fornisce le seguenti azioni nella sezione Then di una re
 
 ### Load Target
 
-Aggiungi questa azione alla regola di tag in cui ha senso caricare Target nel contesto della regola. Questo carica la libreria at.js nella pagina. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Load Target solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
+Aggiungi questa azione alla regola di tag nel punto più appropriato per caricare Target nel contesto della regola. Questo carica la libreria at.js nella pagina. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Load Target solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
 
 Non è necessaria alcuna configurazione.
 
 ### Caricare Target con Decisioning sul dispositivo
 
-Aggiungi questa azione alla regola di tag in cui ha senso caricare Target con [le decisioni sul dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=it) abilitate nel contesto della regola. In questo modo viene caricata nella pagina la libreria at.js con decisioning sul dispositivo abilitato. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Carica Target con Decisioning sul dispositivo solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
+Aggiungi questa azione alla regola di tag nel punto più appropriato per caricare Target con [decisioning sul dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=it) abilitato nel contesto della regola. In questo modo viene caricata nella pagina la libreria at.js con decisioning sul dispositivo abilitato. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Carica Target con Decisioning sul dispositivo solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
 
 Non è necessaria alcuna configurazione.
 
@@ -92,7 +93,7 @@ Questo tipo di azione consente di aggiungere parametri specifici alle richieste 
 
 Questo tipo di azione consente a Target di attivare una richiesta al caricamento della pagina. L&#39;azione Load Target deve essere utilizzata in precedenza.
 
-È necessario specificare se abilitare nascondi corpo per evitare sfarfallii e lo stile utilizzato per nascondere l&#39;elemento corpo. Sono disponibili le seguenti opzioni:
+Specifica se abilitare la funzione per nascondere l’elemento “body”, in modo da evitare lo sfarfallio iniziale della pagina, e lo stile utilizzato per nasconderlo. Sono disponibili le seguenti opzioni:
 
 * **Nascondi corpo:** puoi abilitare o disabilitare questa impostazione. Il valore predefinito è Enabled: ciò significa che HTML BODY è nascosta.
 * **Stile corpo nascosto:** il valore predefinito è body{opacity:0}. Questo valore può essere modificato in uno diverso, ad esempio body{display:none}.
@@ -101,7 +102,7 @@ Per ulteriori informazioni, consulta la [documentazione online di Target](https:
 
 ### Attiva visualizzazione
 
-L’azione Attiva visualizzazione può essere chiamata ogni volta che viene caricata una nuova pagina o quando viene eseguito di nuovo il rendering di un componente di una pagina. La visualizzazione Trigger deve essere implementata per le applicazioni a pagina singola.
+È possibile utilizzare l’azione Attiva visualizzazione quando viene caricata una nuova pagina o quando si esegue di nuovo il rendering di un componente di una pagina. L’azione Attiva visualizzazione deve essere implementata per le applicazioni a pagina singola.
 
 1. Specifica il nome della visualizzazione da attivare.
 1. Specifica se l&#39;attivazione della visualizzazione deve essere attribuita a un&#39;impression per il reporting controllando la casella di controllo Page. Se la visualizzazione è correlata a un componente nuovamente sottoposto a rendering e non attribuisce a un&#39;impression per il reporting, lascia la casella di controllo Page deselezionata.
@@ -116,24 +117,24 @@ Una regola Target con questa implementazione di base si presenta così:
 
 ![](../../../images/targetv2deploy.png)
 
-Dopo aver salvato questa regola, devi aggiungerla a una libreria e generarla/distribuirla in modo da poter testare il comportamento.
+Dopo aver salvato questa regola, devi aggiungerla a una libreria e generarla/implementarla in modo da testarne il comportamento.
 
 ## Estensione Adobe Target con implementazione asincrona
 
 I tag possono essere distribuiti in modo asincrono. Se carichi la libreria di tag in modo asincrono con Target al suo interno, anche Target verrà caricato in modo asincrono. Si tratta di uno scenario completamente supportato, ma bisogna fare una valutazione aggiuntiva.
 
-In implementazioni asincrone, la pagina può terminare il rendering del contenuto predefinito prima che la libreria di Target sia completamente caricata e abbia eseguito lo scambio di contenuto. Questo può causare il cosiddetto &quot;sfarfallio&quot; in cui il contenuto predefinito viene visualizzato brevemente prima di essere sostituito dal contenuto personalizzato specificato da Target. Se desideri evitare questo sfarfallio, ti consigliamo di utilizzare uno snippet per nascondere il contenuto e caricare il bundle di tag in modo asincrono per evitare sfarfallii.
+In implementazioni asincrone, la pagina può terminare il rendering del contenuto predefinito prima che la libreria di Target sia completamente caricata e abbia eseguito lo scambio di contenuto. Questo può causare il cosiddetto &quot;sfarfallio&quot; in cui il contenuto predefinito viene visualizzato brevemente prima di essere sostituito dal contenuto personalizzato specificato da Target. Se vuoi evitare questo sfarfallio, ti consigliamo di utilizzare uno snippet per nascondere il contenuto e caricare il bundle di tag in modo asincrono.
 
 Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza lo snippet per nascondere il contenuto:
 
 * Lo snippet deve essere aggiunto prima di caricare il codice di incorporamento dell’intestazione del tag.
-* Questo codice non può essere gestito da tag, per cui deve essere aggiunto direttamente alla pagina.
+* Questo codice non può essere gestito dai tag, pertanto deve essere aggiunto direttamente alla pagina.
 * La pagina viene visualizzata quando si verifica il primo degli eventi seguenti:
    * Quando è stata ricevuta la risposta di caricamento della pagina
    * Quando la richiesta di caricamento della pagina scade
    * Quando lo stesso frammento scade
-* L&#39;azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
-* L’opzione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target nell’interfaccia utente Data Collection; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
+* L’azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L’opzione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

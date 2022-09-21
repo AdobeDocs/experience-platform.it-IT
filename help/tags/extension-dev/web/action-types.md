@@ -1,10 +1,11 @@
 ---
 title: Tipi di azioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 49%
+source-wordcount: '412'
+ht-degree: 70%
 
 ---
 
@@ -28,7 +29,7 @@ Questo documento illustra come definire i tipi di azioni per un&#39;estensione W
 
 I tipi di azione in genere consistono nei seguenti elementi:
 
-1. Una [visualizzazione](./views.md) mostrata nell&#39;interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni per l&#39;azione.
+1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’azione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni ed eseguire un&#39;azione.
 
 ```js
@@ -37,7 +38,7 @@ module.exports = function(settings) {
 };
 ```
 
-Ad esempio, per rendere il messaggio configurabile dall’utente Adobe Experience Platform, puoi consentire all’utente di inserire e salvare un messaggio nell’oggetto settings. L&#39;oggetto ha un aspetto simile a questo:
+Ad esempio, affinché il messaggio possa essere configurato dall’utente di Adobe Experience Platform, puoi consentire all’utente di inserire e salvare un messaggio nell’oggetto impostazioni. L’oggetto si presente simile a questo:
 
 ```json
 {
@@ -55,7 +56,7 @@ module.exports = function(settings) {
 
 ## Dati contestuali sugli eventi
 
-Un secondo argomento deve quindi essere passato al modulo che contiene le informazioni contestuali sull&#39;evento che attiva la regola. Può risultare utile in alcuni casi e vi si può accedere nel modo seguente:
+Un secondo argomento deve quindi essere passato al modulo contenente le informazioni contestuali sull’evento che attiva la regola. Può risultare utile in alcuni casi e vi si può accedere nel modo seguente:
 
 ```js
 module.exports = function(settings, event) {

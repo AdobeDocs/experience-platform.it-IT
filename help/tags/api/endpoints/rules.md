@@ -2,9 +2,9 @@
 title: Endpoint “rules”
 description: Scopri come effettuare chiamate all’endpoint /rules nell’API di Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 99%
 
 ---
@@ -15,7 +15,7 @@ Nel contesto dei tag di raccolta dati, le regole controllano il comportamento de
 
 >[!NOTE]
 >
->Questo documento illustra come gestire le regole nell’API di Reactor. Per informazioni su come interagire con le regole nell’interfaccia di Data Collection, consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
+>Questo documento illustra come gestire le regole nell’API di Reactor. Per informazioni su come interagire con le regole nell’interfaccia di , consulta la [guida dell’interfaccia utente](../../ui/managing-resources/rules.md).
 
 Una regola appartiene esattamente a una [proprietà](./properties.md). Una proprietà può avere diverse regole.
 

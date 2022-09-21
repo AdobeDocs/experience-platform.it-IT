@@ -1,10 +1,11 @@
 ---
 title: Flusso di pubblicazione
 description: Scopri come creare librerie, testare le build e approvarle per la produzione in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 91%
+source-wordcount: '1490'
+ht-degree: 96%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 91%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Il flusso di pubblicazione dei tag in Adobe Experience Platform si riferisce al processo di creazione delle librerie, al test delle build e alla loro approvazione per la produzione.
+Il flusso di pubblicazione dei tag in Adobe Experience Platform si riferisce al processo di creazione delle librerie, test delle build e approvazione per la produzione.
 
 Le azioni che puoi eseguire su una libreria dipendono dallo stato della libreria e dal livello di autorizzazione. Inoltre, lo stato di una libreria influenza anche le risorse che contiene (regole, elementi dati ed estensioni) a seconda di ciò che è a monte nel flusso di pubblicazione.
 
@@ -30,7 +31,7 @@ Esistono diversi livelli di autorizzazioni utente importanti per il flusso di pu
 
 Queste autorizzazioni non sono inclusive. Affinché un singolo utente possa eseguire il flusso di lavoro dall’inizio alla fine, è necessario concedere a tale persona tutte e tre le autorizzazioni all’interno di una determinata proprietà.
 
-Per ulteriori informazioni sulla gestione delle autorizzazioni per i tag, consulta la [guida alle autorizzazioni utente](../administration/user-permissions.md) .
+Per ulteriori informazioni sulla gestione delle autorizzazioni per i tag, consulta la [guida alle autorizzazioni utente](../administration/user-permissions.md).
 
 ## Stato della libreria {#state}
 
@@ -41,7 +42,7 @@ Per quanto riguarda il flusso di pubblicazione, sono disponibili quattro stati d
 * [[!UICONTROL Approvato]](#approved)
 * [[!UICONTROL Pubblicato]](#published)
 
-Questi quattro stati sono rappresentati come colonne nella scheda **[!UICONTROL Flusso di pubblicazione]** nell’interfaccia utente Raccolta dati.
+Questi quattro stati sono rappresentati come colonne all&#39;interno di **[!UICONTROL Flusso di pubblicazione]** scheda .
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -111,7 +112,7 @@ Ciò che è incluso a monte dipende dalla fase corrente della libreria. Ad esemp
 
 ![](./images/approval-workflow/upstream.png)
 
-Quando modifichi una libreria nell&#39;interfaccia utente Raccolta dati, tutte le risorse ereditate da a monte sono rappresentate nella sezione **[!UICONTROL Risorse a monte]** . Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
+Quando modifichi una libreria nell’interfaccia utente, tutte le risorse ereditate da a monte sono rappresentate nel **[!UICONTROL Risorse a monte]** sezione . Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
@@ -121,4 +122,4 @@ La sezione si espande per mostrare le singole risorse ereditate dalle fasi a mon
 
 ## Passaggi successivi
 
-Questa guida fornisce una panoramica di alto livello del flusso di pubblicazione per le librerie in Adobe Experience Platform. Per ulteriori informazioni su come pubblicare le librerie, consulta la [panoramica sulla pubblicazione](./overview.md).
+Questa guida fornisce una panoramica di alto livello del flusso di pubblicazione di librerie in Adobe Experience Platform. Per ulteriori informazioni su come pubblicare le librerie, consulta la [panoramica sulla pubblicazione](./overview.md).

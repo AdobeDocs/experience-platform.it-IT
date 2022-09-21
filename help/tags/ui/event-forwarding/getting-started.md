@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 92%
+source-wordcount: '872'
+ht-degree: 80%
 
 ---
 
@@ -42,7 +42,7 @@ Crea lo schema in Adobe Experience Platform.
 
 1. Assegna allo schema un nome e una breve descrizione.
 
-1. Puoi aggiungere il gruppo di campi “Dettagli web ExperienceEvent” selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
+1. Puoi aggiungere il gruppo di campi &quot;Dettagli web ExperienceEvent&quot; selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
 
    >[!NOTE]
    >
@@ -54,39 +54,35 @@ Per ulteriori informazioni sugli schemi, consulta la [guida del sistema Experien
 
 ## Creare una proprietà di inoltro degli eventi
 
-Nell’interfaccia utente Data Collection, crea una proprietà di tipo “Edge”.
+In **[!UICONTROL Tag]** area di lavoro, creare una proprietà di tipo **[!UICONTROL Bordo]**.
 
 1. Seleziona **[!UICONTROL Nuova proprietà]**.
 
 1. Assegna un nome alla proprietà.
 
-1. Scegli il tipo di piattaforma “Edge”.
+1. Scegli il tipo di piattaforma &quot;Edge&quot;.
 
 1. Seleziona **[!UICONTROL Salva]**.
 
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
-gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel datastream è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un datastream. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
+gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel datastream è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente dall’ **[!UICONTROL Ambienti]** e incollalo durante la creazione di un datastream. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
 ## Creare un flusso di dati
 
 Per creare il flusso di dati in Adobe Experience Platform, utilizza l’ID ambiente generato quando hai creato la proprietà di inoltro degli eventi.
 
-1. Utilizza il collegamento nella barra a sinistra dell’interfaccia utente di Data Collection per aprire l’interfaccia per i flussi di dati.
-
-1. Seleziona **[!UICONTROL Flussi di dati]**.
+1. Seleziona **[!UICONTROL Datastreams]** nella navigazione a sinistra.
 
 1. Assegna un nome alla configurazione e fornisci una descrizione facoltativa.
 La descrizione è utile per identificare le configurazioni, qualora ne siano elencate diverse.
 
 1. Seleziona **[!UICONTROL Salva]**.
 
-
-
 ## Abilitare l’inoltro degli eventi
 
 Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad altri prodotti Adobe.
 
-1. Seleziona la proprietà creata nell’interfaccia utente per i flussi di dati.
+1. In **[!UICONTROL Datastreams]** workspace, seleziona la proprietà creata.
 
 1. Seleziona l&#39;ambiente di sviluppo, di produzione oppure di gestione temporanea.
 
@@ -102,17 +98,9 @@ Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
 ## Configura l’estensione Platform Web SDK per inviare dati al datastream creato in precedenza
 
-Crea la proprietà nell’interfaccia utente di Data Collection, quindi utilizza l’estensione Adobe Experience Platform Web SDK per configurarla.
+Crea la tua proprietà in **[!UICONTROL Tag]** area di lavoro, quindi passare a **[!UICONTROL Estensioni]** e seleziona l&#39;estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
 
-1. Assegna un nome alla proprietà.
-
-   Puoi avere più istanze di Alloy. Ad esempio, potresti avere diverse proprietà di tracciamento prima e dopo il paywall.
-
-1. Seleziona l&#39;ID dell’organizzazione.
-
-1. Seleziona il dominio Edge.
-
-Per ulteriori opzioni di configurazione, consulta la [documentazione dell&#39;estensione SDK Web](../../extensions/web/sdk/overview.md).
+Consulta la sezione [Documentazione sull&#39;estensione dell&#39;SDK per web](../../extensions/web/sdk/overview.md) per informazioni dettagliate sulle opzioni di configurazione.
 
 ## Creare una regola di tag per inviare dati all’SDK per web di Platform
 

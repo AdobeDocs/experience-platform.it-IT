@@ -1,10 +1,11 @@
 ---
 title: Configurazione dell'estensione
-description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia utente di raccolta dati di Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia utente di Adobe Experience Platform o nell’interfaccia utente di raccolta dati.
+exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 64%
+source-wordcount: '274'
+ht-degree: 84%
 
 ---
 
@@ -16,8 +17,8 @@ ht-degree: 64%
 
 Con la configurazione dell’estensione si definisce il modo in cui un’estensione raccoglie le impostazioni globali da un utente. Ad esempio, considera un’estensione che consente all’utente di inviare un beacon tramite un’azione Invia beacon, e che tale beacon debba sempre contenere un ID account. Vogliamo evitare che agli utenti venga richiesto di immettere l’ID account ogni volta che devono configurare un’azione Invia beacon. L’estensione dovrà quindi richiedere l’ID account una sola volta, dalla vista di configurazione dell’estensione. Ogni volta che un beacon viene inviato, il modulo libreria dell’azione Invia beacon può richiamare l’ID account dalla configurazione dell’estensione e aggiungerlo al beacon.
 
-Quando gli utenti installano un&#39;estensione a una proprietà tag in Adobe Experience Platform, viene mostrata loro la vista di configurazione dell&#39;estensione che l&#39;estensione fornirà. L’estensione potrà essere installata solo dopo che sarà stata configurata. Per informazioni su come creare una schermata per la configurazione delle estensioni, consulta il documento sulle [viste](./web/views.md).
+Quando un utente installa un’estensione su una proprietà tag di Adobe Experience Platform, viene visualizzata la schermata per la configurazione dell’estensione fornita dall’estensione stessa. L’estensione potrà essere installata solo dopo che sarà stata configurata. Per informazioni su come creare una schermata per la configurazione delle estensioni, consulta il documento sulle [viste](./web/views.md).
 
-Una volta salvate le impostazioni da una vista di configurazione dell&#39;estensione, queste verranno emesse nella libreria di runtime di tag. Potrai quindi accedere a tali impostazioni dai moduli libreria delle estensioni richiamando [`turbine.getExtensionSettings()`](./turbine.md#get-extension-settings).
+Una volta salvate le impostazioni dalla vista di configurazione dell’estensione, queste verranno emesse nella libreria runtime di tag. Potrai quindi accedere a tali impostazioni dai moduli libreria delle estensioni richiamando [`turbine.getExtensionSettings()`](./turbine.md#get-extension-settings).
 
 La configurazione dell’estensione è una funzione opzionale che puoi scegliere di non sfruttare.

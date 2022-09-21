@@ -1,10 +1,11 @@
 ---
 title: Tipi di azioni per le estensioni Edge
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 41%
+source-wordcount: '386'
+ht-degree: 66%
 
 ---
 
@@ -28,10 +29,10 @@ Questo documento illustra come definire i tipi di azioni per un&#39;estensione E
 
 I tipi di azione in genere consistono nei seguenti elementi:
 
-1. Visualizzazione nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni dell’azione.
+1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni dell’azione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni ed eseguire un&#39;azione.
 
-Ad esempio, un modulo per inoltrare alcuni dati a un endpoint di terze parti potrebbe avere questo aspetto.
+Ad esempio, un modulo l’inoltro di alcuni dati a un endpoint di terze parti potrebbe presentarsi come segue:
 
 ```js
 module.exports = (context) {
@@ -48,7 +49,7 @@ module.exports = (context) {
 };
 ```
 
-Se si desidera configurare l’endpoint dall’utente e consentire l’input e la persistenza di un endpoint nell’oggetto delle impostazioni all’interno del modulo, l’oggetto avrà un aspetto simile a questo.
+Se si desidera rendere l’endpoint configurabile dall’utente e consentire l’input e la persistenza di un endpoint nell’oggetto impostazioni all’interno del modulo, l’oggetto avrà un aspetto simile al seguente:
 
 ```json
 {
@@ -56,7 +57,7 @@ Se si desidera configurare l’endpoint dall’utente e consentire l’input e l
 }
 ```
 
-Per funzionare sull’endpoint definito dall’utente, il modulo deve passare all’esempio seguente.
+Per utilizzare il nome dell’endpoint definito dall’utente, è necessario modificare il modulo come segue:
 
 ```js
 module.exports = (context) {
@@ -76,6 +77,6 @@ module.exports = (context) {
 
 ## Risultato azione
 
-Il risultato restituito da un modulo di azione può essere qualsiasi cosa. Se l&#39;azione deve eseguire un&#39;attività asincrona, è possibile restituire una [promessa](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) che restituisce il risultato desiderato una volta risolta.
+Il risultato restituito da un modulo di azione può essere qualsiasi cosa. Se l&#39;azione deve eseguire un&#39;attività asincrona, è possibile restituire una [promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) che restituisce il risultato desiderato una volta risolta.
 
 Il risultato dell&#39;azione viene memorizzato all&#39;interno di una chiave `ruleStash` che viene resa disponibile a tutti i moduli tramite il parametro `context` (`context.arc.ruleStash`). Ulteriori informazioni su `ruleStash` sono disponibili [qui](./context.md#rulestash).

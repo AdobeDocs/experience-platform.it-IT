@@ -1,10 +1,11 @@
 ---
 title: Panoramica dell’estensione Adobe Target
 description: Scopri l’estensione tag per Adobe Target in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 79%
+source-wordcount: '1192'
+ht-degree: 96%
 
 ---
 
@@ -30,7 +31,7 @@ Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L&#39;estensione recupera le impostazioni dall&#39;interfaccia utente di Target solo quando viene aggiunta per la prima volta, pertanto tutte le impostazioni devono essere gestite nell&#39;interfaccia utente di Raccolta dati se sono necessari aggiornamenti aggiuntivi.
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target quando viene aggiunta per la prima volta; in caso di aggiornamenti futuri, tutte le impostazioni dovranno invece essere gestite nell&#39;interfaccia di 
 
 Sono disponibili le seguenti configurazioni:
 
@@ -71,7 +72,7 @@ Per ulteriori informazioni sul funzionamento dell&#39;impostazione Timeout, cons
 
 #### Altre impostazioni at.js disponibili nell&#39;interfaccia utente di Target
 
-Diverse impostazioni disponibili nella pagina [!UICONTROL Modifica impostazioni at.js] dell’interfaccia utente di Target non fanno parte dell’estensione Target. Ecco alcune soluzioni alternative:
+Diverse impostazioni disponibili sulla pagina [!UICONTROL Modifica impostazioni at.js] dell’interfaccia utente di Target non fanno parte dell’estensione Target. Ecco alcune soluzioni alternative:
 
 * Creazione automatica di mbox globale. Questa impostazione è sostituita dall&#39;azione Fire Global Mbox nell&#39;estensione Target.
 * Intestazione libreria. Questa impostazione non fa parte dell&#39;estensione Target. Inserisci il codice che deve essere caricato prima di at.js in un&#39;azione Core Extension>Custom Code prima di utilizzare l&#39;azione Load Target.
@@ -85,7 +86,7 @@ L&#39;estensione Target fornisce le seguenti azioni nella sezione Then di una re
 
 ### Load Target
 
-Aggiungi questa azione alla regola di tag in cui ha senso caricare Target nel contesto della regola. Questo carica la libreria at.js nella pagina. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito.
+Aggiungi questa azione alla regola di tag nel punto più appropriato per caricare Target nel contesto della regola. Questo carica la libreria at.js nella pagina. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito.
 
 Non è necessaria alcuna configurazione.
 
@@ -130,17 +131,17 @@ Dopo aver salvato questa regola, devi aggiungerla a una libreria e generarla/dis
 
 I tag possono essere distribuiti in modo asincrono. Se carichi la libreria di tag in modo asincrono con Target al suo interno, anche Target verrà caricato in modo asincrono. Si tratta di uno scenario completamente supportato, ma bisogna fare una valutazione aggiuntiva.
 
-In implementazioni asincrone, la pagina può terminare il rendering del contenuto predefinito prima che la libreria di Target sia completamente caricata e abbia eseguito lo scambio di contenuto. Questo può causare il cosiddetto &quot;sfarfallio&quot; in cui il contenuto predefinito viene visualizzato brevemente prima di essere sostituito dal contenuto personalizzato specificato da Target. Se desideri evitare questo sfarfallio, ti consigliamo di utilizzare uno snippet per nascondere il contenuto e caricare il bundle di tag in modo asincrono per evitare sfarfallii.
+Nelle implementazioni asincrone, è possibile che il rendering del contenuto predefinito della pagina venga completato prima che la libreria di Target sia stata completamente caricata e che abbia eseguito lo scambio dei contenuti. Questo può causare il cosiddetto &quot;sfarfallio&quot; in cui il contenuto predefinito viene visualizzato brevemente prima di essere sostituito dal contenuto personalizzato specificato da Target. Se vuoi evitare questo sfarfallio, ti consigliamo di utilizzare uno snippet per nascondere il contenuto e caricare il bundle di tag in modo asincrono.
 
 Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza lo snippet per nascondere il contenuto:
 
 * Lo snippet deve essere aggiunto prima di caricare il codice di incorporamento dell’intestazione del tag.
-* Questo codice non può essere gestito da tag, per cui deve essere aggiunto direttamente alla pagina.
+* Questo codice non può essere gestito dai tag, pertanto deve essere aggiunto direttamente alla pagina.
 * La pagina viene visualizzata quando si verifica il primo degli eventi seguenti:
    * Quando è stata ricevuta la risposta mbox globale
    * Quando la richiesta mbox globale scade
    * Quando lo stesso frammento scade
-* L&#39;azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L’azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

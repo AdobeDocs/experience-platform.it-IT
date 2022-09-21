@@ -1,10 +1,11 @@
 ---
 title: Copiare le risorse
 description: Scopri come creare una nuova risorsa tag utilizzando le impostazioni di una risorsa tag esistente in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 84%
+source-wordcount: '780'
+ht-degree: 94%
 
 ---
 
@@ -34,7 +35,7 @@ Se copi una regola o un elemento dati, nella finestra di dialogo di copia puoi u
 
 >[!NOTE]
 >
->Nell’interfaccia utente di raccolta dati non è possibile copiare le risorse in un’altra Proprietà se una di queste è configurata per lo sviluppo dell’estensione e l’altra non lo è.
+>Non è possibile copiare le risorse in un&#39;altra proprietà se una di queste è configurata per lo sviluppo dell&#39;estensione e l&#39;altra non lo è.
 
 Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Copia]**.
 
@@ -59,11 +60,11 @@ Quando copi un&#39;estensione in un&#39;altra proprietà ci sono degli elementi 
 
 ## Copia delle regole e degli elementi dati
 
-Tutte le regole e gli elementi dati vengono forniti da un’estensione, pertanto quando effettui una copia tra le proprietà, Platform deve tenere conto di queste estensioni sottostanti.
+Tutte le regole e gli elementi dati vengono forniti da un’estensione; pertanto, quando crei una copia da una proprietà a un’altra, Platform deve tenere conto delle estensioni sottostanti.
 
 ![Copiare una regola nella proprietà demo](../../images/copy-rules-dialog1.png)
 
-La finestra di dialogo Copia fornisce una spiegazione di ciò che verrà eseguito esattamente prima di iniziare la copia. La finestra di dialogo precedente è per una regola, ma lo stesso vale per gli elementi dati.
+ Prima di iniziare la copia, la finestra di dialogo Copia fornisce una spiegazione di ciò che verrà eseguito. La finestra di dialogo precedente è per una regola, ma lo stesso vale per gli elementi dati.
 
 1. **Le estensioni richieste da queste regole vengono copiate.** Questo permette di sapere che le estensioni richieste andranno di pari passo con la regola. Queste copie seguono le stesse regole di una normale copia dell&#39;estensione descritta in precedenza.
 1. **Le impostazioni dell&#39;estensione NON verranno copiate se questa è già installata.** Ciò significa che se le estensioni necessarie esistono già nella proprietà di destinazione, l&#39;estensione rimane invariata. Se desideri copiare anche le impostazioni di estensione puoi utilizzare l&#39;interruttore **Sostituisci le impostazioni dell&#39;estensione nella proprietà di destinazione** e la spiegazione viene aggiornata di conseguenza.

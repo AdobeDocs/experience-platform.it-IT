@@ -1,10 +1,11 @@
 ---
 title: Eliminare le risorse
-description: Scopri come eliminare le risorse dei tag in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come eliminare le risorse tag in Adobe Experience Platform.
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 81%
+source-wordcount: '558'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 81%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L’eliminazione di una risorsa è una rimozione permanente di tale risorsa da Adobe Experience Platform. Se desideri comunque che la risorsa venga visualizzata nell&#39;interfaccia utente di raccolta dati ma non nella libreria dei tag, consulta [Rimuovi risorse da una libreria](remove-resources-from-library.md).
+L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se desideri rimuovere una risorsa da una libreria di tag specifica ma desideri comunque che sia disponibile per l’utilizzo in altre librerie, consulta la guida in [rimozione di risorse da una libreria](remove-resources-from-library.md).
 
 Puoi eliminare elementi dati, regole, estensioni, host, ambienti e proprietà. Una volta eliminate, queste risorse non sono recuperabili.
 
@@ -49,7 +50,7 @@ Puoi risolvere queste dipendenze prima o dopo l&#39;eliminazione dell&#39;elemen
 
 Tutte le altre risorse (regole, componenti regola e elementi di dati) vengono fornite da estensioni.
 
-I componenti e gli elementi dati variano a seconda delle estensioni per il loro comportamento, ma anche per essere visualizzati nell’interfaccia utente Raccolta dati. Se elimini l&#39;estensione prima di risolvere le dipendenze, non potrai più visualizzare queste risorse orfane. Queste risorse orfane vengono visualizzate nelle viste elenco, tuttavia quando tenti di aprire la vista dettagli riceverai un messaggio di errore.
+I componenti regola e gli elementi dati dipendono dalle estensioni non solo per quanto riguarda il loro comportamento, ma anche per la loro visualizzazione o meno nell’interfaccia utente di Data Collection. Se elimini l&#39;estensione prima di risolvere le dipendenze, non potrai più visualizzare queste risorse orfane. Queste risorse orfane vengono visualizzate nelle viste elenco, tuttavia quando tenti di aprire la vista dettagli riceverai un messaggio di errore.
 
 Per questo motivo è necessario prestare molta attenzione all&#39;eliminazione delle estensioni e risolvere le dipendenze prima di eliminarle.
 

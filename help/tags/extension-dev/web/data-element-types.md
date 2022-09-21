@@ -1,10 +1,11 @@
 ---
 title: Tipi di elementi dati per le estensioni web
-description: Scopri come definire un modulo libreria di tipo elemento dati per un’estensione tag in una proprietà web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come definire un modulo libreria data-element-type per un’estensione tag in una proprietà web.
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 60%
+source-wordcount: '600'
+ht-degree: 70%
 
 ---
 
@@ -22,13 +23,13 @@ Questo documento illustra come definire i tipi di elementi dati per un&#39;esten
 
 >[!IMPORTANT]
 >
->Se stai sviluppando un&#39;estensione Edge, consulta la guida sui tipi di elementi dati [per le estensioni edge](../edge/data-element-types.md) .
+>Se stai sviluppando un’estensione Edge, consulta la guida in [tipi di elementi dati per estensioni edge](../edge/data-element-types.md) invece.
 >
 >Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con la loro integrazione nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. Una [visualizzazione](./views.md) mostrata nell&#39;interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni per l&#39;elemento dati.
+1. A [visualizzare](./views.md) nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni per l’elemento dati.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Se si desidera rendere configurabile il nome dell&#39;elemento di archiviazione locale dall&#39;utente Adobe Experience Platform, è possibile consentire all&#39;utente di immettere un nome e quindi salvare il nome nell&#39;oggetto `settings`. L’oggetto potrebbe presentarsi così:
+Se desideri che il nome dell’elemento nell’archiviazione locale possa essere configurato dall’utente di Adobe Experience Platform, puoi consentire agli utenti di immettere un nome e quindi di salvarlo nell’oggetto `settings`. L’oggetto potrebbe presentarsi così:
 
 ```js
 {

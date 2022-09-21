@@ -2,10 +2,10 @@
 title: Estensione Adobe Client Data Layer
 description: Scopri l’estensione per tag Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '647'
+ht-degree: 95%
 
 ---
 
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installazione
 
-Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente di Data Collection e seleziona Adobe Client Data Layer.
+Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente Experience Platform o nell’interfaccia utente di raccolta dati, quindi seleziona Livello dati client Adobe.
 
 ![Visualizzazione dell’estensione ACDL nel catalogo](./images/catalog.png)
 

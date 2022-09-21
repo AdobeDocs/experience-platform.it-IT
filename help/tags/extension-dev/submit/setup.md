@@ -1,10 +1,11 @@
 ---
 title: Configurazione dell’organizzazione Experience Cloud
 description: Scopri come registrare un’organizzazione Adobe Experience Cloud per iniziare a sviluppare estensioni per Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 51%
+source-wordcount: '595'
+ht-degree: 92%
 
 ---
 
@@ -14,15 +15,15 @@ ht-degree: 51%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per sviluppare estensioni di tag in Adobe Experience Platform è necessario registrare un&#39;organizzazione Adobe Experience Cloud.
+Per sviluppare estensioni di tag in Adobe Experience Platform è necessario registrare un’organizzazione Adobe Experience Cloud.
 
-Ai clienti di Experience Cloud viene assegnata un’organizzazione al momento della firma dei contratti. Se sei un cliente esistente e hai già un&#39;organizzazione registrata, puoi saltare questo documento e passare alla guida [concessione dell&#39;accesso utente per lo sviluppo dell&#39;estensione](./access.md). Se non sei un cliente di Experience Cloud, puoi richiedere la creazione di un’organizzazione iscrivendoti a uno dei programmi partner di Adobe elencati di seguito.
+Ai clienti di Experience Cloud viene assegnata un’organizzazione al momento della firma dei contratti. Se sei un cliente esistente e hai già un’organizzazione registrata, puoi saltare questo documento e passare alla guida su come [concedere l’accesso utente per lo sviluppo di estensioni](./access.md). Se non sei un cliente di Experience Cloud, puoi richiedere la creazione di un’organizzazione iscrivendoti a uno dei programmi partner di Adobe elencati di seguito.
 
 ## Programma per partner Exchange
 
 Questo programma è rivolto ai partner che dispongono di tecnologie complementari che possono essere integrate con le soluzioni di Adobe, in modo da offrire valore aggiunto ai nostri reciproci clienti. Nell’ambito di questo programma viene gestito un [marketplace](https://www.adobeexchange.com/experiencecloud.html) in cui i partner possono creare inserzioni per promuovere le loro integrazioni. Puoi consultare la [guida alla registrazione](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) e iniziare a registrarti [qui](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html).
 
-Devi essere membro di questo programma per creare estensioni di tag elencate pubblicamente per Adobe Experience Platform che verranno visualizzate sul mercato.
+Per creare estensioni di tag per Adobe Experience Platform da pubblicare e visualizzare sul marketplace, devi essere membro di questo programma.
 
 >[!WARNING]
 >
@@ -30,18 +31,20 @@ Devi essere membro di questo programma per creare estensioni di tag elencate pub
 
 ## Solution Partner Program (SPP)
 
-Questo programma è destinato alle società di consulenza che aiutano i clienti Adobi a sfruttare al massimo i loro investimenti e i partner che rivendono soluzioni di Adobe. Per una guida dettagliata su come partecipare al programma per i partner della soluzione, visita il [sito web Adobe Spark](https://spark.adobe.com/page/7PKZzIJJjkcDd/) oppure, per ulteriori informazioni, visita il [sito del programma per i partner della soluzione](https://solutionpartners.adobe.com/home.html).
+Questo programma è destinato a società di consulenza che aiutano i clienti di Adobe a trarre il massimo dai loro investimenti, e a partner che rivendono le soluzioni di Adobe. Per una guida dettagliata su come partecipare al Solution Partner Program, visita il [sito web Adobe Spark](https://spark.adobe.com/page/7PKZzIJJjkcDd/) oppure, per ulteriori informazioni, visita il [sito del Solution Partner Program](https://solutionpartners.adobe.com/home.html).
 
 >[!NOTE]
 >
->I partner della soluzione devono anche [registrare](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) per il programma di partner di Exchange in quanto l&#39;accordo di Exchange contiene i termini e le condizioni per lo sviluppo dell&#39;estensione di Adobe Experience Platform.
+>I Solution Partner devono anche [registrarsi](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) al programma per Exchange Partner, in quanto il contratto di Exchange contiene i termini e le condizioni per lo sviluppo di estensioni Adobe Experience Platform.
 >
->Prima di completare la registrazione in Exchange, invia una e-mail all’amministratore di Exchange all’indirizzo <ExchangeHelpEC@adobe.com> e spiega ti stai registrando per poter promuovere le tue estensioni In caso contrario, l&#39;applicazione verrà probabilmente rifiutata e verrai indirizzato all&#39;SPP.
+>Prima di completare la registrazione in Exchange, invia una e-mail all’amministratore di Exchange all’indirizzo <ExchangeHelpEC@adobe.com> e spiega ti stai registrando per poter promuovere le tue estensioni In caso contrario, la domanda di registrazione potrebbe essere rifiutata e verrai indirizzato piuttosto all’SPP.
 >
 >Attualmente il tuo indirizzo e-mail aziendale può essere utilizzato solo in un programma partner alla volta; dovrai quindi utilizzare un’indirizzo e-mail aziendale diverso come contatto registrato per ciascuno di questi programmi.
 
-Una volta che la tua azienda è iscritt al programma Exchange Partner, puoi richiedere l’accesso a Adobe Solutions: accedi al [sito Exchange Partner](https://partners.adobe.com/exchangeprogram/experiencecloud) e segui i passaggi descritti di seguito. Se disponi già di un account di Experience Cloud e di accesso alle soluzioni, ma non hai accesso all&#39;interfaccia utente di raccolta dati in Adobe Experience Platform, consulta le [istruzioni per la configurazione di gruppi e utenti](../../ui/administration/user-permissions.md).
+Una volta che la tua azienda è iscritt al programma Exchange Partner, puoi richiedere l’accesso a Adobe Solutions: accedi al [sito Exchange Partner](https://partners.adobe.com/exchangeprogram/experiencecloud) e segui i passaggi descritti di seguito.
+
+Se disponi di un account Experience Cloud che richiede l’accesso all’interfaccia utente di raccolta dati e all’interfaccia utente di Experience Platform, consulta la sezione [guida alle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
 
 ## Per sviluppatori indipendenti
 
-Se sei uno sviluppatore indipendente o altrimenti non riesci a partecipare a uno dei programmi partner elencati e desideri creare estensioni di tag per Adobe Experience Platform, invia un’e-mail a launch-ext-dev@adobe.com per richiedere l’accesso. Fornisci un po&#39; di background sulla tua esperienza con i tag in Adobe Experience Platform e la roadmap del progetto di estensione pianificata.
+Se sei uno sviluppatore indipendente oppure se non sei in grado di iscriverti a uno di questi programmi per partner e desideri creare delle estensioni tag per Adobe Experience Platform, puoi richiedere l’accesso inviando un messaggio e-mail all’indirizzo launch-ext-dev@adobe.com. Fornisci informazioni sulla tua esperienza con i tag in Adobe Experience Platform e la roadmap prevista per il progetto della tua estensione.

@@ -1,10 +1,11 @@
 ---
 title: Panoramica dell’estensione per il tracciamento di video BrightCove
-description: Scopri l’estensione tag di tracciamento video BrightCove in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri l’estensione tag per il tracciamento di video BrightCove in Adobe Experience Platform.
+exl-id: d27eff21-2abf-4495-8382-08cab32742e0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 38%
+source-wordcount: '908'
+ht-degree: 95%
 
 ---
 
@@ -16,23 +17,23 @@ ht-degree: 38%
 
 ## Prerequisiti
 
-Per ogni proprietà tag in Adobe Experience Platform sono necessarie le seguenti estensioni installate e configurate nella schermata Extension:
+Per ogni proprietà in Adobe Experience Platform è necessario installare e configurare le seguenti estensioni nella schermata Extension:
 
 * Adobe Analytics
 * Servizio ID visitatore di Experience Cloud
 * Estensioni core installate
 
-Utilizza lo snippet di codice &quot;In-Page embed code (Advanced)&quot; nell’HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video. Lo snippet HTML &quot;In-Page Embed code (Advanced)&quot; si trova nella [documentazione Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Il seguente collegamento fornisce ulteriori informazioni su [come generare codice incorporato sia per i lettori video in anteprima che per quelli pubblicati](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
+Utilizza lo snippet di codice “In-Page embed code (Advanced)” nell’HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video. Lo snippet HTML “In-Page Embed code (Advanced)” si trova nella [documentazione di Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Il seguente collegamento fornisce ulteriori informazioni su [come generare codice da incorporare sia per i lettori video in anteprima che per quelli pubblicati](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
 
-Questa versione dell&#39;estensione 1.1.0 supporta l&#39;incorporazione di più video BrightCove in una singola pagina web. Se all’interno dei tag di incorporamento avanzati sono presenti più proprietà `id` , accertati che ciascuna di esse disponga di valori univoci. Ad esempio, `player1`, `player2` e così via.
+Questa versione dell’estensione 1.1.0 consente di incorporare più video BrightCove in una singola pagina web. Se all’interno dei tag di incorporamento avanzati sono presenti più proprietà `id`, accertati che ciascuna di esse disponga di valori univoci. Ad esempio, `player1`, `player2` e così via.
 
 >[!NOTE]
 >
->Sulle pagine con più video, ogni video utilizza lo stesso set di configurazione nella regola di tag in esecuzione sulla pagina. Ad esempio, se crei una regola con un evento che si attiva quando il video è completato al 50%, ogni video della pagina attiverà la regola al punto di cue del 50%.
+>Sulle pagine con più video, tieni presente che ogni video utilizza lo stesso set di configurazione nella regola tag in esecuzione sulla pagina. Ad esempio, se crei una regola con un evento che si attiva quando il video è completato al 50%, ogni video della pagina attiverà la regola al punto di cue del 50%.
 
-Se la pagina web che utilizza questa estensione che interagisce con il video prima che lo script rilevante sia stato completamente caricato, è possibile eseguire due azioni per risolvere il problema. In primo luogo la libreria di tag può essere caricata in modo sincrono e in secondo luogo, inserire l’ `<script type="text/javascript">\_satellite.pageBottom();\</script\>` prima che il video venga incorporato nella pagina.
+Se la pagina web che utilizza questa estensione che interagisce con il video prima che lo script rilevante sia stato completamente caricato, è possibile eseguire due azioni per risolvere il problema. In primo luogo, la libreria di tag può essere caricata in modo sincrono e, in secondo luogo, si può inserire l’elemento `<script type="text/javascript">\_satellite.pageBottom();\</script\>` prima che il video venga incorporato nella pagina.
 
-Per ulteriori informazioni sui metodi e gli eventi dei componenti utilizzati in questa estensione, consulta la [documentazione API BrightCove](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) .
+Per ulteriori informazioni sui metodi dei componenti e gli eventi utilizzati in questa estensione, consulta la [documentazione dell’API di BrightCove](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer).
 
 ## Elementi dati
 
@@ -44,7 +45,7 @@ Nell’estensione sono disponibili sette elementi dati, nessuno dei quali richie
 * **Video Ad Support:** questo elemento dati specifica se gli annunci sono supportati o meno all’interno del video.
 * **Video ID:** questo elemento dati specifica l’ID BrightCove associato al video.
 * **Video Name:** questo elemento dati specifica il nome descrittivo del video.
-* **Video Tags:** questo elemento dati specifica gli script particolari associati al video.
+* **Video Tags:** questo elemento dati specifica gli script associati al video.
 
 ## Eventi
 
@@ -60,7 +61,7 @@ Nell’estensione sono disponibili sette eventi, solo Custom Cue Point Tracking 
 * **Video Loaded Metadata:** questo evento viene attivato quando il lettore riceve le informazioni iniziali sulla durata e sulla dimensione.
 * **Video Pause:** questo evento viene attivato quando il video viene messo in pausa.
 * **Video Resume:** questo evento viene attivato quando il video viene riavviato dopo essere stato messo in pausa.
-* **Video Screen Change:** l’evento viene attivato quando il video passa alla modalità a schermo intero o ne esce.
+* **Video Screen Change:** l’evento viene attivato quando il video passa alla modalità schermo intero o ne esce.
 * **Video Start:** questo evento viene attivato quando il contenuto video viene avviato per la prima volta.
 
 ## Utilizzo
@@ -69,13 +70,13 @@ Nell’estensione sono disponibili sette eventi, solo Custom Cue Point Tracking 
 
 Le regole prevedono tre azioni:
 
-1. Impostare le variabili Adobe Analytics. Crea elementi dati per tutti o alcuni degli elementi dati elencati sopra.
+1. Impostare le variabili Adobe Analytics. (Ovvero creare elementi dati per tutti o alcuni degli elementi dati elencati sopra.)
 1. Inviare il beacon di Adobe Analytics.
 1. Cancellare le variabili Adobe Analytics.
 
-## Esempio di regola tag per &quot;Video Start&quot;
+## Esempio di regola tag per “Video Start”
 
-Devono essere inclusi i seguenti oggetti estensione video:
+Devono essere inclusi i seguenti oggetti di estensione video:
 
 * **Eventi**
 
@@ -90,18 +91,18 @@ Devono essere inclusi i seguenti oggetti estensione video:
    1. In un’azione “Set variables” di Analytics, imposta:
 
       * L’evento per **Video Start** (ad esempio: event17)
-      * Una proprietà/eVar per l&#39;elemento dati **Video Name** (ad esempio: (eVar10)
-      * Una proprietà/eVar per l&#39;elemento dati **Video Duration** (ad esempio: (eVar11)
-      * Una proprietà/eVar per l&#39;elemento dati **Current Video Place** (ad esempio: (eVar12)
+      * Una prop/eVar per l’elemento dati **Video Name** (ad esempio: eVar10)
+      * Una prop/eVar per l’elemento dati **Video Duration** (ad esempio: eVar11)
+      * Una prop/eVar per l’elemento dati **Current Video Place** (ad esempio: eVar12)
    1. L’azione “Send beacon” di Analytics (`s.tl`)
    1. L’azione “Clear variables” di Analytics
 
 
 >[!TIP]
 >
->Per coloro che non desiderano eseguire il provisioning di più eVar o proprietà per ciascun elemento video, esiste un metodo alternativo. I valori degli elementi dati possono essere concatenati all’interno dell’interfaccia utente di raccolta dati. Vengono quindi analizzate nei rapporti di classificazione utilizzando lo strumento per la generazione di regole di classificazione . Per ulteriori informazioni, consulta la documentazione [Strumento per la generazione di regole di classificazione](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it) . Infine, vengono applicati come segmento in Analysis Workspace.
+>Per coloro che non desiderano eseguire il provisioning di più eVar o proprietà per ciascun elemento video, i valori degli elementi dati vengono concatenati come metodo alternativo. Vengono quindi analizzate nei rapporti di classificazione utilizzando lo strumento per la generazione di regole di classificazione. Per ulteriori informazioni, consulta la documentazione dello strumento [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it). Infine, vengono applicati come segmento in Analysis Workspace.
 >
->A questo scopo, crea un nuovo elemento dati denominato ad esempio &quot;Video MetaData&quot; e programmalo per inserire tutti gli elementi di dati video (elencati sopra) e concatenarli insieme.
+>A tale scopo, crea un nuovo elemento dati denominato ad esempio “Video MetaData” e programmalo per inserire tutti gli elementi dati video (elencati sopra) e concatenarli insieme.
 
 ```javascript
 var r = [];

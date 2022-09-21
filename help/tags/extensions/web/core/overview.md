@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '5492'
-ht-degree: 87%
+source-wordcount: '5482'
+ht-degree: 83%
 
 ---
 
@@ -88,7 +88,7 @@ L’evento si attiva se il volume viene alzato o abbassato. Per ulteriori inform
 
 #### Orientation Change
 
-L’evento si attiva se cambia l’orientamento del dispositivo. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
+L&#39;evento si attiva se l&#39;orientamento del dispositivo cambia. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se l’elemento è un tag di ancoraggio (`<a>`) per collegare il contenuto, puoi
 
 Quando utilizzi il ritardo dei collegamenti, Platform impedisce al browser di spostarsi fuori dalla pagina. Successivamente, esegue un reindirizzamento JavaScript alla destinazione originale dopo il timeout specificato. Ciò è particolarmente pericoloso se il markup della pagina contiene tag `<a>` la cui funzionalità prevista non fa uscire l’utente dalla pagina. Se non è possibile risolvere il problema in altro modo, è necessario essere estremamente precisi nella definizione del selettore, in modo che questo evento venga attivato esattamente dove necessario e in nessun altro punto.
 
-Il valore predefinito del ritardo del collegamento è 100 millisecondi. Si prega di notare che i tag attenderanno sempre il tempo specificato e non sarà in alcun modo collegato all’esecuzione delle azioni della regola. È possibile che il ritardo obblighi l’utente ad aspettare più tempo del necessario, e che il ritardo non sia abbastanza lungo per consentire il completamento di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l’esecuzione delle regole, ma peggiorano anche l’esperienza utente.
+Il valore predefinito del ritardo del collegamento è 100 millisecondi. Tieni presente che i tag attendono sempre il periodo di tempo specificato e non sono in alcun modo collegati all’esecuzione delle azioni della regola. È possibile che il ritardo induca l’utente ad attendere più tempo del necessario e che anche il ritardo non sia abbastanza lungo per il completamento corretto di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l’esecuzione delle regole, ma peggiorano anche l’esperienza utente.
 
 Per attivare il ritardo è necessario fornire sia l’elemento selezionato che attiva l’evento, sia la quantità specifica di tempo prima che l’evento venga attivato.
 
@@ -242,11 +242,11 @@ console.log(event);
 return true;
 ```
 
-Esegui la regola in un browser e controlla l’oggetto evento a cui hai avuto accesso nella console del browser. Una volta raccolte le informazioni disponibili è possibile usarle per prendere decisioni programmatiche all’interno del codice personalizzato.
+Esegui la regola in un browser ed esamina l&#39;oggetto evento registrato nella console del browser. Una volta raccolte le informazioni disponibili è possibile usarle per prendere decisioni programmatiche all’interno del codice personalizzato.
 
 *Sequenza delle condizioni*
 
-Quando è abilitata l’opzione “Run rule components in sequence” dalle impostazioni di proprietà, è possibile che dei componenti della regola successivi siano in attesa mentre la condizione esegue un’attività asincrona.
+Quando l’opzione &quot;Esegui componenti regola in sequenza&quot; dalle impostazioni di proprietà è abilitata, è possibile che i componenti regola successivi siano in attesa mentre la condizione esegue un’attività asincrona.
 
 Quando la condizione restituisce una [promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), la condizione successiva nella regola non viene eseguita finché la promessa restituita non è risolta. Se la promessa viene rifiutata, i tag considerano tale condizione come non riuscita e non verranno eseguite ulteriori condizioni o azioni da quella regola.
 
@@ -307,11 +307,11 @@ Sono disponibili i seguenti operatori di confronto dei valori:
 
 **Is True:** La condizione restituisce true se il valore è booleano con il valore true. Il valore fornito non viene convertito in booleano se è di qualsiasi altro tipo. Un valore diverso da un valore booleano con valore true restituisce false.
 
-**Is Truthy:** La condizione restituisce true se il valore è true dopo essere stato convertito in booleano. Consulta la [documentazione Truthy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Truthy) per esempi di valori truthy.
+**Is Truthy:** La condizione restituisce true se il valore è true dopo essere stato convertito in booleano. Per esempi di valori truthy consulta [documentazione Truthy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Truthy).
 
 **Is False:** La condizione restituisce true se il valore è booleano con il valore di false. Il valore fornito non viene convertito in booleano se è di qualsiasi altro tipo. Se un valore diverso da un valore booleano con valore false restituisce false, restituisce false.
 
-**Is Falsy:** La condizione restituisce true se il valore è false dopo essere stato convertito in booleano. Consulta la [documentazione Falsy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Falsy) per esempi di valori falsy.
+**Is Falsy:** La condizione restituisce true se il valore è false dopo essere stato convertito in booleano. Per esempi di valori falsy consulta [documentazione Falsy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Falsy).
 
 #### Variable
 
@@ -351,14 +351,14 @@ Configura il numero di volte in cui il visitatore deve visualizzare la pagina pr
 
 #### Sessions
 
-Attiva l’azione se il numero di sessioni dell’utente soddisfa i criteri specificati.
+Attiva l&#39;azione se il numero di sessioni dell&#39;utente soddisfa i criteri specificati.
 
 1. Seleziona se il numero di sessioni deve essere maggiore di, uguale o inferiore al valore specificato.
 1. Specifica il numero di sessioni che determinano se la condizione è soddisfatta.
 
 #### Time On Site
 
-Attiva l’azione se il numero di sessioni dell’utente soddisfa i criteri specificati.
+Attiva l&#39;azione se il numero di sessioni dell&#39;utente soddisfa i criteri specificati.
 
 Configura per quanto tempo il visitatore deve trovarsi sul sito prima che l&#39;azione venga attivata.
 
@@ -367,9 +367,9 @@ Configura per quanto tempo il visitatore deve trovarsi sul sito prima che l&#39;
 
 #### Traffic Source
 
-Attiva l’azione se il numero di sessioni dell’utente soddisfa i criteri specificati.
+Attiva l&#39;azione se il numero di sessioni dell&#39;utente soddisfa i criteri specificati.
 
-Specifica l’origine del traffico del visitatore che dev’essere true per attivare l’azione.
+Specifica l&#39;origine del traffico del visitatore che deve essere true per attivare l&#39;azione.
 
 1. Specificate l&#39;origine del traffico.
 1. (Facoltativo) Se si tratta di un&#39;espressione regolare, abilita Regex.
@@ -428,23 +428,23 @@ Seleziona uno o più dei seguenti sistemi operativi:
 
 Seleziona la risoluzione dello schermo che i visitatori devono usare sui propri dispositivi per attivare l&#39;azione.
 
-1. Seleziona se la larghezza della risoluzione dello schermo del dispositivo dell’utente deve essere maggiore, uguale o inferiore rispetto al valore specificato.
+1. Seleziona se la larghezza della risoluzione dello schermo del dispositivo del visitatore deve essere maggiore di, uguale o inferiore al valore specificato.
 1. Specifica il numero di pixel richiesti per la larghezza della risoluzione dello schermo.
-1. Seleziona se l’altezza della risoluzione dello schermo del dispositivo dell’utente deve essere maggiore, uguale o inferiore rispetto al valore specificato.
+1. Seleziona se l&#39;altezza della risoluzione dello schermo del dispositivo del visitatore deve essere maggiore di, uguale o inferiore al valore specificato.
 1. Specifica il numero di pixel necessari per l&#39;altezza della risoluzione dello schermo.
 
 #### Window Size
 
 Seleziona la dimensione della finestra che i visitatori devono usare sui propri dispositivi per attivare l&#39;azione.
 
-1. Seleziona se la larghezza della finestra del dispositivo dell’utente deve essere maggiore, uguale o inferiore rispetto al valore specificato.
+1. Seleziona se la larghezza della finestra del dispositivo del visitatore deve essere maggiore di, uguale o inferiore al valore specificato.
 1. Specifica il numero di pixel richiesti per la larghezza della finestra.
-1. Seleziona se l’altezza della finestra del dispositivo dell’utente deve essere maggiore, uguale o inferiore rispetto al valore specificato.
+1. Seleziona se l&#39;altezza della finestra del dispositivo del visitatore deve essere maggiore di, uguale o inferiore al valore specificato.
 1. Specifica il numero di pixel necessari per l&#39;altezza della finestra.
 
 ### URL
 
-#### Domain
+#### Dominio
 
 Specifica il dominio del visitatore.
 
@@ -566,7 +566,7 @@ Quando JavaScript è selezionato come linguaggio, sarà automaticamente disponib
 console.log(event);
 ```
 
-Esegui la regola in un browser e controlla l’oggetto evento a cui hai avuto accesso nella console del browser. Dopo aver compreso le informazioni disponibili, potrai utilizzarle per le decisioni programmate all&#39;interno del codice personalizzato, inviare una parte dell&#39;oggetto `event` a un server e così via.
+Esegui la regola in un browser ed esamina l&#39;oggetto evento registrato nella console del browser. Dopo aver compreso le informazioni disponibili, potrai utilizzarle per le decisioni programmate all&#39;interno del codice personalizzato, inviare una parte dell&#39;oggetto `event` a un server e così via.
 
 ### Elaborazione azione Custom Code
 
@@ -588,7 +588,7 @@ La convalida utilizzata nell’editor di codice tag è progettata per individuar
 
 #### Sequenza delle azioni
 
-Quando è abilitata l’opzione “Run rule components in sequence” dalle impostazioni di proprietà, è possibile che dei componenti della regola successivi siano in attesa mentre l’azione esegue un’attività asincrona. Questo avviene diversamente per i codici personalizzati JavaScript e HTML.
+Quando l’opzione &quot;Esegui componenti regola in sequenza&quot; dalle impostazioni di proprietà è abilitata, è possibile che i componenti regola successivi siano in attesa mentre l’azione esegue un’attività asincrona.  Questo avviene diversamente per i codici personalizzati JavaScript e HTML.
 
 *JavaScript*
 
@@ -668,7 +668,7 @@ Qualsiasi valore di stringa costante a cui è possibile fare riferimento in azio
 
 JavaScript personalizzato può essere inserito nell&#39;interfaccia utente facendo clic su Open Editor e inserendo il codice nella finestra dell’editor.
 
-Nella finestra dell&#39;editor è necessaria un&#39;istruzione return per indicare il valore da utilizzare come valore dell&#39;elemento dati. Se un’istruzione return non viene inclusa o viene restituito il valore `null` o `undefined`, il valore predefinito dell’elemento dati viene utilizzato come valore dell’elemento dati.
+Nella finestra dell&#39;editor è necessaria un&#39;istruzione return per indicare il valore da utilizzare come valore dell&#39;elemento dati. Se un&#39;istruzione return non è inclusa o il valore `null` o `undefined` viene restituito, il valore predefinito dell&#39;elemento dati sarà utilizzato come valore dell&#39;elemento dati.
 
 **Esempio:**
 
@@ -688,7 +688,7 @@ console.log(event);
 return true;
 ```
 
-Esegui la regola in un browser e controlla l’oggetto evento a cui hai avuto accesso nella console del browser. Una volta ottenute le informazioni disponibili nelle varie regole che possono utilizzare l’elemento dati, è possibile usarle per prendere decisioni programmatiche all’interno del codice personalizzato o restituire una parte dell’oggetto `event` come valore dell’elemento dati.
+Esegui la regola in un browser ed esamina l&#39;oggetto evento registrato nella console del browser. Una volta comprese le informazioni disponibili in base alle varie regole che possono utilizzare l&#39;elemento dati, potrai utilizzarle per le decisioni di programmazione all&#39;interno del codice personalizzato o restituire un elemento dell&#39;oggetto `event` come valore dell&#39;elemento dati.
 
 ### DOM attribute
 
@@ -708,7 +708,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all’interno di estensioni o regole personalizzate mediante riferimento agli elementi dati dei tag. Se l’origine dei dati cambia, sarà solo necessario aggiornare il riferimento all’origine nell’interfaccia utente di Data Collection.
+Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all’interno di estensioni o regole personalizzate mediante riferimento agli elementi dati dei tag. Se l&#39;origine dei dati cambia, è necessario aggiornare solo il riferimento all&#39;origine.
 
 Nell’esempio seguente, il markup contiene una variabile JavaScript denominata `Page_Name`.
 
@@ -719,9 +719,9 @@ Nell’esempio seguente, il markup contiene una variabile JavaScript denominata 
 </script>
 ```
 
-Quando crei l’elemento dati nell’interfaccia utente di Data Collection, fornisci semplicemente il percorso di tale variabile.
+Quando crei l&#39;elemento dati , fornisci semplicemente il percorso di tale variabile.
 
-Se utilizzi un oggetto raccolta dati come parte del livello dati, è sufficiente utilizzare la notazione del punto nel percorso per fare riferimento all’oggetto e alla proprietà che desideri acquisire nell’elemento dati, come `_myData.pageName`, `digitalData.pageName`, ecc.
+Se utilizzi un oggetto raccolta dati come parte del livello dati, utilizza la notazione del punto nel percorso per fare riferimento all’oggetto e alla proprietà che desideri acquisire nell’elemento dati, come `_myData.pageName`oppure `digitalData.pageName`e così via.
 
 #### Esempio:
 
@@ -807,7 +807,7 @@ Puoi selezionare uno dei seguenti attributi di pagina da utilizzare nell&#39;ele
 
 Specifica un parametro URL singolo nel campo URL Parameter.
 
-È necessaria solo la sezione name ed eventuali designatori speciali come “?” o “=” devono essere omessi
+È necessaria solo la sezione name ed eventuali designatori speciali come &quot;?&quot; o “=” devono essere omessi.
 
 #### Esempio:
 
@@ -815,7 +815,7 @@ Specifica un parametro URL singolo nel campo URL Parameter.
 
 ### Numero casuale
 
-Utilizza questo elemento dati per generare un numero casuale. Spesso viene utilizzato per campionare dati o creare ID, ad esempio un Hit ID. Il numero casuale può essere usato per oscurare o conservare i dati sensibili. Alcuni esempi possono includere:
+Utilizza questo elemento dati per generare un numero casuale. Viene spesso utilizzato per campionare dati o creare ID, ad esempio un Hit ID. Il numero casuale può essere usato per oscurare o conservare i dati sensibili. Alcuni esempi possono includere:
 
 * Generare un Hit ID
 * Concatenare il numero a un token utente o a una marca temporale per garantire l&#39;univocità

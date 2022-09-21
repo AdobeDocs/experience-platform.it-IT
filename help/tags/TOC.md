@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '401'
 ht-degree: 84%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 84%
 * Introduzione {#get-started}
    * [Guida rapida](./quick-start/quick-start.md)
    * [Guide all&#39;implementazione](./quick-start/implementation-guides.md)
-* Interfaccia utente di Data Collection {#ui}
+* Guide dell&#39;interfaccia {#ui}
    * [Panoramica](./ui/managing-resources/overview.md)
    * Estensioni {#extensions}
       * [Panoramica](./ui/managing-resources/extensions/overview.md)

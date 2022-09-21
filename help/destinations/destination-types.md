@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione
 title: Tipi di destinazione e categorie
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ## Estensioni {#extensions}
 
-Platform sfrutta la potenza e la flessibilità della gestione dei tag, consentendoti di configurare le estensioni dei tag nell’interfaccia utente di raccolta dati.
+Platform sfrutta la potenza e la flessibilità della gestione dei tag, consentendoti di configurare le estensioni dei tag nell’interfaccia utente di .
 
 >[!TIP]
 >
