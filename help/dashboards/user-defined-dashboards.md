@@ -2,9 +2,9 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ La [!UICONTROL Crea dashboard] viene visualizzata la finestra di dialogo . Inser
 
 Il dashboard vuoto appena creato viene visualizzato con il nome scelto nell’angolo in alto a sinistra della visualizzazione.
 
-## Creare un widget
+## Creare un widget {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Numero massimo di widget"
+>abstract="Le dashboard definite dall&#39;utente supportano fino a dieci widget. Dopo aver aggiunto dieci widget al dashboard, [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia."
 
 Dalla nuova vista dashboard, seleziona **[!UICONTROL Aggiungi nuovo widget]** per avviare il processo di creazione del widget.
+
+>[!IMPORTANT]
+>
+>Le dashboard definite dall&#39;utente supportano fino a dieci widget. Dopo aver aggiunto dieci widget al dashboard, [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia.
 
 ![Il nuovo dashboard vuoto con Aggiungi nuovo widget evidenziato.](./images/user-defined-dashboards/add-new-widget.png)
 
