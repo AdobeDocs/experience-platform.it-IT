@@ -2,7 +2,7 @@
 title: Moduli libreria nelle estensioni Web
 description: Scopri come formattare i moduli libreria per le estensioni Web in Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
+source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 93%
@@ -47,7 +47,7 @@ Esempio di utilizzo:
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 È disponibile una variabile gratuita denominata `exports` che consente di esportare l’API del modulo.
 
