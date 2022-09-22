@@ -2,7 +2,7 @@
 title: Guida alla risoluzione dei problemi dei tag
 description: Risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 80%
@@ -96,11 +96,11 @@ Sì! I tag ora supportano proprietà e configurazioni mobili per i nuovi [SDK pe
 
 ## Perché l&#39;interfaccia utente dice che si è verificato un errore durante il caricamento del mio account?
 
-Se ricevi un messaggio che indica che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere l’accesso alle funzioni di raccolta dati nell’interfaccia utente di .
+Se ricevi un messaggio che indica che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere l’accesso all’interfaccia utente di raccolta dati.
 
 ## Perché non posso aggiungere proprietà nell’interfaccia utente?
 
-Se non riesci a creare nuove proprietà quando hai effettuato l’accesso all’interfaccia utente, significa che il tuo account non appartiene a un profilo di prodotto con l’autorizzazione Gestione proprietà .
+Se non riesci a creare nuove proprietà quando hai effettuato l’accesso all’interfaccia utente di raccolta dati, significa che il tuo account non appartiene a un profilo di prodotto con i permessi di gestione proprietà.
 
 Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console in modo da concedere l’autorizzazione Gestione proprietà . Per ulteriori informazioni sui diversi diritti per i tag, consulta la panoramica su [autorizzazioni utente per i tag](./ui/administration/user-permissions.md).
 

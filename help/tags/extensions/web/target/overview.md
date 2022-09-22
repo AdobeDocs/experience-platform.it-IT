@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Target
 description: Scopri l’estensione tag per Adobe Target in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 96%
+source-wordcount: '1194'
+ht-degree: 98%
 
 ---
 
@@ -31,7 +31,7 @@ Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target quando viene aggiunta per la prima volta; in caso di aggiornamenti futuri, tutte le impostazioni dovranno invece essere gestite nell&#39;interfaccia di 
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target quando viene aggiunta per la prima volta; in caso di aggiornamenti futuri, tutte le impostazioni dovranno invece essere gestite nell&#39;interfaccia di Data Collection.
 
 Sono disponibili le seguenti configurazioni:
 
@@ -141,7 +141,7 @@ Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza l
    * Quando è stata ricevuta la risposta mbox globale
    * Quando la richiesta mbox globale scade
    * Quando lo stesso frammento scade
-* L’azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L&#39;azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

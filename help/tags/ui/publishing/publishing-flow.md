@@ -2,10 +2,10 @@
 title: Flusso di pubblicazione
 description: Scopri come creare librerie, testare le build e approvarle per la produzione in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 96%
+source-wordcount: '1499'
+ht-degree: 98%
 
 ---
 
@@ -42,7 +42,7 @@ Per quanto riguarda il flusso di pubblicazione, sono disponibili quattro stati d
 * [[!UICONTROL Approvato]](#approved)
 * [[!UICONTROL Pubblicato]](#published)
 
-Questi quattro stati sono rappresentati come colonne all&#39;interno di **[!UICONTROL Flusso di pubblicazione]** scheda .
+Questi quattro stati sono rappresentati dalle colonne nella scheda **[!UICONTROL Flusso di pubblicazione]** dell’interfaccia utente di Data Collection.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Ciò che è incluso a monte dipende dalla fase corrente della libreria. Ad esemp
 
 ![](./images/approval-workflow/upstream.png)
 
-Quando modifichi una libreria nell’interfaccia utente, tutte le risorse ereditate da a monte sono rappresentate nel **[!UICONTROL Risorse a monte]** sezione . Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
+Quando modifichi una libreria nell’interfaccia utente di Data Collection, tutte le risorse ereditate sono rappresentate nella sezione **[!UICONTROL Risorse a monte]**. Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

@@ -2,10 +2,10 @@
 title: Guida rapida
 description: Scopri come iniziare a usare i tag in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1527'
-ht-degree: 92%
+source-wordcount: '1532'
+ht-degree: 96%
 
 ---
 
@@ -31,13 +31,13 @@ Flusso di lavoro di base dei tag:
 
 I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente sono gestite tramite Admin Console con altri prodotti e soluzioni Adobe da [!DNL Creative Cloud], [!DNL Document Cloud] ed Experience Cloud.
 
-I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione dispone dell’accesso alla raccolta dati, i singoli utenti non possono eseguire alcuna operazione finché un amministratore non concede loro esplicitamente alcuni diritti.
+I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’azienda ha accesso all’interfaccia utente di Data Collection, i singoli utenti non possono fare nulla finché non vengono espressamente concessi loro alcuni diritti da parte dell’amministratore organizzazione.
 
-Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, consulta [guida alle autorizzazioni per la raccolta dati](../../collection/permissions.md).
+Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, consulta il documento sulle [autorizzazioni utente](../ui/administration/user-permissions.md).
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o di raccolta dati. Per farlo, vai direttamente alla [Experience Cloud di schermata di accesso](https://experience.adobe.com/)e selezionando **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
+Dopo l’aggiunta dei diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Data Collection. Per farlo, vai direttamente alla [Experience Cloud di schermata di accesso](https://experiencecloud.adobe.com), quindi selezionando l’interfaccia utente di raccolta dati dalla scheda Accesso rapido .
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfa
 
 ## 3. Creare una proprietà
 
-Dopo aver effettuato l’accesso all’interfaccia utente di , la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
+Dopo aver effettuato l’accesso all’interfaccia utente di Data Collection, la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
 
 Per ulteriori informazioni sulla creazione delle proprietà, vedi [Creazione di una proprietà](../ui/administration/companies-and-properties.md).
 
@@ -67,7 +67,7 @@ Gli **elementi dati** sono indicatori per le informazioni da raccogliere e invia
 * Sessione e archiviazione locale
 * Tutto il resto
 
-Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente di per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione sugli [elementi dati](../ui/managing-resources/data-elements.md).
+Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente di Data Collection per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione sugli [elementi dati](../ui/managing-resources/data-elements.md).
 
 Le **regole** sono il nucleo logico della tua implementazione e controllano cosa, quando, dove e come si trovano i tag sul sito. Definisci un evento, imposta condizioni ed eccezioni, quindi definisci le azioni e l&#39;ordine. Infine, pubblica le modifiche per vedere i risultati. Per ulteriori informazioni, vedi [Regole](../ui/managing-resources/rules.md).
 

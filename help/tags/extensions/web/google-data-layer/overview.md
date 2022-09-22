@@ -2,9 +2,9 @@
 title: Estensione Google Data Layer
 description: Scopri l’estensione tag Client Data Layer di Google in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '819'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ La versione 1.0.x dell&#39;estensione è una versione beta. Questa estensione no
 
 ## Installazione
 
-Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente Experience Platform o nell’interfaccia utente di raccolta dati e seleziona **Livello dati Google**.
+Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente Raccolta dati e seleziona **Livello dati Google**.
 
 Una volta installata, l&#39;estensione crea o accede a un livello di dati ogni volta che la libreria di tag viene caricata sul sito web.
 

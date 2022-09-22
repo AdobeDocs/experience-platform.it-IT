@@ -2,10 +2,10 @@
 title: Copiare le risorse
 description: Scopri come creare una nuova risorsa tag utilizzando le impostazioni di una risorsa tag esistente in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 94%
+source-wordcount: '785'
+ht-degree: 97%
 
 ---
 
@@ -35,7 +35,7 @@ Se copi una regola o un elemento dati, nella finestra di dialogo di copia puoi u
 
 >[!NOTE]
 >
->Non è possibile copiare le risorse in un&#39;altra proprietà se una di queste è configurata per lo sviluppo dell&#39;estensione e l&#39;altra non lo è.
+>Nell’interfaccia utente di Data Collection non è possibile copiare le risorse da una proprietà a un’altra proprietà se una delle due è configurata per lo sviluppo dell’estensione e l’altra non lo è.
 
 Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Copia]**.
 

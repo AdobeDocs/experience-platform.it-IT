@@ -2,9 +2,9 @@
 title: Tipi di eventi per le estensioni Web
 description: Scopri come definire un modulo libreria per tipi di evento per un’estensione Web in Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1048'
 ht-degree: 71%
 
 ---
@@ -27,7 +27,7 @@ Questo documento illustra come definire i tipi di evento per un&#39;estensione W
 
 I tipi di evento sono definiti da estensioni e in genere consistono nei seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’evento.
+1. A [visualizzare](./views.md) nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’evento.
 2. Un modulo libreria emesso all’interno della libreria di runtime di tag per interpretare le impostazioni e controllare che si verifichi una determinata attività.
 
 `module.exports` accetta sia i parametri `settings` che quelli `trigger`. Questo consente di personalizzare il tipo evento.

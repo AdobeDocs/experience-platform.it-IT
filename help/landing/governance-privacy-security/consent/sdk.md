@@ -3,7 +3,7 @@ title: Elaborazione dei dati di consenso dei clienti tramite Adobe Experience Pl
 topic-legacy: getting started
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Questa esercitazione presuppone che tu abbia già determinato come generare i da
 * [Creare un set di dati utilizzando lo standard Adobe](./adobe/dataset.md)
 * [Creare un set di dati utilizzando lo standard TCF 2.0](./iab/dataset.md)
 
-Questa guida segue il flusso di lavoro per configurare l&#39;SDK utilizzando l&#39;estensione tag nell&#39;interfaccia utente. Se non desideri utilizzare l&#39;estensione e preferisci incorporare direttamente sul tuo sito la versione autonoma dell&#39;SDK, consulta i seguenti documenti invece di questa guida:
+Questa guida segue il flusso di lavoro per configurare l’SDK utilizzando l’estensione tag nell’interfaccia utente Raccolta dati. Se non desideri utilizzare l&#39;estensione e preferisci incorporare direttamente sul tuo sito la versione autonoma dell&#39;SDK, consulta i seguenti documenti invece di questa guida:
 
 * [Configurare un datastream](../../../edge/datastreams/overview.md)
 * [Installare l’SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ I passaggi di installazione in questa guida richiedono una comprensione efficace
 
 ## Configurare un datastream
 
-Affinché l’SDK invii dati ad Experience Platform, devi prima configurare un datastream. Nell’interfaccia utente Raccolta dati o Experience Platform, seleziona **[!UICONTROL Datastreams]** nella navigazione a sinistra.
+Affinché l’SDK invii dati ad Experience Platform, devi prima configurare un datastream. Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Datastreams]** nella navigazione a sinistra.
 
 Dopo aver creato un nuovo datastream o selezionato uno esistente da modificare, seleziona il pulsante di attivazione accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizza i valori elencati di seguito per completare il modulo.
 
@@ -80,7 +80,7 @@ Se l&#39;area geografica dell&#39;utente è determinata da una CMP, puoi invece 
 1. Nel gestore eventi, imposta un `adobeDefaultConsent` in base all&#39;area geografica dell&#39;utente, quindi carica lo script della libreria di tag utilizzando JavaScript.
 1. Imposta un elemento dati che utilizza il `adobeDefaultConsent` Variabile JavaScript e utilizza questo elemento dati come valore di consenso predefinito per l’utente.
 
-Per creare un elemento dati nell’interfaccia utente, seleziona **[!UICONTROL Elementi dati]** nel menu di navigazione a sinistra, seleziona **[!UICONTROL Aggiungi elemento dati]** per passare alla finestra di dialogo di creazione dell’elemento dati.
+Per creare un elemento dati nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Elementi dati]** nel menu di navigazione a sinistra, seleziona **[!UICONTROL Aggiungi elemento dati]** per passare alla finestra di dialogo di creazione dell’elemento dati.
 
 Da qui, devi creare un [!UICONTROL Variabile JavaScript] elemento dati basato su `adobeDefaultConsent`. Al termine, seleziona **[!UICONTROL Salva]**.
 

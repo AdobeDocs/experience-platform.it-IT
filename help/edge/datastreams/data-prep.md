@@ -2,9 +2,9 @@
 title: Preparazione per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di un datastream per gli SDK Adobe Experience Platform Web e Mobile.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '918'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Data Prep è un servizio Adobe Experience Platform che ti consente di mappare, t
 >* [Gestione dei formati di dati con Data Prep](../../data-prep/data-handling.md)
 
 
-Questa guida illustra come mappare i dati nell’interfaccia utente di . Per seguire questi passaggi, avvia il processo di creazione di un datastream fino a (e includere) il [passaggio di configurazione di base](./overview.md#create).
+Questa guida illustra come mappare i dati nell’interfaccia utente di raccolta dati. Per seguire questi passaggi, avvia il processo di creazione di un datastream fino a (e includere) il [passaggio di configurazione di base](./overview.md#create).
 
 Per una rapida dimostrazione del processo di preparazione dei dati per la raccolta dei dati, fai riferimento al seguente video:
 
@@ -203,4 +203,4 @@ Una volta che il conteggio dei campi obbligatori raggiunge lo zero e si è soddi
 
 ## Passaggi successivi
 
-Questa guida illustra come mappare i dati su XDM durante la configurazione di un datastream nell’interfaccia utente di . Se stavi seguendo un&#39;esercitazione generale sui datastreams, ora puoi tornare al passaggio [visualizzazione dei dettagli del datastream](./overview.md).
+Questa guida illustra come mappare i dati su XDM durante la configurazione di un datastream nell’interfaccia utente di raccolta dati. Se stavi seguendo un&#39;esercitazione generale sui datastreams, ora puoi tornare al passaggio [visualizzazione dei dettagli del datastream](./overview.md).

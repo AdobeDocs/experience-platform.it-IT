@@ -2,9 +2,9 @@
 title: Riferimento agli oggetti satellite
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che puoi eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1291'
 ht-degree: 79%
 
 ---
@@ -51,7 +51,7 @@ Nell’esempio fornito, se esiste un elemento dati con un nome corrispondente, v
 
 >[!NOTE]
 >
->Puoi utilizzare la percentuale (`%`) per fare riferimento a variabili per molti campi del modulo nell’implementazione dei tag, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, utilizzando `%product%` accede al valore dell’elemento dati prodotto o della variabile personalizzata.
+>Puoi utilizzare la percentuale (`%`) per fare riferimento a variabili per molti campi del modulo nell’interfaccia utente Raccolta dati, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, utilizzando `%product%` accede al valore dell’elemento dati prodotto o della variabile personalizzata.
 
 Quando un evento attiva una regola, puoi passare la regola corrispondente `event` oggetto in `_satellite.getVar()` così:
 

@@ -3,9 +3,9 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '955'
 ht-degree: 9%
 
 ---
@@ -49,7 +49,7 @@ Mentre i tag raccolgono i dati evento direttamente dal sito o dall’applicazion
 
 ### Proprietà {#properties}
 
-L’inoltro degli eventi mantiene il proprio archivio di proprietà separate dai tag, che è possibile visualizzare nell’interfaccia utente di Experience Platform o nell’interfaccia utente di raccolta dati selezionando **[!UICONTROL Inoltro eventi]** nella navigazione a sinistra.
+L’inoltro degli eventi mantiene il proprio archivio di proprietà separate dai tag, che è possibile visualizzare nell’interfaccia utente di raccolta dati selezionando **[!UICONTROL Inoltro eventi]** nella navigazione a sinistra.
 
 ![Proprietà di inoltro eventi nell’interfaccia utente di raccolta dati](../../images/ui/event-forwarding/overview/properties.png)
 

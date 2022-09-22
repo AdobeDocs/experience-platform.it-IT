@@ -1,11 +1,11 @@
 ---
 title: Configurazione dell'estensione
-description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia utente di Adobe Experience Platform o nell’interfaccia utente di raccolta dati.
+description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia di Data Collection di Adobe Experience Platform.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 84%
+source-wordcount: '273'
+ht-degree: 93%
 
 ---
 

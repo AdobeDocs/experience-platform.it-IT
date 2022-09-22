@@ -2,10 +2,10 @@
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 96%
+source-wordcount: '2392'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Platform o l’interfaccia utente di raccolta dati per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e build.
+Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria tag e di una build.
 
 Questo documento illustra come implementare test end-to-end per l’estensione.
 
@@ -74,7 +74,7 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 
 >[!NOTE]
 >
->Durante il caricamento o l&#39;applicazione di patch, il pacchetto dell&#39;estensione viene posto in uno stato &quot;in sospeso&quot; mentre il sistema lo estrae in modo asincrono e lo implementa. Durante questo processo, puoi controllare lo stato dell’ID `extension_package` utilizzando l’API e nell’interfaccia utente di Nel catalogo verrà visualizzata una scheda di estensioni contrassegnata come In sospeso.
+>Durante il caricamento o l&#39;applicazione di patch, il pacchetto dell&#39;estensione viene posto in uno stato &quot;in sospeso&quot; mentre il sistema lo estrae in modo asincrono e lo implementa. Durante questo processo, puoi controllare lo stato dell’ID `extension_package` utilizzando l’API e nell’interfaccia utente di Data Collection. Nel catalogo verrà visualizzata una scheda di estensioni contrassegnata come In sospeso.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 
 ## Creare una proprietà di sviluppo {#property}
 
-Dopo aver effettuato l’accesso all’interfaccia utente e aver selezionato **[!UICONTROL Tag]** nella navigazione a sinistra, il [!UICONTROL Proprietà] viene visualizzata la schermata . Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
+Dopo aver effettuato l’accesso all’interfaccia utente di Data Collection, viene visualizzata la schermata Proprietà. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Le estensioni possono definire i tipi di elementi dati necessari per il funziona
 
 Quando un utente seleziona l’estensione dal menu a discesa **Estensione**, il menu a discesa **Tipo di elemento dati** viene compilato con i tipi di elemento dati fornito dall’estensione. L’utente può quindi mappare ogni elemento dati al relativo valore sorgente. Gli elementi dati possono essere utilizzati quando si creano regole nell’evento di modifica dell’elemento dati o nell’evento Codice personalizzato per attivare una regola da eseguire. Un elemento dati può essere utilizzato anche nella Condizione elemento dati o in altre Condizioni, Eccezioni o Azioni in una regola.
 
-Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se la sorgente del valore cambia (in seguito alla riprogettazione del sito, ecc.) gli utenti dovranno aggiornare la mappatura solo una volta nell’interfaccia di e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
+Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se la sorgente del valore cambia (in seguito alla riprogettazione del sito, ecc.) gli utenti dovranno aggiornare la mappatura solo una volta nell’interfaccia di Data Collection e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
 
 ### Regole
 
@@ -226,6 +226,6 @@ Se occorre apportare delle modifiche al pacchetto di estensione, il processo di 
    >
    >Gli argomenti possono essere passati sulla riga di comando per risparmiare tempo, evitando di immettere più volte le credenziali. Per ulteriori informazioni, consulta la [documentazione sullo strumento Uploader di Reactor](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. Quando si aggiorna un pacchetto esistente, il passaggio di installazione può essere saltato.
-1. Modifica le risorse: se la configurazione di uno dei componenti dell’estensione è stata modificata, dovrai aggiornare tali risorse nell’interfaccia utente di 
+1. Modifica le risorse: se la configurazione di uno dei componenti dell’estensione è stata modificata, dovrai aggiornare tali risorse nell’interfaccia utente di Data Collection.
 1. Aggiungi le modifiche più recenti alla libreria e procedi di nuovo alla sua generazione.
 1. Completa un altro ciclo di test.

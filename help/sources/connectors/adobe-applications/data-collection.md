@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;origine;raccolta d
 title: Raccolta dati di Adobe
 description: Questo documento fornisce una panoramica dell’origine di raccolta dati di Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di raccogliere i dati sull’esperienza del cliente da sorgenti lato client e di inviarli ad Adobe Experience Platform Edge Network in modo che possano essere arricchiti, trasformati e distribuiti in destinazioni Adobi o non Adobi in pochi secondi.
 
-L’integrazione origini della raccolta dati di Adobe Experience Platform consente di accedere ai dati su Edge Network, inclusa la preparazione dei dati per la raccolta dei dati, e al supporto migliorato per gli avvisi, tramite il catalogo origini.
+L’integrazione delle origini della raccolta dati di Adobe consente di accedere ai dati Experience Edge di raccolta dati, inclusa la preparazione dei dati per la raccolta dei dati, nonché al supporto migliorato per gli avvisi, tramite il catalogo origini.
 
-## Utilizza l’area di lavoro origini per accedere alla raccolta dati
+## Utilizza l’area di lavoro origini per accedere alla raccolta dati di Adobe
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in viene visualizzata una varietà di sorgenti con cui è possibile creare un account.
 
@@ -32,7 +32,7 @@ Un datastream è una configurazione che indica alla rete Edge in cui desideri in
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Per passaggi completi su come configurare la raccolta dati nell’interfaccia utente, consulta [panoramica della raccolta dati end-to-end](../../../collection/e2e.md).
+Per i passaggi completi sull’utilizzo dell’interfaccia utente di raccolta dati, consulta [panoramica della raccolta dati end-to-end](../../../collection/e2e.md).
 
 ## Passaggi successivi
 

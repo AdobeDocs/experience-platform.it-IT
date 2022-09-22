@@ -1,10 +1,10 @@
 ---
 title: Configurare l’estensione Adobe Experience Platform Web SDK
-description: Come configurare l'estensione tag Adobe Experience Platform Web SDK nell'interfaccia utente.
+description: Come configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente di raccolta dati.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1047'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 L’estensione tag Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
-Questo documento illustra come configurare l&#39;estensione nell&#39;interfaccia utente di .
+Questo documento illustra come configurare l’estensione nell’interfaccia utente di raccolta dati.
 
 ## Introduzione
 
-Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente e seleziona la **[!UICONTROL Estensioni]** scheda . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
+Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente Raccolta dati e seleziona la proprietà **[!UICONTROL Estensioni]** scheda . In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
 
 ![](../images/extension/overview/configure.png)
 

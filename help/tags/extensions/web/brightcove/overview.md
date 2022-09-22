@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione per il tracciamento di video BrightCove
 description: Scopri l’estensione tag per il tracciamento di video BrightCove in Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 95%
+source-wordcount: '915'
+ht-degree: 98%
 
 ---
 
@@ -100,7 +100,7 @@ Devono essere inclusi i seguenti oggetti di estensione video:
 
 >[!TIP]
 >
->Per coloro che non desiderano eseguire il provisioning di più eVar o proprietà per ciascun elemento video, i valori degli elementi dati vengono concatenati come metodo alternativo. Vengono quindi analizzate nei rapporti di classificazione utilizzando lo strumento per la generazione di regole di classificazione. Per ulteriori informazioni, consulta la documentazione dello strumento [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it). Infine, vengono applicati come segmento in Analysis Workspace.
+>Per coloro che non desiderano eseguire il provisioning di più eVar o proprietà per ciascun elemento video, esiste un metodo alternativo. I valori degli elementi dati possono essere concatenati all’interno dell’interfaccia utente di Data Collection. Vengono quindi analizzate nei rapporti di classificazione utilizzando lo strumento per la generazione di regole di classificazione. Per ulteriori informazioni, consulta la documentazione dello strumento [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it). Infine, vengono applicati come segmento in Analysis Workspace.
 >
 >A tale scopo, crea un nuovo elemento dati denominato ad esempio “Video MetaData” e programmalo per inserire tutti gli elementi dati video (elencati sopra) e concatenarli insieme.
 

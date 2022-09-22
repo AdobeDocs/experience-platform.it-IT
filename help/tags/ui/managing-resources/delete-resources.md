@@ -2,10 +2,10 @@
 title: Eliminare le risorse
 description: Scopri come eliminare le risorse tag in Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 90%
+source-wordcount: '550'
+ht-degree: 96%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se desideri rimuovere una risorsa da una libreria di tag specifica ma desideri comunque che sia disponibile per l’utilizzo in altre librerie, consulta la guida in [rimozione di risorse da una libreria](remove-resources-from-library.md).
+L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se desideri comunque che la risorsa sia visibile nell’interfaccia utente di Data Collection ma non nella libreria di tag, consulta [Rimuovere le risorse da una libreria](remove-resources-from-library.md).
 
 Puoi eliminare elementi dati, regole, estensioni, host, ambienti e proprietà. Una volta eliminate, queste risorse non sono recuperabili.
 

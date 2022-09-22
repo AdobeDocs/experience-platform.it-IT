@@ -2,10 +2,10 @@
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 96%
+source-wordcount: '1631'
+ht-degree: 98%
 
 ---
 
@@ -161,7 +161,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori.  questo modo, puoi fare riferimento all&#39;elemento dati in tutte le tue regole e, se l&#39;origine dei dati dovesse cambiare, devi modificare il riferimento all&#39;origine (l&#39;elemento dati) in un&#39;unica posizione in .
+Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori. In questo modo, puoi fare riferimento all’elemento dati in tutte le tue regole e, se l’origine dei dati dovesse cambiare, dovrai modificare solo il riferimento all’origine (l’elemento dati) in un’unica posizione nell’interfaccia utente di Data Collection.
 
 Ad esempio, supponiamo che il markup contenga una variabile JavaScript denominata `Page_Name`, come segue:
 
@@ -213,7 +213,7 @@ Specifica un parametro URL singolo nel campo [!UICONTROL Parametro URL].
 
 ### Numero casuale
 
-Utilizza questo elemento dati per generare un numero casuale. Viene spesso utilizzato per campionare dati o creare ID, ad esempio un Hit ID. Il numero casuale può essere usato per oscurare o alterare i dati sensibili. Alcuni esempi possono includere:
+Utilizza questo elemento dati per generare un numero casuale. Spesso viene utilizzato per campionare dati o creare ID, ad esempio un Hit ID. Il numero casuale può essere usato per oscurare o alterare i dati sensibili. Alcuni esempi possono includere:
 
 * Generare un Hit ID
 * Concatenare il numero a un token utente o a una marca temporale per garantire l&#39;univocità
@@ -257,7 +257,7 @@ Alcuni casi d&#39;uso comuni includono:
 
 ## Elementi dati incorporati
 
-È necessario creare elementi dati personalizzati aggiuntivi se in precedenza è stato utilizzato uno dei seguenti elementi dati:
+È necessario creare un elemento dati personalizzato nell’interfaccia utente di Data Collection se in precedenza era stato utilizzato uno dei seguenti elementi dati:
 
 * URI
 * Protocollo

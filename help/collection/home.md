@@ -5,9 +5,9 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '464'
 ht-degree: 7%
 
 ---
@@ -38,7 +38,7 @@ Questa guida fornisce un’introduzione di alto livello alla raccolta dei dati e
 
 ## Tag, SDK per web e SDK per dispositivi mobili
 
-L’SDK per web di Platform e l’SDK per dispositivi mobili di Platform comprimono e comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo rispettivamente per le piattaforme web e mobili. Questi possono essere implementati utilizzando codice non elaborato o utilizzando [tag](../tags/home.md) tramite l’interfaccia utente di raccolta dati o Adobe Experience Platform.
+L’SDK per web di Platform e l’SDK per dispositivi mobili di Platform comprimono e comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo rispettivamente per le piattaforme web e mobili. Questi possono essere implementati utilizzando codice non elaborato o utilizzando [tag](../tags/home.md) tramite l’interfaccia utente di raccolta dati.
 
 La compressione di queste librerie velocizza la raccolta dei dati e consolida le operazioni in un unico flusso da dispositivi lato client a Platform Edge Network.
 
