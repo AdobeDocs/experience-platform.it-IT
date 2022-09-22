@@ -5,7 +5,7 @@ title: Definire i campi Enum nell’interfaccia utente
 description: Scopri come definire un campo enum nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 # Definire i campi enum nell’interfaccia utente {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="Enum e valori suggeriti"
 >abstract="Un enum vincola un campo stringa a consentire l’acquisizione solo dei dati che corrispondono a un set predefinito di valori. In alternativa, puoi definire un set di valori consigliati per il campo che non limita l’acquisizione, ma piuttosto gli attributi tra cui puoi scegliere nella segmentazione. Per ulteriori informazioni, consulta la documentazione dello strumento."
 
