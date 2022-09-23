@@ -4,9 +4,9 @@ title: Guida end-to-end per il controllo dell'accesso basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ A questo scopo, devi configurare ruoli, risorse e criteri.
 
 Sarà possibile:
 
-* [Etichettare i ruoli per gli utenti]{#label-roles}: Utilizzare l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
-* [Etichettare le risorse (campi e segmenti di schema)]{#label-resources}: Assegna **[!UICONTROL PHI/Dati sanitari regolamentati]** alle risorse e ai segmenti dello schema.
-* [Creare il criterio che li collegherà]{#policy}: Crea un criterio per collegare le etichette delle risorse alle etichette nel tuo ruolo negando l’accesso ai campi e ai segmenti dello schema. In questo modo verrà negato l’accesso al campo dello schema e al segmento in tutte le sandbox per gli utenti che non dispongono di etichette corrispondenti.
+* [Etichettare i ruoli per gli utenti](#label-roles): Utilizzare l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
+* [Etichettare le risorse (campi e segmenti di schema)](#label-resources): Assegna **[!UICONTROL PHI/Dati sanitari regolamentati]** alle risorse e ai segmenti dello schema.
+* [Creare il criterio che li collegherà](#policy): Crea un criterio per collegare le etichette delle risorse alle etichette nel tuo ruolo negando l’accesso ai campi e ai segmenti dello schema. In questo modo verrà negato l’accesso al campo dello schema e al segmento in tutte le sandbox per gli utenti che non dispongono di etichette corrispondenti.
 
 ## Autorizzazioni
 
@@ -162,7 +162,7 @@ Ripeti i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurare le azioni ammissibili e non ammissibili per una politica"
->abstract="Seleziona Consenti accesso a per configurare le azioni consentite che gli utenti possono eseguire rispetto alle risorse. Seleziona nega l’accesso a per configurare azioni non consentite che gli utenti non possono eseguire in base alle risorse."
+>abstract="A <b>negare l&#39;accesso a</b> quando i criteri vengono soddisfatti, l’accesso verrà negato agli utenti. Se combinato con <b>Il seguente è falso</b> - a tutti gli utenti verrà negato l’accesso a meno che non soddisfino i criteri impostati. Questo tipo di criterio ti consente di proteggere una risorsa sensibile e di accedere solo agli utenti con etichette corrispondenti. <br>A <b>consentire l&#39;accesso</b> consente agli utenti l’accesso quando i criteri sono soddisfatti. Se combinato con <b>Il seguente è vero</b> - gli utenti avranno accesso se soddisfano i criteri impostati. Questo non nega esplicitamente l’accesso agli utenti, ma aggiunge un accesso ai permessi. Questo tipo di criterio ti consente di fornire accesso aggiuntivo alla risorsa e in aggiunta agli utenti che potrebbero già averne accesso tramite le autorizzazioni per i ruoli.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modificare un criterio"
 
 >[!CONTEXTUALHELP]
