@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dei set di dati
 topic-legacy: datasets
 description: Scopri come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
+source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ Viene visualizzata una casella di conferma. Seleziona **[!UICONTROL Elimina]** p
 
 ## Eliminare un set di dati abilitato per il profilo
 
-Se un set di dati è abilitato per [!DNL Profile], l’eliminazione di tale set di dati tramite l’interfaccia utente lo eliminerà sia dal Data Lake che dall’archivio profili all’interno di Platform.
+Se un set di dati è abilitato per Profilo, l’eliminazione di tale set di dati tramite l’interfaccia utente lo elimina dal data lake, dal servizio Identity e dall’archivio profili in Platform.
 
 È possibile eliminare un set di dati da [!DNL Profile] memorizza solo (lasciando i dati nel Data Lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la sezione [guida all’endpoint API per i processi di sistema dei profili](../../profile/api/profile-system-jobs.md).
 
-## Monitorare l’acquisizione di dati
+## Monitoraggio dell’acquisizione di dati
 
 In [!DNL Experience Platform] Interfaccia utente, selezionare **[!UICONTROL Monitoraggio]** nella navigazione a sinistra. La **[!UICONTROL Monitoraggio]** dashboard ti consente di visualizzare gli stati dei dati in entrata da un’acquisizione batch o in streaming. Per visualizzare lo stato dei singoli batch, selezionare una delle seguenti opzioni **[!UICONTROL Fine-end batch]** o **[!UICONTROL Streaming end-to-end]**. Nelle dashboard sono elencate tutte le esecuzioni di batch o streaming ingestion, incluse quelle che hanno esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce i dettagli del batch, compreso l’ID batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per [!DNL Profile], viene visualizzato anche il numero di record di identità e profilo acquisiti.
 
