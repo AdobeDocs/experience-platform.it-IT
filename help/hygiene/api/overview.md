@@ -2,9 +2,9 @@
 title: Guida all’API per l’igiene dei dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,10 @@ A work order is a representation of a data hygiene task that deletes consumer id
 ## Scadenza set di dati
 
 La scadenza di un set di dati è un’azione ritardata &quot;elimina un set di dati&quot;. Creando una scadenza di un set di dati, stai specificando un&#39;ora futura in cui quel set di dati deve essere eliminato. Consulta la sezione [guida all’endpoint di scadenza dei set di dati](./dataset-expiration.md) per informazioni sulla pianificazione delle scadenze dei set di dati nell’API.
+
+## Quota
+
+La tua organizzazione è limitata a una quota di lavoro mensile predeterminata per ogni tipo di operazione di igiene dei dati, che può variare a seconda della licenza. Consulta la sezione [guida all’endpoint quota](./quota.md) per informazioni dettagliate sulla visualizzazione dello stato attuale delle quote dei processi di igiene dei dati.
 
 ## Passaggi successivi
 
