@@ -1,15 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;connettore sorgente di Audience Manager;Audience Manager;connettore di audience manager
-solution: Experience Platform
 title: Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente
-topic-legacy: overview
-type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per creare connettori sorgente per Adobe Audience Manager per l’immissione di dati di eventi di esperienza di consumo in Platform tramite l’interfaccia utente di .
+description: Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente per Adobe Audience Manager che consenta di inserire i dati relativi all’evento esperienza di consumo in Platform utilizzando l’interfaccia utente di .
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -20,20 +16,28 @@ Questa esercitazione descrive i passaggi necessari per creare un connettore sorg
 
 ## Creare una connessione sorgente con Adobe Audience Manager
 
-Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini per le quali è possibile creare un account.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in questa schermata vengono visualizzate diverse sorgenti con cui è possibile creare un account.
 
-Sotto la categoria [!UICONTROL Adobe applications], selezionare **[!UICONTROL Adobe Audience Manager]**, quindi selezionare **[!UICONTROL Configure]**.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando la barra di ricerca.
+
+Sotto [!UICONTROL Applicazione Adobe], seleziona **[!UICONTROL Adobe Audience Manager]** quindi seleziona **[!UICONTROL Configurazione]**.
 
 ![catalogo](../../../../images/tutorials/create/aam/catalog.png)
 
-Viene visualizzato il passaggio [!UICONTROL Select traits and segments] , che fornisce un’interfaccia interattiva per esplorare e selezionare caratteristiche, segmenti e dati.
+### Selezionare caratteristiche e segmenti
 
-* Il pannello a sinistra dell’interfaccia contiene le opzioni [!UICONTROL Select traits and segments] e una directory gerarchica di tutti i segmenti disponibili.
+>[!NOTE]
+>
+>Non è possibile acquisire dati regionali dall’origine Audience Manager all’Experience Platform. Se hai casi d’uso di Analytics che richiedono dati regionali, utilizza la [Connettore sorgente di Analytics](../adobe-applications/analytics.md).
+
+La [!UICONTROL Selezionare caratteristiche e segmenti] viene visualizzato un passaggio che fornisce un’interfaccia interattiva per esplorare e selezionare caratteristiche, segmenti e dati.
+
+* Il pannello a sinistra dell’interfaccia contiene [!UICONTROL Selezionare caratteristiche e segmenti] , nonché una directory gerarchica di tutti i segmenti disponibili.
 * La metà destra dell’interfaccia ti consente di interagire con i segmenti selezionati e di selezionare i dati specifici che desideri utilizzare.
 
 ![add-data](../../../../images/tutorials/create/aam/add-data.png)
 
-Per spostarsi tra i segmenti disponibili, seleziona la cartella a cui desideri accedere dal pannello [!UICONTROL All Segments] . La selezione di una cartella consente di scorrere la gerarchia di una cartella e fornisce un elenco di segmenti da filtrare.
+Per spostarsi tra i segmenti disponibili, seleziona la cartella a cui desideri accedere dal [!UICONTROL Tutti i segmenti] pannello. La selezione di una cartella consente di scorrere la gerarchia di una cartella e fornisce un elenco di segmenti da filtrare.
 
 ![cartella dei segmenti](../../../../images/tutorials/create/aam/segment-folder.png)
 
@@ -41,20 +45,20 @@ Dopo aver identificato e selezionato i segmenti da utilizzare, viene visualizzat
 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
-In alternativa, è possibile selezionare le caselle **[!UICONTROL Select all segments]** e **[!UICONTROL Select all traits]** . Selezionando tutti i segmenti, Platform visualizzerà i segmenti di Audience Manager, mentre selezionando tutte le caratteristiche abilita tutte le caratteristiche di prime parti dall’Audience Manager.
+In alternativa, puoi selezionare la **[!UICONTROL Seleziona tutti i segmenti]** e **[!UICONTROL Seleziona tutte le caratteristiche]** scatole. Selezionando tutti i segmenti, Platform visualizzerà i segmenti di Audience Manager, mentre selezionando tutte le caratteristiche abilita tutte le caratteristiche di prime parti dall’Audience Manager.
 
-Al termine, seleziona **[!UICONTROL Next]**
+Al termine, seleziona **[!UICONTROL Successivo]**
 
 ![tutti i segmenti](../../../../images/tutorials/create/aam/all-segments.png)
 
-Viene visualizzato il passaggio [!UICONTROL Review] , che consente di rivedere le caratteristiche e i segmenti selezionati prima che siano collegati a Platform. I dettagli sono raggruppati nelle seguenti categorie:
+La [!UICONTROL Revisione] viene visualizzato un passaggio che ti consente di rivedere le caratteristiche e i segmenti selezionati prima che siano collegati a Platform. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connection]**: Mostra la piattaforma di origine e lo stato della connessione.
-* **[!UICONTROL Selected data]**: Mostra il numero di segmenti selezionati e caratteristiche abilitate.
+* **[!UICONTROL Connessione]**: Mostra la piattaforma di origine e lo stato della connessione.
+* **[!UICONTROL Dati selezionati]**: Mostra il numero di segmenti selezionati e caratteristiche abilitate.
 
 ![revisione](../../../../images/tutorials/create/aam/review.png)
 
-Dopo aver esaminato il flusso di dati, seleziona **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
+Dopo aver esaminato il flusso di dati, seleziona **[!UICONTROL Fine]** e lascia un certo tempo per la creazione del flusso di dati.
 
 ## Passaggi successivi
 
