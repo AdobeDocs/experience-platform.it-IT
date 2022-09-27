@@ -4,7 +4,7 @@ user-guide-title: Guida all’igiene dei dati
 breadcrumb-title: Guida all’igiene dei dati
 user-guide-description: Gestisci le richieste di dati dei consumatori per rispettare le normative legali sulla privacy come RGPD e CCPA.
 feature: Data Hygiene
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: c5a09a01ed9cc180ea5623af6f2c9f176a8334dc
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 4%
@@ -23,5 +23,5 @@ ht-degree: 4%
 * API di igiene dei dati {#api}
    * [Panoramica](./api/overview.md)
    * [Scadenza set di dati](./api/dataset-expiration.md)
-   * [Lavori di cancellazione del consumatore](./api/jobs.md)
+   * [Lavori di cancellazione del consumatore](./api/workorder.md)
    * [Quota](./api/quota.md)

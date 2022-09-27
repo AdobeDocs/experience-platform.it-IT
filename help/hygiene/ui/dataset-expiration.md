@@ -2,20 +2,16 @@
 title: Gestire le scadenze del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 # Gestire le scadenze dei set di dati
 
->[!IMPORTANT]
->
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
-
-La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform consente di pianificare la scadenza di un set di dati. Quando un set di dati raggiunge la sua data di scadenza, il data lake, il servizio Identity e il profilo cliente in tempo reale iniziano processi separati per rimuovere il contenuto del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come completa.
+La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform consente di pianificare le scadenze per i set di dati. Quando un set di dati raggiunge la sua data di scadenza, il data lake, il servizio Identity e il profilo cliente in tempo reale iniziano processi separati per rimuovere il contenuto del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come completa.
 
 >[!WARNING]
 >
@@ -29,11 +25,13 @@ Per creare una nuova richiesta, seleziona **[!UICONTROL Crea richiesta]** dalla 
 
 ![Immagine che mostra [!UICONTROL Crea richiesta] pulsante selezionato](../images/ui/ttl/create-request-button.png)
 
-<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for dataset expiration scheduling-->
+Viene visualizzata la finestra di dialogo per la creazione della richiesta. Sotto la **[!UICONTROL Azione richiesta]** sezione , seleziona **[!UICONTROL Elimina set di dati]** per aggiornare i controlli disponibili per la pianificazione della scadenza del set di dati.
+
+![Immagine che mostra [!UICONTROL Crea richiesta] pulsante selezionato](../images/ui/ttl/dataset-selected.png)
 
 ### Selezionare una data e un set di dati
 
-Viene visualizzata la finestra di dialogo per la creazione della richiesta. Sotto la **[!UICONTROL Azione]** seleziona la data in cui desideri eliminare il set di dati. Puoi immettere la data manualmente (nel formato `mm/dd/yyyy`) o seleziona l’icona Calendario (![Immagine dell&#39;icona del calendario](../images/ui/ttl/calendar-icon.png)) per selezionare la data da una finestra di dialogo.
+Viene visualizzata la finestra di dialogo per la creazione della richiesta. Sotto la **[!UICONTROL Azione richiesta]** seleziona la data in cui desideri eliminare il set di dati. Puoi immettere la data manualmente (nel formato `mm/dd/yyyy`) o seleziona l’icona Calendario (![Immagine dell&#39;icona del calendario](../images/ui/ttl/calendar-icon.png)) per selezionare la data da una finestra di dialogo.
 
 ![Immagine che mostra una data di scadenza impostata per il set di dati](../images/ui/ttl/select-date.png)
 
@@ -47,13 +45,17 @@ Successivamente, sotto **[!UICONTROL Dettagli set di dati]**, seleziona l’icon
 
 ### Invia la richiesta
 
-Dopo aver selezionato un set di dati e una data di scadenza, seleziona **[!UICONTROL Invia]**.
+La [!UICONTROL Dettagli set di dati] viene compilata per includere l&#39;identità e lo schema principali per il set di dati selezionato. Sotto **[!UICONTROL Impostazioni richieste]**, immetti un nome e una descrizione facoltativa per la richiesta, seguiti da **[!UICONTROL Invia]**.
 
 ![Immagine che mostra [!UICONTROL Invia] pulsante selezionato](../images/ui/ttl/submit.png)
 
 Viene richiesto di confermare la data in cui il set di dati verrà eliminato. Seleziona **[!UICONTROL Invia]** per continuare.
 
 Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro e viene visualizzato nella scheda principale [!UICONTROL Igiene dei dati] workspace. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
+
+>[!NOTE]
+>
+>Consulta la sezione panoramica su [Tempistiche e trasparenza](../home.md#dataset-expiration-transparency) per informazioni dettagliate sull’elaborazione delle scadenze dei set di dati una volta eseguite.
 
 ## Modificare o annullare la scadenza di un set di dati
 
@@ -63,4 +65,6 @@ Nella pagina dei dettagli della scadenza del set di dati, la barra a destra most
 
 ## Passaggi successivi
 
-Questo documento illustra come pianificare le scadenze dei set di dati nell’interfaccia utente di Experience Platform. Per informazioni su come pianificare le scadenze dei set di dati utilizzando l’API di igiene dati, consulta [guida all’endpoint di scadenza dei set di dati](../api/dataset-expiration.md).
+Questo documento illustra come pianificare le scadenze dei set di dati nell’interfaccia utente di Experience Platform. Per informazioni su come eseguire altre attività di igiene dei dati nell’interfaccia utente, consulta [panoramica dell&#39;interfaccia utente per l&#39;igiene dei dati](./overview.md).
+
+Per informazioni su come pianificare le scadenze dei set di dati utilizzando l’API di igiene dati, consulta [guida all’endpoint di scadenza dei set di dati](../api/dataset-expiration.md).
