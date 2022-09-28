@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
 workflow-type: tm+mt
 source-wordcount: '2539'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che offre ai marchi consapevoli della privacy una maggiore flessibilità per gestire l&#39;accesso degli utenti. I singoli oggetti, ad esempio i campi e i segmenti dello schema, possono essere assegnati ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per utenti Platform specifici della tua organizzazione.
 
-Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi personalizzati di dati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
+Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali identificabili (PII) e altri tipi personalizzati di dati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -64,7 +64,7 @@ Per informazioni sull’igiene dei dati, consulta la seguente documentazione:
 
 ## [!UICONTROL Console sulla privacy] {#privacy-console}
 
-La [!UICONTROL Console sulla privacy] nell’interfaccia utente di Experience Platform è disponibile una vista dashboard delle informazioni chiave provenienti da funzioni relative alla privacy come [richieste di persone interessate da Privacy Service], [ordini di lavoro per l&#39;igiene dei dati]e [registri di controllo]. La console fornisce anche diverse guide di casi d’uso all’interno del prodotto per guidarti attraverso i flussi di lavoro comuni sulla privacy.
+La [!UICONTROL Console sulla privacy] nell’interfaccia utente di Experience Platform è disponibile una vista dashboard delle informazioni chiave provenienti da funzioni relative alla privacy come [richieste di persone interessate da Privacy Service](../../privacy-service/home.md), [ordini di lavoro per l&#39;igiene dei dati](../../hygiene/home.md)e [registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md). La console fornisce anche diverse guide di casi d’uso all’interno del prodotto per guidarti attraverso i flussi di lavoro comuni sulla privacy.
 
 Consulta la sezione [Panoramica della console Privacy](../../landing/governance-privacy-security/privacy-console.md) per ulteriori informazioni sulla funzione.
 
@@ -218,6 +218,6 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Supporto per il Cloud Service gestito di Adobe Campaign | Utilizza l’origine Adobe Campaign Managed Cloud Service per fornire Experience Platform dei dati dei registri di consegna e di tracciamento di Adobe Campaign v8.4. Leggi la guida su [creazione di una connessione sorgente Adobe Campaign Managed Cloud Service nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/campaign.md) per ulteriori informazioni. |
 | Supporto API per l’acquisizione on-demand di origini batch | Utilizza l’acquisizione on-demand per creare esecuzioni di flussi ad hoc per un determinato flusso di dati con [!DNL Flow Service] API. Le esecuzioni di flusso create devono essere impostate su acquisizione una tantum. Per ulteriori informazioni, consulta la guida su [creazione di un’esecuzione di flusso per l’acquisizione on-demand tramite API](../../sources/tutorials/api/on-demand-ingestion.md) per ulteriori informazioni. |
 | Supporto API per il nuovo tentativo di esecuzione non riuscita del flusso di dati per origini batch | Utilizza la `re-trigger` per riprovare il flusso di dati non riuscito tramite l&#39;API. Leggi la guida su [nuovo tentativo di esecuzione di un flusso di dati non riuscito tramite API](../../sources/tutorials/api/retry-flows.md) per ulteriori informazioni. |
-| Supporto API per il filtraggio dei dati a livello di riga per il [!DNL Google BigQuery] e [!DNL Snowflake] origini | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] fonti. Per ulteriori informazioni, consulta la guida sul filtro dei dati per una sorgente utilizzando l’API . |
+| Supporto API per il filtraggio dei dati a livello di riga per il [!DNL Google BigQuery] e [!DNL Snowflake] origini | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] fonti. Leggi la guida su [filtraggio dei dati per una sorgente tramite API](../../sources/tutorials/api/filter.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md).

@@ -2,7 +2,7 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione di prodotto creata utilizzando Destination SDK.
 title: Invia per la revisione di una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Puoi trovare informazioni dettagliate su ogni elemento nelle sezioni seguenti:
 Fornisci una descrizione dei casi d’uso che la tua destinazione risolve per i clienti di Experience Platform. Le descrizioni possono essere simili ai casi d&#39;uso dei partner esistenti:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
-* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il targeting di un gruppo di pubblico specifico tenuto fuori dagli indirizzi e-mail in Verizon Media (VMG) possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l’API in tempo quasi reale di VMG.
+* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il targeting di un gruppo di pubblico specifico tenuto fuori dagli indirizzi e-mail in Verizon Media (VMG) possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l&#39;API in tempo quasi reale di VMG.
 
 ## Risultati del test dopo l’utilizzo dell’API di destinazione del test
 
@@ -225,7 +225,7 @@ Fornisci l&#39;ID della richiesta di pubblicazione per la tua destinazione. Per 
 
 Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
 
-## Logo per la destinazione
+## Logo per la destinazione {#logo}
 
 Il catalogo delle destinazioni include un logo per ogni scheda di destinazione. Nel messaggio e-mail di invio, includi un’immagine con il logo della destinazione.
 
