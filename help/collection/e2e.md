@@ -2,9 +2,9 @@
 title: Panoramica della raccolta dati end-to-end
 description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando le funzionalità di raccolta dati di Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ Questa guida fornisce un’esercitazione di alto livello su come inviare un even
 >[!NOTE]
 >
 >Puoi anche scegliere di installare e configurare manualmente l’SDK se non desideri utilizzare i tag, ma i passaggi circostanti devono comunque essere completati come descritto di seguito.
+>
+>Tutti i passaggi che coinvolgono l’interfaccia utente di raccolta dati possono essere eseguiti anche nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti
 
@@ -57,7 +59,7 @@ Il primo passo per configurare le operazioni di raccolta dati è creare uno sche
 >
 >Gli schemi XDM sono molto personalizzabili. Invece di essere eccessivamente prescrittivi, i passaggi descritti di seguito si concentrano specificamente sui requisiti di schema per l&#39;SDK per web. Al di fuori di questi parametri, puoi definire liberamente la struttura rimanente dei tuoi dati in base alle tue preferenze.
 
-Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Schemi]** nella navigazione a sinistra. Da qui puoi visualizzare un elenco degli schemi creati in precedenza appartenenti all’organizzazione. Per continuare, seleziona **[!UICONTROL Creare uno schema]**, quindi seleziona **[!UICONTROL ExperienceEvent XDM]** dal menu a discesa .
+Nell’interfaccia utente, seleziona **[!UICONTROL Schemi]** nella navigazione a sinistra. Da qui puoi visualizzare un elenco degli schemi creati in precedenza appartenenti all’organizzazione. Per continuare, seleziona **[!UICONTROL Creare uno schema]**, quindi seleziona **[!UICONTROL ExperienceEvent XDM]** dal menu a discesa .
 
 ![Area di lavoro degli schemi](./images/e2e/schemas.png)
 
@@ -97,7 +99,7 @@ Un datastream è una configurazione che indica alla rete Edge in cui desideri in
 >
 >Se desideri utilizzare [inoltro eventi](../tags/ui/event-forwarding/overview.md) (supponendo che l’organizzazione disponga della licenza per la funzionalità), è necessario abilitarla per un datastream nello stesso modo in cui si abilitano i prodotti Adobe. I dettagli di questo processo sono trattati in un [sezione successiva](#event-forwarding).
 
-Nell’interfaccia utente Raccolta dati, seleziona **[!UICONTROL Datastreams]**. Da qui, puoi selezionare un datastream esistente dall&#39;elenco da modificare, oppure puoi creare una nuova configurazione selezionando **[!UICONTROL Nuovo Datastream]**.
+Seleziona **[!UICONTROL Datastreams]** nella navigazione a sinistra. Da qui, puoi selezionare un datastream esistente dall&#39;elenco da modificare, oppure puoi creare una nuova configurazione selezionando **[!UICONTROL Nuovo Datastream]**.
 
 ![Stream di dati](./images/e2e/datastreams.png)
 

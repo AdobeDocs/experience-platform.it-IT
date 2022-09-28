@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Target v2
 description: Scopri le caratteristiche dell’estensione Tag di Adobe Target v2 in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 98%
+source-wordcount: '1356'
+ht-degree: 94%
 
 ---
 
@@ -31,7 +31,7 @@ Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore su
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target solo quando viene aggiunta per la prima volta; pertanto, in caso di aggiornamenti aggiuntivi, tutte le impostazioni dovranno essere gestite nell’interfaccia di Data Collection.
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target solo quando viene aggiunta per la prima volta; pertanto, in caso di aggiornamenti aggiuntivi, tutte le impostazioni dovranno essere gestite nell’interfaccia di 
 
 Sono disponibili le seguenti configurazioni:
 
@@ -133,8 +133,8 @@ Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza l
    * Quando è stata ricevuta la risposta di caricamento della pagina
    * Quando la richiesta di caricamento della pagina scade
    * Quando lo stesso frammento scade
-* L&#39;azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
-* L’impostazione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target nell’interfaccia utente di Data Collection; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
+* L’azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L’opzione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

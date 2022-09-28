@@ -2,10 +2,10 @@
 title: Panoramica degli host gestiti da Adobe
 description: Scopri l’opzione di hosting predefinita per la distribuzione delle build della libreria di tag in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 98%
+source-wordcount: '1173'
+ht-degree: 96%
 
 ---
 
@@ -88,9 +88,9 @@ Come riportato in questa tabella, la memorizzazione nella cache del browser non 
 
 Le intestazioni per il controllo della cache sono applicabili solo alla build della libreria principale. Le risorse secondarie rispetto alla libreria principale sono sempre considerate nuove e quindi non è necessario memorizzarle nella cache del browser.
 
-## Utilizzo dell’hosting gestito da Adobe nell’interfaccia utente di raccolta dati
+## Utilizzo dell’hosting gestito da Adobe nell’interfaccia di 
 
-La prima volta che crei una proprietà nell’[interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/), viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
+Quando crei una proprietà nell’interfaccia utente di Platform o nell’interfaccia utente di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
 
 >[!NOTE]
 >

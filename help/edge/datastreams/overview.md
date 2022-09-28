@@ -3,9 +3,9 @@ title: Panoramica dei Datastreams
 description: Connetti l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
 keywords: configurazione;datastreams;datastreamId;edge;datastream id;Impostazioni ambiente;edgeConfigId;identità;sincronizzazione id abilitata;ID contenitore di sincronizzazione ID;Sandbox;ingresso streaming;set di dati evento;target;codice client;token di proprietà;ID ambiente di Target;destinazioni cookie;destinazioni url;destinazioni Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;Mapper DM;Mapper sul bordo;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 Un datastream rappresenta la configurazione lato server quando si implementano gli SDK per web e dispositivi mobili di Adobe Experience Platform. Mentre il [configura, comando](../fundamentals/configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), i datastreams gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, la `edgeConfigId` viene utilizzato per fare riferimento al datastream. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
 
-Questo documento descrive i passaggi per la configurazione di un datastream nell’interfaccia utente di raccolta dati.
+Questo documento descrive i passaggi per la configurazione di un datastream nell’interfaccia utente di .
 
 ## Accedere al [!UICONTROL Datastreams] workspace
 
-Puoi creare e gestire i datastreams nell’interfaccia utente Raccolta dati selezionando **[!UICONTROL Datastreams]** nella navigazione a sinistra.
+Puoi creare e gestire i datastreams nell’interfaccia utente di raccolta dati o di Experience Platform selezionando **[!UICONTROL Datastreams]** nella navigazione a sinistra.
 
-![Scheda Datastreams nell’interfaccia utente di raccolta dati](../images/datastreams/overview/datastreams-tab.png)
+![Scheda Datastreams nell’interfaccia utente](../images/datastreams/overview/datastreams-tab.png)
 
 La [!UICONTROL Datastreams] visualizza un elenco dei datastreams esistenti, con il relativo nome descrittivo, ID e data dell’ultima modifica. Selezionare il nome di un datastream in [visualizzare i dettagli e configurare i servizi](#view-details).
 
@@ -106,7 +106,7 @@ Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Mana
 
 >[!IMPORTANT]
 >
->Quando abiliti un datastream per Platform, prendi nota della sandbox di Platform che stai utilizzando, come visualizzata nella barra multifunzione superiore dell’interfaccia utente di Raccolta dati.
+>Quando abiliti un datastream per Platform, prendi nota della sandbox di Platform che stai utilizzando, come visualizzata nella barra multifunzione superiore dell’interfaccia utente.
 >
 >![Sandbox selezionato](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ La pagina principale del [!UICONTROL Datastreams] riappare l&#39;area di lavoro 
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire i datastreams nell’interfaccia utente di raccolta dati. Per ulteriori informazioni su come installare e configurare l’SDK web dopo aver configurato un datastream, consulta la [Guida alla raccolta dati E2E](../../collection/e2e.md#install).
+Questa guida illustra come gestire i datastreams nell’interfaccia utente di . Per ulteriori informazioni su come installare e configurare l’SDK web dopo aver configurato un datastream, consulta la [Guida alla raccolta dati E2E](../../collection/e2e.md#install).

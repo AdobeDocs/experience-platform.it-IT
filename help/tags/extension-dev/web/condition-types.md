@@ -2,9 +2,9 @@
 title: Tipi di condizioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo condizione per un’estensione tag in una proprietà web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '502'
 ht-degree: 69%
 
 ---
@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di condizioni per un&#39;estensio
 
 I tipi di condizione sono in genere costituiti dai seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni della condizione.
+1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni della condizione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e valutare una condizione.
 
 Un modulo libreria di tipo condizione ha un obiettivo: valuta se qualcosa è vero o falso. Sta a te definire ciò che verrà valutato.

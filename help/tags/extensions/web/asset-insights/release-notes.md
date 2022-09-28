@@ -2,10 +2,10 @@
 title: Note sulla versione per l’estensione AEM Asset Insights
 description: Note aggiornate sulla versione per l’estensione tag di AEM Asset Insights in Adobe Experience Platform.
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 86%
+source-wordcount: '134'
+ht-degree: 64%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 86%
 
 - Questa estensione è pensata per essere utilizzata insieme a AEM Asset Insights.
 - In particolare, sostituisce il processo ***pageTracker*** e il codice della pagina.
-- Quando è configurata nell’interfaccia utente di Data Collection, questa estensione invia ad Adobe Analytics le metriche Impression e Clic di AEM Assets, che verranno quindi importate automaticamente nei rapporti Asset Insights in AEM.
+- Quando è configurata e attivata, questa estensione invia ad Adobe Analytics le metriche Impression e Clic AEM risorsa, che verranno quindi importate automaticamente nei rapporti Asset Insights in AEM.
 
 **Correzioni di bug**
 

@@ -2,9 +2,9 @@
 title: Tipi di azioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà web.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '412'
 ht-degree: 70%
 
 ---
@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di azioni per un&#39;estensione W
 
 I tipi di azione in genere consistono nei seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’azione.
+1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’azione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni ed eseguire un&#39;azione.
 
 ```js

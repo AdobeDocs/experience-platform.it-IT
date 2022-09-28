@@ -2,9 +2,9 @@
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2645'
 ht-degree: 99%
 
 ---
@@ -120,7 +120,7 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facoltativo)</em></td>
-      <td>Se fornito, il <code>displayName</code> verrà elencato in <code>categoryName</code> nell’interfaccia utente di Data Collection. Tutti i tipi con lo stesso <code>categoryName</code> saranno elencati nella stessa categoria. Ad esempio, se l’estensione ha fornito un tipo di evento <code>keyUp</code> e un tipo di evento <code>keyDown</code>, entrambi con <code>categoryName</code> impostato su <code>Keyboard</code>, entrambi i tipi di evento sono elencati nella categoria Keyboard quando l’utente seleziona una voce dall’elenco dei tipi di evento disponibili per creare una regola. Il valore di <code>categoryName</code> deve essere leggibile.</td>
+      <td>Se fornito, il <code>displayName</code> verrà elencato in <code>categoryName</code> nell’interfaccia utente di Tutti i tipi con lo stesso <code>categoryName</code> saranno elencati nella stessa categoria. Ad esempio, se l’estensione ha fornito un tipo di evento <code>keyUp</code> e un tipo di evento <code>keyDown</code>, entrambi con <code>categoryName</code> impostato su <code>Keyboard</code>, entrambi i tipi di evento sono elencati nella categoria Keyboard quando l’utente seleziona una voce dall’elenco dei tipi di evento disponibili per creare una regola. Il valore di <code>categoryName</code> deve essere leggibile.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

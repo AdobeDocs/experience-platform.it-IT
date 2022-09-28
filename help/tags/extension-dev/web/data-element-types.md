@@ -2,9 +2,9 @@
 title: Tipi di elementi dati per le estensioni web
 description: Scopri come definire un modulo libreria data-element-type per un’estensione tag in una proprietà web.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '600'
 ht-degree: 70%
 
 ---
@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di elementi dati per un&#39;esten
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni per l’elemento dati.
+1. A [visualizzare](./views.md) nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni per l’elemento dati.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:

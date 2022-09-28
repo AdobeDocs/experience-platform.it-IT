@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Common Analytics
 description: Scopri l’estensione tag Common Analytics in Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 96%
+source-wordcount: '406'
+ht-degree: 86%
 
 ---
 
@@ -50,7 +50,7 @@ L’estensione Common Analytics Plugins fornisce le azioni seguenti:
 >
 >Anche se questa azione è la più semplice da implementare, Adobe Consulting consiglia di non utilizzarla in quanto aumenta il peso del plug-in.
 
-Con questa azione puoi selezionare ogni plug-in da includere nell’implementazione e salvare le modifiche. Seleziona tutti i plug-in che intendi usare nell’implementazione. Puoi trovare collegamenti alla documentazione sull’utilizzo di ciascun plug-in e una breve descrizione nella [panoramica dei plug-in di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).
+Con questa azione puoi selezionare ogni plug-in da includere nell’implementazione e salvare le modifiche. Seleziona tutti i plug-in che intendi usare nell’implementazione.
 
 ### Inizializza plug-in
 
@@ -58,36 +58,17 @@ Queste azioni inizializzano il plug-in specifico che intendi utilizzare singolar
 
 ## Elementi dati dell’estensione Common Analytics Plugins
 
-In questa sezione sono descritti gli elementi dati disponibili nell’estensione Common Analytics Plugins.
+I seguenti elementi dati sono disponibili nell’estensione Common Analytics Plugins, che sfrutta le funzionalità dei tag per configurare e configurare i plug-in corrispondenti in Analytics:
 
-### getGeoCoordinates
+* `getGeoCoordinates`
+* `getNewRepeat`
+* `getPageName`
+* `getResponsiveLayout`
+* `getTimeParting`
+* `getTimeSinceLastVisit`
+* `getVisitDuration`
+* `getVisitNum`
 
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection in Adobe Experience Platform per impostare e configurare il plugin getGeoCoordinates.
-
-### getNewRepeat
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getNewRepeat.
-
-### getPageName
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getPageName.
-
-### getResponsiveLayout
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getResponsiveLayout.
-
-### getTimeParting
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getTimeParting.
-
-### getTimeSinceLastVisit
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getTimeSinceLastVisit.
-
-### getVisitDuration
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getVisitDuration.
-
-### getVisitNum
-
-Consente agli utenti di sfruttare l’interfaccia utente nativa di Data Collection per impostare e configurare il plugin getVisitNum.
+>[!NOTE]
+>
+>Per ulteriori informazioni sui plugin di cui sopra, si prega di consultare il [Documentazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).

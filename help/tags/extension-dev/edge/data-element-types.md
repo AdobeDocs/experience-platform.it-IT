@@ -2,10 +2,10 @@
 title: Tipi di elementi dati per le estensioni Edge
 description: Scopri come definire un modulo libreria data-element-type per un’estensione tag in una proprietà edge.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 52%
+source-wordcount: '439'
+ht-degree: 51%
 
 ---
 
@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di elementi dati per un’estensi
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. Visualizzazione nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni per l’elemento dati.
+1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni per l’elemento dati.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
 
 Se desideri consentire agli utenti di recuperare una parte di dati dal livello dati personalizzato, il modulo potrebbe avere un aspetto simile a questo esempio.

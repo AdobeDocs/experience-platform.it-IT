@@ -2,9 +2,9 @@
 title: Ripubblicare una libreria
 description: Scopri come ripubblicare una libreria di tag precedente in Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '648'
 ht-degree: 97%
 
 ---
@@ -45,7 +45,7 @@ Questo significa che quando si ripubblica una libreria precedente:
 
 * La modalità con cui gli ambienti di sviluppo e di gestione temporanea calcolano ciò che è a monte non cambia
 
-Esamina lo scenario in cui esegui il roll back a causa di un problema con una regola specifica. La revisione della regola attualmente in produzione potrebbe, ad esempio, essere precedente a tre revisioni. Quando visualizzi questa regola nell’interfaccia utente di Data Collection per correggerla, vengono comunque riportate le ultime modifiche salvate, anziché le modifiche attualmente in produzione.
+Esamina lo scenario in cui esegui il roll back a causa di un problema con una regola specifica. La revisione della regola attualmente in produzione potrebbe, ad esempio, essere precedente a tre revisioni. Quando visualizzi questa regola nell’interfaccia utente di per correggerla, vengono comunque riportate le ultime modifiche salvate, anziché le modifiche attualmente in produzione.
 
 Per questo motivo, Platform notifica che una proprietà è in stato di ripubblicazione per ricordare che ciò che visualizzi nell’interfaccia utente di Data Collection è un po’ più lontano dalla produzione rispetto al solito. Questa notifica può essere eliminata e viene visualizzata una volta per ogni sessione del browser la prima volta che visualizzi la proprietà.
 

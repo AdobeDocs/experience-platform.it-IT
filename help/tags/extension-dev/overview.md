@@ -2,9 +2,9 @@
 title: Panoramica sullo sviluppo di estensioni
 description: Scopri i componenti principali di diverse estensioni di tag e il processo di sviluppo delle stesse in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 25%
 
 ---
@@ -37,11 +37,11 @@ Puoi inserire i file dei moduli libreria in qualsiasi punto ti piaccia all&#39;i
 
 ### Viste
 
-Una visualizzazione è un file HTML in grado di essere caricato in un [`iframe` elemento](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all’interno dell’applicazione tag, in particolare tramite l’interfaccia utente di raccolta dati. Per comunicare con l’applicazione, la visualizzazione deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
+Una visualizzazione è un file HTML in grado di essere caricato in un [`iframe` elemento](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all’interno dell’applicazione tag, in particolare tramite l’interfaccia utente di Platform e l’interfaccia utente di raccolta dati. Per comunicare con l’applicazione, la visualizzazione deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
 
 Il file di visualizzazione più importante per qualsiasi estensione è la sua configurazione. Vedi la sezione su [configurazioni di estensione](#configuration) per ulteriori informazioni.
 
-Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, è possibile utilizzare jQuery, Sottolineatura, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di fare in modo che l’estensione abbia un aspetto e un aspetto simili all’interfaccia utente di raccolta dati.
+Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, è possibile utilizzare jQuery, Sottolineatura, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di fare in modo che l&#39;estensione abbia un aspetto e un aspetto simili all&#39;interfaccia utente.
 
 Si consiglia di inserire tutti i file relativi alla vista (HTML, CSS, JavaScript) in una singola sottodirectory, isolata dai file del modulo libreria. In `extension.json`, è possibile descrivere la posizione della sottodirectory della visualizzazione. Platform metterà a disposizione questa sottodirectory (e solo questa sottodirectory) dai propri server web.
 

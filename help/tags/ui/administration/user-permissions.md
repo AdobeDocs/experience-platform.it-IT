@@ -2,9 +2,9 @@
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1308'
 ht-degree: 23%
 
 ---
@@ -42,7 +42,7 @@ Per impostazione predefinita, i profili di prodotto concedono l’accesso a tutt
 
 ### Diritti di proprietà {#property-rights}
 
-Tutte le proprietà create nell’interfaccia utente Raccolta dati diventano disponibili in Admin Console, consentendoti di raggruppare la proprietà con diritti di proprietà specifici nello stesso profilo di prodotto.
+Qualsiasi proprietà tag creata nell’interfaccia utente diventa disponibile in Admin Console, consentendoti di raggruppare la proprietà con diritti di proprietà specifici nello stesso profilo di prodotto.
 
 Ad esempio, se un determinato profilo di prodotto non ha accesso alla proprietà A1, gli utenti che appartengono a tale profilo non possono visualizzare o modificare le impostazioni all’interno della proprietà A1.
 
@@ -52,7 +52,7 @@ La tabella seguente illustra i diritti di proprietà disponibili e le funzionali
 
 | Diritto di proprietà | Descrizione |
 | --- | --- |
-| **Sviluppa** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Invia una libreria per l&#39;approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di Data Collection richiede questo diritto. |
+| **Sviluppa** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Invia una libreria per l&#39;approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di richiede questo diritto. |
 | **Approva** | Questo consente di trasferire una libreria e una build inviate all&#39;ambiente di staging. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
 | **Pubblica** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
 | **Gestire le estensioni** | Questo consente di eseguire le seguenti azioni: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modifica la configurazione di un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |

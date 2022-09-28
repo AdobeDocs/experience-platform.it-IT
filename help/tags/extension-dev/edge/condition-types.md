@@ -2,10 +2,10 @@
 title: Tipi di condizioni per le estensioni Edge
 description: Scopri come definire un modulo libreria per tipi di condizione per un’estensione Edge in Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 69%
+source-wordcount: '412'
+ht-degree: 68%
 
 ---
 
@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di condizioni per un&#39;estensio
 
 I tipi di condizione sono in genere costituiti dai seguenti elementi:
 
-1. Visualizzazione nell’interfaccia utente di Raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
+1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
 2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e valutare una condizione.
 
 Ad esempio, per valutare se l’utente si trova sull’host `example.com`, il modulo potrebbe presentarsi così.

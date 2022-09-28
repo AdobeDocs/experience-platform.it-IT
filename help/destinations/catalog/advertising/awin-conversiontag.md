@@ -3,9 +3,9 @@ keywords: Estensione tag di conversione Awin Advertiser;tag di conversione;Awin;
 title: Estensione Tag di conversione Awin Advertiser
 description: L’estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '506'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul fun
 
 Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore della tua organizzazione per accedere all’interfaccia utente di raccolta dati e chiedi loro di concederti il **[!UICONTROL manage_properties]** per poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere alle funzioni di raccolta dati nell’interfaccia utente e chiedi all’utente di concedere il **[!UICONTROL manage_properties]** per poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

@@ -2,9 +2,9 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ Questa guida illustra come gestire le autorizzazioni per le funzioni di raccolta
 
 ## Introduzione
 
-Per configurare il controllo di accesso per la raccolta dei dati, è necessario disporre dei privilegi di amministratore per un’organizzazione con un’integrazione di prodotto con Adobe Experience Platform Data Collection. Il ruolo minimo che può concedere o revocare le autorizzazioni è un amministratore del profilo di prodotto. Altri ruoli di amministratore che possono gestire le autorizzazioni sono gli amministratori dei prodotti (possono gestire tutti i profili all’interno di un prodotto) e gli amministratori di sistema (senza restrizioni). Vedi l&#39;articolo su [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) nella guida all’amministrazione di Adobe Enterprise per ulteriori informazioni.
+Per configurare il controllo di accesso per la raccolta dei dati, è necessario disporre dei privilegi di amministratore per un’organizzazione con un’integrazione di prodotto con Adobe Experience Platform Data Collection. Il ruolo minimo che può concedere o revocare le autorizzazioni è un **amministratore del profilo di prodotto**. Altri ruoli di amministratore che possono gestire le autorizzazioni sono **amministratori di prodotto** (può gestire tutti i profili all’interno di un prodotto) e **amministratori di sistema** (nessuna restrizione). Vedi l&#39;articolo su [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) nella guida all’amministrazione di Adobe Enterprise per ulteriori informazioni.
 
 Questa guida presuppone che tu abbia familiarità con i concetti di Admin Console di base come i profili di prodotto e le modalità con cui concedono le autorizzazioni di prodotto ai singoli utenti e gruppi. Per ulteriori informazioni, consulta la sezione [Guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Per ulteriori informazioni sulla gestione degli utenti per un profilo di prodott
 
 ## Passaggi successivi
 
-Questa guida descrive le autorizzazioni disponibili per l’interfaccia utente di raccolta dati e come gestirle tramite un Admin Console. Per ulteriori informazioni sulla gestione delle autorizzazioni per altre funzionalità di Adobe Experience Platform, consulta [documentazione sul controllo degli accessi](../access-control/home.md).
+Questa guida descrive le autorizzazioni disponibili per la raccolta dati e come gestirle tramite un Admin Console. Per ulteriori informazioni sulla gestione delle autorizzazioni per altre funzionalità di Adobe Experience Platform, consulta [documentazione sul controllo degli accessi](../access-control/home.md).
