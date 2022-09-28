@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 5%
 
 ---
@@ -22,9 +22,11 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Registri di controllo](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Raccolta dati](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio Identity](#identity-service)
+- [Servizio query](#query-service)
 - [Origini](#sources)
 
 ## Controllo dell’accesso basato su attributi {#abac}
@@ -106,7 +108,17 @@ L’Experience Platform ti consente di controllare l’attività dell’utente p
 
 Per ulteriori informazioni sui diversi tipi di evento specifici per le risorse tracciati dai registri di controllo in Platform, consulta la sezione [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Raccolta dati
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visualizzare informazioni importanti sui dati dell’organizzazione, acquisiti durante le istantanee giornaliere.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in-use identifica facilmente la presenza di widget esistenti nel dashboard. Questo rende facile evitare la duplicazione, anche se è ancora possibile aggiungere lo stesso widget più di una volta che si desidera. |
+
+Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
+
+## Raccolta dati {#data-collection}
 
 Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di raccogliere i dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network dove possono essere arricchiti, trasformati e distribuiti su destinazioni Adobi o non Adobi.
 
@@ -178,6 +190,19 @@ Il servizio Adobe Experience Platform Identity consente di acquisire una visione
 | Supporto per l’eliminazione dei set di dati | Il servizio Identity supporta ora l’eliminazione dei set di dati durante la richiesta tramite [API del servizio catalogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), l’interfaccia utente o l’igiene dei dati. Leggi la guida su [eliminazione di set di dati nell’interfaccia utente](../../catalog/datasets/user-guide.md#delete-a-dataset) per ulteriori informazioni. |
 
 Per ulteriori informazioni sul servizio Identity, consulta la sezione [Panoramica del servizio Identity](../../identity-service/home.md).
+
+## Servizio query {#query-service}
+
+Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento in Profilo cliente in tempo reale.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| API di abbonamento agli avvisi | Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Esempi di set di dati | Gli esempi di set di dati del servizio query consentono di eseguire query esplorative su grandi dati con tempi di elaborazione notevolmente ridotti a costo di precisione della query. |
+
+Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
 
 ## Origini {#sources}
 
