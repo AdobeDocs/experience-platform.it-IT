@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 17%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 17%
    - [Funzioni SQL di Spark](sql/spark-sql-functions.md)
    - [Comandi metadati](sql/metadata.md)
    - [Dichiarazioni preparate](sql/prepared-statements.md)
+   - [Esempi di set di dati](sql/dataset-samples.md)
 - Connettere i client al servizio query {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Modalità SSL](./clients/ssl-modes.md)
