@@ -4,7 +4,7 @@ title: Invia per la revisione di una destinazione prodotta creata in Destination
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

@@ -4,8 +4,8 @@ title: Guida introduttiva a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

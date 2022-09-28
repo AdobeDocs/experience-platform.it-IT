@@ -4,8 +4,8 @@ title: Configura una destinazione Azure Data Lake Storage con opzioni di formatt
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

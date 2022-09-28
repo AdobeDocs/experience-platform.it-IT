@@ -4,8 +4,8 @@ title: Configura una destinazione SFTP con opzioni di formattazione file predefi
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

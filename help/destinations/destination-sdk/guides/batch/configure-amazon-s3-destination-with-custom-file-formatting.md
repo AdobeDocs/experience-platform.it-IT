@@ -4,8 +4,8 @@ title: Configura una destinazione Amazon S3 con il nome file personalizzato e le
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

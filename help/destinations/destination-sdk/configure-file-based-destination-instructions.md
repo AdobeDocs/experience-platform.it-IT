@@ -4,8 +4,8 @@ title: Utilizzare Destination SDK per configurare una destinazione basata su fil
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

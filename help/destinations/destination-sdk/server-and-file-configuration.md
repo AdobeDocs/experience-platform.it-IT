@@ -4,8 +4,8 @@ title: Opzioni di configurazione per specifiche del server di destinazione basat
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

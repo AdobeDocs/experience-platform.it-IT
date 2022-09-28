@@ -4,8 +4,8 @@ title: Configura una destinazione Azure Blob Storage con opzioni di formattazion
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

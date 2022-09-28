@@ -6,8 +6,8 @@ description: Questo documento elenca il sommario delle destinazioni Adobe Experi
 feature: Destinations
 source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

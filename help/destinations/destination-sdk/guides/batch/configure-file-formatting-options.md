@@ -3,8 +3,8 @@ description: Configurare le opzioni di formattazione per le destinazioni basate 
 title: Scopri come utilizzare Destination SDK per configurare le opzioni di formattazione per le destinazioni basate su file.
 source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

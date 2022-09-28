@@ -4,8 +4,8 @@ title: Opzioni di configurazione della destinazione basate su file per la Destin
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -4,8 +4,8 @@ title: Operazioni API dell’endpoint server di destinazione
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
