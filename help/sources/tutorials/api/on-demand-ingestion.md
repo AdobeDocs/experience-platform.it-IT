@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
 title: (Beta) Crea un’esecuzione di flusso per l’acquisizione on-demand tramite l’API del servizio di flusso
 description: Questa esercitazione descrive i passaggi per creare un’esecuzione di flusso per l’acquisizione su richiesta tramite l’API del servizio di flusso
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1157'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Le esecuzioni del flusso rappresentano un&#39;istanza di esecuzione del flusso. Ad esempio, se un flusso viene pianificato per essere eseguito ogni ora alle 09:00, 10:00 e 11:00, si avranno tre istanze di un’esecuzione di flusso. Le esecuzioni dei flussi sono specifiche per la tua organizzazione specifica.
 
-L’acquisizione su richiesta consente di creare un’esecuzione di flusso rispetto a un determinato flusso di dati. Questo consente agli utenti di creare un’esecuzione di flusso, in base a determinati parametri e di creare un ciclo di acquisizione, senza token di servizio.
+L’acquisizione su richiesta consente di creare un’esecuzione di flusso rispetto a un determinato flusso di dati. Questo consente agli utenti di creare un’esecuzione di flusso, in base a determinati parametri e di creare un ciclo di acquisizione, senza token di servizio. Il supporto per l’acquisizione on-demand è disponibile solo per le origini batch.
 
 Questa esercitazione descrive i passaggi per utilizzare l’acquisizione on-demand e creare un’esecuzione di flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

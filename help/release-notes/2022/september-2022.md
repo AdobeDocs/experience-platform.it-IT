@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 6%
+source-wordcount: '2326'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 6%
 
 Nuove funzioni in Adobe Experience Platform:
 
+- [Controllo dell’accesso basato su attributi](#abac)
 - [Igiene dei dati](#data-hygiene)
 - [[!UICONTROL Console sulla privacy]](#privacy-console)
 
@@ -25,6 +26,23 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio Identity](#identity-service)
 - [Origini](#sources)
+
+## Controllo dell’accesso basato su attributi {#abac}
+
+>[!IMPORTANT]
+>
+>Il controllo degli accessi basato su attributi verrà attivato a partire da ottobre 2022. Se desideri essere un utente in anticipo, contatta il tuo rappresentante Adobe.
+
+Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che offre ai marchi consapevoli della privacy una maggiore flessibilità per gestire l&#39;accesso degli utenti. I singoli oggetti, ad esempio i campi e i segmenti dello schema, possono essere assegnati ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per utenti Platform specifici della tua organizzazione.
+
+Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi personalizzati di dati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Controllo dell’accesso basato su attributi | Il controllo dell’accesso basato su attributi consente di etichettare i campi e i segmenti dello schema Experience Data Model (XDM) con etichette che definiscono ambiti di utilizzo organizzativi o dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso che coprono i campi e i segmenti dello schema XDM per gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Per ulteriori informazioni, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md). |
+| Autorizzazioni | Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto. Tramite Autorizzazioni puoi creare e gestire ruoli, assegnare le autorizzazioni di risorse desiderate per questi ruoli e creare criteri per sfruttare le etichette e definire quali ruoli utente hanno accesso a risorse specifiche di Platform. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, consulta la sezione [Guida all’interfaccia utente per le autorizzazioni](../../access-control/abac/ui/browse.md). |
+
+Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro del controllo degli accessi basato sugli attributi, leggi la sezione [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
 
 ## Igiene dei dati {#data-hygiene}
 
@@ -172,5 +190,9 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Funzione | Descrizione |
 | --- | --- |
 | Audience Manager dell’impatto sulla popolazione del segmento sul profilo cliente in tempo reale | L’acquisizione di popolazioni di segmenti di Audience Manager di grandi dimensioni ha un impatto diretto sul conteggio totale dei profili quando invii per la prima volta un segmento di Audience Manager a Platform utilizzando l’origine di Audience Manager. Ciò significa che la selezione di tutti i segmenti può potenzialmente portare a un conteggio di profili superiore all’adesione all’utilizzo della licenza. Per ulteriori informazioni, consulta la sezione [Panoramica di Audience Manager Source](../../sources/connectors/adobe-applications/audience-manager.md). Per informazioni sull&#39;utilizzo della licenza, consulta la documentazione su [utilizzo del dashboard di utilizzo della licenza](../../dashboards/guides/license-usage.md). |
+| Supporto per il Cloud Service gestito di Adobe Campaign | Utilizza l’origine Adobe Campaign Managed Cloud Service per fornire Experience Platform dei dati dei registri di consegna e di tracciamento di Adobe Campaign v8.4. Leggi la guida su [creazione di una connessione sorgente Adobe Campaign Managed Cloud Service nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/campaign.md) per ulteriori informazioni. |
+| Supporto API per l’acquisizione on-demand di origini batch | Utilizza l’acquisizione on-demand per creare esecuzioni di flussi ad hoc per un determinato flusso di dati con [!DNL Flow Service] API. Le esecuzioni di flusso create devono essere impostate su acquisizione una tantum. Per ulteriori informazioni, consulta la guida su [creazione di un’esecuzione di flusso per l’acquisizione on-demand tramite API](../../sources/tutorials/api/on-demand-ingestion.md) per ulteriori informazioni. |
+| Supporto API per il nuovo tentativo di esecuzione non riuscita del flusso di dati per origini batch | Utilizza la `re-trigger` per riprovare il flusso di dati non riuscito tramite l&#39;API. Leggi la guida su [nuovo tentativo di esecuzione di un flusso di dati non riuscito tramite API](../../sources/tutorials/api/retry-flows.md) per ulteriori informazioni. |
+| Supporto API per il filtraggio dei dati a livello di riga per il [!DNL Google BigQuery] e [!DNL Snowflake] origini | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] fonti. Per ulteriori informazioni, consulta la guida sul filtro dei dati per una sorgente utilizzando l’API . |
 
 Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md).
