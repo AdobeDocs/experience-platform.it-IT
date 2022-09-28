@@ -6,9 +6,9 @@ title: Configurare un’istanza di Customer AI
 topic-legacy: Instance creation
 description: I servizi AI/ML forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3342'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Le istanze del servizio possono essere modificate, clonate ed eliminate utilizza
 
 - **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
 - **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia la configurazione dell&#39;istanza di servizio attualmente selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
+- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Profilo cliente in tempo reale non vengono eliminati.
 - **[!UICONTROL Origine dati]**: Un collegamento al set di dati utilizzato da questa istanza. Se vengono utilizzati più set di dati, selezionando il testo del collegamento ipertestuale si apre il set di dati di anteprima.
 - **[!UICONTROL Dettagli dell&#39;ultima esecuzione]**: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non è riuscita, ad esempio i codici di errore sono visualizzati qui.
 - **[!UICONTROL Definizione del punteggio]**: Panoramica rapida dell’obiettivo configurato per questa istanza.
@@ -67,7 +67,7 @@ Fornisci i valori richiesti e seleziona **[!UICONTROL Successivo]** per continua
 
 Per progettazione, Customer AI utilizza i dati di Adobe Analytics, Adobe Audience Manager, Experience Events in generale e Consumer Experience Event per calcolare i punteggi di propensione. Quando selezioni un set di dati, vengono elencati solo quelli compatibili con Customer AI. Per selezionare un set di dati, seleziona il (**+**) accanto al nome del set di dati o seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Utilizza l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
 
-![Selezionare e cercare il set di dati](../images/user-guide/configure-dataset-page.png)
+![Selezionare e cercare il set di dati](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Dopo aver selezionato i set di dati da utilizzare, seleziona la **[!UICONTROL Aggiungi]** per aggiungere i set di dati al riquadro di anteprima del set di dati.
 
@@ -78,6 +78,10 @@ Selezione dell’icona delle informazioni ![icona info](../images/user-guide/inf
 ![Selezionare e cercare il set di dati](../images/user-guide/dataset-info.png)
 
 L’anteprima del set di dati contiene dati quali l’ora dell’ultimo aggiornamento, lo schema di origine e un’anteprima delle prime dieci colonne.
+
+Seleziona **[!UICONTROL Salva]** per salvare le bozze mentre ci si sposta nel flusso di lavoro. È inoltre possibile salvare le configurazioni del modello 2D e passare al passaggio successivo nel flusso di lavoro. Utilizzo **[!UICONTROL Salva e continua]** per creare e salvare le bozze durante le configurazioni del modello. La funzione consente di creare e salvare le bozze della configurazione del modello ed è particolarmente utile quando si devono definire molti campi nel flusso di lavoro di configurazione.
+
+![Crea il flusso di lavoro della scheda Customer AI Servizi di scienza dei dati con Salva e Salva e continua ad essere evidenziato.](../images/user-guide/cai-save-and-exit.png)
 
 ### Completezza del set di dati {#dataset-completeness}
 
@@ -236,7 +240,7 @@ L’opzione Profilo consente a Customer AI di esportare i risultati del punteggi
 
 Quando si utilizza Customer AI per la prima volta, è possibile disattivare questa funzione fino a quando non si è soddisfatti dei risultati di output del modello. Questo impedisce il caricamento di più set di dati di punteggio nei profili cliente durante la regolazione del modello. Una volta terminata la calibrazione del modello, è possibile clonare il modello utilizzando [opzione clone](#set-up-your-instance) dal **Istanze del servizio** pagina. Questo consente di creare una copia del modello e attivare il profilo.
 
-![Attiva/disattiva profilo](../images/user-guide/advanced-workflow.png)
+![Attiva/disattiva profilo](../images/user-guide/advanced-workflow-save.png)
 
 Una volta impostata la pianificazione del punteggio, incluse le esclusioni di previsione e l’opzione di profilo in cui desideri che sia, seleziona **[!UICONTROL Fine]** in alto a destra per creare la tua istanza di Customer AI.
 
@@ -247,6 +251,14 @@ Se l&#39;istanza viene creata correttamente, un&#39;esecuzione di previsione vie
 >A seconda delle dimensioni dei dati di input, il completamento delle esecuzioni può richiedere fino a 24 ore.
 
 Seguendo questa sezione, hai configurato un&#39;istanza di Customer AI ed eseguito un&#39;esecuzione di previsione. Al completamento dell’esecuzione, le informazioni con punteggio vengono automaticamente compilate nei profili con punteggi previsti se l’opzione di attivazione del profilo è abilitata. Attendi fino a 24 ore prima di continuare la sezione successiva di questa esercitazione.
+
+## Politiche di governance
+
+Una volta avviato il flusso di lavoro per creare un&#39;istanza e inviare la configurazione del modello, il [applicazione delle norme](/help/data-governance/enforcement/auto-enforcement.md) controlli per verificare l&#39;esistenza di eventuali violazioni. Se si verifica una violazione di un criterio, viene visualizzato un puntatore che indica la violazione di uno o più criteri. In questo modo, assicurati che le operazioni dati e le azioni di marketing all’interno di Platform siano conformi ai criteri di utilizzo dei dati.
+
+![manifesto che mostra la violazione dei criteri](../images/user-guide/policy-violation-popover-cai.png)
+
+Il puntatore fornisce informazioni specifiche sulla violazione. Puoi risolvere queste violazioni tramite le impostazioni dei criteri e altre misure che non sono direttamente correlate al flusso di lavoro di configurazione. Ad esempio, puoi modificare le etichette in modo che alcuni campi possano essere utilizzati a scopo di scienza dei dati. In alternativa, puoi anche modificare la configurazione del modello stesso in modo che non utilizzi nulla con un&#39;etichetta. Consulta la documentazione per ulteriori informazioni su come configurare [politiche](/help/data-governance/policies/overview.md).
 
 ## Controllo dell’accesso basato su attributi
 
@@ -274,11 +286,11 @@ Nella parte superiore dell’area di lavoro di Customer AI **pagina approfondime
 
 Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** viene visualizzato un avviso che informa che [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nell’anteprima del set di dati.]
 
-![Area di lavoro di Customer AI con i campi limitati dei set di dati di anteprima con risultati dello schema limitati evidenziati.](../images/user-guide/restricted-dataset-preview.png)
+![Area di lavoro di Customer AI con i campi limitati dei set di dati di anteprima con risultati dello schema limitati evidenziati.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
 
-![L’area di lavoro di Customer AI con i campi limitati dei risultati dell’istanza del servizio evidenziati.](../images/user-guide/information-not-displayed.png)
+![L’area di lavoro di Customer AI con i campi limitati dei risultati dell’istanza del servizio evidenziati.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Passaggi successivi {#next-steps}
 

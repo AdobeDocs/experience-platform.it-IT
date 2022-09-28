@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,10 @@ Selezione dell’icona delle informazioni ![icona info](./images/user-guide/info
 
 L’anteprima del set di dati contiene dati quali l’ora dell’ultimo aggiornamento, lo schema di origine e un’anteprima delle prime dieci colonne.
 
+Seleziona **[!UICONTROL Salva]** per salvare le bozze mentre ci si sposta nel flusso di lavoro. È inoltre possibile salvare le configurazioni del modello 2D e passare al passaggio successivo nel flusso di lavoro. Utilizzo **[!UICONTROL Salva e continua]** per creare e salvare le bozze durante le configurazioni del modello. La funzione consente di creare e salvare le bozze della configurazione del modello ed è particolarmente utile quando si devono definire molti campi nel flusso di lavoro di configurazione.
+
+![Crea flusso di lavoro della scheda Attribution AI Servizi di scienza dei dati con Salva e Salva e continua evidenziato.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Completezza del set di dati {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Nell’anteprima del set di dati è presente un valore percentuale di completezz
 
 Per selezionare un&#39;identità, selezionare il valore sottolineato che si trova nella colonna identità. Viene visualizzato il puntatore di selezione di un&#39;identità.
 
-![seleziona lo stesso namespace](./images/user-guide/aai-identity-map.png)
+![seleziona lo stesso namespace](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 Se in uno spazio dei nomi sono disponibili più identità, accertati di selezionare il campo di identità corretto per il caso d’uso. Ad esempio, due identità e-mail sono disponibili all’interno dello spazio dei nomi e-mail, un messaggio e-mail aziendale e personale. A seconda del caso d’uso, è più probabile che un’e-mail personale venga compilata ed è più utile nelle singole previsioni. Ciò significa che puoi selezionare `EMAIL (personalEmail.address)` come la tua identità.
 
@@ -108,7 +112,7 @@ Se in uno spazio dei nomi sono disponibili più identità, accertati di selezion
 
 Dopo aver selezionato e aggiunto i set di dati, la **Mappa** viene visualizzato il passaggio di configurazione. Attribution AI richiede di mappare il campo Canale multimediale per ogni set di dati selezionato nel passaggio precedente. Questo perché senza la mappatura del canale multimediale tra set di dati, le informazioni derivate da Attribution AI potrebbero non essere visualizzate correttamente rendendo difficile l’interpretazione della pagina delle informazioni. Anche se è richiesto solo il canale Media, si consiglia vivamente di mappare alcuni dei campi facoltativi quali azione Media, nome della campagna, gruppo Campaign e tag Campaign. In questo modo le Attribution AI possono fornire informazioni più chiare e risultati ottimali.
 
-![mappatura](./images/user-guide/mapping.png)
+![mappatura](./images/user-guide/mapping-save-&-exit.png)
 
 ## Definizione degli eventi {#define-events}
 
@@ -198,13 +202,13 @@ Per aggiungere altri punti di contatto, seleziona **Aggiungi punto di contatto**
 
 Al termine della definizione di tutti i punti di contatto necessari, scorri verso l’alto e seleziona **Successivo** nell’angolo in alto a destra per passare al passaggio finale.
 
-![definire finito](./images/user-guide/define_event_next.png)
+![definire finito](./images/user-guide/define_event_save_and_exit.png)
 
 ## Impostazione avanzata di formazione e valutazione
 
 La pagina finale in Attribution AI è la **[!UICONTROL Avanzate]** pagina utilizzata per l’impostazione della formazione e del punteggio.
 
-![nuova pagina avanzata](./images/user-guide/advanced_settings.png)
+![nuove opzioni set di pagine](./images/user-guide/advanced_settings_set_options.png)
 
 ### Formazione programmata
 
@@ -298,7 +302,7 @@ Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UI
 
 Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
 
-![L’area di lavoro Attribution AI con i campi limitati dei risultati dell’istanza evidenziata.](./images/user-guide/information-not-displayed.png)
+![L’area di lavoro Attribution AI con i campi limitati dei risultati dell’istanza evidenziata.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Passaggi successivi
 
