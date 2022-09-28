@@ -2,20 +2,19 @@
 keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;
 title: Guida end-to-end per il controllo dell'accesso basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
 
 # Guida end-to-end per il controllo degli accessi basato su attributi
 
-Il controllo dell&#39;accesso basato su attributi è una funzione di Adobe Experience Platform che offre ai marchi consapevoli della privacy una maggiore flessibilità per gestire l&#39;accesso degli utenti. I singoli oggetti, ad esempio i campi e i segmenti dello schema, possono essere assegnati ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per utenti Platform specifici della tua organizzazione.
+Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che offre ai clienti multi-brand e a tutela della privacy una maggiore flessibilità per gestire l&#39;accesso degli utenti. È possibile concedere o negare l’accesso a singoli oggetti, ad esempio campi e segmenti dello schema, con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per utenti Platform specifici della tua organizzazione.
 
-Questa funzionalità ti consente di classificare campi dello schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dati. In Adobe Journey Optimizer puoi applicare queste stesse etichette a percorsi e offerte. In parallelo, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema XDM e gestire meglio gli utenti o i gruppi (utenti interni, esterni o di terze parti) che possono accedere a tali campi.
+Questa funzionalità ti consente di classificare campi dello schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dati. Puoi applicare queste stesse etichette a percorsi, offerte e altri oggetti in Adobe Journey Optimizer. In parallelo, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema XDM e gestire meglio gli utenti o i gruppi (utenti interni, esterni o di terze parti) che possono accedere a tali campi.
+
 
 ## Introduzione
 
@@ -28,7 +27,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 ### Panoramica del caso d’uso
 
-Questa guida utilizza un caso d’uso esemplificativo di limitazione dell’accesso ai dati sensibili per illustrare il flusso di lavoro. È disponibile un esempio di flusso di lavoro per il controllo degli accessi basato su attributi, in cui puoi creare e assegnare ruoli, etichette e criteri per configurare se gli utenti possono o meno accedere a determinate risorse all’interno dell’organizzazione. Questo caso d’uso è descritto di seguito:
+È disponibile un esempio di flusso di lavoro per il controllo degli accessi basato su attributi, in cui puoi creare e assegnare ruoli, etichette e criteri per configurare se gli utenti possono o meno accedere a risorse specifiche dell’organizzazione. Questa guida utilizza un esempio di limitazione dell’accesso ai dati sensibili per illustrare il flusso di lavoro. Questo caso d’uso è descritto di seguito:
 
 Sei un fornitore di servizi sanitari e vuoi configurare l’accesso alle risorse della tua organizzazione.
 
@@ -41,17 +40,17 @@ Sarà possibile:
 
 * [Etichettare i ruoli per gli utenti](#label-roles): Utilizzare l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
 * [Etichettare le risorse (campi e segmenti di schema)](#label-resources): Assegna **[!UICONTROL PHI/Dati sanitari regolamentati]** alle risorse e ai segmenti dello schema.
-* [Creare il criterio che li collegherà](#policy): Crea un criterio per collegare le etichette delle risorse alle etichette nel tuo ruolo negando l’accesso ai campi e ai segmenti dello schema. In questo modo verrà negato l’accesso al campo dello schema e al segmento in tutte le sandbox per gli utenti che non dispongono di etichette corrispondenti.
+* [Creare il criterio che li collegherà](#policy): Crea un criterio per collegare le etichette delle risorse alle etichette del tuo ruolo, negando l’accesso ai campi e ai segmenti dello schema. In questo modo verrà negato l’accesso al campo dello schema e al segmento in tutte le sandbox per gli utenti che non dispongono di etichette corrispondenti.
 
 ## Autorizzazioni
 
-[!UICONTROL Autorizzazioni] è l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+[!UICONTROL Autorizzazioni] è l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
 Attraverso [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. [!UICONTROL Autorizzazioni] consente inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Se non disponi di privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta disponibili i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali Adobe. Una volta effettuato l&#39;accesso, il **[!UICONTROL Panoramica]** viene visualizzata la pagina della tua organizzazione per la quale disponi dei privilegi di amministratore. Questa pagina mostra i prodotti a cui l’organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione nel suo complesso. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l’area di lavoro per l’integrazione con Platform.
+Una volta disponibili i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali Adobe. Una volta effettuato l&#39;accesso, il **[!UICONTROL Panoramica]** viene visualizzata la pagina della tua organizzazione per la quale disponi dei privilegi di amministratore. Questa pagina mostra i prodotti a cui l’organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l’area di lavoro per l’integrazione con Platform.
 
 ![Immagine che mostra il prodotto Autorizzazioni selezionato in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -80,7 +79,7 @@ Viene visualizzata l’area di lavoro Autorizzazioni per l’interfaccia utente 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Crea nuovo ruolo"
->abstract="Puoi creare un nuovo ruolo per classificare meglio gli utenti che accedono all’istanza di Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta RHD a tale ruolo, in modo da consentire al team di marketing interno di accedere alle informazioni sulla salute protetta (PHI). In alternativa, è anche possibile creare un ruolo per un&#39;agenzia esterna e negare l&#39;accesso di ruolo ai dati PHI non applicando l&#39;etichetta RHD a quel ruolo."
+>abstract="Puoi creare un nuovo ruolo per classificare meglio gli utenti che accedono all’istanza di Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta RHD a tale ruolo, consentendo al team di marketing interno di accedere a informazioni di integrità protette (PHI). In alternativa, è anche possibile creare un ruolo per un&#39;agenzia esterna e negare l&#39;accesso di ruolo ai dati PHI non applicando l&#39;etichetta RHD a quel ruolo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Creare un nuovo ruolo"
 
 >[!CONTEXTUALHELP]
@@ -88,7 +87,7 @@ Viene visualizzata l’area di lavoro Autorizzazioni per l’interfaccia utente 
 >title="Panoramica del ruolo"
 >abstract="Nella finestra di dialogo panoramica ruolo vengono visualizzate le risorse e le sandbox a cui un determinato ruolo può accedere."
 
-I ruoli sono modi per classificare i tipi di utenti che interagiscono con l’istanza Platform e costituiscono blocchi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
+I ruoli sono modi per classificare i tipi di utenti che interagiscono con la tua istanza di Platform e sono blocchi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 
 Per iniziare, seleziona **[!UICONTROL ACME Business Group]** dal **[!UICONTROL Ruoli]** pagina.
 
@@ -102,6 +101,10 @@ Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezi
 
 ![Immagine che mostra l’etichetta RHD selezionata e salvata](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>Quando aggiungi un gruppo di organizzazioni a un ruolo, tutti gli utenti di tale gruppo verranno aggiunti al ruolo . Eventuali modifiche al gruppo dell&#39;organizzazione (utenti rimossi o aggiunti) verranno aggiornate automaticamente all&#39;interno del ruolo .
+
 ## Applicare etichette ai campi dello schema {#label-resources}
 
 Ora che hai configurato un ruolo utente con il [!UICONTROL RHD] etichetta, il passaggio successivo consiste nell’aggiungere la stessa etichetta alle risorse che si desidera controllare per quel ruolo.
@@ -110,9 +113,9 @@ Seleziona **[!UICONTROL Schemi]** dalla navigazione a sinistra, quindi seleziona
 
 ![Immagine che mostra lo schema ACME Healthcare selezionato dalla scheda Schemi](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Quindi, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco dei campi associati allo schema. Da qui è possibile assegnare etichette a uno o più campi contemporaneamente. Seleziona la **[!UICONTROL Glucosio nel sangue]** e **[!UICONTROL LivelloInsulina]** campi, quindi selezionare **[!UICONTROL Modifica delle etichette di governance]**.
+Quindi, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco dei campi associati allo schema. Da qui è possibile assegnare etichette a uno o più campi contemporaneamente. Seleziona la **[!UICONTROL Glucosio nel sangue]** e **[!UICONTROL LivelloInsulina]** campi, quindi selezionare **[!UICONTROL Applicare etichette di accesso e governance dei dati]**.
 
-![Immagine che mostra i valori BloodGlucosio e InsulinLevel selezionati e modifica le etichette di governance selezionate](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Immagine che mostra la selezione di BloodGlucosio e InsulinLevel e applica le etichette di accesso e governance dei dati selezionate](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 La **[!UICONTROL Modificare le etichette]** viene visualizzata una finestra di dialogo che consente di scegliere le etichette da applicare ai campi dello schema. Per questo caso d’uso, seleziona la **[!UICONTROL PHI/Dati sanitari regolamentati]** etichetta, quindi seleziona **[!UICONTROL Salva]**.
 
@@ -162,20 +165,24 @@ Ripeti i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configurare le azioni ammissibili e non ammissibili per una politica"
->abstract="A <b>negare l&#39;accesso a</b> quando i criteri vengono soddisfatti, l’accesso verrà negato agli utenti. Se combinato con <b>Il seguente è falso</b> - a tutti gli utenti verrà negato l’accesso a meno che non soddisfino i criteri impostati. Questo tipo di criterio ti consente di proteggere una risorsa sensibile e di accedere solo agli utenti con etichette corrispondenti. <br>A <b>consentire l&#39;accesso</b> consente agli utenti l’accesso quando i criteri sono soddisfatti. Se combinato con <b>Il seguente è vero</b> - gli utenti avranno accesso se soddisfano i criteri impostati. Questo non nega esplicitamente l’accesso agli utenti, ma aggiunge un accesso ai permessi. Questo tipo di criterio ti consente di fornire accesso aggiuntivo alla risorsa e in aggiunta agli utenti che potrebbero già averne accesso tramite le autorizzazioni per i ruoli.&quot;</br>
+>abstract="A <b>negare l&#39;accesso a</b> quando i criteri vengono soddisfatti, l’accesso verrà negato agli utenti. Combinato con <b>Il seguente è falso</b> - a tutti gli utenti verrà negato l’accesso a meno che non soddisfino i criteri impostati. Questo tipo di criterio consente di proteggere una risorsa sensibile e di consentire l’accesso solo agli utenti con etichette corrispondenti. <br>A <b>consentire l&#39;accesso</b> consente agli utenti l’accesso quando i criteri sono soddisfatti. Se combinato con <b>Il seguente è vero</b> - gli utenti avranno accesso se soddisfano i criteri impostati. Questo non nega esplicitamente l’accesso agli utenti, ma aggiunge un accesso ai permessi. Questo tipo di criterio ti consente di fornire accesso aggiuntivo alla risorsa e in aggiunta agli utenti che potrebbero già averne accesso tramite le autorizzazioni per i ruoli.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Modificare un criterio"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="Configurare le autorizzazioni per una risorsa"
->abstract="Una risorsa è la risorsa o l’oggetto a cui un utente può o non può accedere. Le risorse possono essere segmenti o schemi. Puoi configurare le autorizzazioni di scrittura, lettura o eliminazione per segmenti e campi dello schema."
+>abstract="Una risorsa è la risorsa o l’oggetto a cui un utente può o non può accedere. Le risorse possono essere segmenti o campi di schema. Puoi configurare le autorizzazioni di scrittura, lettura o eliminazione per segmenti e campi dello schema."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="Modifica condizioni"
->abstract="Applicare istruzioni condizionali al criterio per configurare l’accesso degli utenti a determinate risorse. Seleziona abbina tutto per richiedere agli utenti di avere ruoli con le stesse etichette di una risorsa per poter accedere. Seleziona fai clic su &quot;abbina&quot; per richiedere agli utenti di avere un ruolo con una sola etichetta che corrisponda a una risorsa. Le etichette possono essere definite come etichette di base o personalizzate, con etichette di base che rappresentano le etichette create e fornite da etichette Adobi e personalizzate che rappresentano le etichette create per la tua organizzazione."
+>abstract="Applicare istruzioni condizionali al criterio per configurare l’accesso degli utenti a determinate risorse. Seleziona fai clic su abbina tutto per richiedere agli utenti di avere ruoli con le stesse etichette di una risorsa a cui consentire l’accesso. Seleziona la casella di controllo corrispondente a qualsiasi per richiedere agli utenti di avere un ruolo con una sola etichetta corrispondente a un’etichetta su una risorsa. Le etichette possono essere definite come etichette di base o personalizzate, con etichette di base che rappresentano le etichette create e fornite da etichette Adobi e personalizzate che rappresentano le etichette create per la tua organizzazione."
 
-I criteri di controllo degli accessi sfruttano le etichette per definire quali ruoli utente hanno accesso a risorse specifiche di Platform. I criteri possono essere locali o globali e possono sostituire altri criteri. In questo esempio, l’accesso ai campi e ai segmenti dello schema verrà negato in tutte le sandbox agli utenti che non hanno le etichette corrispondenti nel campo dello schema.
+I criteri di controllo degli accessi sfruttano le etichette per definire quali ruoli utente hanno accesso a risorse specifiche di Platform. I criteri possono essere locali o globali e possono prevalere su altri criteri. In questo esempio, l’accesso ai campi e ai segmenti dello schema verrà negato in tutte le sandbox agli utenti che non hanno le etichette corrispondenti nel campo dello schema.
+
+>[!NOTE]
+>
+>Viene creato un &quot;criterio di rifiuto&quot; per concedere l’accesso a risorse sensibili perché il ruolo concede l’autorizzazione ai soggetti. La politica scritta in questo esempio **negazione** accedi se mancano le etichette richieste.
 
 Per creare un criterio di controllo accessi, selezionare **[!UICONTROL Autorizzazioni]** dalla navigazione a sinistra, quindi seleziona **[!UICONTROL Criteri]**. Quindi, seleziona **[!UICONTROL Crea criterio]**.
 
@@ -194,7 +201,7 @@ La tabella seguente mostra le condizioni disponibili per la creazione di un crit
 | Condizioni | Descrizione |
 | --- | --- |
 | Il seguente è falso | Se è impostata l’opzione &quot;Nega accesso a&quot;, l’accesso verrà limitato se l’utente non soddisfa i criteri selezionati. |
-| Il seguente è vero | Se è impostato il valore &quot;Permette l’accesso a&quot;, l’accesso sarà limitato se l’utente soddisfa i criteri selezionati. |
+| Il seguente è vero | Se è impostato su &quot;Consenti accesso a&quot;, l’accesso sarà consentito se l’utente soddisfa i criteri selezionati. |
 | Corrisponde a qualsiasi | L’utente dispone di un’etichetta che corrisponde a qualsiasi etichetta applicata a una risorsa. |
 | Corrisponde a tutti | L’utente dispone di tutte le etichette che corrispondono a tutte le etichette applicate a una risorsa. |
 | Etichetta core | Un’etichetta di base è un’etichetta definita da un Adobe disponibile in tutte le istanze di Platform. |
