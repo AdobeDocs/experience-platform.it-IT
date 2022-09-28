@@ -5,9 +5,9 @@ title: Panoramica dei connettori di origine
 topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,15 @@ La tabella seguente illustra il funzionamento dell’interfaccia utente in base 
 | **[!UICONTROL Gestisci origini]** On | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, concede l&#39;accesso **[!UICONTROL Origine connessione]** opzione in **[!UICONTROL Catalogo]** e **[!UICONTROL Seleziona dati]** opzione in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci origini]** consente inoltre di abilitare o disabilitare **[!UICONTROL Flussi dati]** e modificarne le pianificazioni. |
 | **[!UICONTROL Visualizza origini]** Off e **[!UICONTROL Gestisci origini]** Disattivato | Revoca tutti gli accessi alle sorgenti. |
 
-Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite l&#39;Admin Console, incluse quelle quattro origini, vedi [panoramica sul controllo degli accessi](../access-control/home.md).
+Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite Autorizzazioni di Adobe, consulta la sezione [panoramica sul controllo degli accessi](../access-control/home.md).
+
+### Controllo dell&#39;accesso basato su attributi per le origini
+
+Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi.
+
+Con il controllo dell&#39;accesso basato sugli attributi, puoi applicare configurazioni di mappatura ai campi a cui disponi delle autorizzazioni. Inoltre, non puoi inserire dati in un set di dati se non hai accesso a tutti i campi del set di dati.
+
+Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md).
 
 ## Termini e condizioni {#terms-and-conditions}
 

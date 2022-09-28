@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Panoramica sul controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe 
 
 Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
 
-Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
+Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e tipi personalizzati di dati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
 
 ## Terminologia di controllo degli accessi basata su attributi
 
@@ -33,8 +33,8 @@ Il controllo dell&#39;accesso basato su attributi include i seguenti componenti:
 | Autorizzazioni | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione dei set di dati. |
 | Set di autorizzazioni | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
 | Criteri | Le politiche sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono sostituire altri criteri. |
-| Risorsa | Una risorsa è la risorsa o l’oggetto a cui un soggetto può o non può accedere. Le risorse possono essere file, applicazioni, server o anche API. |
-| Ruoli | I ruoli definiscono l’accesso che un amministratore, uno specialista o un utente finale ha alle risorse dell’organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente viene raggruppato attraverso responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. |
+| Risorsa | Una risorsa è la risorsa o l’oggetto a cui un soggetto può o non può accedere. Le risorse possono essere segmenti o campi di schema. |
+| Ruoli | I ruoli sono modi per classificare i tipi di utenti che interagiscono con l’istanza Platform e costituiscono blocchi costitutivi dei criteri di controllo degli accessi. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente viene raggruppato attraverso responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. |
 | Oggetto | Un oggetto è l’utente che richiede l’accesso a una risorsa per eseguire un’azione. |
 | Gruppi utente | I gruppi di utenti sono più utenti che sono stati raggruppati insieme e hanno l&#39;accesso per eseguire le stesse funzioni. |
 
