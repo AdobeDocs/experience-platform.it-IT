@@ -5,9 +5,9 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
+source-git-commit: e8ad829ac4ea89c0d0167e6b414db577c9ecf094
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1900'
 ht-degree: 4%
 
 ---
@@ -341,6 +341,10 @@ I descrittori di nomi descrittivi consentono a un utente di modificare `title`, 
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
@@ -350,10 +354,11 @@ I descrittori di nomi descrittivi consentono a un utente di modificare `title`, 
 | `@type` | Il tipo di descrittore da definire. Per un descrittore di nome descrittivo, questo valore deve essere impostato su `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
-| `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, usa &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
+| `xdm:sourceProperty` | Percorso della proprietà specifica di cui si desidera modificare i dettagli. Il percorso deve iniziare con una barra (`/`) e non terminare con uno. Non includere `properties` nel percorso (ad esempio, utilizza `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
 | `xdm:title` | Nuovo titolo da visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
-| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco di valori suggeriti per il campo nel [!DNL Experience Platform] Interfaccia utente. È importante notare che `meta:enum` non dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà sorgente è un campo personalizzato definito dall&#39;organizzazione, è invece necessario modificare il campo `meta:enum` direttamente tramite una richiesta di PATCH alla risorsa principale del campo. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` può essere utilizzato per aggiungere valori consigliati per il campo nell’interfaccia utente Segmentazione. È importante notare che `meta:enum` non dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà sorgente è un campo personalizzato definito dall&#39;organizzazione, è invece necessario modificare il campo `meta:enum` direttamente tramite una richiesta di PATCH alla risorsa principale del campo. |
+| `meta:excludeMetaEnum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa che contiene valori suggeriti esistenti forniti in un `meta:enum` è possibile includere questo oggetto in un descrittore di nome descrittivo per escludere alcuni o tutti questi valori dalla segmentazione. La chiave e il valore di ciascuna voce devono corrispondere a quelli inclusi nell&#39;originale `meta:enum` del campo per escludere la voce. |
 
 {style=&quot;table-layout:auto&quot;}
 

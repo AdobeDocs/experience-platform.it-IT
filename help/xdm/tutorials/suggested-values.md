@@ -1,19 +1,38 @@
 ---
-title: Aggiungere valori consigliati a un campo
+title: Gestire i valori consigliati nell’API
 description: Scopri come aggiungere valori consigliati a un campo stringa nell’API del Registro di sistema dello schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '883'
+ht-degree: 1%
 
 ---
 
-# Aggiungere valori consigliati a un campo
+# Gestire i valori suggeriti nell’API
 
-In Experience Data Model (XDM), un campo enum rappresenta un campo stringa vincolato a un sottoinsieme di valori predefinito. I campi Enum possono fornire una convalida per garantire che i dati acquisiti siano conformi a un set di valori accettati. Tuttavia, è anche possibile definire un set di valori consigliati per un campo stringa senza forzarli.
+Per qualsiasi campo stringa in Experience Data Model (XDM), puoi definire un **enum** che vincola i valori che il campo può acquisire a un set predefinito. Se tenti di acquisire dati in un campo enum e il valore non corrisponde a nessuno di quelli definiti nella relativa configurazione, l’acquisizione verrà negata.
 
-In [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), i valori vincolati per un campo enum sono rappresentati da un `enum` mentre un `meta:enum` L&#39;oggetto fornisce nomi visualizzati descrittivi per tali valori:
+A differenza degli enum, aggiunta **valori consigliati** in un campo stringa non vincola i valori che può acquisire. Al contrario, i valori suggeriti influenzano i valori predefiniti disponibili nel [Interfaccia utente di segmentazione](../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
+
+>[!NOTE]
+>
+>Si verifica un ritardo di circa cinque minuti perché i valori consigliati aggiornati di un campo si riflettano nell’interfaccia utente Segmentazione.
+
+Questa guida illustra come gestire i valori suggeriti utilizzando [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Per i passaggi da seguire nell’interfaccia utente di Adobe Experience Platform, consulta la sezione [Guida all’interfaccia utente per enum e valori consigliati](../ui/fields/enum.md).
+
+## Prerequisiti
+
+Questa guida presuppone che tu abbia familiarità con gli elementi della composizione dello schema in XDM e che sia in grado di utilizzare l’API del Registro di sistema dello schema per creare e modificare le risorse XDM. Per un’introduzione, fai riferimento alla seguente documentazione:
+
+* [Nozioni di base sulla composizione dello schema](../schema/composition.md)
+* [Guida all’API del registro dello schema](../api/overview.md)
+
+Si consiglia inoltre vivamente di rivedere il [regole di evoluzione per enum e valori suggeriti](../ui/fields/enum.md#evolution) se stai aggiornando i campi esistenti. Se gestisci i valori suggeriti per gli schemi che partecipano a un&#39;unione, consulta la sezione [regole per l’unione di enum e valori consigliati](../ui/fields/enum.md#merging).
+
+## Composizione
+
+Nell’API, i valori vincolati per un **enum** i campi sono rappresentati da un `enum` mentre un `meta:enum` L&#39;oggetto fornisce nomi visualizzati descrittivi per tali valori:
 
 ```json
 "exampleStringField": {
@@ -34,7 +53,7 @@ In [API del Registro di sistema dello schema](https://developer.adobe.com/experi
 
 Per i campi enum, il Registro di sistema dello schema non consente `meta:enum` da estendere oltre i valori di cui `enum`, poiché il tentativo di acquisire valori stringa al di fuori di tali vincoli non passerebbe la convalida.
 
-In alternativa, è possibile definire un campo stringa che non contiene un `enum` utilizza solo `meta:enum` oggetto per indicare i valori consigliati:
+In alternativa, è possibile definire un campo stringa che non contiene un `enum` utilizza solo `meta:enum` oggetto da indicare **valori consigliati**:
 
 ```json
 "exampleStringField": {
@@ -48,16 +67,13 @@ In alternativa, è possibile definire un campo stringa che non contiene un `enum
 }
 ```
 
-Poiché la stringa non ha un `enum` array per definire vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori. Questa esercitazione illustra come aggiungere valori consigliati ai campi stringa standard e personalizzati nell’API del Registro di sistema dello schema.
+Poiché la stringa non ha un `enum` array per definire vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori.
 
-## Prerequisiti
+## Gestione dei valori consigliati per i campi standard
 
-Questa guida presuppone che tu abbia familiarità con gli elementi della composizione dello schema in XDM e che sia in grado di utilizzare l’API del Registro di sistema dello schema per creare e modificare le risorse XDM. Per un’introduzione, fai riferimento alla seguente documentazione:
+Per i campi standard esistenti, è possibile [aggiungere valori consigliati](#add-suggested-standard) o [rimuovere i valori suggeriti](#remove-suggested-standard).
 
-* [Nozioni di base sulla composizione dello schema](../schema/composition.md)
-* [Guida all’API del registro dello schema](../api/overview.md)
-
-## Aggiungere valori consigliati a un campo standard
+### Aggiungi valori consigliati {#add-suggested-standard}
 
 Per estendere `meta:enum` di un campo stringa standard, è possibile creare un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per il campo in questione in uno schema specifico.
 
@@ -135,9 +151,71 @@ Dopo aver applicato il descrittore, il Registro di sistema dello schema risponde
 >}
 >```
 
-## Aggiungere valori consigliati a un campo personalizzato
+### Rimuovere i valori suggeriti {#remove-suggested-standard}
 
-Per estendere `meta:enum` di un campo personalizzato, è possibile aggiornare la classe principale, il gruppo di campi o il tipo di dati del campo tramite una richiesta PATCH.
+Se in un campo stringa standard sono presenti valori consigliati predefiniti, è possibile rimuovere eventuali valori che non si desidera visualizzare nella segmentazione. Questo avviene tramite la creazione di un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per lo schema che include un `xdm:excludeMetaEnum` proprietà.
+
+**Formato API**
+
+```http
+POST /tenant/descriptors
+```
+
+**Richiesta**
+
+La seguente richiesta rimuove i valori suggeriti &quot;[!DNL Web Form Filled Out]&quot; e &quot;[!DNL Media ping]&quot; `eventType` in uno schema basato su [Classe ExperienceEvent XDM](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `@type` | Il tipo di descrittore da definire. Per un descrittore di nome descrittivo, questo valore deve essere impostato su `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
+| `xdm:sourceVersion` | Versione principale dello schema di origine. |
+| `xdm:sourceProperty` | Percorso della proprietà specifica di cui si desidera gestire i valori consigliati. Il percorso deve iniziare con una barra (`/`) e non terminare con uno. Non includere `properties` nel percorso (ad esempio, utilizza `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Un oggetto che descrive i valori suggeriti che devono essere esclusi dal campo nella segmentazione. La chiave e il valore di ciascuna voce devono corrispondere a quelli inclusi nell&#39;originale `meta:enum` del campo per escludere la voce. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del descrittore appena creato. I valori suggeriti inclusi in `xdm:excludeMetaEnum` sarà ora nascosta dall’interfaccia utente Segmentazione.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## Gestione dei valori consigliati per un campo personalizzato {#suggested-custom}
+
+Per gestire `meta:enum` di un campo personalizzato, è possibile aggiornare la classe principale, il gruppo di campi o il tipo di dati del campo tramite una richiesta PATCH.
 
 >[!WARNING]
 >
@@ -198,4 +276,4 @@ Dopo aver applicato la modifica, il Registro di sistema dello schema risponde co
 
 ## Passaggi successivi
 
-Questa guida illustra come aggiungere valori consigliati ai campi stringa nell’API del Registro di sistema dello schema. Consulta la guida su [definizione di campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.
+Questa guida illustra come gestire i valori consigliati per i campi stringa nell’API del Registro di sistema dello schema. Consulta la guida su [definizione di campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.
