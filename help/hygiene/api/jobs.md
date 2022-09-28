@@ -4,9 +4,9 @@ description: Scopri come correggere o eliminare programmaticamente i dati person
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->L’API di igiene dati è attualmente in versione beta. La funzionalità descritta in questo documento è soggetta a modifiche.
+>Questo endpoint rappresenta la funzionalità beta per le cancellazioni dal consumatore. Per informazioni sulle funzionalità più recenti, utilizza [`/workorder` endpoint](./workorder.md) invece.
 
 L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform.
 

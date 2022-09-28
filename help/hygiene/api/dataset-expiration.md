@@ -1,11 +1,11 @@
 ---
-title: Endpoint API per le scadenze del set di dati
+title: Endpoint API per la scadenza del set di dati
 description: L’endpoint /ttl nell’API di igiene dati ti consente di pianificare programmaticamente la scadenza dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 6%
+source-wordcount: '1450'
+ht-degree: 5%
 
 ---
 
@@ -55,7 +55,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?page=1&size=50 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -68,38 +68,43 @@ Una risposta corretta elenca le scadenze risultanti del set di dati. L&#39;esemp
 
 ```json
 {
-  "results": [
+  "totalRecords": 3,
+  "ttlDetails": [
     {
-      "ttlId": "SDfba908e9fb2e427ab4275d20465631d7",
-      "datasetId": "62799c3e1151781b63ccaa28",
-      "imsOrg": "{ORG_ID}",
-      "status": "cancelled",
-      "expiry": "2022-05-09T22:57:05.531024Z",
-      "updatedAt": "2022-05-09T22:57:05.531025Z",
-      "updatedBy": "{USER_ID}"
+      "status": "completed",
+      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "f440ac301c414bf1b6ba419162866346",
+      "expiry": "2021-07-07T13:14:15Z",
+      "updatedAt": "2021-07-07T13:14:15Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
-      "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-      "datasetId": "62759f2ede9e601b63a2ee14",
-      "imsOrg": "{ORG_ID}",
       "status": "pending",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "expiry": "2099-02-02T00:00:00Z",
+      "updatedAt": "2021-02-02T13:00:00Z",
+      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
+    },
+    {
+      "status": "pending",
+      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "expiry": "2099-01-01T00:00:00Z",
+      "updatedAt": "2021-01-01T13:00:00Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     }
-  ],
-  "current_page": 1,
-  "total_pages": 36,
-  "total_count": 886
+  ]
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `results` | Contiene i dettagli delle scadenze del set di dati restituito. Per ulteriori dettagli sulle proprietà della scadenza di un set di dati, consulta la sezione relativa alla risposta per creare un [chiamata di ricerca](#lookup). |
-| `current_page` | La pagina corrente dei risultati elencati. |
-| `total_pages` | Il numero totale di pagine nella risposta. |
-| `total_count` | Il numero totale di scadenze del set di dati nella risposta. |
+| `totalRecords` | Il numero di scadenze del set di dati che corrispondono ai parametri della chiamata di elenco. |
+| `ttlDetails` | Contiene i dettagli delle scadenze del set di dati restituito. Per ulteriori dettagli sulle proprietà della scadenza di un set di dati, consulta la sezione relativa alla risposta per creare un [chiamata di ricerca](#lookup). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,20 +115,22 @@ Puoi cercare la scadenza di un set di dati tramite una richiesta GET.
 **Formato API**
 
 ```http
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TTL_ID}` | ID della scadenza del set di dati da cercare. |
+| `{DATASET_ID}` | ID del set di dati di cui vuoi cercare la scadenza. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
+La seguente richiesta cerca i dettagli di scadenza del set di dati `62759f2ede9e601b63a2ee14`:
+
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -136,110 +143,71 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
     "datasetId": "62759f2ede9e601b63a2ee14",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
     "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Dataset Expiration Request",
+    "description": "A dataset expiration request that will execute at the end of 2023"
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
+| `workorderId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
 | `imsOrg` | L&#39;ID della tua organizzazione. |
 | `status` | Lo stato corrente della scadenza del set di dati. |
 | `expiry` | Data e ora pianificate in cui il set di dati verrà eliminato. |
 | `updatedAt` | Una marca temporale dell’ultimo aggiornamento della scadenza. |
 | `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
+| `displayName` | Nome visualizzato della richiesta di scadenza. |
+| `description` | Una descrizione della richiesta di scadenza. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Creare una scadenza del set di dati {#create}
+### Tag di scadenza del catalogo
 
-Puoi creare una data di scadenza per un set di dati tramite una richiesta di POST.
+Quando utilizzi [API del catalogo](../../catalog/api/getting-started.md) per cercare i dettagli del set di dati, se il set di dati ha una scadenza attiva, verrà elencato in `tags.adobe/hygiene/ttl`.
 
-**Formato API**
-
-```http
-POST /ttl
-```
-
-**Richiesta**
-
-La seguente richiesta pianifica un set di dati `5b020a27e7040801dedbf46e` per la cancellazione alla fine del 2022 (Greenwich Mean Time).
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ttl \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "datasetId": "5b020a27e7040801dedbf46e",
-        "expiry": "2022-12-31T23:59:59Z"
-      }'
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `datasetId` | ID del set di dati per il quale vuoi pianificare una data di scadenza. |
-| `expiry` | Timestamp ISO 8601 per quando il set di dati verrà eliminato. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli della scadenza del set di dati, con stato HTTP 200 (OK) se è stata aggiornata una scadenza preesistente, o 201 (Creata) se non c&#39;è stata una scadenza preesistente.
+Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di dati da Catalog, che rappresenta un valore di scadenza di `32503680000000`. Il valore del tag codifica la scadenza come numero intero di millisecondi dall&#39;inizio dell&#39;epoch Unix.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
-    "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}"
+  "63212313c308d51b997858ba": {
+    "name": "TTL Test Dataset",
+    "description": "A piecrust promise, made to be broken",
+    "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
+    "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
+    "tags": {
+      "adobe/hygiene/ttl": [ "32503680000000" ],
+      ...
+    },
+    ...
+  }
 }
 ```
 
-| Proprietà | Descrizione |
-| --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `imsOrg` | L&#39;ID della tua organizzazione. |
-| `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | Data e ora pianificate in cui il set di dati verrà eliminato. |
-| `updatedAt` | Una marca temporale dell’ultimo aggiornamento della scadenza. |
-| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
+## Creare o aggiornare una scadenza di un set di dati {#create-or-update}
 
-{style=&quot;table-layout:auto&quot;}
-
-## Aggiornare la scadenza di un set di dati {#update}
-
-Puoi aggiornare la scadenza di un set di dati tramite una richiesta PUT.
+Puoi creare o aggiornare una data di scadenza per un set di dati tramite una richiesta di PUT.
 
 **Formato API**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TTL_ID}` | ID della scadenza del set di dati da modificare. |
-
-{style=&quot;table-layout:auto&quot;}
+| `{DATASET_ID}` | ID del set di dati per il quale vuoi pianificare una scadenza. |
 
 **Richiesta**
 
-La seguente richiesta aggiorna la scadenza del set di dati `5b020a27e7040801dedbf46e` quindi scade alla fine del 2023 (Greenwich Mean Time).
+La seguente richiesta pianifica un set di dati `5b020a27e7040801dedbf46e` per la cancellazione alla fine del 2022 (Greenwich Mean Time). Se non viene trovata alcuna scadenza esistente per il set di dati, viene creata una nuova scadenza. Se il set di dati ha già una scadenza in sospeso, tale scadenza viene aggiornata con la nuova `expiry` valore.
 
 ```shell
 curl -X PUT \
@@ -250,35 +218,41 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2023-12-31T23:59:59Z"
+        "expiry": "2022-12-31T23:59:59Z",
+        "displayName": "Example Expiration Request",
+        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
       }'
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
 | `expiry` | Timestamp ISO 8601 per quando il set di dati verrà eliminato. |
+| `displayName` | Un nome visualizzato per la richiesta di scadenza. |
+| `description` | Una descrizione facoltativa per la richiesta di scadenza. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della scadenza aggiornata.
+Una risposta corretta restituisce i dettagli della scadenza del set di dati, con stato HTTP 200 (OK) se è stata aggiornata una scadenza preesistente, o 201 (Creata) se non c&#39;è stata una scadenza preesistente.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "expiry": "2032-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T22:38:40.393115Z",
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Expiration Request",
+    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
+| `workorderId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
 | `imsOrg` | L&#39;ID della tua organizzazione. |
 | `status` | Lo stato corrente della scadenza del set di dati. |
@@ -292,25 +266,29 @@ Una risposta corretta restituisce i dettagli della scadenza aggiornata.
 
 Puoi annullare la scadenza di un set di dati effettuando una richiesta DELETE.
 
+>[!NOTE]
+>
+>Solo le scadenze del set di dati con uno stato `pending` può essere annullato. Il tentativo di annullare una scadenza eseguita o già annullata restituisce un errore HTTP 404.
+
 **Formato API**
 
 ```http
-DELETE /ttl/{TTL_ID}
+DELETE /ttl/{EXPIRATION_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TTL_ID}` | ID della scadenza del set di dati da annullare. |
+| `{EXPIRATION_ID}` | La `workorderId` della scadenza del set di dati che si desidera annullare. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La seguente richiesta aggiorna la scadenza del set di dati `5b020a27e7040801dedbf46e` quindi scade alla fine del 2023 (Greenwich Mean Time).
+La seguente richiesta annulla la scadenza di un set di dati con ID `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -319,45 +297,21 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della scadenza del set di dati, con la relativa `status` attributo impostato su `cancelled`.
+Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto) e la `status` attributo impostato su `cancelled`.
 
-```json
-{
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
-    "status": "cancelled",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T23:47:30.071186Z",
-    "updatedBy": "{USER_ID}"
-}
-```
+## Recupera la cronologia dello stato di scadenza di un set di dati
 
-| Proprietà | Descrizione |
-| --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `imsOrg` | L&#39;ID della tua organizzazione. |
-| `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | Data e ora pianificate in cui il set di dati verrà eliminato. |
-| `updatedAt` | Una marca temporale dell’ultimo aggiornamento della scadenza. |
-| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Recupera la cronologia della scadenza di un set di dati
-
-Puoi cercare la cronologia di una specifica scadenza di set di dati utilizzando il parametro query `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, sugli eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile).
+Puoi cercare la cronologia dello stato di scadenza di un set di dati specifico utilizzando il parametro di query `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, sugli eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile).
 
 **Formato API**
 
 ```http
-GET /ttl/{TTL_ID}?include=history
+GET /ttl/{DATASET_ID}?include=history
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TTL_ID}` | ID della scadenza del set di dati di cui vuoi cercare la cronologia. |
+| `{DATASET_ID}` | ID del set di dati di cui vuoi cercare la cronologia di scadenza. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +319,7 @@ GET /ttl/{TTL_ID}?include=history
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -378,8 +332,12 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati, con
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
+  "datasetName": "Example Dataset",
+  "sandboxName": "prod",
+  "displayName": "Expiration Request 123",
+  "description": "Expiration Request 123 Description",
   "imsOrg": "{ORG_ID}",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
@@ -410,8 +368,12 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati, con
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
+| `workorderId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
+| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
+| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
+| `displayName` | Nome visualizzato della richiesta di scadenza. |
+| `description` | Una descrizione della richiesta di scadenza. |
 | `imsOrg` | L&#39;ID della tua organizzazione. |
 | `history` | Elenca la cronologia degli aggiornamenti per la scadenza come array di oggetti, con ogni oggetto contenente la `status`, `expiry`, `updatedAt`e `updatedBy` alla scadenza dell’aggiornamento. |
 
@@ -427,8 +389,11 @@ La tabella seguente delinea i parametri di query disponibili quando [elenco dell
 | --- | --- | --- |
 | `size` | Un numero intero compreso tra 1 e 100 che indica il numero massimo di scadenze da restituire. Il valore predefinito è 25. | `size=50` |
 | `page` | Un numero intero che indica la pagina di scadenza da restituire. | `page=3` |
+| `orgId` | Corrisponde alle scadenze dei set di dati il cui ID organizzazione corrisponde a quello del parametro . Il valore predefinito è quello del `x-gw-ims-org-id` Le intestazioni e vengono ignorate a meno che la richiesta non fornisca un token di servizio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | Elenco di stati separati da virgole. Quando è inclusa, la risposta corrisponde alle scadenze del set di dati il cui stato corrente è tra quelli elencati. | `status=pending,cancelled` |
 | `author` | Corrisponde alle scadenze di cui `created_by` è una corrispondenza per la stringa di ricerca. Se la stringa di ricerca inizia con `LIKE` o `NOT LIKE`, il resto viene trattato come un pattern di ricerca SQL. In caso contrario, l’intera stringa di ricerca viene trattata come una stringa letterale che deve corrispondere esattamente all’intero contenuto di un `created_by` campo . | `author=LIKE %john%` |
+| `sandboxName` | Corrisponde alle scadenze del set di dati il cui nome sandbox corrisponde esattamente all’argomento . Impostazione predefinita del nome della sandbox nel `x-sandbox-name` intestazione. Utilizzo `sandboxName=*` per includere le scadenze dei set di dati da tutte le sandbox. | `sandboxName=dev1` |
+| `datasetId` | Corrisponde alle scadenze applicabili a un set di dati specifico. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Corrisponde alle scadenze create nella finestra di 24 ore a partire dall&#39;ora indicata.<br><br>Tieni presente che le date non hanno un&#39;ora (come `2021-12-07`) rappresenta il datetime all&#39;inizio di quel giorno. Pertanto, `createdDate=2021-12-07` si riferisce a qualsiasi scadenza creata il 7 dicembre 2021, a partire da `00:00:00` attraverso `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Corrisponde alle scadenze create al momento o dopo l’ora indicata. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Corrisponde alle scadenze create al momento indicato o prima. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
