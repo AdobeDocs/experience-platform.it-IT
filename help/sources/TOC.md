@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Sources
-source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
+source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '837'
 ht-degree: 11%
 
 ---
@@ -191,6 +191,7 @@ ht-degree: 11%
       - [Raccogliere dati di protocollo](tutorials/api/collect/protocols.md)
       - [Raccogliere dati in streaming](tutorials/api/collect/streaming.md)
    - [Acquisizione on-demand](tutorials/api/on-demand-ingestion.md)
+   - [Filtrare i dati a livello di origine](tutorials/api/filter.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna account](tutorials/api/update.md)
    - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
