@@ -5,16 +5,16 @@ title: Guida all’API del servizio query
 topic-legacy: query templates
 description: L’API Query Service consente agli sviluppatori di eseguire query sui dati Adobe Experience Platform utilizzando SQL standard. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 62463e1542d4306c5c769e5690b566a3c30c59cd
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 6%
 
 ---
 
 # Guida dell’API di [!DNL Query Service]
 
-Questa guida per sviluppatori descrive i passaggi necessari per eseguire varie operazioni in Adobe Experience Platform [!DNL Query Service] API.
+Questa guida per gli sviluppatori descrive i passaggi necessari per eseguire varie operazioni in Adobe Experience Platform [!DNL Query Service] API.
 
 ## Introduzione
 
@@ -55,6 +55,7 @@ Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettu
 - [Query pianificate](scheduled-queries.md)
 - [Viene eseguito per query pianificate](runs-scheduled-queries.md)
 - [Modelli di query](query-templates.md)
+- [Abbonamenti agli avvisi](./alert-subscriptions.md)
 
 ## Passaggi successivi
 
