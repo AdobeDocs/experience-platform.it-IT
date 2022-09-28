@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Attribution AI
 topic-legacy: User guide
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
+source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2873'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Le istanze del servizio possono essere modificate, clonate ed eliminate utilizza
 
 - **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
 - **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
+- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Profilo cliente in tempo reale non vengono eliminati.
 - **[!UICONTROL Origine dati]**: Un collegamento al set di dati in uso. Se Attribution AI utilizza più di un set di dati, viene visualizzato &quot;Multiplo&quot; seguito dal numero di set di dati. Quando si seleziona il collegamento ipertestuale, viene visualizzato il profilo di anteprima dei set di dati.
 - **[!UICONTROL Dettagli dell&#39;ultima esecuzione]**: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
 
@@ -261,6 +261,14 @@ Per garantire che il modello sia il più accurato possibile, è importante addes
 Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Seleziona **[!UICONTROL Ok]** da reindirizzare al **[!UICONTROL Istanze del servizio]** in cui puoi vedere la tua istanza di servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
+
+## Politiche di governance
+
+Una volta avviato il flusso di lavoro per creare un&#39;istanza e inviare la configurazione del modello, il [applicazione delle norme](/help/data-governance/enforcement/auto-enforcement.md) controlli per verificare l&#39;esistenza di eventuali violazioni. Se si verifica una violazione di un criterio, viene visualizzato un puntatore che indica la violazione di uno o più criteri. In questo modo, assicurati che le operazioni dati e le azioni di marketing all’interno di Platform siano conformi ai criteri di utilizzo dei dati.
+
+![manifesto che mostra la violazione dei criteri](./images/user-guide/policy-violation-popover-aai.png)
+
+Il puntatore fornisce informazioni specifiche sulla violazione. Puoi risolvere queste violazioni tramite le impostazioni dei criteri e altre misure che non sono direttamente correlate al flusso di lavoro di configurazione. Ad esempio, puoi modificare le etichette in modo che alcuni campi possano essere utilizzati a scopo di scienza dei dati. In alternativa, puoi anche modificare la configurazione del modello stesso in modo che non utilizzi nulla con un&#39;etichetta. Consulta la documentazione per ulteriori informazioni su come configurare [politiche](/help/data-governance/policies/overview.md).
 
 ## Controllo dell’accesso basato su attributi
 
