@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Registri di controllo](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Raccolta dati](#data-collection)
+- [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio Identity](#identity-service)
 - [Servizio query](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform fornisce un solido set di strumenti per gestire operaz
 
 Le funzionalità di igiene dei dati di Adobe Experience Platform consentono di pulire i dati pianificando la scadenza automatica dei set di dati e l’eliminazione programmatica dei dati dei consumatori in base all’identità.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Le funzionalità di eliminazione dei consumatori sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
+>Le funzionalità di igiene dei dati sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
 
 Per informazioni sull’igiene dei dati, consulta la seguente documentazione:
 
@@ -127,10 +128,39 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | Funzione | Descrizione |
 | --- | --- |
 | Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità precedentemente esclusive dell’interfaccia utente di raccolta dati (compresi tag, inoltro eventi e datastreams) sono ora disponibili anche nella navigazione a sinistra in Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
+| Attribuzione utente in tag e inoltro evento | Quando l’elenco è disponibile [!UICONTROL Proprietà] in tag e inoltro eventi, ogni proprietà elencata ora mostra quando è stata aggiornata per l&#39;ultima volta e quale utente ha effettuato l&#39;aggiornamento. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ----------- | ----------- |
+| SDK di destinazione | Destination SDK ora offre supporto completo per i partner e i clienti che creano destinazioni batch (o basate su file) o private. Per ulteriori informazioni, consulta le seguenti pagine della documentazione: <ul><li>[Panoramica sulla Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Configurare una destinazione basata su file](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configurare le opzioni di formattazione per le destinazioni basate su file](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Verifica delle destinazioni basate su file](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Destinazioni nuove o aggiornate**
+
+| Destinazione | Descrizione |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | La [!DNL Salesforce CRM] destinazione è stata aggiornata per supportare sia gli aggiornamenti di contatti e lead, sia i miglioramenti delle prestazioni per aggiornamenti più rapidi. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentazione nuova o aggiornata**
+
+| Documentazione | Descrizione |
+| ----------- | ----------- |
+| Documentazione API del servizio Flusso delle destinazioni | La [Documentazione di riferimento API per le destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/) è stato aggiornato per includere istruzioni su come eseguire operazioni sulle destinazioni basate su file. Le operazioni per le destinazioni di streaming verranno aggiunte in un secondo momento. |
+
+Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
