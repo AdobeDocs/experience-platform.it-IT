@@ -1,20 +1,17 @@
 ---
 title: Modello dati di Approfondimenti della piattaforma dati cliente (CDP)
 description: Scopri come utilizzare le query SQL dai modelli di dati CDP Insights per personalizzare i tuoi rapporti CDP per i tuoi casi d’uso di marketing e KPI.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (Beta) Modello dati di informazioni approfondite sulla piattaforma dati cliente (CDP)
+# Modello dati di Approfondimenti della piattaforma dati cliente (CDP)
 
->[!IMPORTANT]
->
->La funzione CDP Insights Data Models è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
-
-La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall&#39;utente.
+La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente.
 
 ## Prerequisiti
 
@@ -62,7 +59,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### Caso di utilizzo dei profili di identità singoli
 
-La logica utilizzata per [!UICONTROL Profili di identità singoli] widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che ne crea l&#39;identità. Consulta la sezione[[!UICONTROL Profili di identità singoli] documentazione del widget](./guides/profiles.md#single-identity-profiles) per ulteriori informazioni.
+La logica utilizzata per [!UICONTROL Profili di identità singoli] widget fornisce un conteggio dei profili della tua organizzazione con un solo tipo di ID che ne crea l&#39;identità. Consulta la sezione[[!UICONTROL Profili di identità singoli] documentazione del widget](./guides/profiles.md#single-identity-profiles) per ulteriori informazioni.
 
 SQL che genera il [!UICONTROL Profili di identità singoli] widget è visto nella sezione comprimibile di seguito.
 

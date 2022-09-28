@@ -2,18 +2,14 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
 
-# Dashboard definiti dall&#39;utente (Beta)
-
->[!IMPORTANT]
->
->La funzione delle dashboard definite dall&#39;utente è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+# Dashboard definiti dall&#39;utente
 
 Le dashboard di Adobe Experience Platform consentono di accelerare le informazioni e personalizzare la visualizzazione tramite la funzione dashboard definita dall’utente. Questa funzione ti consente di creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave pertinenti per la tua organizzazione.
 

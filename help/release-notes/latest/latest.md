@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: f7092a394e0ad72d38bf8616e54789c7b2f1ab00
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2796'
 ht-degree: 5%
 
 ---
@@ -52,9 +52,9 @@ Adobe Experience Platform fornisce un solido set di strumenti per gestire operaz
 
 Le funzionalità di igiene dei dati di Adobe Experience Platform consentono di pulire i dati pianificando la scadenza automatica dei set di dati e l’eliminazione programmatica dei dati dei consumatori in base all’identità.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Le funzionalità di eliminazione dei consumatori sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
+>Le funzionalità di igiene dei dati sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
 
 Per informazioni sull’igiene dei dati, consulta la seguente documentazione:
 
@@ -115,6 +115,9 @@ Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visua
 | Funzione | Descrizione |
 | --- | --- |
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in-use identifica facilmente la presenza di widget esistenti nel dashboard. Questo rende facile evitare la duplicazione, anche se è ancora possibile aggiungere lo stesso widget più di una volta che si desidera. |
+| Dashboard definiti dall&#39;utente | Le dashboard definite dall’utente consentono di accelerare le informazioni e personalizzare le visualizzazioni mediante la creazione e la gestione di dashboard personalizzati. Con le dashboard definite dall’utente è possibile creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave pertinenti per la propria organizzazione. Leggi la sezione [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per saperne di più. |
+| Modello dati di Approfondimenti piattaforma dati cliente | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Leggi la sezione [Guida alle funzioni di CDP Insights Data Model](../../dashboards/cdp-insights-data-model.md) per saperne di più. |
+| Widget per report sulla sovrapposizione del pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Da [!UICONTROL Profili] dashboard ti consente di filtrare e visualizzare la sovrapposizione del pubblico unendo i criteri di tutti i segmenti disponibili. La [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico di un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evita di inviare lo stesso pubblico a destinazioni diverse. Il rapporto aiuta inoltre a identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. |
 
 Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
@@ -127,6 +130,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | Funzione | Descrizione |
 | --- | --- |
 | Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità precedentemente esclusive dell’interfaccia utente di raccolta dati (compresi tag, inoltro eventi e datastreams) sono ora disponibili anche nella navigazione a sinistra in Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
+| Attribuzione utente in tag e inoltro evento | Quando l’elenco è disponibile [!UICONTROL Proprietà] in tag e inoltro eventi, ogni proprietà elencata ora mostra quando è stata aggiornata per l&#39;ultima volta e quale utente ha effettuato l&#39;aggiornamento. |
 
 {style=&quot;table-layout:auto&quot;}
 

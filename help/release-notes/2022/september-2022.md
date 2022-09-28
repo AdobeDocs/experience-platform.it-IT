@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2979'
 ht-degree: 5%
 
 ---
@@ -116,6 +116,9 @@ Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visua
 | Funzione | Descrizione |
 | --- | --- |
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in-use identifica facilmente la presenza di widget esistenti nel dashboard. Questo rende facile evitare la duplicazione, anche se è ancora possibile aggiungere lo stesso widget più di una volta che si desidera. |
+| Dashboard definiti dall&#39;utente | Le dashboard definite dall’utente consentono di accelerare le informazioni e personalizzare le visualizzazioni mediante la creazione e la gestione di dashboard personalizzati. Con le dashboard definite dall’utente è possibile creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave pertinenti per la propria organizzazione. Leggi la sezione [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per saperne di più. |
+| Modello dati di Approfondimenti piattaforma dati cliente | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Leggi la sezione [Guida alle funzioni di CDP Insights Data Model](../../dashboards/cdp-insights-data-model.md) per saperne di più. |
+| Widget per report sulla sovrapposizione del pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Da [!UICONTROL Profili] dashboard ti consente di filtrare e visualizzare la sovrapposizione del pubblico unendo i criteri di tutti i segmenti disponibili. La [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico di un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evita di inviare lo stesso pubblico a destinazioni diverse. Il rapporto aiuta inoltre a identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. |
 
 Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
