@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 7%
+source-wordcount: '1827'
+ht-degree: 6%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 7%
 
 **Data di rilascio: 28 settembre 2022**
 
+Nuove funzioni in Adobe Experience Platform:
+
+- [Igiene dei dati](#data-hygiene)
+- [[!UICONTROL Console sulla privacy]](#privacy-console)
+
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Registri di controllo](#audit-logs)
+- [Raccolta dati](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio Identity](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Origini](#sources)
+
+## Igiene dei dati {#data-hygiene}
+
+Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni complesse e di grandi dimensioni sui dati al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che i dati vengano utilizzati come previsto, vengono aggiornati quando è necessario correggere i dati errati e vengono eliminati quando i criteri organizzativi lo ritengono necessario.
+
+Le funzionalità di igiene dei dati di Adobe Experience Platform consentono di pulire i dati pianificando la scadenza automatica dei set di dati e l’eliminazione programmatica dei dati dei consumatori in base all’identità.
+
+>[!NOTE]
+>
+>Le funzionalità di eliminazione dei consumatori sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
+
+Per informazioni sull’igiene dei dati, consulta la seguente documentazione:
+
+- [Panoramica sull&#39;igiene dei dati](../../hygiene/home.md): Scopri le nozioni di base sulle funzionalità di igiene dei dati di Platform.
+- [[!UICONTROL Igiene dei dati] Guida all’interfaccia utente](../../hygiene/ui/overview.md): Scopri come pianificare le scadenze dei set di dati e le richieste di cancellazione del consumatore all’interno dell’interfaccia utente di Platform.
+- [Guida all’API per l’igiene dei dati](../../hygiene/api/overview.md): Anche tutte le attività di igiene dei dati che puoi eseguire nell’interfaccia utente possono essere eseguite a livello di programmazione
+
+## [!UICONTROL Console sulla privacy] {#privacy-console}
+
+La [!UICONTROL Console sulla privacy] nell’interfaccia utente di Experience Platform è disponibile una vista dashboard delle informazioni chiave provenienti da funzioni relative alla privacy come [richieste di persone interessate da Privacy Service], [ordini di lavoro per l&#39;igiene dei dati]e [registri di controllo]. La console fornisce anche diverse guide di casi d’uso all’interno del prodotto per guidarti attraverso i flussi di lavoro comuni sulla privacy.
+
+Consulta la sezione [Panoramica della console Privacy](../../landing/governance-privacy-security/privacy-console.md) per ulteriori informazioni sulla funzione.
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+I servizi AI/ML consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare modelli specifici per le esigenze aziendali utilizzando configurazioni a livello di business senza la necessità di disporre di competenze scientifiche in materia di dati.
+
+### IA per l’attribuzione
+
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) per saperne di più. |
+| Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
+
+Per ulteriori informazioni sulle Attribution AI, consulta [Panoramica di Attribution AI](../../intelligent-services/attribution-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) per saperne di più. |
+| Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
+
+Per ulteriori informazioni su Customer AI, consulta la sezione [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
+
+## Registri di audit {#audit-logs}
+
+L’Experience Platform ti consente di controllare l’attività dell’utente per vari servizi e funzionalità. I registri di controllo forniscono informazioni su chi ha fatto cosa e quando.
+
+**Funzioni aggiornate**
+
+| Funzione | Nome | Descrizione |
+| --- | --- | --- |
+| Risorse aggiunte | <ul><li>Attribution AI</li><li>Istanza di Customer AI</li><li>Datastream</li></ul> | Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività. Se la funzione è abilitata, non è necessario abilitare manualmente la raccolta dei registri. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sui diversi tipi di evento specifici per le risorse tracciati dai registri di controllo in Platform, consulta la sezione [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Raccolta dati
+
+Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di raccogliere i dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network dove possono essere arricchiti, trasformati e distribuiti su destinazioni Adobi o non Adobi.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità precedentemente esclusive dell’interfaccia utente di raccolta dati (compresi tag, inoltro eventi e datastreams) sono ora disponibili anche nella navigazione a sinistra in Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -77,32 +160,6 @@ Il servizio Adobe Experience Platform Identity consente di acquisire una visione
 | Supporto per l’eliminazione dei set di dati | Il servizio Identity supporta ora l’eliminazione dei set di dati durante la richiesta tramite [API del servizio catalogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), l’interfaccia utente o l’igiene dei dati. Leggi la guida su [eliminazione di set di dati nell’interfaccia utente](../../catalog/datasets/user-guide.md#delete-a-dataset) per ulteriori informazioni. |
 
 Per ulteriori informazioni sul servizio Identity, consulta la sezione [Panoramica del servizio Identity](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-I servizi AI/ML consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare modelli specifici per le esigenze aziendali utilizzando configurazioni a livello di business senza la necessità di disporre di competenze scientifiche in materia di dati.
-
-### IA per l’attribuzione
-
-Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
-
-| Funzione | Descrizione |
-| --- | --- |
-| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) per saperne di più. |
-| Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
-
-Per ulteriori informazioni sulle Attribution AI, consulta [Panoramica di Attribution AI](../../intelligent-services/attribution-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
-
-### Customer AI
-
-Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala.
-
-| Funzione | Descrizione |
-| --- | --- |
-| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) per saperne di più. |
-| Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
-
-Per ulteriori informazioni su Customer AI, consulta la sezione [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
 
 ## Origini {#sources}
 
