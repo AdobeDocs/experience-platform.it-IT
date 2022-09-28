@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 2%
 
 Questo documento illustra le note sulla versione dell’SDK Web per Adobe Experience Platform.
 Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Note sulla versione dell’estensione del tag SDK per web](extension/web-sdk-ext-release-notes.md).
+
+## Versione 2.13.0 - 28 settembre 2022
+
+**Nuove funzioni**
+
+* È stato aggiunto il supporto per Migrazione completa pagina per pagina. Il profilo Adobe Target viene ora mantenuto quando un visitatore si sposta tra le pagine at.js e l’SDK per web.
+* È stato aggiunto il supporto configurabile per [Hint client entropy high-Agent](fundamentals/user-agent-client-hints.md#high-entropy).
+* È stato aggiunto il supporto per il nuovo `applyResponse` comando. Ciò consente la personalizzazione ibrida tramite la funzione [API server di rete Edge](../server-api/overview.md).
+* I collegamenti in modalità Controllo qualità ora funzionano su più pagine.
+
+**Correzioni e miglioramenti**
+
+* È stato risolto un problema a causa del quale le metriche di tracciamento dei clic di personalizzazione non venivano aggiornate quando il tracciamento dei collegamenti era disabilitato.
+* Sono stati aggiornati i comandi per generare un errore di convalida quando sono specificate opzioni sconosciute.
+* La `_experience.decisioning.propositionEventType` viene ora compilata quando si inviano automaticamente eventi di personalizzazione visualizzazione e interazione.
+* È stata aggiunta la convalida duplicata dello spazio dei nomi per `getIdentity` comando.
+* Aggiunta convalida dell&#39;ambito decisionale duplicato per il `sendEvent` comando.
 
 ## Versione 2.12.0 - 29 giugno 2022
 
