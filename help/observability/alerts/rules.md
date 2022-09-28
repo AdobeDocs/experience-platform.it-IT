@@ -4,9 +4,9 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,18 @@ Le seguenti regole di avviso sono specifiche per [destinazioni](../../destinatio
 | Ritardi, errori ed errori di esecuzione del flusso di destinazione | Il tasso di Skippage supera la soglia | Questo avviso si attiva quando il rapporto tra ID ignorati e ID totali supera una soglia. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Servizio query
+
+Le seguenti regole di avviso sono specifiche per [Servizio query](../../query-service/home.md):
+
+| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| --- | --- | --- |
+| Informazioni ad hoc sul servizio query | Successo ad hoc del servizio query | Questo avviso viene attivato quando un processo di schema ad hoc viene completato correttamente. |
+| Ritardi, errori ed errori ad hoc del servizio query | Errore ad hoc del servizio query | Questo avviso viene attivato quando un processo di schema ad hoc non riesce. |
+| Informazioni query pianificate del servizio query | Avvio query pianificato del servizio query | Questo avviso viene attivato quando inizia l&#39;esecuzione di una query pianificata. |
+| Informazioni query pianificate del servizio query | Query pianificata dal servizio query riuscita | Questo avviso viene attivato quando un processo di query pianificato viene completato correttamente. |
+| Ritardi, errori ed errori pianificati della query del servizio query | errore di query pianificata del servizio query | Questo avviso viene attivato quando un processo di query pianificato non riesce. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
