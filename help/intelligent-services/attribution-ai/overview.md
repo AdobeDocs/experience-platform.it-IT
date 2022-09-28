@@ -6,16 +6,16 @@ topic-legacy: Attribution AI
 description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti. I punti di contatto includono, ad esempio, le visualizzazioni di ad impression, gli invii di e-mail, le aperture delle e-mail e i clic su risultati di ricerca a pagamento.
 landing-page-description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 36%
+ht-degree: 30%
 
 ---
 
 # Panoramica di Attribution AI
 
-Nell’ambito di Intelligent Services, Attribution AI è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase del percorso del cliente.
+Attribution AI, come parte di Intelligent Services, è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli addetti al marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase dei percorsi dei clienti.
 
 ## Informazioni sulle Attribution AI
 
@@ -38,7 +38,7 @@ Attribution AI può essere utilizzato per assistere nei seguenti casi di utilizz
 - **Rapporto esecutivo**: Consenti ai dirigenti di comprendere il vero impatto incrementale del marketing, sia nel suo complesso che per canale, regione, SKU, ecc.
 - **Stanziamento di bilancio**: Informare le decisioni di allocazione del budget su tutti i canali di marketing.
 - **Ottimizzazione delle campagne**: All&#39;interno di ogni canale, puoi capire quali campagne, creativi e parole chiave funzionano meglio per quali SKU o Geos. Questo consente di guardare ogni canale in modo che il team di marketing possa ottimizzare le proprie tattiche.
-- **Attribuzione a funnel completo**: Comprendi l’impatto del marketing sull’intero percorso di clienti. Ad esempio, l’iscrizione gratuita all’account per la conversione a pagamento e oltre.
+- **Attribuzione a funnel completo**: Comprendi l&#39;impatto del marketing sull&#39;intero percorso di clienti. Ad esempio, l’iscrizione gratuita all’account per la conversione a pagamento e oltre.
 - **Valutazioni dei partner**: Valutare l’efficacia delle agenzie e dei partner, in base ai risultati dell’attribuzione.
 
 ### Funzionalità aggiuntive

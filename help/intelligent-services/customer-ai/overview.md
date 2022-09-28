@@ -7,17 +7,17 @@ topic-legacy: Customer AI Overview
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '553'
+ht-degree: 26%
 
 ---
 
 
 # Panoramica di Customer AI
 
-Customer AI , come parte di Intelligent Services, fornisce agli addetti al marketing il potere di generare previsioni sui clienti a livello individuale con spiegazioni.
+Customer AI, come parte di Intelligent Services, fornisce agli addetti al marketing il potere di generare previsioni sui clienti a livello individuale con spiegazioni.
 
 Con l’aiuto di fattori di influenza, IA per l’analisi dei clienti può dirti cosa potrebbe fare un cliente e perché. Inoltre, gli esperti marketing possono trarre vantaggio dalle previsioni e dalle informazioni di IA per l’analisi dei clienti per personalizzare le customer experience fornendo le offerte e i messaggi più appropriati.
 
@@ -37,10 +37,10 @@ Customer AI è progettato per:
 Il cliente non è costruito in:
 
 - Customer AI non deve essere utilizzato per prevedere un prezzo dinamico o il punto di prezzo al quale il cliente effettuerà un acquisto.
-- Customer AI non è in grado di determinare se l’offerta rende più probabile l’acquisto di un articolo da parte del cliente. Anche se puoi decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire quei clienti.
+- Customer AI non è in grado di determinare se l’offerta rende più probabile l’acquisto di un articolo da parte del cliente. Anche se potresti decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire quei clienti.
 - Customer AI non è uno strumento di consigli per i prodotti. Se disponi di migliaia di SKU, non utilizzare Customer AI come proxy per una soluzione di consigli di prodotto reale come [!DNL Adobe Target].
-- Customer AI non può prevedere in quale fase del Percorso di acquisto si trova il cliente, ad esempio, se si trovano nelle fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
-- Non utilizzare Customer AI per determinare i clienti che probabilmente acquisteranno un prodotto da lanciare in futuro. Questo richiede che determinati eventi di successo siano presenti in passato affinché Customer AI possa addestrare con successo l’algoritmo di apprendimento automatico sui dati.
+- Customer AI non può prevedere in quale fase del Percorso di acquisto si trova il cliente, ad esempio, se si trovano in fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
+- Non utilizzare Customer AI per determinare i clienti che probabilmente acquisteranno un prodotto per il lancio in futuro. Questo richiede che determinati eventi di successo siano presenti in passato affinché Customer AI possa addestrare con successo l’algoritmo di apprendimento automatico sui dati.
 
 Il seguente video è progettato per supportare la tua comprensione di Customer AI.
 
