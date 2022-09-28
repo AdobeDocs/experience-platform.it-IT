@@ -2,10 +2,10 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 12%
+source-wordcount: '944'
+ht-degree: 13%
 
 ---
 
@@ -41,6 +41,7 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 | [Attributo calcolato](../../../profile/computed-attributes/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
 | [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
+| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../edge/datastreams/data-prep.md)</li></ul> |
 | [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attiva set di dati</li><li>Rimozione set di dati</li><li>Attiva profilo</li><li>Rimuovi profilo</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
