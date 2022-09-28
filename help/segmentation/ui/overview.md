@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Per lavorare con le definizioni dei segmenti è necessario comprendere i vari [!
 
 È inoltre importante conoscere due termini chiave utilizzati nel presente documento e comprendere la differenza tra questi:
 - **Definizione del segmento**: Il set di regole utilizzato per descrivere le caratteristiche o i comportamenti chiave di un pubblico target.
-- **Pubblico**: Il set risultante di profili che soddisfano i criteri di una definizione di segmento.
+- **Pubblico**: Il set risultante di profili che soddisfano i criteri di una definizione di segmento. Può essere creato tramite Adobe Experience Platform (pubblico generato da Platform) o da un’origine esterna (pubblico generato esternamente).
 
 ## Panoramica
 
@@ -62,7 +62,7 @@ Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../da
 >title="Aggiungi tutti i segmenti alla pianificazione"
 >abstract="Abilitare l’inclusione di tutti i segmenti di valutazione batch nell’aggiornamento pianificato giornaliero alle 3:30 UTC. Disabilita la rimozione di tutti i segmenti dall&#39;aggiornamento pianificato."
 
-Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per l’organizzazione IMS.
+Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per la tua organizzazione.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Selezione **[!UICONTROL Creare un segmento]** ti porterà al Generatore di segme
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-La barra laterale destra contiene informazioni su tutti i segmenti all’interno dell’organizzazione IMS, elencando il numero totale di segmenti, la data dell’ultima valutazione, la data della valutazione successiva e una suddivisione dei segmenti in base al metodo di valutazione.
+La barra laterale destra contiene informazioni su tutti i segmenti all’interno dell’organizzazione, elencando il numero totale di segmenti, la data dell’ultima valutazione, la data della valutazione successiva e una suddivisione dei segmenti in base al metodo di valutazione.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ Viene visualizzata la pagina dei dettagli del segmento. Nella parte superiore, �
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Riepilogo del segmento
+### Riepilogo del segmento {#segment-summary}
 
 La **[!UICONTROL Riepilogo del segmento]** fornisce informazioni quali ID, nome, descrizione e dettagli degli attributi.
 
@@ -191,6 +191,80 @@ Puoi abilitare le definizioni dei segmenti per la valutazione pianificata utiliz
 Attualmente le pianificazioni possono essere create solo utilizzando l’API . Per passaggi dettagliati sulla creazione, la modifica e l’utilizzo delle pianificazioni tramite l’API, segui l’esercitazione per valutare e accedere ai risultati dei segmenti, in particolare la sezione su [valutazione pianificata utilizzando l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Tipi di pubblico {#audiences}
+
+>[!IMPORTANT]
+>
+>La funzionalità tipi di pubblico al momento è in versione beta limitata e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+
+Seleziona la **[!UICONTROL Tipi di pubblico]** per visualizzare un elenco di tutti i tipi di pubblico per la tua organizzazione.
+
+![Un elenco di tipi di pubblico per la tua organizzazione.](../images/ui/overview/list-audiences.png)
+
+Per impostazione predefinita, questa visualizzazione elenca informazioni sui tipi di pubblico quali nome, conteggio del profilo, origine, data di creazione e data dell’ultima modifica.
+
+È possibile selezionare la ![Personalizzare la tabella](../images/ui/overview/customize-table.png) per modificare i campi visualizzati.
+
+![Il pulsante Personalizza tabella è evidenziato. Selezionando questo pulsante puoi personalizzare i campi visualizzati nella pagina di ricerca Tipi di pubblico .](../images/ui/overview/select-customize-table.png)
+
+Viene visualizzato un puntatore in cui sono elencati tutti i campi che è possibile visualizzare all’interno della tabella.
+
+![Attributi che possono essere visualizzati per la sezione Sfoglia pubblico .](../images/ui/overview/customize-table-attributes.png)
+
+| Campo | Descrizione |
+| ----- | ----------- | 
+| [!UICONTROL Nome] | Il nome del pubblico. |
+| [!UICONTROL Numero di profili] | Il numero totale di profili idonei per il pubblico. |
+| [!UICONTROL Origin] | Origine del pubblico. Se questo pubblico è stato generato da Platform, avrà un’origine del servizio di segmentazione. |
+| [!UICONTROL Stato del ciclo di vita] | Lo stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`e `Archived`. |
+| [!UICONTROL Frequenza di aggiornamento] | Un valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono `On Demand`, `Scheduled`e `Continuous`. |
+| [!UICONTROL Ultimo aggiornamento da] | Nome dell&#39;ultima persona che ha aggiornato il pubblico. |
+| [!UICONTROL Creato] | Data e ora di creazione del pubblico. |
+| [!UICONTROL Ultimo aggiornamento] | L’ora e la data dell’ultima creazione del pubblico. |
+| [!UICONTROL Etichette di accesso] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta della modalità di gestione dei dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+
+È possibile selezionare **[!UICONTROL Crea pubblico]** per creare un pubblico.
+
+![Viene evidenziato il pulsante crea pubblico , che indica dove selezionare per creare un pubblico.](../images/ui/overview/create-audience.png)
+
+Viene visualizzato un popover, che consente di scegliere tra la composizione di un pubblico o la creazione di regole.
+
+![Un puntatore che mostra i due tipi di pubblico che è possibile creare.](../images/ui/overview/create-audience-type.png)
+
+Selezione **[!UICONTROL Componi pubblico]** ti porta al Generatore di pubblico. Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta la sezione [Guida di Audience Builder](./audience-builder.md).
+
+Selezione **[!UICONTROL Crea regola]** ti porta al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consulta la sezione [Guida al Generatore di segmenti](./segment-builder.md)
+
+## Dettagli del pubblico {#audience-details}
+
+Per visualizzare ulteriori dettagli su un pubblico specifico, seleziona il nome di un pubblico all’interno di [!UICONTROL Tipi di pubblico] scheda .
+
+Viene visualizzata la pagina dei dettagli del pubblico. Questa pagina presenta differenze di dettaglio a seconda che il pubblico sia stato generato con Adobe Experience Platform o da un’origine esterna, ad esempio Audience Orchestration.
+
+### Pubblico generato dalla piattaforma
+
+Per ulteriori informazioni sui tipi di pubblico generati da Platform, consulta la sezione [sezione di riepilogo dei segmenti](#segment-summary).
+
+### Pubblico generato esternamente
+
+Nella parte superiore della pagina dei dettagli del pubblico, è presente un riepilogo del pubblico e i dettagli del set di dati in cui il pubblico viene salvato.
+
+![I dettagli forniti per un pubblico generato esternamente.](../images/ui/overview/externally-generated-audience.png)
+
+La **[!UICONTROL Riepilogo del pubblico]** fornisce informazioni quali ID, nome, descrizione e dettagli degli attributi.
+
+La **[!UICONTROL Dettagli del set di dati]** fornisce informazioni quali nome, descrizione, nome della tabella, origine e schema. È possibile selezionare **[!UICONTROL Visualizza set di dati]** per visualizzare ulteriori informazioni sul set di dati.
+
+| Campo | Descrizione |
+| ----- | ----------- |
+| [!UICONTROL Nome] | Nome del set di dati. |
+| [!UICONTROL Descrizione] | Descrizione del set di dati. |
+| [!UICONTROL Nome tabella] | Nome della tabella del set di dati. |
+| [!UICONTROL Origine] | Origine del set di dati. Per i tipi di pubblico generati esternamente, questo valore sarà **Schema**. |
+| [!UICONTROL Schema] | Il tipo di schema XDM a cui corrisponde il set di dati. |
+
+Per ulteriori informazioni sui set di dati, consulta la sezione [panoramica dei set di dati](../../catalog/datasets/overview.md).
 
 ## Segmentazione streaming {#streaming-segmentation}
 
