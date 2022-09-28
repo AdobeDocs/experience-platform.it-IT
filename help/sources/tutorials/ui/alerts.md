@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari; avvisi
 description: Puoi abbonarti agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso sullo stato, il successo o l’errore dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali nell’interfaccia utente
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Gli avvisi disponibili per i flussi di dati di origine sono:
 | Avvio esecuzione flusso di dati di Origini | Questo avviso invia un messaggio all’avvio del flusso di dati sorgente. |
 | Esecuzione del flusso di dati di Origini completata | Questo avviso invia un messaggio quando i dati provenienti dall’origine vengono correttamente acquisiti in Platform. |
 | Errore di esecuzione del flusso di dati di origine | Questo avviso invia un messaggio se si verifica un errore nel flusso di dati. |
-| Fonti Dataflow mancanza di acquisizione | Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform. |
+| ~~Fonti Dataflow mancanza di acquisizione~~ | ~~Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform.~~ <br>**Nota:** Non riceverai più avvisi perché questo avviso è stato dichiarato obsoleto. |
 
 Seleziona gli avvisi a cui desideri abbonarti e quindi seleziona **[!UICONTROL Successivo]** per rivedere e completare il flusso di dati.
 
@@ -117,7 +117,7 @@ Puoi abbonarti a più avvisi o cancellarti dagli avvisi stabiliti per un flusso 
 
 Viene visualizzata una finestra a comparsa che fornisce un elenco di avvisi di origine. Seleziona gli avvisi a cui vuoi abbonarti o deseleziona gli avvisi a cui vuoi annullare l’iscrizione. Al termine, seleziona **[!UICONTROL Salva]**.
 
-![save](../../images/tutorials/alerts/save.png)
+![salva](../../images/tutorials/alerts/save.png)
 
 ## Passaggi successivi
 
