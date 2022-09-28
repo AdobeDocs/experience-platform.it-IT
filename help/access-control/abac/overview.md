@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Panoramica sul controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1684'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Utilizzo della piattaforma [Adobe Admin Console](https://adminconsole.adobe.com)
 
 Per ulteriori informazioni sul controllo degli accessi, consulta la sezione [panoramica sul controllo degli accessi](../home.md).
 
-### Destinazioni
+### Destinazioni {#destinations}
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 
@@ -72,6 +72,15 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo access
    * Nel processo di attivazione, potrebbe essere richiesto agli utenti di selezionare i segmenti che desiderano attivare in una destinazione. In qualità di amministratore, puoi assegnare agli utenti della tua organizzazione il provisioning per visualizzare solo i segmenti etichettati con etichette a cui gli utenti hanno accesso e i segmenti a cui non sono associate etichette.
 * Configura l’accesso utente per visualizzare campi specifici nel processo di attivazione in base a ruolo, autorizzazioni ed etichette;
    * Nel processo di attivazione, potrebbe essere richiesto agli utenti di selezionare i campi che desiderano attivare in una destinazione. In qualità di amministratore, puoi assegnare agli utenti dell’organizzazione il provisioning per visualizzare solo i campi etichettati con le etichette a cui gli utenti hanno accesso e i campi che non contengono etichette.
+
+>[!IMPORTANT]
+>
+>In sintesi, tieni presente le seguenti implicazioni quando lavori con le destinazioni e con il controllo degli accessi basato sugli attributi:
+>
+>* Puoi attivare solo i segmenti a cui hai le autorizzazioni di accesso e visualizzazione nel [visualizzazione di ricerca dei segmenti](/help/segmentation/ui/overview.md#browse) e [seleziona il passaggio del segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flusso di lavoro di attivazione.
+>* In [fase di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), puoi visualizzare e selezionare per l’attivazione solo i campi a cui disponi dell’autorizzazione di accesso.
+>* Quando desideri attivare ulteriori segmenti in una destinazione esistente in cui non hai accesso a tutti i campi mappati per l’esportazione, il flusso di lavoro di attivazione verrà bloccato automaticamente.
+
 
 Per ulteriori informazioni su [!DNL Destinations], fare riferimento alla [[!DNL Destinations] panoramica](../../destinations/home.md).
 

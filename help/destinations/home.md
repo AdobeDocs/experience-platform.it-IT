@@ -3,10 +3,10 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 0%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,24 @@ Per informazioni dettagliate, consulta la sezione [panoramica dei tipi e delle c
 
 La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, puoi visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, consulta [Controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
 
+La tabella seguente illustra le combinazioni di autorizzazioni e autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni:
+
+| Livello di autorizzazione | Descrizione |
+| ---- | ----|
+| **[!UICONTROL Gestire le destinazioni]** | Per connetterti alle destinazioni, devi disporre delle **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** | Per attivare i segmenti sulle destinazioni, è necessario disporre delle **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 Per ulteriori informazioni sui controlli di accesso, consulta la sezione [Guida utente al controllo degli accessi](../access-control/ui/overview.md).
+
+### Controllo dell&#39;accesso basato su attributi per le destinazioni {#attribute-based-access}
+
+Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi.
+
+Con il controllo dell&#39;accesso basato sugli attributi, puoi applicare configurazioni di mappatura ai campi a cui disponi delle autorizzazioni. Inoltre, non puoi esportare i dati in una destinazione se non hai accesso a tutti i campi del set di dati.
+
+Per ulteriori informazioni sul funzionamento delle destinazioni con controlli di accesso basati sugli attributi, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md#destinations).
 
 ## Restrizioni sulla governance dei dati sull’attivazione dei dati alle destinazioni {#data-governance}
 
@@ -64,7 +81,7 @@ Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso 
 * [Destinazioni di marketing e-mail](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione dei segmenti, consulta il passaggio Revisione nelle guide seguenti:
+Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione dei segmenti, consulta la sezione **[!UICONTROL Revisione]** segui le seguenti guide:
 
 * [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](./ui/activate-segment-streaming-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](./ui/activate-streaming-profile-destinations.md#review)
