@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: c8443051597da26bacb2dbf722d82a06abcee2f6
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 29%
+source-wordcount: '250'
+ht-degree: 28%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 29%
    * [Integrazioni con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
    * [Panoramica](./governance-privacy-security/overview.md)
+   * [Console sulla privacy](./governance-privacy-security/privacy-console.md)
    * Gestione del consenso {#consent}
       * Adobe standard {#adobe}
          * [Panoramica](./governance-privacy-security/consent/adobe/overview.md)
