@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Ulteriori informazioni sulle soluzioni di accessibilità personalizzate all'interno dell'interfaccia utente di Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Quando utilizzi l’interfaccia utente del Generatore di segmenti per creare, mo
 * L’interfaccia utente del Generatore di segmenti è accessibile tramite la navigazione da tastiera.
 * Gli assistenti vocali devono riconoscere i tag di markup per le intestazioni e possono annunciare l’intestazione insieme al relativo livello.
 * Altre tecnologie per l’accessibilità possono modificare la visualizzazione di una pagina, utilizzando intestazioni codificate in modo da visualizzare una struttura o una visualizzazione alternativa.
+
+È ora possibile comprimere o espandere le barre sinistra e destra dell’area di lavoro del generatore di segmenti per ottenere più spazio sullo schermo. Questa funzione è particolarmente utile in quanto offre funzionalità complete con zoom del 200%.
+
+![Area di lavoro del generatore di segmenti con i widget di divulgazione della barra a sinistra e a destra evidenziati.](images/left-right-rail-expandables.png)
 
 ## Editor del servizio query
 
