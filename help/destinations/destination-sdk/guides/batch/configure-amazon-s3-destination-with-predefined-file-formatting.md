@@ -2,20 +2,16 @@
 description: Scopri come utilizzare Destination SDK per configurare una destinazione Amazon S3 con opzioni di formattazione file predefinite e configurazione del nome file personalizzato.
 title: Configura una destinazione Amazon S3 con opzioni di formattazione predefinite e configurazione del nome file personalizzato.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '746'
+ht-degree: 1%
 
 ---
 
 # Configura un [!DNL Amazon S3] destinazione con opzioni di formattazione file predefinite e configurazione del nome file personalizzato
 
 ## Panoramica {#overview}
-
->[!IMPORTANT]
->
->La funzionalità per configurare destinazioni basate su file utilizzando Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questa pagina descrive come utilizzare Destination SDK per configurare una destinazione Amazon S3 con impostazione predefinita [opzioni di formattazione dei file](../../server-and-file-configuration.md#file-configuration) e una [configurazione del nome file](../../file-based-destination-configuration.md#file-name-configuration).
 

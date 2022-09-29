@@ -2,20 +2,16 @@
 description: Scopri come utilizzare Destination SDK per configurare una destinazione Azure Data Lake Storage con opzioni di formattazione dei file personalizzate e la configurazione del nome file personalizzato.
 title: Configura una destinazione Azure Data Lake Storage con opzioni di formattazione file personalizzate e configurazione del nome file personalizzato.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '743'
+ht-degree: 1%
 
 ---
 
 # Configura un [!DNL Azure Data Lake Storage] destinazione con opzioni di formattazione file personalizzate e configurazione del nome file personalizzato
 
 ## Panoramica {#overview}
-
->[!IMPORTANT]
->
->La funzionalità per configurare destinazioni basate su file utilizzando Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questa pagina descrive come utilizzare Destination SDK per configurare un [!DNL Azure Data Lake Storage] destinazione con personalizzato [opzioni di formattazione dei file](../../server-and-file-configuration.md#file-configuration) e una [configurazione del nome file](../../file-based-destination-configuration.md#file-name-configuration).
 

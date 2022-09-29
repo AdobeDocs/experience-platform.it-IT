@@ -2,20 +2,16 @@
 description: Scopri come utilizzare Destination SDK per configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato.
 title: Configura una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '740'
+ht-degree: 1%
 
 ---
 
 # Configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato
 
 ## Panoramica {#overview}
-
->[!IMPORTANT]
->
->La funzionalità per configurare destinazioni basate su file utilizzando Adobe Experience Platform Destination SDK è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questa pagina descrive come utilizzare Destination SDK per configurare una destinazione SFTP con impostazione predefinita [opzioni di formattazione dei file](../../server-and-file-configuration.md#file-configuration) e una [configurazione del nome file](../../file-based-destination-configuration.md#file-name-configuration).
 
