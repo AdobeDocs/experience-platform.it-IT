@@ -4,9 +4,9 @@ title: Guida al dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4154'
 ht-degree: 1%
 
 ---
@@ -123,6 +123,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tipi di pubblico mappati sullo stato di destinazione]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Dimensione del pubblico]](#audiences-size)
 * [[!UICONTROL Sovrapposizione del pubblico per criterio di unione]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Rapporto di sovrapposizione del pubblico]](#audience-overlap-report)
 
 ### [!UICONTROL Numero di profili] {#profile-count}
 
@@ -139,7 +140,7 @@ Consulta la sezione [sezione sui criteri di unione in precedenza in questo docum
 >
 >La [!UICONTROL Numero di profili] widget può mostrare un numero diverso dal conteggio del profilo mostrato sul [!UICONTROL Sfoglia] nella scheda [!UICONTROL Profili] per diversi motivi. Il motivo più comune è che [!UICONTROL Sfoglia] fa riferimento al numero totale di profili uniti in base ai criteri di unione predefiniti della tua organizzazione, mentre la [!UICONTROL Numero di profili] Il widget fa riferimento al numero totale di profili uniti in base al criterio di unione selezionato per la visualizzazione nel dashboard.
 >
->Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale nel widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato eseguito guardando la marca temporale sul widget e per ulteriori informazioni sull&#39;attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Rapporto di sovrapposizione del pubblico] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+Questo widget tabularizza i dati di sovrapposizione del pubblico da tutti i segmenti disponibili filtrati in base ai criteri di unione. Per il criterio di unione scelto dal menu a discesa nella parte superiore dello schermo, viene fornito un elenco di cinque tipi di pubblico con una classificazione tra le percentuali di sovrapposizione più alte e più basse. I due segmenti analizzati sono elencati nella variabile [!UICONTROL SEGMENTO DI UN NOME] e [!UICONTROL NOME SEGMENTO B] colonne. La sovrapposizione percentuale viene fornita nella terza colonna con un’approssimazione di dodici posizioni decimali.
+
+Il rapporto di sovrapposizione del pubblico ti aiuta a creare nuovi segmenti ad alte prestazioni. Osservando le sovrapposizioni ad alta percentuale puoi sopprimere i tipi di pubblico e impedire l’invio dello stesso pubblico a destinazioni diverse. Inoltre, ti aiutano a identificare informazioni nascoste che potrebbero essere utili per una migliore segmentazione. Una sovrapposizione a bassa percentuale consente di individuare profili univoci da perseguire.
+
+Seleziona **[!UICONTROL Visualizza altro]** per aprire una finestra di dialogo a schermo intero contenente più dati di sovrapposizione del pubblico.
+
+![Il widget di rapporto di sovrapposizione pubblico con Visualizza più evidenziato .](../images/profiles/profiles-audience-overlap-report.png)
+
+La [!UICONTROL Rapporto di sovrapposizione del pubblico] viene visualizzata la finestra di dialogo . Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Seleziona l’icona delle impostazioni (![Icona delle impostazioni.](../images/profiles/settings-icon.png)) per rimuovere o aggiungere colonne dalla tabella.
+
+![Finestra di dialogo del rapporto di sovrapposizione del pubblico.](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Seleziona la **[!UICONTROL Sovrapposizione]** intestazione di colonna per modificare la classificazione dei risultati tra il più alto e il più basso o il più alto.
+
+Per scaricare l’intero rapporto in formato PDF, seleziona il menu delle opzioni (**`...`**) seguita da **[!UICONTROL Scarica]**.
+
+![La finestra di dialogo del rapporto di sovrapposizione pubblico con l’opzione ellissi e Scarica evidenziata.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+Seleziona una riga dal rapporto per aprire un diagramma di Venn dell’analisi della sovrapposizione. Passa il puntatore del mouse su una sezione del diagramma di Venn per visualizzare il conteggio dei profili in una finestra di dialogo.
+
+![La finestra di dialogo del rapporto di sovrapposizione del pubblico viene visualizzata con un diagramma di Venn e una riga evidenziata.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+Seleziona **[!UICONTROL Chiudi]** per tornare al [!UICONTROL Profili] dashboard.
 
 ### [!UICONTROL Tipi di pubblico mappati sullo stato di destinazione] {#audiences-mapped-to-destination-status}
 

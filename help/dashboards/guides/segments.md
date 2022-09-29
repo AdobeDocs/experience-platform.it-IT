@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tendenza al cambiamento della dimensione del pubblico]](#audience-size-change-trend)
 * [[!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità]](#audience-size-trend-by-identity)
 * [[!UICONTROL Sovrapposizione del pubblico]](#audience-overlap)
+* [[!UICONTROL Rapporto di sovrapposizione del pubblico]](#audience-overlap-report)
 * [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
 * [[!UICONTROL Attivazioni pianificate]](#scheduled-activations)
@@ -147,14 +148,33 @@ Questo widget consente di ottimizzare la strategia di segmentazione visualizzand
 
 ![Il widget di sovrapposizione pubblico.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Rapporto di sovrapposizione del pubblico] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+Questo widget tabularizza i dati di sovrapposizione del pubblico per un segmento specifico. Viene fornito un elenco di cinque tipi di pubblico con una classificazione tra le percentuali di sovrapposizione più alte e più basse per il segmento scelto dal menu a discesa nella parte superiore dello schermo. Per chiarezza, il segmento scelto è elencato nella variabile [!UICONTROL SEGMENTO DI UN NOME] colonna. L’analisi della sovrapposizione del pubblico viene fornita per il secondo segmento elencato nella [!UICONTROL NOME SEGMENTO B] colonna. La sovrapposizione percentuale viene fornita nella terza colonna con un’approssimazione di dodici posizioni decimali.
 
-<!-- ![The Audience overlap report widget.]() -->
+Il rapporto di sovrapposizione del pubblico ti aiuta a creare nuovi segmenti ad alte prestazioni. Osservando le sovrapposizioni ad alta percentuale puoi sopprimere i tipi di pubblico e impedire l’invio dello stesso pubblico a destinazioni diverse. Inoltre, ti aiutano a identificare informazioni nascoste che potrebbero essere utili per una migliore segmentazione. Una sovrapposizione a bassa percentuale consente di individuare profili univoci da perseguire.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Seleziona **[!UICONTROL Visualizza altro]** per aprire una finestra di dialogo a schermo intero contenente più dati di sovrapposizione segmento.
+
+![Il widget di rapporto di sovrapposizione pubblico con Visualizza più evidenziato .](../images/segments/audience-overlap-report.png)
+
+La [!UICONTROL Rapporto di sovrapposizione del pubblico] viene visualizzata la finestra di dialogo . Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Seleziona l’icona delle impostazioni (![Icona delle impostazioni.](../images/segments/settings-icon.png)) per rimuovere o aggiungere colonne dalla tabella.
+
+![Finestra di dialogo del rapporto di sovrapposizione del pubblico.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Seleziona la **[!UICONTROL Sovrapposizione]** intestazione di colonna per modificare la classificazione dei risultati tra il più alto e il più basso o il più alto.
+
+Per scaricare l’intero rapporto in formato PDF, seleziona il menu delle opzioni (**`...`**) seguita da **[!UICONTROL Scarica]**.
+
+![La finestra di dialogo del rapporto di sovrapposizione pubblico con l’opzione ellissi e Scarica evidenziata.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Seleziona una riga dal rapporto per aprire un diagramma di Venn dell’analisi della sovrapposizione. Passa il puntatore del mouse su una sezione del diagramma di Venn per visualizzare il conteggio dei profili in una finestra di dialogo.
+
+![La finestra di dialogo del rapporto di sovrapposizione del pubblico viene visualizzata con un diagramma di Venn e una riga evidenziata.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Seleziona **[!UICONTROL Chiudi]** per tornare al [!UICONTROL Segmenti] dashboard.
 
 ### [!UICONTROL Sovrapposizione identità] {#identity-overlap}
 
