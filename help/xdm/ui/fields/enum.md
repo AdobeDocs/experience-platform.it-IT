@@ -5,9 +5,9 @@ title: Definire i campi enumerati e i valori consigliati nell’interfaccia uten
 description: Scopri come definire enum e valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Seleziona **[!UICONTROL Enum e valori consigliati]**, quindi seleziona **[!UICON
 
 ![Immagine che mostra l’opzione Valori suggeriti selezionata nell’interfaccia utente](../../images/ui/fields/enum/suggested-add-row.png)
 
-Sotto la **[!UICONTROL Nome visualizzato]** fornisci un nome descrittivo per il valore come desideri che appaia nell’interfaccia utente Segmentazione. Per aggiungere altri valori consigliati, seleziona **[!UICONTROL Aggiungi riga]** e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, seleziona l’icona Elimina (![Immagine dell’icona Elimina](../../images/ui/fields/enum/remove-icon.png)) accanto alla riga in questione.
+Sotto la **[!UICONTROL Nome visualizzato]** fornisci un nome descrittivo per il valore come desideri che appaia nell’interfaccia utente Segmentazione. Per aggiungere altri valori consigliati, seleziona **[!UICONTROL Aggiungi riga]** e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, seleziona ![l’icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
 
 Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo schema.
 
@@ -61,25 +61,25 @@ Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo s
 
 ### Gestione dei valori consigliati per i campi standard
 
-Alcuni campi dei componenti XDM standard contengono i valori consigliati, ad esempio `eventType` dal [[!UICONTROL ExperienceEvent XDM] Classe](../../classes/experienceevent.md). Quando utilizzi questi campi negli schemi, puoi utilizzare i pulsanti disponibili per controllare quali valori suggeriti esistenti devono essere utilizzati.
+Alcuni campi dei componenti XDM standard contengono i valori consigliati, ad esempio `eventType` dal [[!UICONTROL ExperienceEvent XDM] Classe](../../classes/experienceevent.md). Mentre è possibile creare valori aggiuntivi consigliati per un campo standard, non è possibile modificare o rimuovere i valori suggeriti non definiti dall’organizzazione. Quando visualizzi un campo standard nell’interfaccia utente, i valori suggeriti vengono visualizzati ma sono di sola lettura.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/suggested-standard.png)
 
-Simile ai campi personalizzati, seleziona **[!UICONTROL Aggiungi riga]** per aggiungere i valori consigliati per i campi standard.
+Per aggiungere nuovi valori consigliati per un campo standard, selezionare **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall’organizzazione, seleziona ![l’icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
 
-![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/suggested-standard.png)
+![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### Rimozione dei valori consigliati per i campi standard
+<!-- ### Removing suggested values for standard fields
 
-È possibile rimuovere da un campo standard solo i valori suggeriti definiti dall’utente. I valori suggeriti esistenti possono essere disattivati in modo che non vengano più visualizzati nel menu a discesa di segmentazione, ma non possano essere rimossi definitivamente.
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-Ad esempio, considera uno schema di profilo in cui il valore suggerito per lo standard `person.gender` campo disabilitato:
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-In questo esempio, il nome visualizzato &quot;[!UICONTROL Non specifico]&quot; è ora disattivato per essere mostrato nell’elenco a discesa segmentazione. Tuttavia, il valore `non_specific` fa ancora parte dell’elenco dei campi enumerati ed è pertanto ancora consentito al momento dell’acquisizione. In altre parole, non è possibile disabilitare il valore enum effettivo per il campo standard in quanto sarebbe contrario al principio di consentire solo le modifiche che rendono un campo meno restrittivo.
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-Consulta la sezione [sezione sottostante](#evolution) per ulteriori informazioni sulle regole per l&#39;aggiornamento degli enum e sui valori consigliati per i campi dello schema esistenti.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## Regole di evoluzione per gli enum e i valori consigliati {#evolution}
 
@@ -109,6 +109,13 @@ Se si fa riferimento allo stesso percorso di campo personalizzato in diversi gru
 
 * Eventuali valori suggeriti aggiuntivi sono **AGGIUNTO** nell&#39;unione.
 * Se lo stesso valore suggerito aggiuntivo è definito in più schemi, questi valori sono **UNITO** nell&#39;unione. In altre parole, lo stesso valore suggerito non verrà visualizzato due volte dopo l’unione.
+
+## Limiti di convalida
+
+A causa delle attuali limitazioni del sistema, ci sono due casi in cui un enum non viene convalidato dal sistema durante l&#39;acquisizione:
+
+1. L&#39;enum è definito su un [campo matrice](./array.md).
+1. L&#39;enum è definito a più livelli nella gerarchia dello schema.
 
 ## Passaggi successivi
 
