@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2776'
 ht-degree: 5%
 
 ---
@@ -78,7 +78,7 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 
 | Funzione | Descrizione |
 | --- | --- |
-| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md) per saperne di più. |
+| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare una configurazione del modello come bozza di istanza e di continuare a modificarla fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono quando un utente ha più campi da definire nel flusso di lavoro ma non può completarlo a causa di vincoli di tempo. Un altro scenario è quello in cui una o più statistiche del set di dati vengono elaborate e non sono ancora disponibili. Leggi la sezione [Guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) per saperne di più. |
 | Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
 
 Per ulteriori informazioni sulle Attribution AI, consulta [Panoramica di Attribution AI](../../intelligent-services/attribution-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
@@ -89,7 +89,7 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 
 | Funzione | Descrizione |
 | --- | --- |
-| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare la configurazione del modello come istanza bozza durante le configurazioni e di continuare a modificare la bozza fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono, ma non sono limitati a, quando gli utenti hanno più campi da definire nel flusso di lavoro di configurazione che non sono in grado di completare in una sola volta o quando una o più statistiche del set di dati (come la completezza della colonna) richiedono del tempo per essere elaborate prima che diventino disponibili. Leggi la sezione [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) per saperne di più. |
+| Salva istanza bozza | Questa nuova funzione consente agli analisti di marketing di salvare una configurazione del modello come bozza di istanza e di continuare a modificarla fino al completamento prima della formazione e del punteggio. Gli scenari in cui questa funzione è utile includono quando un utente ha più campi da definire nel flusso di lavoro ma non può completarlo a causa di vincoli di tempo. Un altro scenario è quello in cui una o più statistiche del set di dati vengono elaborate e non sono ancora disponibili. Leggi la sezione [Guida utente di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) per saperne di più. |
 | Politiche di governance | Dopo che gli utenti si inviano per creare un&#39;istanza tramite il flusso di lavoro di configurazione, il nuovo servizio di imposizione dei criteri verifica se sono presenti violazioni dei criteri relativi all&#39;utilizzo dei dati e visualizza i dettagli in un pover. Garantisce che le operazioni di dati e le azioni di marketing siano conformi ai criteri di utilizzo dei dati configurati su Adobe Experience Platform. |
 
 Per ulteriori informazioni su Customer AI, consulta la sezione [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Per informazioni sui criteri di governance dei dati, consulta la sezione [panoramica dei criteri](../../data-governance/policies/overview.md).
