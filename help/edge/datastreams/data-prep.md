@@ -2,7 +2,7 @@
 title: Preparazione per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di un datastream per gli SDK Adobe Experience Platform Web e Mobile.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
@@ -132,7 +132,7 @@ Per acquisire le proprietà da un elemento dati oggetto XDM, le stesse regole si
 
 È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollare l’oggetto non elaborato nella casella di testo fornita. Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
 
-![Esempio JSON di dati in arrivo previsti](../images/datastreams/data-prep/select-data.png)
+![Esempio JSON di dati in arrivo previsti](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL Mappatura]
 
@@ -145,25 +145,25 @@ La **[!UICONTROL Mappatura]** viene visualizzato un passaggio che ti consente di
 
 Per iniziare, seleziona **[!UICONTROL Aggiungi nuova mappatura]** per creare una nuova riga di mappatura.
 
-![Aggiunta di una nuova mappatura](../images/datastreams/data-prep/add-new-mapping.png)
+![Aggiunta di una nuova mappatura](../assets/datastreams/data-prep/add-new-mapping.png)
 
-Seleziona l’icona sorgente (![Icona Sorgente](../images/datastreams/data-prep/source-icon.png)) e nella finestra di dialogo visualizzata seleziona il campo sorgente da mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza le **[!UICONTROL Seleziona]** per continuare.
+Seleziona l’icona sorgente (![Icona Sorgente](../assets/datastreams/data-prep/source-icon.png)) e nella finestra di dialogo visualizzata seleziona il campo sorgente da mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza le **[!UICONTROL Seleziona]** per continuare.
 
-![Selezione del campo da mappare nello schema di origine](../images/datastreams/data-prep/source-mapping.png)
+![Selezione del campo da mappare nello schema di origine](../assets/datastreams/data-prep/source-mapping.png)
 
-Quindi, seleziona l’icona dello schema (![Icona Schema](../images/datastreams/data-prep/schema-icon.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo a cui desideri mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
+Quindi, seleziona l’icona dello schema (![Icona Schema](../assets/datastreams/data-prep/schema-icon.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo a cui desideri mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
 
-![Selezione del campo da mappare nello schema di destinazione](../images/datastreams/data-prep/target-mapping.png)
+![Selezione del campo da mappare nello schema di destinazione](../assets/datastreams/data-prep/target-mapping.png)
 
 Viene visualizzata nuovamente la pagina di mappatura con la mappatura del campo completata. La **[!UICONTROL Avanzamento mappatura]** aggiornamenti della sezione per riflettere il numero totale di campi mappati correttamente.
 
-![Campo mappato con avanzamento riflesso](../images/datastreams/data-prep/field-mapped.png)
+![Campo mappato con avanzamento riflesso](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Se si desidera mappare una matrice di oggetti (nel campo di origine) a una matrice di oggetti diversi (nel campo di destinazione), aggiungere `[*]` dopo il nome della matrice nei percorsi dei campi di origine e di destinazione, come illustrato di seguito.
 >
->![Mappatura degli oggetti array](../images/datastreams/data-prep/array-object-mapping.png)
+>![Mappatura degli oggetti array](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### Importa regole di mappatura esistenti {#import-mapping}
 
@@ -175,11 +175,11 @@ Se in precedenza hai creato un datastream, puoi riutilizzarne le regole di mappa
 
 Per iniziare, seleziona **[!UICONTROL Mapping importazione]**.
 
-![Immagine che mostra [!UICONTROL Mapping importazione] pulsante selezionato](../images/datastreams/data-prep/import-mapping-button.png)
+![Immagine che mostra [!UICONTROL Mapping importazione] pulsante selezionato](../assets/datastreams/data-prep/import-mapping-button.png)
 
 Nella finestra di dialogo visualizzata, seleziona il datastream di cui desideri importare le regole di mappatura. Una volta selezionato il datastream, seleziona **[!UICONTROL Anteprima]**.
 
-![Immagine che mostra un datastream esistente selezionato](../images/datastreams/data-prep/select-mapping-rules.png)
+![Immagine che mostra un datastream esistente selezionato](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Nella finestra di dialogo visualizzata, seleziona il datastream di cui desideri 
 
 La schermata successiva mostra un&#39;anteprima delle regole di mappatura salvate per il datastream selezionato. Assicurati che le mappature visualizzate siano quelle previste, quindi seleziona **[!UICONTROL Importa]** per confermare e aggiungere le mappature al nuovo datastream.
 
-![Immagine che mostra le regole di mappatura da importare](../images/datastreams/data-prep/import-mapping-rules.png)
+![Immagine che mostra le regole di mappatura da importare](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ Continua seguendo i passaggi precedenti per mappare il resto dei campi allo sche
 
 Una volta che il conteggio dei campi obbligatori raggiunge lo zero e si è soddisfatti della mappatura, selezionare **[!UICONTROL Salva]** per finalizzare le modifiche.
 
-![Mapping completato](../images/datastreams/data-prep/mapping-complete.png)
+![Mapping completato](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## Passaggi successivi
 
