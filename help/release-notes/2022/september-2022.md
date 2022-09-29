@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
+source-git-commit: dd17e0903f69a6d639582d83bcd22b269aedb5d0
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3107'
 ht-degree: 5%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visua
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in-use identifica facilmente la presenza di widget esistenti nel dashboard. Questo rende facile evitare la duplicazione, anche se è ancora possibile aggiungere lo stesso widget più di una volta che si desidera. |
 | Dashboard definiti dall&#39;utente | Le dashboard definite dall’utente consentono di accelerare le informazioni e personalizzare le visualizzazioni mediante la creazione e la gestione di dashboard personalizzati. Con le dashboard definite dall’utente è possibile creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave pertinenti per la propria organizzazione. Leggi la sezione [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per saperne di più. |
 | Modello dati di Approfondimenti piattaforma dati cliente | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Leggi la sezione [Guida alle funzioni di CDP Insights Data Model](../../dashboards/cdp-insights-data-model.md) per saperne di più. |
-| Widget per report sulla sovrapposizione del pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Da [!UICONTROL Profili] dashboard ti consente di filtrare e visualizzare la sovrapposizione del pubblico unendo i criteri di tutti i segmenti disponibili. La [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico di un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evita di inviare lo stesso pubblico a destinazioni diverse. Il rapporto aiuta inoltre a identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. |
+| Widget per report sulla sovrapposizione del pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Da [!UICONTROL Profili] dashboard ti consente di filtrare e visualizzare la sovrapposizione del pubblico unendo i criteri di tutti i segmenti disponibili. La [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico di un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evita di inviare lo stesso pubblico a destinazioni diverse. Il rapporto aiuta inoltre a identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. Leggi i rispettivi [profiles](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmenti](../../dashboards/guides/segments.md#audience-overlap-report) guide per ulteriori informazioni. |
 
 Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 
 | Funzione | Descrizione |
 | --- | --- |
-| API di abbonamento agli avvisi | Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Esempi di set di dati | Gli esempi di set di dati del servizio query consentono di eseguire query esplorative su grandi dati con tempi di elaborazione notevolmente ridotti a costo di precisione della query. |
+| API di abbonamento agli avvisi | Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulta la sezione [documentazione sugli avvisi di query](../../query-service/api/alert-subscriptions.md) per saperne di più. |
+| Esempi di set di dati | Gli esempi di set di dati del servizio query consentono di eseguire query esplorative su grandi dati con tempi di elaborazione notevolmente ridotti a costo di precisione della query. Consulta la sezione [guida a esempi di set di dati](../../query-service/sql/dataset-samples.md) per saperne di più. |
 
 Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
 
