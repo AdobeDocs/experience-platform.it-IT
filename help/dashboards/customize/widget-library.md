@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;da
 title: Panoramica della libreria dei widget dashboard
 description: Questa guida fornisce istruzioni dettagliate per accedere alla libreria dei widget in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ Seleziona **[!UICONTROL Libreria widget]** per aprire la libreria widget e visua
 Da [!UICONTROL Libreria widget], seleziona un widget dall’elenco dei widget standard o personalizzati disponibili. Un segno di spunta nell&#39;angolo del widget indica la selezione.
 
 ![La libreria dei widget con un widget selezionato ed il segno di spunta evidenziato.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Etichetta in uso {#in-use-label}
+
+I widget già aggiunti a un dashboard hanno un [!UICONTROL In uso] etichetta a essi associata quando viene visualizzata nella libreria widget. Questa etichetta evidenzia i widget che sono già stati aggiunti al dashboard per evitare duplicazioni. Anche se, è ancora possibile aggiungere lo stesso widget più di una volta si desidera.
+
+![La libreria dei widget con l&#39;etichetta in-use evidenziata.](../images/customization/in-use-label.png)
 
 Dopo aver selezionato tutti i widget richiesti, seleziona **[!UICONTROL Aggiungi widget]** per confermare la scelta e aggiungere i widget al dashboard.
 
