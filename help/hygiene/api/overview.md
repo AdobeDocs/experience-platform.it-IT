@@ -2,9 +2,9 @@
 title: Guida all’API per l’igiene dei dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
 
 L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform, nonché di pianificare le date di scadenza per i set di dati. Questa guida descrive i passaggi preliminari all’utilizzo dell’API e fornisce collegamenti a documentazione più specifica per l’endpoint.
 
@@ -44,10 +44,6 @@ Questo documento fornisce un esempio di chiamata API per dimostrare come formatt
 La scadenza di un set di dati è un’azione ritardata &quot;elimina un set di dati&quot;. Creando una scadenza di un set di dati, stai specificando un&#39;ora futura in cui quel set di dati deve essere eliminato. Consulta la sezione [guida all’endpoint di scadenza dei set di dati](./dataset-expiration.md) per informazioni sulla pianificazione delle scadenze dei set di dati nell’API.
 
 ## Cancellazioni dal consumatore
-
->[!NOTE]
->
->Le cancellazioni dei consumatori sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Sheild.
 
 L’API di igiene dati ti consente di eliminare tutti i record associati a un’identità del consumatore in uno o tutti i set di dati. Tutte le attività di igiene dei dati che eliminano le identità dei consumatori sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la sezione [guida all’endpoint dell’ordine di lavoro](./workorder.md) per informazioni dettagliate sull’utilizzo delle eliminazioni consumer nell’API.
 
