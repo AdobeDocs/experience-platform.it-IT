@@ -2,9 +2,9 @@
 description: Questa configurazione ti consente di indicare informazioni essenziali per la destinazione basata su file, come nome di destinazione, categoria, descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione basate su file per la Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
+source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '2989'
 ht-degree: 5%
 
 ---
@@ -727,30 +727,33 @@ Utilizza i parametri in  `dynamicSchemaConfig` per recuperare in modo dinamico i
 
 ### Mappature richieste {#required-mappings}
 
-All’interno della configurazione dello schema, puoi aggiungere mappature obbligatorie (o predefinite). Si tratta di mappature che gli utenti possono visualizzare ma non modificare quando impostano una connessione alla destinazione. Ad esempio, puoi applicare il campo dell’indirizzo e-mail affinché venga sempre inviato alla destinazione nei file esportati. Di seguito è riportato un esempio di configurazione di uno schema con le mappature richieste e l’aspetto che avrà nel passaggio di mappatura [attiva i dati nel flusso di lavoro destinazioni batch](/help/destinations/ui/activate-batch-profile-destinations.md).
+All’interno della configurazione dello schema, puoi aggiungere mappature obbligatorie (o predefinite). Si tratta di mappature che gli utenti possono visualizzare ma non modificare quando impostano una connessione alla destinazione. Ad esempio, puoi applicare il campo dell’indirizzo e-mail affinché venga sempre inviato alla destinazione nei file esportati. Di seguito sono riportati due esempi di una configurazione dello schema con le mappature richieste e di come si presentano nel passaggio di mappatura [attiva i dati nel flusso di lavoro destinazioni batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ```json
-    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
-      },
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      },
-      {
-        "sourceType": "text/x.aep-xl",
-        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
-        "destination": "delete"
       }
     ] 
 ```
 
-![Immagine delle mappature richieste nel flusso di attivazione dell’interfaccia utente.](/help/destinations/destination-sdk/assets/required-mappings.png)
+![Immagine delle mappature richieste nel flusso di attivazione dell’interfaccia utente.](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+```
+
+![Immagine delle mappature richieste nel flusso di attivazione dell’interfaccia utente.](/help/destinations/destination-sdk/assets/required-mappings-2.png)
 
 >[!NOTE]
 >
@@ -767,7 +770,7 @@ Utilizza i parametri descritti nella tabella seguente se desideri aggiungere le 
 | `requiredMappingsOnly` | Booleano | Indica se gli utenti possono mappare altri attributi e identità nel flusso di attivazione, *a parte* le mappature richieste definite dall’utente. |
 | `requiredMappings.mandatoryRequired` | Booleano | Imposta su true se questo campo deve essere un attributo obbligatorio che deve essere sempre presente nelle esportazioni di file verso la destinazione. Ulteriori informazioni [attributi obbligatori](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `requiredMappings.primaryKeyRequired` | Booleano | Imposta su true se questo campo deve essere utilizzato come chiave di deduplicazione nelle esportazioni dei file nella destinazione. Ulteriori informazioni [chiavi di deduplicazione](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `requiredMappings.sourceType` | Stringa | Utilizzato quando si configura un campo sorgente come necessario. Indica il tipo di campo del campo di origine. Le opzioni disponibili sono: <ul><li>`"text/x.schema-path"` quando il campo di origine è un attributo XDM predefinito</li><li>`"text/x.aep-xl"` quando il campo di origine è una funzione, ad esempio se è necessario soddisfare una condizione sul lato del campo di origine. Per ulteriori informazioni sulle funzioni supportate, consulta la sezione [Preparazione dei dati](/help/data-prep/api/functions.md) documentazione.</li></ul> |
+| `requiredMappings.sourceType` | Stringa | Utilizzato quando si configura un campo sorgente come necessario. Utilizzo `"text/x.schema-path"`, che indica che il campo di origine è un attributo XDM predefinito |
 | `requiredMappings.source` | Stringa | Indica il campo di origine richiesto. |
 | `requiredMappings.destination` | Stringa | Indica il campo di destinazione richiesto. |
 
