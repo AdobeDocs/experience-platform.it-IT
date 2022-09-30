@@ -2,9 +2,9 @@
 title: Endpoint API per la scadenza del set di dati
 description: L’endpoint /ttl nell’API di igiene dati ti consente di pianificare programmaticamente la scadenza dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
 
 La `/ttl` L’endpoint nell’API di igiene dati ti consente di pianificare le date di scadenza per i set di dati in Adobe Experience Platform.
 

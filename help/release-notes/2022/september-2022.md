@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 4%
+source-wordcount: '3059'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,6 @@ Nuove funzioni in Adobe Experience Platform:
 
 - [Controllo dell’accesso basato su attributi](#abac)
 - [Igiene dei dati](#data-hygiene)
-- [[!UICONTROL Console sulla privacy]](#privacy-console)
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -55,19 +54,13 @@ Le funzionalità di igiene dei dati di Adobe Experience Platform consentono di p
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Privacy Shield.
+>Le funzionalità di igiene dei dati sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
 
 Per informazioni sull’igiene dei dati, consulta la seguente documentazione:
 
 - [Panoramica sull&#39;igiene dei dati](../../hygiene/home.md): Scopri le nozioni di base sulle funzionalità di igiene dei dati di Platform.
 - [[!UICONTROL Igiene dei dati] Guida all’interfaccia utente](../../hygiene/ui/overview.md): Scopri come pianificare le scadenze dei set di dati e le richieste di cancellazione del consumatore all’interno dell’interfaccia utente di Platform.
 - [Guida all’API per l’igiene dei dati](../../hygiene/api/overview.md): Anche tutte le attività di igiene dei dati che puoi eseguire nell’interfaccia utente possono essere eseguite a livello di programmazione
-
-## [!UICONTROL Console sulla privacy] {#privacy-console}
-
-La [!UICONTROL Console sulla privacy] nell’interfaccia utente di Experience Platform è disponibile una vista dashboard delle informazioni chiave provenienti da funzioni relative alla privacy come [richieste di persone interessate da Privacy Service](../../privacy-service/home.md), [ordini di lavoro per l&#39;igiene dei dati](../../hygiene/home.md)e [registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md). La console fornisce anche diverse guide di casi d’uso all’interno del prodotto per guidarti attraverso i flussi di lavoro comuni sulla privacy.
-
-Consulta la sezione [Panoramica della console Privacy](../../landing/governance-privacy-security/privacy-console.md) per ulteriori informazioni sulla funzione.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 

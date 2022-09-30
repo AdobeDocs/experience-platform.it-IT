@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Agosto 2022
 description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '2131'
 ht-degree: 6%
 
 ---
@@ -40,7 +40,7 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 
 {style=&quot;table-layout:auto&quot;}
 
-**Nota**: Le Attribution AI non saranno disponibili con i clienti esistenti di Healthcare Shield o Privacy Shield fino a nuovo avviso.
+**Nota**: Le Attribution AI non saranno disponibili con i clienti esistenti di Healthcare Shield fino a nuovo avviso.
 
 Per ulteriori informazioni sulle Attribution AI, consulta la sezione [Attribution AI](../../intelligent-services/attribution-ai/overview.md) panoramica.
 
@@ -56,7 +56,7 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 
 {style=&quot;table-layout:auto&quot;}
 
-**Nota**: Customer AI non sarà disponibile con i clienti esistenti di Healthcare Shield o Privacy Shield fino a nuovo avviso.
+**Nota**: Customer AI non sarà disponibile con i clienti esistenti Healthcare Shield fino a nuovo avviso.
 
 Per ulteriori informazioni su Customer AI, consulta la sezione [Customer AI](../../intelligent-services/customer-ai/overview.md) panoramica.
 
@@ -178,7 +178,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Disponibilità generale delle origini self-service (SDK batch) | Sviluppa, testa e integra la tua origine dati basata su API REST per acquisire dati batch in Experience Platform utilizzando specifiche sorgente facili da configurare. Con l&#39;SDK di Origini puoi: <ul><li>Configura una nuova origine per il catalogo di Experience Platform.</li><li>Definisci le specifiche dell’origine, incluse le informazioni relative ai tipi di autenticazione supportati, alla pianificazione e al modo in cui vengono recuperati i dati delle risorse.</li><li>Crea la documentazione rivolta all’utente per la nuova sorgente.</li></ul> Per ulteriori informazioni, consulta la documentazione su [Sorgenti self-service (SDK batch)](../../sources/sources-sdk/overview.md). |
 | Disponibilità generale [!DNL Google BigQuery] source | Utilizza la [!DNL Google BigQuery] sorgente per acquisire i dati dal [!DNL Google BigQuery] data warehouse ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] sorgente (Beta) | Utilizza la [!DNL Teradata Vantage] da origine a acquisizione di dati da ambienti multi-cloud ibridi ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
-| Supporto tra aree geografiche per l’origine Adobe Analytics | È ora possibile acquisire suite di rapporti da qualsiasi regione (Stati Uniti, Regno Unito o Singapore). Le suite di rapporti devono essere mappate nella stessa organizzazione dell’istanza Sandbox di Experience Platform in cui viene creata la connessione sorgente. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Adobe Analytics nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Supporto tra aree geografiche per l’origine Adobe Analytics | È ora possibile acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore). Le suite di rapporti devono essere mappate nella stessa organizzazione dell’istanza Sandbox di Experience Platform in cui viene creata la connessione sorgente. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Adobe Analytics nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
