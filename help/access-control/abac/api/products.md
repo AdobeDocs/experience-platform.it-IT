@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Endpoint API per i prodotti
 description: L'endpoint /products nell'API di controllo accessi basato su attributi consente di gestire i prodotti in Adobe Experience Platform a livello di programmazione.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '492'
 ht-degree: 4%
 
 ---
 
 # Endpoint prodotti
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
 La `/products` l’endpoint nell’API di controllo accessi basato su attributi consente di gestire in modo programmatico i prodotti, nonché le categorie di autorizzazioni e i set di autorizzazioni associati ai prodotti dell’organizzazione.
 

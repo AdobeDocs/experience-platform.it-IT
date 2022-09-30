@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Endpoint API per i criteri di controllo di accesso
 description: L'endpoint /policy nell'API di controllo accessi basato su attributi consente di gestire i criteri in Adobe Experience Platform a livello di programmazione.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1412'
 ht-degree: 3%
 
 ---
 
 # Endpoint dei criteri di controllo di accesso
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
 Le politiche di controllo degli accessi sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. Questi criteri possono essere locali o globali e possono sostituire altri criteri. La `/policies` l’endpoint nell’API di controllo accessi basata sugli attributi ti consente di gestire i criteri in modo programmatico, incluse informazioni sulle regole che li governano e sulle rispettive condizioni dell’oggetto.
 

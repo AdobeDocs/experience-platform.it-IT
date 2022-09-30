@@ -3,18 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Controllo di accesso basato su attributi Crea un criterio
 description: Questo documento fornisce informazioni sulla gestione dei criteri tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
 
 # Gestire i criteri
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
 Le politiche sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono sostituire altri criteri.
 

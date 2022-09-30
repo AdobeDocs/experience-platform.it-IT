@@ -3,18 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Gestione utenti tramite controllo accessi basato su attributi
 description: Questo documento fornisce informazioni sulla gestione di utenti e gruppi di utenti tramite l'interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '160'
 ht-degree: 2%
 
 ---
 
 # Gestire gli utenti
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
 Per visualizzare i dettagli utente e i ruoli a cui sono assegnati, seleziona la **[!UICONTROL Utenti]** scheda .
 

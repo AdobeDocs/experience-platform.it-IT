@@ -3,18 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Autorizzazioni per la gestione dei ruoli per il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 # Gestire le autorizzazioni per un ruolo
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
 
 >[!IMPORTANT]
 >
