@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
+source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '3128'
 ht-degree: 4%
 
 ---
@@ -158,7 +158,7 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di esperienze cliente cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Guida introduttiva a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Questa integrazione funziona con Adobe Campaign versione 8.4 o successiva. La versione 8.4 verrà rilasciata il 30 settembre 2022. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di esperienze cliente cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Guida introduttiva a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Questa integrazione funziona con [Adobe Campaign versione 8.4 o successiva](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | La [!DNL Salesforce CRM] destinazione è stata aggiornata per supportare sia gli aggiornamenti di contatti e lead, sia i miglioramenti delle prestazioni per aggiornamenti più rapidi. |
 
 {style=&quot;table-layout:auto&quot;}
