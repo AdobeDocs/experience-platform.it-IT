@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3060'
+source-wordcount: '2895'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,6 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Registri di controllo](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Raccolta dati](#data-collection)
-- [Igiene dei dati](#data-hygiene)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio Identity](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 -->
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
-
-## Igiene dei dati {#data-hygiene}
-
-Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni complesse e di grandi dimensioni sui dati al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che i dati vengano utilizzati come previsto, vengono aggiornati quando è necessario correggere i dati errati e vengono eliminati quando i criteri organizzativi lo ritengono necessario.
-
-Le funzionalità di igiene dei dati di Adobe Experience Platform consentono di pulire i dati pianificando la scadenza automatica dei set di dati e l’eliminazione programmatica dei dati dei consumatori in base all’identità.
-
->[!IMPORTANT]
->
->Le funzionalità di igiene dei dati sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Flussi di lavoro dell’interfaccia utente aggiornati | I flussi di lavoro per [pianificazione delle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md) e [eliminazione dei dati dei consumatori](../../hygiene/ui/delete-consumer.md) sono stati semplificati nell’interfaccia utente di . |
-| Endpoint API per le quote | Ora puoi recuperare le informazioni sulle quote per i processi di igiene dei dati della tua organizzazione chiamando il [`/quota` endpoint](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Per ulteriori informazioni sulle funzionalità di igiene dei dati di Platform, consulta [panoramica sull&#39;igiene dei dati](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

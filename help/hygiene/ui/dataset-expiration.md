@@ -2,14 +2,18 @@
 title: Gestire le scadenze del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
 # Gestire le scadenze dei set di dati
+
+>[!IMPORTANT]
+>
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
 
 La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform consente di pianificare le scadenze per i set di dati. Quando un set di dati raggiunge la sua data di scadenza, il data lake, il servizio Identity e il profilo cliente in tempo reale iniziano processi separati per rimuovere il contenuto del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come completa.
 
