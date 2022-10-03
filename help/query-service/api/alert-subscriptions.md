@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;avviso;
 title: Endpoint API per sottoscrizioni di avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint delle sottoscrizioni di avvisi con l’API del servizio query.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Risposta**
 
-Una risposta corretta restituisce uno stato HTML pari a 200 e tutti gli avvisi sottoscritti. Questo include l&#39;ID dell&#39;avviso, il tipo di avviso, gli ID e-mail registrati dell&#39;Adobe dell&#39;utente e il relativo canale di notifica preferito.
+Una risposta corretta restituisce uno stato HTTP pari a 200 e tutti gli avvisi sottoscritti. Questo include l&#39;ID dell&#39;avviso, il tipo di avviso, gli ID e-mail registrati dell&#39;Adobe dell&#39;utente e il relativo canale di notifica preferito.
 
 ```json
 {
