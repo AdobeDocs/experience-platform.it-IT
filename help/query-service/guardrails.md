@@ -2,10 +2,11 @@
 keywords: Experience Platform;query;servizio query;risoluzione dei problemi;protezioni;linee guida;limite;
 title: Guardrail per il servizio query
 description: Questo documento fornisce informazioni sui limiti di utilizzo dei dati del servizio query per facilitare l’ottimizzazione dell’utilizzo della query.
-source-git-commit: 8ae8efae04e299302cca42f9c92827d374883cd9
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 4%
+source-wordcount: '765'
+ht-degree: 3%
 
 ---
 
@@ -22,6 +23,10 @@ Prima di continuare con questo documento, è necessario avere una buona conoscen
 * **Query ad hoc**: Per l&#39;esecuzione `SELECT` query per esplorare, sperimentare e convalidare i dati in cui i risultati delle query **non sono memorizzati** sul lago dati.
 
 * **Query batch**: Per l&#39;esecuzione `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` query per pulire, modellare, manipolare e arricchire i dati. I risultati di queste query **sono memorizzati** sul lago dati. La metrica per la misurazione del consumo di questa funzionalità è ore di calcolo.
+
+>[!IMPORTANT]
+>
+>Per garantire che ogni query per un dashboard di Real-time Customer Data Platform insights disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando spazi di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee e quindi quattro slot di query simultanee sono disponibili in un dato momento. Le query vengono inserite in una coda basata sugli slot di concorrenza, quindi attendono in coda finché non sono disponibili slot di concorrenza sufficienti.
 
 L’illustrazione seguente riepiloga il modo in cui le funzionalità di Query Service vengono attualmente imballate e concesse in licenza:
 
