@@ -3,14 +3,14 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;prot
 title: Guardrail per il servizio query
 description: Questo documento fornisce informazioni sui limiti di utilizzo dei dati del servizio query per facilitare l’ottimizzazione dell’utilizzo della query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 3%
 
 ---
 
-# Guardrail per i dati del servizio query
+# Guardrail per il servizio query
 
 Le guardrail sono soglie che forniscono indicazioni sull’utilizzo dei dati e del sistema, sull’ottimizzazione delle prestazioni e sull’eliminazione di errori o risultati imprevisti in Adobe Experience Platform.
 
@@ -23,10 +23,6 @@ Prima di continuare con questo documento, è necessario avere una buona conoscen
 * **Query ad hoc**: Per l&#39;esecuzione `SELECT` query per esplorare, sperimentare e convalidare i dati in cui i risultati delle query **non sono memorizzati** sul lago dati.
 
 * **Query batch**: Per l&#39;esecuzione `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` query per pulire, modellare, manipolare e arricchire i dati. I risultati di queste query **sono memorizzati** sul lago dati. La metrica per la misurazione del consumo di questa funzionalità è ore di calcolo.
-
->[!IMPORTANT]
->
->Per garantire che ogni query per un dashboard di Real-time Customer Data Platform insights disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando spazi di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee e quindi quattro slot di query simultanee sono disponibili in un dato momento. Le query vengono inserite in una coda basata sugli slot di concorrenza, quindi attendono in coda finché non sono disponibili slot di concorrenza sufficienti.
 
 L’illustrazione seguente riepiloga il modo in cui le funzionalità di Query Service vengono attualmente imballate e concesse in licenza:
 
@@ -71,6 +67,8 @@ Le tabelle riportate di seguito forniscono i limiti e le descrizioni consigliati
 | Risultati restituiti tramite | Set di dati | N/D | Definisce come i risultati vengono resi disponibili agli utenti. |
 
 {style=&quot;table-layout:auto&quot;}
+
+Per garantire che ogni query per un dashboard di Real-time Customer Data Platform insights disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando spazi di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee e quindi quattro slot di query simultanee sono disponibili in un dato momento. Le query vengono inserite in una coda basata sugli slot di concorrenza, quindi attendono in coda finché non sono disponibili slot di concorrenza sufficienti.
 
 ## Passaggi successivi
 
