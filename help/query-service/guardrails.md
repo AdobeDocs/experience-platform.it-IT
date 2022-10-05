@@ -3,9 +3,9 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;prot
 title: Guardrail per il servizio query
 description: Questo documento fornisce informazioni sui limiti di utilizzo dei dati del servizio query per facilitare l’ottimizzazione dell’utilizzo della query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,8 @@ Le tabelle riportate di seguito forniscono i limiti e le descrizioni consigliati
 | Risultati restituiti tramite | Set di dati | N/D | Definisce come i risultati vengono resi disponibili agli utenti. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Informazioni sulle dashboard generate con le query {#dashboard-insights}
 
 Per garantire che ogni query per un dashboard di Real-time Customer Data Platform insights disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando spazi di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee e quindi quattro slot di query simultanee sono disponibili in un dato momento. Le query vengono inserite in una coda basata sugli slot di concorrenza, quindi attendono in coda finché non sono disponibili slot di concorrenza sufficienti.
 
