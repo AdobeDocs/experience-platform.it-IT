@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketi Engage è l’unica soluzione end-to-end per la gestione dell’esperienza dei clienti (CXM) per il marketing, la pubblicità, l’analisi e il commercio. Ti consente di automatizzare e gestire le attività dalla gestione dei lead CRM e il coinvolgimento dei clienti fino all’attribuzione di marketing e ricavi basata sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -75,9 +75,15 @@ Per istruzioni dettagliate su come impostare la destinazione e attivare i segmen
 
 Il video seguente illustra anche i passaggi per configurare una destinazione Marketo e attivare i segmenti.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->L&#39;interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per le informazioni più aggiornate, consulta la guida riportata sopra.
+>Il video non riflette completamente la capacità corrente. Per le informazioni più aggiornate, consulta la guida riportata sopra. Le seguenti parti del video sono obsolete:
+> 
+>* La scheda di destinazione da utilizzare nell’interfaccia utente di Experience Platform è **[!UICONTROL Marketo V2]**.
+>* Il video non mostra il nuovo **[!UICONTROL Creazione di persone]** campo selettore nel flusso di lavoro di connessione alla destinazione.
+>* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo oltre alle informazioni sull’appartenenza al segmento supportate al momento della registrazione del video. Puoi anche esportare i membri dei segmenti in Marketo che non esistono ancora negli elenchi statici di Marketo e questi verranno aggiunti agli elenchi.
+>* In **[!UICONTROL Fase di pianificazione del segmento]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente un **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più necessario in Marketo V2.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
