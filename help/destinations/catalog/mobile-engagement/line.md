@@ -2,10 +2,10 @@
 keywords: mobile;destinazioni di coinvolgimento mobile;LINE;LINE;destinazione di coinvolgimento mobile LINE
 title: Collegamento LINE
 description: La destinazione LINE ti consente di aggiungere profili al segmento Platform e di fornire esperienze personalizzate agli utenti collegati.
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1183'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,10 @@ Prendi nota dei seguenti prerequisiti in [!DNL LINE], per esportare i dati da Pl
 
 #### Devi avere un [!DNL LINE] account {#prerequisites-account}
 
-Vai a [!DNL LINE] [iscrizione](https://account.line.biz/signup) per registrare e creare un account, se non ne hai già uno.
+È necessario registrarsi e creare un [!DNL LINE] se non ne hai già uno. Per creare un account:
+
+1. Passa a [!DNL LINE] [accesso account](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) page
+2. Seleziona **[!UICONTROL Creare un account]**.
 
 #### Raccogli [!DNL LINE channel access token (long-lived)] dal [!DNL LINE] console per sviluppatori {#gather-credentials}
 
