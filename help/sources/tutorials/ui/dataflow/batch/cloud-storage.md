@@ -1,56 +1,61 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;flusso di dati;Flusso di dati
-solution: Experience Platform
-title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell’interfaccia utente
-topic-legacy: overview
-type: Tutorial
-description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
+title: Configurare un flusso di dati per l’acquisizione di dati in batch da un’origine di archiviazione cloud nell’interfaccia utente
+description: Questa esercitazione fornisce passaggi su come configurare un nuovo flusso di dati per l’acquisizione di dati batch da un’origine di archiviazione cloud nell’interfaccia utente
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
+source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '1795'
 ht-degree: 0%
 
 ---
 
-# Configurare un flusso di dati per una connessione batch di archiviazione cloud nell’interfaccia utente
+# Configurare un flusso di dati per l’acquisizione di dati batch da un’origine di archiviazione cloud nell’interfaccia utente
 
-Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account di archiviazione cloud.
+Questa esercitazione fornisce passaggi su come configurare un flusso di dati per trasferire i dati batch dall&#39;origine di archiviazione cloud a Adobe Experience Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+>[!NOTE]
+>
+>Per creare un flusso di dati per trasferire dati batch da un archivio cloud, è necessario disporre già dell&#39;accesso a un&#39;origine di archiviazione cloud autenticata. Se non hai accesso, vai alla [panoramica di origini](../../../../home.md#cloud-storage) per un elenco delle origini di archiviazione cloud con cui è possibile creare un account.
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
+Questa esercitazione richiede una comprensione approfondita dei seguenti componenti dell&#39;Experience Platform:
+
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’Editor di schema](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, questa esercitazione richiede l’utilizzo di un account di archiviazione cloud stabilito. Un elenco di esercitazioni per la creazione di diversi account di archiviazione cloud nell’interfaccia utente è disponibile nella sezione [panoramica dei connettori sorgente](../../../../home.md).
-
 ### Formati di file supportati
 
-[!DNL Experience Platform] supporta i seguenti formati di file da acquisire da archivi esterni:
+Le origini di archiviazione cloud per i dati batch supportano i seguenti formati di file per l’acquisizione:
 
 * Valori separati da delimitatore (DSV): Qualsiasi valore a carattere singolo può essere utilizzato come delimitatore per i file di dati in formato DSV.
 * [!DNL JavaScript Object Notation] (JSON): I file di dati in formato JSON devono essere conformi a XDM.
 * [!DNL Apache Parquet]: I file di dati in formato parquet devono essere conformi a XDM.
 * File compressi: I file JSON e delimitati possono essere compressi come segue: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`e `tar`.
 
-## Seleziona dati
+## Aggiungi dati
 
-Dopo aver creato l&#39;account di archiviazione cloud, la **[!UICONTROL Seleziona dati]** viene visualizzato un passaggio che fornisce un&#39;interfaccia per esplorare la gerarchia dei file di archiviazione cloud.
+Dopo aver creato l&#39;account di archiviazione cloud, la **[!UICONTROL Aggiungi dati]** viene visualizzato un passaggio che fornisce un’interfaccia per esplorare la gerarchia dei file di archiviazione cloud e selezionare la cartella o il file specifico che si desidera portare in Platform.
 
-* La parte sinistra dell&#39;interfaccia è un browser delle directory, che visualizza i file e le directory di archiviazione cloud.
-* La parte destra dell’interfaccia ti consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
+* La parte sinistra dell&#39;interfaccia è un browser delle directory, che mostra la gerarchia dei file di archiviazione cloud.
+* La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da una cartella o un file compatibile.
 
-![interfaccia](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/select-data.png)
 
-Selezionando una cartella elencata è possibile scorrere la gerarchia delle cartelle in cartelle più profonde. È possibile selezionare una singola cartella per acquisire tutti i file presenti nella cartella in modo ricorsivo. Quando si acquisisce un&#39;intera cartella, è necessario assicurarsi che tutti i file presenti nella cartella condividano lo stesso schema.
+Selezionare la cartella principale per accedere alla gerarchia delle cartelle. Da qui puoi selezionare una singola cartella per acquisire tutti i file della cartella in modo ricorsivo. Quando si acquisisce un&#39;intera cartella, è necessario assicurarsi che tutti i file presenti in tale cartella condividano lo stesso formato e lo stesso schema di dati.
 
-Dopo aver selezionato un file o una cartella compatibile, selezionare il formato di dati corrispondente dal [!UICONTROL Selezionare il formato dati] menu a discesa.
+![](../../../../images/tutorials/dataflow/cloud-batch/folder-directory.png)
 
-Nella tabella seguente viene visualizzato il formato dati appropriato per i tipi di file supportati:
+Dopo aver selezionato una cartella, l’interfaccia corretta viene aggiornata a un’anteprima del contenuto e della struttura del primo file nella cartella selezionata.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/select-folder.png)
+
+Durante questo passaggio, puoi effettuare diverse configurazioni ai tuoi dati, prima di procedere. Per prima cosa, seleziona **[!UICONTROL Formato dati]** quindi seleziona il formato dati appropriato per il file nel pannello a discesa che viene visualizzato.
+
+Nella tabella seguente sono visualizzati i formati di dati appropriati per i tipi di file supportati:
 
 | Tipo di file | Formato dati |
 | --- | --- |
@@ -58,144 +63,110 @@ Nella tabella seguente viene visualizzato il formato dati appropriato per i tipi
 | JSON | [!UICONTROL JSON] |
 | Parquet | [!UICONTROL Parquet XDM] |
 
-Seleziona **[!UICONTROL JSON]** e attendi alcuni secondi per la compilazione dell&#39;interfaccia di anteprima.
+![](../../../../images/tutorials/dataflow/cloud-batch/data-format.png)
 
-![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+### Selezionare un delimitatore di colonna
 
->[!NOTE]
->
->A differenza dei tipi di file delimitati e JSON, i file in formato Parquet non sono disponibili per l’anteprima.
+Dopo aver configurato il formato dei dati, è possibile impostare un delimitatore di colonna durante l’acquisizione di file delimitati. Seleziona la **[!UICONTROL Delimitatore]** quindi selezionate un delimitatore dal menu a discesa. Nel menu vengono visualizzate le opzioni più utilizzate per i delimitatori, inclusa una virgola (`,`), una scheda (`\t`) e una tubazione (`|`).
 
-L’interfaccia di anteprima ti consente di esaminare il contenuto e la struttura di un file. Per impostazione predefinita, l’interfaccia di anteprima visualizza il primo file nella cartella selezionata.
+![](../../../../images/tutorials/dataflow/cloud-batch/delimiter.png)
 
-Per visualizzare un’anteprima di un file diverso, seleziona l’icona di anteprima accanto al nome del file da esaminare.
+Se preferisci utilizzare un delimitatore personalizzato, seleziona **[!UICONTROL Personalizzato]** e immetti un delimitatore a carattere singolo nella barra di input a comparsa.
 
-![anteprima predefinita](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
-
-Dopo aver esaminato il contenuto e la struttura dei file nella cartella, seleziona **[!UICONTROL Successivo]** per acquisire tutti i file nella cartella in modo ricorsivo.
-
-![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
-
-Se preferisci selezionare un file specifico, seleziona il file da acquisire e quindi seleziona **[!UICONTROL Successivo]**.
-
-![file di selezione](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
-
-### Impostare un delimitatore personalizzato per i file delimitati
-
-È possibile impostare un delimitatore personalizzato durante l’acquisizione di file delimitati. Seleziona la **[!UICONTROL Delimitatore]** quindi selezionate un delimitatore dal menu a discesa. Nel menu vengono visualizzate le opzioni più utilizzate per i delimitatori, inclusa una virgola (`,`), una scheda (`\t`) e una tubazione (`|`). Se preferisci utilizzare un delimitatore personalizzato, seleziona **[!UICONTROL Personalizzato]** e immetti un delimitatore a carattere singolo nella barra di input a comparsa.
-
-Dopo aver selezionato il formato dati e impostato il delimitatore, seleziona **[!UICONTROL Successivo]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
 ### Inserire file compressi
 
-È possibile acquisire file JSON compressi o delimitati specificandone il tipo di compressione.
+È inoltre possibile acquisire file JSON compressi o delimitati specificandone il tipo di compressione.
 
 In [!UICONTROL Seleziona dati] seleziona un file compresso da acquisire, quindi seleziona il tipo di file appropriato e se è conforme o meno a XDM. Quindi, seleziona **[!UICONTROL Tipo di compressione]** quindi selezionare il tipo di file compresso appropriato per i dati di origine.
 
-Con un tipo di file compresso identificato, selezionare **[!UICONTROL Successivo]** per procedere.
+![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
+Per portare un file specifico in Platform, seleziona una cartella e quindi il file da acquisire. Durante questo passaggio, puoi anche visualizzare in anteprima il contenuto di altri file all’interno di una determinata cartella utilizzando l’icona di anteprima accanto al nome di un file.
+
+Al termine, seleziona **[!UICONTROL Successivo]**.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/select-file.png)
+
+## Fornire i dettagli del flusso di dati
+
+La [!UICONTROL Dettaglio flusso di dati] consente di selezionare se si desidera utilizzare un set di dati esistente o un nuovo set di dati. Durante questo processo puoi anche configurare i dati da acquisire in Profilo e abilitare impostazioni come [!UICONTROL Diagnostica degli errori], [!UICONTROL Acquisizione parziale]e [!UICONTROL Avvisi].
+
+![](../../../../images/tutorials/dataflow/cloud-batch/dataflow-detail.png)
+
+### Utilizzare un set di dati esistente
+
+Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Set di dati esistente]**. Puoi recuperare un set di dati esistente utilizzando [!UICONTROL Ricerca avanzata] o scorrendo l’elenco dei set di dati esistenti nel menu a discesa. Dopo aver selezionato un set di dati, fornisci un nome e una descrizione per il flusso di dati.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/existing.png)
+
+### Utilizzare un nuovo set di dati
+
+Per acquisire in un nuovo set di dati, seleziona **[!UICONTROL Nuovo set di dati]** e quindi fornisci il nome di un set di dati di output e una descrizione facoltativa. Quindi, seleziona uno schema a cui eseguire il mapping utilizzando [!UICONTROL Ricerca avanzata] oppure scorrendo l’elenco degli schemi esistenti nel menu a discesa. Dopo aver selezionato uno schema, fornisci un nome e una descrizione per il flusso di dati.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/new.png)
+
+### Abilita diagnostica profili ed errori
+
+Quindi, seleziona la **[!UICONTROL Set di dati del profilo]** attiva per abilitare il set di dati per Profilo. Ciò ti consente di creare una visualizzazione olistica degli attributi e dei comportamenti di un’entità. I dati di tutti i set di dati abilitati per il profilo verranno inclusi in Profilo e le modifiche verranno applicate al momento del salvataggio del flusso di dati.
+
+[!UICONTROL Diagnostica degli errori] consente la generazione dettagliata dei messaggi di errore per tutti i record errati che si verificano nel flusso di dati, mentre [!UICONTROL Acquisizione parziale] consente di acquisire dati contenenti errori, fino a una determinata soglia definita manualmente. Consulta la sezione [panoramica dell’acquisizione parziale in batch](../../../../../ingestion/batch-ingestion/partial.md) per ulteriori informazioni.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/ingestion-configs.png)
+
+### Abilitare gli avvisi
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sorgente tramite l’interfaccia utente](../../alerts.md).
+
+Al termine della fornitura dei dettagli al flusso di dati, seleziona **[!UICONTROL Successivo]**.
+
+![](../../../../images/tutorials/dataflow/cloud-batch/alerts.png)
 
 ## Mappatura di campi dati su uno schema XDM
 
-La **[!UICONTROL Mappatura]** viene visualizzato un passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine su un [!DNL Platform] set di dati. I file di origine formattati in Parquet devono essere conformi a XDM e non richiedono la configurazione manuale della mappatura, mentre i file CSV richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare. I file JSON, se contrassegnati come reclamo XDM, non richiedono la configurazione manuale. Tuttavia, se non è contrassegnato come conforme a XDM, sarà necessario configurare esplicitamente la mappatura.
+La [!UICONTROL Mappatura] viene visualizzato un passaggio che fornisce un&#39;interfaccia per mappare i campi di origine dallo schema di origine ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Scegli un set di dati in entrata in cui acquisire i dati. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
+Platform fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per i passaggi completi sull’utilizzo dell’interfaccia di mappatura e dei campi calcolati, consulta la sezione [Guida all’interfaccia utente della preparazione dei dati](../../../../../data-prep/ui/mapping.md).
 
-**Utilizzare un set di dati esistente**
+Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Successivo]**.
 
-Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Set di dati esistente]**, quindi seleziona l’icona del set di dati .
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
-
-La **[!UICONTROL Seleziona set di dati]** viene visualizzata la finestra di dialogo . Trova il set di dati che desideri utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continua]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
-
-**Utilizzare un nuovo set di dati**
-
-Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Nuovo set di dati]** e immetti un nome e una descrizione per il set di dati nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella **[!UICONTROL Seleziona schema]** finestra di dialogo. In alternativa, puoi selezionare la **[!UICONTROL Ricerca avanzata schema]** per cercare uno schema appropriato.
-
-Durante questo passaggio, puoi abilitare il set di dati per [!DNL Real-time Customer Profile] e crea una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche vengono applicate al salvataggio del flusso di dati.
-
-Attiva/disattiva la **[!UICONTROL Set di dati del profilo]** per abilitare il set di dati di destinazione per [!DNL Profile].
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
-
-La **[!UICONTROL Seleziona schema]** viene visualizzata la finestra di dialogo . Seleziona lo schema da applicare al nuovo set di dati, quindi seleziona **[!UICONTROL Fine]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
-
-In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare le funzioni di preparazione dei dati per trasformare i dati di origine in valori calcolati o calcolati. Per i passaggi completi sull’utilizzo dell’interfaccia di mappatura e dei campi calcolati, consulta la sezione [Guida all’interfaccia utente della preparazione dei dati](../../../../../data-prep/ui/mapping.md).
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
-
-Per i file JSON, oltre a mappare direttamente i campi su altri campi, è possibile mappare direttamente gli oggetti su altri oggetti e array su altri array. È inoltre possibile visualizzare in anteprima e mappare tipi di dati complessi, ad esempio gli array in file JSON, utilizzando un connettore di origine dell&#39;archiviazione cloud.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
-
-Non è possibile eseguire la mappatura tra tipi diversi. Ad esempio, non è possibile associare un oggetto a una matrice o un campo a un oggetto.
-
->[!TIP]
->
->Platform fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
-
-Seleziona **[!UICONTROL Anteprima dati]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
-
-Durante l’anteprima, la colonna Identity ha la priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per la convalida dei risultati della mappatura.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
-
-Una volta mappati i dati di origine, seleziona **[!UICONTROL Chiudi]**.
+![](../../../../images/tutorials/dataflow/cloud-batch/mapping.png)
 
 ## Pianifica esecuzioni di acquisizione
 
-La **[!UICONTROL Pianificazione]** viene visualizzato un passaggio che consente di configurare una pianificazione dell’acquisizione per l’acquisizione automatica dei dati di origine selezionati utilizzando le mappature configurate. La tabella seguente illustra i diversi campi configurabili per la pianificazione:
+>[!IMPORTANT]
+>
+>Si consiglia vivamente di pianificare il flusso di dati per l’inserimento una tantum quando si utilizza il [Origine FTP](../../../../connectors/cloud-storage/ftp.md).
+
+La [!UICONTROL Pianificazione] viene visualizzato un passaggio che consente di configurare una pianificazione dell’acquisizione per l’acquisizione automatica dei dati di origine selezionati utilizzando le mappature configurate. Per impostazione predefinita, la pianificazione è impostata su `Once`. Per regolare la frequenza di acquisizione, seleziona **[!UICONTROL Frequenza]** quindi selezionate un&#39;opzione dal menu a discesa.
+
+>[!TIP]
+>
+>L’intervallo e il backfill non sono visibili durante un’acquisizione una tantum.
+
+![programmazione](../../../../images/tutorials/dataflow/cloud-batch/scheduling.png)
+
+Se imposti la frequenza di acquisizione su `Minute`, `Hour`, `Day`oppure `Week`, quindi devi impostare un intervallo per stabilire un intervallo di tempo impostato tra ogni acquisizione. Ad esempio, una frequenza di acquisizione impostata su `Day` e un intervallo impostato su `15` significa che il flusso di dati è pianificato per l’acquisizione dei dati ogni 15 giorni.
+
+Durante questo passaggio, puoi anche abilitare **backfill** e definire una colonna per l’assimilazione incrementale dei dati. Il backfill viene utilizzato per acquisire i dati storici, mentre la colonna definita per l’acquisizione incrementale consente di differenziare i nuovi dati dai dati esistenti.
+
+Vedi la tabella seguente per ulteriori informazioni sulle configurazioni di pianificazione.
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
-| Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima acquisizione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è attivato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se **[!UICONTROL Backfill]** è disabilitato, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non vengono acquisiti. |
-
-I flussi di dati sono progettati per acquisire automaticamente i dati su base pianificata. Inizia selezionando la frequenza di acquisizione. Quindi, impostare l&#39;intervallo per indicare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
-
-Per impostare l’ora di inizio per l’acquisizione, regola la data e l’ora visualizzate nella casella dell’ora di inizio. In alternativa, puoi selezionare l’icona del calendario per modificare il valore dell’ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora corrente in UTC.
-
-Specifica i valori per la pianificazione e seleziona **[!UICONTROL Successivo]**.
+| Frequenza | Frequenza con cui avviene un’acquisizione. Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
+| Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima acquisizione. L’ora di inizio deve essere maggiore o uguale all’ora UTC corrente. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se il backfill è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se il backfill è disabilitato, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non vengono acquisiti. |
 
 >[!NOTE]
 >
 >Per l’acquisizione batch, ogni flusso di dati successivo seleziona i file da acquisire dalla sorgente in base ai relativi **ultima modifica** timestamp. Ciò significa che i flussi di dati batch selezionano i file dall&#39;origine nuovi o modificati dall&#39;ultima esecuzione del flusso. Inoltre, è necessario assicurarsi che vi sia un intervallo di tempo sufficiente tra il caricamento dei file e un&#39;esecuzione di flusso pianificato, perché i file che non sono completamente caricati sul tuo account di archiviazione cloud prima che il tempo di esecuzione del flusso pianificato potrebbe non essere raccolto per l&#39;acquisizione.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
+Al termine della configurazione della pianificazione dell’acquisizione, seleziona **[!UICONTROL Successivo]**.
 
-### Configurare un flusso di dati di acquisizione una tantum
-
-Per impostare l’acquisizione una tantum, seleziona la freccia a discesa della frequenza e seleziona **[!UICONTROL Una volta]**. Puoi continuare a apportare modifiche a un set di flussi di dati per un’acquisizione di frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’orario di inizio, il valore della frequenza una tantum non può più essere modificato. **[!UICONTROL Intervallo]** e **[!UICONTROL Backfill]** non sono visibili quando si imposta un flusso di dati di acquisizione una tantum.
-
->[!IMPORTANT]
->
->Si consiglia vivamente di pianificare il flusso di dati per l’inserimento una tantum quando si utilizza il [Connettore FTP](../../../../connectors/cloud-storage/ftp.md).
-
-Dopo aver fornito i valori appropriati alla pianificazione, seleziona **[!UICONTROL Successivo]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
-
-## Fornire i dettagli del flusso di dati
-
-La **[!UICONTROL Dettaglio flusso di dati]** viene visualizzato un passaggio che ti consente di assegnare un nome e una breve descrizione del nuovo flusso di dati.
-
-Durante questo processo, puoi anche abilitare **[!UICONTROL Acquisizione parziale]** e **[!UICONTROL Diagnostica degli errori]**. Abilitazione **[!UICONTROL Acquisizione parziale]** consente di acquisire dati contenenti errori, fino a una determinata soglia che è possibile impostare. Abilitazione **[!UICONTROL Diagnostica degli errori]** fornirà dettagli su eventuali dati errati che vengono forniti separatamente in batch. Per ulteriori informazioni, consulta la sezione [panoramica dell’acquisizione parziale in batch](../../../../../ingestion/batch-ingestion/partial.md).
-
-Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Successivo]**.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/scheduling-configs.png)
 
 ## Controlla il tuo flusso di dati
 
@@ -207,15 +178,8 @@ La **[!UICONTROL Revisione]** viene visualizzato un passaggio che consente di ri
 
 Dopo aver esaminato il flusso di dati, fai clic su **[!UICONTROL Fine]** e lascia un certo tempo per la creazione del flusso di dati.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
+![](../../../../images/tutorials/dataflow/cloud-batch/review.png)
 
-## Monitorare il flusso di dati
-
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sui tassi di acquisizione, sul successo e sugli errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione su [monitoraggio di account e flussi di dati nell’interfaccia utente](../../monitor.md).
-
-## Elimina il flusso di dati
-
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo errato utilizzando **[!UICONTROL Elimina]** funzione disponibile nella **[!UICONTROL Flussi di dati]** workspace. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione su [eliminazione dei flussi di dati nell’interfaccia utente](../../delete.md).
 
 ## Passaggi successivi
 
@@ -234,18 +198,14 @@ Seguendo questa esercitazione, hai creato correttamente un flusso di dati per in
 
 Le sezioni seguenti forniscono informazioni aggiuntive per l’utilizzo dei connettori sorgente.
 
-### Disattiva un flusso di dati
+## Monitorare il flusso di dati
 
-Quando un flusso di dati viene creato, diventa immediatamente attivo e acquisisce i dati in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sui tassi di acquisizione, sul successo e sugli errori. Per ulteriori informazioni su come monitorare il flusso di dati, visita l’esercitazione su [monitoraggio di account e flussi di dati nell’interfaccia utente](../../monitor.md).
 
-All&#39;interno di **[!UICONTROL Origini]** area di lavoro, fai clic su **[!UICONTROL Sfoglia]** scheda . Quindi, fai clic sul nome dell&#39;account associato al flusso di dati attivo che desideri disattivare.
+## Aggiornare il flusso di dati
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
+Per aggiornare le configurazioni per la pianificazione, la mappatura e le informazioni generali dei flussi di dati, visita l’esercitazione su [aggiornamento dei flussi di dati di origini nell’interfaccia utente](../../update-dataflows.md)
 
-La **[!UICONTROL Attività di origine]** viene visualizzata la pagina . Seleziona il flusso di dati attivo dall’elenco per aprirlo. **[!UICONTROL Proprietà]** sul lato destro dello schermo, che contiene un **[!UICONTROL Abilitato]** pulsante di attivazione/disattivazione. Fai clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+## Elimina il flusso di dati
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
-
-### Attiva dati in entrata per [!DNL Profile] popolazione
-
-I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e popolare il tuo [!DNL Real-time Customer Profile] dati. Per ulteriori informazioni sulla compilazione dei [!DNL Real-time Customer Profile] data, consulta l’esercitazione su [Popolazione del profilo](../../profile.md).
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo errato utilizzando **[!UICONTROL Elimina]** funzione disponibile nella **[!UICONTROL Flussi di dati]** workspace. Per ulteriori informazioni su come eliminare i flussi di dati, visita l’esercitazione su [eliminazione dei flussi di dati nell’interfaccia utente](../../delete.md).
