@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;protezioni;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Questo documento fornisce indicazioni sulle protezioni per l’inserimento dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
+source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,7 @@ Nella tabella seguente sono illustrate le protezioni da considerare quando si ut
 | Acquisizione da data lake tramite l’API di acquisizione batch | <ul><li>Puoi acquisire fino a 20 GB di dati all’ora in un data lake utilizzando l’API di acquisizione batch.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione massima del batch è 100 GB.</li><li>Il numero massimo di proprietà o campi per riga è 10000.</li><li>Il numero massimo di batch al minuto per utente è 138.</li></ul> |
 | Assimilazione di data lake utilizzando origini batch | <ul><li>È possibile acquisire fino a 200 GB di dati all’ora in un data lake utilizzando origini di acquisizione batch come [!DNL Azure Blob], [!DNL Amazon S3]e [!DNL SFTP].</li><li>Le dimensioni di un batch devono essere comprese tra 256 MB e 100 GB.</li><li>Il numero massimo di file per batch è 1500.</li></ul> | Consulta la sezione [panoramica di origini](../sources/home.md) per un catalogo di origini da utilizzare per l’inserimento dei dati. |
 | Acquisizione batch nel profilo | <ul><li>È possibile acquisire fino a 120 GB di dati all’ora.</li><li>La dimensione massima di una classe di record è 100 KB (soft).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (soft).</li><li>La dimensione massima di un singolo record è 1 MB.</li></ul> |
+| Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. | Questo è un limite morbido. È possibile superare un limite soft, tuttavia, i limiti soft forniscono una linea guida consigliata per le prestazioni del sistema. |
 
 ## Guardrail per l’acquisizione in streaming
 
