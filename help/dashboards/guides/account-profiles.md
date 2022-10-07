@@ -2,9 +2,9 @@
 title: Guida al dashboard dei profili account
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sui profili account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 * [Conti totali per branca di attività economica](#total-accounts-by-industry)
 * [Profili account aggiunti](#account-profiles-added)
+* [Distribuzione del punteggio predittivo](#predictive-scoring-distribution)
+* [Fattori più influenti del punteggio predittivo](#predictive-scoring-top-influential-factors)
 
 ### Conti totali per branca di attività economica {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Questo widget utilizza un grafico a barre con codici a colori per illustrare il 
 
 ![I profili account hanno aggiunto un widget.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Distribuzione del punteggio predittivo {#predictive-scoring-distribution}
+
+La [!UICONTROL Distribuzione del punteggio predittivo] widget mostra la distribuzione del punteggio di tutti i profili account per aiutarti a comprendere lo stato di salute della pipeline di vendita. I dati del punteggio vengono trasmessi tramite un grafico a tendina e un grafico a colonne.
+
+Il grafico ad anello illustra la proporzione dei profili totali del tuo account in ciascuna delle propensione elevata, media e bassa per l&#39;acquisto di secchi. La chiave fornisce ulteriori dettagli sulle sezioni con codice a colori, compresi gli intervalli del bucket di punteggio e il numero di profili account in tale intervallo.
+
+Il grafico a colonne fornisce un raggruppamento del punteggio più granulare. Ogni colonna mostra il numero di profili di account in ciascuno dei 20 bucket con incremento di cinque punti.
+
+Il menu a discesa all’interno del widget consente di selezionare il modello di punteggio dell’account.
+
+![Il widget di distribuzione del punteggio predittivo.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Fattori più influenti del punteggio predittivo {#predictive-scoring-top-influential-factors}
+
+La [!UICONTROL Fattori più influenti del punteggio predittivo] widget ti aiuta a capire i fattori più significativi che guidano i punteggi per ogni bucket di propensione.
+
+Questo widget mostra i principali fattori influenti per ciascuno dei bucket di propensione alta, media e bassa. Una barra per ogni fattore influente indica la percentuale dei profili di conto in quel periodo di tempo che contiene il fattore di influsso specifico.
+
+Il menu a discesa all’interno del widget consente di selezionare il modello di punteggio dell’account.
+
+![Il widget di fattori influenti del punteggio predittivo.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Passaggi successivi
 
-Seguendo questo documento è ora possibile individuare il [!UICONTROL Profili account] dashboard. È inoltre necessario comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei profili account come parte dei dati B2B nell’interfaccia utente di Experience Platform, consulta la sezione [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, B2B Edition.
+Seguendo questo documento, ora dovresti sapere come individuare il [!UICONTROL Profili account] dashboard. È inoltre necessario comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei profili account come parte dei dati B2B nell’interfaccia utente di Experience Platform, consulta la sezione [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, B2B Edition.
