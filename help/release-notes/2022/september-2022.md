@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2926'
 ht-degree: 5%
 
 ---
@@ -215,10 +215,12 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 
 | Funzione | Descrizione |
 | --- | --- |
-| API di abbonamento agli avvisi | Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). Consulta la sezione [documentazione sugli avvisi di query](../../query-service/api/alert-subscriptions.md) per saperne di più. |
+| API di abbonamento agli avvisi | Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | Esempi di set di dati | Gli esempi di set di dati del servizio query consentono di eseguire query esplorative su grandi dati con tempi di elaborazione notevolmente ridotti a costo di precisione della query. Consulta la sezione [guida a esempi di set di dati](../../query-service/sql/dataset-samples.md) per saperne di più. |
 
 Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Origini {#sources}
 

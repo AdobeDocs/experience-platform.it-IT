@@ -2,7 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;avviso;
 title: Endpoint API per sottoscrizioni di avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint delle sottoscrizioni di avvisi con l’API del servizio query.
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
