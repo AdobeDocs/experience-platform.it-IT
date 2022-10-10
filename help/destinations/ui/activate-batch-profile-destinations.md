@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2626'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,12 @@ Per le destinazioni basate su profili, devi selezionare gli attributi di profilo
 >[!NOTE]
 >
 > Adobe Experience Platform precompila la selezione con quattro attributi consigliati e di uso comune dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+>[!IMPORTANT]
+>
+>A causa di una limitazione nota, al momento non è possibile utilizzare il **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.status` nel campo schema, come illustrato di seguito.
+>
+>![Registrazione su schermo che mostra la soluzione per l’appartenenza al segmento nella fase di mappatura del flusso di lavoro di attivazione.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.status` è selezionato:
 * Se la `segmentMembership.status` campo selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
