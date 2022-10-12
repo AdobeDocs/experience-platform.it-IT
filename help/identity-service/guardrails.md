@@ -3,10 +3,10 @@ keywords: Experience Platform;identità;servizio di identità;risoluzione dei pr
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tasso per i dati del servizio Identity per facilitare l’uso ottimale del grafico di identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
+source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 3%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -45,6 +45,10 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 | --- | --- | --- |
 | ECID | <ul><li>Il valore di identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore di identità di un ECID deve essere costituito solo da numeri.</li></ul> | <ul><li>Se il valore di identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità di ECID contiene caratteri non numerici, il record viene ignorato.</li></ul> |
 | Non ECID | Il valore di identità non può superare i 1024 caratteri. | Se il valore di identità supera i 1024 caratteri, il record viene ignorato. |
+
+### Acquisizione dello spazio dei nomi identità
+
+A partire dal 31 gennaio 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene in genere acquisita tramite [Origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l&#39;ECID rappresenta lo stesso browser web. Se desideri modificare questa configurazione predefinita, contatta il tuo account manager.
 
 ## Passaggi successivi
 

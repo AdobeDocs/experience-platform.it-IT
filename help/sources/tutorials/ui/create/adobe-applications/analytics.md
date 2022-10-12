@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2302'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,12 @@ La seguente documentazione fornisce ulteriori risorse sulla preparazione dei dat
 * [Funzioni di mappatura della preparazione dei dati](../../../../../data-prep/functions.md)
 * [Aggiungi campi calcolati](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtro per [!DNL Profile Service] (Beta)
+### Filtro per [!DNL Profile Service] (Beta) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Creare regole di filtro"
+>abstract="Definisci regole di filtro a livello di riga e colonna quando invii dati a Profilo cliente in tempo reale. Utilizza il filtro a livello di riga per applicare condizioni e dettare a quali dati **include per l’acquisizione di profili**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati che desideri **escludi per l’acquisizione di profili**. Le regole di filtro non si applicano ai dati inviati a data lake."
 
 >[!IMPORTANT]
 >

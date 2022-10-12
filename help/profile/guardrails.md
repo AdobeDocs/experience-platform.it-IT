@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -110,6 +110,7 @@ Le protezioni descritte in questa sezione si riferiscono al numero e alla natura
 | Guardrail | Limite | Tipo di limite | Descrizione |
 | --- | --- | --- | --- |
 | Segmenti per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti in totale, purché ci siano meno di 4000 segmenti in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti può influire sulle prestazioni del sistema. |
+| Segmenti edge per sandbox | 150 | Morbido | Un’organizzazione può avere più di 150 segmenti edge in totale, purché vi siano meno di 150 segmenti edge in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti edge può influire sulle prestazioni del sistema. |
 | Segmenti in streaming per sandbox | 500 | Morbido | Un’organizzazione può disporre di più di 500 segmenti di streaming in totale, purché ci siano meno di 500 segmenti di streaming in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti di streaming potrebbe influire sulle prestazioni del sistema. |
 | Segmenti batch per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti batch in totale, purché ci siano meno di 4000 segmenti batch in ogni singolo sandbox. Il tentativo di creare ulteriori segmenti batch può influire sulle prestazioni del sistema. |
 

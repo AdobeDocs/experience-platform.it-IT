@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 84%
+source-wordcount: '408'
+ht-degree: 83%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 84%
       * Plug-in comuni di Analytics {#plugins}
          * [Panoramica](./extensions/web/plugins/overview.md)
          * [Note sulla versione](./extensions/web/plugins/release-notes.md)
+      * Plug-in SDK per web comuni {#web-sdk-plugins}
+         * [Panoramica](./extensions/web/web-sdk-plugins/overview.md)
+         * [Note sulla versione](./extensions/web/web-sdk-plugins/release-notes.md)
       * Core {#core}
          * [Panoramica](./extensions/web/core/overview.md)
          * [Inoltro eventi](./extensions/web/core/event-forwarding.md)

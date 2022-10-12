@@ -3,7 +3,7 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Not
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per Migrazione completa pagina per pagina. Il profilo Adobe Target viene ora mantenuto quando un visitatore si sposta tra le pagine at.js e l’SDK per web.
+* È stato aggiunto il supporto per [Migrazione completa per pagina](home.md#migrating-to-web-sdk). Il profilo Adobe Target viene ora mantenuto quando un visitatore si sposta tra le pagine at.js e l’SDK per web.
 * È stato aggiunto il supporto configurabile per [Hint client entropy high-Agent](fundamentals/user-agent-client-hints.md#high-entropy).
 * È stato aggiunto il supporto per il nuovo `applyResponse` comando. Ciò consente la personalizzazione ibrida tramite la funzione [API server di rete Edge](../server-api/overview.md).
 * I collegamenti in modalità Controllo qualità ora funzionano su più pagine.
