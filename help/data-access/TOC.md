@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Accesso ai dati di Adobe Experience Platform
 breadcrumb-title: Guida all’accesso ai dati
-user-guide-description: Scopri e accedi ai set di dati acquisiti all’interno di Platform.
+user-guide-description: Trova e accedi ai set di dati acquisiti in Experience Platform.
 feature: Data Access
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 56%
+source-wordcount: '38'
+ht-degree: 36%
 
 ---
 

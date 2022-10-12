@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Note sulla versione di Adobe Experience Platform
 breadcrumb-title: Note sulla versione di Platform
-user-guide-description: Note sulla versione mensili per Adobe Experience Platform.
-source-git-commit: e2f0c07716f9e92ea6d15b66ec7e2ed988561cbf
+user-guide-description: Trova le note sulla versione mensili per Adobe Experience Platform.
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 93%
+source-wordcount: '67'
+ht-degree: 82%
 
 ---
 
