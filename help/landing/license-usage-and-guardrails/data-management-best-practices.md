@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licenze;licenze;best practice
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
-description: Questo documento illustra le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
+description: Scopri le best practice e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 2%
+source-wordcount: '2528'
+ht-degree: 1%
 
 ---
 
