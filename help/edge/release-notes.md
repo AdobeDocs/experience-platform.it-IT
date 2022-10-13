@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform Web SDK
-description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
+description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
+source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1388'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 2%
 
 Questo documento illustra le note sulla versione dell’SDK Web per Adobe Experience Platform.
 Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Note sulla versione dell’estensione del tag SDK per web](extension/web-sdk-ext-release-notes.md).
+
+## Versione 2.13.1 - 13 ottobre 2022
+
+* È stato risolto un problema a causa del quale la migrazione dei visitatori non funzionava se window.Visitor era definito dopo la configurazione. Questo è un problema in particolare quando si esegue con i tag di Adobe.
+* È stato risolto un problema in cui `device.screenWidth` e `device.screenHeight` in alcuni ambienti venivano compilati come stringhe.
 
 ## Versione 2.13.0 - 28 settembre 2022
 
