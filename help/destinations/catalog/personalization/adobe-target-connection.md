@@ -3,9 +3,9 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 | Nessun datastream selezionato | Datastream selezionato |
 |---|---|
-| <ul><li>[Segmentazione degli spigoli](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere i segmenti alla connessione Adobe Target solo per la sandbox di produzione.</li><li>Per configurare la personalizzazione di sessione successiva senza utilizzare un ID di datastream, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione dei bordi funziona come previsto.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
+| <ul><li>[Segmentazione degli spigoli](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere segmenti nella connessione Adobe Target solo per *sandbox di produzione predefinita*.</li><li>Per configurare la personalizzazione di sessione successiva senza utilizzare un ID di datastream, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione dei bordi funziona come previsto.</li><li>[Personalizzazione a pagina singola e successiva](../../ui/configure-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
 
 ### Abilitare gli avvisi {#enable-alerts}
 
