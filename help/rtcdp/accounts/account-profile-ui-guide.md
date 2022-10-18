@@ -3,9 +3,9 @@ keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;pr
 title: Guida all’interfaccia utente del profilo account
 description: Utilizzando i profili account, Real-time Customer Data Platform B2B Edition consente di unificare le informazioni account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ Per ulteriori informazioni sulla corrispondenza del lead al conto, consulta [Pan
 
 Per sfogliare i profili di account, inizia selezionando **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra.
 
-![Seleziona profili nella navigazione a sinistra](images/b2b-account-browse.png)
-
 Sulla **[!UICONTROL Sfoglia]** è possibile esplorare i profili account utilizzando un ID account proveniente da un’origine enterprise connessa o immettendo direttamente i dettagli sorgente.
 
 ![Utilizzare l’ID account per esplorare i profili](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Viene aperta la **[!UICONTROL Seleziona origine]** , che consente di selezionare
 
 Per ulteriori informazioni sulla connessione delle origini aziendali, consulta [panoramica di origini](../sources/sources-overview.md).
 
-![Selezionare il flusso di lavoro sorgente](images/b2b-account-select-source.png)
-
 È possibile scegliere un&#39;origine selezionando il pulsante di scelta accanto al nome della connessione, quindi utilizzare **[!UICONTROL Seleziona]** per tornare al [!UICONTROL Sfoglia] scheda .
+
+![Selezionare il flusso di lavoro sorgente](images/b2b-account-select-source.png)
 
 Con un&#39;origine selezionata, è ora necessario immettere un **[!UICONTROL ID account]** relativo all&#39;origine. Ad esempio, la selezione di un’origine Salesforce richiede l’inserimento di un ID account dall’istanza Salesforce per visualizzare il profilo account associato a tale ID.
 
