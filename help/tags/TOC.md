@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 83%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 83%
       * Livello dati Google {#google-data-layer}
          * [Panoramica](./extensions/web/google-data-layer/overview.md)
          * [Note sulla versione](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [Panoramica](./extensions/web/splunk/overview.md)
       * Estensione di tracciamento di video [!DNL YouTube] {#youtube}
          * [Panoramica](./extensions/web/youtube/overview.md)
          * [Note sulla versione](./extensions/web/youtube/release-notes.md)
