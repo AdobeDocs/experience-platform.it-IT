@@ -6,9 +6,9 @@ description: Questo articolo illustra il flusso di lavoro end-to-end per l’att
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,10 @@ L&#39;ID del processo di esportazione del segmento è nel `id` , come illustrato
 ## Passaggio 5: Esegui il processo di attivazione ad hoc {#activation-job}
 
 Adobe Experience Platform esegue processi di segmentazione pianificati una volta ogni 24 ore. L’API di attivazione ad-hoc viene eseguita in base ai risultati di segmentazione più recenti.
+
+>[!IMPORTANT]
+>
+>Osserva il seguente vincolo una tantum: Prima di eseguire un processo di attivazione ad hoc, accertati che siano trascorsi almeno 20 minuti dal momento in cui il segmento è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Platform](#activation-flow).
 
 Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione dei segmenti pianificato per i segmenti sia stato completato. Vedi [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni su come monitorare lo stato dei flussi di attivazione. Ad esempio, se il flusso di dati di attivazione mostra una **[!UICONTROL Elaborazione]** attendi che termini prima di eseguire il processo di attivazione ad-hoc.
 
