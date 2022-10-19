@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Guida alle destinazioni
-user-guide-description: Attiva i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e altro ancora.
+user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 9bab22684005609111538037e95bad1f806ff7c4
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 5%
+source-wordcount: '948'
+ht-degree: 6%
 
 ---
 
@@ -106,6 +106,7 @@ ht-degree: 5%
       * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di archiviazione cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni di gestione delle relazioni con i clienti (CRM) {#crm}
       * [Connessione CRM Salesforce](./catalog/crm/salesforce.md)
+      * [Connessione Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connessione di emergenza](catalog/crm/outreach.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni della Data Management Platform (DMP)](./catalog/data-management/overview.md)
