@@ -5,10 +5,10 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 7%
+source-wordcount: '513'
+ht-degree: 6%
 
 ---
 
@@ -47,6 +47,8 @@ La compressione di queste librerie velocizza la raccolta dei dati e consolida le
 ## Rete e datastreams di Platform Edge {#edge}
 
 Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi configurare [datastreams](../edge/datastreams/overview.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
+
+Inoltre, i datastreams sono integrati con diverse funzionalità di Platform che consentono di garantire che tutti i dati sensibili inviati vengano gestiti in modo appropriato rispetto ai criteri organizzativi e alle normative legali. Vedi la sezione su [gestione dei dati sensibili](../edge/datastreams/overview.md#sensitive) nella documentazione di datastreams per ulteriori informazioni.
 
 ![Datastreams e soluzioni Adobe](./images/home/adobe-solutions.png)
 
