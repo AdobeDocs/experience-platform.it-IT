@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1902'
 ht-degree: 5%
 
 ---
@@ -144,6 +144,4 @@ Quando si riuniscono dati provenienti da più origini, i criteri di unione sono 
 
 ### Set di dati suite di rapporti Adobe Analytics in Platform {#aa-datasets}
 
-Per Profilo deve essere abilitato un massimo di un (1) set di dati della suite di rapporti di Adobe Analytics. Si tratta di un limite soft, il che significa che puoi abilitare più di un set di dati Analytics per il profilo, ma non è consigliato in quanto potrebbe avere conseguenze non intenzionali per i tuoi dati. Ciò è dovuto alle differenze tra gli schemi Experience Data Model (XDM), che forniscono la struttura semantica dei dati in Experience Platform e consentono l’interpretazione uniforme dei dati, e la natura personalizzabile degli eVar e delle variabili di conversione in Adobe Analytics.
-
-Ad esempio, in Adobe Analytics una singola organizzazione può avere più suite di rapporti. Se la suite di rapporti A designa eVar 4 come &quot;termine di ricerca interno&quot; e la suite di rapporti B designa eVar 4 come &quot;dominio di riferimento&quot;, questi valori verranno entrambi acquisiti nello stesso campo in Profilo, causando confusione e degradando la qualità dei dati.
+È possibile abilitare più suite di rapporti per il profilo purché tutti i conflitti di dati siano risolti. Puoi utilizzare la funzionalità Preparazione dati per risolvere i conflitti di dati tra eVar, Elenchi e Prop. Per ulteriori informazioni su come utilizzare la funzionalità di preparazione dei dati, consulta la sezione [Guida all’interfaccia utente del connettore Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
