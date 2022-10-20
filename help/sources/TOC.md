@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
-user-guide-description: Acquisisci dati da diverse sorgenti. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
+user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 

@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # Panoramica dei set di dati
 
-Tutti i dati che vengono correttamente acquisiti in Adobe Experience Platform vengono memorizzati nella variabile [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
+Tutti i dati che vengono correttamente acquisiti in Adobe Experience Platform vengono memorizzati nella variabile [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
 
 Questo documento fornisce una panoramica di alto livello dei set di dati in [!DNL Experience Platform].
 

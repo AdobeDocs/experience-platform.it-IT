@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Documentazione API del server di rete Edge
 breadcrumb-title: Documentazione API del server di rete Edge
-user-guide-description: Utilizza l’API server di rete Edge per i casi d’uso di raccolta dati, personalizzazione, pubblicità e marketing con i servizi Experience Cloud o Experience Platform Edge.
+user-guide-description: Utilizza l’API del server di rete Edge per i casi d’uso di raccolta dati, personalizzazione, pubblicità e marketing con i servizi Experience Cloud o Experience Platform Edge.
 feature: Data Collection
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 25%
+ht-degree: 52%
 
 ---
 

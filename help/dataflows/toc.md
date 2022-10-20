@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guida ai flussi di dati
-user-guide-description: Scopri i flussi di dati e come configurarli tra diversi servizi.
+user-guide-description: Scopri i flussi di dati e come configurarli per i diversi servizi.
 feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 4%
+ht-degree: 22%
 
 ---
 

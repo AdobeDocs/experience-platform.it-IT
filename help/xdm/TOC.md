@@ -75,7 +75,7 @@ ht-degree: 15%
       * [Dettagli sul trasferimento dei dispositivi](./field-groups/event/device-trade-in-details.md)
       * [Prenotazione pranzo](./field-groups/event/dining-reservation.md)
       * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
-      * [Dettagli dell&#39;ambiente](./field-groups/event/environment-details.md)
+      * [Dettagli dell’ambiente](./field-groups/event/environment-details.md)
       * [Riserva di volo](./field-groups/event/flight-reservation.md)
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Riserva](./field-groups/event/lodging-reservation.md)

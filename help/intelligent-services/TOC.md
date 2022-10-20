@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
 audience: user
-user-guide-title: Guida ai servizi intelligenti
+user-guide-title: Guida di Intelligent Services
 breadcrumb-title: Guida di Intelligent Services
-user-guide-description: Utilizza i servizi di intelligenza artificiale per generare punteggi, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
+user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 10%
+ht-degree: 24%
 
 ---
 

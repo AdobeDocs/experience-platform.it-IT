@@ -1,11 +1,11 @@
 ---
 audience: user
 user-guide-title: Accessibilità di Adobe Experience Platform
-user-guide-description: Scopri l’impegno Experience Platform di fornire funzionalità accessibili e inclusive a tutti gli individui.
+user-guide-description: Scopri come, con Experience Platform, ci impegniamo a fornire funzionalità accessibili e inclusive a tutte le persone.
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 20%
+ht-degree: 50%
 
 ---
 
