@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;segmentazione in streaming;Segmentazione in streaming;Valutazione continua;
 solution: Experience Platform
-title: 'Valutare gli eventi in tempo reale con Segmentazione in streaming '
+title: Valutare gli eventi in tempo reale con Segmentazione in streaming
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -429,6 +429,8 @@ La segmentazione in streaming funziona su tutti i dati acquisiti tramite un’or
 ### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
 
 Un segmento è definito come segmentazione in batch o in streaming in base a una combinazione di tipo di query e durata della cronologia degli eventi. Un elenco dei segmenti che verranno valutati come segmento in streaming si trova nella sezione [sezione tipi di query per segmentazione in streaming](#query-types).
+
+Tieni presente che se un segmento contiene **entrambi** un `inSegment` espressione e una catena di eventi singoli diretti, non può qualificarsi per la segmentazione in streaming. Se desideri che questo segmento sia idoneo per la segmentazione in streaming, devi impostare la catena diretta a evento singolo come segmento proprio.
 
 ### Perché il numero di segmenti &quot;qualificati totali&quot; continua ad aumentare mentre il numero sotto &quot;Ultimi X giorni&quot; rimane a zero all’interno della sezione dei dettagli del segmento?
 
