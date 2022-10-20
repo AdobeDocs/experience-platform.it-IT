@@ -1,7 +1,7 @@
 ---
 title: Panoramica dell’estensione Splunk
 description: Scopri l’estensione Splunk per l’inoltro di eventi in Adobe Experience Platform.
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 1%
@@ -79,7 +79,7 @@ Il passaggio successivo consiste nel mappare le proprietà dell’evento Splunk 
 | [!UICONTROL Origine] | Il valore di origine da assegnare ai dati dell’evento. Ad esempio, se invii dati da un’app in fase di sviluppo, imposta questa chiave sul nome dell’app. |
 | [!UICONTROL Indice] | Nome dell&#39;indice dei dati dell&#39;evento. L&#39;indice qui specificato deve trovarsi all&#39;interno dell&#39;elenco degli indici consentiti se per il token è impostato il parametro indexes. |
 | [!UICONTROL Tempo] | Ora dell’evento. Il formato ora predefinito è UNIX (nel formato `<sec>.<ms>`) e dipende dal fuso orario locale. Ad esempio: `1433188255.500` indica 1433188255 secondi e 500 millisecondi dopo epoch, o lunedì 1 giugno 2015, a 7:50:55 GMT. |
-| [!UICONTROL Campi] | Specifica un oggetto JSON non elaborato o un set di coppie chiave-valore contenenti campi personalizzati espliciti da definire in fase di indice.  La `fields` la chiave non è applicabile ai dati non elaborati.<br><br>Richieste contenenti `fields` deve essere inviata al `/collector/event` o non verranno indicizzati. Per ulteriori informazioni, consulta la documentazione su [estrazioni dei campi indicizzati](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Campi] | Specifica un oggetto JSON non elaborato o un set di coppie chiave-valore contenenti campi personalizzati espliciti da definire in fase di indice.  La `fields` la chiave non è applicabile ai dati non elaborati.<br><br>Richieste contenenti `fields` deve essere inviata al `/collector/event` o non verranno indicizzati. Per ulteriori informazioni, consulta la documentazione su [estrazioni dei campi indicizzati](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Convalidare i dati in Splunk {#validate}
 
