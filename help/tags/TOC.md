@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
+source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 83%
+source-wordcount: '411'
+ht-degree: 82%
 
 ---
 
@@ -129,10 +129,10 @@ ht-degree: 83%
          * [Note sulla versione](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL Splunk] {#splunk}
          * [Panoramica](./extensions/web/splunk/overview.md)
-      * Estensione di tracciamento di video [!DNL YouTube] {#youtube}
+      * [!DNL YouTube] tracciamento video {#youtube}
          * [Panoramica](./extensions/web/youtube/overview.md)
          * [Note sulla versione](./extensions/web/youtube/release-notes.md)
-      * [!DNL Zendesk] Estensione API degli eventi {#zendesk}
+      * [!DNL Zendesk] API eventi {#zendesk}
          * [Panoramica](./extensions/web/zendesk/overview.md)
    * [Estensioni di terze parti](./extensions/3rd-party-extensions.md)
 * Sviluppo delle estensioni {#extension-dev}
