@@ -2,9 +2,9 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -127,6 +127,12 @@ Un popopover ti informa che il segreto deve essere autorizzato manualmente trami
 ![Pover di autorizzazione Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Viene visualizzata una finestra di dialogo che consente di immettere le credenziali per l’account Google. Segui le istruzioni per concedere l’accesso all’inoltro eventi ai tuoi dati nell’ambito selezionato. Una volta completato il processo di autorizzazione, viene creato il segreto.
+
+>[!IMPORTANT]
+>
+>Se nell’organizzazione è impostato un criterio di riautenticazione per le applicazioni Google Cloud, i segreti creati non verranno aggiornati correttamente dopo la scadenza dell’autenticazione (tra 1 e 24 ore a seconda della configurazione del criterio).
+>
+>Per risolvere il problema, accedi a Google Admin Console e passa alla **[!DNL App access control]** in modo da poter contrassegnare l’app di inoltro eventi (Adobe Real-Time CDP Event Forwarding) come [!DNL Trusted]. Consulta la documentazione Google su [impostazione delle lunghezze di sessione per i servizi Google Cloud](https://support.google.com/a/answer/9368756?hl=it) per ulteriori informazioni.
 
 ## Modificare un segreto
 
