@@ -1,9 +1,9 @@
 ---
 title: Approfondimenti reportistica dell’archivio accelerato delle query
 description: Scopri come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati store accelerati e dashboard definiti dall’utente.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 L’archivio accelerato delle query ti consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai tuoi dati. In genere, i dati vengono elaborati a intervalli regolari (ad esempio, su base oraria o giornaliera) in cui vengono create e riportate le visualizzazioni aggregate. L&#39;analisi di questi rapporti generati da dati aggregati deriva da informazioni intese a migliorare le prestazioni aziendali. L’archivio con accelerazione query fornisce un servizio cache, una concorrenza, un’esperienza interattiva e un’API senza stato. Tuttavia, presuppone che i dati siano preelaborati e ottimizzati per l’esecuzione di query aggregate e non per l’esecuzione di query sui dati non elaborati.
 
-L’archivio con accelerazione query ti consente di creare un modello dati personalizzato e/o di estenderlo ai modelli dati Real-time Customer Data Platform esistenti. Puoi quindi interagire con o incorporare le tue informazioni sui rapporti in un framework di reporting/visualizzazione a tua scelta. Il modello dati CDP in tempo reale di Adobe Experience Platform fornisce informazioni su profili, segmenti e destinazioni e abilita le dashboard approfondimenti CDP in tempo reale. Questo documento ti guida attraverso il processo di creazione del modello dati di reportistica insights e anche su come estendere i modelli di dati Real-time CDP in base alle esigenze.
+L’archivio con accelerazione query ti consente di creare un modello dati personalizzato e/o di estenderlo ai modelli dati Real-time Customer Data Platform esistenti. Puoi quindi interagire con o incorporare le tue informazioni sui rapporti in un framework di reporting/visualizzazione a tua scelta. Per informazioni su come consultare la documentazione sul modello dati di Real-time Customer Data Platform Insights [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi di utilizzo di marketing e indicatori prestazioni chiave (KPI, Key Performance Indicator)](../../dashboards/cdp-insights-data-model.md).
+
+Il modello dati Real-Time CDP di Adobe Experience Platform fornisce informazioni su profili, segmenti e destinazioni e abilita le dashboard approfondimenti di Real-Time CDP. Questo documento ti guida attraverso il processo di creazione del modello dati di reportistica insights e anche su come estendere i modelli di dati Real-Time CDP in base alle esigenze.
 
 ## Prerequisiti
 
@@ -20,7 +22,7 @@ Questa esercitazione utilizza dashboard definite dall’utente per visualizzare 
 
 ## Introduzione
 
-Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting e per estendere i modelli di dati CDP in tempo reale che contengono dati della piattaforma arricchiti. Vedi la [imballaggio](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)e [licenza](../data-distiller/licence-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
+Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting e per estendere i modelli di dati di Real-Time CDP che contengono dati Platform arricchiti. Vedi la [imballaggio](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)e [licenza](../data-distiller/licence-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
 
 ## Creare un modello di dati insights per la generazione di rapporti
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Estendi il tuo modello dati con il modello dati Real-time CDP insights
+## Estendi il tuo modello dati con il modello dati Real-Time CDP insights
 
 Puoi estendere il modello di pubblico con ulteriori dettagli per creare una tabella di dimensioni più ricca. Ad esempio, puoi mappare il nome del segmento e il nome della destinazione all’identificatore esterno del pubblico. A questo scopo, utilizza Query Service per creare o aggiornare un nuovo set di dati e aggiungerlo al modello di pubblico che combina segmenti e destinazioni con un’identità esterna. Il diagramma seguente illustra il concetto di questa estensione del modello dati.
 
-![Un diagramma ERD che collega il modello dati di insight CDP in tempo reale al modello di archivio con accelerazione query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Un diagramma ERD che collega il modello dati insight di Real-Time CDP e il modello di archivio con accelerazione query.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Creare tabelle di dimensioni per estendere il modello di informazioni sui rapporti
 
-Utilizza Query Service per aggiungere attributi descrittivi chiave dai set di dati della dimensione CDP in tempo reale arricchiti al `audienceinsight` modello dati e stabilire una relazione tra la tabella dei fatti e la nuova tabella delle dimensioni. L&#39;istruzione SQL seguente illustra come integrare tabelle di dimensioni esistenti nel modello dati di analisi dei rapporti.
+Utilizza Query Service per aggiungere attributi descrittivi chiave dai set di dati delle dimensioni Real-Time CDP arricchiti al `audienceinsight` modello dati e stabilire una relazione tra la tabella dei fatti e la nuova tabella delle dimensioni. L&#39;istruzione SQL seguente illustra come integrare tabelle di dimensioni esistenti nel modello dati di analisi dei rapporti.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

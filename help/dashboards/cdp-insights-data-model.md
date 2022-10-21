@@ -1,29 +1,29 @@
 ---
-title: Modello dati di Approfondimenti della piattaforma dati cliente (CDP)
-description: Scopri come utilizzare le query SQL dai modelli di dati CDP Insights per personalizzare i tuoi rapporti CDP per i tuoi casi d’uso di marketing e KPI.
+title: Modello dati di Real-time Customer Data Platform Insights
+description: Scopri come utilizzare le query SQL con i modelli di dati di Real-time Customer Data Platform Insights per personalizzare i tuoi report Real-Time CDP per i tuoi casi d’uso di marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# Modello dati di Approfondimenti della piattaforma dati cliente (CDP)
+# Modello dati di Real-time Customer Data Platform Insights
 
-La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente.
+La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato query . [come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisiti
 
 Questa guida richiede una buona comprensione del [funzione dashboard definita dall&#39;utente](./user-defined-dashboards.md). Prima di continuare con questa guida, leggi la documentazione .
 
-## CDP, rapporti approfonditi e casi d’uso
+## Rapporti approfonditi e casi d’uso di Real-Time CDP
 
-Il reporting CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con segmenti e destinazioni. Sono stati sviluppati diversi modelli di schema a stella per rispondere a diversi casi d’uso comuni di marketing e ogni modello di dati può supportare diversi casi d’uso.
+Il reporting di Real-Time CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con segmenti e destinazioni. Sono stati sviluppati diversi modelli di schema a stella per rispondere a diversi casi d’uso comuni di marketing e ogni modello di dati può supportare diversi casi d’uso.
 
 >[!IMPORTANT]
 >
->I dati utilizzati per la generazione di rapporti CDP sono accurati per un criterio di unione scelto e dall’istantanea giornaliera più recente.
+>I dati utilizzati per la generazione di rapporti di Real-Time CDP sono accurati per un criterio di unione scelto e per lo snapshot giornaliero più recente.
 
 ### Modello di profilo {#profile-model}
 
