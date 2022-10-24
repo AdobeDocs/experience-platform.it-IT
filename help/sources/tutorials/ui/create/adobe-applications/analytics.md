@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2345'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ Sotto la **[!UICONTROL Applicazioni di Adobe]** categoria, seleziona **[!UICONTR
 ![catalogo](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleziona dati
+
+>[!IMPORTANT]
+>
+>Le suite di rapporti elencate sullo schermo possono provenire da varie aree geografiche. Sei responsabile di comprendere i limiti e gli obblighi dei tuoi dati e il modo in cui li utilizzi nelle diverse aree geografiche di Adobe Experience Platform. Assicurati che ciò sia consentito dalla tua azienda.
 
 La **[!UICONTROL Aggiungere dati alla sorgente di Analytics]** fornisce un elenco di [!DNL Analytics] i dati della suite di rapporti con cui creare una connessione sorgente.
 
