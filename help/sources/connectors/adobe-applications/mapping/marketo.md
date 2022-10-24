@@ -5,14 +5,19 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
+source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 7%
+source-wordcount: '746'
+ht-degree: 6%
 
 ---
 
-# [!DNL Marketo Engage] mappature dei campi
+# [!DNL Marketo Engage] mappature dei campi {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Mappature dei campi sorgente Marketo"
+>abstract="Per stabilire una connessione sorgente tra Marketo e Platform, i campi dei dati di origine Marketo devono essere mappati sui campi XDM di destinazione appropriati prima di essere acquisiti in Platform."
 
 Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] set di dati e i campi XDM (Experience Data Model) corrispondenti.
 
