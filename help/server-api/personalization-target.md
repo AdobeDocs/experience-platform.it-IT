@@ -2,10 +2,10 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 1%
+source-wordcount: '735'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ Con l’aiuto di [Compositore esperienza basato su moduli](https://experiencelea
 
 >[!IMPORTANT]
 >
->Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) non sono supportati dall&#39;API server.
+>Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) non sono completamente supportati dall&#39;API server. L&#39;API del server può **retrieve** attività create dal Compositore esperienza visivo, ma l’API del server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create dal Compositore esperienza visivo, utilizza il [SDK per web](../edge/home.md).
 
 ## Configurare il datastream {#configure-your-datastream}
 
@@ -31,7 +31,7 @@ Durante la configurazione del datastream, puoi (facoltativamente) fornire valori
 
 Puoi scegliere tra le seguenti opzioni [!DNL Analytics Logging] opzioni:
 
-* **[!DNL Server Side]**: Questa è l’opzione predefinita per [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). Quando questa opzione è selezionata, ogni volta che Target restituisce il contenuto di personalizzazione, il [!DNL A4T] i dati vengono inviati automaticamente ad Analytics, in base alla risposta dal motore di personalizzazione di Target.
+* **[!DNL Server Side]**: Questa è l’opzione predefinita per [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it). Quando questa opzione è selezionata, ogni volta che Target restituisce il contenuto di personalizzazione, il [!DNL A4T] i dati vengono inviati automaticamente ad Analytics, in base alla risposta dal motore di personalizzazione di Target.
 * **[!DNL Client Side]**: Quando questa opzione è selezionata, ogni volta che Target restituisce il contenuto di personalizzazione, il [!DNL A4T] i dati vengono restituiti all&#39;applicazione chiamante. Se desideri registrare questi dati in Analytics, assicurati che siano segnalati in una chiamata successiva a [!DNL Analytics].
 
    >[!IMPORTANT]
