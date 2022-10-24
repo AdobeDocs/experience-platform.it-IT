@@ -5,9 +5,9 @@ title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ Il primo passaggio per l’utilizzo di tipi di pubblico esterni consiste nella c
 Per creare uno spazio dei nomi di identità, segui le istruzioni contenute in [guida allo spazio dei nomi identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegnali [!UICONTROL Tipo] come **[!UICONTROL Identificatore non personale]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->Per iniziare a utilizzare namespace personalizzati con tipi di pubblico esterni, dovrai creare un ticket di supporto. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 ## Creare uno schema per i metadati del segmento
 
