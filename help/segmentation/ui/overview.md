@@ -5,7 +5,7 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2375'
 ht-degree: 1%
@@ -136,7 +136,7 @@ La **[!UICONTROL Destinazioni attivate]** mostra le destinazioni per le quali qu
 
 >[!NOTE]
 >
-> Le destinazioni sono una funzionalità disponibile con [!DNL Real-time Customer Data Platform]e ti consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, consulta il [panoramica sulle destinazioni](../../destinations/home.md). Per scoprire come attivare un segmento a una destinazione, consulta [panoramica di attivazione](../../destinations/ui/activation-overview.md).
+> Le destinazioni sono una funzionalità disponibile con [!DNL Adobe Real-Time Customer Data Platform]e ti consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, consulta il [panoramica sulle destinazioni](../../destinations/home.md). Per scoprire come attivare un segmento a una destinazione, consulta [panoramica di attivazione](../../destinations/ui/activation-overview.md).
 
 ### Esempi di profilo
 

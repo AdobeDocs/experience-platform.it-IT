@@ -1,9 +1,9 @@
 ---
 title: Pacchetti del servizio query
 description: Il documento seguente illustra i pacchetti di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform Query Service può essere diviso in due funzionalità 
 
 Le funzionalità di Query Service vengono inserite in un pacchetto con i seguenti prodotti e componenti aggiuntivi:
 
-- **Applicazioni basate su piattaforma** (Real-time Customer Data Platform, Customer Journey Analytics e Adobe Journey Optimizer): L’accesso a Query Service per eseguire query ad hoc viene fornito fin dall’inizio con ogni variante e livello di applicazioni basate su Platform.
+- **Applicazioni basate su piattaforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): L’accesso a Query Service per eseguire query ad hoc viene fornito fin dall’inizio con ogni variante e livello di applicazioni basate su Platform.
 - **[!DNL Data Distiller]** (pacchetto aggiuntivo che può essere acquistato con Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): L’accesso al servizio query per eseguire query batch viene fornito con [!DNL Data Distiller].
 
 La tabella seguente illustra le adesioni chiave del servizio Query in base alla modalità di creazione dei pacchetti:
@@ -30,7 +30,7 @@ La tabella seguente illustra le adesioni chiave del servizio Query in base alla 
 | Caso d’uso supportato | <ul><li>&#x200B; di esplorazione</li><li>&#x200B; di rilevamento dati</li><li>Convalida dei dati</li><li>Sperimentazione</li></ul> | <ul><li>Pulizia</li><li>Forma</li><li>Manipolazione</li><li>Arricchimento</li></ul> |
 | Semantica supportata | <ul><li>Query SELECT</li></ul> | <ul><li>Query CTAS e ITAS</li></ul> |
 | Tempo massimo di esecuzione | 10 minuti | 24 ore |
-| Metrica della licenza | **Condivisa utente query**: <ul><li>1 utente simultaneo (Real-time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utenti simultanei (Customer Journey Analytics) &#x200B;</li></ul> **Condivisa query**: <ul><li>1 query in esecuzione simultanea (tutte le applicazioni) &#x200B;</li></ul> **Aggiuntivo pacchetto aggiuntivo per utenti di query ad hoc** possono essere acquistati per aumentare le adesioni autorizzate alle query ad hoc dei clienti. <ul><li>+5 utenti simultanei aggiuntivi per confezione</li><li>+1 ulteriore query di esecuzione simultanea per pacchetto</li></ul> | **Orari di calcolo**: <ul><li>Variabile (con ambito in base alle adesioni all&#39;applicazione del cliente)</li></ul> **Orari di calcolo** è una misura del tempo impiegato dal motore Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch. |
+| Metrica della licenza | **Condivisa utente query**: <ul><li>1 utente simultaneo (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utenti simultanei (Customer Journey Analytics) &#x200B;</li></ul> **Condivisa query**: <ul><li>1 query in esecuzione simultanea (tutte le applicazioni) &#x200B;</li></ul> **Aggiuntivo pacchetto aggiuntivo per utenti di query ad hoc** possono essere acquistati per aumentare le adesioni autorizzate alle query ad hoc dei clienti. <ul><li>+5 utenti simultanei aggiuntivi per confezione</li><li>+1 ulteriore query di esecuzione simultanea per pacchetto</li></ul> | **Orari di calcolo**: <ul><li>Variabile (con ambito in base alle adesioni all&#39;applicazione del cliente)</li></ul> **Orari di calcolo** è una misura del tempo impiegato dal motore Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch. |
 | Interfaccia di esecuzione query | <ul><li>Interfaccia utente del servizio query</li><li>Interfaccia utente client di terze parti</li><li>[!DNL PostgresSQL] interfaccia utente client</li></ul> | <ul><li>Interfaccia utente query </li><li>Interfaccia utente client di terze parti</li><li>[!DNL PostgresSQL] interfaccia utente client</li><li>API REST</li></ul> |
 | Risultati della query restituiti tramite | Interfaccia utente client | Set di dati derivati memorizzato nel data lake |
 | Limite risultati | <ul><li>Interfaccia utente query - 100 righe</li><li>Client di terze parti - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>Interfaccia utente della query (nessun limite massimo per le righe)</li><li>Client di terze parti (nessun limite massimo alle righe)</li><li>[!DNL PostgresSQL] client (nessun limite massimo alle righe)</li><li>API REST (nessun limite massimo alle righe)</li></ul> |

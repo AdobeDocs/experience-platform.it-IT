@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorare i processi di arricchimento dei profili
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -93,7 +93,7 @@ Utilizza la **[!UICONTROL Mostra solo errori]** per visualizzare solo i processi
 
 Seguendo questa esercitazione, ora puoi monitorare e comprendere correttamente le metriche per i processi di arricchimento dei profili. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [Account correlati in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Account correlati in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Lead per corrispondenza account in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Punteggio predittivo di lead e account in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Lead per corrispondenza account in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Punteggio predittivo di lead e account in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

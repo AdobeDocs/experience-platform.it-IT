@@ -2,9 +2,9 @@
 title: Gestire le etichette di utilizzo dei dati per uno schema
 description: Scopri come aggiungere etichette per l’utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->L&#39;etichettatura basata su schema fa parte di [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), attualmente disponibile in una versione limitata per i clienti sanitari negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Real-time Customer Data Platform una volta rilasciata.
+>L&#39;etichettatura basata su schema fa parte di [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), attualmente disponibile in una versione limitata per i clienti sanitari negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti Adobe Real-time Customer Data Platform una volta rilasciata.
 
 Tutti i dati inseriti in Adobe Experience Platform sono vincolati dagli schemi Experience Data Model (XDM). Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. Per tenere conto di ciò, Platform ti consente di limitare l’utilizzo di determinati set di dati e campi tramite l’utilizzo di [etichette di utilizzo dei dati](../../data-governance/labels/overview.md).
 

@@ -1,15 +1,16 @@
 ---
-title: Gestire il punteggio predittivo di lead e account in Real-time CDP B2B
+title: Gestire il punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
 description: Questo documento fornisce informazioni sulla gestione della funzione di valutazione predittiva del lead e del conto in Experience Platform CDP B2B.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 2%
 
 ---
 
-# Gestire il punteggio predittivo per lead e account in Real-time Customer Data Platform, B2B Edition
+# Gestire il punteggio predittivo per lead e account in Adobe Real-time Customer Data Platform, B2B Edition
 
 >[!NOTE]
 >

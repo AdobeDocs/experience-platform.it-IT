@@ -6,9 +6,9 @@ title: Guida introduttiva di Customer AI
 topic-legacy: Getting started
 description: Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Le guide per Customer AI richiedono una comprensione approfondita dei vari servi
 - [Panoramica del sistema Experience Data Model (XDM)](../../xdm/home.md): XDM è il framework fondamentale che consente [!DNL Adobe Experience Cloud], grazie all&#39;Experience Platform, per inviare il messaggio giusto alla persona giusta, sul canale giusto, al momento giusto. La metodologia su cui viene generato l’Experience Platform, sistema XDM, rende operativi gli schemi Experience Data Model per l’utilizzo da parte dei servizi Platform.
 - [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in [!DNL Adobe Experience Platform].
 - [Creazione di schemi](../../xdm/tutorials/create-schema-ui.md): Questa esercitazione descrive i passaggi per la creazione di uno schema utilizzando l’Editor di schema in Experience Platform.
-- [Panoramica del profilo cliente in tempo reale](../../rtcdp/overview.md): Incorporato [!DNL Adobe Experience Platform], Real-time Customer Data Platform (Real-time CDP) consente alle aziende di unire dati noti e sconosciuti per attivare i profili dei clienti con decisioni intelligenti in tutto il percorso di clienti. Real-time CDP combina più origini dati aziendali per creare in tempo reale profili unificati che possono essere utilizzati per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e dispositivi.
+- [Panoramica del profilo cliente in tempo reale](../../rtcdp/overview.md): Incorporato [!DNL Adobe Experience Platform], Adobe Real-time Customer Data Platform (Real-Time CDP) consente alle aziende di unire dati noti e sconosciuti per attivare i profili dei clienti con decisioni intelligenti in tutto il percorso di clienti. Real-Time CDP combina più origini dati aziendali per creare in tempo reale profili unificati che possono essere utilizzati per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e dispositivi.
 - [Panoramica del servizio di segmentazione](../../segmentation/home.md): La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili per distinguere un gruppo commerciabile di persone dalla base dei clienti. Ad esempio, in una campagna e-mail intitolata &quot;Ti sei dimenticato di comprare le scarpe da ginnastica?&quot;, potresti volere un pubblico di tutti gli utenti che hanno cercato di correre scarpe negli ultimi 30 giorni, ma che non hanno completato un acquisto. Utilizzando segmenti diversi, puoi concentrarti sui vari tipi di pubblico, offrendo un’esperienza di marketing più personalizzata.
 - [Guida utente di Segment Builder](../../segmentation/tutorials/create-a-segment.md): Platform consente di creare e accedere facilmente ai segmenti e di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i segmenti.
 

@@ -1,20 +1,21 @@
 ---
 title: Tipo di dati attributi di audit del sistema di origine esterna
 description: Questo documento fornisce una panoramica del tipo di dati XDM (External Source System Audit Attributes Experience Data Model).
-source-git-commit: 8bf0c63f33ae9cbfb01d4db9e5220c6762575c5b
+exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '217'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Tipo di dati Audit ] Attributesdata del sistema di origine esterna
+# [!UICONTROL Attributi di controllo del sistema di origine esterna] tipo di dati
 
 >[!NOTE]
 >
->Questo tipo di dati è disponibile solo per le organizzazioni che hanno accesso all’edizione B2B di Real-time Customer Data Platform.
+>Questo tipo di dati è disponibile solo per le organizzazioni che hanno accesso all’edizione B2B di Adobe Real-time Customer Data Platform.
 
-[!UICONTROL External Source System Audit ] Attributesis è un tipo di dati XDM (Experience Data Model) standard che acquisisce i dettagli di controllo relativi a un sistema sorgente esterno.
+[!UICONTROL Attributi di controllo del sistema di origine esterna] è un tipo di dati XDM (Experience Data Model) standard che acquisisce i dettagli di controllo relativi a un sistema sorgente esterno.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 

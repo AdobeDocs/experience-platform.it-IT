@@ -5,9 +5,9 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 **Etichetta del contratto C5**: A `C5` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting intersito di contenuti o annunci basati su interessi. Il targeting basato sugli interessi, o personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: I dati raccolti sul sito sono utilizzati per trarre conclusioni sull&#39;interesse dell&#39;utente; è utilizzato in un altro contesto, ad esempio su un altro sito o app; e viene utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
 
-**Etichetta del contratto C6**: A `C6` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci sul sito. Il targeting degli annunci in sito include la selezione e la consegna di annunci sui siti web o sulle app della tua organizzazione o per misurare la consegna e l’efficacia di tali annunci. Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito relativi all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati visualizzati, e se gli utenti hanno intrapreso azioni relative all&#39;annuncio, come la selezione di un annuncio o l&#39;effettuazione di un acquisto.
+**Etichetta del contratto C6**: A `C6` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci sul sito. Il targeting degli annunci in sito include la selezione e la consegna di annunci sui siti web o sulle app della tua organizzazione o per misurare la consegna e l&#39;efficacia di tali annunci. Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito relativi all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su ciò che gli annunci sono stati mostrati, quando e dove sono stati mostrati, e se gli utenti hanno preso qualsiasi azione correlata all&#39;annuncio, come la selezione di un annuncio o l&#39;effettuazione di un acquisto.
 
 **Etichetta del contratto C7**: A `C7` l’etichetta di utilizzo dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting in sito del contenuto. Il targeting dei contenuti in sito include la selezione e la distribuzione di contenuti sui siti web o sulle app della tua organizzazione o per misurare la consegna e l’efficacia di tali contenuti. Ciò include informazioni raccolte in precedenza sull’interesse degli utenti per la selezione del contenuto, l’elaborazione dei dati su quale contenuto è stato visualizzato, la frequenza o la durata della visualizzazione, quando e dove è stato visualizzato, e se gli utenti hanno eseguito azioni correlate al contenuto, ad esempio la selezione del contenuto.
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **Funzione di ingresso**: Una funzione di input è specificata nella mappatura delle funzioni e viene utilizzata da un modello di apprendimento automatico per fare previsioni.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] quali [!DNL Attribution AI] e [!DNL Customer AI] sono modelli di apprendimento automatico basati su intelligenza artificiale che richiedono l’esecuzione e il funzionamento di Experienci Platform (o applicazioni integrate in Platform come Real-time Customer Data Platform).
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] quali [!DNL Attribution AI] e [!DNL Customer AI] sono modelli di apprendimento automatico basati su intelligenza artificiale che richiedono l’esecuzione e il funzionamento di Experienci Platform (o applicazioni integrate in Platform come Adobe Real-time Customer Data Platform).
 
 **Targeting o personalizzazione basati su interessi**: Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti:
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale nel percorso di clienti digitali.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale nel percorso cliente digitale.
 
 **Profilo cliente in tempo reale**: Il Profilo cliente in tempo reale (talvolta denominato Profilo) fornisce una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in profili individuali offrendo account con marca temporale e fruibili per ogni interazione con il cliente.
 

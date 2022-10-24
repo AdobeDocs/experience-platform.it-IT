@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -120,7 +120,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Aggiornamenti UX dettagli destinazione | Il flusso di lavoro di destinazione di Real-time CDP ora include il monitoraggio in linea per vedere quali attivazioni batch hanno avuto successo. Questa funzione consente agli utenti di risolvere i problemi direttamente nel flusso di lavoro per le destinazioni batch tramite avvisi e un dashboard di monitoraggio per tenere traccia degli errori nella pipeline di elaborazione. |
+| Aggiornamenti UX dettagli destinazione | Il flusso di lavoro di destinazione di Real-Time CDP ora include il monitoraggio in linea per vedere quali attivazioni batch hanno avuto successo. Questa funzione consente agli utenti di risolvere i problemi direttamente nel flusso di lavoro per le destinazioni batch tramite avvisi e un dashboard di monitoraggio per tenere traccia degli errori nella pipeline di elaborazione. |
 | Crittografia file | Per le destinazioni basate su file, gli utenti possono ora aggiungere la crittografia ai file esportati. |
 | Pianificazione dei file | Per le destinazioni di archiviazione cloud e basate su e-mail, gli utenti possono creare un’esportazione una tantum o istantanee giornaliere. |
 | Campi obbligatori | Gli utenti possono contrassegnare i campi come obbligatori, garantendo l’esportazione solo dei campi contenenti il campo obbligatorio. |
@@ -139,7 +139,7 @@ I servizi intelligenti consentono agli analisti e ai professionisti del marketin
 
 Per ulteriori informazioni, consulta la sezione su [aggiunta di campi di identità a un set di dati](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) nella guida alla preparazione dei dati di Intelligent Services .
 
-### Attribution AI
+### IA per l’attribuzione
 
 Nell’ambito di Intelligent Services, Attribution AI è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici.
 
@@ -163,7 +163,7 @@ Per ulteriori informazioni, leggere il [Panoramica di Attribution AI](../../inte
 
 ### Customer AI
 
-Customer AI, come parte di Intelligent Services, fornisce agli addetti al marketing il potere di generare previsioni sui clienti a livello individuale con spiegazioni. Con l’aiuto di fattori influenti, Customer AI può dirvi cosa è probabile che faccia un cliente e perché. Inoltre, gli esperti di marketing possono trarre vantaggio dalle previsioni e dalle informazioni di Customer AI per personalizzare le esperienze dei clienti servendo le offerte e i messaggi più appropriati.
+Customer AI, come parte di Intelligent Services, fornisce agli addetti al marketing il potere di generare previsioni sui clienti a livello individuale con spiegazioni. Con l’aiuto di fattori di influenza, IA per l’analisi dei clienti può dirti cosa potrebbe fare un cliente e perché. Inoltre, gli esperti marketing possono trarre vantaggio dalle previsioni e dalle informazioni di IA per l’analisi dei clienti per personalizzare le customer experience fornendo le offerte e i messaggi più appropriati.
 
 **Funzionalità chiave**
 

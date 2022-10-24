@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licenze;licenze;best practice
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
-description: Scopri le best practice e gli strumenti che puoi utilizzare per gestire meglio le adesioni alle licenze con Adobe Experience Platform.
+description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
-ht-degree: 1%
+source-wordcount: '2529'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +47,7 @@ Quando si concede l’Experience Platform di licenza, l’utente dispone di diri
 
 La [!DNL Profile Richness] varia a seconda della licenza acquistata. Sono disponibili due calcoli per [!DNL Profile Richness] disponibile:
 
-* La somma di tutti i dati di produzione archiviati in Real-time Customer Data Platform (ad esempio, Servizio profilo e Servizio identità) in qualsiasi momento, divisa per [!DNL Addressable Audience];
+* La somma di tutti i dati di produzione archiviati in Adobe Real-time Customer Data Platform (ad esempio, Servizio profilo e Servizio identità) in qualsiasi momento, divisa per la variabile [!DNL Addressable Audience];
 * La somma di tutti i dati archiviati in Platform (compresi, tra l’altro, [!DNL Data Lake], Servizio profilo e Servizio identità) in qualsiasi momento e con tutti i dati in cui è in corso lo streaming (anziché l’archiviazione all’interno di) Platform negli ultimi 12 mesi, suddivisi per [!DNL Addressable Audience].
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse variano a seconda della licenza acquistata dalla tua organizzazione.

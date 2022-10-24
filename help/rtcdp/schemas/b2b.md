@@ -1,23 +1,23 @@
 ---
 title: Schemi in Real-time Customer Data Platform B2B Edition
-description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Real-time Customer Data Platform B2B Edition.
+description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Schemi in Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition fornisce diversi standard [Classi Experience Data Model (XDM)](../../xdm/schema/composition.md#class) che acquisiscono dettagli sulle entità dati B2B essenziali, come account, opportunità, campagne e altro ancora. Inoltre, Real-time CDP B2B Edition ti consente di definire relazioni molti-a-uno tra questi schemi in modo che possano partecipare a casi di utilizzo di segmentazione avanzati.
+Adobe Real-time Customer Data Platform B2B Edition fornisce diversi standard [Classi Experience Data Model (XDM)](../../xdm/schema/composition.md#class) che acquisiscono dettagli sulle entità dati B2B essenziali, come account, opportunità, campagne e altro ancora. Inoltre, Real-Time CDP B2B Edition ti consente di definire relazioni molti-a-uno tra questi schemi in modo che possano partecipare a casi di utilizzo di segmentazione avanzata.
 
 >[!IMPORTANT]
 >
->È necessario avere accesso a Real-time CDP B2B Edition per consentire agli schemi B2B di partecipare [Profilo cliente in tempo reale](../../profile/home.md).
+>È necessario avere accesso a Real-Time CDP B2B Edition per consentire agli schemi B2B di partecipare [Profilo cliente in tempo reale](../../profile/home.md).
 
-Le seguenti classi standard sono fornite in Real-time CDP B2B Edition:
+In Real-Time CDP B2B Edition sono fornite le seguenti classi standard:
 
 * [Account aziendale XDM](../../xdm/classes/b2b/business-account.md)
 * [Relazione personale account aziendale XDM](../../xdm/classes/b2b/business-account-person-relation.md)

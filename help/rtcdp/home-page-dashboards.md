@@ -3,22 +3,22 @@ keywords: panoramica delle metriche; Panoramica sulle metriche rtcdp
 title: Home page e dashboard di Real-time Customer Data Platform
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 2%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] home page e dashboard
+# [!DNL Real-Time Customer Data Platform] home page e dashboard
 
-La home page di Real-time Customer Data Platform (Real-time CDP), che include un dashboard delle metriche, viene visualizzata quando accedi a Real-time CDP.
+Quando accedi a Real-Time CDP, viene visualizzata la home page di Adobe Real-time Customer Data Platform (Real-Time CDP), che include un dashboard delle metriche.
 
-La home page è solo una delle posizioni in cui vengono visualizzate le schede metriche. Real-time CDP fornisce schede metriche per tutta l’esperienza. Queste metriche ti informano sui dati, sul profilo e sui segmenti di pubblico nel sistema.
+La home page è solo una delle posizioni in cui vengono visualizzate le schede metriche. Real-Time CDP fornisce schede metriche per tutta l’esperienza. Queste metriche ti informano sui dati, sul profilo e sui segmenti di pubblico nel sistema.
 
 ![immagine](assets/home.png)
 
-Se non sono presenti dati nel sistema quando si accede a Real-time CDP, il dashboard nella home page non viene visualizzato. In questo caso, la home page fornisce materiale di apprendimento per una prima esperienza utente. Come vengono raccolti i dati, in altre parole come <!--sources-->set di dati, profili, segmenti e destinazioni vengono creati e i dati scorrono nel sistema. Il dashboard si aggiorna automaticamente per visualizzare le informazioni relative a tali dati<!-- in metric cards-->.
+Se non sono presenti dati nel sistema quando si accede a Real-Time CDP, il dashboard nella home page non viene visualizzato. In questo caso, la home page fornisce materiale di apprendimento per una prima esperienza utente. Come vengono raccolti i dati, in altre parole come <!--sources-->set di dati, profili, segmenti e destinazioni vengono creati e i dati scorrono nel sistema. Il dashboard si aggiorna automaticamente per visualizzare le informazioni relative a tali dati<!-- in metric cards-->.
 
 ## Vista dashboard della pagina Home
 
@@ -53,7 +53,7 @@ Questo conteggio utilizza il valore predefinito [criterio di unione](profile/mer
 
 Il numero di profili viene aggiornato una volta ogni 24 ore.
 
-Per ulteriori informazioni sui profili, consulta [Visualizzazione unificata del cliente in Real-time CDP](profile/profile-overview.md).
+Per ulteriori informazioni sui profili, consulta [Una visione unificata del cliente in Real-Time CDP](profile/profile-overview.md).
 
 ### Segmenti
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

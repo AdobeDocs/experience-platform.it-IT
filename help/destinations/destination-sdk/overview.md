@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK è un set di API di configurazione che ti consente di configurare pattern di integrazione di destinazione, ad Experience Platform per distribuire i dati di pubblico e profilo all’endpoint o alla posizione di archiviazione, in base ai dati e ai formati di autenticazione scelti. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 2%
 
 ---
@@ -23,16 +23,16 @@ La documentazione Destination SDK fornisce istruzioni per l’utilizzo di Adobe 
 
 >[!IMPORTANT]
 >
-> Questa funzionalità per creare destinazioni personalizzate private è disponibile solo per [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
+> Questa funzionalità per creare destinazioni personalizzate private è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 In qualità di partner di Destination SDK, puoi trarre vantaggio dall’aggiunta della destinazione per i prodotti al [catalogo Experience Platform](/help/destinations/catalog/overview.md):
 1. Configurazioni di integrazione standardizzate tra i clienti con parametri preconfigurati e semplificate l’esperienza di configurazione per i clienti.
 2. Presenta una scheda di destinazione con marchio nel catalogo delle destinazioni Experience Platform per semplificare la configurazione e la sensibilizzazione dei clienti.
-3. È disponibile come integrazione di destinazione con Adobe Experience Platform e Real-time Customer Data Platform.
+3. È disponibile come integrazione di destinazione per i prodotti con Adobe Experience Platform e Adobe Real-time Customer Data Platform.
 
 In qualità di cliente di Experience Platform, puoi anche creare una destinazione personalizzata privata, che può soddisfare al meglio le tue esigenze di attivazione.
 
-![Un diagramma di panoramica che mostra come gli sviluppatori di destinazioni interagiscono con Destination SDK e come i clienti Real-time CDP possono trarre vantaggio da destinazioni produttive e private.](./assets/destination-sdk-visual.png)
+![Un diagramma di panoramica che mostra come gli sviluppatori di destinazioni interagiscono con Destination SDK e come i clienti Real-Time CDP traggono vantaggio dalle destinazioni produttive e private.](./assets/destination-sdk-visual.png)
 
 ## Tipi di integrazioni supportate {#supported-integration-types}
 

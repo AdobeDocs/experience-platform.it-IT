@@ -1,9 +1,9 @@
 ---
 title: Account correlati in Real-Time CDP B2B Edition
 type: Documentation
-description: Una panoramica e ulteriori informazioni sulla funzione relativa agli account in Experience Platform Real-time CDP B2B.
+description: Una panoramica e ulteriori informazioni sulla funzione relativa agli account in Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 5%
@@ -26,7 +26,7 @@ Le imprese B2B spesso presentano le informazioni sui clienti memorizzate in più
 
 {style=&quot;table-layout:auto&quot;}
 
-Con i relativi conti, [!DNL Real-time CDP B2B] ora mostra un elenco di account simili all’account che stai esplorando.
+Con i relativi conti, [!DNL Real-Time CDP B2B] ora mostra un elenco di account simili all’account che stai esplorando.
 
 ![Schermata che mostra gli account correlati nell’interfaccia utente di Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

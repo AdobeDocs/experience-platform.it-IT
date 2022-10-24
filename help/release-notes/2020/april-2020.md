@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 10%
@@ -93,12 +93,12 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 **Nuove destinazioni**
 
-Real-time CDP ora supporta l’attivazione dei dati a oltre cinquanta [!DNL Experience Cloud Launch] estensioni, abilitazione di analytics, personalizzazione e altri casi d’uso. Vedi sotto per i dettagli:
+Real-Time CDP ora supporta l’attivazione dei dati a oltre cinquanta anni [!DNL Experience Cloud Launch] estensioni, abilitazione di analytics, personalizzazione e altri casi d’uso. Vedi sotto per i dettagli:
 
 | Documentazione | Descrizione |
 |--- | ---|
-| [Tipi di destinazione e categorie](../../destinations/destination-types.md) | Questo articolo spiega la differenza tra connessioni ed estensioni nell&#39;interfaccia Real-time CDP e consiglia quando utilizzare ciascuna di queste destinazioni. |
-| [Estensioni Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Questa pagina spiega cosa [!DNL Launch] le estensioni sono elencate, elenca i casi d’uso per utilizzarle e i collegamenti alla documentazione per ogni [!DNL Launch] estensione in Real-time CDP. |
+| [Tipi di destinazione e categorie](../../destinations/destination-types.md) | Questo articolo spiega la differenza tra connessioni ed estensioni nell&#39;interfaccia di Real-Time CDP e consiglia quando utilizzare ciascuna di queste destinazioni. |
+| [Estensioni Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Questa pagina spiega cosa [!DNL Launch] le estensioni sono elencate, elenca i casi d’uso per utilizzarle e i collegamenti alla documentazione per ogni [!DNL Launch] in Real-Time CDP. |
 
 Per ulteriori informazioni, consulta la sezione [Panoramica sulle destinazioni](../../destinations/home.md).
 

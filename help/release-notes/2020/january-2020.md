@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 9%
@@ -91,13 +91,13 @@ Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di ori
 
 ## Destinazioni {#destinations}
 
-In [Real-time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
+In [Real-Time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
-| Supporto per le autorizzazioni di controllo degli accessi | La funzionalità Destinazioni in Real-time CDP funziona con le autorizzazioni di controllo accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, puoi visualizzare, gestire e attivare le destinazioni. |
+| Supporto per le autorizzazioni di controllo degli accessi | La funzionalità Destinazioni in Real-Time CDP funziona con le autorizzazioni di controllo accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, puoi visualizzare, gestire e attivare le destinazioni. |
 
 **Autorizzazioni di controllo di accesso**
 

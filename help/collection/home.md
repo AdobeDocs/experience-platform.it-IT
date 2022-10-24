@@ -5,10 +5,10 @@ title: Panoramica sulla raccolta dati
 topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 8%
 
 ---
 
@@ -30,7 +30,7 @@ La raccolta dei dati si concentra sulla scoperta e l’accessibilità dei set di
 * [Inoltro eventi](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
-* [Debugger Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Debugger Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=it)
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Servizio Adobe Experience Platform Identity](../identity-service/home.md)
 
@@ -64,7 +64,7 @@ Inoltre, i datastreams sono integrati con diverse funzionalità di Platform che 
 
 >[!NOTE]
 >
->L’inoltro degli eventi è una funzione a pagamento inclusa solo nell’offerta Real-time Customer Data Platform Connections.
+>L’inoltro di eventi è una funzione a pagamento inclusa solo nell’offerta Connessioni Adobe Real-time Customer Data Platform.
 
 ## Passaggi successivi
 

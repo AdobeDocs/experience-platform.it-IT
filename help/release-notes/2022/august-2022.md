@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Agosto 2022
 description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2131'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -52,7 +52,7 @@ Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato pe
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <ul><li> Customer AI supporta ora la definizione di ruoli utente e di criteri di accesso da gestire [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>Customer AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i marchi devono utilizzare Platform Privacy Service per inviare richieste di accesso e cancellazione dei consumatori e rimuovere i dati dal lago dati, dal servizio Identity e dal profilo cliente in tempo reale. </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Supporto per la privacy | <ul><li> Customer AI supporta ora la definizione di ruoli utente e di criteri di accesso da gestire [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio le etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>Customer AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i marchi devono utilizzare Platform Privacy Service per inviare richieste di accesso e cancellazione dei consumatori e rimuovere i dati dal lago dati, dal servizio Identity e dal profilo cliente in tempo reale. </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

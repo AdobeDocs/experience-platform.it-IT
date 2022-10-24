@@ -2,9 +2,9 @@
 title: Classe membri della campagna aziendale XDM
 description: Questo documento fornisce una panoramica della classe Membri di Business Campaign XDM in Experience Data Model (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '249'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Questa classe è destinata ad essere utilizzata dalle organizzazioni con accesso [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). È necessario avere accesso a Real-time CDP B2B Edition per consentire a questa classe di partecipare [Profilo cliente in tempo reale](../../../profile/home.md).
+>Questa classe è destinata ad essere utilizzata dalle organizzazioni con accesso [Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). È necessario avere accesso a Real-Time CDP B2B Edition per consentire a questa classe di partecipare a [Profilo cliente in tempo reale](../../../profile/home.md).
 
 [!UICONTROL Membri di una campagna aziendale XDM] è una classe standard Experience Data Model (XDM) che descrive un contatto o un lead associato a una campagna aziendale.
 
@@ -29,6 +29,6 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-Per scoprire in che modo questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell’interfaccia utente di Adobe Experience Platform, consulta la guida in [relazioni di schema in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md)
+Per scoprire in che modo questa classe si relaziona concettualmente alle altre classi B2B e come stabilire tali relazioni nell’interfaccia utente di Adobe Experience Platform, consulta la guida in [relazioni di schema in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 
 Per ulteriori campi compatibili con questa classe, vedere il riferimento al gruppo di campi per [[!UICONTROL Dettagli membri della campagna aziendale XDM]](../../field-groups/b2b-campaign-members/details.md).

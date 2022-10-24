@@ -4,10 +4,10 @@ title: Guida al dashboard per l’utilizzo delle licenze
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 2%
+source-wordcount: '875'
+ht-degree: 1%
 
 ---
 
@@ -85,10 +85,10 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:BUONA PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, servizi app e servizi intelligenti](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>PIATTAFORMA DATI DEL CLIENTE RT:BUON PRFL A 10M</li><li>PIATTAFORMA DATI DEL CLIENTE RT:DA BUON PRFL A 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>PIATTAFORMA DATI DEL CLIENTE RT:BUON PRFL A 10M</li><li>PIATTAFORMA DATI DEL CLIENTE RT:DA BUON PRFL A 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:BUONA ATTIVAZIONE</li><li>AEP:BUONA ATTIVAZIONE PRFL A 10M</li><li>AEP:BUONA ATTIVAZIONE PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>SELEZIONE Journey Optimizer:OD</li><li>PRIME Journey Optimizer:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP RTCDP:BUONA ORCHESTRAZIONE PROFILO</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>SELEZIONE Journey Optimizer:OD</li><li>PRIME Journey Optimizer:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:BUONA ORCHESTRAZIONE PROFILO</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

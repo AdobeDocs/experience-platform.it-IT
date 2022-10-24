@@ -1,10 +1,10 @@
 ---
 title: Fonti in Real-time Customer Data Platform B2B Edition
-description: Panoramica del ruolo delle origini in Real-time Customer Data Platform B2B Edition.
+description: Panoramica del ruolo delle origini in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Se non utilizzi Real-time Customer Data Platform B2B Edition, consulta la sezione [panoramica di origini](./sources-overview.md) invece.
+>Se non utilizzi Adobe Real-time Customer Data Platform B2B Edition, consulta la sezione [panoramica di origini](./sources-overview.md) invece.
 
-Real-time Customer Data Platform B2B Edition consente di portare i dati B2B attraverso varie fonti, tra cui [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connettore di origine, Salesforce, Amazon S3 e ADLS, tra gli altri. Questa gamma di origini ti offre la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi.
+Adobe Real-time Customer Data Platform B2B Edition ti consente di portare i tuoi dati B2B attraverso varie fonti, tra cui [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connettore di origine, Salesforce, Amazon S3 e ADLS, tra gli altri. Questa gamma di origini ti offre la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi.
 
 Per capire come le sorgenti si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

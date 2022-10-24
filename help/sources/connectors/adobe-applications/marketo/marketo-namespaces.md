@@ -5,9 +5,9 @@ title: namespace e schemi B2B
 topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore sorgente B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Questo documento fornisce informazioni sull&#39;impostazione sottostante per i n
 
 >[!IMPORTANT]
 >
->Devi avere accesso a [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) affinché gli schemi B2B partecipino [Profilo cliente in tempo reale](../../../../profile/home.md).
+>Devi avere accesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) affinché gli schemi B2B partecipino [Profilo cliente in tempo reale](../../../../profile/home.md).
 
 ## Imposta spazi dei nomi B2B e utilità di generazione automatica dello schema
 

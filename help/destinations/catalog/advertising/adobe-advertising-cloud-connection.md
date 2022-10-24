@@ -1,10 +1,10 @@
 ---
 title: Connessione Adobe Advertising Cloud DSP
-description: Adobe Advertising Cloud DSP è una destinazione integrata per [!DNL Adobe Real-time Customer Data Profile], che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e con gli utenti per l’attivazione della campagna.
+description: Adobe Advertising Cloud DSP è una destinazione integrata per Adobe Real-time Customer Data Platform che consente di condividere segmenti di prime parti autenticati con inserzionisti approvati e gli utenti per l’attivazione della campagna.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Per comprendere meglio come e quando utilizzare la destinazione Advertising Clou
 
 ### Caso di utilizzo della pubblicità del marchio
 
-Un rivenditore online desidera effettuare il retargeting dei suoi clienti di alto valore tramite una campagna di visualizzazione senza utilizzare i cookie per il targeting. Il rivenditore condivide un segmento composto dagli ID e-mail con hash dei suoi clienti di alto valore dai suoi [!DNL Real-Time CDP] conto al suo conto DSP. DSP quindi converte gli ID e-mail con hash in autenticati [!DNL RampIDs] attraverso una partnership tra DSP e LiveRamp. Il risultato [!DNL RampIDs] può essere utilizzato in una campagna di visualizzazione per eseguire il targeting del pubblico.
+Un rivenditore online desidera effettuare il retargeting dei suoi clienti di alto valore tramite una campagna di visualizzazione senza utilizzare i cookie per il targeting. Il rivenditore condivide un segmento composto dagli ID e-mail con hash dei suoi clienti di alto valore dal suo account Adobe Real-time Customer Data Platform (Real-Time CDP) al suo account DSP. DSP quindi converte gli ID e-mail con hash in autenticati [!DNL RampIDs] attraverso una partnership tra DSP e LiveRamp. Il risultato [!DNL RampIDs] può essere utilizzato in una campagna di visualizzazione per eseguire il targeting del pubblico.
 
 ### Caso d&#39;uso dell&#39;agenzia
 

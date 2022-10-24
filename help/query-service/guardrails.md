@@ -3,7 +3,7 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;prot
 title: Guardrail per il servizio query
 description: Questo documento fornisce informazioni sui limiti di utilizzo dei dati del servizio query per facilitare l’ottimizzazione dell’utilizzo della query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 3%
@@ -84,7 +84,7 @@ La tabella seguente fornisce i limiti e la descrizione consigliati per l’archi
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 |---|---|---|---|
-| Condivisa query | 4 | Duro | Per garantire che le query sui dati aggregati tramite l’API di reporting (incluse le query che migliorano i modelli di dati come i modelli di dati Real-time CDP) dispongano delle risorse per essere eseguite in modo efficiente, l’API di reporting tiene traccia dell’utilizzo delle risorse assegnando gli slot di concorrenza a ciascuna query. Il sistema mette le query in una coda e attende fino a quando gli slot di concorrenza diventano disponibili o possono essere servite dalla cache. Sono disponibili al massimo quattro slot di query simultanee in un dato momento.<br>Se si accede all’API di reporting tramite uno strumento BI e si desidera una maggiore concorrenza, è necessario un server BI. |
+| Condivisa query | 4 | Duro | Per garantire che le query sui dati aggregati tramite l’API di reporting (incluse le query che ottimizzano i modelli di dati come i modelli di dati di Real-Time CDP) dispongano delle risorse da eseguire in modo efficiente, l’API di reporting tiene traccia dell’utilizzo delle risorse assegnando gli slot di concorrenza a ciascuna query. Il sistema mette le query in una coda e attende fino a quando gli slot di concorrenza diventano disponibili o possono essere servite dalla cache. Sono disponibili al massimo quattro slot di query simultanee in un dato momento.<br>Se si accede all’API di reporting tramite uno strumento BI e si desidera una maggiore concorrenza, è necessario un server BI. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,17 +1,17 @@
 ---
-title: Casi di utilizzo della segmentazione per Real-time CDP B2B Edition
-description: Panoramica dei vari casi d’uso disponibili in tempo reale CDP B2B Edition.
+title: Casi d’uso della segmentazione per Real-time Customer Data Platform B2B Edition
+description: Panoramica dei vari casi di utilizzo disponibili per Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
 
 # Casi d’uso della segmentazione per Real-time Customer Data Platform B2B Edition
 
-Questo documento fornisce esempi di definizioni di segmenti in Real-time CDP B2B Edition e di come diversi tipi di attributi possono essere combinati per i casi d’uso comuni B2B. Per capire come le destinazioni si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+Questo documento fornisce esempi di definizioni di segmenti in Adobe Real-time Customer Data Platform B2B Edition e di come è possibile combinare diversi tipi di attributi per i casi d’uso comuni B2B. Per capire come le destinazioni si adattano al tuo flusso di lavoro B2B, consulta [esercitazione end-to-end](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Le classi B2B e i relativi attributi sono aggiunti con un `B2B` all’interno de
 
 Per creare in modo efficace segmenti per i casi di utilizzo B2B, è importante avere una conoscenza approfondita dello schema e capire come si presenta il modello di dati. È inoltre utile conoscere il percorso che i dati prendono da un oggetto dati all’altro.
 
-L&#39;immagine seguente illustra le relazioni tra le classi B2B disponibili in Real-time CDP B2B Edition.
+L&#39;immagine seguente illustra le relazioni tra le classi B2B disponibili in Real-Time CDP B2B Edition.
 
 ![Classe B2B ERD](../assets/segmentation/b2b-classes.png)
 
@@ -114,4 +114,4 @@ Trova tutti i profili con il punteggio di lead superiore a 80.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questa panoramica, ora hai una comprensione delle possibilità di segmentazione disponibili utilizzando Real-time CDP, B2B Edition. Per ulteriori informazioni sul servizio di segmentazione, consulta il [Documentazione sulla segmentazione](../../segmentation/home.md).
+Dopo aver letto questa panoramica, ora hai una comprensione delle possibilità di segmentazione disponibili con Real-Time CDP, B2B Edition. Per ulteriori informazioni sul servizio di segmentazione, consulta il [Documentazione sulla segmentazione](../../segmentation/home.md).

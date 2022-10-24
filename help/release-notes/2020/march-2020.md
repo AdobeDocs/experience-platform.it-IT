@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -39,8 +39,8 @@ La governance dei dati di Adobe Experience Platform è una serie di strategie e 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Applicazione automatica dei criteri di utilizzo dei dati per [!DNL Real-time Customer Data Platform] | I criteri di utilizzo dei dati vengono ora applicati nel flusso di lavoro per l’attivazione dei dati alle destinazioni. La governance dei dati viene inoltre incorporata e applicata quando si apportano modifiche che influiscono sulle attivazioni esistenti (come modifiche alle etichette dei set di dati, criteri di unione, definizioni dei segmenti e altre). |
-| Linea di dati per l’applicazione | Quando un criterio di utilizzo dei dati viene violato in Real-time CDP, l’interfaccia utente visualizza una notifica che contiene informazioni di derivazione dei dati per aiutare l’utente a comprendere perché i criteri sono stati violati e cosa può fare per risolvere la violazione. |
+| Applicazione automatica dei criteri di utilizzo dei dati per [!DNL Real-Time Customer Data Platform] | I criteri di utilizzo dei dati vengono ora applicati nel flusso di lavoro per l’attivazione dei dati alle destinazioni. La governance dei dati viene inoltre incorporata e applicata quando si apportano modifiche che influiscono sulle attivazioni esistenti (come modifiche alle etichette dei set di dati, criteri di unione, definizioni dei segmenti e altre). |
+| Linea di dati per l’applicazione | Quando in Real-Time CDP viene violato un criterio di utilizzo dei dati, l’interfaccia utente visualizza una notifica contenente informazioni sulla derivazione dei dati per aiutare l’utente a comprendere perché i criteri sono stati violati e cosa può fare per risolvere la violazione. |
 
 
 **Problemi noti**
@@ -76,8 +76,8 @@ Sono disponibili nuove destinazioni per l’attivazione dei dati Adobe Experienc
 
 | Destinazione | Descrizione |
 |--- | ---|
-| Destinazioni di archiviazione cloud | Real-time CDP può ora consegnare i segmenti come file di dati ai tuoi [!DNL Amazon S3] o posizioni di archiviazione cloud SFTP. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni tramite file CSV o file delimitati da tabulazioni. |
-| Destinazioni pubblicitarie | La [!DNL Google] la scheda di destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display e video 360. |
+| Destinazioni di archiviazione cloud | Real-Time CDP può ora inviare i segmenti come file di dati al tuo [!DNL Amazon S3] o posizioni di archiviazione cloud SFTP. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni tramite file CSV o file delimitati da tabulazioni. |
+| Destinazioni pubblicitarie | La [!DNL Google] la scheda di destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in Real-Time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display e video 360. |
 
 Per ulteriori informazioni, visita il [panoramica sulle destinazioni](../../destinations/home.md)
 

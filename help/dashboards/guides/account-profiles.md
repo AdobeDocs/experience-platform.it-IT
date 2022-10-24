@@ -2,9 +2,9 @@
 title: Guida al dashboard dei profili account
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sui profili account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Per una panoramica di tutte le funzioni dell’interfaccia utente del profilo ac
 
 ## Introduzione
 
-Devi avere diritto a [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) per accedere al B2B [!UICONTROL Profili account] dashboard.
+Devi avere diritto a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) per accedere al B2B [!UICONTROL Profili account] dashboard.
 
 ## Dati dei profili account
 
@@ -45,7 +45,7 @@ Seleziona la [!UICONTROL ID profilo] dai risultati visualizzati nel [!UICONTROL 
 
 ![Nella scheda Sfoglia Profili account sono visualizzati i risultati e l’ID profilo è evidenziato.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Le informazioni sul profilo dell&#39;account visualizzate nel [!UICONTROL Dettagli] è stata unita una scheda da più frammenti di profilo per formare una singola vista del singolo account. Consulta la documentazione su [esplorazione dei profili account in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) per ulteriori informazioni sulle funzionalità di visualizzazione del profilo account nell’interfaccia utente di Platform.
+Le informazioni sul profilo dell&#39;account visualizzate nel [!UICONTROL Dettagli] è stata unita una scheda da più frammenti di profilo per formare una singola vista del singolo account. Consulta la documentazione su [esplorazione dei profili account in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) per ulteriori informazioni sulle funzionalità di visualizzazione del profilo account nell’interfaccia utente di Platform.
 
 ## La [!UICONTROL Profili account] [!UICONTROL Panoramica] {#overview}
 

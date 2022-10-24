@@ -5,9 +5,9 @@ title: Elaborazione del consenso in Adobe Experience Platform
 topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Questo documento fornisce una panoramica su come configurare le operazioni sui d
 
 >[!NOTE]
 >
->Questo documento si concentra sull’elaborazione dei dati di consenso tramite lo standard Adobe. Se elabora i dati di consenso in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la guida su [Supporto TCF 2.0 in Real-time Customer Data Platform](../iab/overview.md).
+>Questo documento si concentra sull’elaborazione dei dati di consenso tramite lo standard Adobe. Se elabora i dati di consenso in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la guida su [Supporto TCF 2.0 in Adobe Real-time Customer Data Platform](../iab/overview.md).
 
 ## Prerequisiti
 

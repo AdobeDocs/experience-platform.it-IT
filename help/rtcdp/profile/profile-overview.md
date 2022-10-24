@@ -1,11 +1,11 @@
 ---
 keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;profilo cliente in tempo reale
-title: Profilo del cliente in tempo reale in Real-time CDP
-description: Scopri come Real-time Customer Data Platform consente di gestire esperienze coordinate, coerenti e rilevanti per i clienti utilizzando il Profilo cliente in tempo reale.
+title: Informazioni sul profilo cliente in tempo reale in Real-Time CDP
+description: Scopri come Adobe Real-time Customer Data Platform ti consente di gestire esperienze coordinate, coerenti e rilevanti per i tuoi clienti utilizzando il Profilo cliente in tempo reale.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 Profilo cliente in tempo reale consente di visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Ogni singolo profilo cliente consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 
-## Profili in [!DNL Real-time Customer Data Platform]
+## Profili in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] consente di gestire esperienze coordinate e coerenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Fornire queste esperienze personalizzate in modo che si sentano rilevanti e tempestive non è una piccola impresa, ma può essere ottenuta utilizzando il Profilo del cliente in tempo reale, parte di Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] consente di gestire esperienze coordinate e coerenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Fornire queste esperienze personalizzate in modo che si sentano rilevanti e tempestive non è una piccola impresa, ma può essere ottenuta utilizzando il Profilo del cliente in tempo reale, parte di Adobe Experience Platform.
 
-Real-time CDP è basato sull’Experience Platform e utilizza molte delle funzioni e funzionalità di base dell’Experience Platform, inclusa la creazione di profili. Queste visualizzazioni aggregate di un singolo cliente riuniscono i dati provenienti da diversi canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per memorizzare i dati dei clienti.
+Real-Time CDP si basa sull’Experience Platform e utilizza molte delle funzioni e funzionalità di base dell’Experience Platform, inclusa la creazione di profili. Queste visualizzazioni aggregate di un singolo cliente riuniscono i dati provenienti da diversi canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per memorizzare i dati dei clienti.
 
-## Miglioramenti al profilo per Real-time CDP, B2B Edition
+## Miglioramenti al profilo per Real-Time CDP, B2B Edition
 
-Oltre alle funzionalità di profilo supportate da Real-time CDP, puoi utilizzare Real-time CDP, B2B Edition per sfogliare informazioni importanti associate a un individuo, ad esempio un account e opportunità. Per ulteriori informazioni sui miglioramenti dei profili per Real-time CDP, B2B Edition, inizia leggendo il [guida alla navigazione del profilo](profile-browse.md).
+Oltre alle funzionalità di profilo supportate da Real-Time CDP, puoi utilizzare Real-Time CDP, B2B Edition per sfogliare importanti informazioni associate a un individuo, ad esempio un account e opportunità. Per ulteriori informazioni sui miglioramenti del profilo per Real-Time CDP, B2B Edition, inizia leggendo il [guida alla navigazione del profilo](profile-browse.md).
 
 ## Identità e spazi dei nomi delle identità
 

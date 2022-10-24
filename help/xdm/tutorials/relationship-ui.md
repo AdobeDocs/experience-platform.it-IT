@@ -6,9 +6,9 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Questo documento fornisce un&#39;esercitazione per definire una relazione tra du
 
 >[!NOTE]
 >
->Per i passaggi su come creare una relazione molti-a-uno in Real-time Customer Data Platform B2B Edition, consulta la guida su [creazione di relazioni B2B](./relationship-b2b.md).
+>Per i passaggi su come creare una relazione molti-a-uno in Adobe Real-time Customer Data Platform B2B Edition, consulta la guida su [creazione di relazioni B2B](./relationship-b2b.md).
 
 ## Introduzione
 

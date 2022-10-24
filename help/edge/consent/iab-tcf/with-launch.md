@@ -2,9 +2,9 @@
 title: Integrare il supporto IAB TCF 2.0 utilizzando i tag e l’estensione Platform Web SDK
 description: Scopri come impostare il consenso IAB TCF 2.0 con i tag e l’estensione Adobe Experience Platform Web SDK.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Quando gli eventi vengono attivati dopo l’evento esperienza iniziale, i due el
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Platform Web SDK, puoi anche scegliere di integrarsi con altre soluzioni di Adobe come Adobe Analytics o Real-time Customer Data Platform. Consulta la sezione [Panoramica di IAB Transparency and Consent Framework 2.0](./overview.md) per ulteriori informazioni.
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Platform Web SDK, puoi anche scegliere di integrarsi con altre soluzioni di Adobe come Adobe Analytics o Adobe Real-time Customer Data Platform. Consulta la sezione [Panoramica di IAB Transparency and Consent Framework 2.0](./overview.md) per ulteriori informazioni.

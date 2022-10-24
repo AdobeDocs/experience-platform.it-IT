@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine di gestione delle relazioni con i clienti utilizzando l’interfaccia utente di Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Platform fornisce consigli intelligenti per i campi mappati automaticamente in b
 
 >[!NOTE]
 >
->Se utilizzi [!DNL Salesforce] come parte di Real-time Customer Data Platform B2B Edition, si prega di fare riferimento al [[!DNL Salesforce] documento di mappatura del campo](../../../connectors/adobe-applications/mapping/salesforce.md) guida sulla mappatura [!DNL Salesforce] i campi di origine ai campi di destinazione XDM appropriati.
+>Se utilizzi [!DNL Salesforce] come parte di Adobe Real-time Customer Data Platform B2B Edition, si prega di fare riferimento al [[!DNL Salesforce] documento di mappatura del campo](../../../connectors/adobe-applications/mapping/salesforce.md) guida sulla mappatura [!DNL Salesforce] i campi di origine ai campi di destinazione XDM appropriati.
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Successivo]**.
 

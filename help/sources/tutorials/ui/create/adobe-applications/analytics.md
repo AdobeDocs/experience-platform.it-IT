@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ Una suite di rapporti è un contenitore di dati che costituisce la base di [!DNL
 
 >[!NOTE]
 >
->I dati provenienti da più suite di rapporti possono essere abilitati per Profilo dati cliente in tempo reale solo se non sono presenti conflitti di dati, ad esempio due proprietà personalizzate (eVar, elenchi e proprietà) che hanno un significato diverso.
+>I dati provenienti da più suite di rapporti possono essere abilitati per Profilo cliente in tempo reale solo se non sono presenti conflitti di dati, ad esempio due proprietà personalizzate (eVar, elenchi e proprietà) che hanno un significato diverso.
 
 Per creare un [!DNL Analytics] connessione sorgente, seleziona una suite di rapporti e seleziona **[!UICONTROL Successivo]** per procedere.
 
