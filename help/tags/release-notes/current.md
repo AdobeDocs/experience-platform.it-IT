@@ -2,14 +2,20 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note di rilascio relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 8%
+source-wordcount: '350'
+ht-degree: 6%
 
 ---
 
 # Note sulla versione per tag e inoltro eventi
+
+## 26 ottobre 2022
+
+* **Gestione sensibile dei dati per i datastreams**: I Datastreams ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili come imposto da regolamenti come l&#39;Health Insurance Portability and Accountability Act (HIPAA). Vedi la sezione su [gestione dei dati sensibili nei flussi di dati](../../edge/datastreams/overview.md#sensitive) per ulteriori informazioni.
+* **[!DNL Splunk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Splunk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Splunk] panoramica dell&#39;estensione](../extensions/web/splunk/overview.md) per ulteriori informazioni.
+* **[!DNL Zendesk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Zendesk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Zendesk] panoramica dell&#39;estensione](../extensions/web/zendesk/overview.md) per ulteriori informazioni.
 
 ## 28 settembre 2022
 
