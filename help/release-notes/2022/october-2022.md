@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '764'
 ht-degree: 6%
 
 ---
@@ -12,14 +12,13 @@ ht-degree: 6%
 
 **Data di rilascio: 26 ottobre 2022**
 
-Nuove funzioni in Adobe Experience Platform:
-
 - [Chiavi gestite dal cliente](#cmk)
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Raccolta dati](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
+- [Servizio query](#query-service)
 - [Origini](#sources)
 
 ## Chiavi gestite dal cliente {#cmk}
@@ -57,6 +56,21 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+
+## Servizio query {#query-service}
+
+Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento in Profilo cliente in tempo reale.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Modello di dati per informazioni di reporting accelerate per query | Come parte dello SKU di Data Distiller, lo store con accelerazione query ti consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai tuoi dati. Con l’archivio con accelerazione query è possibile creare un modello dati personalizzato e/o estenderlo ai modelli dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni di reporting e le relative visualizzazioni. Consulta la sezione [documento approfondimenti reportistica di archivio accelerato di query](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) per ulteriori informazioni su questa funzione. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sui servizi di query, consulta la [Panoramica del servizio query](../../query-service/home.md).
+Nuove funzioni in Adobe Experience Platform:
 
 ## Origini {#sources}
 
