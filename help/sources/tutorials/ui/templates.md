@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;
-description: Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, ad esempio schemi, set di dati, regole di mappatura, spazi dei nomi delle identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
+description: Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, come schemi, set di dati, regole di mappatura, identità, namespace di identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
 title: (Alfa) Crea un flusso di dati delle sorgenti utilizzando i modelli nell’interfaccia utente
 hide: true
 hidefromtoc: true
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '1184'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 >
 >I modelli sono in alfa e al momento sono supportati solo da [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). La documentazione e le funzionalità sono soggette a modifiche.
 
-Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, ad esempio schemi, set di dati, regole di mappatura, spazi dei nomi delle identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
+Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, ad esempio schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
 
 Con i modelli è possibile:
 
-* Riduci il time-to-value dell’acquisizione grazie all’accelerazione della creazione di risorse basate su ML.
+* Riduci il time-to-value dell’acquisizione grazie all’accelerazione della creazione di risorse modellate.
 * Riduci al minimo gli errori che possono verificarsi durante il processo di inserimento manuale dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
@@ -51,7 +51,12 @@ Sotto la [!UICONTROL Applicazioni di Adobe] categoria, seleziona **[!UICONTROL M
 
 ![Un catalogo dell&#39;area di lavoro origini con la sorgente del Marketo Engage evidenziata.](../../images/tutorials/templates/catalog.png)
 
-Viene visualizzata una finestra a comparsa che ti presenta l’opzione per sfogliare i modelli o utilizzare schemi e set di dati esistenti. Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Sfoglia modelli]** quindi seleziona **[!UICONTROL Seleziona]**.
+Viene visualizzata una finestra a comparsa che ti presenta l’opzione per sfogliare i modelli o utilizzare schemi e set di dati esistenti.
+
+* **Sfoglia modelli**: I modelli di origine creano automaticamente schemi, identità, set di dati e flussi di dati con regole di mappatura. Puoi personalizzare queste risorse in base alle tue esigenze.
+* **Utilizzare le risorse esistenti**: Acquisisci i dati utilizzando i set di dati e gli schemi esistenti creati. Se necessario, puoi anche creare nuovi set di dati e schemi.
+
+Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Sfoglia modelli]** quindi seleziona **[!UICONTROL Seleziona]**.
 
 ![Una finestra a comparsa con opzioni per sfogliare i modelli o utilizzare risorse esistenti.](../../images/tutorials/templates/browse-templates.png)
 
@@ -83,6 +88,12 @@ Viene visualizzata la finestra di anteprima che consente di esplorare ed esamina
 
 Quindi, seleziona dall’elenco il modello da utilizzare. È possibile selezionare più modelli e creare più flussi di dati contemporaneamente. Tuttavia, un modello può essere utilizzato solo una volta per account. Dopo aver selezionato i modelli, seleziona **[!UICONTROL Fine]** e consenti la generazione di alcune risorse.
 
+Se selezioni uno o più elementi parziali dall’elenco dei modelli disponibili, verranno comunque generati tutti gli schemi B2B e i namespace di identità per garantire che le relazioni B2B tra gli schemi siano configurate correttamente.
+
+>[!NOTE]
+>
+>I modelli già utilizzati verranno disattivati dalla selezione.
+
 ![Elenco di modelli con il modello Ruolo contatto opportunità selezionato.](../../images/tutorials/templates/select-template.png)
 
 ### Esaminare le risorse {#review-assets}
@@ -92,7 +103,7 @@ Quindi, seleziona dall’elenco il modello da utilizzare. È possibile seleziona
 >title="Esamina le risorse generate automaticamente"
 >abstract="La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di lasciare la pagina, riceverai una notifica da restituire una volta completate le risorse. Puoi rivedere le risorse una volta generate e configurare ulteriormente il flusso di dati in qualsiasi momento."
 
-La [!UICONTROL Esaminare le risorse dei modelli] In questa pagina vengono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, i namespace di identità e i flussi di dati generati automaticamente associati alla connessione di origine.
+La [!UICONTROL Esaminare le risorse dei modelli] In questa pagina vengono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, i namespace di identità e i flussi di dati generati automaticamente associati alla connessione di origine. La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di lasciare la pagina, riceverai una notifica da restituire una volta completate le risorse. Puoi rivedere le risorse una volta generate e configurare ulteriormente il flusso di dati in qualsiasi momento.
 
 I flussi di dati generati automaticamente sono abilitati per impostazione predefinita. Seleziona i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona **[!UICONTROL Mappature di anteprima]** per visualizzare i set di mappatura creati per il flusso di dati.
 
@@ -104,8 +115,22 @@ Viene visualizzata una pagina di anteprima che consente di esaminare la relazion
 
 Puoi aggiornare i flussi di dati in qualsiasi momento dopo l’esecuzione. Seleziona i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona **[!UICONTROL Aggiornamento del flusso di dati]**. Viene visualizzata la pagina del flusso di lavoro origini in cui è possibile aggiornare i dettagli del flusso di dati, incluse le impostazioni per l’acquisizione parziale, la diagnostica degli errori e le notifiche degli avvisi, nonché la mappatura del flusso di dati.
 
+Puoi utilizzare la vista dell’editor dello schema per apportare aggiornamenti allo schema generato automaticamente. Visita la guida su [utilizzo dell’editor di schemi](../../../xdm/tutorials/create-schema-ui.md) per ulteriori informazioni.
+
 ![Una finestra a discesa con l’opzione Aggiorna flussi di dati selezionata.](../../images/tutorials/templates/update.png)
 
 ## Passaggi successivi
 
 Seguendo questa esercitazione, ora hai creato flussi di dati e risorse come schemi, set di dati e namespace di identità utilizzando i modelli. Per informazioni generali sulle fonti, visita il [panoramica di origini](../../home.md).
+
+## Appendice
+
+La sezione seguente fornisce ulteriori informazioni sui modelli.
+
+### Utilizza il pannello notifiche per tornare alla pagina di revisione
+
+I modelli sono supportati dagli avvisi di Adobe Experience Platform e puoi utilizzare il pannello di notifica per ricevere aggiornamenti sullo stato delle risorse e anche per tornare alla pagina di revisione.
+
+Seleziona l’icona di notifica nell’intestazione superiore dell’interfaccia utente di Platform, quindi seleziona l’avviso di stato per visualizzare le risorse da esaminare.
+
+![Il pannello Notifiche nell’interfaccia utente di Platform con una notifica che avvisa un flusso di dati non riuscito evidenziato.](../../images/tutorials/templates/notifications.png)
