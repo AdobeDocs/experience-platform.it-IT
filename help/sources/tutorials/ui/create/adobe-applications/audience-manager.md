@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;connettore sorgente di Aud
 title: Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente
 description: Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente per Adobe Audience Manager che consenta di inserire i dati relativi all’evento esperienza di consumo in Platform utilizzando l’interfaccia utente di .
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Dopo aver identificato e selezionato i segmenti da utilizzare, viene visualizzat
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 In alternativa, puoi selezionare la **[!UICONTROL Seleziona tutti i segmenti]** e **[!UICONTROL Seleziona tutte le caratteristiche]** scatole. Selezionando tutti i segmenti, Platform visualizzerà i segmenti di Audience Manager, mentre selezionando tutte le caratteristiche abilita tutte le caratteristiche di prime parti dall’Audience Manager.
+
+>[!WARNING]
+>
+>L’acquisizione di popolazioni di segmenti di Audience Manager di grandi dimensioni ha un impatto diretto sul conteggio totale dei profili quando invii per la prima volta un segmento di Audience Manager a Platform utilizzando l’origine di Audience Manager. Ciò significa che la selezione di tutti i segmenti può potenzialmente portare a un conteggio di profili superiore all’adesione all’utilizzo della licenza. Controlla la tua [quota di utilizzo della licenza](../../../../../dashboards/guides/license-usage.md) prima di procedere.
 
 Al termine, seleziona **[!UICONTROL Successivo]**
 
