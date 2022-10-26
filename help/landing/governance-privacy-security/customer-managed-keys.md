@@ -1,9 +1,9 @@
 ---
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Una volta arrivati al **[!DNL Review + create]** è possibile esaminare i dettag
 
 ![Configurazione di base per l&#39;insieme di chiavi](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Concedere a Microsoft un’eccezione di firewall
+## Configurare le opzioni di rete
 
 Se l&#39;insieme di credenziali chiave è configurato per limitare l&#39;accesso pubblico a determinate reti virtuali o per disabilitare completamente l&#39;accesso pubblico, è necessario concedere a Microsoft un&#39;eccezione firewall.
 
