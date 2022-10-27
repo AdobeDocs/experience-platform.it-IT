@@ -5,9 +5,9 @@ title: Definire i campi enumerati e i valori consigliati nell’interfaccia uten
 description: Scopri come definire enum e valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ A differenza degli enum, il **[!UICONTROL Valori consigliati]** consente di indi
 Quando [definizione di un nuovo campo](./overview.md#define) nell’interfaccia utente di Adobe Experience Platform e l’impostazione del tipo su [!UICONTROL Stringa], ti viene offerta l’opzione di definire un [enum](#enum) o [valori consigliati](#suggested-values) per quel campo.
 
 ![Immagine che mostra l’opzione Enum &amp; Suggested Values abilitata per un campo stringa nell’interfaccia utente](../../images/ui/fields/enum/enum-options-selected.png)
+
+Questo documento illustra come definire enum e valori suggeriti nel [!UICONTROL Schemi] Area di lavoro dell’interfaccia utente. Per una rapida panoramica degli enum e dei valori suggeriti, tra cui come configurarli nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definire un enum {#enum}
 
