@@ -5,9 +5,9 @@ title: Collegare lo studio al servizio query
 topic-legacy: connect
 description: Questo documento descrive i passaggi necessari per la connessione di R Studio con Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -20,29 +20,29 @@ Questo documento descrive i passaggi necessari per la connessione [!DNL RStudio]
 >
 > Questa guida presuppone che tu abbia già accesso a [!DNL RStudio] e sono a conoscenza di come usarlo. Ulteriori informazioni [!DNL RStudio] si trova nella [ufficiale [!DNL RStudio] documentazione](https://rstudio.com/products/rstudio/).
 > 
-> Inoltre, per utilizzare RStudio con Query Service, è necessario installare il driver PostgreSQL JDBC 4.2. È possibile scaricare il driver JDBC dal [Sito ufficiale PostgreSQL](https://jdbc.postgresql.org/download/).
+> Inoltre, per utilizzare [!DNL RStudio] con Query Service, è necessario installare [!DNL PostgreSQL] Driver JDBC 4.2. È possibile scaricare il driver JDBC dal [[!DNL PostgreSQL] sito ufficiale](https://jdbc.postgresql.org/download/).
 
 ## Crea un [!DNL Query Service] connessione [!DNL RStudio] interfaccia
 
 Dopo l&#39;installazione [!DNL RStudio], devi installare il pacchetto RJDBC. Vai a **[!DNL Packages]** e seleziona **[!DNL Install]**.
 
-![](../images/clients/rstudio/install-package.png)
+![La [!DNL RStudio] dashboard con pacchetti e installazione evidenziata.](../images/clients/rstudio/install-package.png)
 
 Viene visualizzato un pop-up che mostra la **[!DNL Install Packages]** schermo. Assicurati che **[!DNL Repository (CRAN)]** è selezionato per **[!DNL Install from]** sezione . Valore per **[!DNL Packages]** devono `RJDBC`. Assicurati **[!DNL Install dependencies]** è selezionato. Dopo aver confermato la correttezza di tutti i valori, seleziona **[!DNL Install]** per installare i pacchetti.
 
-![](../images/clients/rstudio/install-jrdbc.png)
+![La finestra di dialogo Installa pacchetti con RJDBC è stata inserita nel campo Pacchetti e Installa evidenziata.](../images/clients/rstudio/install-jrdbc.png)
 
-Ora che il pacchetto RJDBC è stato installato, riavviare RStudio per completare il processo di installazione.
+Ora che il pacchetto RJDBC è stato installato, riavvia [!DNL RStudio] per completare il processo di installazione.
 
-Dopo il riavvio di RStudio, è ora possibile connettersi a Query Service. Seleziona la **[!DNL RJDBC]** nel pacchetto **[!DNL Packages]** e immetti il comando seguente nella console:
+Dopo [!DNL RStudio] riavviato, è ora possibile connettersi al servizio query. Seleziona la **[!DNL RJDBC]** nel pacchetto **[!DNL Packages]** e immetti il comando seguente nella console:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Dove {PATH TO THE POSTGRESQL JDBC} rappresenta il percorso del JAR JDBC PostgreSQL installato sul computer.
+Dove `{PATH TO THE POSTGRESQL JDBC JAR}` rappresenta il percorso della [!DNL PostgreSQL] JDBC JAR installato sul tuo computer.
 
-Ora è possibile creare la connessione a Query Service immettendo il seguente comando nella console:
+Ora è possibile creare la connessione a Query Service. Immetti il seguente comando nella console:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -54,7 +54,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
 
-![](../images/clients/rstudio/connection-rjdbc.png)
+![Uscita della console in [!DNL RStudio] dalla connessione a Query Service.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Scrittura di query
 

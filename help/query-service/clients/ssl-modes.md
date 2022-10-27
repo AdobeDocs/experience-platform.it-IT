@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;Query service;query service;connect;connect to query service;SSL;ssl;sslmode;
 title: Opzioni SSL del servizio query
 description: Scopri il supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e come connettersi utilizzando la modalità SSL verify-full.
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -32,8 +33,8 @@ I diversi `sslmode` I valori dei parametri forniscono diversi livelli di protezi
 | `allow` | Parziale | No | La sicurezza non è una priorità, la velocità e il sovraccarico di elaborazione sono più importanti. Questa modalità consente la crittografia solo se il server insiste su di essa. |
 | `prefer` | Parziale | No | La crittografia non è necessaria, ma la comunicazione verrà crittografata se il server la supporta. |
 | `require` | Sì | No | È necessaria la codifica su tutte le comunicazioni. La rete è attendibile per la connessione al server corretto. La convalida del certificato SSL del server non è necessaria. |
-| `verify-ca` | Sì | Dipende dalla policy CA | È necessaria la codifica su tutte le comunicazioni. La convalida del server è necessaria prima della condivisione dei dati. Questo richiede l&#39;impostazione di un certificato radice nella directory home di PostgreSQL. [Di seguito sono riportati i dettagli](#instructions) |
-| `verify-full` | Sì | Sì | È necessaria la codifica su tutte le comunicazioni. La convalida del server è necessaria prima della condivisione dei dati. Questo richiede l&#39;impostazione di un certificato radice nella directory home di PostgreSQL. [Di seguito sono riportati i dettagli](#instructions). |
+| `verify-ca` | Sì | Dipende dalla policy CA | È necessaria la codifica su tutte le comunicazioni. La convalida del server è necessaria prima della condivisione dei dati. È necessario impostare un certificato radice nel [!DNL PostgreSQL] home directory. [Di seguito sono riportati i dettagli](#instructions) |
+| `verify-full` | Sì | Sì | È necessaria la codifica su tutte le comunicazioni. La convalida del server è necessaria prima della condivisione dei dati. È necessario impostare un certificato radice nel [!DNL PostgreSQL] home directory. [Di seguito sono riportati i dettagli](#instructions). |
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine PostgreSQL
 topic-legacy: overview
 description: Scopri come collegare PostgreSQL a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Postg
 
 ## Connetti [!DNL PostgreSQL] a [!DNL Platform] utilizzo delle API
 
-- [Creare una connessione di base PostgreSQL utilizzando l’API del servizio di flusso](../../tutorials/api/create/databases/postgres.md)
+- [Crea un [!DNL PostgreSQL] connessione di base tramite l’API del servizio di flusso](../../tutorials/api/create/databases/postgres.md)
 - [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connetti [!DNL PostgreSQL] a [!DNL Platform] utilizzo dell’interfaccia
 
-- [Creare una connessione sorgente PostgreSQL nell&#39;interfaccia utente](../../tutorials/ui/create/databases/postgres.md)
+- [Crea un [!DNL PostgreSQL] connessione sorgente nell’interfaccia utente](../../tutorials/ui/create/databases/postgres.md)
 - [Creazione di un flusso di dati per una connessione sorgente del database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)

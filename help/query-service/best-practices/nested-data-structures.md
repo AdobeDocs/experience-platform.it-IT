@@ -3,9 +3,9 @@ keywords: Experience Platform;servizio query;servizio query;strutture dati nidif
 title: Utilizzo delle strutture dati nidificate nel servizio query
 description: Questo documento fornisce un esempio di lavoro per l’elaborazione e la trasformazione di campi di dati nidificati utilizzando le istruzioni CTAS e INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service supporta l’utilizzo di campi di dati nidificati. La complessità delle strutture di dati aziendali può rendere complicata la trasformazione o l’elaborazione di tali dati. Questo documento fornisce esempi su come creare, elaborare o trasformare set di dati con tipi di dati complessi, incluse le strutture di dati nidificate.
 
-Query Service fornisce un&#39;interfaccia PostgreSQL per eseguire query SQL su tutti i set di dati gestiti da Experience Platform. Platform supporta l’utilizzo di tipi di dati primitivi o complessi nelle colonne di tabelle quali struttura, array, mappe e strutture, array e mappe profondamente nidificate. I set di dati possono inoltre contenere strutture nidificate in cui il tipo di dati della colonna può essere complesso quanto una matrice di strutture nidificate, o una mappa di mappe in cui il valore di una coppia chiave-valore può essere una struttura con più livelli di nidificazione.
+Il servizio di query fornisce un [!DNL PostgreSQL] interfaccia per eseguire query SQL su tutti i set di dati gestiti da Experience Platform. Platform supporta l’utilizzo di tipi di dati primitivi o complessi nelle colonne di tabelle quali struttura, array, mappe e strutture, array e mappe profondamente nidificate. I set di dati possono inoltre contenere strutture nidificate in cui il tipo di dati della colonna può essere complesso quanto una matrice di strutture nidificate, o una mappa di mappe in cui il valore di una coppia chiave-valore può essere una struttura con più livelli di nidificazione.
 
 ## Introduzione
 

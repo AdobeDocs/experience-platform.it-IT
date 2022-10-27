@@ -5,9 +5,9 @@ title: Guida alle credenziali del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Prima di poter generare credenziali non in scadenza, è necessario completare i 
 3. [Configura entrambe le **Sandbox** e **Gestisci integrazione servizio query** permissions](../../access-control/ui/permissions.md) per il profilo di prodotto.
 4. [Aggiungere un nuovo utente a un profilo di prodotto](../../access-control/ui/users.md) quindi gli vengono concesse le relative autorizzazioni configurate.
 5. [Aggiungi l’utente come amministratore del profilo di prodotto](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
-6. [Aggiungi l’utente come sviluppatore del profilo di prodotto](https://helpx.adobe.com/enterprise/using/manage-developers.html) per creare un’integrazione.
+6. [Aggiungi l’utente come sviluppatore del profilo di prodotto](https://helpx.adobe.com/it/enterprise/using/manage-developers.html) per creare un’integrazione.
 
 Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione su [controllo di accesso](../../access-control/home.md).
 
@@ -82,9 +82,9 @@ Il file JSON di configurazione contiene informazioni quali il nome dell’accoun
 
 Dopo aver salvato le credenziali generate, seleziona **[!UICONTROL Chiudi]**. È ora possibile visualizzare un elenco di tutte le credenziali non in scadenza.
 
-![La scheda Credenziali dashboard Query con la sezione Credenziali non in scadenza è espansa.](../images/ui/credentials/list-credentials.png)
+![La scheda Credenziali dashboard Query con la sezione Credenziali non in scadenza è evidenziata.](../images/ui/credentials/list-credentials.png)
 
-È possibile modificare o eliminare le credenziali non in scadenza. Per modificare una credenziale non in scadenza, seleziona l’icona a forma di matita (![](../images/ui/credentials/edit-icon.png)). Per eliminare una credenziale non in scadenza, seleziona l’icona Elimina (![](../images/ui/credentials/delete-icon.png)).
+È possibile modificare o eliminare le credenziali non in scadenza. Per modificare una credenziale non in scadenza, seleziona l’icona a forma di matita (![Icona a forma di matita.](../images/ui/credentials/edit-icon.png)). Per eliminare una credenziale non in scadenza, seleziona l’icona Elimina (![Icona di un cestino.](../images/ui/credentials/delete-icon.png)).
 
 Quando si modifica una credenziale non in scadenza, viene visualizzato un modale. Puoi fornire i seguenti dettagli da aggiornare:
 
@@ -102,7 +102,7 @@ Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna a
 
 L’immagine indica la posizione di ogni parametro trovato nell’interfaccia utente, ad eccezione della password delle credenziali in scadenza. Mentre le credenziali non in scadenza vengono fornite dai relativi file di configurazione JSON, puoi visualizzare le credenziali in scadenza nella sezione **Credenziali** nell’interfaccia utente di .
 
-![](../images/ui/credentials/expiring-credentials.png)
+![La scheda Credenziali dell&#39;area di lavoro Query con la sezione Credenziali in scadenza è evidenziata.](../images/ui/credentials/expiring-credentials.png)
 
 La tabella seguente delinea i parametri generalmente necessari per la connessione a client esterni.
 

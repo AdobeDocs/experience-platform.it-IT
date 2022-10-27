@@ -5,9 +5,9 @@ title: Connetti Looker al servizio query
 topic-legacy: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Looker con Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ Questo documento descrive i passaggi per la connessione [!DNL Looker] con Adobe 
 
 Dopo aver effettuato l’accesso a [!DNL Looker], seleziona **[!DNL Admin]**, seguita da **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![La [!DNL Looker] dashboard con connessioni evidenziate dal menu a discesa Amministrazione.](../images/clients/looker/click-admin-connections.png)
 
 In questa pagina, seleziona **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![Area di lavoro Connessioni con nuova connessione evidenziata.](../images/clients/looker/click-new-connection.png)
 
 Da qui è possibile compilare i dettagli delle impostazioni di connessione.
 
-![](../images/clients/looker/new-connection.png)
+![Pagina delle impostazioni delle connessioni per una nuova connessione.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** Nome della connessione.
 - **[!DNL Dialect]:** Il dialetto utilizzato per il database SQL. [!DNL Query Service] utilizza **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del da
 
 Dopo aver inserito i dettagli della connessione, seleziona **[!DNL Test These Settings]** per garantire il corretto funzionamento delle credenziali. In caso affermativo, di seguito verrà visualizzato un messaggio che indica che è possibile connettersi. Se la connessione ha esito positivo, seleziona **[!DNL Add Connection]** per creare la connessione.
 
-![](../images/clients/looker/click-test-connection.png)
+![È evidenziata la pagina delle impostazioni Connessioni per una nuova connessione con il test di queste impostazioni.](../images/clients/looker/click-test-connection.png)
 
 ## Passaggi successivi
 

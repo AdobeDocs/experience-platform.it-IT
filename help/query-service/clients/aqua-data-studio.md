@@ -5,9 +5,9 @@ title: Connettere Aqua Data Studio al servizio query
 topic-legacy: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Aqua Data Studio con Adobe Experience Platform Query Service.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ La **[!DNL Register Server]** viene visualizzata la finestra di dialogo . Sotto 
 - **[!DNL Host and Port]**: L&#39;endpoint host e la relativa porta per [!DNL Query Service]. Per connettersi a è necessario utilizzare la porta 80 [!DNL Query Service].
 - **[!DNL Database]:** Database che verrà utilizzato. Utilizzare il valore per la credenziale dell’interfaccia utente di Platform `dbname`: `prod:all`.
 
-![La scheda Generale di Aqua Data Studio con i campi di input richiesti evidenziati.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![La [!DNL Aqua Data Studio] Scheda Generale con i campi di input richiesti evidenziati.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credenziali
 
@@ -56,7 +56,7 @@ Quindi, seleziona la **[!DNL Driver]** scheda . Sotto **[!DNL Parameters]**, imp
 >
 >Consulta la sezione [[!DNL Query Service] Documentazione SSL](./ssl-modes.md) per informazioni sul supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e su come connettersi utilizzando `verify-full` Modalità SSL.
 
-![La scheda Driver di Aqua Data Studio con il campo Parametri evidenziato.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![La [!DNL Aqua Data Studio] Scheda Driver con il campo Parametri evidenziato.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Dopo aver inserito i dettagli della connessione, seleziona **[!DNL Test Connection]** per garantire il corretto funzionamento delle credenziali. Se il test di connessione ha esito positivo, seleziona **[!DNL Save]** per registrare il server. Viene visualizzata una finestra di dialogo di conferma della connessione e la connessione viene visualizzata sul dashboard. È ora possibile connettersi al server e visualizzare i relativi oggetti schema.
 

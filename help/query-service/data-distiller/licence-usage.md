@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio utilizzo licenza query batch
 description: L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo della licenza di Data Distiller dell’organizzazione.
-source-git-commit: 74175e5e2ce31427ef6ea8d93055d6ca3a8406f4
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -34,4 +34,4 @@ La [!UICONTROL Orari di calcolo] widget utilizza un grafico a linee per visualiz
 >
 >La [!UICONTROL Orari di calcolo] widget è applicabile solo ai clienti con la licenza Data Distiller per le query batch.
 
-![Il dashboard di utilizzo della licenza con il widget Calcola ore evidenziato.](../images/data-distiller/compute-hours.png)
+![Dashboard di utilizzo della licenza con il widget ore di calcolo evidenziato.](../images/data-distiller/compute-hours.png)

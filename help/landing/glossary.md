@@ -5,9 +5,9 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
 workflow-type: tm+mt
-source-wordcount: '7436'
+source-wordcount: '7435'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 **Classe**: In Experience Data Model (XDM), una classe definisce il set di campi più piccolo utilizzato per creare uno schema e definisce il comportamento di base dell&#39;oggetto business rappresentato dallo schema.
 
-**Client**: Un client è uno strumento o un&#39;applicazione esterna che si connette a [!DNL Query Service] tramite protocollo PostgreSQL o API HTTP.
+**Client**: Un client è uno strumento o un&#39;applicazione esterna che si connette a [!DNL Query Service] tramite [!DNL PostgreSQL] protocollo o API HTTP.
 
 **Raccolta**: In [!DNL Offer Decisioning], le raccolte sono sottoinsiemi di offerte in base a condizioni predefinite definite da un addetto al marketing, ad esempio la categoria dell’offerta.
 

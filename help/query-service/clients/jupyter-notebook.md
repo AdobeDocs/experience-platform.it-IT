@@ -1,9 +1,9 @@
 ---
 title: Collegare il blocco appunti Jupyter al servizio query
 description: Scopri come collegare Jupyter Notebook a Adobe Experience Platform Query Service.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Acquisizione delle credenziali necessarie per la connessione [!DNL Jupyter Noteb
 
 Dopo aver aperto una nuova [!DNL Jupyter Notebook] applicazione web, selezionare **[!DNL New]** menu a discesa seguito da **[!DNL Python 3]** per creare un nuovo blocco appunti. La [!DNL Notebook] viene visualizzato l&#39;editor.
 
-![La [!DNL Jupiter Notebook] Scheda File con [!DNL New dropdown] e [!DNL Python] 3 evidenziato.](../images/clients/jupyter-notebook/new-notebook.png)
+![La [!DNL Jupiter Notebook] Scheda File con [!DNL New] a discesa e [!DNL Python] 3 evidenziato.](../images/clients/jupyter-notebook/new-notebook.png)
 
 Sulla prima riga del [!DNL Notebook] editor, inserisci il seguente valore: `pip install psycopg2-binary` e seleziona **[!DNL Run]** dalla barra dei comandi. Sotto la riga di input viene visualizzato un messaggio di operazione riuscita.
 

@@ -5,53 +5,53 @@ title: Connetti Postico a Query Service
 topic-legacy: connect
 description: Questo documento contiene il collegamento per l'installazione del client di backup Postico per Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
 
-# Connetti [!DNL Postico] a Query Service (Mac)
+# Connetti [!DNL Postico] al servizio query (Mac)
 
-Questo documento descrive i passaggi per la connessione di [!DNL Postico] con Adobe Experience Platform [!DNL Query Service].
+Questo documento descrive i passaggi per la connessione [!DNL Postico] con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Questa guida presuppone che tu abbia già accesso a [!DNL Postico] e che tu abbia familiarità con come navigare nella relativa interfaccia. Ulteriori informazioni su [!DNL Postico] sono disponibili nella [documentazione [!DNL Postico] ufficiale](https://eggerapps.at/postico/docs).
+> Questa guida presuppone che tu abbia già accesso a [!DNL Postico] e conoscono bene come navigare nella relativa interfaccia. Ulteriori informazioni [!DNL Postico] si trova nella [ufficiale [!DNL Postico] documentazione](https://eggerapps.at/postico/docs).
 > 
-> Inoltre, [!DNL Postico] è **disponibile solo** su dispositivi macOS.
+> Inoltre, [!DNL Postico] è **only** disponibile su dispositivi macOS.
 
-Per connettersi a [!DNL Postico] Query Service, apri [!DNL Postico] e seleziona **[!DNL New Favorite]**.
+Connessione [!DNL Postico] al servizio query, apri [!DNL Postico] e seleziona **[!DNL New Favorite]**.
 
-![](../images/clients/postico/open-postico.png)
+![La [!DNL Postico] Interfaccia utente con nuovo preferito evidenziato.](../images/clients/postico/open-postico.png)
 
 È ora possibile immettere i valori per la connessione con Adobe Experience Platform.
 
-Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
+Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
 
-Dopo aver inserito le credenziali, selezionare **[!DNL Connect]** per connettersi al servizio query.
+Dopo aver inserito le credenziali, seleziona **[!DNL Connect]** per la connessione con Query Service.
 
-![](../images/clients/postico/authentication-details.png)
+![Finestra di dialogo Nuovo preferito con connessione evidenziata.](../images/clients/postico/authentication-details.png)
 
 Dopo la connessione a Platform, potrai visualizzare un elenco di tutte le relazioni precedentemente effettuate con Query Service.
 
-![](../images/clients/postico/show-queries.png)
+![Un elenco di connessioni nel [!DNL Postico] Interfaccia utente.](../images/clients/postico/show-queries.png)
 
 ## Creare istruzioni SQL
 
 Per creare una nuova query SQL, selezionare e aprire &quot;Query SQL&quot;.
 
-![](../images/clients/postico/create-query.png)
+![La [!DNL Postico] Interfaccia utente con il collegamento a query SQL evidenziato.](../images/clients/postico/create-query.png)
 
 Viene visualizzata una casella in cui è possibile digitare la query da eseguire. Al termine, seleziona **[!DNL Execute Statement]** per eseguire la query.
 
-![](../images/clients/postico/run-statement.png)
+![Editor SQL con istruzione Execute evidenziato.](../images/clients/postico/run-statement.png)
 
 Viene visualizzata una tabella che mostra i risultati dell’esecuzione della query completata.
 
-![](../images/clients/postico/query-results.png)
+![Tabella dei risultati della query di esempio.](../images/clients/postico/query-results.png)
 
 ## Passaggi successivi
 
-Dopo aver effettuato la connessione con [!DNL Query Service], è possibile utilizzare [!DNL Postico] per scrivere le query. Per ulteriori informazioni su come scrivere ed eseguire le query, leggere la [guida all&#39;esecuzione delle query](../best-practices/writing-queries.md).
+Ora che ti sei connesso [!DNL Query Service], puoi utilizzare [!DNL Postico] per scrivere query. Per ulteriori informazioni su come scrivere ed eseguire le query, leggere il [guida all’esecuzione delle query](../best-practices/writing-queries.md).

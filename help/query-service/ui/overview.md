@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '716'
 ht-degree: 1%
 
 ---
@@ -26,15 +26,15 @@ La [!DNL Query Editor] consente di scrivere ed eseguire query senza utilizzare u
 
 ![Uno zoom in vista del [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Sfogliare {#browse}
+## Modelli {#browse}
 
-La **[!UICONTROL Sfoglia]** mostra le query salvate dagli utenti dell’organizzazione. È utile considerarli come progetti di query, in quanto le query salvate qui potrebbero essere ancora in costruzione. Query visualizzate nel **[!UICONTROL Sfoglia]** viene visualizzata anche come query di esecuzione nella scheda **[!UICONTROL Registro]** se sono stati eseguiti in precedenza da [!DNL Query Service].
+La **[!UICONTROL Modelli]** mostra le query salvate dagli utenti dell’organizzazione. È utile considerarli come progetti di query, in quanto le query salvate qui potrebbero essere ancora in costruzione. Query visualizzate nel **[!UICONTROL Modelli]** viene visualizzata anche come query di esecuzione nella scheda **[!UICONTROL Registro]** se sono stati eseguiti in precedenza da [!DNL Query Service].
 
-![Una visualizzazione ingrandita della scheda Sfoglia del dashboard Query che mostra diverse query salvate.](../images/ui/overview/browse.png)
+![Una visualizzazione ingrandita della scheda Modelli dashboard Query che mostra diverse query salvate.](../images/ui/overview/templates.png)
 
 | Colonna | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome]** | Nome della query creata dall&#39;utente. Puoi selezionare il nome per aprire la query nella [!DNL Query Editor]. È inoltre possibile utilizzare la barra di ricerca per cercare il Nome di una query. Le ricerche sono sensibili all’uso di maiuscole e minuscole. |
+| **[!UICONTROL Nome]** | Il campo nome è il nome della query creato dall&#39;utente o i primi caratteri della query SQL. All’inizio viene denominato qualsiasi query creata tramite l’interfaccia utente con l’Editor query. Se la query è stata creata tramite l’API, il nome della query è uno snippet dell’SQL iniziale utilizzato per creare la query. Puoi selezionare il nome della query per aprire la query nella [!DNL Query Editor]. È inoltre possibile utilizzare la barra di ricerca per cercare [!UICONTROL Nome] di una query. Le ricerche sono sensibili all’uso di maiuscole e minuscole. |
 | **[!UICONTROL SQL]** | I primi caratteri della query SQL. Passando il puntatore del mouse sul codice viene visualizzata la query completa. |
 | **[!UICONTROL Modificato da]** | Ultimo utente che ha modificato la query. Qualsiasi utente della tua organizzazione con accesso a [!DNL Query Service] può modificare le query. |
 | **[!UICONTROL Ultima modifica]** | La data e l’ora dell’ultima modifica alla query, nel fuso orario del browser. |
@@ -55,7 +55,7 @@ La **[!UICONTROL Registro]** fornisce un elenco delle query che sono state esegu
 | **[!UICONTROL Ultima esecuzione]** | Quando la query è stata eseguita per ultima. Puoi ordinare l’elenco in ordine crescente o decrescente selezionando la freccia su questa colonna. |
 | **[!UICONTROL Tempo di esecuzione]** | Il tempo necessario per eseguire la query. |
 
-## Credenziali
+## Credenziali 
 
 La **[!UICONTROL Credenziali]** visualizza le credenziali in scadenza e non in scadenza. Per ulteriori informazioni su come utilizzare queste credenziali per la connessione con client esterni, leggere il [guida alle credenziali](../clients/overview.md).
 

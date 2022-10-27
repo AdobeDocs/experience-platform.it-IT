@@ -5,9 +5,9 @@ title: Sintassi SQL nel servizio query
 topic-legacy: syntax
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ L&#39;esempio restituisce quanto segue:
 
 Questo secondo esempio dimostra ulteriormente il concetto e l&#39;applicazione `inline` funzione . Il modello dati per l’esempio è illustrato nell’immagine seguente.
 
-![Diagramma di schema per productListItems](../images/sql/productListItems.png)
+![Diagramma di schema per productListItems.](../images/sql/productListItems.png)
 
 **Esempio**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Per restituire il valore di qualsiasi impostazione, utilizza `SET [property key]` senza `property_value`.
 
-## Comandi PostgreSQL
+## [!DNL PostgreSQL] comandi
 
-Le sottosezioni seguenti descrivono i comandi PostgreSQL supportati da Query Service.
+Le sottosezioni che seguono riguardano [!DNL PostgreSQL] comandi supportati da Query Service.
 
 ### ANALISI TABELLA
 
@@ -677,7 +677,7 @@ Ulteriori informazioni sui parametri di query SELECT standard sono disponibili n
 | Parametri | Descrizione |
 | ------ | ------ |
 | `TEMPORARY` oppure `TEMP` | Un parametro facoltativo. Se specificato, la tabella creata sarà una tabella temporanea. |
-| `UNLOGGED` | Un parametro facoltativo. Se specificato, la tabella creata come sarà una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili in [Documentazione PostgreSQL](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Un parametro facoltativo. Se specificato, la tabella creata come sarà una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili in [[!DNL PostgreSQL] documentazione](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nome della tabella da creare. |
 
 **Esempio**

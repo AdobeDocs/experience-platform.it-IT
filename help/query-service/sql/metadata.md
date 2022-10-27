@@ -5,17 +5,16 @@ title: Comandi PostgreSQL per metadati nel servizio query
 topic-legacy: metadata
 description: Elenco di comandi PostgreSQL attualmente supportati per la query dei metadati in Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-# Comandi PostgreSQL per metadati nel servizio query
+# Metadati [!DNL PostgreSQL] comandi in Query Service
 
-Per i metadati del set di dati, i seguenti comandi PostgreSQL sono attualmente supportati per le query:
+Per i metadati nel set di dati, effettuare le seguenti operazioni [!DNL PostgreSQL] comandi attualmente supportati per la query:
 
 >[!NOTE]
 >
@@ -42,6 +41,6 @@ Per i metadati del set di dati, i seguenti comandi PostgreSQL sono attualmente s
 | `\showtables` | Mostra le seguenti informazioni: <br>nome: Nome a cui fare riferimento la tabella.<br>datasetId: ID del set di dati memorizzato.<br>set di dati: Nome del set di dati memorizzato.<br>descrizione: Una descrizione del set di dati.<br>risolto: Un valore booleano che indica se il set di dati è risolto o meno nella sessione corrente. |
 | `\timing` | Attiva e disattiva la visualizzazione. La visualizzazione è in millisecondi. Gli intervalli più lunghi di un secondo vengono visualizzati in formato minuti:secondi, con i campi ore e giorni aggiunti quando necessario. |
 
-Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile pubblicare `\dtsn` per visualizzare un elenco di tutte le tabelle, le sequenze e gli schemi. `\d` mostra di per sé tutte le tabelle, viste, viste materializzate e sequenze visibili.
+Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, puoi risolvere un problema `\dtsn` per visualizzare un elenco di tutte le tabelle, le sequenze e gli schemi. `\d` mostra di per sé tutte le tabelle, viste, viste materializzate e sequenze visibili.
 
-Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione all&#39;indirizzo [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tieni presente che non tutte le opzioni visualizzate nella documentazione PostgreSQL sono supportate da [!DNL Experience Platform].
+Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione all’indirizzo [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tieni presente che non tutte le opzioni visualizzate nella [!DNL PostgreSQL] la documentazione è supportata da [!DNL Experience Platform].

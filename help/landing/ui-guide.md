@@ -5,9 +5,9 @@ title: Panoramica dell’interfaccia utente di Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ La **[!UICONTROL Schemi]** Questa sezione ti consente di creare e gestire gli sc
 
 La **[!UICONTROL Set di dati]** consente di creare e gestire i set di dati. Ulteriori informazioni sui set di dati sono disponibili nella sezione [guida utente dei set di dati](../catalog/datasets/user-guide.md).
 
-La **[!UICONTROL Query]** consente di creare e gestire le query, le query SQL di log effettuate da Adobe Experience Platform Query Service e le credenziali PostgreSQL. Ulteriori informazioni sulle query sono disponibili nella sezione [Guida utente di Query Service](../query-service/ui/overview.md).
+La **[!UICONTROL Query]** consente di creare e gestire query, registrare query SQL create da Adobe Experience Platform Query Service e visualizzare il [!DNL PostgreSQL] credenziali. Ulteriori informazioni sulle query sono disponibili nella sezione [Guida utente di Query Service](../query-service/ui/overview.md).
 
 La **[!UICONTROL Monitoraggio]** consente di monitorare l’acquisizione in batch e in streaming. Ulteriori informazioni sul monitoraggio sono disponibili nella sezione [guida utente per il monitoraggio dell’inserimento dei dati](../ingestion/quality/monitor-data-ingestion.md).
 

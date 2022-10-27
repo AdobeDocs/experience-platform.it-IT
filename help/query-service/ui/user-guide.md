@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
+source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 1%
+source-wordcount: '1993'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Servic
 
 [!DNL Query Editor] L&#39;inizializzazione e la connessione richiedono alcuni secondi [!DNL Query Service] quando viene aperto. La console indica quando è connessa, come illustrato di seguito. Se tenti di eseguire una query prima che l’editor si sia connesso, l’esecuzione ritarda fino al completamento della connessione.
 
-![Immagine](../images/ui/query-editor/connect.png)
+![L’output della console dell’Editor query al momento della connessione iniziale.](../images/ui/query-editor/connect.png)
 
 ### Esecuzione delle query da [!DNL Query Editor] {#run-a-query}
 
@@ -36,17 +36,17 @@ Query eseguite da [!DNL Query Editor] esegui in modo interattivo. Ciò significa
 
 Utilizzo [!DNL Query Editor], puoi scrivere, eseguire e salvare query per i dati sulla customer experience. Tutte le query eseguite o salvate in [!DNL Query Editor] sono disponibili per tutti gli utenti dell’organizzazione con accesso a [!DNL Query Service].
 
-### Accesso al [!DNL Query Editor] {#accessing-query-editor}
+### Accesso [!DNL Query Editor] {#accessing-query-editor}
 
 In [!DNL Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Query]** nel menu di navigazione a sinistra per aprire [!DNL Query Service] workspace. Quindi, seleziona **[!UICONTROL Crea query]** in alto a destra della schermata per iniziare a scrivere query. Questo collegamento è disponibile da una qualsiasi delle pagine nel [!DNL Query Service] workspace.
 
-![Immagine](../images/ui/query-editor/create-query.png)
+![Scheda panoramica dell’area di lavoro Query con Crea query evidenziata.](../images/ui/query-editor/create-query.png)
 
 ### Scrittura di query {#writing-queries}
 
-[!UICONTROL Editor query] è organizzato in modo da rendere la scrittura di query il più semplice possibile. La schermata seguente mostra come l’editor appare nell’interfaccia utente, con **Play** campo voce pulsante e SQL evidenziato.
+[!UICONTROL Editor query] è organizzato in modo da rendere la scrittura di query il più semplice possibile. La schermata seguente mostra come l&#39;editor appare nell&#39;interfaccia utente, con il campo di immissione SQL e **Play** evidenziato.
 
-![Immagine](../images/ui/query-editor/editor.png)
+![Editor query con il campo di input SQL e Riproduci evidenziato.](../images/ui/query-editor/editor.png)
 
 Per ridurre al minimo il tempo di sviluppo, è consigliabile sviluppare le query con limiti sulle righe restituite. Ad esempio, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Dopo aver verificato che la query produca l’output previsto, rimuovi i limiti ed esegui la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l’output.
 
@@ -54,15 +54,15 @@ Per ridurre al minimo il tempo di sviluppo, è consigliabile sviluppare le query
 
 - **Evidenziazione automatica della sintassi:** Semplifica la lettura e l&#39;organizzazione di SQL.
 
-![Immagine](../images/ui/query-editor/syntax-highlight.png)
+![Istruzione SQL nell&#39;Editor query che dimostra l&#39;evidenziazione della sintassi del colore.](../images/ui/query-editor/syntax-highlight.png)
 
 - **Completamento automatico parola chiave SQL:** Inizia a digitare la query e utilizza i tasti freccia per passare al termine desiderato e premi **Invio**.
 
-![Immagine](../images/ui/query-editor/syntax-auto.png)
+![Alcuni caratteri di SQL con il menu a discesa completamento automatico che fornisce le opzioni dell’Editor query.](../images/ui/query-editor/syntax-auto.png)
 
 - **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella che desideri `SELECT` da, quindi utilizzare i tasti freccia per passare alla tabella desiderata e premere **Invio**. Una volta selezionata una tabella, la funzione di completamento automatico riconoscerà i campi presenti nella tabella.
 
-![L’interfaccia della riga di comando dell’Editor query che visualizza suggerimenti a discesa.](../images/ui/query-editor/tables-auto.png)
+![Suggerimenti per i nomi della tabella a discesa per l’inserimento dell’editor delle query.](../images/ui/query-editor/tables-auto.png)
 
 ### Interruttore di configurazione dell’interfaccia utente con completamento automatico {#auto-complete}
 
@@ -94,17 +94,17 @@ Selezionare l&#39;opzione appropriata per disattivare la funzione di completamen
 
 [!DNL Query Editor] convalida automaticamente una query durante la scrittura, fornendo una convalida SQL generica e una convalida di esecuzione specifica. Se sotto la query viene visualizzata una sottolineatura rossa (come illustrato nell’immagine seguente), la query presenta un errore.
 
-![Immagine](../images/ui/query-editor/syntax-error-highlight.png)
+![L&#39;input dell&#39;editor delle query che visualizza SQL sottolineato in rosso per indicare un errore.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Quando vengono rilevati errori, è possibile visualizzare i messaggi di errore specifici passando il mouse sul codice SQL.
 
-![Immagine](../images/ui/query-editor/linting-error.png)
+![Una finestra di dialogo con un messaggio di errore.](../images/ui/query-editor/linting-error.png)
 
 ### Dettagli query {#query-details}
 
-Durante la visualizzazione di una query in [!DNL Query Editor], **[!UICONTROL Dettagli query]** Il pannello fornisce gli strumenti per gestire la query selezionata.
+Seleziona qualsiasi modello salvato dal [!UICONTROL Modelli] per visualizzarlo nell’Editor query. Il pannello dei dettagli della query fornisce ulteriori informazioni e strumenti per gestire la query selezionata.
 
-![Immagine](../images/ui/query-editor/query-details.png)
+![Editor query con il pannello dei dettagli della query evidenziato.](../images/ui/query-editor/query-details.png)
 
 Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o denominare la query visualizzata e aggiungere una pianificazione alla query.
 
@@ -118,11 +118,13 @@ Questo pannello mostra anche metadati utili, come l’ultima volta che la query 
 
 Per aggiungere una pianificazione a una query, seleziona **[!UICONTROL Aggiungi pianificazione]**.
 
-![Immagine](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![Editor query con pianificazione Aggiungi evidenziata.](../images/ui/query-editor/add-schedule.png)
 
 La **[!UICONTROL Dettagli della pianificazione]** viene visualizzata la pagina . In questa pagina puoi scegliere la frequenza della query pianificata, le date di esecuzione della query pianificata e il set di dati in cui esportare la query.
 
-![Immagine](../images/ui/query-editor/schedule-details.png)
+![Il pannello Dettagli pianificazione è evidenziato.](../images/ui/query-editor/schedule-details.png)
 
 Puoi scegliere le seguenti opzioni per **[!UICONTROL Frequenza]**:
 
@@ -152,7 +154,9 @@ La pagina dei dettagli della query viene visualizzata nuovamente e ora mostra i 
 
 Per eliminare una pianificazione, seleziona **[!UICONTROL Eliminare una pianificazione]**.
 
-![Immagine](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![L’Editor query con Disabilita pianificazione ed Elimina pianificazione evidenziata.](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -184,7 +188,7 @@ Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#
 
 La console fornisce informazioni sullo stato e sul funzionamento di [!DNL Query Service]. Nella console viene visualizzato lo stato della connessione a [!DNL Query Service], le operazioni di query in esecuzione ed eventuali messaggi di errore risultanti da tali query.
 
-![Immagine](../images/ui/query-editor/console.png)
+![La scheda Console della console Editor query.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -194,7 +198,7 @@ La console fornisce informazioni sullo stato e sul funzionamento di [!DNL Query 
 
 Al termine di una query, i risultati vengono visualizzati nella **[!UICONTROL Risultati]** accanto alla scheda **[!UICONTROL Console]** scheda . Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione ti consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovi i limiti sulle righe restituite ed esegui la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l’output. Consulta la sezione [esercitazione sulla generazione di set di dati](./create-datasets.md) per istruzioni su come generare un set di dati dai risultati della query in [!DNL Query Editor].
 
-![Immagine](../images/ui/query-editor/query-results.png)
+![Nella scheda Risultati della console Editor query sono visualizzati i risultati di un’esecuzione della query.](../images/ui/query-editor/query-results.png)
 
 ## Eseguire query con [!DNL Query Service] video tutorial {#query-tutorial-video}
 

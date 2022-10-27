@@ -2,9 +2,9 @@
 title: Supporto per il controllo degli accessi basato su attributi per gli schemi ad hoc
 description: Una guida per limitare l’accesso ai campi dati negli schemi ad hoc generati tramite Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -56,13 +56,13 @@ Per modificare le etichette dati per lo schema ad hoc, seleziona la [!UICONTROL 
 
 ## Modificare le etichette per lo schema o il campo
 
-Per modificare le etichette per l&#39;intero schema, seleziona l&#39;icona a forma di matita (![](../images/data-governance/edit-icon.png)) sul lato del nome dello schema sotto il [!UICONTROL Etichette] scheda .
+Per modificare le etichette per l&#39;intero schema, seleziona l&#39;icona a forma di matita (![Icona a forma di matita.](../images/data-governance/edit-icon.png)) sul lato del nome dello schema sotto il [!UICONTROL Etichette] scheda .
 
 ![L’icona a forma di matita evidenziata viene visualizzata nell’area di lavoro degli schemi.](../images/data-governance/edit-entire-schema-labels.png)
 
 Per applicare un’etichetta a un campo esistente, selezionare uno o più campi dall’elenco seguito da [!UICONTROL Modifica delle etichette di governance] nella barra laterale destra.
 
-![Le etichette vengono visualizzate nell’area di lavoro degli schemi con l’opzione &quot;Modifica etichette di governance&quot; evidenziata nella barra laterale dei diritti.](../images/data-governance/edit-governance-labels.png)
+![Le etichette vengono visualizzate nell’area di lavoro degli schemi con l’opzione &quot;Modifica etichette di governance&quot; evidenziata nella barra laterale destra.](../images/data-governance/edit-governance-labels.png)
 
 ## Modifica del puntatore delle etichette
 

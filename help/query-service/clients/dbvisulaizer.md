@@ -5,9 +5,9 @@ title: Collegare DbVisualizer al servizio query
 topic-legacy: connect
 description: Questo documento illustra i passaggi necessari per la connessione di DbVisualizer con Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Usa la barra di ricerca o seleziona [!DNL PostgreSQL] dall&#39;elenco a discesa 
 
 Dall&#39;area di lavoro Connessione database, selezionare la **[!DNL Properties]** , seguita dalla scheda **[!DNL Driver Properties]** dalla barra laterale di navigazione.
 
-![Area di lavoro Connessione al database con la scheda delle proprietà evidenziata.](../images/clients/dbvisualizer/driver-properties.png)
+![Area di lavoro Connessione al database con proprietà e proprietà driver evidenziate.](../images/clients/dbvisualizer/driver-properties.png)
 
 Per abilitare l’utilizzo di SSL con DBVisualizer, si consiglia di utilizzare le proprietà del driver riportate nella tabella seguente.
 
@@ -57,7 +57,7 @@ Per abilitare l’utilizzo di SSL con DBVisualizer, si consiglia di utilizzare l
 
 La `PGHOST` e `user` i valori sono tratti dalle credenziali Adobe Experience Platform. Per trovare le tue credenziali, accedi all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla navigazione a sinistra, seguita da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md).
 
-![Experience Platform Query Credenziali Dashboard con credenziali evidenziate.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![La pagina Credenziali dell&#39;area di lavoro Query Experienci Platform con credenziali e le credenziali in scadenza evidenziate.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] offre inoltre credenziali non in scadenza per consentire una configurazione unica con client di terze parti. Consulta la documentazione per [istruzioni complete su come generare e utilizzare le credenziali non in scadenza](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Per richiedere un ID utente e un&#39;autenticazione basata su password ogni volt
 
 Nel pannello Autenticazione connessione, controlla entrambi i parametri **[!DNL Require Userid]** e **[!DNL Require Password]** caselle di controllo e seleziona **[!DNL Apply]**.
 
-![Il pannello Autenticazione connessione con le caselle di controllo Userid e Password è evidenziato.](../images/clients/dbvisualizer/connection-authentication.png)
+![Pannello di autenticazione per [!DNL PostgreSQL] Connessione al database con le caselle di controllo Richiedi ID utente e Password evidenziate.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Connetti a Platform
 
@@ -90,11 +90,11 @@ Per effettuare una connessione, seleziona la **[!DNL Connection]** dall&#39;area
 
 Dopo aver immesso tutte le credenziali rilevanti, seleziona **[!DNL Connect]**.
 
-![Area di lavoro Connessione database con la scheda Connessione e il pulsante di connessione evidenziati.](../images/clients/dbvisualizer/connect.png)
+![La [!DNL PostgreSQL] Area di lavoro Connessione database con la scheda Connessione e il pulsante di connessione evidenziati.](../images/clients/dbvisualizer/connect.png)
 
 La [!DNL Connect] nella prima occasione della sessione viene visualizzata la finestra di dialogo.
 
-![Viene evidenziata la finestra di dialogo Connetti con i campi di testo dell&#39;ID utente del database e della password del database.](../images/clients/dbvisualizer/connect-dialog.png)
+![Connetti: [!DNL PostgreSQL] finestra di dialogo con i campi di testo Database Userid e Database Password evidenziati.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Immetti il tuo ID utente e la tua password e seleziona **[!DNL Connect]**. Nel registro viene visualizzato un messaggio per confermare la riuscita della connessione.
 

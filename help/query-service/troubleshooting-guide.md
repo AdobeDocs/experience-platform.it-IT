@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Dopo aver effettuato l’accesso all’Experience Platform, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra dell’interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
 - Set di dati [!UICONTROL Sfoglia] viene visualizzata la scheda . Puoi usare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
 
-![Un set di dati evidenziato nell’interfaccia utente di Platform.](./images/troubleshooting/dataset-selection.png)
+![Dashboard dei set di dati nell’interfaccia utente di Platform con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
 
-- La [!UICONTROL Attività set di dati] viene visualizzata la schermata . Seleziona [!UICONTROL Anteprima set di dati] per aprire una finestra di dialogo dello schema XDM e una visualizzazione tabulare dei dati appiattiti dal set di dati selezionato. Maggiori dettagli sono disponibili nella sezione [visualizzare in anteprima la documentazione del set di dati](../catalog/datasets/user-guide.md#preview-a-dataset)
+- La [!UICONTROL Attività set di dati] viene visualizzata la schermata . Seleziona **[!UICONTROL Anteprima set di dati]** per aprire una finestra di dialogo dello schema XDM e una visualizzazione tabulare dei dati appiattiti dal set di dati selezionato. Maggiori dettagli sono disponibili nella sezione [visualizzare in anteprima la documentazione del set di dati](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Lo schema XDM e la visualizzazione tabulare dei dati appiattiti.](./images/troubleshooting/dataset-preview.png)
+![Scheda Attività set di dati del dashboard Set di dati con set di dati di anteprima evidenziato.](./images/troubleshooting/dataset-preview.png)
 
 - Seleziona un campo qualsiasi dallo schema per visualizzarne il contenuto in una colonna appiattita. Il nome della colonna viene visualizzato sopra il relativo contenuto sul lato destro della pagina. È necessario copiare questo nome da utilizzare per eseguire query su questo set di dati.
 
-![Il nome della colonna di un set di dati nidificato evidenziato nell’interfaccia utente.](./images/troubleshooting/column-name.png)
+![Lo schema XDM e la visualizzazione tabulare dei dati appiattiti. Il nome della colonna di un set di dati nidificato viene evidenziato nell’interfaccia utente.](./images/troubleshooting/column-name.png)
 
 Consulta la documentazione per maggiori informazioni [come utilizzare le strutture dati nidificate](./best-practices/nested-data-structures.md) utilizzando l’editor delle query o un client di terze parti.
 +++
@@ -119,12 +119,12 @@ Consulta la documentazione per maggiori informazioni [come utilizzare le struttu
 - Passa a [https://www.adobe.com/](https://www.adobe.com/) nel browser web.
 - Sul lato destro della barra di navigazione superiore, seleziona **[!UICONTROL Accesso]**.
 
-![Adobe del sito web con accesso evidenziato.](./images/troubleshooting/adobe-sign-in.png)
+![Il sito web di Adobe con Accedi evidenziato.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilizza il tuo Adobe ID e la password registrati con la tua licenza di Adobe.
 - Seleziona **[!UICONTROL Aiuto e supporto]** dalla barra di navigazione superiore.
 
-![Menu a discesa della barra di navigazione superiore con aiuto e supporto evidenziato.](./images/troubleshooting/help-and-support.png)
+![Il menu a discesa della barra di navigazione superiore con Guida e supporto, Supporto Enterprise e Contattaci evidenziato.](./images/troubleshooting/help-and-support.png)
 
 Viene visualizzato un banner a discesa contenente un [!UICONTROL Aiuto e supporto] sezione . Seleziona **[!UICONTROL Contattaci]** per aprire Adobe Customer Care Virtual Assistant o selezionare **[!UICONTROL Supporto aziendale]** per un aiuto dedicato alle grandi organizzazioni.
 +++
