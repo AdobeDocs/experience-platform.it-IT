@@ -4,9 +4,9 @@ description: Scopri come Adobe Experience Platform Edge Network gestisce lo stat
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;stato;gestione;edge;rete;gateway;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Stato restituito da [!DNL Edge Network] nel corpo della risposta è un `Handle` 
 | --- | --- | --- |
 | `key` | Stringa | **Obbligatorio**. Nome della voce. |
 | `value` | Stringa | *Facoltativo*. Valore immesso. |
-| `maxAge` | Intero | *Facoltativo* Il time-to-live (TTL) in secondi. Se mancante, le voci devono essere memorizzate solo per la sessione corrente. |
+| `maxAge` | Intero | *Facoltativo* Il tempo (in secondi) fino alla scadenza della voce. Se mancante, le voci devono essere memorizzate solo per la sessione corrente. |
 | `attrs` | `Map<String, String>` | *Facoltativo*. Un elenco facoltativo di attributi di ingresso. Per tutte le connessioni sicure con un&#39;intestazione HTTP referente sicura, il `SameSite` attributo impostato su `None`. |
 
 

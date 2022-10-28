@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l’API,
 >
 >Nel caso in cui uno schema venga esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi appena aggiunti. Per ulteriori informazioni sulla personalizzazione [!DNL Experience Data Model] (XDM), visita [Esercitazione sull’Editor di schema](../xdm/tutorials/create-schema-ui.md).
 >
->Inoltre, se il valore TTL (time-to-live) è abilitato nel set di dati, ciò potrebbe influenzare l’appartenenza del segmento creato. Per ulteriori informazioni su TTL e su come può influenzare la segmentazione, consulta la sezione [Guida TTL del servizio profili](../profile/apply-ttl.md).
+>Inoltre, se un valore di scadenza di Experience Event è abilitato sul set di dati, ciò potrebbe influenzare l’appartenenza del segmento creato. Leggi la guida su [Scadenza eventi esperienza](../profile/event-expirations.md) per ulteriori informazioni su come questa funzione può influenzare la segmentazione.
 
 ## Valutare i segmenti {#evaluate-segments}
 

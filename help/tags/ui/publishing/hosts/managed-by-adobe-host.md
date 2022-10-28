@@ -2,10 +2,10 @@
 title: Panoramica degli host gestiti da Adobe
 description: Scopri l’opzione di hosting predefinita per la distribuzione delle build della libreria di tag in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 96%
+ht-degree: 88%
 
 ---
 
@@ -54,7 +54,7 @@ Una volta che la build è stata implementata nell&#39;host gestito da Adobe, la 
 >
 >Per gli host gestiti da Adobe, la prima libreria pubblicata in un nuovo ambiente può impiegare fino a cinque minuti per propagarsi nella rete CDN globale.
 
-Quando un nodo edge riceve una richiesta per un determinato file (ad esempio la build della libreria), viene innanzitutto verificato il valore TTL (time-to-live) del file. Se tale valore non è scaduto, il nodo perimetrale trasmette la versione cache. Se invece è scaduto, viene richiesta una nuova copia dall’origine più vicina. La copia aggiornata viene trasmessa e viene quindi memorizza nella cache con un nuovo valore TTL.
+Quando un nodo perimetrale riceve una richiesta per un file specifico (come la build della libreria), il nodo controlla prima il tempo di scadenza sul file. Se il tempo non è scaduto, il nodo perimetrale trasmette la versione cache. Se l’ora è scaduta, il nodo perimetrale richiede una nuova copia dall’origine più vicina, invia la copia aggiornata e quindi memorizza in cache la copia aggiornata con un nuovo tempo di scadenza.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ I gruppi del server di origine hanno quindi il tempo necessario per replicare tr
 
 Le build delle librerie vengono anche memorizzate nella cache del browser tramite l’intestazione HTTP `cache-control`. Quando utilizzi gli host gestiti da Adobe, non puoi intervenire sulle intestazioni restituite nelle risposte API e vengono quindi utilizzate le impostazioni di cache predefinite di Adobe. In altre parole, non è possibile utilizzare intestazioni personalizzate per gli host gestiti da Adobe. Se hai l’esigenza di usare un’intestazione `cache-control` personalizzata, puoi ricorrere al [self-hosting](self-hosting-libraries.md).
 
-Il valore TTL (time-to-live) della build della libreria memorizzata nella cache del browser (definito dall’intestazione `cache-control`) varia a seconda dell’ambiente di tag in uso:
+Il tempo di scadenza per la build della libreria memorizzata nella cache del browser (determinato dal `cache-control` ) varia a seconda dell’ambiente tag in uso:
 
 | Ambiente | Valore `cache-control` |
 | --- | --- |

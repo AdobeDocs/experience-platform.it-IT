@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licen
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2134'
 ht-degree: 2%
 
 ---
@@ -88,12 +88,12 @@ I dati possono essere acquisiti in uno o più sistemi in Platform, ovvero [!DNL 
 
 ### Quali dati conservare?
 
-Puoi applicare sia i filtri di acquisizione dei dati che le regole di scadenza (noti anche come TTL Time-To-Live) per rimuovere i dati che sono diventati obsoleti per i tuoi casi d’uso. In genere, i dati comportamentali (come i dati di Analytics) consumano molto più spazio di archiviazione dei dati di record (come i dati CRM). Ad esempio, molti utenti di Platform hanno fino al 90% di profili compilati da soli con dati comportamentali, rispetto ai dati di record. Pertanto, la gestione dei dati comportamentali è fondamentale per garantire la conformità all’interno delle adesioni alla licenza.
+Puoi applicare filtri di acquisizione dati e regole di scadenza per rimuovere i dati che sono diventati obsoleti per i tuoi casi d’uso. In genere, i dati comportamentali (come i dati di Analytics) consumano molto più spazio di archiviazione dei dati di record (come i dati CRM). Ad esempio, molti utenti di Platform hanno fino al 90% di profili compilati da soli con dati comportamentali, rispetto ai dati di record. Pertanto, la gestione dei dati comportamentali è fondamentale per garantire la conformità all’interno delle adesioni alla licenza.
 
 Sono disponibili diversi strumenti che puoi sfruttare per mantenere i diritti di utilizzo della licenza:
 
 * [Filtri di acquisizione](#ingestion-filters)
-* [TTL servizio profilo](#profile-service)
+* [Archivio profili](#profile-service)
 
 ### Filtri di acquisizione {#ingestion-filters}
 
@@ -109,9 +109,7 @@ I filtri di acquisizione ti consentono di inserire solo i dati necessari per i c
 
 {style=&quot;table-layout:auto&quot;}
 
-### Servizio profili {#profile-service}
-
-La funzionalità TTL (time-to-live) del servizio profilo ti consente di applicare il TTL ai dati nell’archivio profili. In questo modo il sistema può rimuovere automaticamente i dati il cui valore è diminuito nel tempo.
+### Archivio profili {#profile-service}
 
 L’archivio profili è composto dai seguenti componenti:
 
@@ -124,53 +122,20 @@ L’archivio profili è composto dai seguenti componenti:
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### Rapporti sulla composizione dell’archivio profili
 
-Sono disponibili diversi rapporti per comprendere la composizione dell’archivio profili. Questi rapporti ti aiutano a prendere decisioni informate su come e dove impostare i TTL del profilo per ottimizzare meglio l’utilizzo della licenza:
+Sono disponibili diversi rapporti per comprendere la composizione dell’archivio profili. Questi rapporti ti aiutano a prendere decisioni informate su come e dove impostare la scadenza dell’evento esperienza per ottimizzare meglio l’utilizzo della licenza:
 
-* **API rapporto di sovrapposizione set di dati**: Espone i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Puoi utilizzare questo rapporto per identificare quale [!DNL ExperienceEvent] set di dati per cui impostare un TTL. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) per ulteriori informazioni.
+* **API rapporto di sovrapposizione set di dati**: Espone i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Puoi utilizzare questo rapporto per identificare quale [!DNL ExperienceEvent] set di dati per cui impostare una scadenza. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) per ulteriori informazioni.
 * **API del rapporto di sovrapposizione identità**: Espone i namespace di identità che contribuiscono maggiormente al pubblico indirizzabile. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) per ulteriori informazioni.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] TTL set di dati {#dataset-ttl}
+#### Scadenza eventi esperienza {#event-expirations}
 
-Puoi applicare il TTL ai set di dati abilitati per il profilo per rimuovere dall’archivio profili i dati comportamentali che non sono più utili per i casi d’uso. Una volta applicato il TTL a un set di dati abilitato per il profilo, Platform rimuove automaticamente i dati non più necessari tramite un processo in due parti:
-
-* Tutti i nuovi dati che avanzano avranno il valore di scadenza TTL applicato al momento dell’acquisizione;
-* Tutti i dati esistenti avranno il valore di scadenza TTL applicato come parte di un processo di backfill del sistema una tantum.
-
-È possibile prevedere che il valore TTL per ogni evento sia dalla marca temporale dell’evento. Tutti gli eventi precedenti al valore di scadenza TTL vengono eliminati immediatamente durante l&#39;esecuzione del processo di sistema. Tutti gli altri eventi vengono eliminati quando si avvicinano al valore di scadenza TTL indicato nella marca temporale dell’evento.
-
-Vedi l&#39;esempio seguente per comprendere meglio [!DNL ExperienceEvent] TTL set di dati.
-
-Se applichi un valore TTL di 30 giorni il 15 maggio, allora:
-
-* A tutti i nuovi eventi verrà applicato un TTL di 30 giorni al loro arrivo;
-* Tutti gli eventi esistenti con una marca temporale precedente al 15 aprile vengono eliminati immediatamente da un processo di sistema.;
-* Gli eventi che hanno una marca temporale dopo il 15 aprile avranno una scadenza del timestamp dell’evento + dei giorni TTL. Quindi, un evento con una marca temporale del 18 aprile terminerà tre giorni dopo il 15 maggio.
-
->[!IMPORTANT]
->
->Una volta applicato un TTL, tutti i dati più vecchi del numero TTL selezionato verranno **permanentemente** eliminato e non può essere ripristinato.
-
-Prima di applicare il TTL, è necessario assicurarsi di mantenere un intervallo di lookback di qualsiasi segmento all’interno del limite TTL. In caso contrario, i risultati del segmento potrebbero diventare errati dopo l’applicazione del TTL. Ad esempio, se hai applicato un TTL di 30 giorni per i dati di Adobe Analytics e un TTL di 365 giorni per i dati delle transazioni in-store, il segmento seguente creerà risultati errati:
-
-* Pagina prodotto visualizzata negli ultimi 60 giorni seguita da un acquisto in negozio;
-* Aggiungi al carrello seguito da nessun acquisto negli ultimi 60 giorni.
-
-Al contrario, i seguenti risultati creeranno comunque corretti:
-
-* Pagina prodotto visualizzata negli ultimi 14 giorni seguita da un acquisto in negozio;
-* È stata visualizzata una pagina di aiuto specifica online negli ultimi 30 giorni;
-* ha acquistato un prodotto offline negli ultimi 120 giorni;
-* Aggiunto al carrello seguito da acquisto negli ultimi 14 giorni.
-
->[!TIP]
->
->Per comodità, puoi mantenere lo stesso TTL per tutti i set di dati, in modo da non doverti preoccupare dell’impatto TTL tra i set di dati nella logica di segmentazione.
-
-Per ulteriori informazioni sull’applicazione di TTL ai dati del profilo, consulta la documentazione su [TTL servizio profilo](../../profile/apply-ttl.md).
+Questa funzionalità ti consente di rimuovere automaticamente i dati comportamentali da un set di dati abilitato per il profilo che non è più utile per i tuoi casi d’uso. Vedi la panoramica su [Scadenza eventi esperienza](../../profile/event-expirations.md) per informazioni dettagliate sul funzionamento di questo processo una volta abilitato per un set di dati.
 
 ## Riepilogo delle best practice per la conformità all’utilizzo delle licenze {#best-practices}
 
@@ -179,7 +144,7 @@ Di seguito è riportato un elenco di alcune best practice consigliate da seguire
 * Utilizza la [dashboard di utilizzo della licenza](../../dashboards/guides/license-usage.md) per monitorare e monitorare le tendenze di utilizzo dei clienti. Questo ti consente di superare eventuali overage potenziali che potrebbero verificarsi.
 * Configura [filtri di acquisizione](#ingestion-filters) identificando gli eventi necessari per i casi d’uso di segmentazione e personalizzazione. Questo consente di inviare solo gli eventi importanti richiesti per i casi d’uso.
 * Assicurati di avere solo [set di dati abilitati per il profilo](#ingestion-filters) necessari per i casi d’uso di segmentazione e personalizzazione.
-* Configura un [[!DNL ExperienceEvent] TTL set di dati](#dataset-ttl) per dati ad alta frequenza come i dati web.
+* Configura un [Scadenza degli eventi esperienza](#event-expirations) per dati ad alta frequenza come i dati web.
 * Controlla periodicamente il [Rapporti sulla composizione dei profili](#profile-store-composition-reports) per comprendere la composizione dell’archivio profili. Ciò ti consente di comprendere le origini dati che contribuiscono maggiormente al consumo di licenze.
 
 ## Riepilogo delle funzioni e disponibilità {#feature-summary}
@@ -191,7 +156,7 @@ La tabella seguente illustra l’elenco delle funzionalità attualmente disponib
 | Funzione | Descrizione |
 | --- | --- |
 | [Attivare/disattivare i set di dati per il profilo](../../catalog/datasets/user-guide.md) | Abilitare o disabilitare l’acquisizione di set di dati in Profile Service |
-| [!DNL ExperienceEvent] TTL set di dati | Applica una scadenza TTL per i set di dati comportamentali nell’archivio profili. Contatta il tuo rappresentante di supporto Adobe. |
+| [Scadenza eventi esperienza](../../profile/event-expirations.md) | Applica un tempo di scadenza per tutti gli eventi acquisiti in un set di dati abilitato per il profilo. Per abilitare questa funzione, contatta il tuo rappresentante di supporto Adobe. |
 | [Filtri di preparazione dei dati di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Applica [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione |
 | [Filtri del connettore sorgente Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Applicare filtri di connessione all’origine di Audience Manager per escludere i dati non necessari dall’acquisizione |
 | [Filtri dati Alloy SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Applicare filtri di lega per escludere i dati non necessari dall’acquisizione |

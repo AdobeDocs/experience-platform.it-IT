@@ -5,9 +5,9 @@ title: Best Practice Per La Modellazione Dei Dati
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2699'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Se un’entità contiene attributi relativi a un singolo cliente, probabilmente 
 
 Se desideri analizzare in che modo determinati attributi all’interno di un’entità cambiano nel tempo, è più probabile che si tratti di un’entità evento. Ad esempio, l’aggiunta di elementi prodotto a un carrello può essere tracciata come eventi add-to-cart in [!DNL Platform]:
 
-| Customer ID | Tipo | ID prodotto | Quantità | Timestamp |
+| Customer ID | Tipo | ID prodotto | Quantità | Marca temporale |
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | Ott 1, 10:32 |
 | 1234567 | Rimuovi | 275098 | 1 | Ott 1, 10:33 |
@@ -138,7 +138,7 @@ La tabella seguente illustra alcune relazioni di entità comuni e le categorie c
 
 Mentre la sezione precedente fornisce alcune linee guida generali per decidere come categorizzare le entità, è importante comprendere che spesso possono esserci pro e contro per la scelta di una categoria di entità più di un’altra. Il seguente caso di studio ha lo scopo di illustrare come considerare le opzioni disponibili in queste situazioni.
 
-Un&#39;azienda tiene traccia degli abbonamenti attivi per i propri clienti, dove un cliente può avere molti abbonamenti. L’azienda desidera inoltre includere gli abbonamenti per i casi di utilizzo della segmentazione, ad esempio per trovare tutti gli utenti con abbonamenti attivi.
+Un’azienda tiene traccia degli abbonamenti attivi per i propri clienti, dove un cliente può avere molti abbonamenti. L’azienda desidera inoltre includere gli abbonamenti per i casi di utilizzo della segmentazione, ad esempio per trovare tutti gli utenti con abbonamenti attivi.
 
 In questo scenario, l&#39;azienda dispone di due opzioni potenziali per rappresentare le sottoscrizioni di un cliente nel proprio modello dati:
 
@@ -175,7 +175,7 @@ Il secondo approccio consiste nell’utilizzare gli schemi di evento per rappres
 **Contro**
 
 * La segmentazione diventa più complessa per il caso d’uso originale previsto (identificando lo stato degli abbonamenti più recenti dei clienti). Il segmento deve ora essere dotato di una logica aggiuntiva per contrassegnare l’ultimo evento di abbonamento per un cliente al fine di verificarne lo stato.
-* Gli eventi presentano un rischio maggiore di scadenza automatica e di eliminazione dall’archivio profili. Consulta la guida su [TTL profilo](../../profile/apply-ttl.md) per ulteriori informazioni.
+* Gli eventi presentano un rischio maggiore di scadenza automatica e di eliminazione dall’archivio profili. Consulta la guida su [Scadenza eventi esperienza](../../profile/event-expirations.md) per ulteriori informazioni.
 
 ## Creare schemi in base alle entità categorizzate
 

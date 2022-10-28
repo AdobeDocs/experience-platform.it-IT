@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Endpoint API di anteprima dello stato del campione (anteprima profilo)
 description: L’endpoint di stato di esempio dell’anteprima dell’API del profilo cliente in tempo reale consente di visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano sovrapposizione di set di dati, sovrapposizione di identità e profili non uniti.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2874'
 ht-degree: 1%
 
 ---
@@ -303,7 +303,7 @@ La risposta include un `data` array, con singoli oggetti contenenti i dettagli d
 
 ## Genera il rapporto di sovrapposizione dei set di dati
 
-Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Oltre a fornire informazioni approfondite sui dati, questo rapporto può essere utile per ottimizzare l’utilizzo della licenza, ad esempio per impostare un TTL per alcuni set di dati.
+Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico di destinazione (profili uniti). Oltre a fornire informazioni approfondite sui dati, questo rapporto può aiutarti a intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio l’impostazione della scadenza per alcuni set di dati.
 
 Puoi generare il rapporto di sovrapposizione del set di dati eseguendo una richiesta GET al `/previewsamplestatus/report/dataset/overlap` punto finale.
 

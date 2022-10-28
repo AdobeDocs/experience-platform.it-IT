@@ -2,7 +2,7 @@
 title: Endpoint API per la scadenza del set di dati
 description: L’endpoint /ttl nell’API di igiene dati ti consente di pianificare programmaticamente la scadenza dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 5%
@@ -178,7 +178,7 @@ Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di d
 ```json
 {
   "63212313c308d51b997858ba": {
-    "name": "TTL Test Dataset",
+    "name": "Test Dataset",
     "description": "A piecrust promise, made to be broken",
     "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
     "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",

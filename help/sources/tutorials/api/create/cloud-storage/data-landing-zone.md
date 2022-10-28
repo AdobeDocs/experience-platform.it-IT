@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 5%
 
 ---
@@ -72,7 +72,7 @@ La risposta seguente restituisce informazioni su una zona di destinazione, inclu
 | Proprietà | Descrizione |
 | --- | --- |
 | `containerName` | Nome della zona di destinazione recuperata. |
-| `containerTTL` | L’impostazione &quot;time-to-live&quot; applicata ai dati all’interno della zona di destinazione. Tutte le operazioni all’interno di una determinata zona di sbarco vengono eliminate dopo sette giorni. |
+| `containerTTL` | Il tempo di scadenza (in giorni) applicato ai dati all’interno della zona di destinazione. Tutte le operazioni all’interno di una determinata zona di sbarco vengono eliminate dopo sette giorni. |
 
 ## Recupera [!DNL Data Landing Zone] credenziali
 
