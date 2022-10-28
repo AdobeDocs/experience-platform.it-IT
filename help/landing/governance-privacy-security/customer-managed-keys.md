@@ -1,9 +1,9 @@
 ---
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -24,14 +24,14 @@ CMK è inclusa nell&#39;offerta Healthcare Shield e Privacy and Security Shield 
 
 Il processo è il seguente:
 
-1. [Crea un [!DNL Microsoft Azure] Vault](#create-key-vault), quindi [generare una chiave di crittografia](#generate-a-key) (in base ai criteri della tua organizzazione) che verrà infine condiviso con Adobe.
-1. Utilizzare le chiamate API per [registra l’app CMK](#register-app) con il tuo [!DNL Azure] inquilino.
-1. [Assegnare l’entità servizio per l’app CMK](#assign-to-role) a un ruolo appropriato per l&#39;insieme di chiavi.
-1. Utilizzare le chiamate API per [invia ad Adobe l&#39;ID chiave di crittografia](#send-to-adobe).
+1. [Configura un [!DNL Microsoft Azure] Vault](#create-key-vault) in base ai criteri della tua organizzazione, quindi [generare una chiave di crittografia](#generate-a-key) questo sarà in definitiva condiviso con l&#39;Adobe.
+1. Utilizzare le chiamate API per [configurare l’app CMK](#register-app) con il tuo [!DNL Azure] inquilino.
+1. Utilizzare le chiamate API per [invia ad Adobe l&#39;ID chiave di crittografia](#send-to-adobe) e avvia il processo di abilitazione per la funzione.
+1. [Controlla lo stato della configurazione](#check-status) per verificare se CMK è stato abilitato.
 
-Una volta completato il processo di configurazione, tutti i dati caricati in Platform in tutte le sandbox verranno crittografati utilizzando il [!DNL Azure] configurazione chiave, specifica per [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) risorse. Per utilizzare CMK, sfrutterai [!DNL Microsoft Azure] funzionalità che possono far parte delle [programma di anteprima pubblica](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Una volta completato il processo di configurazione, tutti i dati caricati in Platform in tutte le sandbox verranno crittografati utilizzando il [!DNL Azure] configurazione della chiave. Per utilizzare CMK, sfrutterai [!DNL Microsoft Azure] funzionalità che possono far parte delle [programma di anteprima pubblica](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Crea un [!DNL Azure] Vault {#create-key-vault}
+## Configura un [!DNL Azure] Vault {#create-key-vault}
 
 CMK supporta solo le chiavi da un [!DNL Microsoft Azure] Archivio chiavi Per iniziare, devi lavorare con [!DNL Azure] per creare un nuovo account enterprise o utilizzare un account enterprise esistente e seguire i passaggi riportati di seguito per creare l&#39;insieme di credenziali chiave.
 
@@ -65,7 +65,7 @@ Una volta arrivati al **[!DNL Review + create]** è possibile esaminare i dettag
 
 ![Configurazione di base per l&#39;insieme di chiavi](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Configurare le opzioni di rete
+### Configurare le opzioni di rete
 
 Se l&#39;insieme di credenziali chiave è configurato per limitare l&#39;accesso pubblico a determinate reti virtuali o per disabilitare completamente l&#39;accesso pubblico, è necessario concedere a Microsoft un&#39;eccezione firewall.
 
@@ -73,7 +73,7 @@ Seleziona **[!DNL Networking]** nella navigazione a sinistra. Sotto **[!DNL Fire
 
 ![Configurazione di base per l&#39;insieme di chiavi](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Genera una chiave {#generate-a-key}
+### Genera una chiave {#generate-a-key}
 
 Dopo aver creato un insieme di credenziali chiave, puoi generare una nuova chiave. Passa a **[!DNL Keys]** e seleziona **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ La chiave configurata viene visualizzata nell&#39;elenco delle chiavi per l&#39;
 
 ![Chiave aggiunta](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## Registra l&#39;app CMK {#register-app}
+## Configurare l’app CMK {#register-app}
 
 Una volta configurato l&#39;insieme di credenziali chiave, il passaggio successivo consiste nel registrarsi per l&#39;applicazione CMK che si collegherà al tuo [!DNL Azure] inquilino.
 
@@ -135,7 +135,7 @@ Copiare e incollare `applicationRedirectUrl` indirizzare in un browser per aprir
 
 ![Accetta richiesta di autorizzazione](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## Assegnare l’app CMK a un ruolo {#assign-to-role}
+### Assegnare l’app CMK a un ruolo {#assign-to-role}
 
 Dopo aver completato il processo di autenticazione, torna al tuo [!DNL Azure] Archivio chiavi e seleziona **[!DNL Access control]** nella navigazione a sinistra. Da qui, seleziona **[!DNL Add]** seguito da **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ Nella schermata successiva, scegli **[!DNL Select members]** per aprire una fine
 >
 >Se non è possibile trovare l&#39;applicazione nell&#39;elenco, l&#39;entità servizio non è stata accettata nel tenant. Per favore, collabora con [!DNL Azure] amministratore o rappresentante per verificare di disporre dei privilegi corretti.
 
-## Invia l’URI della chiave all’Adobe {#send-to-adobe}
+## Abilita la configurazione della chiave di crittografia su Experience Platform {#send-to-adobe}
 
 Dopo aver installato l’app CMK su [!DNL Azure], puoi inviare ad Adobe l’identificatore della chiave di crittografia . Seleziona **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che desideri inviare.
 
@@ -221,7 +221,7 @@ Una risposta corretta restituisce i dettagli del processo di configurazione.
 
 Il processo deve completare l&#39;elaborazione entro pochi minuti.
 
-### Controlla lo stato della configurazione {#check-status}
+## Verifica lo stato della configurazione {#check-status}
 
 Per verificare lo stato della richiesta di configurazione, puoi effettuare una richiesta GET.
 
