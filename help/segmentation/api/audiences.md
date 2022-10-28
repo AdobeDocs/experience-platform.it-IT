@@ -3,15 +3,21 @@ keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazion
 title: Endpoint API per tipi di pubblico
 topic-legacy: developer guide
 description: L’endpoint audience nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire i tipi di pubblico a livello di programmazione per la tua organizzazione.
-source-git-commit: 2a0c1f55115c541962f7bd3b7b11d367da50ff3b
+exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1515'
 ht-degree: 4%
 
 ---
 
-
 # Endpoint pubblico
+
+>[!IMPORTANT]
+>
+>L&#39;endpoint per il pubblico è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 Un pubblico è una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Queste raccolte di persone possono essere generate utilizzando Adobe Experience Platform o da fonti esterne. È possibile utilizzare `/audiences` nell’API di segmentazione, che consente di recuperare, creare, aggiornare ed eliminare in modo programmatico i tipi di pubblico.
 
