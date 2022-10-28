@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Scadenza eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per i singoli eventi Experience all’interno di un set di dati Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 # Scadenza eventi esperienza
 
-In Adobe Experience Platform, puoi configurare i tempi di scadenza per tutti gli eventi Experience che vengono acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Questo ti consente di rimuovere automaticamente i dati dal data lake e dall’archivio profili che non sono più validi o utili per i tuoi casi d’uso.
+In Adobe Experience Platform, puoi configurare i tempi di scadenza per tutti gli eventi Experience che vengono acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Ciò ti consente di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
 Le scadenze degli eventi di esperienza non possono essere configurate tramite l’interfaccia utente o le API di Platform. Al contrario, devi contattare il supporto per abilitare le scadenze dell’Experience Event sui set di dati richiesti.
 
@@ -25,7 +25,7 @@ Le scadenze degli eventi di esperienza non possono essere configurate tramite l�
 
 Dopo che le scadenze dell’evento esperienza sono state abilitate in un set di dati abilitato per il profilo, Platform applica automaticamente i valori di scadenza per ogni evento acquisito in un processo in due fasi:
 
-1. Tutti i nuovi dati acquisiti nel set di dati hanno il valore di scadenza applicato al momento dell’acquisizione.
+1. Tutti i nuovi dati acquisiti nel set di dati hanno il valore di scadenza applicato al momento dell’acquisizione in base alla marca temporale dell’evento.
 1. Tutti i dati esistenti nel set di dati hanno il valore di scadenza applicato retroattivamente come processo di backfill del sistema una tantum. Una volta che il valore di scadenza è stato inserito nel set di dati, gli eventi che sono più vecchi del valore di scadenza verranno eliminati immediatamente non appena il processo di sistema viene eseguito. Tutti gli altri eventi verranno eliminati non appena raggiungono i loro valori di scadenza dalla marca temporale dell’evento.
 
 >[!WARNING]
