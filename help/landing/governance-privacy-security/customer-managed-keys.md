@@ -1,26 +1,26 @@
 ---
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 1%
 
 ---
 
 # Tasti gestiti dal cliente in Adobe Experience Platform
 
-Tutti i dati archiviati in Adobe Experience Platform vengono crittografati a riposo utilizzando le chiavi a livello di sistema. Se utilizzi un’applicazione basata su Platform, puoi scegliere di utilizzare le tue chiavi di crittografia, per avere un maggiore controllo sulla sicurezza dei dati.
+I dati archiviati in Adobe Experience Platform vengono crittografati a riposo utilizzando le chiavi a livello di sistema. Se utilizzi un’applicazione basata su Platform, puoi scegliere di utilizzare le tue chiavi di crittografia, per avere un maggiore controllo sulla sicurezza dei dati.
 
 Questo documento illustra il processo di abilitazione della funzione chiavi gestite dal cliente (CMK) in Platform.
 
 ## Riepilogo del processo
 
-CMK è inclusa nell&#39;offerta Healthcare Shield e Privacy and Security Shield dell&#39;Adobe. Dopo che l’organizzazione ha acquistato una di queste offerte, puoi iniziare un processo una tantum per la configurazione della funzione.
+CMK è inclusa nell&#39;offerta Healthcare Shield e Privacy and Security Shield dell&#39;Adobe. Dopo che l’organizzazione acquista una licenza per una di queste offerte, puoi iniziare un processo una tantum per la configurazione della funzione.
 
 >[!WARNING]
 >
->Dopo aver impostato CMK, non puoi tornare alle chiavi gestite dal sistema. Sei responsabile della gestione sicura delle chiavi e degli archivi chiavi in [!DNL Azure] per evitare di perdere l&#39;accesso ai dati.
+>Dopo aver impostato CMK, non puoi tornare alle chiavi gestite dal sistema. Sei responsabile della gestione sicura delle chiavi e dell&#39;accesso all&#39;app Key Vault, Key e CMK in [!DNL Azure] per evitare di perdere l&#39;accesso ai dati.
 
 Il processo è il seguente:
 
@@ -29,7 +29,7 @@ Il processo è il seguente:
 1. [Assegnare l’entità servizio per l’app CMK](#assign-to-role) a un ruolo appropriato per l&#39;insieme di chiavi.
 1. Utilizzare le chiamate API per [invia ad Adobe l&#39;ID chiave di crittografia](#send-to-adobe).
 
-Una volta completato il processo di configurazione, tutti i dati caricati in Platform in tutte le sandbox verranno crittografati utilizzando il [!DNL Azure] configurazione chiave, specifica per [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) risorse. Sfruttamenti CMK [!DNL Azure]s [programma di anteprima pubblica](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) per rendere possibile questo.
+Una volta completato il processo di configurazione, tutti i dati caricati in Platform in tutte le sandbox verranno crittografati utilizzando il [!DNL Azure] configurazione chiave, specifica per [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) e [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) risorse. Per utilizzare CMK, sfrutterai [!DNL Microsoft Azure] funzionalità che possono far parte delle [programma di anteprima pubblica](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Crea un [!DNL Azure] Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ La **[!UICONTROL Identificatore chiave]** visualizza l’identificatore URI dell
 
 Una volta ottenuto l’URI dell’archivio chiavi, puoi inviarlo utilizzando una richiesta POST all’endpoint di configurazione CMK.
 
+>[!NOTE]
+>
+>Solo l&#39;insieme di credenziali e il nome della chiave sono memorizzati con Adobe, non con la versione chiave.
+
 **Richiesta**
 
 ```shell
@@ -265,6 +269,10 @@ La `status` L&#39;attributo può avere uno dei quattro valori con i seguenti sig
 
 ## Passaggi successivi
 
-Completando i passaggi precedenti, hai abilitato correttamente CMK per la tua organizzazione. Tutti i dati acquisiti in Platform verranno ora crittografati e decrittografati utilizzando le chiavi nella [!DNL Azure] Archivio chiavi Se desideri revocare l’accesso a Platform ai tuoi dati, puoi rimuovere il ruolo utente associato all’applicazione dall’insieme di chiavi in [!DNL Azure].
+Completando i passaggi precedenti, hai abilitato correttamente CMK per la tua organizzazione. I dati acquisiti in Platform verranno ora crittografati e decrittografati utilizzando le chiavi nella [!DNL Azure] Archivio chiavi Se desideri revocare l’accesso a Platform ai tuoi dati, puoi rimuovere il ruolo utente associato all’applicazione dall’insieme di chiavi in [!DNL Azure].
 
-Dopo aver disabilitato l’accesso all’applicazione, occorrono da due a 24 ore perché i dati non siano più accessibili in Platform. Lo stesso intervallo di tempo si applica per rendere nuovamente disponibili i dati quando si riabilita l’accesso all’applicazione.
+Dopo aver disabilitato l’accesso all’applicazione, potrebbero essere necessarie da alcuni minuti a 24 ore perché i dati non siano più accessibili in Platform. Lo stesso ritardo si applica al fatto che i dati siano nuovamente disponibili quando si riabilita l’accesso all’applicazione.
+
+>[!WARNING]
+>
+>Una volta che l’app Key Vault, Key o CMK è disabilitata e i dati non sono più accessibili in Platform, non sarà più possibile eseguire operazioni downstream relative a tali dati. Assicurati di comprendere gli impatti a valle della revoca dell’accesso a Platform ai dati prima di apportare modifiche alla configurazione.
