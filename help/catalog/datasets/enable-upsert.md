@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti dei profili tramite API
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" al fine di eseguire aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1050'
 ht-degree: 2%
 
 ---
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ Una richiesta PATCH corretta restituisce lo stato HTTP 200 (OK) e un array conte
 ### Abilita il set di dati per Profilo e aggiornamento {#enable-the-dataset}
 
 Un set di dati esistente può essere abilitato per gli aggiornamenti di profili e attributi utilizzando una singola richiesta PATCH.
+
+>[!IMPORTANT]
+>
+>Quando abiliti il set di dati per Profilo, assicurati che lo schema a cui è associato il set di dati sia **anche** Abilitato per il profilo. Se lo schema non è abilitato per il profilo, il set di dati **not** nell’interfaccia utente di Platform vengono visualizzate come abilitate per il profilo.
 
 **Formato API**
 
