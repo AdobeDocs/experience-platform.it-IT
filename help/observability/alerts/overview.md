@@ -4,9 +4,9 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '760'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,10 @@ Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario c
 Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona della campana (![Icona Bell](../images/alerts/overview/icon.png)) nell’angolo in alto a destra.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> Seleziona un avviso per passare a un dashboard correlato e ottenere informazioni più dettagliate sul motivo per cui l’avviso è stato attivato.
 
 Inoltre, il [!UICONTROL Avvisi] La scheda nell’interfaccia utente consente ai singoli utenti di effettuare l’abbonamento a specifici tipi di avvisi e consente agli amministratori di abilitare o disabilitare completamente le regole di avviso. Consulta la sezione [Guida all’interfaccia utente](./ui.md) per ulteriori informazioni sulla gestione degli avvisi.
 
