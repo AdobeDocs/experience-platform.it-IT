@@ -2,7 +2,7 @@
 title: Modelli di query
 description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando l’Editor query o l’API del servizio query e sono disponibili per l’utilizzo su tutti i set di dati di Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -25,11 +25,9 @@ Devi avere la [!UICONTROL Gestire le query] l’autorizzazione è abilitata per 
 
 ### Utilizza l’editor delle query per creare e salvare una query come modello
 
-Consulta la documentazione per le istruzioni su come utilizzare l’editor delle query per [scrivere](./user-guide.md#query-authoring) e [salvare le query](./user-guide.md#saving-queries). Dopo aver denominato e salvato la query, questa può essere riutilizzata come modello di query dal [!UICONTROL Sfoglia] scheda .
+Consulta la documentazione per le istruzioni su come utilizzare l’editor delle query per [scrivere](./user-guide.md#query-authoring) e [salvare le query](./user-guide.md#saving-queries). Dopo aver denominato e salvato la query, questa può essere riutilizzata come modello di query dal [!UICONTROL Modelli] scheda .
 
 Dall’area di lavoro Query dell’interfaccia utente della piattaforma, seleziona **[!UICONTROL Modelli]** per visualizzare l&#39;elenco delle query salvate disponibili.
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![Area di lavoro query con la scheda Modelli evidenziata.](../images/ui/query-templates/query-templates.png)
 
@@ -43,7 +41,7 @@ Consulta la documentazione per le istruzioni su [come creare un modello di query
 
 >[!NOTE]
 >
->I modelli creati utilizzando l’API sono visibili anche nella scheda Sfoglia del servizio query dell’interfaccia utente di Platform.
+>I modelli creati utilizzando l’API sono visibili anche nella scheda Modelli di servizio query dell’interfaccia utente di Platform.
 
 ## Passaggi successivi
 

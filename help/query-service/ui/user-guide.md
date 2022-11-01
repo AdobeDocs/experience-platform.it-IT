@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente dell’editor delle query
 topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -116,13 +116,19 @@ Questo pannello mostra anche metadati utili, come l’ultima volta che la query 
 >
 >Di seguito è riportato un elenco di limitazioni per le query pianificate quando si utilizza l’editor delle query. Non si applicano al [!DNL Query Service] API:<br/>È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.<br/>You **impossibile** aggiungi una pianificazione a una query con parametri.<br/>Query pianificate **impossibile** contiene un blocco anonimo.
 
-Per aggiungere una pianificazione a una query, seleziona **[!UICONTROL Aggiungi pianificazione]**.
+Le pianificazioni sono impostate dall’Editor query. Tuttavia, è possibile pianificare solo le query che sono già state salvate come modello. Per aggiungere una pianificazione a una query, selezionare un modello di query dal [!UICONTROL Modelli] oppure [!UICONTROL Query pianificate] scheda per passare all’Editor query.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+Per informazioni su come aggiungere le pianificazioni utilizzando l’API, leggi la [guida all’endpoint delle query pianificate](../api/scheduled-queries.md).
 
-![Editor query con pianificazione Aggiungi evidenziata.](../images/ui/query-editor/add-schedule.png)
+Quando si accede a una query salvata dall’Editor delle query, l’ [!UICONTROL Pianificazioni] sotto il nome della query viene visualizzata la scheda . Seleziona **[!UICONTROL Pianificazioni]**.
 
-La **[!UICONTROL Dettagli della pianificazione]** viene visualizzata la pagina . In questa pagina puoi scegliere la frequenza della query pianificata, le date di esecuzione della query pianificata e il set di dati in cui esportare la query.
+![Editor query con la scheda Pianificazioni evidenziata.](../images/ui/query-editor/schedules-tab.png)
+
+Viene visualizzata l&#39;area di lavoro pianificazioni. Seleziona **[!UICONTROL Aggiungi pianificazione]** per creare una pianificazione.
+
+![Area di lavoro Pianificazione editor query con Aggiungi pianificazione evidenziata.](../images/ui/query-editor/add-schedule.png)
+
+Viene visualizzata la pagina dei dettagli della pianificazione. In questa pagina puoi scegliere la frequenza della query pianificata, la data di inizio e di fine, il giorno della settimana in cui verrà eseguita la query pianificata e il set di dati in cui esportare la query.
 
 ![Il pannello Dettagli pianificazione è evidenziato.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ Per il set di dati, puoi utilizzare un set di dati esistente o crearne uno nuovo
 >
 > Poiché utilizzi un set di dati esistente o crei un nuovo, lo fai **not** devono includere `INSERT INTO` o `CREATE TABLE AS SELECT` come parte della query, poiché i set di dati sono già impostati. Includere `INSERT INTO` o `CREATE TABLE AS SELECT` come parte delle query pianificate si verifica un errore.
 
-Dopo aver confermato tutti questi dettagli, seleziona **[!UICONTROL Salva]** per creare una pianificazione.
+Dopo aver confermato tutti questi dettagli, seleziona **[!UICONTROL Salva]** per creare una pianificazione. Viene visualizzata l’area di lavoro pianificazioni che visualizza i dettagli della nuova pianificazione creata, inclusi l’ID pianificazione, la pianificazione stessa e il set di dati di output della pianificazione. Puoi utilizzare l’ID pianificazione per cercare ulteriori informazioni sulle esecuzioni della query pianificata stessa. Per saperne di più, leggere il [guida agli endpoint di esecuzione delle query programmate](../api/runs-scheduled-queries.md).
 
-La pagina dei dettagli della query viene visualizzata nuovamente e ora mostra i dettagli della nuova pianificazione creata, inclusi l’ID pianificazione, la pianificazione stessa e il set di dati di output della pianificazione. Puoi utilizzare l’ID pianificazione per cercare ulteriori informazioni sulle esecuzioni della query pianificata stessa. Per saperne di più, leggere il [guida agli endpoint di esecuzione delle query programmate](../api/runs-scheduled-queries.md).
+![Area di lavoro pianificazioni con la pianificazione appena creata evidenziata.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> È possibile pianificare solo **uno** modello di query utilizzando l’interfaccia utente. Se desideri aggiungere ulteriori pianificazioni a un modello di query, dovrai utilizzare l’API . Se una pianificazione è già stata aggiunta utilizzando l’API, **not** puoi aggiungere altre pianificazioni utilizzando l’interfaccia utente . Se più pianificazioni sono già collegate a un modello di query, verrà visualizzata solo la pianificazione meno recente. Per informazioni su come aggiungere le pianificazioni utilizzando l’API, leggi la [guida all’endpoint delle query pianificate](../api/scheduled-queries.md).
->
-> Inoltre, devi aggiornare la pagina se desideri avere lo stato più recente della pianificazione che stai visualizzando.
+#### Eliminare o disabilitare una pianificazione {#delete-schedule}
 
-#### Eliminare una pianificazione {#delete-schedule}
+È possibile eliminare o disattivare una pianificazione dall&#39;area di lavoro pianificazioni. È necessario selezionare un modello di query dal [!UICONTROL Modelli] oppure [!UICONTROL Query pianificate] scheda per passare all’Editor query e selezionare **[!UICONTROL Pianificazione]** per accedere all&#39;area di lavoro pianificazioni.
 
-Per eliminare una pianificazione, seleziona **[!UICONTROL Eliminare una pianificazione]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![L’Editor query con Disabilita pianificazione ed Elimina pianificazione evidenziata.](../images/ui/query-editor/delete-schedule.png)
+Selezionare una pianificazione dalle righe delle pianificazioni disponibili. Puoi utilizzare l’interruttore per disattivare o abilitare la query pianificata.
 
 >[!IMPORTANT]
 >
-> Se si desidera eliminare una pianificazione per una query, è necessario prima disattivare la pianificazione.
+>È necessario disattivare la pianificazione prima di eliminare una pianificazione per una query.
+
+Seleziona **[!UICONTROL Eliminare una pianificazione]** per eliminare la pianificazione disabilitata.
+
+![Area di lavoro pianificazioni con Disabilita pianificazione ed Elimina pianificazione evidenziata.](../images/ui/query-editor/delete-schedule.png)
 
 ### Salvataggio delle query {#saving-queries}
 
-[!DNL Query Editor] fornisce una funzione di salvataggio che ti consente di salvare una query e lavorarci in un secondo momento. Per salvare una query, seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando **[!UICONTROL Dettagli query]** pannello.
+La [!DNL Query Editor] fornisce una funzione di salvataggio che ti consente di salvare una query e lavorarci in un secondo momento. Per salvare una query, seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando **[!UICONTROL Dettagli query]** pannello.
 
 >[!NOTE]
 >
->Le query denominate e salvate con l’Editor query sono disponibili come modelli all’interno del dashboard Query [!UICONTROL Sfoglia] scheda . Consulta la sezione [documentazione dei modelli](./query-templates.md) per ulteriori informazioni.
+>Le query denominate e salvate con l’Editor query sono disponibili come modelli all’interno del dashboard Query [!UICONTROL Modelli] scheda . Consulta la sezione [documentazione dei modelli](./query-templates.md) per ulteriori informazioni.
 
 ### Come trovare le query precedenti {#previous-queries}
 
-Tutte le query eseguite da [!DNL Query Editor] vengono acquisiti nella tabella Registro. Puoi utilizzare la funzionalità di ricerca nella sezione **[!UICONTROL Registro]** per trovare le esecuzioni delle query. Le query salvate sono elencate nella **[!UICONTROL Sfoglia]** scheda .
+Tutte le query eseguite da [!DNL Query Editor] vengono acquisiti nella tabella Registro. Puoi utilizzare la funzionalità di ricerca nella sezione **[!UICONTROL Registro]** per trovare le esecuzioni delle query. Le query salvate sono elencate nella **[!UICONTROL Modelli]** scheda .
 
 Consulta la sezione [Panoramica dell’interfaccia utente del servizio query](./overview.md) per ulteriori informazioni.
 
@@ -182,7 +184,7 @@ Consulta la sezione [Panoramica dell’interfaccia utente del servizio query](./
 
 ## Esecuzione di query tramite Editor query {#executing-queries}
 
-Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dal **[!UICONTROL Registro]** o **[!UICONTROL Sfoglia]** e seleziona **Play**. Lo stato dell’esecuzione della query viene visualizzato nel **[!UICONTROL Console]** , e i dati di output sono visualizzati nella **[!UICONTROL Risultati]** scheda .
+Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dal **[!UICONTROL Registro]** o **[!UICONTROL Modelli]** e seleziona **Play**. Lo stato dell’esecuzione della query viene visualizzato nel **[!UICONTROL Console]** , e i dati di output sono visualizzati nella **[!UICONTROL Risultati]** scheda .
 
 ### Console {#console}
 

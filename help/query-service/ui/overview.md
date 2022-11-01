@@ -5,7 +5,7 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Query Service] fornisce un’interfaccia utente 
 
 ## [!DNL Query Editor]
 
-La [!DNL Query Editor] consente di scrivere ed eseguire query senza utilizzare un client esterno. Seleziona **[!UICONTROL Crea query]** per aprire [!DNL Query Editor] e crea una nuova query. Puoi anche accedere al [!DNL Query Editor] selezionando una query dal **[!UICONTROL Registro]** o **[!UICONTROL Sfoglia]** schede. Quando si seleziona una query eseguita o salvata in precedenza, viene aperta la [!DNL Query Editor] e visualizza l&#39;istruzione SQL per la query selezionata.
+La [!DNL Query Editor] consente di scrivere ed eseguire query senza utilizzare un client esterno. Seleziona **[!UICONTROL Crea query]** per aprire [!DNL Query Editor] e crea una nuova query. Puoi anche accedere al [!DNL Query Editor] selezionando una query dal **[!UICONTROL Registro]** o **[!UICONTROL Modelli]** schede. Quando si seleziona una query eseguita o salvata in precedenza, viene aperta la [!DNL Query Editor] e visualizza l&#39;istruzione SQL per la query selezionata.
 
 ![Il dashboard Query con Crea query evidenziato.](../images/ui/overview/overview.png)
 

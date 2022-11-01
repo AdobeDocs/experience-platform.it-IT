@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service consente la creazione di set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi d’uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
+source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,15 @@ ht-degree: 0%
 
 ## Generare set di dati dall’interfaccia utente di Adobe Experience Platform
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 Per creare set di dati dall’interfaccia utente di Adobe Experience Platform, effettua le seguenti operazioni:
 
 1. Crea una query utilizzando un client connesso e convalida l’output. Per imparare a scrivere query utilizzando [!DNL Query Editor], leggi [!DNL Query Editor] Guida all’interfaccia utente [durante la scrittura di query](./user-guide.md#writing-queries).
 
-2. Nell’interfaccia utente di Platform, passa a **[!UICONTROL Query]** seguito da **[!UICONTROL Sfoglia]** e seleziona la query creata. Per ulteriori informazioni su come visualizzare le query create e salvate per la tua organizzazione nell’interfaccia utente di Platform, consulta la sezione [[!DNL Query Service] panoramica](./overview.md#browse).
+2. Nell’interfaccia utente di Platform, passa a **[!UICONTROL Query]** seguito da **[!UICONTROL Modelli]** e seleziona la query creata. Per ulteriori informazioni su come visualizzare le query create e salvate per la tua organizzazione nell’interfaccia utente di Platform, consulta la sezione [[!DNL Query Service] panoramica](./overview.md#browse).
 
 3. Nel pannello Dettagli query, seleziona **[!UICONTROL Set di dati di output]**.
 
-   ![Scheda Modello area di lavoro Query con set di dati Seleziona output evidenziato.](../images/ui/create-datasets/output-dataset.png)
+   ![La scheda Modelli dell&#39;area di lavoro Query con Seleziona set di dati di output evidenziato.](../images/ui/create-datasets/output-dataset.png)
 
 4. Nella finestra di dialogo visualizzata, immetti un nome di set di dati preceduto dal tuo ID LDAP. Il nome del set di dati non deve essere univoco o sicuro da SQL. Il nome della tabella per il set di dati verrà generato in base al nome del set di dati creato qui.
 
