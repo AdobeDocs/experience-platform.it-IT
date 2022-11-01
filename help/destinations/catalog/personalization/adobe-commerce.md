@@ -1,9 +1,9 @@
 ---
 title: (Beta) Connettore di destinazione Adobe Commerce
 description: Scopri in che modo i commercianti Adobe Commerce e Real-Time CDP possono personalizzare l’esperienza di acquisto fornendo contenuti e promozioni del sito altamente pertinenti, personalizzati per i segmenti di clienti generati e gestiti all’interno di Real-Time CDP.
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Leggi [Attivare profili e segmenti nelle destinazioni di richieste di profilo](.
 
 Ora che hai configurato il [!DNL Commerce] all’interno di Experience Platform, devi configurare il [!DNL Commerce Admin] per importare i segmenti Real-Time CDP creati. Consulta la sezione [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) per saperne di più.
 
-## Convalida esportazione dati {#exported-data}
+## Convalidare l’attivazione dell’audience in Commerce {#exported-data}
 
 Dopo aver attivato i segmenti Real-Time CDP nel tuo [!DNL Adobe Commerce] vedrai questi segmenti disponibili nella sezione [!DNL Admin] quando crei una regola del prezzo del carrello:
 
