@@ -1,9 +1,9 @@
 ---
 title: Mappare un file CSV su uno schema XDM utilizzando Recommendations generato dall’intelligenza artificiale (Beta)
 description: Questa esercitazione illustra come mappare un file CSV su uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 1%
 
 ---
@@ -35,13 +35,13 @@ Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origin
 
 La **[!UICONTROL Mappa schema CSV XDM]** viene visualizzato il flusso di lavoro, a partire dal **[!UICONTROL Dettaglio flusso di dati]** passo.
 
-Seleziona **[!UICONTROL Creare un nuovo schema utilizzando i consigli ML]**, causando la visualizzazione di nuovi controlli. Scegli la classe appropriata per i dati CSV da mappare ([!UICONTROL Profilo] o [!UICONTROL ExperienceEvent]) e utilizza il menu a discesa per selezionare il settore pertinente per la tua attività. Se l’organizzazione opera sotto una [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) , seleziona il modello **[!UICONTROL Dati B2B]** casella di controllo.
+Seleziona **[!UICONTROL Creare un nuovo schema utilizzando i consigli ML]**, causando la visualizzazione di nuovi controlli. Scegli la classe appropriata per i dati CSV da mappare ([!UICONTROL Profilo] o [!UICONTROL ExperienceEvent]). Facoltativamente, puoi utilizzare il menu a discesa per selezionare il settore rilevante per la tua attività, oppure lasciarlo vuoto se le categorie fornite non sono applicabili. Se l’organizzazione opera sotto una [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) , seleziona il modello **[!UICONTROL Dati B2B]** casella di controllo.
 
 ![La [!UICONTROL Dettaglio flusso di dati] passo con l&#39;opzione di raccomandazione ML selezionata. [!UICONTROL Profilo] è selezionato per la classe e [!UICONTROL Telecomunicazioni] selezionato per il settore](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 Da qui, fornisci un nome per lo schema che verrà creato dai dati CSV e un nome per il set di dati di output che conterrà i dati acquisiti in tale schema.
 
-Facoltativamente, puoi configurare le seguenti funzionalità aggiuntive per il flusso di dati:
+Facoltativamente, puoi configurare le seguenti funzionalità aggiuntive per il flusso di dati prima di procedere:
 
 | Nome di ingresso | Descrizione |
 | --- | --- |
@@ -50,6 +50,8 @@ Facoltativamente, puoi configurare le seguenti funzionalità aggiuntive per il f
 | [!UICONTROL Acquisizione parziale] | Se questa opzione è abilitata, i record validi per i nuovi dati batch verranno acquisiti entro una determinata soglia di errore. Questa soglia consente di configurare la percentuale di errori accettabili prima che l’intero batch non riesca. |
 | [!UICONTROL Dettagli del flusso di dati] | Specifica un nome e una descrizione facoltative per il flusso di dati che porterà i dati CSV in Platform. Al flusso di dati viene assegnato automaticamente un nome predefinito all’avvio del flusso di lavoro. La modifica del nome è facoltativa. |
 | [!UICONTROL Avvisi] | Seleziona da un elenco di [avvisi interni al prodotto](../../../observability/alerts/overview.md) che si desidera ricevere per quanto riguarda lo stato del flusso di dati una volta avviato. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Al termine della configurazione del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
@@ -81,7 +83,7 @@ Utilizza l’anteprima della mappatura dei campi per modificare le mappature esi
 
 ### Modifica gruppi di campi {#edit-field-groups}
 
-I campi CSV vengono mappati automaticamente ai gruppi di campi esistenti utilizzando i modelli ML. Se desideri modificare il gruppo di campi per un particolare campo CSV, seleziona **[!UICONTROL Modifica]** accanto alla struttura dello schema.
+I campi CSV vengono mappati automaticamente ai gruppi di campi XDM esistenti utilizzando i modelli ML. Se desideri modificare il gruppo di campi per un particolare campo CSV, seleziona **[!UICONTROL Modifica]** accanto alla struttura dello schema.
 
 ![La [!UICONTROL Modifica] pulsante selezionato accanto alla struttura dello schema](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
