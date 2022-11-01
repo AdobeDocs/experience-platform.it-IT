@@ -1,9 +1,9 @@
 ---
 title: Endpoint API per la quota
 description: L’endpoint /quota nell’API di igiene dati consente di monitorare l’utilizzo dell’igiene dei dati in base ai limiti della quota mensile della tua organizzazione per ogni tipo di lavoro.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
 
 La `/quota` l’endpoint nell’API di igiene dati consente di monitorare l’utilizzo dell’igiene dei dati in base ai limiti di quota della tua organizzazione per ogni tipo di processo.
 

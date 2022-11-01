@@ -5,9 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati c
 
 >[!IMPORTANT]
 >
->Le politiche di consenso sono attualmente disponibili solo per le organizzazioni che hanno acquistato Healthcare Shield.
+>I criteri di consenso sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
 
 Se [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quando attivi un segmento in una destinazione, puoi vedere in che modo i criteri di consenso influiscono sulla percentuale di profili inclusi nell’attivazione.
 

@@ -2,9 +2,9 @@
 title: Panoramica dell’igiene dei dati
 description: Adobe Experience Platform Data Hygiene consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->L&#39;igiene dei dati è attualmente disponibile solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
+>L’igiene dei dati è attualmente disponibile solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
 
 Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni complesse e di grandi dimensioni sui dati al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che i dati vengano utilizzati come previsto, vengono aggiornati quando è necessario correggere i dati errati e vengono eliminati quando i criteri organizzativi lo ritengono necessario.
 
@@ -42,7 +42,7 @@ Le richieste di cancellazione del consumatore e di scadenza del set di dati disp
 
 Quando un [richiesta di scadenza del set di dati](./ui/dataset-expiration.md) viene creato:
 
-| Stage | Ora dopo la scadenza pianificata | Descrizione |
+| Ambiente di staging | Ora dopo la scadenza pianificata | Descrizione |
 | --- | --- | --- |
 | Richiesta inviata | 0 ore | Un amministratore dei dati o un analista della privacy invia una richiesta per la scadenza di un set di dati in un dato momento. La richiesta è visibile nella [!UICONTROL Interfaccia utente di Data Hygiene] dopo l’invio e rimane in uno stato in sospeso fino al tempo di scadenza pianificato, dopo di che la richiesta verrà eseguita. |
 | Set di dati eliminato | 1 ora | Il set di dati viene rilasciato dal [pagina di inventario dei set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di . I dati all&#39;interno del data lake sono solo morbidi cancellati, e lo rimarranno fino alla fine del processo, dopo di che sarà duro cancellati. |
@@ -57,7 +57,7 @@ Quando un [richiesta di scadenza del set di dati](./ui/dataset-expiration.md) vi
 
 Quando un [richiesta di cancellazione del consumatore](./ui/delete-consumer.md) viene creato:
 
-| Stage | Tempo dopo l’invio della richiesta | Descrizione |
+| Ambiente di staging | Tempo dopo l’invio della richiesta | Descrizione |
 | --- | --- | --- |
 | Richiesta inviata | 0 ore | Un amministratore dei dati o un analista della privacy invia una richiesta di cancellazione del consumatore. La richiesta è visibile nella [!UICONTROL Interfaccia utente di Data Hygiene] dopo l’invio. |
 | Ricerca profilo aggiornata | 3 ore | La modifica dei conteggi dei profili causata dall’identità eliminata si riflette in [widget dashboard](../dashboards/guides/profiles.md#profile-count-trend) e altri rapporti. |
