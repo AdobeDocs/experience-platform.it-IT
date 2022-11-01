@@ -5,7 +5,7 @@ title: Elaborazione del consenso in Adobe Experience Platform
 topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Consulta la documentazione dell’SDK mobile per [configurazione dell’estensio
 
 È possibile acquisire dati di consenso conformi a XDM da un file CSV utilizzando l’acquisizione batch. Questa funzione può essere utile se disponi di un backlog dei dati di consenso raccolti in precedenza che devono ancora essere integrati nei profili dei clienti.
 
-Segui l’esercitazione su [mappatura di un file CSV in XDM](../../../../ingestion/tutorials/map-a-csv-file.md) per scoprire come convertire i campi dati in XDM e trasferirli in Platform. Quando selezioni [!UICONTROL Destinazione] per la mappatura, accertati di selezionare il **[!UICONTROL Utilizza set di dati esistenti]** e scegli la [!DNL Profile]Set di dati di consenso abilitato creato in precedenza.
+Segui l’esercitazione su [mappatura di un file CSV in XDM](../../../../ingestion/tutorials/map-csv/overview.md) per scoprire come convertire i campi dati in XDM e trasferirli in Platform. Quando selezioni [!UICONTROL Destinazione] per la mappatura, accertati di selezionare il **[!UICONTROL Utilizza set di dati esistenti]** e scegli la [!DNL Profile]Set di dati di consenso abilitato creato in precedenza.
 
 ## Verificare l’implementazione {#test-implementation}
 

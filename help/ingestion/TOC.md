@@ -4,10 +4,10 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasmetti i dati a Experience Platform tramite l’acquisizione in batch o in streaming.
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 26%
+source-wordcount: '145'
+ht-degree: 24%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 26%
    - [Acquisizione batch parziale](batch-ingestion/partial.md)
    - [Risoluzione dei problemi](batch-ingestion/troubleshooting.md)
 - Tutorial {#tutorials}
-   - [Mappare un file CSV in XDM](tutorials/map-a-csv-file.md)
+   - Mappare un file CSV in XDM {#map-csv}
+      - [Panoramica](./tutorials/map-csv/overview.md)
+      - [Mappare un file CSV su uno schema esistente](./tutorials/map-csv/existing-schema.md)
+      - [Mappare un file CSV utilizzando i consigli generati dall&#39;intelligenza artificiale](./tutorials/map-csv/recommendations.md)
    - [Inserire dati batch tramite l’interfaccia utente](tutorials/ingest-batch-data.md)
    - [Creare una connessione in streaming autenticata](tutorials/create-authenticated-streaming-connection.md)
    - [Creare una connessione in streaming (API)](tutorials/create-streaming-connection.md)

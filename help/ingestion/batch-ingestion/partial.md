@@ -5,7 +5,7 @@ title: Panoramica sull’acquisizione parziale in batch
 topic-legacy: overview
 description: Questo documento fornisce un'esercitazione per la gestione dell'acquisizione batch parziale.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Ora puoi caricare i dati utilizzando la **Aggiungi dati** e verrà acquisito tra
 
 ### Utilizza il &quot;[!UICONTROL Mappatura di CSV su schema XDM]&quot; flusso {#map-flow}
 
-Per utilizzare &quot;[!UICONTROL Mappatura di CSV su schema XDM]&quot; flusso, segui i passaggi elencati nel [Esercitazione sulla mappatura di un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il **[!UICONTROL Aggiungi dati]** , prendere atto del **[!UICONTROL Acquisizione parziale]** e **[!UICONTROL Diagnostica degli errori]** campi.
+Per utilizzare &quot;[!UICONTROL Mappatura di CSV su schema XDM]&quot; flusso, segui i passaggi elencati nel [Esercitazione sulla mappatura di un file CSV](../tutorials/map-csv/overview.md). Una volta raggiunto il **[!UICONTROL Aggiungi dati]** , prendere atto del **[!UICONTROL Acquisizione parziale]** e **[!UICONTROL Diagnostica degli errori]** campi.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

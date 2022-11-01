@@ -5,7 +5,7 @@ title: Preparare i dati da utilizzare nei servizi intelligenti
 topic-legacy: Intelligent Services
 description: Affinché i servizi intelligenti possano scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in una struttura standard in modo semantico. Per ottenere questo risultato, i servizi intelligenti utilizzano gli schemi Experience Data Model (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 0%
@@ -356,7 +356,7 @@ Se acquisisci dati da un file CSV locale, puoi passare alla sezione successiva i
 
 #### Mappare e acquisire dati {#ingest}
 
-Dopo aver creato uno schema e un set di dati CEE, puoi iniziare a mappare le tabelle di dati sullo schema e a trasferirli in Platform. Guarda l’esercitazione su [mappatura di un file CSV su uno schema XDM](../ingestion/tutorials/map-a-csv-file.md) per informazioni su come eseguire questa operazione nell’interfaccia utente di . Puoi utilizzare i seguenti [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
+Dopo aver creato uno schema e un set di dati CEE, puoi iniziare a mappare le tabelle di dati sullo schema e a trasferirli in Platform. Guarda l’esercitazione su [mappatura di un file CSV su uno schema XDM](../ingestion/tutorials/map-csv/overview.md) per informazioni su come eseguire questa operazione nell’interfaccia utente di . Puoi utilizzare i seguenti [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
 
 Una volta compilato un set di dati, lo stesso set di dati può essere utilizzato per acquisire file di dati aggiuntivi.
 
