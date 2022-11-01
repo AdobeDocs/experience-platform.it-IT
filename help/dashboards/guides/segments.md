@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 La **[!UICONTROL Dimensione del pubblico]** widget visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione dei criteri di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni individuo nel segmento.
 
-Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo il [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni sui frammenti e i profili uniti, consulta la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ![Panoramica del dashboard Segmenti con il widget Dimensione pubblico evidenziato.](../images/segments/audience-size.png)
 

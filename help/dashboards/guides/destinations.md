@@ -4,9 +4,9 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Per una panoramica delle destinazioni e un catalogo di tutte le destinazioni dis
 
 ## [!UICONTROL Destinazioni] dati del dashboard {#destinations-dashboard-data}
 
-La [!UICONTROL Destinazioni] nel dashboard viene visualizzata un’istantanea delle destinazioni abilitate dall’organizzazione in Experience Platform. I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard delle destinazioni non viene aggiornato in tempo reale.
+Nel dashboard Destinazioni viene visualizzata un&#39;istantanea delle destinazioni abilitate dall&#39;organizzazione in Experience Platform. I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard delle destinazioni non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ La data e l’ora dell’istantanea più recente vengono visualizzate nella part
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, la [!UICONTROL Destinazioni] dashboard [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] nel menu di navigazione a sinistra viene visualizzata la [!UICONTROL Catalogo] scheda . Per ulteriori informazioni sulle [!UICONTROL Catalogo] , fai riferimento alla [[!UICONTROL Destinazioni] guida all’area di lavoro](../../destinations/ui/destinations-workspace.md).
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, il dashboard Destinazioni e [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] nel menu di navigazione a sinistra viene visualizzata la [!UICONTROL Catalogo] scheda . Per ulteriori informazioni sulle [!UICONTROL Catalogo] , fai riferimento alla [[!UICONTROL Destinazioni] guida all’area di lavoro](../../destinations/ui/destinations-workspace.md).
 
 ![Panoramica delle destinazioni dell’interfaccia utente di Platform con l’istantanea più recente evidenziata.](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ La data aggiornata visualizzata visualizza l’ultima volta che il segmento è s
 
 Selezionando il nome di un segmento dall’elenco visualizzato sul widget, passerai ai dettagli del segmento. Puoi anche selezionare **[!UICONTROL Visualizza tutto]** per passare alla scheda di ricerca dei segmenti, quindi selezionare il nome di un segmento per visualizzarne i dettagli.
 
-Per ulteriori informazioni sull’utilizzo dei segmenti in Experience Platform, inizia leggendo il [Panoramica del servizio di segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni sull’utilizzo dei segmenti in Experience Platform, consulta la [Panoramica del servizio di segmentazione](../../segmentation/home.md).
 
 ![La scheda Panoramica del dashboard Destinazioni con il widget Segmenti attivati di recente evidenziata.](../images/destinations/recently-activated-segments.png)
 
