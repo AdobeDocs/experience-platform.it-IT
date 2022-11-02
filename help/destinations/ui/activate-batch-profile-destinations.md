@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
+source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
 workflow-type: tm+mt
-source-wordcount: '3468'
+source-wordcount: '3411'
 ht-degree: 0%
 
 ---
@@ -124,11 +124,6 @@ Utilizza la **[!UICONTROL Pianificato]** per fare in modo che il processo di att
 1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 ### Esportare file incrementali {#export-incremental-files}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_datasets_exportoptions"
->title="Opzioni di esportazione dei file per i set di dati"
->abstract="Seleziona **Esportare file incrementali** per esportare solo i dati aggiunti al set di dati dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, fungendo da backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dalla prima esportazione."
 
 Seleziona **[!UICONTROL Esportare file incrementali]** per attivare un’esportazione in cui il primo file è uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato e i file successivi sono qualifiche di profilo incrementali a partire dall’esportazione precedente.
 

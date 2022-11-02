@@ -2,9 +2,9 @@
 title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 1%
 
 ---
@@ -68,6 +68,11 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona set di dati in cui puoi selezionare i set di dati da esportare.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Pianificazione esportazione set di dati {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Opzioni di esportazione dei file per i set di dati"
+>abstract="Seleziona **Esportare file incrementali** per esportare solo i dati aggiunti al set di dati dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, fungendo da backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dalla prima esportazione."
 
 In **[!UICONTROL Pianificazione]** puoi impostare una data di inizio e una cadenza di esportazione per le esportazioni dei set di dati.
 
