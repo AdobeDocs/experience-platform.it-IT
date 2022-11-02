@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mapp
 title: Campi di mappatura Salesforce
 description: Le tabelle seguenti contengono le mappature tra i campi di origine Salesforce e i campi XDM corrispondenti.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 14%
+source-wordcount: '494'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 14%
 Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di origine e i campi corrispondenti di Experience Data Model (XDM).
 
 ## Contatto {#contact}
+
+Leggi la sezione [Panoramica del profilo individuale XDM](../../../../xdm/classes/individual-profile.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi di schema Dettagli persona commerciale XDM](../../../../xdm/field-groups/profile/business-person-details.md) guida e [Gruppo di campi di schema Componenti per Business Person XDM](../../../../xdm/field-groups/profile/business-person-components.md) guida.
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 
 ## Lead {#lead}
 
+Leggi la sezione [Panoramica del profilo individuale XDM](../../../../xdm/classes/individual-profile.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi di schema Dettagli persona commerciale XDM](../../../../xdm/field-groups/profile/business-person-details.md) guida e [Gruppo di campi di schema Componenti per Business Person XDM](../../../../xdm/field-groups/profile/business-person-components.md) guida.
+
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 {style=&quot;table-layout:auto&quot;}
 
 ## Account {#account}
+
+Leggi la sezione [Panoramica dei dettagli dell&#39;account aziendale XDM](../../../../xdm/classes/b2b/business-account.md) per ulteriori informazioni sulla classe XDM.
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 
 ## Opportunità {#opportunity}
 
+Leggi la sezione [Panoramica sulle opportunità aziendali XDM](../../../../xdm/classes/b2b/business-opportunity.md) per ulteriori informazioni sulla classe XDM.
+
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 
 ## Ruolo di contatto opportunità {#opportunity-contact-role}
 
+Leggi la sezione [Panoramica sulla classe di relazione tra persone opportunità aziendali XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) per ulteriori informazioni sulla classe XDM.
+
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+Leggi la sezione [Panoramica sulla classe di Business Campaign XDM](../../../../xdm/classes/b2b/business-campaign.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi schema dettagli campagna aziendale XDM](../../../../xdm/field-groups/b2b-campaign/details.md) guida.
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 
 ## Membro della campagna {#campaign-member}
 
+Leggi la sezione [Panoramica dei membri della campagna aziendale XDM](../../../../xdm/classes/b2b/business-campaign-members.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi schema dettagli membri di campagna aziendale XDM](../../../../xdm/field-groups/b2b-campaign/details.md) documento.
+
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ Le tabelle seguenti contengono le mappature tra [!DNL Salesforce] i campi di ori
 | `Type` | `b2b.personType` |
 
 ## Relazione di contatto dell&#39;account {#account-contact-relation}
+
+Leggi la sezione [Classe di relazione tra persone dell&#39;account aziendale XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) per ulteriori informazioni sulla classe XDM.
 
 | Campo di origine | Percorso del campo XDM di Target | Note |
 | --- | --- | --- |

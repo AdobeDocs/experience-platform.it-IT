@@ -5,10 +5,10 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 6%
+source-wordcount: '952'
+ht-degree: 5%
 
 ---
 
@@ -28,6 +28,8 @@ Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] 
 ## Attività {#activities}
 
 La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le attività standard, devi aggiornare lo schema utilizzando [utilità di generazione automatica dello schema](../marketo/marketo-namespaces.md) perché se crei una nuova `activities` Flusso di dati senza aggiornare lo schema, i modelli di mappatura non riusciranno, in quanto i nuovi campi di destinazione non saranno presenti nello schema. Se scegli di non aggiornare lo schema, puoi comunque creare un nuovo flusso di dati e ignorare eventuali errori. Tuttavia, eventuali campi nuovi o aggiornati non verranno acquisiti in Platform.
+
+Consulta la documentazione su [Classe evento esperienza XDM](../../../../xdm/classes/experienceevent.md) per ulteriori informazioni sulle classi XDM e sui gruppi di campi XDM.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 
 ## Programmi {#programs}
 
+Leggi la sezione [Panoramica di XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi schema Dettagli campagna aziendale](../../../../xdm/field-groups/b2b-campaign/details.md) guida.
+
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 {style=&quot;table-layout:auto&quot;}
 
 ## Partecipazioni al programma {#program-memberships}
+
+Leggi la sezione [Panoramica dei membri della campagna aziendale XDM](../../../../xdm/classes/b2b/business-campaign-members.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi Dettagli membri della campagna aziendale XDM](../../../../xdm/field-groups/b2b-campaign-members/details.md) guida.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 
 ## Aziende {#companies}
 
+Leggi la sezione [Panoramica account aziendale XDM](../../../../xdm/classes/b2b/business-account.md) per ulteriori informazioni sulla classe XDM.
+
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 
 ## Elenchi statici {#static-lists}
 
+Leggi la sezione [Panoramica dell’elenco marketing aziendale XDM](../../../../xdm/classes/b2b/business-marketing-list.md) per ulteriori informazioni sulla classe XDM.
+
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 {style=&quot;table-layout:auto&quot;}
 
 ## appartenenze a elenchi statici {#static-list-memberships}
+
+Leggi la sezione [Panoramica dei membri dell&#39;elenco marketing aziendale XDM](../../../../xdm/classes/b2b/business-marketing-list-members.md) per ulteriori informazioni sulla classe XDM.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 >[!IMPORTANT]
 >
 >Il set di dati di account denominati è necessario solo con la funzione ABM (Account-Based Marketing) di Marketo. Se non utilizzi ABM, non è necessario impostare mappature per account denominati.
+
+Leggi la sezione [Panoramica account aziendale XDM](../../../../xdm/classes/b2b/business-account.md) per ulteriori informazioni sulla classe XDM.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 {style=&quot;table-layout:auto&quot;}
 
 ## Opportunità {#opportunities}
+
+Leggi la sezione [Panoramica sulle opportunità aziendali XDM](../../../../xdm/classes/b2b/business-opportunity.md) per ulteriori informazioni sulla classe XDM.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 
 ## Ruoli di contatto opportunità {#opportunity-contact-roles}
 
+Leggi la sezione [Panoramica sulla relazione tra persone opportunità aziendali XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) per ulteriori informazioni sulla classe XDM.
+
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ La [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le 
 {style=&quot;table-layout:auto&quot;}
 
 ## Persone {#persons}
+
+Leggi la sezione [Panoramica del profilo individuale XDM](../../../../xdm/classes/individual-profile.md) per ulteriori informazioni sulla classe XDM. Per ulteriori informazioni sui gruppi di campi XDM, consulta la [Gruppo di campi di schema Dettagli persona commerciale XDM](../../../../xdm/field-groups/profile/business-person-details.md) guida e [Gruppo di campi di schema Componenti per Business Person XDM](../../../../xdm/field-groups/profile/business-person-components.md) guida.
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
