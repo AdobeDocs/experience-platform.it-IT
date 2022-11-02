@@ -5,10 +5,10 @@ title: Panoramica dei set di dati
 topic-legacy: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -61,6 +61,7 @@ Di seguito è riportato un elenco di servizi a valle che utilizzano set di dati 
 * [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): Consente di creare segmenti e generare tipi di pubblico dai [!DNL Real-time Customer Profile] dati. Questi tipi di pubblico possono quindi essere esportati nei rispettivi set di dati all’interno di [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utilizza l’apprendimento automatico e l’intelligenza artificiale per individuare informazioni in set di dati di grandi dimensioni.
 * [Servizio query Adobe Experience Platform](../../query-service/home.md): Consente di utilizzare SQL standard per eseguire query sui dati in [!DNL Experience Platform], unione di qualsiasi set di dati all’interno di [!DNL Data Lake] e la cattura dei risultati delle query come nuovo set di dati da utilizzare nei rapporti, [!DNL Data Science Workspace]oppure [!DNL Real-time Customer Profile].
+* [Servizio Destinazioni Adobe Experience Platform](../../destinations/home.md): Permette di [esportare i set di dati](/help/destinations/ui/export-datasets.md) alle tue destinazioni di marketing e-mail o di archiviazione cloud desiderate, per attività di reporting o data science.
 
 ## Passaggi successivi
 

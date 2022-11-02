@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione
 title: Tipi di destinazione e categorie
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,12 @@ Ulteriori informazioni su come [configurare le destinazioni di personalizzazione
 Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Destinazioni di esportazione del set di dati (Beta) {#dataset-export-destinations}
+
+Alcune destinazioni di archiviazione cloud nel catalogo delle destinazioni supportano le esportazioni di set di dati. Utilizza queste destinazioni per esportare i set di dati non elaborati nelle posizioni di archiviazione cloud.
+
+Ulteriori informazioni su come [esportare i set di dati](/help/destinations/ui/export-datasets.md).
 
 ## Estensioni {#extensions}
 
