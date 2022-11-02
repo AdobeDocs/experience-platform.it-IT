@@ -3,18 +3,36 @@ keywords: Amazon S3;destinazione S3;s3;amazon s3
 title: Connessione Amazon S3
 description: Crea una connessione in uscita diretta all’archiviazione S3 di Amazon Web Services (AWS) per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon S3] connection {#s3-connection}
 
+## Passaggio alla destinazione {#changelog}
+
+>[!IMPORTANT]
+>
+>Con la versione beta della funzionalità dei set di dati per l’esportazione e la funzionalità di esportazione dei file migliorata, ora potrebbero essere disponibili due [!DNL Amazon S3] nel catalogo delle destinazioni.
+>* Se si esportano già i file in **[!UICONTROL Amazon S3]** destinazione: Crea nuovi flussi di dati per il nuovo **[!UICONTROL Amazon S3 beta]** destinazione.
+>* Se non hai ancora creato alcun flusso di dati per il **[!UICONTROL Amazon S3]** destinazione, utilizzare il nuovo **[!UICONTROL Amazon S3 beta]** scheda per esportare i file in **[!UICONTROL Amazon S3]**.
+
+
+![Immagine delle due schede di destinazione Amazon S3 affiancate.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+Miglioramenti nel nuovo [!DNL Amazon S3] la scheda di destinazione include:
+
+* [Supporto per l&#39;esportazione di set di dati](/help/destinations/ui/export-datasets.md).
+* Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Panoramica {#overview}
 
-Crea una connessione in uscita diretta al tuo [!DNL Amazon Web Services] (AWS) Archiviazione S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
+Crea una connessione in uscita diretta al tuo [!DNL Amazon S3] archiviazione per esportare periodicamente i file di dati da Adobe Experience Platform nei bucket S3.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -110,6 +128,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
+## (Beta) Esportare i set di dati {#export-datasets}
+
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta la sezione [esercitazione sui set di dati di esportazione](/help/destinations/ui/export-datasets.md).
+
 ## Dati esportati {#exported-data}
 
-Per [!DNL Amazon S3] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione sull’attivazione dei segmenti.
+Per [!DNL Amazon S3] destinazioni, [!DNL Platform] crea un file di dati nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione sull’attivazione dei segmenti.

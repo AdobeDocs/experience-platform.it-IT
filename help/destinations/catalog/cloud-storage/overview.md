@@ -3,9 +3,9 @@ keywords: destinazione di archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può fornire i segmenti come file di dati alle posizioni di archiviazione cloud di Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform può distribuire i segmenti come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob] e SFTP. Per [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinazioni, i dati vengono inviati in streaming fuori Experience Platform in [!DNL JSON] formato.
+Adobe Experience Platform può distribuire i segmenti come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]e SFTP. Per [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinazioni, i dati vengono inviati in streaming fuori Experience Platform in [!DNL JSON] formato.
 
 ![Destinazioni di Adobe per l’archiviazione cloud](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform supporta le seguenti destinazioni di archiviazione clo
 * [Connessione Amazon Kinesis](amazon-kinesis.md)
 * [Connessione Amazon S3](amazon-s3.md)
 * [Connessione BLOB di Azure](azure-blob.md)
+* [(Beta) Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Connessione hub eventi di Azure](azure-event-hubs.md)
+* [(Beta) Data Landing Zone](data-landing-zone.md)
+* [(Beta) Google Cloud Storage](google-cloud-storage.md)
 * [Connessione SFTP](sftp.md)
 
 ## Connessione a una nuova destinazione di archiviazione cloud {#connect-destination}

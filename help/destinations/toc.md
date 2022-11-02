@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: e345d43104752fe3d51ccd0d611701bd2beebe6a
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '985'
 ht-degree: 6%
 
 ---
@@ -35,12 +35,14 @@ ht-degree: 6%
       * [Attivare i dati del pubblico nelle destinazioni di richiesta del profilo](./ui/activate-profile-request-destinations.md)
       * [Configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](./ui/configure-personalization-destinations.md)
       * [(Beta) Esportazione di file on-demand in destinazioni batch tramite l’interfaccia utente Experience Platform](./ui/export-file-now.md)
+      * [(Beta) Esportazione di set di dati tramite l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
    * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
    * [Modificare i flussi di dati di attivazione](./ui/edit-activation.md)
    * [Eliminare le destinazioni](./ui/delete-destinations.md)
    * [Monitorare i flussi di dati](./ui/monitor-dataflows.md)
+   * [(Beta) Configurare le opzioni di formattazione per le destinazioni basate su file](./ui/batch-destinations-file-formatting-options.md)
    * [Iscriviti agli avvisi di destinazione nel contesto](ui/alerts.md)
 * Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
@@ -102,7 +104,10 @@ ht-degree: 6%
       * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
+      * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Connessione hub eventi di Azure](./catalog/cloud-storage/azure-event-hubs.md)
+      * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
       * [inserire nell&#39;elenco Consentiti dell’indirizzo IP per le destinazioni di archiviazione cloud](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni di gestione delle relazioni con i clienti (CRM) {#crm}

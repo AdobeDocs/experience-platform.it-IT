@@ -3,14 +3,32 @@ keywords: BLOB di Azure;destinazione BLOB;s3;destinazione BLOB di azzurro
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita dal vivo all’archivio BLOB di Azure per esportare periodicamente file di dati CSV da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
 
 # [!DNL Azure Blob] connection
+
+## Passaggio alla destinazione {#changelog}
+
+>[!IMPORTANT]
+>
+>Con la versione beta della funzionalità dei set di dati per l’esportazione e la funzionalità di esportazione dei file migliorata, ora potrebbero essere disponibili due [!DNL Azure Blob] nel catalogo delle destinazioni.
+>* Se si esportano già i file in **[!UICONTROL BLOB di Azure]** destinazione: Crea nuovi flussi di dati per il nuovo **[!UICONTROL Azure Blob beta]** destinazione.
+>* Se non hai ancora creato alcun flusso di dati per il **[!UICONTROL BLOB di Azure]** destinazione, utilizzare il nuovo **[!UICONTROL Azure Blob beta]** scheda per esportare i file in **[!UICONTROL BLOB di Azure]**.
+
+
+![Immagine delle due schede di destinazione BLOB di Azure in visualizzazione affiancata.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+
+Miglioramenti nel nuovo [!DNL Azure Blob] la scheda di destinazione include:
+
+* [Supporto per l&#39;esportazione di set di dati](/help/destinations/ui/export-datasets.md).
+* Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Panoramica {#overview}
 
@@ -89,6 +107,10 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+
+## (Beta) Esportare i set di dati {#export-datasets}
+
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta la sezione [esercitazione sui set di dati di esportazione](/help/destinations/ui/export-datasets.md).
 
 ## Dati esportati {#exported-data}
 
