@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -136,7 +136,7 @@ La [!DNL Profile] il modello di dati store è costituito da due tipi di entità 
 
 ### Frammenti di profilo
 
-In questo documento sono presenti diverse protezioni che fanno riferimento a &quot;frammenti di profilo&quot;. Ad Experience Platform, più frammenti di profilo vengono uniti per formare il Profilo cliente in tempo reale. Ciascun frammento rappresenta un’identità principale univoca e i dati corrispondenti del record o dell’evento per tale ID all’interno di un dato set di dati. Per ulteriori informazioni sui frammenti di profilo, consulta [Panoramica del profilo](home.md#profile-fragments-vs-merged-profiles).
+In questo documento sono presenti diverse protezioni che fanno riferimento a &quot;frammenti di profilo&quot;. Ad Experience Platform, più frammenti di profilo vengono uniti per formare il Profilo cliente in tempo reale. Ogni frammento rappresenta un’identità principale univoca e il record o set completo di dati evento corrispondente per tale ID all’interno di un dato set di dati. Per ulteriori informazioni sui frammenti di profilo, consulta [Panoramica del profilo](home.md#profile-fragments-vs-merged-profiles).
 
 ### Unisci criteri {#merge-policies}
 
