@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -116,3 +116,7 @@ Il numero di segmenti qualificati totali viene ricavato dal processo di segmenta
 Il numero sotto &quot;Ultimi X giorni&quot; **only** include i tipi di pubblico qualificati nella segmentazione in streaming, e **only** aumenta se hai inviato dati in streaming nel sistema e conta verso tale definizione di streaming. Questo valore è **only** mostrata per i segmenti in streaming. Di conseguenza, questo valore **possono** viene visualizzato come 0 per i segmenti batch.
 
 Di conseguenza, se vedi che il numero sotto &quot;Ultimi X giorni&quot; è zero, e il grafico a linee è anche pari a zero, hai **not** ha inviato in streaming nel sistema tutti i profili idonei per quel segmento.
+
+### Quanto tempo ci vuole perché un segmento sia disponibile?
+
+Ci vuole fino a un&#39;ora perché un segmento sia disponibile.

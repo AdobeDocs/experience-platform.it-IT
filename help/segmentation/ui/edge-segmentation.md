@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,11 @@ Una query può essere valutata con segmentazione edge se soddisfa uno dei criter
 ## Passaggi successivi
 
 Questa guida spiega come valutare i segmenti con la segmentazione edge su Adobe Experience Platform. Per ulteriori informazioni sull’utilizzo dell’interfaccia utente di Experience Platform, consulta la sezione [Guida utente alla segmentazione](./overview.md). Per informazioni su come eseguire azioni simili e lavorare con i segmenti utilizzando le API di Experience Platform, visita il [guida API per la segmentazione edge](../api/edge-segmentation.md).
+
+## Appendice
+
+Nella sezione seguente sono elencate le domande frequenti sulla segmentazione dei bordi:
+
+### Quanto tempo ci vuole perché un segmento sia disponibile su Edge Network?
+
+Per rendere disponibile un segmento su Edge Network, è necessaria fino a un’ora.

@@ -5,9 +5,9 @@ title: Valutare gli eventi in tempo reale con Segmentazione in streaming
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -439,3 +439,7 @@ Il numero di segmenti qualificati totali viene ricavato dal processo di segmenta
 Il numero sotto &quot;Ultimi X giorni&quot; **only** include i tipi di pubblico qualificati nella segmentazione in streaming, e **only** aumenta se hai inviato dati in streaming nel sistema e conta verso tale definizione di streaming. Questo valore è **only** mostrata per i segmenti in streaming. Di conseguenza, questo valore **possono** viene visualizzato come 0 per i segmenti batch.
 
 Di conseguenza, se vedi che il numero sotto &quot;Ultimi X giorni&quot; è zero, e il grafico a linee è anche pari a zero, hai **not** ha inviato in streaming nel sistema tutti i profili idonei per quel segmento.
+
+### Quanto tempo ci vuole perché un segmento sia disponibile?
+
+Ci vuole fino a un&#39;ora perché un segmento sia disponibile.
