@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Panoramica sul controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 1%
+source-wordcount: '1777'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ Il controllo dell&#39;accesso basato su attributi include i seguenti componenti:
 
 Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Tramite Autorizzazioni puoi creare e gestire ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, consulta la sezione [Guida alle autorizzazioni](ui/browse.md).
+Mediante le Autorizzazioni di , , puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, consulta la sezione [Guida alle autorizzazioni](ui/browse.md).
 
 ## API di controllo dell&#39;accesso basato su attributi
 
@@ -55,6 +55,18 @@ Le sezioni seguenti forniscono informazioni su come il controllo degli accessi b
 ### Controllo degli accessi
 
 Utilizzo della piattaforma [Adobe Admin Console](https://adminconsole.adobe.com) profili di prodotto per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l’accesso a una varietà di funzionalità di Platform, tra cui la modellazione dei dati, la gestione dei profili e l’amministrazione di sandbox. Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, invece dei profili di prodotto in Adobe Admin Console, per gestire le autorizzazioni per utenti, funzionalità, etichette e altre risorse dell’organizzazione.
+
+La disponibilità per il controllo degli accessi basato sugli attributi è limitata ai clienti che acquistano scudi sanitari e/o privacy. Le funzioni di questa funzionalità includono:
+
+* Interfaccia delle autorizzazioni: Fornisce un&#39;interfaccia per definire ruoli utente, autorizzazioni e criteri per il controllo degli accessi basato su attributi.
+
+* Etichettatura: Aggiungi, modifica, rimuovi le etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati al fine di sfruttare i criteri di controllo degli accessi.
+
+I flussi di lavoro di amministrazione per tutte le applicazioni basate su Experience Platform, dall’Admin Console alla nuova interfaccia Autorizzazioni, sono in corso di commutazione.
+
+>[!IMPORTANT]
+>
+>Quando l’organizzazione è abilitata, i profili di prodotto vengono migrati automaticamente nell’interfaccia Autorizzazioni . I profili di prodotto in Admin Console rimarranno invariati al momento. Per favore **non** modifica i profili di prodotto dopo che l’organizzazione è stata abilitata.
 
 Per ulteriori informazioni sul controllo degli accessi, consulta la sezione [panoramica sul controllo degli accessi](../home.md).
 

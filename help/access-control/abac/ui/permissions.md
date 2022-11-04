@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Autorizzazioni per la gestione dei ruoli per il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Tramite Autorizzazioni puoi creare e gestire ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
+Mediante le Autorizzazioni di , , puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Immediatamente dopo [creazione di un nuovo ruolo](#create-a-new-role), viene restituita la **[!UICONTROL Ruoli]** scheda . Se stai modificando le autorizzazioni per un ruolo esistente, seleziona il ruolo dal **[!UICONTROL Ruoli]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare un ruolo.
 
@@ -147,9 +147,21 @@ Per rimuovere un gruppo di utenti da un ruolo, seleziona la **X** accanto al nom
 
 La **[!UICONTROL Rimuovi gruppo utenti]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’eliminazione.
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 Verrà restituito al **[!UICONTROL Gruppi di utenti]** scheda .
+
+## Aggiunta di utenti all’Experience Platform tramite un profilo di prodotto
+
+Per aggiungere un utente a un profilo di prodotto, accedi all’Admin Console e seleziona **[!UICONTROL Aggiungi utenti]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+La **[!UICONTROL Aggiungi utenti al tuo team]** viene visualizzata la finestra di dialogo . Immetti l’indirizzo e-mail, il nome (facoltativo) e il cognome degli utenti (facoltativo).
+
+Seleziona l’icona a forma di matita per selezionare prodotti e gruppi di utenti, seleziona **[!UICONTROL Adobe Experience Platform]**, quindi seleziona **[!UICONTROL AEP-Default-All-Users]**, quindi seleziona  **[!UICONTROL Salva]**.
+
+![profilo di prodotto](../../images/flac-ui/product-profile.png)
 
 ## Passaggi successivi
 
