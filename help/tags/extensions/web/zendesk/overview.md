@@ -1,7 +1,8 @@
 ---
 title: Estensione di inoltro eventi Zendesk
 description: Estensione di inoltro eventi Zendesk per Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 6%
@@ -53,7 +54,7 @@ Sotto **[!UICONTROL Dominio Zendesk]**, immetti il valore del sottodominio Zende
 
 ## Configurare una regola di inoltro eventi
 
-Avvia la creazione di una nuova regola di inoltro eventi [regola](../../../ui/managing-resources/rules.md) e configurane le condizioni desiderate. Quando selezioni le azioni per la regola, seleziona la [!UICONTROL Splunk] , quindi seleziona la [!UICONTROL Crea evento] tipo di azione.
+Avvia la creazione di una nuova regola di inoltro eventi [regola](../../../ui/managing-resources/rules.md) e configurane le condizioni desiderate. Quando selezioni le azioni per la regola, seleziona la [!UICONTROL Zendesk] , quindi seleziona la [!UICONTROL Crea evento] tipo di azione.
 
 ![Definisci regola](../../../images/extensions/zendesk/rule.png)
 

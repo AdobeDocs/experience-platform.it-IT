@@ -1,18 +1,15 @@
 ---
 title: Monitoraggio delle query
 description: Scopri come monitorare le query tramite l’interfaccia utente del servizio query.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
 
-# Monitoraggio delle query (rilascio limitato)
-
->[!IMPORTANT]
->
->Al momento questa funzione è limitata ed è disponibile solo per un numero limitato di clienti.
+# Monitorare le query
 
 Adobe Experience Platform offre una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. Da [!UICONTROL Query pianificate] è ora possibile trovare informazioni importanti sulle esecuzioni della query che includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore. Puoi anche abbonarti agli avvisi per le query in base al loro stato tramite l’interfaccia utente per ognuna di queste query tramite [!UICONTROL Query pianificate] scheda .
 
@@ -126,4 +123,3 @@ La sezione relativa allo stato della query fornisce il codice di errore e il mes
 Seleziona **[!UICONTROL Query]** per tornare alla schermata dei dettagli della pianificazione, oppure **[!UICONTROL Query pianificate]** per tornare al [!UICONTROL Query pianificate] scheda .
 
 ![Schermata dei dettagli di esecuzione con Query evidenziata.](./images/monitor-queries/return-navigation.png)
-
