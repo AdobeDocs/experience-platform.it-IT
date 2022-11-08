@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
+source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
-source-wordcount: '853'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -94,6 +94,7 @@ ht-degree: 11%
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
       - [Connettore Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Connettore Eloqua Oracle](connectors/marketing-automation/oracle-eloqua.md)
+      - [Connettore Oracle Responsys](connectors/marketing-automation/oracle-responsys.md)
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
@@ -162,6 +163,7 @@ ht-degree: 11%
          - [Campagna MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membri MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -271,6 +273,7 @@ ht-degree: 11%
          - [Campagne Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Membri di Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
