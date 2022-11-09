@@ -1,11 +1,11 @@
 ---
+keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
-keywords: streaming;
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c65e8b4a4b3a3f9e546126258d3b9ca58de07081
 workflow-type: tm+mt
-source-wordcount: '2376'
+source-wordcount: '2375'
 ht-degree: 0%
 
 ---
