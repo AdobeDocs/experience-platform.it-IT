@@ -2,9 +2,9 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione agli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 1%
 
 ---
@@ -37,6 +37,12 @@ Questa guida presuppone che tu abbia già familiarità con le modalità di gesti
 È inoltre necessario avere una conoscenza approfondita del flusso di pubblicazione per tag e inoltro eventi, tra cui come aggiungere risorse a una libreria e installare una build sul sito web per il test. Consulta la sezione [panoramica sulla pubblicazione](../publishing/overview.md) per ulteriori dettagli.
 
 ## Creare un segreto {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Ambienti per segreti"
+>abstract="Affinché un segreto possa essere utilizzato dall&#39;inoltro eventi, deve essere assegnato a un ambiente esistente. Se non sono stati creati ambienti per la proprietà di inoltro eventi, è necessario configurarli prima di continuare."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Panoramica sugli ambienti"
 
 Per creare un segreto, seleziona **[!UICONTROL Inoltro eventi]** nel menu di navigazione a sinistra, apri la proprietà di inoltro eventi in cui desideri aggiungere il segreto. Quindi, seleziona **[!UICONTROL Segreti]** nella navigazione a sinistra, seguita da **[!UICONTROL Crea nuovo segreto]**.
 

@@ -3,23 +3,32 @@ keywords: Experience Platform;casa;argomenti popolari;modulo;DULE
 solution: Experience Platform
 title: Panoramica dei criteri di utilizzo dei dati
 topic-legacy: policies
-description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che sono consentite o a cui è consentita l’esecuzione di dati all’interno di un Experience Platform.
+description: Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 0%
+source-wordcount: '1180'
+ht-degree: 4%
 
 ---
 
-# Panoramica dei criteri di utilizzo dei dati
+# Panoramica dei criteri di utilizzo dei dati {#policies-overview}
 
-Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform].
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Limitare l’utilizzo dei dati"
+>abstract="Il tipo di criterio di utilizzo dati valuta azioni di marketing specifiche applicate alle etichette di governance dei dati per limitare l’utilizzo dei dati per le attività di marketing."
+
+Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform].
 
 Sono disponibili due tipi di criteri:
 
 * **[!UICONTROL Criteri di governance dei dati]**: Limita l’attivazione dei dati in base all’azione di marketing in corso e alle etichette di utilizzo dei dati in base ai dati in questione.
 * **[!UICONTROL Criterio di consenso]**: Filtrare i profili a cui è possibile attivare [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei clienti
+
+>[!NOTE]
+>
+>I criteri di utilizzo dei dati non devono essere confusi con [criteri di controllo accessi](../../access-control/abac/end-to-end-guide.md#policy), che determinano se determinati utenti di Platform della tua organizzazione possono accedere a determinati campi di dati e sono configurati tramite [!UICONTROL Autorizzazioni] scheda .
 
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e collegamenti ad ulteriore documentazione per l’utilizzo dei criteri nell’interfaccia utente o API.
 

@@ -5,10 +5,10 @@ title: Guida all’interfaccia utente sandbox
 topic-legacy: user guide
 description: Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,17 @@ Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla s
 
 ![a commutazione di sandbox](../images/ui/sandbox-switched.png)
 
-## Creare una nuova sandbox
+## Creare una nuova sandbox {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Nome sandbox"
+>abstract="Il nome della sandbox è il testo utilizzato sul back-end per creare un ID univoco per questa sandbox."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Titolo sandbox"
+>abstract="Il titolo della sandbox è il nome visualizzato che rappresenta la sandbox nei menu e nei menu a discesa nell’interfaccia utente di Experience Platform."
 
 >[!NOTE]
 >
@@ -68,7 +78,7 @@ Una volta completata la creazione della sandbox, aggiorna la pagina e la nuova s
 
 >[!WARNING]
 >
->Di seguito è riportato un elenco di eccezioni che possono impedire il ripristino della sandbox di produzione predefinita o di una sandbox di produzione creata dall’utente: <ul><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.</li><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Audience Manager per la [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>La sandbox di produzione predefinita non può essere reimpostata se contiene dati per le funzioni CDA e PBD.</li><li>Una sandbox di produzione creata dall’utente e utilizzata per la condivisione di segmenti bidirezionali con Adobe Audience Manager o con il servizio di base Audience può essere reimpostata dopo un messaggio di avviso.</li></ul>
+>Di seguito è riportato un elenco di eccezioni che possono impedire il ripristino della sandbox di produzione predefinita o di una sandbox di produzione creata dall’utente: <ul><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.</li><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Audience Manager per la [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).</li><li>La sandbox di produzione predefinita non può essere reimpostata se contiene dati per le funzioni CDA e PBD.</li><li>Una sandbox di produzione creata dall’utente e utilizzata per la condivisione di segmenti bidirezionali con Adobe Audience Manager o con il servizio di base Audience può essere reimpostata dopo un messaggio di avviso.</li></ul>
 
 Se si reimposta una sandbox di produzione o sviluppo, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
 

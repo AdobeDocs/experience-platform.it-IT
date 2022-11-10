@@ -5,10 +5,10 @@ title: Guida alla risoluzione dei problemi delle sandbox
 topic-legacy: troubleshooting guide
 description: Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,13 @@ Le sandbox suddividono una singola istanza di Platform in ambienti virtuali sepa
 
 Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox. Consulta la sezione [panoramica sulle sandbox](home.md) per ulteriori informazioni.
 
-## Quali tipi di sandbox sono disponibili e quali sono le loro differenze?
+## Quali tipi di sandbox sono disponibili e quali sono le loro differenze? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Tipo di sandbox"
+>abstract="Il tipo di sandbox indica se si tratta di una sandbox di produzione o di sviluppo. Le sandbox di produzione includono dati live e sandbox di sviluppo vengono utilizzate per il test e lo sviluppo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Creare una sandbox nell’interfaccia utente"
 
 Nell’Experience Platform sono disponibili due tipi di sandbox:
 
@@ -48,7 +54,7 @@ Un’istanza di Experience Platform supporta più sandbox di produzione e svilup
 
 Una licenza di Experience Platform predefinita ti concede un totale di cinque sandbox, che puoi classificare come produzione o sviluppo. È possibile concedere in licenza pacchetti aggiuntivi di 10 sandbox fino a un massimo di 75 sandbox in totale.
 
-Le sandbox di produzione possono essere reimpostate o eliminate, ad eccezione delle sandbox di produzione che vengono utilizzate anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) funzionalità.
+Le sandbox di produzione possono essere reimpostate o eliminate, ad eccezione delle sandbox di produzione che vengono utilizzate anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it) funzionalità.
 
 Puoi aggiornare il titolo di una sandbox di produzione. Tuttavia, non è possibile rinominare una sandbox di produzione.
 
@@ -64,7 +70,7 @@ Le sandbox di sviluppo supportano sia le funzionalità di ripristino che quelle 
 
 ## Ho appena creato una sandbox. Come si impostano le autorizzazioni per gli utenti che lavoreranno con questa sandbox?
 
-Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l’uso dei profili di prodotto. Dopo aver creato una nuova sandbox, passa alla **Autorizzazioni** scheda del profilo di prodotto a cui si desidera concedere l’accesso, quindi fare clic su **Sandbox**. Da qui, puoi aggiungere o rimuovere l’accesso alla nuova sandbox nello stesso modo di altre autorizzazioni.
+Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l’uso dei profili di prodotto. Dopo aver creato una nuova sandbox, passa alla **Autorizzazioni** scheda del profilo di prodotto a cui desideri concedere l’accesso, quindi fai clic su **Sandbox**. Da qui, puoi aggiungere o rimuovere l’accesso alla nuova sandbox nello stesso modo di altre autorizzazioni.
 
 Se desideri aggiungere autorizzazioni univoche agli utenti di una particolare sandbox, potrebbe essere necessario creare un nuovo profilo di prodotto con le sandbox e le autorizzazioni appropriate applicate e assegnare tali utenti a tale profilo.
 

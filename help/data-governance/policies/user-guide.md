@@ -5,9 +5,9 @@ title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 topic-legacy: policies
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ I criteri di consenso sono formati da due componenti logici:
 * **[!UICONTROL Se]**: La condizione che attiverà il controllo dei criteri. Questo può essere basato su una determinata azione di marketing in corso, sulla presenza di determinate etichette di utilizzo dei dati o su una combinazione di entrambe.
 * **[!UICONTROL Then]**: Attributi di consenso che devono essere presenti affinché un profilo sia incluso nell’azione che ha attivato il criterio.
 
-#### Configurare le condizioni
+#### Configurare le condizioni {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="Se la condizione"
+>abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere alcune azioni di marketing in corso, alcune etichette per la governance dei dati presenti o una combinazione di entrambe."
 
 Sotto la **[!UICONTROL Se]** seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Seleziona **[!UICONTROL Visualizza tutto]** e **[!UICONTROL Seleziona etichette]** per visualizzare l’elenco completo delle azioni di marketing e delle etichette disponibili, rispettivamente.
 
@@ -108,7 +113,12 @@ Se selezioni più di una condizione, puoi utilizzare l’icona visualizzata tra 
 
 ![](../images/policies/and-or-selection.png)
 
-#### Selezionare gli attributi di consenso
+#### Selezionare gli attributi di consenso {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Allora, condizione"
+>abstract="Una volta definita la condizione &quot;If&quot;, utilizza la sezione &quot;Then&quot; per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili siano inclusi nell’azione gestita da questo criterio."
 
 Sotto la **[!UICONTROL Then]** seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili siano inclusi nell’azione gestita da questo criterio. È possibile scegliere una delle opzioni fornite dall’elenco oppure selezionare **[!UICONTROL Visualizza tutto]** per scegliere l&#39;attributo direttamente dallo schema di unione.
 
