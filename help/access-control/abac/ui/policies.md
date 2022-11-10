@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Controllo di accesso basato su attributi Crea un criterio
 description: Questo documento fornisce informazioni sulla gestione dei criteri tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Quindi, seleziona il menu a discesa **Corrisponde**.
 
 ![flac-policy-match-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Quindi, seleziona il menu a discesa **Utente**.
+Quindi, utilizzando il menu a discesa, seleziona il tipo di etichetta (**[!UICONTROL Etichetta core]** o **[!UICONTROL Etichetta personalizzata]**) per corrispondere all’etichetta assegnata all’utente nei ruoli.
 
 ![elenco a discesa flac-policy-user](../../images/flac-ui/flac-policy-user-dropdown.png)
 
