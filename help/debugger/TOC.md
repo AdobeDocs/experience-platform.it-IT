@@ -4,9 +4,9 @@ user-guide-title: Aiuto di Adobe Experience Platform Debugger
 breadcrumb-title: Guida di Adobe Experience Platform Debugger
 user-guide-description: Esamina le pagine web per individuare eventuali problemi relativi alle implementazioni di Experience Platform.
 feature: Debugger
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '62'
 ht-degree: 48%
 
 ---
@@ -18,11 +18,13 @@ ht-degree: 48%
 * [Installare l’estensione](./install-debugger.md)
 * [Configura l&#39;estensione](./configure-debugger.md)
 * [Scheda Riepilogo](./summary.md)
-* [Scheda Soluzioni](./solutions.md)
+* Scheda Soluzioni {#solutions}
+   * [Panoramica](./solutions/overview.md)
+   * [Adobe Target](./solutions/target.md)
 * [Scheda Registri](./logs.md)
 * [Scheda Rete](./network.md)
 * [Scheda Eventi](./events.md)
-* Auditor {#auditor}
+* Scheda Auditor {#auditor}
    * [Panoramica](./auditor/overview.md)
    * [Test di coerenza dei tag](./auditor/tag-consistency.md)
    * [Test di presenza tag](./auditor/tag-presence.md)
