@@ -2,9 +2,9 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Numero di identità"
->abstract="Numero di identità richieste per l&#39;eliminazione nell&#39;ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="Numero di identità i cui record sono stati richiesti per essere aggiornati o eliminati nell&#39;ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
