@@ -2,9 +2,9 @@
 title: Panoramica dell’igiene dei dati
 description: Adobe Experience Platform Data Hygiene consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,10 @@ Quando un [richiesta di scadenza del set di dati](./ui/dataset-expiration.md) vi
 {style=&quot;table-layout:auto&quot;}
 
 ### Cancellazioni dal consumatore {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>Le cancellazioni dei consumatori sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
 
 Quando un [richiesta di cancellazione del consumatore](./ui/delete-consumer.md) viene creato:
 
