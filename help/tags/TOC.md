@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 82%
+source-wordcount: '416'
+ht-degree: 81%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 82%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Panoramica](./extensions/web/marketo/overview.md)
          * [Note sulla versione](./extensions/web/marketo/release-notes.md)
+      * Conversioni ottimizzate di Google Ads {#google-ads-enhanced-conversions}
+         * [Panoramica](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Livello dati Google {#google-data-layer}
          * [Panoramica](./extensions/web/google-data-layer/overview.md)
          * [Note sulla versione](./extensions/web/google-data-layer/release-notes.md)
