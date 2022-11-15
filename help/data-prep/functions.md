@@ -5,10 +5,10 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
-ht-degree: 3%
+source-wordcount: '4337'
+ht-degree: 4%
 
 ---
 
@@ -234,6 +234,11 @@ Per informazioni sulla funzione di copia dell’oggetto, consulta la sezione . [
 {style=&quot;table-layout:auto&quot;}
 
 ### Funzioni dell&#39;agente utente {#user-agent}
+
+Una delle funzioni dell’agente utente contenute nella tabella seguente può restituire uno dei seguenti valori:
+
+* Telefono: un dispositivo mobile con un piccolo schermo (solitamente &lt; 7&quot;)
+* Mobile : dispositivo mobile che non è ancora stato identificato. Questo dispositivo mobile può essere un eReader, un tablet, un telefono, un orologio, ecc.
 
 >[!NOTE]
 >

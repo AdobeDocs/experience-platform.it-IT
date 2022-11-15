@@ -5,9 +5,9 @@ title: Endpoint API per set di mappature
 topic-legacy: mapping sets
 description: Puoi utilizzare l'endpoint `/mappingSets` nell'API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | ID dello schema XDM a cui si fa riferimento. |
 | `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall&#39;origine alla destinazione. |
+| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall&#39;origine alla destinazione. Il tipo di origine supporta due possibili valori: <ul><li>`ATTRIBUTE`: Tipo di origine `ATTRIBUTE` viene utilizzato quando l&#39;attributo di input proviene da uno schema di origine.</li><li>`EXPRESSION`: Tipo di origine `EXPRESSION` viene utilizzato quando la mappatura viene completata utilizzando un campo calcolato.</li></ul> **AVVISO**: L&#39;impostazione errata dei valori del tipo di origine può rendere non modificabili i set di mappatura. |
 | `mappings.source` | La posizione da cui desideri mappare i dati. |
 | `mappings.destination` | Posizione in cui si desidera mappare i dati. |
 
