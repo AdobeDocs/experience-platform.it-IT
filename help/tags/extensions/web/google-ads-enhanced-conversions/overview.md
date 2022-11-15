@@ -1,9 +1,10 @@
 ---
 title: Estensione Google Ads Enhanced Conversions
 description: Scopri l’estensione Conversioni avanzate di Google Ads per l’inoltro di eventi in Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Le conversioni migliorate sfruttano [!DNL Google Ads] API per aggiungere dati di
 >Per associare l’evento di conversione lato client ai dati di prime parti inviati dall’inoltro eventi, la variabile `transaction_ID` deve essere lo stesso in entrambe le chiamate. Per ulteriori informazioni su dove deve essere fornito questo valore per ogni servizio, consulta le sezioni sulla configurazione delle azioni di conversione per [tag](#conversion-action-tags) e [inoltro eventi](#conversion-action-event-forwarding), rispettivamente.
 
 Poiché l’invio di eventi di conversione comporta un’implementazione lato client e lato server, questo documento descrive i passaggi prerequisiti per la configurazione del lato client [[!DNL Google Global Site Tag] estensione (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) oltre al [!DNL Enhanced Conversions] estensione per l&#39;inoltro eventi.
+
+Il seguente video fornisce un’introduzione al [!DNL Enhanced Conversions] Estensione e illustra i passaggi di implementazione di alto livello:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Inviare una conversione utilizzando i tag
 
