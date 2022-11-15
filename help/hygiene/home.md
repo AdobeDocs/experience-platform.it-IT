@@ -2,9 +2,9 @@
 title: Panoramica dell’igiene dei dati
 description: Adobe Experience Platform Data Hygiene consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,11 @@ Adobe Experience Platform fornisce un solido set di strumenti per gestire operaz
 Le funzionalità di igiene dei dati di Platform consentono di gestire i dati archiviati dei clienti attraverso:
 
 * Pianificazione delle scadenze automatizzate dei set di dati
-* Eliminazione dei dati dei consumatori in base alle identità acquisite
+* Eliminazione dei dati dei singoli consumatori dai record
+
+>[!IMPORTANT]
+>
+>Le eliminazioni da parte del consumatore sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../privacy-service/home.md) invece.
 
 Queste attività possono essere eseguite utilizzando [[!UICONTROL Igiene dei dati] Area di lavoro dell&#39;interfaccia utente](#ui) o [API di igiene dei dati](#api). Quando un processo di igiene dei dati viene eseguito, il sistema fornisce aggiornamenti di trasparenza in ogni fase del processo. Vedi la sezione su [Tempistiche e trasparenza](#timelines-and-transparency) per ulteriori informazioni sulla rappresentazione di ciascun tipo di processo nel sistema.
 

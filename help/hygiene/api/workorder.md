@@ -2,9 +2,9 @@
 title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dati ti consente di gestire in modo programmatico le attività di eliminazione per le identità dei consumatori.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1033'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,9 @@ La `/workorder` L’endpoint nell’API di igiene dati ti consente di gestire in
 >[!IMPORTANT]
 >
 >Le richieste di cancellazione del consumatore sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
+>
+>
+>Le eliminazioni da parte del consumatore sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Introduzione
 

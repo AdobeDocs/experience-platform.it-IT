@@ -2,20 +2,23 @@
 title: Elimina record consumer
 description: Scopri come eliminare i record consumer nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
 
 # Elimina record consumer
 
+La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform puoi eliminare i record dei consumatori che partecipano al servizio Identity e al profilo cliente in tempo reale.
+
 >[!IMPORTANT]
 >
 >Le richieste di cancellazione del consumatore sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
-
-La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform puoi eliminare i record dei consumatori che partecipano al servizio Identity e al profilo cliente in tempo reale.
+>
+>
+>Le eliminazioni da parte del consumatore sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Prerequisiti
 

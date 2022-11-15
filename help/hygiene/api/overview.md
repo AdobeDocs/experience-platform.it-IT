@@ -2,9 +2,9 @@
 title: Guida all’API per l’igiene dei dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,10 @@ La scadenza di un set di dati è un’azione ritardata &quot;elimina un set di d
 
 >[!IMPORTANT]
 >
->Le richieste di cancellazione del consumatore sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield.
+>Le richieste di cancellazione del consumatore sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
+>
+>
+>Le eliminazioni da parte del consumatore sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 L’API di igiene dati ti consente di eliminare tutti i record associati a un’identità del consumatore in uno o tutti i set di dati. Tutte le attività di igiene dei dati che eliminano le identità dei consumatori sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la sezione [guida all’endpoint dell’ordine di lavoro](./workorder.md) per informazioni dettagliate sull’utilizzo delle eliminazioni consumer nell’API.
 
