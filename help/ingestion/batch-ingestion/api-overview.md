@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’API di acquisizione in batch
 description: Questo documento fornisce una guida completa per gli sviluppatori che lavorano con le API di acquisizione batch per Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2413'
 ht-degree: 5%
 
 ---
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
+| `{FILE_NAME}` | Nome del file da caricare. Assicurati di utilizzare un nome file univoco in modo che non si scontri con un altro file per il batch di file in corso di invio. |
 
 **Richiesta**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `acme/customers/campaigns/summer.json`. |
 
 **Risposta**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
+| `{FILE_NAME}` | Nome del file da caricare. Assicurati di utilizzare un nome file univoco in modo che non si scontri con un altro file per il batch di file in corso di invio. |
 
 **Richiesta**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `acme/customers/campaigns/summer.parquet`. |
 
 **Risposta**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
+| `{FILE_NAME}` | Nome del file da caricare. Assicurati di utilizzare un nome file univoco in modo che non si scontri con un altro file per il batch di file in corso di invio. |
 
 **Richiesta**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In numeri interi, l’inizio e la fine dell’intervallo richiesto. |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `acme/customers/campaigns/summer.json`. |
 
 
 **Risposta**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
+| `{FILE_NAME}` | Nome del file da caricare. Assicurati di utilizzare un nome file univoco in modo che non si scontri con un altro file per il batch di file in corso di invio. |
 
 **Richiesta**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `acme/customers/campaigns/summer.csv`. |
 
 
 **Risposta**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
+| `{FILE_NAME}` | Nome del file da caricare. Assicurati di utilizzare un nome file univoco in modo che non si scontri con un altro file per il batch di file in corso di invio. |
 
 **Richiesta**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `acme/customers/campaigns/summer.json`. |
 
 **Risposta**
 
