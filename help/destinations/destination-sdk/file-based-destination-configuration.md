@@ -2,9 +2,9 @@
 description: Questa configurazione ti consente di indicare informazioni essenziali per la destinazione basata su file, come nome di destinazione, categoria, descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione basate su file per la Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2989'
+source-wordcount: '3012'
 ht-degree: 5%
 
 ---
@@ -794,10 +794,13 @@ I parametri di questa sezione determinano le identità accettate dalla destinazi
     },
 ```
 
-Indica quale [!DNL Platform] i clienti di identità possono esportare nella tua destinazione. Alcuni esempi [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi delle identità che i clienti possono mappare a spazi dei nomi delle identità dalla destinazione. Puoi anche indicare se i clienti possono mappare i namespace personalizzati alle identità supportate dalla tua destinazione.
+Indica quale [!DNL Platform] i clienti di identità possono esportare nella tua destinazione. Alcuni esempi [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi delle identità che i clienti possono mappare a spazi dei nomi delle identità dalla destinazione. Puoi anche indicare se i clienti possono mappare i namespace personalizzati alle identità supportate dalla tua destinazione (`acceptsCustomNamespaces: true`) e se i clienti possono mappare gli attributi XDM standard alle identità supportate dalla tua destinazione (`acceptsAttributes: true`).
 
 Gli spazi dei nomi di identità non richiedono una corrispondenza 1-to-1 tra [!DNL Platform] e la destinazione.
 Ad esempio, i clienti possono mappare un [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL IDFA] spazio dei nomi dalla destinazione, oppure possono mappare lo stesso [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL Customer ID] spazio dei nomi nella destinazione.
+
+Ulteriori informazioni sulle identità in [Panoramica dello spazio dei nomi identità](/help/identity-service/namespaces.md).
+
 
 ## Configurazione batch - Denominazione dei file e programmazione delle esportazioni {#batch-configuration}
 
