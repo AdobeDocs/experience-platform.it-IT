@@ -3,9 +3,9 @@ title: Crittografia dei dati in Adobe Experience Platform
 topic-legacy: data protection
 description: Scopri come i dati vengono crittografati in transito e nel resto in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Una volta inseriti i dati nel sistema e [criptato a riposo](#at-rest), può quin
 
 I dati acquisiti e utilizzati da Platform vengono memorizzati nel data lake, un archivio dati altamente granulare contenente tutti i dati gestiti dal sistema, indipendentemente dall’origine o dal formato del file. Tutti i dati persistenti nel data lake sono crittografati, memorizzati e gestiti in un [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) istanza univoca per la tua organizzazione.
 
-Per informazioni dettagliate sul modo in cui i dati a riposo vengono crittografati nel database Azure Data Lake Storage e Cosmos, consulta la sezione [documentazione ufficiale di Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+Per informazioni dettagliate sul modo in cui i dati a riposo vengono crittografati in Azure Data Lake Storage, consulta la sezione [documentazione ufficiale di Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Passaggi successivi
 
