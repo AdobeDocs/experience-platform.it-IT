@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,29 @@ La [!DNL Query Editor] consente di scrivere ed eseguire query senza utilizzare u
 [!DNL Query Editor] fornisce uno spazio di modifica in cui iniziare a digitare una query. Mentre si digita, l&#39;editor completa automaticamente le parole riservate SQL, le tabelle e i nomi di campo all&#39;interno delle tabelle. Al termine della scrittura della query, seleziona la **Play** per eseguire la query. La **[!UICONTROL Console]** la scheda sotto l’editor mostra cosa [!DNL Query Service] è in corso, per indicare quando è stata restituita una query. La **[!UICONTROL Risultato]** accanto alla console vengono visualizzati i risultati delle query. Consulta la sezione [Guida all’editor delle query](./user-guide.md) per ulteriori informazioni sull&#39;utilizzo di [!DNL Query Editor].
 
 ![Uno zoom in vista del [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Query pianificate {#scheduled-queries}
+
+Le query già salvate come modello possono essere programmate per essere eseguite con cadenza regolare. Quando pianifichi una query, puoi scegliere la frequenza delle esecuzioni, la data di inizio e di fine, il giorno della settimana in cui viene eseguita la query pianificata e il set di dati in cui esportare la query. Le pianificazioni delle query vengono impostate utilizzando l’Editor query.
+
+Per informazioni su come pianificare una query tramite l’interfaccia utente, consulta [guida alle query pianificate](./user-guide.md#scheduled-queries). Per informazioni su come aggiungere le pianificazioni utilizzando l’API, leggi la [guida all’endpoint delle query pianificate](../api/scheduled-queries.md).
+
+Una volta pianificata una query, questa viene visualizzata nell’elenco delle query pianificate nella [!UICONTROL Query pianificate] scheda . Per informazioni complete sulla query, le esecuzioni, il creatore e gli intervalli, seleziona una query pianificata dall’elenco.
+
+![Area di lavoro Query con la scheda Query pianificate evidenziata e visualizzazione delle righe delle pianificazioni delle query.](../images/ui/overview/scheduled-queries.png)
+
+| Colonna | Descrizione |
+| --- | --- |
+| **[!UICONTROL Nome]** | Il campo nome è il nome del modello o i primi caratteri della query SQL. All’inizio viene denominato qualsiasi query creata tramite l’interfaccia utente con l’Editor query. Se la query è stata creata tramite l’API, il nome della query è uno snippet dell’SQL iniziale utilizzato per creare la query. |
+| **[!UICONTROL Modello]** | Nome del modello della query. Selezionare un nome di modello per passare all’Editor query. Il modello di query viene visualizzato nell’Editor query per comodità. Se non è presente un nome di modello, la riga viene contrassegnata con un trattino e non è possibile reindirizzare all’Editor query per visualizzare la query. |
+| **[!UICONTROL SQL]** | Frammento della query SQL. |
+| **[!UICONTROL Frequenza di esecuzione]** | Questa è la cadenza alla quale la query è impostata per essere eseguita. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
+| **[!UICONTROL Creato da]** | Nome dell’utente che ha creato la query. |
+| **[!UICONTROL Creato]** | La marca temporale alla creazione della query, in formato UTC. |
+| **[!UICONTROL Timestamp ultima esecuzione]** | La marca temporale più recente all’esecuzione della query. Questa colonna evidenzia se una query è stata eseguita in base alla pianificazione corrente. |
+| **[!UICONTROL Stato dell&#39;ultima esecuzione]** | Lo stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
+
+Consulta la documentazione per ulteriori informazioni su come [monitorare le query tramite l’interfaccia utente del servizio query](../monitor-queries.md).
 
 ## Modelli {#browse}
 
