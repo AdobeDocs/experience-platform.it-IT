@@ -1,14 +1,19 @@
 ---
 title: Monitoraggio utilizzo licenza query batch
 description: L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo della licenza di Data Distiller dell’organizzazione.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# Monitoraggio dell’utilizzo della licenza delle query batch {#monitor-license-usage}
+# (Beta) Monitora l&#39;utilizzo della licenza di query batch {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>La possibilità di monitorare l’utilizzo della licenza di query batch tramite l’interfaccia utente è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
 
 L’interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sull’utilizzo della licenza di Query Service della propria organizzazione.
 

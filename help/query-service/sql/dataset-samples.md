@@ -1,18 +1,19 @@
 ---
 title: Esempi di set di dati
 description: I set di dati di esempio del servizio query ti consentono di eseguire query esplorative sui grandi dati con un tempo di elaborazione notevolmente ridotto al costo dell’accuratezza della query. Questa guida fornisce informazioni su come gestire i campioni per approssimare l’elaborazione delle query
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (Beta) Esempi di set di dati
+# Esempi di set di dati (rilascio limitato)
 
 >[!IMPORTANT]
 >
->La funzione di esempio del set di dati è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+>La funzione di esempi di set di dati è attualmente in una versione limitata e non è disponibile per tutti i clienti.
 
 Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione approssimativa delle query. I set di dati di esempio vengono creati con campioni casuali uniformi provenienti da [!DNL Azure Data Lake Storage] (ADLS) set di dati che utilizzano solo una percentuale di record dell&#39;originale. Questa percentuale è nota come tasso di campionamento. La regolazione della frequenza di campionamento per controllare l&#39;equilibrio tra precisione e tempo di elaborazione consente di eseguire query esplorative sui grandi dati con tempi di elaborazione notevolmente ridotti al costo dell&#39;accuratezza della query.
 
