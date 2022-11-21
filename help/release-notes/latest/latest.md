@@ -1,9 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1357'
 ht-degree: 5%
 
 ---
@@ -124,6 +125,5 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 | Funzione | Descrizione |
 | --- | --- | 
 | Disponibilità beta dell’origine Adobe Workfront | Utilizza la [Origine Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) per dare Experience Platform ai dati Workfront ed eseguire casi d&#39;uso, ad esempio la combinazione dei record di lavoro con dati di terze parti, l&#39;applicazione di analisi storiche e di serie temporali sui record di lavoro e l&#39;esecuzione di query sui dati di lavoro utilizzando SQL standard. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Workfront nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Disponibilità beta dell’origine Oracle Service Cloud | Utilizza l’origine Oracle Service Cloud per acquisire i dati dall’account Oracle Service Cloud all’Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [Origine Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md).
