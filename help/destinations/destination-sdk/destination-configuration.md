@@ -2,7 +2,7 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
 workflow-type: tm+mt
 source-wordcount: '1894'
 ht-degree: 4%
@@ -104,7 +104,7 @@ Questa è un esempio di configurazione di una destinazione di streaming fittizia
             "includeSegmentId":true,
             "includeSegmentStatus":true,
             "includeIdentity":true,
-            "oneIdentityPerGroup":false,
+            "oneIdentityPerGroup":true,
             "groups":[
                {
                   "namespaces":[
