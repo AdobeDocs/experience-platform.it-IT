@@ -2,9 +2,9 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1603'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ Questo documento illustra il processo di abilitazione della funzione chiavi gest
 
 ## Prerequisiti
 
-Per abilitare CMK, devi disporre dell’accesso a **tutto** delle seguenti funzioni in [!DNL Microsoft Azure]:
+Per abilitare CMK, il tuo [!DNL Azure] L&#39;insieme di credenziali chiave deve essere configurato con le seguenti impostazioni:
 
-* [Criteri per il controllo degli accessi basati sul ruolo](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (da non confondere con la stessa funzione nell’Experience Platform)
-* [Eliminazione soft dell&#39;insieme di credenziali](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Protezione da eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Abilita protezione da eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configura l&#39;accesso tramite [!DNL Azure] controllo dell&#39;accesso basato su ruoli](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Riepilogo del processo
 
