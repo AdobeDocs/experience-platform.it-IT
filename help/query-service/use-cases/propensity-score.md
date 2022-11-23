@@ -1,16 +1,19 @@
 ---
 title: Determinare Un Punteggio Di Propensione Utilizzando Un Modello Predittivo Generato Dall’Apprendimento Automatico
 description: Scopri come utilizzare Query Service per applicare il modello predittivo ai dati di Platform. Questo documento illustra come utilizzare i dati di Platform per prevedere la propensione di un cliente all’acquisto in ogni visita.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Determinare un punteggio di propensione utilizzando un modello predittivo generato da machine-learning
 
-Utilizzando Query Service, puoi sfruttare i dati di Experience Platform nelle piattaforme di apprendimento automatico per generare modelli predittivi come i punteggi di propensione. Questa guida spiega come utilizzare Query Service per inviare dati alla piattaforma di apprendimento automatico al fine di addestrare un modello in un blocco appunti computazionale. Il modello addestrato può essere applicato ai dati utilizzando SQL per prevedere la propensione di un cliente all&#39;acquisto per ogni visita.
+Utilizzando Query Service è possibile sfruttare modelli predittivi, come i punteggi di propensione, generati sulla piattaforma di apprendimento automatico per analizzare i dati di Experience Platform.
+
+Questa guida spiega come utilizzare Query Service per inviare dati alla piattaforma di apprendimento automatico al fine di addestrare un modello in un blocco appunti computazionale. Il modello addestrato può essere applicato ai dati utilizzando SQL per prevedere la propensione di un cliente all&#39;acquisto per ogni visita.
 
 ## Introduzione
 
@@ -322,5 +325,3 @@ Vengono quindi ordinate le precisioni del modello di bootstrapped. Dopo di che, 
 ![Comando di stampa per visualizzare l&#39;intervallo di affidabilità del punteggio di propensione.](../images/use-cases/confidence-interval.png)
 
 La figura precedente indica che se si impiegano solo 1000 righe per addestrare i modelli, è possibile prevedere che le precisioni scendano tra l’84% e l’88% circa. È possibile regolare le `LIMIT` nelle query Query Service in base alle tue esigenze per garantire le prestazioni dei modelli.
-
-
