@@ -2,10 +2,10 @@
 title: Segreti nell'API del reattore
 description: Scopri le basi di come configurare i segreti nell’API di Reactor da utilizzare nell’inoltro degli eventi.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -131,7 +131,7 @@ Dopo che l&#39;artefatto di scambio è stato salvato con successo nell&#39;ambie
 
 ## Riferimenti ai segreti {#referencing-secrets}
 
-Per fare riferimento a un segreto, devi creare un elemento dati di tipo &quot;[!UICONTROL Segreto]&quot; (fornito dalla [[!UICONTROL Core] estensione](../../extensions/web/core/overview.md)) su una proprietà di inoltro eventi. Durante la configurazione di questo elemento dati, viene richiesto di indicare quale segreto utilizzare per ogni ambiente. Puoi quindi creare regole che fanno riferimento a un elemento dati segreto, ad esempio all’interno dell’intestazione di una chiamata HTTP.
+Per fare riferimento a un segreto, devi creare un elemento dati di tipo &quot;[!UICONTROL Segreto]&quot; (fornito dalla [[!UICONTROL Core] estensione](../../extensions/client/core/overview.md)) su una proprietà di inoltro eventi. Durante la configurazione di questo elemento dati, viene richiesto di indicare quale segreto utilizzare per ogni ambiente. Puoi quindi creare regole che fanno riferimento a un elemento dati segreto, ad esempio all’interno dell’intestazione di una chiamata HTTP.
 
 ![Elemento dati segreto](../../images/api/guides/secrets/data-element.png)
 

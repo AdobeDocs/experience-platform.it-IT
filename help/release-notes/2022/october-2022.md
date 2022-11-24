@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -38,8 +38,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | Funzione | Descrizione |
 | --- | --- |
 | Gestione sensibile dei dati per i datastreams | I Datastreams ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili come imposto da regolamenti come l&#39;Health Insurance Portability and Accountability Act (HIPAA). Vedi la sezione su [gestione dei dati sensibili nei flussi di dati](../../edge/datastreams/overview.md#sensitive) per ulteriori informazioni. |
-| [!DNL Splunk] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Splunk] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Splunk] panoramica dell&#39;estensione](../../tags/extensions/web/splunk/overview.md) per ulteriori informazioni. |
-| [!DNL Zendesk] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Zendesk] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Zendesk] panoramica dell&#39;estensione](../../tags/extensions/web/zendesk/overview.md) per ulteriori informazioni. |
+| [!DNL Splunk] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Splunk] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Splunk] panoramica dell&#39;estensione](../../tags/extensions/server/splunk/overview.md) per ulteriori informazioni. |
+| [!DNL Zendesk] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Zendesk] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Zendesk] panoramica dell&#39;estensione](../../tags/extensions/server/zendesk/overview.md) per ulteriori informazioni. |
 
 {style=&quot;table-layout:auto&quot;}
 

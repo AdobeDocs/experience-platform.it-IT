@@ -2,7 +2,7 @@
 title: Implementazione asincrona
 description: Scopri come implementare in modo asincrono le librerie tag di Adobe Experience Platform nel tuo sito web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 92%
@@ -56,7 +56,7 @@ Innanzitutto, poiché il caricamento della libreria di tag può terminare prima 
 
 In secondo luogo, il caricamento della libreria di tag può terminare prima o dopo l’evento [`DOMContentLoaded`](https://developer.mozilla.org/it-IT/docs/Web/Events/DOMContentLoaded) del browser (DOM Ready).
 
-A causa di questi due punti, vale la pena dimostrare come funzionano i tipi di evento [Library Loaded](../../extensions/web/core/overview.md#library-loaded-page-top), [Page Bottom](../../extensions/web/core/overview.md#page-bottom), [DOM Ready](../../extensions/web/core/overview.md#page-bottom) e [Window Loaded](../../extensions/web/core/overview.md#window-loaded) dell’estensione Core durante il caricamento asincrono di una libreria di tag.
+A causa di questi due punti, vale la pena dimostrare come funzionano i tipi di evento [Library Loaded](../../extensions/client/core/overview.md#library-loaded-page-top), [Page Bottom](../../extensions/client/core/overview.md#page-bottom), [DOM Ready](../../extensions/client/core/overview.md#page-bottom) e [Window Loaded](../../extensions/client/core/overview.md#window-loaded) dell’estensione Core durante il caricamento asincrono di una libreria di tag.
 
 Se la proprietà tag contiene le quattro regole seguenti:
 

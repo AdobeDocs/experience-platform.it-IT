@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 9%
@@ -27,9 +27,9 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!DNL AWS] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Amazon Web Services] ([!DNL AWS]) utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL AWS] panoramica dell&#39;estensione](../../tags/extensions/web/aws/overview.md) per ulteriori informazioni. |
-| [!DNL Google Ads Enhanced Conversions] estensione per l&#39;inoltro eventi | Ora puoi inviare i dati di conversione a [!DNL Google Ads] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Google Ads Enhanced Conversions] panoramica dell&#39;estensione](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) per ulteriori informazioni. |
-| [!DNL Microsoft Azure] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Microsoft Azure] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Microsoft Azure] panoramica dell&#39;estensione](../../tags/extensions/web/azure/overview.md) per ulteriori informazioni. |
+| [!DNL AWS] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Amazon Web Services] ([!DNL AWS]) utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL AWS] panoramica dell&#39;estensione](../../tags/extensions/server/aws/overview.md) per ulteriori informazioni. |
+| [!DNL Google Ads Enhanced Conversions] estensione per l&#39;inoltro eventi | Ora puoi inviare i dati di conversione a [!DNL Google Ads] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Google Ads Enhanced Conversions] panoramica dell&#39;estensione](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) per ulteriori informazioni. |
+| [!DNL Microsoft Azure] estensione per l&#39;inoltro eventi | Ora puoi inviare dati a [!DNL Microsoft Azure] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Microsoft Azure] panoramica dell&#39;estensione](../../tags/extensions/server/azure/overview.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni sulle funzionalità di raccolta dati di Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 

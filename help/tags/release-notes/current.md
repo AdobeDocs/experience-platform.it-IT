@@ -2,7 +2,7 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note di rilascio relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 6%
@@ -14,8 +14,8 @@ ht-degree: 6%
 ## 26 ottobre 2022
 
 * **Gestione sensibile dei dati per i datastreams**: I Datastreams ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili come imposto da regolamenti come l&#39;Health Insurance Portability and Accountability Act (HIPAA). Vedi la sezione su [gestione dei dati sensibili nei flussi di dati](../../edge/datastreams/overview.md#sensitive) per ulteriori informazioni.
-* **[!DNL Splunk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Splunk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Splunk] panoramica dell&#39;estensione](../extensions/web/splunk/overview.md) per ulteriori informazioni.
-* **[!DNL Zendesk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Zendesk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Zendesk] panoramica dell&#39;estensione](../extensions/web/zendesk/overview.md) per ulteriori informazioni.
+* **[!DNL Splunk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Splunk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Splunk] panoramica dell&#39;estensione](../extensions/server/splunk/overview.md) per ulteriori informazioni.
+* **[!DNL Zendesk]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Zendesk] utilizzando [inoltro eventi](../ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Zendesk] panoramica dell&#39;estensione](../extensions/server/zendesk/overview.md) per ulteriori informazioni.
 
 ## 28 settembre 2022
 
@@ -32,6 +32,6 @@ ht-degree: 6%
 
 Sono state rilasciate nuove estensioni:
 
-* [Estensione tag Google Data Layer](../extensions/web/google-data-layer/overview.md): Consente di utilizzare un livello dati Google nell’implementazione dei tag.
+* [Estensione tag Google Data Layer](../extensions/client/google-data-layer/overview.md): Consente di utilizzare un livello dati Google nell’implementazione dei tag.
 * [Estensione di inoltro evento Conversioni migliorate di Google Ads](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Consente di migliorare le conversioni di Google Ads in tempo reale.
-* [Estensione inoltro evento Mailchimp](../extensions/web/mailchimp/overview.md): Invia eventi all’API marketing Mailchimp che può attivare le e-mail per campagne di marketing, percorsi o transazioni Mailchimp.
+* [Estensione inoltro evento Mailchimp](../extensions/server/mailchimp/overview.md): Invia eventi all’API marketing Mailchimp che può attivare le e-mail per campagne di marketing, percorsi o transazioni Mailchimp.

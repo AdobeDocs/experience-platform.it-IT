@@ -2,7 +2,7 @@
 title: Regole
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 81%
@@ -41,7 +41,7 @@ Se si verifica un evento specificato, vengono valutate le condizioni, quindi ven
 
 * **Condizioni**: restringi l’evento configurando eventuali condizioni che devono essere soddisfatte affinché l’evento possa attivare la regola. Un&#39;eccezione è definita come condizione NOT. Condizioni multiple sono collegate da un AND.
 
-Gli eventi disponibili dipendono dalle estensioni installate. Per informazioni sugli eventi nell&#39;estensione Core, consulta [Tipi di evento estensione Core](../../extensions/web/core/overview.md#core-extension-event-types).
+Gli eventi disponibili dipendono dalle estensioni installate. Per informazioni sugli eventi nell&#39;estensione Core, consulta [Tipi di evento estensione Core](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Azioni (then)
 

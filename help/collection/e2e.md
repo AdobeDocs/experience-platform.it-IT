@@ -2,7 +2,7 @@
 title: Panoramica della raccolta dati end-to-end
 description: Panoramica di alto livello su come inviare dati evento alle soluzioni Adobe Experience Cloud utilizzando le funzionalità di raccolta dati di Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Viene visualizzata la pagina di configurazione dell’evento. Per configurare un
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui diversi tipi di eventi forniti da estensioni Web di Adobe, tra cui come configurarli, consulta la sezione [Riferimento per le estensioni di Adobe](../tags/extensions/web/overview.md) nella documentazione sui tag.
+>Per ulteriori informazioni sui diversi tipi di eventi forniti da estensioni Web di Adobe, tra cui come configurarli, consulta la sezione [Riferimento per le estensioni di Adobe](../tags/extensions/client/overview.md) nella documentazione sui tag.
 
 L’evento di invio del modulo consente di utilizzare un [Selettore CSS](https://www.w3schools.com/css/css_selectors.asp) per fare riferimento a un elemento specifico su cui attivare la regola. Nell’esempio seguente, l’ID `add-to-cart-form` viene utilizzato in modo che questa regola venga attivata solo per il modulo &quot;Aggiungi al carrello&quot;. Seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l’evento alla regola.
 

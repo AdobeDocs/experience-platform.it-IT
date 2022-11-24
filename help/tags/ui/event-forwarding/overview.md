@@ -3,7 +3,7 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 9%
@@ -57,7 +57,7 @@ Elenco di tutte le proprietà di inoltro eventi **[!UICONTROL Bordo]** come piat
 
 ### Estensioni {#extensions}
 
-L&#39;inoltro degli eventi dispone di un proprio catalogo di estensioni compatibili, ad esempio [Core](../../extensions/web/core/event-forwarding.md) estensione e [Connettore cloud di Adobe](../../extensions/web/cloud-connector/overview.md) estensione. Puoi visualizzare le estensioni disponibili per le proprietà di inoltro eventi nell’interfaccia utente selezionando **[!UICONTROL Estensioni]** nella navigazione a sinistra, seguita da **[!UICONTROL Catalogo]**.
+L&#39;inoltro degli eventi dispone di un proprio catalogo di estensioni compatibili, ad esempio [Core](../../extensions/server/core/overview.md) estensione e [Connettore cloud di Adobe](../../extensions/server/cloud-connector/overview.md) estensione. Puoi visualizzare le estensioni disponibili per le proprietà di inoltro eventi nell’interfaccia utente selezionando **[!UICONTROL Estensioni]** nella navigazione a sinistra, seguita da **[!UICONTROL Catalogo]**.
 
 ![Estensioni dell’inoltro eventi nell’interfaccia utente Raccolta dati](../../images/ui/event-forwarding/overview/extensions.png)
 

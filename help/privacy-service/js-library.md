@@ -5,7 +5,7 @@ title: Panoramica della libreria JavaScript sulla privacy di Adobe
 topic-legacy: overview
 description: La libreria JavaScript per la privacy di Adobe consente di recuperare le identità dell’interessato da utilizzare in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 6%
@@ -48,7 +48,7 @@ Per iniziare a utilizzare [!DNL Privacy JS Library], è necessario installarlo n
 * Installare utilizzando npm eseguendo il seguente comando: `npm install @adobe/adobe-privacy`
 * Scarica da [Archivio Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-Puoi anche installare la libreria tramite un’estensione tag. Vedi la panoramica sul [Estensione del tag Privacy di Adobe](../tags/extensions/web/privacy/overview.md) per ulteriori informazioni.
+Puoi anche installare la libreria tramite un’estensione tag. Vedi la panoramica sul [Estensione del tag Privacy di Adobe](../tags/extensions/client/privacy/overview.md) per ulteriori informazioni.
 
 ## Creare un&#39;istanza del [!DNL Privacy JS Library]
 
@@ -187,7 +187,7 @@ Di seguito è riportato un elenco dei parametri di configurazione accettati per 
 | --- | --- |
 | `key` | Un ID univoco che identifica l&#39;utente o la persona interessata. Questa proprietà è destinata all&#39;uso a scopi di tracciamento interni e non viene utilizzata da Adobe. |
 
-**Adobe Analytics**  
+**Adobe Analytics**
 
 | Parametro | Descrizione |
 | --- | --- |

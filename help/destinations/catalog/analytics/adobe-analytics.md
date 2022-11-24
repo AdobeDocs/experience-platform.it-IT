@@ -3,7 +3,7 @@ keywords: estensione Analytics;estensione Analytics;analisi di destinazione
 title: Estensione Adobe Analytics
 description: L'estensione Adobe Analytics è una destinazione Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 9%
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Adobe Analytics è una soluzione leader di settore che ti consente di comprendere i tuoi clienti come persone e gestire la tua attività grazie alle informazioni sul cliente.
 
-Adobe Analytics è un&#39;estensione Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la sezione [Panoramica dell&#39;estensione Adobe Analytics](/help/tags/extensions/web/analytics/overview.md) nella documentazione Tag .
+Adobe Analytics è un&#39;estensione Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la sezione [Panoramica dell&#39;estensione Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) nella documentazione Tag .
 
 Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta la sezione [panoramica delle estensioni di tag](../launch-extensions/overview.md).
 

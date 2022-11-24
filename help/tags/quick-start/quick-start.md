@@ -2,7 +2,7 @@
 title: Guida rapida
 description: Scopri come iniziare a usare i tag in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 92%
@@ -53,7 +53,7 @@ Per ulteriori informazioni sulla creazione delle proprietà, vedi [Creazione di 
 
 Un’estensione è un’integrazione creata da Adobe o da un partner di Adobe che offre opzioni nuove e infinite per i tag che puoi implementare nei tuoi siti. Se pensi a un tag come a un sistema operativo, le estensioni sono le app che puoi installare per eseguire specifiche operazioni.
 
-Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/web/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L’estensione Core è creata da Adobe per fornire un set predefinito solido di tipi di elementi dati per il livello di dati, e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
+Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/client/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L’estensione Core è creata da Adobe per fornire un set predefinito solido di tipi di elementi dati per il livello di dati, e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
 
 Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

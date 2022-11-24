@@ -3,7 +3,7 @@ title: Installare Adobe Experience Platform Web SDK
 description: Scopri come installare Experience Platform Web SDK.
 keywords: installazione sdk web;installazione sdk web;internet explorer;promise;pacchetto npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Sono disponibili tre modi supportati per utilizzare Adobe Experience Platform We
 
 ## Opzione 1: Installazione dell’estensione tag
 
-Per la documentazione sull’estensione tag, consulta la sezione [documentazione di launch](../../tags/extensions/web/sdk/overview.md)
+Per la documentazione sull’estensione tag, consulta la sezione [documentazione di launch](../../tags/extensions/client/sdk/overview.md)
 
 ## Opzione 2: Installazione della versione autonoma predefinita
 
@@ -28,7 +28,7 @@ La versione precompilata è disponibile su una rete CDN. Puoi fare riferimento a
 
 Struttura URL: https://cdn1.adoberesources.net/alloy/[VERSIONE]/alloy.min.js OR alloy.js per la versione non minimizzata.
 
-Esempio:
+Ad esempio:
 
 
 * Minimizzato: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
