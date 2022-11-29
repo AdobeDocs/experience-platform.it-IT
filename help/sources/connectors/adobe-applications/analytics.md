@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;Connettore origine Analyti
 title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1014'
 ht-degree: 6%
 
 ---
@@ -49,7 +49,9 @@ La latenza prevista per i dati di Analytics su Platform è descritta nella tabel
 | Nuovi dati in [!DNL Real-time Customer Profile] (A4T **not** abilitato) | &lt; 2 minuti |
 | Nuovi dati in [!DNL Real-time Customer Profile] (A4T **è** abilitato) | &lt; 15 minuti |
 | Nuovi dati su Data Lake | &lt; 90 minuti |
-| Dati di backfill (13 mesi di dati o 10 miliardi di eventi, a seconda di quale sia il valore inferiore). | &lt; 4 settimane |
+| Recupero di meno di 10 miliardi di eventi | &lt; 4 settimane |
+
+Per impostazione predefinita, Analytics esegue il backfills a 13 mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza attesa.
 
 >[!NOTE]
 >
