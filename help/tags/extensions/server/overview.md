@@ -1,10 +1,11 @@
 ---
 title: Riferimento per le estensioni di inoltro eventi
 description: Trova documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
+source-git-commit: fbdfbe4be6e3b1e5ad212a4e5ebd3551cec3a89a
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 19%
+source-wordcount: '158'
+ht-degree: 18%
 
 ---
 
@@ -23,6 +24,7 @@ Di seguito è riportato un elenco di documentazione per le estensioni di inoltro
 * [Connettore Adobe Experience Platform Cloud](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [Core](./core/overview.md)
+* [API di conversione facebook](https://exchange.adobe.com/apps/ec/105509)
 * [Conversioni ottimizzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
