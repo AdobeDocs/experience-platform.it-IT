@@ -5,9 +5,9 @@ title: Guida alle credenziali del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service consente di connettersi con client esterni. È possibile connettersi a questi client esterni utilizzando credenziali in scadenza o credenziali in scadenza.
 
-## Credenziali in scadenza
+## Credenziali in scadenza {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="Modalità SSL del client"
+>abstract="SSL deve essere abilitato nei client connessi al servizio query. Assicurati che la modalità SSL sia impostata su &quot;required&quot;."
 
 È possibile utilizzare le credenziali in scadenza per configurare rapidamente una connessione a un client esterno.
 
@@ -96,7 +101,7 @@ Quando si modifica una credenziale non in scadenza, viene visualizzato un modale
 
 Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna account]** per completare l&#39;aggiornamento delle credenziali.
 
-## Utilizzo delle credenziali per la connessione a client esterni
+## Utilizzare le credenziali per connettersi a client esterni {#use-credential-to-connect}
 
 È possibile utilizzare le credenziali in scadenza o non in scadenza per connettersi con client esterni, ad esempio Aqua Data Studio, Looker o Power BI. Il metodo di input per queste credenziali varia a seconda del client esterno. Per istruzioni specifiche sull&#39;utilizzo di queste credenziali, consulta la documentazione del client esterno .
 
