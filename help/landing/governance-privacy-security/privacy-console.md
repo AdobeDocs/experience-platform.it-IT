@@ -1,10 +1,10 @@
 ---
 title: Panoramica della console Privacy
 description: Scopri come monitorare i flussi di lavoro relativi alla privacy nell’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ La funzione di ogni widget è spiegata di seguito:
 
 | Nome widget | Descrizione |
 | --- | --- |
-| Stato dell&#39;ordine di lavoro per l&#39;igiene dei dati | Mostra gli stati dei processi di eliminazione del consumatore in [Igiene dei dati](../../hygiene/home.md) per l&#39;intervallo di tempo selezionato. Utilizza il menu a discesa per modificare l’intervallo di tempo tra gli ultimi 7 giorni, 14 giorni e 30 giorni. |
+| Stato dell&#39;ordine di lavoro per l&#39;igiene dei dati | Mostra gli stati dei processi di eliminazione dei record in [Igiene dei dati](../../hygiene/home.md) per l&#39;intervallo di tempo selezionato. Utilizza il menu a discesa per modificare l’intervallo di tempo tra gli ultimi 7 giorni, 14 giorni e 30 giorni. |
 | Ordini di lavoro recenti sull&#39;igiene dei dati | Mostra il più recente [Igiene dei dati](../../hygiene/home.md) ordini di lavoro elaborati dal sistema. Utilizzare il menu a discesa per passare dagli ordini di lavoro creati di recente agli ordini di lavoro aggiornati di recente. |
 | Azioni più frequenti | Mostra le azioni più frequenti su Platform acquisite da [registri di controllo](./audit-logs/overview.md) per l&#39;intervallo di tempo selezionato. Utilizza il menu a discesa per modificare l’intervallo di tempo tra gli ultimi 7 giorni, 14 giorni e 30 giorni. |
 | Utenti più attivi | Mostra gli utenti Platform più attivi all’interno della tua organizzazione, come rilevato da [registri di controllo](./audit-logs/overview.md) per l&#39;intervallo di tempo selezionato. Utilizza il menu a discesa per modificare l’intervallo di tempo tra gli ultimi 7 giorni, 14 giorni e 30 giorni. |

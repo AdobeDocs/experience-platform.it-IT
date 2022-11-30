@@ -1,9 +1,10 @@
 ---
 title: Endpoint API per la quota
 description: L’endpoint /quota nell’API di igiene dati consente di monitorare l’utilizzo dell’igiene dei dati in base ai limiti della quota mensile della tua organizzazione per ogni tipo di lavoro.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ La `/quota` l’endpoint nell’API di igiene dati consente di monitorare l’ut
 
 Le quote vengono applicate per ciascun tipo di lavoro di igiene dei dati nei seguenti modi:
 
-* Le eliminazioni dal consumatore e gli aggiornamenti dei campi sono limitati a un certo numero di richieste ogni mese.
+* Le eliminazioni e gli aggiornamenti dei record sono limitati a un certo numero di richieste ogni mese.
 * Le scadenze del set di dati hanno un limite fisso per il numero di processi contemporaneamente attivi, indipendentemente da quando verranno eseguite le scadenze.
 
 ## Introduzione
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUOTA_TYPE}` | Parametro di query facoltativo che specifica il tipo di quota da recuperare. Se no `quotaType` viene fornito il parametro , tutti i valori di quota vengono restituiti nella risposta API. I valori di tipo accettati includono:<ul><li>`expirationDatasetQuota`: Scadenza set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: Cancellazioni dal consumo</li><li>`fieldUpdateWorkOrderDatasetQuota`: Aggiornamenti dei campi</li></ul> |
+| `{QUOTA_TYPE}` | Parametro di query facoltativo che specifica il tipo di quota da recuperare. Se no `quotaType` viene fornito il parametro , tutti i valori di quota vengono restituiti nella risposta API. I valori di tipo accettati includono:<ul><li>`expirationDatasetQuota`: Scadenza set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: Elimina record</li><li>`fieldUpdateWorkOrderDatasetQuota`: Aggiornamenti dei record</li></ul> |
 
 **Richiesta**
 
@@ -70,7 +71,7 @@ Una risposta corretta restituisce i dettagli delle quote di igiene dei dati.
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ Una risposta corretta restituisce i dettagli delle quote di igiene dei dati.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `quotas` | Elenca le informazioni sulle quote per ogni tipo di processo di igiene dei dati. Ogni oggetto quota contiene le seguenti proprietà:<ul><li>`name`: Tipo di lavoro per l&#39;igiene dei dati:<ul><li>`expirationDatasetQuota`: Scadenza set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: Cancellazioni dal consumo</li></ul></li><li>`description`: Descrizione del tipo di processo di igiene dei dati.</li><li>`consumed`: Il numero di processi di questo tipo eseguiti nel periodo mensile corrente.</li><li>`quota`: Limite di quota per questo tipo di processo. Per le eliminazioni consumer e gli aggiornamenti dei campi, questo rappresenta il numero di processi che possono essere eseguiti per ogni periodo mensile. Per le scadenze dei set di dati, questo rappresenta il numero di processi che possono essere contemporaneamente attivi in un dato momento.</li></ul> |
+| `quotas` | Elenca le informazioni sulle quote per ogni tipo di processo di igiene dei dati. Ogni oggetto quota contiene le seguenti proprietà:<ul><li>`name`: Tipo di lavoro per l&#39;igiene dei dati:<ul><li>`expirationDatasetQuota`: Scadenza set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: Elimina record</li></ul></li><li>`description`: Descrizione del tipo di processo di igiene dei dati.</li><li>`consumed`: Il numero di processi di questo tipo eseguiti nel periodo mensile corrente.</li><li>`quota`: Limite di quota per questo tipo di processo. Per le eliminazioni e gli aggiornamenti dei record, rappresenta il numero di processi che possono essere eseguiti per ogni periodo mensile. Per le scadenze dei set di dati, questo rappresenta il numero di processi che possono essere contemporaneamente attivi in un dato momento.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

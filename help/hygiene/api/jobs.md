@@ -1,21 +1,21 @@
 ---
-title: Eliminare i record consumer utilizzando l’API di igiene dei dati
+title: Eliminare i record utilizzando l’API di igiene dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 2%
 
 ---
 
-# Eliminare i record dei consumatori utilizzando l’API di igiene dei dati
+# Eliminare i record utilizzando l’API di igiene dati
 
 >[!IMPORTANT]
 >
->Questo endpoint rappresenta la funzionalità beta per le cancellazioni dal consumatore. Per informazioni sulle funzionalità più recenti, utilizza [`/workorder` endpoint](./workorder.md) invece.
+>Questo endpoint rappresenta la funzionalità beta per le cancellazioni dei record. Per informazioni sulle funzionalità più recenti, utilizza [`/workorder` endpoint](./workorder.md) invece.
 
 L’API di igiene dei dati ti consente di correggere o eliminare programmaticamente i dati personali memorizzati dei tuoi clienti in Adobe Experience Platform.
 

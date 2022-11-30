@@ -2,7 +2,7 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Quando accedi per la prima volta al **[!UICONTROL Igiene dei dati]** nell’inte
 
 ![Immagine che mostra [!UICONTROL Igiene dei dati] Area di lavoro nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
 
-L&#39;elenco mostra solo gli ordini di lavoro per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco delle attività di eliminazione dei consumatori e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
+L&#39;elenco mostra solo gli ordini di lavoro per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco delle attività di eliminazione dei record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
 
 ![Immagine che mostra [!UICONTROL Set di dati] scheda](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/
 
 A seconda del tipo di ordine di lavoro visualizzato, sono disponibili diverse opzioni di filtro.
 
-### Filtri per le cancellazioni dei consumatori
+### Filtri per le cancellazioni dei record
 
-I seguenti filtri si applicano alle richieste di cancellazione del consumatore:
+I seguenti filtri si applicano alle richieste di cancellazione dei record:
 
 | Filtro | Descrizione |
 | --- | --- |
@@ -78,8 +78,8 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Risposta di cancellazione del consumatore"
->abstract="Quando un processo di eliminazione del consumatore riceve una risposta dal sistema, questi messaggi vengono visualizzati sotto il **[!UICONTROL Risultato]** sezione . Se si verifica un problema durante l&#39;elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti verranno visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>title="Risposta di eliminazione record"
+>abstract="Quando un processo di eliminazione dei record riceve una risposta dal sistema, questi messaggi vengono visualizzati sotto il **[!UICONTROL Risultato]** sezione . Se si verifica un problema durante l&#39;elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti verranno visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 
@@ -87,11 +87,11 @@ Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagl
 
 A seconda del tipo di ordine di lavoro selezionato, vengono fornite informazioni e controlli diversi. Questi sono trattati nelle sezioni seguenti.
 
-### Dettagli di cancellazione del consumatore {#consumer-delete}
+### Dettagli eliminazione record {#record-delete}
 
-I dettagli di una richiesta di cancellazione del consumatore includono lo stato attuale e il tempo trascorso dalla richiesta. Ogni richiesta include anche **[!UICONTROL Stato per servizio]** sezione che fornisce informazioni sullo stato individuale di ciascun servizio a valle coinvolto nella cancellazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
+I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dalla richiesta. Ogni richiesta include anche **[!UICONTROL Stato per servizio]** sezione che fornisce informazioni sullo stato individuale di ciascun servizio a valle coinvolto nella cancellazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
 
-![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di eliminazione del consumatore](../images/ui/browse/consumer-delete-details.png)
+![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di eliminazione record](../images/ui/browse/record-delete-details.png)
 
 ### Dettagli di scadenza del set di dati {#dataset-expiration}
 
@@ -104,4 +104,4 @@ La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni s
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consulta la seguente documentazione:
 
 * [Gestire le scadenze dei set di dati](./dataset-expiration.md)
-* [Gestire le cancellazioni dei consumatori](./delete-consumer.md)
+* [Gestisci eliminazioni record](./record-delete.md)

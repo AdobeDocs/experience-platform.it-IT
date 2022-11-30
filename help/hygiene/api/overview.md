@@ -2,9 +2,9 @@
 title: Guida all’API per l’igiene dei dati
 description: Scopri come correggere o eliminare programmaticamente i dati personali memorizzati dai tuoi clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -43,16 +43,16 @@ Questo documento fornisce un esempio di chiamata API per dimostrare come formatt
 
 La scadenza di un set di dati è un’azione ritardata &quot;elimina un set di dati&quot;. Creando una scadenza di un set di dati, stai specificando un&#39;ora futura in cui quel set di dati deve essere eliminato. Consulta la sezione [guida all’endpoint di scadenza dei set di dati](./dataset-expiration.md) per informazioni sulla pianificazione delle scadenze dei set di dati nell’API.
 
-## Cancellazioni dal consumatore
+## Elimina record
 
 >[!IMPORTANT]
 >
->Le richieste di cancellazione del consumatore sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
+>Le richieste di eliminazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
 >
 >
->Le eliminazioni da parte del consumatore sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
+>Le eliminazioni dei record sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
-L’API di igiene dati ti consente di eliminare tutti i record associati a un’identità del consumatore in uno o tutti i set di dati. Tutte le attività di igiene dei dati che eliminano le identità dei consumatori sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la sezione [guida all’endpoint dell’ordine di lavoro](./workorder.md) per informazioni dettagliate sull’utilizzo delle eliminazioni consumer nell’API.
+L’API di igiene dati ti consente di eliminare tutti i record associati a un’identità in uno o tutti i set di dati. Tutte le attività di igiene dei dati che eliminano le identità sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la sezione [guida all’endpoint dell’ordine di lavoro](./workorder.md) per informazioni sull’utilizzo delle eliminazioni dei record nell’API.
 
 ## Quota
 

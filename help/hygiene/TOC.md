@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aiuto sull’igiene dei dati
 breadcrumb-title: Guida all’igiene dei dati
-user-guide-description: Gestisci le richieste di dati dei consumatori per rispettare le normative legali sulla privacy come RGPD e CCPA.
+user-guide-description: Elimina singoli record e pianifica le scadenze dei set di dati in Experience Platform per la pulizia, la rimozione di dati anonimi e la minimizzazione dei dati.
 feature: Data Hygiene
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 45%
+source-wordcount: '52'
+ht-degree: 15%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 45%
    * [Panoramica](./ui/overview.md)
    * [Sfoglia gli ordini di lavoro esistenti](./ui/browse.md)
    * [Gestire le scadenze dei set di dati](./ui/dataset-expiration.md)
-   * [Elimina record consumer](./ui/delete-consumer.md)
+   * [Elimina record](./ui/record-delete.md)
 * API di igiene dei dati {#api}
    * [Panoramica](./api/overview.md)
    * [Scadenza set di dati](./api/dataset-expiration.md)
-   * [Cancellazioni dal consumatore](./api/workorder.md)
+   * [Elimina record](./api/workorder.md)
    * [Quota](./api/quota.md)

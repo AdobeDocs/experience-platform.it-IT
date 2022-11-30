@@ -2,9 +2,9 @@
 title: Guida all’interfaccia utente per l’igiene dei dati
 description: Scopri come gestire le attività di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Ruota dell&#39;igiene dei dati"
->abstract="Questo widget mostra lo stato dei processi di eliminazione del consumatore di igiene dati per l&#39;intervallo temporale selezionato. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
+>abstract="Questo widget mostra lo stato dei processi di eliminazione dei record di igiene dati per l&#39;intervallo temporale selezionato. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="Ordini di lavoro per l’igiene dei dati recenti"
 >abstract="Questo widget mostra i cinque ordini di lavoro di igiene dati creati o aggiornati più di recente, a seconda dell&#39;opzione selezionata in alto a destra. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
 
-La **[!UICONTROL Igiene dei dati]** workspace nell’interfaccia utente di Adobe Experience Platform consente di creare e monitorare varie attività di igiene dei dati, tra cui l’eliminazione delle identità dei consumatori e la pianificazione delle scadenze dei set di dati.
+La **[!UICONTROL Igiene dei dati]** workspace nell’interfaccia utente di Adobe Experience Platform consente di creare e monitorare varie attività di igiene dei dati, tra cui l’eliminazione dei record e la pianificazione delle scadenze dei set di dati.
 
 Questa guida illustra come gestire le attività di igiene dei dati nell’interfaccia utente di Platform. Per informazioni su come eseguire queste attività utilizzando le chiamate API, consulta la [Guida all’API per l’igiene dei dati](../api/overview.md).
 
@@ -33,4 +33,4 @@ Da qui è possibile sfogliare gli ordini di lavoro esistenti e configurare nuove
 
 * [Sfoglia gli ordini di lavoro esistenti](./browse.md)
 * [Creare una richiesta di scadenza del set di dati](./dataset-expiration.md)
-* [Creare una richiesta di cancellazione del consumatore](./delete-consumer.md)
+* [Creare una richiesta di cancellazione del record](./record-delete.md)
