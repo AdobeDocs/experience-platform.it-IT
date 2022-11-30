@@ -4,9 +4,9 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Dalla libreria dei widget, puoi selezionare i widget per segmenti standard e per
 ## Widget standard {#standard-widgets}
 
 Adobe fornisce diversi widget standard che puoi utilizzare per visualizzare diverse metriche correlate alle destinazioni e valutare la completezza dei segmenti disponibili per l’analisi dei dati. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, si prega di iniziare leggendo [Panoramica della libreria Widget](../customize/widget-library.md).
+
+### Prerequisiti {#prerequisites}
+
+Prima di continuare con le descrizioni dei widget standard, assicurati di conoscere le definizioni dei seguenti termini chiave utilizzati nella documentazione:
+
+* **Segmento:** Un segmento è **l&#39;insieme delle norme** che includono attributi e dati evento che qualificano un numero di profili come pubblico.
+* **Pubblico**: Un pubblico è **l’insieme dei profili** che soddisfano i criteri di una definizione di segmento.
+* **Mappatura / Mappatura**: La mappatura dei dati è il processo di mappatura dei campi dei dati di origine su campi di destinazione correlati in una destinazione.
+* **Identità**: Un’identità è un identificatore che rappresenta in modo univoco un singolo cliente, ad esempio un ID cookie, un ID dispositivo o un ID e-mail.
+* **Attiva**: Attiva è l’azione intrapresa da un utente per mappare uno o più segmenti su una destinazione come ad Oracle un Marketing Cloud Eloqua, Google o Salesforce.
 
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, seleziona il nome di un widget dal seguente elenco:
 
@@ -139,6 +149,8 @@ Per visualizzare i dettagli di un segmento, seleziona il nome di un segmento dal
 
 ![I segmenti attivati di recente per widget di destinazione.](../images/destinations/recently-activated-segments-by-destination.png)
 
+Consulta la sezione sui prerequisiti per [definizioni dei termini utilizzati](#prerequisites) in questa descrizione.
+
 ### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Il menu a discesa ID destinazione filtra i segmenti disponibili. Gli ID filtro e
 La colonna identità conta il numero di ID sorgente all’interno del segmento che possono essere mappati sull’ID scelto nel menu a discesa ID widget.
 
 ![I segmenti non mappati per widget di identità.](../images/destinations/unmapped-segments-by-identity.png)
+
+Consulta la sezione sui prerequisiti per [definizioni dei termini utilizzati](#prerequisites) in questa descrizione.
 
 ### [!UICONTROL Segmenti mappati per identità] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ Il widget fornisce una tabella a due colonne per mostrare un elenco di piattafor
 
 ### [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] {#activated-audiences-across-all-destinations}
 
-La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget fornisce il numero totale di tipi di pubblico attivati in tutte le destinazioni in un’unica metrica. Questo numero è preciso rispetto all&#39;istantanea più recente.
+La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget fornisce il numero totale di tipi di pubblico attivati in tutte le destinazioni in un’unica metrica. Questo widget mostra il conteggio dei tipi di pubblico e non il conteggio dei segmenti. Questo numero è preciso rispetto all&#39;istantanea più recente.
 
 ![Il pubblico attivato in tutte le destinazioni widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Seleziona **[!UICONTROL Tipi di pubblico]** per passare alle destinazioni [!UICONTROL Sfoglia] scheda . Questa pagina fornisce un elenco di tutte le destinazioni abilitate e una varietà di metriche rilevanti. Consulta la documentazione per [ulteriori informazioni [!UICONTROL Sfoglia] scheda](../../destinations/ui/destinations-workspace.md#browse).
+Seleziona **[!UICONTROL Tipi di pubblico]** per passare alle destinazioni [!UICONTROL Sfoglia] scheda . Questa pagina fornisce un elenco di tutte le destinazioni abilitate e una varietà di metriche rilevanti. Consulta la documentazione per ulteriori informazioni sul [[!UICONTROL Sfoglia] scheda](../../destinations/ui/destinations-workspace.md#browse).
+
+Consulta la sezione sui prerequisiti per [definizioni dei termini utilizzati](#prerequisites) in questa descrizione.
 
 ### [!UICONTROL Tipi di pubblico attivati] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Seleziona **[!UICONTROL Tipi di pubblico]** per passare alla pagina dei dettagli
 ![La pagina dei dettagli del dashboard delle destinazioni con la scheda Dati di attivazione evidenziata.](../images/destinations/activation-data-tab.png)
 
 Questo widget ti aiuta a capire il valore delle destinazioni in base al numero di tipi di pubblico attivati a colpo d&#39;occhio. Offre inoltre un facile accesso a informazioni più dettagliate per ulteriori analisi.
+
+Consulta la sezione sui prerequisiti per [definizioni dei termini utilizzati](#prerequisites) in questa descrizione.
 
 ## Passaggi successivi
 
