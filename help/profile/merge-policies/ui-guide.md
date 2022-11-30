@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente per i criteri di unione
 type: Documentation
 description: Quando si riuniscono dati provenienti da più origini in Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare la visualizzazione unificata. Questa guida fornisce istruzioni passo per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2321'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Il primo passaggio del flusso di lavoro consente di configurare i criteri di uni
    * **[!UICONTROL Grafico privato]**: Eseguire unione di identità in base al grafico di identità privata.
 * **[!UICONTROL Criterio di unione predefinito]**: Pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà o meno il valore predefinito per l&#39;organizzazione. Se il selettore è attivato, viene visualizzato un avviso che richiede di confermare la modifica dei criteri di unione predefiniti dell&#39;organizzazione. Consulta la sezione [panoramica dei criteri di unione](overview.md) per ulteriori informazioni sui criteri di unione predefiniti.
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Criterio di unione attiva sul bordo]**: Pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione è attivo o meno sul bordo. Per garantire che tutti i consumatori di profili lavorino con la stessa vista sui bordi, i criteri di unione possono essere contrassegnati come attivi sui bordi. Affinché un segmento possa essere attivato sul bordo (contrassegnato come segmento edge), deve essere associato a un criterio di unione contrassegnato come attivo sul bordo. Se un segmento è **not** associato a un criterio di unione contrassegnato come attivo sul bordo, il segmento non sarà contrassegnato come attivo sul bordo e sarà contrassegnato come segmento in streaming. Inoltre, ogni organizzazione IMS può avere solo **uno** criterio di unione attivo sul bordo.
+* **[!UICONTROL Criterio di unione attiva sul bordo]**: Pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione è attivo o meno sul bordo. Per garantire che tutti i consumatori di profili lavorino con la stessa vista sui bordi, i criteri di unione possono essere contrassegnati come attivi sui bordi. Affinché un segmento possa essere attivato sul bordo (contrassegnato come segmento edge), deve essere associato a un criterio di unione contrassegnato come attivo sul bordo. Se un segmento è **not** associato a un criterio di unione contrassegnato come attivo sul bordo, il segmento non sarà contrassegnato come attivo sul bordo e sarà contrassegnato come segmento in streaming. Inoltre, ogni sandbox in un&#39;organizzazione può avere solo **uno** criterio di unione attivo sul bordo.
 
 Una volta completati i campi obbligatori, puoi selezionare **[!UICONTROL Successivo]** per continuare con il flusso di lavoro.
 
@@ -167,7 +167,7 @@ La **[!UICONTROL Anteprima dati]** La tabella mostra record di profilo di esempi
 
 ### Elenco aggiornato dei criteri di unione {#updated-list}
 
-Dopo aver completato il flusso di lavoro per la creazione di un nuovo criterio di unione, viene visualizzata la **[!UICONTROL Unisci criteri]** scheda . L&#39;elenco dei criteri di unione per l&#39;organizzazione deve ora includere i criteri di unione appena creati.
+Dopo aver completato il flusso di lavoro per la creazione di un nuovo criterio di unione, viene visualizzata nuovamente la **[!UICONTROL Unisci criteri]** scheda . L&#39;elenco dei criteri di unione per l&#39;organizzazione deve ora includere i criteri di unione appena creati.
 
 ![](../images/merge-policies/new-merge-policy-created.png)
 
