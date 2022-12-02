@@ -4,7 +4,7 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -273,7 +273,13 @@ Il widget fornisce una tabella a due colonne per mostrare un elenco di piattafor
 
 ### [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] {#activated-audiences-across-all-destinations}
 
-La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget fornisce il numero totale di tipi di pubblico attivati in tutte le destinazioni in un’unica metrica. Questo widget mostra il conteggio dei tipi di pubblico e non il conteggio dei segmenti. Questo numero è preciso rispetto all&#39;istantanea più recente.
+La [!UICONTROL Tipi di pubblico attivati per tutte le destinazioni] widget fornisce il numero totale di tipi di pubblico attivati in tutte le destinazioni in un’unica metrica.
+
+>[!NOTE]
+>
+>Questo widget mostra il conteggio dei tipi di pubblico e non il conteggio dei segmenti.
+
+Questo numero è preciso rispetto all&#39;istantanea più recente.
 
 ![Il pubblico attivato in tutte le destinazioni widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
