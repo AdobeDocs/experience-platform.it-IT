@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Microsoft Azure
 description: Scopri l’estensione Microsoft Azure per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '938'
 ht-degree: 4%
 
 ---
