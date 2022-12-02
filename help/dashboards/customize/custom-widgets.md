@@ -1,54 +1,54 @@
 ---
 keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenza;widget;metriche;
 title: Creazione di widget personalizzati per dashboard
-description: 'Questa guida fornisce istruzioni dettagliate per la creazione di widget personalizzati da utilizzare nelle dashboard di Adobe Experience Platform. '
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+description: Questa guida fornisce istruzioni dettagliate per la creazione di widget personalizzati da utilizzare nelle dashboard di Adobe Experience Platform.
+exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
+source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
-
 
 # Creazione di widget personalizzati per dashboard
 
 In Adobe Experience Platform puoi visualizzare e interagire con i dati dell’organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. Oltre ai widget standard forniti da Adobe, puoi anche creare widget personalizzati e condividerli all’interno della tua organizzazione.
 
-Questa guida fornisce istruzioni dettagliate per creare e aggiungere widget personalizzati ai dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell’interfaccia utente di Platform.
+Questa guida fornisce istruzioni dettagliate per la creazione e l’aggiunta di widget personalizzati al [!UICONTROL Profili], [!UICONTROL Segmenti]e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
 
-Per ulteriori informazioni sui widget standard, consulta la guida all’ [aggiunta di widget standard alle dashboard](standard-widgets.md).
+Per ulteriori informazioni sui widget standard, consulta la guida per [aggiunta di widget standard alle dashboard](standard-widgets.md).
 
 >[!NOTE]
 >
->I widget visualizzati nel dashboard [!UICONTROL Utilizzo licenza] non possono essere personalizzati. Per ulteriori informazioni su questo dashboard univoco, consulta la [documentazione del dashboard di utilizzo della licenza](../guides/license-usage.md).
+>I widget visualizzati nella [!UICONTROL Utilizzo della licenza] impossibile personalizzare il dashboard. Per ulteriori informazioni su questo dashboard univoco, consulta la sezione [documentazione del dashboard di utilizzo della licenza](../guides/license-usage.md).
 
 ## Libreria widget {#widget-library}
 
-Questa guida richiede l&#39;accesso alla [!UICONTROL Libreria widget] all&#39;interno di Experience Platform. Per ulteriori informazioni sulla libreria di widget e su come accedervi nell&#39;interfaccia utente, inizia leggendo la [panoramica della libreria di widget](widget-library.md).
+Questa guida richiede l’accesso al [!UICONTROL Libreria widget] all&#39;Experience Platform. Per ulteriori informazioni sulla libreria di widget e su come accedervi nell&#39;interfaccia utente, leggi la [panoramica della libreria widget](widget-library.md).
 
 ## Guida introduttiva ai widget personalizzati
 
-Nella libreria dei widget, la scheda **[!UICONTROL Personalizzato]** consente di creare widget e condividerli con altri utenti dell’organizzazione al fine di personalizzare l’aspetto delle dashboard.
+Nella libreria dei widget, la **[!UICONTROL Personalizzato]** consente di creare widget e condividerli con altri utenti dell’organizzazione al fine di personalizzare l’aspetto delle dashboard.
 
 >[!IMPORTANT]
 >
 >La tua organizzazione può creare un massimo di 20 widget personalizzati nella libreria dei widget.
 
-Seleziona la scheda **[!UICONTROL Personalizzato]** per iniziare a creare widget personalizzati o per visualizzare widget personalizzati già creati dalla tua organizzazione.
+Seleziona la **[!UICONTROL Personalizzato]** per iniziare a creare widget personalizzati o per visualizzare widget personalizzati già creati dalla tua organizzazione.
 
-![](../images/customization/custom-widgets.png)
+![Area di lavoro libreria widget con la scheda Personalizzato evidenziata.](../images/customization/custom-widgets.png)
 
 ## Creare un widget personalizzato
 
-Per creare un widget personalizzato, seleziona **[!UICONTROL Crea widget]** dall&#39;angolo in alto a destra della libreria dei widget oppure, se si tratta del primo widget personalizzato della tua organizzazione, seleziona **[!UICONTROL Crea]** dal centro della libreria dei widget.
+Per creare un widget personalizzato, seleziona **[!UICONTROL Widget per creazione]** dall&#39;angolo in alto a destra della libreria widget oppure, se si tratta del primo widget personalizzato della tua organizzazione, seleziona **[!UICONTROL Crea]** dal centro della libreria widget.
 
-![](../images/customization/create-widget.png)
+![Scheda Personalizzato dell’area di lavoro della libreria widget con Crea evidenziato.](../images/customization/create-widget.png)
 
-Nella finestra di dialogo **[!UICONTROL Crea widget]** , fornisci un titolo e una descrizione per il nuovo widget e scegli l&#39;attributo che desideri visualizzare.
+In **[!UICONTROL Widget per creazione]** , fornisci un titolo e una descrizione per il nuovo widget e scegli l&#39;attributo che desideri visualizzare.
 
 >[!NOTE]
 >
->L’elenco degli attributi disponibili dipende dallo schema configurato per la tua organizzazione. Per ulteriori informazioni sulla selezione degli attributi e sulla configurazione dello schema, consulta la guida alla [modifica dello schema per creare widget personalizzati](edit-schema.md).
+>L’elenco degli attributi disponibili dipende dallo schema configurato per la tua organizzazione. Per ulteriori informazioni sulla selezione degli attributi e sulla configurazione dello schema, consulta la guida in [modifica dello schema per creare widget personalizzati](edit-schema.md).
 
 Per scegliere un attributo, selezionare il pulsante di scelta accanto all&#39;attributo che si desidera aggiungere.
 
@@ -56,7 +56,7 @@ Per scegliere un attributo, selezionare il pulsante di scelta accanto all&#39;at
 >
 >È possibile selezionare un solo attributo per widget e creare un solo widget per attributo. Se un widget è già stato creato per un attributo, questo viene visualizzato in grigio.
 
-![](../images/customization/create-widget-dialog.png)
+![Finestra di dialogo Crea widget .](../images/customization/create-widget-dialog.png)
 
 ## Selezionare una visualizzazione
 
@@ -78,39 +78,39 @@ A seconda dell’attributo , l’intelligenza artificiale consiglia diverse opzi
 >
 >I dati mostrati nel widget di esempio sono solo a scopo illustrativo. L’anteprima non visualizza i dati effettivi provenienti dall’organizzazione.
 
-Per salvare il nuovo widget e tornare alla scheda [!UICONTROL Personalizzato], seleziona **[!UICONTROL Crea]**.
+Per salvare il nuovo widget e tornare al [!UICONTROL Personalizzato] scheda , seleziona **[!UICONTROL Crea]**.
 
-![](../images/customization/create-widget-select-attribute.png)
+![Finestra di dialogo Crea widget con le opzioni di visualizzazione e Crea evidenziato.](../images/customization/create-widget-select-attribute.png)
 
 Il nuovo widget è ora disponibile per essere aggiunto a un dashboard scegliendo il widget dalla libreria e selezionando **[!UICONTROL Aggiungi widget]**.
 
-![](../images/customization/custom-widgets-new.png)
+![La scheda Personalizzato dell&#39;area di lavoro della libreria widget con i nuovi widget e Aggiungi widget evidenziati.](../images/customization/custom-widgets-new.png)
 
 ## Nascondere un widget personalizzato
 
-Dopo che un widget è stato aggiunto alla libreria, può essere nascosto selezionando i puntini di sospensione (`...`) nella scheda widget e quindi selezionando **[!UICONTROL Nascondi widget]**. Puoi anche visualizzare in anteprima e modificare il widget dallo stesso menu a discesa.
+Dopo aver aggiunto un widget alla libreria, può essere nascosto selezionando i puntini di sospensione (`...`) sulla scheda widget e quindi seleziona **[!UICONTROL Nascondi widget]**. Puoi anche visualizzare in anteprima e modificare il widget dallo stesso menu a discesa.
 
-Per visualizzare i widget nascosti, seleziona **[!UICONTROL Mostra widget nascosti]** dall&#39;angolo in alto a destra della libreria dei widget.
+Per visualizzare i widget nascosti, seleziona **[!UICONTROL Mostra widget nascosti]** dall&#39;angolo in alto a destra della libreria widget.
 
 >[!WARNING]
 >
 >Nascondere un widget nella libreria non rimuove il widget dai dashboard dei singoli utenti. Se un widget non deve più essere utilizzato nella tua organizzazione, assicurati di comunicarlo direttamente a tutti gli utenti di Platform in quanto dovranno rimuovere il widget dalle loro dashboard.
 
-![](../images/customization/hide-widget.png)
+![La scheda Personalizzato dell’area di lavoro della libreria widget con le opzioni del menu a discesa dei widget e Mostra widget nascosti evidenziati.](../images/customization/hide-widget.png)
 
 ## Modificare un widget personalizzato
 
-Puoi modificare i widget personalizzati nella libreria dei widget selezionando i puntini di sospensione (`...`) nella scheda dei widget e quindi selezionando **[!UICONTROL Modifica]** dal menu a discesa.
+Per modificare i widget personalizzati nella libreria dei widget, seleziona i puntini di sospensione (`...`) sulla scheda widget e quindi seleziona **[!UICONTROL Modifica]** dal menu a discesa .
 
-![](../images/customization/custom-widget-edit.png)
+![Le opzioni del menu a discesa dei widget con i puntini di sospensione e Modifica evidenziate.](../images/customization/custom-widget-edit.png)
 
-Nella finestra di dialogo **[!UICONTROL Modifica widget]**, puoi modificare il titolo e la descrizione del widget, nonché visualizzare in anteprima e selezionare diverse visualizzazioni. Dopo aver apportato le modifiche, seleziona **[!UICONTROL Salva]** per salvare le modifiche e tornare alla scheda widget personalizzati.
+Sulla **[!UICONTROL Widget di modifica]** Puoi modificare il titolo e la descrizione del widget, nonché visualizzare in anteprima e selezionare diverse visualizzazioni. Dopo aver apportato le modifiche, seleziona **[!UICONTROL Salva]** per salvare le modifiche e tornare alla scheda widget personalizzati.
 
 >[!WARNING]
 >
 >La modifica di un widget nella libreria non aggiorna il widget per i singoli utenti. Se un widget è stato aggiornato, assicurati di comunicarlo direttamente a tutti gli utenti di Platform in quanto dovranno rimuovere il widget obsoleto dalle loro dashboard, quindi selezionare e aggiungere il widget aggiornato dalla libreria dei widget.
 
-![](../images/customization/edit-widget.png)
+![Finestra di dialogo Modifica widget.](../images/customization/edit-widget.png)
 
 ## Passaggi successivi
 

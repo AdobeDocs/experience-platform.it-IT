@@ -4,9 +4,9 @@ title: Guida al dashboard per l’utilizzo delle licenze
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Per passare al dashboard dell’utilizzo della licenza nell’interfaccia utente
 >
 >Il dashboard di utilizzo della licenza non è abilitato per impostazione predefinita. Per poter visualizzare il dashboard, è necessario concedere agli utenti l’autorizzazione &quot;Visualizza dashboard di utilizzo licenze&quot;. Per i passaggi sulla concessione delle autorizzazioni di accesso per visualizzare il dashboard di utilizzo della licenza, fare riferimento al [guida alle autorizzazioni del dashboard](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![Scheda Panoramica sull’utilizzo della licenza .](../images/license-usage/dashboard-overview.png)
 
 ### Selezionare una sandbox
 
@@ -41,7 +41,7 @@ Per scegliere una sandbox da visualizzare nel dashboard, selezionate una delle s
 
 La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le sandbox dello stesso tipo. In altre parole, seleziona [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti sui consumi per tutte le sandbox di produzione o di sviluppo, rispettivamente.
 
-![](../images/license-usage/select-sandbox.png)
+![La scheda Panoramica del dashboard Utilizzo licenza con il selettore sandbox evidenziato.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le
 
 Dopo aver selezionato una sandbox, puoi utilizzare il menu a discesa dell’intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili più opzioni, tra cui il valore predefinito degli ultimi 30 giorni.
 
-![](../images/license-usage/select-date-range.png)
+![La scheda Panoramica del dashboard dell’utilizzo della licenza con il menu a discesa dell’intervallo di date evidenziato.](../images/license-usage/select-date-range.png)
 
 Puoi anche selezionare **[!UICONTROL Data personalizzata]** per scegliere il periodo di tempo visualizzato.
 
-![](../images/license-usage/select-custom-date.png)
+![La scheda Panoramica del dashboard Utilizzo licenza con le opzioni di intervallo date personalizzate evidenziate.](../images/license-usage/select-custom-date.png)
 
 ## Widget
 
@@ -68,7 +68,7 @@ Il dashboard per l&#39;utilizzo delle licenze è composto da widget che visualiz
 
 Ogni widget visualizza un grafico a linee che confronta i numeri effettivi per la tua organizzazione con il totale disponibile con le licenze della tua organizzazione e fornisce una percentuale dell&#39;utilizzo totale.
 
-![](../images/license-usage/widgets.png)
+![La scheda Panoramica del dashboard sull’utilizzo della licenza con il grafico a linee del widget della metrica di utilizzo della licenza di esempio evidenziato.](../images/license-usage/widgets.png)
 
 ## Metriche disponibili
 

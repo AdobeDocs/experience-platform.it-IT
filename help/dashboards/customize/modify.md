@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;da
 title: Modificare le dashboard di Platform nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizzazione dei dati Adobe Experience Platform dell’organizzazione all’interno delle dashboard.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizz
 
 Da qualsiasi dashboard (ad esempio, il [!UICONTROL Profili] dashboard), puoi selezionare **[!UICONTROL Modifica dashboard]** per ridimensionare e riordinare i widget esistenti.
 
-![](../images/customization/modify-dashboard.png)
+![Dashboard Profili con dashboard Modifica evidenziato.](../images/customization/modify-dashboard.png)
 
 ## Riordina widget
 
 Dopo aver scelto di modificare il dashboard, è possibile riordinare i widget selezionando il titolo del widget e trascinando e rilasciando i widget nell&#39;ordine desiderato. In questo esempio, la **[!UICONTROL Tendenza del conteggio dei profili]** il widget viene spostato nella riga superiore e il **[!UICONTROL Numero di profili]** widget ora viene visualizzato nella seconda riga.
 
-![](../images/customization/move-widget.png)
+![Il dashboard Profili con due widget riordinati evidenziati.](../images/customization/move-widget.png)
 
 ## Ridimensiona widget
 
@@ -40,13 +40,13 @@ Puoi anche ridimensionare un widget selezionando il simbolo dell&#39;angolo nell
 >
 >Quando i widget vengono regolati in dimensioni, i widget circostanti vengono riposizionati in modo dinamico. Questo potrebbe causare lo spostamento di alcuni widget in righe aggiuntive, che richiedono lo scorrimento per visualizzare tutti i widget.
 
-![](../images/customization/resize-widget.png)
+![Il dashboard Profili con un widget ridimensionato evidenziato.](../images/customization/resize-widget.png)
 
 ## Salvare gli aggiornamenti del dashboard
 
 Dopo aver completato lo spostamento e il ridimensionamento dei widget, seleziona **[!UICONTROL Salva e esci]** per salvare le modifiche e tornare alla vista dashboard principale. Se non desideri mantenere le modifiche, seleziona **[!UICONTROL Annulla]** per ripristinare il dashboard e tornare alla vista dashboard principale.
 
-![](../images/customization/save-changes.png)
+![Il dashboard Profili con le opzioni Annulla e Salva e Esci evidenziate.](../images/customization/save-changes.png)
 
 ## Libreria widget
 
@@ -54,7 +54,7 @@ Oltre a ridimensionare e riordinare i widget, seleziona **[!UICONTROL Modifica d
 
 Per istruzioni dettagliate su come accedere e utilizzare i [!UICONTROL Libreria widget], fare riferimento alla [guida alla libreria di widget](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![Area di lavoro libreria widget con evidenziati Standard e Personalizzato.](../images/customization/widget-library.png)
 
 ## Passaggi successivi
 

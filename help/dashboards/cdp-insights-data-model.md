@@ -2,9 +2,9 @@
 title: Modello dati di Real-time Customer Data Platform Insights
 description: Scopri come utilizzare le query SQL con i modelli di dati di Real-time Customer Data Platform Insights per personalizzare i tuoi report Real-Time CDP per i tuoi casi d’uso di marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 Il modello dello spazio dei nomi è composto dai seguenti set di dati:
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
 
@@ -149,9 +149,9 @@ GROUP BY
 Il modello di segmento è composto dai seguenti set di dati:
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 Il modello namespace-segmento è composto dai seguenti set di dati:
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ Il modello namespace-segmento è composto dai seguenti set di dati:
 
 L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
 
-![Un ERD del modello di segmento.](./images/cdp-insights/namespace-segment-model.png)
+![Un ERD del modello di segmento dello spazio dei nomi.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profili per identità per caso d’uso di un segmento
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 Il modello dello spazio dei nomi di sovrapposizione è composto dai seguenti set di dati:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
 
-![Un ERD del modello di segmento.](./images/cdp-insights/overlap-namespace-model.png)
+![Un ERD del modello dello spazio dei nomi di sovrapposizione.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Caso d’uso di sovrapposizione identità (profili)
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 Lo spazio dei nomi di sovrapposizione per modello di segmento è composto dai seguenti set di dati:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ Lo spazio dei nomi di sovrapposizione per modello di segmento è composto dai se
 
 L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
 
-![Un ERD del modello di segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Un ERD dello spazio dei nomi di sovrapposizione per modello di segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Caso d’uso di sovrapposizione identità (segmenti)
 

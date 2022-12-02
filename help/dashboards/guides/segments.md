@@ -4,9 +4,9 @@ title: Guida al dashboard dei segmenti
 description: Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Per passare al [!UICONTROL Segmenti] nell’interfaccia utente di Platform, sele
 >
 >Se la tua organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, la [!UICONTROL Segmenti] dashboard non è visibile. Invece, [!UICONTROL Panoramica] visualizza collegamenti e documentazione per iniziare a usare la segmentazione.
 
-![Scheda Panoramica del dashboard Segmenti.](../images/segments/dashboard-overview.png)
+![La scheda Panoramica del dashboard Segmenti con Segmenti e Panoramica evidenziata.](../images/segments/dashboard-overview.png)
 
 ### Modifica la [!UICONTROL Segmenti] dashboard {#modify}
 
@@ -204,7 +204,7 @@ La **[!UICONTROL Profili per identità]** widget visualizza la suddivisione dell
 
 Seleziona **[!UICONTROL Sottotitoli]** per aprire la finestra di dialogo didascalie automatiche.
 
-![Finestra di dialogo Profili per didascalie di identità.](../images/segments/profiles-by-identity.png)
+![Panoramica del dashboard Segmenti con l’opzione Profili per widget identità e Didascalie evidenziata.](../images/segments/profiles-by-identity.png)
 
 Un modello di apprendimento automatico genera automaticamente informazioni sui dati analizzando la distribuzione complessiva e le dimensioni chiave dei dati.
 

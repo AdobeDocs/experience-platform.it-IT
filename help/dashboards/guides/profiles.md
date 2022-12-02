@@ -4,9 +4,9 @@ title: Guida al dashboard dei profili
 description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati Profilo cliente in tempo reale della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Per passare al dashboard Profili nell’interfaccia utente di Platform, selezion
 >
 >Se l’organizzazione è nuova di Platform e non dispone ancora di set di dati di profilo attivi o di criteri di unione creati, il dashboard Profili non è visibile. Invece, [!UICONTROL Panoramica] visualizza collegamenti e documentazione per iniziare a usare Profilo cliente in tempo reale.
 
-![](../images/profiles/dashboard-overview.png)
+![La dashboard Profili di Experience Platform con Profili e Panoramica evidenziata.](../images/profiles/dashboard-overview.png)
 
 ### Modifica del dashboard Profili
 
@@ -142,7 +142,7 @@ Consulta la sezione [sezione sui criteri di unione in precedenza in questo docum
 >
 >Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per la [!UICONTROL Sfoglia] scheda . Puoi vedere quando [!UICONTROL Numero di profili] l&#39;ultimo aggiornamento del widget è stato effettuato osservando la marca temporale nel widget. Per ulteriori informazioni sull’attivazione del processo di esempio nel [!UICONTROL Sfoglia] scheda , vedi [sezione conteggio profilo nella guida all’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![Il dashboard Profili Experience Platform con il widget Conteggio profili evidenziato.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Tendenza al conteggio dei profili] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Per ulteriori informazioni sui frammenti di profilo, consulta la sezione su [fra
 
 Per saperne di più sulle identità, visita il [Documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![Panoramica del dashboard Profili con il widget di sovrapposizione identità evidenziato.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Profili di identità singoli] {#single-identity-profiles}
 

@@ -4,9 +4,9 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profili, segmenti e destinazioni in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ La convenzione di denominazione di questi set di dati è **Profilo-Snapshot-Expo
 
 Per comprendere lo schema completo di ciascun set di dati di esportazione dello snapshot del profilo, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
-![](images/query/profile-attribute.png)
+![Anteprima del set di dati Profile-Snapshot-Export.](images/query/profile-attribute.png)
 
 #### Mappatura dei set di dati degli attributi di profilo per unire gli ID dei criteri
 
@@ -72,7 +72,7 @@ La convenzione di denominazione di questo set di dati è **Segmentdefinition-Sna
 
 Per comprendere lo schema completo di ogni set di dati per l’esportazione di snapshot di definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
-![](images/query/segment-metadata.png)
+![Anteprima del set di dati Segmentdefinition-Snapshot-Export.](images/query/segment-metadata.png)
 
 ### Set di dati metadati di destinazione
 
@@ -82,7 +82,7 @@ La convenzione di denominazione di questo set di dati è **DIM_Destination**.
 
 Per comprendere lo schema completo del set di dati di destinazione DIM, puoi visualizzare in anteprima ed esplorare il set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
 
-![](images/query/destinations-metadata.png)
+![Anteprima del set di dati DIM_Destination.](images/query/destinations-metadata.png)
 
 ## (Beta) Rapporti Approfondimenti su Customer Data Platform (CDP)
 
