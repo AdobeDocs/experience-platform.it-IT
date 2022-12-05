@@ -2,9 +2,9 @@
 title: Guida all’interfaccia utente per l’igiene dei dati
 description: Scopri come gestire le attività di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Ruota dell&#39;igiene dei dati"
->abstract="Questo widget mostra lo stato dei processi di eliminazione dei record di igiene dati per l&#39;intervallo temporale selezionato. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
+>title="Stato delle richieste di igiene dei dati"
+>abstract="Questo widget mostra i conteggi totali dei processi di eliminazione dei record Data Hygiene creati, non riusciti e completati. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
