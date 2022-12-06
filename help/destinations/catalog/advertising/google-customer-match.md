@@ -3,7 +3,7 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Customer Match di Google consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti su proprietà possedute e gestite da Google, come ad esempio Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
 workflow-type: tm+mt
 source-wordcount: '1778'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [Customer Match di Google](https://support.google.com/google-ads/answer/6379332?hl=en) consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti su proprietà possedute e gestite da Google, ad esempio: [!DNL Search], [!DNL Shopping], [!DNL Gmail]e [!DNL YouTube].
 
-![Destinazione Customer Match di Google nell’interfaccia utente di Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Destinazione Customer Match di Google nell’interfaccia utente di Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Casi d’uso {#use-cases}
 

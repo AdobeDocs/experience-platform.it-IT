@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione
 title: Tipi di destinazione e categorie
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -97,4 +97,4 @@ Le estensioni sono utili quando i dati evento vengono utilizzati per attivare un
 
 Le connessioni e le estensioni nel [catalogo delle destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppati per categoria di destinazione (**Pubblicità**, **archiviazione cloud**, **Piattaforme di sondaggio**, **E-mail marketing**, ecc.), a seconda dell’azione di marketing che ti consente di ottenere. Per ulteriori informazioni su ciascuna categoria e sulle destinazioni incluse in ciascuna categoria, consulta la sezione [Documentazione del catalogo delle destinazioni](./catalog/overview.md).
 
-![Categorie di destinazione](./assets/destination-types/destination-categories-menu.png)
+![Categorie di destinazione evidenziate nella pagina del catalogo.](./assets/destination-types/destination-categories-menu.png)
