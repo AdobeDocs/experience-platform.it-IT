@@ -5,9 +5,9 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,11 @@ Le funzioni di preparazione dei dati possono essere utilizzate per calcolare e c
 
 Un nome campo può essere un qualsiasi identificatore legale, ovvero una sequenza illimitata di lettere e cifre Unicode, che inizia con una lettera, il simbolo del dollaro (`$`) o il carattere di sottolineatura (`_`). Anche i nomi delle variabili sono sensibili all’uso di maiuscole e minuscole.
 
-Se il nome di un campo non segue questa convenzione, è necessario racchiudere il nome del campo con `${}`. Quindi, ad esempio, se il nome del campo è &quot;Nome&quot; o &quot;Nome.Nome&quot;, il nome deve essere racchiuso come `${First Name}` o `${First.Name}` rispettivamente.
+Se il nome di un campo non segue questa convenzione, è necessario racchiudere il nome del campo con `${}`. Quindi, ad esempio, se il nome del campo è &quot;Nome&quot; o &quot;Nome.Nome&quot;, il nome deve essere racchiuso come `${First Name}` o `${First\.Name}` rispettivamente.
+
+>[!TIP]
+>
+>Quando interagisci con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per evitare i caratteri speciali. Per ulteriori informazioni, consulta la guida su [escape di caratteri speciali](home.md#escape-special-characters).
 
 Inoltre, se il nome di un campo è **qualsiasi** delle seguenti parole chiave riservate, deve essere racchiuso con `${}`:
 

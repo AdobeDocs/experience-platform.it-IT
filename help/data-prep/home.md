@@ -5,7 +5,7 @@ title: Panoramica sulla preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -41,7 +41,7 @@ I campi calcolati consentono la creazione di valori in base agli attributi nello
 
 Per ulteriori informazioni sui campi calcolati, consulta la sezione [guida ai campi calcolati](./functions.md#calculated-fields).
 
-### Caratteri speciali di escape
+### Caratteri speciali di escape {#escape-special-characters}
 
 È possibile applicare un escape ai caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportate da questo meccanismo. Quando interagisci con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per evitare i caratteri speciali. Ad esempio: `address` è un oggetto che contiene l&#39;attributo `street.name`, che può essere successivamente indicato come `address.street\.name` anziché `address.street.name`.
 
