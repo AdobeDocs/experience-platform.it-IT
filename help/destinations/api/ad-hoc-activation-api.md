@@ -6,10 +6,10 @@ description: Questo articolo illustra il flusso di lavoro end-to-end per l’att
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 2%
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 2%
 
 L’API di attivazione ad hoc consente agli addetti al marketing di attivare programmaticamente i segmenti di pubblico nelle destinazioni, in modo rapido ed efficiente, in situazioni in cui è richiesta l’attivazione immediata.
 
+Utilizza l’API di attivazione ad-hoc per esportare i file completi nel sistema di ricezione dei file desiderato. L’attivazione ad hoc del pubblico è supportata solo da [destinazioni batch basate su file](../destination-types.md#file-based).
+
 Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazione dei segmenti tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che si svolgono in Platform ogni 24 ore.
 
 ![attivazione ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->L’attivazione ad hoc del pubblico è supportata solo da [destinazioni batch basate su file](../destination-types.md#file-based).
+
 
 ## Casi d’uso {#use-cases}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform esegue processi di segmentazione pianificati una volta
 >
 >Osserva il seguente vincolo una tantum: Prima di eseguire un processo di attivazione ad hoc, accertati che siano trascorsi almeno 20 minuti dal momento in cui il segmento è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Platform](#activation-flow).
 
-Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione dei segmenti pianificato per i segmenti sia stato completato. Vedi [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni su come monitorare lo stato dei flussi di attivazione. Ad esempio, se il flusso di dati di attivazione mostra una **[!UICONTROL Elaborazione]** attendi che termini prima di eseguire il processo di attivazione ad-hoc.
+Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione dei segmenti pianificato per i segmenti sia stato completato. Vedi [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md) per informazioni su come monitorare lo stato dei flussi di attivazione. Ad esempio, se il flusso di dati di attivazione mostra una **[!UICONTROL Elaborazione]** attendi che termini prima di eseguire il processo di attivazione ad hoc per esportare un file completo.
 
 Una volta completato il processo di esportazione del segmento, puoi attivare l’attivazione.
 
@@ -250,3 +250,4 @@ Quando utilizzi l’API di attivazione ad hoc, puoi trovare messaggi di errore s
 ## Informazioni correlate {#related-information}
 
 * [Connettersi a destinazioni batch e attivare i dati utilizzando l’API del servizio di flusso](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(Beta) Esportazione di file on-demand in destinazioni batch tramite l’interfaccia utente Experience Platform](/help/destinations/ui/export-file-now.md)
