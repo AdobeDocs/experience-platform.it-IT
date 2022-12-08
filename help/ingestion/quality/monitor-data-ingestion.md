@@ -5,24 +5,35 @@ title: Monitoraggio dell’acquisizione dei dati
 topic-legacy: overview
 description: Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
 
 # Monitoraggio dell’acquisizione di dati
 
-L’inserimento dei dati consente di acquisire i dati in Adobe Experience Platform. Puoi utilizzare l’acquisizione batch, che ti consente di inserire i dati utilizzando vari tipi di file (come CSV), o l’acquisizione in streaming, che ti consente di acquisire i dati in [!DNL Platform] utilizzando gli endpoint di streaming in tempo reale.
+L’inserimento dei dati consente di acquisire i dati in Adobe Experience Platform. Puoi utilizzare l’acquisizione batch, che ti consente di inserire i dati utilizzando vari tipi di file (come i CSV), o l’acquisizione in streaming, che ti consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
 
 Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 
-## Monitorare l’acquisizione di dati end-to-end in streaming
+## Monitorare l’acquisizione di dati end-to-end in streaming {#monitor-streaming-end-to-end-data-ingestion}
 
-Nell&#39; [Interfaccia Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="Tasso di ingestione"
+>abstract="Il numero di eventi elaborati correttamente al secondo."
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorare i flussi di dati per le sorgenti nell’interfaccia utente"
 
-Viene visualizzata la pagina di monitoraggio **[!UICONTROL Streaming end-to-end]** . Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati correttamente da [[!DNL Real-time Customer Profile]](../../profile/home.md) e un elenco dettagliato dei dati in arrivo.
+>[!TIP]
+>
+>Per calcolare gli eventi totali in una data particolare, utilizza l’espressione di: `total events / day = ingestion rate * 60 * 60 * 24`.
+
+In [Interfaccia utente Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
+
+La **[!UICONTROL Streaming end-to-end]** viene visualizzata la pagina di monitoraggio. Questa area di lavoro fornisce un grafico che mostra il tasso di eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra il tasso di eventi in streaming elaborati correttamente da [[!DNL Real-time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -34,7 +45,7 @@ Il grafico in basso mostra la frequenza degli eventi in streaming elaborati corr
 
 >[!NOTE]
 >
->Affinché i dati vengano visualizzati su questo grafico, i dati devono essere abilitati **esplicitamente** per [!DNL Profile]. Per informazioni su come abilitare i dati in streaming per [!DNL Profile], consulta la [guida utente per i set di dati](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Affinché i dati vengano visualizzati su questo grafico, i dati devono essere **esplicitamente** abilitato per [!DNL Profile]. Per scoprire come abilitare i dati di streaming per [!DNL Profile], leggi [guida utente dei set di dati](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -56,15 +67,15 @@ Inoltre, i record non riusciti forniscono dettagli sugli errori che si sono veri
 
 >[!NOTE]
 >
->Se ci sono errori nelle righe acquisite, queste righe **non** verranno eliminate a meno che il messaggio risultante non dia luogo a XDM non valido.
+>In presenza di errori nelle righe acquisite, queste righe vengono **not** viene rilasciato a meno che il messaggio risultante non restituisca XDM non valido.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitorare l’acquisizione di dati in batch end-to-end
 
-Nel [[!DNL Experience Platform UI]](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dal menu di navigazione a sinistra.
+In [[!DNL Experience Platform UI]](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra.
 
-Viene visualizzata la pagina di monitoraggio **[!UICONTROL End-to-end-to-end]** in cui è visualizzato un elenco dei batch precedentemente acquisiti. Puoi selezionare uno dei batch per informazioni più dettagliate su tale record.
+La **[!UICONTROL Fine-end batch]** viene visualizzata la pagina di monitoraggio, in cui viene visualizzato un elenco dei batch precedentemente acquisiti. Puoi selezionare uno dei batch per informazioni più dettagliate su tale record.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 
@@ -82,6 +93,6 @@ Inoltre, i batch con errori forniscono dettagli sugli errori che si sono verific
 
 >[!NOTE]
 >
->Se ci sono errori nelle righe acquisite, queste righe **non** verranno eliminate a meno che il messaggio risultante non dia luogo a XDM non valido.
+>In presenza di errori nelle righe acquisite, queste righe vengono **not** viene rilasciato a meno che il messaggio risultante non restituisca XDM non valido.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)
