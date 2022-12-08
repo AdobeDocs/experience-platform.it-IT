@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: Connessione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* Se non hai ancora creato alcun flusso di dati per il **[!UICONTROL SFTP]** destinazione, utilizzare il nuovo **[!UICONTROL Beta SFTP]** scheda per esportare i file in **[!UICONTROL SFTP]**.
 
 
-![Immagine delle due schede di destinazione SFTP affiancata.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Immagine delle due schede di destinazione SFTP affiancata.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Miglioramenti nel nuovo [!DNL SFTP] la scheda di destinazione include:
 
@@ -104,6 +104,8 @@ Dopo aver stabilito la connessione di autenticazione per la posizione SFTP, forn
 * **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione nell’interfaccia utente di Experience Platform;
 * **[!UICONTROL Descrizione]**: inserire una descrizione della destinazione;
 * **[!UICONTROL Percorso cartella]**: inserisci il percorso della cartella nel percorso SFTP in cui verranno esportati i file.
+* **[!UICONTROL Tipo di file]**: selezionare l&#39;Experience Platform di formato da utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL Beta SFTP]** destinazione. Quando selezioni [!UICONTROL CSV] è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato di compressione]**: selezionare il tipo di compressione che l&#39;Experience Platform deve utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL Beta SFTP]** destinazione.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

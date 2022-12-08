@@ -2,7 +2,7 @@
 title: Destinazione Marketo Engage
 description: Marketi Engage è l’unica soluzione end-to-end per la gestione dell’esperienza dei clienti (CXM) per il marketing, la pubblicità, l’analisi e il commercio. Ti consente di automatizzare e gestire le attività dalla gestione dei lead CRM e il coinvolgimento dei clienti fino all’attribuzione di marketing e ricavi basata sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
+source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 >* Se non hai ancora creato alcun flusso di dati per il **[!UICONTROL Marketo V1]** destinazione, utilizzare il nuovo **[!UICONTROL Marketo V2]** scheda per la connessione e l’esportazione di dati a Marketo.
 
 
-![Immagine delle due schede di destinazione Marketo affiancate.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![Immagine delle due schede di destinazione Marketo affiancate.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 I miglioramenti nella destinazione Marketo V2 includono:
 
