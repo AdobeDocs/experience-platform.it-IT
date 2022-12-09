@@ -5,9 +5,9 @@ title: Guida alle credenziali del servizio query
 topic-legacy: guide
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,15 @@ La **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 - **[!UICONTROL Nome utente]**: Nome utente che verrà utilizzato per connettersi al servizio query.
 - **[!UICONTROL Password]**: Password da utilizzare per la connessione al servizio query.
 - **[!UICONTROL Comando PSQL]**: Comando che ha inserito automaticamente tutte le informazioni pertinenti per la connessione a Query Service tramite PSQL nella riga di comando.
-- **[!UICONTROL Scadenza]**: Data di scadenza delle credenziali in scadenza. Le credenziali scadono 24 ore dopo la generazione.
+- **[!UICONTROL Scadenza]**: Data e ora di scadenza delle credenziali in scadenza. La durata di validità predefinita del token è di 24 ore, ma può essere modificata nelle impostazioni avanzate dell’Admin Console.
+
+>[!TIP]
+>
+>Per modificare la durata della sessione per la connessione delle credenziali in scadenza al servizio query, passa alla [Admin Console](https://adminconsole.adobe.com/) e seleziona le seguenti opzioni sullo schermo: **Impostazioni** > **Privacy e sicurezza** > **Impostazioni di autenticazione** > **Impostazioni avanzate** > **Durata massima della sessione**.
+>
+>![La scheda Admin Console settings (Impostazioni privacy e sicurezza) presenta Privacy e protezione, impostazioni di autenticazione e durata massima della sessione evidenziata.](../images/ui/credentials/max-session-life.png)
+>
+>Consulta la documentazione di Adobe per ulteriori informazioni sul [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerta da Admin Console.
 
 ## Credenziali non in scadenza {#non-expiring-credentials}
 
