@@ -2,14 +2,20 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note di rilascio relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 6%
+source-wordcount: '418'
+ht-degree: 5%
 
 ---
 
 # Note sulla versione per tag e inoltro eventi
+
+## 23 novembre 2022
+
+* **[!DNL AWS]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Amazon Web Services] ([!DNL AWS]) utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL AWS] panoramica dell&#39;estensione](../../tags/extensions/server/aws/overview.md) per ulteriori informazioni.
+* **[!DNL Google Ads Enhanced Conversions]estensione per l&#39;inoltro eventi**: Ora puoi inviare i dati di conversione a [!DNL Google Ads] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Google Ads Enhanced Conversions] panoramica dell&#39;estensione](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) per ulteriori informazioni.
+* **[!DNL Microsoft Azure]estensione per l&#39;inoltro eventi**: Ora puoi inviare dati a [!DNL Microsoft Azure] utilizzando [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la sezione [[!DNL Microsoft Azure] panoramica dell&#39;estensione](../../tags/extensions/server/azure/overview.md) per ulteriori informazioni.
 
 ## 26 ottobre 2022
 
