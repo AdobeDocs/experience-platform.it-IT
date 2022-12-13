@@ -5,7 +5,7 @@ title: Vincoli del tipo di campo XDM
 topic-legacy: overview
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%
@@ -130,7 +130,7 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 >
 >Tra i tipi XDM standard elencati nelle tabelle seguenti, il [!UICONTROL Mappa] è incluso anche il tipo . Le mappe vengono utilizzate negli schemi standard quando i dati sono rappresentati come chiavi che corrispondono a determinati valori, o quando le chiavi non possono essere ragionevolmente incluse in uno schema statico e devono essere trattate come valori di dati.
 >
->Molti componenti XDM standard utilizzano tipi di mappa e puoi anche [definire campi mappa personalizzati](../tutorials/custom-fields-api.md#maps) se desiderato. L’inclusione del tipo di mappa nelle tabelle seguenti ha lo scopo di aiutarti a determinare come mappare i dati esistenti su XDM se sono attualmente memorizzati in uno dei formati elencati di seguito.
+>Molti componenti XDM standard utilizzano tipi di mappa e puoi anche [definire campi mappa personalizzati](../tutorials/custom-fields-api.md#custom-maps) se desiderato. L’inclusione del tipo di mappa nelle tabelle seguenti ha lo scopo di aiutarti a determinare come mappare i dati esistenti su XDM se sono attualmente memorizzati in uno dei formati elencati di seguito.
 
 ### Parquet, SQL Spark e Java {#parquet}
 
