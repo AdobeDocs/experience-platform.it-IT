@@ -5,9 +5,9 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **Console**: In [!DNL Query Service], la console fornisce informazioni sullo stato e sul funzionamento di una query. Nella console viene visualizzato lo stato della connessione a [!DNL Query Service], le operazioni di query in esecuzione ed eventuali messaggi di errore risultanti da tali query.
 
-**Etichette del contratto (&quot;C&quot;)**: Le etichette per l’utilizzo dei dati del contratto (&quot;C&quot;) vengono utilizzate per classificare i dati che hanno obblighi contrattuali o sono correlati alle politiche di governance dei dati di un cliente.
+**Etichette del contratto (&quot;C&quot;)**: Le etichette di utilizzo dei dati del contratto (&quot;C&quot;) vengono utilizzate per classificare i dati che hanno obblighi contrattuali o sono correlati ai criteri di governance dei dati della tua organizzazione.
 
 **Etichetta del contratto C1**: A `C1` l’etichetta di utilizzo dei dati del contratto specifica che i dati possono essere esportati da Adobe Experience Cloud solo in un modulo aggregato senza includere identificatori di dispositivo o singoli. Ad esempio, i dati provenienti dai social network.
 
@@ -502,7 +502,7 @@ ht-degree: 0%
 
 **Connettore sorgente**: I connettori sorgente (noti anche come sorgenti) consentono agli utenti di acquisire facilmente dati da più sorgenti, consentendo la strutturazione, l’etichettatura e il miglioramento dei dati tramite i servizi Experience Platform. I dati possono essere acquisiti da una varietà di fonti come l’archiviazione basata su cloud, il software di terze parti e i sistemi CRM.
 
-**Connessione streaming**: Una connessione in streaming è un endpoint univoco fornito da Adobe e associato all’organizzazione IMS di un cliente per lo streaming dei dati in Experience Platform.
+**Connessione streaming**: Una connessione in streaming è un endpoint univoco fornito da Adobe e associato all’organizzazione per lo streaming dei dati in Experience Platform.
 
 **Spazio dei nomi di identità standard**: I namespace di identità standard sono spazi dei nomi di identità predefiniti forniti da Adobe, che rappresentano soluzioni standard di settore comunemente utilizzate per identificare i clienti.
 

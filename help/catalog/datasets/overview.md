@@ -5,10 +5,10 @@ title: Panoramica dei set di dati
 topic-legacy: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '784'
+ht-degree: 9%
 
 ---
 
@@ -41,6 +41,10 @@ Consulta la sezione [Panoramica sull’acquisizione dei dati](../../ingestion/ho
 ## Applicazione delle etichette di utilizzo ai set di dati
 
 La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti al fine di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Il framework per la governance dei dati ti consente di applicare etichette di utilizzo per classificare i dati in base ai criteri di utilizzo applicati a tali dati.
+
+>[!IMPORTANT]
+>
+>L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
 Le etichette di utilizzo dei dati possono essere applicate a interi set di dati o a singoli campi di set di dati. Le etichette aggiunte a livello di set di dati vengono ereditate da tutti i campi all’interno di tale set di dati.
 

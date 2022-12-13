@@ -5,16 +5,16 @@ title: Endpoint API per la valutazione dei criteri
 topic-legacy: developer guide
 description: Una volta create le azioni di marketing e definiti i criteri, puoi utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l'azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1542'
 ht-degree: 2%
 
 ---
 
 # Endpoint di valutazione delle politiche
 
-Una volta create le azioni di marketing e definite le policy, puoi utilizzare [!DNL Policy Service] API per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
+Una volta create le azioni di marketing e definite le policy di utilizzo dei dati, puoi utilizzare [!DNL Policy Service] API per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 
 Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` partecipare alla valutazione. Tuttavia, puoi utilizzare il parametro di query `?includeDraft=true` per includere `DRAFT` politiche di valutazione.
 

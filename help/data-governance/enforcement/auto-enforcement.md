@@ -5,9 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 0%
 >
 >L&#39;applicazione automatica dei criteri è disponibile solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
 
-Una volta etichettati i dati e definiti i criteri di utilizzo, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo in caso di violazioni.
+Una volta etichettati i dati e definiti i criteri di utilizzo dei dati, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo in caso di violazioni.
+
+>[!NOTE]
+>
+>Questo documento si concentra sull&#39;applicazione delle politiche sulla governance dei dati e sul consenso. Per informazioni sulle politiche di controllo degli accessi, consulta la documentazione su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md).
 
 ## Prerequisiti
 

@@ -5,9 +5,9 @@ title: Guida all’API di Policy Service
 topic-legacy: developer guide
 description: L’API del servizio criteri consente agli sviluppatori di gestire le etichette di utilizzo dei dati e i criteri in Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '545'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,13 @@ Le azioni di marketing (o casi di utilizzo del marketing), nel contesto del fram
 
 ## Criteri
 
-I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform]. Un criterio è definito come segue:
+I criteri di governance dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è consentito eseguire sui dati all’interno di [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>I criteri di governance dei dati non devono essere confusi con i criteri di controllo degli accessi, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti Platform della tua organizzazione. Consulta la guida su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
+
+I criteri di governance dei dati sono definiti nel modo seguente:
 
 1. Un’azione di marketing specifica
 1. Le etichette di utilizzo dei dati su cui è limitata l’esecuzione dell’azione

@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti comuni;api;controllo degli accessi basato su attributi;controllo degli accessi basato su attributi
 solution: Experience Platform
 title: Guida all'API per il controllo degli accessi basato su attributi
-description: L'API di controllo degli accessi basata su attributi consente di gestire in modo programmatico ruoli e criteri in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+description: L'API di controllo degli accessi basata su attributi consente di gestire in modo programmatico ruoli e criteri di accesso in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
 
 L’API di controllo accessi basata sugli attributi viene utilizzata per accedere a ruoli, prodotti, categorie di autorizzazioni e set di autorizzazioni in Adobe Experience Platform, fornendo un’interfaccia utente e un’API RESTful da cui sono accessibili tutte le risorse della libreria disponibili.
+
+>[!IMPORTANT]
+>
+>Il controllo dell’accesso basato su attributi non va confuso con le funzionalità di governance dei dati di Experience Platform, che ti consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché a quali utenti dell’organizzazione possono accedervi. Consulta la sezione [Guida all’API di Policy Service](../../../data-governance/api/overview.md) per i passaggi su come utilizzare in modo programmatico queste funzionalità.
 
 Questi endpoint sono descritti di seguito. Per informazioni dettagliate, visita le singole guide dell’endpoint e fai riferimento alla sezione [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 

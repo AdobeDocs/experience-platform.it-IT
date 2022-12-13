@@ -1,13 +1,13 @@
 ---
 title: (Beta) La connessione Trade Desk - CRM
 description: Attiva i profili nel tuo account Trade Desk per il targeting del pubblico e la soppressione in base ai dati CRM.
-source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
+exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # (Beta) [!DNL Trade Desk] - Connessione CRM
 
@@ -90,7 +90,7 @@ Prima di poter inviare o attivare i dati del pubblico a una destinazione, è nec
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID inserzionista]**: le [!DNL Trade Desk Advertiser ID], che può essere condiviso dal tuo [!DNL Trade Desk] Account Manager oppure [!DNL Advertiser Preferences] in [!DNL Trade Desk] Interfaccia utente.
 
-Quando ci si connette alla destinazione, l’impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l&#39;Experience Platform [panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) per ulteriori dettagli.
+Quando ci si connette alla destinazione, l&#39;impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l&#39;Experience Platform [panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it) per ulteriori dettagli.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 

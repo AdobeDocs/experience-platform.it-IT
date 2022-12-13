@@ -5,16 +5,20 @@ title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 topic-legacy: policies
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
 
 # Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 
-La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nel **Criteri** nell&#39;area di lavoro [!DNL Experience Platform] interfaccia utente.
+Questo documento illustra come utilizzare il **[!UICONTROL Criteri]** nell’interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
+
+>[!NOTE]
+>
+>Per informazioni su come gestire i criteri di controllo degli accessi nell’interfaccia utente, consulta [guida all’interfaccia utente basata sugli attributi](../../access-control/abac/ui/policies.md) invece.
 
 >[!IMPORTANT]
 >

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Guida alla governance dei dati di Adobe Experience Platform
 breadcrumb-title: Guida alla governance dei dati
-user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri.
+user-guide-description: Applica le restrizioni sull’utilizzo dei dati utilizzando etichette, azioni di marketing e criteri di governance.
 feature: Data Governance
-source-git-commit: c84926fe88ab02503220ca377170521077dc517e
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 35%
+source-wordcount: '97'
+ht-degree: 21%
 
 ---
 

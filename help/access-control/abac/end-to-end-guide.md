@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;
 title: Guida end-to-end per il controllo dell'accesso basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 0%
+source-wordcount: '2427'
+ht-degree: 1%
 
 ---
 
@@ -13,8 +14,11 @@ ht-degree: 0%
 
 Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che offre ai clienti multi-brand e a tutela della privacy una maggiore flessibilità per gestire l&#39;accesso degli utenti. È possibile concedere o negare l’accesso a singoli oggetti, ad esempio campi e segmenti dello schema, con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per utenti Platform specifici della tua organizzazione.
 
-Questa funzionalità ti consente di classificare campi dello schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dati. Puoi applicare queste stesse etichette a percorsi, offerte e altri oggetti in Adobe Journey Optimizer. In parallelo, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema XDM e gestire meglio gli utenti o i gruppi (utenti interni, esterni o di terze parti) che possono accedere a tali campi.
+Questa funzionalità ti consente di classificare campi dello schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dati. Puoi applicare queste stesse etichette a percorsi, offerte e altri oggetti in Adobe Journey Optimizer. In parallelo, gli amministratori possono definire i criteri di accesso ai campi dello schema Experience Data Model (XDM) e gestire meglio gli utenti o i gruppi (utenti interni, esterni o di terze parti) a cui possono accedere.
 
+>[!NOTE]
+>
+>Questo documento si concentra sul caso d&#39;uso delle politiche di controllo degli accessi. Se stai cercando di impostare criteri per governare il **use** dei dati anziché a quali utenti di Platform hanno accesso, consulta la guida end-to-end in [governance dei dati](../../data-governance/e2e.md) invece.
 
 ## Introduzione
 
@@ -46,7 +50,7 @@ Sarà possibile:
 
 [!UICONTROL Autorizzazioni] è l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Attraverso [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. [!UICONTROL Autorizzazioni] consente inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
+Attraverso [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni di risorse desiderate per questi ruoli. [!UICONTROL Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.]
 
 Se non disponi di privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 

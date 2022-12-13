@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;governance dei dati;criteri di utilizzo dei dati
 solution: Experience Platform
-title: Creare un criterio di utilizzo dei dati nell’API
+title: Creare un criterio di governance dei dati nell’API
 topic-legacy: policies
 type: Tutorial
-description: L’API di Policy Service ti consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere intraprese rispetto ai dati che contengono alcune etichette di utilizzo dei dati. Questo documento fornisce un'esercitazione passo per creare un criterio utilizzando l'API del servizio criteri.
+description: Scopri come creare un criterio di governance dei dati utilizzando l’API del servizio criteri.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1200'
+ht-degree: 3%
 
 ---
 
-# Creare un criterio di utilizzo dei dati nell’API
+# Creare un criterio di governance dei dati nell’API
 
-La [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere intraprese rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
+La [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di creare e gestire criteri di governance dei dati per determinare quali azioni di marketing possono essere intraprese rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
 
-Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio utilizzando [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell’API, vedi [Guida per gli sviluppatori di Policy Service](../api/getting-started.md).
+Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio di governance utilizzando [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Per i passaggi su come creare un criterio di controllo degli accessi, consulta `/policies` guida dell&#39;endpoint per [API di controllo accessi](../../access-control/abac/api/policies.md). Per informazioni su come creare un criterio per il consenso, consulta [guida all’interfaccia utente dei criteri](./user-guide.md#consent-policy).
 
 ## Introduzione
 

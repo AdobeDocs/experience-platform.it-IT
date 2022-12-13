@@ -5,18 +5,22 @@ title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 topic-legacy: labels
 description: Questa guida descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno dell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
 # Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 
-Questa guida utente descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno di [!DNL Experience Platform] interfaccia utente. Prima di usare la guida, consulta la sezione [Panoramica sulla governance dei dati](../home.md) per un’introduzione più solida al framework per la governance dei dati.
+Questa guida utente descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno di [!DNL Experience Platform] interfaccia utente.
 
 ## Gestire le etichette a livello di set di dati
+
+>[!IMPORTANT]
+>
+>L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
 Per gestire le etichette di utilizzo dei dati a livello di set di dati, devi selezionare un set di dati esistente o crearne uno nuovo. Dopo aver effettuato l’accesso a Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra per aprire il **[!UICONTROL Set di dati]** workspace. In questa pagina sono elencati tutti i set di dati creati appartenenti all’organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
 
@@ -75,6 +79,10 @@ La **[!UICONTROL Mostra etichette ereditate]** per impostazione predefinita, l�
 ![Nascondere le etichette ereditate](../images/labels/inherited-labels.png)
 
 ## Gestire le etichette a livello di campo del set di dati
+
+>[!IMPORTANT]
+>
+>L’applicazione di etichette a livello di campo set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
 Continua del flusso di lavoro per [aggiunta e modifica di etichette di utilizzo dati a livello di set di dati](#add-labels), puoi anche gestire le etichette a livello di campo all’interno della **[!UICONTROL Governance dei dati]** area di lavoro per quel set di dati.
 

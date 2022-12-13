@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;api set di dati;gestire l’utilizzo dei dati;api di utilizzo dati
 solution: Experience Platform
-title: 'Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API '
+title: Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
 topic-legacy: developer guide
 description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '816'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 # Gestire le etichette di utilizzo dei dati per i set di dati tramite API
 
 La [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dal [!DNL Catalog Service] API che gestisce i metadati del set di dati.
+
+>[!IMPORTANT]
+>
+>L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
 Questo documento illustra come gestire le etichette per i set di dati e i campi utilizzando [!DNL Dataset Service API]. Per i passaggi su come gestire direttamente le etichette di utilizzo dei dati utilizzando le chiamate API, vedi [guida all’endpoint delle etichette](../api/labels.md) per [!DNL Policy Service API].
 
@@ -155,10 +159,6 @@ Una risposta corretta restituisce il set aggiornato di etichette per il set di d
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai imparato a gestire le etichette di utilizzo dei dati per i set di dati e i campi utilizzando [!DNL Dataset Service] API.
-
-Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a inserire i dati in [!DNL Experience Platform]. Per saperne di più, inizia leggendo il [documentazione sull’acquisizione dei dati](../../ingestion/home.md).
-
-È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, consulta la sezione [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
+Leggendo questo documento, hai imparato a gestire le etichette di utilizzo dei dati per i set di dati e i campi utilizzando [!DNL Dataset Service] API. Ora puoi definire [criteri di utilizzo dei dati](../policies/overview.md) e [criteri di controllo accessi](../../access-control/abac/ui/policies.md) in base alle etichette applicate.
 
 Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedi [panoramica dei set di dati](../../catalog/datasets/overview.md).

@@ -5,10 +5,10 @@ title: Panoramica sulla governance dei dati
 topic-legacy: overview
 description: La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno dell’Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 0%
+source-wordcount: '1479'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 0%
 Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. È quindi importante assicurarsi che i dati operino entro [!DNL Platform] sono conformi ai criteri di utilizzo dei dati.
 
 La governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all&#39;interno di [!DNL Experience Platform] a vari livelli, compresi catalogazione, derivazione dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
+
+>[!NOTE]
+>
+>Ad Experience Platform, la governance dei dati riguarda solo il modo in cui i dati vengono utilizzati o attivati, indipendentemente dall’utente che esegue l’azione. Per informazioni su come controllare l’accesso a campi di dati specifici per determinati utenti di Platform all’interno della tua organizzazione, consulta la documentazione su [controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md) invece.
 
 ## Ruoli di governance dei dati
 
@@ -74,7 +78,7 @@ Vedi la panoramica su [etichette di utilizzo dei dati](./labels/overview.md) per
 
 ## Criteri di utilizzo dei dati
 
-Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è impedito di eseguire sui dati all’interno di [!DNL Experience Platform].
+Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform].
 
 Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste una politica che indica che le informazioni personali (PII) non possono essere esportate e un&#39;etichetta &quot;I&quot; (dati di identità) è stata applicata al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che possa esportare il set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, il servizio criteri invia un messaggio che indica che è stato violato un criterio di utilizzo dei dati.
 
@@ -112,7 +116,7 @@ La tabella seguente delinea i termini chiave relativi alla governance dei dati e
 | **Etichette per i campi** | Le etichette dei campi sono etichette di governance dei dati ereditate da un set di dati o applicate direttamente a un campo.  Le etichette di governance dei dati applicate a un campo non vengono ereditate fino a un set di dati. |
 | **Geofence** | Un recinto geografico è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area. |
 | **Etichette di identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati che possono identificare o contattare una persona specifica. |
-| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: i dati raccolti sul sito vengono utilizzati per fare deduzioni sull’interesse degli utenti, vengono utilizzati in un altro contesto, ad esempio su un altro sito o un’app (fuori sito), e vengono utilizzati per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
+| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: i dati raccolti sul sito sono utilizzati per fare deduzioni sull&#39;interesse degli utenti, vengono utilizzati in un altro contesto, ad esempio su un altro sito o un&#39;app (fuori sito), e vengono utilizzati per selezionare quali contenuti o annunci vengono serviti in base a tali deduzioni. |
 | **Azione di marketing** | Un’azione di marketing, nel contesto del framework di governance dei dati, è un’azione che [!DNL Experience Platform] dati acquisiti dal consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, una policy è una regola che descrive il tipo di azioni di marketing consentite o non consentite su dati specifici. |
 | **Etichette sensibili** | Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati che tu e la tua organizzazione consideri sensibili. |

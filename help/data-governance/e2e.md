@@ -1,9 +1,10 @@
 ---
 title: Guida completa alla governance dei dati
 description: Segui la procedura completa per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Per controllare quali azioni di marketing possono essere eseguite su determinati
 1. [Configurare e abilitare i criteri di governance dei dati](#policy) che determinano quali tipi di dati etichettati possono essere utilizzati per determinate azioni di marketing.
 1. [Applicare azioni di marketing alle tue destinazioni](#destinations) per indicare quali criteri si applicano ai dati inviati a tali destinazioni.
 
-Una volta completata la configurazione di etichette, criteri e azioni di marketing, puoi [verifica dell&#39;applicazione dei criteri](#test) per garantire che funzioni come previsto.
+Una volta completata la configurazione delle etichette, dei criteri di governance e delle azioni di marketing, puoi [verifica dell&#39;applicazione dei criteri](#test) per garantire che funzioni come previsto.
 
 Questa guida descrive il processo completo per la configurazione e l’applicazione di criteri di governance dei dati nell’interfaccia utente di Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
 
@@ -24,6 +25,10 @@ Questa guida descrive il processo completo per la configurazione e l’applicazi
 * [Etichette di utilizzo dati](./labels/overview.md)
 * [Criteri di utilizzo dei dati](./policies/overview.md)
 * [Applicazione delle politiche](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>Questa guida si concentra su come impostare e applicare criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai cercando di limitare **accesso** per i dati stessi per alcuni utenti di Platform all’interno della tua organizzazione, consulta la guida end-to-end su [controllo dell&#39;accesso basato sugli attributi](../access-control/abac/end-to-end-guide.md) invece. Il controllo dell&#39;accesso basato su attributi utilizza anche etichette e criteri, ma per un caso d&#39;uso diverso rispetto alla governance dei dati.
 
 ## Applicare etichette {#labels}
 

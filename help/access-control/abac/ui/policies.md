@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;ABAC
-title: Controllo di accesso basato su attributi Crea un criterio
-description: Questo documento fornisce informazioni sulla gestione dei criteri tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud
+title: Gestire i criteri di controllo degli accessi
+description: Questo documento fornisce informazioni sulla gestione dei criteri di controllo degli accessi tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Gestire i criteri
+# Gestire i criteri di controllo degli accessi
 
-Le politiche sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono sostituire altri criteri.
+Le politiche di controllo degli accessi sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri di accesso possono essere locali o globali e possono sostituire altri criteri.
+
+>[!IMPORTANT]
+>
+>I criteri di accesso non devono essere confusi con i criteri di utilizzo dei dati, che controllano il modo in cui i dati vengono utilizzati in Adobe Experience Platform invece dei quali gli utenti della tua organizzazione hanno accesso. Consulta la guida alla creazione [criteri di utilizzo dei dati](../../../data-governance/policies/create.md) per ulteriori informazioni.
 
 ## Crea un nuovo criterio
 

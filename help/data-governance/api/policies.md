@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;applicazione basata su API;governance dei dati
 solution: Experience Platform
-title: Endpoint API per i criteri di utilizzo dei dati
+title: Endpoint API per i criteri di governance dei dati
 topic-legacy: developer guide
-description: I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono il tipo di azioni di marketing che puoi o da cui ti sono limitate, eseguendo dati all’interno di un Experience Platform. L’endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di utilizzo dei dati.
+description: I criteri di governance dei dati sono regole adottate dalla tua organizzazione che descrivono il tipo di azioni di marketing che ti è permesso o da cui ti sono limitati nell’eseguire sui dati all’interno di un Experience Platform. L’endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 4%
+source-wordcount: '1865'
+ht-degree: 3%
 
 ---
 
-# Endpoint dei criteri di utilizzo dati
+# Endpoint per criteri di governance dei dati
 
-I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform]. La `/policies` punto finale [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di utilizzo dei dati per l’organizzazione.
+I criteri di governance dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è consentito eseguire sui dati all’interno di [!DNL Experience Platform]. La `/policies` punto finale [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di governance dei dati per la tua organizzazione.
 
 >[!IMPORTANT]
 >
->Questo endpoint non deve essere confuso con `/policies` punto finale [API di controllo accessi](../../access-control/abac/api/policies.md), che viene utilizzato per gestire i criteri di controllo accessi.
+>I criteri di governance non devono essere confusi con i criteri di controllo degli accessi, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Platform nella tua organizzazione. Fai riferimento a `/policies` guida dell&#39;endpoint per [API di controllo accessi](../../access-control/abac/api/policies.md) per informazioni su come gestire in modo programmatico i criteri di controllo accessi.
 
 ## Introduzione
 
@@ -611,7 +611,7 @@ Puoi confermare l’eliminazione tentando di cercare nuovamente (GET) il criteri
 
 ## Recupera un elenco dei criteri di base abilitati {#list-enabled-core}
 
-Per impostazione predefinita, solo i criteri di utilizzo dei dati abilitati partecipano alla valutazione. Puoi recuperare un elenco dei criteri di base attualmente abilitati dalla tua organizzazione effettuando una richiesta di GET al `/enabledCorePolicies` punto finale.
+Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Puoi recuperare un elenco dei criteri di base attualmente abilitati dalla tua organizzazione effettuando una richiesta di GET al `/enabledCorePolicies` punto finale.
 
 **Formato API**
 
@@ -663,7 +663,7 @@ Una risposta corretta restituisce l&#39;elenco dei criteri di base abilitati in 
 
 ## Aggiornare l’elenco dei criteri di base abilitati {#update-enabled-core}
 
-Per impostazione predefinita, solo i criteri di utilizzo dei dati abilitati partecipano alla valutazione. Effettuando una richiesta PUT al `/enabledCorePolicies` endpoint, puoi aggiornare l’elenco dei criteri di base abilitati per l’organizzazione utilizzando una singola chiamata .
+Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Effettuando una richiesta PUT al `/enabledCorePolicies` endpoint, puoi aggiornare l’elenco dei criteri di base abilitati per l’organizzazione utilizzando una singola chiamata .
 
 >[!NOTE]
 >

@@ -3,18 +3,18 @@ keywords: Experience Platform;home;argomenti popolari;criteri efficaci;api di co
 solution: Experience Platform
 title: Endpoint API per criteri efficaci
 topic-legacy: developer guide
-description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie funzionalità di Platform utilizzando Adobe Admin Console. Questo documento funge da guida per visualizzare i criteri efficaci utilizzando l’API di controllo accessi per Adobe Experience Platform.
+description: Scopri come visualizzare i criteri di accesso effettivi utilizzando l’API di controllo accessi per Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '295'
 ht-degree: 2%
 
 ---
 
 # Endpoint criteri efficaci
 
-Per visualizzare i criteri efficaci per l’utente corrente, invia una richiesta POST al `/acl/effective-policies` punto finale [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nell’esempio di chiamata API di seguito.
+Per visualizzare i criteri di controllo degli accessi efficaci per l’utente corrente, invia una richiesta POST al `/acl/effective-policies` punto finale [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nell’esempio di chiamata API di seguito.
 
 **Formato API**
 
@@ -65,7 +65,7 @@ Una risposta corretta restituisce informazioni sulle autorizzazioni e sui tipi d
 
 ## Passaggi successivi
 
-Questo documento illustra come effettuare chiamate al [!DNL Access Control] API per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedi [panoramica sul controllo degli accessi](../home.md).
+Questo documento illustra come effettuare chiamate al [!DNL Access Control] API per restituire informazioni sulle autorizzazioni attive e i relativi criteri di accesso per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedi [panoramica sul controllo degli accessi](../home.md).
 
 ## Appendice
 

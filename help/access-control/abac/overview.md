@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Panoramica sul controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1826'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 3%
 Il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
 
 Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
+
+>[!IMPORTANT]
+>
+>Il controllo dell’accesso basato su attributi non va confuso con le funzionalità di governance dei dati di Experience Platform, che ti consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché a quali utenti dell’organizzazione possono accedervi. Consulta la sezione [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e tipi personalizzati di dati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
 

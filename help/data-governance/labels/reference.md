@@ -5,9 +5,9 @@ title: Glossario delle etichette di utilizzo dei dati
 topic-legacy: labels
 description: Questo documento delinea tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="Esistono diverse categorie di etichette di utilizzo dei dati. Le etichette definite in Adobe includono etichette di contratto, etichette di identità ed etichette sensibili. Le etichette definite dall&#39;organizzazione vengono classificate come etichette personalizzate."
 >text="See the data usage labels glossary for more information on these label types."
 
-Le etichette di utilizzo dei dati ti consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. La governance dei dati di Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati di base pronte all’uso che puoi utilizzare per iniziare a categorizzare i tuoi dati.
+Le etichette di utilizzo dei dati ti consentono di classificare set di dati e campi in base a [politiche di governance](../policies/overview.md) e [criteri di controllo accessi](../../access-control/abac/overview.md) che si applicano a quei dati. Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati di base pronte all’uso che puoi utilizzare per iniziare a categorizzare i tuoi dati.
 
-Questo documento delinea le etichette di utilizzo dei dati di base attualmente fornite da [!DNL Experience Platform]. Ulteriori informazioni sulla governance dei dati sono disponibili nella sezione [Panoramica sulla governance dei dati](../home.md).
+Questo documento delinea le etichette di utilizzo dei dati di base attualmente fornite da Experience Platform.
 
 ## Etichette per i contratti
 
@@ -135,7 +135,7 @@ Alcuni contratti includono divieti espliciti sull&#39;uso dei dati per la scienz
 
 #### C10 {#c10}
 
-Alcuni criteri di utilizzo dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. L’etichetta C10 viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;grafico privato&quot;.
+Alcuni criteri di governance dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. L’etichetta C10 viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;grafico privato&quot;.
 
 #### C11 {#c11}
 

@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;controllo degli accessi basato su attributi;controllo degli accessi basato su attributi
-title: Guida introduttiva al controllo degli accessi basati su attributi
-description: Il controllo dell'accesso basato su attributi consente di gestire in modo programmatico ruoli e criteri in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+title: Guida introduttiva all'API di controllo degli accessi basata su attributi
+description: L'API di controllo degli accessi basata su attributi consente di gestire in modo programmatico ruoli e criteri di accesso in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '330'
 ht-degree: 4%
 
 ---
 
-# Guida introduttiva al controllo degli accessi basato sugli attributi
+# Guida introduttiva all’API di controllo degli accessi basata sugli attributi
 
-Questa guida per sviluppatori descrive i passaggi necessari per utilizzare il controllo degli accessi basato sugli attributi per gestire ruoli, prodotti, categorie di autorizzazioni e set di autorizzazioni in Adobe Experience Platform e include chiamate API di esempio per l’esecuzione di varie operazioni.
+Questa guida per sviluppatori descrive i passaggi necessari per utilizzare l’API di controllo accessi basata sugli attributi per gestire ruoli, prodotti, categorie di autorizzazioni e set di autorizzazioni in Adobe Experience Platform e include chiamate API di esempio per l’esecuzione di varie operazioni.
 
 ## Lettura di chiamate API di esempio
 
