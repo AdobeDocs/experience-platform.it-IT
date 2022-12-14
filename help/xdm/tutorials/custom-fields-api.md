@@ -2,9 +2,9 @@
 title: Definire i campi XDM nell’API del Registro di sistema dello schema
 description: Scopri come definire campi diversi durante la creazione di risorse personalizzate Experience Data Model (XDM) nell’API del Registro di sistema dello schema.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 0947eb38bdb18cb3783723cb11be79d3d32a3b76
+source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Facoltativamente, puoi vincolare i tipi di valori che possono essere immessi per
 }
 ```
 
-È possibile fornire etichette facoltative rivolte al cliente per ogni valore in una `meta:enum` proprietà, con ogni etichetta associata a un `enum` valore.
+Facoltativamente, puoi fornire etichette rivolte al cliente per ogni valore sotto a `meta:enum` proprietà, con ogni etichetta associata a un valore corrispondente sotto `enum`.
 
 ```json
 "sampleField": {
