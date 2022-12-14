@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4362'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,19 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 +++Risposta Una possibile causa è la funzione di completamento automatico. La funzione elabora alcuni comandi di metadati che possono rallentare occasionalmente l’editor durante la modifica delle query.
 +++
 
-### Posso utilizzare Postman per l’API del servizio query?
+### Posso usare [!DNL Postman] per l’API del servizio query?
 
-+++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando Postman (un’applicazione gratuita di terze parti). Guarda il [Guida alla configurazione di Postman](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate su come impostare un progetto nella console Adobe Developer e acquisire tutte le credenziali necessarie per l’utilizzo con Postman. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione delle raccolte Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++Risposta Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (applicazione gratuita di terze parti). Guarda il [[!DNL Postman] guida alla configurazione](https://video.tv.adobe.com/v/28832) istruzioni dettagliate su come impostare un progetto nella console Adobe Developer e acquisire tutte le credenziali necessarie per l’utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [indicazioni sull’avvio, l’esecuzione e la condivisione [!DNL Postman] collezioni](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
 
 +++Risposta Sì, Query Service applica internamente un limite di 50.000 righe a meno che non venga specificato un limite esplicito all’esterno. Consulta le linee guida [esecuzione di query interattive](./best-practices/writing-queries.md#interactive-query-execution) per ulteriori dettagli.
++++
+
+### Posso utilizzare le query per aggiornare le righe?
+
++++Risposta Nelle query batch, l’aggiornamento di una riga all’interno del set di dati non è supportato.
 +++
 
 ### Esiste un limite di dimensione dei dati per l&#39;output risultante da una query?
@@ -55,7 +60,7 @@ Questa sezione include informazioni su prestazioni, limiti e processi.
 
 ### Come posso ignorare il limite del numero di righe di output da una query SELECT?
 
-+++Risposta Per ignorare il limite di righe di output, applicare &quot;LIMIT 0&quot; nella query. Esempio:
++++Risposta Per ignorare il limite di righe di output, applicare &quot;LIMIT 0&quot; nella query. Ad esempio:
 
 ```sql
 SELECT * FROM customers LIMIT 0;
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### Se vengono eseguite più query contemporaneamente, si verifica un problema o un impatto sulle prestazioni del servizio query?
 
 ++ + N. risposta Query Service ha una funzionalità di scalabilità automatica che garantisce che le query simultanee non abbiano alcun impatto significativo sulle prestazioni del servizio.
++++
+
+### Posso utilizzare parole chiave riservate come nome di colonna?
+
++++Risposta Ci sono alcune parole chiave riservate che non possono essere utilizzate come nome della colonna, ad esempio, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Se si desidera utilizzare queste parole chiave, è necessario evitare queste colonne.
 +++
 
 ### Come si trova un nome di colonna da un set di dati gerarchico?
@@ -453,6 +463,76 @@ WHERE T2.ID IS NULL
 +++Risposta No, si tratta di una limitazione intenzionale tra gli Experienci Platform che si applica a tutti i servizi Adobe, incluso Query Service. Un nome con due caratteri di sottolineatura è accettabile come nome di schema e set di dati, ma il nome della tabella per il set di dati può contenere un solo carattere di sottolineatura.
 +++
 
+### Quante query simultanee è possibile eseguire alla volta?
+
++++Risposta Non esiste un limite di concorrenza delle query in quanto le query batch vengono eseguite come processi back-end. Esiste tuttavia un limite di timeout della query impostato su 24 ore.
++++
+
+### Esiste un dashboard delle attività in cui puoi visualizzare le attività di query e lo stato?
+
++++Risposta Sono disponibili funzionalità di monitoraggio e avvisi per verificare le attività e gli stati delle query. Consulta la sezione [Integrazione del registro di controllo del servizio query](./data-governance/audit-log-guide.md) e [log delle query](./ui/overview.md#log) documenti per ulteriori informazioni.
++++
+
+### C&#39;è un modo per riportare gli aggiornamenti? Ad esempio, in caso di errore o se è necessario riconfigurare alcuni calcoli durante la riscrittura dei dati su Platform, come deve essere gestito lo scenario?
+
++++Risposta Attualmente, non sono supportati i rollback o gli aggiornamenti in questo modo.
++++
+
+### Come si ottimizzano le query in Adobe Experience Platform?
+
++++Risposta Il sistema non dispone di indici in quanto non si tratta di un database, ma dispone di altre ottimizzazioni in posizione legate all&#39;archivio dati. Per ottimizzare le query sono disponibili le seguenti opzioni:
+
+- Un filtro basato sul tempo per i dati delle serie temporali.
+- Ottimizzato push down per il tipo di dati struttura.
+- Ottimizzazione dei costi e della memoria push-down per array e tipi di dati mappa.
+- Elaborazione incrementale tramite istantanee.
+- Un formato dati persistente.
++++
+
+### Gli accessi possono essere limitati a determinati aspetti di Query Service o si tratta di una soluzione &quot;all or nothing&quot;?
+
++++Risposta Query Service è una soluzione &quot;all or nothing&quot;. Impossibile fornire l&#39;accesso parziale.
++++
+
+### Posso limitare l’utilizzo di Data Query Service o semplicemente accedere all’intero data lake di Adobe Experience Platform?
+
++++Risposta Sì, è possibile limitare l&#39;esecuzione di query ai set di dati con accesso in sola lettura.
++++
+
+### Quali altre opzioni sono disponibili per limitare i dati a cui può accedere Query Service?
+
++++Risposta Ci sono tre approcci per limitare l&#39;accesso. Essi sono i seguenti:
+
+- Utilizza solo le istruzioni SELECT e concedi ai set di dati accesso in sola lettura. Inoltre, assegna l’autorizzazione gestisci query.
+- Utilizza le istruzioni SELECT/INSERT/CREATE e concedi accesso in scrittura ai set di dati. Inoltre, assegna l’autorizzazione gestione query.
+- Utilizza un account di integrazione con i suggerimenti precedenti e assegna l’autorizzazione di integrazione delle query.
+
++++
+
+### Una volta restituiti i dati da Query Service, sono presenti controlli che Platform può eseguire per assicurarsi che non abbia restituito dati protetti?
+
+- Query Service supporta il controllo degli accessi basato sugli attributi. È possibile limitare l’accesso ai dati a livello di colonna/foglia e/o di struttura. Per ulteriori informazioni sul controllo degli accessi basato sugli attributi, consulta la documentazione .
+
+### Posso specificare una modalità SSL per la connessione a un client di terze parti? Ad esempio, posso utilizzare &#39;verify-full&#39; con Power BI?
+
++++Risposta Sì, le modalità SSL sono supportate. Consulta la sezione [Documentazione sulle modalità SSL](./clients/ssl-modes.md) per un raggruppamento delle diverse modalità SSL disponibili e del livello di protezione da esse fornito.
++++
+
+### Utilizziamo TLS 1.2 per tutte le connessioni dai client Power BI al servizio di query?
+
+++ + Risposta Sì. I dati in transito sono sempre conformi a HTTPS. La versione attualmente supportata è TLS1.2.
++++
+
+### Una connessione effettuata sulla porta 80 utilizza ancora https?
+
++++Risposta Sì, una connessione effettuata sulla porta 80 utilizza ancora SSL. È inoltre possibile utilizzare la porta 5432.
++++
+
+### Posso controllare l&#39;accesso a set di dati e colonne specifici per una connessione specifica? Come è configurato questo?
+
++++Risposta Sì, se configurato, viene applicato il controllo di accesso basato su attributi. Consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md) per ulteriori informazioni.
++++
+
 ## Esportazione dei dati {#exporting-data}
 
 Questa sezione fornisce informazioni sull’esportazione di dati e limiti.
@@ -479,7 +559,7 @@ FROM <table_name>
 
 ### Perché il connettore dati Analytics non restituisce dati?
 
-+++Risposta Una causa comune di questo problema è l&#39;esecuzione di query sui dati della serie temporale senza filtro temporale. Esempio:
++++Risposta Una causa comune di questo problema è l&#39;esecuzione di query sui dati della serie temporale senza filtro temporale. Ad esempio:
 
 ```sql
 SELECT * FROM prod_table LIMIT 1;
