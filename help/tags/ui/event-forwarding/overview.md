@@ -3,9 +3,9 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '996'
 ht-degree: 9%
 
 ---
@@ -89,7 +89,7 @@ Nelle regole dei tag, gli elementi dati vengono token con un `%` all’inizio e 
 
 #### Sequenza di azioni della regola {#action-sequencing}
 
-La [!UICONTROL Azioni] la sezione di una regola di inoltro eventi viene sempre eseguita in sequenza. Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere eseguita in modo asincrono come può con i tag .
+La [!UICONTROL Azioni] la sezione di una regola di inoltro eventi viene sempre eseguita in sequenza. Ad esempio, se una regola ha due azioni, la seconda azione non inizia l&#39;esecuzione fino al completamento dell&#39;azione precedente (e nei casi in cui è prevista una risposta da un endpoint, tale endpoint ha risposto). Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere eseguita in modo asincrono come può con le regole dei tag.
 
 ## Segreti {#secrets}
 
