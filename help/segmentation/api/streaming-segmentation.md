@@ -5,9 +5,9 @@ title: Valutare gli eventi in tempo reale con Segmentazione in streaming
 topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1971'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,8 @@ Una definizione di segmento **not** è abilitata per la segmentazione in streami
 
 - La definizione del segmento include segmenti o caratteristiche Adobe Audience Manager (AAM).
 - La definizione del segmento include più entità (query con più entità).
+- La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
+   - Tuttavia, se il segmento contenuto nel `inSegment` l’evento è solo di profilo, la definizione del segmento **sarà** deve essere abilitata per la segmentazione in streaming.
 
 Durante la segmentazione in streaming si applicano le seguenti linee guida:
 

@@ -5,9 +5,9 @@ title: Segmentazione Edge tramite API
 topic-legacy: developer guide
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 1%
 
 ---
@@ -60,6 +60,11 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione edge, l
 | Query che fa riferimento a una mappa | Qualsiasi definizione di segmento che fa riferimento a una mappa di proprietà. | Persone che hanno aggiunto al carrello in base ai dati dei segmenti esterni. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Inoltre, il segmento **deve** essere associato a un criterio di unione attivo sul bordo. Per ulteriori informazioni sui criteri di unione, consultare il [guida ai criteri di unione](../../profile/api/merge-policies.md).
+
+Una definizione di segmento **not** possono essere abilitati per la segmentazione edge nei seguenti scenari:
+
+- La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
+   - Tuttavia, se il segmento contenuto nel `inSegment` l’evento è solo di profilo, la definizione del segmento **sarà** per la segmentazione dei bordi.
 
 ## Recupera tutti i segmenti abilitati per la segmentazione dei bordi
 

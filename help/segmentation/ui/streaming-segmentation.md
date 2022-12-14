@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,8 @@ Una definizione di segmento **not** è abilitata per la segmentazione in streami
 
 - La definizione del segmento include segmenti o caratteristiche Adobe Audience Manager (AAM).
 - La definizione del segmento include più entità (query con più entità).
+- La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
+   - Tuttavia, se il segmento contenuto nel `inSegment` l’evento è solo di profilo, la definizione del segmento **sarà** deve essere abilitata per la segmentazione in streaming.
 
 Durante la segmentazione in streaming si applicano le seguenti linee guida:
 

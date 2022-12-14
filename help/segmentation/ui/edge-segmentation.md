@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Segmentazione bordo
 topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,9 @@ La segmentazione dei bordi è la capacità di valutare istantaneamente i segment
 >
 > Inoltre, il motore di segmentazione dei bordi rispetterà solo le richieste sul bordo in cui è presente **uno** identità principale contrassegnata, coerente con le identità principali non basate su edge.
 
-## Tipi di query per segmentazione Edge
+## Tipi di query per segmentazione Edge {#query-types}
 
 Attualmente è possibile valutare solo i tipi di query selezionati con la segmentazione edge. Le sezioni seguenti forniscono un elenco dei tipi di query che possono essere valutati con la segmentazione edge e quelli che non sono attualmente supportati.
-
-### Tipi di query supportati {#query-types}
 
 Una query può essere valutata con segmentazione edge se soddisfa uno dei criteri descritti nella tabella seguente.
 
@@ -54,6 +52,11 @@ Una query può essere valutata con segmentazione edge se soddisfa uno dei criter
 | Eventi multipli con un profilo entro una finestra temporale di 24 ore | Qualsiasi definizione di segmento che fa riferimento a uno o più attributi di profilo e a più eventi che si verificano all’interno di un intervallo di tempo di 24 ore. | Persone dagli Stati Uniti che hanno visitato la homepage **e** Ho visitato la pagina di pagamento nelle ultime 24 ore. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti in batch o in streaming. | Persone che vivono negli Stati Uniti e si trovano nel segmento &quot;segmento esistente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Query che fa riferimento a una mappa | Qualsiasi definizione di segmento che fa riferimento a una mappa di proprietà. | Persone che hanno aggiunto al carrello in base ai dati dei segmenti esterni. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+Una definizione di segmento **not** possono essere abilitati per la segmentazione edge nei seguenti scenari:
+
+- La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
+   - Tuttavia, se il segmento contenuto nel `inSegment` l’evento è solo di profilo, la definizione del segmento **sarà** per la segmentazione dei bordi.
 
 ## Passaggi successivi
 
