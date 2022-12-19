@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -66,11 +66,11 @@ Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le def
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Questa visualizzazione elenca informazioni sulla definizione del segmento, tra cui suddivisione, abbandono, conteggio dei profili, metodo di valutazione, data di creazione e data dell’ultima modifica.
+Questa visualizzazione elenca informazioni sulla definizione del segmento, tra cui il conteggio del profilo, la data di creazione e l’ultima data di modifica.
 
-La suddivisione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realizzato], [!UICONTROL Esistente]e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella sezione [!UICONTROL Sfoglia] è la suddivisione più accurata dello stato del segmento. Se questo numero è diverso da quello indicato nella [!UICONTROL Panoramica] è necessario utilizzare i numeri nella scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, dal momento che [!UICONTROL Panoramica] i numeri di scheda vengono aggiornati solo una volta al giorno.
+Per aggiungere altri campi a questa visualizzazione, seleziona IMAGE (IMMAGINE). Questi campi aggiuntivi includono suddivisione, abbandono, metodo di valutazione e ID processo.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Se è selezionata l’opzione di suddivisione, la visualizzazione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realizzato], [!UICONTROL Esistente]e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella sezione [!UICONTROL Sfoglia] è la suddivisione più accurata dello stato del segmento. Se questo numero è diverso da quello indicato nella [!UICONTROL Panoramica] è necessario utilizzare i numeri nella scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, dal momento che [!UICONTROL Panoramica] i numeri di scheda vengono aggiornati solo una volta al giorno.
 
 | Stato | Descrizione |
 | ------ | ----------- |
