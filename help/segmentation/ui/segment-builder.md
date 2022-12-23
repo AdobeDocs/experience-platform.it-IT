@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Oltre a essere in grado di cercare [!DNL ExperienceEvent] È inoltre possibile c
 
 Per impostazione predefinita, vengono visualizzati solo i campi dello schema compilati dall’archivio dati. Ciò include &quot;[!UICONTROL Tipi di eventi]&quot;. Se &quot;[!UICONTROL Tipi di eventi]&quot; elenco non visibile oppure è possibile selezionare solo &quot;[!UICONTROL Qualsiasi]&quot; come &quot;[!UICONTROL Tipo evento]&quot;, seleziona la **icona ingranaggio** accanto a **[!UICONTROL Campi]**, quindi seleziona **[!UICONTROL Mostra schema XDM completo]** sotto **[!UICONTROL Campi disponibili]**. Seleziona la **icona ingranaggio** di nuovo per tornare al **[!UICONTROL Campi]** e ora dovresti essere in grado di visualizzare più &quot;[!UICONTROL Tipi di eventi]&quot; e i campi dello schema, indipendentemente dal fatto che contengano o meno dati.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Vengono evidenziati i pulsanti di scelta che consentono di visualizzare solo i campi con dati o tutti i campi XDM.](../images/ui/segment-builder/show-populated.png)
 
 #### Set di dati suite di rapporti Adobe Analytics
 
@@ -76,7 +76,7 @@ Ad esempio, considera una situazione in cui disponi di due suite di rapporti con
 | eVar3 | URL | Nome pagina |
 | eVar4 | Termini di ricerca | Nome del prodotto |
 | event1 | Clic | Page Views |
-| event2 | Visualizzazioni pagina | Aggiunte carrello |
+| event2 | Page Views | Aggiunte carrello |
 | event3 | Aggiunte carrello | Pagamenti |
 | event4 | Acquisti | Acquisti |
 

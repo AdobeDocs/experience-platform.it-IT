@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2647'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ La **[!UICONTROL Segmenti]** Il dashboard delinea le metriche chiave correlate a
 
 Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![Viene visualizzato il dashboard dei segmenti. Mostra vari widget, tra cui dimensione del pubblico, profili per identità, sovrapposizione identità e tendenza di cambiamento della dimensione del pubblico.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Sfogliare {#browse}
 
@@ -60,15 +60,15 @@ Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../da
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Aggiungi tutti i segmenti alla pianificazione"
->abstract="Abilitare l’inclusione di tutti i segmenti di valutazione batch nell’aggiornamento pianificato giornaliero alle 3:30 UTC. Disabilita la rimozione di tutti i segmenti dall&#39;aggiornamento pianificato."
+>abstract="Abilita l&#39;inclusione di tutti i segmenti di valutazione batch nell&#39;aggiornamento pianificato giornaliero. Disabilita la rimozione di tutti i segmenti dall&#39;aggiornamento pianificato."
 
 Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per la tua organizzazione.
 
-![](../images/ui/overview/segment-browse-all.png)
+![Viene visualizzata la schermata Sfoglia dei segmenti. Viene visualizzato un elenco di tutti i segmenti appartenenti all’organizzazione.](../images/ui/overview/segment-browse-all.png)
 
 Questa visualizzazione elenca informazioni sulla definizione del segmento, tra cui il conteggio del profilo, la data di creazione e l’ultima data di modifica.
 
-Per aggiungere altri campi a questa visualizzazione, seleziona IMAGE (IMMAGINE). Questi campi aggiuntivi includono suddivisione, abbandono, metodo di valutazione e ID processo.
+Puoi aggiungere altri campi a questa visualizzazione selezionando ![l’icona dell’attributo del filtro](../images/ui/overview/filter-attribute.png). Questi campi aggiuntivi includono suddivisione, abbandono, metodo di valutazione e ID processo.
 
 Se è selezionata l’opzione di suddivisione, la visualizzazione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realizzato], [!UICONTROL Esistente]e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella sezione [!UICONTROL Sfoglia] è la suddivisione più accurata dello stato del segmento. Se questo numero è diverso da quello indicato nella [!UICONTROL Panoramica] è necessario utilizzare i numeri nella scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, dal momento che [!UICONTROL Panoramica] i numeri di scheda vengono aggiornati solo una volta al giorno.
 
@@ -82,7 +82,7 @@ L’abbandono rappresenta la percentuale di profili che cambiano all’interno d
 
 Il metodo di valutazione può essere in streaming, batch o edge. I segmenti in streaming vengono valutati costantemente man mano che i dati entrano nel sistema. I segmenti batch vengono valutati in base a una pianificazione impostata. I segmenti Edge vengono valutati in tempo reale, consentendo gli stessi casi di utilizzo per la personalizzazione della pagina e di quella successiva.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![Vengono evidenziati i segmenti all’interno della pagina di ricerca dei segmenti.](../images/ui/overview/segment-browse-segments.png)
 
 Nella parte superiore della pagina sono disponibili le opzioni per aggiungere tutti i segmenti a una pianificazione e per creare un nuovo segmento.
 
@@ -90,11 +90,11 @@ Attiva/disattiva **[!UICONTROL Aggiungi tutti i segmenti alla pianificazione]** 
 
 Selezione **[!UICONTROL Creare un segmento]** ti porterà al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consulta la sezione su [creazione di un segmento nella guida utente](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![Viene evidenziata la barra di navigazione superiore nella pagina di ricerca dei segmenti. Questa barra contiene un pulsante per aggiungere tutti i segmenti a una pianificazione e un pulsante per creare un segmento.](../images/ui/overview/segment-browse-top.png)
 
 La barra laterale destra contiene informazioni su tutti i segmenti all’interno dell’organizzazione, elencando il numero totale di segmenti, la data dell’ultima valutazione, la data della valutazione successiva e una suddivisione dei segmenti in base al metodo di valutazione.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![Viene evidenziata la barra laterale destra nella pagina di ricerca dei segmenti. Vengono visualizzate informazioni sui segmenti nell’organizzazione. Sono incluse informazioni quali il numero totale di segmenti, l’ultima volta valutata, la prossima volta valutata e un raggruppamento dei diversi tipi di segmenti.](../images/ui/overview/segment-browse-segment-info.png)
 
 Selezionando la riga della definizione del segmento viene fornito un riepilogo della definizione del segmento, che include opzioni per modificare o eliminare il segmento, attivare il segmento in una destinazione, il pubblico qualificato per il segmento, la dimensione totale del pubblico, oltre al nome, alla descrizione, al metodo di valutazione, alla data di creazione e all’ultima data di modifica del segmento.
 
@@ -102,7 +102,7 @@ Selezionando la riga della definizione del segmento viene fornito un riepilogo d
 >
 > Sarà **not** puoi eliminare un segmento utilizzato in un’attivazione di destinazione.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Vengono visualizzati i dettagli sul segmento selezionato. Ciò include dettagli sul numero di profili qualificati, sulla suddivisione in percentuale dei profili qualificati rispetto ai profili totali, sulla data dell’ultima valutazione.](../images/ui/overview/segment-browse-details.png)
 
 ## Dettagli della definizione del segmento {#segment-details}
 
@@ -110,7 +110,7 @@ Per visualizzare ulteriori dettagli su una definizione di segmento specifica, se
 
 Viene visualizzata la pagina dei dettagli del segmento. Nella parte superiore, è presente un riepilogo della definizione del segmento, delle informazioni sulla dimensione del pubblico qualificato e delle destinazioni per le quali il segmento viene attivato.
 
-![](../images/ui/overview/segment-details-summary.png)
+![Viene visualizzata la pagina dei dettagli della definizione del segmento. Vengono evidenziati il riepilogo del segmento, il pubblico totale nel segmento e le schede di destinazione attivate.](../images/ui/overview/segment-details-summary.png)
 
 ### Riepilogo del segmento {#segment-summary}
 
@@ -118,7 +118,7 @@ La **[!UICONTROL Riepilogo del segmento]** fornisce informazioni quali ID, nome,
 
 Inoltre, puoi attivare il segmento in una destinazione o modificarlo. Selezione **[!UICONTROL Attiva a destinazione]** ti consente di attivare il segmento in una destinazione. Per informazioni più dettagliate sull’attivazione di un segmento a una destinazione, consulta la sezione [panoramica di attivazione](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![Il pulsante Attiva a destinazione viene evidenziato.](../images/ui/overview/segment-details-activate.png)
 
 Selezione **[!UICONTROL Modifica segmento]** ti porterà al [!DNL Segment Builder]. Per informazioni più dettagliate sull&#39;utilizzo di [!DNL Segment Builder] area di lavoro, leggere [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
@@ -158,13 +158,13 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 
 Informazioni più dettagliate su ogni [!DNL Profile] può essere visualizzato selezionando la [!DNL Profile] ID. Per ulteriori informazioni sui dettagli di un profilo, consulta il [[!DNL Real-time Customer Profile] guida utente](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![Vengono evidenziati i profili di esempio per la definizione del segmento. Le informazioni di profilo di esempio includono l’ID del profilo, il nome, il cognome e l’e-mail della persona.](../images/ui/overview/segment-details-profiles.png)
 
 ## Creazione di un segmento {#create-segment}
 
 Selezione **[!UICONTROL Creare un segmento]** nell’angolo in alto a destra si apre il [!DNL Segment Builder] area di lavoro, in cui puoi iniziare a creare una definizione di segmento.
 
-![](../images/ui/overview/segment-browse-create.png)
+![Nella pagina di ricerca Segmento viene evidenziato il pulsante Crea segmento .](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace
 
@@ -172,7 +172,7 @@ Selezione **[!UICONTROL Creare un segmento]** nell’angolo in alto a destra si 
 
 Per informazioni più dettagliate sull&#39;utilizzo di [!DNL Segment Builder] area di lavoro, leggere [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![Viene visualizzata l’area di lavoro Generatore di segmenti .](../images/ui/overview/segment-builder.png)
 
 ## Segmentazione pianificata {#scheduled-segmentation}
 
@@ -190,7 +190,7 @@ Puoi abilitare le definizioni dei segmenti per la valutazione pianificata utiliz
 
 Attualmente le pianificazioni possono essere create solo utilizzando l’API . Per passaggi dettagliati sulla creazione, la modifica e l’utilizzo delle pianificazioni tramite l’API, segui l’esercitazione per valutare e accedere ai risultati dei segmenti, in particolare la sezione su [valutazione pianificata utilizzando l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![L’opzione Aggiungi tutti i segmenti a una pianificazione viene evidenziata nella pagina Sfoglia segmenti .](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Tipi di pubblico {#audiences}
 
@@ -290,7 +290,7 @@ Ulteriori informazioni sulla segmentazione dei bordi sono disponibili nella sezi
 
 Dopo aver creato il segmento, questo viene analizzato dalla governance dei dati di Adobe Experience Platform per garantire che non vi siano violazioni dei criteri all’interno del segmento. Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![Vengono visualizzate le violazioni dei criteri per il segmento.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Passaggi successivi e risorse aggiuntive {#next-steps}
 

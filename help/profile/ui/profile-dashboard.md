@@ -4,19 +4,19 @@ title: Dashboard del profilo
 description: L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati del profilo cliente in tempo reale.
 type: Documentation
 exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
-#  Dashboard dei profili  {#profile-dashboard}
+# [!UICONTROL Profili] dashboard {#profile-dashboard}
 
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui dati [!DNL Real-time Customer Profile] acquisiti durante un’istantanea giornaliera.
+L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sul tuo [!DNL Real-time Customer Profile] come acquisiti durante un&#39;istantanea giornaliera.
 
-Per istruzioni dettagliate su come accedere e interagire con il dashboard [!UICONTROL Profiles] nell&#39;interfaccia utente e per ulteriori informazioni sulle metriche disponibili visualizzate nel dashboard, visita la [[!UICONTROL Guida del dashboard ] Profiles](../../dashboards/guides/profiles.md).
+Per istruzioni dettagliate su come accedere e interagire con il [!UICONTROL Profili] dashboard nell’interfaccia utente e per ulteriori informazioni sulle metriche disponibili visualizzate nel dashboard, visita [[!UICONTROL Profili] guida del dashboard](../../dashboards/guides/profiles.md).
 
-Per una panoramica di tutte le funzioni del dashboard all&#39;interno dell&#39;interfaccia utente di Experience Platform, leggere la [panoramica delle dashboard](../../dashboards/home.md).
+Per una panoramica di tutte le funzioni del dashboard all&#39;interno dell&#39;interfaccia utente di Experience Platform, si prega di iniziare leggendo il [panoramica delle dashboard](../../dashboards/home.md).
 
-![](../images/profile-dashboard/dashboard-overview.png)
+![Viene visualizzato il dashboard Profilo.](../images/profile-dashboard/dashboard-overview.png)

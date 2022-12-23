@@ -4,9 +4,9 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Il dashboard del profilo delinea le metriche chiave correlate ai dati di profilo
 
 Per ulteriori informazioni, visita il [guida al dashboard del profilo](../../dashboards/guides/profiles.md).
 
-![](../../dashboards/images/profiles/dashboard-overview.png)
+![Viene visualizzato il dashboard Profilo.](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL Sfoglia] metriche di scheda
 
@@ -51,7 +51,7 @@ Sul lato destro del **[!UICONTROL Sfoglia]** è [conteggio profilo](#profile-cou
 
 Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ultimo aggiornamento, indicando quando sono state valutate le metriche.
 
-![](../images/user-guide/browse-metrics.png)
+![Le metriche Profilo vengono visualizzate ed evidenziate.](../images/user-guide/browse-metrics.png)
 
 ### Numero di profili {#profile-count}
 
@@ -75,7 +75,7 @@ Simile al [conteggio profilo](#profile-count) , quando l’acquisizione di recor
 
 Sulla **[!UICONTROL Sfoglia]** è possibile visualizzare profili di esempio utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
 
-![](../images/user-guide/none-selected.png)
+![Vengono visualizzati i profili che appartengono all’organizzazione.](../images/user-guide/none-selected.png)
 
 ### Sfoglia per [!UICONTROL Criteri di unione]
 
@@ -85,36 +85,35 @@ La **[!UICONTROL Sfoglia]** per impostazione predefinita, la scheda è impostata
 >
 >Se non è stato selezionato alcun criterio di unione, utilizzare il pulsante di selezione accanto al **[!UICONTROL Criteri di unione]** per aprire la finestra di dialogo di selezione.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![Il selettore dei criteri di unione viene evidenziato.](../images/user-guide/browse-by-merge-policy.png)
 
 Per scegliere un criterio di unione dal **[!UICONTROL Seleziona criterio di unione]** , seleziona il pulsante di scelta accanto al nome del criterio e utilizza **[!UICONTROL Seleziona]** per tornare al [!UICONTROL Sfoglia] scheda . Puoi quindi selezionare **[!UICONTROL Visualizza]** per aggiornare i profili di esempio e visualizzare un esempio di profili con il nuovo criterio di unione applicato.
 
-![](../images/user-guide/select-merge-policy.png)
+![Viene visualizzata una finestra di dialogo in cui è possibile selezionare il criterio di unione per cui filtrare.](../images/user-guide/select-merge-policy.png)
 
 I profili visualizzati rappresentano un esempio di fino a 20 profili dall’archivio profili della tua organizzazione, dopo l’applicazione del criterio di unione selezionato. I profili di esempio per il criterio di unione selezionato vengono aggiornati quando vengono aggiunti nuovi dati all’archivio profili dell’organizzazione.
 
 Per visualizzare i dettagli di uno dei profili di esempio, seleziona la **[!UICONTROL ID profilo]**. Per ulteriori informazioni, consulta la sezione più avanti in questa guida su [visualizzazione dei dettagli del profilo](#profile-detail).
 
-![](../images/user-guide/sample-profiles.png)
+![Vengono visualizzati i profili di esempio corrispondenti ai criteri di unione.](../images/user-guide/sample-profiles.png)
 
 Per ulteriori informazioni sui criteri di unione e sul loro ruolo all’interno di Platform, consulta [panoramica dei criteri di unione](../merge-policies/overview.md).
-
 
 ### Sfoglia per [!UICONTROL Identità] {#browse-identity}
 
 Sulla **[!UICONTROL Sfoglia]** è possibile utilizzare uno spazio dei nomi di identità per cercare un profilo specifico in base a un valore di identità. Per effettuare la ricerca in base a un&#39;identità è necessario specificare un criterio di unione, uno spazio dei nomi di identità e un valore di identità.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![Il selettore dei criteri di unione viene evidenziato.](../images/user-guide/browse-by-merge-policy.png)
 
 Se necessario, utilizza il **[!UICONTROL Criteri di unione]** selettore per aprire **[!UICONTROL Seleziona criterio di unione]** e scegliere il criterio di unione che si desidera utilizzare.
 
-![](../images/user-guide/select-merge-policy.png)
+![Viene visualizzata una finestra di dialogo in cui è possibile selezionare il criterio di unione per cui filtrare.](../images/user-guide/select-merge-policy.png)
 
 Quindi utilizza il **[!UICONTROL Spazio dei nomi identità]** selettore per aprire **[!UICONTROL Seleziona spazio dei nomi identità]** e scegli lo spazio dei nomi in base al quale desideri eseguire la ricerca. Se l’organizzazione dispone di più spazi dei nomi, è possibile utilizzare la barra di ricerca nella finestra di dialogo per iniziare a digitare il nome di uno spazio dei nomi.
 
 Puoi selezionare uno spazio dei nomi per visualizzare ulteriori dettagli oppure il pulsante di scelta per scegliere uno spazio dei nomi. È quindi possibile utilizzare **[!UICONTROL Seleziona]** per continuare.
 
-![](../images/user-guide/select-identity-namespace.png)
+![Viene visualizzata una finestra di dialogo in cui è possibile selezionare lo spazio dei nomi identità da filtrare in base a.](../images/user-guide/select-identity-namespace.png)
 
 Dopo aver selezionato una [!UICONTROL Spazio dei nomi identità] e ritornando al [!UICONTROL Sfoglia] è possibile immettere un **[!UICONTROL Valore identità]** relativo allo spazio dei nomi selezionato.
 
@@ -122,11 +121,11 @@ Dopo aver selezionato una [!UICONTROL Spazio dei nomi identità] e ritornando al
 >
 >Questo valore è specifico per un profilo cliente individuale e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione dello spazio dei nomi di identità &quot;E-mail&quot; richiede un valore di identità sotto forma di un indirizzo e-mail valido.
 
-![](../images/user-guide/filter-identity-value.png)
+![Il valore di identità per il quale desideri filtrare viene evidenziato.](../images/user-guide/filter-identity-value.png)
 
 Una volta immesso un valore, seleziona **[!UICONTROL Visualizza]** e viene restituito un singolo profilo che corrisponde al valore . Seleziona la **[!UICONTROL ID profilo]** per visualizzare i dettagli del profilo.
 
-![](../images/user-guide/filtered-identity-value.png)
+![Viene evidenziato il profilo che corrisponde al valore dell’identità.](../images/user-guide/filtered-identity-value.png)
 
 ## Visualizzare i dettagli del profilo {#profile-detail}
 
@@ -134,7 +133,7 @@ Dopo aver selezionato una **[!UICONTROL ID profilo]**, **[!UICONTROL Dettaglio]*
 
 I campi predefiniti visualizzati possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, incluse istruzioni dettagliate per l’aggiunta e la rimozione degli attributi e il ridimensionamento dei pannelli della dashboard, consulta la sezione [guida alla personalizzazione dei dettagli del profilo](profile-customization.md).
 
-![](../images/user-guide/profile-detail.png)
+![La scheda Dettagli viene evidenziata. Vengono visualizzati i dettagli del profilo.](../images/user-guide/profile-detail.png)
 
 Puoi visualizzare ulteriori informazioni relative al singolo profilo cliente selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda di appartenenza del segmento che mostra i segmenti per i quali il profilo è attualmente qualificato.
 
@@ -144,7 +143,7 @@ La **[!UICONTROL Attributi]** La scheda fornisce una vista a elenco che riepilog
 
 Questi attributi possono anche essere visualizzati come un oggetto JSON selezionando **[!UICONTROL Visualizzare JSON]**. È utile per gli utenti che desiderano comprendere meglio in che modo gli attributi del profilo vengono acquisiti in Platform.
 
-![](../images/user-guide/attributes.png)
+![La scheda Attributi è evidenziata. Vengono visualizzati gli attributi del profilo.](../images/user-guide/attributes.png)
 
 ### Scheda Eventi
 
@@ -152,7 +151,7 @@ La **[!UICONTROL Eventi]** contiene i dati dei 100 ExperienceEvents più recenti
 
 Gli eventi possono anche essere visualizzati come un oggetto JSON selezionando **[!UICONTROL Visualizzare JSON]**. È utile per comprendere come vengono acquisiti gli eventi in Platform.
 
-![](../images/user-guide/events.png)
+![La scheda Eventi è evidenziata. Vengono visualizzati gli eventi di profilo.](../images/user-guide/events.png)
 
 ### Scheda Iscrizione al segmento
 
@@ -160,7 +159,7 @@ La **[!UICONTROL Iscrizione al segmento]** visualizza un elenco con il nome e la
 
 Per ulteriori informazioni sulla segmentazione, consulta l’ [Documentazione di Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![](../images/user-guide/segment-membership.png)
+![Viene evidenziata la scheda Iscrizione al segmento . Vengono visualizzati i dettagli dell’appartenenza al segmento di profilo.](../images/user-guide/segment-membership.png)
 
 ## Unisci criteri
 
@@ -168,7 +167,7 @@ Dal principale **[!UICONTROL Profili]** seleziona il menu **[!UICONTROL Unisci c
 
 Per ulteriori informazioni sui criteri di unione, vedere [panoramica dei criteri di unione](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policies.png)
+![Viene evidenziata la scheda Criteri di unione . Vengono visualizzati i criteri di unione appartenenti all&#39;organizzazione.](../images/user-guide/merge-policies.png)
 
 ## Schema dell&#39;unione {#union-schema}
 
@@ -176,7 +175,7 @@ Dal principale **[!UICONTROL Profili]** seleziona il menu **[!UICONTROL Schema d
 
 Per ulteriori informazioni sugli schemi di unione, visita il [guida all’interfaccia utente per schema unione](union-schema.md).
 
-![](../images/user-guide/union-schema.png)
+![Viene evidenziata la scheda Schema dell’Unione. Vengono visualizzati gli schemi di unione appartenenti all’organizzazione.](../images/user-guide/union-schema.png)
 
 ## Passaggi successivi
 

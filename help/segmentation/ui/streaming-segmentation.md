@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic-legacy: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata quando i dati vengono trasmessi in Platform, il che significa che l’appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ Una query viene valutata automaticamente con la segmentazione in streaming se so
 
 | Tipo di query | Dettagli | Esempio |
 | ---------- | ------- | ------- |
-| Evento singolo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Singolo evento all’interno di una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Singolo evento con una finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Evento singolo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. | ![Viene mostrato un esempio di un singolo evento.](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Singolo evento all’interno di una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. | ![Viene visualizzato un esempio di un singolo evento all’interno di una finestra temporale relativa.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Singolo evento con una finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. | ![Viene visualizzato un esempio di un singolo evento con una finestra temporale.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |  |
-| Singolo evento con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. **Nota:** La query viene valutata immediatamente quando viene generato l’evento. Nel caso di un evento di profilo, tuttavia, deve attendere 24 ore per essere incorporato. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Singolo evento con un attributo di profilo in una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti in batch o in streaming. **Nota:** Se utilizzi un segmento, si verificherà l’annullamento della qualifica del profilo **ogni 24 ore**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Eventi multipli con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Singolo evento con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. **Nota:** La query viene valutata immediatamente quando viene generato l’evento. Nel caso di un evento di profilo, tuttavia, deve attendere 24 ore per essere incorporato. | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo.](../images/ui/streaming-segmentation/profile-hit.png) |
+| Singolo evento con un attributo di profilo in una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all’interno di una finestra temporale relativa.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti in batch o in streaming. **Nota:** Se utilizzi un segmento, si verificherà l’annullamento della qualifica del profilo **ogni 24 ore**. | ![Viene visualizzato un esempio di segmento di segmenti.](../images/ui/streaming-segmentation/two-batches.png) |
+| Eventi multipli con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | ![Viene visualizzato un esempio di più eventi con un attributo di profilo.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Una definizione di segmento **not** è abilitata per la segmentazione in streaming nei seguenti scenari:
 
@@ -67,7 +67,7 @@ Inoltre, l’annullamento della qualificazione dei segmenti, analogamente alla q
 
 Dopo aver creato un segmento abilitato per lo streaming, puoi visualizzare i dettagli di tale segmento.
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![Viene visualizzata la pagina dei dettagli del segmento.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 In particolare, **[!UICONTROL Totale qualificato]** viene visualizzata una metrica che mostra il numero totale di tipi di pubblico qualificati, in base a valutazioni batch e in streaming per questo segmento.
 
@@ -79,11 +79,11 @@ Sotto c’è un grafico a linee che mostra il numero di nuovi tipi di pubblico a
 >
 >Ulteriori informazioni su questi stati sono disponibili nella tabella di stato all’interno di [panoramica sulla segmentazione](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![La scheda Profili nel tempo viene evidenziata, mostrando un grafico a linee dei profili nel tempo.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 Puoi trovare ulteriori informazioni sulla valutazione dell’ultimo segmento selezionando la bolla di informazioni accanto a **[!UICONTROL Totale qualificato]**.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![È stata selezionata la bolla di informazioni per i profili qualificati totali. Vengono visualizzate informazioni sull’ultima ora di valutazione del segmento.](../images/ui/streaming-segmentation/info-bubble.png)
 
 Per ulteriori informazioni sulle definizioni dei segmenti, consulta la sezione precedente su [dettagli di definizione del segmento](#segment-details).
 

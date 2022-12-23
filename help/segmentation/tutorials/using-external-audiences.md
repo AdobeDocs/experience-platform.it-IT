@@ -5,9 +5,9 @@ title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Il primo passaggio per l’utilizzo di tipi di pubblico esterni consiste nella c
 
 Per creare uno spazio dei nomi di identità, segui le istruzioni contenute in [guida allo spazio dei nomi identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegnali [!UICONTROL Tipo] come **[!UICONTROL Identificatore non personale]**.
 
-![](../images/tutorials/external-audiences/identity-namespace-info.png)
+![L’identificatore Non-person viene evidenziato nel modale Crea spazio dei nomi identità .](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## Creare uno schema per i metadati del segmento
 
@@ -52,19 +52,19 @@ Dopo aver creato uno spazio dei nomi di identità, devi creare un nuovo schema p
 
 Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemi]** sulla barra di navigazione a sinistra, seguita dalla **[!UICONTROL Creare uno schema]** nell’angolo in alto a destra dell’area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Sfoglia]** per visualizzare una selezione completa dei tipi di schema disponibili.
 
-![](../images/tutorials/external-audiences/create-schema-browse.png)
+![Vengono evidenziati sia lo schema Crea che quello Sfoglia.](../images/tutorials/external-audiences/create-schema-browse.png)
 
 Poiché stai creando una definizione di segmento, che è una classe predefinita, seleziona **[!UICONTROL Usa classe esistente]**. Ora, seleziona la **[!UICONTROL Definizione del segmento]** classe, seguita da **[!UICONTROL Assegna classe]**.
 
-![](../images/tutorials/external-audiences/assign-class.png)
+![La classe di definizione del segmento viene evidenziata.](../images/tutorials/external-audiences/assign-class.png)
 
 Dopo la creazione dello schema, dovrai specificare quale campo conterrà l’ID del segmento. Questo campo deve essere contrassegnato come identità principale e assegnato agli spazi dei nomi creati in precedenza.
 
-![](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![Le caselle per contrassegnare il campo selezionato come identità principale vengono evidenziate nell’Editor di schema.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 Dopo la marcatura `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore etichettato **[!UICONTROL Profilo]**. Seleziona **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-time Customer Profile].
 
-![](../images/tutorials/external-audiences/schema-profile.png)
+![L’opzione per abilitare lo schema per il profilo viene evidenziata nell’Editor schema.](../images/tutorials/external-audiences/schema-profile.png)
 
 Ora, questo schema è abilitato per Profilo, con l’identificazione principale assegnata allo spazio dei nomi dell’identità non persona creato. Di conseguenza, i metadati del segmento importati in Platform utilizzando questo schema verranno acquisiti in Profilo senza essere uniti ad altri dati di profilo relativi alle persone.
 
@@ -74,11 +74,11 @@ Dopo aver configurato lo schema, dovrai creare un set di dati per i metadati del
 
 Per creare un set di dati, segui le istruzioni nella sezione [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Dovresti seguire la **[!UICONTROL Creare un set di dati dallo schema]** utilizzando lo schema creato in precedenza.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Lo schema su cui si desidera basare il set di dati viene evidenziato.](../images/tutorials/external-audiences/select-schema.png)
 
 Dopo aver creato il set di dati, continua a seguire le istruzioni in [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per il profilo cliente in tempo reale.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![L’interruttore per abilitare lo schema per il profilo viene evidenziato nella pagina Attività set di dati .](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configurazione e importazione di dati sul pubblico
 
@@ -94,7 +94,7 @@ Per creare una connessione in streaming, puoi seguire le istruzioni contenute in
 
 Una volta creata la connessione streaming, avrai accesso all&#39;endpoint streaming univoco a cui puoi inviare i tuoi dati. Per informazioni su come inviare dati a questi endpoint, consulta la sezione [esercitazione sullo streaming dei dati di record](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![L’endpoint di streaming per la connessione in streaming viene evidenziato nella pagina dei dettagli sorgente.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Struttura dei metadati del pubblico
 
@@ -151,7 +151,7 @@ Di seguito è riportato un esempio dei metadati del payload per il pubblico este
 
 Una volta configurati i tipi di pubblico importati, possono essere utilizzati come parte del processo di segmentazione. Per trovare tipi di pubblico esterni, vai al Generatore di segmenti e seleziona **[!UICONTROL Tipi di pubblico]** nella scheda **[!UICONTROL Campi]** sezione .
 
-![](../images/tutorials/external-audiences/external-audiences.png)
+![Viene evidenziato il selettore dei tipi di pubblico esterni nel Generatore di segmenti.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## Passaggi successivi
 
@@ -165,15 +165,15 @@ Oltre a utilizzare i metadati del pubblico esterno importati e utilizzarli per c
 
 Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemi]** sulla barra di navigazione a sinistra, seguita dalla **[!UICONTROL Creare uno schema]** nell’angolo in alto a destra dell’area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Profilo individuale XDM]**.
 
-![](../images/tutorials/external-audiences/create-schema-profile.png)
+![L’area Profilo individuale XDM viene evidenziata.](../images/tutorials/external-audiences/create-schema-profile.png)
 
 Una volta creato lo schema, è necessario aggiungere il gruppo di campi di appartenenza al segmento come parte dello schema. A questo scopo, seleziona [!UICONTROL Dettagli di appartenenza al segmento], seguita da [!UICONTROL Aggiungi gruppi di campi].
 
-![](../images/tutorials/external-audiences/segment-membership-details.png)
+![Viene evidenziato il gruppo di campi Dettagli appartenenza segmento .](../images/tutorials/external-audiences/segment-membership-details.png)
 
 Inoltre, assicurati che lo schema sia contrassegnato per **[!UICONTROL Profilo]**. A questo scopo, è necessario contrassegnare un campo come identità principale.
 
-![](../images/tutorials/external-audiences/external-segment-profile.png)
+![L’opzione per abilitare lo schema per il profilo viene evidenziata nell’Editor schema.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### Imposta il set di dati
 
@@ -181,11 +181,11 @@ Dopo aver creato lo schema, dovrai creare un set di dati.
 
 Per creare un set di dati, segui le istruzioni nella sezione [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Dovresti seguire la **[!UICONTROL Creare un set di dati dallo schema]** utilizzando lo schema creato in precedenza.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![Lo schema utilizzato per creare il database viene evidenziato.](../images/tutorials/external-audiences/select-schema.png)
 
 Dopo aver creato il set di dati, continua a seguire le istruzioni in [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per il profilo cliente in tempo reale.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![L’opzione per abilitare lo schema per il profilo viene evidenziata nel flusso di lavoro crea set di dati .](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Configurazione e importazione di dati di appartenenza a un pubblico esterno
 
@@ -201,7 +201,7 @@ Per creare una connessione in streaming, puoi seguire le istruzioni contenute in
 
 Una volta creata la connessione streaming, avrai accesso all&#39;endpoint streaming univoco a cui puoi inviare i tuoi dati. Per informazioni su come inviare dati a questi endpoint, consulta la sezione [esercitazione sullo streaming dei dati di record](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![L’endpoint di streaming per la connessione in streaming viene evidenziato nella pagina dei dettagli sorgente.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## Struttura di appartenenza al segmento
 

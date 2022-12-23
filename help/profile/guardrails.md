@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1929'
 ht-degree: 5%
 
 ---
@@ -87,8 +87,8 @@ Le seguenti protezioni fanno riferimento alla dimensione dei dati e forniscono i
 | --- | --- | --- | --- |
 | Dimensione massima di ExperienceEvent | 10 KB | Duro | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno eliminati. |
 | Dimensione massima del record del profilo | 100 KB | Duro | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, tuttavia i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
-| Dimensione massima del frammento di profilo | 50 MB | Duro | **La dimensione massima di un singolo frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi [frammento di profilo](#profile-fragments) è più grande di 50 MB. |
-| Dimensioni massime di archiviazione del profilo | 50 MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** Aggiunta di nuovi [frammenti di profilo](#profile-fragments) In un profilo di dimensioni superiori a 50 MB, le prestazioni del sistema risulteranno compromesse. Ad esempio, un profilo potrebbe contenere un singolo frammento di 50 MB oppure più frammenti in più set di dati con una dimensione totale combinata di 50 MB. Il tentativo di memorizzare un profilo con un singolo frammento di dimensioni superiori a 50 MB o più frammenti di dimensioni totali superiori a 50 MB in una dimensione combinata influisce sulle prestazioni del sistema. |
+| Dimensione massima del frammento di profilo | 50MB | Duro | **La dimensione massima di un singolo frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi [frammento di profilo](#profile-fragments) è più grande di 50 MB. |
+| Dimensioni massime di archiviazione del profilo | 50MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** Aggiunta di nuovi [frammenti di profilo](#profile-fragments) In un profilo di dimensioni superiori a 50 MB, le prestazioni del sistema risulteranno compromesse. Ad esempio, un profilo potrebbe contenere un singolo frammento di 50 MB oppure più frammenti in più set di dati con una dimensione totale combinata di 50 MB. Il tentativo di memorizzare un profilo con un singolo frammento di dimensioni superiori a 50 MB o più frammenti di dimensioni totali superiori a 50 MB in una dimensione combinata influisce sulle prestazioni del sistema. |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | 90 | Morbido | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -128,11 +128,11 @@ La [!DNL Profile] il modello di dati store è costituito da due tipi di entità 
 
    Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
 
-   ![](images/guardrails/profile-entity.png)
+   ![Un&#39;infografica che descrive le differenze tra i dati dei record e i dati delle serie temporali.](images/guardrails/profile-entity.png)
 
 * **entità Dimension:** Anche se l’archivio dati del profilo in cui vengono conservati i dati del profilo non è un archivio relazionale, il profilo consente l’integrazione con entità di dimensioni ridotte per creare segmenti in modo semplice e intuitivo. Questa integrazione è nota come [segmentazione su più entità](../segmentation/multi-entity-segmentation.md). La tua organizzazione può inoltre definire classi XDM per descrivere elementi diversi da singoli utenti, ad esempio negozi, prodotti o proprietà. Tali[!DNL XDM Individual Profile] Gli schemi sono noti come &quot;entità dimensione&quot; e non contengono dati relativi alle serie temporali. Le entità di Dimension forniscono dati di ricerca che consentono e semplificano le definizioni di segmenti a più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![Un’infografica che mostra che un’entità profilo è composta da entità dimensione.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Frammenti di profilo
 
