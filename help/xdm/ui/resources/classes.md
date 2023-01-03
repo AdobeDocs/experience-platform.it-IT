@@ -5,9 +5,9 @@ title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,6 @@ Ora puoi iniziare [aggiunta di campi alla classe](#add-fields), che verrà condi
 
 ## Modificare una classe esistente {#edit}
 
->[!IMPORTANT]
->
->Le classi personalizzate create dopo il 30 aprile 2022 non possono essere modificate direttamente e una correzione è attualmente in fase di sviluppo. Come soluzione alternativa, è possibile [creare un gruppo di campi personalizzato](./field-groups.md) e riutilizzarlo per ogni schema che utilizza la classe personalizzata che si desidera estendere. Questa limitazione non riguarda le classi personalizzate create prima del 30 aprile 2022.
-
 >[!NOTE]
 >
 >Solo le classi personalizzate definite dall&#39;organizzazione possono essere modificate e personalizzate completamente. Per le classi principali definite dall’Adobe, solo i nomi visualizzati dei relativi campi possono essere modificati nel contesto dei singoli schemi. Vedi la sezione su [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names) per i dettagli.
@@ -73,10 +69,6 @@ La [!DNL Schema Editor] , con la struttura dello schema mostrata nell&#39;area d
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Aggiungere campi a una classe {#add-fields}
-
->[!IMPORTANT]
->
->Le classi personalizzate create dopo il 30 aprile 2022 non possono essere modificate direttamente e una correzione è attualmente in fase di sviluppo. Come soluzione alternativa, è possibile [creare un gruppo di campi personalizzato](./field-groups.md) e riutilizzarlo per ogni schema che utilizza la classe personalizzata che si desidera estendere. Questa limitazione non riguarda le classi personalizzate create prima del 30 aprile 2022.
 
 Una volta che si dispone di uno schema che utilizza una classe personalizzata aperta nel [!UICONTROL Editor di schema], puoi iniziare ad aggiungere campi alla classe . Per aggiungere un nuovo campo, seleziona la **più (+)** accanto al nome dello schema.
 
