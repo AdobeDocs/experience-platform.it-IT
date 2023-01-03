@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione AWS
 description: Scopri l’estensione AWS per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) è una piattaforma di cloud computing che offre un&#39;ampia varietà di servizi come l&#39;informatica distribuita, l&#39;archiviazione del database, la distribuzione dei contenuti e la gestione delle relazioni con i clienti (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) è una piattaforma di cloud computing che offre un&#39;ampia varietà di servizi quali elaborazione distribuita, archiviazione di database, distribuzione di contenuti e servizi di integrazione software-as-a-service (SaaS) per la gestione delle relazioni con i clienti (CRM) e la pianificazione delle risorse aziendali (ERP).
 
 La [!DNL AWS] [inoltro eventi](../../../ui/event-forwarding/overview.md) utilizzo di estensioni [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) per inviare eventi da Adobe Experience Platform Edge Network a [!DNL AWS] per ulteriori elaborazioni. Questa guida illustra come installare l&#39;estensione e utilizzarne le funzionalità in una regola di inoltro degli eventi.
 
