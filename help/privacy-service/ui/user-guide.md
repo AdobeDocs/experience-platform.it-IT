@@ -5,10 +5,10 @@ title: Gestire i processi relativi alla privacy nell’interfaccia utente di Pri
 topic-legacy: UI guide
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di privacy in diverse applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
@@ -24,13 +24,25 @@ Il dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widg
 
 ### Tipo di regolamento
 
-[!DNL Privacy Service] supporta le richieste di lavoro per diverse normative sulla privacy:
+[!DNL Privacy Service] supporta le richieste di lavoro per diverse normative sulla privacy. Nella tabella seguente sono elencati i regolamenti supportati e la relativa etichetta corrispondente come rappresentata nell’interfaccia utente:
 
-* La [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* L&#39;Unione europea [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
-* Thailandia [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* Brasile [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* Nuova Zelanda [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| Etichetta dell’interfaccia utente | Regolamento |
+| --- | --- |
+| [!UICONTROL CCPA] | Le selezioni del menu [!DNL California Consumer Privacy Act] |
+| [!UICONTROL RGPD] | L&#39;Unione europea [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | Thailandia [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | Brasile [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | Nuova Zelanda [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | Le selezioni del menu [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | Le selezioni del menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | Le selezioni del menu [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | Le selezioni del menu [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Vedi la panoramica su [normative sulla privacy supportate](../regulations/overview.md) per ulteriori informazioni sul contesto giuridico di ciascun regolamento.
 
 I lavori per ciascun tipo di regolamento sono tracciati separatamente. Per passare da un tipo di regolamento all&#39;altro, seleziona la **[!UICONTROL Tipo di regolamento]** menu a discesa e selezionare il regolamento desiderato dall&#39;elenco.
 

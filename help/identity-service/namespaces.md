@@ -5,9 +5,9 @@ title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1642'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Per utilizzare i namespace di identità è necessario comprendere i vari servizi
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Identity Service]](./home.md): Ottieni una visione migliore dei singoli clienti e del loro comportamento attraverso il collegamento delle identità tra dispositivi e sistemi.
-- [[!DNL Privacy Service]](../privacy-service/home.md): I namespace di identità vengono utilizzati per conformarsi al Regolamento generale sulla protezione dei dati (RGPD), in cui è possibile effettuare richieste RGPD in relazione a uno spazio dei nomi.
+- [[!DNL Privacy Service]](../privacy-service/home.md): I namespace di identità vengono utilizzati nelle richieste di conformità per normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
 ## Informazioni sugli spazi dei nomi delle identità
 

@@ -5,9 +5,9 @@ title: Panoramica sulle normative sulla privacy
 topic-legacy: troubleshooting
 description: Questo documento fornisce una panoramica delle diverse normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 74624291b77e586c6adeb3e08b12a1dae92d419a
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Questo documento fornisce una panoramica delle diverse normative sulla privacy supportate da Adobe Experience Cloud.
 
-Utilizzando Adobe Experience Platform Privacy Service, Experience Cloud supporta le richieste di accesso e di cancellazione in base ai seguenti regolamenti:
+Attraverso l&#39;uso di [Adobe Experience Platform Privacy Service](../home.md), Experience Cloud supporta le richieste di accesso e di cancellazione in base ai seguenti regolamenti:
 
 | Regolamento | Descrizione |
 | --- | --- |
@@ -29,6 +29,8 @@ Utilizzando Adobe Experience Platform Privacy Service, Experience Cloud supporta
 | Nuova Zelanda [!DNL Privacy Act] | La [Nuova Zelanda [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controlla il modo in cui le agenzie possono raccogliere, utilizzare, divulgare, archiviare e dare accesso alle informazioni personali dei cittadini e delle organizzazioni della Nuova Zelanda. Nel 2020, l&#39;ultima versione dell&#39;atto ha introdotto importanti aggiornamenti a queste leggi sulla privacy, tra cui nuovi reati, aumento delle multe, notifiche obbligatorie per violazioni dei dati e aumento dei poteri del commissario per la privacy. |
 | PDPA (Thailandia) | La [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;uso o dalla divulgazione illecita dei loro dati personali. Il regolamento, ispirato al RGPD dell&#39;Unione europea, conferisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso ai loro dati personali memorizzati o la loro cancellazione. |
 | VCDPA (Virginia) | La [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) fornisce nuovi diritti sulla privacy dei dati ai residenti della Virginia (&quot;Consumatori&quot;), compreso il diritto di accesso, cancellazione e correzione dei dati personali. I consumatori hanno anche il diritto di rinunciare alla vendita di dati personali, di rinunciare alla profilazione basata su dati personali e al trattamento di fini pubblicitari personali. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Passaggi successivi
 

@@ -5,9 +5,9 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '7433'
+source-wordcount: '7919'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,8 @@ ht-degree: 0%
 **bucket Amazon S3**: [!DNL Amazon S3] i bucket sono i contenitori fondamentali per i dati memorizzati in [!DNL Amazon] ecosistema. I bucket contengono oggetti, ogni oggetto viene memorizzato e recuperato utilizzando una chiave univoca assegnata agli sviluppatori.
 
 **Connettore Amazon S3**: La [!DNL Amazon] Il connettore S3 consente ai clienti di Experience Platform di connettersi e accedere in modo sicuro ai propri [!DNL Amazon] Dati S3.
+
+**APA**: La [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promuove e protegge la privacy degli individui e regola il modo in cui le agenzie governative e le organizzazioni australiane gestiscono le informazioni personali. La [!DNL Privacy Act] include principi applicabili alle organizzazioni del settore privato. Ad esempio, gli individui hanno il diritto di comprendere perché le informazioni personali vengono raccolte e come verranno utilizzate, la possibilità di accedere, cancellare i loro dati e correggere le informazioni personali.
 
 **Aggiungi strategia di salvataggio**: La strategia di salvataggio &quot;append&quot; è un’opzione utilizzata quando si specificano dati di terze parti da acquisire tramite una connessione e si aggiungono nuovi dati o righe alla fine del set di dati. Le righe precedentemente acquisite non vengono toccate e solo le righe create dall’ultima esecuzione pianificata vengono assimilate ad Experience Platform. Tutte le righe modificate nel sistema di origine rimangono invariate, ad Experience Platform.
 
@@ -90,6 +92,8 @@ ht-degree: 0%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (talvolta denominati [!DNL Catalog]) è il sistema di registrazione per la posizione e la derivazione dei dati all’interno di Adobe Experience Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel lago di dati come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca, monitoraggio e governance dei dati.
 
+**CCPA**: La [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) Migliora i diritti sulla privacy e la protezione dei consumatori per i residenti della California, Stati Uniti. Il CCPA conferisce ai residenti della California nuovi diritti sulla privacy dei dati, tra cui il diritto di accesso e cancellazione dei propri dati personali, di sapere se i propri dati personali vengono venduti o divulgati (e a chi), e il diritto di rinunciare alla vendita dei propri dati a terzi.
+
 **Classe**: In Experience Data Model (XDM), una classe definisce il set di campi più piccolo utilizzato per creare uno schema e definisce il comportamento di base dell&#39;oggetto business rappresentato dallo schema.
 
 **Client**: Un client è uno strumento o un&#39;applicazione esterna che si connette a [!DNL Query Service] tramite [!DNL PostgreSQL] protocollo o API HTTP.
@@ -107,6 +111,8 @@ ht-degree: 0%
 **Console**: In [!DNL Query Service], la console fornisce informazioni sullo stato e sul funzionamento di una query. Nella console viene visualizzato lo stato della connessione a [!DNL Query Service], le operazioni di query in esecuzione ed eventuali messaggi di errore risultanti da tali query.
 
 **Etichette del contratto (&quot;C&quot;)**: Le etichette di utilizzo dei dati del contratto (&quot;C&quot;) vengono utilizzate per classificare i dati che hanno obblighi contrattuali o sono correlati ai criteri di governance dei dati della tua organizzazione.
+
+**CPRA**: La [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) espande e modifica parti del [!DNL California Consumer Privacy Act (CCPA)]. La [!DNL CPRA] stabilisce una nuova base di riferimento per la privacy dei dati dei consumatori in California aumentando i diritti dei consumatori e ampliando il tipo di dati coperti da una più ampia definizione di informazioni personali sensibili. Inoltre, il [!DNL CPRA] ha istituito la California Privacy Protection Agency, una nuova agenzia dedicata all’implementazione e all’applicazione delle regole sulla privacy dei dati.
 
 **Etichetta del contratto C1**: A `C1` l’etichetta di utilizzo dei dati del contratto specifica che i dati possono essere esportati da Adobe Experience Cloud solo in un modulo aggregato senza includere identificatori di dispositivo o singoli. Ad esempio, i dati provenienti dai social network.
 
@@ -262,6 +268,8 @@ ht-degree: 0%
 
 ## H
 
+**HIPAA**: La [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) è una legge federale degli Stati Uniti creata per migliorare l&#39;efficienza sanitaria, migliorare la portabilità dell&#39;assicurazione sanitaria e proteggere la privacy dei pazienti e dei membri dei piani sanitari. Ai sensi dell&#39;HIPAA, le persone hanno il diritto di accedere alle informazioni e di modificarle e di ottenere copie delle loro cartelle cliniche o delle informazioni sanitarie. Le entità coperte e le associate commerciali delle entità coperte devono rispettare le norme HIPAA.
+
 **Host**: Nel contesto dei tag, un host specifica la posizione, il dominio e le credenziali utente necessarie affinché il sistema possa distribuire una build.
 
 **Orario**: Nel contesto delle esportazioni pianificate di file, pianifica le esportazioni incrementali di file ogni 3, 6, 8 o 12 ore.
@@ -316,6 +324,8 @@ ht-degree: 0%
 
 ## L
 
+**LGPD**: La [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) mira a regolamentare il trattamento dei dati personali di tutte le persone fisiche o fisiche in Brasile. La LGPD conferisce ai cittadini brasiliani il diritto di accedere ai propri dati personali e di cancellarli, di sapere se i propri dati personali vengono venduti o divulgati (e a chi), e il diritto di negare la possibilità di vendere i propri dati a terzi.
+
 **Libreria**: Nel contesto dei tag , una libreria è un set di regole di business che contiene istruzioni sul comportamento della libreria di tag sul dispositivo client.
 
 **Entità di ricerca**: Nel contesto della modellazione dei dati, le entità di ricerca rappresentano concetti che possono riferirsi a una singola persona, ma che non possono essere utilizzati direttamente per identificare l’individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate.
@@ -342,6 +352,8 @@ ht-degree: 0%
 
 ## N
 
+**[!DNL New Zealand Privacy Act]**: La [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controlla il modo in cui le agenzie possono raccogliere, utilizzare, divulgare, archiviare e dare accesso alle informazioni personali dei cittadini e delle organizzazioni della Nuova Zelanda. Nel 2020, l&#39;ultima versione dell&#39;atto ha introdotto importanti aggiornamenti a queste leggi sulla privacy, tra cui nuovi reati, aumento delle multe, notifiche obbligatorie per violazioni dei dati e aumento dei poteri del commissario per la privacy.
+
 **Sandbox non di produzione**: Le sandbox non di produzione sono sandbox solitamente utilizzate per esperimenti di sviluppo, test o test. A differenza delle sandbox di produzione, le sandbox non di produzione possono essere reimpostate ed eliminate.
 
 **[!DNL Notebooks]**: [!DNL Notebooks] sono creati utilizzando [!DNL Jupyter Notebook] e può essere eseguito per eseguire l’analisi dei dati.
@@ -367,6 +379,8 @@ ht-degree: 0%
 **Acquisizione parziale**: L’acquisizione parziale consente l’inserimento di record validi di dati batch entro una determinata soglia di errore. È possibile scaricare o accedere alla diagnostica degli errori per i record non riusciti in [!UICONTROL Monitoraggio] o [!UICONTROL Origini] panoramica dell’esecuzione del flusso di dati.
 
 **File di parquet**: Un file Parquet è un formato di file di archiviazione colonna con strutture di dati nidificate complesse. I file di parquet sono necessari per aggiungere dati per compilare un set di dati di schema.
+
+**PDPA**: La [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;uso o dalla divulgazione illecita dei loro dati personali. Il regolamento, ispirato al RGPD dell&#39;Unione europea, conferisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso ai loro dati personali memorizzati o la loro cancellazione.
 
 **Offerte personalizzate**: Un’offerta personalizzata è un messaggio di marketing personalizzabile basato su regole e vincoli di idoneità.
 
@@ -529,6 +543,8 @@ ht-degree: 0%
 **Schema dell&#39;unione**: Uno schema di unione è un consolidamento di schemi che condividono la stessa classe e sono stati abilitati per [!DNL Real-time Customer Profile]. Possono esistere più schemi di unione per un&#39;organizzazione, ma può esserci un solo schema di unione per classe.
 
 ## V
+
+**VCDPA**: La [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) fornisce nuovi diritti sulla privacy dei dati ai residenti della Virginia (&quot;Consumatori&quot;), compreso il diritto di accesso, cancellazione e correzione dei dati personali. I consumatori hanno anche il diritto di rinunciare alla vendita di dati personali, di rinunciare alla profilazione basata su dati personali e al trattamento di fini pubblicitari personali.
 
 ## W
 
