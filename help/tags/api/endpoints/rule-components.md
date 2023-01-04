@@ -2,10 +2,10 @@
 title: Endpoint “rule_components”
 description: Scopri come effettuare chiamate all’endpoint /rule_components nell’API di Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 99%
+source-wordcount: '1190'
+ht-degree: 96%
 
 ---
 
@@ -305,22 +305,22 @@ Per creare un nuovo componente regola devi effettuare una richiesta POST.
 **Formato API**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `RULE_ID` | `id` della regola per la quale stai definendo un componente regola. |
+| `PROPERTY_ID` | La `id` della proprietà in cui si definisce il componente della regola. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo componente per la regola specificata. La chiamata associa anche il componente regola a un’estensione esistente tramite la proprietà `relationships`. Per ulteriori informazioni, consulta la guida sulle [relazioni](../guides/relationships.md).
+La richiesta seguente crea un nuovo componente della regola. Nel payload, il `relationships` associa il componente a regole specifiche e a un&#39;estensione esistente. Per ulteriori informazioni, consulta la guida delle [relazioni](../guides/relationships.md).
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Numero intero che indica la priorità di attivazione della regola associata. |
 | `attributes.settings` | Oggetto JSON delle impostazioni rappresentato come stringa. |
 | `attributes.timeout` | Numero intero che indica il timeout dell’azione eseguita in sequenza. |
-| `relationships` | Oggetto che stabilisce le relazioni necessarie per il componente regola. Occorre stabilire due relazioni: <ol><li>`extension`: l’estensione che definisce questo componente regola. Deve essere la stessa estensione il cui pacchetto di estensione è indicato da `delegate_descriptor_id`.</li><li>`rules`: la regola in cui viene definito questo componente. Deve essere lo stesso ID regola fornito nel percorso della richiesta.</li></ol>Per informazioni più generali sulle relazioni, consulta la [guida delle relazioni](../guides/relationships.md). |
+| `relationships` | Oggetto che stabilisce le relazioni necessarie per il componente regola. Occorre stabilire due relazioni: <ol><li>`extension`: l’estensione che definisce questo componente regola. Deve essere la stessa estensione il cui pacchetto di estensione è indicato da `delegate_descriptor_id`.</li><li>`rules`: la regola in cui viene definito questo componente.</li></ol>Per informazioni più generali sulle relazioni, consulta la [guida delle relazioni](../guides/relationships.md). |
 | `type` | Tipo di risorsa da creare. Per questo endpoint, il valore deve essere `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -2,7 +2,7 @@
 title: Tipo di dati di origine B2B
 description: Questo documento fornisce una panoramica del tipo di dati XDM (B2B Source Experience Data Model).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 4%
@@ -23,7 +23,7 @@ La [!UICONTROL Origine B2B] il tipo di dati ti consente di utilizzare l’ID str
 | --- | --- | --- |
 | `sourceID` | Stringa | Un ID univoco per il record sorgente. |
 | `sourceInstanceID` | Stringa | L&#39;ID istanza o organizzazione dei dati di origine. |
-| `sourceKey` | Stringa | Un identificatore univoco composto da `sourceId`, `sourceInstanceId`e `sourceType` concatenati nel seguente formato: `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Alcuni connettori sorgente come Marketo concatenano automaticamente questo valore per alcuni identificatori. Gli altri devono essere concatenati manualmente utilizzando la variabile [Preparazione dei dati `concat` Funzione](../../data-prep/functions.md#string)ad esempio: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | Stringa | Un identificatore univoco composto da `sourceId`, `sourceInstanceId`e `sourceType` concatenati nel seguente formato: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Alcuni connettori sorgente come Marketo concatenano automaticamente questo valore per alcuni identificatori. Gli altri devono essere concatenati manualmente utilizzando la variabile [Preparazione dei dati `concat` Funzione](../../data-prep/functions.md#string)ad esempio: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Stringa | Nome della piattaforma che fornisce i dati di origine. |
 
 {style=&quot;table-layout:auto&quot;}
