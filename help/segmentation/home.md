@@ -5,16 +5,16 @@ title: Panoramica del servizio di segmentazione
 topic-legacy: overview
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] panoramica
+# Panoramica di [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] fornisce un’interfaccia utente e l’API RESTful che ti consentono di creare segmenti e generare tipi di pubblico dal tuo [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione di Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fornisce un’interfaccia utente e l’API RESTful che ti consentono di creare segmenti e generare tipi di pubblico dal tuo [!DNL Real-Time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione di Adobe.
 
 Questo documento fornisce una panoramica di [!DNL Segmentation Service] e il ruolo che gioca in Adobe Experience Platform.
 
@@ -63,7 +63,7 @@ Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazi
 
 ### Segmentazione streaming {#streaming}
 
-La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
+La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-Time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
 Per ulteriori informazioni sulla segmentazione in streaming, consulta la sezione [documentazione sulla segmentazione in streaming](./api/streaming-segmentation.md).
 
@@ -160,7 +160,7 @@ Assegnando una variabile all&#39;attributo dello stato di acquisto, il segmento 
 
 ## Segmentazione su più entità {#multi-entity}
 
-Con la funzione avanzata di segmentazione multi-entità, puoi estendere [!DNL Real-time Customer Profile] dati con dati aggiuntivi basati su prodotti, archivi o altre persone, noti anche come entità &quot;dimension&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi [!DNL Profile] archivio dati. La segmentazione su più entità offre flessibilità nell’identificazione dei tipi di pubblico in base ai dati pertinenti alle tue esigenze aziendali specifiche. Per ulteriori informazioni, compresi i casi d’uso e i flussi di lavoro, consulta [guida alla segmentazione su più entità](multi-entity-segmentation.md).
+Con la funzione avanzata di segmentazione multi-entità, puoi estendere [!DNL Real-Time Customer Profile] dati con dati aggiuntivi basati su prodotti, archivi o altre persone, noti anche come entità &quot;dimension&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi [!DNL Profile] archivio dati. La segmentazione su più entità offre flessibilità nell’identificazione dei tipi di pubblico in base ai dati pertinenti alle tue esigenze aziendali specifiche. Per ulteriori informazioni, compresi i casi d’uso e i flussi di lavoro, consulta [guida alla segmentazione su più entità](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipi di dati
 
@@ -168,7 +168,7 @@ Con la funzione avanzata di segmentazione multi-entità, puoi estendere [!DNL Re
 
 ## Passaggi successivi
 
-[!DNL Segmentation Service] fornisce un flusso di lavoro consolidato da cui creare i segmenti [!DNL Real-time Customer Profile] dati. In sintesi:
+[!DNL Segmentation Service] fornisce un flusso di lavoro consolidato da cui creare i segmenti [!DNL Real-Time Customer Profile] dati. In sintesi:
 
 - [!DNL Segmentation] è il processo di definizione di un sottoinsieme di profili dall’archivio profili, che ti consente di caratterizzare il comportamento o gli attributi di un gruppo commercializzabile desiderato. [!DNL Segmentation Service] rende possibile questo processo.
 - Durante la pianificazione di un segmento, ricorda che un segmento può essere referenziato da qualsiasi altro segmento e combinato con esso.

@@ -3,7 +3,7 @@ title: Supporto delle preferenze di consenso dei clienti tramite Adobe Experienc
 description: Scopri come supportare le preferenze di consenso con Adobe Experience Platform Web SDK.
 keywords: consenso;consenso predefinito;consenso predefinito;setConsent;gruppo di campi Privacy profilo;gruppo di campi Privacy evento esperienza;gruppo di campi Privacy;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%

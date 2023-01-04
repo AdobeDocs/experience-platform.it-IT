@@ -3,7 +3,7 @@ keywords: segmenti rtcdp;segmento rtcdp del generatore di segmenti;segmento rtcd
 title: Customer AI in Real-time Customer Data Platform
 description: Panoramica di Customer AI e di come può essere utile nella generazione di punteggi per risultati specifici, come conversioni o abbandono.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 6%
@@ -19,7 +19,7 @@ Con l’aiuto di fattori di influenza, IA per l’analisi dei clienti può dirti
 * Fornisci modelli di propensione clienti ad alta precisione per segmentazione e targeting più rigorosi.
 * Comprendere i fattori influenti e la probabilità dietro alcuni comportamenti dei clienti.
 * Fornire opzioni personalizzabili per i casi d’uso e i dati unici della tua azienda.
-* Miglioramento del profilo cliente in tempo reale con punteggi di propensione dei clienti quali abbandono e conversione.
+* Miglioramento del profilo cliente in tempo reale con punteggi di propensione del cliente come abbandono e conversione.
 * Miglioramento dei profili dei clienti con fattori influenti per i punteggi di propensione.
 * Creazione di segmenti di clienti in base a fattori influenti e punteggi di propensione.
 

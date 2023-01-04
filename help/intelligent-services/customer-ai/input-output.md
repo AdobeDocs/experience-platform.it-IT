@@ -6,10 +6,10 @@ title: Input e output in Customer AI
 topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -287,7 +287,7 @@ La tabella seguente descrive i vari attributi trovati nell’output di Customer 
 >[!NOTE]
 >
 > - Customer AI utilizza solo dati aggiornati per ulteriore formazione e valutazione. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.
-> - Customer AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i marchi devono utilizzare Platform Privacy Service per inviare richieste di accesso e cancellazione dei consumatori e rimuovere i dati dal lago dati, dal servizio Identity e dal profilo cliente in tempo reale.
+> - Customer AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i brand devono utilizzare Platform Privacy Service per inviare le richieste di accesso e cancellazione dei consumatori al fine di rimuovere i dati dal lago di dati, dal servizio Identity e dal profilo cliente in tempo reale.
 > - Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md)
 
 

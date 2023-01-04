@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un segmento di pubblico utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra per accedere
 
 >[!NOTE]
 >
->Seleziona l’icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per [!DNL Real-time Customer Profile].
+>Seleziona l’icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per [!DNL Real-Time Customer Profile].
 
 ![Viene visualizzata l’area di lavoro dei set di dati.](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -57,7 +57,7 @@ Per selezionare la [!DNL XDM Individual Profile Union Schema] per l’utilizzo n
 
 >[!NOTE]
 >
->Nonostante gli schemi di unione partecipino per definizione al Profilo del cliente in tempo reale, vengono elencati come &quot;Non abilitati&quot; a causa del fatto che non sono abilitati per il profilo allo stesso modo degli schemi tradizionali.
+>Nonostante gli schemi di unione partecipino per definizione al Profilo del cliente in tempo reale, sono elencati come &quot;Non abilitato&quot; perché non sono abilitati per il profilo allo stesso modo degli schemi tradizionali.
 
 Seleziona il pulsante di scelta accanto a **[!UICONTROL Profilo individuale XDM]**, quindi seleziona **[!UICONTROL Successivo]**.
 

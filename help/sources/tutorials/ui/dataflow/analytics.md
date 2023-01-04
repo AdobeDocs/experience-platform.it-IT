@@ -3,7 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;analytics;mixpanel
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine di Analytics nell’interfaccia utente
 description: Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine di analisi utilizzando l’interfaccia utente di Platform.
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’Editor di schema](../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
 <!-- ## Add data
@@ -140,10 +141,10 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per trasferire i dati dall’origine Analytics a Platform. I dati in arrivo possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per trasferire i dati dall’origine Analytics a Platform. I dati in arrivo possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] panoramica](../../../../data-science-workspace/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Panoramica di [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

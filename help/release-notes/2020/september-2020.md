@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -74,19 +74,19 @@ Diverse normative legali e organizzative consentono agli utenti di accedere o ca
 
 Consulta la sezione [Panoramica di Privacy Service](../../privacy-service/home.md) per ulteriori informazioni sul servizio.
 
-## Real-time Customer Profile {#profile}
+## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-Time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Visualizzatore profili | Il visualizzatore del profilo, nell’interfaccia utente di Platform, è stato aggiornato per diventare un dashboard con personalizzazione completa. L’utente ora può effettuare le seguenti attività: <ul><li>Aggiorna gli attributi standard e personalizzati selezionati nel widget informazioni di base.</li><li>Creare, modificare e rimuovere widget personalizzati</li><li>Ridimensionamento e ridisposizione dei widget</li></ul> |
 
-Per ulteriori informazioni su [!DNL Real-time Customer Profile], incluse esercitazioni e best practice per l’utilizzo di [!DNL Profile] dati, leggere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni su [!DNL Real-Time Customer Profile], incluse esercitazioni e best practice per l’utilizzo di [!DNL Profile] dati, leggere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione di Adobe.
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-Time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione di Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 

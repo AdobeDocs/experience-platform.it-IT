@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 4%
@@ -37,18 +37,18 @@ Per ulteriori informazioni, leggere il [Panoramica sulla preparazione dei dati](
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-Time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Aggiunte API di anteprima del profilo | API di anteprima del profilo (`/previewsamplestatus`) ora include la possibilità di visualizzare una suddivisione dei frammenti di profilo totali nell’organizzazione IMS e di visualizzare la distribuzione dei frammenti di profilo tra i namespace dell’identità. |
 | Aggiornamenti della visualizzazione dello schema dell&#39;unione | Nell’interfaccia utente di Experience Platform, gli utenti possono trovare più facilmente informazioni su tutti gli schemi e i set di dati che contribuiscono allo schema dell’unione, nonché attributi chiave di superficie come i campi di identità e relazione. Questi aggiornamenti migliorano la possibilità di risolvere e convalidare la corretta configurazione dei profili, la corretta unione delle identità e il corretto inserimento dei dati. |
 
-Per ulteriori informazioni su [!DNL Real-time Customer Profile], incluse esercitazioni e best practice per l’utilizzo di [!DNL Profile] dati, leggere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni su [!DNL Real-Time Customer Profile], incluse esercitazioni e best practice per l’utilizzo di [!DNL Profile] dati, leggere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione di Adobe.
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dal proprio [!DNL Real-Time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione di Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
@@ -85,7 +85,7 @@ Adobe Experience Platform consente ai team delle operazioni di marketing di crea
 
 #### Schema
 
-Aggiorna usabilità e flusso di lavoro e fornisce informazioni predefinite, standardizzazione e trasparenza dei campi chiave nelle composizioni degli schemi. Espone la derivazione dei dati per la combinazione di singoli modelli di dati rappresentati come &quot;schema di unione&quot;, fornendo informazioni sulla struttura e gli ingredienti del Profilo cliente in tempo reale.
+Aggiorna usabilità e flusso di lavoro e fornisce informazioni predefinite, standardizzazione e trasparenza dei campi chiave nelle composizioni degli schemi. Espone la derivazione dei dati per la combinazione di singoli modelli di dati rappresentati come &quot;schema di unione&quot;, fornendo informazioni sulla struttura e gli ingredienti del Profilo del cliente in tempo reale.
 
 - Aggiornamento del flusso di lavoro dello schema
    - Utilizza le scelte rapide per il tipo più comune di schemi XDM, con impostazioni automatizzate nell’editor di schemi e raccomandazioni per i gruppi di campi di schema in base agli obiettivi

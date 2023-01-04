@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;connettore sorgente di Aud
 title: Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente
 description: Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente per Adobe Audience Manager che consenta di inserire i dati relativi all’evento esperienza di consumo in Platform utilizzando l’interfaccia utente di .
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%

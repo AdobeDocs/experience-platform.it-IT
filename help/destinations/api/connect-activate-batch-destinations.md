@@ -6,7 +6,7 @@ description: Istruzioni dettagliate per utilizzare l’API del servizio Flusso p
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Se preferisci utilizzare l’interfaccia utente di Platform per connettersi a un
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di generare segmenti e generare tipi di pubblico in [!DNL Adobe Experience Platform] dal [!DNL Real-time Customer Profile] dati.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di generare segmenti e generare tipi di pubblico in [!DNL Adobe Experience Platform] dal [!DNL Real-Time Customer Profile] dati.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni batch in Platform.

@@ -1,10 +1,11 @@
 ---
 title: Dettagli dei membri della campagna aziendale XDM Dettagli gruppo di campi di schema
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli membri di Business Campaign XDM.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 4%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Una marca temporale ISO 8601 di quando la persona ha risposto per la prima volta alla campagna. |
 | `hasReachedSuccess` | [!UICONTROL Booleano] | Indica se il membro della campagna ha dato esito positivo alla conversione. |
 | `hasResponded` | [!UICONTROL Booleano] | Indica se il membro della campagna ha risposto alla campagna. |
-| `isDeleted` | [!UICONTROL Booleano] | Indica se il membro della campagna è stato eliminato nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
+| `isDeleted` | [!UICONTROL Booleano] | Indica se il membro della campagna è stato eliminato nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi nel Profilo del cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `isExhausted` | [!UICONTROL Booleano] | Indica se il membro della campagna ha esaurito tutte le interazioni della campagna. |
 | `lastStatus` | [!UICONTROL Stringa] | Ultimo stato del membro della campagna. |
 | `memberStatus` | [!UICONTROL Stringa] | Lo stato corrente del membro della campagna. |

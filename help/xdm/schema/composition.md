@@ -5,7 +5,7 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -58,7 +58,7 @@ Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:i
 
 Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola visualizzazione unificata di una singola entità. Pertanto, è importante, quando pensi agli schemi, pensare alle identità dei clienti e a quali campi può essere utilizzato per identificare un soggetto indipendentemente da dove i dati potrebbero provenire.
 
-Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL Grafico di identità]&quot; per quell&#39;individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-time Customer Profile]](../../profile/home.md) e altri [!DNL Experience Platform] servizi per fornire una vista unita di ogni singolo cliente.
+Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL Grafico di identità]&quot; per quell&#39;individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri [!DNL Experience Platform] servizi per fornire una vista unita di ogni singolo cliente.
 
 Campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot;include: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera inoltre eventuali identificatori univoci specifici per la tua organizzazione, in quanto possono essere validi &quot;[!UICONTROL Identità]&quot; anche i campi.
 
@@ -114,7 +114,7 @@ Come mostrato nell’esempio precedente, ogni chiave nel `identityMap` l&#39;ogg
 
 >[!NOTE]
 >
->Un valore booleano per indicare se il valore è un&#39;identità primaria (`primary`) può essere fornito anche per ogni valore di identità. Le identità principali devono essere impostate solo per gli schemi destinati ad essere utilizzati in [!DNL Real-time Customer Profile]. Vedi la sezione su [schemi di unione](#union) per ulteriori informazioni.
+>Un valore booleano per indicare se il valore è un&#39;identità primaria (`primary`) può essere fornito anche per ogni valore di identità. Le identità principali devono essere impostate solo per gli schemi destinati ad essere utilizzati in [!DNL Real-Time Customer Profile]. Vedi la sezione su [schemi di unione](#union) per ulteriori informazioni.
 
 ### Principi di evoluzione dello schema {#evolution}
 
@@ -136,7 +136,7 @@ La tabella seguente suddivide le modifiche supportate durante la modifica di sch
 
 ### Campi obbligatori
 
-I singoli campi dello schema possono essere [contrassegnato come obbligatorio](../ui/fields/required.md), il che significa che tutti i record acquisiti devono contenere dati in tali campi per poter passare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può essere utile per garantire che tutti i record acquisiti partecipino al Profilo del cliente in tempo reale, mentre l’impostazione di un campo di marca temporale come richiesto assicura che tutti gli eventi della serie temporale siano conservati cronologicamente.
+I singoli campi dello schema possono essere [contrassegnato come obbligatorio](../ui/fields/required.md), il che significa che tutti i record acquisiti devono contenere dati in tali campi per poter passare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può essere utile per garantire che tutti i record acquisiti partecipino al Profilo del cliente in tempo reale, mentre l’impostazione di un campo di marca temporale come richiesto assicura che tutti gli eventi della serie temporale siano conservati in modo cronologico.
 
 >[!IMPORTANT]
 >
@@ -273,7 +273,7 @@ Quando [!DNL Experience Platform] consente di comporre schemi per casi d’uso p
 
 ![](../images/schema-composition/union.png)
 
-Attivando uno schema da utilizzare con [!DNL Real-time Customer Profile], verrà incluso nell&#39;unione per quel tipo di classe. [!DNL Profile] fornisce profili affidabili e centralizzati degli attributi del cliente e un account con marca temporale di ogni evento che il cliente ha avuto in qualsiasi sistema integrato con [!DNL Platform]. [!DNL Profile] utilizza la visualizzazione unione per rappresentare questi dati e fornire una visualizzazione olistica di ogni singolo cliente.
+Attivando uno schema da utilizzare con [!DNL Real-Time Customer Profile], verrà incluso nell&#39;unione per quel tipo di classe. [!DNL Profile] fornisce profili affidabili e centralizzati degli attributi del cliente e un account con marca temporale di ogni evento che il cliente ha avuto in qualsiasi sistema integrato con [!DNL Platform]. [!DNL Profile] utilizza la visualizzazione unione per rappresentare questi dati e fornire una visualizzazione olistica di ogni singolo cliente.
 
 Per ulteriori informazioni sull’utilizzo di [!DNL Profile], vedi [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 

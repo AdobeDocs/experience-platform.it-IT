@@ -4,7 +4,7 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profili, segmenti e destinazioni in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Adobe Experience Platform fornisce informazioni importanti sul profilo, sui segm
 
 ## Guida introduttiva a [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] supporta gli esperti di marketing nell’acquisire informazioni dai propri dati consentendo l’utilizzo di SQL standard per eseguire query sui dati nel data lake. [!DNL Query Service] offre un’interfaccia utente e un’API che possono essere utilizzate per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovi set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’inserimento in Profilo cliente in tempo reale.
+Adobe Experience Platform [!DNL Query Service] supporta gli esperti di marketing nell’acquisire informazioni dai propri dati consentendo l’utilizzo di SQL standard per eseguire query sui dati nel data lake. [!DNL Query Service] offre un’interfaccia utente e un’API che possono essere utilizzate per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovi set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’inserimento nel Profilo cliente in tempo reale.
 
 Per ulteriori informazioni [!DNL Query Service] e il suo ruolo all&#39;interno dell&#39;Experience Platform, si prega di iniziare leggendo il [[!DNL Query Service] panoramica](../query-service/home.md).
 

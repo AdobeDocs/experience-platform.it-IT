@@ -5,7 +5,8 @@ title: Creare un flusso di dati utilizzando un’origine di consenso e preferenz
 topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine di consenso e preferenze utilizzando l’interfaccia utente di Platform.
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -28,7 +29,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’Editor di schema](../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
 ## Aggiungi dati
@@ -142,10 +143,10 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per trasferire i dati dall’origine di consenso e preferenze a Platform. I dati in arrivo possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per trasferire i dati dall’origine di consenso e preferenze a Platform. I dati in arrivo possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] panoramica](../../../../data-science-workspace/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Panoramica di [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

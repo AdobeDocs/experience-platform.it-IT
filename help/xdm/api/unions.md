@@ -5,7 +5,7 @@ title: Endpoint API Unions
 description: L’endpoint /sindacati nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi di unione XDM nell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Endpoint Unions
 
-Le unioni (o visualizzazioni di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Le unioni (o visualizzazioni di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 Questo documento descrive i concetti essenziali per lavorare con i sindacati nell’API del Registro di sistema dello schema, incluse le chiamate di esempio per varie operazioni. Per informazioni più generali sui sindacati in XDM, consulta la sezione sui sindacati in [nozioni di base sulla composizione dello schema](../schema/composition.md#union).
 

@@ -5,7 +5,7 @@ title: Panoramica origine di Audience Manager
 topic-legacy: overview
 description: L’origine Adobe Audience Manager invia ad Adobe Experience Platform i dati di prime parti raccolti in Audience Manager.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -83,5 +83,5 @@ Puoi anche verificare l’utilizzo del profilo disponibile per il tuo account tr
 | Dati Audience Manager | Tipo | Latenza | Note |
 | --- | --- | --- | --- |
 | Dati in tempo reale | Eventi | &lt;25 minuti | Tempo dall&#39;acquisizione sul nodo Audience Manager Edge per la visualizzazione nel data lake. |
-| Dati in tempo reale | Aggiornamenti del profilo | &lt;10 minuti | Tempo di atterraggio nel Profilo del cliente in tempo reale. |
-| Dati in tempo reale e onboarded | Aggiornamenti del profilo | da 24 a 36 ore | Tempo dall’acquisizione tramite dati DCS/PCS Edge e dati onboarded, dall’elaborazione a un profilo utente, fino alla visualizzazione in Profilo cliente in tempo reale. Attualmente, questi dati non arrivano direttamente nel lago dati. L’opzione di attivazione del profilo può essere abilitata, ad Audience Manager, per i set di dati Profilo per l’acquisizione diretta di tali dati nel Profilo cliente in tempo reale. |
+| Dati in tempo reale | Aggiornamenti del profilo | &lt;10 minuti | È ora di iniziare il Profilo del cliente in tempo reale. |
+| Dati in tempo reale e onboarded | Aggiornamenti del profilo | da 24 a 36 ore | Tempo dall’acquisizione tramite dati DCS/PCS Edge e dati onboarded, dall’elaborazione a un profilo utente, fino alla visualizzazione nel Profilo cliente in tempo reale. Attualmente, questi dati non arrivano direttamente nel lago dati. L’opzione di attivazione del profilo può essere abilitata, ad Audience Manager, per i set di dati Profilo per acquisire questi dati direttamente nel Profilo cliente in tempo reale. |

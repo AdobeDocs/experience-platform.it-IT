@@ -5,7 +5,7 @@ title: Endpoint API per le classi
 description: L’endpoint /classes nell’API del Registro di sistema dello schema consente di gestire in modo programmatico le classi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 4%
@@ -255,7 +255,7 @@ Una risposta corretta restituisce i dettagli della classe. I campi restituiti di
 >
 >Quando si compone uno schema basato su una classe personalizzata definita dall&#39;utente, non è possibile utilizzare gruppi di campi standard. Ogni gruppo di campi definisce le classi con le quali è compatibile `meta:intendedToExtend` attributo. Una volta iniziato a definire gruppi di campi compatibili con la nuova classe, utilizzando `$id` della tua nuova classe `meta:intendedToExtend` campo del gruppo di campi), sarà possibile riutilizzare tali gruppi di campi ogni volta che si definisce uno schema che implementa la classe definita. Consulta le sezioni [creazione di gruppi di campi](./field-groups.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide dei punti finali per ulteriori informazioni.
 >
->Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è anche importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se si desidera includere uno schema di classe personalizzato nell&#39;unione per un&#39;altra classe come [!UICONTROL Profilo individuale XDM] o [!UICONTROL ExperienceEvent XDM], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Guarda l’esercitazione su [creazione di una relazione tra due schemi nell’API](../tutorials/relationship-api.md) per ulteriori informazioni.
+>Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se si desidera includere uno schema di classe personalizzato nell&#39;unione per un&#39;altra classe come [!UICONTROL Profilo individuale XDM] o [!UICONTROL ExperienceEvent XDM], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Guarda l’esercitazione su [creazione di una relazione tra due schemi nell’API](../tutorials/relationship-api.md) per ulteriori informazioni.
 
 **Formato API**
 

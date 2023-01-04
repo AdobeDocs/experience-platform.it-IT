@@ -5,7 +5,7 @@ title: Elaborazione del consenso in Adobe Experience Platform
 topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Questa guida richiede una comprensione approfondita dei vari servizi di Experien
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
 * [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
-* [Profilo cliente in tempo reale](../../../../profile/home.md): Usi [!DNL Identity Service] funzionalità per creare profili cliente dettagliati dai set di dati in tempo reale. Il profilo cliente in tempo reale richiama i dati dal Data Lake e persiste nei profili cliente nel proprio archivio dati separato.
+* [Profilo cliente in tempo reale](../../../../profile/home.md): Usi [!DNL Identity Service] funzionalità per creare profili cliente dettagliati dai set di dati in tempo reale. Il profilo cliente in tempo reale estrae i dati dal Data Lake e persiste nei profili cliente nel proprio archivio dati separato.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): Libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto ai clienti.
    * [Comandi di consenso SDK](../../../../edge/consent/supporting-consent.md): Panoramica del caso d’uso dei comandi SDK relativi al consenso visualizzati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](../../../../segmentation/home.md): Consente di dividere i dati Profilo cliente in tempo reale in gruppi di persone che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente nell’interfaccia utente per inserire in Adobe Experience Platform i dati del profilo degli attributi del cliente.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%
@@ -76,7 +76,7 @@ La [!UICONTROL Revisione] viene visualizzato un passaggio che consente di rivede
 
 ## Passaggi successivi
 
-Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell’acquisizione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i seguenti documenti:
+Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell’acquisizione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-Time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Panoramica di [!DNL Segmentation Service]](../../../../../segmentation/home.md)

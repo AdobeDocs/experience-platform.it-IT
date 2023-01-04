@@ -5,10 +5,10 @@ title: Gruppo di campi di consenso IAB TCF 2.0 per gli schemi di eventi
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema di consenso IAB TCF 2.0 per la classe ExperienceEvent XDM.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

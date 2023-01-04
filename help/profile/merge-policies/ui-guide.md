@@ -4,7 +4,7 @@ title: Guida all’interfaccia utente per i criteri di unione
 type: Documentation
 description: Quando si riuniscono dati provenienti da più origini in Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare la visualizzazione unificata. Questa guida fornisce istruzioni passo per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Per ulteriori informazioni sui criteri di unione e sul loro ruolo nell&#39;Exper
 Questa guida richiede una comprensione operativa di diverse importanti [!DNL Experience Platform] funzionalità. Prima di seguire questa guida, consulta la documentazione relativa ai seguenti servizi:
 
 * [Profilo cliente in tempo reale](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): Abilita il profilo del cliente in tempo reale collegando le identità da diverse origini dati in cui viene effettuato l’acquisizione [!DNL Platform].
+* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): Abilita il profilo del cliente in tempo reale collegando le identità di diverse origini dati in cui viene effettuato l’acquisizione [!DNL Platform].
 * [Experience Data Model (XDM)](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
 
 ## Visualizza criteri di unione {#view-merge-policies}

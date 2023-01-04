@@ -6,14 +6,14 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1929'
 ht-degree: 5%
 
 ---
 
-# Guardrail predefiniti per [!DNL Real-time Customer Profile] dati
+# Guardrail predefiniti per [!DNL Real-Time Customer Profile] dati
 
 Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su insights comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello dati ibrido altamente denormalizzato che differisce dal modello dati relazionale tradizionale.
 
@@ -27,7 +27,7 @@ In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tass
 
 I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei dati del profilo cliente in tempo reale:
 
-* [[!DNL Real-time Customer Profile]](home.md): Crea profili di consumatore unificati utilizzando dati provenienti da più sorgenti.
+* [[!DNL Real-Time Customer Profile]](home.md): Crea profili di consumatore unificati utilizzando dati provenienti da più sorgenti.
 * [Identità](../identity-service/home.md): Collega le identità di diverse origini dati durante l’acquisizione in Platform.
 * [Schemi](../xdm/home.md): Gli schemi Experience Data Model (XDM) sono il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
 * [Segmenti](../segmentation/home.md): Il motore di segmentazione all’interno di Platform viene utilizzato per creare segmenti dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
@@ -124,9 +124,9 @@ Questa sezione fornisce ulteriori dettagli sui limiti contenuti in questo docume
 
 La [!DNL Profile] il modello di dati store è costituito da due tipi di entità principali:
 
-* **Entità principale:** Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
+* **Entità principale:** Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-Time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
 
-   Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
+   Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-Time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
 
    ![Un&#39;infografica che descrive le differenze tra i dati dei record e i dati delle serie temporali.](images/guardrails/profile-entity.png)
 

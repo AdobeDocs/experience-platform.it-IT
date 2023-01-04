@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente per il sistema locale per portare i file locali in Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’Editor di schema](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Caricare file locali in Platform
 
@@ -86,10 +86,10 @@ Una volta pronti i set di mappatura, seleziona **[!UICONTROL Fine]** e consente 
 
 ![mappatura](../../../../images/tutorials/create/local/mapping.png)
 
-## Monitorare l’acquisizione di dati
+## Monitoraggio dell’acquisizione di dati
 
 Una volta mappato e creato il file CSV, puoi monitorare i dati che vengono acquisiti tramite il dashboard di monitoraggio. Per ulteriori informazioni, consulta l’esercitazione su [monitoraggio dei flussi di dati di origini nell’interfaccia utente](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai mappato correttamente un file CSV flat in uno schema XDM e lo hai acquisito in Platform. Questi dati possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-time Customer Profile]. Consulta la panoramica di [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) per ulteriori informazioni.
+Seguendo questa esercitazione, hai mappato correttamente un file CSV flat in uno schema XDM e lo hai acquisito in Platform. Questi dati possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-Time Customer Profile]. Consulta la panoramica di [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) per ulteriori informazioni.

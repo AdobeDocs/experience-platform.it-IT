@@ -5,7 +5,7 @@ title: Panoramica dell’interfaccia utente di Experience Platform
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 1%
@@ -148,7 +148,7 @@ La **[!UICONTROL Modelli]** questa sezione consente di utilizzare l’apprendime
 
 La **[!UICONTROL Servizi]** questa sezione ti consente di gestire i modelli pubblicati per la formazione e il punteggio pianificati oppure di utilizzare i servizi intelligenti di Adobe, un set di servizi AI che offrono esperienze cliente personalizzate in tempo reale. Per ulteriori informazioni sulla sezione Servizi, consulta la sezione [Esercitazione sulla pubblicazione di un modello come servizio](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
-### [!UICONTROL Gestione dati]
+### [!UICONTROL Gestione dei dati]
 
 La **[!UICONTROL Schemi]** Questa sezione ti consente di creare e gestire gli schemi Experience Data Model (XDM). Per ulteriori informazioni sugli schemi, consulta l’esercitazione su [creazione di uno schema](../xdm/tutorials/create-schema-ui.md). Ulteriori informazioni su XDM sono disponibili nella sezione [Panoramica del sistema XDM](../xdm/home.md).
 

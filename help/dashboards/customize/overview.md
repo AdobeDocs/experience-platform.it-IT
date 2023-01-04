@@ -3,7 +3,7 @@ keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;da
 title: Panoramica sulla personalizzazione del dashboard
 description: Ulteriori informazioni sui modi in cui è possibile personalizzare i dati visualizzati nelle dashboard di Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%

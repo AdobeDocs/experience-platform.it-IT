@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Panoramica sul controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato sugli attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 3%
@@ -104,7 +104,7 @@ Come parte del controllo dell&#39;accesso basato sugli attributi, il `view-ident
 
 Per ulteriori informazioni su [!DNL Identity Service], fare riferimento alla [[!DNL Identity Service] panoramica](../../identity-service/home.md).
 
-### Real-time Customer Profile
+### Profilo cliente in tempo reale
 
 Platform ti consente di distribuire esperienze coordinate, coerenti e rilevanti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei tuoi clienti diversi in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 

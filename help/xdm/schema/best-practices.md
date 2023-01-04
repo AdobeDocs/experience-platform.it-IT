@@ -5,10 +5,10 @@ title: Best Practice Per La Modellazione Dei Dati
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2699'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -86,8 +86,8 @@ Se desideri analizzare in che modo determinati attributi all’interno di un’e
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | Ott 1, 10:32 |
 | 1234567 | Rimuovi | 275098 | 1 | Ott 1, 10:33 |
-| 1234567 | Aggiungi | 486502 | 1 | Ott 1, 10:41 |
-| 1234567 | Aggiungi | 910482 | 5 | 3 ottobre, 2:15 PM |
+| 1234567 | Add | 486502 | 1 | Ott 1, 10:41 |
+| 1234567 | Add | 910482 | 5 | 3 ottobre, 2:15 PM |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,7 +205,7 @@ Se non sei sicuro se un particolare campo sia necessario per essere incluso in u
 
 ### Campi di identità
 
-Ad Experience Platform, i campi XDM contrassegnati come identità vengono utilizzati per unire le informazioni sui singoli clienti provenienti da più origini dati. Anche se uno schema può avere più campi contrassegnati come identità, è necessario definire una singola identità primaria affinché lo schema sia abilitato per l&#39;utilizzo in [!DNL Real-time Customer Profile]. Vedi la sezione su [campi di identità](./composition.md#identity) nelle nozioni di base sulla composizione dello schema per informazioni più dettagliate sul caso d’uso di questi campi.
+Ad Experience Platform, i campi XDM contrassegnati come identità vengono utilizzati per unire le informazioni sui singoli clienti provenienti da più origini dati. Anche se uno schema può avere più campi contrassegnati come identità, è necessario definire una singola identità primaria affinché lo schema sia abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile]. Vedi la sezione su [campi di identità](./composition.md#identity) nelle nozioni di base sulla composizione dello schema per informazioni più dettagliate sul caso d’uso di questi campi.
 
 Durante la progettazione degli schemi, qualsiasi chiave primaria nelle tabelle di database relazionali sarà probabilmente candidato per le identità principali. Altri esempi di campi di identità applicabili sono gli indirizzi e-mail dei clienti, i numeri di telefono, gli ID account e [ECID](../../identity-service/ecid.md).
 

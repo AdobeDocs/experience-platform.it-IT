@@ -5,7 +5,7 @@ title: Panoramica del sistema XDM
 topic-legacy: overview
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), basato su un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 0%
@@ -114,15 +114,15 @@ Una volta creato uno schema e creato un set di dati che fa riferimento a tale sc
 
 Fai riferimento a [Panoramica del servizio query](../query-service/home.md) per ulteriori informazioni sul servizio.
 
-### Real-time Customer Profile
+### Profilo cliente in tempo reale
 
 Profilo cliente in tempo reale fornisce un profilo consumatore centralizzato per una gestione delle esperienze mirata e personalizzata. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché account con marca temporale utilizzabili per eventi che coinvolgono il singolo utente che si sono verificati in uno dei sistemi utilizzati con Experience Platform.
 
-Profilo cliente in tempo reale utilizza dati formattati per schema in base al [!UICONTROL Profilo individuale XDM] e [!UICONTROL ExperienceEvent XDM] e risponde alle query basate su tali dati. Il profilo non supporta l’utilizzo di schemi basati su altre classi.
+Profilo cliente in tempo reale consuma dati formattati in base allo schema [!UICONTROL Profilo individuale XDM] e [!UICONTROL ExperienceEvent XDM] e risponde alle query basate su tali dati. Il profilo non supporta l’utilizzo di schemi basati su altre classi.
 
 Il sistema mantiene un&#39;istanza di ciascun profilo cliente, unendo i dati per formare una &quot;singola fonte di verità&quot; per l&#39;individuo. Questi dati unificati vengono rappresentati utilizzando uno &quot;schema di unione&quot; (a volte denominato &quot;visualizzazione di unione&quot;). Uno schema di unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema.  Quando si compone uno schema utilizzando l’interfaccia utente o l’API, è possibile abilitare lo schema per l’utilizzo con Profilo cliente in tempo reale e assegnare tag per l’inclusione nell’unione. Lo schema con tag partecipa quindi alla definizione dello schema da inviare al profilo.
 
-Come [!UICONTROL Profilo individuale XDM] e [!UICONTROL ExperienceEvent XDM] i dati vengono acquisiti nel Data Lake, il Profilo cliente in tempo reale acquisisce tutti i dati abilitati per il suo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
+Come [!UICONTROL Profilo individuale XDM] e [!UICONTROL ExperienceEvent XDM] i dati vengono acquisiti nel Data Lake, il Profilo cliente in tempo reale acquisisce tutti i dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
 
 [!UICONTROL Profilo individuale XDM] i dati consentono di informare e abilitare le azioni su qualsiasi canale o integrazione di prodotti Adobe. Se associati a una ricca cronologia dei dati comportamentali e interattivi, questi dati possono essere utilizzati per potenziare l&#39;apprendimento automatico. L’API del profilo cliente in tempo reale può essere utilizzata anche per arricchire le funzionalità di soluzioni di terze parti, CRM e soluzioni proprietarie.
 

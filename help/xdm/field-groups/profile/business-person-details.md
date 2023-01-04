@@ -2,10 +2,10 @@
 title: Gruppo di campi di schema Dettagli persona aziendale XDM
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli persona commerciale XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -47,13 +47,13 @@ ht-degree: 4%
 | `mobilePhone` | [Numero di telefono](../../data-types/phone-number.md) | Il numero di cellulare della persona. |
 | `otherAddress` | [Indirizzo postale](../../data-types/postal-address.md) | Indirizzo alternativo della persona. |
 | `otherPhone` | [Numero di telefono](../../data-types/phone-number.md) | Un numero di telefono alternativo per la persona. |
-| `person` | [Utente](../../data-types/person.md) | Un singolo attore, contatto o proprietario. |
+| `person` | [Persona](../../data-types/person.md) | Un singolo attore, contatto o proprietario. |
 | `personalEmail` | [Indirizzo e-mail](../../data-types/email-address.md) | Indirizzo e-mail personale della persona. |
 | `workAddress` | [Indirizzo postale](../../data-types/postal-address.md) | L&#39;indirizzo di lavoro della persona. |
 | `workEmail` | [Indirizzo e-mail](../../data-types/email-address.md) | Indirizzo e-mail aziendale della persona. |
 | `workPhone` | [Numero di telefono](../../data-types/phone-number.md) | Il numero di telefono del lavoro della persona. |
 | `identityMap` | Mappa | Campo mappa contenente un set di identità con spazi dei nomi per la persona. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Vedi la sezione sulle mappe di identità nel [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul relativo caso d’uso. |
-| `isDeleted` | Booleano | Indica se la persona è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
+| `isDeleted` | Booleano | Indica se la persona è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi nel Profilo del cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `organizations` | Matrice di stringhe | Un elenco di nomi di organizzazioni in cui la persona lavora. |
 
 {style=&quot;table-layout:auto&quot;}

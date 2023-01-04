@@ -6,7 +6,7 @@ title: Scopri informazioni approfondite con Customer AI
 topic-legacy: Discovering insights
 description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
@@ -145,7 +145,7 @@ Inoltre, utilizzando i drill-down, puoi confrontare un fattore di distribuzione 
 
 Puoi notare che i profili con bassa propensione alla conversione hanno meno probabilità di aver effettuato una visita recente alle pagine web adobe.com. Il fattore &quot;Giorni dall’ultima visita web&quot; ha una copertura solo dell’8% rispetto al 26% nei profili di propensione medi. Utilizzando questi numeri, puoi confrontare la distribuzione all’interno di ciascun bucket per il fattore. Queste informazioni possono essere utilizzate per dedurre che la recency nella visita web non è così influente nel bucket di bassa propensione, come è nel secchio di media propensione.
 
-### Creare un segmento
+### Crea un segmento
 
 Selezione della **[!UICONTROL Crea segmento]** in uno qualsiasi dei bucket per la propensione bassa, media e alta ti reindirizzerà al generatore di segmenti.
 
@@ -155,7 +155,7 @@ Selezione della **[!UICONTROL Crea segmento]** in uno qualsiasi dei bucket per l
 
 ![Fai clic su Crea segmento](../images/insights/influential-factors-create-segment.png)
 
-![Creare un segmento](../images/insights/create-segment.png)
+![Crea un segmento](../images/insights/create-segment.png)
 
 Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Crea segmento]** dalla pagina Approfondimenti , Customer AI aggiunge automaticamente al segmento le informazioni sui bucket selezionati. Per completare la creazione del segmento, compila semplicemente il **Nome** e **Descrizione** contenitori situati nella barra a destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato un nome e una descrizione al segmento, seleziona **[!UICONTROL Salva]** in alto a destra.
 

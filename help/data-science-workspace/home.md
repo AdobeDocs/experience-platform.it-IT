@@ -5,7 +5,7 @@ title: Panoramica di Data Science Workspace
 topic-legacy: overview
 description: Questa guida fornisce una panoramica dei concetti chiave relativi a Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Con [!DNL Data Science Workspace], gli esperti di dati possono semplificare il p
 
 I dati sono la pietra angolare dell’intelligenza artificiale e dell’apprendimento automatico.
 
-[!DNL Data Science Workspace] è completamente integrato con Adobe Experience Platform, incluso Data Lake, [!DNL Real-time Customer Profile]e [!DNL Unified Edge]. Esplora contemporaneamente tutti i dati organizzativi archiviati in Adobe Experience Platform, insieme ai grandi dati comuni e alle librerie di apprendimento profondo, come [!DNL Spark] ML e [!DNL TensorFlow]. Se non trovi ciò che ti serve, acquisisci i set di dati personalizzati utilizzando lo schema standardizzato XDM.
+[!DNL Data Science Workspace] è completamente integrato con Adobe Experience Platform, incluso Data Lake, [!DNL Real-Time Customer Profile]e [!DNL Unified Edge]. Esplora contemporaneamente tutti i dati organizzativi archiviati in Adobe Experience Platform, insieme ai grandi dati comuni e alle librerie di apprendimento profondo, come [!DNL Spark] ML e [!DNL TensorFlow]. Se non trovi ciò che ti serve, acquisisci i set di dati personalizzati utilizzando lo schema standardizzato XDM.
 
 ### Ricette di apprendimento automatico precompilate
 

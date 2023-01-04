@@ -5,7 +5,7 @@ title: Endpoint API per i processi di segmento
 topic-legacy: developer guide
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire i processi di segmento a livello di programmazione per la tua organizzazione.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Endpoint per processi di segmento
 
-Un processo di segmento è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a un [definizione del segmento](./segment-definitions.md), nonché [criteri di unione](../../profile/api/merge-policies.md) controllo [!DNL Real-time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico.
+Un processo di segmento è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a un [definizione del segmento](./segment-definitions.md), nonché [criteri di unione](../../profile/api/merge-policies.md) controllo [!DNL Real-Time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico.
 
 Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per l’esecuzione di azioni di base tramite l’API.
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;Adobe Campaign Managed Cloud Services;campagna;servizi gestiti per campagne
 title: Adobe Campaign Managed Cloud Services
 description: Scopri come collegare Cloud Services gestiti di Campaign a Platform utilizzando l’interfaccia utente di
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -61,7 +62,7 @@ Quindi, crea uno schema ExperienceEvent XDM per i registri di consegna e di trac
 
 >[!NOTE]
 >
->Lo schema ExperienceEvent XDM deve essere abilitato per il profilo per acquisire i dati Campaign in [!DNL Real-time Customer Profile].
+>Lo schema ExperienceEvent XDM deve essere abilitato per il profilo per acquisire i dati Campaign in [!DNL Real-Time Customer Profile].
 
 Per istruzioni dettagliate su come creare uno schema, consulta la guida in [creazione di uno schema XDM nell’interfaccia utente](../../../xdm/tutorials/create-schema-ui.md).
 

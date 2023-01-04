@@ -2,7 +2,7 @@
 title: Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -69,7 +69,7 @@ A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni sche
 
 Lo schema di origine &quot;[!DNL Opportunities]&quot; si basa sul [!UICONTROL Opportunità aziendali XDM] classe. Uno dei campi forniti dalla classe, `opportunityKey`, funge da identificatore per lo schema. In particolare, `sourceKey` campo `opportunityKey` viene impostato come identità principale dello schema in uno spazio dei nomi personalizzato denominato [!DNL B2B Opportunity].
 
-Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-time Customer Profile].
+Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
 ![Schema opportunità](../images/tutorials/relationship-b2b/opportunities.png)
 

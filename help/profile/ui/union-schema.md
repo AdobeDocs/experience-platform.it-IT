@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Nell’interfaccia utente di Adobe Experience Platform è possibile visualizzare facilmente qualsiasi schema di unione all’interno dell’organizzazione e visualizzare in anteprima i campi, le identità, le relazioni e gli schemi che contribuiscono a una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione utilizzando l’interfaccia utente di Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -20,15 +20,15 @@ Nell’interfaccia utente di Adobe Experience Platform è possibile visualizzare
 
 Questa guida all’interfaccia utente richiede una comprensione dei vari [!DNL Experience Platform] servizi relativi alla gestione dei dati del profilo cliente in tempo reale. Prima di leggere questa guida o di lavorare nell’interfaccia utente, controlla la documentazione relativa ai seguenti servizi:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-time Customer Profile] colmando le identità provenienti da fonti di dati diverse che vengono ingerite in [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-Time Customer Profile] colmando le identità provenienti da fonti di dati diverse che vengono ingerite in [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
 
 ## Informazioni sugli schemi di unione
 
-Profilo cliente in tempo reale consente di creare profili solidi e centralizzati contenenti gli attributi del cliente e gli eventi con marca temporale per ciascuna interazione del cliente tra sistemi integrati con Adobe Experience Platform. Il formato e la struttura di questi dati vengono forniti dagli schemi Experience Data Model (XDM), in cui ogni schema è basato su una classe XDM e contiene campi compatibili con tale classe.
+Il Profilo del cliente in tempo reale consente di creare profili solidi e centralizzati contenenti gli attributi del cliente e gli eventi con marca temporale per ciascuna interazione del cliente tra sistemi integrati con Adobe Experience Platform. Il formato e la struttura di questi dati vengono forniti dagli schemi Experience Data Model (XDM), in cui ogni schema è basato su una classe XDM e contiene campi compatibili con tale classe.
 
-Gli schemi possono essere creati per più casi d’uso, facendo riferimento alla stessa classe ma contenendo campi specifici per il loro utilizzo. Quando uno schema è abilitato per Profilo, diventa parte di uno schema di unione. In altre parole, gli schemi di unione sono composti da più schemi che condividono la stessa classe e sono stati abilitati per Profilo. Lo schema di unione consente di visualizzare una combinazione di tutti i campi contenuti negli schemi che condividono la stessa classe. Real-time Customer Profile utilizza lo schema di unione per creare una visualizzazione olistica di ogni cliente.
+Gli schemi possono essere creati per più casi d’uso, facendo riferimento alla stessa classe ma contenendo campi specifici per il loro utilizzo. Quando uno schema è abilitato per Profilo, diventa parte di uno schema di unione. In altre parole, gli schemi di unione sono composti da più schemi che condividono la stessa classe e sono stati abilitati per Profilo. Lo schema di unione consente di visualizzare una combinazione di tutti i campi contenuti negli schemi che condividono la stessa classe. Profilo cliente in tempo reale utilizza lo schema unione per creare una visualizzazione olistica di ogni singolo cliente.
 
 Per lavorare con gli schemi di unione è necessario comprendere a fondo gli schemi XDM. Per ulteriori informazioni, si prega di iniziare leggendo il [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md).
 

@@ -5,7 +5,7 @@ title: Glossario Adobe Experience Platform
 topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7919'
 ht-degree: 0%
@@ -278,7 +278,7 @@ ht-degree: 0%
 
 **Identità**: Un’identità è un identificatore che rappresenta in modo univoco un singolo cliente, ad esempio un ID cookie, un ID dispositivo o un ID e-mail.
 
-**Campi di identità**: I campi di identità sono campi XDM utilizzati per unire informazioni sui singoli clienti provenienti da più origini dati. Affinché lo schema sia abilitato per l’utilizzo in Profilo cliente in tempo reale, è necessario definire una singola identità principale.
+**Campi di identità**: I campi di identità sono campi XDM utilizzati per unire informazioni sui singoli clienti provenienti da più origini dati. Affinché lo schema sia abilitato per l’utilizzo nel profilo cliente in tempo reale, è necessario definire una singola identità primaria.
 
 **Etichette di identità (&quot;I&quot;)**: Le etichette di utilizzo dei dati di identità (&quot;I&quot;) vengono utilizzate per classificare i dati che possono identificare o contattare una persona specifica.
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
 **Azione di marketing**: Nel framework di governance dei dati, un’azione di marketing (nota anche come caso d’uso del marketing) è un’azione eseguita da un consumatore di dati di Experience Platform, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-**Metodo Merge**: Quando si definisce un criterio di unione utilizzando l’interfaccia utente di Platform, il metodo di unione specifica la priorità dei frammenti di dati in caso di conflitto. Quando si utilizza l’API Profilo cliente in tempo reale per definire un criterio di unione, il metodo di unione viene determinato utilizzando la variabile `attributeMerge` oggetto.
+**Metodo Merge**: Quando si definisce un criterio di unione utilizzando l’interfaccia utente di Platform, il metodo di unione specifica la priorità dei frammenti di dati in caso di conflitto. Quando si utilizza l&#39;API del profilo cliente in tempo reale per definire un criterio di unione, il metodo di unione viene determinato utilizzando il `attributeMerge` oggetto.
 
 **Criteri di unione**: I criteri di unione sono regole utilizzate da Experience Platform per determinare in che modo i frammenti di dati del cliente provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina quali dati devono avere la priorità per l’inclusione nel profilo.
 
@@ -430,7 +430,7 @@ ht-degree: 0%
 
 **Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale nel percorso cliente digitale.
 
-**Profilo cliente in tempo reale**: Il Profilo cliente in tempo reale (talvolta denominato Profilo) fornisce una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in profili individuali offrendo account con marca temporale e fruibili per ogni interazione con il cliente.
+**Profilo cliente in tempo reale**: Il profilo cliente in tempo reale (talvolta denominato Profilo) fornisce una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, tra cui online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in profili individuali offrendo account con marca temporale e fruibili per ogni interazione con il cliente.
 
 **Ricetta**: Una ricetta è un termine Adobe per una specifica di modello ed è un contenitore principale che rappresenta specifici processi di apprendimento automatico, algoritmi AI, logica di elaborazione e parametri di configurazione necessari per creare ed eseguire un modello qualificato e quindi contribuire a risolvere specifici problemi di business.
 
@@ -522,9 +522,9 @@ ht-degree: 0%
 
 **Acquisizione in streaming**: L’acquisizione in streaming ti consente di inviare in tempo reale dati da dispositivi lato client e lato server all’Experience Platform.
 
-**Segmentazione streaming**: La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
+**Segmentazione streaming**: La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all’attività dell’utente. Una volta generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-Time Customer Profile]. Gli aggiornamenti e le rimozioni dei segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
-**Vista di sistema**: La Vista sistema è una rappresentazione visiva dei set di dati di origine che scorrono [!DNL Real-time Customer Profile] verso le destinazioni.
+**Vista di sistema**: La Vista sistema è una rappresentazione visiva dei set di dati di origine che scorrono [!DNL Real-Time Customer Profile] verso le destinazioni.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 0%
 
 ## U
 
-**Schema dell&#39;unione**: Uno schema di unione è un consolidamento di schemi che condividono la stessa classe e sono stati abilitati per [!DNL Real-time Customer Profile]. Possono esistere più schemi di unione per un&#39;organizzazione, ma può esserci un solo schema di unione per classe.
+**Schema dell&#39;unione**: Uno schema di unione è un consolidamento di schemi che condividono la stessa classe e sono stati abilitati per [!DNL Real-Time Customer Profile]. Possono esistere più schemi di unione per un&#39;organizzazione, ma può esserci un solo schema di unione per classe.
 
 ## V
 

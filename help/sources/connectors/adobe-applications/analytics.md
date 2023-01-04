@@ -3,14 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;Connettore origine Analyti
 title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1014'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Connettore sorgente Adobe Analytics per i dati della suite di rapporti
+# Connettore di origine di Adobe Analytics per i dati della suite di rapporti
 
 Adobe Experience Platform consente di acquisire i dati di Adobe Analytics tramite il connettore di origine di Analytics. La [!DNL Analytics] dati del connettore di origine raccolti da [!DNL Analytics] su Platform in tempo reale, conversione in formato SCDS [!DNL Analytics] dati [!DNL Experience Data Model] (XDM) campi da utilizzare in Platform.
 
@@ -18,11 +18,11 @@ Questo documento fornisce una panoramica di [!DNL Analytics] e descrive i casi d
 
 ## Dati di Adobe Analytics e Analytics
 
-[!DNL Analytics] è un motore potente che ti aiuta a scoprire di più sui tuoi clienti, su come interagiscono con le tue proprietà web, su dove le tue spese di marketing digitale sono efficaci e individua le aree di miglioramento. [!DNL Analytics] gestisce migliaia di miliardi di transazioni web all&#39;anno e [!DNL Analytics] il connettore di origine ti consente di sfruttare facilmente questi ricchi dati comportamentali e di arricchire il [!DNL Real-time Customer Profile] in pochi minuti.
+[!DNL Analytics] è un motore potente che ti aiuta a scoprire di più sui tuoi clienti, su come interagiscono con le tue proprietà web, su dove le tue spese di marketing digitale sono efficaci e individua le aree di miglioramento. [!DNL Analytics] gestisce migliaia di miliardi di transazioni web all&#39;anno e [!DNL Analytics] il connettore di origine ti consente di sfruttare facilmente questi ricchi dati comportamentali e di arricchire il [!DNL Real-Time Customer Profile] in pochi minuti.
 
 ![](./images/analytics-data-experience-platform.png)
 
-Ad alto livello, [!DNL Analytics] raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Una volta che i dati grezzi hanno superato questa elaborazione leggera, vengono considerati pronti per il consumo da [!DNL Real-time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono micro-batch e acquisiti in set di dati Platform per consumo da [!DNL Data Science Workspace], [!DNL Query Service]e altre applicazioni di data discovery.
+Ad alto livello, [!DNL Analytics] raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Una volta che i dati grezzi hanno superato questa elaborazione leggera, vengono considerati pronti per il consumo da [!DNL Real-Time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono micro-batch e acquisiti in set di dati Platform per consumo da [!DNL Data Science Workspace], [!DNL Query Service]e altre applicazioni di data discovery.
 
 Consulta la sezione [panoramica delle regole di elaborazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) per ulteriori informazioni sulle regole di elaborazione.
 
@@ -36,7 +36,7 @@ Per ulteriori informazioni su XDM, consulta la sezione [Panoramica del sistema X
 
 ## Come vengono mappati i campi da Adobe Analytics a XDM?
 
-Quando viene stabilita una connessione di origine per l&#39;importazione [!DNL Analytics] dati in Experience Platform tramite l’interfaccia utente di Platform, i campi dati vengono mappati automaticamente e acquisiti in [!DNL Real-time Customer Profile] in pochi minuti. Per istruzioni su come creare una connessione sorgente con [!DNL Analytics] utilizzando l’interfaccia utente di Platform, consulta [Esercitazione sul connettore sorgente di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
+Quando viene stabilita una connessione di origine per l&#39;importazione [!DNL Analytics] dati in Experience Platform tramite l’interfaccia utente di Platform, i campi dati vengono mappati automaticamente e acquisiti in [!DNL Real-Time Customer Profile] in pochi minuti. Per istruzioni su come creare una connessione sorgente con [!DNL Analytics] utilizzando l’interfaccia utente di Platform, consulta [Esercitazione sul connettore sorgente di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 Per informazioni dettagliate sulla mappatura dei campi eseguita tra [!DNL Analytics] e, ad Experience Platform, vedi la [Mappatura dei campi Adobe Analytics](./mapping/analytics.md) guida.
 
@@ -46,8 +46,8 @@ La latenza prevista per i dati di Analytics su Platform è descritta nella tabel
 
 | Dati di Analytics | Latenza prevista |
 | -------------- | ---------------- |
-| Nuovi dati in [!DNL Real-time Customer Profile] (A4T **not** abilitato) | &lt; 2 minuti |
-| Nuovi dati in [!DNL Real-time Customer Profile] (A4T **è** abilitato) | &lt; 15 minuti |
+| Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **not** abilitato) | &lt; 2 minuti |
+| Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **è** abilitato) | &lt; 15 minuti |
 | Nuovi dati su Data Lake | &lt; 90 minuti |
 | Recupero di meno di 10 miliardi di eventi | &lt; 4 settimane |
 
@@ -67,7 +67,7 @@ La tabella seguente fornisce ulteriori informazioni sui campi di identità nel [
 | --- | --- |
 | AAID | L’AAID è l’identificatore del dispositivo principale in Adobe Analytics ed è garantito che esista su ogni evento che viene passato attraverso il [!DNL Analytics] sorgente. L’AAID viene a volte indicato come *ID Analytics legacy* o come `s_vi` ID cookie. Tuttavia, viene creato un AAID anche se il `s_vi` cookie non presente. L’AAID è rappresentato dal `post_visid_high` e `post_visid_low` colonne in [[!DNL Analytics] feed dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=it). Su un dato evento, il campo AAID contiene una singola identità che può essere uno dei diversi tipi descritti nel [ordine delle operazioni [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Nota**: All’interno di un’intera suite di rapporti, un AAID può contenere diversi tipi di eventi. |
 | ECID | L’ECID (ID Experience Cloud) è un campo di identificazione del dispositivo separato, che viene popolato in Adobe Analytics quando [!DNL Analytics] viene implementato utilizzando il servizio Experience Cloud Identity. L’ECID viene talvolta indicato anche come MCID (ID Marketing Cloud). Se un ECID esiste su un evento, l’AAID può essere basato su ECID a seconda che Analytics [periodo di tolleranza](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) è configurato. L’ECID è rappresentato dal `mcvisid` nei feed di dati di Analytics. Per ulteriori informazioni su ECID, consulta la sezione [Panoramica ECID](../../../identity-service/ecid.md). Per informazioni su come funziona ECID con [!DNL Analytics], consulta il documento in [Richieste Analytics ed Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=it). |
-| AACUSTOMID | L&#39;AACUSTOMID è un campo di identificazione separato che viene popolato in Adobe Analytics in base all&#39;uso del `s.VisitorID` nella variabile [!DNL Analytics] implementazione. L&#39;AACUSTOMID è rappresentato dal `cust_visid` colonna in [[!DNL Analytics] feed dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Se l&#39;AACUSTOMID è presente, l&#39;AAID sarà basato sull&#39;AACUSTOMID perché l&#39;AACUSTOMID trumpa tutti gli altri identificatori come definito dal [ordine delle operazioni [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
+| AACUSTOMID | L&#39;AACUSTOMID è un campo di identificazione separato che viene popolato in Adobe Analytics in base all&#39;uso del `s.VisitorID` nella variabile [!DNL Analytics] implementazione. L&#39;AACUSTOMID è rappresentato dal `cust_visid` colonna in [[!DNL Analytics] feed dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=it). Se l&#39;AACUSTOMID è presente, l&#39;AAID sarà basato sull&#39;AACUSTOMID perché l&#39;AACUSTOMID trumpa tutti gli altri identificatori come definito dal [ordine delle operazioni [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### Come funziona [!DNL Analytics] la fonte tratta le identità
 

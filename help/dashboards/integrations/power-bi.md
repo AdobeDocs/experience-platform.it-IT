@@ -1,13 +1,13 @@
 ---
 title: Modelli di rapporto Power BI per dashboard di Platform
 description: Utilizza i modelli di report per esplorare i dati di Experience Platform utilizzando Power BI.
-source-git-commit: 19b0ce2c8125fa5253cbba34adbd2884e27b5133
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
-
 
 # Modelli di report Power BI per dashboard
 
@@ -140,7 +140,7 @@ I widget personalizzati vengono creati tramite la Libreria widget. Consulta la s
 
 ### Ricrea il widget personalizzato nell&#39;ambiente Power BI
 
-Una volta che il dashboard dispone delle metriche e degli attributi appropriati contenuti nei widget personalizzati, puoi modificare il modello di rapporto visualizzato dall’interno dell’ambiente Power BI. Consulta la sezione [Documentazione Power BI](https://docs.microsoft.com/it-it/power-bi/) per informazioni su come modificare un rapporto tramite la relativa interfaccia utente.
+Una volta che il dashboard dispone delle metriche e degli attributi appropriati contenuti nei widget personalizzati, puoi modificare il modello di rapporto visualizzato dall’interno dell’ambiente Power BI. Consulta la sezione [Documentazione Power BI](https://docs.microsoft.com/it-IT/power-bi/) per informazioni su come modificare un rapporto tramite la relativa interfaccia utente.
 
 ## Eliminare l’integrazione dell’applicazione Power BI
 

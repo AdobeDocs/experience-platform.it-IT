@@ -4,7 +4,7 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Le seguenti regole di avviso sono specifiche per [Servizio identità](../../iden
 
 {style=&quot;table-layout:auto&quot;}
 
-## Real-time Customer Profile
+## Profilo cliente in tempo reale
 
 Le seguenti regole di avviso sono specifiche per [Profilo cliente in tempo reale](../../profile/home.md):
 

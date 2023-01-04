@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Questa esercitazione richiede una buona conoscenza dei vari servizi Adobe Experi
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati dell’esperienza.
    - [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md): Una guida completa che copre ciascuno degli endpoint disponibili [!DNL Schema Registry] API e modalità di effettuazione delle chiamate. Ciò include la conoscenza del `{TENANT_ID}`, che viene visualizzato nelle chiamate durante questa esercitazione, oltre a sapere come creare schemi, che viene utilizzato nella creazione di un set di dati per l’acquisizione.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 ### Utilizzo delle API di Platform
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Nome da utilizzare per lo schema. Questo nome deve essere univoco. |
 | `description` | Una descrizione significativa dello schema che si sta creando. |
-| `meta:immutableTags` | In questo esempio, la `union` viene utilizzato per mantenere i dati in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In questo esempio, la `union` viene utilizzato per mantenere i dati in [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Risposta**
 
@@ -139,7 +139,7 @@ Quindi, aggiungi un [descrittore di identità](../../xdm/api/descriptors.md) all
 
 1. L’indirizzo e-mail di lavoro diventerà un campo obbligatorio. Ciò significa che i messaggi inviati senza questo campo non possono essere convalidati e non verranno acquisiti.
 
-2. [!DNL Real-time Customer Profile] utilizzerà l&#39;indirizzo e-mail di lavoro come identificatore per unire più informazioni su quell&#39;individuo.
+2. [!DNL Real-Time Customer Profile] utilizzerà l&#39;indirizzo e-mail di lavoro come identificatore per unire più informazioni su quell&#39;individuo.
 
 ### Richiesta
 
@@ -199,7 +199,7 @@ Una volta creato lo schema, dovrai creare un set di dati per acquisire i dati de
 
 >[!NOTE]
 >
->Questo set di dati verrà abilitato per **[!DNL Real-time Customer Profile]** e **[!DNL Identity Service]**.
+>Questo set di dati verrà abilitato per **[!DNL Real-Time Customer Profile]** e **[!DNL Identity Service]**.
 
 **Formato API**
 

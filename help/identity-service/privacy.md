@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari
 title: Elaborazione della richiesta di privacy nel servizio Identity
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Questo documento tratta i concetti essenziali relativi all’elaborazione delle 
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di accesso a dati personali per l’archivio dati di Identity in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati nel lago dati](../catalog/privacy.md) e alla guida [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di accesso a dati personali per l’archivio dati di Identity in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-Time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati nel lago dati](../catalog/privacy.md) e alla guida [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -28,7 +28,7 @@ Si consiglia di avere una comprensione operativa dei seguenti elementi [!DNL Exp
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
-* [[!DNL Real-time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 

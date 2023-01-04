@@ -5,14 +5,14 @@ title: Panoramica del servizio Identity
 topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
 
 ---
 
-# [!DNL Identity Service] panoramica
+# Panoramica di [!DNL Identity Service]
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati dei clienti sono frammentati in diversi sistemi, il che fa sì che ogni singolo cliente sembri avere più &quot;identità&quot;.
 
@@ -52,7 +52,7 @@ Considera un esempio quotidiano del rapporto di un consumatore con il tuo marchi
 
 ![Unione delle identità su Platform](./images/identity-service-stitching.png)
 
-Essenzialmente, [!DNL Identity Service] consente di creare un quadro completo del cliente, aggregando dati correlati che potrebbero altrimenti essere dispersi tra sistemi diversi. Le relazioni di identità che [!DNL Identity Service] definisce e gestisce il profilo cliente in tempo reale per creare un quadro completo di un cliente e delle sue interazioni con il tuo marchio. Per ulteriori informazioni, consulta la sezione [Panoramica del profilo cliente in tempo reale](../profile/home.md).
+Essenzialmente, [!DNL Identity Service] consente di creare un quadro completo del cliente, aggregando dati correlati che potrebbero altrimenti essere dispersi tra sistemi diversi. Le relazioni di identità che [!DNL Identity Service] Le definizioni e gli strumenti di manutenzione sono sfruttati dal Profilo cliente in tempo reale per creare un quadro completo di un cliente e delle sue interazioni con il tuo marchio. Per ulteriori informazioni, consulta la sezione [Panoramica del profilo cliente in tempo reale](../profile/home.md).
 
 ### Casi d’uso
 

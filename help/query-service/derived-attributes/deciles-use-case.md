@@ -2,7 +2,7 @@
 title: Caso di utilizzo degli attributi derivati basati su dispositivi mobili
 description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare attributi derivati basati su decile da utilizzare con i dati del profilo.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -64,11 +64,11 @@ Nella tabella seguente sono visualizzati i dati di esempio contenuti nella `_pro
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 01/01/2022 | STATUS_MILES | Nuovo membro | 5000 | VOLANTE |
-| B789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | AWARD_MILES | JFK-FRA | 7500 | ARGENTO |
-| B789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | STATUS_MILES | JFK-FRA | 7500 | ARGENTO |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nuovo membro | 5000 | VOLANTE |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | ARGENTO |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | ARGENTO |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | ARGENTO |
-| A123487284 | rritson1zn@sciencedaily.com | 01/07/2022 | STATUS_MILES | Nuova carta di credito | 10000 | VOLANTE |
+| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nuova carta di credito | 10000 | VOLANTE |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -82,9 +82,9 @@ Crea uno &quot;schema del decile fedeltà della compagnia aerea&quot; per creare
 
 ### Abilitare lo schema per il profilo cliente in tempo reale
 
-I dati che vengono acquisiti in Experience Platform per l’utilizzo da parte di Profilo cliente in tempo reale devono essere conformi a [schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Affinché uno schema sia abilitato per Profilo, deve implementare la classe Profilo individuale XDM o ExperienceEvent XDM.
+I dati che vengono acquisiti in Experience Platform per l’utilizzo da parte del Profilo cliente in tempo reale devono essere conformi a [schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Affinché uno schema sia abilitato per Profilo, deve implementare la classe Profilo individuale XDM o ExperienceEvent XDM.
 
-[Abilita lo schema per l’utilizzo in Profilo cliente in tempo reale utilizzando l’API del Registro di sistema dello schema.](../../xdm/tutorials/create-schema-api.md) o [Interfaccia utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).  Istruzioni dettagliate su come abilitare uno schema per il profilo sono disponibili nella rispettiva documentazione.
+[Abilitare lo schema per l’utilizzo in Profilo cliente in tempo reale utilizzando l’API del Registro di sistema dello schema](../../xdm/tutorials/create-schema-api.md) o [Interfaccia utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).  Istruzioni dettagliate su come abilitare uno schema per il profilo sono disponibili nella rispettiva documentazione.
 
 Quindi, crea un tipo di dati da riutilizzare per tutti i gruppi di campi correlati a decile. La creazione del gruppo di campi decile è un unico passaggio per sandbox. Può anche essere riutilizzato per tutti gli schemi relativi ai decile.
 

@@ -2,10 +2,10 @@
 title: Tipo di dati di origine B2B
 description: Questo documento fornisce una panoramica del tipo di dati XDM (B2B Source Experience Data Model).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 

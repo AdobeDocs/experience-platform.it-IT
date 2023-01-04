@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Scopri come creare un criterio di governance dei dati utilizzando l’API del servizio criteri.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%
@@ -423,6 +423,6 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e i dettagli del criter
 
 Seguendo questa esercitazione, hai creato correttamente un criterio di utilizzo dei dati per un’azione di marketing. Ora puoi continuare l’esercitazione su [applicazione dei criteri di utilizzo dei dati](../enforcement/api-enforcement.md) per scoprire come verificare le violazioni dei criteri e gestirle nell&#39;applicazione di esperienza.
 
-Per ulteriori informazioni sulle diverse operazioni disponibili nella [!DNL Policy Service] API, vedi [Guida per gli sviluppatori di Policy Service](../api/getting-started.md). Per informazioni su come applicare i criteri per [!DNL Real-time Customer Profile] data, consulta l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md).
+Per ulteriori informazioni sulle diverse operazioni disponibili nella [!DNL Policy Service] API, vedi [Guida per gli sviluppatori di Policy Service](../api/getting-started.md). Per informazioni su come applicare i criteri per [!DNL Real-Time Customer Profile] data, consulta l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md).
 
 Per scoprire come gestire i criteri di utilizzo in [!DNL Experience Platform] interfaccia utente, vedi [guida utente di policy](user-guide.md).

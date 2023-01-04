@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%
@@ -290,12 +290,12 @@ Per eliminare un flusso di dati, testa alla [!UICONTROL Flussi di dati] quindi s
 
 ## Passaggi successivi e risorse aggiuntive
 
-Una volta creata la connessione, il flusso di dati viene creato automaticamente per contenere i dati in arrivo e compilare un set di dati con lo schema selezionato. Inoltre, avviene il recupero dei dati e vengono acquisiti fino a 13 mesi di dati storici. Al termine dell’acquisizione iniziale, [!DNL Analytics] dati e utilizzati dai servizi della piattaforma a valle, quali [!DNL Real-time Customer Profile] e il servizio di segmentazione. Per ulteriori informazioni, consulta i seguenti documenti:
+Una volta creata la connessione, il flusso di dati viene creato automaticamente per contenere i dati in arrivo e compilare un set di dati con lo schema selezionato. Inoltre, avviene il recupero dei dati e vengono acquisiti fino a 13 mesi di dati storici. Al termine dell’acquisizione iniziale, [!DNL Analytics] dati e utilizzati dai servizi della piattaforma a valle, quali [!DNL Real-Time Customer Profile] e il servizio di segmentazione. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] panoramica](../../../../../query-service/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Panoramica di [!DNL Segmentation Service]](../../../../../segmentation/home.md)
+* [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+* [Panoramica di [!DNL Query Service]](../../../../../query-service/home.md)
 
 Il seguente video è pensato per comprendere come acquisire i dati utilizzando il connettore Adobe Analytics Source:
 

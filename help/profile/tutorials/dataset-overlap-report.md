@@ -4,7 +4,7 @@ title: Genera il rapporto di sovrapposizione del set di dati
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione dei set di dati utilizzando l’API del profilo cliente in tempo reale.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Il rapporto di sovrapposizione del set di dati fornisce visibilità nella compos
 
 Oltre a fornire approfondimenti sui tuoi dati, questo rapporto può aiutarti a intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio per impostare un limite di vita di alcuni dati.
 
-Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione del set di dati utilizzando [!DNL Real-time Customer Profile] API e interpreta i risultati per la tua organizzazione.
+Questa esercitazione descrive i passaggi necessari per generare il rapporto di sovrapposizione del set di dati utilizzando [!DNL Real-Time Customer Profile] API e interpreta i risultati per la tua organizzazione.
 
 ## Introduzione
 

@@ -3,7 +3,7 @@ keywords: governance dei dati rtcdp;governance dei dati rtcdp;governance dei dat
 title: Privacy in Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform ti consente di semplificare il processo per mantenere le operazioni sui dati conformi alle normative sulla privacy.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Norme legali sulla privacy come [!DNL General Data Protection Regulation] (RGPD)
 
 ## Funzionalità di rinuncia
 
-[!DNL Real-Time CDP] consente ai clienti di rinunciare all’inclusione dei propri dati personali nei casi di utilizzo della segmentazione. Le preferenze di rinuncia dei clienti vengono acquisite e memorizzate da [!DNL Real-time Customer Profile], e può essere applicato escludendo gli utenti che hanno rinunciato a un segmento utilizzando la logica booleana (&quot;AND NOT&quot;) nel predicato del segmento.
+[!DNL Real-Time CDP] consente ai clienti di rinunciare all’inclusione dei propri dati personali nei casi di utilizzo della segmentazione. Le preferenze di rinuncia dei clienti vengono acquisite e memorizzate da [!DNL Real-Time Customer Profile], e può essere applicato escludendo gli utenti che hanno rinunciato a un segmento utilizzando la logica booleana (&quot;AND NOT&quot;) nel predicato del segmento.
 
 Visualizza il documento in [soddisfare le richieste di rinuncia](../../segmentation/consents.md) per ulteriori informazioni, consulta la documentazione sul servizio di segmentazione di Adobe Experience Platform .
 

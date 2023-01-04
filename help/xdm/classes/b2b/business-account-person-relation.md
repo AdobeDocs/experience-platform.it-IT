@@ -2,7 +2,7 @@
 title: Classe di relazione tra le persone dell'account aziendale XDM
 description: Questo documento fornisce una panoramica della classe di relazione tra le persone dell’account aziendale XDM in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 3%
@@ -30,7 +30,7 @@ ht-degree: 3%
 | `accountPersonID` | Stringa | Identificatore univoco per l&#39;entità relazione conto-persona. |
 | `currencyCode` | Stringa | Codice valuta ISO 4217 utilizzato per il rapporto tra il conto e la persona. |
 | `isActive` | Booleano | Indica se la relazione tra l&#39;account e la persona è attiva. |
-| `isDeleted` | Booleano | Indica se la relazione account-persona è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
+| `isDeleted` | Booleano | Indica se la relazione account-persona è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi nel Profilo del cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `isDirect` | Booleano | Indica se si tratta di una relazione diretta tra l&#39;account e la persona. |
 | `isPrimary` | Booleano | Indica se la persona è il contatto principale su questo account. |
 | `personID` | Stringa | Identificatore univoco per la persona nella relazione account-persona. |

@@ -1,10 +1,11 @@
 ---
 title: Gruppo campi schema dettagli campagna aziendale XDM
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli campagna aziendale XDM.
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 5%
 | `expectedResponse` | [!UICONTROL Stringa] | Risposta prevista per la campagna. |
 | `integrationPartnerName` | [!UICONTROL Stringa] | Nome del partner che si è integrato con questa campagna. |
 | `isActive` | [!UICONTROL Booleano] | Indica se la campagna è attiva. |
-| `isDeleted` | [!UICONTROL Booleano] | Indica se la campagna è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi in Profilo cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
+| `isDeleted` | [!UICONTROL Booleano] | Indica se la campagna è stata eliminata nel Marketo Engage.<br><br>Quando utilizzi [Connettore sorgente Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente riflessi nel Profilo del cliente in tempo reale. Tuttavia, i record relativi a tali profili possono ancora persistere nel Data Lake. Per impostazione `isDeleted` a `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query sul Data Lake. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Timestamp ISO 8601 dell’ultima attività associata alla campagna. |
 | `timeZone` | [!UICONTROL Stringa] | Il fuso orario in cui opera la campagna. |
 | `timeZoneDelivery` | [!UICONTROL Stringa] | Il fuso orario di consegna in cui opera la campagna. |

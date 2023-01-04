@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;
 title: (Beta) Creare una connessione sorgente Adobe Workfront nell’interfaccia utente
 description: Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente Adobe Workfront per trasferire i dati di Workfront a Adobe Experience Platform tramite l’interfaccia utente di .
-source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
+exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 0%

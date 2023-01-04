@@ -6,18 +6,17 @@ title: Monitor di dati
 topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-translation-type: tm+mt
-source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '132'
 ht-degree: 8%
 
 ---
 
 # Monitorare i flussi di dati
 
-[!UICONTROL Destinations] consente di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni.
+[!UICONTROL Destinazioni] consente di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni.
 
-I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati in [!DNL Platform]. Questi flussi di dati sono configurati tra diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e[!DNL Real-time Customer Profile] prima di essere infine attivati nelle destinazioni.
+I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati in [!DNL Platform]. Questi flussi di dati sono configurati tra diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e[!DNL Real-Time Customer Profile] prima di essere infine attivato nelle destinazioni.
 
-Per ulteriori informazioni sul monitoraggio dei flussi di dati per le destinazioni, consulta l’ [Monitoraggio dei flussi di dati per le destinazioni nell’esercitazione UI](../../dataflows/ui/monitor-destinations.md) .
+Per ulteriori informazioni sul monitoraggio dei flussi di dati per le destinazioni, consulta il [Monitorare i flussi di dati per le destinazioni nell’interfaccia utente](../../dataflows/ui/monitor-destinations.md) esercitazione.

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore base di archiviazione cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
    - [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    - [Esercitazione sull’Editor di schema](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Aggiungi dati
 
@@ -136,7 +136,7 @@ Una volta creato il flusso di dati di archiviazione cloud in streaming, puoi mon
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato creato correttamente un flusso di dati per lo streaming dei dati da un&#39;origine di archiviazione cloud. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, è stato creato correttamente un flusso di dati per lo streaming dei dati da un&#39;origine di archiviazione cloud. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-- [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
+- [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+- [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

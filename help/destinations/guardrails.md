@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Ulteriori informazioni sui limiti di utilizzo e di tasso predefiniti per l’attivazione dei dati.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 3%
@@ -33,7 +34,7 @@ Questo documento contiene due tipi di limiti predefiniti:
 
 ## Limiti di attivazione {#activation-limits}
 
-Le seguenti protezioni forniscono i limiti consigliati quando si attivano i dati del Profilo cliente in tempo reale nelle destinazioni.
+Le seguenti protezioni forniscono i limiti consigliati quando si attivano i dati del profilo cliente in tempo reale nelle destinazioni.
 
 ### Guardrail di attivazione generale {#general-activation-guardrails}
 
@@ -121,5 +122,5 @@ Visualizza informazioni sulle protezioni per altri servizi di Experience Platfor
 
 * Guardrail per [inserimento dati](/help/ingestion/guardrails.md)
 * Guardrail per [[!DNL Identity Service] dati](/help/identity-service/guardrails.md)
-* Guardrail per [[!DNL Real-time Customer Profile] dati](/help/profile/guardrails.md)
+* Guardrail per [[!DNL Real-Time Customer Profile] dati](/help/profile/guardrails.md)
 * Guardrail per [[!DNL Query Service] dati](/help/query-service/guardrails.md)

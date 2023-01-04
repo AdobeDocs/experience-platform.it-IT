@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per guidarti nei passaggi necessari per comporre uno schema utilizzando una classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 Prima di avviare questa esercitazione, controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare correttamente le chiamate al [!DNL Schema Registry] API. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
@@ -955,7 +955,7 @@ L&#39;esecuzione di una richiesta di GET per cercare lo schema ora mostra il rif
 
 ### Definire un descrittore di identità
 
-Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identity&quot; (Identità) e, al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;Grafico identità&quot; per tale individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-time Customer Profile]](../../profile/home.md) e altri [!DNL Experience Platform] servizi per fornire una vista unita di ogni singolo cliente.
+Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identity&quot; (Identità) e, al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;Grafico identità&quot; per tale individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri [!DNL Experience Platform] servizi per fornire una vista unita di ogni singolo cliente.
 
 I campi comunemente contrassegnati come &quot;Identity&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci.
 
@@ -1016,9 +1016,9 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) con un corpo di ris
 }
 ```
 
-## Abilita schema da utilizzare in [!DNL Real-time Customer Profile] {#profile}
+## Abilita schema da utilizzare in [!DNL Real-Time Customer Profile] {#profile}
 
-Aggiungendo il tag &quot;union&quot; al tag `meta:immutableTags` è possibile abilitare lo schema Membri fedeltà per l&#39;utilizzo da [!DNL Real-time Customer Profile].
+Aggiungendo il tag &quot;union&quot; al tag `meta:immutableTags` è possibile abilitare lo schema Membri fedeltà per l&#39;utilizzo da [!DNL Real-Time Customer Profile].
 
 Per ulteriori informazioni sulle operazioni con le visualizzazioni di unione, consulta la sezione su [sindacati](../api/unions.md) in [!DNL Schema Registry] guida per sviluppatori.
 

@@ -5,7 +5,7 @@ title: Appendice della guida API di Privacy Service
 topic-legacy: developer guide
 description: Questo documento contiene informazioni aggiuntive sull’utilizzo dell’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 7%
@@ -28,7 +28,7 @@ La tabella seguente illustra diversi tipi di identità predefiniti di uso comune
 | Telefono | `Phone` | `7` |
 | ID Adobe Advertising Cloud | `AdCloud` | `411` |
 | UUID Adobe Audience Manager | `CORE` | `0` |
-| ID Adobe Experience Cloud | `ECID` | `4` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
 | Adobe Target ID | `TNTID` | `9` |
 | [!DNL Apple] ID per gli inserzionisti | `IDFA` | `20915` |
 | [!DNL Google] ID annuncio | `GAID` | `20914` |

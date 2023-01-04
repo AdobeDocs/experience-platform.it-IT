@@ -5,7 +5,7 @@ description: Rilevamento dispositivi condiviso identifica diversi utenti autenti
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Quando [!DNL Shared Device Detection] è abilitato, [!DNL Profile] definisce l�
 
 Un **evento di esperienza autenticato** è un’azione completata da un utente che ha effettuato l’accesso a un dispositivo. Per gli eventi di esperienza autenticati, l&#39;identità principale è la **Namespace User Identity** (ID di accesso). Un **evento di esperienza non autenticato** è un’azione completata da un utente che non ha effettuato l’accesso a un dispositivo. Per gli eventi di esperienza non autenticati, l&#39;identità principale è la **Spazio dei nomi identità condiviso** (ECID).
 
-Per ulteriori informazioni, consulta la sezione  [[!DNL Real-time Customer Profile] panoramica](../../profile/home.md).
+Per ulteriori informazioni, consulta la sezione  [[!DNL Real-Time Customer Profile] panoramica](../../profile/home.md).
 
 ## Interfaccia utente dei dispositivi condivisi
 

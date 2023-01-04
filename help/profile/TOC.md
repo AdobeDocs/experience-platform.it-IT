@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Guida di Real-time Customer Profile
+user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 feature: Profiles
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 23%
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
-* [[!DNL Profile] panoramica](home.md)
+* [Panoramica di [!DNL Profile]](home.md)
 * [Panoramica del profilo (video)](video/profile-overview.md)
 * [[!DNL Profile] e protezioni della segmentazione](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)

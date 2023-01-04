@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione HTTP API Streaming utilizzando l’API del servizio di flusso
 description: Questa esercitazione fornisce passaggi su come creare una connessione in streaming utilizzando l’origine API HTTP per dati grezzi e XDM utilizzando l’API del servizio di flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 4%
@@ -22,7 +22,7 @@ Questa esercitazione utilizza la funzione [[!DNL Flow Service] API](https://www.
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati dell’esperienza.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Inoltre, per creare una connessione in streaming è necessario disporre di uno schema XDM di destinazione e di un set di dati. Per scoprire come crearli, leggi l’esercitazione su [dati di registrazione in streaming](../../../../../ingestion/tutorials/streaming-record-data.md) o l&#39;esercitazione su [streaming di dati della serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 

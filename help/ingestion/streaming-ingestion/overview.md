@@ -5,7 +5,7 @@ title: Panoramica dell’acquisizione in streaming
 topic-legacy: overview
 description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%
@@ -18,7 +18,7 @@ L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti
 
 ## Cosa puoi fare con l’acquisizione in streaming?
 
-Adobe Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un [!DNL Real-time Customer Profile] per ogni singolo cliente. L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili e consente di [!DNL Profile] i dati [!DNL Data Lake] con una latenza minima possibile.
+Adobe Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un [!DNL Real-Time Customer Profile] per ogni singolo cliente. L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili e consente di [!DNL Profile] i dati [!DNL Data Lake] con una latenza minima possibile.
 
 Il video seguente è stato progettato per aiutarti a comprendere lo streaming ingestion e illustra i concetti illustrati sopra.
 
@@ -32,7 +32,7 @@ Per piacere, leggi le [creare una guida alla connessione in streaming](../tutori
 
 ### Trasmetti ai set di dati
 
-Una volta certi che i dati sono puliti, puoi abilitare i set di dati per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+Una volta certi che i dati sono puliti, puoi abilitare i set di dati per [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
 
 Per ulteriori informazioni sull’abilitazione di un set di dati per [!DNL Profile] e [!DNL Identity Service], leggi la [configurare una guida ai set di dati](../../profile/tutorials/dataset-configuration.md).
 
@@ -40,7 +40,7 @@ Per ulteriori informazioni sull’abilitazione di un set di dati per [!DNL Profi
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
-| Real-time Customer Profile | &lt; 1 minuto |
+| Profilo cliente in tempo reale | &lt; 1 minuto |
 | Lago dati | &lt; 60 minuti |
 
 ## Richiesta per secondi (RPS) guida sull’acquisizione in streaming

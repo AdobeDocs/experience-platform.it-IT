@@ -5,7 +5,7 @@ title: Endpoint API per i processi di privacy
 topic-legacy: developer guide
 description: Scopri come gestire i processi relativi alla privacy per le applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 3%
@@ -160,7 +160,7 @@ curl -X POST \
 | `expandIDs` | Una proprietà facoltativa che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l’elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `analyticsDeleteMethod` | Proprietà facoltativa che specifica come Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
-| `mergePolicyId` | Quando effettui richieste di privacy per Profilo cliente in tempo reale (`profileService`), puoi facoltativamente fornire l’ID del [criterio di unione](../../profile/merge-policies/overview.md) da utilizzare per l&#39;unione degli ID. Specificando un criterio di unione, le richieste di privacy possono includere informazioni sui segmenti quando restituiscono dati su un cliente. È possibile specificare un solo criterio di unione per richiesta. Se non viene fornito alcun criterio di unione, le informazioni sulla segmentazione non vengono incluse nella risposta. |
+| `mergePolicyId` | Quando effettui richieste di privacy per il profilo cliente in tempo reale (`profileService`), puoi facoltativamente fornire l’ID del [criterio di unione](../../profile/merge-policies/overview.md) da utilizzare per l&#39;unione degli ID. Specificando un criterio di unione, le richieste di privacy possono includere informazioni sui segmenti quando restituiscono dati su un cliente. È possibile specificare un solo criterio di unione per richiesta. Se non viene fornito alcun criterio di unione, le informazioni sulla segmentazione non vengono incluse nella risposta. |
 | `regulation` **(Obbligatorio)** | Il regolamento per il lavoro sulla privacy. Sono accettati i seguenti valori: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Vedi la panoramica su [regolamenti supportati](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
 
 {style=&quot;table-layout:auto&quot;}

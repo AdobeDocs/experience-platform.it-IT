@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Alle Righe Al Servizio Profilo Utilizzando Data Prep
 description: Questo documento fornisce informazioni su come inviare aggiornamenti parziali delle righe al Servizio profili utilizzando Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%

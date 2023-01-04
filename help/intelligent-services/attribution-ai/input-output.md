@@ -5,7 +5,7 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2504'
 ht-degree: 3%
@@ -238,7 +238,7 @@ La tabella seguente mappa i punteggi aggregati ai punteggi non elaborati. Se des
 >[!IMPORTANT]
 >
 > - Attribution AI utilizza solo dati aggiornati per l’ulteriore formazione e il punteggio. Allo stesso modo, quando richiedi di eliminare i dati, Customer AI rifiuta di utilizzare i dati eliminati.
-> - Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i marchi devono utilizzare Platform Privacy Service per inviare richieste di accesso e cancellazione dei consumatori e rimuovere i dati dal lago dati, dal servizio Identity e dal profilo cliente in tempo reale.
+> - Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i brand devono utilizzare Platform Privacy Service per inviare le richieste di accesso e cancellazione dei consumatori al fine di rimuovere i dati dal lago di dati, dal servizio Identity e dal profilo cliente in tempo reale.
 > - Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md)
 
 

@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati del profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. Questo richiede l’utilizzo dell’API di profilo per creare un processo del sistema di profili o per eliminare una richiesta.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Endpoint dei processi del sistema del profilo (richieste di eliminazione)
 
-Adobe Experience Platform consente di acquisire dati da più sorgenti e di creare profili affidabili per i singoli clienti. Dati acquisiti in [!DNL Platform] è memorizzato in [!DNL Data Lake]e se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati nella [!DNL Real-time Customer Profile] anche i dati archiviati. Talvolta può essere necessario eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. È necessario utilizzare [!DNL Real-time Customer Profile] API per creare un [!DNL Profile] lavoro di sistema, oppure `delete request`, che possono anche essere modificati, monitorati o rimossi, se necessario.
+Adobe Experience Platform consente di acquisire dati da più sorgenti e di creare profili affidabili per i singoli clienti. Dati acquisiti in [!DNL Platform] è memorizzato in [!DNL Data Lake]e se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati nella [!DNL Real-Time Customer Profile] anche i dati archiviati. Talvolta può essere necessario eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. È necessario utilizzare [!DNL Real-Time Customer Profile] API per creare un [!DNL Profile] lavoro di sistema, oppure `delete request`, che possono anche essere modificati, monitorati o rimossi, se necessario.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Adobe Experience Platform consente di acquisire dati da più sorgenti e di crear
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Visualizza richieste di eliminazione
 

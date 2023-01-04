@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione illustra come mappare un file CSV su uno schema XDM esistente utilizzando l'interfaccia utente di Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%
@@ -121,4 +121,4 @@ Una volta mappato e creato il file CSV, puoi monitorare i dati che vengono acqui
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai mappato correttamente un file CSV flat in uno schema XDM e lo hai acquisito in [!DNL Platform]. Questi dati possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-time Customer Profile]. Consulta la panoramica di [[!DNL Real-time Customer Profile]](../../../profile/home.md) per ulteriori informazioni.
+Seguendo questa esercitazione, hai mappato correttamente un file CSV flat in uno schema XDM e lo hai acquisito in [!DNL Platform]. Questi dati possono ora essere utilizzati da downstream [!DNL Platform] servizi quali [!DNL Real-Time Customer Profile]. Consulta la panoramica di [[!DNL Real-Time Customer Profile]](../../../profile/home.md) per ulteriori informazioni.

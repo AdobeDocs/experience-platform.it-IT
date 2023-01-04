@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
+title: Elaborazione delle richieste di privacy nel profilo cliente in tempo reale
 type: Documentation
-description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
+description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per il profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
 
 ---
 
-# Elaborazione della richiesta di privacy in [!DNL Real-time Customer Profile]
+# Elaborazione della richiesta di privacy in [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti per accedere, rinunciare alla vendita o cancellare i propri dati personali come delineato dalle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD) e [!DNL California Consumer Privacy Act] (CCPA).
 
-Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Real-time Customer Profile] in Adobe Experience Platform.
+Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Real-Time Customer Profile] in Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Si consiglia di avere una comprensione operativa dei seguenti elementi [!DNL Exp
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
-* [[!DNL Real-time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
@@ -42,7 +42,7 @@ Per ulteriori informazioni sugli spazi dei nomi delle identità in [!DNL Experie
 
 ## Invio di richieste {#submit}
 
-Le sezioni seguenti illustrano come effettuare richieste di accesso a dati personali per [!DNL Real-time Customer Profile] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, si consiglia vivamente di rivedere il [API Privacy Service](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione completa sui passaggi per l’invio di un processo relativo alla privacy, inclusa la modalità di formattazione corretta dei dati di identità utente inviati nei payload della richiesta.
+Le sezioni seguenti illustrano come effettuare richieste di accesso a dati personali per [!DNL Real-Time Customer Profile] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, si consiglia vivamente di rivedere il [API Privacy Service](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione completa sui passaggi per l’invio di un processo relativo alla privacy, inclusa la modalità di formattazione corretta dei dati di identità utente inviati nei payload della richiesta.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### Utilizzo dell’interfaccia
 
-Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** sotto **[!UICONTROL Prodotti]** al fine di elaborare lavori per i dati memorizzati nel lago di dati o [!DNL Real-time Customer Profile], rispettivamente.
+Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** sotto **[!UICONTROL Prodotti]** al fine di elaborare lavori per i dati memorizzati nel lago di dati o [!DNL Real-Time Customer Profile], rispettivamente.
 
 ![Viene creata una richiesta di processo di accesso nell’interfaccia utente, con l’opzione Profilo selezionata in Prodotti](./images/privacy/product-value.png)
 

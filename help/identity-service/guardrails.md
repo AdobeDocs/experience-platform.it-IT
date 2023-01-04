@@ -3,7 +3,7 @@ keywords: Experience Platform;identità;servizio di identità;risoluzione dei pr
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tasso per i dati del servizio Identity per facilitare l’uso ottimale del grafico di identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Questo documento fornisce informazioni sui limiti di utilizzo e di tasso per [!D
 I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei dati di identità:
 
 * [Identità](home.md): Collega le identità di diverse origini dati durante l’acquisizione in Platform.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Crea profili di consumatore unificati utilizzando dati provenienti da più sorgenti.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Crea profili di consumatore unificati utilizzando dati provenienti da più sorgenti.
 
 ## Limiti del modello dati
 
@@ -31,7 +31,7 @@ La tabella seguente delinea i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Il grafico dell’identità non verrà aggiornato una volta raggiunto il limite. **Nota**: Numero massimo di identità in un grafico di identità **per un singolo profilo unito** è 50. I profili uniti basati su grafici di identità con più di 50 identità sono esclusi dal Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [protezioni per i dati del profilo](../profile/guardrails.md). |
+| Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Il grafico dell’identità non verrà aggiornato una volta raggiunto il limite. **Nota**: Numero massimo di identità in un grafico di identità **per un singolo profilo unito** è 50. I profili uniti basati su grafici di identità con più di 50 identità sono esclusi dal Profilo del cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [protezioni per i dati del profilo](../profile/guardrails.md). |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di grafici | Nessuna | Non vi sono limiti al numero di grafici di identità che è possibile creare. |
@@ -54,5 +54,5 @@ A partire dal 31 gennaio 2023, il servizio Identity bloccherà l’acquisizione 
 
 Per ulteriori informazioni, consulta la seguente documentazione [!DNL Identity Service]:
 
-* [[!DNL Identity Service] panoramica](home.md)
+* [Panoramica di [!DNL Identity Service]](home.md)
 * [Visualizzatore grafico di identità](ui/identity-graph-viewer.md)

@@ -5,7 +5,7 @@ title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Dopo la creazione dello schema, dovrai specificare quale campo conterrà l’ID 
 
 ![Le caselle per contrassegnare il campo selezionato come identità principale vengono evidenziate nell’Editor di schema.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Dopo la marcatura `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore etichettato **[!UICONTROL Profilo]**. Seleziona **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-time Customer Profile].
+Dopo la marcatura `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore etichettato **[!UICONTROL Profilo]**. Seleziona **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-Time Customer Profile].
 
 ![L’opzione per abilitare lo schema per il profilo viene evidenziata nell’Editor schema.](../images/tutorials/external-audiences/schema-profile.png)
 

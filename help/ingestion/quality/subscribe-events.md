@@ -5,7 +5,7 @@ title: Notifiche di acquisizione dei dati
 topic-legacy: overview
 description: Per facilitare il monitoraggio del processo di acquisizione, Adobe Experience Platform consente di abbonarsi a un set di eventi pubblicati in ogni fase del processo, notificandovi lo stato dei dati acquisiti ed eventuali errori.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 
 Il processo di acquisizione dei dati in Adobe Experience Platform è composto da più passaggi. Una volta identificati i file di dati che devono essere acquisiti in [!DNL Platform], il processo di acquisizione inizia e ogni passaggio avviene consecutivamente fino a quando i dati non vengono acquisiti correttamente o non riescono. Il processo di acquisizione può essere avviato utilizzando [API di acquisizione dati di Adobe Experience Platform](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) o utilizzando [!DNL Experience Platform] interfaccia utente.
 
-Dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la relativa destinazione, [!DNL Data Lake] o [!DNL Real-time Customer Profile] archivio dati. Ogni passaggio comporta l’elaborazione dei dati, la convalida dei dati e quindi la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo e c&#39;è sempre la possibilità che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi di dati devono essere risolti e l’intero processo di acquisizione deve essere riavviato utilizzando i file di dati corretti.
+Dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la relativa destinazione, [!DNL Data Lake] o [!DNL Real-Time Customer Profile] archivio dati. Ogni passaggio comporta l’elaborazione dei dati, la convalida dei dati e quindi la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo e c&#39;è sempre la possibilità che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi di dati devono essere risolti e l’intero processo di acquisizione deve essere riavviato utilizzando i file di dati corretti.
 
 assistere nel monitoraggio del processo di acquisizione, [!DNL Experience Platform] consente di effettuare la sottoscrizione a un set di eventi pubblicati in ogni fase del processo, con notifica dello stato dei dati acquisiti e di eventuali errori.
 
 ## Registra un webhook per le notifiche di inserimento dati
 
-Per ricevere le notifiche di inserimento dei dati, devi utilizzare [Console per sviluppatori di Adobe](https://www.adobe.com/go/devs_console_ui) per registrare un webhook nella tua integrazione di Experience Platform.
+Per ricevere le notifiche di inserimento dei dati, devi utilizzare [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui) per registrare un webhook nella tua integrazione di Experience Platform.
 
 Segui l’esercitazione su [abbonamento a [!DNL Adobe I/O Event] Notifiche](../../observability/alerts/subscribe.md) per passaggi dettagliati su come eseguire questa operazione.
 
@@ -86,8 +86,8 @@ Nella tabella seguente sono elencate le notifiche sullo stato di acquisizione de
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | Un batch è stato acquisito correttamente in un set di dati all’interno di [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | guasto | Impossibile acquisire un batch in un set di dati all’interno di [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Acquisizione di un batch riuscita nel [!DNL Profile] archivio dati. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | guasto | Impossibile acquisire un batch nel [!DNL Profile] archivio dati. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | Acquisizione di un batch riuscita nel [!DNL Profile] archivio dati. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | guasto | Impossibile acquisire un batch nel [!DNL Profile] archivio dati. |
 | `ig_load_success` | [!DNL Identity Service] | success | Caricamento dei dati nel grafico delle identità completato. |
 | `ig_load_failure` | [!DNL Identity Service] | guasto | Impossibile caricare i dati nel grafico delle identità. |
 

@@ -4,7 +4,7 @@ title: Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i tuoi dati in modo da ottenere prestazioni di sistema ottimali utilizzando Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1602'
 ht-degree: 2%
@@ -119,9 +119,9 @@ Questa sezione fornisce ulteriori dettagli sui limiti contenuti in questo docume
 
 La [!DNL Profile] il modello di dati store è costituito da due tipi di entità principali:
 
-* **Entità principale:** Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
+* **Entità principale:** Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-Time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
 
-   Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
+   Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-Time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
 
    ![](../profile/images/guardrails/profile-entity.png)
 

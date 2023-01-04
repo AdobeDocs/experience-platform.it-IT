@@ -4,7 +4,7 @@ title: Gruppo di campi schema Consensi e Preferenze
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Consensi e Preferenze .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Il seguente JSON mostra un esempio del tipo di dati che [!UICONTROL Consensi e p
 >* Se il consenso o la preferenza a livello di canale non è impostato o il cliente ha acconsentito, il consenso o le preferenze equivalenti in `idSpecific` sono onorati.
 
 
-Ogni chiave nel `idSpecific` l’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto dal servizio Adobe Experience Platform Identity. Sebbene sia possibile definire namespace personalizzati per classificare identificatori diversi, si consiglia di utilizzare uno dei namespace standard forniti dal servizio Identity per ridurre le dimensioni di archiviazione per Profilo cliente in tempo reale. Per ulteriori informazioni sugli spazi dei nomi delle identità, consulta la sezione [panoramica dello spazio dei nomi identità](../../../identity-service/namespaces.md) nella documentazione del servizio Identity.
+Ogni chiave nel `idSpecific` l’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto dal servizio Adobe Experience Platform Identity. Sebbene sia possibile definire namespace personalizzati per classificare identificatori diversi, si consiglia di utilizzare uno dei namespace standard forniti dal servizio Identity per ridurre le dimensioni di archiviazione per il profilo cliente in tempo reale. Per ulteriori informazioni sugli spazi dei nomi delle identità, consulta la sezione [panoramica dello spazio dei nomi identità](../../../identity-service/namespaces.md) nella documentazione del servizio Identity.
 
 Le chiavi di ciascun oggetto namespace rappresentano i valori di identità univoci per i quali il cliente ha impostato le preferenze. Ogni valore di identità può contenere un insieme completo di consensi e preferenze, formattati nello stesso modo `consents`.
 
@@ -182,7 +182,7 @@ Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](
 
 >[!IMPORTANT]
 >
->Se desideri inviare i dati di consenso a [!DNL Real-time Customer Profile], è necessario creare un [!DNL Profile]schema abilitato basato su [!DNL XDM Individual Profile] la classe che contiene [!UICONTROL Consensi e preferenze] gruppo di campi. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi a [!DNL Real-time Customer Profile] requisiti per schemi e set di dati.
+>Se desideri inviare i dati di consenso a [!DNL Real-Time Customer Profile], è necessario creare un [!DNL Profile]schema abilitato basato su [!DNL XDM Individual Profile] la classe che contiene [!UICONTROL Consensi e preferenze] gruppo di campi. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi a [!DNL Real-Time Customer Profile] requisiti per schemi e set di dati.
 >
 >Inoltre, è necessario assicurarsi che i criteri di unione siano configurati per assegnare priorità ai set di dati contenenti i dati di consenso e preferenza più recenti, in modo che i profili cliente vengano aggiornati correttamente. Vedi la panoramica su [criteri di unione](../../../rtcdp/profile/merge-policies.md) per ulteriori informazioni.
 

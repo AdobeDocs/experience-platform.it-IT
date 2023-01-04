@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi di acquisizione in streaming
 topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sull’acquisizione in streaming su Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -46,9 +46,9 @@ Quando la convalida sincrona non è supportata per la posizione richiesta, viene
 
 [!DNL Experience Platform] supporta la raccolta dati protetta. Quando la raccolta dati autenticata è abilitata, i client devono inviare un JSON Web Token (JWT) e il loro ID organizzazione IMS come intestazioni della richiesta. Per ulteriori informazioni su come inviare dati autenticati a [!DNL Platform], consulta la guida su [raccolta dati autenticata](../tutorials/create-authenticated-streaming-connection.md).
 
-### Qual è la latenza per i dati in streaming a [!DNL Real-time Customer Profile]?
+### Qual è la latenza per i dati in streaming a [!DNL Real-Time Customer Profile]?
 
-Gli eventi in streaming si riflettono generalmente in [!DNL Real-time Customer Profile] in meno di 60 secondi. Le latenze effettive possono variare a causa del volume di dati, della dimensione del messaggio e delle limitazioni di larghezza di banda.
+Gli eventi in streaming si riflettono generalmente in [!DNL Real-Time Customer Profile] in meno di 60 secondi. Le latenze effettive possono variare a causa del volume di dati, della dimensione del messaggio e delle limitazioni di larghezza di banda.
 
 ### Posso includere più messaggi nella stessa richiesta API?
 
@@ -94,9 +94,9 @@ Il seguente JSON è un oggetto di risposta di esempio per una richiesta API con 
 }
 ```
 
-### Perché i miei messaggi inviati non vengono ricevuti da [!DNL Real-time Customer Profile]?
+### Perché i miei messaggi inviati non vengono ricevuti da [!DNL Real-Time Customer Profile]?
 
-Se [!DNL Real-time Customer Profile] rifiuta un messaggio, è molto probabilmente dovuto a informazioni di identità errate. Questo può essere il risultato della fornitura di un valore o di uno spazio dei nomi non valido per un&#39;identità.
+Se [!DNL Real-Time Customer Profile] rifiuta un messaggio, è molto probabilmente dovuto a informazioni di identità errate. Questo può essere il risultato della fornitura di un valore o di uno spazio dei nomi non valido per un&#39;identità.
 
 Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando utilizzi spazi dei nomi personalizzati, accertati che lo spazio dei nomi sia stato registrato in [!DNL Identity Service]. Consulta la sezione [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md) per ulteriori informazioni sull’utilizzo degli spazi dei nomi predefiniti e personalizzati.
 

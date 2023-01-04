@@ -5,20 +5,20 @@ topic-legacy: guide
 type: Documentation
 description: La guida introduttiva all’API di profilo descrive i concetti chiave e le funzionalità di base che devi conoscere per utilizzare gli endpoint API del profilo cliente in tempo reale per eseguire operazioni CRUD di base rispetto ai dati del profilo.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# Guida introduttiva a [!DNL Real-time Customer Profile] API {#getting-started}
+# Guida introduttiva a [!DNL Real-Time Customer Profile] API {#getting-started}
 
 Utilizzando gli endpoint API del profilo cliente in tempo reale, puoi eseguire operazioni CRUD di base rispetto ai dati del profilo, ad esempio configurare attributi calcolati, accedere alle entità, esportare i dati del profilo ed eliminare set di dati o batch non necessari.
 
-L’utilizzo della guida per gli sviluppatori richiede una comprensione approfondita dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di [!DNL Profile] dati. Prima di iniziare a lavorare con [!DNL Real-time Customer Profile] API, controlla la documentazione per i seguenti servizi:
+L’utilizzo della guida per gli sviluppatori richiede una comprensione approfondita dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di [!DNL Profile] dati. Prima di iniziare a lavorare con [!DNL Real-Time Customer Profile] API, controlla la documentazione per i seguenti servizi:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ottieni una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
@@ -28,7 +28,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ## Lettura di chiamate API di esempio
 
-La [!DNL Real-time Customer Profile] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare correttamente le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+La [!DNL Real-Time Customer Profile] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare correttamente le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ## Intestazioni richieste
 
@@ -48,4 +48,4 @@ Tutte le richieste con un payload nel corpo della richiesta (come le chiamate PO
 
 ## Passaggi successivi
 
-Per iniziare a effettuare chiamate utilizzando [!DNL Real-time Customer Profile] API, seleziona una delle guide degli endpoint disponibili.
+Per iniziare a effettuare chiamate utilizzando [!DNL Real-Time Customer Profile] API, seleziona una delle guide degli endpoint disponibili.

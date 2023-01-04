@@ -1,10 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti comuni;monitorare segmenti;monitorare flussi di dati;flussi di dati;segmentazione
-description: La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati Profilo cliente in tempo reale. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati durante la segmentazione utilizzando l’interfaccia utente di Experience Platform.
+description: La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati del profilo cliente in tempo reale. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati durante la segmentazione utilizzando l’interfaccia utente di Experience Platform.
 title: Monitorare i flussi di dati per i segmenti nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
-source-git-commit: cec27197d47d2dd979bdf29f16fef77e8ff855e3
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%
@@ -23,7 +24,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 - [Flussi di dati](../home.md): I flussi di dati sono una rappresentazione dei processi di trasferimento dei dati in Platform. I flussi di dati sono configurati su diversi servizi e consentono di spostare i dati dai connettori di origine ai set di dati di destinazione, fino a [!DNL Identity] e [!DNL Profile]e a [!DNL Destinations].
    - [Corse del flusso di dati](../../sources/notifications.md): Le esecuzioni dei flussi di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
-- [Segmentazione](../../segmentation/home.md): La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati Profilo cliente in tempo reale.
+- [Segmentazione](../../segmentation/home.md): La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati del profilo cliente in tempo reale.
    - [Processi di attivazione](../../destinations/ui/activation-overview.md): Un processo di attivazione viene utilizzato per attivare il segmento in una destinazione specifica.
    - [Processi di valutazione](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Un processo di valutazione è un processo asincrono che crea un segmento di pubblico in base al segmento specificato.
    - [Esportare i processi](../../segmentation/api/export-jobs.md): Un processo di esportazione è un processo asincrono utilizzato per persistere i membri del segmento di pubblico nei set di dati.

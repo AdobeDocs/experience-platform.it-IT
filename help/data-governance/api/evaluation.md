@@ -5,7 +5,7 @@ title: Endpoint API per la valutazione dei criteri
 topic-legacy: developer guide
 description: Una volta create le azioni di marketing e definiti i criteri, puoi utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando l'azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 2%
@@ -682,6 +682,6 @@ Una risposta corretta restituisce una serie di risultati di valutazione; uno per
 ]
 ```
 
-## Valutazione politica per [!DNL Real-time Customer Profile]
+## Valutazione politica per [!DNL Real-Time Customer Profile]
 
-La [!DNL Policy Service] L’API può anche essere utilizzata per verificare la presenza di violazioni dei criteri che coinvolgono l’utilizzo di [!DNL Real-time Customer Profile] segmenti. Guarda l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md) per ulteriori informazioni.
+La [!DNL Policy Service] L’API può anche essere utilizzata per verificare la presenza di violazioni dei criteri che coinvolgono l’utilizzo di [!DNL Real-Time Customer Profile] segmenti. Guarda l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md) per ulteriori informazioni.

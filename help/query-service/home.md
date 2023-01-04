@@ -5,26 +5,26 @@ title: Panoramica di Query Service
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del ruolo del servizio query all’interno di Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] panoramica
+# Panoramica di [!DNL Query Service]
 
-Adobe Experience Platform acquisisce dati da un’ampia varietà di sorgenti. Una grande sfida per gli addetti al marketing è dare un senso a questi dati per ottenere informazioni sui loro clienti. Adobe Experience Platform [!DNL Query Service] facilita questo grazie all&#39;utilizzo di SQL standard per eseguire query sui dati in [!DNL Platform]. Utilizzo [!DNL Query Service], puoi unire qualsiasi set di dati nel [!DNL Data Lake] e acquisisce i risultati della query come nuovo set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’acquisizione in [!DNL Real-time Customer Profile]. Questo documento fornisce una panoramica del ruolo di [!DNL Query Service] entro [!DNL Experience Platform].
+Adobe Experience Platform acquisisce dati da un’ampia varietà di sorgenti. Una grande sfida per gli addetti al marketing è dare un senso a questi dati per ottenere informazioni sui loro clienti. Adobe Experience Platform [!DNL Query Service] facilita questo grazie all&#39;utilizzo di SQL standard per eseguire query sui dati in [!DNL Platform]. Utilizzo [!DNL Query Service], puoi unire qualsiasi set di dati nel [!DNL Data Lake] e acquisisce i risultati della query come nuovo set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’acquisizione in [!DNL Real-Time Customer Profile]. Questo documento fornisce una panoramica del ruolo di [!DNL Query Service] entro [!DNL Experience Platform].
 
 [!DNL Query Service] consente ai brand di collegare il percorso di clienti online-to-offline e comprendere l’attribuzione omni-channel. Il video seguente mostra come un&#39;azienda di esperienze può sfruttare [!DNL Query Service] per risolvere i casi d’uso chiave e come [!DNL Query Service] funziona.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
-## Utilizzando [!DNL Query Service]
+## Utilizzo [!DNL Query Service]
 
 [!DNL Query Service] fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui è possibile creare query SQL per analizzare meglio i dati. Con l’interfaccia utente è possibile scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS. L’interfaccia utente è destinata a essere utilizzata come sandbox per testare le query prima di eseguirle sul set di dati più ampio. Ulteriori informazioni sull&#39;utilizzo del servizio interattivo in [!DNL Platform] si trova nella [Guida all’interfaccia utente del servizio query](ui/overview.md). L’API RESTful offre un’esperienza simile, che consente di scrivere ed eseguire a livello di programmazione query, pianificare query per utilizzi e ripetizioni futuri e creare modelli per le query che si desidera scrivere. Ulteriori informazioni sull’utilizzo di [!DNL Query Service] L’API si trova in [Guida per gli sviluppatori di Query Service](api/getting-started.md).
 
-## [!DNL Query Service] e [!DNL Experience Platform] servizi
+## Servizi [!DNL Query Service] e [!DNL Experience Platform]
 
 [!DNL Query Service] interagisce e può essere utilizzato insieme a più [!DNL Experience Platform] servizi. Per sfruttare al massimo [!DNL Query Service's] si consiglia di acquisire familiarità con questi servizi e con il modo in cui interagiscono con [!DNL Query Service].
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] utilizza l’apprendimen
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di suddividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi segmenti possono essere successivamente valutati per fornire una migliore analisi dei tuoi [!DNL Real-time Customer Profile] dati. [!DNL Query Service] può essere utilizzato per fornire questa analisi eseguendo query su questi dati del segmento all’interno di [!DNL Data Lake]. Per piacere, leggi le [!DNL Segmentation Service] panoramica per ulteriori informazioni sulla segmentazione, e [!DNL Profile Query Language] (PQL) guida per ulteriori informazioni su come analizzare i segmenti.
+Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di suddividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi segmenti possono essere successivamente valutati per fornire una migliore analisi dei tuoi [!DNL Real-Time Customer Profile] dati. [!DNL Query Service] può essere utilizzato per fornire questa analisi eseguendo query su questi dati del segmento all’interno di [!DNL Data Lake]. Per piacere, leggi le [!DNL Segmentation Service] panoramica per ulteriori informazioni sulla segmentazione, e [!DNL Profile Query Language] (PQL) guida per ulteriori informazioni su come analizzare i segmenti.
 
 ## Casi d’uso
 

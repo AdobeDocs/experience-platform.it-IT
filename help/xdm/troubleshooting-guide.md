@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi di sistema XDM
 description: Trova le risposte alle domande frequenti su Experience Data Model (XDM), inclusi i passaggi per la risoluzione di errori API comuni.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Per ulteriori informazioni, consulta la sezione [identificazione delle risorse](
 
 ### Quando uno schema inizia a impedire l&#39;interruzione delle modifiche?
 
-È possibile apportare modifiche allo schema purché non sia mai stato utilizzato nella creazione di un set di dati o sia abilitato per l’utilizzo in [[!DNL Real-time Customer Profile]](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione di un set di dati o abilitato per l’utilizzo con [!DNL Real-time Customer Profile], le norme [Evoluzione schema](schema/composition.md#evolution) essere rigorosamente applicato dal sistema.
+È possibile apportare modifiche allo schema purché non sia mai stato utilizzato nella creazione di un set di dati o sia abilitato per l’utilizzo in [[!DNL Real-Time Customer Profile]](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione di un set di dati o abilitato per l’utilizzo con [!DNL Real-Time Customer Profile], le norme [Evoluzione schema](schema/composition.md#evolution) essere rigorosamente applicato dal sistema.
 
 ### Qual è la dimensione massima di un tipo di campo lungo?
 
@@ -72,17 +72,17 @@ Per ulteriori dettagli sulla gestione delle identità nell&#39;interfaccia utent
 
 ### Lo schema deve avere un&#39;identità primaria?
 
-Le identità principali sono facoltative, in quanto gli schemi possono avere zero o uno di essi. Tuttavia, uno schema deve disporre di un&#39;identità primaria affinché lo schema sia abilitato per l&#39;utilizzo in [!DNL Real-time Customer Profile]. Consulta la sezione [identità](./tutorials/create-schema-ui.md#identity-field) per ulteriori informazioni, consulta la sezione dell’esercitazione Editor di schema .
+Le identità principali sono facoltative, in quanto gli schemi possono avere zero o uno di essi. Tuttavia, uno schema deve disporre di un&#39;identità primaria affinché lo schema sia abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile]. Consulta la sezione [identità](./tutorials/create-schema-ui.md#identity-field) per ulteriori informazioni, consulta la sezione dell’esercitazione Editor di schema .
 
-### Come abilitare uno schema da utilizzare in [!DNL Real-time Customer Profile]?
+### Come abilitare uno schema da utilizzare in [!DNL Real-Time Customer Profile]?
 
-Gli schemi sono abilitati per l&#39;uso in [[!DNL Real-time Customer Profile]](../profile/home.md) mediante l&#39;aggiunta di un tag &quot;union&quot; all&#39;interno del `meta:immutableTags` attributo dello schema. Abilitazione di uno schema da utilizzare con [!DNL Profile] può essere eseguito utilizzando l’API o l’interfaccia utente.
+Gli schemi sono abilitati per l&#39;uso in [[!DNL Real-Time Customer Profile]](../profile/home.md) mediante l&#39;aggiunta di un tag &quot;union&quot; all&#39;interno del `meta:immutableTags` attributo dello schema. Abilitazione di uno schema da utilizzare con [!DNL Profile] può essere eseguito utilizzando l’API o l’interfaccia utente.
 
 #### Abilitazione di uno schema esistente per [!DNL Profile] utilizzo dell’API
 
 Effettua una richiesta di PATCH per aggiornare lo schema e aggiungere il `meta:immutableTags` come array contenente il valore &quot;union&quot;. Se l&#39;aggiornamento ha esito positivo, la risposta mostrerà lo schema aggiornato che ora contiene il tag di unione.
 
-Per ulteriori informazioni sull’utilizzo dell’API per abilitare uno schema da utilizzare in [!DNL Real-time Customer Profile], vedi [sindacati](./api/unions.md) documento [!DNL Schema Registry] guida per sviluppatori.
+Per ulteriori informazioni sull’utilizzo dell’API per abilitare uno schema da utilizzare in [!DNL Real-Time Customer Profile], vedi [sindacati](./api/unions.md) documento [!DNL Schema Registry] guida per sviluppatori.
 
 #### Abilitazione di uno schema esistente per [!DNL Profile] utilizzo dell’interfaccia
 
@@ -178,7 +178,7 @@ Questo messaggio di errore viene visualizzato quando si tenta di creare una riso
 
 Questo messaggio di errore viene visualizzato quando si tenta di creare una risorsa con campi con spazi dei nomi non appropriati o si aggiungono campi con spazi dei nomi non appropriati a una risorsa esistente.
 
-Per evitare conflitti con altre risorse del settore e del fornitore, le risorse definite dall’organizzazione IMS devono assegnare un namespace ai propri campi nell’ID tenant. Quando si crea uno schema utilizzando gruppi di campi standard, anche tutti i campi personalizzati aggiunti all’interno della struttura di tali gruppi di campi devono avere un namespace nell’ID tenant.
+Per evitare conflitti con altre risorse del settore e del fornitore, le risorse definite dall’organizzazione IMS devono assegnare uno spazio dei nomi ai propri campi nell’ID tenant. Quando si crea uno schema utilizzando gruppi di campi standard, anche tutti i campi personalizzati aggiunti all’interno della struttura di tali gruppi di campi devono avere un namespace nell’ID tenant.
 
 >[!NOTE]
 >
@@ -230,9 +230,9 @@ A seconda dell’endpoint utilizzato, il `detailed-message` la proprietà indica
 
 Per gli elenchi delle intestazioni Accept compatibili per diverse richieste API, fai riferimento alle sezioni corrispondenti nella [Guida per gli sviluppatori del Registro di sistema dello schema](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] errori
+### [!DNL Real-Time Customer Profile] errori
 
-I seguenti messaggi di errore sono associati alle operazioni necessarie per abilitare gli schemi per [!DNL Real-time Customer Profile]. Consulta la sezione [sindacati](./api/unions.md) nella sezione [!DNL Schema Registry] Guida all’API per ulteriori informazioni.
+I seguenti messaggi di errore sono associati alle operazioni necessarie per abilitare gli schemi per [!DNL Real-Time Customer Profile]. Consulta la sezione [sindacati](./api/unions.md) nella sezione [!DNL Schema Registry] Guida all’API per ulteriori informazioni.
 
 #### Deve essere presente un descrittore di identità di riferimento
 

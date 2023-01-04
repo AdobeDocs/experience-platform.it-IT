@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per applicare la conformità dell’utilizzo dei dati per i segmenti di pubblico Profilo cliente in tempo reale che utilizzano le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # Applicare la conformità in materia di utilizzo dei dati per un segmento di pubblico utilizzando le API
 
-Questa esercitazione descrive i passaggi per applicare la conformità in materia di utilizzo dei dati per [!DNL Real-time Customer Profile] segmenti di pubblico utilizzando le API.
+Questa esercitazione descrive i passaggi per applicare la conformità in materia di utilizzo dei dati per [!DNL Real-Time Customer Profile] segmenti di pubblico utilizzando le API.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona comprensione dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire [!DNL Experience Data Model (XDM)] dati [!DNL Platform]. Il profilo unisce i dati tra varie risorse di dati aziendali e fornisce l’accesso a tali dati in una presentazione unificata.
-   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate da [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
-- [[!DNL Segmentation]](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di utenti contenuti nell’archivio profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire [!DNL Experience Data Model (XDM)] dati [!DNL Platform]. Il profilo unisce i dati tra varie risorse di dati aziendali e fornisce l’accesso a tali dati in una presentazione unificata.
+   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate da [!DNL Real-Time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
+- [[!DNL Segmentation]](../home.md): Come [!DNL Real-Time Customer Profile] divide un ampio gruppo di utenti contenuti nell’archivio profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [Governance dei dati](../../data-governance/home.md): La governance dei dati fornisce l’infrastruttura per l’etichettatura e l’applicazione dell’utilizzo dei dati, utilizzando i seguenti componenti:
    - [Etichette di utilizzo dati](../../data-governance/labels/user-guide.md): Etichette utilizzate per descrivere i set di dati e i campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
    - [Criteri di utilizzo dei dati](../../data-governance/policies/overview.md): Configurazioni che indicano quali azioni di marketing sono consentite sui dati categorizzati da particolari etichette di utilizzo dei dati.
@@ -58,7 +58,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Cercare un criterio di unione per una definizione di segmento {#merge-policy}
 
-Questo flusso di lavoro inizia con l’accesso a un segmento di pubblico noto. Segmenti abilitati per l’uso in [!DNL Real-time Customer Profile] contengono un ID criterio di unione nella relativa definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
+Questo flusso di lavoro inizia con l’accesso a un segmento di pubblico noto. Segmenti abilitati per l’uso in [!DNL Real-Time Customer Profile] contengono un ID criterio di unione nella relativa definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
 
 Utilizzo della [!DNL Segmentation] API, puoi cercare una definizione di segmento in base al relativo ID per trovare i criteri di unione associati.
 

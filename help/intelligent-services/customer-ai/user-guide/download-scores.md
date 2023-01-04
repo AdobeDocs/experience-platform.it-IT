@@ -6,7 +6,7 @@ title: Scaricare i punteggi in Customer AI
 topic-legacy: Downloading scores
 description: Customer AI consente di scaricare i punteggi in formato file Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 3%
@@ -286,7 +286,7 @@ Un modo alternativo per scaricare i dati del punteggio è quello di esportare il
 
 >[!IMPORTANT]
 >
->Per utilizzare questo metodo di esportazione, è necessario abilitare Profilo cliente in tempo reale per il set di dati.
+>Per utilizzare questo metodo di esportazione, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
 
 La [esportare un segmento](../../../segmentation/tutorials/evaluate-a-segment.md) nella guida alla valutazione dei segmenti sono descritti i passaggi necessari per esportare un set di dati per il pubblico. La guida illustra e fornisce esempi di quanto segue:
 

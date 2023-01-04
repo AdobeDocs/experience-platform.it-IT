@@ -5,7 +5,7 @@ title: Guida all’interfaccia utente dei set di dati
 topic-legacy: datasets
 description: Scopri come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Questa guida utente richiede una buona comprensione dei seguenti componenti di A
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Editor di schema](../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi XDM personalizzati utilizzando [!DNL Schema Editor] all&#39;interno del [!DNL Platform] interfaccia utente.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri sull&#39;utilizzo dei dati dei clienti.
 
 ## Visualizzare i set di dati {#view-datasets}
@@ -108,7 +108,7 @@ La **[!UICONTROL Aggiungi dati]** viene visualizzato il passaggio . Carica il fi
 
 ## Abilitare un set di dati per il profilo cliente in tempo reale {#enable-profile}
 
-Ogni set di dati è in grado di arricchire i profili dei clienti con i relativi dati acquisiti. A tal fine, lo schema a cui aderisce il set di dati deve essere compatibile per l’utilizzo in [!DNL Real-time Customer Profile]. Uno schema compatibile soddisfa i seguenti requisiti:
+Ogni set di dati è in grado di arricchire i profili dei clienti con i relativi dati acquisiti. A tal fine, lo schema a cui aderisce il set di dati deve essere compatibile per l’utilizzo in [!DNL Real-Time Customer Profile]. Uno schema compatibile soddisfa i seguenti requisiti:
 
 * Lo schema ha almeno un attributo specificato come proprietà Identity.
 * Lo schema presenta una proprietà Identity definita come identità principale.
@@ -145,7 +145,7 @@ Viene visualizzata una casella di conferma. Seleziona **[!UICONTROL Elimina]** p
 
 Se un set di dati è abilitato per Profilo, l’eliminazione di tale set di dati tramite l’interfaccia utente lo elimina dal data lake, dal servizio Identity e dall’archivio profili in Platform.
 
-È possibile eliminare un set di dati da [!DNL Profile] memorizza solo (lasciando i dati nel Data Lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la sezione [guida all’endpoint API per i processi di sistema dei profili](../../profile/api/profile-system-jobs.md).
+È possibile eliminare un set di dati da [!DNL Profile] memorizza solo (lasciando i dati nel Data Lake) utilizzando l’API del profilo cliente in tempo reale. Per ulteriori informazioni, consulta la sezione [guida all’endpoint API per i processi di sistema dei profili](../../profile/api/profile-system-jobs.md).
 
 ## Monitoraggio dell’acquisizione di dati
 

@@ -5,7 +5,7 @@ title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 3%
@@ -20,13 +20,13 @@ Gli spazi dei nomi di identità sono un componente di [[!DNL Identity Service]](
 
 Per utilizzare i namespace di identità è necessario comprendere i vari servizi Adobe Experience Platform interessati. Prima di iniziare a utilizzare i namespace, controlla la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Identity Service]](./home.md): Ottieni una visione migliore dei singoli clienti e del loro comportamento attraverso il collegamento delle identità tra dispositivi e sistemi.
 - [[!DNL Privacy Service]](../privacy-service/home.md): I namespace di identità vengono utilizzati nelle richieste di conformità per normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
 ## Informazioni sugli spazi dei nomi delle identità
 
-Un&#39;identità completa include un valore ID e uno spazio dei nomi. Quando i dati dei record vengono confrontati tra i frammenti di profilo, come quando [!DNL Real-time Customer Profile] unisce i dati di profilo, sia il valore di identità che lo spazio dei nomi devono corrispondere.
+Un&#39;identità completa include un valore ID e uno spazio dei nomi. Quando i dati dei record vengono confrontati tra i frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati di profilo, sia il valore di identità che lo spazio dei nomi devono corrispondere.
 
 Ad esempio, due frammenti di profilo possono contenere ID primari diversi, ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;, pertanto [!DNL Platform] è in grado di vedere che questi frammenti sono in realtà la stessa persona e li unisce nel grafico dell&#39;identità per l&#39;individuo.
 

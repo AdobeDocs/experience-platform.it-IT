@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. Questa guida mostra come creare, visualizzare, aggiornare ed eliminare gli attributi calcolati utilizzando l’API Profilo cliente in tempo reale.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -142,7 +142,7 @@ Un attributo calcolato creato correttamente restituisce HTTP Status 200 (OK) e u
 | `positionPath` | Matrice contenente la struttura decostruita `path` al campo inviato nella richiesta. |
 | `returnSchema.meta:xdmType` | Il tipo di campo in cui verrà memorizzato l&#39;attributo calcolato. |
 | `definedOn` | Matrice che mostra gli schemi dell&#39;unione su cui è stato definito l&#39;attributo calcolato. Contiene un oggetto per schema di unione, il che significa che possono essere presenti più oggetti all&#39;interno dell&#39;array se l&#39;attributo calcolato è stato aggiunto a più schemi in base a classi diverse. |
-| `active` | Un valore booleano che indica se l&#39;attributo calcolato è attualmente attivo o meno. Per impostazione predefinita, il valore è `true`. |
+| `active` | Un valore booleano che indica se l&#39;attributo calcolato è attualmente attivo o meno. Il valore per impostazione predefinita è `true`. |
 | `type` | Il tipo di risorsa creata, in questo caso &quot;ComputedAttribute&quot;, è il valore predefinito. |
 | `createEpoch` e `updateEpoch` | Data e ora di creazione dell&#39;attributo calcolato e dell&#39;ultimo aggiornamento, rispettivamente. |
 
@@ -270,7 +270,7 @@ Un attributo calcolato creato correttamente restituisce HTTP Status 200 (OK) e u
 | `positionPath` | Matrice contenente la struttura decostruita `path` al campo inviato nella richiesta. |
 | `returnSchema.meta:xdmType` | Il tipo di campo in cui verrà memorizzato l&#39;attributo calcolato. |
 | `definedOn` | Matrice che mostra gli schemi dell&#39;unione su cui è stato definito l&#39;attributo calcolato. Contiene un oggetto per schema di unione, il che significa che possono essere presenti più oggetti all&#39;interno dell&#39;array se l&#39;attributo calcolato è stato aggiunto a più schemi in base a classi diverse. |
-| `active` | Un valore booleano che indica se l&#39;attributo calcolato è attualmente attivo o meno. Per impostazione predefinita, il valore è `true`. |
+| `active` | Un valore booleano che indica se l&#39;attributo calcolato è attualmente attivo o meno. Il valore per impostazione predefinita è `true`. |
 | `type` | Il tipo di risorsa creata, in questo caso &quot;ComputedAttribute&quot;, è il valore predefinito. |
 | `createEpoch` e `updateEpoch` | Data e ora di creazione dell&#39;attributo calcolato e dell&#39;ultimo aggiornamento, rispettivamente. |
 

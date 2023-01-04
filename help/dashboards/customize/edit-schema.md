@@ -3,7 +3,7 @@ keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;da
 title: Modifica schema per creare widget personalizzato del dashboard
 description: Questa guida fornisce istruzioni dettagliate per la selezione degli attributi e la configurazione dello schema dell’organizzazione al fine di creare widget personalizzati per le dashboard di Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Modificare lo schema per creare widget personalizzati
 
-Per creare widget personalizzati per le dashboard di Adobe Experience Platform, devi prima identificare gli attributi Profilo cliente in tempo reale su cui saranno basati i widget.
+Per creare widget personalizzati per le dashboard di Adobe Experience Platform, devi prima identificare gli attributi del profilo cliente in tempo reale su cui saranno basati i widget.
 
 Questa guida fornisce istruzioni dettagliate per la modifica dello schema dell’organizzazione selezionando gli attributi per creare widget dashboard personalizzati.
 

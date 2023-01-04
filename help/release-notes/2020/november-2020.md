@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 5%
@@ -29,7 +29,7 @@ Aggiornamenti alle funzioni esistenti:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Servizio](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Migrazione Adobe Experience Platform Data Lake {#migration}
@@ -60,7 +60,7 @@ Per ulteriori informazioni, consulta la sezione [panoramica sul controllo degli 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Libreria di offerte centralizzata | Interfaccia in cui puoi creare e gestire i diversi elementi che compongono le offerte e definirne regole e vincoli. |
-| Motore di decisione dell’offerta | Il motore di decisione dell’offerta sfrutta [!DNL Platform] dati e [!DNL Real-time Customer Profiles], insieme alla Libreria offerte, per selezionare l’ora esatta, i clienti e i canali a cui verranno distribuite le offerte. |
+| Motore di decisione dell’offerta | Il motore di decisione dell’offerta sfrutta [!DNL Platform] dati e [!DNL Real-Time Customer Profiles], insieme alla Libreria offerte, per selezionare l’ora esatta, i clienti e i canali a cui verranno distribuite le offerte. |
 
 Per ulteriori informazioni, consulta la sezione [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=it) documentazione.
 
@@ -179,7 +179,7 @@ Customer AI, come parte di Intelligent Services, fornisce agli addetti al market
 
 Per ulteriori informazioni, leggere il [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md).
 
-## Real-time Customer Profile {#profile}
+## Profilo cliente in tempo reale {#profile}
 
 Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account actionable e timestamp di ogni interazione con il cliente.
 

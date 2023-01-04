@@ -5,7 +5,7 @@ title: Filtrare i dati del catalogo utilizzando i parametri della query
 topic-legacy: developer guide
 description: L’API del servizio catalogo consente di filtrare i dati di risposta utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 2%
@@ -210,7 +210,7 @@ Ci sono alcune limitazioni da considerare quando si utilizzano i tag:
 * I nomi dei tag sono univoci per la tua organizzazione IMS.
 * I processi di Adobe possono sfruttare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, evita questa convenzione quando si dichiarano i nomi dei tag.
 * I seguenti nomi di tag sono riservati per l’uso in [!DNL Experience Platform], e quindi non può essere dichiarato come nome di tag per la tua organizzazione:
-   * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da acquisire [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da acquisire [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: Questo nome di tag è riservato ai set di dati da acquisire [[!DNL Identity Service]](../../identity-service/home.md).
 
 Di seguito è riportato un esempio di set di dati che contiene un `tags` proprietà. I tag all&#39;interno di tale proprietà si presentano sotto forma di coppie chiave-valore, con ogni valore di tag che viene visualizzato come una matrice contenente una singola stringa:

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;connett
 title: Creare una connessione sorgente Adobe Campaign Managed Cloud Services tramite l’interfaccia utente di Platform
 description: Scopri come collegare Adobe Experience Platform a Adobe Campaign Managed Cloud Services utilizzando l’interfaccia utente di Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: b9f032c903da2bdb9f37179b1693119bf7b0029d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 1%
@@ -137,7 +137,7 @@ Questa pagina fornisce anche un’interfaccia per aggiornare la descrizione dei 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i tuoi registri di consegna Campaign v8 e i dati dei registri di tracciamento in Platform. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i tuoi registri di consegna Campaign v8 e i dati dei registri di tracciamento in Platform. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

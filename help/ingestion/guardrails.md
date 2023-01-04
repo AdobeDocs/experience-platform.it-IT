@@ -3,7 +3,7 @@ keywords: Experience Platform;risoluzione dei problemi;protezioni;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Questo documento fornisce indicazioni sulle protezioni per l’inserimento dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 1%
@@ -40,5 +40,5 @@ Nella tabella seguente sono illustrate le protezioni da considerare quando si ut
 
 Vedi la seguente documentazione per maggiori informazioni sulle protezioni dei dati e del trattamento in Experience Platform:
 
-* [Guardrail per dati Profilo cliente in tempo reale](../profile/guardrails.md)
+* [Guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md)
 * [Guardrail per i dati del servizio Identity](../identity-service/guardrails.md)

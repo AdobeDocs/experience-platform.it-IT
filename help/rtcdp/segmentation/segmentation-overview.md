@@ -3,7 +3,7 @@ keywords: segmentazione; segmentazione rtcdp;segmentazione della piattaforma dat
 title: Servizio di segmentazione in Real-time Customer Data Platform
 description: Adobe Real-Time Customer Data Platformå è basato su Adobe Experience Platform e utilizza molti dei servizi e delle funzionalità di Experience Platform. Tramite il servizio di segmentazione, puoi fornire attività di marketing personalizzate dividendo i tuoi clienti in gruppi più piccoli con caratteristiche simili.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 4%
@@ -33,7 +33,7 @@ Con l’aiuto di fattori di influenza, IA per l’analisi dei clienti può dirti
 * Fornisci modelli di propensione clienti ad alta precisione per segmentazione e targeting più rigorosi.
 * Comprendere i fattori influenti e la probabilità dietro alcuni comportamenti dei clienti.
 * Fornire opzioni personalizzabili per i casi d’uso e i dati unici della tua azienda.
-* Miglioramento del profilo cliente in tempo reale con punteggi di propensione dei clienti quali abbandono e conversione.
+* Miglioramento del profilo cliente in tempo reale con punteggi di propensione del cliente come abbandono e conversione.
 * Miglioramento dei profili dei clienti con fattori influenti per i punteggi di propensione.
 * Creazione di segmenti di clienti in base a fattori influenti e punteggi di propensione.
 

@@ -3,7 +3,7 @@ keywords: panoramica delle metriche; Panoramica sulle metriche rtcdp
 title: Home page e dashboard di Real-time Customer Data Platform
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Per ulteriori informazioni sui set di dati, consulta la sezione [panoramica dei 
 
 ### Profili
 
-La **[!UICONTROL Profili]** count mostra il numero totale di persone con profili nel [!DNL Real-time Customer Profile]. Non include frammenti di profilo. Questo è il tuo pubblico totalmente indirizzabile.
+La **[!UICONTROL Profili]** count mostra il numero totale di persone con profili nel [!DNL Real-Time Customer Profile]. Non include frammenti di profilo. Questo è il tuo pubblico totalmente indirizzabile.
 
 Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione dei criteri di unione nel profilo unificato.
 

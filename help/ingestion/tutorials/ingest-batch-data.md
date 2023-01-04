@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file Parquet o dati conformi a uno schema Experience Data Model (XDM) noto.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -75,23 +75,23 @@ Ora è stato creato un set di dati vuoto e sei stato restituito al **[!UICONTROL
 
 Sul lato destro dell’area di lavoro Set di dati viene visualizzata la variabile **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati quali ID set di dati, nome, descrizione, nome della tabella, schema, streaming e origine. La scheda Informazioni include anche informazioni su quando è stato creato il set di dati e la sua ultima data di modifica.
 
-Anche nella scheda Informazioni è presente un  **[!UICONTROL Profilo]** attiva/disattiva utilizzato per abilitare il set di dati per l’utilizzo con [!DNL Real-time Customer Profile]. Utilizzo di questo interruttore e [!DNL Real-time Customer Profile], sarà spiegato più dettagliatamente nella sezione che segue.
+Anche nella scheda Informazioni è presente un  **[!UICONTROL Profilo]** attiva/disattiva utilizzato per abilitare il set di dati per l’utilizzo con [!DNL Real-Time Customer Profile]. Utilizzo di questo interruttore e [!DNL Real-Time Customer Profile], sarà spiegato più dettagliatamente nella sezione che segue.
 
 ![Attività set di dati](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Abilita set di dati per [!DNL Real-time Customer Profile]
+## Abilita set di dati per [!DNL Real-Time Customer Profile]
 
 I set di dati vengono utilizzati per acquisire i dati in [!DNL Experience Platform]e che i dati vengono utilizzati in ultima analisi per identificare gli individui e unire le informazioni provenienti da più fonti. L&#39;informazione unita si chiama [!DNL Real-Time Customer Profile]. Per [!DNL Platform] per sapere quali informazioni devono essere incluse nel [!DNL Real-Time Profile], i set di dati possono essere contrassegnati per l’inclusione utilizzando **[!UICONTROL Profilo]** alternare.
 
 Per impostazione predefinita, questa opzione è disattivata. Se scegli di attivare [!DNL Profile], tutti i dati acquisiti nel set di dati verranno utilizzati per identificare un individuo e unire le sue relazioni [!DNL Real-Time Profile].
 
-Per ulteriori informazioni [!DNL Real-time Customer Profile] e lavorando con le identità, controlla i [Servizio identità](../../identity-service/home.md) documentazione.
+Per ulteriori informazioni [!DNL Real-Time Customer Profile] e lavorando con le identità, controlla i [Servizio identità](../../identity-service/home.md) documentazione.
 
-Per abilitare il set di dati per [!DNL Real-time Customer Profile], fai clic su **[!UICONTROL Profilo]** attivare **[!UICONTROL Info]** scheda .
+Per abilitare il set di dati per [!DNL Real-Time Customer Profile], fai clic su **[!UICONTROL Profilo]** attivare **[!UICONTROL Info]** scheda .
 
 ![Attiva/disattiva profilo](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’abilitazione del set di dati per [!DNL Real-time Customer Profile].
+Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’abilitazione del set di dati per [!DNL Real-Time Customer Profile].
 
 ![Finestra di dialogo Abilita profilo](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -119,7 +119,7 @@ Una volta trascinati e rilascia (o sfoglia e seleziona) un file Parquet o JSON d
 
 ## Metriche del set di dati
 
-Al termine del caricamento del file, il **[!UICONTROL Attività set di dati]** La scheda non mostra più che &quot;non sono stati aggiunti batch&quot;. Invece, **[!UICONTROL Attività set di dati]** ora mostra le metriche del set di dati. Tutte le metriche mostrano &quot;0&quot; in questa fase, in quanto il batch non è ancora caricato.
+Al termine del caricamento del file, il **[!UICONTROL Attività set di dati]** La scheda non mostra più che &quot;non sono stati aggiunti batch&quot;. Invece, **[!UICONTROL Attività set di dati]** La scheda ora mostra le metriche del set di dati. Tutte le metriche mostrano &quot;0&quot; in questa fase, in quanto il batch non è ancora caricato.
 
 Nella parte inferiore della scheda è presente un elenco che mostra il **[!UICONTROL ID batch]** dei dati appena acquisiti tramite [&quot;Aggiungi dati al set di dati&quot;](#add-data-to-dataset) processo. Sono incluse anche le informazioni relative al batch, tra cui data di acquisizione, numero di record acquisiti e stato del batch corrente.
 

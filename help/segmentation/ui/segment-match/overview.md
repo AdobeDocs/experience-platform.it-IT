@@ -5,14 +5,14 @@ title: Panoramica sulla corrispondenza dei segmenti
 topic-legacy: overview
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] panoramica
+# Panoramica di [!DNL Segment Match]
 
 Adobe Experience Platform Segment Match è un servizio di condivisione dei segmenti che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy. [!DNL Segment Match] utilizza gli standard sulla privacy di Platform e gli identificatori personali come e-mail con hash, numeri di telefono con hash e identificatori dei dispositivi come IDFA e GAID.
 
@@ -37,7 +37,7 @@ Il primo passo per iniziare a utilizzare [!DNL Segment Match] è per assicurarsi
 
 Gli spazi dei nomi di identità sono un componente di [Servizio Adobe Experience Platform Identity](../../../identity-service/home.md). Ogni identità cliente contiene uno spazio dei nomi associato che indica il contesto dell&#39;identità. Ad esempio, uno spazio dei nomi può distinguere un valore di &quot;name&quot;<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
 
-Un&#39;identità completa include un valore ID e uno spazio dei nomi. Quando i dati dei record vengono confrontati tra i frammenti di profilo (ad esempio quando [!DNL Real-time Customer Profile] unisce i dati del profilo), il valore dell’identità e lo spazio dei nomi devono corrispondere.
+Un&#39;identità completa include un valore ID e uno spazio dei nomi. Quando i dati dei record vengono confrontati tra i frammenti di profilo (ad esempio quando [!DNL Real-Time Customer Profile] unisce i dati del profilo), il valore dell’identità e lo spazio dei nomi devono corrispondere.
 
 Nel contesto [!DNL Segment Match], gli spazi dei nomi vengono utilizzati nel processo di sovrapposizione durante la condivisione dei dati.
 
@@ -204,4 +204,4 @@ Leggendo questo documento, hai acquisito una comprensione [!DNL Segment Match], 
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] panoramica](../../../profile/home.md)
+* [Panoramica di [!DNL Real-Time Customer Profile]](../../../profile/home.md)

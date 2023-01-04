@@ -4,7 +4,7 @@ title: Tipo di dati consenso e preferenze
 description: Il tipo di dati Consent for Privacy, Personalization and Marketing Preferences (Consenso per privacy, personalizzazione e preferenze di marketing) ha lo scopo di supportare la raccolta di autorizzazioni e preferenze dei clienti generate dalle piattaforme di gestione dei consensi (CMP, Consent Management Platform) e da altre sorgenti dalle operazioni sui dati.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 2%
@@ -263,7 +263,7 @@ Guarda l’esercitazione su [creazione di uno schema nell’interfaccia utente](
 
 >[!IMPORTANT]
 >
->Se desideri inviare i dati di consenso a [!DNL Real-time Customer Profile], è necessario creare un [!DNL Profile]schema abilitato basato su [!DNL XDM Individual Profile] la classe che contiene [!UICONTROL Consensi e preferenze] tipo di dati. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi a [!DNL Real-time Customer Profile] requisiti per schemi e set di dati.
+>Se desideri inviare i dati di consenso a [!DNL Real-Time Customer Profile], è necessario creare un [!DNL Profile]schema abilitato basato su [!DNL XDM Individual Profile] la classe che contiene [!UICONTROL Consensi e preferenze] tipo di dati. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi a [!DNL Real-Time Customer Profile] requisiti per schemi e set di dati.
 >
 >Inoltre, è necessario assicurarsi che i criteri di unione siano configurati per assegnare priorità ai set di dati contenenti i dati di consenso e preferenza più recenti, in modo che i profili cliente vengano aggiornati correttamente. Vedi la panoramica su [criteri di unione](../../rtcdp/profile/merge-policies.md) per ulteriori informazioni.
 

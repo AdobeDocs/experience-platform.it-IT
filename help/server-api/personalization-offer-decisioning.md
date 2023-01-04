@@ -2,7 +2,7 @@
 title: Personalizzazione tramite Offer decisioning
 description: Scopri come utilizzare l’API server per fornire ed eseguire il rendering di esperienze personalizzate tramite Offer decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Consulta la sezione [guida sull’aggiunta di servizi a un datastream](../edge/d
 
 La [!DNL Offer Decision Engine] utilizza i dati di Adobe Experience Platform e [Profili cliente in tempo reale](../profile/home.md), insieme al [!DNL Offer Library], per fornire offerte ai clienti e ai canali giusti al momento giusto.
 
-Per ulteriori informazioni sulle [!DNL Offer Decisioning Engine], consulta l’ [documentazione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html).
+Per ulteriori informazioni sulle [!DNL Offer Decisioning Engine], consulta l’ [documentazione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it).
 
 Dopo [configurazione del datastream](#configure-your-datastream), devi definire gli ambiti decisionali da utilizzare nella campagna di personalizzazione.
 

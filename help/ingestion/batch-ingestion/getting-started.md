@@ -4,7 +4,7 @@ title: Guida introduttiva all’API di acquisizione dei dati
 type: Documentation
 description: La guida introduttiva all’acquisizione dei dati API descrive i concetti chiave e le funzionalità di base da conoscere prima di poter iniziare a inserire dati in Experience Platform utilizzando le API.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Utilizzando gli endpoint API per l’acquisizione dei dati, puoi eseguire operaz
 L’utilizzo delle guide API richiede una buona conoscenza di più servizi Adobe Experience Platform coinvolti nell’utilizzo dei dati. Prima di utilizzare l’API di acquisizione dati, consulta la documentazione relativa ai seguenti servizi:
 
 * [Acquisizione batch](./overview.md): Consente di acquisire dati in Adobe Experience Platform come file batch.
-* [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-Time Customer Profile]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 

@@ -5,31 +5,30 @@ topic-legacy: guide
 type: Documentation
 description: Questo documento fornisce le risposte alle domande frequenti sul Profilo cliente in tempo reale e una guida alla risoluzione dei problemi relativi agli errori comuni durante l’utilizzo dei dati del profilo con Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
 
-# Guida alla risoluzione dei problemi in tempo reale del profilo cliente
+# Guida alla risoluzione dei problemi del profilo cliente in tempo reale
 
-Questo documento fornisce le risposte alle domande frequenti sul Profilo cliente in tempo reale e una guida alla risoluzione dei problemi per gli errori comuni. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, consulta la [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande più frequenti sul Profilo del cliente in tempo reale, nonché una guida alla risoluzione dei problemi per gli errori comuni. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, fai riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-Con [!DNL Real-time Customer Profile] puoi visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Questo consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti per i clienti su più canali.
+Con [!DNL Real-Time Customer Profile], puoi visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Questo consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti per i clienti su più canali.
 
 ## Domande frequenti
 
 Di seguito è riportato un elenco delle risposte alle domande più frequenti sul Profilo del cliente in tempo reale.
 
-### Quali tipi di dati sono accettati per Profilo cliente in tempo reale?
+### Quali tipi di dati sono accettati per il Profilo cliente in tempo reale?
 
-Il profilo accetta sia dati **record** che **serie temporali**, purché i dati in questione contengano almeno un valore di identità che associa i dati a una singola persona univoca.
+Il profilo accetta entrambe **record** e **serie temporale** purché i dati in questione contengano almeno un valore di identità che associa i dati a una singola persona univoca.
 
-Come tutti i servizi Platform, Profile richiede che i suoi dati siano strutturati semanticamente in uno schema Experience Data Model (XDM). A sua volta, questo schema deve avere un&#39;identità **primaria** definita ed essere abilitato per l&#39;utilizzo in Profilo.
+Come tutti i servizi Platform, Profile richiede che i suoi dati siano strutturati semanticamente in uno schema Experience Data Model (XDM). A sua volta, questo schema deve avere un **identità principale** è stato definito e deve essere abilitato per l’utilizzo in Profilo.
 
-Se non conosci XDM, inizia con [Panoramica XDM](../xdm/home.md) per ulteriori informazioni. Quindi, consulta la guida utente XDM per i passaggi su come [impostare i campi di identità](../xdm/tutorials/create-schema-ui.md#identity-field) e [abilitare uno schema per Profilo](../xdm/tutorials/create-schema-ui.md#profile).
+Se non conosci XDM, inizia con [Panoramica di XDM](../xdm/home.md) per saperne di più. Quindi, consulta la guida utente di XDM per i passaggi su come [imposta campi di identità](../xdm/tutorials/create-schema-ui.md#identity-field) e [abilitare uno schema per il profilo](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Dove sono memorizzati i dati del profilo?
 
@@ -39,27 +38,27 @@ Profilo cliente in tempo reale mantiene il proprio archivio dati (denominato &qu
 
 Se i dati sono stati acquisiti in un set di dati non di profilo, devi riacquisire tali dati in un set di dati abilitato per il profilo per renderli disponibili nell’archivio profili. È possibile abilitare un set di dati esistente per il profilo, tuttavia tutti i dati acquisiti prima di tale configurazione non verranno ancora visualizzati nell’archivio profili.
 
-Se desideri aggiungere dati precedentemente acquisiti all’archivio profili, segui l’ [esercitazione sulla configurazione del set di dati](./tutorials/dataset-configuration.md) per creare un nuovo set di dati o convertire un set di dati esistente da abilitare per il profilo, quindi riassimila i dati desiderati in tale set di dati.
+Se desideri aggiungere dati precedentemente acquisiti all’archivio profili, segui la [esercitazione sulla configurazione del set di dati](./tutorials/dataset-configuration.md) per creare un nuovo set di dati o convertire un set di dati esistente da abilitare per il profilo, quindi riacquisire i dati desiderati in tale set di dati.
 
 ### Come posso visualizzare i dati del profilo acquisito?
 
 Esistono diversi metodi per visualizzare i dati del profilo, a seconda che tu utilizzi l’API o l’interfaccia utente.
 
-#### Utilizzo dell’API
+#### Mediante l’API
 
-Se conosci gli ID delle entità profilo a cui desideri accedere, puoi utilizzare l’endpoint `/entities` (Accesso profilo) nell’API del profilo per cercare tali entità. Per ulteriori informazioni, consulta la sezione sulle [entità](./api/entities.md) nella guida per gli sviluppatori.
+Se conosci gli ID delle entità profilo a cui desideri accedere, puoi utilizzare la funzione `/entities` (Accesso profilo) endpoint nell’API del profilo per cercare tali entità. Vedi la sezione su [entità](./api/entities.md) nella guida per gli sviluppatori per ulteriori informazioni.
 
-Puoi inoltre utilizzare l’API del servizio di segmentazione di Adobe Experience Platform per accedere ai singoli profili dei clienti idonei per un’iscrizione a un segmento. Per ulteriori informazioni, consulta la [Panoramica del servizio di segmentazione](../segmentation/home.md) .
+Puoi inoltre utilizzare l’API del servizio di segmentazione di Adobe Experience Platform per accedere ai singoli profili dei clienti idonei per un’iscrizione a un segmento. Consulta la sezione [Panoramica del servizio di segmentazione](../segmentation/home.md) per ulteriori informazioni.
 
 #### Utilizzo dell’interfaccia
 
-Nell’interfaccia utente Experience Platform, la scheda **[!UICONTROL Browse]** nell’area di lavoro **[!UICONTROL Profiles]** ti consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al loro valore di identità. Per ulteriori informazioni, consulta la [Guida utente al profilo](./ui/user-guide.md) .
+Nell’interfaccia utente di Experience Platform, la funzione **[!UICONTROL Sfoglia]** nella scheda **[!UICONTROL Profili]** workspace consente di visualizzare il conteggio totale dei profili e di cercare singoli profili in base al loro valore di identità. Consulta la sezione [Guida utente profilo](./ui/user-guide.md) per ulteriori informazioni.
 
-Puoi anche visualizzare un elenco dei segmenti nella scheda **[!UICONTROL Browse]** nell’ area di lavoro **[!UICONTROL Segments]** . Dopo aver selezionato un segmento, viene visualizzato un esempio di profili qualificati per quel segmento. Puoi quindi selezionare uno qualsiasi di questi profili elencati per visualizzarne i dettagli. Per ulteriori informazioni, consulta la [Panoramica dell’interfaccia utente di segmentazione](../segmentation/ui/overview.md) .
+Puoi anche visualizzare un elenco dei segmenti nella sezione **[!UICONTROL Sfoglia]** nella scheda **[!UICONTROL Segmenti]** workspace. Dopo aver selezionato un segmento, viene visualizzato un esempio di profili qualificati per quel segmento. Puoi quindi selezionare uno qualsiasi di questi profili elencati per visualizzarne i dettagli. Consulta la sezione [Panoramica dell’interfaccia utente di segmentazione](../segmentation/ui/overview.md) per ulteriori informazioni.
 
 ## Codici di errore
 
-Di seguito è riportato un elenco di messaggi di errore che potresti incontrare quando lavori con l’API del profilo cliente in tempo reale. Se l&#39;errore che incontri non è elencato qui, puoi trovarlo nella [Guida generale alla risoluzione dei problemi della piattaforma](../landing/troubleshooting.md).
+Di seguito è riportato un elenco di messaggi di errore che potresti incontrare quando lavori con l’API del profilo cliente in tempo reale. Se l&#39;errore che si verifica non è presente in questa pagina, è possibile trovarlo in generale [Guida alla risoluzione dei problemi di Platform](../landing/troubleshooting.md) invece.
 
 ### Impossibile cercare lo schema dell&#39;attributo calcolato per il percorso fornito
 
@@ -70,9 +69,9 @@ Di seguito è riportato un elenco di messaggi di errore che potresti incontrare 
 }
 ```
 
-Durante la creazione di un nuovo attributo calcolato, questo errore si verifica quando il sistema non è riuscito a trovare lo schema fornito nel payload della richiesta. Assicurati di aver fornito l’ID tenant corretto nella proprietà `path` del payload e che i valori di `schema.name` siano un nome di schema valido.
+Durante la creazione di un nuovo attributo calcolato, questo errore si verifica quando il sistema non è riuscito a trovare lo schema fornito nel payload della richiesta. Verifica di aver fornito l’ID tenant corretto nel payload `path` e che i valori di `schema.name` è un nome di schema valido.
 
-Se non conosci il tuo ID tenant, puoi recuperarlo seguendo i passaggi descritti nella [Guida per gli sviluppatori del Registro di sistema dello schema](../xdm/api/getting-started.md).
+Se non conosci il tuo ID tenant, puoi recuperarlo seguendo i passaggi descritti nella sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../xdm/api/getting-started.md).
 
 ### La funzione con lo stesso nome esiste già per lo schema specificato o definedOn
 
@@ -83,7 +82,7 @@ Se non conosci il tuo ID tenant, puoi recuperarlo seguendo i passaggi descritti 
 }
 ```
 
-Quando si crea un nuovo attributo calcolato, questo errore si verifica quando la proprietà `name` fornita è già utilizzata per lo schema indicato in `schema.name`. Sostituisci il valore con un nome univoco prima di riprovare.
+Quando si crea un nuovo attributo calcolato, questo errore si verifica quando il `name` proprietà già utilizzata per lo schema indicato in `schema.name`. Sostituisci il valore con un nome univoco prima di riprovare.
 
 ### Lo schema restituito dell&#39;espressione non è lo schema dell&#39;attributo calcolato nello schema XDM
 
@@ -94,7 +93,7 @@ Quando si crea un nuovo attributo calcolato, questo errore si verifica quando la
 }
 ```
 
-Quando si crea un nuovo attributo calcolato, questo errore si verifica quando la proprietà `name` fornita è già utilizzata per lo schema indicato in `schema.name`. Sostituisci il valore con un nome univoco prima di riprovare.
+Quando si crea un nuovo attributo calcolato, questo errore si verifica quando il `name` proprietà già utilizzata per lo schema indicato in `schema.name`. Sostituisci il valore con un nome univoco prima di riprovare.
 
 ### Richiesta di eliminazione non valida (processo di sistema del profilo)
 
@@ -105,7 +104,7 @@ Quando si crea un nuovo attributo calcolato, questo errore si verifica quando la
 }
 ```
 
-Questo errore si verifica quando viene fornito un payload non valido per un processo di eliminazione del sistema. Assicurati di fornire un set di dati o un ID batch valido sotto la proprietà `dataSetID` o `batchID` del payload, rispettivamente. Per ulteriori informazioni, consulta la sezione su [creazione di una richiesta di cancellazione](./api/profile-system-jobs.md#create-a-delete-request) nella guida per gli sviluppatori di profili .
+Questo errore si verifica quando viene fornito un payload non valido per un processo di eliminazione del sistema. Assicurati di fornire un set di dati o un ID batch valido sotto il payload `dataSetID` o `batchID` proprietà, rispettivamente. Vedi la sezione su [creazione di una richiesta di cancellazione](./api/profile-system-jobs.md#create-a-delete-request) per ulteriori informazioni, consulta la guida per gli sviluppatori di profili .
 
 ### Batch non trovato per il set di dati del profilo
 
@@ -135,7 +134,7 @@ Questo errore si verifica quando non è stato possibile trovare un batch valido 
 }
 ```
 
-Questo errore si verifica quando la `destinationId` fornita in una richiesta `POST /config/projections` non è valida. Prima di riprovare, verifica di aver fornito un ID di destinazione valido. Per creare una nuova destinazione, segui i passaggi descritti nella [Guida per gli sviluppatori di profili](./api/edge-projections.md#create-a-destination).
+Questo errore si verifica quando `destinationId` a `POST /config/projections` richiesta non valida. Prima di riprovare, verifica di aver fornito un ID di destinazione valido. Per creare una nuova destinazione, segui i passaggi descritti nel [Guida per gli sviluppatori di profili](./api/edge-projections.md#create-a-destination).
 
 ### Tipo di supporto non supportato
 

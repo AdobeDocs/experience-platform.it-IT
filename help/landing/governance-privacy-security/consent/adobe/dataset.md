@@ -5,7 +5,7 @@ title: Configurare un set di dati per acquisire dati di consenso e preferenza
 topic-legacy: getting started
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenza in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurare un set di dati per acquisire dati di consenso e preferenza
 
-Affinché Adobe Experience Platform possa elaborare i dati di consenso o preferenza dei clienti, questi devono essere inviati a un set di dati il cui schema contiene campi relativi ai consensi e ad altre autorizzazioni. In particolare, questo set di dati deve essere basato su [!DNL XDM Individual Profile] e abilitata per l&#39;uso in [!DNL Real-time Customer Profile].
+Affinché Adobe Experience Platform possa elaborare i dati di consenso o preferenza dei clienti, questi devono essere inviati a un set di dati il cui schema contiene campi relativi ai consensi e ad altre autorizzazioni. In particolare, questo set di dati deve essere basato su [!DNL XDM Individual Profile] e abilitata per l&#39;uso in [!DNL Real-Time Customer Profile].
 
 Questo documento fornisce passaggi per la configurazione di un set di dati per elaborare i dati di consenso in Experience Platform. Per una panoramica dell’intero flusso di lavoro per l’elaborazione dei dati di consenso/preferenza in Platform, consulta la [panoramica dell&#39;elaborazione del consenso](./overview.md).
 
@@ -133,7 +133,7 @@ Se lo schema modificato viene utilizzato dalla [!UICONTROL Set di dati del profi
 
 ## Creare un set di dati basato sullo schema di consenso {#dataset}
 
-Dopo aver creato uno schema con i campi di consenso, devi creare un set di dati che in ultima analisi acquisirà i dati di consenso dei clienti. Questo set di dati deve essere abilitato per [!DNL Real-time Customer Profile].
+Dopo aver creato uno schema con i campi di consenso, devi creare un set di dati che in ultima analisi acquisirà i dati di consenso dei clienti. Questo set di dati deve essere abilitato per [!DNL Real-Time Customer Profile].
 
 Per iniziare, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, seleziona **[!UICONTROL Creare un set di dati]** nell&#39;angolo in alto a destra.
 
@@ -151,7 +151,7 @@ La **[!UICONTROL Configurare il set di dati]** viene visualizzato il passaggio .
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-Viene visualizzata la pagina dei dettagli per il set di dati appena creato. Se il set di dati è basato sullo schema delle serie temporali, il processo è completo. Se il set di dati è basato sullo schema del record, il passaggio finale del processo consiste nell’abilitare il set di dati per l’utilizzo in [!DNL Real-time Customer Profile].
+Viene visualizzata la pagina dei dettagli per il set di dati appena creato. Se il set di dati è basato sullo schema delle serie temporali, il processo è completo. Se il set di dati è basato sullo schema del record, il passaggio finale del processo consiste nell’abilitare il set di dati per l’utilizzo in [!DNL Real-Time Customer Profile].
 
 Nella barra a destra, seleziona la **[!UICONTROL Profilo]** alternare.
 

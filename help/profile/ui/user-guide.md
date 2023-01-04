@@ -4,23 +4,23 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] Guida all’interfaccia utente
+# [!DNL Real-Time Customer Profile] Guida all’interfaccia utente
 
-[!DNL Real-time Customer Profile] crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l’interazione con [!DNL Real-time Customer Profile] nell’interfaccia utente di Adobe Experience Platform.
+[!DNL Real-Time Customer Profile] crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l’interazione con [!DNL Real-Time Customer Profile] nell’interfaccia utente di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida all’interfaccia utente richiede una comprensione dei vari [!DNL Experience Platform] servizi di gestione [!DNL Real-time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, controlla la documentazione relativa ai seguenti servizi:
+Questa guida all’interfaccia utente richiede una comprensione dei vari [!DNL Experience Platform] servizi di gestione [!DNL Real-Time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, controlla la documentazione relativa ai seguenti servizi:
 
-* [[!DNL Real-time Customer Profile] panoramica](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-time Customer Profile] colmando le identità provenienti da fonti di dati diverse che vengono ingerite in [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] panoramica](../home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-Time Customer Profile] colmando le identità provenienti da fonti di dati diverse che vengono ingerite in [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
 
 ## [!UICONTROL Panoramica]
@@ -171,7 +171,7 @@ Per ulteriori informazioni sui criteri di unione, vedere [panoramica dei criteri
 
 ## Schema dell&#39;unione {#union-schema}
 
-Dal principale **[!UICONTROL Profili]** seleziona il menu **[!UICONTROL Schema dell&#39;unione]** per visualizzare gli schemi di unione disponibili per i dati acquisiti. Uno schema di unione è un&#39;unione di tutti [!DNL Experience Data Model] (XDM) campi sotto la stessa classe, i cui schemi sono stati abilitati per l’utilizzo in [!DNL Real-time Customer Profile].
+Dal principale **[!UICONTROL Profili]** seleziona il menu **[!UICONTROL Schema dell&#39;unione]** per visualizzare gli schemi di unione disponibili per i dati acquisiti. Uno schema di unione è un&#39;unione di tutti [!DNL Experience Data Model] (XDM) campi sotto la stessa classe, i cui schemi sono stati abilitati per l’utilizzo in [!DNL Real-Time Customer Profile].
 
 Per ulteriori informazioni sugli schemi di unione, visita il [guida all’interfaccia utente per schema unione](union-schema.md).
 

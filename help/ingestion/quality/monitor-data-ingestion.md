@@ -5,7 +5,7 @@ title: Monitoraggio dell’acquisizione dei dati
 topic-legacy: overview
 description: Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Questa guida utente descrive come monitorare i dati all’interno dell’interfa
 
 In [Interfaccia utente Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
 
-La **[!UICONTROL Streaming end-to-end]** viene visualizzata la pagina di monitoraggio. Questa area di lavoro fornisce un grafico che mostra il tasso di eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra il tasso di eventi in streaming elaborati correttamente da [[!DNL Real-time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
+La **[!UICONTROL Streaming end-to-end]** viene visualizzata la pagina di monitoraggio. Questa area di lavoro fornisce un grafico che mostra il tasso di eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra il tasso di eventi in streaming elaborati correttamente da [[!DNL Real-Time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

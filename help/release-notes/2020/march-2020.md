@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -111,7 +111,7 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso 
 | ------- | ----------- |
 | Segnali obsoleti per il connettore Adobe Audience Manager | I dati a livello di segnale da Audience Manager non verranno più inviati. Tieni presente che l’appartenenza al segmento per le caratteristiche e i segmenti continuerà a essere inclusa. In seguito a questa modifica, i set di dati in entrata non verranno più generati. |
 | Set di dati rinominati | I set di dati generati dal connettore di Audience Manager avranno nomi e descrizioni aggiornati. |
-| Abilita [!DNL Profile] attivare/disattivare Audience Manager | [!DNL Profile] può essere abilitata o disabilitata per promuovere il set di dati a [!DNL Real-time Customer Profile]. L’opzione Attiva/Disattiva sarà attivata per impostazione predefinita. |
+| Abilita [!DNL Profile] attivare/disattivare Audience Manager | [!DNL Profile] può essere abilitata o disabilitata per promuovere il set di dati a [!DNL Real-Time Customer Profile]. L’opzione Attiva/Disattiva sarà attivata per impostazione predefinita. |
 | Supporto dell’interfaccia utente per i sistemi di archiviazione cloud | Nuovo connettore sorgente per [!DNL Azure Data Lake Storage Gen2] nell’interfaccia utente di . |
 | Supporto dell’interfaccia utente per i sistemi CRM | Nuovo connettore sorgente per [!DNL HubSpot], [!DNL Salesforce Service Cloud]e [!DNL ServiceNow] nell’interfaccia utente di . |
 | Supporto dell’interfaccia utente per i sistemi di database | Nuovo connettore sorgente per [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]e [!DNL MySQL] nell’interfaccia utente di . |
