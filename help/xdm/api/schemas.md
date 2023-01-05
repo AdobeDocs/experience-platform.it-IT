@@ -5,7 +5,7 @@ title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 5%
@@ -374,7 +374,7 @@ Una delle operazioni più comuni di PATCH consiste nell’aggiungere a uno schem
 **Formato API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parametro | Descrizione |
@@ -465,7 +465,7 @@ Al fine di uno schema a cui partecipare [Profilo cliente in tempo reale](../../p
 **Formato API**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parametro | Descrizione |
