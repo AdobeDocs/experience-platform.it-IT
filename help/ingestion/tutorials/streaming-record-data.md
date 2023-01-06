@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
 title: Trasmetti dati di record tramite le API Streaming Ingestion
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 3%

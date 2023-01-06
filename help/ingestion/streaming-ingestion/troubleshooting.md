@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;streaming;streaming ingestion;risoluzione dei problemi;streaming ingestion risoluzione dei problemi;streaming ingestion faq;faq;
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in streaming
-topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sull’acquisizione in streaming su Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%

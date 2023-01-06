@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;acquisizione streaming;acquisizione;dati sulle serie temporali;dati sulle serie temporali in streaming;
 solution: Experience Platform
 title: Trasmetti dati serie temporale tramite API Streaming Ingestion
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 2%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;acquisizione streaming;acquisizione;streaming messaggi multipli;messaggi multipli;
 solution: Experience Platform
 title: Inviare più messaggi in una singola richiesta HTTP
-topic-legacy: tutorial
 type: Tutorial
 description: Questo documento fornisce un tutorial per l’invio di più messaggi a Adobe Experience Platform all’interno di una singola richiesta HTTP utilizzando l’acquisizione in streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%

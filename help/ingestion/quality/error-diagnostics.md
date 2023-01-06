@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;inserimento batch;inserimento batch;acquisizione parziale;acquisizione parziale;acquisizione parziale;acquisizione parziale;recupero di errori;recupero di errori;recupero di errori;errore;recupero di errori;inserimento parziale batch;parziale;acquisizione;acquisizione;acquisizione;diagnostica di errori;recupero di errori diagnostici;ottieni errori;ottieni errori;recupera errori;recupera errori; recupera errori;
 solution: Experience Platform
 title: Diagnostica degli errori di acquisizione dei dati in recupero
-topic-legacy: overview
 description: Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 3%

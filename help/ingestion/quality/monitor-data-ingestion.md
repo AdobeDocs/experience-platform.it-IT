@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;monitoraggio;monitorare;flussi di dati;monitorare l’acquisizione;inserimento dati;inserimento dati;visualizzare record;visualizzare batch;
 solution: Experience Platform
 title: Monitoraggio dell’acquisizione dei dati
-topic-legacy: overview
 description: Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;inserimento dati;dati acquisiti;streaming;panoramica;acquisizione streaming;latenza;latenza streaming;
 solution: Experience Platform
 title: Panoramica dell’acquisizione in streaming
-topic-legacy: overview
 description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 3%

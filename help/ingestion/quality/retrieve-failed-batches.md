@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;acquisizione batch;acquisizione batch;batch non riusciti;ottenere batch non riusciti;ottenere batch non riusciti;scaricare batch non riusciti;scaricare batch non riusciti;
 solution: Experience Platform
 title: Recupero dei batch con errore tramite API di accesso ai dati
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando le API di acquisizione dati.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%

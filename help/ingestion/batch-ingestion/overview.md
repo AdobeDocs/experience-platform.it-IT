@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;inserimento dati;batch;abilita set di dati;panoramica acquisizione batch;panoramica;panoramica acquisizione batch;
 solution: Experience Platform
 title: Panoramica API di acquisizione in batch
-topic-legacy: overview
 description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 6%

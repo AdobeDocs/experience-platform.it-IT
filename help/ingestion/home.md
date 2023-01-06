@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;inserimento dati;posizione dati;posizione dati;gestione dati;gestione dati;gestione dati;linea;linea;linea;batch;batch;dati acquisiti
 solution: Experience Platform
 title: Panoramica sull’acquisizione dei dati
-topic-legacy: overview
 description: Questo documento presenta i tre modi principali in cui i dati vengono acquisiti in Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 14%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;notifiche di inserimento dati;notifiche;eventi di sottoscrizione;eventi di stato di inserimento dati;eventi di stato;sottoscrizione;notifiche di stato;
 solution: Experience Platform
 title: Notifiche di acquisizione dei dati
-topic-legacy: overview
 description: Per facilitare il monitoraggio del processo di acquisizione, Adobe Experience Platform consente di abbonarsi a un set di eventi pubblicati in ogni fase del processo, notificandovi lo stato dei dati acquisiti ed eventuali errori.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%

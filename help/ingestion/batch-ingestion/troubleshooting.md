@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;dati acquisiti;risoluzione dei problemi;FAQ;acquisizione;inserimento batch;acquisizione batch;
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in batch
-topic-legacy: troubleshooting
 description: Questa documentazione risponderà alle domande frequenti relative alle API di acquisizione di dati in batch di Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -91,7 +90,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Qual è la differenza tra le righe JSON (JSON a riga singola) e JSON a riga singola?
 
-Per le righe JSON esiste un oggetto JSON per riga. Esempio:
+Per le righe JSON esiste un oggetto JSON per riga. Ad esempio:
 
 ```json
 {"string":"string1","int":1,"array":[1,2,3],"dict": {"key": "value1"}}
@@ -99,7 +98,7 @@ Per le righe JSON esiste un oggetto JSON per riga. Esempio:
 {"string":"string3","int":3,"array":[3,6,9],"dict": {"key": "value3", "extra_key": "extra_value3"}}
 ```
 
-Per JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Esempio:
+Per JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Ad esempio:
 
 ```json
 [
