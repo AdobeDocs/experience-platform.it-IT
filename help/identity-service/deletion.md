@@ -1,10 +1,10 @@
 ---
 title: Eliminazioni nel servizio Identity
 description: Questo documento fornisce una panoramica dei vari meccanismi che è possibile utilizzare per eliminare i dati di identità in Experience Platform e per fornire chiarezza su come i grafici di identità possono essere interessati.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ La tabella seguente fornisce una suddivisione delle differenze tra la cancellazi
 | Casi di utilizzo accettati | Solo richieste di privacy dei dati (RGPD, CCPA). | Gestione dei dati memorizzati in Experience Platform. |
 | Latenza stimata | Giorni a settimane | Days |
 | Servizi interessati | L’eliminazione di una singola identità in Privacy Service consente di selezionare se i dati verranno eliminati dal servizio Identity, dal profilo cliente in tempo reale o dal data lake. | L’eliminazione di una singola identità in igiene dati elimina i dati selezionati tra il servizio Identity, il profilo cliente in tempo reale e il data lake. |
-| Pattern di eliminazione | Elimina un’identità dal servizio Identity. | Elimina completamente un’identità e tutti i relativi collegamenti corrispondenti dal servizio Identity, da tutti i set di dati o per un singolo set di dati. |
+| Pattern di eliminazione | Elimina un’identità dal servizio Identity. | Elimina un’identità dal servizio Identity. |
 
 {style=&quot;table-layout:auto&quot;}
 
