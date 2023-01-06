@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;governance dei dati;api dell'etichetta di utilizzo dati;api del servizio criteri;panoramica delle etichette di utilizzo dati
 solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
-topic-legacy: labels
 description: Scopri in che modo le etichette di utilizzo dei dati vengono utilizzate per rafforzare la conformità alla governance dei dati in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

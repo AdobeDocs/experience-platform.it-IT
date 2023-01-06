@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;governance dei dati;guida utente per i criteri di utilizzo dei dati
 solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
-topic-legacy: policies
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 0%

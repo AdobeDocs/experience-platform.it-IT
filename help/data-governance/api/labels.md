@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Endpoint API per le etichette
-topic-legacy: developer guide
 description: Scopri come gestire le etichette di utilizzo dei dati in Experience Platform utilizzando l’API del servizio criteri.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 4%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;api set di dati;gestire l’utilizzo dei dati;api di utilizzo dati
 solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
-topic-legacy: developer guide
 description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 2%

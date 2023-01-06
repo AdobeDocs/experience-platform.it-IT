@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;governance dei dati;criteri di utilizzo dei dati
 solution: Experience Platform
 title: Creare un criterio di governance dei dati nell’API
-topic-legacy: policies
 type: Tutorial
 description: Scopri come creare un criterio di governance dei dati utilizzando l’API del servizio criteri.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%
