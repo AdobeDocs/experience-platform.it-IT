@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;risoluzione dei problemi;controllo accessi
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di controllo degli accessi
-topic-legacy: troubleshooting guide
 description: Questo documento fornisce le risposte alle domande più frequenti sul controllo degli accessi in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%

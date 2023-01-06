@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;controllo accessi;api;guida introduttiva
 solution: Experience Platform
 title: Guida all’API di controllo degli accessi
-topic-legacy: developer guide
 description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie funzionalità di Platform utilizzando Adobe Admin Console. Le sezioni seguenti forniscono informazioni aggiuntive che gli sviluppatori dovranno conoscere per effettuare correttamente le chiamate all’API del Registro di sistema dello schema.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
