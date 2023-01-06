@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazi dei nomi;spazio dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;identità
 solution: Experience Platform
 title: Creare un namespace personalizzato nell’API del servizio Identity
-topic-legacy: API guide
 description: Utilizzando l’API dello spazio dei nomi identità, puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 5%

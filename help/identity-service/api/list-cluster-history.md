@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;identità;cronologia cluster
 solution: Experience Platform
 title: Recupero della cronologia cluster di un'identità
-topic-legacy: API guide
 description: Le identità possono spostare i cluster nel corso di varie esecuzioni di grafici dei dispositivi. Il servizio Identity fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

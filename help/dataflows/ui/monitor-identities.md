@@ -2,15 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;monitorare identità;monitorare flussi di dati;flussi di dati;identità;
 description: Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento attraverso la creazione di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali di forte impatto. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati con le identità utilizzando l'interfaccia utente di Experience Platform.
 title: Monitorare i flussi di dati per le identità nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 0%
 
 ---
-
 
 # Monitorare i flussi di dati per le identità nell’interfaccia utente
 

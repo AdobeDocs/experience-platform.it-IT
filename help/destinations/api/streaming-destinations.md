@@ -3,13 +3,12 @@ keywords: Experience Platform;home;argomenti popolari; Esercitazioni API; API pe
 solution: Experience Platform
 title: Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso in Adobe Experience Platform
 description: Questo documento tratta la creazione di destinazioni di streaming utilizzando l’API Adobe Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +35,7 @@ Se preferisci utilizzare l’interfaccia utente di Platform per connettersi a un
 Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] è il sistema di registrazione per la posizione dei dati e la derivazione all&#39;interno di Experience Platform.
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati alle destinazioni di streaming in Platform.

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiornare i flussi di dati di destinazione
 solution: Experience Platform
 title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere segmenti e attributi utilizzando l’API del servizio di flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 2%

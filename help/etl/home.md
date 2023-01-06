@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;ETL;etl;integrazioni etl;integrazioni ETL
 solution: Experience Platform
 title: Sviluppo di integrazioni ETL per Adobe Experience Platform
-topic-legacy: overview
 description: La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 1%
@@ -787,7 +786,7 @@ Adobe Experience Platform non identifica i dati differiti al momento, pertanto l
 
 | Data | Azione | Descrizione |
 | ---- | ------ | ----------- |
-| 01/01/2019 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati in precedenza includevano una proprietà &quot;field&quot; che conteneva una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, ignorarla e utilizzare invece &quot;osservSchema&quot; o &quot;schemaRef&quot;. |
-| 03/03/2019 | proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i campi potenziali che possono essere utilizzati dal set di dati. |
-| 03/03/2019 | Tutti gli identificatori dell&#39;utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | &quot;identityMap&quot; è un&#39;incapsulazione di tutti gli identificatori univoci di un soggetto, come ID CRM, ECID o ID programma fedeltà. Questa mappa è utilizzata da [[!DNL Identity Service]](../identity-service/home.md) risolvere tutte le identità note e anonime di un soggetto, formando un unico grafico di identità per ciascun utente finale. |
-| 05/05/2019 | Fine del ciclo vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati forniva un collegamento di riferimento allo schema utilizzando l’opzione obsoleta `/xdms` punto finale [!DNL Catalog] API. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; dello schema come indicato nel nuovo [!DNL Schema Registry] API. |
+| 2019-01-19 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati in precedenza includevano una proprietà &quot;field&quot; che conteneva una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, ignorarla e utilizzare invece &quot;osservSchema&quot; o &quot;schemaRef&quot;. |
+| 2019-03-15 | proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i campi potenziali che possono essere utilizzati dal set di dati. |
+| 2019-03-15 | Tutti gli identificatori dell&#39;utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | &quot;identityMap&quot; è un&#39;incapsulazione di tutti gli identificatori univoci di un soggetto, come ID CRM, ECID o ID programma fedeltà. Questa mappa è utilizzata da [[!DNL Identity Service]](../identity-service/home.md) risolvere tutte le identità note e anonime di un soggetto, formando un unico grafico di identità per ciascun utente finale. |
+| 2019-05-30 | Fine del ciclo vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati forniva un collegamento di riferimento allo schema utilizzando l’opzione obsoleta `/xdms` punto finale [!DNL Catalog] API. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; dello schema come indicato nel nuovo [!DNL Schema Registry] API. |

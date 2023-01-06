@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;flussi di dati;flussi di dati;dati;monitoraggio;monitorare flussi di dati;monitorare flussi di dati;monitorare;monitorare flussi di dati;monitorare flussi di dati;monitorare flussi di dati;flusso;servizio di flusso;
 solution: Experience Platform
 title: Panoramica dei flussi di dati
-topic-legacy: overview
 description: Questo documento introduce flussi di dati che esprimono il modo in cui vengono utilizzati in Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%

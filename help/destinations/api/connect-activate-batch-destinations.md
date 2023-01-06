@@ -3,10 +3,9 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Connettersi a destinazioni batch e attivare i dati utilizzando l’API del servizio di flusso
 description: Istruzioni dettagliate per utilizzare l’API del servizio Flusso per creare un archivio cloud batch o una destinazione di marketing via e-mail in Experience Platform e attivare i dati
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%

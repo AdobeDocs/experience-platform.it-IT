@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;identità;identità;grafici XDM;servizio identità;servizio Identity
 solution: Experience Platform
 title: Panoramica del servizio Identity
-topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -47,8 +46,8 @@ Considera un esempio quotidiano del rapporto di un consumatore con il tuo marchi
 - A questo punto, l’attività di Mary viene visualizzata come due profili separati:
    - Accesso a e-commerce
    - Dispositivo tablet, forse identificato dall&#39;ID dispositivo
-- Mary riprende in seguito la sessione del tablet e fornisce il suo indirizzo e-mail durante l&#39;iscrizione alla newsletter. In questo modo, l’acquisizione in streaming aggiunge una nuova identità come dati di record all’interno del suo profilo. Di conseguenza, [!DNL Identity Service] ora mette in relazione l’attività di Mary relativa ai dispositivi tablet con la cronologia del suo account di e-commerce.
-- Al prossimo clic sul suo tablet, il tuo contenuto di destinazione potrebbe riflettere l’intero profilo e la storia di Mary, piuttosto che un semplice tablet utilizzato da un acquirente sconosciuto.
+- Mary riprende in seguito la sessione del tablet e fornisce il suo indirizzo e-mail durante l&#39;iscrizione alla newsletter. In questo modo, l’acquisizione in streaming aggiunge una nuova identità come dati di record all’interno del suo profilo. Di conseguenza, [!DNL Identity Service] ora fa riferimento all’attività di Mary relativa ai dispositivi tablet con la cronologia del suo account di e-commerce.
+- Al prossimo clic sul suo tablet, il tuo contenuto di destinazione potrebbe riflettere l&#39;intero profilo e la storia di Mary, piuttosto che un semplice tablet utilizzato da un acquirente sconosciuto.
 
 ![Unione delle identità su Platform](./images/identity-service-stitching.png)
 

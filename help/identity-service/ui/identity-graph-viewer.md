@@ -2,13 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;visualizzatore grafico identità;visualizzatore grafico identità;visualizzatore grafico;visualizzatore grafico;visualizzatore grafico;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio Identity;servizio Identity
 solution: Experience Platform
 title: Panoramica del visualizzatore di Identity Graph
-topic-legacy: tutorial
 description: Un grafico delle identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il tuo marchio su diversi canali.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1037'
 ht-degree: 1%
 
 ---
@@ -33,29 +31,29 @@ Lavorare con il visualizzatore grafico dell&#39;identità richiede una comprensi
 
 ### Terminologia
 
-- **Identità (nodo):** un’identità o un nodo è dato univoco per un’entità, in genere una persona. Un&#39;identità è composta da uno spazio dei nomi e un valore di identità.
-- **Collegamento (bordo):** un collegamento o un bordo rappresenta la connessione tra le identità.
-- **Grafico (cluster):** un grafico o un cluster è un gruppo di identità e collegamenti che rappresentano una persona.
+- **Identità (nodo):** Un&#39;identità o un nodo sono dati unici di un&#39;entità, in genere una persona. Un&#39;identità è composta da uno spazio dei nomi e un valore di identità.
+- **Collegamento (bordo):** Un collegamento o un bordo rappresenta la connessione tra le identità.
+- **Grafico (cluster):** Un grafico o un cluster è un gruppo di identità e collegamenti che rappresentano una persona.
 
 ## Accedere al visualizzatore grafico delle identità
 
-Per utilizzare il visualizzatore grafico delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identities]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Identity graph]** . Dalla schermata **[!UICONTROL Identity Namespace]**, fai clic sull’icona **[!UICONTROL Select identity namespace]** per cercare lo spazio dei nomi che intendi utilizzare.
+Per utilizzare il visualizzatore grafico delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identità]** nella navigazione a sinistra, quindi seleziona la **[!UICONTROL Grafico di identità]** scheda . Da **[!UICONTROL Namespace Identity]** fai clic su **[!UICONTROL Seleziona spazio dei nomi identità]** per cercare lo spazio dei nomi che si intende utilizzare.
 
 ![schermo dello spazio dei nomi](../images/identity-graph-viewer/identity-namespace.png)
 
-Viene visualizzato il pannello **[!UICONTROL Select identity namespace]** . Questa schermata contiene un elenco di namespace disponibili per l’organizzazione, tra cui informazioni su **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** e **[!UICONTROL Description]** di uno spazio dei nomi. È possibile utilizzare uno qualsiasi dei namespace forniti a condizione che vi sia collegato un valore di identità valido.
+La **[!UICONTROL Seleziona spazio dei nomi identità]** viene visualizzato il pannello . Questa schermata contiene un elenco dei namespace disponibili per la tua organizzazione, incluse informazioni sui namespace **[!UICONTROL Nome visualizzato]**, **[!UICONTROL Simbolo di identità]**, **[!UICONTROL Proprietario]**, **[!UICONTROL Ultimo aggiornamento]** data e **[!UICONTROL Descrizione]**. È possibile utilizzare uno qualsiasi dei namespace forniti a condizione che vi sia collegato un valore di identità valido.
 
-Seleziona lo spazio dei nomi da utilizzare e fai clic su **[!UICONTROL Select]** per continuare.
+Seleziona lo spazio dei nomi da utilizzare e fai clic su **[!UICONTROL Seleziona]** per procedere.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Dopo aver selezionato uno spazio dei nomi, immetti il valore corrispondente per un cliente specifico nella casella di testo **[!UICONTROL Identity value]** e seleziona **[!UICONTROL View]**.
+Dopo aver selezionato uno spazio dei nomi, inserisci il valore corrispondente per un particolare cliente nel **[!UICONTROL Valore identità]** casella di testo e seleziona **[!UICONTROL Visualizza]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
 ### Accedere al visualizzatore del grafico delle identità dai set di dati
 
-Puoi anche accedere al visualizzatore del grafico delle identità utilizzando l’interfaccia set di dati. Dalla pagina dei set di dati [!UICONTROL Browse], seleziona un set di dati con cui desideri interagire, quindi seleziona **[!UICONTROL Preview dataset]**
+Puoi anche accedere al visualizzatore del grafico delle identità utilizzando l’interfaccia set di dati. Dai set di dati [!UICONTROL Sfoglia] , seleziona un set di dati con cui desideri interagire, quindi seleziona **[!UICONTROL Anteprima set di dati]**
 
 ![preview-set di dati](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -71,27 +69,27 @@ Viene visualizzato il visualizzatore del grafico delle identità. Sul lato sinis
 
 >[!IMPORTANT]
 >
->Un grafico delle identità richiede la generazione di almeno due identità collegate, nonché uno spazio dei nomi e una coppia ID validi. Il numero massimo di identità visualizzabili dal visualizzatore grafico è 150. Per ulteriori informazioni, consulta la sezione [appendice](#appendix) di seguito.
+>Un grafico delle identità richiede la generazione di almeno due identità collegate, nonché uno spazio dei nomi e una coppia ID validi. Il numero massimo di identità visualizzabili dal visualizzatore grafico è 150. Consulta la sezione [appendice](#appendix) per ulteriori informazioni, consulta la sezione seguente.
 
 ![grafico di identità](../images/identity-graph-viewer/graph-viewer.png)
 
-Seleziona un’identità per aggiornare la riga evidenziata nella tabella **[!UICONTROL Identities]** e per aggiornare le informazioni fornite nella barra a destra, che include le **[!UICONTROL Value]**, **[!UICONTROL Batch ID]** di un’identità e la relativa data **[!UICONTROL Last updated]**.
+Selezionare un&#39;identità per aggiornare la riga evidenziata **[!UICONTROL Identità]** e per aggiornare le informazioni fornite nella barra a destra, che include **[!UICONTROL Valore]**, **[!UICONTROL ID batch]** e le sue **[!UICONTROL Ultimo aggiornamento]** data.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-Puoi filtrare attraverso un grafico e isolare uno specifico spazio dei nomi utilizzando l’opzione di ordinamento sopra la tabella **[!UICONTROL Identities]**. Dal menu a discesa, seleziona lo spazio dei nomi da evidenziare.
+Puoi filtrare attraverso un grafico e isolare uno specifico spazio dei nomi utilizzando l’opzione di ordinamento disponibile sopra **[!UICONTROL Identità]** tabella. Dal menu a discesa, seleziona lo spazio dei nomi da evidenziare.
 
 ![filtro per namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-Viene restituito il visualizzatore grafico, evidenziando lo spazio dei nomi selezionato. L’opzione filtro aggiorna inoltre la tabella **[!UICONTROL Identities]** in modo da restituire solo le informazioni relative allo spazio dei nomi selezionato.
+Viene restituito il visualizzatore grafico, evidenziando lo spazio dei nomi selezionato. L’opzione di filtro aggiorna anche la **[!UICONTROL Identità]** per restituire informazioni solo per lo spazio dei nomi selezionato.
 
 ![filtrato](../images/identity-graph-viewer/filtered.png)
 
-L’angolo in alto a destra della casella del visualizzatore grafico contiene opzioni per l’ingrandimento. Seleziona l’icona **(+)** per ingrandire il grafico o l’icona **(-)** per ridurre lo zoom.
+L’angolo in alto a destra della casella del visualizzatore grafico contiene opzioni per l’ingrandimento. Seleziona la **(+)** icona per ingrandire il grafico o **(-)** icona per ridurre lo zoom.
 
 ![zoom](../images/identity-graph-viewer/zoom.png)
 
-Per visualizzare ulteriori informazioni sui batch, seleziona **[!UICONTROL Data source]** dall’intestazione . La tabella **[!UICONTROL Data source]** visualizza un elenco di **[!UICONTROL Batch IDs]** associati al grafico, nonché i relativi **[!UICONTROL Linked IDs]**, lo schema di origine e la data di acquisizione.
+Per visualizzare ulteriori informazioni sui batch, seleziona la **[!UICONTROL Origine dati]** dall’intestazione. La **[!UICONTROL Origine dati]** nella tabella viene visualizzato un elenco di **[!UICONTROL ID batch]** associati al grafico, nonché i relativi **[!UICONTROL ID collegati]**, lo schema di origine e la data di acquisizione.
 
 ![sorgente dati](../images/identity-graph-viewer/data-source-table.png)
 
@@ -116,18 +114,18 @@ La sezione seguente fornisce informazioni aggiuntive su come utilizzare il visua
 Possono verificarsi errori quando si accede al visualizzatore grafico dell’identità. Di seguito è riportato un elenco di prerequisiti e limitazioni di cui tenere conto quando si lavora con il visualizzatore grafico dell’identità.
 
 - Un valore di identità deve esistere nello spazio dei nomi selezionato.
-- Il visualizzatore del grafico delle identità richiede almeno due identità collegate da generare. È possibile che ci sia un solo valore di identità e nessuna identità collegata e, in questo caso, il valore esisterebbe solo nel visualizzatore [!DNL Profile].
+- Il visualizzatore del grafico delle identità richiede almeno due identità collegate da generare. È possibile che ci sia un solo valore di identità e nessuna identità collegata, e in questo caso, il valore esisterebbe solo in [!DNL Profile] visualizzatore.
 - Il visualizzatore del grafico delle identità non può superare il massimo di 150 identità.
 
 ![schermo di errore](../images/identity-graph-viewer/error-screen.png)
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai imparato a esplorare i grafici di identità dei tuoi clienti nell’interfaccia utente di Platform. Per ulteriori informazioni sulle identità in Platform, consulta la [panoramica del servizio Identity](../home.md)
+Leggendo questo documento, hai imparato a esplorare i grafici di identità dei tuoi clienti nell’interfaccia utente di Platform. Per ulteriori informazioni sulle identità in Platform, consulta la [Panoramica del servizio Identity](../home.md)
 
 ## Changelog
 
 | Data | Azione |
 | ---- | ------ |
-| 01/2021 | <ul><li>È stato aggiunto il supporto per lo streaming di dati acquisiti e sandbox non di produzione.</li><li>Correzioni di bug minori.</li></ul> |
-| 02/2021 | <ul><li>Il visualizzatore del grafico di identità è accessibile tramite l’anteprima del set di dati.</li><li>Correzioni di bug minori.</li><li>Il visualizzatore del grafico di identità è reso generalmente disponibile.</li></ul> |
+| 2021-01 | <ul><li>È stato aggiunto il supporto per lo streaming di dati acquisiti e sandbox non di produzione.</li><li>Correzioni di bug minori.</li></ul> |
+| 2021-02 | <ul><li>Il visualizzatore del grafico di identità è accessibile tramite l’anteprima del set di dati.</li><li>Correzioni di bug minori.</li><li>Il visualizzatore del grafico di identità è reso generalmente disponibile.</li></ul> |

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;identity xid;XID
 solution: Experience Platform
 title: Ottenere l'ID nativo per un'identità
-topic-legacy: API guide
 description: I dati di identità vengono generalmente forniti come valore di stringa ID e namespace di identità nei dati XDM acquisiti e quando si fornisce un’identità da utilizzare in una chiamata API. Quando le identità vengono mantenute nel servizio Identity, viene generato un ID che viene assegnato a tale identità, denominato XID nativo. API di Platform che richiedono il supporto dei dati di identità utilizzando questo modulo più compatto per l’ID aggregato e lo spazio dei nomi. XID è una stringa codificata base64.
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 1%
