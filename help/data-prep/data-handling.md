@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv su xdm;mappare csv su xdm;guida interfaccia utente;mappatura;mappatura;preparazione dati;preparazione dati;preparazione dei dati;
 solution: Experience Platform
 title: Gestione dei formati di dati con Data Prep
-topic-legacy: overview
 description: Questo documento offre una panoramica della gestione dei diversi tipi di dati in Preparazione dati.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 13%
