@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;posizione dati;posizione dati;gestione dati;gestione dati;linea;linea;linea;tipo di dati;tipi di dati;tipi di dati;tipo di dati
 solution: Experience Platform
 title: Panoramica dei set di dati
-topic-legacy: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 9%

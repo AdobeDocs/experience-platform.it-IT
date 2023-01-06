@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;Catalog Service;posizione dati;gestione dei dati;gestione dati;lineage;derivazione;catalogo;abilitare set di dati
 solution: Experience Platform
 title: Panoramica di Catalog Service
-topic-legacy: overview
 description: Catalog Service è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel data lake come file e directory, il servizio Catalog contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca e monitoraggio.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 100%
 

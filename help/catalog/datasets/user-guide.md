@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;abilitare set di dati;set di dati;set di dati
 solution: Experience Platform
 title: Guida all’interfaccia utente dei set di dati
-topic-legacy: datasets
 description: Scopri come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%

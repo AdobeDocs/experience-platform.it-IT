@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;catalogo;api;sostituire un oggetto
 solution: Experience Platform
 title: Sostituire un oggetto catalogo
-topic-legacy: developer guide
 description: Puoi sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta PUT, dove l’intera risorsa viene sostituita con il payload della richiesta.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 3%

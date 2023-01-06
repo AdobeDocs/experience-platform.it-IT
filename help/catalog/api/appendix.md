@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio catalogo;api catalogo;appendice
 solution: Experience Platform
 title: Appendice alla guida API del servizio catalogo
-topic-legacy: developer guide
 description: Questo documento contiene informazioni aggiuntive utili per l’utilizzo dell’API Catalogo in Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 1%

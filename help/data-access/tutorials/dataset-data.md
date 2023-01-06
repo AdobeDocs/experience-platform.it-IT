@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;accesso ai dati;api di accesso ai dati;accesso ai dati di query
 solution: Experience Platform
 title: Visualizzare i dati del set di dati utilizzando l’API di accesso ai dati
-topic-legacy: tutorial
 type: Tutorial
 description: Scopri come individuare, accedere e scaricare i dati memorizzati all’interno di un set di dati utilizzando l’API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune funzionalità uniche dell’API di accesso ai dati, come il paging e i download parziali.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 4%

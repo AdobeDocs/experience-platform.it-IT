@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;privacy data lake;spazi dei nomi di identità;privacy;data lake
 solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Data Lake
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei propri dati personali come delineato dalle normative legali e organizzative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste sulla privacy per i dati dei clienti archiviati nel data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%

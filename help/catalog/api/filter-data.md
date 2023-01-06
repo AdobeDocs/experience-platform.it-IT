@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;filtro;filtrare;filtrare dati;filtrare dati;intervallo di date
 solution: Experience Platform
 title: Filtrare i dati del catalogo utilizzando i parametri della query
-topic-legacy: developer guide
 description: L’API del servizio catalogo consente di filtrare i dati di risposta utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;filtro;filtrare;filtrare dati;filtrare dati
 solution: Experience Platform
 title: Elenco oggetti catalogo
-topic-legacy: developer guide
 description: È possibile recuperare un elenco di tutti gli oggetti disponibili di un tipo specifico tramite una singola chiamata API, in cui la best practice prevede l’inclusione di filtri che limitano la dimensione della risposta.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 2%

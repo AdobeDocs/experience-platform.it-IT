@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;accesso ai dati;sdk python;scintilla sdk;api di accesso ai dati;esportazione;esportazione
 solution: Experience Platform
 title: Guida all’API di accesso ai dati
-topic-legacy: developer guide
 description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla scoperta e l’accessibilità dei set di dati acquisiti all’interno di Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 6%
@@ -240,4 +239,4 @@ Per ulteriori campioni, consulta la sezione [esercitazione sull&#39;accesso ai d
 
 ## Iscriviti agli eventi di inserimento dati
 
-[!DNL Platform] rende disponibili per l’abbonamento eventi specifici di alto valore tramite [Console per sviluppatori di Adobe](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti a eventi di inserimento dati per ricevere notifiche su potenziali ritardi e errori. Guarda l’esercitazione su [sottoscrizione alle notifiche di inserimento dati](../ingestion/quality/subscribe-events.md) per ulteriori informazioni.
+[!DNL Platform] rende disponibili per l’abbonamento eventi specifici di alto valore tramite [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti a eventi di inserimento dati per ricevere notifiche su potenziali ritardi e errori. Guarda l’esercitazione su [sottoscrizione alle notifiche di inserimento dati](../ingestion/quality/subscribe-events.md) per ulteriori informazioni.
