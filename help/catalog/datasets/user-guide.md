@@ -5,7 +5,7 @@ title: Guida all’interfaccia utente dei set di dati
 topic-legacy: datasets
 description: Scopri come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Per abilitare un set di dati per il profilo, accedi al relativo **[!UICONTROL At
 
 Le etichette di utilizzo dei dati ti consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette, o fai riferimento alla sezione [guida utente delle etichette per l’utilizzo dei dati](../../data-governance/labels/overview.md) per istruzioni su come applicare le etichette ai set di dati.
 
-## Eliminare un set di dati
+## Eliminare un set di dati {#delete}
 
 È possibile eliminare un set di dati accedendo per primo ai relativi **[!UICONTROL Attività set di dati]** schermo. Quindi, seleziona **[!UICONTROL Elimina set di dati]** per eliminarlo.
 
