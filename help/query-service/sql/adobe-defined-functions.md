@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;funzioni definite da adobe;sql;
 solution: Experience Platform
 title: Funzioni SQL definite in Adobe nel servizio query
-topic-legacy: functions
 description: Questo documento fornisce informazioni per le funzioni definite da Adobi disponibili in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 3%

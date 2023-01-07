@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query
 solution: Experience Platform
 title: Guida all’API del servizio query
-topic-legacy: query templates
 description: L’API Query Service consente agli sviluppatori di eseguire query sui dati Adobe Experience Platform utilizzando SQL standard. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 6%
@@ -28,7 +27,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate in questa documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate in questa documentazione per le chiamate API di esempio, consulta la sezione sulla [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogli i valori delle intestazioni richieste
 

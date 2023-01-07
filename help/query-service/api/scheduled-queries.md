@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query pianificate;query pianificate;
 solution: Experience Platform
 title: Endpoint API per query pianificate
-topic-legacy: scheduled queries
 description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per query pianificate con l’API del servizio query.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 3%

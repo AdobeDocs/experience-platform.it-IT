@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;istruzioni preparate;preparate;sql;
 solution: Experience Platform
 title: Istruzioni preparate nel servizio query
-topic-legacy: prepared statements
 description: In SQL, le istruzioni preparate vengono utilizzate per creare un modello di query o aggiornamenti simili. Adobe Experience Platform Query Service supporta le istruzioni preparate utilizzando una query con parametri.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -86,10 +85,10 @@ La query SQL di cui sopra restituirà la seguente risposta:
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alessandro | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | duboide | 1967-03-14 | example2@example.com | Parigi | Francia |
-| 10002 | kyoko | sakura | 11-26/1999 | example3@example.com | Tokyo | Giappone |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
-| 10005 | fernando | rios | 07/07/2002 | example6@example.com | Santiago | Cile |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
 Questa query SQL può essere parametrizzata utilizzando la seguente istruzione preparata:
 
@@ -109,10 +108,10 @@ Quando viene chiamato, vengono visualizzati esattamente gli stessi risultati di 
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alessandro | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | duboide | 1967-03-14 | example2@example.com | Parigi | Francia |
-| 10002 | kyoko | sakura | 11-26/1999 | example3@example.com | Tokyo | Giappone |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
 | 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
-| 10005 | fernando | rios | 07/07/2002 | example6@example.com | Santiago | Cile |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
 Dopo aver completato l&#39;utilizzo dell&#39;istruzione preparata, è possibile disallocarla utilizzando la seguente chiamata:
 

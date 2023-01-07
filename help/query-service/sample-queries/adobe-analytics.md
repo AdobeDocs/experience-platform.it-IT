@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;query di esempio;adobe analytics;
 solution: Experience Platform
 title: Query di esempio per i dati di Adobe Analytics
-topic-legacy: queries
 description: I dati provenienti da suite di rapporti Adobe Analytics selezionate vengono trasformati in XDM ExperienceEvents e acquisiti in Adobe Experience Platform come set di dati. Questo documento delinea una serie di casi d’uso in cui Query Service utilizza questi dati e include query di esempio progettate per funzionare con i set di dati Adobe Analytics.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%
@@ -122,7 +121,7 @@ Nel reporting, gli ordini, le entrate, le visualizzazioni dei prodotti e gli att
 | eVar6 (metodo di ricerca dei prodotti) | ricavi | ordini | visualizzazioni di prodotto | aggiunta carrello |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | ricerca interna:camicia estiva | 19,99 | 1 | 1 | 1 |
-| ricerca interna:cappello invernale | 12,99 | 1 | 1 | 1 |
+| ricerca interna:cappello invernale | 12.99 | 1 | 1 | 1 |
 
 Per ulteriori informazioni sull’utilizzo della sintassi di conversione, consulta la documentazione di Adobe Analytics in [implementazione di eVar utilizzando la sintassi di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 

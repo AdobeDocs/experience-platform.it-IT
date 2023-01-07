@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;PSQL;psql;Query service;query service;metadati;comandi;comandi di metadati;
 solution: Experience Platform
 title: Comandi PostgreSQL per metadati nel servizio query
-topic-legacy: metadata
 description: Elenco di comandi PostgreSQL attualmente supportati per la query dei metadati in Adobe Experience Platform Query Service.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

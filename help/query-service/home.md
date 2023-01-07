@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query
 solution: Experience Platform
 title: Panoramica di Query Service
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del ruolo del servizio query all’interno di Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 1%

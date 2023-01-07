@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;generare set di dati;generare set di dati;creare set di dati;
 solution: Experience Platform
 title: Generare set di dati dai risultati nel servizio query
-topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service consente la creazione di set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi d’uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%

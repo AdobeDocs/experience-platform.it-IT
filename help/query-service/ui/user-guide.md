@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;editor query;editor query;servizio query;servizio query;
 solution: Experience Platform
 title: Guida all’interfaccia utente dell’editor delle query
-topic-legacy: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 0%

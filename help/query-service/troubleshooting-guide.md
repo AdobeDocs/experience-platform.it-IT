@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;guida alla risoluzione dei problemi;FAQ;risoluzione dei problemi;
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio query
-topic-legacy: troubleshooting
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%

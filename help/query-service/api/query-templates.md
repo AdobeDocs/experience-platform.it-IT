@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;modelli di query;guida api;modelli;servizio query;
 solution: Experience Platform
 title: Endpoint API per i modelli di query
-topic-legacy: query templates
 description: Questa guida descrive le varie chiamate API del modello di query che puoi effettuare utilizzando l’API del servizio query.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 5%
