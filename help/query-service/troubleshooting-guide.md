@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi del servizio query
 topic-legacy: troubleshooting
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4383'
 ht-degree: 1%
 
 ---
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### Posso controllare l&#39;accesso a set di dati e colonne specifici per una connessione specifica? Come è configurato questo?
 
 +++Risposta Sì, se configurato, viene applicato il controllo di accesso basato su attributi. Consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md) per ulteriori informazioni.
++++
+
+### Il servizio query supporta il comando &quot;INSERT OVERWRITE IN&quot;?
+
++++Risposta No, Query Service non supporta il comando &quot;INSERT OVERWRITE IN&quot;.
 +++
 
 ## Esportazione dei dati {#exporting-data}
