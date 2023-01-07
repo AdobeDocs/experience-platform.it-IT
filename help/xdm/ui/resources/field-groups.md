@@ -5,9 +5,9 @@ title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Una volta che lo schema è aperto nel [!DNL Schema Editor], seleziona **[!UICONT
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Viene visualizzata una finestra di dialogo che mostra un elenco dei gruppi di campi esistenti per l’organizzazione. Nella parte superiore della finestra di dialogo, seleziona **[!UICONTROL Crea nuovo gruppo di campi]**. Qui puoi fornire un **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, seleziona **[!UICONTROL Aggiungi gruppo di campi]**.
+Nella finestra di dialogo visualizzata, seleziona **[!UICONTROL Crea nuovo gruppo di campi]**. Qui puoi fornire un **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, seleziona **[!UICONTROL Aggiungi gruppi di campi]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 La [!DNL Schema Editor] viene nuovamente visualizzato, con il nuovo gruppo di campi elencato nella barra a sinistra. Poiché si tratta di un nuovo gruppo di campi, al momento non fornisce alcun campo allo schema, e quindi l’area di lavoro rimane invariata. Ora puoi iniziare [aggiunta di campi al gruppo di campi](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## Modificare un gruppo di campi esistente {#edit}
 
@@ -58,13 +60,17 @@ Una volta aperto lo schema nell&#39;editor, puoi iniziare [aggiunta di campi al 
 >
 >Questa sezione si concentra sull&#39;aggiunta di campi ai gruppi di campi personalizzati. Per informazioni su come aggiungere campi personalizzati ai gruppi di campi standard, consulta [Guida all’interfaccia utente per gli schemi](./schemas.md#custom-fields-for-standard-groups).
 
-Per aggiungere campi a un gruppo di campi personalizzato nel [!DNL Schema Editor], inizia selezionando il nome del gruppo di campi nella barra a sinistra, quindi seleziona la **più (+)** accanto al nome dello schema nell’area di lavoro.
+Per aggiungere campi a un gruppo di campi personalizzato, inizia selezionando **più (+)** accanto al nome dello schema nell’area di lavoro.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare e aggiungere il campo al gruppo di campi.
+A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare diversi tipi di campi.
 
-Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, seleziona **[!UICONTROL Salva]** per salvare lo schema e il gruppo di campi.
+Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Gruppo di campi]** , quindi utilizza il menu a discesa per selezionare il gruppo di campi desiderato dall’elenco. Puoi iniziare a digitare il nome del gruppo di campi per limitare i risultati.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Una volta aggiunto il campo allo schema, questo viene assegnato al gruppo di campi selezionato. Continua ad aggiungere tutti i campi necessari al gruppo di campi. Al termine, seleziona **[!UICONTROL Salva]** per salvare lo schema e il gruppo di campi.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

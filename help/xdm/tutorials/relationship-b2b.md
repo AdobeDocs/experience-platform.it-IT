@@ -2,9 +2,9 @@
 title: Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Se si visualizza la struttura dello schema di destinazione, il marcatore di rela
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata una relazione molti-a-uno tra due schemi utilizzando [!DNL Schema Editor]. Una volta acquisiti i dati utilizzando set di dati basati su questi schemi e attivati nell’archivio dati Profilo, puoi utilizzare gli attributi di entrambi gli schemi per i casi di utilizzo della segmentazione multiclasse. Per ulteriori informazioni, consulta la documentazione su Real-Time CDP B2B Edition .
+Seguendo questa esercitazione, è stata creata una relazione molti-a-uno tra due schemi utilizzando [!DNL Schema Editor]. Una volta acquisiti i dati utilizzando set di dati basati su questi schemi e attivati nell’archivio dati Profilo, puoi utilizzare gli attributi di entrambi gli schemi per [casi d’uso di segmentazione multiclasse](../../rtcdp/segmentation/b2b.md).

@@ -5,20 +5,20 @@ title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
+source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
 
 # Creare e modificare le classi nell’interfaccia utente
 
-In Experience Data Model (XDM), le classi definiscono gli aspetti comportamentali dei dati che uno schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
+In Adobe Experience Platform, la classe di uno schema definisce gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
-Adobe fornisce diverse classi XDM standard (&quot;core&quot;), tra cui [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione.
+Adobe fornisce diverse classi standard (&quot;core&quot;) di Experience Data Model (XDM), tra cui [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione.
 
-Questo documento fornisce una panoramica su come creare, modificare e gestire classi personalizzate nell’interfaccia utente di Adobe Experience Platform.
+Questo documento fornisce una panoramica su come creare, modificare e gestire classi personalizzate nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti
 
@@ -32,7 +32,7 @@ In **[!UICONTROL Schemi]** area di lavoro, seleziona **[!UICONTROL Creare uno sc
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-Viene visualizzata una finestra di dialogo che consente di selezionare da un elenco di classi disponibili. Nella parte superiore della finestra di dialogo, seleziona **[!UICONTROL Crea nuova classe]**. È quindi possibile assegnare alla nuova classe un nome visualizzato (un nome breve, descrittivo, univoco e descrittivo per la classe), una descrizione e un comportamento per i dati che lo schema definirà (&quot;[!UICONTROL Record]&quot; o &quot;[!UICONTROL Serie temporali]&quot;).
+Viene visualizzata una finestra di dialogo che consente di selezionare da un elenco di classi disponibili. Nella parte superiore della finestra di dialogo, seleziona **[!UICONTROL Crea nuova classe]**. È quindi possibile assegnare alla nuova classe un nome visualizzato (un nome breve, descrittivo, univoco e descrittivo per la classe), una descrizione e un comportamento per i dati che lo schema definirà (**[!UICONTROL Record]** o **[!UICONTROL Serie temporali]**).
 
 Al termine, seleziona **[!UICONTROL Assegna classe]**.
 
@@ -78,9 +78,11 @@ Una volta che si dispone di uno schema che utilizza una classe personalizzata ap
 >
 >Tenere presente che tutti i campi aggiunti a una classe verranno utilizzati in tutti gli schemi che utilizzano tale classe. È quindi necessario considerare attentamente quali campi saranno utili in tutti i casi di utilizzo dello schema. Se si sta pensando di aggiungere un campo che può essere utilizzato solo in alcuni schemi di questa classe, è consigliabile aggiungerlo a tali schemi tramite [creazione di un gruppo di campi](./field-groups.md#create) invece.
 
-A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare e aggiungere il campo alla classe .
+A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Classe]**.
 
-Continua ad aggiungere tutti i campi necessari alla classe. Al termine, seleziona **[!UICONTROL Salva]** per salvare lo schema e la classe.
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare e aggiungere il campo alla classe . Continua ad aggiungere tutti i campi necessari alla classe. Al termine, seleziona **[!UICONTROL Salva]** per salvare lo schema e la classe.
 
 ![](../../images/ui/resources/classes/save.png)
 

@@ -6,9 +6,9 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all’interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) ti consentono di ottenere informazioni complesse sui dati dei clienti.
 
-Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema dell&#39;unione e [!DNL Real-Time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che fa riferimento all&#39;identità di uno schema di destinazione.
+Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema dell&#39;unione e [!DNL Real-Time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che fa riferimento all&#39;identità dell&#39;altro schema correlato.
 
 Questo documento fornisce un&#39;esercitazione per definire una relazione tra due schemi che utilizzano l&#39;Editor di schema nel [!DNL Experience Platform] interfaccia utente. Per i passaggi sulla definizione delle relazioni tra schemi utilizzando l’API, consulta l’esercitazione su [definizione di una relazione utilizzando l’API del Registro di sistema dello schema](relationship-api.md).
 
@@ -48,7 +48,7 @@ Questa esercitazione richiede una comprensione approfondita dei [!DNL XDM System
 * [Nozioni di base sulla composizione dello schema](../schema/composition.md): Introduzione dei blocchi costitutivi degli schemi XDM.
 * [Creare uno schema utilizzando [!DNL Schema Editor]](create-schema-ui.md): Un tutorial che illustra le nozioni di base sull’utilizzo delle [!DNL Schema Editor].
 
-## Definire uno schema di origine e di destinazione
+## Definire uno schema di origine e di riferimento
 
 È previsto che siano già stati creati i due schemi che verranno definiti nella relazione. A scopo dimostrativo, questo tutorial crea una relazione tra i membri del programma fedeltà di un&#39;organizzazione (definito in &quot;[!DNL Loyalty Members]&quot; schema) e il loro hotel preferito (definito in un &quot;[!DNL Hotels]&quot; schema).
 
@@ -56,55 +56,39 @@ Questa esercitazione richiede una comprensione approfondita dei [!DNL XDM System
 >
 >Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite e devono essere abilitati per [!DNL Real-Time Customer Profile]. Vedi la sezione su [abilitazione di uno schema da utilizzare nel profilo](./create-schema-ui.md#profile) nell’esercitazione sulla creazione dello schema, se hai bisogno di indicazioni su come configurare gli schemi di conseguenza.
 
-Le relazioni dello schema sono rappresentate da un campo dedicato all’interno di un **schema di origine** che fa riferimento a un altro campo all&#39;interno di un **schema di destinazione**. Nei passi successivi, &quot;[!DNL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!DNL Hotels]&quot; fungerà da schema di destinazione.
+Le relazioni dello schema sono rappresentate da un campo dedicato all’interno di un **schema di origine** che punta a un altro campo all&#39;interno di un **schema di riferimento**. Nei passi successivi, &quot;[!DNL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!DNL Hotels]&quot; fungerà da schema di riferimento.
 
-A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni schema utilizzato in questa esercitazione prima che sia stata definita una relazione.
+Le sezioni seguenti descrivono la struttura di ogni schema utilizzato in questa esercitazione prima che sia stata definita una relazione.
 
 ### [!DNL Loyalty Members] schema
 
-Lo schema di origine &quot;[!DNL Loyalty Members]&quot; si basa sul [!DNL XDM Individual Profile] ed è lo schema creato nell&#39;esercitazione per [creazione di uno schema nell’interfaccia utente](create-schema-ui.md). Include un `loyalty` oggetto `_tenantId` namespace, che include diversi campi specifici per la fidelizzazione. Uno di questi campi, `loyaltyId`, funge da identità principale per lo schema in [!UICONTROL E-mail] spazio dei nomi. Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
+Lo schema di origine &quot;[!DNL Loyalty Members]&quot; si basa sul [!DNL XDM Individual Profile] Classe, contenente un campo che descrive i membri di un programma fedeltà. Uno di questi campi, `personalEmail.addess`, funge da identità principale per lo schema in [!UICONTROL E-mail] spazio dei nomi. Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels] schema
 
-Lo schema di destinazione &quot;[!DNL Hotels]&quot; si basa su un &quot;[!DNL Hotels]&quot; classe e contiene campi che descrivono un hotel.
+Schema di riferimento &quot;[!DNL Hotels]&quot; si basa su un &quot;[!DNL Hotels]&quot; classe e contiene campi che descrivono un hotel. Per partecipare a una relazione, lo schema di riferimento deve avere anche un&#39;identità primaria definita ed abilitata per [!UICONTROL Profilo]. In questo caso, `_tenantId.hotelId`agisce come identità principale per lo schema, utilizzando un &quot;[!DNL Hotel ID]&quot; namespace identity.
 
-![](../images/tutorials/relationship/hotels.png)
-
-Per poter partecipare a una relazione, lo schema di destinazione deve avere un&#39;identità primaria. In questo esempio, la `hotelId` viene utilizzato come identità principale utilizzando uno spazio dei nomi di identità &quot;ID hotel&quot; personalizzato.
-
-![Identità principale dell&#39;hotel](../images/tutorials/relationship/hotel-identity.png)
+![Abilita per profilo](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
 >Per informazioni su come creare spazi dei nomi di identità personalizzati, consulta [Documentazione del servizio Identity](../../identity-service/namespaces.md#manage-namespaces).
 
-Una volta impostata l&#39;identità principale, lo schema di destinazione deve essere abilitato per [!DNL Real-Time Customer Profile].
-
-![Abilita per profilo](../images/tutorials/relationship/hotel-profile.png)
-
-## Creare un gruppo di campi schema di relazione
+## Creare un gruppo di campi di relazione
 
 >[!NOTE]
 >
->Questo passaggio è necessario solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come riferimento allo schema di destinazione. Se questo campo è già definito nello schema di origine, passa al passaggio successivo di [definizione di un campo relazione](#relationship-field).
+>Questo passaggio è necessario solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come puntatore all&#39;identità primaria dello schema di riferimento. Se questo campo è già definito nello schema di origine, passa al passaggio successivo di [definizione di un campo relazione](#relationship-field).
 
-Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato da utilizzare come riferimento allo schema di destinazione. È possibile aggiungere questo campo allo schema di origine creando un nuovo gruppo di campi dello schema.
+Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che indichi l’identità principale dello schema di riferimento. È possibile aggiungere questo campo allo schema di origine creando un nuovo gruppo di campi dello schema o estendendone uno esistente.
 
-Inizia selezionando **[!UICONTROL Aggiungi]** in **[!UICONTROL Gruppi di campi]** sezione .
-
-![](../images/tutorials/relationship/loyalty-add-field-group.png)
-
-La [!UICONTROL Aggiungi gruppo di campi] viene visualizzata la finestra di dialogo . Da qui, seleziona **[!UICONTROL Crea nuovo gruppo di campi]**. Nei campi di testo visualizzati, immettere un nome visualizzato e una descrizione per il nuovo gruppo di campi. Seleziona **[!UICONTROL Aggiungi gruppi di campi]** una volta finito.
-
-![](../images/tutorials/relationship/create-field-group.png)
-
-L&#39;area di lavoro viene visualizzata nuovamente con &quot;[!DNL Favorite Hotel]&quot; che compare nel **[!UICONTROL Gruppi di campi]** sezione . Selezionare il nome del gruppo di campi, quindi selezionare **[!UICONTROL Aggiungi campo]** accanto al livello principale `Loyalty Members` campo .
+Nel caso di [!DNL Loyalty Members] schema, nuovo `preferredHotel` verrà aggiunto un campo per indicare l’hotel preferito del membro fedeltà per le visite aziendali. Inizia selezionando l’icona più (**+**) accanto al nome dello schema di origine.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Un nuovo campo viene visualizzato nell’area di lavoro sotto la `_tenantId` spazio dei nomi. Sotto **[!UICONTROL Proprietà campo]**, fornire un nome di campo e un nome visualizzato per il campo e impostarne il tipo su &quot;[!UICONTROL Stringa]&quot;.
+Nell’area di lavoro viene visualizzato un nuovo segnaposto campo. Sotto **[!UICONTROL Proprietà campo]**, fornire un nome di campo e un nome visualizzato per il campo e impostarne il tipo su &quot;[!UICONTROL Stringa]&quot;. Sotto **[!UICONTROL Assegna a]**, seleziona un gruppo di campi esistente da estendere o digita un nome univoco per creare un nuovo gruppo di campi. In questo caso, un nuovo &quot;[!DNL Preferred Hotel]&quot; viene creato un gruppo di campi.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -112,7 +96,7 @@ Al termine, seleziona **[!UICONTROL Applica]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Il `favoriteHotel` il campo viene visualizzato nell&#39;area di lavoro. Seleziona **[!UICONTROL Salva]** per finalizzare le modifiche allo schema.
+Il `preferredHotel` il campo viene visualizzato nell&#39;area di lavoro, situata sotto a `_tenantId` poiché si tratta di un campo personalizzato. Seleziona **[!UICONTROL Salva]** per finalizzare le modifiche allo schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -124,15 +108,15 @@ Una volta definito il campo di riferimento dedicato dello schema di origine, è 
 >
 >I passaggi seguenti descrivono come definire un campo di relazione utilizzando i controlli della barra a destra nell’area di lavoro. Se hai accesso a Real-Time CDP B2B Edition, puoi anche definire una relazione uno-a-uno utilizzando la [stessa finestra di dialogo](./relationship-b2b.md#relationship-field) come quando si creano relazioni molti-a-uno.
 
-Seleziona la `favoriteHotel` nell’area di lavoro, quindi scorri verso il basso sotto **[!UICONTROL Proprietà campo]** fino al **[!UICONTROL Relazione]** viene visualizzata la casella di controllo . Selezionare la casella di controllo per visualizzare i parametri richiesti per la configurazione di un campo di relazione.
+Seleziona la `preferredHotel` nell’area di lavoro, quindi scorri verso il basso sotto **[!UICONTROL Proprietà campo]** fino al **[!UICONTROL Relazione]** viene visualizzata la casella di controllo . Selezionare la casella di controllo per visualizzare i parametri richiesti per la configurazione di un campo di relazione.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Seleziona il menu a discesa per **[!UICONTROL Schema di riferimento]** e selezionare lo schema di destinazione per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio). Se lo schema di destinazione è abilitato per [!DNL Profile], **[!UICONTROL Spazio dei nomi identità di riferimento]** viene impostato automaticamente sullo spazio dei nomi dell&#39;identità principale dello schema di destinazione. Se nello schema non è definita un&#39;identità primaria, è necessario selezionare manualmente lo spazio dei nomi che si intende utilizzare dal menu a discesa. Seleziona **[!UICONTROL Applica]** una volta finito.
+Seleziona il menu a discesa per **[!UICONTROL Schema di riferimento]** e selezionare lo schema di riferimento per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio). Sotto **[!UICONTROL Spazio dei nomi identità di riferimento]**, seleziona lo spazio dei nomi del campo di identità dello schema di riferimento (in questo caso, &quot;[!DNL Hotel ID]&quot;). Seleziona **[!UICONTROL Applica]** una volta finito.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-La `favoriteHotel` Il campo viene ora evidenziato come una relazione nell’area di lavoro, che visualizza il nome e lo spazio dei nomi dell’identità di riferimento dello schema di destinazione. Seleziona **[!UICONTROL Salva]** per salvare le modifiche e completare il flusso di lavoro.
+La `preferredHotel` il campo viene ora evidenziato come una relazione nell&#39;area di lavoro, visualizzando il nome dello schema di riferimento. Seleziona **[!UICONTROL Salva]** per salvare le modifiche e completare il flusso di lavoro.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 

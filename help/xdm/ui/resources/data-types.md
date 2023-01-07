@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Scopri come creare e modificare i tipi di dati nell’interfaccia utente di Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Questo dimostra come i tipi di dati flessibili possono essere in termini di desc
 
 Dopo aver aggiunto i campi al tipo di dati, seleziona **[!UICONTROL Salva]** per salvare le modifiche e aggiungere il tipo di dati al [!DNL Schema Library].
 
-## Aggiungere il tipo di dati a una classe o a un gruppo di campi
+## Aggiungere il tipo di dati a uno schema
 
 Dopo aver creato un tipo di dati, puoi iniziare a utilizzarlo negli schemi. Poiché gli schemi XDM sono composti da una classe e da zero o più gruppi di campi, i campi forniti da un tipo di dati non possono essere aggiunti direttamente a uno schema. Devono invece essere inclusi in una classe o in un gruppo di campi.
 
-Inizia seguendo i passaggi descritti in [aggiunta di un campo a una classe](./classes.md#add-fields) o [aggiunta di un campo a un gruppo di campi](./field-groups.md#add-fields). Quando scegli la **[!UICONTROL Tipo]** per il nuovo campo, seleziona il nome del tipo di dati dal menu a discesa.
+Inizia seguendo i passaggi descritti in [aggiunta di un campo a una classe](./classes.md#add-fields) o [aggiunta di un campo a un gruppo di campi](./field-groups.md#add-fields). In alternativa, puoi iniziare [aggiunta di un campo direttamente a uno schema](./schemas.md#add-individual-fields) e scegliere la classe o il gruppo di campi padre da lì. Quando scegli la **[!UICONTROL Tipo]** per il nuovo campo, seleziona il nome del tipo di dati dal menu a discesa.
 
 ## Convertire un oggetto con più campi in un tipo di dati {#convert}
 
@@ -102,7 +102,7 @@ Per convertire un campo di tipo oggetto in un tipo di dati, selezionare il campo
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-L’area di lavoro aggiorna il tipo di dati del campo da &quot;[!UICONTROL Oggetto]&quot; al nuovo tipo di dati. Accanto ai sottocampi sono inoltre presenti piccole icone di blocco che indicano che non sono più campi singoli ma fanno parte di un tipo di dati con più campi. Questa struttura può ora essere riutilizzata in altre classi e gruppi di campi selezionando questo tipo di dati dal **[!UICONTROL Tipo]** menu a discesa durante la definizione di un nuovo campo.
+L’area di lavoro aggiorna il tipo di dati del campo da &quot;[!UICONTROL Oggetto]&quot; al nuovo tipo di dati. Questa struttura può ora essere riutilizzata in altre classi e gruppi di campi selezionando questo tipo di dati dal **[!UICONTROL Tipo]** menu a discesa durante la definizione di un nuovo campo.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

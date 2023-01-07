@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 title: Definire i campi obbligatori nell’interfaccia utente
 description: Scopri come definire un campo XDM obbligatorio nell’interfaccia utente di Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Se il campo è un attributo di livello principale sotto l&#39;oggetto ID tenant,
 
 Tuttavia, se un campo obbligatorio è nidificato all’interno di un oggetto non contrassegnato come obbligatorio, il campo nidificato non viene visualizzato sotto **[!UICONTROL Campi obbligatori]** nella barra a sinistra.
 
-Nell’esempio seguente, la `loyaltyId` il campo è impostato come obbligatorio, ma l&#39;oggetto principale è `loyalty` non lo è. In questo caso, se non si verificano errori di convalida `loyalty` è stato escluso durante l’acquisizione dei dati, anche se il campo figlio `loyaltyId` è contrassegnato come necessario. In altre parole, mentre `loyalty` è facoltativo e deve contenere un `loyaltyId` nel caso in cui sia incluso.
+Nell’esempio seguente, la `internalSKU` il campo è impostato come obbligatorio, ma l&#39;oggetto principale è `SKUs` non lo è. In questo caso, se non si verificano errori di convalida `SKUs` viene escluso durante l’acquisizione dei dati, anche se il campo figlio `internalSKU` è contrassegnato come necessario. In altre parole, mentre `SKUs` è facoltativo e deve contenere un `internalSKU` nel caso in cui sia incluso.
 
 ![Campo obbligatorio nidificato](../../images/ui/fields/required/nested.png)
 
