@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;RGPD;RGPD;CCPA;CCPA;PDPA;PDPA;LGPD;LGPD;lgpd;panoramica;panoramica;regolamento;regolamenti;regolamenti;privacy;privacy;privacy;
 solution: Experience Platform
 title: Terminologia delle normative sulla privacy
-topic-legacy: troubleshooting
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 65ff39c99eee98654daee89c86d6047dc055c196
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 3%
@@ -60,7 +59,7 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **Enterprise**: Qualsiasi entità impegnata in attività economica, indipendentemente dalla forma giuridica, comprese persone, società di persone, associazioni, ecc.
 
-**Consenso esplicito**: Norma di consenso che comporta un’indicazione specifica, informata e inequivocabile della volontà della persona interessata in forma orale o scritta. In parole povere, la persona interessata deve dire letteralmente ed esplicitamente &quot;Io acconsento&quot; o &quot;Io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il ritiro del consenso deve essere altrettanto semplice di quello che lo è.
+**Consenso esplicito**: Standard di consenso che comporta un&#39;indicazione specifica, informata e univoca dei desideri della persona interessata in forma orale o scritta. In parole povere, la persona interessata deve dire letteralmente ed esplicitamente &quot;Io acconsento&quot; o &quot;Io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il ritiro del consenso deve essere altrettanto semplice di quello che lo è.
 
 ## F
 
@@ -154,6 +153,6 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 ## X
 
-## Y
+## S
 
 ## Z

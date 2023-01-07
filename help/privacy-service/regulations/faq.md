@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;RGPD;RGPD;CCPA;CCPA;PDPA;PDPA;LGPD;LGPD;lgpd;faq;FAQ;regolamento;regolamenti;regolamenti;privacy;privacy;
 solution: Experience Platform
 title: Domande frequenti sulle normative sulla privacy
-topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sulle normative legali sulla privacy supportate e sulla loro implementazione in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
@@ -19,7 +17,7 @@ Questo documento fornisce le risposte alle domande più frequenti sulle normativ
 
 >[!NOTE]
 >
->Le definizioni dei vari termini utilizzati in questo documento si trovano nella guida [terminologia delle normative sulla privacy](terminology.md).
+>Le definizioni dei vari termini utilizzati in questo documento sono disponibili nella [terminologia normativa sulla privacy](terminology.md) guida.
 
 ## Domande generali
 
@@ -27,7 +25,7 @@ Le seguenti domande riguardano tutte le normative sulla privacy supportate dall&
 
 ### Quali sono gli effetti delle normative sulla privacy supportate?
 
-Le [normative sulla privacy supportate dall&#39;Experience Cloud](./overview.md) si applicano a tutte le organizzazioni che memorizzano ed elaborano i dati personali dei cittadini all&#39;interno delle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
+La [normative sulla privacy supportate dall&#39;Experience Cloud](./overview.md) si applica a tutte le organizzazioni che memorizzano e trattano i dati personali dei cittadini nelle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
 
 ### Cosa si intende per dati personali?
 
@@ -49,19 +47,19 @@ Le informazioni personali possono includere anche informazioni su Internet o alt
 * Cronologia ricerche
 * Informazioni relative all&#39;interazione di un consumatore con un sito web, un&#39;applicazione o un annuncio
 
-Sebbene le normative sulla privacy coprano un’ampia serie di informazioni personali, le condizioni contrattuali standard dell’Adobe stabiliscono che le informazioni personali sensibili (come SSN, le informazioni sulla patente di guida, le informazioni finanziarie sul conto finanziario e i dati biometrici) sono generalmente vietate dall’importazione e dall’uso nelle applicazioni di Experience Cloud.
+Anche se le normative sulla privacy coprono un ampio insieme di informazioni personali, le condizioni contrattuali standard dell&#39;Adobe stabiliscono che le informazioni personali sensibili (come SSN, le informazioni sulla patente di guida, le informazioni finanziarie e i dati biometrici) sono generalmente vietate dall&#39;importazione e dall&#39;uso nelle applicazioni di Experience Cloud.
 
 ### Qual è la differenza tra un titolare del trattamento e un responsabile del trattamento dei dati?
 
-Un **titolare del trattamento** è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre il **responsabile del trattamento** è un&#39;entità che tratta i dati personali per conto del titolare del trattamento.
+A **titolare dei dati** è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre **elaboratore dati** è un’entità che tratta dati personali per conto del titolare del trattamento.
 
-Un **titolare del trattamento** è la persona o l&#39;organizzazione che ha il potere e la responsabilità di prendere decisioni in merito alla raccolta, all&#39;utilizzo o alla divulgazione dei dati personali. Un **responsabile del trattamento dei dati** è la persona o l&#39;organizzazione che opera in relazione alla raccolta, all&#39;uso o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
+A **titolare dei dati** è la persona o l&#39;organizzazione che ha il potere e la responsabilità di prendere decisioni in merito alla raccolta, all&#39;uso o alla divulgazione dei dati personali. A **elaboratore dati** è la persona o l’organizzazione che opera in relazione alla raccolta, all’uso o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
 
 ### Qual è la differenza tra il consenso esplicito e non ambiguo delle persone interessate?
 
-**Il** consenso esplicito si riferisce a uno standard di consenso che comporta un’indicazione specifica, informata e inequivocabile della volontà della persona interessata in forma orale o scritta. In parole povere, la persona interessata deve dire letteralmente ed esplicitamente &quot;Io acconsento&quot; o &quot;Io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il ritiro del consenso deve essere altrettanto semplice di quello che lo è.
+**Consenso esplicito** si riferisce a uno standard di consenso che comporta un&#39;indicazione specifica, informata e inequivocabile della volontà della persona interessata in forma orale o scritta. In parole povere, la persona interessata deve dire letteralmente ed esplicitamente &quot;Io acconsento&quot; o &quot;Io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il ritiro del consenso deve essere altrettanto semplice di quello che lo è.
 
-**Il** consenso esplicito (implicito) si riferisce al consenso che non è stato esplicitamente fornito dalla persona interessata, ma che è comunque di natura inequivocabile. Ad esempio, durante il processo di registrazione per un sito web aziendale, viene comunicato che, fornendo un indirizzo e-mail, l’interessato acconsente a ricevere e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva di inserire l’e-mail è sufficiente per essere considerato un consenso non ambiguo.
+**Consenso univoco (implicito)** si riferisce al consenso che non è stato dato esplicitamente dalla persona interessata, ma che è comunque di natura inequivocabile. Ad esempio, durante il processo di registrazione per un sito web aziendale, viene comunicato che, fornendo un indirizzo e-mail, l’interessato acconsente a ricevere e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva di inserire l’e-mail è sufficiente per essere considerato un consenso non ambiguo.
 
 Per molti regolamenti come il RGPD, è necessario un consenso esplicito per il trattamento dei dati personali sensibili, dove basta solo il &quot;consenso&quot;. Per i dati non sensibili, tuttavia, il consenso esplicito (implicito) è accettabile.
 
@@ -105,7 +103,7 @@ Se le operazioni relative ai dati della tua organizzazione rientrano nelle giuri
 
 ### Come posso supportare le richieste sulla privacy dei consumatori se mantengo i dati coperti dalle normative sulla privacy?
 
-Una volta effettuati i passaggi necessari per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate, Adobe Experience Platform Privacy Service ti consente di inviare le richieste sulla privacy dei consumatori ad applicazioni Experience Cloud compatibili. Per ulteriori informazioni, consulta la sezione [[!DNL Privacy Service] panoramica](../home.md) . Per informazioni su come le applicazioni Experience Cloud in uso possono soddisfare le richieste di accesso a dati personali, consulta la guida sulle [applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md).
+Una volta effettuati i passaggi necessari per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate, Adobe Experience Platform Privacy Service ti consente di inviare le richieste sulla privacy dei consumatori ad applicazioni Experience Cloud compatibili. Consulta la sezione [[!DNL Privacy Service] panoramica](../home.md) per ulteriori informazioni. Per informazioni su come le applicazioni di Experience Cloud possono soddisfare le richieste sulla privacy, consulta la guida su [Applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -119,14 +117,14 @@ Le seguenti domande riguardano specificamente il CCPA.
 
 Come definito dal CCPA, i seguenti ruoli si applicano ad Adobe e ai suoi clienti:
 
-* I clienti di Adobe (la parte che richiede la raccolta e l&#39;uso di informazioni personali da parte dei residenti della California) saranno considerati come **Azienda**.
-* L&#39;Adobe, nel suo ruolo di fornitore del servizio, sarebbe considerato un **fornitore di servizi**.
+* I clienti Adobi (la parte che richiede la raccolta e l&#39;uso di informazioni personali da parte dei residenti della California) saranno considerati come **Business**.
+* L&#39;Adobe, nel suo ruolo di prestazione del servizio, sarebbe considerato un **Provider di servizi**.
 
 In qualità di fornitore di servizi, Adobe raccoglie ed elabora le informazioni personali per conto dell&#39;Azienda ed è contrattualmente obbligato ad utilizzare tali informazioni solo per gli scopi specifici stabiliti nel contratto.
 
 Considerata questa relazione e il linguaggio contrattuale Adobe, le informazioni all&#39;Adobe probabilmente non sarebbero considerate una &quot;vendita&quot; per la quale le imprese dovrebbero fornire un avviso e richiedere il consenso.
 
-Tuttavia, i servizi di Adobe possono essere utilizzati per consentire la condivisione e il trasferimento di determinati dati a terzi. Tali trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e richiedono legalmente la divulgazione e il consenso. I clienti devono collaborare con il proprio consulente legale per valutare casi d’uso specifici al fine di valutare i requisiti applicabili.
+Tuttavia, i servizi Adobe possono essere utilizzati per consentire la condivisione e il trasferimento di determinati dati a terzi. Questi trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e richiedono legalmente la divulgazione e il consenso. I clienti devono collaborare con il proprio consulente legale per valutare casi d’uso specifici al fine di valutare i requisiti applicabili.
 
 ### L’Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
 
@@ -140,7 +138,7 @@ Le seguenti domande riguardano specificamente il RGPD.
 
 ### Qual è la differenza tra un regolamento e una direttiva?
 
-Un **regolamento** è un atto legislativo vincolante e deve essere applicato nella sua interezza in tutta l&#39;UE. Un **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;UE devono raggiungere, ma spetta ai singoli paesi decidere come.
+A **regolamento** è un atto legislativo vincolante e deve essere applicato nella sua interezza in tutta l&#39;UE. A **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;UE devono raggiungere, ma spetta ai singoli paesi decidere come.
 
 È importante notare che il RGPD è un regolamento, a differenza della precedente legislazione (la direttiva sulla protezione dei dati), che è una direttiva.
 

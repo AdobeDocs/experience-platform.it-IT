@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Come configurare un campo attributo calcolato
-topic-legacy: guide
 type: Documentation
 description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. È possibile creare il campo utilizzando un gruppo di campi dello schema per aggiungere il campo a uno schema esistente oppure selezionando un campo già definito in uno schema.
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%
@@ -26,7 +25,7 @@ Per configurare un attributo calcolato, devi innanzitutto identificare il campo 
 
 Per definire correttamente un campo attributo calcolato, è necessario abilitare lo schema per [!DNL Profile] e vengono visualizzati come parte dello schema di unione per la classe su cui è basato lo schema. Per ulteriori informazioni su [!DNL Profile]- schemi e sindacati abilitati, si prega di rivedere la sezione del [!DNL Schema Registry] sezione guida per sviluppatori su [abilitazione di uno schema per il profilo e visualizzazione degli schemi di unione](../../xdm/api/getting-started.md). Si consiglia inoltre di rivedere il [sezione sui sindacati](../../xdm/schema/composition.md) nella documentazione di base sulla composizione dello schema.
 
-Il flusso di lavoro in questa esercitazione utilizza un [!DNL Profile]schema abilitato e segue i passaggi necessari per definire un nuovo gruppo di campi contenente il campo dell&#39;attributo calcolato e assicurarsi che sia lo spazio dei nomi corretto. Se disponi già di un campo nello spazio dei nomi corretto all’interno di uno schema abilitato per il profilo, puoi procedere direttamente al passaggio per [creazione di un attributo calcolato](#create-a-computed-attribute).
+Il flusso di lavoro in questa esercitazione utilizza un [!DNL Profile]schema abilitato e segue i passaggi necessari per definire un nuovo gruppo di campi contenente il campo dell&#39;attributo calcolato e assicurarsi che lo spazio dei nomi sia corretto. Se disponi già di un campo nello spazio dei nomi corretto all’interno di uno schema abilitato per il profilo, puoi procedere direttamente al passaggio per [creazione di un attributo calcolato](#create-a-computed-attribute).
 
 ## Visualizzare uno schema
 

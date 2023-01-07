@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Endpoint API per la proiezione Edge
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di gestire in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, rendendo i dati giusti immediatamente disponibili e costantemente aggiornati man mano che avvengono le modifiche. Questo avviene tramite l'uso di edge, un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%

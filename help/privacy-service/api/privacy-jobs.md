@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Endpoint API per i processi di privacy
-topic-legacy: developer guide
 description: Scopri come gestire i processi relativi alla privacy per le applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 3%

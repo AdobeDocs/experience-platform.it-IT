@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Panoramica della libreria JavaScript sulla privacy di Adobe
-topic-legacy: overview
 description: La libreria JavaScript per la privacy di Adobe consente di recuperare le identità dell’interessato da utilizzare in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 6%
@@ -139,7 +138,7 @@ adobePrivacy.removeIdentities(handleRemovedIDs);
 adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 ```
 
-| Variabile | Descrizione |
+| Variable | Descrizione |
 | --- | --- |
 | `validIds` | Un oggetto JSON contenente tutti gli ID recuperati correttamente. |
 | `failedIDs` | Un oggetto JSON contenente tutti gli ID non recuperati da [!DNL Privacy Service]oppure non è stato possibile trovarli. |

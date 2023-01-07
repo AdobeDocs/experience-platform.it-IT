@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;ECID;ecid
 solution: Experience Platform
 title: Dati di identità per le richieste di privacy
-topic-legacy: overview
 description: Questo documento fornisce indicazioni generali su come configurare le operazioni sui dati e sfruttare le tecnologie Adobe per recuperare in modo efficace le informazioni di identità appropriate per le richieste di privacy dei clienti.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 2%
@@ -38,7 +37,7 @@ Una volta assegnati gli ECID ai visitatori del sito, puoi utilizzare l’Adobe [
 
 ## [!DNL Privacy JS Library]
 
-La [!DNL Adobe Privacy JavaScript Library] fornisce diverse funzioni che ti consentono di recuperare e rimuovere le identità cliente memorizzate nel browser. La libreria può essere configurata per recuperare informazioni di identità da diverse applicazioni di Adobe, incluso ECID. Mediante l&#39;utilizzo di callback o promesse, puoi gestire in modo programmatico gli ID recuperati e inviarli al [!DNL Privacy Service] API.
+La [!DNL Adobe Privacy JavaScript Library] fornisce diverse funzioni che ti consentono di recuperare e rimuovere le identità cliente memorizzate nel browser. La libreria può essere configurata per recuperare informazioni di identità da diverse applicazioni di Adobe, incluso ECID. Utilizzando callback o promesse, puoi gestire gli ID recuperati e inviarli al [!DNL Privacy Service] API.
 
 Per ulteriori informazioni [!DNL Privacy JS Library], compresi i campioni di codice per diversi casi d&#39;uso comuni, si prega di fare riferimento al [Panoramica sulla libreria JS per la privacy](js-library.md).
 

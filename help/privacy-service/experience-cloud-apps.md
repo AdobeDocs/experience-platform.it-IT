@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Applicazioni Privacy Service e Experience Cloud
-topic-legacy: overview
 description: Questo documento fornisce un riferimento su come configurare diverse applicazioni Experience Cloud per le operazioni relative alla privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 11%
@@ -33,7 +32,7 @@ Di seguito è riportato un elenco di [!DNL Experience Cloud] applicazioni integr
 
 | Applicazione | Accedere/eliminare | Rinuncia alla vendita | Elimina comportamento | Documentazione e altre considerazioni |
 | --- | :---: | :---: | --- | --- |
-| Adobe Advertising Cloud | ✓ | ✓ | L’ID cookie o l’ID dispositivo dell’interessato viene eliminato dal sistema, insieme a tutti i dati relativi a costi, clic e ricavi associati al cookie. | <ul><li>[Accedere/eliminare la documentazione relativa al RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Accedere/eliminare la documentazione relativa al CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentazione di rifiuto del CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | L’ID cookie o l’ID dispositivo della persona interessata viene eliminato dal sistema, insieme a tutti i dati relativi a costi, clic e ricavi associati al cookie. | <ul><li>[Accedere/eliminare la documentazione relativa al RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Accedere/eliminare la documentazione relativa al CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentazione di rifiuto del CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | Se `analyticsDeleteMethod` viene omesso o impostato su `anonymize` quando si effettua la richiesta di accesso a dati personali, tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` è impostato su `purge`, tutti i dati vengono rimossi completamente. | <ul><li>[Accedere/eliminare la documentazione](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=it)</li><li>[!DNL Analytics] gestisce le richieste di rinuncia utilizzando [variabili per la generazione di rapporti sulla privacy](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=it)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | Tutte le caratteristiche e i segmenti associati all’identificatore di Audience Manager incluso nella richiesta vengono eliminati. Inoltre, i rispettivi identificatori per il singolo utente vengono esclusi dall’ulteriore raccolta di dati e le rispettive mappature ID vengono rimosse. | <ul><li>[Accedere/eliminare la documentazione](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentazione di rinuncia](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | I dati archiviati della persona interessata vengono eliminati dal sistema. | <ul><li>[Accedere/eliminare la documentazione](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=it)</li><li>[Documentazione di rinuncia](../segmentation/consents.md)</li></ul> |

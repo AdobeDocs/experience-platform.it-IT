@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Guida introduttiva all’API del profilo cliente in tempo reale
-topic-legacy: guide
 type: Documentation
 description: La guida introduttiva all’API di profilo descrive i concetti chiave e le funzionalità di base che devi conoscere per utilizzare gli endpoint API del profilo cliente in tempo reale per eseguire operazioni CRUD di base rispetto ai dati del profilo.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
