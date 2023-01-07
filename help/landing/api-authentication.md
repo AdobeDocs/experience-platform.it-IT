@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;autenticare;accedere
 solution: Experience Platform
 title: API di Experience Platform di autenticazione e accesso
-topic-legacy: tutorial
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 9%
@@ -37,7 +36,7 @@ Per effettuare correttamente le chiamate alle API di Experience Platform, devi d
 
 Devi anche disporre di un Adobe ID per completare questa esercitazione. Se non disponi di un Adobe ID, puoi crearne uno seguendo questi passaggi:
 
-1. Vai a [Console per sviluppatori di Adobe](https://console.adobe.io).
+1. Vai a [Console Adobe Developer](https://console.adobe.io).
 2. Seleziona **[!UICONTROL Crea un nuovo account]**.
 3. Completa il processo di registrazione.
 
@@ -47,9 +46,9 @@ Prima di creare integrazioni sulla console Adobe Developer, il tuo account deve 
 
 ### Accesso per sviluppatori
 
-Contatta un [!DNL Admin Console] amministratore della tua organizzazione per aggiungerti come sviluppatore a un profilo di prodotto di Experience Platform utilizzando [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulta la sezione [!DNL Admin Console] documentazione per istruzioni specifiche su come [gestire l’accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Contatta un [!DNL Admin Console] amministratore della tua organizzazione per aggiungerti come sviluppatore a un profilo di prodotto di Experience Platform utilizzando [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulta la sezione [!DNL Admin Console] documentazione per istruzioni specifiche su come [gestire l’accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/it/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Una volta assegnato come sviluppatore, puoi iniziare a creare integrazioni in [Console per sviluppatori di Adobe](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline da applicazioni e servizi esterni alle API di Adobe.
+Una volta assegnato come sviluppatore, puoi iniziare a creare integrazioni in [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline da applicazioni e servizi esterni alle API di Adobe.
 
 ### Accesso utente
 

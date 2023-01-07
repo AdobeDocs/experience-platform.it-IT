@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida utente;guida utente;guida interfaccia utente;guida interfaccia utente piattaforma;introduzione alla piattaforma;dashboard;
 solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Experience Platform
-topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 1%

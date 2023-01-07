@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;CJA;analisi dei percorsi;analisi dei percorsi dei clienti;orchestrazione della campagna;orchestrazione;percorso cliente;percorso;orchestrazione percorso;funzionalità;area geografica
 title: Flusso di lavoro di esempio end-to-end di Adobe Experience Platform
-topic-legacy: getting started
 description: Scopri il flusso di lavoro end-to-end di base per Adobe Experience Platform ad alto livello.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 3%

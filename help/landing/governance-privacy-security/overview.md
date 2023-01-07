@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Panoramica su governance, privacy e sicurezza
-topic-legacy: overview
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati relativi all’esperienza raccolti per rispettare le tue pratiche commerciali, gli obblighi legali e il processo di sviluppo.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +35,7 @@ Consulta la sezione [Panoramica sulla governance dei dati](../../data-governance
 
 ### Catalogo e set di dati {#catalog}
 
-Servizio catalogo è il sistema di registrazione per la posizione dei dati e la derivazione all’interno di Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
+Catalog Service è il sistema di registrazione per la posizione e la derivazione dei dati in Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel data lake come file e directory, il servizio Catalog contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca e monitoraggio.
 
 Il catalogo organizza i dati acquisiti nei set di dati, con ogni set di dati contenente i metadati che possono essere utilizzati per etichettare e classificare i dati in esso contenuti.
 

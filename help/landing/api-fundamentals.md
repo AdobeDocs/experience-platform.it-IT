@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Experience Platform di base API
-topic-legacy: getting started
 description: Questo documento fornisce una breve panoramica di alcune tecnologie e sintassi sottostanti coinvolte con le API di Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%

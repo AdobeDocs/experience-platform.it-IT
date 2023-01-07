@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida utente;guida utente;guida utente;guida interfaccia utente workflow;flussi di lavoro;guida utente flussi di lavoro;
 solution: Experience Platform
 title: Guida all’interfaccia utente dei flussi di lavoro
-topic-legacy: ui guide
 description: Scopri come seguire i flussi di lavoro in più passaggi per eseguire operazioni comuni all’interno dell’interfaccia utente di Adobe Experience Platform.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -18,7 +17,7 @@ La **[!UICONTROL Flussi di lavoro]** all’interno dell’interfaccia utente di 
 
 ![workflow](./images/workflows/workflows.png)
 
-## [!UICONTROL Acquisizione dati]
+## [!UICONTROL Acquisizione dei dati]
 
 La **[!UICONTROL Mappatura di CSV su schema XDM]** flusso di lavoro consente di caricare e convertire un file CSV in uno schema Experience Data Model (XDM). Per ulteriori informazioni su questo flusso di lavoro, consulta l’esercitazione su [mappatura di un file CSV su uno schema XDM](../ingestion/tutorials/map-csv/overview.md).
 
