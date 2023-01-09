@@ -1,9 +1,10 @@
 ---
 title: Panoramica dell’estensione Meta Pixel
 description: Scopri l’estensione tag Meta Pixel in Adobe Experience Platform.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 0%
 
 La [!DNL Meta Pixel] l’estensione tag consente di sfruttare [!DNL Pixel] funzionalità nelle librerie di tag lato client. Questo documento illustra come installare l&#39;estensione e utilizzarne le funzionalità in un [regola](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->Se stai tentando di inviare eventi lato server a [!DNL Meta] anziché dal lato client, utilizza il [[!DNL Meta Conversions API] estensione](../../server/meta/overview.md) invece.
-
 ## Prerequisiti
 
 Per utilizzare l&#39;estensione, è necessario disporre di un [!DNL Meta] account con accesso a [!DNL Ads Manager]. In particolare, devi [creare una nuova [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) e copia le sue [!DNL Pixel ID] in modo che l&#39;estensione possa essere configurata sul tuo account. Se esiste già un [!DNL Meta Pixel], invece puoi utilizzarne l’ID.
+
+Si consiglia vivamente di utilizzare [!DNL Meta Pixel] in combinazione con [!DNL Meta Conversions API] per condividere e inviare gli stessi eventi dal lato client e dal lato server, rispettivamente, in quanto ciò potrebbe aiutare a recuperare gli eventi che non sono stati rilevati da [!DNL Meta Pixel]. Consulta la guida [[!DNL Meta Conversions API] estensione per l&#39;inoltro eventi](../../client/meta/overview.md) per informazioni su come integrarlo nelle implementazioni lato server. Tieni presente che la tua organizzazione deve avere accesso a [inoltro eventi](../../../ui/event-forwarding/overview.md) per utilizzare l&#39;estensione lato server.
 
 ## Installare l’estensione
 
@@ -36,7 +35,7 @@ Nella visualizzazione di configurazione visualizzata, devi fornire [!DNL Pixel] 
 >
 >L’utilizzo di un elemento dati consente di modificare dinamicamente la variabile [!DNL Pixel] ID utilizzato a seconda di altri fattori, ad esempio l’ambiente di creazione. Vedi la sezione dell&#39;appendice su [utilizzando diversi [!DNL Pixel] ID per ambienti diversi](#id-data-element) per ulteriori informazioni.
 
-Facoltativamente, puoi anche fornire un ID evento da associare all&#39;estensione. Viene utilizzato per deduplicare eventi identici tra [!DNL Meta Pixel] e [!DNL Meta Conversions API]. Consulta la sezione [!DNL Meta] documentazione [movimentazione [!DNL Pixel] e [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) per i dettagli.
+Facoltativamente, puoi anche fornire un ID evento da associare all&#39;estensione. Viene utilizzato per deduplicare eventi identici tra [!DNL Meta Pixel] e [!DNL Meta Conversions API]. Per informazioni dettagliate, consulta la sezione [deduplicazione degli eventi](../../server/meta/overview.md#event-deduplication) in panoramica per [!DNL Conversions API] estensione.
 
 Al termine, seleziona **[!UICONTROL Salva]**
 
@@ -64,7 +63,9 @@ Dopo che la build aggiornata è stata distribuita sul sito web, puoi verificare 
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare dati a [!DNL Meta] utilizzando [!DNL Meta Pixel] estensione tag. Per ulteriori informazioni sui tag nell’Experience Platform, consulta [panoramica dei tag](../../../home.md).
+Questa guida illustra come inviare dati a [!DNL Meta] utilizzando [!DNL Meta Pixel] estensione tag. Se prevedi di inviare anche eventi lato server a [!DNL Meta], ora puoi procedere all’installazione e alla configurazione del [[!DNL Conversions API] estensione di inoltro eventi](../../server/meta/overview.md).
+
+Per ulteriori informazioni sui tag nell’Experience Platform, consulta [panoramica dei tag](../../../home.md).
 
 ## Appendice: Usa diversi [!DNL Pixel] ID per ambienti diversi {#id-data-element}
 
@@ -77,4 +78,3 @@ L&#39;esempio seguente restituisce un ID produzione falso `exampleProductionKey`
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
