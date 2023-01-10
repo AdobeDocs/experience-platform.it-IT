@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;SFTP;sftp
 solution: Experience Platform
 title: Panoramica del connettore sorgente SFTP
-topic-legacy: overview
 description: Scopri come collegare un server SFTP a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -41,7 +40,7 @@ La [!DNL SFTP] source supporta l&#39;autenticazione tramite [!DNL Base64]Chiave 
 
 Se utilizzi un [!DNL Windows] macchina, apri **Inizio** quindi seleziona **Impostazioni**.
 
-![impostazioni](../../images/tutorials/create/sftp/settings.png)
+![del profilo](../../images/tutorials/create/sftp/settings.png)
 
 Da **Impostazioni** menu visualizzato, selezionare **App**.
 

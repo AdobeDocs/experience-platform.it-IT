@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;conformità all’utilizzo dei dati;applicare;applicare la conformità all’utilizzo dei dati;servizio di segmentazione;segmentazione;segmentazione;
 solution: Experience Platform
 title: Applicare la conformità in materia di utilizzo dei dati per un segmento di pubblico utilizzando le API
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per applicare la conformità dell’utilizzo dei dati per i segmenti di pubblico Profilo cliente in tempo reale che utilizzano le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%

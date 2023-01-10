@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;attributi del cliente
 solution: Experience Platform
 title: Creare una connessione sorgente attributi cliente nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente nell’interfaccia utente per inserire in Adobe Experience Platform i dati del profilo degli attributi del cliente.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;ecommerce;eCommerce
 solution: Experience Platform
 title: Esplorare una connessione e-commerce utilizzando l’API del servizio di flusso
-topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare le connessioni eCommerce.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%

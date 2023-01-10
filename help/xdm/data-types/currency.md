@@ -2,25 +2,24 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;dispositivo;tipo di dati;tipo di dati;tipo di dati;tipo di dati;valuta;
 solution: Experience Platform
 title: Tipo di dati della valuta
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM della valuta.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-#  Tipo di dati valuta
+# [!UICONTROL Valuta] tipo di dati
 
- La valuta è un tipo di dati XDM standard che descrive un importo in valuta, inclusi il tipo di valuta e la data di conversione.
+[!UICONTROL Valuta] è un tipo di dati XDM standard che descrive un ammontare di valuta, inclusi il tipo di valuta e la data di conversione.
 
 ![](../images/data-types/currency.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `amount` | Doppio | L&#39;ammontare della valuta definito da `currencyCode`. |
+| `amount` | Doppio | L&#39;ammontare della valuta definita dalla `currencyCode`. |
 | `conversionDate` | DateTime | Una marca temporale di quando è stata effettuata la conversione della valuta. |
 | `currencyCode` | Stringa | Un codice ISO 4217 che indica il tipo di valuta che `amount` rappresenta. |
 

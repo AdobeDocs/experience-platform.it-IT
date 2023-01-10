@@ -2,14 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;mappatura Audience Manager;mappatura di audience manager
 solution: Experience Platform
 title: Campi di mappatura per il connettore sorgente Adobe Audience Manager
-topic-legacy: overview
 description: Scopri come mappare i dati di Adobe Audience Manager (in tempo reale, onboarded e Profile) sui campi corrispondenti di Experience Data Model (XDM) per il connettore di origine Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '175'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -17,7 +15,7 @@ ht-degree: 0%
 
 Le tabelle seguenti contengono le mappature tra i campi dei dati Adobe Audience Manager (in tempo reale, onboarded e Profile data) e i campi XDM corrispondenti.
 
-Per ulteriori informazioni su ciascun campo XDM, vedere il [dizionario dei campi XDM](../../../../xdm/schema/field-dictionary.md).
+Vedi la [Dizionario dei campi XDM](../../../../xdm/schema/field-dictionary.md) per ulteriori informazioni su ciascun campo XDM.
 
 ## Dati in tempo reale
 
@@ -26,7 +24,7 @@ Tipo: Dati in tempo reale
 | Campo dati in tempo reale | Campo XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` -  *Solo per i namespace presenti in endUserIds e solo per il primo valore.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Solo per i namespace presenti in endUserIds e solo per il primo valore.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *Solo per i namespace presenti in endUserIds e solo per il primo valore.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |

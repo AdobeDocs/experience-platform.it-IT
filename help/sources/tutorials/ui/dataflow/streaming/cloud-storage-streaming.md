@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;streaming;connettore di archiviazione cloud;archiviazione cloud
 solution: Experience Platform
 title: Creare un flusso di dati in streaming per un’origine di archiviazione cloud nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore base di archiviazione cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%

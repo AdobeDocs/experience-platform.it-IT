@@ -2,22 +2,22 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schema;schema di schema;gruppo di campi;gruppo di campi;dispositivo;commercio;commercio;commercio;
 solution: Experience Platform
 title: Gruppo di campi schema dettagli commercio dispositivo
-topic-legacy: overview
 description: In questo documento viene fornita una panoramica del gruppo di campi dello schema Dettagli del commercio dispositivi.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Gruppo di campi ] Detailsschema di Device Trade-In
+# [!UICONTROL Dettagli sul trasferimento dei dispositivi] gruppo di campi schema
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Device Trade-In ] Consente di specificare un gruppo di campi schema standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Fornisce un singolo campo (`deviceTradeInDetails`) che descrive una transazione di trade-in per dispositivi, tra cui valore di trade-in, ID dispositivo originale e nuovo ID dispositivo.
+[!UICONTROL Dettagli sul trasferimento dei dispositivi] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md). Fornisce un singolo campo (`deviceTradeInDetails`) che descrive una transazione di accesso ai dispositivi, tra cui valore di accesso, ID dispositivo originale e nuovo ID dispositivo.
 
 ![Struttura dei dettagli di Device Trade-In](../../images/field-groups/device-trade-in-details.png)
 

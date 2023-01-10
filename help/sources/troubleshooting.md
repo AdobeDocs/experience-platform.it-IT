@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;origini;acquisizione;risoluzione dei problemi;origini risoluzione dei problemi;domande frequenti;origini;FAQ;connettori sorgente;connettori sorgente;domande frequenti sui connettori sorgente;risoluzione dei problemi dei connettori sorgente;
 solution: Experience Platform
 title: Risoluzione dei problemi di Origini
-topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: b55097b6e7cd49166f68d0c86b788cd36ebdebab
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%

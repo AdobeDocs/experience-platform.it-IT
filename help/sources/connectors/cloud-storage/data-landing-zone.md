@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Origine area di destinazione dei dati
-topic-legacy: overview
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%

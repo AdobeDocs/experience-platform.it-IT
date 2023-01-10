@@ -2,25 +2,24 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;browser;dettagli browser;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati dettagli browser
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Dettagli browser.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 6%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Tipo ] di dati del browser
+# [!UICONTROL Dettagli del browser] tipo di dati
 
-[!UICONTROL Il browser ] descrive un tipo di dati XDM standard che descrive i dettagli relativi a un browser o a un&#39;applicazione.
+[!UICONTROL Dettagli del browser] è un tipo di dati XDM standard che descrive i dettagli relativi a un browser o a un’applicazione.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `acceptLanguage` | Stringa | Tag del linguaggio IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
+| `acceptLanguage` | Stringa | Un tag per il linguaggio IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Booleano | Indica se le impostazioni dell&#39;utente consentono la scrittura di cookie. |
 | `javaEnabled` | Booleano | Indica se Java è stato abilitato nel dispositivo da cui è stata effettuata l&#39;osservazione. |
 | `javaScriptEnabled` | Booleano | Indica se JavaScript è stato abilitato nel dispositivo da cui è stata effettuata l&#39;osservazione. |

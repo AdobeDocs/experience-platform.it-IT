@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;Raccogliere dati di pagamento;dati di pagamento
 solution: Experience Platform
 title: Creare un flusso di dati per le origini dei pagamenti utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione di pagamento e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 3%

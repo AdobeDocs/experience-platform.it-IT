@@ -2,19 +2,18 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;interazione web;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati di interazione web
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Experience Data Model) per l’interazione web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Tipo ] di dati interazionali web
+# [!UICONTROL Interazione web] tipo di dati
 
-[!UICONTROL L’] interazione web è un tipo di dati XDM (Experience Data Model) standard che descrive informazioni sulle interazioni che si sono verificate in una pagina web al termine del caricamento della pagina iniziale. È destinato a registrare le interazioni in applicazioni web avanzate che non attivano un nuovo caricamento di pagina, come le app web a pagina singola (SPA).
+[!UICONTROL Interazione web] è un tipo di dati XDM (Experience Data Model) standard che descrive informazioni sulle interazioni che si sono verificate in una pagina web al termine del caricamento della pagina iniziale. È destinato a registrare le interazioni in applicazioni web avanzate che non attivano un nuovo caricamento di pagina, come le app web a pagina singola (SPA).
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 

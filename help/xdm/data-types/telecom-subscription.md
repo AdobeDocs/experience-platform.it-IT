@@ -2,45 +2,45 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;telecom;abbonamento;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati di abbonamento a una rete telefonica
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Telecom Subscription Experience Data Model).
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '611'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Tipo di dati ] sottoscrizione Telecom
+# [!UICONTROL Abbonamento a domicilio] tipo di dati
 
-[!UICONTROL Telecom ] Subscriptionè un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli per tipi di sottoscrizione di telecomunicazioni specifici, come Internet, dispositivi mobili, media o linea fissa.
+[!UICONTROL Abbonamento a domicilio] è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli di tipi di sottoscrizione di telecomunicazioni specifici, come Internet, dispositivi mobili, media o linea fissa.
 
 >[!NOTE]
 >
->Questo documento descrive il tipo di dati. Per il gruppo di campi con lo stesso nome, fare riferimento alla guida di riferimento del gruppo di campi [[!UICONTROL Sottoscrizione alle telecomunicazioni]](../field-groups/profile/telecom-subscription.md).
+>Questo documento descrive il tipo di dati. Per il gruppo di campi con lo stesso nome, fai riferimento al [[!UICONTROL Abbonamento a domicilio] guida di riferimento per i gruppi di campi](../field-groups/profile/telecom-subscription.md).
 >
->Se stai descrivendo un tipo di abbonamento non correlato al settore delle telecomunicazioni, utilizza invece il tipo di dati generico [[!UICONTROL Abbonamento]](./subscription.md).
+>Se stai descrivendo un tipo di abbonamento che non è collegato al settore delle telecomunicazioni, utilizza il [[!UICONTROL Abbonamento] tipo di dati](./subscription.md) invece.
 
 ![Struttura di abbonamento a telecomunicazioni](../images/data-types/telecom-subscription/structure.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `devices` | Array di oggetti | Descrive un elenco di dispositivi e/o accessori associati al piano. Per informazioni dettagliate sulla struttura prevista di ciascun elemento dell&#39;array, vedere la sezione [riportata di seguito](#devices). |
+| `devices` | Array di oggetti | Descrive un elenco di dispositivi e/o accessori associati al piano. Consulta la sezione [sezione sottostante](#devices) per informazioni dettagliate sulla struttura prevista di ogni elemento della matrice. |
 | `subscriber` | [[!UICONTROL Persona]](./person.md) | Descrive il proprietario della sottoscrizione. |
 | `ID` | Stringa | Identificatore univoco per l&#39;istanza di abbonamento. |
 | `billingPeriod` | Stringa | La durata tra le fatture. |
-| `billingStartDate` | Data | Data di inizio del periodo di fatturazione. Il formato della data (senza tempo) deve seguire lo standard [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) . |
+| `billingStartDate` | Data | Data di inizio del periodo di fatturazione. Il formato della data (senza tempo) deve seguire il [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
 | `chargeMethod` | Stringa | Modalità di configurazione della fatturazione per addebitare al cliente. |
 | `contractID` | Stringa | ID univoco del contratto che regola la sottoscrizione. |
 | `country` | Stringa | Il paese in cui le condizioni contrattuali e contrattuali dell&#39;abbonamento sono radicate. |
-| `endDate` | Data | Data di fine del termine di abbonamento corrente. Il formato della data (senza tempo) deve seguire lo standard [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) . |
-| `paymentDueDate` | Data | Data di scadenza del pagamento dell’abbonamento. Il formato della data (senza tempo) deve seguire lo standard [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) . |
+| `endDate` | Data | Data di fine del termine di abbonamento corrente. Il formato della data (senza tempo) deve seguire il [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `paymentDueDate` | Data | Data di scadenza del pagamento dell’abbonamento. Il formato della data (senza tempo) deve seguire il [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
 | `paymentMethod` | Stringa | Metodo di pagamento per pagamenti ricorrenti. |
 | `paymentStatus` | Stringa | Il saldo del conto. |
 | `planName` | Stringa | Nome leggibile per l&#39;abbonamento. |
 | `reason` | Stringa | Intento generale del membro per l&#39;utilizzo della sottoscrizione. |
 | `renew` | Stringa | Modalità concordate per il proseguimento della sottoscrizione dopo la data di scadenza. |
-| `startDate` | Data | Data di inizio dell&#39;abbonamento. Il formato della data (senza tempo) deve seguire lo standard [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) . |
+| `startDate` | Data | Data di inizio dell&#39;abbonamento. Il formato della data (senza tempo) deve seguire il [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
 | `status` | Stringa | Lo stato corrente della sottoscrizione. |
 | `subscriptionCategory` | Stringa | La classificazione principale di questo tipo di abbonamento. |
 | `subscriptionSKU` | Stringa | Unità di conservazione delle scorte (SKU) per la sottoscrizione. |
@@ -65,7 +65,7 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `deviceFees` | Oggetto | Un oggetto che acquisisce qualsiasi costo dispositivo per elementi quali router, modem e ricevitori. Si aspetta le seguenti proprietà:<ul><li>`amount`: L&#39;ammontare monetario rappresentato dal  `currencyCode`.</li><li>`conversionDate`: Data in cui è stata effettuata la conversione della valuta.</li><li>`currencyCode`: Il codice della valuta  [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) per  `amount`.</li></ul> |
+| `deviceFees` | Oggetto | Un oggetto che acquisisce qualsiasi costo dispositivo per elementi quali router, modem e ricevitori. Si aspetta le seguenti proprietà:<ul><li>`amount`: L&#39;importo monetario rappresentato dal `currencyCode`.</li><li>`conversionDate`: Data in cui è stata effettuata la conversione della valuta.</li><li>`currencyCode`: La [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) codice della valuta per `amount`.</li></ul> |
 | `ID` | Stringa | Un ID univoco per il dispositivo. |
 | `OS` | Stringa | Sistema operativo del dispositivo. |
 | `deviceInsurance` | Stringa | Indica se un cliente ha acconsentito all&#39;assicurazione del dispositivo. |

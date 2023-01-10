@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;progettazione schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
-title: Campaign Marketing Details Schema Field Group
-topic-legacy: overview
-description: This document provides an overview of the Campaign Marketing Details schema field group.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+title: Gruppo di campi schema dettagli marketing campagna
+description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli marketing di Campaign.
+exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-
-# [!UICONTROL Campaign Marketing Details] schema field group
+# [!UICONTROL Dettagli di marketing per le campagne] gruppo di campi schema
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Campaign Marketing Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), used to describe marketing campaign information such as campaign group, name, and tracking code.
+[!UICONTROL Dettagli di marketing per le campagne] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sulla campagna di marketing, ad esempio il gruppo di campagne, il nome e il codice di tracciamento.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 
@@ -28,7 +27,7 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
-For more details on the field group, refer to the public XDM repository:
+Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

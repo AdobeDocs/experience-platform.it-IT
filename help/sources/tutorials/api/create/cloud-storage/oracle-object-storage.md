@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;archiviazione oggetti Oracle;archiviazione oggetti oracle
 solution: Experience Platform
 title: Creare una connessione di base di archiviazione degli oggetti di Oracle utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform ad Oracle Object Storage utilizzando l’API del servizio di flusso.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%

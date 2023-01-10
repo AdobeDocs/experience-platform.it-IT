@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;mappa identità;mappa identità;mappa identità;schema schema;mappa schema;mappa;schema unione;unione
 solution: Experience Platform
 title: Classe di profilo individuale XDM
-topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%

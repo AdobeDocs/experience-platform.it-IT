@@ -2,11 +2,10 @@
 keywords: Experience Platform;casa;argomenti popolari;generico REST;riposo generico
 solution: Experience Platform
 title: Creare una connessione di base API REST generica utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare l’API REST generica a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

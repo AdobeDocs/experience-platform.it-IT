@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;tipo di dati;tipi di dati;tipi di dati;tipo di dati;tipi di dati di segmentazione;segmentazione;segmentazione;servizio di segmentazione;tipi di dati di servizio di segmentazione;
 solution: Experience Platform
 title: Tipi di dati supportati nel servizio di segmentazione
-topic-legacy: overview
 description: Tutti i tipi di dati Experience Data Model (XDM) sono supportati in Adobe Segmentation Service. Le regole che costituiscono una definizione di segmento vengono contestualizzate dai seguenti tipi di dati.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -30,22 +29,22 @@ I dati stringa sono inclusi nelle definizioni dei segmenti utilizzando istruzion
 
 ## Dati data
 
-I dati data consentono di assegnare un contesto basato sull’ora alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o istruzioni relative alla data come mostrato nella tabella seguente. Un&#39;implementazione potrebbe consistere nella creazione di un pubblico di clienti che hanno interagito con il tuo marchio in qualsiasi momento *quest&#39;anno* ed è stato attivo *negli ultimi giorni*.
+I dati data consentono di assegnare un contesto basato sull’ora alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o istruzioni relative alla data come mostrato nella tabella seguente. Un’implementazione potrebbe creare un pubblico di clienti che hanno interagito con il tuo marchio in qualsiasi momento *quest&#39;anno* ed è stato attivo *entro* negli ultimi giorni.
 
 | Campo di esempio | Dichiarazioni relative alla data | Timeline  |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | Pertinente al giorno in cui il segmento è stato generato. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Pertinente al giorno in cui il segmento è stato generato. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Pertinente entro una data settimana/mese. |
 
 ## Eventi esperienza
 
-Come schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra le interazioni esplicite e implicite dei clienti con le applicazioni integrate [!DNL Platform], inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. [!DNL ExperienceEvents] sono registrazioni dei fatti. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
+Come schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registrare interazioni esplicite e implicite con i clienti [!DNL Platform]-applicazioni integrate, compresa una copia istantanea del sistema al momento dell&#39;interazione. [!DNL ExperienceEvents] sono registrazioni dei fatti. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
 
 Come illustrato nella tabella seguente, i dati evento vengono sottoposti a rendering utilizzando parole chiave che consentono di perfezionare il comportamento dell’evento e specificare gli attributi dell’evento.
 
 | Parola chiave | Utilizzo di  |
 | ------- | --- |
-| Includi/escludi | Descrive il comportamento dell’evento attraverso l’inclusione o l’omissione dei dati. |
+| Includere/escludere | Descrive il comportamento dell’evento attraverso l’inclusione o l’omissione dei dati. |
 | Any/all | Consente di determinare il numero di segmenti qualificati. |
 | Pulsante di attivazione/disattivazione &quot;Applica regola di tempo&quot; | Incorpora i dati relativi alla data. |
 | Uguale, non uguale, inizia con, non inizia con, termina con, non termina con, contiene, non contiene, esiste, non esiste | Incorpora i dati stringa. |
@@ -54,11 +53,11 @@ Come illustrato nella tabella seguente, i dati evento vengono sottoposti a rende
 
 I tipi di pubblico esterni possono essere utilizzati anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributo al nuovo segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con origini aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con origini aggiuntive abilitate in futuro. Per ulteriori informazioni sull’utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform, consulta [guida alla condivisione del pubblico nella documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Condivisione dei segmenti
 
-I segmenti creati in Platform possono essere utilizzati in altri [servizi core Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
+I segmenti creati in Platform possono essere utilizzati in altri [Servizi di base Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it). Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 

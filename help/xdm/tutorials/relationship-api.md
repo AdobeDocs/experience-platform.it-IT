@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro schema;schema;schema;schemi;schemi;schemi;relazione;relazione;descrittore di relazione;descrittore di relazione;identità di riferimento;identità di riferimento;
 title: Definire una relazione tra due schemi utilizzando l’API del Registro di sistema dello schema
 description: Questo documento fornisce un'esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall'organizzazione utilizzando l'API del Registro di sistema dello schema.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 3%

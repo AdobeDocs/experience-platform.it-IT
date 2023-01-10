@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;Google PubSub;google pubsub
 solution: Experience Platform
 title: Panoramica del connettore sorgente Google PubSub
-topic-legacy: overview
 description: Scopri come collegare Google PubSub a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 28c07150958c6ac22bf2a23537d5792b8990b2d3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%

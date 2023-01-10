@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmenti;appartenenza segmento;appartenenza segmento;struttura schema;mappa;mappa;
 solution: Experience Platform
 title: Gruppo di campi schema Dettagli appartenenza segmento
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi di schema Dettagli appartenenza segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 

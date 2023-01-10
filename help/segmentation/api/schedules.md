@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pianificazioni;pianificazione;api;API;
 solution: Experience Platform
 title: Endpoint API di pianificazione
-topic-legacy: developer guide
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 4%
@@ -391,7 +390,7 @@ I caratteri speciali consentiti rappresentano i seguenti significati:
 | `/` | Questo valore viene utilizzato per specificare gli incrementi. Il valore inserito prima della `/` determina da dove viene incrementato, mentre il valore inserito dopo il `/` determina la quantità di incremento. Ad esempio, se metti `1/7` nel campo dei minuti, ciò significa che i minuti includeranno 1, 8, 15, 22, 29, 36, 43, 50 e 57. |
 | `L` | Questo valore viene utilizzato per specificare `Last`e ha un significato diverso a seconda del campo in cui viene utilizzato. Se viene utilizzato con il campo giorno del mese , rappresenta l’ultimo giorno del mese. Se viene utilizzato con il campo giorno della settimana di per sé, rappresenta l’ultimo giorno della settimana, che è sabato (`SAT`). Se viene utilizzato insieme al campo giorno della settimana, insieme a un altro valore, rappresenta l’ultimo giorno di quel tipo per il mese. Ad esempio, se metti `5L` nel campo del giorno della settimana, **only** includere l’ultimo venerdì del mese. |
 | `W` | Questo valore viene utilizzato per specificare il giorno feriale più vicino al giorno specificato. Ad esempio, se metti `18W` nel campo del giorno del mese, e il 18 di quel mese era un sabato, attivava il venerdì del 17, che è il giorno feriale più vicino. Se il 18 di quel mese fosse una domenica, il trigger sarebbe il lunedì il 19, che è il giorno feriale più vicino. Si prega di notare che se si mette `1W` nel campo del giorno del mese e il giorno feriale più vicino è quello del mese precedente, l&#39;evento si attiva ancora il giorno feriale più vicino del **attuale** mese.</br></br>Inoltre, puoi combinare `L` e `W` fare `LW`, che specifica l’ultimo giorno della settimana del mese. |
-| `#` | Questo valore viene utilizzato per specificare l’ennesimo giorno della settimana in un mese. Il valore inserito prima della `#` rappresenta il giorno della settimana, mentre il valore inserito dopo il `#` rappresenta l&#39;occorrenza nel mese in cui si trova. Ad esempio, se metti `1#3`, l&#39;evento si sarebbe verificato la terza domenica del mese. Si prega di notare che se si mette `X#5` e non c&#39;è quinta occorrenza di quel giorno della settimana in quel mese, l&#39;evento **not** essere attivate. Ad esempio, se metti `1#5`e non c&#39;è quinta domenica in quel mese, l&#39;evento **not** essere attivate. |
+| `#` | Questo valore viene utilizzato per specificare l’ennesimo giorno della settimana in un mese. Il valore inserito prima della `#` rappresenta il giorno della settimana, mentre il valore inserito dopo il `#` rappresenta l&#39;occorrenza nel mese in cui si trova. Ad esempio, se metti `1#3`, l&#39;evento si attiverà la terza domenica del mese. Si prega di notare che se si mette `X#5` e non c&#39;è quinta occorrenza di quel giorno della settimana in quel mese, l&#39;evento **not** essere attivate. Ad esempio, se metti `1#5`e non c&#39;è quinta domenica in quel mese, l&#39;evento **not** essere attivate. |
 
 ### Esempi
 

@@ -3,10 +3,9 @@ keywords: Experience Platform;home;argomenti popolari; eliminare gli account
 description: I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione fornisce i passaggi per l'eliminazione degli account dall'area di lavoro Origini.
 solution: Experience Platform
 title: Eliminare gli account di connessione sorgente nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

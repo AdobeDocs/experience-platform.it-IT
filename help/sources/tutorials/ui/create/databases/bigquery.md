@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;Google Big Query;Google big query;GBQ;gbq
 solution: Experience Platform
 title: Creare una connessione sorgente di query principale Google nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Google Big Query utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 1%

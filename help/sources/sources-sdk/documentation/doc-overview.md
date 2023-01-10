@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
 title: Documentare la tua origine
-topic-legacy: overview
 description: Il passaggio finale prima che la nuova sorgente possa essere resa attiva in Adobe Experience Platform è quello di documentare la nuova sorgente.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%

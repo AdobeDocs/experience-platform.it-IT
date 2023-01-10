@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
 title: Creare un IBM [!DNL IBM DB2] Connessione di base tramite l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare IBM [!DNL IBM DB2] a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 2%

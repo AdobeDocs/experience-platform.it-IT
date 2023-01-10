@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;raccogliere dati eCommerce;dati eCommerce
 solution: Experience Platform
 title: Creare un flusso di dati per le origini di e-commerce utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 2%

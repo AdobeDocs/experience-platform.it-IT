@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;attivare dati in entrata;compilare profilo;popolare rtcp;profilo unificato popolato
 solution: Experience Platform
 title: Attivare i dati di origine in entrata per popolare i profili dei clienti nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e popolare i dati del profilo cliente in tempo reale.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%

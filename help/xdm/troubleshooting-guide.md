@@ -3,9 +3,8 @@ keywords: Experience Platform;argomenti popolari;XDM;sistema XDM;profilo individ
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di sistema XDM
 description: Trova le risposte alle domande frequenti su Experience Data Model (XDM), inclusi i passaggi per la risoluzione di errori API comuni.
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -178,7 +177,7 @@ Questo messaggio di errore viene visualizzato quando si tenta di creare una riso
 
 Questo messaggio di errore viene visualizzato quando si tenta di creare una risorsa con campi con spazi dei nomi non appropriati o si aggiungono campi con spazi dei nomi non appropriati a una risorsa esistente.
 
-Per evitare conflitti con altre risorse del settore e del fornitore, le risorse definite dall’organizzazione IMS devono assegnare uno spazio dei nomi ai propri campi nell’ID tenant. Quando si crea uno schema utilizzando gruppi di campi standard, anche tutti i campi personalizzati aggiunti all’interno della struttura di tali gruppi di campi devono avere un namespace nell’ID tenant.
+Per evitare conflitti con altre risorse del settore e del fornitore, le risorse definite dall’organizzazione IMS devono assegnare un namespace ai propri campi nell’ID tenant. Quando si crea uno schema utilizzando gruppi di campi standard, anche tutti i campi personalizzati aggiunti all’interno della struttura di tali gruppi di campi devono avere un namespace nell’ID tenant.
 
 >[!NOTE]
 >

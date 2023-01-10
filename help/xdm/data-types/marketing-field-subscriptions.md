@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Campo Preferenza Di Marketing Generico Con Tipo Di Dati Di Abbonamento
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del campo Preferenze di marketing generiche con tipo di dati XDM sottoscrizioni.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;segmentazione in streaming;Segmentazione in streaming;Valutazione continua;
 solution: Experience Platform
 title: Valutare gli eventi in tempo reale con Segmentazione in streaming
-topic-legacy: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 1%

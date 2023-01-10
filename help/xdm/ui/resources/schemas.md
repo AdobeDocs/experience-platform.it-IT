@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Creare e modificare schemi nell’interfaccia utente
 description: Scopri le nozioni di base su come creare e modificare schemi nell’interfaccia utente di Experience Platform.
-topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;consenso e preferenze;consenso;fiducia;OneTrust
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine di consenso e preferenze nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine di consenso e preferenze utilizzando l’interfaccia utente di Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%

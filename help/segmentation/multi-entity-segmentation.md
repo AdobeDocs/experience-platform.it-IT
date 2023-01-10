@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;servizio segmenti;segmenti;segmenti;multi-entità;segmentazione multi-entità;segmenti multi-entità;
 solution: Experience Platform
 title: Panoramica sulla segmentazione su più entità
-topic-legacy: overview
 description: La segmentazione su più entità consente di estendere i dati di profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati provenienti da classi aggiuntive diventano disponibili come se fossero nativi dello schema Profilo.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

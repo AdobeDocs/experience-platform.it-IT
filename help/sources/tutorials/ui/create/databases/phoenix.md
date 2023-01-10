@@ -2,11 +2,10 @@
 keywords: Experience Platform;casa;argomenti popolari;Phoenix;fenice
 solution: Experience Platform
 title: Creare una connessione Phoenix Source nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Phoenix utilizzando l’interfaccia utente Adobe Experience Platform.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

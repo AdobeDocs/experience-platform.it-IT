@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;salesforce marketing cloud;Salesforce Marketing Cloud
 solution: Experience Platform
 title: Creare una connessione sorgente del Marketing Cloud Salesforce nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente del Marketing Cloud Salesforce utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%

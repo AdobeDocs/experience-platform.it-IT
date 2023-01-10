@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Generatore di segmenti;Generatore di segmenti
 solution: Experience Platform
 title: Guida all’interfaccia utente dei vincoli di tempo di segmentazione refactoring
-topic-legacy: ui guide
 description: Segment Builder (Generatore di segmenti) fornisce un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

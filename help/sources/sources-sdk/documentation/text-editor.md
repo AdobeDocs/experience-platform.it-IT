@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
 title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione sulle sorgenti
-topic-legacy: tutorial
 description: Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione relativa all’origine e inviare una richiesta di pull (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%

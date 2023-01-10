@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;rossa;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Creare una connessione di base Amazon Redshift utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Amazon Redshift utilizzando l’API del servizio di flusso.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 2%

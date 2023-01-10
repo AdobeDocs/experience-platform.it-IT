@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;schema crm;CRM;flusso di dati;flusso di dati
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine CRM nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine di gestione delle relazioni con i clienti utilizzando l’interfaccia utente di Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, devi già disporre di un account autenticato con un&#39;origine CRM. Un elenco di esercitazioni per la creazione di diversi account di origine CRM nell&#39;interfaccia utente è disponibile nella sezione [panoramica di origini](../../../home.md#crm).
+>Per creare un flusso di dati, devi già disporre di un account autenticato con un&#39;origine CRM. Un elenco di esercitazioni per la creazione di diversi account di origine CRM nell&#39;interfaccia utente è disponibile in [panoramica di origini](../../../home.md#crm).
 
 ## Introduzione
 

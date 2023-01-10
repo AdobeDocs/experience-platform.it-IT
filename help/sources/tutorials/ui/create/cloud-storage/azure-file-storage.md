@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;Azure File Storage;Connettore di archiviazione file di Azure
 solution: Experience Platform
 title: Creare una connessione di Azure File Storage Source nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Azure File Storage utilizzando l’interfaccia utente Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%

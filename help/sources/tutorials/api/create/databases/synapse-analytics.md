@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;Synapse;sinapse;Azure synapse Analytics
 solution: Experience Platform
 title: Creare una connessione di base di Analytics Azure synapse utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Azure synapse Analytics a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 2%

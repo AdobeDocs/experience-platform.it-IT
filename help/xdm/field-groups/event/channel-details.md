@@ -2,23 +2,22 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;progettazione schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
 title: Gruppo campi schema dettagli canale
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli canale .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-
-# [!UICONTROL Gruppo di campi ] Dettaglio canale
+# [!UICONTROL Dettagli canale] gruppo di campi schema
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Dettaglio canale ] è un gruppo di campi schema standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sul canale come ID, tipo di canale, tipo di supporto e tipo di posizione.
+[!UICONTROL Dettagli canale] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sul canale come ID, tipo di canale, tipo di supporto e tipo di posizione.
 
 ![](../../images/field-groups/channel-details.png)
 
@@ -31,4 +30,4 @@ ht-degree: 3%
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)
+* [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)

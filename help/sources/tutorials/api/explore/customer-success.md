@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;cs;CS;sistema di successo del cliente
 solution: Experience Platform
 title: Esplorare un sistema di successo cliente utilizzando l’API del servizio di flusso
-topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare i sistemi Customer Success (CS).
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 3%

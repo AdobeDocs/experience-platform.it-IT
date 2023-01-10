@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;connettore origine Analytics;connettore Analytics;origine Analytics;Analytics
 solution: Experience Platform
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%

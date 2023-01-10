@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione edge;Segmentazione;Servizio di segmentazione;servizio di segmentazione;guida interfaccia utente;bordo streaming;
 solution: Experience Platform
 title: Guida all’interfaccia utente di Segmentazione bordo
-topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 0%

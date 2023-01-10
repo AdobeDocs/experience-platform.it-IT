@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;xdm;modello dati esperienza;spazio dei nomi;spazi dei nomi;modalità compatibilità;fisso;
 solution: Experience Platform
 title: Namespace in Experience Data Model (XDM)
-topic-legacy: overviews
 description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) ti consente di estendere gli schemi e impedire conflitti di campo quando diversi componenti dello schema vengono riuniti.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

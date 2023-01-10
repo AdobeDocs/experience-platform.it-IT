@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;Zoho CRM;zoho crm;Zoho;zoho;zoho
 solution: Experience Platform
 title: Panoramica del connettore di origine di Zoho CRM
-topic-legacy: overview
 description: Scopri come collegare Zoho CRM a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 0%

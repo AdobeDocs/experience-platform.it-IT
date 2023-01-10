@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;campi di mappatura di Analytics;mappatura di Analytics
 solution: Experience Platform
 title: Campi di mappatura per il connettore sorgente Adobe Analytics
-topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire i dati di Adobe Analytics tramite l’origine Analytics. Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente dai campi di Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
-ht-degree: 7%
+ht-degree: 13%
 
 ---
 
@@ -47,7 +46,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | m_page_url | web.webPageDetails.URL | stringa | URL dell&#39;hit pagina. |
 | m_pagename_no_url | web.webPageDetails.</span>name | stringa | Variabile utilizzata per compilare la dimensione Pagine. |
 | m_referrer | web.webReferrer.URL | stringa | URL della pagina precedente. |
-| m_search_page_num | search.pageDepth | numero intero | Utilizzato dalla dimensione Classifica pagina di ricerca. Indica in quale pagina dei risultati di ricerca il sito è stato visualizzato prima che l’utente avesse fatto clic sul sito. |
+| m_search_page_num | search.pageDepth | numero intero | Utilizzato dalla dimensione Classificazione di tutte le pagine di ricerca. Indica in quale pagina dei risultati di ricerca il sito è stato visualizzato prima che l’utente avesse fatto clic sul sito. |
 | m_state | _experience.analytics.customDimensions.stateProvince | stringa | Variabile di stato. |
 | m_user_server | web.webPageDetails.server | stringa | Variabile utilizzata nella dimensione Server. |
 | m_zip | _experience.analytics.customDimensions.postalCode | stringa | Variabile utilizzata per popolare la dimensione Codice postale. |
@@ -74,16 +73,16 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | videocapitolo | media.mediaTimed.mediaChapter.chapterAssetReference._id | stringa | Nome del capitolo video |
 | videoname | media.mediaTimed.primaryAssetReference._dc.title | stringa | Nome del video. |
 | videoadname | advertising.adAssetReference._dc.title | stringa | Nome dell&#39;annuncio video. |
-| video | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series._iptc4xmpExt.Name | stringa | Video. |
+| video | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series._iptc4xmpExt.Name | stringa | Presentazione video. |
 | videoconferenza | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Season._iptc4xmpExt.Name | stringa | Video Stagione. |
-| video episodio | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Episode._iptc4xmpExt.Name | stringa | episodio video. |
+| video episodio | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Episode._iptc4xmpExt.Name | stringa | Episodio video. |
 | videonetwork | media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | stringa | Rete video. |
 | videoshowtype | media.mediaTimed.primaryAssetReference.showType | stringa | Tipo di presentazione video. |
-| videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | stringa | Caricamenti degli annunci video. |
+| videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | stringa | Caricamenti di annunci video. |
 | videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | stringa | Tipo di feed video. |
-| mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | numero | beacon principale di Mobile Services. |
-| mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | numero | beacon secondario di Mobile Services. |
-| mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | stringa | UUID beacon di Mobile Services. |
+| mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | numero | Beacon principale di Mobile Services. |
+| mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | numero | Beacon secondario di Mobile Services. |
+| mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | stringa | UUID del beacon di Mobile Services. |
 | videosess ionid | media.mediaTimed.primaryAssetViewDetails._id | stringa | ID sessione video. |
 | videogame | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | array | Genere video. | {title (Oggetto), description (Oggetto), tipo (Oggetto), meta:xdmType (Oggetto), elementi (stringa), meta:xdmField (Oggetto)} |
 | mobileinstalls | application.firstLaunches | Oggetto | Viene attivato alla prima esecuzione dopo l&#39;installazione o reinstallazione | {id (stringa), valore (numero)} |
@@ -111,13 +110,13 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | Oggetto | Tempo buffer qualità video | {id (stringa), valore (numero)} |
 | videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | Oggetto | Conteggio dei cambiamenti nella qualità video | {id (stringa), valore (numero)} |
 | videoqoebitratemedia | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | Oggetto | Bit rate medio della qualità video | {id (stringa), valore (numero)} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Oggetto | Numero di errori nella qualità video | {id (stringa), valore (numero)} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | Oggetto | Conteggio errori nella qualità video | {id (stringa), valore (numero)} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
-| video-progress10 | media.mediaTimed.progress10 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
-| video-progress25 | media.mediaTimed.progress25 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
-| video-progress50 | media.mediaTimed.progress50 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
-| video progress75 | media.mediaTimed.progress75 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
-| video progress95 | media.mediaTimed.progress95 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
+| videoprogress10 | media.mediaTimed.progress10 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
+| videoprogress25 | media.mediaTimed.progress25 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
+| videoprogress50 | media.mediaTimed.progress50 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
+| videoprogress75 | media.mediaTimed.progress75 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
+| videoprogress95 | media.mediaTimed.progress95 | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
 | videoresume | media.mediaTimed.resumes | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
 | videopausecount | media.mediaTimed.pauses | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
 | videopausetime | media.mediaTimed.pauseTime | Oggetto | <!-- MISSING --> | {id (stringa), valore (numero)} |
@@ -168,7 +167,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | m_pagename_no_url | web.webPageDetails.pageViews.value | numero | Nome della pagina (se impostato). Se non viene specificata alcuna pagina, questo valore viene lasciato vuoto. |
 | m_paid_search | search.isPaid | booleano | Flag impostato se l&#39;hit corrisponde al rilevamento di ricerca a pagamento. |
 | m_product_list | productListItems[].items | array | L’elenco dei prodotti, come trasmesso attraverso la variabile dei prodotti. | {SKU (stringa), quantità (numero intero), prezzoTotale (numero)} |
-| m_ref_type | web.webReferrer.type | stringa | Un ID numerico che rappresenta il tipo di riferimento per l&#39;hit. 1 significa all&#39;interno del tuo sito, 2 significa altri siti web, 3 significa motori di ricerca, 4 significa disco rigido, 5 significa USENET, 6 significa Digitato/Segnalibro (nessun referrer), 7 significa e-mail, 8 significa No JavaScript, e 9 significa Social Networks. |
+| m_ref_type | web.webReferrer.type | stringa | Un ID numerico che rappresenta il tipo di riferimento per l’hit. 1 significa all&#39;interno del tuo sito, 2 significa altri siti web, 3 significa motori di ricerca, 4 significa disco rigido, 5 significa USENET, 6 significa Digitato/Segnalibro (nessun referrer), 7 significa e-mail, 8 significa No JavaScript, e 9 significa Social Networks. |
 | m_search_engine | search.searchEngine | stringa | L&#39;ID numerico che rappresenta il motore di ricerca che ha indirizzato il visitatore al sito. |
 | post_currency | commerce.order.currencyCode | stringa | Codice valuta utilizzato durante la transazione. |
 | post_cust_hit_time_gmt | timestamp | stringa | Viene utilizzato solo nei set di dati abilitati per le marche temporali. Si tratta della marca temporale inviata con , in base all’ora Unix. |
@@ -191,7 +190,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | mcvisid_high | endUserIDs._experience.mcid.namespace.code | stringa | L’ID Experience Cloud (ECID) è noto anche come MCID e a volte viene utilizzato nei namespace. |
 | mcvisid_low | identityMap | oggetto | ID visitatore Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | stringa | ID unione hit. Il campo di analisi sdid_high e sdid_low è l’ID di dati supplementare utilizzato per unire due (o più) hit in arrivo. |
-| mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | stringa | Prossimità del beacon di Mobile Services. |
+| mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | stringa | Prossimità beacon di Mobile Services. |
 | videocapitolo | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | numero intero | Nome del capitolo video. |
 | lunghezza di video | media.mediaTimed.primaryAssetReference._xmpDM.duration | numero intero | Lunghezza del video. |
 
@@ -240,7 +239,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 | visit_keywords | _experience.analytics.session.search.keywords | stringa | Variabile utilizzata nella dimensione Parole chiave di ricerca. |
 | visit_num | _experience.analytics.session.num | numero intero | Variabile utilizzata nella dimensione Numero visita. Questo inizia a 1 e viene incrementato ogni volta che inizia una nuova visita (per utente). |
 | visit_page_num | _experience.analytics.session.depth | numero intero | Variabile utilizzata nella dimensione Profondità di hit. Questo valore aumenta di 1 per ogni hit generato dall’utente e viene reimpostato dopo ogni visita. |
-| visit_referrer | _experience.analytics.session.web.webReferrer.URL | stringa | Il primo referente della visita. |
+| visit_referrer | _experience.analytics.session.web.webReferrer.URL | stringa | Il primo referrer della visita. |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | numero intero | Nome pagina della visita. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Oggetto | Variabili di traffico personalizzate da 1 a 75. |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.Hierarchies.hier1 - _experience.analytics.customDimensions.Hierarchies.hier5 | Oggetto | Utilizzato da variabili gerarchiche e contiene un elenco delimitato di valori. | {valori (matrice), delimitatore (stringa)} |
@@ -264,14 +263,14 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (*C
 |  | mvvar3_instances | .list.items[] | Oggetto | Elenco dei valori delle variabili. Contiene un elenco delimitato di valori personalizzati, a seconda dell’implementazione. |
 | color | device.colorDepth | numero intero | ID profondità colore, in base al valore della colonna c_color. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | stringa | L&#39;ID numerico che rappresenta il tipo di referente del primo referente del visitatore. |
-| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | numero intero | Timestamp del primo hit del visitatore in tempo Unix. |
+| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | numero intero | Marca temporale del primo hit del visitatore in tempo Unix. |
 | geo_country | placeContext.geo.countryCode | stringa | Abbreviazione del paese da cui proviene l&#39;hit, basata su IP. |
 | geo_latitude | placeContext.geo._schema.latitude | numero | <!-- MISSING --> |
 | geo_longitude | placeContext.geo._schema.longitude | numero | <!-- MISSING --> |
 | paid_search | search.isPaid | booleano | Flag impostato se l&#39;hit corrisponde al rilevamento di ricerca a pagamento. |
-| ref_type | web.webReferrer.type | stringa | Un ID numerico che rappresenta il tipo di riferimento per l&#39;hit. |
+| ref_type | web.webReferrer.type | stringa | Un ID numerico che rappresenta il tipo di riferimento per l’hit. |
 | visit_paid_search | _experience.analytics.session.search.isPaid | booleano | Flag (1=paid, 0=not paid) che indica se il primo hit della visita proviene da un hit di ricerca a pagamento. |
-| visit_ref_type | _experience.analytics.session.web.webReferrer.type | stringa | ID numerico che rappresenta il tipo di referente del primo referente della visita. |
+| visit_ref_type | _experience.analytics.session.web.webReferrer.type | stringa | ID numerico che rappresenta il tipo di referrer del primo referrer della visita. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | stringa | ID numerico del primo motore di ricerca della visita. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | numero intero | Timestamp del primo hit della visita in tempo Unix. |
 

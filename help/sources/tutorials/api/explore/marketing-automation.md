@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;automazione del marketing
 solution: Experience Platform
 title: Esplorare un sistema di automazione di marketing utilizzando l’API del servizio di flusso
-topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare i sistemi di automazione del marketing.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 3%

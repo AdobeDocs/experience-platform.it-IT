@@ -2,10 +2,9 @@
 keywords: Experience Platform;casa;argomenti popolari;Phoenix;fenice
 solution: Experience Platform
 title: Panoramica del connettore di origine Phoenix
-topic-legacy: overview
 description: Scopri come collegare Phoenix a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

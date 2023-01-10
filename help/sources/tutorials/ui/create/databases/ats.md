@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;archiviazione tabella di Azure;archiviazione tabella di Azure;ats;ATS
 solution: Experience Platform
 title: Creare una connessione di Azure Table Storage Source nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente di archiviazione tabella di Azure utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%

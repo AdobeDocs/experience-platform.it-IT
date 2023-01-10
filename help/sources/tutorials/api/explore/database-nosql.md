@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;database di terze parti;servizio flusso di database
 solution: Experience Platform
 title: Esplorare un database utilizzando l’API del servizio di flusso
-topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare i contenuti e la struttura dei file di un database di terze parti.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%

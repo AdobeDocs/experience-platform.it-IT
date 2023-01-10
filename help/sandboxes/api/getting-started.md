@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;guida per gli sviluppatori sandbox
 solution: Experience Platform
 title: Guida introduttiva all’API Sandbox
-topic-legacy: developer guide
 description: L’API Sandbox consente agli sviluppatori di gestire in modo programmatico le sandbox in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 5%

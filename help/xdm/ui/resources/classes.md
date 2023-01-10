@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
-topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%

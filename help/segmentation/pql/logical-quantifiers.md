@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;quantificatori logici;quantificatore logico;
 solution: Experience Platform
 title: Quantificatori logici PQL
-topic-legacy: developer guide
 description: I quantificatori logici possono essere utilizzati per asserire condizioni con gli array in Profile Query Language (PQL).
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 4%
@@ -15,11 +13,11 @@ ht-degree: 4%
 
 # Funzioni quantificatore logico
 
-I quantificatori logici possono essere utilizzati per asserire condizioni con array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+I quantificatori logici possono essere utilizzati per asserire condizioni con gli array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Esiste
 
-La funzione `exists` determina l&#39;esistenza di un elemento in una matrice, purché soddisfi la condizione specificata.
+La `exists` determina l&#39;esistenza di un elemento in una matrice, purché soddisfi la condizione specificata.
 
 **Formato**
 
@@ -44,7 +42,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Per tutti
 
-La funzione `forall` determina tutti gli elementi di una matrice che soddisfano tutte le condizioni specificate.
+La `forall` determina tutti gli elementi di una matrice che soddisfano tutte le condizioni specificate.
 
 **Formato**
 
@@ -69,4 +67,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Passaggi successivi
 
-Ora che hai imparato i quantificatori logici, puoi utilizzarli nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
+Ora che hai imparato i quantificatori logici, puoi utilizzarli nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).

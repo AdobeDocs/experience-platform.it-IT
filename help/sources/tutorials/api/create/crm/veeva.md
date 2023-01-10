@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;veeva crm;Veeva CRM;Veeva;
 solution: Experience Platform
 title: Creare una connessione di base Veeva CRM utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Veeva CRM utilizzando l’API del servizio di flusso.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 2%

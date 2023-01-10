@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Creare una connessione sorgente Amazon Kinesis nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Amazon Kinesis utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%

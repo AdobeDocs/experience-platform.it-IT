@@ -2,27 +2,26 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;numeroTelefono;xdm:phoneNumber;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati numero di telefono
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Numero di telefono.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Tipo ] di dati numerici del telefono
+# [!UICONTROL Numero di telefono] tipo di dati
 
-[!UICONTROL Il ] numero di telefono è un tipo di dati XDM standard che descrive i dettagli di un numero di telefono.
+[!UICONTROL Numero di telefono] è un tipo di dati XDM standard che descrive i dettagli di un numero di telefono.
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
 | Proprietà | Descrizione |
 | --- | --- |
 | `extension` | Il numero di composizione interno utilizzato per chiamare da uno scambio privato, un operatore o un quadro comandi. |
-| `number` | Il numero di telefono. Il numero telefonico è una stringa e può includere caratteri significativi come parentesi `()`, trattini `-` o caratteri per indicare identificatori di composizione secondaria, ad esempio estensioni `x`, `1-353(0)18391111` o `+613 9403600x1234`. |
-| `primary` | Un valore booleano che indica se si tratta del numero di telefono principale dell&#39;utente. A differenza dell&#39;indirizzo o dell&#39;indirizzo e-mail, possono essere presenti più numeri di telefono primari; uno per canale di comunicazione. Il canale di comunicazione è definito dal tipo (indicato dal nome della proprietà principale): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` e `fax`. |
+| `number` | Il numero di telefono. Il numero di telefono è una stringa e può includere caratteri significativi come le parentesi `()`, trattini `-`o caratteri per indicare identificatori di composizione secondaria, come le estensioni `x` ad esempio, `1-353(0)18391111` o `+613 9403600x1234`. |
+| `primary` | Un valore booleano che indica se si tratta del numero di telefono principale dell&#39;utente. A differenza dell&#39;indirizzo o dell&#39;indirizzo e-mail, possono essere presenti più numeri di telefono primari; uno per canale di comunicazione. Il canale di comunicazione è definito dal tipo (indicato dal nome della proprietà principale): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`e `fax`. |
 | `status` | Indica se il numero di telefono può essere attualmente utilizzato. |
 | `statusReason` | Una descrizione dello stato corrente. |
 | `validity` | Livello di correttezza tecnica del numero di telefono. |

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;protocollo
 solution: Experience Platform
 title: Esplorare un sistema di protocollo utilizzando l’API del servizio di flusso
-topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare le applicazioni dei protocolli.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 3%

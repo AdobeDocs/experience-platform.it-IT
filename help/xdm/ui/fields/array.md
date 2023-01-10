@@ -3,12 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Definire i campi Array nell’interfaccia utente
 description: Scopri come definire un campo array nell’interfaccia utente di Experience Platform.
-topic-legacy: user guide
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '366'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,9 +15,9 @@ ht-degree: 1%
 
 Quando definisci un campo Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform, puoi designare tale campo come array.
 
-Il contenuto della matrice dipende dal [!UICONTROL Tipo] selezionato per quel campo. Ad esempio, se l&#39;impostazione di un campo [!UICONTROL Tipo] è impostata su &quot;[!UICONTROL Stringa]&quot;, l&#39;impostazione di tale campo come array indicherà il campo come una matrice di stringhe. Se il campo [!UICONTROL Tipo] è impostato su un tipo di dati a più campi come &quot;[!UICONTROL Indirizzo postale]&quot;, diventerà una matrice di oggetti indirizzo postale conforme al tipo di dati.
+Il contenuto dell’array dipende dal [!UICONTROL Tipo] selezionata per quel campo. Ad esempio, se un campo è [!UICONTROL Tipo] è impostato su &quot;[!UICONTROL Stringa]&quot;, impostando tale campo come array il campo verrà designato come array di stringhe. Se il campo è [!UICONTROL Tipo] è impostato su un tipo di dati con più campi, ad esempio &quot;[!UICONTROL Indirizzo postale]&quot;, diventerebbe un array di oggetti di indirizzo postale conformi al tipo di dati.
 
-Dopo aver [definito un nuovo campo nell&#39;interfaccia utente](./overview.md#define), puoi impostarlo come campo matrice selezionando la casella di controllo **[!UICONTROL Array]** nella barra a destra.
+Dopo aver [ha definito un nuovo campo nell’interfaccia utente di](./overview.md#define), puoi impostarlo come campo array selezionando la **[!UICONTROL Array]** nella barra a destra.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -30,18 +29,18 @@ I controlli di configurazione aggiuntivi per gli array sono i seguenti:
 | --- | --- |
 | [!UICONTROL Lunghezza minima] | Il numero minimo di elementi che la matrice deve contenere affinché l&#39;acquisizione abbia esito positivo. |
 | [!UICONTROL Lunghezza massima] | Il numero massimo di elementi che la matrice deve contenere affinché l&#39;acquisizione abbia esito positivo. |
-| [!UICONTROL Solo elementi univoci] | Se è impostato su &quot;[!UICONTROL True]&quot;, ogni elemento della matrice deve essere univoco per garantire il successo dell&#39;acquisizione. |
+| [!UICONTROL Solo elementi univoci] | Se impostato su &quot;[!UICONTROL True]&quot;, ogni elemento dell’array deve essere univoco per garantire il successo dell’acquisizione. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Al termine della configurazione del campo, selezionare **[!UICONTROL Applica]** per applicare la modifica allo schema.
+Al termine della configurazione del campo, seleziona **[!UICONTROL Applica]** per applicare la modifica allo schema.
 
 ![](../../images/ui/fields/special/array-config.png)
 
-L’area di lavoro viene aggiornata per riflettere le modifiche apportate al campo. Al tipo di dati visualizzato accanto al nome del campo nell’area di lavoro viene aggiunta una coppia di parentesi quadre (`[]`) che indica che il campo rappresenta una matrice di tale tipo di dati.
+L’area di lavoro viene aggiornata per riflettere le modifiche apportate al campo. Al tipo di dati visualizzato accanto al nome del campo nell’area di lavoro viene aggiunta una coppia di parentesi quadre (`[]`), che indica che il campo rappresenta una matrice di quel tipo di dati.
 
 ![](../../images/ui/fields/special/array-applied.png)
 
 ## Passaggi successivi
 
-Questa guida illustra come definire un campo array nell’interfaccia utente di . Per informazioni su come definire altri tipi di campi XDM nell’ [!DNL Schema Editor], consulta la panoramica relativa alla [definizione dei campi nell’interfaccia utente](./overview.md#special) .
+Questa guida illustra come definire un campo array nell’interfaccia utente di . Vedi la panoramica su [definizione dei campi nell’interfaccia utente](./overview.md#special) per scoprire come definire altri tipi di campi XDM nel [!DNL Schema Editor].

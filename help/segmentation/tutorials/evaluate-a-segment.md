@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;valutazione dei segmenti;servizio di segmentazione;segmentazione;segmentazione;valutazione di un segmento;risultati dei segmenti di accesso;valutazione e segmento di accesso;
 solution: Experience Platform
 title: Valutare e accedere ai risultati dei segmenti
-topic-legacy: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -224,7 +223,7 @@ Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponib
 
 Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno della [!DNL Data Lake] in [!DNL Experience Platform]. È quindi possibile utilizzare la [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni del segmento, i dati possono essere in blocchi e il batch può essere costituito da più file.
 
-Per istruzioni dettagliate sull’utilizzo del [!DNL Data Access] API per accedere e scaricare file batch, segui la [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
+Per istruzioni dettagliate sull’utilizzo del [!DNL Data Access] API per accedere e scaricare file batch, segui [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
 
 Puoi anche accedere ai dati dei segmenti esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. Utilizzando l’interfaccia utente o l’API RESTful, [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno di [!DNL Data Lake].
 

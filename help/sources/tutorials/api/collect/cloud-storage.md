@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;dati di archiviazione cloud
 solution: Experience Platform
 title: Creare un flusso di dati per le origini di archiviazione cloud utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 3%

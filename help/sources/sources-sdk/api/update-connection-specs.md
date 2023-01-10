@@ -1,13 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
-topic-legacy: developer guide
 description: È possibile aggiornare le proprietà di una specifica di connessione tramite un'operazione PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 

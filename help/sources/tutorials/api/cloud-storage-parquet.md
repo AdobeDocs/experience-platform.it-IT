@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;connessione origine dati
 solution: Experience Platform
 title: Inserire dati di parquet da un sistema di storage cloud di terze parti utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione utilizza l’API del servizio Flusso per illustrarvi i passaggi necessari per acquisire i dati Apache Parquet da un sistema di archiviazione cloud di terze parti.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 3%

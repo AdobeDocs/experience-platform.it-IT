@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;hub eventi di Azure;hub eventi di Azure;hub eventi di Azure;hub eventi;hub eventi;hub eventi
 solution: Experience Platform
 title: Panoramica del connettore di origine per gli hub eventi di Azure
-topic-legacy: overview
 description: Scopri come collegare gli hub eventi di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%

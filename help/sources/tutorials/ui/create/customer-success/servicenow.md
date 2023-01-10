@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;ServiceNow;servicenow
 solution: Experience Platform
 title: Creare una connessione ServiceNow Source nell'interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente ServiceNow utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%

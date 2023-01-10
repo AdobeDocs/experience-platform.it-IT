@@ -2,19 +2,18 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;beacon;dettagli interazione;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati dettagli interazione geografica
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Dettagli interazione geografica.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Informazioni ] dettagliate sull’interazione geografica
+# [!UICONTROL Dettagli interazione geografica] tipo di dati
 
-[!UICONTROL I ] dettagli dell’interazione geografica sono un tipo di dati XDM standard che descrive lo stato corrente di inclusione in un’area geograficamente definita.
+[!UICONTROL Dettagli interazione geografica] è un tipo di dati XDM standard che descrive lo stato corrente di inclusione in un’area geograficamente definita.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 

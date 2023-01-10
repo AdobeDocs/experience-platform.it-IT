@@ -2,11 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni aritmetiche;aritmetica;
 solution: Experience Platform
 title: Funzioni aritmetiche PAL
-topic-legacy: developer guide
 description: Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 5%
@@ -15,11 +13,11 @@ ht-degree: 5%
 
 # Funzioni aritmetiche
 
-Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Add
 
-La funzione `+` (addizione) viene utilizzata per trovare la somma di due espressioni di argomento.
+La `+` (aggiunta) viene utilizzata per trovare la somma di due espressioni di argomento.
 
 **Formato**
 
@@ -37,7 +35,7 @@ product1.price + product2.price
 
 ## Moltiplica
 
-La funzione `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento.
+La `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento.
 
 **Formato**
 
@@ -55,7 +53,7 @@ product.inventory * product.price
 
 ## Sottrai
 
-La funzione `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressioni di argomento.
+La `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressioni di argomento.
 
 **Formato**
 
@@ -73,7 +71,7 @@ product1.price - product2.price
 
 ## Dividi
 
-La funzione `/` (divisione) viene utilizzata per trovare il quoziente di due espressioni di argomento.
+La `/` (divisione) viene utilizzato per trovare il quoziente di due espressioni di argomento.
 
 **Formato**
 
@@ -91,7 +89,7 @@ totalProduct.price / totalProduct.sold
 
 ## Resto
 
-La funzione `%` (modulo/rest) viene utilizzata per trovare il resto dopo aver diviso le due espressioni di argomento.
+La `%` (modulo/rest) viene utilizzato per trovare il resto dopo aver diviso le due espressioni di argomento.
 
 **Formato**
 
@@ -109,4 +107,4 @@ person.age % 5 = 0
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni aritmetiche, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
+Ora che hai imparato le funzioni aritmetiche, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).

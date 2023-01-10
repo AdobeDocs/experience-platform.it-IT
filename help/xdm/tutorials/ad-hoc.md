@@ -3,10 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Creare uno schema ad hoc
 description: In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono spazi dei nomi per l’utilizzo solo da un singolo set di dati. Questo è denominato schema "ad hoc". Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di acquisizione dei dati, ad Experience Platform per l’acquisizione di file CSV e la creazione di determinati tipi di connessioni sorgente.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 4%

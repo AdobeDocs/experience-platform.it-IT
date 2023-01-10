@@ -3,22 +3,20 @@ keywords: Experience Platform;home;argomenti popolari;aggiornare account
 description: In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origini esistente. L'area di lavoro Origini consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 solution: Experience Platform
 title: Aggiorna i dettagli dell'account di connessione sorgente nell'interfaccia utente
-topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
 
 # Aggiornare i dettagli dell’account nell’interfaccia utente
 
-In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origini esistente. L’area di lavoro [!UICONTROL Sources] consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
+In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origini esistente. La [!UICONTROL Origini] workspace consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 
-Questa esercitazione fornisce passaggi per aggiornare i dettagli e le credenziali di un account esistente dall&#39;area di lavoro [!UICONTROL Sources].
+Questa esercitazione fornisce i passaggi per aggiornare i dettagli e le credenziali di un account esistente dal [!UICONTROL Origini] workspace.
 
 ## Introduzione
 
@@ -29,27 +27,27 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 ## Aggiorna account
 
-Accedi all&#39; [Interfaccia Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com) quindi seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. Seleziona **[!UICONTROL Account]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
 ![catalogo](../../images/tutorials/update/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Accounts]** . In questa pagina è presente un elenco di account visualizzabili, che include informazioni sulla loro origine, nome utente, numero di flussi di dati e data di creazione.
+La **[!UICONTROL Account]** viene visualizzata la pagina . In questa pagina è presente un elenco di account visualizzabili, che include informazioni sulla loro origine, nome utente, numero di flussi di dati e data di creazione.
 
-Seleziona l&#39;icona del filtro ![filter](../../images/tutorials/update/filter.png) in alto a sinistra per avviare il pannello di ordinamento.
+Seleziona l’icona del filtro ![filter](../../images/tutorials/update/filter.png) in alto a sinistra per avviare il pannello di ordinamento.
 
 ![elenco degli account](../../images/tutorials/update/accounts-list.png)
 
 Il pannello di ordinamento fornisce un elenco di tutte le origini. È possibile selezionare più di un&#39;origine dall&#39;elenco per accedere a una selezione filtrata di account associati a origini diverse.
 
-Selezionare l&#39;origine con cui si desidera lavorare per visualizzare un elenco dei relativi account esistenti. Una volta identificato l&#39;account che si desidera aggiornare, selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account.
+Selezionare l&#39;origine con cui si desidera lavorare per visualizzare un elenco dei relativi account esistenti. Una volta identificato l&#39;account da aggiornare, seleziona i puntini di sospensione (`...`) accanto al nome dell’account.
 
 ![ordinamento dei conti](../../images/tutorials/update/accounts-sort.png)
 
-Viene visualizzato un menu a discesa che fornisce le opzioni per **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]**. Seleziona **[!UICONTROL Edit details]** dal menu per aggiornare il tuo account.
+Viene visualizzato un menu a discesa che fornisce le opzioni per **[!UICONTROL Aggiungi dati]**, **[!UICONTROL Modifica dettagli]** e **[!UICONTROL Elimina]**. Seleziona **[!UICONTROL Modifica dettagli]** dal menu per aggiornare l&#39;account.
 
 ![update](../../images/tutorials/update/update.png)
 
-La finestra di dialogo **[!UICONTROL Edit account details]** consente di aggiornare il nome, la descrizione e le credenziali di autenticazione di un account. Dopo aver aggiornato le informazioni desiderate, seleziona **[!UICONTROL Save]**.
+La **[!UICONTROL Modifica dettagli account]** consente di aggiornare il nome, la descrizione e le credenziali di autenticazione di un account. Dopo aver aggiornato le informazioni desiderate, seleziona **[!UICONTROL Salva]**.
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
@@ -59,6 +57,6 @@ Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro [!UICONTROL Sources] per aggiornare le informazioni di un account di origine esistente.
+Seguendo questa esercitazione, hai utilizzato correttamente il [!UICONTROL Origini] per aggiornare le informazioni di un account di origine esistente.
 
-Per informazioni su come eseguire queste operazioni a livello di programmazione utilizzando l’ API [!DNL Flow Service], fai riferimento all’esercitazione sull’ [aggiornamento delle informazioni di connessione tramite l’API del servizio di flusso](../../tutorials/api/update.md).
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando il [!DNL Flow Service] API, consulta l’esercitazione su [aggiornamento delle informazioni di connessione tramite l’API del servizio di flusso](../../tutorials/api/update.md).

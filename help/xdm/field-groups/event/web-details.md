@@ -1,30 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;progettazione schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
 title: Gruppo campi schema dettagli Web
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli Web.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-
-# [!UICONTROL Gruppo di campi Web ] Detailsschema
+# [!UICONTROL Dettagli Web] gruppo di campi schema
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Web ] Detailsis è un gruppo di campi schema standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere informazioni relative a eventi di dettagli web quali interazione, dettagli pagina e referrer.
+[!UICONTROL Dettagli Web] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md), utilizzato per descrivere informazioni su eventi di dettagli web quali interazione, dettagli della pagina e referente.
 
 ![](../../images/field-groups/web-details.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `web` | [Web information](../../data-types/web-information.md) | Descrive i clic sul collegamento, i dettagli della pagina web, le informazioni sul referente e i dettagli del browser. |
+| `web` | [Informazioni web](../../data-types/web-information.md) | Descrive i clic sul collegamento, i dettagli della pagina web, le informazioni sul referente e i dettagli del browser. |
 
 {style=&quot;table-layout:auto&quot;}
 

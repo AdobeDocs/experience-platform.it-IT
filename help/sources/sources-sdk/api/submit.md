@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Invia origine
-topic-legacy: overview
 description: Il seguente documento fornisce passaggi su come testare e verificare una nuova origine utilizzando l’API del servizio di flusso e integrare una nuova origine tramite Origini self-service (SDK batch).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---

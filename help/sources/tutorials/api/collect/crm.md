@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;crm;CRM
 solution: Experience Platform
 title: Creare un flusso di dati per le origini di gestione delle relazioni con i clienti utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%

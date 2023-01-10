@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
-topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 2%

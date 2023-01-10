@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Configurare le specifiche di origine per le origini self-service (SDK batch)
-topic-legacy: overview
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Origini self-service (SDK batch).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 1%

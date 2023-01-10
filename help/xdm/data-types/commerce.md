@@ -2,19 +2,18 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;commercio;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati Commerce
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati Commerce Experience Data Model (XDM).
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-#  Tipo di dati commerciali
+# [!UICONTROL Commerce] tipo di dati
 
- Commerciale è un tipo di dati XDM (Experience Data Model) standard che descrive i record relativi all’attività di acquisto e vendita.
+[!UICONTROL Commerce] è un tipo di dati XDM (Experience Data Model) standard che descrive i record relativi all’attività di acquisto e vendita.
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 

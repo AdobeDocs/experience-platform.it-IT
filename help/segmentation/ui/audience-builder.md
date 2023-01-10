@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di segmentazione;segmentazione;servizio di segmentazione;guida utente;guida utente;guida utente;guida utente di Audiences;guida utente di Audiences;audience builder;audience;audiences;guida interfaccia utente di Audiences;
 solution: Experience Platform
 title: Guida all'interfaccia utente di Audiences
-topic-legacy: ui guide
 description: Audience Builder nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di tipi di pubblico per la tua organizzazione.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%
@@ -155,7 +155,7 @@ Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attri
 
 ![Viene visualizzato un elenco di attributi.](../images/ui/audience-builder/select-attribute.png)
 
-Dopo aver selezionato l’attributo , puoi scegliere i profili che appartengono al sottopubblico aggiungendo i valori all’interno del **[!UICONTROL Valori]** campo .
+Dopo aver selezionato l’attributo , puoi scegliere i profili a cui appartiene il sottopubblico aggiungendo i valori all’interno del **[!UICONTROL Valori]** campo .
 
 ![Vengono aggiunti i valori per i quali si desidera dividere gli attributi.](../images/ui/audience-builder/attribute-split-values.png)
 

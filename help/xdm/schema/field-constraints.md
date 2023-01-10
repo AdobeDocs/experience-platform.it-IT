@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;gruppo di campi;gruppo di campi;gruppi di campi;tipo di dati;tipi di dati;tipi di dati;tipo di dati;struttura dello schema;tipo di dati;tipo di dati;tipo di dati;tipo di dati;schemi;schema;progettazione dello schema;mappa;mappa;
 solution: Experience Platform
 title: Vincoli del tipo di campo XDM
-topic-legacy: overview
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%

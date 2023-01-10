@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti comuni;schema;schema;XDM;campi;schemi;schemi;schemi;geo;geo;geo shape;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati a forma di geo
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM della forma Geo.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

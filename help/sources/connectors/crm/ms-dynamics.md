@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Panoramica del connettore di origine Microsoft Dynamics
-topic-legacy: overview
 description: Scopri come collegare Microsoft Dynamics a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 2%

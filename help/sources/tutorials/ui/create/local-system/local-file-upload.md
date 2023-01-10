@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;sistema locale;caricamento file;mappa csv;mappa file csv;mappa file csv su xdm;mappa csv su xdm;guida ui;
 solution: Experience Platform
 title: Creare un connettore sorgente per il caricamento di file locale nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente per il sistema locale per portare i file locali in Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%

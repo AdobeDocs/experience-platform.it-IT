@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;dati di archiviazione cloud;dati in streaming;streaming
 solution: Experience Platform
 title: Creare un flusso di dati in streaming per i dati non elaborati utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 4%

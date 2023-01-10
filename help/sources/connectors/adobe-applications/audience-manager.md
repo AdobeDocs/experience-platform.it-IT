@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;connettore Audience Manager;Audience Manager;audience manager
 solution: Experience Platform
 title: Panoramica origine di Audience Manager
-topic-legacy: overview
 description: L’origine Adobe Audience Manager invia ad Adobe Experience Platform i dati di prime parti raccolti in Audience Manager.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%

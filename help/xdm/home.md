@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;XDM;sistema XDM;profilo individuale XDM;ExperienceEvent XDM;evento esperienza XDM;evento esperienza;evento esperienza;gruppi di campi;gruppi di campi;gruppo di campi;evento esperienza;evento esperienza XDM;evento esperienza XDM;evento esperienza;evento esperienza;evento;esperienza;modello di dati XDM;modello di dati esperienza;modello di dati esperienza;modello di dati esperienza;modello di dati;modello di dati schema di registro;Schema di registro;libreria di schemi;libreria di schemi;schema;record di dati;serie temporali;serie temporali
 solution: Experience Platform
 title: Panoramica del sistema XDM
-topic-legacy: overview
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), basato su un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;anteprime;stime;anteprime e stime;stime e anteprime;api;API;
 solution: Experience Platform
 title: Anteprime e stime degli endpoint API
-topic-legacy: developer guide
 description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima all’interno di Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo per assicurarti di isolare il pubblico previsto.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 2%

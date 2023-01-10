@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Endpoint API per i comportamenti
 description: L’endpoint /Behaviors nell’API del Registro di sistema dello schema consente di recuperare tutti i comportamenti disponibili nel contenitore globale.
-topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 6%

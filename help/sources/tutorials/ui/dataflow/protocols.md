@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;connettore del protocollo
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine dei protocolli nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione descrive come creare un flusso di dati per un’origine protocolli utilizzando l’interfaccia utente di Platform.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 0%

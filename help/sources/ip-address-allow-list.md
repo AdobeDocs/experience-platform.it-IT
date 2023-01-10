@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;
 description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti prima di lavorare con i connettori sorgente.
 solution: Experience Platform
 title: ELENCO CONSENTITI di indirizzi IP per le connessioni di origine
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

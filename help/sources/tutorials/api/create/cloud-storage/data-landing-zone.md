@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;
 solution: Experience Platform
 title: Collegare l’area di destinazione dei dati a Adobe Experience Platform utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%

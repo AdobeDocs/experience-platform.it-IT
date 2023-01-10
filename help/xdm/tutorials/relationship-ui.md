@@ -3,10 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;interfaccia utente;XDM;sis
 solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l’Editor di schema
 description: Questo documento fornisce un'esercitazione per definire una relazione tra due schemi utilizzando l'Editor di schema nell'interfaccia utente di Experience Platform.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;opt-out;segmentazione;servizio di segmentazione;servizio di segmentazione;onorare le rinunce;opt-out;opt-out;opt-out;consenso;condivisione;raccogliere;
 solution: Experience Platform
 title: Rispetto del consenso nei segmenti
-topic-legacy: overview
 description: Scopri come rispettare le preferenze di consenso dei clienti per la raccolta e la condivisione di dati personali nelle operazioni sui segmenti.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%

@@ -2,12 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
 title: Panoramica delle sorgenti self-service (SDK per batch)
-topic-legacy: overview
 description: Origini self-service di Adobe Experience Platform (SDK di batch) è un set di API di configurazione che ti consentono di integrare un’origine basata su API REST utilizzando l’API del servizio di flusso per fornire Experienci Platform ai tuoi dati.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---

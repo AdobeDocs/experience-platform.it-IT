@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;connettore database
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un'origine di database nell'interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione descrive come creare un flusso di dati per un’origine di database utilizzando l’interfaccia utente di Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 0%

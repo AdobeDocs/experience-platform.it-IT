@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;pubblicità;google adwords;pubblicità
 solution: Experience Platform
 title: Creare un flusso di dati per le fonti pubblicitarie utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione pubblicitaria di terze parti e acquisirli in Platform utilizzando i connettori sorgente e l’API del servizio di flusso.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 3%

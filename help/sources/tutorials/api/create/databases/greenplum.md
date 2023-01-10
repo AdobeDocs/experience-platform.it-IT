@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;greenplum;Greenplum
 solution: Experience Platform
 title: Creare una connessione di base GreenPlum utilizzando l’API del servizio di flusso
-topic-legacy: overview
 type: Tutorial
 description: Scopri come collegare GreenPlum a Adobe Experience Platform utilizzando l’API del servizio di flusso.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 2%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
 title: Creare una nuova specifica di connessione utilizzando l’API del servizio di flusso
-topic-legacy: tutorial
 description: Il seguente documento fornisce passaggi su come creare una specifica di connessione utilizzando l’API del servizio di flusso e integrare una nuova origine tramite Origini self-service.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 2%
 
 ---
 

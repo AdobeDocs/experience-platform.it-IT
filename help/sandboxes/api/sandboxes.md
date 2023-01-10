@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;guida per gli sviluppatori sandbox
 solution: Experience Platform
 title: Endpoint API per la gestione delle sandbox
-topic-legacy: developer guide
 description: L’endpoint /sandbox nell’API Sandbox consente di gestire le sandbox in Adobe Experience Platform a livello di programmazione.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 4%
@@ -405,7 +404,7 @@ Una risposta corretta restituisce i dettagli della sandbox aggiornata, mostrando
 }
 ```
 
-La sandbox di produzione predefinita e tutte le sandbox di produzione create dall’utente non possono essere reimpostate se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) funzionalità.
+La sandbox di produzione predefinita e tutte le sandbox di produzione create dall’utente non possono essere reimpostate se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it) funzionalità.
 
 Di seguito è riportato un elenco di possibili eccezioni che potrebbero impedire la reimpostazione di una sandbox:
 

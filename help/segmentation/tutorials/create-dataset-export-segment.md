@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di segmentazione;segmentazione;segmentazione;creare un set di dati;esportare segmenti di pubblico;esportare segmenti;
 solution: Experience Platform
 title: Creare un set di dati per l’esportazione di un segmento di pubblico
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un segmento di pubblico utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

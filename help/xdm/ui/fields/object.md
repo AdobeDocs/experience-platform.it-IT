@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Definire i campi oggetto nell’interfaccia utente
 description: Scopri come definire un campo di tipo oggetto nell’interfaccia utente di Experience Platform.
-topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%

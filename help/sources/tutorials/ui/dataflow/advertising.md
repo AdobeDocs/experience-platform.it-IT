@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;configurare un flusso di dati;connettore pubblicitario
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine pubblicitaria nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine pubblicitaria utilizzando l’interfaccia utente di Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%

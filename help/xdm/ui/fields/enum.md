@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Definire i campi enumerati e i valori consigliati nell’interfaccia utente
 description: Scopri come definire enum e valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%

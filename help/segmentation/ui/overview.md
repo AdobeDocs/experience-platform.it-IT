@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di segmentazione;segmentazione;servizio di segmentazione;guida utente;guida utente;guida utente;guida utente di segmentazione;generatore segmenti;generatore segmenti;realizzato;esistente;esistente; uscita;
 solution: Experience Platform
 title: Guida all’interfaccia utente del servizio di segmentazione
-topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni stringa;stringa;
 solution: Experience Platform
 title: Funzioni stringa PQL
-topic-legacy: developer guide
 description: Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l’interazione con le stringhe.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 6%

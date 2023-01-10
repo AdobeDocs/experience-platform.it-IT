@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 title: Guida all’API per le sorgenti self-service (SDK per batch)
-topic-legacy: overview
 description: Questo documento fornisce una panoramica del processo di creazione di una nuova origine, inclusi i passaggi su come recuperare, scrivere e inviare una nuova specifica di connessione utilizzando l’API Servizio di flusso.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%

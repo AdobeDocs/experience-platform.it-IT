@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: Panoramica del connettore di origine SQL Server
-topic-legacy: overview
 description: Scopri come collegare Microsoft SQL Server a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
 solution: Experience Platform
 title: Creare una connessione sorgente Campagne MailChimp tramite l’interfaccia utente di Platform
-topic-legacy: tutorial
 description: Scopri come collegare Adobe Experience Platform a Campagne MailChimp tramite l’interfaccia utente di Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -43,7 +42,7 @@ Per ulteriori informazioni sull’utilizzo di OAuth 2 per l’autenticazione del
 
 | Credenziali  | Descrizione |
 | --- | --- |
-| Dominio | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
+| Domain | URL principale utilizzato per connettersi all&#39;API MailChimp. Il formato dell’URL principale è `https://{DC}.api.mailchimp.com`, dove `{DC}` rappresenta il data center che corrisponde al tuo account. |
 | Nome utente | Il nome utente che corrisponde al tuo account MailChimp. Questo è necessario per l’autenticazione di base. |
 | Password | La password che corrisponde al tuo account MailChimp. Questo è necessario per l’autenticazione di base. |
 

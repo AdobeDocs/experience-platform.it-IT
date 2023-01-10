@@ -2,10 +2,9 @@
 keywords: Experience Platform;home;argomenti comuni;risoluzione dei problemi sandbox
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi delle sandbox
-topic-legacy: troubleshooting guide
 description: Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%

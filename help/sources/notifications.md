@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari; Notifiche
 description: Iscrivendosi a Eventi di Adobe I/O, puoi utilizzare i webhook per ricevere notifiche relative agli stati di esecuzione del flusso delle connessioni di origine. Queste notifiche contengono informazioni sul successo dell'esecuzione del flusso o sugli errori che hanno contribuito al fallimento di un'esecuzione.
 solution: Experience Platform
 title: Notifiche di esecuzione del flusso
-topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 1%
@@ -30,7 +29,7 @@ Questo documento richiede anche una comprensione funzionante dei webhook e come 
 
 ## Registra un webhook per le notifiche di esecuzione del flusso
 
-Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare Adobe Developer Console per registrare un webhook nel proprio [!DNL Experience Platform] integrazione.
+Per ricevere le notifiche di esecuzione del flusso, devi utilizzare Adobe Developer Console per registrare un webhook nel tuo [!DNL Experience Platform] integrazione.
 
 Segui l’esercitazione su [iscrizione alle notifiche di [!DNL I/O Event]](../observability/alerts/subscribe.md) per passaggi dettagliati su come eseguire questa operazione.
 

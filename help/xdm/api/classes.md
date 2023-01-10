@@ -3,9 +3,8 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Endpoint API per le classi
 description: L’endpoint /classes nell’API del Registro di sistema dello schema consente di gestire in modo programmatico le classi XDM all’interno dell’applicazione di esperienza.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 4%

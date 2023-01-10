@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;argomenti comuni;connettore pagamenti
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine dei pagamenti nell’interfaccia utente
-topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce passaggi su come creare un flusso di dati per un’origine dei pagamenti tramite l’interfaccia utente di Platform.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 0%
