@@ -2,13 +2,13 @@
 title: Suggerimenti client utente-agente
 description: Scopri come funzionano i suggerimenti client User-Agent nell’SDK per web
 keywords: user-agent;suggerimenti client; stringa; stringa agente utente; entropia bassa; entropia elevata
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 6%
+source-wordcount: '1065'
+ht-degree: 5%
 
 ---
-
 
 # Suggerimenti client utente-agente
 
@@ -116,20 +116,14 @@ Se nell’ambiente non si abilitano hint client entropici elevati, i rapporti e 
 
 ### Rapporti di Adobe Analytics basati su suggerimenti client entropici elevati {#analytics}
 
-I seguenti rapporti di Adobe Analytics non funzioneranno quando gli hint client entropy elevati sono disabilitati.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Tipo di browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Tipi di sistemi operativi](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Dimensioni per dispositivi mobili](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+La [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) include la versione del sistema operativo memorizzata come hint client entropy elevato. Se i suggerimenti per i client entropici elevati non sono abilitati, la versione del sistema operativo potrebbe essere imprecisa per i risultati raccolti dai browser Chromium.
 
 ### Caratteristiche di Audience Manager basate su suggerimenti client entropici elevati {#aam}
 
 Se le caratteristiche di Audience Manager utilizzano una delle seguenti proprietà, è necessario abilitare hint client entropy elevati. In caso contrario, le caratteristiche smetteranno di funzionare.
 
 * Versione del sistema operativo
-* Modello del dispositivo
+* Modello dispositivo
 * produttore del dispositivo
 * Fornitore di dispositivi
 
