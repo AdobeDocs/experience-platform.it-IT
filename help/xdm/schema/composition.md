@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
 workflow-type: tm+mt
-source-wordcount: '4103'
+source-wordcount: '4108'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ Un esempio di mappa di identità semplice è simile al seguente:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -100,10 +100,10 @@ Un esempio di mappa di identità semplice è simile al seguente:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -197,7 +197,7 @@ I gruppi di campi definiscono le classi con cui sono compatibili in base al comp
 
 [!DNL Experience Platform] include molti gruppi di campi di Adobe standard, consentendo al contempo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per i propri concetti specifici.
 
-Ad esempio, per acquisire dettagli come &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo abitazione]&quot; per il tuo &quot;[!UICONTROL Membri fedeltà]&quot; schema, puoi utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti specifici per casi di utilizzo meno comuni (come &quot;[!UICONTROL Livello del programma fedeltà]&quot;) spesso non hanno un gruppo di campi predefinito. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
+Ad esempio, per acquisire dettagli come &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo abitazione]&quot; per il tuo &quot;[!UICONTROL Membri fedeltà]&quot; schema, puoi utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, i concetti più specifici dell’organizzazione (ad esempio i dettagli del programma fedeltà personalizzato o gli attributi di prodotto) che potrebbero non essere inclusi nei gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
 
 >[!NOTE]
 >
