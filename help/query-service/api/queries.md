@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint API query
 description: Nelle sezioni seguenti sono descritte le chiamate dettagliate che è possibile effettuare utilizzando l’endpoint /query nell’API del servizio query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 4%
+source-wordcount: '825'
+ht-degree: 3%
 
 ---
 
@@ -42,6 +42,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l’ele
 | `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (inferiore a), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da), e `~` (contiene). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
 | `excludeSoftDeleted` | Indica se includere una query che è stata eliminata tramite soft. Ad esempio: `excludeSoftDeleted=false` sarà **include** query eliminate soft. (*Valore booleano predefinito: true*) |
 | `excludeHidden` | Indica se visualizzare query non basate su utenti. Se questo valore viene impostato su false, verrà **include** query non basate su utenti, ad esempio definizioni CURSOR, FETCH o query con metadati. (*Valore booleano predefinito: true*) |
+| `isPrevLink` | La `isPrevLink` il parametro query viene utilizzato per l’impaginazione. I risultati della chiamata API vengono ordinati in base ai rispettivi `created` la marca temporale e `orderby` proprietà. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Annulla l’ordine della query. Vedi i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
 
 **Richiesta**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **Richiesta**
 
-La seguente richiesta crea una nuova query configurata dai valori forniti nel payload:
+La seguente richiesta crea una nuova query con un&#39;istruzione SQL fornita nel payload:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+L’esempio di richiesta seguente crea una nuova query utilizzando un ID modello di query esistente.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | Query SQL da creare. |
 | `name` | Nome della query SQL. |
 | `description` | Descrizione della query SQL. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
+| `templateId` | Identificatore univoco per una query preesistente. È possibile specificare questo anziché un&#39;istruzione SQL. |
+| `insertIntoParameters` | (Facoltativo) Se questa proprietà è definita, questa query verrà convertita in una query INSERT INTO. |
+| `ctasParameters` | (Facoltativo) Se questa proprietà è definita, questa query verrà convertita in una query CTAS. |
 
 **Risposta**
 

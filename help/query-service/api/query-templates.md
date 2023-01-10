@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint API per i modelli di query
 description: Questa guida descrive le varie chiamate API del modello di query che puoi effettuare utilizzando l’API del servizio query.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 5%
+source-wordcount: '894'
+ht-degree: 4%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | Query SQL da creare. |
+| `sql` | Query SQL da creare. È possibile utilizzare SQL standard o una sostituzione di parametri. Per utilizzare una sostituzione di parametri nell&#39;SQL è necessario anteporre la chiave di parametro a un `$`. Ad esempio: `$key`e fornire i parametri utilizzati nelle coppie di valori chiave SQL come JSON nella `queryParameters` campo . I valori passati qui saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta di POST. |
 | `name` | Nome del modello di query. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
@@ -145,7 +149,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | Query SQL da aggiornare. |
-| `name` | Nome della query pianificata. |
+| `sql` | Query SQL da creare. È possibile utilizzare SQL standard o una sostituzione di parametri. Per utilizzare una sostituzione di parametri nell&#39;SQL è necessario anteporre la chiave di parametro a un `$`. Ad esempio: `$key`e fornire i parametri utilizzati nelle coppie di valori chiave SQL come JSON nella `queryParameters` campo . I valori passati qui saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta di POST. |
+| `name` | Nome del modello di query. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
