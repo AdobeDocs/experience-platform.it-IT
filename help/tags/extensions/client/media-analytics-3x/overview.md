@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Medium Analytics (3.x SDK) for Audio and Video
 description: Scopri l’estensione tag Adobe Media Analytics (3.x SDK) for Audio and Video in Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 96%
+source-wordcount: '752'
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ L’estensione Media Analytics (MA) aggiunge l’SDK principale JavaScript Media
 
 >[!IMPORTANT]
 >
->Questa estensione viene distribuita con Media 3.x SDK, che non è compatibile con le versioni precedenti quali Media 2.x SDK. Se la pagina utilizza già Media 2.x SDK, utilizza l’[estensione Adobe Media Analytics for Audio and Video](../media-analytics/overview.md) invece di questa estensione.
+>Questa estensione viene distribuita con Media 3.x SDK, che non è compatibile con le versioni precedenti quali Media 2.x SDK. Poiché 2.x è stato dichiarato obsoleto, effettua l’aggiornamento alla versione 3.x.
 
 Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel progetto abilitato per i tag, puoi procedere in uno dei due modi seguenti:
 
