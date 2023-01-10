@@ -5,7 +5,7 @@ title: Collegare l’area di destinazione dei dati a Adobe Experience Platform u
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%
@@ -80,7 +80,7 @@ Per recuperare le credenziali di un [!DNL Data Landing Zone], invia una richiest
 **Formato API**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Richiesta**
@@ -124,7 +124,7 @@ La risposta seguente restituisce le informazioni delle credenziali per la zona d
 **Formato API**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Intestazioni | Descrizione |
