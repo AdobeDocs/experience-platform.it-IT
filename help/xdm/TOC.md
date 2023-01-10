@@ -135,7 +135,7 @@ ht-degree: 15%
    * [Misura](./data-types/measure.md)
    * [Ordine](./data-types/order.md)
    * [Elemento di pagamento](./data-types/payment-item.md)
-   * [Utente](./data-types/person.md)
+   * [Persona](./data-types/person.md)
    * [Nome della persona](./data-types/person-name.md)
    * [Numero di telefono](./data-types/phone-number.md)
    * [Posizionare il contesto](./data-types/place-context.md)

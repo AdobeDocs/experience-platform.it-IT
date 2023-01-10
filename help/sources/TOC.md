@@ -6,8 +6,8 @@ user-guide-description: Acquisisci dati da diverse origini. Scopri come struttur
 feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '860'
+ht-degree: 11%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 0%
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
    - Creare una connessione di base {#create}
-      - Pubblicità {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/api/create/analytics/mixpanel.md)
@@ -118,7 +118,7 @@ ht-degree: 0%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hub eventi di Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Zona di destinazione dei dati](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -213,7 +213,7 @@ ht-degree: 0%
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - Pubblicità {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/ui/create/analytics/mixpanel.md)
@@ -225,7 +225,7 @@ ht-degree: 0%
          - [BLOB di Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Hub eventi di Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Zona di destinazione dei dati](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
