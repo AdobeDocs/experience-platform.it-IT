@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;modelli;api di apprendimento automatico sensei
 solution: Experience Platform
 title: Endpoint API per modelli
-topic-legacy: Developer guide
 description: Un modello è un'istanza di una ricetta di apprendimento automatico formata utilizzando dati storici e configurazioni per risolvere un caso d'uso aziendale.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

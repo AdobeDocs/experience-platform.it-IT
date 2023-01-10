@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;Data Science Workspace;argomenti comuni;apprendimento automatico in tempo reale;riferimento al nodo;
 solution: Experience Platform
 title: Gestire i blocchi appunti di apprendimento automatico in tempo reale
-topic-legacy: Training and scoring a ML model
 description: La guida seguente illustra i passaggi necessari per creare un’applicazione di apprendimento automatico in tempo reale in Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%

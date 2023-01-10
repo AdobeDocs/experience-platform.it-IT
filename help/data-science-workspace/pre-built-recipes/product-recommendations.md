@@ -2,10 +2,9 @@
 keywords: Experience Platform;ricetta di consigli di prodotto;Data Science Workspace;argomenti popolari;ricette;pregenerare ricetta
 solution: Experience Platform
 title: Ricetta consigli prodotti
-topic-legacy: overview
 description: La ricetta Recommendations per i prodotti ti consente di fornire consigli di prodotti personalizzati che siano personalizzati in base alle esigenze e agli interessi del cliente. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni su quali prodotti potrebbe essere interessato.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 3%

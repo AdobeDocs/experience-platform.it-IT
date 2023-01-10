@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;informazioni;api di apprendimento automatico sensei
 solution: Experience Platform
 title: Endpoint API Insights
-topic-legacy: Developer guide
 description: Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali visualizzando le metriche di valutazione pertinenti.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%

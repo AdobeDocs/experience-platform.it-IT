@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;notebook;Data Science Workspace;argomenti comuni;analizzare i blocchi appunti di dati;eda;analisi dei dati esplorativi;scienza dei dati
 solution: Experience Platform
 title: Notebook di analisi dei dati esplorativi (EDA)
-topic-legacy: overview
 type: Tutorial
 description: Questa guida si concentra su come utilizzare il blocco appunti per l'analisi dei dati esplorativi (EDA) per scoprire i pattern nei dati web, gli eventi aggregati con obiettivo di previsione, i dati aggregati puliti e comprendere il rapporto tra i predicatori e un obiettivo.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%

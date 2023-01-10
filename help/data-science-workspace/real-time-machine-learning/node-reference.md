@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per gli sviluppatori;Data Science Workspace;argomenti comuni;Real-time Machine Learning;riferimento al nodo;
 solution: Experience Platform
 title: Riferimento al nodo di apprendimento automatico in tempo reale
-topic-legacy: Nodes reference
 description: Un nodo è l'unità fondamentale di cui si formano i grafici. Ogni nodo esegue un'attività specifica e può essere concatenato utilizzando i collegamenti per formare un grafico che rappresenta una pipeline ML. L'attività eseguita da un nodo rappresenta un'operazione sui dati di input, ad esempio una trasformazione di dati o schemi o un'inferenza di apprendimento automatico. Il nodo restituisce il valore trasformato o dedotto ai nodi successivi.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Dividere
 
-Usa il seguente nodo per dividere il dataframe in treno e test passando `train_size` o `test_size`. Questo restituisce un dataframe con un multi-indice. È possibile accedere ai fotogrammi dati del treno e del test utilizzando l&#39;esempio seguente: `msg5.data.xs(“train”)`.
+Usa il seguente nodo per dividere il dataframe in treno e test passando `train_size` o `test_size`. Questo restituisce un dataframe con un multi-indice. È possibile accedere ai fotogrammi dati del treno e del test utilizzando l&#39;esempio seguente: `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

@@ -2,39 +2,37 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;
 solution: Experience Platform
 title: Appendice della guida all’API di apprendimento automatico di Sensei
-topic-legacy: Developer guide
 description: Le sezioni seguenti forniscono informazioni di riferimento per varie funzioni dell’API di apprendimento automatico di Sensei.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # [!DNL Sensei Machine Learning] Appendice della guida API
 
-Le sezioni seguenti forniscono informazioni di riferimento per le varie funzioni dell’ API [!DNL Sensei Machine Learning] .
+Le sezioni seguenti forniscono informazioni di riferimento per le varie caratteristiche del [!DNL Sensei Machine Learning] API.
 
 ## Parametri di query per il recupero delle risorse {#query}
 
-L’ API [!DNL Sensei Machine Learning] fornisce il supporto per i parametri di query per il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
+La [!DNL Sensei Machine Learning] L’API fornisce il supporto per i parametri di query con il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
 
 | Parametro query | Descrizione | Valore predefinito |
 | --------------- | ----------- | ------- |
 | `start` | Indica l&#39;indice iniziale per l&#39;impaginazione. | `start=0` |
 | `limit` | Indica il numero massimo di risultati da restituire. | `limit=25` |
-| `orderby` | Indica le proprietà da utilizzare per l&#39;ordinamento in ordine di priorità. Includi un trattino (**-**) prima che un nome di proprietà venga ordinato in ordine decrescente, altrimenti i risultati vengono ordinati in ordine crescente. | `orderby=created` |
+| `orderby` | Indica le proprietà da utilizzare per l&#39;ordinamento in ordine di priorità. Includi un trattino (**-**) prima del nome di una proprietà da ordinare in ordine decrescente, altrimenti i risultati vengono ordinati in ordine crescente. | `orderby=created` |
 | `property` | Indica l&#39;espressione di confronto che un oggetto deve soddisfare per poter essere restituito. | `property=deleted==false` |
 
 >[!NOTE]
 >
->Quando si combinano più parametri di query, devono essere separati da e commerciale (**&amp;**).
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciale (**&amp;**).
 
 ## Configurazioni CPU e GPU Python {#cpu-gpu-config}
 
-I motori Python possono scegliere tra una CPU o una GPU a scopo di formazione o punteggio ed è definito su una [MLInance](./mlinstances.md) come specifica di attività (`tasks.specification`).
+I Python Engines hanno la possibilità di scegliere tra una CPU o una GPU per i suoi scopi di formazione o punteggio, ed è definito su un [MLInance](./mlinstances.md) come specifica di un&#39;attività (`tasks.specification`).
 
 Di seguito è riportato un esempio di configurazione che specifica l’utilizzo di una CPU per la formazione e di una GPU per il punteggio:
 
@@ -71,7 +69,7 @@ Di seguito è riportato un esempio di configurazione che specifica l’utilizzo 
 
 >[!NOTE]
 >
->I valori di `cpus` e `gpus` non indicano il numero di CPU o GPU, ma il numero di macchine fisiche. Questi valori sono consentiti `"1"` e in caso contrario genereranno un&#39;eccezione.
+>I valori di `cpus` e `gpus` non indica il numero di CPU o GPU, ma piuttosto il numero di macchine fisiche. Questi valori sono consentiti `"1"` e altrimenti lancerà un&#39;eccezione.
 
 ## Configurazioni delle risorse PySpark e Spark {#resource-config}
 
@@ -79,13 +77,13 @@ I motori Spark possono modificare le risorse computazionali a scopo di formazion
 
 | Risorsa | Descrizione | Tipo |
 | -------- | ----------- | ---- |
-| driverMemory | Memoria del driver in megabyte | int |
-| driverCores | Numero di core utilizzati dal conducente | int |
-| exutorMemory | Memoria per esecutore in megabyte | int |
-| esecutoreCores | Numero di core utilizzati dall&#39;esecutore | int |
-| numExecutors | Numero di esecutori | int |
+| driverMemory | Memoria del driver in megabyte | Intero |
+| driverCores | Numero di core utilizzati dal conducente | Intero |
+| exutorMemory | Memoria per esecutore in megabyte | Intero |
+| esecutoreCores | Numero di core utilizzati dall&#39;esecutore | Intero |
+| numExecutors | Numero di esecutori | Intero |
 
-Le risorse possono essere specificate su un [ISTANZA MLI](./mlinstances.md) come (A) parametri di formazione o valutazione individuali o (B) all&#39;interno di un oggetto di specifiche aggiuntivo (`specification`). Ad esempio, le seguenti configurazioni di risorse sono le stesse sia per la formazione che per il punteggio:
+Le risorse possono essere specificate in un [MLInance](./mlinstances.md) come (A) parametri individuali di addestramento o punteggio, o (B) all&#39;interno di un oggetto specifico aggiuntivo (`specification`). Ad esempio, le seguenti configurazioni di risorse sono le stesse sia per la formazione che per il punteggio:
 
 ```json
 [

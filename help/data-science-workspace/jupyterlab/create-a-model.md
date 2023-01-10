@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab;ricetta;notebook;Data Science Workspace;argomenti popolari;creare ricetta
 solution: Experience Platform
 title: Creare un modello utilizzando i notebook JupyterLab
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare una ricetta utilizzando il modello JupyterLab per la generazione di ricette per i notebook.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%

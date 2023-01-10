@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;istanze multiple;api di apprendimento automatico sensei
 solution: Experience Platform
 title: Endpoint API per le istanze mobili
-topic-legacy: Developer guide
 description: Un'istanza MLI è un'associazione di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%

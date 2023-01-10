@@ -2,11 +2,10 @@
 keywords: Experience Platform;importazione di ricetta confezionata;Data Science Workspace;argomenti popolari;ricette;api;apprendimento automatico sensei;crea motore
 solution: Experience Platform
 title: Importare una composizione in pacchetto utilizzando l’API di apprendimento automatico di Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione utilizza l'API di apprendimento automatico di Sensei per creare un motore, noto anche come Ricetta nell'interfaccia utente.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%

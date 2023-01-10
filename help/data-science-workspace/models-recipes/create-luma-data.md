@@ -2,11 +2,10 @@
 keywords: Experience Platform;dati web luma;Data Science Workspace;argomenti popolari;ricette;dati demo;dati web demo;dati luma
 solution: Experience Platform
 title: Creare schemi web e set di dati Luma
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse necessari per il modello di propensione demo Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%

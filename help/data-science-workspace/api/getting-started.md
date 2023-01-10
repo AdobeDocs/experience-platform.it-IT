@@ -2,13 +2,12 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;data science workspace;scienza dei dati
 solution: Experience Platform
 title: Guida all’API di apprendimento automatico di Sensei
-topic-legacy: Developer guide
 description: L’API di apprendimento automatico di Sensei consente agli sviluppatori di eseguire operazioni CRUD su varie risorse di Data Science Workspace. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -42,7 +41,7 @@ Una volta raccolte le credenziali di autenticazione richieste, puoi procedere al
 
 * [Motori](./engines.md)
 * [Esperimenti](./experiments.md)
-* [Informazioni approfondite](./insights.md)
+* [Insights](./insights.md)
 * [MLI (ricette)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modelli](./models.md)

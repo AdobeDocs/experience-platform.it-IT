@@ -2,11 +2,10 @@
 keywords: Experience Platform;Punteggio di un modello;Data Science Workspace;argomenti popolari;api di apprendimento automatico sensei
 solution: Experience Platform
 title: Punteggio di un modello utilizzando l’API di apprendimento automatico di Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico di Sensei per creare un esperimento e un’esecuzione di un esperimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;motori;API di apprendimento automatico sensei
 solution: Experience Platform
 title: Endpoint API per motori
-topic-legacy: Developer guide
 description: I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l'ingegneria delle funzioni o entrambe.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;ricetta vendite al dettaglio;Data Science Workspace;argomenti popolari;ricette;precostruire ricetta
 solution: Experience Platform
 title: Ricetta vendite al dettaglio
-topic-legacy: overview
 description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi predefiniti per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare il rapporto tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%

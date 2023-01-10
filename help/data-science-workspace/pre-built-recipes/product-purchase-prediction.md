@@ -2,11 +2,9 @@
 keywords: Experience Platform;ricetta di acquisto del prodotto;Data Science Workspace;argomenti popolari;ricette;precostruire ricetta
 solution: Experience Platform
 title: Ricetta previsione acquisto prodotti
-topic-legacy: overview
 description: La ricetta Predizione di acquisto del prodotto ti consente di prevedere la probabilità di un certo tipo di evento di acquisto del cliente, ad esempio un acquisto di prodotto.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 6%
@@ -33,7 +31,7 @@ La ricetta Predizione di acquisto del prodotto utilizza l&#39;apprendimento auto
 
 ## Schema dati
 
-Questa ricetta utilizza [schemi XDM](../../xdm/home.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
+Questa ricetta utilizza [Schemi XDM](../../xdm/home.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
 | --- | --- |
@@ -50,7 +48,7 @@ Questa ricetta utilizza [schemi XDM](../../xdm/home.md) per modellare i dati. Lo
 | orderDate1 | Numero |
 | shippingDate1 | Numero |
 | totalPrice1 | Numero |
-| imposta1 | Numero |
+| tax1 | Numero |
 | orderDate2 | Numero |
 | shippingDate2 | Numero |
 | totalPrice2 | Numero |
@@ -58,6 +56,6 @@ Questa ricetta utilizza [schemi XDM](../../xdm/home.md) per modellare i dati. Lo
 
 ## Algoritmo
 
-Innanzitutto, viene caricato il set di dati di formazione nello schema *ProductPredizione* . Da qui, il modello viene addestrato utilizzando un [classificatore di foresta casuale](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificatore di foresta casuale è un tipo di algoritmo di raggruppamento che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore Foresta casuale costruisce più alberi decisionali e li unisce per creare una previsione più accurata e stabile.
+In primo luogo, il set di dati sulla formazione nel *Predizione prodotto* schema caricato. Da qui, il modello viene addestrato utilizzando un [classificatore di foresta casuale](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Classificatore di foresta casuale è un tipo di algoritmo di raggruppamento che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore Foresta casuale costruisce più alberi decisionali e li unisce per creare una previsione più accurata e stabile.
 
 Questo processo inizia con la creazione di un insieme di alberi decisionali che selezionano casualmente sottoinsiemi di dati di formazione. In seguito, i risultati di ogni albero decisionale sono in media.

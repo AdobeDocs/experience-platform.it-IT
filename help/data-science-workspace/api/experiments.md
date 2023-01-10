@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;esperimenti;api di apprendimento macchina sensei
 solution: Experience Platform
 title: Endpoint API per gli esperimenti
-topic-legacy: Developer guide
 description: Lo sviluppo e la formazione dei modelli avviene a livello di Esperimento, dove un Esperimento è costituito da un’istanza MLI, da percorsi di formazione e da percorsi di valutazione.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;formazione e valutazione;Data Science Workspace;argomenti comuni;API di apprendimento automatico di Sensei
 solution: Experience Platform
 title: Formazione e valutazione di un modello utilizzando l’API di apprendimento automatico di Sensei
-topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API di apprendimento automatico di Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 1%
