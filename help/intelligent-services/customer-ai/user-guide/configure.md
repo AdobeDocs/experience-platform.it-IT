@@ -3,10 +3,9 @@ keywords: Experience Platform;guida utente;customer ai;argomenti comuni;configur
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configurare un’istanza di Customer AI
-topic-legacy: Instance creation
 description: I servizi AI/ML forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3342'
 ht-degree: 0%

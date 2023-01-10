@@ -2,10 +2,9 @@
 keywords: similarità visiva;somiglianza visiva;api ccai
 solution: Experience Platform
 title: Somiglianza visiva nell’API Content and Commerce AI
-topic-legacy: Developer guide
 description: Il servizio di somiglianza visiva, quando si fornisce un’immagine, trova automaticamente immagini visivamente simili da un catalogo.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%

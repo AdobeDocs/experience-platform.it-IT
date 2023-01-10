@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida introduttiva;ai contenuti;ai e-commerce;contenuto e ai-commerce;estrazione colore;estrazione colore
 solution: Experience Platform
 title: Estrazione del colore nell’API Content and Commerce AI
-topic-legacy: Developer guide
 description: Il servizio di estrazione del colore, quando viene fornita un'immagine, può calcolare l'istogramma dei colori dei pixel e ordinarli in blocchi in base ai colori dominanti.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: classificazione del testo;classificazione del testo
 solution: Experience Platform
 title: Classificazione del testo nell’API Content and Commerce AI
-topic-legacy: Developer guide
 description: Se si assegna un frammento di testo, il servizio di classificazione del testo può classificarlo in una o più etichette. La classificazione può essere a etichetta singola, a etichetta multipla o gerarchica.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%
@@ -71,7 +70,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. | No |
 | `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
-| `content` | Contenuto utilizzato dal servizio di classificazione del testo. Il contenuto può essere di tipo non elaborato (&quot;inline&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’url firmato. | Sì |
+| `content` | Contenuto utilizzato dal servizio di classificazione del testo. Il contenuto può essere in formato testo non elaborato (tipo di contenuto &quot;inline&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’url firmato. | Sì |
 
 **Risposta**
 

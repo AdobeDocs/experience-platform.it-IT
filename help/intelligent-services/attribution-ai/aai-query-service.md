@@ -2,10 +2,9 @@
 keywords: insights;attribution ai;attribution ai insights;AAI query service;query di attribuzione;punteggi di attribuzione
 feature: Attribution AI
 title: Analisi dei punteggi di attribuzione tramite Query Service
-topic-legacy: Attribution AI queries
 description: Scopri come utilizzare Adobe Experience Platform Query Service per analizzare i punteggi delle Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 # Analisi dei punteggi di attribuzione tramite Query Service
 
-Ogni riga nei dati rappresenta una conversione in cui le informazioni per i punti di contatto correlati vengono memorizzate come una matrice di strutture sotto la colonna `touchpointsDetail` .
+Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i relativi punti di contatto sono memorizzate come una matrice di strutture sotto la `touchpointsDetail` colonna.
 
 | Informazioni sui punti di contatto | Colonna |
 | ---------------------- | ------ |
@@ -24,7 +23,7 @@ Ogni riga nei dati rappresenta una conversione in cui le informazioni per i punt
 
 ## Ricerca dei percorsi dati
 
-Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Set di dati]**. Quindi, seleziona la scheda **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
+Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra. La **[!UICONTROL Set di dati]** viene visualizzata la pagina . Quindi, seleziona la **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
 
 ![Accesso all’istanza](./images/aai-query/datasets_browse.png)
 
@@ -32,7 +31,7 @@ Seleziona il set di dati di output. Viene visualizzata la pagina dell’attivit�
 
 ![pagina di attività del set di dati](./images/aai-query/select_preview.png)
 
-Nella pagina dell’attività del set di dati , seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra per visualizzare in anteprima i dati e assicurarsi che siano stati acquisiti come previsto.
+Nella pagina dell’attività del set di dati, seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra per visualizzare in anteprima i dati e assicurarsi che siano stati acquisiti come previsto.
 
 ![set di dati di anteprima](./images/aai-query/preview_dataset.JPG)
 
@@ -40,13 +39,13 @@ Dopo aver visualizzato l’anteprima dei dati, seleziona lo schema nella barra a
 
 ![selezionare lo schema](./images/aai-query/select_schema.png)
 
-Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionata, si apre la barra laterale **[!UICONTROL Proprietà campo]** che consente di copiare il percorso da utilizzare nella creazione delle query.
+Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionato, il **[!UICONTROL Proprietà campo]** si apre la barra laterale che consente di copiare il percorso da utilizzare nella creazione delle query.
 
 ![copiare il percorso](./images/aai-query/copy_path.png)
 
 ## Servizio query di accesso
 
-Per accedere a Query Service dall’interno dell’interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** . Viene caricato un elenco delle query salvate in precedenza.
+Per accedere a Query Service dall’interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nel menu di navigazione a sinistra, seleziona il **[!UICONTROL Sfoglia]** scheda . Viene caricato un elenco delle query salvate in precedenza.
 
 ![navigatore del servizio di query](./images/aai-query/query_tab.png)
 
@@ -54,15 +53,15 @@ Quindi, seleziona **[!UICONTROL Crea query]** nell&#39;angolo in alto a destra. 
 
 ![editor di query](./images/aai-query/query_example.png)
 
-Per ulteriori informazioni sull&#39;editor delle query, visita la [guida utente dell&#39;editor delle query](../../query-service/ui/user-guide.md).
+Per ulteriori informazioni sull’editor delle query, visita il [Guida utente dell’editor delle query](../../query-service/ui/user-guide.md).
 
 ## Modelli di query per l’analisi del punteggio di attribuzione
 
-Le query riportate di seguito possono essere utilizzate come modello per diversi scenari di analisi dei punteggi. È necessario sostituire i valori `_tenantId` e `your_score_output_dataset` con quelli corretti presenti nello schema di output del punteggio.
+Le query riportate di seguito possono essere utilizzate come modello per diversi scenari di analisi dei punteggi. È necessario sostituire il `_tenantId` e `your_score_output_dataset` con i valori corretti trovati nello schema di output del punteggio.
 
 >[!NOTE]
 >
-> A seconda di come sono stati acquisiti i dati, i valori utilizzati di seguito, ad esempio `timestamp`, potrebbero essere in un formato diverso.
+> A seconda di come sono stati acquisiti i dati, i valori utilizzati di seguito, come `timestamp` potrebbe essere in un formato diverso.
 
 ### Esempi di convalida
 
@@ -306,7 +305,7 @@ Questa query appiattisce la colonna di struttura in più colonne singole ed espl
 
 >[!TIP]
 >
-> In questo esempio, è necessario sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La variabile `COLUMN_NAME` può accettare i valori dei nomi di colonna facoltativi pass through (colonne di reporting) aggiunti durante la configurazione dell’istanza di Attribution AI. Controlla lo schema di output del punteggio per trovare i valori `{COLUMN_NAME}` necessari per completare la query.
+> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La `COLUMN_NAME` può accettare i valori dei nomi di colonna facoltativi passati attraverso (colonne di reporting) aggiunti durante la configurazione dell’istanza di Attribution AI. Controlla lo schema di output del punteggio per trovare il `{COLUMN_NAME}` valori necessari per completare la query.
 
 ```sql
 SELECT 

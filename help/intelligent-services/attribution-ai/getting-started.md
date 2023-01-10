@@ -2,10 +2,9 @@
 keywords: Experience Platform;guida introduttiva;ai di attribuzione;argomenti comuni
 feature: Attribution AI
 title: Guida introduttiva ad Attribution AI
-topic-legacy: Getting started
 description: Le guide seguenti richiedono una comprensione dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di Attribution AI. Prima di iniziare le esercitazioni, controlla i seguenti documenti.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%

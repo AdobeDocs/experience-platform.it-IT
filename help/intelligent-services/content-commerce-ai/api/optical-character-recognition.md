@@ -2,10 +2,9 @@
 keywords: OCR;presenza di testo;riconoscimento ottico dei caratteri
 solution: Experience Platform
 title: Presenza di testo e riconoscimento ottico dei caratteri
-topic-legacy: Developer guide
 description: Nell’API Content and Commerce AI, il servizio di riconoscimento ottico dei caratteri (OCR, Text Presence / Optical Character Recognition) può indicare se un testo è presente in una determinata immagine. Se il testo è presente, OCR può restituire il testo.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%
@@ -83,7 +82,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. | No |
 | `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
-| `content` | Il contenuto può essere un’immagine non elaborata (tipo di contenuto &quot;in linea&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’URL firmato. | Sì |
+| `content` | Il contenuto può essere un’immagine non elaborata (tipo di contenuto &quot;inline&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’URL firmato. | Sì |
 
 **Risposta**
 
