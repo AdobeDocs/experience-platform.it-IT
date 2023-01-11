@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API query
 description: Nelle sezioni seguenti sono descritte le chiamate dettagliate che è possibile effettuare utilizzando l’endpoint /query nell’API del servizio query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 3%
 
 ---
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 >
 >Puoi utilizzare il valore di `_links.cancel` a [annulla query creata](#cancel-a-query).
 
-### Annullare una query
+### Annullare o eliminare in modo soft una query
 
-È possibile richiedere l’eliminazione di una query specificata effettuando una richiesta di PATCH al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
+È possibile richiedere l’annullamento o l’eliminazione soft di una query specificata effettuando una richiesta di PATCH al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -305,9 +305,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 PATCH /queries/{QUERY_ID}
 ```
 
-| Proprietà | Descrizione |
+| Parametro | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | La `id` valore della query da annullare. |
+| `{QUERY_ID}` | La `id` valore della query su cui si desidera eseguire l&#39;operazione. |
 
 
 **Richiesta**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `op` | Per annullare la query, è necessario impostare il parametro op con il valore `cancel `. |
+| `op` | Tipo di operazione da eseguire sulla risorsa. I valori accettati sono `cancel` e `soft_delete`. Per annullare la query, è necessario impostare il parametro op con il valore `cancel `. L’operazione di eliminazione soft impedisce la restituzione della query sulle richieste GET ma non la elimina dal sistema. |
 
 **Risposta**
 

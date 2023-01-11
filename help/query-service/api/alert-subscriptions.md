@@ -2,9 +2,10 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;avviso;
 title: Endpoint API per sottoscrizioni di avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint delle sottoscrizioni di avvisi con l’API del servizio query.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -49,7 +50,23 @@ Recupera un elenco di tutti gli avvisi per una sandbox organizzazione effettuand
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Proprietà | Descrizione |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Facoltativo) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (&amp;). I parametri disponibili sono elencati di seguito. |
+
+**Parametri query**
+
+Di seguito è riportato un elenco dei parametri di query disponibili per l’elenco delle query. Tutti questi parametri sono facoltativi. Effettuare una chiamata a questo endpoint senza parametri recupererà tutte le query disponibili per la tua organizzazione.
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `orderby` | Campo che specifica l’ordine dei risultati. I campi supportati sono `created` e `updated`. Anteporre il nome della proprietà con `+` per crescente e `-` per ordine decrescente. Il valore predefinito è `-created`. Tieni presente che il segno più (`+`) deve essere preceduta da `%2B`. Esempio `%2Bcreated` è il valore di un ordine creato crescente. |
+| `pagesize` | Usa questo parametro per controllare il numero di record che desideri recuperare dalla chiamata API per pagina. Il limite predefinito è impostato sulla quantità massima di 50 record per pagina. |
+| `page` | Indicare il numero di pagina dei risultati restituiti per i quali si desidera visualizzare i record. |
+| `property` | Filtrare i risultati in base ai campi selezionati. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono il filtraggio: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l’avviso con un ID corrispondente. |
 
 **Richiesta**
 
@@ -283,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parametri | Descrizione |
 | -------- | ----------- |
-| `ALERT_TYPE` | Ogni avviso può avere tre diversi tipi di avviso. Sono: <ul><li>`start`: Notifica un utente quando l’esecuzione della query è iniziata.</li><li>`success`: Notifica all’utente il completamento della query.</li><li>`failure`: Notifica all’utente se la query non riesce.</li></ul> |
+| `ALERT_TYPE` | Questa proprietà descrive lo stato di esecuzione della query che attiva un avviso. La risposta includerà solo le informazioni di abbonamento avvisi per avvisi di questo tipo. Ogni avviso può avere tre diversi tipi di avviso. Sono: <ul><li>`start`: Notifica un utente quando l’esecuzione della query è iniziata.</li><li>`success`: Notifica all’utente il completamento della query.</li><li>`failure`: Notifica all’utente se la query non riesce.</li></ul> |
 | `QUERY_ID` | Identificatore univoco della query da aggiornare. |
 | `SCHEDULE_ID` | Identificatore univoco della query pianificata da aggiornare. |
 
@@ -370,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parametri | Descrizione |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Un indirizzo e-mail registrato in un account di Adobe viene utilizzato per identificare gli utenti abbonati agli avvisi. |
+| `orderby` | Campo che specifica l’ordine dei risultati. I campi supportati sono `created` e `updated`. Anteporre il nome della proprietà con `+` per crescente e `-` per ordine decrescente. Il valore predefinito è `-created`. Tieni presente che il segno più (`+`) deve essere preceduta da `%2B`. Esempio `%2Bcreated` è il valore di un ordine creato crescente. |
+| `pagesize` | Usa questo parametro per controllare il numero di record che desideri recuperare dalla chiamata API per pagina. Il limite predefinito è impostato sulla quantità massima di 50 record per pagina. |
+| `page` | Indicare il numero di pagina dei risultati restituiti per i quali si desidera visualizzare i record. |
+| `property` | Filtrare i risultati in base ai campi selezionati. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono il filtraggio: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l’avviso con un ID corrispondente. |
 
 **Richiesta**
 

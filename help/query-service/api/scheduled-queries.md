@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per query pianificate
 description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per query pianificate con l’API del servizio query.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ La richiesta di PATCH supporta due percorsi diversi: `/state` e `/schedule/sched
 
 ### Aggiorna stato query pianificato
 
-È possibile utilizzare `/state` per aggiornare lo stato della query pianificata selezionata - ENABLED o DISABLED. Per aggiornare lo stato, è necessario impostare il valore come `enable` o `disable`.
+È possibile aggiornare lo stato della query pianificata selezionata impostando il `path` proprietà di `/state` e `value` proprietà `enable` o `disable`.
 
 **Formato API**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
+| `op` | Operazione da eseguire sulla pianificazione della query. Il valore accettato è `replace`. |
 | `path` | Percorso del valore a cui si desidera applicare la patch. In questo caso, poiché si aggiorna lo stato della query pianificata, è necessario impostare il valore di `path` a `/state`. |
 | `value` | Il valore aggiornato del `/state`. Questo valore può essere impostato come `enable` o `disable` per abilitare o disabilitare la query pianificata. |
 
@@ -363,7 +364,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Aggiorna pianificazione query pianificata
 
-È possibile utilizzare `/schedule/schedule` per aggiornare la pianificazione cron della query pianificata. Per ulteriori informazioni sugli orari dei cron, si prega di leggere il [formato di espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione.
+È possibile aggiornare la pianificazione cron della query pianificata impostando la `path` proprietà di `/schedule/schedule` nel corpo della richiesta. Per ulteriori informazioni sugli orari dei cron, si prega di leggere il [formato di espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione.
 
 **Formato API**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
+| `op` | Operazione da eseguire sulla pianificazione della query. Il valore accettato è `replace`. |
 | `path` | Percorso del valore a cui si desidera applicare la patch. In questo caso, poiché si aggiorna la pianificazione della query pianificata, è necessario impostare il valore di `path` a `/schedule/schedule`. |
 | `value` | Il valore aggiornato del `/schedule`. Questo valore deve essere sotto forma di programma cron. In questo esempio, la query pianificata verrà eseguita ogni ora alla soglia di 45 minuti. |
 
