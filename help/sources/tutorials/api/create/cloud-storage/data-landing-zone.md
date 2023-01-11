@@ -5,7 +5,7 @@ title: Collegare l’area di destinazione dei dati a Adobe Experience Platform u
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform all’area di destinazione dei dati utilizzando l’API del servizio di flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
+source-git-commit: b1021f985626157895d7350e941238c3197db0b6
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 5%
@@ -36,7 +36,7 @@ Il primo passaggio nell’utilizzo delle API per accedere a [!DNL Data Landing Z
 **Formato API**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | Intestazioni | Descrizione |
