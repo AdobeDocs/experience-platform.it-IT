@@ -4,9 +4,9 @@ title: Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce limiti di utilizzo e di tasso predefiniti per aiutarti a modellare i tuoi dati in modo da ottenere prestazioni di sistema ottimali utilizzando Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1651'
 ht-degree: 2%
 
 ---
@@ -117,14 +117,22 @@ Questa sezione fornisce ulteriori dettagli sui limiti contenuti in questo docume
 
 ### Tipi di entità
 
-La [!DNL Profile] il modello di dati store è costituito da due tipi di entità principali:
+La [!DNL Profile] il modello di dati store è costituito da due tipi di entità principali: [entità principali](#primary-entity) e [entità dimensione](#dimension-entity).
 
-* **Entità principale:** Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-Time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
+#### Entità principale
 
-   Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-Time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
+Un’entità primaria o un’entità di profilo unisce i dati per formare una &quot;singola origine di verità&quot; per un singolo utente. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema dell&#39;unione per [!DNL Real-Time Customer Profile] è un modello dati ibrido denormalizzato che agisce come contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
 
-   ![](../profile/images/guardrails/profile-entity.png)
+Gli attributi indipendenti dal tempo, noti anche come &quot;dati di record&quot; vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot; vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-Time Customer Profile] per iniziare l’acquisizione dei dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più i profili individuali diventano solidi.
 
-* **entità Dimension:** Anche se l’archivio dati del profilo in cui vengono conservati i dati del profilo non è un archivio relazionale, il profilo consente l’integrazione con entità di dimensioni ridotte per creare segmenti in modo semplice e intuitivo. Questa integrazione è nota come [segmentazione su più entità](../segmentation/multi-entity-segmentation.md). La tua organizzazione può inoltre definire classi XDM per descrivere elementi diversi da singoli utenti, ad esempio negozi, prodotti o proprietà. Tali[!DNL XDM Individual Profile] Gli schemi sono noti come &quot;entità dimensione&quot; e non contengono dati relativi alle serie temporali. Le entità di Dimension forniscono dati di ricerca che consentono e semplificano le definizioni di segmenti a più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
+![Un&#39;infografica che descrive le differenze tra i dati dei record e i dati delle serie temporali.](../profile/images/guardrails/profile-entity.png)
 
-   ![](../profile/images/guardrails/profile-and-dimension-entities.png)
+#### entità Dimension
+
+Anche se l’archivio dati del profilo in cui vengono conservati i dati del profilo non è un archivio relazionale, il profilo consente l’integrazione con entità di dimensioni ridotte per creare segmenti in modo semplice e intuitivo. Questa integrazione è nota come [segmentazione su più entità](../segmentation/multi-entity-segmentation.md).
+
+La tua organizzazione può inoltre definire classi XDM per descrivere elementi diversi da singoli utenti, ad esempio negozi, prodotti o proprietà. Tali[!DNL XDM Individual Profile] Gli schemi sono chiamati &quot;entità dimensione&quot; (dette anche &quot;entità di ricerca&quot;) e non contengono dati relativi alle serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l’utilizzo di [relazioni dello schema](../xdm/tutorials/relationship-ui.md).
+
+Le entità di Dimension forniscono dati di ricerca che consentono e semplificano le definizioni di segmenti a più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
+
+![Un’infografica che mostra che un’entità profilo è composta da entità dimensione.](../profile/images/guardrails/profile-and-dimension-entities.png)

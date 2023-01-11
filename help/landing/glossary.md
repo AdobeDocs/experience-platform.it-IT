@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 0%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 0%
 
 **Libreria**: Nel contesto dei tag , una libreria è un set di regole di business che contiene istruzioni sul comportamento della libreria di tag sul dispositivo client.
 
-**Entità di ricerca**: Nel contesto della modellazione dei dati, le entità di ricerca rappresentano concetti che possono riferirsi a una singola persona, ma che non possono essere utilizzati direttamente per identificare l’individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate.
+**Entità di ricerca**: Nel contesto della modellazione dei dati, le entità di ricerca rappresentano concetti che possono riferirsi a una singola persona, ma che non possono essere utilizzati direttamente per identificare l’individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate e collegate a un’entità profilo tramite un [relazione schema](../xdm/tutorials/relationship-ui.md).
 
 ## M
 

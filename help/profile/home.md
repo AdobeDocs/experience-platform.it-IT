@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Panoramica del profilo cliente in tempo reale
 description: Profilo cliente in tempo reale unisce i dati provenienti da varie fonti e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Il rapporto tra Profilo cliente in tempo reale e altri servizi all’interno di 
 
 ### Composizione entità profilo
 
-Un profilo cliente in tempo reale è composto da un&#39;entità principale, denominata **entità principale** e varie entità di supporto. L’entità principale è composta da caratteristiche, comportamenti e appartenenze a segmenti di un profilo. Altre entità consentono al motore di segmentazione di utilizzare dati al di fuori dell’entità primaria del profilo e includono quanto segue:
+Un profilo cliente in tempo reale è composto da un&#39;entità principale, denominata **entità principale** e varie entità di supporto. Nel contesto dell’Experience Platform, l’entità principale è in genere un **entità profilo**, composto da caratteristiche, comportamenti e appartenenze a segmenti di una singola persona. Altre entità consentono al motore di segmentazione di utilizzare dati al di fuori dell’entità primaria del profilo e includono quanto segue:
 
 - **Entità dimensionale**: L’entità utilizzata per semplificare il processo di modellazione dei dati per le informazioni condivise tra eventi o record di profilo. Questa è nota anche come entità di ricerca o di classificazione.
 - **Entità B2B**: Entità che descrivono la relazione del profilo con gli account business-to-business e le opportunità.
@@ -36,6 +36,11 @@ Un profilo cliente in tempo reale è composto da un&#39;entità principale, deno
 >[!IMPORTANT]
 >
 >Poiché le entità dimensionali e B2B esistono solo al di fuori dell’entità primaria, queste vengono utilizzate solo per la segmentazione batch.
+
+Le entità dimensionali e B2B sono collegate all’entità principale tramite **relazioni dello schema**. Per ulteriori informazioni, consulta la seguente documentazione:
+
+- [Creare una relazione di schema uno-a-uno per le entità di ricerca](../xdm/tutorials/relationship-ui.md)
+- [Creare una relazione di schema molti-a-uno per le entità B2B](../xdm/tutorials/relationship-b2b.md)
 
 ### Archiviazione dati profilo
 
