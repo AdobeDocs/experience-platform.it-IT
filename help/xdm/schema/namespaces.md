@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Namespace in Experience Data Model (XDM)
 description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) ti consente di estendere gli schemi e impedire conflitti di campo quando diversi componenti dello schema vengono riuniti.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Le sezioni seguenti mostrano come gli spazi dei nomi vengono assegnati nella sin
 
 La sintassi XDM standard fornisce informazioni approfondite sulla rappresentazione dei namespace negli schemi (tra cui [come vengono tradotte in Adobe Experience Platform](#compatibility)).
 
-Utilizzo standard di XDM [JSON LD](https://json-ld.org/) sintassi per assegnare spazi dei nomi ai campi. Questo spazio dei nomi si presenta sotto forma di URI (ad esempio `https://ns.adobe.com/xdm` per `xdm` namespace) o come prefisso abbreviato configurato nel `@context` attributo di uno schema.
+Utilizzo standard di XDM [JSON LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintassi per assegnare spazi dei nomi ai campi. Questo spazio dei nomi si presenta sotto forma di URI (ad esempio `https://ns.adobe.com/xdm` per `xdm` namespace) o come prefisso abbreviato configurato nel `@context` attributo di uno schema.
 
 Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM standard. Ad eccezione di `@id` (l&#39;identificatore univoco definito dalla specifica JSON-LD), ogni campo in `properties` inizia con uno spazio dei nomi e termina con il nome del campo. Se si utilizza un prefisso abbreviato definito in `@context`, lo spazio dei nomi e il nome del campo sono separati da due punti (`:`). Se non si utilizza un prefisso , lo spazio dei nomi e il nome del campo sono separati da una barra (`/`).
 
@@ -75,7 +75,7 @@ Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM s
 | Proprietà | Descrizione |
 | --- | --- |
 | `@context` | Un oggetto che definisce i prefissi abbreviati che possono essere utilizzati al posto di un URI dello spazio dei nomi completo in `properties`. |
-| `@id` | Un identificatore univoco per il record definito dalla [Specifiche JSON-LD](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Un identificatore univoco per il record definito dalla [Specifiche JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Esempio di campo che utilizza un prefisso abbreviato per indicare uno spazio dei nomi. In questo caso, `xdm` è lo spazio dei nomi (`https://ns.adobe.com/xdm`) e `sku` è il nome del campo. |
 | `https://ns.adobe.com/xdm/channels/application` | Esempio di campo che utilizza l’URI dello spazio dei nomi completo. In questo caso, `https://ns.adobe.com/xdm/channels` è lo spazio dei nomi e `application` è il nome del campo. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | I campi forniti dalle risorse fornitore utilizzano spazi dei nomi univoci. In questo esempio, `https://ns.adobe.com/vendorA/product` è lo spazio dei nomi del fornitore e `stockNumber` è il nome del campo. |

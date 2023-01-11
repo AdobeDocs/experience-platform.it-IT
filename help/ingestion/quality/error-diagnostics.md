@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Diagnostica degli errori di acquisizione dei dati in recupero
 description: Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 3%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Risposta**
 
-Una risposta corretta restituirà oggetti JSON contenenti `path` oggetti in cui sono stati specificati i percorsi di salvataggio della diagnostica. La risposta restituirà il `path` oggetti in [Righe JSON](https://jsonlines.org/) formato.
+Una risposta corretta restituirà oggetti JSON contenenti `path` oggetti in cui sono stati specificati i percorsi di salvataggio della diagnostica. La risposta restituirà il `path` oggetti in [Righe JSON](https://jsonlines.readthedocs.io/en/latest/) formato.
 
 ```json
 {"path": "F1.json"}
