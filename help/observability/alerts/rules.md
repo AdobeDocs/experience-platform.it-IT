@@ -4,9 +4,9 @@ title: Regole di avviso standard
 description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '961'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Le seguenti regole di avviso sono specifiche per [Servizio di segmentazione](../
 | --- | --- | --- |
 | Informazioni sul processo di valutazione del segmento | Avvio processo segmento | Questo avviso viene attivato quando un processo di valutazione dei segmenti avvia l’elaborazione dei dati. |
 | Informazioni sul processo di valutazione del segmento | Processo del segmento riuscito | Questo avviso viene attivato quando un processo di valutazione dei segmenti viene completato correttamente. |
-| Ritardi, errori ed errori del processo di valutazione del segmento | Ritardo processo segmento | Questo avviso viene attivato quando il completamento di un processo di valutazione dei segmenti richiede più di 150 minuti. |
+| Ritardi, errori ed errori del processo di valutazione del segmento | Ritardo processo segmento | Questo avviso viene attivato quando il completamento di un processo di valutazione dei segmenti richiede più di 150 minuti. <br> Verrà visualizzato uno dei seguenti stati: <br>- ATTIVAZIONE - È stata soddisfatta la condizione per il guasto o il ritardo (considerarla in uno stato ATTIVO). <br>- INATTIVO - La condizione non è stata soddisfatta o non è stata risolta (Considerala in uno stato RISOLTO). |
 | Ritardi, errori ed errori del processo di valutazione del segmento | Errore del processo del segmento | Questo avviso si attiva quando un processo di valutazione del segmento genera un errore. |
 | Ritardi, errori ed errori del processo di valutazione del segmento | Definizione del segmento disabilitata | Questo avviso si attiva quando una definizione di segmento è disabilitata a causa di un errore interno. Questo attiva automaticamente una stanza di guerra per un team di ingegneri Adobe per indagare il problema. Questo avviso è inteso solo come informativo e non richiede alcuna azione da parte tua. |
 
