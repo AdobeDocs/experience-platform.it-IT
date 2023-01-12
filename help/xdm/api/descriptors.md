@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%
@@ -385,15 +385,15 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso del campo nello schema di origine in cui viene definita la relazione. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | La `$id` URI dello schema di destinazione con cui questo descrittore sta definendo una relazione. |
-| `xdm:destinationVersion` | Versione principale dello schema di destinazione. |
-| `xdm:destinationProperty` | Percorso facoltativo di un campo di destinazione nello schema di destinazione. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da qualsiasi campo contenente un descrittore di identità di riferimento corrispondente (vedere di seguito). |
+| `xdm:destinationSchema` | La `$id` URI dello schema di riferimento con cui questo descrittore sta definendo una relazione. |
+| `xdm:destinationVersion` | Versione principale dello schema di riferimento. |
+| `xdm:destinationProperty` | Percorso facoltativo di un campo di destinazione nello schema di riferimento. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da qualsiasi campo contenente un descrittore di identità di riferimento corrispondente (vedere di seguito). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Descrittore di identità di riferimento
 
-I descrittori di identità di riferimento forniscono un contesto di riferimento all’identità principale di un campo di schema, consentendo di farvi riferimento da campi di altri schemi. Lo schema di destinazione deve avere già un campo di identità principale definito prima che possa essere fatto riferimento da altri schemi tramite questo descrittore.
+I descrittori di identità di riferimento forniscono un contesto di riferimento all’identità principale di un campo di schema, consentendo di farvi riferimento da campi di altri schemi. Lo schema di riferimento deve avere già un campo di identità principale definito prima che possa essere fatto riferimento da altri schemi tramite questo descrittore.
 
 ```json
 {
@@ -410,7 +410,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 | `@type` | Il tipo di descrittore da definire. Per un descrittore di identità di riferimento, questo valore deve essere impostato su `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
-| `xdm:sourceProperty` | Percorso del campo nello schema di origine che verrà utilizzato per fare riferimento allo schema di destinazione. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Percorso del campo nello schema di origine che verrà utilizzato per fare riferimento allo schema di riferimento. Deve iniziare con un &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Codice dello spazio dei nomi identità per la proprietà sorgente. |
 
 {style=&quot;table-layout:auto&quot;}

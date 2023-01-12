@@ -2,7 +2,7 @@
 title: Casi d’uso della segmentazione per Real-time Customer Data Platform B2B Edition
 description: Panoramica dei vari casi di utilizzo disponibili per Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
@@ -42,7 +42,7 @@ L&#39;immagine seguente illustra le relazioni tra le classi B2B disponibili in R
 
 Poiché il modello dati può essere complicato, puoi utilizzare l’interfaccia utente di Platform per visualizzare una rappresentazione visiva più dettagliata del modello dati, al fine di trovare gli attributi rilevanti per il tuo caso d’uso. Per iniziare, passa all’interfaccia utente di Platform e seleziona Schemi nella navigazione a sinistra.
 
-Seleziona lo schema appropriato dall’elenco disponibile e seleziona la relazione appropriata dal [!UICONTROL Composizione] barra laterale. Nell&#39;esempio seguente, selezionando la relazione &quot;Persona&quot; viene mostrato quale attributo nello schema corrente fa riferimento allo schema &quot;Persona&quot; correlato (se si tratta dello schema di origine nella relazione), o viene fatto riferimento dallo schema &quot;Persona&quot; (se si tratta dello schema di destinazione nella relazione).
+Seleziona lo schema appropriato dall’elenco disponibile e seleziona la relazione appropriata dal [!UICONTROL Composizione] barra laterale. Nell&#39;esempio seguente, selezionando la relazione &quot;Persona&quot; viene mostrato quale attributo nello schema corrente fa riferimento allo schema &quot;Persona&quot; correlato (se si tratta dello schema di origine nella relazione), o viene fatto riferimento dallo schema &quot;Persona&quot; (se si tratta dello schema di riferimento nella relazione).
 
 ![esempio di chiave di origine che utilizza la relazione persone nell&#39;area di lavoro schema](../assets/segmentation/source-key-schema-relationship-example.png)
 

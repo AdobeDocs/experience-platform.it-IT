@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 2%
@@ -76,7 +76,7 @@ Il principale svantaggio dell&#39;utilizzo `identityMap` è che le identità ven
 
 >[!NOTE]
 >
->Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non come schema di destinazione. Questo perché tutti gli schemi di destinazione devono avere un&#39;identità visibile che può essere mappata in un campo di riferimento all&#39;interno dello schema di origine. Consulta la guida all’interfaccia utente in [relazioni](../tutorials/relationship-ui.md) per ulteriori informazioni sui requisiti degli schemi di origine e di destinazione.
+>Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non come schema di riferimento. Questo perché tutti gli schemi di riferimento devono avere un&#39;identità visibile che può essere mappata in un campo di riferimento all&#39;interno dello schema di origine. Consulta la guida all’interfaccia utente in [relazioni](../tutorials/relationship-ui.md) per ulteriori informazioni sui requisiti degli schemi di origine e di riferimento.
 
 Tuttavia, le mappe di identità possono essere particolarmente utili se inserisci dati provenienti da origini che memorizzano insieme le identità (ad esempio [!DNL Airship] o Adobe Audience Manager), o quando esiste un numero variabile di identità per uno schema. Inoltre, le mappe di identità sono necessarie se utilizzi [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 

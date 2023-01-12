@@ -2,7 +2,7 @@
 title: Definire una relazione tra due schemi in Real-time Customer Data Platform B2B Edition
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Questa esercitazione richiede una comprensione approfondita dei [!DNL XDM System
 * [Nozioni di base sulla composizione dello schema](../schema/composition.md): Introduzione dei blocchi costitutivi degli schemi XDM.
 * [Creare uno schema utilizzando [!DNL Schema Editor]](create-schema-ui.md): Un’esercitazione che illustra le nozioni di base su come creare e modificare gli schemi nell’interfaccia utente di .
 
-## Definire uno schema di origine e di destinazione
+## Definire uno schema di origine e di riferimento
 
 È previsto che siano già stati creati i due schemi che verranno definiti nella relazione. A scopo dimostrativo, questo tutorial crea una relazione tra opportunità di business (definite in un &quot;[!DNL Opportunities]&quot; schema) e il relativo account aziendale associato (definito in un &quot;[!DNL Accounts]&quot; schema).
 
-Le relazioni dello schema sono rappresentate da un campo dedicato all’interno di un **schema di origine** che fa riferimento al campo di identità principale di un **schema di destinazione**. Nei passi successivi, &quot;[!DNL Opportunities]&quot; funge da schema di origine, mentre &quot;[!DNL Accounts]&quot; agisce come schema di destinazione.
+Le relazioni dello schema sono rappresentate da un campo dedicato all’interno di un **schema di origine** che fa riferimento al campo di identità principale di un **schema di riferimento**. Nei passi successivi, &quot;[!DNL Opportunities]&quot; funge da schema di origine, mentre &quot;[!DNL Accounts]&quot; agisce come schema di riferimento.
 
 ### Informazioni sulle identità nelle relazioni B2B
 
@@ -53,7 +53,7 @@ Le relazioni dello schema sono rappresentate da un campo dedicato all’interno 
 >title="Spazio dei nomi identità di riferimento"
 >abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione. Per ulteriori informazioni sulle identità nelle relazioni B2B, consulta la documentazione ."
 
-Per stabilire una relazione, lo schema di destinazione deve avere un&#39;identità principale definita. Quando imposti un’identità primaria per un’entità B2B, ricorda che gli ID di entità basati su stringhe possono sovrapporsi se li raccogli tra sistemi o posizioni diversi, il che potrebbe causare conflitti di dati in Platform.
+Per stabilire una relazione, lo schema di riferimento deve avere un&#39;identità primaria definita. Quando imposti un’identità primaria per un’entità B2B, ricorda che gli ID di entità basati su stringhe possono sovrapporsi se li raccogli tra sistemi o posizioni diversi, il che potrebbe causare conflitti di dati in Platform.
 
 Per questo motivo, tutte le classi B2B standard contengono campi &quot;chiave&quot; conformi alla [[!UICONTROL Origine B2B] tipo di dati](../data-types/b2b-source.md). Questo tipo di dati fornisce campi per un identificatore di stringa per l’entità B2B, insieme ad altre informazioni contestuali sull’origine dell’identificatore. Uno di questi campi, `sourceKey`concatena i valori degli altri campi del tipo di dati per produrre un identificatore completamente univoco per l’entità. Questo campo deve sempre essere utilizzato come identità principale per gli schemi di entità B2B.
 
@@ -75,7 +75,7 @@ Come visto sotto **[!UICONTROL Proprietà schema]**, questo schema è stato abil
 
 ### [!DNL Accounts] schema
 
-Lo schema di destinazione &quot;[!DNL Accounts]&quot; si basa sul [!UICONTROL Account XDM] classe. Livello principale `accountKey` il campo contiene `sourceKey` che agisce come identità principale in uno spazio dei nomi personalizzato denominato [!DNL B2B Account]. Questo schema è stato abilitato anche per l’utilizzo in Profilo.
+Schema di riferimento &quot;[!DNL Accounts]&quot; si basa sul [!UICONTROL Account XDM] classe. Livello principale `accountKey` il campo contiene `sourceKey` che agisce come identità principale in uno spazio dei nomi personalizzato denominato [!DNL B2B Account]. Questo schema è stato abilitato anche per l’utilizzo in Profilo.
 
 ![Schema account](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ Lo schema di destinazione &quot;[!DNL Accounts]&quot; si basa sul [!UICONTROL Ac
 >title="Nome di relazione dallo schema di riferimento"
 >abstract="Etichetta che descrive la relazione dallo schema di riferimento allo schema corrente (ad esempio, &quot;Opportunità correlate&quot;). Questa etichetta viene utilizzata in Profilo e segmentazione per fornire contesto ai dati provenienti da entità B2B correlate. Consulta la documentazione per ulteriori informazioni sulla creazione di relazioni tra schemi B2B."
 
-Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che faccia riferimento all’identità primaria dello schema di destinazione. Le classi B2B standard includono campi chiave sorgente dedicati per le entità business comunemente correlate. Ad esempio, il [!UICONTROL Opportunità aziendali XDM] la classe contiene i campi della chiave di origine di un account correlato (`accountKey`) e una campagna correlata (`campaignKey`). Tuttavia, puoi anche aggiungere altri [!UICONTROL Origine B2B] allo schema utilizzando i gruppi di campi personalizzati se sono necessari più componenti di quelli predefiniti.
+Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che indichi l’identità primaria dello schema di riferimento. Le classi B2B standard includono campi chiave sorgente dedicati per le entità business comunemente correlate. Ad esempio, il [!UICONTROL Opportunità aziendali XDM] la classe contiene i campi della chiave di origine di un account correlato (`accountKey`) e una campagna correlata (`campaignKey`). Tuttavia, puoi anche aggiungere altri [!UICONTROL Origine B2B] allo schema utilizzando i gruppi di campi personalizzati se sono necessari più componenti di quelli predefiniti.
 
 >[!NOTE]
 >
->Attualmente, è possibile definire solo relazioni a uno e a uno solo da uno schema di origine a uno schema di destinazione. Per le relazioni uno-a-molti, è necessario definire il campo di relazione nello schema che rappresenta i &quot;molti&quot;.
+>Attualmente, è possibile definire solo relazioni molti-a-uno e uno-a-uno da uno schema di origine a uno schema di riferimento. Per le relazioni uno-a-molti, è necessario definire il campo di relazione nello schema che rappresenta i &quot;molti&quot;.
 
 Per impostare un campo di relazione, seleziona l’icona a forma di freccia (![Icona a freccia](../images/tutorials/relationship-b2b/arrow.png)) accanto al campo in questione all’interno dell’area di lavoro. Nel caso di [!DNL Opportunities] schema, è `accountKey.sourceKey` poiché l&#39;obiettivo è stabilire una relazione molti-a-uno con un account.
 
@@ -105,11 +105,11 @@ Viene visualizzata una finestra di dialogo che consente di specificare i dettagl
 
 ![Dialogo tra relazioni](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Sotto **[!UICONTROL Schema di riferimento]**, utilizza la barra di ricerca per trovare il nome dello schema di destinazione. Quando si evidenzia il nome dello schema di destinazione, la **[!UICONTROL Namespace di riferimento Identity]** Il campo viene aggiornato automaticamente allo spazio dei nomi dell&#39;identità principale dello schema.
+Sotto **[!UICONTROL Schema di riferimento]**, utilizza la barra di ricerca per trovare il nome dello schema di riferimento. Quando si evidenzia il nome dello schema di riferimento, la **[!UICONTROL Namespace di riferimento Identity]** Il campo viene aggiornato automaticamente allo spazio dei nomi dell&#39;identità principale dello schema.
 
 ![Schema di riferimento](../images/tutorials/relationship-b2b/reference-schema.png)
 
-Sotto **[!UICONTROL Nome relazione dallo schema corrente]** e **[!UICONTROL Nome della relazione dallo schema di riferimento]**, fornire nomi descrittivi per la relazione nel contesto rispettivamente degli schemi di origine e di destinazione. Al termine, seleziona **[!UICONTROL Salva]** per applicare le modifiche e salvare lo schema.
+Sotto **[!UICONTROL Nome relazione dallo schema corrente]** e **[!UICONTROL Nome della relazione dallo schema di riferimento]**, fornire nomi descrittivi per la relazione nel contesto rispettivamente degli schemi di origine e di riferimento. Al termine, seleziona **[!UICONTROL Salva]** per applicare le modifiche e salvare lo schema.
 
 ![Nome relazione](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ L’area di lavoro viene visualizzata nuovamente, con il campo di relazione ora 
 
 ![Relazione applicata](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-Se si visualizza la struttura dello schema di destinazione, il marcatore di relazione viene visualizzato accanto al campo di identità principale dello schema e nella barra a sinistra.
+Se si visualizza la struttura dello schema di riferimento, il marcatore di relazione viene visualizzato accanto al campo di identità principale dello schema e nella barra a sinistra.
 
 ![Marcatore di relazione schema di destinazione](../images/tutorials/relationship-b2b/destination-relationship.png)
 

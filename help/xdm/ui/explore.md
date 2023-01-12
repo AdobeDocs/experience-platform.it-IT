@@ -5,9 +5,9 @@ title: Esplorare le risorse dello schema nell’interfaccia utente
 description: Scopri come esplorare gli schemi, le classi, i gruppi di campi dello schema e i tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ I campi di identità sono evidenziati nell’area di lavoro con l’icona dell�
 
 Se stai analizzando uno schema contenente un campo di relazione, il campo verrà elencato nella barra a sinistra sotto **[!UICONTROL Relazioni]**. Seleziona il nome del campo di relazione nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente da quanto è nidificato.
 
-I campi di relazione vengono inoltre evidenziati in modo univoco nell’area di lavoro, mostrando il nome dello schema di destinazione a cui fa riferimento il campo. Se selezioni il nome del campo relazione, puoi visualizzare lo spazio dei nomi identità dell’identità principale dello schema di destinazione nella barra a destra.
+I campi di relazione vengono inoltre evidenziati in modo univoco nell’area di lavoro, mostrando il nome dello schema di riferimento a cui il campo si collega. Se selezioni il nome del campo relazione, puoi visualizzare lo spazio dei nomi identità dell&#39;identità principale dello schema di riferimento nella barra a destra.
 
 ![](../images/ui/explore/relationship-field.png)
 

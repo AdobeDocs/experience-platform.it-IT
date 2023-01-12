@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di sistema XDM
 description: Trova le risposte alle domande frequenti su Experience Data Model (XDM), inclusi i passaggi per la risoluzione di errori API comuni.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno s
 }
 ```
 
-Per abilitare gli schemi che contengono descrittori di relazione da utilizzare in [!DNL Profile], lo spazio dei nomi del campo di origine e dello spazio dei nomi primario del campo di destinazione deve essere lo stesso. Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno schema che contiene uno spazio dei nomi non corrispondente per il relativo descrittore di identità di riferimento. Assicurati che `xdm:namespace` il valore del campo di identità dello schema di destinazione corrisponde a quello del `xdm:identityNamespace` nel descrittore di identità di riferimento del campo di origine per risolvere il problema.
+>[!NOTE]
+>
+>Per questo errore, lo &quot;schema di destinazione&quot; fa riferimento allo schema di riferimento nella relazione.
+
+Per abilitare gli schemi che contengono descrittori di relazione da utilizzare in [!DNL Profile], lo spazio dei nomi del campo di origine e lo spazio dei nomi primario del campo di riferimento deve essere lo stesso. Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno schema che contiene uno spazio dei nomi non corrispondente per il relativo descrittore di identità di riferimento.
+
+Assicurati che `xdm:namespace` il valore del campo di identità dello schema di riferimento corrisponde a quello del `xdm:identityNamespace` nel descrittore di identità di riferimento del campo di origine per risolvere il problema.
 
 Per un elenco dei codici dei namespace di identità standard, consulta la sezione [namespace standard](../identity-service/namespaces.md) nella panoramica dello spazio dei nomi identità.
 
