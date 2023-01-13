@@ -2,9 +2,9 @@
 title: Cerca ordini di lavoro di igiene dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -104,4 +104,4 @@ La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni s
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consulta la seguente documentazione:
 
 * [Gestire le scadenze dei set di dati](./dataset-expiration.md)
-* [Gestisci eliminazioni record](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->
