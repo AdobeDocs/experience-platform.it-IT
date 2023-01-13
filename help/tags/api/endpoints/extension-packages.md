@@ -2,10 +2,10 @@
 title: Endpoint “extension_packages”
 description: Scopri come effettuare chiamate all’endpoint /extension_packages nell’API di Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 71%
+source-wordcount: '954'
+ht-degree: 70%
 
 ---
 
@@ -944,7 +944,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di e
 
 Una volta completato il test del pacchetto di estensione, puoi rilasciarlo privatamente. Questo lo rende disponibile alle proprietà della tua azienda.
 
-Dopo averlo rilasciato privatamente, puoi iniziare il processo di rilascio pubblico compilando il [modulo di richiesta di rilascio pubblico](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+Dopo averlo rilasciato privatamente, puoi iniziare il processo di rilascio pubblico compilando il [modulo di richiesta di rilascio pubblico](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **Formato API**
 
