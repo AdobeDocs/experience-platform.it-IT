@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connetti Looker al servizio query
 description: Questo documento descrive i passaggi necessari per la connessione di Looker con Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,11 @@ Questo documento descrive i passaggi per la connessione [!DNL Looker] con Adobe 
 >
 > Questa guida presuppone che tu abbia già accesso a [!DNL Looker] e conoscono bene come navigare nella relativa interfaccia. Ulteriori informazioni [!DNL Looker] si trova nella [ufficiale [!DNL Looker] documentazione](https://docs.looker.com/).
 
-Dopo aver effettuato l’accesso a [!DNL Looker], seleziona **[!DNL Admin]**, seguita da **[!DNL Connections]**.
+## Crea una nuova connessione al database {#create-connection}
 
-![La [!DNL Looker] dashboard con connessioni evidenziate dal menu a discesa Amministrazione.](../images/clients/looker/click-admin-connections.png)
+Dopo aver effettuato l’accesso a [!DNL Looker], seleziona **[!DNL Admin]**, seguita da **[!DNL Connections]**. La [!DNL Connections] viene visualizzata la pagina . Sulla [!DNL Connections] pagina, seleziona **[!DNL Add Connection]**.
 
-In questa pagina, seleziona **[!DNL New Connection]**.
-
-![Area di lavoro Connessioni con nuova connessione evidenziata.](../images/clients/looker/click-new-connection.png)
-
-Da qui è possibile compilare i dettagli delle impostazioni di connessione.
-
-![Pagina delle impostazioni delle connessioni per una nuova connessione.](../images/clients/looker/new-connection.png)
+Da qui, immetti i dettagli delle impostazioni di connessione elencate di seguito. Consulta la documentazione ufficiale di Looker per [istruzioni per creare una nuova connessione al database e descrizioni delle proprietà disponibili](https://cloud.google.com/looker/docs/connecting-to-your-db#creating_a_new_database_connection).
 
 - **[!DNL Name]:** Nome della connessione.
 - **[!DNL Dialect]:** Il dialetto utilizzato per il database SQL. [!DNL Query Service] utilizza **[!DNL PostgreSQL]**.
@@ -38,15 +32,17 @@ Da qui è possibile compilare i dettagli delle impostazioni di connessione.
 - **[!DNL Username and Password]:** Le credenziali di accesso che verranno utilizzate. Il nome utente sarà sotto forma di `ORG_ID@AdobeOrg`.
 - **SSL**: Abilita SSL per garantire una connessione sicura attraverso la rete.
 
+Per trovare le credenziali necessarie per collegare Looker a Query Service, accedi all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla navigazione a sinistra, seguita da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare le **host**, **porta**, **database**, **username** e **password** credenziali, leggere [guida alle credenziali](../ui/credentials.md).
+
+![La pagina Credenziali dell&#39;area di lavoro Query Experienci Platform con credenziali e le credenziali in scadenza evidenziate.](../images/clients/looker/query-service-credentials-page.png)
+
 >[!IMPORTANT]
 >
->Consulta la sezione [[!DNL Query Service] Documentazione SSL](./ssl-modes.md) per informazioni sul supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e su come connettersi utilizzando `verify-full` Modalità SSL.
+>[!DNL Query Service] offre inoltre credenziali non in scadenza per consentire una configurazione unica con client di terze parti. Consulta la documentazione per [istruzioni complete su come generare e utilizzare le credenziali non in scadenza](../ui/credentials.md#non-expiring-credentials). È necessario completare questo processo se si desidera collegare Looker come una configurazione una tantum. La `credential` e `technicalAccountId` i valori acquisiti comprendono il valore del Looker `password` parametro .
 
-Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
+Per informazioni sul supporto SSL per connessioni di terze parti in Adobe Experience Platform, consulta la [[!DNL Query Service] Documentazione SSL](./ssl-modes.md). Questo documento fornisce istruzioni su come connettersi utilizzando `verify-full` Modalità SSL.
 
-Dopo aver inserito i dettagli della connessione, seleziona **[!DNL Test These Settings]** per garantire il corretto funzionamento delle credenziali. In caso affermativo, di seguito verrà visualizzato un messaggio che indica che è possibile connettersi. Se la connessione ha esito positivo, seleziona **[!DNL Add Connection]** per creare la connessione.
-
-![È evidenziata la pagina delle impostazioni Connessioni per una nuova connessione con il test di queste impostazioni.](../images/clients/looker/click-test-connection.png)
+Dopo aver inserito i dettagli di connessione, seleziona **[!DNL Test These Settings]** per garantire il corretto funzionamento delle credenziali. Ulteriori informazioni [verifica delle impostazioni di connessione](https://cloud.google.com/looker/docs/connecting-to-your-db#testing_your_connection_settings) sono forniti nella documentazione ufficiale del Looker. Una volta stabilita la connessione, sullo schermo viene visualizzato un messaggio per indicare che è possibile connettersi. Una volta completata la connessione, seleziona **[!DNL Add Connection]** per creare la connessione.
 
 ## Passaggi successivi
 

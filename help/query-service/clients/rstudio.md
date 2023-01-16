@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collegare lo studio al servizio query
 description: Questo documento descrive i passaggi necessari per la connessione di R Studio con Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ Questo documento descrive i passaggi necessari per la connessione [!DNL RStudio]
 
 >[!NOTE]
 >
+> [!DNL RStudio] è stato modificato come [!DNL Posit]. [!DNL RStudio] i prodotti sono stati rinominati in [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud]e [!DNL Posit Academy].
+>
 > Questa guida presuppone che tu abbia già accesso a [!DNL RStudio] e sono a conoscenza di come usarlo. Ulteriori informazioni [!DNL RStudio] si trova nella [ufficiale [!DNL RStudio] documentazione](https://rstudio.com/products/rstudio/).
 > 
 > Inoltre, per utilizzare [!DNL RStudio] con Query Service, è necessario installare [!DNL PostgreSQL] Driver JDBC 4.2. È possibile scaricare il driver JDBC dal [[!DNL PostgreSQL] sito ufficiale](https://jdbc.postgresql.org/download/).
 
 ## Crea un [!DNL Query Service] connessione [!DNL RStudio] interfaccia
 
-Dopo l&#39;installazione [!DNL RStudio], devi installare il pacchetto RJDBC. Vai a **[!DNL Packages]** e seleziona **[!DNL Install]**.
+Dopo l&#39;installazione [!DNL RStudio], devi installare il pacchetto RJDBC. Istruzioni su come [collegare un database tramite la riga di comando](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) si trova nella documentazione ufficiale Posit.
 
-![La [!DNL RStudio] dashboard con pacchetti e installazione evidenziata.](../images/clients/rstudio/install-package.png)
+Se utilizzi un sistema operativo Mac puoi selezionare **[!UICONTROL Strumenti]** dalla barra dei menu seguita da **[!UICONTROL Installa pacchetti]** dal menu a discesa . In alternativa, seleziona la **[!DNL Packages]** nell’interfaccia utente di RStudio e seleziona **[!DNL Install]**.
 
-Viene visualizzato un pop-up che mostra la **[!DNL Install Packages]** schermo. Assicurati che **[!DNL Repository (CRAN)]** è selezionato per **[!DNL Install from]** sezione . Valore per **[!DNL Packages]** devono `RJDBC`. Assicurati **[!DNL Install dependencies]** è selezionato. Dopo aver confermato la correttezza di tutti i valori, seleziona **[!DNL Install]** per installare i pacchetti.
-
-![La finestra di dialogo Installa pacchetti con RJDBC è stata inserita nel campo Pacchetti e Installa evidenziata.](../images/clients/rstudio/install-jrdbc.png)
-
-Ora che il pacchetto RJDBC è stato installato, riavvia [!DNL RStudio] per completare il processo di installazione.
+Viene visualizzato un pop-up che mostra la **[!DNL Install Packages]** schermo. Assicurati che **[!DNL Repository (CRAN)]** è selezionato per **[!DNL Install from]** sezione . Valore per **[!DNL Packages]** devono `RJDBC`. Assicurati **[!DNL Install dependencies]** è selezionato. Dopo aver confermato la correttezza di tutti i valori, seleziona **[!DNL Install]** per installare i pacchetti. Ora che il pacchetto RJDBC è stato installato, riavvia [!DNL RStudio] per completare il processo di installazione.
 
 Dopo [!DNL RStudio] riavviato, è ora possibile connettersi al servizio query. Seleziona la **[!DNL RJDBC]** nel pacchetto **[!DNL Packages]** e immetti il comando seguente nella console:
 
@@ -53,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
 
-![Uscita della console in [!DNL RStudio] dalla connessione a Query Service.](../images/clients/rstudio/connection-rjdbc.png)
+Un messaggio nell’output della console conferma la connessione al servizio query.
 
 ## Scrittura di query
 

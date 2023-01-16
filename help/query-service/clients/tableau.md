@@ -4,44 +4,41 @@ solution: Experience Platform
 title: Connettere Tableau a Query Service
 description: Questo documento descrive i passaggi necessari per la connessione di Tableau con Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 2%
+source-wordcount: '447'
+ht-degree: 1%
 
 ---
 
 # Connetti [!DNL Tableau] al servizio query
 
-Questo documento descrive i passaggi per la connessione [!DNL Tableau] con Adobe Experience Platform [!DNL Query Service].
+Questo documento fornisce informazioni sulla connessione [!DNL Tableau] con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Questa guida presuppone che tu abbia già accesso a [!DNL Tableau] e conoscono bene come navigare nella relativa interfaccia. Ulteriori informazioni [!DNL Tableau] si trova nella [ufficiale [!DNL Tableau] documentazione](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-Connessione [!DNL Tableau] a [!DNL Query Service], apri [!DNL Tableau]e nella **[!DNL To a Server]** selezione della sezione **[!DNL More]** seguito da **[!DNL PostgreSQL]**
+Istruzioni su come [connettersi a un server PostgreSQL con Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) sono disponibili sul sito ufficiale Tableau. Una volta visualizzata la finestra di dialogo per le impostazioni di connessione, immetti le credenziali Platform nei campi dei parametri per la connessione con Adobe Experience Platform. Di seguito è riportato un elenco dei parametri di connessione richiesti.
 
-![La [!DNL Tableau] dashboard con altro e [!DNL PostgreSQL] evidenziato.](../images/clients/tableau/open-connection.png)
+| Parametro di connessione | Descrizione |
+|---|---|
+| **[!DNL Server]** | L&#39;indirizzo del percorso di archiviazione SFTP. Utilizza il valore del tuo Experience Platform **[!UICONTROL Host]** credenziale. |
+| **[!DNL Port]:** | La porta [!DNL Query Service]. È necessario utilizzare la porta **80** o **5432** per connettersi con [!DNL Query Service]. |
+| **[!DNL Database]** | Database a cui si desidera accedere. Utilizza il valore del tuo Experience Platform **[!UICONTROL Database]** credenziale: `prod:all`. |
+| **[!DNL Authentication]:** | Il metodo scelto per dimostrare l&#39;identità dell&#39;utente. È consigliabile selezionare [!DNL Username and Password] dalle opzioni disponibili del menu a discesa. |
+| **[!DNL Username]** | Questo è l’ID organizzazione della piattaforma. Utilizza il valore del tuo Experience Platform **[!UICONTROL Nome utente]** credenziale. L&#39;ID sarà nel formato di `ORG_ID@AdobeOrg`. |
+| **[!DNL Password]** | Questa stringa alfanumerica è il tuo Experience Platform **[!UICONTROL Password]** credenziale. Se desideri utilizzare credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati della variabile `technicalAccountID` e `credential` scaricato nel file JSON di configurazione. Il valore della password assume la forma di: {technicalAccountId}:{credential}. Il file JSON di configurazione per le credenziali non in scadenza è un download una tantum durante l&#39;inizializzazione di cui l&#39;Adobe non conserva una copia. |
 
-È ora possibile immettere i valori per la connessione con Adobe Experience Platform. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
+Per ulteriori informazioni su come trovare il nome utente, la password e le credenziali di accesso, leggere il [guida alle credenziali](../ui/credentials.md). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
 
-Verifica di aver selezionato il **[!UICONTROL Richiedi SSL]** prima di provare a connettersi.
-
->[!IMPORTANT]
->
->Consulta la sezione [[!DNL Query Service] Documentazione SSL](./ssl-modes.md) per informazioni sul supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e su come connettersi utilizzando `verify-full` Modalità SSL.
-
-![La [!DNL PostgreSQL] finestra di dialogo di connessione con dettagli di connessione completati.](../images/clients/tableau/sign-in.png)
+Verifica di aver selezionato il **[!UICONTROL Richiedi SSL]** prima di provare a connettersi. Consulta la sezione [Documentazione sulle modalità SSL](./ssl-modes.md) per informazioni sul supporto SSL per le connessioni di terze parti al servizio query Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Le strutture di dati nidificate negli strumenti BI di terze parti possono essere appiattite per migliorarne l’usabilità e ridurre il carico di lavoro necessario per recuperare, analizzare, trasformare e segnalare i dati. Consulta la documentazione sul[`FLATTEN` caratteristica](../best-practices/flatten-nested-data.md) per istruzioni su come attivare questa impostazione durante la connessione a un database.
 
-Dopo aver compilato tutte le credenziali, seleziona **[!DNL Sign In]** per continuare.
-
-Ora ti sei connesso a Adobe Experience Platform con un elenco delle tabelle visualizzato sul lato.
-
-![Nuovo [!DNL Tableau] dashboard con tabelle Query Service evidenziate nel pannello a sinistra.](../images/clients/tableau/connected.png)
+Dopo aver compilato tutte le credenziali, conferma le impostazioni per continuare. Ora ti sei connesso a Adobe Experience Platform.
 
 ## Passaggi successivi
 

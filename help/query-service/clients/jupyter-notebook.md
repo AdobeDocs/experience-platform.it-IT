@@ -1,9 +1,10 @@
 ---
 title: Collegare il blocco appunti Jupyter al servizio query
 description: Scopri come collegare Jupyter Notebook a Adobe Experience Platform Query Service.
-source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
+exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
+source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -21,16 +22,15 @@ Acquisizione delle credenziali necessarie per la connessione [!DNL Jupyter Noteb
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] è un&#39;interfaccia utente grafica desktop (GUI) che offre un modo più semplice di installare e avviare comuni [!DNL Python] programmi quali [!DNL Jupyter Notebook]. Consente inoltre di gestire pacchetti, ambienti e canali senza utilizzare comandi a riga di comando.
->È possibile [installa la versione preferita dell&#39;applicazione](https://docs.anaconda.com/anaconda/install/) dal loro sito web.
->Seguire il processo di installazione guidato. Dalla schermata iniziale di Anaconda Navigator, selezionare **[!DNL Jupyter Notebook]** dall&#39;elenco delle applicazioni supportate per avviare il programma.
->![La [!DNL Anaconda Navigator] schermata iniziale con [!DNL Jupyter Notebook] evidenziato.](../images/clients/jupyter-notebook/anaconda-navigator-home.png)
->Ulteriori informazioni sono disponibili nella [documentazione ufficiale](https://docs.anaconda.com/anaconda/navigator/).
+>Segui il processo guidato di installazione sul loro sito web a [installa la versione preferita dell&#39;applicazione](https://docs.anaconda.com/anaconda/install/).
+>Dalla schermata iniziale di Anaconda Navigator, selezionare **[!DNL Jupyter Notebook]** dall&#39;elenco delle applicazioni supportate per avviare il programma.
+>Ulteriori informazioni sono disponibili nella sezione [documentazione ufficiale di Anaconda](https://docs.anaconda.com/anaconda/navigator/).
+
+La documentazione ufficiale di Jupyter fornisce istruzioni su [eseguire il blocco appunti dall&#39;interfaccia della riga di comando](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Launch [!DNL Jupyter Notebook]
 
-Dopo aver aperto una nuova [!DNL Jupyter Notebook] applicazione web, selezionare **[!DNL New]** menu a discesa seguito da **[!DNL Python 3]** per creare un nuovo blocco appunti. La [!DNL Notebook] viene visualizzato l&#39;editor.
-
-![La [!DNL Jupiter Notebook] Scheda File con [!DNL New] a discesa e [!DNL Python] 3 evidenziato.](../images/clients/jupyter-notebook/new-notebook.png)
+Dopo aver aperto una nuova [!DNL Jupyter Notebook] applicazione web, selezionare **[!DNL New]** dall’interfaccia utente, seguita da **[!DNL Python 3]** per creare un nuovo blocco appunti. La [!DNL Notebook] viene visualizzato l&#39;editor.
 
 Sulla prima riga del [!DNL Notebook] editor, inserisci il seguente valore: `pip install psycopg2-binary` e seleziona **[!DNL Run]** dalla barra dei comandi. Sotto la riga di input viene visualizzato un messaggio di operazione riuscita.
 
@@ -38,11 +38,7 @@ Sulla prima riga del [!DNL Notebook] editor, inserisci il seguente valore: `pip 
 >
 >Come parte di questo processo per creare una connessione, è necessario selezionare **[!DNL Run]** per eseguire ogni riga di codice.
 
-![La [!DNL Notebook] Interfaccia utente con il comando installa librerie evidenziato.](../images/clients/jupyter-notebook/install-library.png)
-
 Quindi, importa un [!DNL PostgreSQL] scheda di database per [!DNL Python]. Immetti il valore: `import psycopg2`e seleziona **[!DNL Run]**. Nessun messaggio di successo per questo processo. Se non è presente alcun messaggio di errore, continua con il passaggio successivo.
-
-![La [!DNL Notebook] Interfaccia utente con il codice del driver del database di importazione evidenziato.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 È ora necessario fornire le credenziali Adobe Experience Platform immettendo il valore: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Le credenziali di connessione si trovano nella [!UICONTROL Query] nella sezione [!UICONTROL Credenziali] scheda dell’interfaccia utente di Platform. Consulta la documentazione su come [trova le credenziali aziendali](../ui/credentials.md) per istruzioni dettagliate.
 
@@ -50,9 +46,11 @@ Si consiglia di utilizzare le credenziali non in scadenza quando si utilizzano c
 
 >[!IMPORTANT]
 >
->Durante la copia delle credenziali dall’interfaccia utente di Platform, assicurati che non vi sia alcuna formattazione aggiuntiva delle credenziali. Devono essere tutti in una riga, con un unico spazio tra le proprietà e i valori. Le credenziali sono racchiuse tra virgolette e **not** separati da virgole.
+>Durante la copia delle credenziali dall’interfaccia utente di Platform, non è necessario formattare ulteriormente le credenziali. È possibile assegnarle in una riga, con un singolo spazio tra le proprietà e i valori. Le credenziali sono racchiuse tra virgolette e **not** separati da virgole.
 
-![La [!DNL Notebook] Interfaccia utente con le credenziali di connessione evidenziate.](../images/clients/jupyter-notebook/provide-credentials.png)
+```python
+conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"
+```
 
 Le [!DNL Jupyter Notebook] L’istanza è ora connessa al servizio query.
 
@@ -62,29 +60,25 @@ Ora che ti sei connesso [!DNL Jupyter Notebook] per eseguire query sui set di da
 
 Immetti i seguenti valori:
 
-```console
+```python
 cur = conn.cursor()
-cur.execute('''{YOUR_QUERY_HERE}''')
+cur.execute('''<YOUR_QUERY_HERE>''')
 data = [r for r in cur]
 ```
 
 Quindi, chiama il parametro (`data` nell’esempio precedente) per visualizzare i risultati della query in una risposta non formattata.
-
-![La [!DNL Notebook] Interfaccia utente con comandi per restituire e visualizzare i risultati SQL all&#39;interno del blocco appunti.](../images/clients/jupyter-notebook/example-query.png)
 
 Per formattare i risultati in modo più leggibile, utilizzare i seguenti comandi:
 
 - `colnames = [desc[0] for desc in cur.description]`
 - `import pandas as pd`
 - `import numpy as np`
+- `df = pd.DataFrame(samples,columns=colnames)`
+- `df.fillna(0,inplace=True)`
 
 Questi comandi non generano un messaggio di successo. Se non è presente alcun messaggio di errore, è possibile utilizzare una funzione per generare i risultati della query SQL in un formato tabella.
 
-![Comandi necessari per formattare i risultati SQL.](../images/clients/jupyter-notebook/format-results-commands.png)
-
 Inserisci ed esegui il `df.head()` per visualizzare i risultati della query tabularizzata.
-
-![Risultati tabularizzati della query SQL in [!DNL Jupyter Notebook].](../images/clients/jupyter-notebook/format-results-output.png)
 
 ## Passaggi successivi
 
