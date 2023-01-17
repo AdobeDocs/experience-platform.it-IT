@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Origine area di destinazione dei dati
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
+
+>[!IMPORTANT]
+>
+>Questa pagina è specifica per [!DNL Data Landing Zone] *source* connettore in Experience Platform. Per informazioni sulla connessione al [!DNL Data Landing Zone] *destinazione* connettore, fare riferimento alla [[!DNL Data Landing Zone] pagina della documentazione di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione file sicura basata su cloud per l’importazione di file in Platform. Hai accesso a uno [!DNL Data Landing Zone] Il contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato ai dati totali forniti con la licenza Platform Products and Services . Tutti i clienti di Platform e dei relativi servizi applicativi, quali [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]e [!DNL Adobe Real-Time Customer Data Platform] dispongono di un provisioning [!DNL Data Landing Zone] contenitore per sandbox. È possibile leggere e scrivere file nel contenitore attraverso [!DNL Azure Storage Explorer] o l&#39;interfaccia della riga di comando.
 

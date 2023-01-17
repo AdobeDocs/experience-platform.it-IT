@@ -3,14 +3,18 @@ keywords: Experience Platform;home;argomenti comuni;Data Landing Zone;data landi
 title: Collegare l’area di destinazione dei dati alla piattaforma utilizzando l’interfaccia utente
 description: Scopri come creare un connettore sorgente dell’area di destinazione dei dati utilizzando l’interfaccia utente di Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
 # Connetti [!DNL Data Landing Zone] su Platform tramite l’interfaccia utente
+
+>[!IMPORTANT]
+>
+>Questa pagina è specifica per [!DNL Data Landing Zone] *source* connettore in Experience Platform. Per informazioni sulla connessione al [!DNL Data Landing Zone] *destinazione* connettore, fare riferimento alla [[!DNL Data Landing Zone] pagina della documentazione di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] è una struttura di archiviazione file sicura basata su cloud per l’importazione di file in Adobe Experience Platform. I dati vengono eliminati automaticamente dal [!DNL Data Landing Zone] dopo sette giorni.
 
