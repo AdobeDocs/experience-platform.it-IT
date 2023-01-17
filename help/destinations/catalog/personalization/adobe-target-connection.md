@@ -3,9 +3,9 @@ keywords: personalizzazione mirata; destinazione; destinazione target experience
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale in tutte le interazioni dei clienti in entrata tra siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
+source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * **Nome**: Compila il nome preferito per questa destinazione.
 * **Descrizione**: Inserisci una descrizione per la destinazione. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione. Questo campo è facoltativo.
-* **ID Datastream**: Questo determina in quale datastream di raccolta dati i segmenti saranno inclusi. Il menu a discesa mostra solo i datastreams con la destinazione Target abilitata. Vedi [configurazione di un datastream](../../../edge/datastreams/overview.md#target) per informazioni dettagliate su come configurare un datastream per Adobe Target.
+* **ID Datastream**: Questo determina in quale datastream di raccolta dati i segmenti saranno inclusi. Il menu a discesa mostra solo i datastreams con i servizi Target e Adobe Experience Platform abilitati. Vedi [configurazione di un datastream](../../../edge/datastreams/configure.md#aep) per informazioni dettagliate su come configurare un datastream per Adobe Experience Platform e Adobe Target.
    * **[!UICONTROL Nessuno]**: Seleziona questa opzione se hai bisogno di configurare la personalizzazione Adobe Target ma non puoi implementare il [Experience Platform Web SDK](../../../edge/home.md). Quando utilizzi questa opzione, i segmenti esportati da Experience Platform a Target supportano solo la personalizzazione a sessione successiva e la segmentazione edge viene disabilitata. Per ulteriori informazioni, consulta la tabella seguente.
 
 | Nessun datastream selezionato | Datastream selezionato |
