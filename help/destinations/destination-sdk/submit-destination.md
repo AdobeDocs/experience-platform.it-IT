@@ -2,9 +2,9 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione di prodotto creata utilizzando Destination SDK.
 title: Invia per la revisione di una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
+source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -29,23 +29,25 @@ Prima che la destinazione possa essere pubblicata nel [Catalogo delle destinazio
 In questa pagina sono elencate tutte le informazioni da fornire durante l’invio o l’aggiornamento di una destinazione creata con Adobe Experience Platform Destination SDK. Per inviare correttamente una destinazione in Adobe Experience Platform, invia un messaggio e-mail a <aepdestsdk@adobe.com> che include:
 
 * Una descrizione dei casi di utilizzo risolti dalla destinazione. Questo non è necessario se aggiorni una configurazione di destinazione esistente.
-* Verifica i risultati dopo aver utilizzato l’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe:
-   * Chiamata API effettuata all&#39;endpoint di destinazione.
-   * Risposta API ricevuta dall’endpoint di destinazione.
+* Verifica i risultati dopo aver utilizzato l’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe una chiamata API effettuata all’endpoint di destinazione e la risposta API ricevuta dall’endpoint di destinazione.
+* Requisiti aggiuntivi per le destinazioni basate su file:
+   * Condividi una richiesta e un esempio di risposta dopo aver utilizzato l’API di test per [verifica la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+   * Allega un file di esempio generato dalla destinazione ed esportato nel percorso di archiviazione.
+   * Invia una forma di prova per verificare che il file esportato sia stato correttamente acquisito dal percorso di archiviazione nel sistema.
 * Prova di aver inviato una richiesta di pubblicazione di destinazione per la destinazione utilizzando [API di pubblicazione della destinazione](./destination-publish-api.md).
 * Una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
 * Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni Experience Platform.
 
 Puoi trovare informazioni dettagliate su ogni elemento nelle sezioni seguenti:
 
-## Descrizione del caso d’uso
+## Descrizione del caso d’uso {#use-case-description}
 
 Fornisci una descrizione dei casi d’uso che la tua destinazione risolve per i clienti di Experience Platform. Le descrizioni possono essere simili ai casi d&#39;uso dei partner esistenti:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
 * [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il targeting di un gruppo di pubblico specifico tenuto fuori dagli indirizzi e-mail in Verizon Media (VMG) possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l&#39;API in tempo quasi reale di VMG.
 
-## Risultati del test dopo l’utilizzo dell’API di destinazione del test
+## Risultati del test dopo l’utilizzo dell’API di destinazione del test {#testing-api-response}
 
 Fornire i risultati dei test dopo l&#39;utilizzo del [API di destinazione del test](./test-destination.md) per eseguire una chiamata HTTP alla destinazione. Ciò include:
 
@@ -215,15 +217,35 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## Prova dell&#39;invio di una richiesta di pubblicazione di destinazione
+## Requisiti aggiuntivi per le destinazioni basate su file {#additional-file-based-destination-requirements}
+
+Per le destinazioni basate su file, è necessario fornire una prova aggiuntiva per verificare di aver configurato correttamente la destinazione. Assicurati di includere gli elementi seguenti:
+
+### Verifica della risposta API {#testing-api-response-file-based}
+
+Includi una richiesta e un esempio di risposta dopo aver utilizzato l’API di test per [verifica la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+
+### Allega file esportato {#attach-exported-file}
+
+Nel tuo [email di invio](#download-sample-email), allega un file CSV esportato nel percorso di archiviazione in base alla destinazione impostata.
+
+### Prova del successo dell’acquisizione {#proof-of-successful-ingestion}
+
+Infine, è necessario fornire una forma di prova del corretto inserimento dei dati nel sistema dopo l’esportazione nel percorso di archiviazione fornito. Fornisci uno dei seguenti elementi:
+
+* Schermate o un breve video di screencapture in cui si prende il file manualmente dal percorso di archiviazione e lo si inserisce nel sistema.
+* Screenshot o un breve video di screencapture in cui l&#39;interfaccia utente del sistema conferma che il nome file generato da Experience Platform è stato acquisito correttamente nel sistema.
+* Registra le righe del sistema che possono essere Adobi con il nome del file o con i dati generati da Experience Platform.
+
+## Prova dell&#39;invio di una richiesta di pubblicazione di destinazione {#destination-publishing-request-proof}
 
 Dopo aver verificato con successo la destinazione, devi utilizzare il [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la destinazione ad Adobe per la revisione e la pubblicazione.
 
 Fornisci l&#39;ID della richiesta di pubblicazione per la tua destinazione. Per informazioni su come recuperare l’ID richiesta di pubblicazione, leggi [Elenca richieste di pubblicazione di destinazione](./destination-publish-api.md#retrieve-list).
 
-## Documentazione di destinazione PR (richiesta pull) per le integrazioni prodotte
+## Documentazione di destinazione PR (richiesta pull) per le integrazioni prodotte {#documentation-pr}
 
-Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
+Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), è necessario utilizzare [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
 
 ## Logo per la destinazione {#logo}
 
@@ -233,6 +255,6 @@ I requisiti delle immagini sono:
 * **Formato**: `SVG`
 * **Dimensione**: inferiore a 2 MB
 
-## Scarica e-mail di esempio
+## Scarica e-mail di esempio {#download-sample-email}
 
 [Scarica](./assets/sample-email-submit-destination.rtf) un’e-mail di esempio con tutte le informazioni necessarie da fornire ad Adobe.
