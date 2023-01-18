@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: Connessione hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale al tuo [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati dall'Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fd6a9f082c830de5a46d484bccfeba3b4116d05d
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Se selezioni la **[!UICONTROL Autenticazione standard]** digita per connettersi 
 * **[!UICONTROL Nome chiave SAS]**: Nome della regola di autorizzazione, noto anche come nome della chiave SAS.
 * **[!UICONTROL Chiave SAS]**: Chiave primaria dello spazio dei nomi Hubs evento. La `sasPolicy` che `sasKey` corrisponde a **gestire** diritti configurati per popolare l’elenco Hub eventi. Informazioni sull&#39;autenticazione in [!DNL Azure Event Hubs] con le chiavi SAS nel [Documentazione di Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Riempi il tuo [!DNL Azure Event Hubs] spazio dei nomi. Scopri [!DNL Azure Event Hubs] spazi dei nomi nel [Documentazione di Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Namespace]**: Riempi il tuo [!DNL Azure Event Hubs] spazio dei nomi. Scopri [!DNL Azure Event Hubs] spazi dei nomi nel [Documentazione di Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Nome hub eventi]**: Riempi il tuo [!DNL Azure Event Hub] nome . Scopri [!DNL Azure Event Hubs] i nomi nel [Documentazione di Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Compila i dettagli della destinazione {#destination-details}
 
