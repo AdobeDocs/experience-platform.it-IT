@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo accessi;controll
 title: Guida end-to-end per il controllo dell'accesso basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2425'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Sarà possibile:
 
 * [Etichettare i ruoli per gli utenti](#label-roles): Utilizzare l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
 * [Etichettare le risorse (campi e segmenti di schema)](#label-resources): Assegna **[!UICONTROL PHI/Dati sanitari regolamentati]** alle risorse e ai segmenti dello schema.
-* [Creare il criterio che li collegherà](#policy): Crea un criterio per collegare le etichette delle risorse alle etichette del tuo ruolo, negando l’accesso ai campi e ai segmenti dello schema. In questo modo verrà negato l’accesso al campo dello schema e al segmento in tutte le sandbox per gli utenti che non dispongono di etichette corrispondenti.
+* [Creare il criterio che li collegherà](#policy): Crea un criterio per collegare le etichette delle risorse alle etichette del tuo ruolo, negando l’accesso ai campi e ai segmenti dello schema. In questo modo gli utenti che hanno etichette corrispondenti potranno accedere al campo dello schema e al segmento in tutte le sandbox.
 
 ## Autorizzazioni
 
