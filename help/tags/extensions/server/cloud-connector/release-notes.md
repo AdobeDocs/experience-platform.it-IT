@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione per l’estensione Adobe Experience Platform Cloud Connector
 description: Note aggiornate sulla versione dell'estensione Cloud Connector in Adobe Experience Platform.
-source-git-commit: 8a478c727b3b97de53ba303fbda4dd1502ff6a0d
+source-git-commit: e232ad7a9b581e65f7f4240bbc06155aec409eb7
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 25%
+source-wordcount: '128'
+ht-degree: 22%
 
 ---
 
@@ -20,4 +20,5 @@ v1.0.1
 
 * È stato risolto un problema a causa del quale un JSON valido incollato nell’area di testo Body Raw veniva salvato come stringa invece di JSON.
 * Non consentire l’impostazione di Body nelle richieste GET o HEAD.
+* Correggere un bug che causava il mancato salvataggio di una risposta di dimensioni superiori a 5 KB.
 
