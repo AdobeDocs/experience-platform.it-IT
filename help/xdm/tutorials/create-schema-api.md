@@ -5,9 +5,9 @@ title: Creare uno schema utilizzando l’API del Registro di sistema dello schem
 type: Tutorial
 description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per guidarti nei passaggi necessari per comporre uno schema utilizzando una classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 2%
 La [!DNL Schema Registry] viene utilizzato per accedere al [!DNL Schema Library] in Adobe Experience Platform. La [!DNL Schema Library] contiene le risorse messe a tua disposizione per Adobe, [!DNL Experience Platform] partner e fornitori di cui utilizzi le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse della libreria disponibili.
 
 Questa esercitazione utilizza la funzione [!DNL Schema Registry] API per seguire i passaggi necessari per comporre uno schema utilizzando una classe standard. Se preferisci utilizzare l’interfaccia utente in [!DNL Experience Platform], [Tutorial dell’Editor di schema](create-schema-ui.md) fornisce istruzioni dettagliate per eseguire azioni simili nell’editor dello schema.
+
+>[!NOTE]
+>
+>Se acquisisci dati CSV in Platform, puoi [mappare tali dati su uno schema XDM creato dai consigli generati dall’intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
 
 ## Introduzione
 

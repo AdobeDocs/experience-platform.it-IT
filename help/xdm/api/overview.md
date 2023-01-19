@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’API del Registro di sistema dello schema
 description: L’API del Registro di sistema dello schema consente agli sviluppatori di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,9 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati acquisiti in Platform. Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Puoi creare, visualizzare, modificare ed eliminare gli schemi utilizzando la funzione `/schemas` punto finale. Per informazioni su come utilizzare questo endpoint, consulta la sezione [guida all’endpoint degli schemi](./schemas.md).
 
-Per una guida dettagliata su come creare uno schema completo nell’API del Registro di sistema dello schema, inclusa la creazione e l’aggiunta di gruppi di campi e tipi di dati, consulta la sezione [Esercitazione sulla creazione di uno schema API](../tutorials/create-schema-api.md).
+Per una guida dettagliata su come creare manualmente uno schema completo nell’API del Registro di sistema dello schema, inclusa la creazione e l’aggiunta di gruppi di campi e tipi di dati, consulta la sezione [Esercitazione sulla creazione di uno schema API](../tutorials/create-schema-api.md).
+
+Se acquisisci dati CSV, consulta la sezione [Conversione da CSV a schema](#csv-to-schema).
 
 ## Comportamenti
 
@@ -62,6 +64,10 @@ Per informazioni su come visualizzare le unioni nell’API del Registro di siste
 Puoi generare automaticamente uno schema XDM utilizzando un file CSV come modello, per creare modelli che importino in blocco i campi dello schema e tagliano le operazioni manuali di API o interfaccia utente.
 
 Consulta la sezione [Guida all’endpoint di conversione da CSV a schema](./export.md) per ulteriori informazioni.
+
+>[!NOTE]
+>
+>Puoi inoltre utilizzare l’interfaccia utente per [mappare un CSV su uno schema utilizzando i consigli generati dall’intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta).
 
 ## Esporta {#export}
 

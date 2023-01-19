@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare schemi nell’interfaccia utente
 description: Scopri le nozioni di base su come creare e modificare schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Questa guida fornisce una panoramica su come creare, modificare e gestire gli sc
 Questa guida richiede una buona comprensione del sistema XDM. Fai riferimento a [Panoramica di XDM](../../home.md) introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) per una panoramica della creazione degli schemi.
 
 ## Creare un nuovo schema {#create}
+
+>[!NOTE]
+>
+>Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se acquisisci dati CSV in Platform, puoi optare per [mappare tali dati su uno schema XDM creato dai consigli generati dall’intelligenza artificiale](../../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
 
 In [!UICONTROL Schemi] area di lavoro, seleziona **[!UICONTROL Creare uno schema]** nell&#39;angolo in alto a destra. Nel menu a discesa visualizzato, puoi scegliere tra **[!UICONTROL Profilo individuale XDM]** e **[!UICONTROL ExperienceEvent XDM]** come classe base per lo schema. In alternativa, è possibile selezionare **[!UICONTROL Sfoglia]** per selezionare dall’elenco completo delle classi disponibili, oppure [creare una nuova classe personalizzata](./classes.md#create) invece.
 
