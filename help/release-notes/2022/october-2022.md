@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -104,8 +104,8 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 
 | Funzione | Descrizione |
 | --- | --- |
-| Monitorare le query tramite l’interfaccia utente di Platform | Servizio query [!UICONTROL Query pianificate] La scheda fornisce una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. È ora possibile trovare informazioni importanti sullo stato delle esecuzioni della query, inclusi i messaggi di errore e i codici in caso di errore, da [!UICONTROL Query pianificate] scheda . Puoi anche abbonarti agli avvisi tramite l’interfaccia utente per tutte queste query in base al loro stato. Consulta la sezione [Documento Query di monitoraggio](../../query-service/monitor-queries.md) per ulteriori informazioni su questa funzione. |
-| Modello di dati per informazioni di reporting accelerate per query | Come parte dello SKU di Data Distiller, lo store con accelerazione query ti consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai tuoi dati. Con l’archivio con accelerazione query è possibile creare un modello dati personalizzato e/o estenderlo ai modelli dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni di reporting e le relative visualizzazioni. Consulta la sezione [documento approfondimenti reportistica di archivio accelerato di query](../../query-service/query-accelerated-store/reporting-insights-data-model.md) per ulteriori informazioni su questa funzione. |
+| Monitorare le query tramite l’interfaccia utente di Platform | Servizio query [!UICONTROL Query pianificate] La scheda fornisce una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. È ora possibile trovare informazioni importanti sullo stato delle esecuzioni della query, inclusi i messaggi di errore e i codici in caso di errore, da [!UICONTROL Query pianificate] scheda . Puoi anche abbonarti agli avvisi tramite l’interfaccia utente per tutte queste query in base al loro stato. Consulta la sezione [Documento Query di monitoraggio](../../query-service/ui/monitor-queries.md) per ulteriori informazioni su questa funzione. |
+| Modello di dati per informazioni di reporting accelerate per query | Come parte dello SKU di Data Distiller, lo store con accelerazione query ti consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai tuoi dati. Con l’archivio con accelerazione query è possibile creare un modello dati personalizzato e/o estenderlo ai modelli dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni di reporting e le relative visualizzazioni. Consulta la sezione [documento approfondimenti reportistica di archivio accelerato di query](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) per ulteriori informazioni su questa funzione. |
 
 {style=&quot;table-layout:auto&quot;}
 

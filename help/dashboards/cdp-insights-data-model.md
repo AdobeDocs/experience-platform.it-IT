@@ -2,7 +2,7 @@
 title: Modello dati di Real-time Customer Data Platform Insights
 description: Scopri come utilizzare le query SQL con i modelli di dati di Real-time Customer Data Platform Insights per personalizzare i tuoi report Real-Time CDP per i tuoi casi d’uso di marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Modello dati di Real-time Customer Data Platform Insights
 
-La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che consentono di acquisire informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato query . [come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che forniscono informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato query . [come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisiti
 

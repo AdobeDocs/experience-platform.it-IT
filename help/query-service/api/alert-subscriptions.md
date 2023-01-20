@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;avviso;
-title: Endpoint API per sottoscrizioni di avvisi
+title: Endpoint sottoscrizioni di avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint delle sottoscrizioni di avvisi con l’API del servizio query.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 2%
 
 ---
 
-# Endpoint API per sottoscrizioni di avvisi
+# Endpoint sottoscrizioni di avvisi
 
-Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Il contenuto delle notifiche è lo stesso per gli avvisi in-Platform e gli avvisi e-mail. Attualmente, gli avvisi di query possono essere abbonati solo a utilizzando [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform Query Service consente di sottoscrivere avvisi per query ad hoc e pianificate. Gli avvisi possono essere ricevuti tramite e-mail, all’interno dell’interfaccia utente di Platform o per entrambi. Il contenuto delle notifiche è lo stesso per gli avvisi in-Platform e gli avvisi e-mail. Attualmente, gli avvisi di query possono essere abbonati solo utilizzando il [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >

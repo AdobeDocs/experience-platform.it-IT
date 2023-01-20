@@ -1,0 +1,17 @@
+---
+title: Invia query accelerate
+description: Introduzione all’API delle query accelerate.
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 0%
+
+---
+
+# Invia query accelerate
+
+Come parte della SKU di Data Distiller, la [API del servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/) consente di eseguire query senza stato nell’archivio accelerato. La [endpoint di query accelerate](https://developer.adobe.com/experience-platform-apis/references/query-service/#tag/Accelerated-Queries) restituisce risultati basati su dati aggregati per ridurre il tempo di attesa dei risultati e fornire uno scambio di informazioni più interattivo.
+
+Consulta la sezione [Endpoint Query accelerate](../../api/accelerated-queries.md) documentazione per istruzioni su come eseguire query sull&#39;archivio accelerato.
+
+Con l’archivio con accelerazione query è possibile creare un modello dati personalizzato e/o estendere un modello dati Adobe Real-time Customer Data Platform esistente. Per interagire con o incorporare le tue informazioni di reporting in un framework di reporting/visualizzazione, consulta la [guida alle informazioni di reporting per archivi accelerate delle query](./reporting-insights-data-model.md). Puoi anche leggere la documentazione di Real-time Customer Data Platform Insights Data Model per scoprire come [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi di utilizzo di marketing e indicatori prestazioni chiave (KPI, Key Performance Indicator)](../../../dashboards/cdp-insights-data-model.md).

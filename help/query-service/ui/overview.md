@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all’interfaccia utente del servizio query
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 1%
@@ -46,7 +46,7 @@ Una volta pianificata una query, questa viene visualizzata nell’elenco delle q
 | **[!UICONTROL Timestamp ultima esecuzione]** | La marca temporale più recente all’esecuzione della query. Questa colonna evidenzia se una query è stata eseguita in base alla pianificazione corrente. |
 | **[!UICONTROL Stato dell&#39;ultima esecuzione]** | Lo stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
 
-Consulta la documentazione per ulteriori informazioni su come [monitorare le query tramite l’interfaccia utente del servizio query](../monitor-queries.md).
+Consulta la documentazione per ulteriori informazioni su come [monitorare le query tramite l’interfaccia utente del servizio query](./monitor-queries.md).
 
 ## Modelli {#browse}
 

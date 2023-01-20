@@ -2,7 +2,7 @@
 title: Filtro bot in Query Service con apprendimento automatico
 description: Questo documento fornisce una panoramica sull’utilizzo di Query Service e machine learning per determinare l’attività di bot e filtrare le loro azioni in base al traffico dei visitatori del sito web online.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 L’attività dei bot può influire sulle metriche di analisi e compromettere l’integrità dei dati. Adobe Experience Platform [!DNL Query Service] può essere utilizzato per mantenere la qualità dei dati attraverso il processo di filtraggio dei bot.
 
-Il filtraggio dei bot consente di mantenere la qualità dei dati rimuovendo in modo ampio la contaminazione dei dati risultante dall’interazione non umana con il sito web. Questo processo si ottiene attraverso la combinazione di query SQL e apprendimento automatico.
+Il filtraggio dei bot ti consente di mantenere la qualità dei dati rimuovendo in modo ampio la contaminazione dei dati risultante dall’interazione non umana con il tuo sito web. Questo processo si ottiene attraverso la combinazione di query SQL e apprendimento automatico.
 
 L’attività bot può essere identificata in diversi modi. L’approccio adottato in questo documento si concentra sui picchi di attività, in questo caso, il numero di azioni intraprese da un utente in un dato periodo di tempo. Inizialmente, una query SQL imposta arbitrariamente una soglia per il numero di azioni intraprese in un periodo di tempo per qualificarsi come attività bot. Questa soglia viene quindi perfezionata dinamicamente utilizzando un modello di apprendimento automatico per migliorare la precisione di questi rapporti.
 
@@ -169,6 +169,6 @@ Il modello di esempio è stato determinato con un alto grado di precisione in ba
 
 ## Passaggi successivi
 
-Leggendo questo documento si ha una migliore comprensione di come utilizzare [!DNL Query Service] e l&#39;apprendimento automatico per determinare e filtrare l&#39;attività bot.
+Leggendo questo documento, si ha una migliore comprensione di come utilizzare [!DNL Query Service] e l&#39;apprendimento automatico per determinare e filtrare l&#39;attività bot.
 
 Altri documenti che dimostrano i vantaggi di [!DNL Query Service] le informazioni strategiche aziendali della tua organizzazione sono [caso d&#39;uso del browser abbandonato](./abandoned-browse.md) esempio.

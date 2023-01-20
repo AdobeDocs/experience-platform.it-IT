@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettere Tableau a Query Service
 description: Questo documento descrive i passaggi necessari per la connessione di Tableau con Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 1d71cc4336747eb258ec2d8dcdc545cb2233692d
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Verifica di aver selezionato il **[!UICONTROL Richiedi SSL]** prima di provare a
 
 >[!IMPORTANT]
 >
->Le strutture di dati nidificate negli strumenti BI di terze parti possono essere appiattite per migliorarne l’usabilità e ridurre il carico di lavoro necessario per recuperare, analizzare, trasformare e segnalare i dati. Consulta la documentazione sul[`FLATTEN` caratteristica](../best-practices/flatten-nested-data.md) per istruzioni su come attivare questa impostazione durante la connessione a un database.
+>Le strutture di dati nidificate negli strumenti BI di terze parti possono essere appiattite per migliorarne l’usabilità e ridurre il carico di lavoro necessario per recuperare, analizzare, trasformare e segnalare i dati. Consulta la documentazione sul[`FLATTEN` caratteristica](../essential-concepts/flatten-nested-data.md) per istruzioni su come attivare questa impostazione durante la connessione a un database.
 
 Dopo aver compilato tutte le credenziali, conferma le impostazioni per continuare. Ora ti sei connesso a Adobe Experience Platform.
 

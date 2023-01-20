@@ -5,9 +5,9 @@ title: Guida generale per l’esecuzione delle query nel servizio query
 type: Tutorial
 description: Questo documento delinea dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplica
 
-Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, consulta la sezione [Guida alla deduplicazione di Query Service](./deduplication.md).
+Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, consulta la sezione [Guida alla deduplicazione di Query Service](../essential-concepts/deduplication.md).
 
 ## Calcolo del fuso orario nel servizio query
 
@@ -325,4 +325,7 @@ Per ulteriori esempi di query utilizzabili in Query Service, consulta la seguent
 
 - [Informazioni approfondite su Analytics](../use-cases/analytics-insights.md)
 - [Analisi delle attività con Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Query di esempio ExperienceEvent](../sample-queries/experience-event.md).
+- [Creare un rapporto con tendenze degli eventi](../use-cases/trended-report-of-events.md)
+- [Visualizzare un rapporto roll-up di un visitatore](../use-cases/roll-up-report-of-a-visitor.md)
+- [Elencare le visualizzazioni di pagina di un utente](../use-cases/list-visitor-sessions.md)
+- [Elencare i visitatori per numero di visualizzazioni di pagina](../use-cases/visitors-by-number-of-page-views.md)

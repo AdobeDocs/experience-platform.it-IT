@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;guida alla risoluzione dei problemi;FAQ;risoluzione dei problemi;
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi del servizio query
+title: Domande frequenti
 description: Questo documento contiene domande comuni e risposte relative al servizio query. Gli argomenti includono l'esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] guida alla risoluzione dei problemi
+# Domande frequenti
 
 Questo documento fornisce le risposte alle domande più frequenti sul servizio Query e fornisce un elenco di codici di errore visualizzati di frequente durante l’utilizzo del servizio Query. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, fai riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![Lo schema XDM e la visualizzazione tabulare dei dati appiattiti. Il nome della colonna di un set di dati nidificato viene evidenziato nell’interfaccia utente.](./images/troubleshooting/column-name.png)
 
-Consulta la documentazione per maggiori informazioni [come utilizzare le strutture dati nidificate](./best-practices/nested-data-structures.md) utilizzando l’editor delle query o un client di terze parti.
+Consulta la documentazione per maggiori informazioni [come utilizzare le strutture dati nidificate](./essential-concepts/nested-data-structures.md) utilizzando l’editor delle query o un client di terze parti.
 +++
 
 ### Come velocizzare una query su un set di dati che contiene array?
@@ -142,7 +142,7 @@ Viene visualizzato un banner a discesa contenente un [!UICONTROL Aiuto e support
 
 +++Risposta La funzione blocco anonimo consente di catena di una o più istruzioni SQL eseguite in sequenza. Essi consentono inoltre la possibilità di gestire le eccezioni.
 
-Consulta la sezione [documentazione relativa al blocco anonimo](./best-practices/anonymous-block.md) per ulteriori dettagli.
+Consulta la sezione [documentazione relativa al blocco anonimo](./essential-concepts/anonymous-block.md) per ulteriori dettagli.
 +++
 
 ### Come si implementa l’attribuzione personalizzata in Query Service?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### Come posso elaborare rapidamente i nuovi dati che entrano nel sistema ogni giorno?
 
-+++Risposta [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) può essere utilizzato per leggere in modo incrementale i dati su una tabella basata su un ID snapshot. Questa funzione è ideale per l&#39;utilizzo con [carico incrementale](./best-practices/incremental-load.md) pattern di progettazione che elabora solo le informazioni nel set di dati creato o modificato dall’ultima esecuzione del caricamento. Di conseguenza, aumenta l’efficienza dell’elaborazione e può essere utilizzata sia con l’elaborazione in streaming che con quella in batch.
++++Risposta [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) può essere utilizzato per leggere in modo incrementale i dati su una tabella basata su un ID snapshot. Questa funzione è ideale per l&#39;utilizzo con [carico incrementale](./essential-concepts/incremental-load.md) pattern di progettazione che elabora solo le informazioni nel set di dati creato o modificato dall’ultima esecuzione del caricamento. Di conseguenza, aumenta l’efficienza dell’elaborazione e può essere utilizzata sia con l’elaborazione in streaming che con quella in batch.
 +++
 
 ### Perché c&#39;è una differenza tra i numeri mostrati nell&#39;interfaccia utente del profilo e i numeri calcolati dal set di dati di esportazione del profilo?

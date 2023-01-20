@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2022
 description: Le note sulla versione di gennaio 2022 per Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -39,7 +39,7 @@ Per ulteriori informazioni sugli avvisi in Platform, consulta [panoramica degli 
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fornisce diverse dashboard attraverso le quali puoi visualizzare informazioni importanti sui dati dell’organizzazione, acquisiti durante le istantanee giornaliere.
+Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visualizzare informazioni importanti sui dati dell’organizzazione, acquisiti durante le istantanee giornaliere.
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -91,7 +91,7 @@ Per informazioni più generali sulle destinazioni, consulta [panoramica sulle de
 
 | Funzione | Descrizione |
 | --- | --- |
-| Blocco anonimo | Il costrutto SQL a blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi riutilizzarli ed eseguirli in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, consulta la sezione [query di esempio per la documentazione del blocco anonimo](../../query-service/best-practices/anonymous-block.md). |
+| Blocco anonimo | Il costrutto SQL a blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi riutilizzarli ed eseguirli in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, consulta la sezione [query di esempio per la documentazione del blocco anonimo](../../query-service/essential-concepts/anonymous-block.md). |
 | Organizzazione del set di dati | Fornisce una struttura dati coerente e logica per organizzare le risorse dati da utilizzare con Query Service man mano che la quantità di risorse dati all’interno della sandbox cresce. Per ulteriori informazioni, consulta la sezione [organizzare la documentazione delle risorse dati](../../query-service/best-practices/organize-data-assets.md). |
 
 Per ulteriori informazioni su [!DNL Query Service], vedi [[!DNL Query Service] panoramica](../../query-service/home.md).
