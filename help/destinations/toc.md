@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '988'
 ht-degree: 6%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 6%
       * [Estensione KickFire](./catalog/personalization/kickfire.md)
       * [Estensione Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
       * [Connessione Pega Customer Decision Hub](./catalog/personalization/pega.md)
+      * [Connessione profilo Pega](./catalog/personalization/pega-profile.md)
    * Destinazioni social{#social}
       * [Panoramica delle destinazioni social](./catalog/social/overview.md)
       * [Estensione Adobe Livefyre](./catalog/social/adobe-livefyre.md)
