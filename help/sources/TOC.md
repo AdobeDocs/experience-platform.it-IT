@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '872'
 ht-degree: 11%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 11%
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
+      - [Connettore SugarCRM](connectors/crm/sugarcrm.md)
       - [Connettore Veeva CRM](connectors/crm/veeva.md)
       - [Connettore Zoho CRM](connectors/crm/zoho.md)
    - Successo cliente {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 11%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Account e contatti di SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [Eventi SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoo CRM](tutorials/api/create/crm/zoho.md)
       - Successo cliente {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 11%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Account e contatti di SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [Eventi SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoo CRM](tutorials/ui/create/crm/zoho.md)
       - Successo del cliente {#customer-success}
