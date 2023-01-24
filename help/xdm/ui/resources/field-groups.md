@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Per aggiungere campi a un gruppo di campi personalizzato, inizia selezionando **
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare diversi tipi di campi.
+Un **[!UICONTROL Campo senza titolo]** nell’area di lavoro viene visualizzato un segnaposto e la barra a destra viene aggiornata per mostrare i controlli necessari per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell’interfaccia utente](../fields/overview.md#define) per passaggi specifici su come configurare diversi tipi di campi.
+
+Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Gruppo di campi]** , quindi utilizza il menu a discesa per selezionare il gruppo di campi desiderato dall’elenco. Puoi iniziare a digitare il nome del gruppo di campi per limitare i risultati.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Gruppo di campi]** , quindi utilizza il menu a discesa per selezionare il gruppo di campi desiderato dall’elenco. Puoi iniziare a digitare il nome del gruppo di campi per limitare i risultati.
 

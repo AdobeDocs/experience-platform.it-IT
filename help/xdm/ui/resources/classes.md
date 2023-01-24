@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,9 @@ Una volta che si dispone di uno schema che utilizza una classe personalizzata ap
 >
 >Tenere presente che tutti i campi aggiunti a una classe verranno utilizzati in tutti gli schemi che utilizzano tale classe. È quindi necessario considerare attentamente quali campi saranno utili in tutti i casi di utilizzo dello schema. Se si sta pensando di aggiungere un campo che può essere utilizzato solo in alcuni schemi di questa classe, è consigliabile aggiungerlo a tali schemi tramite [creazione di un gruppo di campi](./field-groups.md#create) invece.
 
-A **[!UICONTROL Nuovo campo]** nell’area di lavoro e nella barra a destra vengono visualizzati i controlli per configurare le proprietà del campo. Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Classe]**.
+Un **[!UICONTROL Campo senza titolo]** nell’area di lavoro viene visualizzato un segnaposto e la barra a destra viene aggiornata per mostrare i controlli necessari per configurare le proprietà del campo. Sotto **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Classe]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 
