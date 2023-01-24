@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 5%
 
 ---
@@ -90,6 +90,7 @@ Le seguenti protezioni fanno riferimento alla dimensione dei dati e forniscono i
 | Dimensione massima del frammento di profilo | 50MB | Duro | **La dimensione massima di un singolo frammento di profilo è 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi [frammento di profilo](#profile-fragments) è più grande di 50 MB. |
 | Dimensioni massime di archiviazione del profilo | 50MB | Morbido | **La dimensione massima di un profilo memorizzato è 50 MB.** Aggiunta di nuovi [frammenti di profilo](#profile-fragments) In un profilo di dimensioni superiori a 50 MB, le prestazioni del sistema risulteranno compromesse. Ad esempio, un profilo potrebbe contenere un singolo frammento di 50 MB oppure più frammenti in più set di dati con una dimensione totale combinata di 50 MB. Il tentativo di memorizzare un profilo con un singolo frammento di dimensioni superiori a 50 MB o più frammenti di dimensioni totali superiori a 50 MB in una dimensione combinata influisce sulle prestazioni del sistema. |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | 90 | Morbido | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. |
+| Numero di ExperienceEvents per record di profilo | 5000 | Morbido | **Il numero massimo di ExperienceEvents per record di profilo è 5000.** I profili con più di 5000 ExperienceEvents avranno **not** da considerare per la segmentazione. |
 
 {style=&quot;table-layout:auto&quot;}
 
