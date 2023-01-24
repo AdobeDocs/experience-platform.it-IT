@@ -2,7 +2,7 @@
 title: Guida agli approfondimenti dei rapporti sugli archivi accelerati delle query
 description: Scopri come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati store accelerati e dashboard definiti dall’utente.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Questa esercitazione utilizza dashboard definite dall’utente per visualizzare 
 
 ## Introduzione
 
-Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting e per estendere i modelli di dati di Real-Time CDP che contengono dati Platform arricchiti. Vedi la [imballaggio](../../packages.md), [guardrail](../../guardrails.md#query-accelerated-store)e [licenza](../../data-distiller/licence-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
+Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting e per estendere i modelli di dati di Real-Time CDP che contengono dati Platform arricchiti. Vedi la [imballaggio](../../packages.md), [guardrail](../../guardrails.md#query-accelerated-store)e [licenza](../../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
 
 ## Creare un modello di dati insights per la generazione di rapporti
 

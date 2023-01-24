@@ -1,7 +1,8 @@
 ---
 title: Endpoint query accelerate
 description: Scopri come accedere all’archivio accelerato delle query in modo senza stato per restituire rapidamente i risultati in base ai dati aggregati. Questo documento fornisce un esempio di richiesta e risposta HTTP per l’endpoint query accelerate del servizio query.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -16,7 +17,7 @@ Prima di continuare con questa guida, assicurati di aver letto e compreso il [Gu
 
 ## Introduzione
 
-Lo SKU di Data Distiller è necessario per utilizzare l’archivio con accelerazione query. Vedi la [imballaggio](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)e [licenza](../data-distiller/licence-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
+Lo SKU di Data Distiller è necessario per utilizzare l’archivio con accelerazione query. Vedi la [imballaggio](../packages.md), [guardrail](../guardrails.md#query-accelerated-store)e [licenza](../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi della SKU di Data Distiller, contatta il tuo rappresentante del servizio clienti Adobe per ulteriori informazioni.
 
 Le sezioni seguenti descrivono le chiamate API necessarie per accedere all’archivio accelerato della query in modo senza stato tramite l’API del servizio query. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
@@ -210,4 +211,3 @@ Una risposta corretta restituisce lo stato HTTP 200 con lo schema ad hoc creato 
 | `resultsMeta._adhoc.meta:xdmType` | Si tratta di un valore generato dal sistema per il tipo di campo XDM. Per ulteriori informazioni sui tipi disponibili, consulta la documentazione su [tipi XDM disponibili](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | Si tratta dei nomi di colonna del set di dati interrogato. |
 | `resultsMeta._adhoc.results` | Questi sono i nomi di riga del set di dati interrogato. Riflettono ciascuna delle colonne restituite. |
-

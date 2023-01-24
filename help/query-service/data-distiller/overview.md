@@ -1,7 +1,7 @@
 ---
 title: Panoramica di Data Distiller
 description: Riepilogo dei limiti di utilizzo di Data Distiller per i dati di Query Service in relazione all’adesione alla licenza.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Data Distiller è un pacchetto che include un sottoinsieme delle funzionalità di Adobe Experience Platform. Con Data Distiller è possibile eseguire la preparazione dei dati post-acquisizione (ad esempio la pulizia, la modellazione e la manipolazione) per casi d’uso in tempo reale del profilo del cliente o analitici eseguendo query batch in Query Service. L&#39;utilizzo di Data Distiller dipende dalla licenza attuale e continua di almeno uno dei seguenti elementi: Adobe Real-time Customer Data Platform, Customer Journey Analytics e/o Adobe Journey Optimizer.
 
-## Utilizzo della licenza {#licence-usage}
+## Utilizzo delle licenze {#license-usage}
 
-Consulta la sezione [Documento sull&#39;utilizzo della licenza di Distiller dati](./licence-usage.md) per visualizzare informazioni importanti sull’utilizzo della licenza Query Service della tua organizzazione.
+Consulta la sezione [Documento sull&#39;utilizzo della licenza di Distiller dati](./license-usage.md) per visualizzare informazioni importanti sull’utilizzo della licenza Query Service della tua organizzazione.
 
 ## Parametri di ambito {#scoping-parameters}
 

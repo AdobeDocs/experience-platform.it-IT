@@ -2,7 +2,7 @@
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 23%
@@ -53,7 +53,7 @@ La tabella seguente illustra i diritti di proprietà disponibili e le funzionali
 | Diritto di proprietà | Descrizione |
 | --- | --- |
 | **Sviluppa** | Questo consente di eseguire le seguenti azioni:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Invia una libreria per l&#39;approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di richiede questo diritto. |
-| **Approva** | Questo consente di trasferire una libreria e una build inviate all&#39;ambiente di staging. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
+| **Approvazione** | Questo consente di trasferire una libreria e una build inviate all&#39;ambiente di staging. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
 | **Pubblica** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
 | **Gestire le estensioni** | Questo consente di eseguire le seguenti azioni: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modifica la configurazione di un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
 | **Gestire gli ambienti** | Questo consente di creare e modificare ambienti. Per ulteriori informazioni, consulta la [documentazione degli ambienti](../publishing/environments.md). Generalmente, questo ruolo appartiene al reparto IT. |
@@ -113,9 +113,9 @@ Nella tabella seguente sono riportati alcuni esempi dei tipi di ruoli che potres
 | Manager | Vuole vedere cosa sta succedendo nel sistema, ma non deve essere in grado di apportare modifiche. | Inclusione automatica | (Nessuna) | (Nessuna) |
 | Addetto al marketing | Può installare le estensioni e impostare nuovi tag per le proprietà esistenti, ma non può pubblicare negli ambienti di staging o produzione. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
 | Sviluppatore app mobili | È responsabile dell’implementazione di soluzioni Adobe e di terze parti all’interno di un’app mobile nativa. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <li>Gestisci proprietà</li><li>Gestire le configurazioni dell’app</li> |
-| Team IT | Non modifica effettivamente i tag, ma dispongono del controllo completo sugli ambienti di staging e produzione e su cosa contengono. | Inclusione automatica | (Nessuna) | <ul><li>Approva</li><li>Pubblica</li><li>Gestire gli ambienti</li></ul> |
+| Team IT | Non modifica effettivamente i tag, ma dispongono del controllo completo sugli ambienti di staging e produzione e su cosa contengono. | Inclusione automatica | (Nessuna) | <ul><li>Approvazione</li><li>Pubblica</li><li>Gestire gli ambienti</li></ul> |
 | Sviluppatore di estensioni | Sviluppa estensioni e può inviare per l’approvazione, ma non può pubblicarle o aggiungerle alle proprietà esistenti. | Inclusione automatica | <ul><li>Sviluppa</li></ul> | <ul><li>Gestisci proprietà</li><li>Sviluppa estensioni</li></ul> |
-| Super utente | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approva</li><li>Pubblica</li><li>Gestire le estensioni</li><li>Gestire gli ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
+| Super utente | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approvazione</li><li>Pubblica</li><li>Gestire le estensioni</li><li>Gestire gli ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
