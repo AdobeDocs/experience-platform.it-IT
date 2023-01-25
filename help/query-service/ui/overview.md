@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente del servizio query
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1135'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ La **[!UICONTROL Modelli]** mostra le query salvate dagli utenti dell’organizz
 
 Consulta la sezione [modelli di query](./query-templates.md) per ulteriori informazioni sui modelli nell’interfaccia utente di Platform.
 
-## Registro
+## Registro {#log}
 
 La **[!UICONTROL Registro]** fornisce un elenco delle query che sono state eseguite in precedenza. Per impostazione predefinita, il registro elenca le query nella cronologia inversa.
 
@@ -81,6 +81,8 @@ La **[!UICONTROL Registro]** fornisce un elenco delle query che sono state esegu
 
 >!![Note]
 Seleziona l’icona a forma di matita (![Icona a forma di matita.](../images/ui/overview/edit-icon.png)) da qualsiasi riga del registro delle query per passare al [!DNL Query Editor]. La query viene precompilata per una comoda modifica.
+
+Consulta la sezione [documentazione dei registri delle query](./query-logs.md) per ulteriori informazioni sui file di registro generati automaticamente da un evento di query.
 
 ## Credenziali 
 
