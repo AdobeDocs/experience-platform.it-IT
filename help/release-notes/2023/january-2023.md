@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2023
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
+source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1371'
 ht-degree: 7%
 
 ---
@@ -18,6 +18,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Raccolta dati](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Profilo cliente in tempo reale](#profile)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
 ## Assurance {#assurance}
@@ -93,15 +94,6 @@ Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica d
 
 Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
 
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Scadenza dell’appartenenza al segmento generata dalla piattaforma | Qualsiasi appartenenza al segmento presente nella `Exited` per più di 30 giorni, in base alla `lastQualificationTime` sarà soggetto a eliminazione. |
-| Scadenza dell&#39;iscrizione a un pubblico esterno | Per impostazione predefinita, le appartenenze al pubblico esterno vengono mantenute per 30 giorni. Per conservarli più a lungo, utilizza le `validUntil` durante l’acquisizione dei dati sul pubblico. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Prossima deprecazione** {#deprecation}
 
 Per rimuovere la ridondanza nel ciclo di vita dell’appartenenza al segmento, la `Existing` lo stato verrà dichiarato obsoleto dal [mappa di appartenenza del segmento](../../xdm/field-groups/profile/segmentation.md) alla fine di marzo 2023. Un annuncio di follow-up includerà la data esatta di deprecazione.
@@ -111,6 +103,21 @@ Dopo un post obsoleto, i profili qualificati in un segmento saranno rappresentat
 Questa modifica potrebbe interessarti se utilizzi [destinazioni aziendali](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) e dispongono di processi a valle automatizzati, in base al `Existing` stato. Controlla le integrazioni downstream se questo è il caso per te. Se sei interessato a identificare i nuovi profili qualificati oltre un certo periodo di tempo, considera l&#39;utilizzo di una combinazione dei `Realized` lo stato e `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati del profilo, consulta la sezione [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+
+## Servizio di segmentazione {#segmentation}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Scadenza dell’appartenenza al segmento generata dalla piattaforma | Qualsiasi appartenenza al segmento presente nella `Exited` per più di 30 giorni, in base alla `lastQualificationTime` sarà soggetto a eliminazione. |
+| Scadenza dell&#39;iscrizione a un pubblico esterno | Per impostazione predefinita, le appartenenze al pubblico esterno vengono mantenute per 30 giorni. Per conservarli più a lungo, utilizza le `validUntil` durante l’acquisizione dei dati sul pubblico. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
