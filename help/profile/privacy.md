@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per il profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Questo documento tratta i concetti essenziali relativi all’elaborazione delle 
 
 ## Introduzione
 
-Si consiglia di avere una comprensione operativa dei seguenti elementi [!DNL Experience Platform] servizi prima di leggere questa guida:
+Questa guida richiede una buona comprensione dei seguenti elementi [!DNL Platform] componenti:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
@@ -48,7 +48,7 @@ Le sezioni seguenti illustrano come effettuare richieste di accesso a dati perso
 >
 >Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizzano un criterio di unione che non esegue la combinazione di identità. Vedi la sezione su [limitazioni dei criteri di unione](#merge-policy-limitations) per ulteriori informazioni.
 >
->È inoltre importante notare che il tempo necessario per completare una richiesta di accesso a dati personali non può essere garantito. Se si verificano modifiche nel [!DNL Profile] i dati durante l&#39;elaborazione di una richiesta, indipendentemente dal fatto che tali record siano o meno elaborati, non possono essere garantiti.
+>Tieni presente che il tempo necessario per completare una richiesta di accesso a dati personali può richiedere **impossibile** essere garantiti. Se si verificano modifiche nel [!DNL Profile] i dati durante l&#39;elaborazione di una richiesta, indipendentemente dal fatto che tali record siano o meno elaborati, non possono essere garantiti.
 
 ### Mediante l’API
 
@@ -65,6 +65,8 @@ Inoltre, il `include` la matrice del payload della richiesta deve includere i va
 >Vedi la sezione su [richieste di profilo e richieste di identità](#profile-v-identity) più avanti in questo documento per informazioni più dettagliate sugli effetti dell&#39;uso `ProfileService` e `identity` all&#39;interno del `include` array.
 
 La seguente richiesta crea un nuovo processo di privacy per i dati di un singolo cliente nel [!DNL Profile] archiviare. Per il cliente vengono forniti due valori di identità nel `userIDs` array; uno che utilizza lo standard `Email` spazio dei nomi di identità e l&#39;altro utilizzando un `Customer_ID` spazio dei nomi. Include inoltre il valore del prodotto per [!DNL Profile] (`ProfileService`) nel `include` array:
+
+**Richiesta**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform elabora le richieste di privacy in tutti [sandbox](../sandboxes/home.md) appartenente alla tua organizzazione. Di conseguenza, qualsiasi `x-sandbox-name` l’intestazione inclusa nella richiesta viene ignorata dal sistema.
+
+**Risposta del prodotto**
+
+Per il Servizio profili, una volta completato il processo di privacy, viene restituita una risposta in formato JSON con le informazioni relative agli ID utente richiesti.
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Utilizzo dell’interfaccia
 
@@ -161,6 +213,6 @@ Privacy Service è in grado di elaborare solo [!DNL Profile] i dati che utilizza
 >
 ## Passaggi successivi
 
-Leggendo questo documento, ti sono stati introdotti i concetti importanti relativi all’elaborazione delle richieste di privacy in [!DNL Experience Platform]. Si consiglia di continuare a leggere la documentazione fornita in questa guida per approfondire la comprensione su come gestire i dati di identità e creare processi di privacy.
+Leggendo questo documento, ti sono stati introdotti i concetti importanti relativi all’elaborazione delle richieste di privacy in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi per la privacy, continua a leggere la documentazione fornita in questa guida.
 
 Per informazioni sull’elaborazione delle richieste di accesso a dati personali per [!DNL Platform] risorse non utilizzate da [!DNL Profile], consulta il documento in [elaborazione della richiesta di accesso a dati nel lago dati](../catalog/privacy.md).
