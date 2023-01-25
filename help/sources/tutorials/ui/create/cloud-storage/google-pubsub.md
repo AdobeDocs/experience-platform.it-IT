@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Google PubSub;google pubsub
-solution: Experience Platform
 title: Creare una connessione Google PubSub Source nell'interfaccia utente
-type: Tutorial
 description: Scopri come creare un connettore sorgente Google PubSub utilizzando l’interfaccia utente di Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -31,8 +28,9 @@ Per connettersi [!DNL PubSub] su Platform, devi fornire un valore valido per le 
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `projectId` | ID progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
-| `credentials` | ID della credenziale o della chiave privata necessaria per l&#39;autenticazione [!DNL PubSub]. |
+| Progetto ID | ID progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
+| Credenziali  | ID della credenziale o della chiave privata necessaria per l&#39;autenticazione [!DNL PubSub]. |
+| ID argomento | L&#39;ID per [!DNL PubSub] risorsa che rappresenta un feed di messaggi. È necessario specificare un ID argomento se si desidera fornire l&#39;accesso a un flusso specifico di dati nel [!DNL Google PubSub] sorgente. |
 
 Per ulteriori informazioni su questi valori, consulta quanto segue [Autenticazione PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se utilizzi l’autenticazione basata sull’account del servizio, consulta quanto segue [Guida di PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
 
@@ -44,9 +42,9 @@ Una volta raccolte le credenziali richieste, puoi seguire i passaggi seguenti pe
 
 ## Collega il tuo [!DNL PubSub] account
 
-In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in questa schermata vengono visualizzate diverse sorgenti per le quali è possibile creare un account.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in questa schermata vengono visualizzate diverse sorgenti con le quali è possibile creare un account.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando la barra di ricerca.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
 
 Sotto la [!UICONTROL archiviazione cloud] categoria, seleziona **[!UICONTROL Google PubSub]**, quindi seleziona **[!UICONTROL Aggiungi dati]**.
 
@@ -62,7 +60,13 @@ Per utilizzare un account esistente, seleziona la [!DNL PubSub] account con cui 
 
 ### Nuovo account
 
-Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e [!DNL PubSub] credenziali di autenticazione nel modulo di input. Al termine, seleziona **[!UICONTROL Connetti alla sorgente]** e quindi lasciare un po&#39; di tempo per stabilire la nuova connessione.
+Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e [!DNL PubSub] credenziali di autenticazione nel modulo di input. Durante questo passaggio, puoi definire i dati a cui il tuo account ha accesso fornendo un ID argomento. Solo le sottoscrizioni associate a tale ID argomento saranno accessibili.
+
+>[!NOTE]
+>
+>I Principali (ruoli) assegnati a un progetto pubsub vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se desideri aggiungere un&#39;entità (ruolo) per avere accesso a un argomento specifico, è necessario aggiungere tale entità (ruolo) anche alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, consulta la sezione [[!DNL PubSub] documentazione sul controllo degli accessi](https://cloud.google.com/pubsub/docs/access-control).
+
+Al termine, seleziona **[!UICONTROL Connetti alla sorgente]** e quindi lasciare un po&#39; di tempo per stabilire la nuova connessione.
 
 ![nuovo](../../../../images/tutorials/create/google-pubsub/new.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore sorgente di archiviazione Google Cloud
 description: Scopri come collegare Google Cloud Storage a Adobe Experience Platform utilizzando API o l’interfaccia utente.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ La **[!UICONTROL Interoperabilità]** contiene informazioni sull’autenticazion
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 Puoi usare il tuo ID chiave di accesso appena generato e la chiave di accesso segreto per collegare il tuo [!DNL Google Cloud Storage] a Platform.
+
+Per ulteriori informazioni, consulta la guida su [creazione e gestione delle chiavi dell&#39;account del servizio](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) dal [!DNL Google Cloud] documentazione.
 
 ## Vincoli di denominazione per file e directory
 
