@@ -2,9 +2,9 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente del servizio query.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7b5a22d849f0f46a9ff14843c594b743bbd01c9d
+source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform offre una migliore visibilità dello stato di tutti i 
 
 ## [!UICONTROL Query pianificate]
 
-La [!UICONTROL Query pianificate] fornisce una panoramica delle query eseguite e pianificate. L&#39;area di lavoro contiene tutte le query CTAS e ITAS pianificate per l&#39;esecuzione o eseguite almeno una volta. È possibile trovare dettagli di esecuzione per tutte le query pianificate, nonché codici di errore e messaggi per le query non riuscite.
+La [!UICONTROL Query pianificate] fornisce una panoramica di tutte le query CTAS e ITAS pianificate. È possibile trovare i dettagli di esecuzione per tutte le query pianificate, nonché i codici di errore e i messaggi per tutte le query non riuscite.
 
 Per passare al [!UICONTROL Query pianificate] scheda , seleziona **[!UICONTROL Query]** dalla barra di navigazione a sinistra seguita da **[!UICONTROL Query pianificate]**
 
@@ -29,14 +29,14 @@ La tabella seguente descrive ogni colonna disponibile.
 
 | Colonna | Descrizione |
 |---|---|
-| Nome | Il campo nome è il nome del modello o i primi caratteri della query SQL. All’inizio viene denominato qualsiasi query creata tramite l’interfaccia utente con l’Editor query. Se la query è stata creata tramite l’API, il nome della query è uno snippet dell’SQL iniziale utilizzato per creare la query. |
-| Modello | Nome del modello della query. Selezionare un nome di modello per passare all’Editor query. Il modello di query viene visualizzato nell’Editor query per comodità. Se non è presente un nome di modello, la riga viene contrassegnata con un trattino e non è possibile reindirizzare all’Editor query per visualizzare la query. |
-| SQL | Frammento della query SQL. |
-| Frequenza di esecuzione | Questa è la cadenza alla quale la query è impostata per essere eseguita. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
-| Creato da | Nome dell’utente che ha creato la query. |
-| Creato | La marca temporale alla creazione della query, in formato UTC. |
-| Timestamp ultima esecuzione | La marca temporale più recente all’esecuzione della query. Questa colonna evidenzia se una query è stata eseguita in base alla pianificazione corrente. |
-| Stato dell&#39;ultima esecuzione | Lo stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Nome]** | Il campo nome è il nome del modello o i primi caratteri della query SQL. All’inizio viene denominato qualsiasi query creata tramite l’interfaccia utente con l’Editor query. Se la query è stata creata tramite l’API, il suo nome diventa uno snippet dell’SQL iniziale utilizzato per creare la query. Seleziona qualsiasi elemento dal [!UICONTROL Nome] per visualizzare un elenco di tutte le esecuzioni associate alla query. Per ulteriori informazioni, consulta la sezione [dettagli pianificazione esecuzione query](#query-runs) sezione . |
+| **[!UICONTROL Modello]** | Nome del modello della query. Selezionare un nome di modello per passare all’Editor query. Il modello di query viene visualizzato nell’Editor query per comodità. Se non è presente un nome di modello, la riga viene contrassegnata con un trattino e non è possibile reindirizzare all’Editor query per visualizzare la query. |
+| **[!UICONTROL SQL]** | Frammento della query SQL. |
+| **[!UICONTROL Frequenza di esecuzione]** | Questa è la cadenza alla quale la query è impostata per essere eseguita. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
+| **[!UICONTROL Creato da]** | Nome dell’utente che ha creato la query. |
+| **[!UICONTROL Creato]** | La marca temporale alla creazione della query, in formato UTC. |
+| **[!UICONTROL Timestamp ultima esecuzione]** | La marca temporale più recente all’esecuzione della query. Questa colonna evidenzia se una query è stata eseguita in base alla pianificazione corrente. |
+| **[!UICONTROL Stato dell&#39;ultima esecuzione]** | Lo stato dell’esecuzione della query più recente. I valori di stato sono: `Success`, `Failed`, `In progress`e `No runs`. |
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ Puoi abbonarti agli avvisi dal [!UICONTROL Query pianificate] scheda . Seleziona
 
 Consulta la sezione [documentazione API per gli abbonamenti agli avvisi](../api/alert-subscriptions.md) per ulteriori informazioni.
 
-### Filtrare le query
+### Filtrare le query {#filter}
 
 È possibile filtrare le query in base alla frequenza di esecuzione. Da [!UICONTROL Query pianificate] , seleziona l’icona del filtro (![Icona filtro](../images/ui/monitor-queries/filter-icon.png)) per aprire la barra laterale del filtro.
 
@@ -80,7 +80,7 @@ Seleziona la **[!UICONTROL Pianificato]** o **[!UICONTROL Esegui una volta]** es
 
 Dopo aver abilitato i criteri di filtro, seleziona **[!UICONTROL Nascondi filtri]** per chiudere il pannello del filtro.
 
-## Query esegue i dettagli della pianificazione
+## Dettagli pianificazione esecuzione query {#query-runs}
 
 Seleziona un nome di query per passare alla pagina dei dettagli della pianificazione. Questa visualizzazione fornisce un elenco di tutte le esecuzioni eseguite nell&#39;ambito di tale query pianificata. Le informazioni fornite includono l’ora di inizio e di fine, lo stato e il set di dati utilizzati.
 
@@ -90,23 +90,23 @@ Queste informazioni sono fornite in una tabella a cinque colonne. Ciascuna riga 
 
 | Nome colonna | Descrizione |
 |---|---|
-| ID esecuzione query | ID di esecuzione della query per l&#39;esecuzione giornaliera. |
-| Avvio esecuzione query | La marca temporale in cui è stata eseguita la query. Questo è in formato UTC. |
-| Esecuzione query completata | La marca temporale al completamento della query. Questo è in formato UTC. |
-| Stato | Lo stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
-| Set di dati | Il set di dati coinvolto nell’esecuzione. |
+| **[!UICONTROL ID esecuzione query]** | ID di esecuzione della query per l&#39;esecuzione giornaliera. Seleziona la **[!UICONTROL ID esecuzione query]** per passare al [!UICONTROL Panoramica dell’esecuzione delle query]. |
+| **[!UICONTROL Avvio esecuzione query]** | La marca temporale in cui è stata eseguita la query. Questo è in formato UTC. |
+| **[!UICONTROL Esecuzione query completata]** | La marca temporale al completamento della query. Questo è in formato UTC. |
+| **[!UICONTROL Stato]** | Lo stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Set di dati]** | Il set di dati coinvolto nell’esecuzione. |
 
 I dettagli della query pianificata possono essere visualizzati nella [!UICONTROL Proprietà] pannello. Questo pannello include l&#39;ID della query iniziale, il tipo di client, il nome del modello, l&#39;SQL della query e la frequenza della pianificazione.
 
 ![La pagina dei dettagli della pianificazione con il pannello delle proprietà evidenziato.](../images/ui/monitor-queries/properties-panel.png)
 
-### Dettagli esecuzione
-
 Seleziona un ID di esecuzione della query per passare alla pagina dei dettagli di esecuzione e visualizzare le informazioni sulla query.
 
 ![Schermata dei dettagli della pianificazione con un ID di esecuzione evidenziato.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-Questa visualizzazione fornisce informazioni sulle singole esecuzioni per questa query pianificata e una suddivisione più dettagliata dello stato di esecuzione. Questa pagina include anche le informazioni sul client e i dettagli di eventuali errori che hanno causato il mancato funzionamento della query.
+## Panoramica dell’esecuzione delle query {#query-run-overview}
+
+La [!UICONTROL Panoramica dell’esecuzione delle query] fornisce informazioni sulle singole esecuzioni per questa query pianificata e una suddivisione più dettagliata dello stato di esecuzione. Questa pagina include anche le informazioni sul client e i dettagli di eventuali errori che potrebbero aver causato il mancato funzionamento della query.
 
 ![La schermata dei dettagli di esecuzione con la sezione panoramica evidenziata.](../images/ui/monitor-queries/query-run-details.png)
 
@@ -117,6 +117,20 @@ La sezione relativa allo stato della query fornisce il codice di errore e il mes
 È possibile copiare l&#39;SQL della query negli Appunti da questa visualizzazione. Selezionare l&#39;icona di copia in alto a destra dello snippet SQL per copiare la query. Un messaggio popup conferma che il codice è stato copiato.
 
 ![Schermata dei dettagli di esecuzione con l&#39;icona di copia SQL evidenziata.](../images/ui/monitor-queries/copy-sql.png)
+
+### Esegui i dettagli delle query con blocco anonimo {#anonymous-block-queries}
+
+Le query che utilizzano blocchi anonimi per includere le relative istruzioni SQL sono separate nelle singole query. Questo ti consente di controllare i dettagli di esecuzione per ogni blocco di query singolarmente.
+
+I blocchi anonimi sono indicati attraverso l&#39;uso di un `$$` prima della query. Consulta la sezione [documento a blocchi anonimi](../essential-concepts/anonymous-block.md) per ulteriori informazioni sui blocchi anonimi nel servizio query.
+
+Le query di blocco anonime hanno schede a sinistra dello stato di esecuzione. Seleziona una scheda per visualizzare i dettagli dell’esecuzione.
+
+![Panoramica dell’esecuzione della query che visualizza una query di blocco anonima. Vengono evidenziate più schede di query.](../images/ui/monitor-queries/anonymous-block-overview.png)
+
+Nel caso in cui una query di blocco anonimo non riesca, è possibile trovare il codice di errore per quel particolare blocco tramite questa interfaccia utente.
+
+![Panoramica dell’esecuzione della query che visualizza una query di blocco anonima con il codice di errore per un singolo blocco evidenziato.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Seleziona **[!UICONTROL Query]** per tornare alla schermata dei dettagli della pianificazione, oppure **[!UICONTROL Query pianificate]** per tornare al [!UICONTROL Query pianificate] scheda .
 

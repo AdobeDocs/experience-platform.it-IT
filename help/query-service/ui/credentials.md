@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali del servizio query
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Adobe Experience Platform Query Service consente di connettersi con client ester
 
 La **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 
-- **[!UICONTROL Host]**: Nome dell&#39;host a cui ti connetterai. Per la connessione al servizio query, verrà incluso il nome dell’organizzazione IMS attualmente in uso.
-- **[!UICONTROL Porta]**: Numero di porta dell&#39;host a cui ci si connette.
-- **[!UICONTROL Database]**: Nome del database a cui ci si connette.
-- **[!UICONTROL Nome utente]**: Nome utente che verrà utilizzato per connettersi al servizio query.
-- **[!UICONTROL Password]**: Password da utilizzare per la connessione al servizio query.
+- **[!UICONTROL Host]**: Nome dell&#39;host a cui collegare il client. Questo incorpora il nome della tua organizzazione come mostrato nella barra multifunzione superiore dell’interfaccia utente di Platform.
+- **[!UICONTROL Porta]**: Numero di porta dell&#39;host a cui connettersi.
+- **[!UICONTROL Database]**: Nome del database a cui collegare un client.
+- **[!UICONTROL Nome utente]**: Nome utente utilizzato per connettersi al servizio query.
+- **[!UICONTROL Password]**: Password utilizzata per la connessione al servizio query. Le password nell’interfaccia utente sono state crittografate per motivi di sicurezza. Seleziona l’icona Copia (![Icona di copia.](../images/ui/credentials/copy-icon.png)) per copiare le credenziali complete e senza hash negli Appunti.
 - **[!UICONTROL Comando PSQL]**: Comando che ha inserito automaticamente tutte le informazioni pertinenti per la connessione a Query Service tramite PSQL nella riga di comando.
 - **[!UICONTROL Scadenza]**: Data e ora di scadenza delle credenziali in scadenza. La durata di validità predefinita del token è di 24 ore, ma può essere modificata nelle impostazioni avanzate dell’Admin Console.
 

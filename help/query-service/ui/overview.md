@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente del servizio query
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1117'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,8 @@ La **[!UICONTROL Modelli]** mostra le query salvate dagli utenti dell’organizz
 | **[!UICONTROL Modificato da]** | Ultimo utente che ha modificato la query. Qualsiasi utente della tua organizzazione con accesso a [!DNL Query Service] può modificare le query. |
 | **[!UICONTROL Ultima modifica]** | La data e l’ora dell’ultima modifica alla query, nel fuso orario del browser. |
 
+Consulta la sezione [modelli di query](./query-templates.md) per ulteriori informazioni sui modelli nell’interfaccia utente di Platform.
+
 ## Registro
 
 La **[!UICONTROL Registro]** fornisce un elenco delle query che sono state eseguite in precedenza. Per impostazione predefinita, il registro elenca le query nella cronologia inversa.
@@ -69,13 +71,16 @@ La **[!UICONTROL Registro]** fornisce un elenco delle query che sono state esegu
 
 | Colonna | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome]** | Nome della query, costituito dai primi caratteri della query SQL. Selezionando il nome si apre la [!DNL Query Editor], che consente di modificare la query. È possibile utilizzare la barra di ricerca per cercare il nome di una query. Le ricerche sono sensibili all’uso di maiuscole e minuscole. |
-| **[!UICONTROL Creato da]** | Nome della persona che ha creato la query. |
-| **[!UICONTROL Client]** | Client utilizzato per la query. |
-| **[!UICONTROL Set di dati]** | Il set di dati di input utilizzato dalla query. Seleziona il set di dati da passare alla schermata dei dettagli del set di dati di input. |
+| **[!UICONTROL Nome]** | Nome della query, costituito dai primi caratteri della query SQL. Seleziona il nome del modello per aprire il [!UICONTROL Dettagli del registro query] visualizza l&#39;esecuzione. È possibile utilizzare la barra di ricerca per cercare il nome di una query. Le ricerche sono sensibili all’uso di maiuscole e minuscole. |
+| **[!UICONTROL Ora di inizio]** | Ora di esecuzione della query. |
+| **[!UICONTROL Tempo di completamento]** | L’ora di esecuzione della query completata. |
 | **[!UICONTROL Stato]** | Lo stato corrente della query. |
-| **[!UICONTROL Ultima esecuzione]** | Quando la query è stata eseguita per ultima. Puoi ordinare l’elenco in ordine crescente o decrescente selezionando la freccia su questa colonna. |
-| **[!UICONTROL Tempo di esecuzione]** | Il tempo necessario per eseguire la query. |
+| **[!UICONTROL Set di dati]** | Il set di dati di input utilizzato dalla query. Seleziona il set di dati da passare alla schermata dei dettagli del set di dati di input. |
+| **[!UICONTROL Client]** | Client utilizzato per la query. |
+| **[!UICONTROL Creato da]** | Nome della persona che ha creato la query. |
+
+>!![Note]
+Seleziona l’icona a forma di matita (![Icona a forma di matita.](../images/ui/overview/edit-icon.png)) da qualsiasi riga del registro delle query per passare al [!DNL Query Editor]. La query viene precompilata per una comoda modifica.
 
 ## Credenziali 
 

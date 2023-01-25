@@ -2,10 +2,10 @@
 title: Modelli di query
 description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando l’Editor query o l’API del servizio query e sono disponibili per l’utilizzo su tutti i set di dati di Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,8 @@ Devi avere la [!UICONTROL Gestire le query] l’autorizzazione è abilitata per 
 
 Consulta la documentazione per le istruzioni su come utilizzare l’editor delle query per [scrivere](./user-guide.md#query-authoring) e [salvare le query](./user-guide.md#saving-queries). Dopo aver denominato e salvato la query, questa può essere riutilizzata come modello di query dal [!UICONTROL Modelli] scheda .
 
+## Sfoglia modelli di query {#browse}
+
 Dall’area di lavoro Query dell’interfaccia utente della piattaforma, seleziona **[!UICONTROL Modelli]** per visualizzare l&#39;elenco delle query salvate disponibili.
 
 ![Area di lavoro query con la scheda Modelli evidenziata.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ Dall’area di lavoro Query dell’interfaccia utente della piattaforma, selezio
 Per trovare informazioni rilevanti sul modello, seleziona un modello di query dall’elenco disponibile per aprire il pannello dei dettagli.
 
 ![Il pannello dei dettagli nell’area di lavoro query con l’ID query evidenziato.](../images/ui/query-templates/details-panel.png)
+
+Dal pannello dei dettagli puoi eseguire quattro azioni separate:
+
+* Seleziona **[!UICONTROL Set di dati di output]** per modificare il set di dati di output per il modello selezionato.
+* Seleziona **[!UICONTROL Visualizza pianificazione]** per passare al [!UICONTROL Pianificazioni] scheda . Questa visualizzazione contiene tutte le informazioni di pianificazione associate alla query.
+* Seleziona **[!UICONTROL Elimina query]** per eliminare il modello.
+* Selezionare il nome del modello per passare all&#39;Editor query in cui l&#39;SQL è precompilato per la modifica.
 
 ### Utilizza l’API del servizio query per creare un modello
 
