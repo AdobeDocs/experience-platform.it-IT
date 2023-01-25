@@ -5,9 +5,9 @@ title: Valutare e accedere ai risultati dei segmenti
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,10 @@ L’esempio seguente mostra cosa `segmentMembership` l’attributo è simile a c
 | `lastQualificationTime` | La marca temporale in cui è stata rilasciata l’asserzione dell’appartenenza al segmento e il profilo è entrato o uscito dal segmento. |
 | `status` | Lo stato della partecipazione al segmento come parte della richiesta corrente. Deve essere uguale a uno dei seguenti valori noti: <ul><li>`existing`: L’entità continua a trovarsi nel segmento.</li><li>`realized`: L&#39;entità sta entrando nel segmento.</li><li>`exited`: L&#39;entità sta uscendo dal segmento.</li></ul> |
 
+>[!NOTE]
+>
+>Qualsiasi appartenenza al segmento presente nella `exited` stato per più di 30 giorni, in base alla `lastQualificationTime`, sarà soggetto a cancellazione.
+
 ## Accedere ai risultati dei segmenti
 
 È possibile accedere ai risultati di un processo di segmento in uno dei due modi seguenti: puoi accedere a singoli profili o esportare un intero pubblico in un set di dati.
@@ -223,7 +227,7 @@ Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponib
 
 Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno della [!DNL Data Lake] in [!DNL Experience Platform]. È quindi possibile utilizzare la [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni del segmento, i dati possono essere in blocchi e il batch può essere costituito da più file.
 
-Per istruzioni dettagliate sull’utilizzo del [!DNL Data Access] API per accedere e scaricare file batch, segui [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
+Per istruzioni dettagliate sull’utilizzo del [!DNL Data Access] API per accedere e scaricare file batch, segui la [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
 
 Puoi anche accedere ai dati dei segmenti esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. Utilizzando l’interfaccia utente o l’API RESTful, [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno di [!DNL Data Lake].
 

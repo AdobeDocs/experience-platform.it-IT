@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -257,3 +257,7 @@ Di seguito è riportato un esempio del payload per l’appartenenza all’audien
 | `xdmEntity._id` | Un ID adatto utilizzato per identificare in modo univoco il record all’interno del set di dati. |
 | `{TENANT_NAME}.identities` | Questa sezione viene utilizzata per collegare il gruppo di campi delle identità personalizzate con gli utenti precedentemente importati. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Etichetta dello spazio dei nomi di identità personalizzato creato in precedenza. Ad esempio, se hai chiamato il namespace Identity &quot;externalAudience&quot;, lo utilizzerai come chiave dell’array. |
+
+>[!NOTE]
+>
+>Per impostazione predefinita, le appartenenze al pubblico esterno vengono mantenute solo per 30 giorni. Per conservarli per più di 30 giorni, utilizza il `validUntil` durante l’acquisizione dei dati sul pubblico. Per ulteriori informazioni su questo campo, consulta la guida su [Gruppi di campi schema Dettagli appartenenza segmento](../../xdm/field-groups/profile/segmentation.md).
