@@ -3,10 +3,10 @@ keywords: destinazioni;soluzioni experience cloud; target;destinazione target; a
 title: Panoramica sulle destinazioni di Adobe
 description: Gestisci la tua esperienza cliente connettendo i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 13%
+source-wordcount: '230'
+ht-degree: 12%
 
 ---
 
@@ -20,11 +20,14 @@ Gestisci la tua esperienza cliente connettendo i tuoi dati in Adobe Experience P
 
 Al momento, Platform supporta le destinazioni di Adobe elencate di seguito.
 
-Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
+Per comprendere la differenza tra connessioni ed estensioni, vedi [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
 
 ### Connessioni
 
+* [Connessione Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Connessione Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Beta) tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Collegamento Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Estensioni
