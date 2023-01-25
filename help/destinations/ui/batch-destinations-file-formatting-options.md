@@ -1,10 +1,11 @@
 ---
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati nelle destinazioni basate su file
 title: (Beta) Configurare le opzioni di formattazione per le destinazioni basate su file
-source-git-commit: 23a7a1997e05d2bde26de5b73a23ea051bf2b3bb
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 0%
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
@@ -28,17 +29,25 @@ L&#39;opzione per configurare varie opzioni di formattazione per i file esportat
 
 ## Configurazione della formattazione dei file {#file-configuration}
 
+Per visualizzare le opzioni di formattazione del file, avvia la [connessione a destinazione](/help/destinations/ui/connect-destination.md) workflow. Seleziona **Tipo di dati: Segmenti** e **Tipo di file: CSV** per visualizzare le impostazioni di formattazione disponibili per l&#39;esportazione `CSV` file.
+
 >[!IMPORTANT]
 >
 >La destinazione a cui ci si connette potrebbe non disporre di tutte queste opzioni. Spetta allo sviluppatore di destinazione determinare le opzioni di formattazione dei file che desiderano supportare nella destinazione. Lo sviluppatore di destinazione può determinare quali opzioni sono disponibili quando si effettua la connessione alla destinazione. Le opzioni richieste sono contrassegnate da un asterisco nell’interfaccia utente di Experience Platform.
-
-Per visualizzare le opzioni di formattazione del file, avvia la [connessione a destinazione](/help/destinations/ui/connect-destination.md) e seleziona i segmenti come **Tipo di file**. Questa sezione descrive le impostazioni di formattazione disponibili per l&#39;esportazione `CSV` file.
+> 
+>Le nuove destinazioni di archiviazione cloud: [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure (Beta)](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - al momento supporta solo le sei opzioni CSV evidenziate di seguito.
 
 ![Immagine che mostra alcune delle opzioni di formattazione disponibili.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### Delimitatore
+### Delimitatore {#delimiter}
 
-Imposta un separatore per ciascun campo e valore. Ad esempio: `,` per valori separati da virgole o `/t` per valori separati da tabulazioni.
+Imposta un separatore per ciascun campo e valore. Le opzioni disponibili sono:
+
+* Due punti `(:)`
+* Virgola `(,)`
+* Barra verticale `(|)`
+* Punto e virgola `(;)`
+* Scheda `(\\t)`
 
 ### Carattere di citazione
 
