@@ -5,9 +5,9 @@ title: Creare uno schema utilizzando l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3947'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Quando definisci i campi nel [!DNL Schema Editor], sono disponibili alcune opzio
 | --- | --- |
 | [!UICONTROL Obbligatorio] | Indica che il campo è obbligatorio per l’inserimento dei dati. Eventuali dati caricati in un set di dati basato su questo schema che non contiene questo campo avranno esito negativo al momento dell’inserimento. |
 | [!UICONTROL Array] | Indica che il campo contiene una matrice di valori, ciascuno con il tipo di dati specificato. Ad esempio, utilizzando questo vincolo su un campo con un tipo di dati &quot;[!UICONTROL Stringa]&quot; specifica che il campo conterrà una matrice di stringhe. |
-| [!UICONTROL Enum e valori consigliati] | Un enum indica che questo campo deve contenere uno dei valori di un elenco enumerato di valori possibili. In alternativa, è anche possibile utilizzare questa opzione per fornire solo un elenco di valori consigliati per un campo stringa senza vincolare il campo a tali valori. |
+| [!UICONTROL Enum e valori consigliati] | Un enum indica che questo campo deve contenere uno dei valori di un elenco enumerato di valori possibili. In alternativa, è anche possibile utilizzare questa opzione per fornire solo un elenco di valori consigliati per un campo stringa senza vincolare il campo a tali valori. Consulta la guida su [definizione di enum e valori consigliati](../ui/fields/enum.md) per ulteriori informazioni su come gestire questi tipi di campi nell’interfaccia utente di . |
 | [!UICONTROL Identità] | Indica che il campo è un campo di identità. Sono fornite ulteriori informazioni sui campi di identità [più avanti in questa esercitazione](#identity-field). |
 | [!UICONTROL Relazione] | Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema dell&#39;unione e [!DNL Real-Time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. La [!UICONTROL Relazione] Il vincolo indica che questo campo fa riferimento all&#39;identità principale di uno schema basato su una classe diversa, il che implica una relazione tra i due schemi. Guarda l’esercitazione su [definizione di una relazione](./relationship-ui.md) per ulteriori informazioni. |
 

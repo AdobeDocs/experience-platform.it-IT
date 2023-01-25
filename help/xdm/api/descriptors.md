@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 4%
+source-wordcount: '1956'
+ht-degree: 3%
 
 ---
 
@@ -357,7 +357,7 @@ I descrittori di nomi descrittivi consentono a un utente di modificare `title`, 
 | `xdm:title` | Nuovo titolo da visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
 | `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` può essere utilizzato per aggiungere valori consigliati per il campo nell’interfaccia utente Segmentazione. È importante notare che `meta:enum` non dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà sorgente è un campo personalizzato definito dall&#39;organizzazione, è invece necessario modificare il campo `meta:enum` direttamente tramite una richiesta di PATCH alla risorsa principale del campo. |
-| `meta:excludeMetaEnum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa che contiene valori suggeriti esistenti forniti in un `meta:enum` è possibile includere questo oggetto in un descrittore di nome descrittivo per escludere alcuni o tutti questi valori dalla segmentazione. La chiave e il valore di ciascuna voce devono corrispondere a quelli inclusi nell&#39;originale `meta:enum` del campo per escludere la voce. |
+| `meta:excludeMetaEnum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa che contiene valori suggeriti esistenti forniti in un `meta:enum` è possibile includere questo oggetto in un descrittore di nome descrittivo per escludere alcuni o tutti questi valori dalla segmentazione. La chiave e il valore di ciascuna voce devono corrispondere a quelli inclusi nell&#39;originale `meta:enum` del campo per escludere la voce.<br><br>È importante notare che è possibile escludere solo i valori per i campi stringa contenenti **solo valori consigliati**. Se il campo stringa contiene dati effettivi `enum` vincoli, i relativi valori consigliati associati non possono essere disabilitati. `enum` i campi delle risorse personalizzate definite dall’organizzazione possono essere modificati tramite le richieste di PATCH, ma `enum` impossibile rimuovere i campi da risorse definite in Adobe standard. |
 
 {style=&quot;table-layout:auto&quot;}
 

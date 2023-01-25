@@ -2,9 +2,9 @@
 title: Definire i campi XDM nell’API del Registro di sistema dello schema
 description: Scopri come definire campi diversi durante la creazione di risorse personalizzate Experience Data Model (XDM) nell’API del Registro di sistema dello schema.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Facoltativamente, puoi fornire etichette rivolte al cliente per ogni valore sott
 
 >[!NOTE]
 >
->La `meta:enum` value does **not** dichiarare un&#39;enumerazione o eseguire autonomamente la convalida dei dati. Nella maggior parte dei casi, le stringhe fornite in `meta:enum` sono inoltre forniti ai sensi `enum` per garantire il vincolo dei dati. Tuttavia, in alcuni casi d’uso `meta:enum` è fornito senza `enum` array. Guarda l’esercitazione su [definizione dei valori suggeriti](../tutorials/suggested-values.md) per ulteriori informazioni.
+>La `meta:enum` value does **not** dichiarare un&#39;enumerazione o eseguire autonomamente la convalida dei dati. Nella maggior parte dei casi, le stringhe fornite in `meta:enum` sono inoltre forniti ai sensi `enum` per garantire il vincolo dei dati. Tuttavia, in alcuni casi d’uso `meta:enum` è fornito senza `enum` array. Guarda l’esercitazione su [definizione dei valori suggeriti nell’API](../tutorials/suggested-values.md) per ulteriori informazioni.
 
 Facoltativamente, puoi fornire un `default` per indicare il valore predefinito `enum` valore che il campo utilizzerà se non viene fornito alcun valore.
 
