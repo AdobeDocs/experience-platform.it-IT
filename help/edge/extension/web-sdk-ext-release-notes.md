@@ -2,7 +2,7 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
+source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 Questo documento illustra le note sulla versione per l&#39;estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK stesso, consulta la sezione [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Versione 2.15.0 - 25 gennaio 2023
+## Versione 2.15.1 - 26 gennaio 2023
 
 * È stato risolto un problema che impediva agli utenti senza accesso ai datastreams di modificare la configurazione dell’estensione.
 * È stato aggiunto il supporto per le superfici nel `sendEvent` azione.
