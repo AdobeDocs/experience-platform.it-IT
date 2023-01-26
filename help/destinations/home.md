@@ -3,18 +3,25 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
 
 ---
 
-# [!DNL Destinations] panoramica {#overview}
+# Panoramica di [!DNL Destinations] {#overview}
 
 ![Banner di panoramica sulle destinazioni](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Destinazioni e fonti {#destinations-and-sources}
 
