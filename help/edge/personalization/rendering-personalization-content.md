@@ -3,20 +3,20 @@ title: Eseguire il rendering di contenuti personalizzati utilizzando l’SDK per
 description: Scopri come eseguire il rendering di contenuti personalizzati con l’SDK per web di Adobe Experience Platform.
 keywords: personalizzazione;renderdecisions;sendEvent;decisionScopes;proposizioni;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 1%
+source-wordcount: '962'
+ht-degree: 2%
 
 ---
 
 # Rendering di contenuti personalizzati
 
-Adobe Experience Platform Web SDK supporta il recupero di contenuti personalizzati dalle soluzioni di personalizzazione Adobe, tra cui [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) e [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=it).
+Adobe Experience Platform Web SDK supporta il recupero di contenuti personalizzati dalle soluzioni di personalizzazione Adobe, tra cui [Adobe Target](https://business.adobe.com/it/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it).
 
 Inoltre, l’SDK per web abilita funzionalità di personalizzazione per pagina e pagina successiva tramite destinazioni di personalizzazione Adobe Experience Platform, ad esempio [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [connessione di personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md). Per scoprire come configurare un Experience Platform per la personalizzazione della stessa pagina e della pagina successiva, consulta la sezione [guida dedicata](../../destinations/ui/configure-personalization-destinations.md).
 
-Contenuto creato in Adobe Target [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) può essere recuperato e riprodotto automaticamente dall&#39;SDK. Contenuto creato in Adobe Target [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) L&#39;SDK non può eseguire il rendering automatico dell&#39;Offer decisioning o . Al contrario, devi richiedere questo contenuto utilizzando l’SDK e quindi eseguire manualmente il rendering del contenuto.
+Contenuto creato in Adobe Target [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e Adobe Journey Optimizer [Interfaccia utente di Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) può essere recuperato e riprodotto automaticamente dall&#39;SDK. Contenuto creato in Adobe Target [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) L&#39;SDK non può eseguire il rendering automatico dell&#39;Offer decisioning o . Al contrario, devi richiedere questo contenuto utilizzando l’SDK e quindi eseguire manualmente il rendering del contenuto.
 
 ## Rendering automatico del contenuto
 
@@ -107,7 +107,7 @@ Nell’esempio, la `renderDecisions` opzione non impostata su `true` quando `sen
 
 In alternativa, imposta la variabile `renderDecisions` opzione per `true` quando invii l’evento, l’SDK avrebbe tentato di eseguire il rendering di tutte le proposte idonee per il rendering automatico (come descritto in precedenza). Di conseguenza, ogni oggetto della proposta ha il proprio `renderAttempted` proprietà impostata su `true`. In questo caso non sarebbe necessario eseguire manualmente il rendering di queste proposte.
 
-Finora abbiamo discusso solo dei contenuti di personalizzazione idonei per il rendering automatico (ovvero di qualsiasi contenuto creato nel Compositore esperienza visivo di Adobe Target). Per recuperare qualsiasi contenuto di personalizzazione _not_ idoneo per il rendering automatico, è necessario richiedere il contenuto popolando il `decisionScopes` quando si invia l’evento. Un ambito è una stringa che identifica una particolare proposta che si desidera recuperare dal server.
+Finora abbiamo discusso solo dei contenuti di personalizzazione idonei per il rendering automatico (ovvero di qualsiasi contenuto creato nel Compositore esperienza visivo di Adobe Target o nell’interfaccia utente di Adobe Journey Optimizer Web Campaign). Per recuperare qualsiasi contenuto di personalizzazione _not_ idoneo per il rendering automatico, è necessario richiedere il contenuto popolando il `decisionScopes` quando si invia l’evento. Un ambito è una stringa che identifica una particolare proposta che si desidera recuperare dal server.
 
 Ecco un esempio:
 
@@ -303,7 +303,7 @@ La `applyPropositions` consente di eseguire il rendering o l&#39;esecuzione di u
 
 >[!IMPORTANT]
 >
->Se le proposte per `__view__` l’ambito è stato sottoposto a rendering al caricamento della pagina, i relativi `renderAttempted` Il flag viene impostato su `true`. La `applyPropositions` il comando non rieseguirà il rendering del `__view__` proposte di ambito che hanno `renderAttempted: true` bandiera.
+>Se le proposte per `__view__` al caricamento della pagina sono stati sottoposti a rendering l’ambito (o una superficie web), `renderAttempted` Il flag viene impostato su `true`. La `applyPropositions` il comando non rieseguirà il rendering del `__view__` proposte di ambito (o superficie web) che hanno `renderAttempted: true` bandiera.
 
 ### Caso d&#39;uso 1: Rendering delle proposte di visualizzazione di applicazioni a pagina singola
 

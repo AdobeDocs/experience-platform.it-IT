@@ -5,10 +5,10 @@ user-guide-title: Guida di Adobe Experience Platform Web SDK
 breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
-source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
+source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 32%
+source-wordcount: '197'
+ht-degree: 33%
 
 ---
 
@@ -60,6 +60,8 @@ ht-degree: 32%
          * [Registrazione lato server](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [Panoramica](personalization/offer-decisioning/offer-decisioning-overview.md)
+   * Adobe Journey Optimizer {#ajo}
+      * [Panoramica](personalization/ajo/overview.md)
 * Consenso {#consent}
    * [Consenso di supporto](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
