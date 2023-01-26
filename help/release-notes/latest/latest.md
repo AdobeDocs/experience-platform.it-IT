@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
+source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1994'
 ht-degree: 6%
 
 ---
@@ -66,19 +66,10 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Nuove opzioni di delimitazione per i connettori di destinazione dell&#39;archiviazione cloud beta | Tre nuove opzioni di delimitazione (due punti) `:`, Tubo `|`, punto e virgola `;`) sono ora disponibili per le nuove destinazioni di archiviazione cloud beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure (Beta)](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informazioni sul supporto [opzioni di formattazione dei file](/help/destinations/ui/batch-destinations-file-formatting-options.md) per le destinazioni basate su file. |
-| Nuovo parametro opzionale disponibile in [campi dati del cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurazioni [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilizza questa opzione quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi dati di destinazione impostati dall&#39;organizzazione di un utente. <br> Ad esempio, il **[!UICONTROL Alias di integrazione]** nel campo [[!UICONTROL Personalizzazione personalizzata]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) La destinazione deve essere univoca, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
+| Nuove opzioni di delimitazione per i connettori di destinazione dell&#39;archiviazione cloud beta | Tre nuove opzioni di delimitazione (due punti) `:`, Pipe, Punto e virgola `;`) sono ora disponibili per le nuove destinazioni di archiviazione cloud beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure (Beta)](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informazioni sul supporto [opzioni di formattazione dei file](/help/destinations/ui/batch-destinations-file-formatting-options.md) per le destinazioni basate su file. |
+| Nuovo parametro opzionale disponibile in [campi dati del cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurazioni [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi dati di destinazione impostati dall&#39;organizzazione di un utente. <br> Ad esempio, il **[!UICONTROL Alias di integrazione]** nel campo [[!UICONTROL Personalizzazione personalizzata]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) La destinazione deve essere univoca, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
 
-**Correzioni e miglioramenti** {#fixes-and-enhancements}
-
-<!--
-
-| Fix or enhancement | Description |
-| ----------- | ----------- |
-| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
-| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
-
--->
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
 
 <table>
     <tr>
