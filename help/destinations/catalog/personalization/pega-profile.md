@@ -1,7 +1,8 @@
 ---
 title: Connettore profilo Pega
 description: Utilizza il Connettore profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archivio cloud Amazon S3. In Pega Customer Decision Hub, i processi di dati possono essere pianificati in Customer Profile Designer per importare periodicamente dati di profilo dall’archiviazione Amazon S3.
-source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
+last-substantial-update: 2023-01-25T00:00:00Z
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%

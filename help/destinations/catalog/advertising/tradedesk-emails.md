@@ -1,8 +1,9 @@
 ---
 title: (Beta) La connessione Trade Desk - CRM
 description: Attiva i profili nel tuo account Trade Desk per il targeting del pubblico e la soppressione in base ai dati CRM.
+last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 271a9ad9848db855372a4ce5346f97cf48400901
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 1%
