@@ -2,9 +2,9 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente del servizio query.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,11 @@ La sezione relativa allo stato della query fornisce il codice di errore e il mes
 
 ![Schermata dei dettagli di esecuzione con l&#39;icona di copia SQL evidenziata.](../images/ui/monitor-queries/copy-sql.png)
 
-### Esegui i dettagli delle query con blocco anonimo {#anonymous-block-queries}
+### (Versione limitata) Esegui i dettagli per le query con blocco anonimo {#anonymous-block-queries}
+
+>[!IMPORTANT]
+>
+>La funzione di monitoraggio delle query che visualizza i dettagli di esecuzione per le query di blocco anonime è attualmente in una versione limitata e non è disponibile per tutti i clienti.
 
 Le query che utilizzano blocchi anonimi per includere le relative istruzioni SQL sono separate nelle singole query. Questo ti consente di controllare i dettagli di esecuzione per ogni blocco di query singolarmente.
 

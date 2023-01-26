@@ -1,14 +1,18 @@
 ---
 title: Registri delle query
 description: I registri di query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di servizio query dell’interfaccia utente.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # Registro delle query
+
+>[!IMPORTANT]
+>
+>Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti. L’interfaccia utente potrebbe essere leggermente diversa senza un’icona di modifica. Inoltre, il processo di selezione di un nome di query può passare all’editor delle query anziché al [!UICONTROL Dettagli del registro query] visualizza.
 
 Adobe Experience Platform gestisce un registro di tutti gli eventi di query che si verificano tramite sia l’API che l’interfaccia utente. Queste informazioni sono disponibili nell’interfaccia utente del servizio query nel [!UICONTROL Registri] scheda .
 
@@ -39,6 +43,10 @@ Ciascuna riga rappresenta i dati di registro per un’esecuzione di query associ
 Nel pannello dei dettagli del registro, è possibile selezionare un nuovo set di dati di output e visualizzare o copiare l&#39;intera query SQL utilizzata nell&#39;esecuzione.
 
 ![Area di lavoro Registro query con una riga selezionata e set di dati di output e query SQL evidenziate.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti.
 
 Puoi anche selezionare un nome di modello di query dal [!UICONTROL Nome] per passare direttamente alla colonna [!UICONTROL Dettagli del registro query] visualizza.
 
