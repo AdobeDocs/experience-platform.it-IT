@@ -2,10 +2,10 @@
 title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1534'
+ht-degree: 1%
 
 ---
 
@@ -83,6 +83,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nel *YourDestination* destinazione. |
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo di esportazione | **[!UICONTROL Esportazione set di dati]** | Stai esportando set di dati non elaborati, che non sono raggruppati o strutturati in base a interessi o qualifiche di pubblico. |
 | Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 | Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
 
@@ -130,11 +131,13 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-*Elimina come appropriato: se stai documentando una nuova destinazione di streaming, mantieni il primo paragrafo qui sotto. Se stai documentando una nuova destinazione basata su file, mantieni il secondo paragrafo.*
+*Elimina come appropriato: se stai documentando una nuova destinazione di streaming, mantieni il primo paragrafo qui sotto. Se stai documentando una nuova destinazione basata su file, mantieni il secondo paragrafo. Se si documenta una destinazione che esporta i set di dati, mantenere il terzo paragrafo.*
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
 Leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+
+Leggi [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) per istruzioni dettagliate sull&#39;esportazione dei set di dati in questa destinazione.
 
 ### Mappare attributi e identità {#map}
 
