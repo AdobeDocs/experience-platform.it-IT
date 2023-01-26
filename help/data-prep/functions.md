@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dei dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
+source-git-commit: 9dd05980bdb360fba23b01f2b3e3ecc5d8d3e9e0
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4392'
 ht-degree: 4%
 
 ---
@@ -139,7 +139,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Controlla se un oggetto è vuoto o meno. | <ul><li>INGRESSO: **Obbligatorio** L&#39;oggetto che si sta tentando di controllare è vuoto.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| array_to_object | Crea un elenco di oggetti. | <ul><li>INGRESSO: **Obbligatorio** Un raggruppamento di coppie chiave-array.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot;: 22.5 }, { &quot;sku&quot;: &quot;id2&quot;, &quot;price&quot;: 14,35 }] |
+| array_to_object | Crea un elenco di oggetti. | <ul><li>INGRESSO: **Obbligatorio** Un raggruppamento di coppie chiave-array.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Crea un oggetto in base alle coppie chiave/valore flat specificate. | <ul><li>INGRESSO: **Obbligatorio** Elenco semplice di coppie chiave/valore.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un oggetto dalla stringa di input. | <ul><li>STRINGA: **Obbligatorio** Stringa da analizzare per creare un oggetto.</li><li>VALUE_DELIMITER: *Facoltativo* Il delimitatore che separa un campo dal valore. Il delimitatore predefinito è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di valori di campo. Il delimitatore predefinito è `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: È possibile utilizzare `get()` insieme a `str_to_object()` per recuperare i valori per le chiavi nella stringa. | <ul><li>Esempio n. 1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Esempio n. 2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Esempio n. 1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Esempio n. 2: &quot;John&quot;</li></ul> |
 | contains_key | Controlla se l&#39;oggetto esiste all&#39;interno dei dati di origine. **Nota:** Questa funzione sostituisce la funzione obsoleta `is_set()` funzione . | <ul><li>INGRESSO: **Obbligatorio** Percorso da verificare se esiste all’interno dei dati di origine.</li></ul> | contains_key(INPUT) | contains_key(&quot;evar.evar.field1&quot;) | true |
