@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note aggiornate sulla versione di Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1847'
 ht-degree: 6%
 
 ---
@@ -75,10 +75,6 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
     <tr>
         <td><b>Correzione o miglioramento</b></td>
         <td><b>Descrizione</b></td>
-    </tr>
-    <tr>
-        <td>Convalida dell'interfaccia utente e API per le mappature richieste e le mappature duplicate (PLAT-123316)</td>
-        <td>La convalida viene ora applicata come segue nell’interfaccia utente e nell’API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campi di mappatura</a> nel flusso di lavoro di attivazione delle destinazioni :<ul><li><b>Mappature richieste</b>: Se la destinazione è stata impostata dallo sviluppatore di destinazione con le mappature richieste (ad esempio, il <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destinazione), quindi questi mapping richiesti devono essere aggiunti dall'utente quando si attivano i dati nella destinazione. </li><li><b>Mappature duplicate</b>: Nel passaggio di mappatura del flusso di lavoro di attivazione, puoi aggiungere valori duplicati nei campi di origine, ma non nei campi di destinazione. Vedi la tabella seguente per un esempio di combinazioni di mappatura consentite e proibite. <br><table><thead><tr><th>Consentito/vietato</th><th>Campo di origine</th><th>Campo di destinazione</th></tr></thead><tbody><tr><td>Consentito</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias e-mail2</li></ul></td></tr><tr><td>Proibito</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>È stato aggiornato il comportamento di esportazione nelle destinazioni basate su file (PLAT-123316)</td>
