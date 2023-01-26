@@ -2,14 +2,23 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note di rilascio relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---
 
 # Note sulla versione per tag e inoltro eventi
+
+## 25 gennaio 2022
+
+* **Nuova schermata principale**: La home page dell’interfaccia utente di raccolta dati è stata aggiornata con informazioni utili sull’onboarding e collegamenti per semplificare la produttività. Ciò include:
+   1. Documentazione e flussi di lavoro consigliati per iniziare
+   1. Proprietà, regole ed elementi dati recenti
+   1. Estensioni popolari
+   1. Nuovi aggiornamenti di estensione con una funzione di installazione rapida
+* **Invia dati a [!DNL Google Ads] utilizzo dell&#39;inoltro eventi**: Ora puoi utilizzare la [[!DNL Google Ads Enhanced Conversions] Estensione API](../extensions/server/google-ads-enhanced-conversions/overview.md) per l&#39;inoltro di eventi, combinato con [Google Oauth 2 segreti](../ui/event-forwarding/secrets.md#google-oauth2), per inviare in modo sicuro i dati lato server a [!DNL Google Ads] in tempo reale.
 
 ## 23 novembre 2022
 
