@@ -4,9 +4,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Utilizza i gruppi di campi per classi e schemi di Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '508'
 ht-degree: 15%
 
 ---
@@ -190,7 +190,8 @@ ht-degree: 15%
 * Tutorial {#tutorials}
    * [Creare uno schema nell’interfaccia utente](tutorials/create-schema-ui.md)
    * [Creare uno schema nell’API](tutorials/create-schema-api.md)
-   * [Definire campi personalizzati nell’API](./tutorials/custom-fields-api.md)
+   * [Aggiungere campi specifici a uno schema (API)](./tutorials/specific-fields-api.md)
+   * [Definire campi personalizzati (API)](./tutorials/custom-fields-api.md)
    * [Aggiungere valori consigliati a un campo (API)](tutorials/suggested-values.md)
    * [Campo XDM obsoleto](tutorials/field-deprecation.md)
    * [Definire una relazione di schema nell’interfaccia utente](tutorials/relationship-ui.md)
