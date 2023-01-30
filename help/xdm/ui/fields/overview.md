@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire campi XDM nell’interfaccia utente di Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ A seconda che si stia aggiungendo un campo direttamente a uno schema o ai relati
 
 ## Definire le proprietà di un campo {#define}
 
-Dopo aver selezionato la **più (+)** icona, un **[!UICONTROL Nuovo campo]** viene visualizzato nell’area di lavoro, all’interno di un oggetto con namespace nell’ID tenant univoco (mostrato come `_tenantId` nell&#39;esempio seguente). Tutti i campi personalizzati aggiunti a uno schema vengono inseriti automaticamente all’interno di questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti dall’Adobe.
+Dopo aver selezionato la **più (+)** icona, un **[!UICONTROL Campo senza titolo]** nell&#39;area di lavoro viene visualizzato un segnaposto.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ Nella barra a destra sotto **[!UICONTROL Proprietà campo]**, puoi configurare i
 
 | Proprietà campo | Descrizione |
 | --- | --- |
-| [!UICONTROL Nome campo] | Nome descrittivo univoco del campo. Il nome del campo non può essere modificato dopo il salvataggio dello schema.<br><br>Il nome dovrebbe idealmente essere scritto in camelCase. Può contenere caratteri alfanumerici, trattini o caratteri di sottolineatura, ma **non possono** inizia con un carattere di sottolineatura.<ul><li>**Corretto**: `fieldName`</li><li>**Accettabile:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Errato**: `_fieldName`</li></ul> |
-| [!UICONTROL Nome visualizzato] | Un nome descrittivo per il campo. |
+| [!UICONTROL Nome campo] | Nome descrittivo univoco del campo. Il nome del campo non può essere modificato dopo il salvataggio dello schema. Questo valore viene utilizzato per identificare e fare riferimento al campo nel codice e in altre applicazioni a valle<br><br>Il nome dovrebbe idealmente essere scritto in camelCase. Può contenere caratteri alfanumerici, trattini o caratteri di sottolineatura, ma **non possono** inizia con un carattere di sottolineatura.<ul><li>**Corretto**: `fieldName`</li><li>**Accettabile:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Errato**: `_fieldName`</li></ul> |
+| [!UICONTROL Nome visualizzato] | Nome visualizzato del campo. Questo è il nome che verrà utilizzato per rappresentare il campo nell’area di lavoro dell’Editor di schema. |
 | [!UICONTROL Tipo] | Il tipo di dati che il campo conterrà. Da questo menu a discesa, puoi selezionare uno dei [tipi scalari standard](../../schema/field-constraints.md) supportato da XDM o da uno dei campi multipli [tipi di dati](../resources/data-types.md) definiti in precedenza nella [!DNL Schema Registry].<br><br>Puoi anche selezionare **[!UICONTROL Ricerca avanzata del tipo]** per cercare e filtrare i tipi di dati esistenti e individuare più facilmente il tipo desiderato. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Al termine della configurazione del campo, seleziona **[!UICONTROL Applica]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-L’area di lavoro viene aggiornata in modo da visualizzare il nome e il tipo del campo. Nella barra a destra viene ora visualizzato il percorso del campo oltre alle altre proprietà.
+L’area di lavoro viene aggiornata per mostrare il campo appena aggiunto, che si trova all’interno di un oggetto con namespace nell’ID tenant univoco (mostrato come `_tenantId` nell&#39;esempio seguente). Tutti i campi personalizzati aggiunti a uno schema vengono inseriti automaticamente all’interno di questo spazio dei nomi per evitare conflitti con altri campi delle classi e dei gruppi di campi forniti dall’Adobe. La barra a destra ora elenca il percorso del campo oltre alle altre proprietà.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

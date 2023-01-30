@@ -5,9 +5,9 @@ title: Creare uno schema utilizzando l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 0%
 
 ---
@@ -177,8 +177,10 @@ Seleziona la **più (+)** accanto all’icona `loyaltyTier` per iniziare ad aggi
 
 Ogni campo richiede le seguenti informazioni:
 
-* **[!UICONTROL Nome campo]:** Nome del campo, scritto in cammello. Esempio: loyaltyLevel
-* **[!UICONTROL Nome visualizzato]:** Nome del campo, scritto nel caso del titolo. Esempio: Livello fedeltà
+* **[!UICONTROL Nome campo]:** Nome del campo, preferibilmente scritto in camelCase. Non sono consentiti spazi. Questo è il nome utilizzato per fare riferimento al campo nel codice e in altre applicazioni downstream.
+   * Esempio: loyaltyLevel
+* **[!UICONTROL Nome visualizzato]:** Nome del campo, scritto nel caso del titolo. Questo è il nome che verrà visualizzato nell&#39;area di lavoro durante la visualizzazione o la modifica dello schema.
+   * Esempio: Livello fedeltà
 * **[!UICONTROL Tipo]:** Tipo di dati del campo. Ciò include i tipi scalari di base e qualsiasi tipo di dati definito in [!DNL Schema Registry]. Esempi: [!UICONTROL Stringa], [!UICONTROL Intero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Indirizzo], [!UICONTROL Numero di telefono], ecc.
 * **[!UICONTROL Descrizione]:** Una descrizione facoltativa del campo deve essere inclusa con un massimo di 200 caratteri.
 
