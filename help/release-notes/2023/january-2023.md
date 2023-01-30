@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2023
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
+source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1911'
 ht-degree: 5%
 
 ---
@@ -61,11 +61,11 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | [Connessione profilo Pega](../../destinations/catalog/personalization/pega-profile.md) | Utilizza la [!DNL Pega Profile Connector] in Adobe Experience Platform per creare una connessione in uscita diretta al tuo [!DNL Amazon] Archiviazione S3 per esportare periodicamente i dati del profilo in file CSV da Adobe Experience Platform nei bucket S3 personalizzati. In [!DNL Pega Customer Decision Hub], è possibile pianificare i processi dati per importare i dati del profilo dall&#39;archiviazione S3 per aggiornare [!DNL Pega Customer Decision Hub] profilo. |
 | [(Beta) La connessione UE CRM per il settore commerciale](../../destinations/catalog/advertising/tradedesk-emails.md) | Con il rilascio di EUID (ID unificato europeo), ne vedrai due [!DNL The Trade Desk - CRM] destinazioni nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md). <ul><li> Se si raccolgono dati nell&#39;UE, utilizzare il **[!DNL The Trade Desk - CRM (EU)]** destinazione.</li><li> Se si ottengono dati nelle aree APAC o NAMER, utilizzare il **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destinazione. </li></ul> |
 
-**Funzionalità nuove o aggiornate**
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Miglioramento del consenso per i contenuti multimediali a pagamento per le integrazioni con destinazioni di streaming | Un miglioramento a [applicazione della politica del consenso](/help/data-governance/enforcement/auto-enforcement.md) su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations) per i casi d’uso relativi all’attivazione a pagamento di contenuti multimediali. I profili che hanno ritirato il consenso da una particolare esperienza vengono ora rimossi in modo proattivo da queste destinazioni. <br> <b>Nota</b>: Questa funzionalità è disponibile solo per i clienti di **[!UICONTROL Privacy e sicurezza]** e quelli di **[!UICONTROL Scudo sanitario]**. |
+| Miglioramento della policy di consenso ai file multimediali a pagamento per le integrazioni con le destinazioni di streaming | Un miglioramento a [applicazione della politica del consenso](/help/data-governance/enforcement/auto-enforcement.md) su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations) per i casi d’uso relativi all’attivazione a pagamento di contenuti multimediali. Quando i profili non sono più qualificati per i criteri di consenso, ora Experience Platform comunica in modo proattivo la loro uscita dai criteri alle destinazioni di streaming. <br> <b>Nota</b>: Questa funzionalità è disponibile solo per i clienti di **[!UICONTROL Privacy e sicurezza]** e quelli di **[!UICONTROL Scudo sanitario]**. |
 | Nuove opzioni di delimitazione per i connettori di destinazione dell&#39;archiviazione cloud beta | Tre nuove opzioni di delimitazione (due punti) `:`, Pipe, Punto e virgola `;`) sono ora disponibili per le nuove destinazioni di archiviazione cloud beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure (Beta)](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informazioni sul supporto [opzioni di formattazione dei file](/help/destinations/ui/batch-destinations-file-formatting-options.md) per le destinazioni basate su file. |
 | Nuovo parametro opzionale disponibile in [campi dati del cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurazioni [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi dati di destinazione impostati dall&#39;organizzazione di un utente. <br> Ad esempio, il **[!UICONTROL Alias di integrazione]** nel campo [[!UICONTROL Personalizzazione personalizzata]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) La destinazione deve essere univoca, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
 
