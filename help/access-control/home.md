@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1473'
 ht-degree: 3%
 
 ---
@@ -79,6 +79,12 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 
 | Categoria | Autorizzazione | Descrizione |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL Visualizza cronologia avvisi] | Accesso in sola lettura per la cronologia degli avvisi. |
+| [!DNL Alerts] | [!UICONTROL Risolvere gli avvisi] | Accesso alla lettura, alla modifica e all’eliminazione degli avvisi. |
+| [!DNL Alerts] | [!UICONTROL Visualizzare gli avvisi] | Accesso in sola lettura per gli avvisi. |
+| [!DNL Alerts] | [!UICONTROL Gestire gli avvisi] | Accesso alla cronologia degli avvisi in lettura, creazione, modifica ed eliminazione. |
+| [!DNL Data Hygiene] | [!UICONTROL Visualizza igiene dati] | Accesso in sola lettura per l&#39;igiene dei dati. |
+| [!DNL Data Hygiene] | [!UICONTROL Gestire l’igiene dei dati] | Accesso per leggere, creare, modificare ed eliminare l’igiene dei dati. |
 | [!DNL Data Modeling] | [!UICONTROL Gestire gli schemi] | Accesso a strumenti per la lettura, la creazione, la modifica e l’eliminazione di schemi e risorse correlate. |
 | [!DNL Data Modeling] | [!UICONTROL Visualizzare gli schemi] | Accesso in sola lettura agli schemi e alle risorse correlate. |
 | [!DNL Data Modeling] | [!UICONTROL Gestire le relazioni] | Accedere alla funzione di lettura, creazione, modifica ed eliminazione delle relazioni tra schemi. |
@@ -94,9 +100,9 @@ La tabella seguente illustra le autorizzazioni disponibili per [!DNL Experience 
 | [!DNL Profile Management] | [!UICONTROL Visualizza criteri di unione] | Accesso in sola lettura ai criteri di unione disponibili. |
 | [!DNL Profile Management] | [!UICONTROL Esportare il pubblico per il segmento] | Possibilità di esportare un segmento di pubblico valutato in un set di dati. |
 | [!DNL Profile Management] | [!UICONTROL Valutare un segmento in un pubblico] | Possibilità di generare profili per un pubblico valutando una definizione di segmento. |
-| [!DNL Identities] | [!UICONTROL Manage Identity Namespaces (Gestisci spazi dei nomi di identità)] | Accesso a spazi dei nomi delle identità di lettura, creazione, modifica ed eliminazione. |
-| [!DNL Identities] | [!UICONTROL Visualizzare gli spazi dei nomi delle identità] | Accesso in sola lettura per i namespace di identità. |
-| [!DNL Identities] | [!UICONTROL Visualizza grafico identità] | Accesso in sola lettura per i grafici di identità. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces (Gestisci spazi dei nomi di identità)] | Accesso a spazi dei nomi delle identità di lettura, creazione, modifica ed eliminazione. |
+| [!DNL Identity Management] | [!UICONTROL Visualizzare gli spazi dei nomi delle identità] | Accesso in sola lettura per i namespace di identità. |
+| [!DNL Identity Management] | [!UICONTROL Visualizza grafico identità] | Accesso in sola lettura per i grafici di identità. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestire le sandbox] | Accesso alla lettura, alla creazione, alla modifica e all’eliminazione delle sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes (Visualizza sandbox)] | Accesso in sola lettura per le sandbox appartenenti all’organizzazione. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reimpostare una sandbox] | Possibilità di reimpostare una sandbox. |
