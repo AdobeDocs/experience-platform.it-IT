@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Guida all’interfaccia utente di Attribution AI
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
@@ -17,41 +17,41 @@ Nell’ambito di Intelligent Services, Attribution AI è un servizio di attribuz
 
 Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 
-## Creare un’istanza
+## Creare un modello
 
 In [!DNL Adobe Experience Platform] Interfaccia utente, seleziona **[!UICONTROL Servizi]** nella navigazione a sinistra. La **[!UICONTROL Servizi]** viene visualizzato il browser e vengono visualizzati i servizi intelligenti di Adobe disponibili. Nel contenitore per Attribution AI, seleziona **[!UICONTROL Apri]**.
 
-![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
+![Accesso al modello](./images/user-guide/open_Attribution_ai.png)
 
-Viene visualizzata la pagina del servizio Attribution AI. In questa pagina sono elencate le istanze di servizio di Attribution AI e vengono visualizzate informazioni su di esse, tra cui il nome dell’istanza, gli eventi di conversione, la frequenza di esecuzione dell’istanza e lo stato dell’ultimo aggiornamento.
+Viene visualizzata la pagina del servizio Attribution AI. In questa pagina sono elencati i modelli di servizio di Attribution AI e vengono visualizzate informazioni su di essi, tra cui il nome del modello, gli eventi di conversione, la frequenza di esecuzione del modello e lo stato dell&#39;ultimo aggiornamento.
 
-È possibile trovare le **[!UICONTROL Totale degli eventi di conversione valutati]** in basso a destra **[!UICONTROL Crea istanza]** contenitore. Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali istanze di servizio eliminate.
+È possibile trovare le **[!UICONTROL Totale degli eventi di conversione valutati]** in basso a destra **[!UICONTROL Crea modello]** contenitore. Questa metrica tiene traccia del numero totale di eventi di conversione valutati per Attribution AI per l’anno solare corrente, inclusi tutti gli ambienti sandbox ed eventuali modelli di servizio eliminati.
 
 ![conversioni totali](./images/user-guide/total_conversions.png)
 
-Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, seleziona un&#39;istanza dal tuo esistente **[!UICONTROL Istanze del servizio]**. I controlli contengono le seguenti informazioni:
+I modelli di servizio possono essere modificati, clonati ed eliminati utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, selezionare un modello dal modello esistente **[!UICONTROL Modelli di servizio]**. I controlli contengono le seguenti informazioni:
 
-- **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
-- **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia l&#39;istanza di servizio selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Elimina]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Profilo cliente in tempo reale non vengono eliminati.
+- **[!UICONTROL Modifica]**: Selezione **[!UICONTROL Modifica]** consente di modificare un modello di servizio esistente. Puoi modificare il nome, la descrizione, lo stato, la frequenza di punteggio del modello e colonne di set di dati di punteggio aggiuntive.
+- **[!UICONTROL Clona]**: Selezione **[!UICONTROL Clona]** copia il modello di servizio selezionato. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuovo modello.
+- **[!UICONTROL Elimina]**: È possibile eliminare un modello di servizio, comprese eventuali esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Profilo cliente in tempo reale non vengono eliminati.
 - **[!UICONTROL Origine dati]**: Un collegamento al set di dati in uso. Se Attribution AI utilizza più di un set di dati, viene visualizzato &quot;Multiplo&quot; seguito dal numero di set di dati. Quando si seleziona il collegamento ipertestuale, viene visualizzato il profilo di anteprima dei set di dati.
 - **[!UICONTROL Dettagli dell&#39;ultima esecuzione]**: Viene visualizzato solo in caso di errore di un&#39;esecuzione. Informazioni sul motivo per cui l’esecuzione non riuscita, ad esempio i codici di errore, sono visualizzati qui.
 
 ![Riquadro laterale](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Eventi di conversione]**: Panoramica rapida degli eventi di conversione configurati per questa istanza.
+- **[!UICONTROL Eventi di conversione]**: Panoramica rapida degli eventi di conversione configurati per questo modello.
 - **[!UICONTROL Intervallo di lookback]**: Intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell’evento di conversione sono inclusi.
-- **[!UICONTROL Punti di contatto]**: Elenco di tutti i punti di contatto definiti durante la creazione dell’istanza.
+- **[!UICONTROL Punti di contatto]**: Elenco di tutti i punti di contatto definiti durante la creazione di questo modello.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Seleziona **[!UICONTROL Crea istanza]** per iniziare.
+Seleziona **[!UICONTROL Crea modello]** per iniziare.
 
-![Crea istanza](./images/user-guide/landing_page.png)
+![Crea modello](./images/user-guide/landing_page.png)
 
-Viene quindi visualizzata la pagina di configurazione per Attribution AI in cui puoi specificare un nome e una descrizione facoltative per l’istanza del servizio.
+Viene quindi visualizzata la pagina di configurazione per Attribution AI in cui è possibile specificare un nome e una descrizione facoltative per il modello di servizio.
 
-![denominazione di un’istanza](./images/user-guide/naming_instance.png)
+![denominazione di un modello](./images/user-guide/naming_instance.png)
 
 ## Seleziona dati {#select-data}
 
@@ -227,7 +227,7 @@ Per modificare l’ora del giorno in cui si desidera che si verifichi il puntegg
 
 ### Colonne di set di dati con punteggio aggiuntivo (facoltativo)
 
-Per impostazione predefinita, viene creato un set di dati di punteggio per ogni istanza di servizio in uno schema standard. Puoi scegliere di aggiungere ulteriori colonne in base alle configurazioni Evento di conversione e Punto di contatto all’output del set di dati di valutazione. Per iniziare, seleziona le colonne dal set di dati di input, puoi trascinarle e rilasciarle per modificare l’ordine tenendo premuto il pulsante sinistro del mouse sull’icona hamburger.
+Per impostazione predefinita, viene creato un set di dati di punteggio per ogni modello di servizio in uno schema standard. Puoi scegliere di aggiungere ulteriori colonne in base alle configurazioni Evento di conversione e Punto di contatto all’output del set di dati di valutazione. Per iniziare, seleziona le colonne dal set di dati di input, puoi trascinarle e rilasciarle per modificare l’ordine tenendo premuto il pulsante sinistro del mouse sull’icona hamburger.
 
 ![aggiunta a una colonna di set di dati di punteggio](./images/user-guide/Add-score-dataset.png)
 
@@ -264,44 +264,6 @@ Per garantire che il modello sia il più accurato possibile, è importante addes
 Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]** nell&#39;angolo in alto a destra. Consentire un po&#39; di tempo per l&#39;elaborazione dei dati. Una volta completata, viene visualizzata una finestra di dialogo di attivazione che conferma il completamento della configurazione dell&#39;istanza. Seleziona **[!UICONTROL Ok]** da reindirizzare al **[!UICONTROL Istanze del servizio]** in cui puoi vedere la tua istanza di servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
-
-## Politiche di governance
-
-Una volta avviato il flusso di lavoro per creare un&#39;istanza e inviare la configurazione del modello, il [applicazione delle norme](/help/data-governance/enforcement/auto-enforcement.md) controlli per verificare l&#39;esistenza di eventuali violazioni. Se si verifica una violazione di un criterio, viene visualizzato un puntatore che indica la violazione di uno o più criteri. In questo modo, assicurati che le operazioni dati e le azioni di marketing all’interno di Platform siano conformi ai criteri di utilizzo dei dati.
-
-![manifesto che mostra la violazione dei criteri](./images/user-guide/policy-violation-popover-aai.png)
-
-Il puntatore fornisce informazioni specifiche sulla violazione. Puoi risolvere queste violazioni tramite le impostazioni dei criteri e altre misure che non sono direttamente correlate al flusso di lavoro di configurazione. Ad esempio, puoi modificare le etichette in modo che alcuni campi possano essere utilizzati a scopo di scienza dei dati. In alternativa, puoi anche modificare la configurazione del modello stesso in modo che non utilizzi nulla con un&#39;etichetta. Consulta la documentazione per ulteriori informazioni su come configurare [politiche](/help/data-governance/policies/overview.md).
-
-## Controllo dell’accesso basato su attributi
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile solo in una versione limitata.
-
-[Controllo dell&#39;accesso basato su attributi](../../../help/access-control/abac/overview.md) è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
-
-Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
-
-Grazie al controllo degli accessi basato sugli attributi, gli amministratori possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali identificabili (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
-
-A causa del controllo degli accessi basato sugli attributi, alcuni campi e funzionalità potrebbero avere accesso limitato e non essere disponibili per alcune istanze del servizio Attribution AI. Ad esempio, &quot;Identity&quot;, &quot;Score Definition&quot; e &quot;Clone&quot;.
-
-Nella parte superiore dell’area di lavoro Attribution AI **pagina approfondimenti**, i dettagli visualizzati nella barra laterale hanno accesso limitato.
-
-![Area di lavoro Attribution AI con i campi dello schema limitati evidenziati.](./images/user-guide/access-restricted.png)
-
-Se selezioni set di dati con schemi limitati nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** accanto al nome del set di dati viene visualizzato un avviso con il messaggio: [!UICONTROL Sono escluse le informazioni limitate].
-
-![Area di lavoro Attribution AI con i campi set di dati limitati evidenziati.](./images/user-guide/restricted-info-excluded.png)
-
-Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** viene visualizzato un avviso che informa che [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nell’anteprima del set di dati.]
-
-![Risultati evidenziati nell’area di lavoro di Attribution AI con i campi dello schema con anteprima limitata.](./images/user-guide/restricted-dataset-preview.png)
-
-Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
-
-![L’area di lavoro Attribution AI con i campi limitati dei risultati dell’istanza evidenziata.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Passaggi successivi
 

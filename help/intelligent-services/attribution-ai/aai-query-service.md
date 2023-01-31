@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Analisi dei punteggi di attribuzione tramite Query Service
 description: Scopri come utilizzare Adobe Experience Platform Query Service per analizzare i punteggi delle Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i rel
 
 Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra. La **[!UICONTROL Set di dati]** viene visualizzata la pagina . Quindi, seleziona la **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
 
-![Accesso all’istanza](./images/aai-query/datasets_browse.png)
+![Accesso al modello](./images/aai-query/datasets_browse.png)
 
 Seleziona il set di dati di output. Viene visualizzata la pagina dell’attività del set di dati.
 
@@ -305,7 +305,7 @@ Questa query appiattisce la colonna di struttura in più colonne singole ed espl
 
 >[!TIP]
 >
-> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La `COLUMN_NAME` può accettare i valori dei nomi di colonna facoltativi passati attraverso (colonne di reporting) aggiunti durante la configurazione dell’istanza di Attribution AI. Controlla lo schema di output del punteggio per trovare il `{COLUMN_NAME}` valori necessari per completare la query.
+> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La `COLUMN_NAME` può accettare i valori dei nomi di colonna facoltativi passati attraverso (colonne di reporting) aggiunti durante la configurazione del modello di Attribution AI. Controlla lo schema di output del punteggio per trovare il `{COLUMN_NAME}` valori necessari per completare la query.
 
 ```sql
 SELECT 

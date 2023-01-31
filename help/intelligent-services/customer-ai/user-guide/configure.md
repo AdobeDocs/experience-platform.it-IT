@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurare un’istanza di Customer AI
 description: I servizi AI/ML forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -250,46 +250,6 @@ Se l&#39;istanza viene creata correttamente, un&#39;esecuzione di previsione vie
 >A seconda delle dimensioni dei dati di input, il completamento delle esecuzioni può richiedere fino a 24 ore.
 
 Seguendo questa sezione, hai configurato un&#39;istanza di Customer AI ed eseguito un&#39;esecuzione di previsione. Al completamento dell’esecuzione, le informazioni con punteggio vengono automaticamente compilate nei profili con punteggi previsti se l’opzione di attivazione del profilo è abilitata. Attendi fino a 24 ore prima di continuare la sezione successiva di questa esercitazione.
-
-## Politiche di governance
-
-Una volta avviato il flusso di lavoro per creare un&#39;istanza e inviare la configurazione del modello, il [applicazione delle norme](/help/data-governance/enforcement/auto-enforcement.md) controlli per verificare l&#39;esistenza di eventuali violazioni. Se si verifica una violazione di un criterio, viene visualizzato un puntatore che indica la violazione di uno o più criteri. In questo modo, assicurati che le operazioni dati e le azioni di marketing all’interno di Platform siano conformi ai criteri di utilizzo dei dati.
-
-![manifesto che mostra la violazione dei criteri](../images/user-guide/policy-violation-popover-cai.png)
-
-Il puntatore fornisce informazioni specifiche sulla violazione. Puoi risolvere queste violazioni tramite le impostazioni dei criteri e altre misure che non sono direttamente correlate al flusso di lavoro di configurazione. Ad esempio, puoi modificare le etichette in modo che alcuni campi possano essere utilizzati a scopo di scienza dei dati. In alternativa, puoi anche modificare la configurazione del modello stesso in modo che non utilizzi nulla con un&#39;etichetta. Consulta la documentazione per ulteriori informazioni su come configurare [politiche](/help/data-governance/policies/overview.md).
-
-## Controllo dell’accesso basato su attributi
-
->[!IMPORTANT]
->
->Il controllo dell&#39;accesso basato su attributi è attualmente disponibile solo in una versione limitata.
-
-[Controllo dell&#39;accesso basato su attributi](../../../access-control/abac/overview.md) è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono gli attributi per gestire le autorizzazioni di accesso degli utenti.
-
-Questa funzionalità ti consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia utente e l’interfaccia di amministrazione dei ruoli per definire i criteri di accesso ai campi dello schema XDM e gestire meglio l’accesso dato a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo degli accessi basato sugli attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
-
-Grazie al controllo degli accessi basato sugli attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD) e alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.
-
-A causa del controllo degli accessi basato sugli attributi, alcuni campi e funzionalità avrebbero accesso limitato e non sarebbero disponibili per alcune istanze del servizio Customer AI. Ad esempio, &quot;Identity&quot;, &quot;Score Definition&quot; e &quot;Clone&quot;.
-
-![L’area di lavoro di Customer AI con i campi limitati dei risultati dell’istanza del servizio evidenziati.](../images/user-guide/unavailable-functionalities.png)
-
-Nella parte superiore dell’area di lavoro di Customer AI **pagina approfondimenti**, noterai che i dettagli nella barra laterale, nella definizione del punteggio, nell’identità e negli attributi di profilo mostrano tutti &quot;Accesso limitato&quot;.
-
-![Area di lavoro di Customer AI con i campi limitati dello schema evidenziati.](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-Quando si visualizzano in anteprima i set di dati con schema limitato nel **[!UICONTROL Creare un flusso di lavoro delle istanze]** viene visualizzato un avviso che informa che [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nell’anteprima del set di dati.]
-
-![Area di lavoro di Customer AI con i campi limitati dei set di dati di anteprima con risultati dello schema limitati evidenziati.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-Dopo aver creato un&#39;istanza con informazioni limitate e passare alla **[!UICONTROL Definire l&#39;obiettivo]** viene visualizzato un avviso nella parte superiore: [!UICONTROL A causa di restrizioni di accesso, alcune informazioni non vengono visualizzate nella configurazione.]
-
-![L’area di lavoro di Customer AI con i campi limitati dei risultati dell’istanza del servizio evidenziati.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Passaggi successivi {#next-steps}
 
