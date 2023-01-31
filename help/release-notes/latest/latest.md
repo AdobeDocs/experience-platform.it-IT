@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1948'
-ht-degree: 5%
+source-wordcount: '2293'
+ht-degree: 7%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 5%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Raccolta dati](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Profilo cliente in tempo reale](#profile)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
+
+## Servizi di intelligenza artificiale/apprendimento automatico {#ai-ml}
+
+I servizi di intelligenza artificiale e apprendimento automatico consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e del machine learning nei casi di utilizzo della customer experience. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze aziendali, senza la necessità di disporre di competenze specifiche in materia di scienza dei dati, utilizzando configurazioni a livello aziendale.
+
+### IA per l’attribuzione
+
+La Attribution AI viene utilizzata per attribuire i crediti ai punti di contatto che conducono a eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Ambito dell’HIPAA | I clienti di Healthcare Shield possono ora ricevere, utilizzare, mantenere o trasmettere informazioni sulla salute protette in Attribution AI e in alcune altre applicazioni basate su Experienci Platform. Healthcare Shield è per i clienti sanitari che sono un&#39;entità coperta o un&#39;impresa associata in HIPAA. Per ulteriori informazioni, consulta la documentazione su [HIPAA e prodotti e servizi di Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Modifica colonne di set di dati di punteggio aggiuntive | È ora possibile aggiungere o rimuovere ulteriori colonne di set di dati con punteggio (colonne di reporting) quando si modificano modelli esistenti. Questo estende la flessibilità dei punteggi di attribuzione per fornire informazioni approfondite su dimensioni aggiuntive dopo la creazione di un modello. Consulta la sezione [Guida all’interfaccia utente di Attribution](../../intelligent-services/attribution-ai/user-guide.md) per saperne di più. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Vedi la [Servizi AI/ML](../../intelligent-services/attribution-ai/overview.md) panoramica per ulteriori informazioni.
+
+### Customer AI
+
+Customer AI per Real-time Customer Data Platform viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Ambito dell’HIPAA | I clienti di Healthcare Shield possono ora ricevere, utilizzare, mantenere o trasmettere informazioni sulla salute protette in Customer AI per Real-time Customer Data Platform e in alcune altre applicazioni basate su Experienci Platform. Healthcare Shield è per i clienti sanitari che sono un&#39;entità coperta o un&#39;impresa associata in HIPAA. Per ulteriori informazioni, consulta la documentazione su [HIPAA e prodotti e servizi di Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Vedi la [Servizi AI/ML](../../intelligent-services/customer-ai/overview.md) panoramica per ulteriori informazioni.
 
 ## Assurance {#assurance}
 
