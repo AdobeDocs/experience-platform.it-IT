@@ -4,9 +4,9 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione dei segme
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform mappando i segmenti sulle destinazioni di streaming dei segmenti.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -125,15 +125,25 @@ Per visualizzare tutti i segmenti che vengono attivati nella destinazione, utili
 
 Sulla **[!UICONTROL Revisione]** per visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
->[!IMPORTANT]
->
->In questo passaggio, Adobe Experience Platform verifica la presenza di violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di un criterio. Non puoi completare il flusso di lavoro di attivazione dei segmenti finché non avrai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedi [Applicazione delle politiche](../../rtcdp/privacy/data-governance-overview.md#enforcement) nella sezione documentazione sulla governance dei dati .
+![Riepilogo della selezione nella fase di revisione.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+
+### Valutazione politica del consenso {#consent-policy-evaluation}
+
+Se l’organizzazione ha acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**, seleziona **[!UICONTROL Visualizza criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi nell’attivazione in seguito a tali criteri. Leggi [valutazione politica del consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+
+### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
+
+In **[!UICONTROL Revisione]** passaggio , Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di un criterio. Non puoi completare il flusso di lavoro di attivazione dei segmenti finché non avrai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, consulta [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati .
 
 ![violazione dei criteri dei dati](../assets/common/data-policy-violation.png)
 
-Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+### Filtrare segmenti {#filter-segments}
 
-![Revisione](../assets/ui/activate-segment-streaming-destinations/review.png)
+Anche in questo passaggio puoi utilizzare i filtri disponibili nella pagina per visualizzare solo i segmenti la cui pianificazione o mappatura è stata aggiornata come parte di questo flusso di lavoro. È inoltre possibile scegliere le colonne di tabella da visualizzare.
+
+![Registrazione su schermo che mostra i filtri di segmento disponibili nel passaggio di revisione.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+
+Se sei soddisfatto della selezione e non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
 ## Verificare l’attivazione dei segmenti {#verify}
 
