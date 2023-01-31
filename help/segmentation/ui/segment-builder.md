@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Generatore di segmenti
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3258'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,22 @@ Quando selezioni un valore per l&#39;attributo, viene visualizzato un elenco di 
 Se selezioni un valore da questo elenco di enum, il valore viene evidenziato con un bordo pieno. Tuttavia, per i campi che utilizzano `meta:enum` (soft) enum, puoi anche selezionare un valore che è **not** dall&#39;elenco degli enum. Se crei un valore personalizzato, questo verrà evidenziato con un bordo punteggiato e verrà visualizzato un messaggio di avviso che segnala che tale valore non è presente nell’elenco di enum.
 
 ![Avviso visualizzato se si inserisce un valore che non fa parte dell&#39;elenco enum.](../images/ui/segment-builder/enum-warning.png)
+
+Se crei più valori, puoi aggiungerli tutti contemporaneamente utilizzando il caricamento in serie. Seleziona la ![icona a forma di segno più](../images/ui/segment-builder/plus-icon.png) per mostrare **[!UICONTROL Aggiungi valori in blocco]** popover.
+
+![L&#39;icona più è evidenziata, mostrando il pulsante che è possibile selezionare per accedere all&#39;opzione di caricamento in serie.](../images/ui/segment-builder/add-bulk-values.png)
+
+Sulla **[!UICONTROL Aggiungi valori in blocco]** popover, puoi caricare un file CSV o TSV.
+
+![Viene visualizzato il valore Add in bulk pover. Viene evidenziata la finestra di dialogo che puoi selezionare per caricare un file CSV o TSV.](../images/ui/segment-builder/bulk-values-popover.png)
+
+In alternativa, puoi aggiungere manualmente valori separati da virgole.
+
+![Viene visualizzato il valore Add in bulk pover. Viene evidenziata sia la finestra di dialogo che è possibile utilizzare per inserire i valori sia i valori aggiunti.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+È consentito un massimo di 250 valori. Se si supera questo importo, è necessario rimuovere alcuni valori prima di aggiungerne altri.
+
+![Viene visualizzato un avviso che indica che è stato raggiunto il numero massimo di valori.](../images/ui/segment-builder/maximum-values.png)
 
 ### Aggiunta di tipi di pubblico
 

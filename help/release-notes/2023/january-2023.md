@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2023
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1949'
 ht-degree: 5%
 
 ---
@@ -148,8 +148,9 @@ Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tuto
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Scadenza dell’appartenenza al segmento generata dalla piattaforma | Qualsiasi appartenenza al segmento presente nella `Exited` per più di 30 giorni, in base alla `lastQualificationTime` sarà soggetto a eliminazione. |
+| Importazione in serie di valori nel Generatore di segmenti | Il Generatore di segmenti ora supporta l’importazione di più valori, sia caricando un file CSV o TSV che inserendo manualmente valori separati da virgole. Ulteriori informazioni sono disponibili nella sezione [Guida al Generatore di segmenti](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Scadenza dell&#39;iscrizione a un pubblico esterno | Per impostazione predefinita, le appartenenze al pubblico esterno vengono mantenute per 30 giorni. Per conservarli più a lungo, utilizza le `validUntil` durante l’acquisizione dei dati sul pubblico. |
+| Scadenza dell’appartenenza al segmento generata dalla piattaforma | Qualsiasi appartenenza al segmento presente nella `Exited` per più di 30 giorni, in base alla `lastQualificationTime` sarà soggetto a eliminazione. |
 
 {style=&quot;table-layout:auto&quot;}
 
