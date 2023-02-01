@@ -1,11 +1,11 @@
 ---
 keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli destinazioni
 title: Visualizza dettagli destinazione
-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
+description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -78,11 +78,17 @@ La [!UICONTROL Corse del flusso di dati] La scheda fornisce i dati metriche sull
 
 >[!NOTE]
 >
->* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* la [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
+>* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* la [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
 >* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) le destinazioni, le identità escluse al momento non vengono visualizzate.
 
 
 ![Vista delle esecuzioni del flusso di dati](../assets/ui/details-page/dataflow-runs.png)
+
+### Il flusso di dati esegue la durata {#dataflow-runs-duration}
+
+Esiste un problema noto nella durata di esecuzione del flusso di dati visualizzato. Mentre il **[!UICONTROL Durata dell&#39;elaborazione]** per la maggior parte delle esecuzioni dei flussi di dati sono indicate circa quattro ore, come mostrato nell&#39;immagine seguente, il tempo di elaborazione effettivo per qualsiasi esecuzione dei flussi di dati è molto più breve. Le finestre di esecuzione del flusso di dati rimangono aperte più a lungo nel caso in cui Experience Platform debba riprovare a effettuare chiamate alla destinazione.
+
+![L’immagine del flusso di dati esegue la pagina con la colonna Ora di elaborazione evidenziata.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
 
 ## [!UICONTROL Dati di attivazione] {#activation-data}
 
