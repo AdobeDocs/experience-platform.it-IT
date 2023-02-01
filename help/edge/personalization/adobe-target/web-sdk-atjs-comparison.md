@@ -3,7 +3,7 @@ title: Confronto tra at.js e Experience Platform Web SDK
 description: Scopri in che modo le funzioni di at.js si confrontano con Experience Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;diagramma di sistema;diagramma
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
+source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 6%
@@ -28,10 +28,10 @@ La versione precompilata è disponibile su una rete CDN. Puoi fare riferimento a
 
 Struttura URL: https://cdn1.adoberesources.net/alloy/[VERSIONE]/alloy.min.js OR alloy.js per la versione non minimizzata.
 
-Esempio:
+Ad esempio:
 
-* Minimizzato: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* Non minimizzato: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* Minimizzato: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* Non minimizzato: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 [Per saperne di più](../../fundamentals/installing-the-sdk.md)
 
