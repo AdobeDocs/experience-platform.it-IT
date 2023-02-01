@@ -1,12 +1,11 @@
 ---
 keywords: approfondimenti;customer ai;approfondimenti sull’intelligenza dei clienti;servizio query AAI;query sull’intelligenza dei clienti;punteggi dell’intelligenza dei clienti; chiavi gestite dal cliente in CAI
-feature: Customer-Managed Keys in Customer AI
-title: Chiavi gestite dal cliente
+title: Chiavi gestite dal cliente in Customer AI.
 description: Scopri come configurare le chiavi gestite dal cliente per Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 

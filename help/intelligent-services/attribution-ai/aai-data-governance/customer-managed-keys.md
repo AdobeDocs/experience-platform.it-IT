@@ -1,9 +1,8 @@
 ---
 keywords: insights;attribution ai;attribution ai insights;AAI query service;query di attribuzione;punteggi di attribuzione; chiavi gestite dal cliente in AAI
-feature: Customer-Managed Keys in Attribution AI
 title: Chiavi gestite dal cliente
 description: Scopri come impostare le chiavi gestite dal cliente per Attribution AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%

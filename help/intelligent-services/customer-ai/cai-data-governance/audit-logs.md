@@ -1,11 +1,10 @@
 ---
 keywords: insights;customer ai;approfondimenti sull'ai del cliente;servizio di query CAI;query sull'ai del cliente;punteggi dell'ai del cliente
-feature: Customer AI audit logs
-title: Panoramica dei registri di controllo
+title: Panoramica dei registri di controllo in Customer AI
 description: Scopri come visualizzare e gestire i registri di controllo in Customer AI.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 28%
 
 ---
@@ -22,4 +21,4 @@ In un certo senso, un registro di audit comunica chi ha eseguito quale azione, e
 
 Se questa funzione è abilitata per la tua organizzazione, i registri di audit vengono raccolti automaticamente quando si verifica un’attività. Non è necessario abilitare manualmente la raccolta dei registri.
 
-Per visualizzare ed esportare i registri di controllo, devi disporre dell’autorizzazione Controllo accesso ai registri di controllo in Adobe Console. Per informazioni su come gestire le autorizzazioni individuali per le funzionalità di Customer AI, consulta [documentazione sul controllo degli accessi](../../customer-ai/user-guide/access-controls.md).
+Per visualizzare ed esportare i registri di controllo, devi disporre dell’autorizzazione Controllo accesso ai registri di controllo in Adobe Console. Per informazioni su come gestire le autorizzazioni individuali per le funzionalità di Customer AI, consulta [documentazione sul controllo degli accessi](../cai-data-governance/access-controls.md).
