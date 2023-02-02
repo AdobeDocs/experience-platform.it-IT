@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2443'
 ht-degree: 7%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Destinazioni {#destinations}
+## Destinazioni (aggiornato il 2 febbraio) {#destinations}
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 
@@ -114,6 +114,10 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
         <td>È stato aggiornato il comportamento di esportazione nelle destinazioni basate su file (PLAT-123316)</td>
         <td>È stato risolto un problema nel comportamento di <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">attributi obbligatori</a> durante l’esportazione di file di dati in destinazioni batch. <br> In precedenza, ogni record nei file di output veniva verificato per contenere: <ol><li>Un valore non nullo del <code>mandatoryField</code> colonna e</li><li>Un valore non nullo su almeno uno degli altri campi non obbligatori.</li></ol> La seconda condizione è stata rimossa. Di conseguenza, potresti vedere più righe di output nei file di dati esportati, come mostrato nell’esempio seguente:<br> <b> Comportamento del campione prima della versione di gennaio 2023 </b> <br> Campo obbligatorio: <code>emailAddress</code> <br> <b>Dati di input da attivare</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Uscita attivazione</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Comportamento del campione dopo la versione di gennaio 2023 </b> <br> <b>Uscita attivazione</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>Convalida dell'interfaccia utente e API per le mappature richieste e le mappature duplicate (PLAT-123316)</td>
+        <td>La convalida viene ora applicata come segue nell’interfaccia utente e nell’API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campi di mappatura</a> nel flusso di lavoro di attivazione delle destinazioni :<ul><li><b>Mappature richieste</b>: Se la destinazione è stata impostata dallo sviluppatore di destinazione con le mappature richieste (ad esempio, il <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destinazione), quindi questi mapping richiesti devono essere aggiunti dall'utente quando si attivano i dati nella destinazione. </li><li><b>Mappature duplicate</b>: Nel passaggio di mappatura del flusso di lavoro di attivazione, puoi aggiungere valori duplicati nei campi di origine, ma non nei campi di destinazione. Vedi la tabella seguente per un esempio di combinazioni di mappatura consentite e proibite. <br><table><thead><tr><th>Consentito/vietato</th><th>Campo di origine</th><th>Campo di destinazione</th></tr></thead><tbody><tr><td>Consentito</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias e-mail2</li></ul></td></tr><tr><td>Proibito</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
