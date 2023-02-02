@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 11%
+source-wordcount: '928'
+ht-degree: 10%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 11%
       - [Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini](sources-sdk/documentation/text-editor.md)
       - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
       - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
+   - SDK per streaming {#streaming-sdk}
+      - [Guida introduttiva alle origini self-service (SDK per streaming)](sources-sdk/streaming/getting-started.md)
+      - [Creare una specifica di connessione per una sorgente in streaming](sources-sdk/streaming/create.md)
+      - [Aggiornare una specifica di connessione a un’origine streaming](sources-sdk/streaming/update-connection-specs.md)
+      - [Aggiorna la specifica del flusso di flusso](sources-sdk/streaming/update-flow-specs.md)
+      - [Verifica e invia le specifiche di connessione per la verifica](sources-sdk/streaming/submit.md)
+      - [Documentare la sorgente (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+      - [Modello di streaming API self-service della documentazione](sources-sdk/streaming/streaming-template-api.md)
+      - [Modello di streaming dell’interfaccia utente self-service della documentazione](sources-sdk/streaming/streaming-template-ui.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
