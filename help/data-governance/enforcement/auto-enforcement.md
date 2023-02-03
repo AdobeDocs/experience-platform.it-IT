@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,16 @@ Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati c
 ### Valutazione politica del consenso {#consent-policy-evaluation}
 
 Se [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quando attivi un segmento in una destinazione, puoi vedere in che modo i criteri di consenso influiscono sulla percentuale di profili inclusi nell’attivazione.
+
+#### Miglioramento della politica di consenso per i supporti a pagamento {#consent-policy-enhancement}
+
+È stato apportato un miglioramento all’applicazione dei criteri di consenso sulle destinazioni di streaming, comprese le attivazioni per i media a pagamento. Questo miglioramento è disponibile per i clienti di Privacy e Security Shield o Healthcare Shield e rimuove in modo proattivo i profili dalle destinazioni di streaming quando lo stato del consenso cambia. Inoltre, assicura che le modifiche al consenso vengano propagate immediatamente in modo che il pubblico giusto sia sempre oggetto di targeting.
+
+Questi miglioramenti consentono una maggiore fiducia nella strategia di marketing in quanto elimina la necessità per gli addetti al marketing di aggiungere manualmente gli attributi di consenso alla loro espressione di segmento. In questo modo, nessun profilo viene eseguito inavvertitamente il targeting per eventuali esperienze di marketing una volta che il consenso è stato ritirato o non è più qualificato per una politica di consenso. I criteri di consenso marketing che impostano le regole per la gestione dei dati di consenso o preferenza in diversi flussi di lavoro di marketing vengono ora applicati automaticamente nei flussi di lavoro di attivazione nelle soluzioni downstream.
+
+>[!NOTE]
+>
+>Questo miglioramento non comporta alcuna modifica dell’interfaccia utente.
 
 #### Valutazione pre-attivazione
 
