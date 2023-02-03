@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe ExperienceEvent XDM
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ La radice `timestamp` campo di uno schema evento può **only** rappresentano l&#
 
 Ad esempio, se un&#39;azienda nel settore dei viaggi e dell&#39;ospitalità sta modellando un evento di prenotazione del volo, a livello di classe `timestamp` Il campo rappresenta l’ora in cui è stato osservato l’evento di prenotazione. Gli altri timestamp relativi all’evento, ad esempio la data di inizio della prenotazione, devono essere acquisiti in campi separati forniti da gruppi di campi standard o personalizzati.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Esempio di schema Evento esperienza con Riserva di volo e Data di inizio evidenziati.](../images/classes/experienceevent/timestamps.png)
 
 Mantenendo la marca temporale a livello di classe separata dagli altri valori datetime correlati negli schemi di evento, puoi implementare casi d’uso di segmentazione flessibili conservando un account con marca temporale dei percorsi cliente nell’applicazione di esperienza.
 
