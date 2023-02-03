@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci pubblicitari sui loro siti web, attraverso video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '890'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ Tieni presente i seguenti dettagli specifici per [!DNL Google Ad Manager] destin
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico a 38 cifre associato a ciascun dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) per eseguire il targeting degli utenti in California e dell’ID cookie di Google per tutti gli altri utenti. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico a 38 cifre associato a ciascun dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e dell’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per eseguire il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
 | MAID | Microsoft Advertising ID. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
@@ -58,18 +58,10 @@ Se desideri creare la tua prima destinazione con [!DNL Google Ad Manager] e non 
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
->[!NOTE]
->
->L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Ad Manager] in Platform. Assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
->L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario rivedere il processo di inserimento nell’elenco Consentiti e procedere con i passaggi successivi.
+L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Ad Manager] in Platform. Prima di creare la destinazione, completa il processo di inserimento nell’elenco Consentiti descritto di seguito.
 
-Prima di creare il [!DNL Google Ad Manager] in Platform, devi contattare [!DNL Google] ad Adobe da inserire nell’elenco dei provider di dati consentiti e da aggiungere all’elenco consentiti il tuo account. Contatto [!DNL Google] e fornire le seguenti informazioni:
-
-* **ID account**: ID account Adobe con Google. ID account: 87933855.
-* **ID cliente**: ID account cliente Adobe con Google. ID cliente: 89690775.
-* **Codice di rete**: Questo è il tuo [!DNL Google Ad Manager] identificatore di rete, trovato in **[!UICONTROL Amministratore > Impostazioni globali]** nell’interfaccia Google e nell’URL.
-* **ID collegamento pubblico**: Questo è un identificatore specifico associato al [!DNL Google Ad Manager] rete (non il [!DNL Network code]), disponibile anche in **[!UICONTROL Amministratore > Impostazioni globali]** nell’interfaccia di Google.
-* Tipo di account. DFP per Google o acquirente AdX.
+1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere Adobe come piattaforma di gestione dati (DMP, Data Management Platform) collegata.
+2. In [!DNL Google Ad Manager] interfaccia, vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]** e abilita **[!UICONTROL Accesso API]** cursore.
 
 ## Collegati alla destinazione {#connect}
 
@@ -85,10 +77,11 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
+* **[!UICONTROL ID account]**: Inserisci il tuo [!DNL Audience Link ID] dal [!DNL Google] conto. Questo è un identificatore specifico associato al [!DNL Google Ad Manager] rete (non il [!DNL Network code]). Puoi trovarlo in **[!UICONTROL Amministratore > Impostazioni globali]** in [!DNL Google Ad Manager] interfaccia.
 * **[!UICONTROL Tipo di conto]**: Seleziona un’opzione, a seconda dell’account con Google:
    * Utilizzo `DFP by Google` per [!DNL DoubleClick] per gli editori
    * Utilizzo `AdX buyer` per [!DNL Google AdX]
-* **[!UICONTROL ID account]**: Compila il tuo ID collegamento pubblico con [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmen
 ## Dati esportati {#exported-data}
 
 Per verificare se i dati sono stati esportati correttamente in [!DNL Google Ad Manager] destinazione, controlla il tuo [!DNL Google Ad Manager] conto. Se l&#39;attivazione ha avuto successo, i tipi di pubblico vengono compilati nel tuo account.
+
+## Risoluzione dei problemi {#troubleshooting}
+
+Nel caso in cui si verifichino errori durante l&#39;utilizzo di questa destinazione e sia necessario contattare Adobe o Google, mantieni a portata di mano i seguenti ID.
+
+Questi sono gli ID account Google di Adobe:
+
+* **[!UICONTROL ID account]**: 87933855
+* **[!UICONTROL ID cliente]**: 89690775

@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci pubblicitari sui loro siti web, tramite video e nelle app per dispositivi mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 1%
+source-wordcount: '926'
+ht-degree: 2%
 
 ---
 
@@ -54,19 +54,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
+L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Ad Manager 360] in Platform. Prima di creare la destinazione, completa il processo di inserimento nell’elenco Consentiti descritto di seguito.
+
 >[!NOTE]
 >
->L’elenco consentiti è obbligatorio prima di configurare il primo [!DNL Google Ad Manager] in Platform. Assicurati che il processo di elenco consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
+>L&#39;eccezione a questa regola è per esistente [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario rivedere il processo di inserimento nell’elenco Consentiti e procedere con i passaggi successivi.
 
->[!IMPORTANT]
->
->Google ha semplificato il processo per collegare piattaforme esterne di gestione dell&#39;audience a Google Ad Manager 360. Ora puoi seguire il processo per collegarti a Google Ad Manager 360 in modo self-service. Leggi [Segmenti da piattaforme di gestione dati](https://support.google.com/admanager/answer/3289669?hl=en) nella documentazione di Google. Devi disporre degli ID elencati di seguito.
+1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere Adobe come piattaforma di gestione dati (DMP, Data Management Platform) collegata.
+2. In [!DNL Google Ad Manager] interfaccia, vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]** e abilita **[!UICONTROL Accesso API]** cursore.
 
-* **ID account**: ID account Adobe con Google. ID account: 87933855.
-* **ID cliente**: ID account cliente Adobe con Google. ID cliente: 89690775.
-* **Codice di rete**: Questo è il tuo [!DNL Google Ad Manager] identificatore di rete, trovato in **[!UICONTROL Amministratore > Impostazioni globali]** nell’interfaccia Google e nell’URL.
-* **ID collegamento pubblico**: Questo è un identificatore specifico associato al [!DNL Google Ad Manager] rete (non il [!DNL Network code]), disponibile anche in **[!UICONTROL Amministratore > Impostazioni globali]** nell’interfaccia di Google.
-* Tipo di account. DFP per Google o acquirente AdX.
 
 ## Collegati alla destinazione {#connect}
 
@@ -91,12 +87,12 @@ Per configurare i dettagli della destinazione, compila i campi obbligatori e fac
 
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
-* **[!UICONTROL Nome blocco]**: Immetti il nome della [!DNL Google Cloud Storage] bucket utilizzato da questa destinazione.
 * **[!UICONTROL Percorso cartella]**: Immettere il percorso della cartella di destinazione che ospiterà i file esportati.
-* **[!UICONTROL ID account]**: Compila il tuo ID collegamento pubblico con [!DNL Google].
-* **[!UICONTROL Tipo di conto]**: Seleziona un’opzione, a seconda dell’account con Google:
-   * Utilizzo `DFP by Google` per [!DNL DoubleClick] per gli editori
+* **[!UICONTROL Nome blocco]**: Immetti il nome della [!DNL Google Cloud Storage] bucket utilizzato da questa destinazione.
+* **[!UICONTROL ID account]**: Inserisci il tuo [!DNL Audience Link ID] dal [!DNL Google] conto. Questo è un identificatore specifico associato al [!DNL Google Ad Manager] rete (non il [!DNL Network code]). Puoi trovarlo in **[!UICONTROL Amministratore > Impostazioni globali]** in [!DNL Google Ad Manager] interfaccia.
+* **[!UICONTROL Tipo di conto]**: Seleziona un’opzione a seconda del [!DNL Google] account:
    * Utilizzo `AdX buyer` per [!DNL Google AdX]
+   * Utilizzo `DFP by Google` per [!DNL DoubleClick] per gli editori
 
 ### Abilitare gli avvisi {#enable-alerts}
 
@@ -127,3 +123,12 @@ Queste mappature sono richieste da [!DNL Google Ad Manager 360] e vengono create
 ## Dati esportati {#exported-data}
 
 Per verificare se i dati sono stati esportati correttamente, controlla il tuo [!DNL Google Cloud Storage] e assicurati che i file esportati contengano le popolazioni di profilo previste.
+
+## Risoluzione dei problemi {#troubleshooting}
+
+Nel caso in cui si verifichino errori durante l&#39;utilizzo di questa destinazione e sia necessario contattare Adobe o Google, mantieni a portata di mano i seguenti ID.
+
+Questi sono gli ID account Google di Adobe:
+
+* **[!UICONTROL ID account]**: 87933855
+* **[!UICONTROL ID cliente]**: 89690775
