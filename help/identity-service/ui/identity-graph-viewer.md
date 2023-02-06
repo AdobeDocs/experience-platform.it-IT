@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del visualizzatore di Identity Graph
 description: Un grafico delle identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il tuo marchio su diversi canali.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Lavorare con il visualizzatore grafico dell&#39;identità richiede una comprensi
 - **Collegamento (bordo):** Un collegamento o un bordo rappresenta la connessione tra le identità.
 - **Grafico (cluster):** Un grafico o un cluster è un gruppo di identità e collegamenti che rappresentano una persona.
 
-## Accedere al visualizzatore grafico delle identità
+## Accedere al visualizzatore grafico delle identità {#access-identity-graph-viewer}
 
 Per utilizzare il visualizzatore grafico delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identità]** nella navigazione a sinistra, quindi seleziona la **[!UICONTROL Grafico di identità]** scheda . Da **[!UICONTROL Namespace Identity]** fai clic su **[!UICONTROL Seleziona spazio dei nomi identità]** per cercare lo spazio dei nomi che si intende utilizzare.
 

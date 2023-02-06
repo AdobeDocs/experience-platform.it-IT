@@ -3,10 +3,10 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '755'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ Una delle funzionalità principali di Platform è l’acquisizione dei dati di p
 
 ## Controlli {#controls}
 
-I controlli [Area di lavoro Destinazioni](./ui/destinations-workspace.md) consente di:
+I controlli [area di lavoro delle destinazioni](./ui/destinations-workspace.md) consente di:
 
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
@@ -45,7 +45,7 @@ I controlli [Area di lavoro Destinazioni](./ui/destinations-workspace.md) consen
 
 ## Tipi di destinazione e categorie {#types-and-categories}
 
-Per informazioni dettagliate, consulta la sezione [panoramica dei tipi e delle categorie di destinazione](./destination-types.md).
+Ad Experience Platform, puoi attivare i dati in vari tipi di destinazioni per soddisfare i tuoi casi d’uso di attivazione. Le destinazioni variano dalle integrazioni basate su API alle integrazioni con i sistemi di ricezione dei file, dalle destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, consulta la sezione [panoramica dei tipi e delle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
@@ -69,6 +69,12 @@ Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform c
 Con il controllo dell&#39;accesso basato sugli attributi, puoi applicare configurazioni di mappatura ai campi a cui disponi delle autorizzazioni. Inoltre, non puoi esportare i dati in una destinazione se non hai accesso a tutti i campi del set di dati.
 
 Per ulteriori informazioni sul funzionamento delle destinazioni con controlli di accesso basati sugli attributi, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md#destinations).
+
+## Monitoraggio delle destinazioni {#destinations-monitoring}
+
+Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni dei dati nel sistema di ricezione. Leggi la sezione [guida al monitoraggio dei flussi di dati verso le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
+
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo hanno un *Convalida sezione esportazione dati*, che indica come è possibile verificare nella piattaforma di destinazione che i dati vengano immessi correttamente da Experience Platform.
 
 ## Restrizioni sulla governance dei dati sull’attivazione dei dati alle destinazioni {#data-governance}
 

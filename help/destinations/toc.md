@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1016'
 ht-degree: 6%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 6%
 * [Destinazioni - Panoramica](./home.md)
 * [Tipi di destinazione e categorie](./destination-types.md)
 * [Guardie delle destinazioni (attivazione)](./guardrails.md)
+* Funzionamento delle destinazioni {#how-destinations-work}
+   * [Impostazioni di esportazione comuni e configurabili nelle destinazioni](./how-destinations-work/destinations-configurations.md)
+   * [Comportamento dell’esportazione del profilo per diversi tipi di destinazione](./how-destinations-work/profile-export-behavior.md)
+   * [Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni](./how-destinations-work/identity-handling.md)
 * Esercitazioni API {#api}
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti all’archiviazione cloud batch e alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/connect-activate-batch-destinations.md)

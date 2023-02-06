@@ -3,9 +3,9 @@ keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c65e8b4a4b3a3f9e546126258d3b9ca58de07081
+source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2442'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Contenuto dell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che, se uno dei segmenti mappati cambia stato (da null a Realizzato o da Realizzato/Esistente a Uscire) o qualsiasi attributo mappato viene aggiornato, verrà avviata un’esportazione di destinazione.</li><li>Poiché le identità non possono attualmente essere mappate su destinazioni API HTTP, le modifiche apportate a un dato profilo determinano anche le esportazioni di destinazione.</li><li>Una modifica per un attributo è definita come qualsiasi aggiornamento sull&#39;attributo, che sia o meno lo stesso valore. Ciò significa che una sovrascrittura su un attributo viene considerata una modifica anche se il valore stesso non è stato modificato.</li></ul> | <ul><li>Tutti i segmenti (con lo stato di appartenenza più recente), indipendentemente dal fatto che siano mappati nel flusso di dati o meno, sono inclusi nel `segmentMembership` oggetto.</li><li>Tutte le identità nel `identityMap` sono inclusi anche gli oggetti (l&#39;Experience Platform attualmente non supporta la mappatura delle identità nella destinazione API HTTP).</li><li>Solo gli attributi mappati sono inclusi nell’esportazione di destinazione.</li></ul> |
+| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che, se uno dei segmenti mappati cambia stato (da null a Realizzato o da Realizzato/Esistente a Uscire) o qualsiasi attributo mappato viene aggiornato, verrà avviata un’esportazione di destinazione.</li><li>Poiché le identità non possono attualmente essere mappate su destinazioni API HTTP, le modifiche apportate a un dato profilo determinano anche le esportazioni di destinazione.</li><li>Una modifica per un attributo è definita come qualsiasi aggiornamento sull&#39;attributo, che sia o meno lo stesso valore. Ciò significa che una sovrascrittura su un attributo viene considerata una modifica anche se il valore stesso non è stato modificato.</li></ul> | <ul><li>La `segmentMembership` l&#39;oggetto include il segmento mappato nel flusso di dati di attivazione per il quale lo stato del profilo è cambiato in seguito a un evento di uscita della qualifica o del segmento. Tieni presente che altri segmenti non mappati per i quali il profilo è qualificato possono far parte dell’esportazione di destinazione, se questi segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come segmento mappato nel flusso di dati di attivazione. </li><li>Tutte le identità nel `identityMap` sono inclusi anche gli oggetti (l&#39;Experience Platform attualmente non supporta la mappatura delle identità nella destinazione API HTTP).</li><li>Solo gli attributi mappati sono inclusi nell’esportazione di destinazione.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -221,7 +221,7 @@ Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tr
 
 ![Flusso di dati di destinazione API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Un’esportazione di profilo verso la destinazione può essere determinata da un profilo che qualifica o esce da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri segmenti non mappati, se quel particolare profilo è membro di essi. Se un profilo è idoneo per il segmento Cliente con DeLorean Cars ma è anche membro dei segmenti Orologio &quot;Torna al futuro&quot; film e appassionati di fantascienza, allora questi altri due segmenti saranno anche presenti nel `segmentMembership` oggetto dell’esportazione dei dati, anche se non sono mappati nel flusso di dati.
+Un’esportazione di profilo verso la destinazione può essere determinata da un profilo che qualifica o esce da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) (sezione seguente), potrebbero essere visualizzati altri segmenti non mappati, se quel particolare profilo è membro di essi e se questi condividono lo stesso criterio di unione del segmento che ha attivato l’esportazione. Se un profilo è idoneo per **Cliente con DeLorean Cars** ma è anche membro del **Guardato &quot;Torna al futuro&quot;** film e **fan della fantascienza** i segmenti, quindi anche questi altri due segmenti saranno presenti nel `segmentMembership` oggetto dell&#39;esportazione di dati, anche se non mappati nel flusso di dati, se questi condividono lo stesso criterio di unione con il **Cliente con DeLorean Cars** segmento.
 
 Dal punto di vista degli attributi del profilo, eventuali modifiche ai quattro attributi mappati sopra determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti sul profilo sarà presente nell’esportazione dei dati.
 
