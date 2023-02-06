@@ -1,7 +1,7 @@
 ---
 title: Comportamento dell’esportazione del profilo
 description: Scopri in che modo il comportamento di esportazione del profilo varia tra i diversi pattern di integrazione supportati nelle destinazioni di Experience Platform.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Un’esportazione di profilo verso la destinazione può essere determinata da un
 
 Dal punto di vista degli attributi del profilo, qualsiasi modifica ai tre attributi mappati sopra determinerà un’esportazione di destinazione.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Destinazioni batch (basate su file) {#file-based-destinations}
 
