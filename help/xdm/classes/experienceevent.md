@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe ExperienceEvent XDM
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1842'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ La [!DNL XDM ExperienceEvent] la classe stessa fornisce diversi campi relativi a
 | --- | --- |
 | `_id`<br>**(Obbligatorio)** | Identificatore stringa univoco per l&#39;evento. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo evento, per impedire la duplicazione dei dati e per cercare l’evento nei servizi a valle. In alcuni casi, `_id` può essere [Identificatore univoco universale (UUID)](https://tools.ietf.org/html/rfc4122) o [Identificatore univoco globale (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Se trasferisci dati da una connessione di origine o acquisisci direttamente da un file Parquet, devi generare questo valore concatenando una determinata combinazione di campi che rendono l’evento unico, ad esempio un ID principale, una marca temporale, un tipo di evento e così via. Il valore concatenato deve essere un `uri-reference` stringa formattata, ovvero è necessario rimuovere i due punti. In seguito, il valore concatenato deve essere dotato di hash utilizzando SHA-256 o un altro algoritmo scelto.<br><br>È importante distinguere che **questo campo non rappresenta un&#39;identità correlata a una singola persona** ma piuttosto la registrazione dei dati stessi. I dati di identità relativi a una persona devono essere relegati a [campi di identità](../schema/composition.md#identity) forniti invece da gruppi di campi compatibili. |
 | `eventMergeId` | Se utilizzi [Adobe Experience Platform Web SDK](../../edge/home.md) per acquisire i dati, questo rappresenta l’ID del batch acquisito che ha causato la creazione del record. Questo campo viene compilato automaticamente dal sistema al momento dell’inserimento dei dati. L’utilizzo di questo campo al di fuori del contesto di un’implementazione SDK per web non è supportato. |
-| `eventType` | Una stringa che indica il tipo o la categoria per l&#39;evento. Questo campo può essere utilizzato se desideri distinguere diversi tipi di eventi all’interno dello stesso schema e dello stesso set di dati, ad esempio distinguere un evento di visualizzazione prodotto da un evento add-to-shopping-cart per una società di vendita al dettaglio.<br><br>I valori standard di questa proprietà vengono forniti nella [sezione appendice](#eventType), comprese le descrizioni del caso d&#39;uso previsto. Questo campo è un enum estensibile, il che significa che puoi utilizzare anche stringhe del tipo di evento personalizzate per classificare gli eventi che stai tracciando. È inoltre possibile [disattiva uno dei valori standard suggeriti](../ui/fields/enum.md#standard-fields) per questo campo se non sono adatti ai tuoi casi d&#39;uso.<br><br>`eventType` ti limita a utilizzare un solo evento per hit sull&#39;applicazione e devi quindi utilizzare campi calcolati per informare il sistema dell&#39;evento più importante. Per ulteriori informazioni, consulta la sezione su [best practice per i campi calcolati](#calculated). |
+| `eventType` | Una stringa che indica il tipo o la categoria per l&#39;evento. Questo campo può essere utilizzato se desideri distinguere diversi tipi di eventi all’interno dello stesso schema e dello stesso set di dati, ad esempio distinguere un evento di visualizzazione prodotto da un evento add-to-shopping-cart per una società di vendita al dettaglio.<br><br>I valori standard di questa proprietà vengono forniti nella [sezione appendice](#eventType), comprese le descrizioni del caso d&#39;uso previsto. Questo campo è un enum estensibile, il che significa che puoi utilizzare anche stringhe del tipo di evento personalizzate per classificare gli eventi che stai tracciando.<br><br>`eventType` ti limita a utilizzare un solo evento per hit sull&#39;applicazione e devi quindi utilizzare campi calcolati per informare il sistema dell&#39;evento più importante. Per ulteriori informazioni, consulta la sezione su [best practice per i campi calcolati](#calculated). |
 | `producedBy` | Valore stringa che descrive il produttore o l&#39;origine dell&#39;evento. Questo campo può essere utilizzato per filtrare alcuni produttori di eventi se necessario a scopo di segmentazione.<br><br>Alcuni valori consigliati per questa proprietà sono forniti nella variabile [sezione appendice](#producedBy). Questo campo è un enum estensibile, il che significa che è possibile utilizzare anche le proprie stringhe per rappresentare diversi produttori di eventi. |
 | `identityMap` | Campo mappa che contiene un set di identità con spazi dei nomi per l’individuo a cui si applica l’evento. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Vedi la sezione sulle mappe di identità nel [nozioni di base sulla composizione dello schema](../schema/composition.md#identityMap) per ulteriori informazioni sul relativo caso d’uso. |
 | `timestamp`<br>**(Obbligatorio)** | Una marca temporale ISO 8601 di quando si è verificato l’evento, formattata in base a [RFC 3339 - Sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Questa marca temporale deve essere presente in passato. Vedi la sezione seguente su [timestamp](#timestamps) per le best practice sull’utilizzo di questo campo. |
@@ -86,9 +86,9 @@ Adobe fornisce diversi gruppi di campi standard da utilizzare con [!DNL XDM Expe
 
 La sezione seguente contiene informazioni aggiuntive su [!UICONTROL ExperienceEvent XDM] classe.
 
-### Valori consigliati per `eventType` {#eventType}
+### Valori accettati per `eventType` {#eventType}
 
-La tabella seguente illustra i valori standard consigliati per `eventType`, con le relative definizioni:
+La tabella seguente illustra i valori accettati per `eventType`, con le relative definizioni:
 
 | Valore | Definizione |
 | --- | --- |
@@ -148,7 +148,7 @@ La tabella seguente illustra i valori standard consigliati per `eventType`, con 
 
 ### Valori consigliati per `producedBy` {#producedBy}
 
-La tabella seguente illustra i valori standard consigliati per `producedBy`:
+Nella tabella seguente sono riportati alcuni valori accettati per `producedBy`:
 
 | Valore | Definizione |
 | --- | --- |

@@ -2,10 +2,10 @@
 title: Gestire i valori consigliati nell’API
 description: Scopri come aggiungere valori consigliati a un campo stringa nell’API del Registro di sistema dello schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 0%
 
 ---
 
@@ -69,11 +69,11 @@ In alternativa, è possibile definire un campo stringa che non contiene un `enum
 
 Poiché la stringa non ha un `enum` array per definire vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori.
 
-## Gestione dei valori consigliati per i campi standard
+<!-- ## Manage suggested values for standard fields
 
-Per i campi standard esistenti, è possibile [aggiungere valori consigliati](#add-suggested-standard) o [disabilita i valori suggeriti](#disable-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Aggiungere valori consigliati a un campo standard {#add-suggested-standard}
+## Aggiungere valori consigliati a un campo standard {#add-suggested-standard}
 
 Per estendere `meta:enum` di un campo stringa standard, è possibile creare un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per il campo in questione in uno schema specifico.
 
@@ -151,25 +151,19 @@ Dopo aver applicato il descrittore, il Registro di sistema dello schema risponde
 >}
 >```
 
-### Disattiva i valori consigliati per un campo standard {#disable-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-Se un campo stringa standard contiene valori consigliati predefiniti in `meta:enum`, puoi disattivare tutti i valori che non desideri visualizzare nella segmentazione. Questo avviene tramite la creazione di un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per lo schema che include un `xdm:excludeMetaEnum` proprietà.
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
->[!IMPORTANT]
->
->È possibile disattivare solo i valori consigliati per i campi standard che non presentano vincoli enum corrispondenti. In altre parole, se il campo ha un `enum` array, quindi `meta:excludeMetaEnum` non avrà effetto.
->
->Vedi la sezione su [regole di evoluzione per enum e valori suggeriti](../ui/fields/enum.md#evolution) per ulteriori informazioni sulle restrizioni per la modifica dei campi esistenti.
-
-**Formato API**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Richiesta**
+**Request**
 
-La richiesta seguente disabilita i valori suggeriti &quot;[!DNL Web Form Filled Out]&quot; e &quot;[!DNL Media ping]&quot; `eventType` in uno schema basato su [Classe ExperienceEvent XDM](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -191,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| Proprietà | Descrizione |
+| Property | Description |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. Per un descrittore di nome descrittivo, questo valore deve essere impostato su `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | La `$id` URI dello schema in cui viene definito il descrittore. |
-| `xdm:sourceVersion` | Versione principale dello schema di origine. |
-| `xdm:sourceProperty` | Percorso della proprietà specifica di cui si desidera gestire i valori consigliati. Il percorso deve iniziare con una barra (`/`) e non terminare con uno. Non includere `properties` nel percorso (ad esempio, utilizza `/personalEmail/address` anziché `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | Un oggetto che descrive i valori suggeriti che devono essere esclusi dal campo nella segmentazione. La chiave e il valore di ciascuna voce devono corrispondere a quelli inclusi nell&#39;originale `meta:enum` del campo per escludere la voce. |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Risposta**
+**Response**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del descrittore appena creato. I valori suggeriti inclusi in `xdm:excludeMetaEnum` sarà ora nascosta dall’interfaccia utente Segmentazione.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -217,7 +211,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Gestione dei valori consigliati per un campo personalizzato {#suggested-custom}
 
