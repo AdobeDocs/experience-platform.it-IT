@@ -1,9 +1,9 @@
 ---
 title: Impostazioni di esportazione comuni e configurabili nelle destinazioni
 description: Scopri quali impostazioni di esportazione nelle destinazioni sono configurabili a livello di destinazione e quali sono fisse e non possono essere modificate.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -63,5 +63,7 @@ Ulteriori informazioni sulle diverse opzioni e passaggi disponibili nel flusso d
 ## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, ora sai quali impostazioni di esportazione per le destinazioni sono comuni tra i tipi di destinazione, che possono essere configurate a livello di destinazione individuale dagli sviluppatori e quali impostazioni possono essere modificate dagli utenti nel flusso di lavoro di attivazione.
+
+Successivamente, puoi leggere informazioni più dettagliate su [modelli comuni di comportamento per le esportazioni per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 Per gli sviluppatori di destinazioni, puoi [introduzione](/help/destinations/destination-sdk/getting-started.md) con Destination SDK. Per gli utenti che desiderano attivare i dati, puoi estrarre tutte le destinazioni disponibili nella [catalogo](/help/destinations/catalog/overview.md).

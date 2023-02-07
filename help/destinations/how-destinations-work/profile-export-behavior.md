@@ -1,9 +1,9 @@
 ---
 title: Comportamento dell’esportazione del profilo
 description: Scopri in che modo il comportamento di esportazione del profilo varia tra i diversi pattern di integrazione supportati nelle destinazioni di Experience Platform.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Dal punto di vista degli attributi del profilo, eventuali modifiche ai quattro a
 
 ## Destinazioni basate su API in streaming {#streaming-api-based-destinations}
 
-Il comportamento di esportazione del profilo per destinazioni di streaming come Facebook, Trade Desk e altre integrazioni basate su API è identico a quello indicato sopra.
+Il comportamento di esportazione del profilo per destinazioni di streaming come Facebook, Trade Desk e altre integrazioni basate su API è molto simile al comportamento descritto in precedenza per le destinazioni aziendali.
 
-Esempi di destinazione: pubblicità, social, ecc.
+Esempi di destinazioni di streaming sono le destinazioni appartenenti al [categorie sociali e pubblicitarie](/help/destinations/destination-types.md#categories) nel catalogo.
 
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione di streaming, in modo da esportare i dati solo nelle destinazioni basate su API in streaming quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica del segmento o altri eventi significativi. I profili vengono esportati nella destinazione nelle situazioni seguenti:
 

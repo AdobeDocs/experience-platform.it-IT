@@ -1,9 +1,9 @@
 ---
 title: Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni
 description: Scopri come viene gestita l’esportazione di identità nel flusso di lavoro di attivazione, a seconda del tipo di destinazione
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -107,3 +107,5 @@ Durante la configurazione di un datastream come descritto nella documentazione c
 Dopo aver letto questo documento, ora sai come scoprire quali identità sono supportate o necessarie per le singole destinazioni. Ora è anche possibile sapere come funziona la selezione dell’identità per ciascun tipo di destinazione.
 
 Successivamente, puoi leggere quali [impostazioni di esportazione](/help/destinations/how-destinations-work/destinations-configurations.md) le destinazioni sono comuni tra i tipi di destinazione, che possono essere configurati a livello di destinazione individuale dagli sviluppatori e quali impostazioni possono essere modificate dagli utenti nel flusso di lavoro di attivazione.
+
+Puoi anche controllare tutte le destinazioni disponibili nel [catalogo](/help/destinations/catalog/overview.md).
