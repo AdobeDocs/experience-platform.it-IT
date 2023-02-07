@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Endpoint API per criteri efficaci
 description: Scopri come visualizzare i criteri di accesso effettivi utilizzando l’API di controllo accessi per Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '318'
 ht-degree: 2%
 
 ---
 
 # Endpoint criteri efficaci
+
+>[!NOTE]
+>
+>Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
 
 Per visualizzare i criteri di controllo degli accessi efficaci per l’utente corrente, invia una richiesta POST al `/acl/effective-policies` punto finale [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nell’esempio di chiamata API di seguito.
 

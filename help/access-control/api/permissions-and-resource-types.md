@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Endpoint API di riferimento
 description: L'endpoint di riferimento nell'API di controllo accessi consente di visualizzare i nomi delle autorizzazioni e dei tipi di risorse disponibili, che possono quindi essere utilizzati per visualizzare criteri di controllo accessi efficaci per l'utente corrente.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '188'
 ht-degree: 2%
 
 ---
 
 # Endpoint di riferimento
+
+>[!NOTE]
+>
+>Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
 
 È possibile elencare i nomi di tutte le autorizzazioni e i tipi di risorse effettuando una richiesta GET al `/acl/reference` punto finale. Questi nomi possono quindi essere utilizzati nelle chiamate API a [visualizzare le politiche di controllo degli accessi efficaci](./effective-policies.md) per l&#39;utente corrente.
 

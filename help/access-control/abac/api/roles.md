@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Endpoint API ruoli
 description: L'endpoint /ruoli nell'API di controllo accessi basato su attributi consente di gestire i ruoli in modo programmatico in Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1606'
 ht-degree: 4%
 
 ---
 
 # Endpoint ruoli
+
+>[!NOTE]
+>
+>Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
 
 I ruoli definiscono l’accesso che un amministratore, uno specialista o un utente finale ha alle risorse dell’organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente viene raggruppato attraverso responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
 
