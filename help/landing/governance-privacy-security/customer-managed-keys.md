@@ -2,9 +2,9 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
+source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1618'
 ht-degree: 1%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 1%
 # Tasti gestiti dal cliente in Adobe Experience Platform
 
 I dati archiviati in Adobe Experience Platform vengono crittografati a riposo utilizzando le chiavi a livello di sistema. Se utilizzi un’applicazione basata su Platform, puoi scegliere di utilizzare le tue chiavi di crittografia, per avere un maggiore controllo sulla sicurezza dei dati.
+
+>[!NOTE]
+>
+>I dati in Adobe Experience Platform data lake e Profile Store (CosmosDB) sono crittografati utilizzando CMK.
 
 Questo documento illustra il processo di abilitazione della funzione chiavi gestite dal cliente (CMK) in Platform.
 
