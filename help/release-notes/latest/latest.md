@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2431'
 ht-degree: 7%
 
 ---
@@ -130,7 +130,7 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Disattivazione dei valori consigliati per i campi stringa | Ora puoi [disattivare i singoli valori consigliati per i campi stringa](../../xdm/ui/fields/enum.md) in [!UICONTROL Schemi] workspace, inclusi quelli provenienti da componenti standard. Questa funzione è disponibile solo per i campi con valori consigliati e non è supportata per i vincoli di enumerazione. |
+| Miglioramenti al nome visualizzato della struttura dello schema | In precedenza, i nomi dei campi venivano visualizzati nell’interfaccia utente, ma ora i nomi visualizzati dei campi dello schema nell’area di lavoro dello schema sono più comprensibili da leggere. |
 
 **Nuovi componenti XDM**
 
