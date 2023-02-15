@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
 workflow-type: tm+mt
-source-wordcount: '3211'
+source-wordcount: '3214'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!NOTE]
 >
 >- La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* la [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
->- Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) le destinazioni, le identità escluse al momento non vengono visualizzate.
+>- Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) Le destinazioni, le identità escluse, non riuscite e attivate al momento non vengono visualizzate.
 
 
 >[!CONTEXTUALHELP]
@@ -204,7 +204,7 @@ Usa l’icona a forma di freccia (![icona a forma di freccia](/help/dataflows/as
 
 La **[!UICONTROL Attivazione]** Il grafico viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l’elenco di destinazioni riportato di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
+La **[!UICONTROL Attivazione]** visualizza un elenco di destinazioni contenenti almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, le identità attivate, le identità non riuscite, le identità escluse, il tasso di attivazione, i flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente delinea quali metriche sono disponibili per tipo di destinazione, streaming o batch.
 
 | Metrica | Tipo di destinazione |
 ---------|----------|
