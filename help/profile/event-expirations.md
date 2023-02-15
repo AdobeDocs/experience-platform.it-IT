@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenza eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per i singoli eventi Experience all’interno di un set di dati Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Le scadenze degli eventi di esperienza non possono essere configurate tramite l�
 Dopo che le scadenze dell’evento esperienza sono state abilitate in un set di dati abilitato per il profilo, Platform applica automaticamente i valori di scadenza per ogni evento acquisito in un processo in due fasi:
 
 1. Tutti i nuovi dati acquisiti nel set di dati hanno il valore di scadenza applicato al momento dell’acquisizione in base alla marca temporale dell’evento.
-1. Tutti i dati esistenti nel set di dati hanno il valore di scadenza applicato retroattivamente come processo di backfill del sistema una tantum. Una volta che il valore di scadenza è stato inserito nel set di dati, gli eventi che sono più vecchi del valore di scadenza verranno eliminati immediatamente non appena il processo di sistema viene eseguito. Tutti gli altri eventi verranno eliminati non appena raggiungono i loro valori di scadenza dalla marca temporale dell’evento.
+1. Tutti i dati esistenti nel set di dati hanno il valore di scadenza applicato retroattivamente come processo di backfill del sistema una tantum. Una volta che il valore di scadenza è stato inserito nel set di dati, gli eventi che sono più vecchi del valore di scadenza verranno eliminati immediatamente non appena il processo di sistema viene eseguito. Tutti gli altri eventi verranno eliminati non appena raggiungono i loro valori di scadenza dalla marca temporale dell’evento. Quando tutti gli eventi di esperienza sono stati rimossi, se il profilo non dispone più di attributi di profilo, il profilo non esisterà più.
 
 >[!WARNING]
 >
