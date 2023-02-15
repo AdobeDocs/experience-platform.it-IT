@@ -3,7 +3,7 @@ keywords: Experience Platform;identità;servizio di identità;risoluzione dei pr
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tasso per i dati del servizio Identity per facilitare l’uso ottimale del grafico di identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -48,7 +48,7 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 
 ### Acquisizione dello spazio dei nomi identità
 
-A partire dal 31 gennaio 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene in genere acquisita tramite [Origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l&#39;ECID rappresenta lo stesso browser web. Se desideri modificare questa configurazione predefinita, contatta il tuo account manager.
+A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene in genere acquisita tramite [Origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l&#39;ECID rappresenta lo stesso browser web. Se desideri modificare questa configurazione predefinita, contatta il tuo account manager.
 
 ## Passaggi successivi
 
