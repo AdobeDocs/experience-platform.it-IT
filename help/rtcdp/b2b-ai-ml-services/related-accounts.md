@@ -3,10 +3,10 @@ title: Account correlati in Real-Time CDP B2B Edition
 type: Documentation
 description: Una panoramica e ulteriori informazioni sulla funzione relativa agli account in Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 5%
+source-wordcount: '433'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ Le imprese B2B spesso presentano le informazioni sui clienti memorizzate in più
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
 | 3 | Acme Inc |  |  | CA | (408)5366000 |  |
-| 4 | Servizio di consulenza Acme | `http://www.acme.com/consulting` | Consulenza tecnologica | NY | (212) 471-0904 | x |
+| 4 | Servizio di consulenza Acme | `http://www.acme.com/consulting` | Consulenza tecnologica | NY | (212)471-0904 | x |
 | 5 | IT Acme |  |  | CA |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -31,6 +31,16 @@ Con i relativi conti, [!DNL Real-Time CDP B2B] ora mostra un elenco di account s
 ![Schermata che mostra gli account correlati nell’interfaccia utente di Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilizza questa funzione per visualizzare i profili di account correlati per un profilo di account nell’interfaccia utente di Experience Platform e quindi includi gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi nei segmenti.
+
+## Attiva il servizio di account correlato {#enable}
+
+Per abilitare il servizio, seleziona **[!UICONTROL Profili]** nella barra laterale seguita da **[!UICONTROL Impostazioni]**.
+
+![Experience Platform di evidenziazione di profili e impostazioni nell’interfaccia utente.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Seleziona l&#39;interruttore accanto [!UICONTROL Abilita account correlati] per abilitare il servizio, quindi seleziona **[!UICONTROL Salva]**.
+
+![Schermata delle impostazioni dell’account che evidenzia l’interruttore e salva.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Come funziona {#how-it-works}
 
