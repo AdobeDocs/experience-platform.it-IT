@@ -1,9 +1,9 @@
 ---
 title: Comportamento dell’esportazione del profilo
 description: Scopri in che modo il comportamento di esportazione del profilo varia tra i diversi pattern di integrazione supportati nelle destinazioni di Experience Platform.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2979'
 ht-degree: 0%
 
 ---
@@ -169,11 +169,11 @@ In base alle informazioni contenute nella sezione precedente, il comportamento d
 
 **Esportazioni complete di file**
 
-La popolazione totale del segmento viene esportata ogni giorno.
+La popolazione attiva completa del segmento viene esportata ogni giorno.
 
 | Cosa determina un’esportazione di destinazione | Contenuto del file esportato |
 |---------|----------|
-| <ul><li>La pianificazione per l’esportazione impostata nell’interfaccia utente o nell’API e l’azione dell’utente (selezionando [Esporta file ora](/help/destinations/ui/export-file-now.md) nell’interfaccia utente o utilizzando [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) determina l&#39;inizio di un&#39;esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un segmento di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali.</li></ul> | Nelle esportazioni di file completi, l’intera popolazione di profilo di un segmento, in base alla valutazione più recente del segmento, è inclusa in ogni esportazione di file. Gli ultimi valori per ogni attributo XDM selezionato per l’esportazione sono inclusi anche come colonne in ciascun file. |
+| <ul><li>La pianificazione per l’esportazione impostata nell’interfaccia utente o nell’API e l’azione dell’utente (selezionando [Esporta file ora](/help/destinations/ui/export-file-now.md) nell’interfaccia utente o utilizzando [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) determina l&#39;inizio di un&#39;esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un segmento di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali.</li></ul> | Nelle esportazioni di file completi, l’intero gruppo di profili attivo di un segmento, in base alla valutazione più recente del segmento, è incluso in ogni esportazione di file. Gli ultimi valori per ogni attributo XDM selezionato per l’esportazione sono inclusi anche come colonne in ciascun file. I profili in stato di uscita non sono inclusi nell’esportazione del file. |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -183,7 +183,7 @@ Nella prima esportazione di file dopo aver impostato il flusso di lavoro di atti
 
 | Cosa determina un’esportazione di destinazione | Contenuto del file esportato |
 |---------|----------|
-| <ul><li>La pianificazione per l’esportazione impostata nell’interfaccia utente o nell’API determina l’inizio di un’esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un segmento di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali. Modifiche agli attributi o alle mappe di identità per un profilo *non* qualificare un profilo da includere nelle esportazioni incrementali.</li></ul> | I profili per i quali è stata modificata l’appartenenza al segmento, insieme alle informazioni più recenti per ogni attributo XDM selezionato per l’esportazione. |
+| <ul><li>La pianificazione per l’esportazione impostata nell’interfaccia utente o nell’API determina l’inizio di un’esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un segmento di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali. Modifiche agli attributi o alle mappe di identità per un profilo *non* qualificare un profilo da includere nelle esportazioni incrementali.</li></ul> | <p>I profili per i quali è stata modificata l’appartenenza al segmento, insieme alle informazioni più recenti per ogni attributo XDM selezionato per l’esportazione.</p><p>I profili con lo stato di uscita sono inclusi nelle esportazioni di destinazione, se il `segmentMembership.status` Il campo XDM viene selezionato nella fase di mappatura.</p> |
 
 {style=&quot;table-layout:fixed&quot;}
 
