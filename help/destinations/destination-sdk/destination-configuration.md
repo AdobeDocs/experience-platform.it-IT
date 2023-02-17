@@ -2,9 +2,9 @@
 description: Questa configurazione ti consente di indicare informazioni di base come il nome di destinazione, la categoria, la descrizione, il logo e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
 title: Opzioni di configurazione della destinazione in streaming per Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -152,7 +152,7 @@ Utenti selezionati **[!UICONTROL Connetti alla destinazione]** per attivare il f
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Stringa | Indica la configurazione utilizzata per autenticare i clienti Experience Platform nel server. Vedi `authType` di seguito per i valori accettati. |
-| `authType` | Stringa | I valori accettati per le destinazioni di streaming sono:<ul><li>`BEARER`. Se la destinazione supporta l’autenticazione al portatore, imposta `"authType":"Bearer"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in [sezione di consegna della destinazione](./destination-configuration.md).</li><li>`OAUTH2`. Se la destinazione supporta l’autenticazione OAuth 2, imposta `"authType":"OAUTH2"` e aggiungi i campi richiesti per OAuth 2, come mostrato nella [Destination SDK pagina di autenticazione OAuth 2](./oauth2-authentication.md). Inoltre, imposta `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in [sezione di consegna della destinazione](./destination-configuration.md).</li> |
+| `authType` | Stringa | I valori accettati per le destinazioni di streaming sono:<ul><li>`BASIC`. Se la destinazione supporta l’autenticazione di base, imposta `"authType":"Basic"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in [sezione di consegna della destinazione](./destination-configuration.md).</li><li>`BEARER`. Se la destinazione supporta l’autenticazione al portatore, imposta `"authType":"Bearer"` e  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in [sezione di consegna della destinazione](./destination-configuration.md).</li><li>`OAUTH2`. Se la destinazione supporta l’autenticazione OAuth 2, imposta `"authType":"OAUTH2"` e aggiungi i campi richiesti per OAuth 2, come mostrato nella [Destination SDK pagina di autenticazione OAuth 2](./oauth2-authentication.md). Inoltre, imposta `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in [sezione di consegna della destinazione](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 

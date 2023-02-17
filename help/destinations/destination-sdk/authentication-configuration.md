@@ -2,9 +2,9 @@
 description: Utilizza le configurazioni di autenticazione supportate in Adobe Experience Platform Destination SDK per autenticare gli utenti e attivare i dati nell’endpoint di destinazione.
 title: Configurazione dell’autenticazione
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,9 @@ La configurazione di autenticazione selezionata determina il modo in cui Experie
 Adobe Experience Platform Destination SDK supporta diversi tipi di autenticazione:
 
 * [Autenticazione portatore](#bearer)
+* [Autenticazione di base](#basic)
 * [[!DNL Amazon S3] autenticazione](#s3)
-* [[!DNL Azure Blob] Storage](#blob)
+* [[!DNL Azure Blob] Archiviazione](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
 * [[!DNL Google Cloud Storage]](#gcs)
 * [SFTP con chiave SSH](#sftp-ssh)
@@ -34,6 +35,22 @@ Per informazioni dettagliate sulla configurazione dell&#39;autenticazione per ci
 
 * [Configurazioni di autenticazione per le destinazioni di streaming](destination-configuration.md#customer-authentication-configurations)
 * [Configurazioni di autenticazione per destinazioni basate su file](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Autenticazione di base {#basic}
+
+L’autenticazione di base è supportata ad Experience Platform per le destinazioni di streaming.
+
+Quando configuri il tipo di autenticazione di base, gli utenti devono immettere un nome utente e una password per connettersi alla tua destinazione.
+
+Per impostare l’autenticazione di base per la destinazione, configura la `customerAuthenticationConfigurations` tramite `/destinations` punto finale come mostrato di seguito:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Autenticazione portatore {#bearer}
 
