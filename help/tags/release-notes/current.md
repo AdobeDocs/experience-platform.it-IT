@@ -2,7 +2,7 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note di rilascio relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 5%
@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # Note sulla versione per tag e inoltro eventi
 
-## 25 gennaio 2022
+## 25 gennaio 2023
 
 * **Nuova schermata principale**: La home page dell’interfaccia utente di raccolta dati è stata aggiornata con informazioni utili sull’onboarding e collegamenti per semplificare la produttività. Ciò include:
    1. Documentazione e flussi di lavoro consigliati per iniziare
