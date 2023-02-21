@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;
 description: Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, come schemi, set di dati, regole di mappatura, identità, namespace di identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
-title: (Alfa) Crea un flusso di dati delle sorgenti utilizzando i modelli nell’interfaccia utente
+title: (Beta) Crea un flusso di dati sorgente utilizzando i modelli nell’interfaccia utente
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 1%
+source-wordcount: '1337'
+ht-degree: 0%
 
 ---
 
-# (Alfa) Crea un flusso di dati delle sorgenti utilizzando i modelli nell’interfaccia utente
+# (Beta) Crea un flusso di dati sorgente utilizzando i modelli nell’interfaccia utente
 
 >[!IMPORTANT]
 >
->I modelli sono in alfa e al momento sono supportati solo da [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). La documentazione e le funzionalità sono soggette a modifiche.
+>I modelli sono in versione beta e sono supportati dalle seguenti origini:
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>La documentazione e le funzionalità sono soggette a modifiche.
 
 Adobe Experience Platform fornisce modelli preconfigurati che è possibile utilizzare per accelerare il processo di inserimento dei dati. I modelli includono risorse generate automaticamente, ad esempio schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che puoi utilizzare per l’inserimento di dati da un’origine all’Experience Platform.
 
@@ -25,7 +32,7 @@ Con i modelli è possibile:
 * Riduci al minimo gli errori che possono verificarsi durante il processo di inserimento manuale dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
-L’esercitazione seguente fornisce passaggi su come utilizzare i modelli nell’interfaccia utente di Platform utilizzando [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md).
+L’esercitazione seguente descrive come utilizzare i modelli nell’interfaccia utente di Platform.
 
 ## Introduzione
 
@@ -43,11 +50,11 @@ Questa esercitazione richiede una comprensione approfondita dei seguenti compone
 >abstract="Seleziona il tipo di business appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it" text="Panoramica di Real-Time CDP"
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] visualizza una varietà di sorgenti che possono essere utilizzate per creare un account.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] visualizza un catalogo di origini disponibili in Experience Platform.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando la barra di ricerca.
+Utilizza la *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immetti un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
-Sotto la [!UICONTROL Applicazioni di Adobe] categoria, seleziona **[!UICONTROL Marketo Engage]** quindi seleziona **[!UICONTROL Aggiungi dati]**.
+Vai a [!UICONTROL Applicazioni di Adobe] per visualizzare la categoria [!DNL Marketo Engage] scheda di origine e quindi seleziona [!UICONTROL Aggiungi dati] per iniziare.
 
 ![Un catalogo dell&#39;area di lavoro origini con la sorgente del Marketo Engage evidenziata.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Sfog
 
 Viene visualizzato il passaggio di autenticazione , che richiede di creare un nuovo account o di utilizzare un account esistente.
 
-#### Account esistente
+>[!BEGINTABS]
+
+>[!TAB Utilizzare un account esistente]
 
 Per utilizzare un account esistente, seleziona [!UICONTROL Account esistente] quindi selezionare l&#39;account da utilizzare dall&#39;elenco visualizzato.
 
 ![Pagina di selezione per un account esistente con un elenco di account esistenti a cui è possibile accedere.](../../images/tutorials/templates/existing-account.png)
 
-#### Nuovo account
+>[!TAB Crea un nuovo account]
 
 Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci i dettagli della connessione di origine e le credenziali di autenticazione dell’account. Al termine, seleziona **[!UICONTROL Connetti alla sorgente]** e lasciare un po&#39; di tempo per stabilire la nuova connessione.
 
 ![Pagina di autenticazione per un nuovo account con i dettagli della connessione di origine e le credenziali di autenticazione dell’account.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Selezionare i modelli
 
-Dopo aver autenticato e selezionato l&#39;account, viene visualizzato un elenco di modelli. Seleziona l’icona di anteprima accanto al nome di un modello per visualizzare in anteprima i dati di esempio dal modello.
+A seconda del tipo di business selezionato, viene visualizzato un elenco di modelli. Seleziona l’icona di anteprima ![icona anteprima](../../images/tutorials/templates/preview-icon.png) accanto al nome di un modello per visualizzare in anteprima i dati di esempio dal modello.
 
 ![Elenco di modelli con l’icona di anteprima evidenziata.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Se selezioni uno o più elementi parziali dall’elenco dei modelli disponibili,
 >I modelli già utilizzati verranno disattivati dalla selezione.
 
 ![Elenco di modelli con il modello Ruolo contatto opportunità selezionato.](../../images/tutorials/templates/select-template.png)
+
+### Imposta una pianificazione
+
+La [!DNL Microsoft Dynamics] e [!DNL Salesforce] origini supportano entrambi i flussi di dati di pianificazione.
+
+Utilizza l’interfaccia di pianificazione per configurare una pianificazione dell’acquisizione per i flussi di dati. Imposta la frequenza di acquisizione su **Una volta** per creare un’acquisizione una tantum.
+
+![Interfaccia di pianificazione per i modelli Dynamics e Salesforce.](../../images/tutorials/templates/schedule.png)
+
+In alternativa, puoi impostare la frequenza di acquisizione su **Minuto**, **Ora**, **Giorno** oppure **Settimana**. Se pianifichi il flusso di dati per più acquisizioni, devi impostare un intervallo per stabilire un intervallo di tempo tra ogni acquisizione. Ad esempio, una frequenza di acquisizione impostata su **Ora** e un intervallo impostato su **15** significa che il flusso di dati è pianificato per l’acquisizione di dati ogni **15 ore**.
+
+Durante questo passaggio, puoi anche abilitare **backfill** e definire una colonna per l’assimilazione incrementale dei dati. Il backfill viene utilizzato per acquisire i dati storici, mentre la colonna definita per l’acquisizione incrementale consente di differenziare i nuovi dati dai dati esistenti.
+
+Al termine della configurazione della pianificazione dell’acquisizione, seleziona **[!UICONTROL Fine]**.
+
+![Interfaccia di pianificazione per i modelli Dynamics e Salesforce con backfill abilitato.](../../images/tutorials/templates/backfill.png)
 
 ### Esaminare le risorse {#review-assets}
 

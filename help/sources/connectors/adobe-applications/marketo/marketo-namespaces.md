@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;connettore sorgente Marketo;spazi dei nomi;schemi;b2b;B2B
-solution: Experience Platform
 title: namespace e schemi B2B
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore sorgente B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 2%
 
 ---
 
 # namespace e schemi B2B
+
+>[!NOTE]
+>
+>Puoi utilizzare i modelli nell’interfaccia utente di Adobe Experience Platform per accelerare la creazione delle risorse per i dati B2B e B2C. Per ulteriori informazioni, consulta la guida su [utilizzo dei modelli nell’interfaccia utente di Platform](../../../tutorials/ui/templates.md).
 
 Questo documento fornisce informazioni sull&#39;impostazione sottostante per i namespace e gli schemi da utilizzare con le origini B2B. Questo documento fornisce inoltre dettagli sull&#39;impostazione dell&#39;utility di automazione Postman necessaria per la generazione di spazi dei nomi e schemi B2B.
 
