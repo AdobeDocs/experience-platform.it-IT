@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore Marketo Engage
 description: Questo documento fornisce una panoramica del connettore di origine del Marketo Engage, con informazioni sull’autenticazione, la mappatura e la latenza dei dati.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -77,8 +77,9 @@ La tabella seguente illustra la latenza prevista per il [!DNL Marketo] in Platfo
 
 La seguente documentazione fornisce ulteriori informazioni sulla creazione di un [!DNL Marketo] connessione di origine:
 
-* Per informazioni su come collegare le [!DNL Marketo] dati a Platform, consulta l’esercitazione su [creazione di un connettore sorgente Marketo nell’interfaccia utente](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* Per informazioni sulla configurazione sottostante per i namespace e gli schemi B2B utilizzati con [!DNL Marketo], consulta la documentazione di [namespace e schemi B2B](./marketo-namespaces.md).
-* Per informazioni su come trovare le [!DNL Marketo] munchkin ID e la generazione delle tue credenziali, vedi [[!DNL Marketo] guida all’autenticazione](./marketo-auth.md).
-* Per informazioni sulle regole di mappatura specifiche applicabili a [!DNL Marketo] set di dati, consulta la documentazione su [[!DNL Marketo] mappature dei campi](../mapping/marketo.md).
-* Per informazioni generali su [!DNL Real-Time Customer Data Platform B2B Edition] e le relative funzioni, consulta la documentazione [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Per informazioni su come collegare le [!DNL Marketo] dati a Platform, leggi l’esercitazione su [creazione di un [!DNL Marketo] connessione sorgente nell’interfaccia utente](../../../tutorials/ui/create/adobe-applications/marketo.md).
+   * Per informazioni su come impostare gli schemi e acquisire dati di attività personalizzati, consulta l’esercitazione su [creazione di una connessione sorgente e di un flusso di dati per [!DNL Marketo] dati attività personalizzati](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* Per informazioni sulla configurazione sottostante per i namespace e gli schemi B2B utilizzati con [!DNL Marketo], leggi la documentazione di [namespace e schemi B2B](./marketo-namespaces.md).
+* Per informazioni su come trovare le [!DNL Marketo] munchkin ID e la generazione delle tue credenziali, leggi [[!DNL Marketo] guida all’autenticazione](./marketo-auth.md).
+* Per informazioni sulle regole di mappatura specifiche applicabili a [!DNL Marketo] set di dati, leggi la documentazione su [[!DNL Marketo] mappature dei campi](../mapping/marketo.md).
+* Per informazioni generali su [!DNL Real-Time Customer Data Platform B2B Edition] e le relative funzioni, consulta la documentazione su [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

@@ -1,22 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;connettore sorgente Marketo;connettore Marketo;sorgente Marketo;Marketo
-solution: Experience Platform
-title: Creare un connettore sorgente di Marketo Engage nell’interfaccia utente
-type: Tutorial
-description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
+title: Creare una connessione sorgente del Marketo Engage e un flusso di dati nell’interfaccia utente
+description: Questa esercitazione fornisce passaggi per creare una connessione sorgente di Marketo Engage e un flusso di dati nell’interfaccia utente per inserire i dati B2B in Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
 
-# Crea un [!DNL Marketo Engage] connettore sorgente nell’interfaccia utente
+# Crea un [!DNL Marketo Engage] connessione sorgente e flusso di dati nell’interfaccia utente
 
 >[!IMPORTANT]
 >
->Prima di creare un [!DNL Marketo Engage] connessione di origine e un flusso di dati, è innanzitutto necessario assicurarsi di disporre di [mappatura dell’ID organizzazione Adobe IMS](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [popolamento automatico [!DNL Marketo] namespace e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione sorgente e un flusso di dati.
+>Prima di creare un [!DNL Marketo Engage] connessione di origine e un flusso di dati, è innanzitutto necessario assicurarsi di disporre di [mappatura dell&#39;ID organizzazione Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [popolamento automatico [!DNL Marketo] namespace e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione sorgente e un flusso di dati.
 
 Questa esercitazione fornisce i passaggi per la creazione di un [!DNL Marketo Engage] (in appresso denominato &quot;[!DNL Marketo]&quot;) connettore di origine nell&#39;interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 
@@ -48,7 +45,7 @@ Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi descritti n
 
 ## Collega il tuo [!DNL Marketo] account
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in questa schermata vengono visualizzate diverse sorgenti per le quali è possibile creare un account.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in viene visualizzata una varietà di sorgenti con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando la barra di ricerca.
 
@@ -84,23 +81,27 @@ Seleziona il set di dati da acquisire prima, quindi seleziona **[!UICONTROL Succ
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Fornire i dettagli del flusso di dati
+## Fornire i dettagli del flusso di dati {#provide-dataflow-details}
 
 La [!UICONTROL Dettaglio flusso di dati] consente di selezionare se si desidera utilizzare un set di dati esistente o un nuovo set di dati. Durante questo processo, puoi anche configurare le impostazioni per [!UICONTROL Set di dati del profilo], [!UICONTROL Diagnostica degli errori], [!UICONTROL Acquisizione parziale]e [!UICONTROL Avvisi].
 
 ![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### Utilizzare un set di dati esistente
+>[!BEGINTABS]
+
+>[!TAB Utilizzare un set di dati esistente]
 
 Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Set di dati esistente]**. Puoi recuperare un set di dati esistente utilizzando [!UICONTROL Ricerca avanzata] o scorrendo l’elenco dei set di dati esistenti nel menu a discesa. Dopo aver selezionato un set di dati, fornisci un nome e una descrizione per il flusso di dati.
 
 ![set di dati esistente](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### Utilizzare un nuovo set di dati
+>[!TAB Utilizzare un nuovo set di dati]
 
 Per acquisire in un nuovo set di dati, seleziona **[!UICONTROL Nuovo set di dati]** e quindi fornisci il nome di un set di dati di output e una descrizione facoltativa. Quindi, seleziona uno schema a cui eseguire il mapping utilizzando [!UICONTROL Ricerca avanzata] oppure scorrendo l’elenco degli schemi esistenti nel menu a discesa. Dopo aver selezionato uno schema, fornisci un nome e una descrizione per il flusso di dati.
 
 ![nuovo set di dati](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!ENDTABS]
 
 ### Abilita [!DNL Profile] e diagnostica degli errori
 
@@ -110,7 +111,7 @@ Quindi, seleziona la **[!UICONTROL Set di dati del profilo]** attiva/disattiva i
 
 >[!IMPORTANT]
 >
->La [!DNL Marketo] connettore utilizza l’acquisizione batch per acquisire tutti i record storici e utilizza l’acquisizione in streaming per aggiornamenti in tempo reale. Questo consente al connettore di continuare lo streaming durante l’acquisizione di eventuali record errati. Abilita la **[!UICONTROL Acquisizione parziale]** attivare/disattivare e quindi impostare la [!UICONTROL Soglia errore %] per evitare errori nel flusso di dati.
+>La [!DNL Marketo] source utilizza l’acquisizione batch per acquisire tutti i record storici e utilizza l’acquisizione in streaming per aggiornamenti in tempo reale. Questo consente alla sorgente di continuare lo streaming durante l’acquisizione di eventuali record errati. Abilita la **[!UICONTROL Acquisizione parziale]** attivare/disattivare e quindi impostare la [!UICONTROL Soglia errore %] per evitare errori nel flusso di dati.
 
 ![profili ed errori](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -121,6 +122,14 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati.
 Al termine della fornitura dei dettagli al flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![avvisi](../../../../images/tutorials/create/marketo/alerts.png)
+
+### Salta gli account non reclamati durante l’acquisizione dei dati delle aziende
+
+Quando crei un flusso di dati per acquisire dati dal set di dati delle aziende, puoi configurare [!UICONTROL Escludere i conti non reclamati] per escludere o includere conti non reclamati dall’acquisizione.
+
+Quando i singoli utenti compilano un modulo, [!DNL Marketo] crea un record di account fantasma basato sul nome società che non contiene altri dati. Per i nuovi flussi di dati, l’opzione per escludere gli account non reclamati è abilitata per impostazione predefinita. Per i flussi di dati esistenti, puoi abilitare o disabilitare la funzione, con modifiche applicabili ai dati appena acquisiti e non a quelli esistenti.
+
+![conti non reclamati](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Mappa il tuo [!DNL Marketo] campi di origine del set di dati per eseguire il targeting dei campi XDM
 
