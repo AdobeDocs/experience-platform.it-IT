@@ -3,7 +3,7 @@ title: Acquisizione di dati crittografati
 description: Adobe Experience Platform consente di acquisire file crittografati tramite origini batch di archiviazione cloud.
 hide: true
 hidefromtoc: true
-source-git-commit: 0457784b8aa97d55882b794077aecdbd2a9a612a
+source-git-commit: 526c9665843efaeb0e98423dc424a4193434f583
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 2%
@@ -53,15 +53,15 @@ La richiesta seguente genera una coppia di chiavi di crittografia utilizzando lâ
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
       "encryptionAlgorithm": "PGP",
       "params": {
-          "passPhrase": "{PASSPHRASE}"
+          "passPhrase": "{{PASSPHRASE}}"
       }
   }'
 ```
@@ -128,9 +128,9 @@ La seguente richiesta crea un flusso di dati per lâ€™acquisizione di dati critto
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ACME Customer Data",

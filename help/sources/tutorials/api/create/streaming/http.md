@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione HTTP API Streaming utilizzando l’API del servizio di flusso
 description: Questa esercitazione fornisce passaggi su come creare una connessione in streaming utilizzando l’origine API HTTP per dati grezzi e XDM utilizzando l’API del servizio di flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 4%
+source-wordcount: '1496'
+ht-degree: 3%
 
 ---
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `auth.params.sourceId` | Identificatore aggiuntivo utilizzabile durante la creazione di una connessione di base autenticata. Questo parametro è facoltativo e utilizzerà lo stesso valore del `name` , se non viene fornito. |
-| `auth.params.authenticationRequired` | Il parametro che specifica la connessione streaming creata |
+| `auth.params.authenticationRequired` | Questo parametro specifica se la connessione in streaming richiede o meno l’autenticazione. Se `authenticationRequired` è impostato su `true` è quindi necessario fornire l’autenticazione per la connessione in streaming. Se `authenticationRequired` è impostato su `false` l&#39;autenticazione non è necessaria. |
 
 **Risposta**
 
