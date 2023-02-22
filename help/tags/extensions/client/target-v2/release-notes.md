@@ -2,10 +2,10 @@
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 62%
+source-wordcount: '628'
+ht-degree: 60%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 62%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## v0.19.2 (14 febbraio 2023)
+
+- È stato risolto un problema che impediva l’impostazione del timeout su un elemento dati.
 
 ## v0.19.0 (19 settembre 2022)
 
