@@ -3,10 +3,10 @@ title: Suggerimenti client utente-agente
 description: Scopri come funzionano i suggerimenti client User-Agent nell’SDK per web
 keywords: user-agent;suggerimenti client; stringa; stringa agente utente; entropia bassa; entropia elevata
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 5%
+source-wordcount: '1132'
+ht-degree: 6%
 
 ---
 
@@ -120,12 +120,9 @@ La [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Caratteristiche di Audience Manager basate su suggerimenti client entropici elevati {#aam}
 
-Se le caratteristiche di Audience Manager utilizzano una delle seguenti proprietà, è necessario abilitare hint client entropy elevati. In caso contrario, le caratteristiche smetteranno di funzionare.
+[!DNL Google] ha aggiornato il [!DNL Chrome] funzionalità del browser per ridurre al minimo le informazioni raccolte tramite il `User-Agent` intestazione. Di conseguenza, i clienti di Audience Manager che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) non riceverà più informazioni affidabili per le caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=it).
 
-* Versione del sistema operativo
-* Modello dispositivo
-* produttore del dispositivo
-* Fornitore di dispositivi
+Ad Audience Manager, i clienti che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=it) anziché [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)e abilita [Hint client ad alta entropia](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
 
 ## Abilitazione di hint client entropy elevati {#enabling-high-entropy-client-hints}
 
