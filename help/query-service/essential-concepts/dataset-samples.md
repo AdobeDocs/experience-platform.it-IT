@@ -2,18 +2,14 @@
 title: Esempi di set di dati
 description: I set di dati di esempio del servizio query ti consentono di eseguire query esplorative sui grandi dati con un tempo di elaborazione notevolmente ridotto al costo dell’accuratezza della query. Questa guida fornisce informazioni su come gestire i campioni per approssimare l’elaborazione delle query
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Esempi di set di dati (rilascio limitato)
-
->[!IMPORTANT]
->
->La funzione di esempi di set di dati è attualmente in una versione limitata e non è disponibile per tutti i clienti.
+# Esempi di set di dati
 
 Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione approssimativa delle query. I set di dati di esempio vengono creati con campioni casuali uniformi provenienti da [!DNL Azure Data Lake Storage] (ADLS) set di dati che utilizzano solo una percentuale di record dell&#39;originale. Questa percentuale è nota come tasso di campionamento. La regolazione della frequenza di campionamento per controllare l&#39;equilibrio tra precisione e tempo di elaborazione consente di eseguire query esplorative sui grandi dati con tempi di elaborazione notevolmente ridotti al costo dell&#39;accuratezza della query.
 
@@ -22,14 +18,15 @@ Poiché molti utenti non necessitano di una risposta esatta per un’operazione 
 Per facilitare la gestione dei campioni per l’elaborazione approssimativa delle query, Query Service supporta le seguenti operazioni per gli esempi di set di dati:
 
 - [Crea un campione di set di dati casuale uniforme.](#create-a-sample)
+- [Facoltativamente, specifica un criterio di filtro](##optional-filter-criteria)
 - [Visualizza l&#39;elenco di campioni per una tabella ADLS.](#view-list-of-samples)
 - [Esegui direttamente una query sui set di dati di esempio.](#query-sample-datasets)
 - [Elimina un campione.](#delete-a-sample)
 - Elimina i campioni associati quando la tabella ADLS originale viene eliminata.
 
-## Introduzione
+## Introduzione {#get-started}
 
-Per utilizzare le funzionalità di elaborazione approssimativa delle query descritte qui sopra, è necessario impostare il flag di sessione su `true`. Dalla riga di comando dell’Editor query o del client PSQL immettere il `SET aqp=true;` comando.
+Per utilizzare le funzionalità di elaborazione approssimativa delle query di creazione ed eliminazione descritte in questo documento, è necessario impostare il flag di sessione su `true`. Dalla riga di comando dell’Editor query o del client PSQL immettere il `SET aqp=true;` comando.
 
 >[!NOTE]
 >
@@ -39,7 +36,7 @@ Per utilizzare le funzionalità di elaborazione approssimativa delle query descr
 
 ## Creare un campione di set di dati casuale uniforme {#create-a-sample}
 
-Utilizza la `ANALYZE TABLE` con un nome di set di dati per creare un campione casuale uniforme da quel set di dati.
+Utilizza la `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nome di set di dati per creare un campione casuale uniforme da quel set di dati.
 
 La frequenza di campionamento è la percentuale di record prelevati dal set di dati originale. Puoi controllare la frequenza di campionamento utilizzando la variabile `TABLESAMPLE SAMPLERATE` parole chiave. In questo esempio, il valore di 5,0 equivale a una frequenza di campionamento del 50%. Un valore pari a 2,5 equivale a 25% e così via.
 
@@ -50,6 +47,28 @@ La frequenza di campionamento è la percentuale di record prelevati dal set di d
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
+
+## Facoltativamente, specifica un criterio di filtro {#optional-filter-criteria}
+
+Puoi scegliere di specificare un criterio di filtro per i campioni casuali uniformi. Questo consente di creare un campione basato sul sottoinsieme filtrato della tabella analizzata.
+
+Durante la creazione di un campione, il filtro facoltativo viene applicato per primo, quindi il campione viene creato dalla visualizzazione filtrata del set di dati. Un esempio di set di dati con un filtro applicato segue il seguente formato di query:
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
+```
+
+Di seguito sono riportati alcuni esempi pratici di questo tipo di set di dati filtrati:
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+Negli esempi forniti, il nome della tabella è `large_table`, la condizione del filtro nella tabella originale è `month(to_timestamp(timestamp)) in ('8', '9')`e la frequenza di campionamento è (X% dei dati filtrati), in questo caso, `10`.
 
 ## Visualizza l&#39;elenco dei campioni {#view-list-of-samples}
 
