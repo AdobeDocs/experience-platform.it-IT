@@ -4,7 +4,7 @@ description: Scopri come aggiungere individualmente i campi dai gruppi di campi 
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Questa guida descrive i diversi metodi per aggiungere singoli campi a uno schema
 
 Questa esercitazione presuppone che tu abbia familiarità con [composizione degli schemi XDM](../schema/composition.md) e come utilizzare l’Editor di schema nell’interfaccia utente di Platform. Per seguire, dovresti iniziare il processo di [creazione di un nuovo schema](./resources/schemas.md) e assegnarla a una classe standard prima di continuare con questa guida.
 
-## Rimuovi i campi aggiunti dai gruppi di campi standard
+## Rimuovi i campi aggiunti dai gruppi di campi standard {#remove-field-group}
 
 Dopo aver aggiunto un gruppo di campi standard a uno schema, puoi rimuovere tutti i campi standard di cui non hai bisogno.
 

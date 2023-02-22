@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 4%
@@ -417,7 +417,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 #### Descrittore di campo obsoleto
 
-È possibile [deprecazione di un campo all’interno di una risorsa XDM personalizzata](../tutorials/field-deprecation.md#custom) aggiungendo un `meta:status` attributo impostato su `deprecated` al settore in questione. Tuttavia, se desideri deprecare i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare un descrittore di campo obsoleto allo schema in questione per ottenere lo stesso effetto. Utilizzo della [corretto `Accept` header](../tutorials/field-deprecation.md#verify-deprecation), puoi quindi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell’API.
+È possibile [deprecazione di un campo all’interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un `meta:status` attributo impostato su `deprecated` al settore in questione. Tuttavia, se desideri deprecare i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare un descrittore di campo obsoleto allo schema in questione per ottenere lo stesso effetto. Utilizzo della [corretto `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation), puoi quindi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell’API.
 
 ```json
 {
