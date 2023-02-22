@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2023
 description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
-source-git-commit: 1c2b7f291d0f8c0845a76ba4c863a9558da1bb4f
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '988'
 ht-degree: 3%
 
 ---
@@ -14,10 +14,31 @@ ht-degree: 3%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio query](#query-service)
 - [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
 - [Origini](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+**Funzioni nuove o aggiornate** {#destinations-new-updated-features}
+
+| Funzione | Descrizione |
+| ----------- | ----------- |
+| [Miglioramento dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) per integrazioni con [destinazioni basate su file (batch)](/help/destinations/destination-types.md#file-based) | <p> Quando i profili non sono più qualificati per i criteri di consenso, ora Experience Platform comunica in modo proattivo la loro uscita dai criteri alle destinazioni basate su file. Questo segue [versione di febbraio 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) della stessa funzionalità per le destinazioni di streaming. </p> <p> <b>Nota</b>: Questa funzionalità è disponibile solo per i clienti di **[!UICONTROL Privacy e sicurezza]** e quelli di **[!UICONTROL Scudo sanitario]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Documentazione nuova o aggiornata** {#destinations-new-updated-documentation}
+
+| Documentazione | Descrizione |
+| ----------- | ----------- |
+| Come funzionano le destinazioni | <p>Abbiamo pubblicato tre nuovi articoli esplorativi sul funzionamento delle destinazioni, sulla base delle domande comuni degli utenti:</p> <p><ul><li>[Impostazioni di esportazione comuni e configurabili nelle destinazioni](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Comportamento dell’esportazione del profilo per diversi tipi di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
