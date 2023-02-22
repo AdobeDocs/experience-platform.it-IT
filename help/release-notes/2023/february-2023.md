@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2023
 description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
-source-git-commit: b14ef8783a39fc063183e385f195af473acbc33d
+source-git-commit: 1c2b7f291d0f8c0845a76ba4c863a9558da1bb4f
 workflow-type: tm+mt
-source-wordcount: '30'
-ht-degree: 53%
+source-wordcount: '818'
+ht-degree: 3%
 
 ---
 
@@ -14,3 +14,73 @@ ht-degree: 53%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Experience Data Model (XDM)](#xdm)
+- [Servizio query](#query-service)
+- [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
+- [Origini](#sources)
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+
+**Funzioni aggiornate**
+&#x200B; | Funzione | Descrizione | | — | — | | Deprecazione del campo tramite l’interfaccia utente | Dopo l’acquisizione dei dati, ora puoi deprecare i campi dagli schemi. La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
+
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md). &#x200B;
+<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+
+## Servizio query {#query-service}
+
+Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati da data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento nel Profilo cliente in tempo reale.
+
+**Funzioni aggiornate**
+&#x200B; | Funzione | Descrizione | | — | — | | Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. | | Monitorare query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore.  | | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. | | Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza i campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
+
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
+<!-- Links for QS feature docs after release day: -->
+<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
+<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
+<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
+<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
+
+## Account correlati in Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>La funzione Account correlati è disponibile solo per i clienti di Real-Time CDP B2B Edition.
+
+Conti correlati, [!DNL Real-Time CDP B2B] ti consente di visualizzare un elenco di account simili a quello che stai esplorando. Puoi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi nei segmenti.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Abilita il servizio account correlato | La nuova funzione di attivazione/disattivazione consente di abilitare il relativo servizio di account sul tuo account. Per ulteriori informazioni, consulta la guida su [abilitazione del servizio di account correlato](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Ulteriori informazioni sulle funzioni relative agli account sono disponibili nelle seguenti pagine di documentazione:
+
+- [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-accounts)
+
+Per ulteriori informazioni su Real-Time CDP B2B Edition, consulta la sezione [Panoramica di Real-Time CDP B2B Edition](../../rtcdp/overview.md).
+
+## Origini {#sources}
+
+Adobe Experience Platform può acquisire dati da sorgenti esterne e consente di strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+
+L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Designare l’accesso a livello di abbonamento con [!DNL Google PubSub] | È ora possibile definire l’accesso a una sottoscrizione di un argomento specifica quando si utilizza il [!DNL Google PubSub] , fornendo l’ID della sottoscrizione al momento dell’autenticazione. Per ulteriori informazioni, consulta la sezione [!DNL Google PubSub] esercitazione sull&#39;autenticazione [utilizzo dell’API del servizio di flusso](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) o [Interfaccia utente della piattaforma](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Acquisisci dati di attività personalizzati da [!DNL Marketo] | Ora puoi importare dati di attività personalizzati dal tuo [!DNL Marketo] Experience Platform. Per acquisire dati di attività personalizzati, devi impostare gruppi di campi di attività personalizzati nello schema Attività B2B e creare un flusso di dati utilizzando il set di dati delle attività. Una volta completato il flusso di dati, il set di dati acquisito conterrà le attività standard e personalizzate dal tuo [!DNL Marketo] istanza. È quindi possibile utilizzare [Servizio query](../../query-service/home.md) per accedere ai record di attività personalizzati in Platform. Per ulteriori informazioni, consulta la guida su [creazione di un flusso di dati per i dati di attività personalizzati](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Escludere i conti non reclamati da [!DNL Marketo] | È ora possibile configurare se si desidera escludere o includere account non reclamati dall’acquisizione durante la creazione di un flusso di dati per i dati delle aziende. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente e di un flusso di dati per [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md).

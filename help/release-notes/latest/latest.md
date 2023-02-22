@@ -1,198 +1,71 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
-description: Le note sulla versione di gennaio 2023 per Adobe Experience Platform.
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
+description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
+source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
 workflow-type: tm+mt
-source-wordcount: '2431'
-ht-degree: 7%
+source-wordcount: '817'
+ht-degree: 4%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 25 gennaio 2023**
+**Data di rilascio: 22 febbraio 2023**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
-- [Assurance](#assurance)
-- [Raccolta dati](#data-collection)
-- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Profilo cliente in tempo reale](#profile)
-- [Servizio di segmentazione](#segmentation)
+- [Servizio query](#query-service)
+- [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
 - [Origini](#sources)
-
-## Servizi di intelligenza artificiale/apprendimento automatico {#ai-ml}
-
-I servizi di intelligenza artificiale e apprendimento automatico consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e del machine learning nei casi di utilizzo della customer experience. Questo consente agli analisti di marketing di impostare previsioni, senza la necessità di competenze specifiche per le esigenze specifiche di un&#39;azienda, utilizzando configurazioni a livello di business.
-
-### IA per l’attribuzione
-
-La Attribution AI viene utilizzata per attribuire i crediti ai punti di contatto che conducono a eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
-
-**Funzioni aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Ambito dell’HIPAA | I clienti di Healthcare Shield possono ora ricevere, utilizzare, mantenere o trasmettere informazioni sulla salute protette in Attribution AI e in alcune altre applicazioni basate su Experienci Platform. Healthcare Shield è per i clienti sanitari che sono un&#39;entità coperta o un&#39;impresa associata in HIPAA. Per ulteriori informazioni, consulta la documentazione su [HIPAA e prodotti e servizi di Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
-| Modifica colonne di set di dati di punteggio aggiuntive | È ora possibile aggiungere o rimuovere ulteriori colonne di set di dati con punteggio (colonne di reporting) quando si modificano modelli esistenti. Questo estende la flessibilità dei punteggi di attribuzione per fornire informazioni approfondite su dimensioni aggiuntive dopo la creazione di un modello. Consulta la sezione [Guida all’interfaccia utente di Attribution](../../intelligent-services/attribution-ai/user-guide.md) per saperne di più. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Vedi la [Servizi AI/ML](../../intelligent-services/attribution-ai/overview.md) panoramica per ulteriori informazioni.
-
-### Customer AI
-
-Customer AI per Real-time Customer Data Platform viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
-
-**Funzioni aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Ambito dell’HIPAA | I clienti di Healthcare Shield possono ora ricevere, utilizzare, mantenere o trasmettere informazioni sulla salute protette in Customer AI per Real-time Customer Data Platform e in alcune altre applicazioni basate su Experienci Platform. Healthcare Shield è per i clienti sanitari che sono un&#39;entità coperta o un&#39;impresa associata in HIPAA. Per ulteriori informazioni, consulta la documentazione su [HIPAA e prodotti e servizi di Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
-
-{style=&quot;table-layout:auto&quot;}
-
-Vedi la [Servizi AI/ML](../../intelligent-services/customer-ai/overview.md) panoramica per ulteriori informazioni.
-
-## Assurance {#assurance}
-
-Adobe Assurance ti consente di controllare, provare, simulare e convalidare il modo in cui raccogli i dati o distribuisci le esperienze nell’app mobile.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Editor di convalida | Sono stati aggiunti nuovi miglioramenti all’editor di convalida. Questi miglioramenti includono colonne di convalida, nuovi strumenti per la creazione del codice e visualizzazioni migliorate. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Per ulteriori informazioni su Assurance, leggere il [Documentazione di affidabilità](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
-
-## Raccolta dati {#data-collection}
-
-Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di raccogliere i dati sull’esperienza del cliente lato client e inviarli ad Adobe Experience Platform Edge Network dove possono essere arricchiti, trasformati e distribuiti su destinazioni Adobi o non Adobi.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Nuova schermata principale | La home page dell’interfaccia utente di raccolta dati è stata aggiornata con informazioni utili sull’onboarding e collegamenti per semplificare la produttività. Ciò include:<ol><li>Documentazione e flussi di lavoro consigliati per iniziare</li><li>Proprietà, regole ed elementi dati recenti</li><li>Estensioni popolari</li><li>Nuovi aggiornamenti di estensione con una funzione di installazione rapida</li></ol> |
-| Invia dati a [!DNL Google Ads] utilizzo dell&#39;inoltro eventi | Ora puoi utilizzare la [[!DNL Google Ads Enhanced Conversions] Estensione API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) per l&#39;inoltro di eventi, combinato con [Google Oauth 2 segreti](../../tags/ui/event-forwarding/secrets.md#google-oauth2), per inviare in modo sicuro i dati lato server a [!DNL Google Ads] in tempo reale. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Destinazioni (aggiornato il 2 febbraio) {#destinations}
-
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
-
-**Nuove destinazioni**
-
-| Destinazione | Descrizione |
-| ----------- | ----------- |
-| [(Beta) Connessione di Adobe Experience Cloud Audiences](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Utilizza la [!UICONTROL (Beta) Pubblico Adobe Experience Cloud] connessione per condividere segmenti da Experience Platform a diverse soluzioni di Experience Platform, come ad Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target o Marketo. |
-| [Connessione profilo Pega](../../destinations/catalog/personalization/pega-profile.md) | Utilizza la [!DNL Pega Profile Connector] in Adobe Experience Platform per creare una connessione in uscita diretta al tuo [!DNL Amazon] Archiviazione S3 per esportare periodicamente i dati del profilo in file CSV da Adobe Experience Platform nei bucket S3 personalizzati. In [!DNL Pega Customer Decision Hub], è possibile pianificare i processi dati per importare i dati del profilo dall&#39;archiviazione S3 per aggiornare [!DNL Pega Customer Decision Hub] profilo. |
-| [(Beta) La connessione UE CRM per il settore commerciale](../../destinations/catalog/advertising/tradedesk-emails.md) | Con il rilascio di EUID (ID unificato europeo), ne vedrai due [!DNL The Trade Desk - CRM] destinazioni nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md). <ul><li> Se si raccolgono dati nell&#39;UE, utilizzare il **[!DNL The Trade Desk - CRM (EU)]** destinazione.</li><li> Se si ottengono dati nelle aree APAC o NAMER, utilizzare il **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destinazione. </li></ul> |
-
-**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
-
-| Funzionalità | Descrizione |
-| ----------- | ----------- |
-| Miglioramento della policy di consenso ai file multimediali a pagamento per le integrazioni con le destinazioni di streaming | Un [miglioramento dell&#39;applicazione delle politiche di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations) per i casi d’uso relativi all’attivazione a pagamento di contenuti multimediali. Quando i profili non sono più qualificati per i criteri di consenso, ora Experience Platform comunica in modo proattivo la loro uscita dai criteri alle destinazioni di streaming. <br> <b>Nota</b>: Questa funzionalità è disponibile solo per i clienti di **[!UICONTROL Privacy e sicurezza]** e quelli di **[!UICONTROL Scudo sanitario]**. |
-| Nuove opzioni di delimitazione per i connettori di destinazione dell&#39;archiviazione cloud beta | Tre nuove opzioni di delimitazione (due punti) `:`, Pipe, Punto e virgola `;`) sono ora disponibili per le nuove destinazioni di archiviazione cloud beta - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure (Beta)](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informazioni sul supporto [opzioni di formattazione dei file](/help/destinations/ui/batch-destinations-file-formatting-options.md) per le destinazioni basate su file. |
-| Nuovo parametro opzionale disponibile in [campi dati del cliente](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) configurazioni [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi dati di destinazione impostati dall&#39;organizzazione di un utente. <br> Ad esempio, il **[!UICONTROL Alias di integrazione]** nel campo [[!UICONTROL Personalizzazione personalizzata]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) La destinazione deve essere univoca, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
-
-**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
-
-<table>
-    <tr>
-        <td><b>Correzione o miglioramento</b></td>
-        <td><b>Descrizione</b></td>
-    </tr>
-    <tr>
-        <td>È stato aggiornato il comportamento di esportazione nelle destinazioni basate su file (PLAT-123316)</td>
-        <td>È stato risolto un problema nel comportamento di <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">attributi obbligatori</a> durante l’esportazione di file di dati in destinazioni batch. <br> In precedenza, ogni record nei file di output veniva verificato per contenere: <ol><li>Un valore non nullo del <code>mandatoryField</code> colonna e</li><li>Un valore non nullo su almeno uno degli altri campi non obbligatori.</li></ol> La seconda condizione è stata rimossa. Di conseguenza, potresti vedere più righe di output nei file di dati esportati, come mostrato nell’esempio seguente:<br> <b> Comportamento del campione prima della versione di gennaio 2023 </b> <br> Campo obbligatorio: <code>emailAddress</code> <br> <b>Dati di input da attivare</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Uscita attivazione</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Comportamento del campione dopo la versione di gennaio 2023 </b> <br> <b>Uscita attivazione</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
-    </tr>
-    <tr>
-        <td>Convalida dell'interfaccia utente e API per le mappature richieste e le mappature duplicate (PLAT-123316)</td>
-        <td>La convalida viene ora applicata come segue nell’interfaccia utente e nell’API quando <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">campi di mappatura</a> nel flusso di lavoro di attivazione delle destinazioni :<ul><li><b>Mappature richieste</b>: Se la destinazione è stata impostata dallo sviluppatore di destinazione con le mappature richieste (ad esempio, il <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> destinazione), quindi questi mapping richiesti devono essere aggiunti dall'utente quando si attivano i dati nella destinazione. </li><li><b>Mappature duplicate</b>: Nel passaggio di mappatura del flusso di lavoro di attivazione, puoi aggiungere valori duplicati nei campi di origine, ma non nei campi di destinazione. Vedi la tabella seguente per un esempio di combinazioni di mappatura consentite e proibite. <br><table><thead><tr><th>Consentito/vietato</th><th>Campo di origine</th><th>Campo di destinazione</th></tr></thead><tbody><tr><td>Consentito</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>alias e-mail2</li></ul></td></tr><tr><td>Proibito</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
-    </tr>    
-</table>
-
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
 XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
 
-**Funzioni nuove o aggiornate**
+**Funzioni aggiornate**
+&#x200B; | Funzione | Descrizione | | — | — | | Deprecazione del campo tramite l’interfaccia utente | Dopo l’acquisizione dei dati, ora puoi deprecare i campi dagli schemi. La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
+
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md). &#x200B;
+<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+
+## Servizio query {#query-service}
+
+Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati da data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento nel Profilo cliente in tempo reale.
+
+**Funzioni aggiornate**
+&#x200B; | Funzione | Descrizione | | — | — | | Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. | | Monitorare query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore.  | | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. | | Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza i campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
+
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
+<!-- Links for QS feature docs after release day: -->
+<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
+<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
+<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
+<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
+
+## Account correlati in Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>La funzione Account correlati è disponibile solo per i clienti di Real-Time CDP B2B Edition.
+
+Conti correlati, [!DNL Real-Time CDP B2B] ti consente di visualizzare un elenco di account simili a quello che stai esplorando. Puoi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi nei segmenti.
+
+**Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Miglioramenti al nome visualizzato della struttura dello schema | In precedenza, i nomi dei campi venivano visualizzati nell’interfaccia utente, ma ora i nomi visualizzati dei campi dello schema nell’area di lavoro dello schema sono più comprensibili da leggere. |
-
-**Nuovi componenti XDM**
-
-| Tipo di componente | Nome | Descrizione |
-| --- | --- | --- |
-| Classe | [[!UICONTROL Conversione]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Classe per il tracciamento dei dati di conversione come le conversioni di valuta. |
-| Gruppo di campi | [[!UICONTROL Dettagli tasso di conversione valuta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Un gruppo di campi per [!UICONTROL Conversione] classe, acquisendo ulteriori dettagli relativi alla conversione di valuta. |
-| Gruppo di campi | [[!UICONTROL I risultati della valutazione delle politiche di consenso vengono mappati con i metadati]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Acquisisce i dettagli del risultato della valutazione di più criteri di consenso, comprese le informazioni sui metadati relativi alle entrate e all’esistenza dei criteri di consenso. |
-
-**Componenti XDM aggiornati**
-
-| Tipo di componente | Nome | Descrizione |
-| --- | --- | --- |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli pubblicitari]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | La `ID` è stato rinominato in `name`e il precedente `name` il campo è ora `friendlyName`. |
-| Tipo di dati | [[!UICONTROL Dettagli della proposta di decisione]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Aggiunta di un `selectionStrategy` campo che acquisisce i dettagli di una strategia di selezione. |
-| Gruppo di campi | [[!UICONTROL Evento esperienza - Interazioni proposte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | Il gruppo di campi è ora compatibile con [!UICONTROL Evento passaggio percorso] classe. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli degli errori]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | La `ID` è stato rinominato in `name`. |
-| Tipo di dati | [[!UICONTROL Informazioni multimediali]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Ripristino di una modifica del pattern nella proprietà del segmento video. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati QE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | È stato rimosso il `droppedFrameCount` campo . |
-| Tipo di dati | [[!UICONTROL Informazioni sulla sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Rinominato il `isAuthorized` campo a `authorized`e ha aggiornato il `type` a una stringa quando in precedenza era un valore booleano. |
-| Tipo di dati | [[!UICONTROL Spedizione]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Sono stati aggiunti diversi nuovi campi: `shipDate`, `trackingNumber`e `trackingURL`. |
-| Gruppo di campi | [[!UICONTROL Campi di entità AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Sono stati aggiunti diversi nuovi campi: `journeyNodeID`, `journeyNodeName`e `journeyModeType`. |
-| Gruppo di campi | [[!UICONTROL Evento esperienza consumatore]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | Il gruppo di campi è ora compatibile anche con [!UICONTROL Metriche di riepilogo] classe. |
-| Gruppo di campi | [[!UICONTROL Trigger dei prodotti]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | La `productTriggers` è ora nidificato sotto a `weather` oggetto. |
-| Gruppo di campi | [[!UICONTROL Trigger relativi]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | La `relativeTriggers` è ora nidificato sotto a `weather` oggetto. |
-| Gruppo di campi | [[!UICONTROL Trigger severi]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | La `severeTriggers` è ora nidificato sotto a `weather` oggetto. |
-| Gruppo di campi | [[!UICONTROL Trigger del tempo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | La `weatherTriggers` è ora nidificato sotto a `weather` oggetto. |
-| Gruppo di campi | [[!UICONTROL Account commerciali correlati a XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Il gruppo di campi è ora stabile. |
+| Abilita il servizio account correlato | La nuova funzione di attivazione/disattivazione consente di abilitare il relativo servizio di account sul tuo account. Per ulteriori informazioni, consulta la guida su [abilitazione del servizio di account correlato](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+Ulteriori informazioni sulle funzioni relative agli account sono disponibili nelle seguenti pagine di documentazione:
 
-## Profilo cliente in tempo reale {#profile}
+- [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
-
-**Prossima deprecazione** {#deprecation}
-
-Per rimuovere la ridondanza nel ciclo di vita dell’appartenenza al segmento, la `Existing` lo stato verrà dichiarato obsoleto dal [mappa di appartenenza del segmento](../../xdm/field-groups/profile/segmentation.md) alla fine di marzo 2023. Un annuncio di follow-up includerà la data esatta di deprecazione.
-
-Dopo un post obsoleto, i profili qualificati in un segmento saranno rappresentati come `Realized` e i profili squalificati continueranno a essere rappresentati come `Exited`. In questo modo la parità con le destinazioni basate su file con `Active` e `Expired` stati dei segmenti.
-
-Questa modifica potrebbe interessarti se utilizzi [destinazioni aziendali](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) e dispongono di processi a valle automatizzati, in base al `Existing` stato. Controlla le integrazioni downstream se questo è il caso per te. Se sei interessato a identificare i nuovi profili qualificati oltre un certo periodo di tempo, considera l&#39;utilizzo di una combinazione dei `Realized` lo stato e `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
-
-Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati del profilo, consulta la sezione [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
-
-## Servizio di segmentazione {#segmentation}
-
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Importazione in serie di valori nel Generatore di segmenti | Il Generatore di segmenti ora supporta l’importazione di più valori, sia caricando un file CSV o TSV che inserendo manualmente valori separati da virgole. Ulteriori informazioni sono disponibili nella sezione [Guida al Generatore di segmenti](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
-| Scadenza dell&#39;iscrizione a un pubblico esterno | Per impostazione predefinita, le appartenenze al pubblico esterno vengono mantenute per 30 giorni. Per conservarli più a lungo, utilizza le `validUntil` durante l’acquisizione dei dati sul pubblico. |
-| Scadenza dell’appartenenza al segmento generata dalla piattaforma | Qualsiasi appartenenza al segmento presente nella `Exited` per più di 30 giorni, in base alla `lastQualificationTime` sarà soggetto a eliminazione. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni su Real-Time CDP B2B Edition, consulta la sezione [Panoramica di Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Origini {#sources}
 
@@ -200,7 +73,14 @@ Adobe Experience Platform può acquisire dati da sorgenti esterne e consente di 
 
 L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
+**Funzioni aggiornate**
+
 | Funzione | Descrizione |
 | --- | --- |
-| Consenti accesso utente alle sottocartelle delle origini di archiviazione cloud | È ora possibile definire l’accesso a una sottocartella specifica dell’origine di archiviazione cloud durante la creazione di un nuovo account. Una volta creati, gli utenti potranno accedere solo ai dati della sottocartella consentita. Questa funzione è disponibile per le seguenti origini di archiviazione cloud: [Archiviazione BLOB di Azure](../../sources/connectors/cloud-storage/blob.md), [Google Cloud Storage](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md)e [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
-| Disponibilità beta [!DNL SugarCRM] | [!DNL SugarCRM] le origini sono ora disponibili in versione beta. Utilizza la [!DNL SugarCRM Accounts & Contacts] e [!DNL SugarCRM Events] origini per ottenere i dati dal [!DNL SugarCRM] conto all&#39;Experience Platform. Per ulteriori informazioni, consulta la sezione [[!DNL SugarCRM] panoramica](../../sources/connectors/crm/sugarcrm.md). |
+| Designare l’accesso a livello di abbonamento con [!DNL Google PubSub] | È ora possibile definire l’accesso a una sottoscrizione di un argomento specifica quando si utilizza il [!DNL Google PubSub] , fornendo l’ID della sottoscrizione al momento dell’autenticazione. Per ulteriori informazioni, consulta la sezione [!DNL Google PubSub] esercitazione sull&#39;autenticazione [utilizzo dell’API del servizio di flusso](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) o [Interfaccia utente della piattaforma](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Acquisisci dati di attività personalizzati da [!DNL Marketo] | Ora puoi importare dati di attività personalizzati dal tuo [!DNL Marketo] Experience Platform. Per acquisire dati di attività personalizzati, devi impostare gruppi di campi di attività personalizzati nello schema Attività B2B e creare un flusso di dati utilizzando il set di dati delle attività. Una volta completato il flusso di dati, il set di dati acquisito conterrà le attività standard e personalizzate dal tuo [!DNL Marketo] istanza. È quindi possibile utilizzare [Servizio query](../../query-service/home.md) per accedere ai record di attività personalizzati in Platform. Per ulteriori informazioni, consulta la guida su [creazione di un flusso di dati per i dati di attività personalizzati](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Escludere i conti non reclamati da [!DNL Marketo] | È ora possibile configurare se si desidera escludere o includere account non reclamati dall’acquisizione durante la creazione di un flusso di dati per i dati delle aziende. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente e di un flusso di dati per [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sulle origini, consulta la sezione [panoramica di origini](../../sources/home.md).
