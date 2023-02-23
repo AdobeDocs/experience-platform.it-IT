@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 4%
+source-wordcount: '952'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Servizio query](#query-service)
-- [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
+- [Edizione B2B di Real-Time Customer Data Platform](#b2b)
 - [Origini](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 **Funzioni aggiornate**
 &#x200B; | Funzione | Descrizione | | — | — | | Deprecazione del campo tramite l’interfaccia utente | Dopo l’acquisizione dei dati, ora puoi deprecare i campi dagli schemi. La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
 
-&#x200B; Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Servizio query {#query-service}
@@ -57,20 +57,16 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 **Funzioni aggiornate**
 &#x200B; | Funzione | Descrizione | | — | — | | Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. | | Monitorare query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore.  | | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. | | Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza i campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
 
-&#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Account correlati in Real-Time CDP B2B Edition {#related-accounts}
+## Edizione B2B di Real-Time Customer Data Platform {#b2b}
 
->[!NOTE]
->
->La funzione Account correlati è disponibile solo per i clienti di Real-Time CDP B2B Edition.
-
-Conti correlati, [!DNL Real-Time CDP B2B] ti consente di visualizzare un elenco di account simili a quello che stai esplorando. Puoi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi nei segmenti.
+Basato su Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition è progettato appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Riunisce i dati provenienti da più sorgenti e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono agli esperti di marketing di eseguire il targeting preciso di tipi di pubblico specifici e coinvolgerli in tutti i canali disponibili.
 
 **Funzioni aggiornate**
 
@@ -79,12 +75,6 @@ Conti correlati, [!DNL Real-Time CDP B2B] ti consente di visualizzare un elenco 
 | Abilita il servizio account correlato | La nuova funzione di attivazione/disattivazione consente di abilitare il relativo servizio di account sul tuo account. Per ulteriori informazioni, consulta la guida su [abilitazione del servizio di account correlato](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-Ulteriori informazioni sulle funzioni relative agli account sono disponibili nelle seguenti pagine di documentazione:
-
-- [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Come utilizzare account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Per ulteriori informazioni su Real-Time CDP B2B Edition, consulta la sezione [Panoramica di Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
