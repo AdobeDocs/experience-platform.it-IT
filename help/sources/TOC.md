@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
+source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '937'
 ht-degree: 10%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 10%
    - Sistema locale {#local-system}
       - [Connettore di caricamento file locale](connectors/local-system/local-file-upload.md)
    - Automazione del marketing {#marketing-automation}
+      - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
       - [Connettore Mailchimp](connectors/marketing-automation/mailchimp.md)
@@ -163,6 +164,7 @@ ht-degree: 10%
       - eCommerce {#ecommerce}
          - [Shopificante](tutorials/api/create/ecommerce/shopify.md)
       - Automazione del marketing {#marketing-automation}
+         - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campagna MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
@@ -278,6 +280,7 @@ ht-degree: 10%
       - Sistema locale {#local-system}
          - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
       - Automazione del marketing {#marketing-automation}
+         - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Campagne Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)

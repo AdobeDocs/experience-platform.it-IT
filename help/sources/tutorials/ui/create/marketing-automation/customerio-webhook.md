@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente Customer.io e un flusso di dati nell'interfaccia utente
 description: Scopri come creare una connessione sorgente Customer.io utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: "Beta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -64,13 +64,13 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla 
 
 Utilizza la *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immetti un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
-Vai a [!UICONTROL Automazione del marketing] per visualizzare la categoria [!DNL Customer.io] scheda sorgente. Per iniziare, seleziona [!UICONTROL Aggiungi dati].
+Vai a [!UICONTROL Automazione del marketing] per visualizzare la categoria [!DNL Customer.io] scheda sorgente. Per iniziare, seleziona **[!UICONTROL Aggiungi dati]**.
 
 ![Schermata dell’interfaccia utente della piattaforma per catalogo con la scheda Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Selezionare i dati {#select-data}
 
-La **[!UICONTROL Seleziona dati]** viene visualizzato un passaggio che fornisce un’interfaccia per selezionare i dati inviati a Platform.
+La **[!UICONTROL Seleziona dati]** viene visualizzato un passaggio che fornisce un’interfaccia per selezionare i dati da portare in Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia ti consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
