@@ -2,10 +2,10 @@
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 60%
+source-wordcount: '650'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 60%
 ## v0.19.2 (14 febbraio 2023)
 
 - È stato risolto un problema che impediva l’impostazione del timeout su un elemento dati.
+
+## v0.19.1 (3 febbraio 2023)
+
+- Aggiornamento al supporto `at.js` v2.10.1
+- I parametri mbox personalizzati del client ora supportano correttamente la notazione del punto
+- Le chiamate di consegna non vengono più effettuate nel Compositore esperienza visivo
 
 ## v0.19.0 (19 settembre 2022)
 
