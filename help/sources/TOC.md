@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 10%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 10%
       - [Connettore Google Ads](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Connettore a pannello multiplo](connectors/analytics/mixpanel.md)
+      - [Pendo](connectors/analytics/pendo-webhook.md)
    - archiviazione cloud {#cloud-storage}
       - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connettore Amazon S3](connectors/cloud-storage/s3.md)
@@ -113,6 +114,7 @@ ht-degree: 10%
          - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/api/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -226,6 +228,7 @@ ht-degree: 10%
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Pannello misto](tutorials/ui/create/analytics/mixpanel.md)
+         - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
       - archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
