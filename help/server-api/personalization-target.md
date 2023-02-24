@@ -2,10 +2,10 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 3%
+source-wordcount: '620'
+ht-degree: 2%
 
 ---
 
@@ -28,15 +28,6 @@ Consulta la sezione [guida sull’aggiunta di servizi a un datastream](../edge/d
 Durante la configurazione del datastream, puoi (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID]e [!DNL Target Third Party ID Namespace].
 
 ![Immagine dell&#39;interfaccia utente che mostra la schermata di configurazione del servizio datastream, con Adobe Target selezionato](assets/target-datastream.png)
-
-Puoi scegliere tra le seguenti opzioni [!DNL Analytics Logging] opzioni:
-
-* **[!DNL Server Side]**: Questa è l’opzione predefinita per [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=it). Quando questa opzione è selezionata, ogni volta che Target restituisce il contenuto di personalizzazione, il [!DNL A4T] i dati vengono inviati automaticamente ad Analytics, in base alla risposta dal motore di personalizzazione di Target.
-* **[!DNL Client Side]**: Quando questa opzione è selezionata, ogni volta che Target restituisce il contenuto di personalizzazione, il [!DNL A4T] i dati vengono restituiti all&#39;applicazione chiamante. Se desideri registrare questi dati in Analytics, assicurati che siano segnalati in una chiamata successiva a [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >Oltre a selezionare **[!UICONTROL Lato client]** nella configurazione di Target, devi anche disabilitare Analytics affinché la rete Edge restituisca il [!DNL A4T] le informazioni tornano alla risposta.
 
 
 ## Parametri personalizzati {#custom-parameters}
