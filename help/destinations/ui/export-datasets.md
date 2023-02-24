@@ -2,9 +2,10 @@
 title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,9 @@ ht-degree: 1%
 >* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 
-Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage].
+Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage] utilizzando l’interfaccia utente di Experience Platform.
+
+Puoi anche utilizzare le API di Experience Platform per esportare i set di dati. Leggi la sezione [esercitazione API sui set di dati di esportazione](/help/destinations/api/export-datasets.md) per ulteriori informazioni.
 
 ## Quando attivare segmenti o esportare set di dati {#when-to-activate-segments-or-activate-datasets}
 
