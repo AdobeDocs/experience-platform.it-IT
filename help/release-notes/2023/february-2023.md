@@ -47,7 +47,7 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 **Funzioni aggiornate**
 &#x200B; | Funzione | Descrizione | | — | — | | Deprecazione del campo tramite l’interfaccia utente | È ora possibile [dopo l’acquisizione dei dati, i campi degli schemi diventano obsoleti](../../xdm/tutorials/field-deprecation-ui.md). La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 **Nuovi componenti XDM**
 
@@ -78,7 +78,7 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 **Funzioni aggiornate**
 &#x200B; | Funzione | Descrizione | | — | — | | Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. | | Monitorare query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore.  | | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. | | Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza i campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
+&#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
