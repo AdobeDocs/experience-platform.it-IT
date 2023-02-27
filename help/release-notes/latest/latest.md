@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
-source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
+source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
 workflow-type: tm+mt
 source-wordcount: '1137'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -45,9 +45,12 @@ Per informazioni più generali sulle destinazioni, consulta [panoramica sulle de
 XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
 
 **Funzioni aggiornate**
-&#x200B; | Funzione | Descrizione | | — | — | | Deprecazione del campo tramite l’interfaccia utente | È ora possibile [dopo l’acquisizione dei dati, i campi degli schemi diventano obsoleti](../../xdm/tutorials/field-deprecation-ui.md). La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
 
+| Funzione | Descrizione |
+| --- | --- |
+| Rimozione dei campi dall’interfaccia utente | Ora puoi [dopo l’acquisizione dei dati, i campi degli schemi diventano obsoleti](../../xdm/tutorials/field-deprecation-ui.md). La funzione di deprecazione del campo XDM consente di rimuovere i campi dalla visualizzazione dell’interfaccia utente conservandoli per l’utilizzo. Se necessario, puoi visualizzare nuovamente i campi obsoleti e tutti i segmenti, le query o le soluzioni downstream che fanno riferimento ai campi verranno eseguiti come di consueto. |
 
+{style=&quot;table-layout:auto&quot;}
 
 **Nuovi componenti XDM**
 
@@ -76,9 +79,18 @@ Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica d
 Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati da data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’inserimento nel Profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
-&#x200B; | Funzione | Descrizione | | — | — | | Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. | | Monitorare query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore.  | | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. | | Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza i campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
 
-&#x200B; Per ulteriori informazioni su Query Services, consulta [Panoramica del servizio query](../../query-service/home.md). &#x200B;
+| Funzione | Descrizione |
+| --- | --- |
+| Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. |
+| Monitoraggio delle query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore. |
+| Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. |
+| Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Per ulteriori informazioni sui servizi di query, consulta la [Panoramica del servizio query](../../query-service/home.md).
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
