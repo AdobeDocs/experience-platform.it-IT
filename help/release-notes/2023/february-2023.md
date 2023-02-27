@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2023
 description: Le note sulla versione di febbraio 2023 per Adobe Experience Platform.
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1172'
 ht-degree: 6%
 
 ---
@@ -82,20 +82,15 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 
 | Funzione | Descrizione |
 | --- | --- |
-| Abilitare i set di dati per il profilo con SQL | Utilizza LE ETICHETTE nelle query CTAS per rendere un set di dati &quot;abilitato al profilo&quot; o utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. |
-| Monitoraggio delle query pianificate | Utilizza la scheda Query pianificate per trovare informazioni importanti sulle esecuzioni della query e per abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore. |
-| Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione attivando la funzione di completamento automatico dell’editor delle query. Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. |
-| Esempi di set di dati | Specifica una frequenza di campionamento nella query e utilizza campioni di set di dati per creare un campione casuale uniforme o creare campioni condizionali basati su criteri specifici. |
+| Abilitare i set di dati per il profilo con SQL | [Utilizza le ETICHETTE nelle query CTAS per creare un set di dati &quot;profilo abilitato&quot;](../../query-service/sql/syntax.md#create-table-as-select)oppure utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. È possibile utilizzare questo costrutto SQL esteso per fornire supporto senza soluzione di continuità per gli attributi derivati per i casi d&#39;uso aziendali di Profilo cliente in tempo reale. Consulta la sezione [Flusso SQL senza pari per il documento degli attributi derivati](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) per ulteriori dettagli. |
+| Monitoraggio delle query pianificate | Utilizza la [Scheda Query pianificate](../../query-service/ui/monitor-queries.md) per trovare informazioni importanti sull’esecuzione della query e per effettuare la sottoscrizione agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di errore. |
+| Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi di metadati e migliora i tempi di elaborazione tramite [attivazione della funzione di completamento automatico dell’editor delle query](../../query-service/ui/user-guide.md#auto-complete). Questa funzione suggerisce automaticamente potenziali parole chiave SQL e dettagli della tabella per la query durante la scrittura. |
+| Esempi di set di dati | Specificare una frequenza di campionamento nella query e [utilizzare i campioni di set di dati per creare un campione casuale uniforme](../../query-service/essential-concepts/dataset-samples.md)oppure crea campioni condizionali basati su criteri specifici. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Per ulteriori informazioni sui servizi di query, consulta la [Panoramica del servizio query](../../query-service/home.md).
 
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Edizione B2B di Real-Time Customer Data Platform {#b2b}
 
