@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione HTTP API Streaming utilizzando l’API del servizio di flusso
 description: Questa esercitazione fornisce passaggi su come creare una connessione in streaming utilizzando l’origine API HTTP per dati grezzi e XDM utilizzando l’API del servizio di flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 3%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Senza trasformazioni]
 
+La seguente richiesta crea un flusso di dati in streaming per l’API HTTP senza trasformazioni di dati.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Con trasformazioni]
+
+Le seguenti richieste creano un flusso di dati in streaming per l’API HTTP con trasformazioni di mappatura applicate ai dati.
+
+Quando crei un flusso di dati con trasformazioni, la funzione `name` impossibile modificare il parametro . Questo valore deve sempre essere impostato su `Mapping`.
 
 ```shell
 curl -X POST \
