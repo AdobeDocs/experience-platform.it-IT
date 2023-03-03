@@ -1,139 +1,140 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;ABAC
-title: Gestire i criteri di controllo degli accessi
-description: Questo documento fornisce informazioni sulla gestione dei criteri di controllo degli accessi tramite l'interfaccia Autorizzazioni di Adobe Experience Cloud.
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+title: Gestire i criteri di controllo di accesso
+description: Questo documento fornisce informazioni sulla gestione dei criteri di controllo di accesso tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
-# Gestire i criteri di controllo degli accessi
+# Gestire i criteri di controllo dell’accesso
 
-Le politiche di controllo degli accessi sono dichiarazioni che riuniscono gli attributi per stabilire azioni ammissibili e non ammissibili. I criteri di accesso possono essere locali o globali e possono sostituire altri criteri.
+I criteri di controllo degli accessi sono istruzioni che riuniscono attributi per stabilire azioni consentite e inammissibili. I criteri di accesso possono essere locali o globali e possono ignorare altri criteri. Adobe fornisce una policy predefinita che può essere attivata immediatamente o ogni volta che l’organizzazione è pronta per iniziare a controllare l’accesso a oggetti specifici in base alle etichette. Il criterio predefinito sfrutta le etichette applicate alle risorse per negare l’accesso, a meno che gli utenti non abbiano un ruolo con un’etichetta corrispondente.
 
 >[!IMPORTANT]
 >
->I criteri di accesso non devono essere confusi con i criteri di utilizzo dei dati, che controllano il modo in cui i dati vengono utilizzati in Adobe Experience Platform invece dei quali gli utenti della tua organizzazione hanno accesso. Consulta la guida alla creazione [criteri di utilizzo dei dati](../../../data-governance/policies/create.md) per ulteriori informazioni.
+>I criteri di accesso non devono essere confusi con i criteri di utilizzo dei dati, che controllano il modo in cui i dati vengono utilizzati in Adobe Experience Platform anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la guida alla creazione di [criteri di utilizzo dati](../../../data-governance/policies/create.md) per ulteriori informazioni.
 
-## Crea un nuovo criterio
+<!-- ## Create a new policy
 
-Per creare un nuovo criterio, seleziona la **[!UICONTROL Criteri]** nella barra laterale e seleziona **[!UICONTROL Crea criterio]**.
+To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
-![nuova politica](../../images/flac-ui/flac-new-policy.png)
+![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
 
-La **[!UICONTROL Crea un nuovo criterio]** viene visualizzata una finestra di dialogo in cui viene richiesto di immettere un nome e una descrizione facoltativa. Al termine, seleziona **[!UICONTROL Conferma]**.
+The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-Utilizzando la freccia a discesa seleziona se desideri **Autorizzare l&#39;accesso a** (![permesso-vuoto-accesso-a](../../images/flac-ui/flac-permit-access-to.png)) una risorsa o **Nega l&#39;accesso a** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) una risorsa.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
-Quindi, seleziona la risorsa da includere nel criterio utilizzando il menu a discesa e il tipo di accesso alla ricerca, lettura o scrittura.
+Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
-![flac-flac-policy-resource-menu a discesa](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-Quindi, utilizzando la freccia a discesa, seleziona la condizione che desideri applicare a questo criterio, **Il seguente è vero** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) o **Il seguente è falso** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
-Seleziona l’icona più a **Aggiungi espressione corrisponde** o **Aggiungi gruppo di espressioni** per la risorsa .
+Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
 ![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
 
-Utilizzando il menu a discesa , seleziona la **Risorsa**.
+Using the dropdown, select the **Resource**.
 
-![elenco a discesa flac-policy-resource](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
-Quindi, seleziona il menu a discesa **Corrisponde**.
+Next, using the dropdown select the **Matches**.
 
-![flac-policy-match-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
+![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Quindi, utilizzando il menu a discesa, seleziona il tipo di etichetta (**[!UICONTROL Etichetta core]** o **[!UICONTROL Etichetta personalizzata]**) per corrispondere all’etichetta assegnata all’utente nei ruoli.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
-![elenco a discesa flac-policy-user](../../images/flac-ui/flac-policy-user-dropdown.png)
+![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
-Infine, seleziona la **Sandbox** a cui si desidera applicare le condizioni dei criteri, utilizzando il menu a discesa.
+Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
 
-![flac-policy-sandboxes-menu a discesa](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
+![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-Seleziona **Aggiungi risorsa** per aggiungere altre risorse. Al termine, seleziona **[!UICONTROL Salva e chiudi]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-Il nuovo criterio viene creato correttamente e viene reindirizzato al **[!UICONTROL Criteri]** , in cui verrà visualizzato il criterio appena creato nell’elenco.
+The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
 
-![salvato in base a criteri non validi](../../images/flac-ui/flac-policy-saved.png)
+![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
 
-## Modificare un criterio
+## Edit a policy
 
-Per modificare un criterio esistente, selezionalo nella **[!UICONTROL Criteri]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare il criterio da modificare.
+To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Quindi, seleziona i puntini di sospensione (`…`) accanto al nome dei criteri e un elenco a discesa visualizza i controlli per modificare, disattivare, eliminare o duplicare il ruolo. Seleziona modifica dal menu a discesa.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-Viene visualizzata la schermata delle autorizzazioni dei criteri. Effettua gli aggiornamenti e seleziona **[!UICONTROL Salva e chiudi]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-Il criterio viene aggiornato correttamente e viene reindirizzato al **[!UICONTROL Criteri]** scheda .
+The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
 
-## Duplicare un criterio
+## Duplicate a policy
 
-Per duplicare un criterio esistente, selezionalo nella **[!UICONTROL Criteri]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare il criterio da modificare.
+To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Quindi, seleziona i puntini di sospensione (`…`) accanto al nome di un criterio e un elenco a discesa visualizza i controlli per modificare, disattivare, eliminare o duplicare il ruolo. Seleziona duplica dal menu a discesa.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
 ![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
-La **[!UICONTROL Criterio duplicato]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la duplicazione.
+The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
 
 ![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Il nuovo criterio viene visualizzato nell&#39;elenco come copia dell&#39;originale nel **[!UICONTROL Criteri]** scheda .
+The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
 
-![salvataggi flash-role-duplicate](../../images/flac-ui/flac-role-duplicate-saved.png)
+![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Eliminare un criterio
+## Delete a policy
 
-Per eliminare un criterio esistente, selezionalo nella **[!UICONTROL Criteri]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare il criterio da eliminare.
+To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Quindi, seleziona i puntini di sospensione (`…`) accanto al nome di un criterio e un elenco a discesa visualizza i controlli per modificare, disattivare, eliminare o duplicare il ruolo. Seleziona Elimina dal menu a discesa.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
-La **[!UICONTROL Elimina criterio utente]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’eliminazione.
+The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
 
 ![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
 
-Viene restituito al **[!UICONTROL politiche]** appare una scheda e una conferma dell’eliminazione.
+You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-Confirm](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Attivare un criterio
 
-Per attivare un criterio esistente, selezionarlo dalla **[!UICONTROL Criteri]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare il criterio da eliminare.
+Per attivare un criterio esistente, selezionalo da **[!UICONTROL Criteri]** scheda.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Quindi, seleziona i puntini di sospensione (`…`) accanto al nome di un criterio e un elenco a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona attiva dal menu a discesa.
+Quindi, seleziona i puntini di sospensione (`…`) accanto al nome di un criterio e un menu a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona attiva dal menu a discesa.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La **[!UICONTROL Attiva criterio utente]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’attivazione.
+Il **[!UICONTROL Attiva criterio]** viene visualizzata una finestra di dialogo che richiede di confermare l&#39;attivazione.
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-Viene restituito al **[!UICONTROL politiche]** appare una scheda e una conferma dell’attivazione. Lo stato del criterio viene visualizzato come attivo.
 
-![attivato con flac-policy](../../images/flac-ui/flac-policy-activated.png)
+Viene visualizzata di nuovo la **[!UICONTROL criteri]** e viene visualizzata una conferma del pop-over di attivazione. Lo stato del criterio viene visualizzato come attivo.
+
+![flac-policy-enabled](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Passaggi successivi
 
-Con la creazione di un nuovo criterio, puoi procedere al passaggio successivo per [gestire le autorizzazioni per un ruolo](permissions.md).
+Attivando un criterio, puoi procedere al passaggio successivo per [gestire le autorizzazioni per un ruolo](permissions.md).
