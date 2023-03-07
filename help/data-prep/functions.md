@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
-ht-degree: 4%
+source-wordcount: '4557'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | è uguale a | Confronta due stringhe per verificare se sono uguali. Questa funzione distingue tra maiuscole e minuscole. | <ul><li>STRINGA1: **Obbligatorio** La prima stringa che si desidera confrontare.</li><li>STRINGA2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Confronta due stringhe per verificare se sono uguali. Questa funzione è **non** distinzione tra maiuscole e minuscole. | <ul><li>STRINGA1: **Obbligatorio** La prima stringa che si desidera confrontare.</li><li>STRINGA2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni espressione regolare
 
@@ -73,7 +73,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | extract_regex | Estrae gruppi dalla stringa di input, in base a un&#39;espressione regolare. | <ul><li>STRINGA: **Obbligatorio** Stringa da cui si stanno estraendo i gruppi.</li><li>REGEX: **Obbligatorio** Espressione regolare che si desidera associare al gruppo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Verifica se la stringa corrisponde all’espressione regolare immessa. | <ul><li>STRINGA: **Obbligatorio** La stringa da controllare corrisponde all&#39;espressione regolare.</li><li>REGEX: **Obbligatorio** L’espressione regolare con cui stai effettuando il confronto.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni di hashing {#hashing}
 
@@ -89,7 +89,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | md5 | Accetta un input e produce un valore hash utilizzando MD5. | <ul><li>INPUT: **Obbligatorio** Testo normale con hash.</li><li>CHARSET: *Facoltativo* Nome del set di caratteri. I valori possibili includono UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4&#x200B;e9bd0198d03ba6852c7 |
 | crc32 | Prende un input utilizza un algoritmo CRC (Cyclic Redundancy Check) per produrre un codice ciclico a 32 bit. | <ul><li>INPUT: **Obbligatorio** Testo normale con hash.</li><li>CHARSET: *Facoltativo* Nome del set di caratteri. I valori possibili includono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni URL {#url}
 
@@ -104,8 +104,10 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | get_url_port | Restituisce la porta dell’URL specificato. Se l’input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** URL da cui estrarre la porta.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | Restituisce il percorso dell’URL specificato. Per impostazione predefinita, viene restituito il percorso completo. | <ul><li>URL: **Obbligatorio** URL da cui estrarre il percorso.</li><li>PERCORSO_COMPLETO: *Facoltativo* Valore booleano che determina se viene restituito il percorso completo. Se impostato su false, viene restituita solo la fine del percorso.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B;employee.csv&quot; |
 | get_url_query_str | Restituisce la stringa di query di un URL specificato come mappa del nome della stringa di query e del valore della stringa di query. | <ul><li>URL: **Obbligatorio** L’URL da cui stai tentando di ottenere la stringa di query.</li><li>ANCORAGGIO: **Obbligatorio** Determina l&#39;operazione che verrà eseguita con l&#39;ancoraggio nella stringa query. Può essere uno dei tre valori seguenti: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Se il valore è &quot;keep&quot; (mantieni), l’ancoraggio verrà attaccato al valore restituito.<br>Se il valore è &quot;remove&quot;, l’ancoraggio verrà rimosso dal valore restituito.<br>Se il valore è &quot;append&quot;, l’ancoraggio verrà restituito come valore separato.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com&#x200B;:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | Questa funzione accetta un URL come input e sostituisce o codifica i caratteri speciali con caratteri ASCII. Per ulteriori informazioni sui caratteri speciali, leggere [elenco dei caratteri speciali](#special-characters) nell&#39;appendice del presente documento. | <ul><li>URL: **Obbligatorio** L’URL di input con caratteri speciali che desideri sostituire o codificare con caratteri ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | Questa funzione accetta un URL come input e decodifica i caratteri ASCII in caratteri speciali.  Per ulteriori informazioni sui caratteri speciali, leggere [elenco dei caratteri speciali](#special-characters) nell&#39;appendice del presente documento. | <ul><li>URL: **Obbligatorio** L’URL di input con caratteri ASCII che desideri decodificare in caratteri speciali.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni data e ora {#date-and-time}
 
@@ -128,7 +130,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | zone_date_to_utc | Converte una data in qualsiasi fuso orario in una data in UTC. | <ul><li>DATA: **Obbligatorio** La data che stai tentando di convertire.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Converte una data da un fuso orario a un altro. | <ul><li>DATA: **Obbligatorio** La data che stai tentando di convertire.</li><li>ZONA: **Obbligatorio** Fuso orario in cui si sta tentando di convertire la data.</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Gerarchie - Oggetti {#objects}
 
@@ -147,7 +149,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | get_keys | Analizza le coppie chiave/valore e restituisce tutte le chiavi. | <ul><li>OGGETTO: **Obbligatorio** Oggetto da cui verranno estratte le chiavi.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analizza le coppie chiave/valore e restituisce il valore della stringa, in base alla chiave specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa da analizzare.</li><li>CHIAVE: **Obbligatorio** Chiave per la quale estrarre il valore.</li><li>DELIMITATORE_VALORE: **Obbligatorio** Il delimitatore che separa il campo e il valore. Se uno dei due `null` o viene fornita una stringa vuota, questo valore è `:`.</li><li>DELIMITATORE_CAMPO: *Facoltativo* Il delimitatore che separa le coppie di campi e valori. Se uno dei due `null` o viene fornita una stringa vuota, questo valore è `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [sotto](#object-copy).
 
@@ -169,7 +171,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | upsert_array_append | Questa funzione viene utilizzata per aggiungere tutti gli elementi dell’intero array di input alla fine dell’array in Profilo. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array a cui aggiungere l’array nel profilo.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi in un array. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array che sostituisce l’array nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operatori logici {#logical-operators}
 
@@ -182,7 +184,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se viene trovata una chiave oppure restituisce un valore predefinito se presente nell’array. | <ul><li>CHIAVE: **Obbligatorio** Chiave da associare.</li><li>OPTIONS: **Obbligatorio** Array piatto di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice stato dato è &quot;ca&quot;, &quot;California&quot;.<br>Se il codice dello stato dato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
 | iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatorio** Espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Aggregazione {#aggregation}
 
@@ -195,7 +197,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | min | Restituisce il minimo degli argomenti specificati. Utilizza l’ordinamento naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Restituisce il massimo degli argomenti specificati. Utilizza l’ordinamento naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Conversioni tipo {#type-conversions}
 
@@ -210,7 +212,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | to_float | Converte una stringa in un elemento mobile. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in Mobile.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Converte una stringa in un numero intero. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in un numero intero.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni JSON {#json}
 
@@ -222,7 +224,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserializza il contenuto JSON dalla stringa specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa JSON da deserializzare.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | Oggetto che rappresenta il JSON. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Operazioni speciali {#special-operations}
 
@@ -234,7 +236,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>GUID | Genera un ID pseudo-casuale. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funzioni dell’agente utente {#user-agent}
 
@@ -258,7 +260,7 @@ Una qualsiasi delle funzioni dell’agente utente contenute nella tabella seguen
 | ua_agent_name | Estrae il nome dell&#39;agente dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Estrae la classe device dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefono |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Copia oggetto {#object-copy}
 
@@ -302,3 +304,43 @@ Per garantire il funzionamento della mappatura automatica, è necessario soddisf
 * I nuovi attributi devono avere nomi corrispondenti nello schema di origine e nello schema XDM.
 
 Se uno dei prerequisiti non è soddisfatto, devi mappare manualmente lo schema di origine allo schema XDM utilizzando la preparazione dati.
+
+## Appendice
+
+Di seguito sono riportate ulteriori informazioni sull’utilizzo delle funzioni di mappatura della preparazione dati
+
+### Caratteri speciali {#special-characters}
+
+La tabella seguente delinea un elenco di caratteri riservati e dei corrispondenti caratteri codificati.
+
+| Carattere riservato | Carattere codificato |
+| --- | --- |
+| spazio | %20 |
+| ! | %21 |
+| &quot; | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ). | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
