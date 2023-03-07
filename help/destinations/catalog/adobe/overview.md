@@ -1,34 +1,35 @@
 ---
 keywords: destinazioni;soluzioni experience cloud; target;destinazione target; ad cloud; advertising cloud; audience manager; destinazione adobe target; target; destinazione audience manager;
-title: Panoramica sulle destinazioni di Adobe
-description: Gestisci la tua esperienza cliente connettendo i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l’automazione del marketing e altro ancora
+title: Panoramica sulle destinazioni degli Adobi
+description: Gestisci la customer experience collegando i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
+source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '234'
 ht-degree: 12%
 
 ---
 
-# Panoramica sulle destinazioni di Adobe {#adobe-destinations}
+# Panoramica sulle destinazioni degli Adobi {#adobe-destinations}
 
 ## Panoramica {#overview}
 
-Gestisci la tua esperienza cliente connettendo i tuoi dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l’automazione del marketing e altro ancora.
+Gestisci la customer experience collegando i tuoi dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora.
 
-## Destinazioni di Adobi supportate {#supported-destinations}
+## Destinazioni di Adobe supportate {#supported-destinations}
 
-Al momento, Platform supporta le destinazioni di Adobe elencate di seguito.
+Attualmente, Platform supporta le destinazioni di Adobe elencate di seguito.
 
-Per comprendere la differenza tra connessioni ed estensioni, vedi [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie .
+Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
 
 ### Connessioni
 
 * [Connessione Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Connessione Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
-* [(Beta) tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-* [Collegamento Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
+* [Pubblico Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+* [Connessione Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
+* [Connessione Marketo Measure Ultimate](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 
 ### Estensioni
 
@@ -46,6 +47,6 @@ Per comprendere la differenza tra connessioni ed estensioni, vedi [Connessioni](
 
 ## Experience Platform di condivisione dei segmenti
 
-Utilizza la funzionalità di condivisione dei segmenti di Experience Platform per condividere i segmenti di Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (visualizzata nel portale della documentazione di Audience Manager):
+Utilizza la funzionalità di condivisione del segmento Experience Platform per condividere i segmenti di Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
 
-* [Experience Platform di condivisione di segmenti con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione con i servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Condivisione dei segmenti di Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
