@@ -2,9 +2,9 @@
 title: Destinazione Marketo Measure Ultimate
 description: Scopri come collegare e attivare i dati alla destinazione Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -60,21 +60,23 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 
+![Il flusso di lavoro Connetti alla destinazione per la destinazione Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Esporta set di dati in questa destinazione {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
+Leggi le [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) tutorial per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
 
-## Dati esportati / Convalida esportazione dati {#exported-data}
+## Convalidare l’esportazione dei dati {#exported-data}
 
 Per convalidare un’esportazione corretta del set di dati, puoi verificare che il set di dati sia stato correttamente inviato al tuo [data warehouse di Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Per convalidare un’esportazione corretta del set di dati, puoi verificare che 
 
 Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
-## Risorse aggiuntive {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
