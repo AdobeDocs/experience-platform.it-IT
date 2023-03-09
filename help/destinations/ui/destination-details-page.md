@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
+source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '926'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ Il [!UICONTROL Il flusso di dati viene eseguito] fornisce i dati delle metriche 
 >[!NOTE]
 >
 >* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
->* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) le destinazioni, le identità escluse, non riuscite e attivate non sono attualmente visualizzate.
+>* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinazioni, vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
 
 
 ![Visualizzazione esecuzioni flusso di dati](../assets/ui/details-page/dataflow-runs.png)
