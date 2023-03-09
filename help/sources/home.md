@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: fd82f109b8af665540e2ff30e92c6546ef9f3d2c
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1322'
 ht-degree: 2%
 
 ---
@@ -184,11 +184,21 @@ La tabella seguente illustra il comportamento dell’interfaccia utente in base 
 
 Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite Autorizzazioni di Adobe, vedi [panoramica sul controllo degli accessi](../access-control/home.md).
 
-### Controllo dell’accesso basato su attributi per le origini
+### Controllo dell’accesso basato su attributi
 
 Il controllo dell’accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi.
 
 Con il controllo degli accessi basato su attributi, puoi applicare configurazioni di mappatura ai campi per i quali disponi delle autorizzazioni di. Inoltre, non puoi acquisire dati in un set di dati se non hai accesso a tutti i campi del set di dati.
+
+#### Supporto per il controllo degli accessi basato su attributi nelle origini [!BADGE Nuova funzione]
+
+>[!TIP]
+>
+>Il controllo degli accessi basato su attributi funziona come segue: **ruoli** sono create per categorizzare i tipi di utenti che interagiscono con l’istanza Platform. **Etichette** sono applicati a **ruoli** per designare l’accesso a quel determinato ruolo. **Etichette** vengono applicati anche a risorse quali campi dello schema e segmenti. Affinché un utente possa accedere a determinati campi e segmenti dello schema, è necessario aggiungerli a *un ruolo con la stessa etichetta assegnato alla risorsa su cui è stata eseguita la query*. Per ulteriori informazioni, leggere [guida end-to-end per il controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md).
+
+- Applica le etichette ai campi dello schema per definire l’accesso a specifici campi dello schema nella tua organizzazione. Una volta stabilito l’accesso a campi dello schema specifici, gli utenti potranno creare mappature solo per i campi a cui hanno accesso.
+- Gli utenti che non dispongono dei ruoli appropriati non potranno creare o aggiornare flussi di dati con mappature che coinvolgono campi schema inaccessibili. Inoltre, gli utenti non autorizzati non possono aggiornare, eliminare, abilitare o disabilitare flussi di dati esistenti con campi schema inaccessibili.
+- Inoltre, un flusso di dati deve avere esattamente lo stesso ID schema e la stessa versione nella mappatura, nel set di dati di destinazione e nella connessione di destinazione.
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, leggere [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md).
 
