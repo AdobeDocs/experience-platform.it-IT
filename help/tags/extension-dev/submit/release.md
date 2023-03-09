@@ -2,7 +2,7 @@
 title: Rilasciare un’estensione
 description: Scopri come rilasciare un’estensione tag in Adobe Experience Platform in modo privato o pubblico.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 92%
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una volta completati i test e la documentazione, l’estensione è pronta per il rilascio. Attualmente è possibile eseguire due tipi di rilascio:
 
@@ -36,4 +36,4 @@ Se desideri rilasciare l’estensione a disponibilità privata utilizzando diret
 
 Una volta completato il rilascio privato dell’estensione, puoi chiedere ad Adobe di rilasciarla pubblicamente.  In questo modo l’estensione sarà disponibile nel catalogo pubblico. Qualsiasi utente di Data Collection può installare l’estensione in qualsiasi proprietà.
 
-Per avviare il processo di rilascio, completa il [modulo di richiesta di rilascio pubblico](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+Per avviare il processo di rilascio, completa il [modulo di richiesta di rilascio pubblico](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
