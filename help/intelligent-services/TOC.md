@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guida di Intelligent Services
 breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
-source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
+source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 27%
+source-wordcount: '141'
+ht-degree: 31%
 
 ---
 
@@ -18,42 +18,40 @@ ht-degree: 27%
 - [Preparare i dati da utilizzare in Intelligent Services](data-preparation.md)
 - IA per l’attribuzione {#attribution-ai}
    - [Panoramica](attribution-ai/overview.md)
-   - [Guida introduttiva ad Attribution AI](attribution-ai/getting-started.md)
+   - [Introduzione alle Attribution AI](attribution-ai/getting-started.md)
    - [Ingresso e uscita](attribution-ai/input-output.md)
    - [Guida all’interfaccia utente](attribution-ai/user-guide.md)
    - [Scopri informazioni](attribution-ai/discover-insights.md)
-   - [Scaricare i punteggi](attribution-ai/download-scores.md)
+   - [Scarica punteggi](attribution-ai/download-scores.md)
    - Governance dei dati {#aai-data-governance}
       - [Controlli di accesso](attribution-ai/aai-data-governance/access-controls.md)
       - [Registri di controllo](attribution-ai/aai-data-governance/audit-logs.md)
       - [Chiavi gestite dal cliente](attribution-ai/aai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](attribution-ai/aai-data-governance/data-governance.md)
-      - [Politiche di governance](attribution-ai/aai-data-governance/governance-policies.md)
+      - [Criteri di governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analizzare i punteggi utilizzando Query Service](attribution-ai/aai-query-service.md)
-   - [Risoluzione dei problemi](attribution-ai/troubleshooting.md)
-- Content and Commerce AI (beta) {#content-commerce-ai}
-   - [Panoramica](content-commerce-ai/overview.md)
-   - [Introduzione](content-commerce-ai/getting-started.md)
-   - API di Content and Commerce AI{#api}
-      - [Estrazione colore](content-commerce-ai/api/color-extraction.md)
-      - [Estrazione di parole chiave](content-commerce-ai/api/keyword-extraction.md)
-      - [Classificazione del testo](content-commerce-ai/api/text-classification.md)
-      - [Somiglianza visiva](content-commerce-ai/api/visual-similarity.md)
-      - [Presenza di testo e riconoscimento ottico dei caratteri](content-commerce-ai/api/optical-character-recognition.md)
-- Customer AI {#customer-ai}
+   - [Risoluzione dei problemi di errore](attribution-ai/troubleshooting.md)
+- Assegnazione di tag ai contenuti {#content-tagging-ai}
+   - [Panoramica](content-tagging/overview.md)
+   - [Introduzione](content-tagging/getting-started.md)
+   - API IA per l’assegnazione tag dei contenuti{#api}
+      - [Assegnazione di tag colore](content-tagging/api/color-tagging.md)
+      - [Assegnazione tag parole chiave](content-tagging/api/keyword-tagging.md)
+      - [Presenza di testo e riconoscimento ottico dei caratteri](content-tagging/api/optical-character-recognition.md)
+- IA per l’analisi dei clienti {#customer-ai}
    - [Panoramica](customer-ai/overview.md)
-   - [Guida introduttiva di Customer AI](customer-ai/getting-started.md)
+   - [Guida introduttiva ad IA per l’analisi dei clienti](customer-ai/getting-started.md)
    - [Ingresso e uscita](customer-ai/input-output.md)
-   - Guide dell&#39;interfaccia{#user-guide}
+   - Guide dell’interfaccia utente{#user-guide}
       - [Configurare un’istanza](customer-ai/user-guide/configure.md)
       - [Scopri informazioni](customer-ai/user-guide/discover-insights.md)
       - [Creare segmenti utilizzando i punteggi di Customer AI](customer-ai/user-guide/create-segment.md)
-      - [Scaricare i punteggi](customer-ai/user-guide/download-scores.md)
-   - [Risoluzione dei problemi](customer-ai/troubleshooting.md)
+      - [Scarica punteggi](customer-ai/user-guide/download-scores.md)
+   - [Risoluzione dei problemi di errore](customer-ai/troubleshooting.md)
    - Governance dei dati {#cai-data-governance}
       - [Controlli di accesso](customer-ai/cai-data-governance/access-controls.md)
       - [Registri di controllo](customer-ai/cai-data-governance/audit-logs.md)
       - [Chiavi gestite dal cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](customer-ai/cai-data-governance/data-governance.md)
-      - [Politiche di governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+      - [Criteri di governance](customer-ai/cai-data-governance/governance-policies.md)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
