@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;categorie di tag;tag;tags;
 title: Categorie di tag
-description: Questo documento fornisce informazioni sulla gestione delle categorie di tag amministrativi in Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: Questo documento fornisce informazioni sulla gestione delle categorie di tag unificati in Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%

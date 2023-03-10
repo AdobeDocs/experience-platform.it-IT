@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;gestione di tag;tag;tag;
-title: Gestione dei tag amministrativi
-description: Questo documento fornisce informazioni sulla gestione dei tag amministrativi in Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: Gestione dei tag unificati
+description: Questo documento fornisce informazioni sulla gestione dei tag unificati in Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
