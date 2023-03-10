@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;guida introduttiva;contenuto ai;commerce ai;tag contenuto ai;tag parole chiave;tag parole chiave
+keywords: Experience Platform;guida introduttiva;contenuto;assegnazione tag contenuto;tag parole chiave;assegnazione tag parole chiave
 solution: Experience Platform
 title: Assegnazione di tag alle parole chiave nell’API di assegnazione tag contenuto
 description: Il servizio di assegnazione tag parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono meglio l'oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità denominate (NER) e di tag delle parole chiave non supervisionati.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 6%
 
 ---
 
