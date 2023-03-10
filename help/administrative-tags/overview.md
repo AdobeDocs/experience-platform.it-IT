@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;tag unificati;tag;
-title: Panoramica dei tag unificati (Beta)
+title: Panoramica dei tag unificati (versione beta)
 description: Questo documento fornisce informazioni sui tag unificati in Adobe Experience Platform
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# Panoramica dei tag unificati (Beta)
+# Panoramica sui tag unificati (versione beta)
 
 >[!IMPORTANT]
 >

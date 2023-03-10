@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Tag amministrativi nell’Aiuto di Adobe Experience Platform
-breadcrumb-title: Guida ai tag amministrativi
-user-guide-description: Utilizza i tag amministrativi per gestire le tassonomie dei metadati. Scopri come creare categorie di tag e tag.
-source-git-commit: c72b2244e7905c3823fd60212c071614222d0c4f
+user-guide-title: Aiuto per i tag unificati in Adobe Experience Platform
+breadcrumb-title: Guida ai tag unificati
+user-guide-description: Utilizza i tag unificati per gestire le tassonomie dei metadati. Scopri come creare categorie e tag di tag.
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Tag amministrativi {#administrative-tags}
+# Tag unificati (beta){#administrative-tags}
 
-* [Panoramica sui tag amministrativi](overview.md)
-* Interfaccia utente dei tag amministrativi {#ui}
+* [Panoramica sui tag unificati (versione beta)](overview.md)
+* Interfaccia utente tag unificata {#ui}
    * [Gestione dei tag](ui/managing-tags.md)
    * [Categorie di tag](ui/tags-categories.md)
