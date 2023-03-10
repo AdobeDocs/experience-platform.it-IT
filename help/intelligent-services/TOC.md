@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guida di Intelligent Services
 breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
-source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 31%
+source-wordcount: '140'
+ht-degree: 32%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 31%
       - [Criteri di governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analizzare i punteggi utilizzando Query Service](attribution-ai/aai-query-service.md)
    - [Risoluzione dei problemi di errore](attribution-ai/troubleshooting.md)
-- Assegnazione di tag ai contenuti {#content-tagging-ai}
-   - [Panoramica](content-tagging/overview.md)
-   - [Introduzione](content-tagging/getting-started.md)
-   - API IA per l’assegnazione tag dei contenuti{#api}
-      - [Assegnazione di tag colore](content-tagging/api/color-tagging.md)
-      - [Assegnazione tag parole chiave](content-tagging/api/keyword-tagging.md)
-      - [Presenza di testo e riconoscimento ottico dei caratteri](content-tagging/api/optical-character-recognition.md)
+- Assegnazione di tag ai contenuti {#content-commerce-ai}
+   - [Panoramica](content-commerce-ai/overview.md)
+   - [Introduzione](content-commerce-ai/getting-started.md)
+   - API per l’assegnazione tag dei contenuti{#api}
+      - [Assegnazione di tag colore](content-commerce-ai/api/color-tagging.md)
+      - [Assegnazione tag parole chiave](content-commerce-ai/api/keyword-tagging.md)
+      - [Presenza di testo e riconoscimento ottico dei caratteri](content-commerce-ai/api/optical-character-recognition.md)
 - IA per l’analisi dei clienti {#customer-ai}
    - [Panoramica](customer-ai/overview.md)
    - [Guida introduttiva ad IA per l’analisi dei clienti](customer-ai/getting-started.md)
