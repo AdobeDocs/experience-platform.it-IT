@@ -5,9 +5,9 @@ title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ La scadenza dei dati del profilo pseudonimo non può essere configurata tramite 
 
 - I tipi di identità da considerare per le eliminazioni di profili pseudonimi.
    - Ad esempio: `ECID` solo, `AAID` solo, o una combinazione di `ECID` e `AAID`.
-- Quantità di tempo di attesa prima di eliminare un profilo pseudonimo. Il consiglio predefinito per i clienti è di 30 giorni. Tuttavia, questo valore può variare in base al caso d’uso.
+- Quantità di tempo di attesa prima di eliminare un profilo pseudonimo. Il consiglio predefinito per i clienti è di 14 giorni. Tuttavia, questo valore può variare in base al caso d’uso.
 - Il conteggio dei profili corrente confrontato con il conteggio dei profili di licenza.
 
 ## Domande frequenti {#faq}
@@ -37,10 +37,10 @@ Nella sezione seguente sono elencate le domande frequenti relative alla scadenza
 
 ### Quali utenti dovrebbero utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- Se utilizzi un connettore che invia direttamente i dati dalla rispettiva origine a Platform.
+- Se utilizzi un’origine di streaming che invia direttamente i dati a Platform.
 - Se disponi di un sito web che serve in massa clienti non autenticati.
 - Se nei set di dati sono presenti conteggi di profilo eccessivi e hai confermato che tali conteggi sono dovuti a un tipo di identità anonima basata su cookie.
-   - Per determinare ciò, è necessario utilizzare il rapporto di sovrapposizione del tipo di identità. Ulteriori informazioni su questo report sono disponibili SUL LINK
+   - Per determinare ciò, è necessario utilizzare il rapporto di sovrapposizione del tipo di identità. Ulteriori informazioni su questo rapporto sono disponibili nella sezione [sezione report di sovrapposizione identità](./api/preview-sample-status.md#identity-overlap-report) della guida all’API per lo stato del campione di anteprima.
 
 ### Quali sono alcune avvertenze di cui dovresti essere a conoscenza prima di utilizzare la scadenza dei dati dei profili pseudonimi?
 
