@@ -13,7 +13,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 9 settembre 2020
 
@@ -23,7 +23,7 @@ ht-degree: 64%
 
 - Questa estensione è pensata per essere utilizzata insieme a AEM Asset Insights.
 - In particolare, sostituisce il processo ***pageTracker*** e il codice della pagina.
-- Una volta configurata e attivata, questa estensione invia ad Adobe Analytics le metriche Impression e Clic delle risorse AEM, che verranno quindi importate automaticamente nei rapporti Asset Insights in AEM.
+- Quando è configurata e attivata, questa estensione invia ad Adobe Analytics le metriche Impression e Clic AEM risorsa, che verranno quindi importate automaticamente nei rapporti Asset Insights in AEM.
 
 **Correzioni di bug**
 

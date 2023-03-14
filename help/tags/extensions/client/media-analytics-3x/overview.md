@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questa documentazione per maggiori informazioni sull’installazione, la configurazione e l’implementazione dell’estensione Adobe Media Analytics (3.x SDK) for Audio and Video (estensione Media Analytics). Sono incluse le opzioni disponibili quando si utilizza questa estensione per generare una regola, insieme a esempi e collegamenti a campioni.
 
@@ -24,7 +24,7 @@ L’estensione Media Analytics (MA) aggiunge l’SDK principale JavaScript Media
 
 >[!IMPORTANT]
 >
->Questa estensione viene distribuita con Media 3.x SDK, che non è compatibile con le versioni precedenti quali Media 2.x SDK. Poiché 2.x è stato dichiarato obsoleto, esegui l’aggiornamento a 3.x.
+>Questa estensione viene distribuita con Media 3.x SDK, che non è compatibile con le versioni precedenti quali Media 2.x SDK. Poiché 2.x è stato dichiarato obsoleto, effettua l’aggiornamento alla versione 3.x.
 
 Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel progetto abilitato per i tag, puoi procedere in uno dei due modi seguenti:
 

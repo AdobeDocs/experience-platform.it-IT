@@ -14,11 +14,11 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implementazione asincrona"
->abstract="Se questa opzione è abilitata, quando il tag di script viene analizzato il browser inizierà a caricare il file JavaScript, ma invece di attendere il caricamento e l&#39;esecuzione della libreria continuerà ad analizzare ed eseguire il rendering del resto del documento. Questo può migliorare le prestazioni delle pagine web, ma ha implicazioni importanti per quanto riguarda il modo in cui vengono eseguite determinate regole. Per informazioni dettagliate, consulta la documentazione."
+>abstract="Se questa opzione è abilitata, quando questo tag script viene analizzato il browser inizierà a caricare il file JavaScript, ma invece di attendere che la libreria venga caricata ed eseguita, continuerà ad analizzare ed eseguire il rendering del resto del documento. Questo può migliorare le prestazioni della pagina web, ma ha importanti implicazioni quando si tratta di come vengono eseguite determinate regole. Per ulteriori informazioni, consulta la documentazione ."
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per gli utenti di Adobe Experience Cloud, assumono sempre maggiore importanza sia le prestazioni, sia la possibilità di implementare le librerie JavaScript richieste dai prodotti Adobe senza che questo comporti alcun blocco del sistema. Strumenti come [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) consigliano agli utenti di modificare le modalità di implementazione delle librerie Adobe nei loro siti. Questo articolo spiega come utilizzare le librerie JavaScript di Adobe in modo asincrono.
 

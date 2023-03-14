@@ -13,7 +13,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’invio di un’estensione al catalogo di raccolta dati in Adobe Experience Platform non è difficile come potrebbe sembrare. Questo documento fornisce una guida dettagliata all’invio dell’estensione, seguendo singole guide sequenziali. Per inviare l’estensione, è necessario completare i seguenti passaggi:
 
@@ -29,7 +29,7 @@ Per informazioni su ciascuno dei passaggi, seleziona il collegamento corrisponde
 
 ## Supporto
 
-Durante la creazione e il test dell’estensione, è possibile ricevere supporto tramite l’area di lavoro Slack della community di sviluppatori di tag. L’area di lavoro Slack è una community online in cui gli autori delle estensioni si supportano a vicenda. Puoi richiedere l’accesso utilizzando i seguenti elementi [modulo online](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Durante la creazione e il test dell’estensione, è possibile ricevere supporto tramite l’area di lavoro Slack della community di sviluppatori di tag. L’area di lavoro Slack è una community online in cui gli autori delle estensioni si supportano a vicenda. Puoi richiedere l&#39;accesso utilizzando i seguenti [modulo online](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

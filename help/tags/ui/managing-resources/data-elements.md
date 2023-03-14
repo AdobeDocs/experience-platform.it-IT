@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 
@@ -137,7 +137,7 @@ Puoi utilizzarlo negli script personalizzati con la sintassi dell’oggetto `_sa
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Quando si utilizza la percentuale (`%`), è sufficiente specificare il nome dell’elemento dati. Non c’è bisogno di specificare `event`.
+Quando si utilizza la percentuale (`%`), devi solo specificare il nome dell’elemento dati. Non c’è bisogno di specificare `event`.
 
 ```text
 %data element name%
@@ -257,7 +257,7 @@ Alcuni casi d&#39;uso comuni includono:
 
 ## Elementi dati incorporati
 
-Devi creare elementi dati personalizzati aggiuntivi se in precedenza hai utilizzato uno dei seguenti elementi dati:
+È necessario creare elementi dati personalizzati aggiuntivi se in precedenza è stato utilizzato uno dei seguenti elementi dati:
 
 * URI
 * Protocol

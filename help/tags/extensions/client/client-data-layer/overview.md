@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installazione
 
-Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection e seleziona Adobe Client Data Layer.
+Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente Experience Platform o nell’interfaccia utente di raccolta dati, quindi seleziona Livello dati client Adobe.
 
 ![Visualizzazione dell’estensione ACDL nel catalogo](./images/catalog.png)
 

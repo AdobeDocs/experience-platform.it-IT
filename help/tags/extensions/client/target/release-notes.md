@@ -13,13 +13,13 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 16 settembre 2021
 
 ### Estensione Adobe Target 0.11.4
 
-* Aggiornato a at.js v1.8.3
+* Aggiornato alla versione 1.8.3 di at.js
 * Aggiunto `SameSite=None` e `Secure` attributi durante l’impostazione dei cookie
 
 ## 24 luglio 2020

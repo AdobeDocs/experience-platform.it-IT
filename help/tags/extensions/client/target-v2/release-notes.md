@@ -9,46 +9,46 @@ ht-degree: 58%
 
 ---
 
-# Note sulla versione dell’estensione Adobe Target v2
+# Note sulla versione dell&#39;estensione Adobe Target v2
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## v0.19.2 (14 febbraio 2023)
 
-- È stato risolto un problema che consentiva di impostare il timeout su un elemento dati.
+- È stato risolto un problema che impediva l’impostazione del timeout su un elemento dati.
 
 ## v0.19.1 (3 febbraio 2023)
 
-- Aggiornato per supportare `at.js` v2.10.1
-- I parametri Mbox personalizzati del client ora supportano correttamente la notazione del punto
-- Chiamate di consegna non più effettuate nel Compositore esperienza visivo
+- Aggiornamento al supporto `at.js` v2.10.1
+- I parametri mbox personalizzati del client ora supportano correttamente la notazione del punto
+- Le chiamate di consegna non vengono più effettuate nel Compositore esperienza visivo
 
 ## v0.19.0 (19 settembre 2022)
 
-- Aggiornato per supportare `at.js` v2.10.0
-- È stato aggiunto il supporto per il tracciamento tra più domini.
+- Aggiornamento al supporto `at.js` v2.10.0
+- È stato aggiunto il supporto per il tracciamento tra domini diversi.
 
 ## v0.18.0 (1° giugno 2022)
 
-- Aggiornato per supportare `at.js` v2.9.0
+- Aggiornamento al supporto `at.js` v2.9.0
 - È stato aggiunto il supporto per i User Agent Client Hints.
 
 ## v0.17.1 (28 gennaio 2022)
 
-- Aggiornato per supportare `at.js` v2.8.1
-- Fisso `pageLoad` mappatura non eseguita su `target-global-mbox` in modalità di esecuzione ibrida ODD
+- Aggiornamento al supporto `at.js` v2.8.1
+- Fisso `pageLoad` non mappato su `target-global-mbox` in modalità di esecuzione ibrida ODD
 - È stato risolto un problema relativo ai dettagli di analisi per `mbox` richiesta
 - Sono state aggiornate le dipendenze di sviluppo per correggere alcune vulnerabilità di sicurezza
 
 ## v0.17.0 (7 gennaio 2022)
 
-- Aggiornato per supportare `at.js` v2.8.0, che sta raccogliendo dati di telemetria relativi all’utilizzo delle funzioni e alle prestazioni.  I dati personali non vengono raccolti. Per rinunciare a questa funzione, imposta `telemetryEnabled` a `false` in `targetGlobalSettings`.
+- Aggiornamento al supporto `at.js` v2.8.0, che sta raccogliendo dati di utilizzo delle funzioni e telemetria delle prestazioni.  I dati personali non vengono raccolti. Per rinunciare a questa funzione, imposta `telemetryEnabled` a `false` in `targetGlobalSettings`.
 
 ## v0.16.0 (28 ottobre 2021)
 
-- Aggiornato per supportare `at.js` v2.7.0, ora disponibile per il download da Adobe Target.
+- Aggiornamento al supporto `at.js` v2.7.0, ora disponibile per il download da Adobe Target.
 
 ## v0.15.1 (20 luglio 2021)
 
@@ -56,7 +56,7 @@ ht-degree: 58%
 
 ## v0.15.0 (16 luglio 2021)
 
-- Aggiungi attributo protetto ai cookie ogni volta che `at.js` impostazioni secureOnly è impostato su true
+- Aggiungi un attributo sicuro ai cookie ogni volta `at.js` settings secureOnly è impostato su true
 - Ora quando si utilizza `triggerView()` sono disponibili i token di risposta.
 - È stato corretto un bug relativo all’evento `CONTENT_RENDERING_NO_OFFERS`. Ora viene attivato correttamente ogni volta che non viene restituito alcun contenuto da Target.
 - I dettagli delle metriche di clic di A4T vengono restituiti correttamente quando si utilizzano le richieste prefetch.
@@ -66,7 +66,7 @@ ht-degree: 58%
 
 ## v0.14.2 (2 giugno 2021)
 
-- Correzione di un bug per cui il bundle finale contiene due `at.js` versioni, una con decisioning sul dispositivo e una senza.
+- Correggi un bug in cui il bundle finale contiene due `at.js` versioni, una con On-Device Decisioning e una senza.
 
 ## v0.14.1 (19 maggio 2021)
 
@@ -75,14 +75,14 @@ ht-degree: 58%
 ## v0.14 (14 maggio 2021)
 
 - È stata aggiunta la nuova azione Carica Target con [decisioning sul dispositivo](./overview.md#load-target-with-on-device-decisioning), che carica 2.5 con funzionalità Decisioning sul dispositivo.`at.js`
-- Aggiornato `at.js` da a 2.5
+- Aggiornato `at.js` a 2.5
 
 
 ## v0.13.7 (25 marzo 2021)
 
 - È stato risolto un problema a causa del quale `targetPageParams` veniva incluso nelle richieste mbox. `targetPageParams` deve essere incluso solo nelle richieste `pageLoad`.
 - È stato risolto un problema relativo agli oggetti globali di documenti e finestre nell’estensione tag, sostituendo le dipendenze degli oggetti globali con riferimenti diretti a essi.
-- Aggiornato `at.js` 2.4.1.
+- Aggiornato `at.js` da 2.4.1 a 2.4.1.
 
 ## v0.13.6 (25 gennaio 2021)
 
@@ -95,7 +95,7 @@ ht-degree: 58%
 
 - È stato corretto un bug a causa del quale i parametri mbox non venivano visualizzati nell’interfaccia utente.
 - Aggiornamenti degli elementi di branding
-- È stato aggiornato il `at.js` versione 2.3.3
+- È stato aggiornato il `at.js` versione a 2.3.3
 
 ## v0.13.3 (24 luglio 2020)
 
@@ -104,7 +104,7 @@ ht-degree: 58%
 
 ## v0.13.2 (15 giugno 2020)
 
-- È stato risolto un problema che si verificava con l’utilizzo di CNAME e Edge override, in cui `at.js` 1.x potrebbe creare il dominio del server in modo errato, causando un errore nella richiesta di Target
+- È stato risolto un problema che si verificava con l’utilizzo di CNAME e Edge override, dove `at.js` 1.x potrebbe creare il dominio del server in modo errato, causando l’errore della richiesta Target
 - È stato risolto un problema a causa del quale, quando si utilizzava l’estensione tag v2 per Target e l’estensione tag Adobe Analytics, Target ritardava la chiamata sendBeacon di Analytics.
 - È stata migliorata l’impostazione `deviceIdLifetime` rendendola sostituibile tramite `targetGlobalSettings`
 
@@ -117,8 +117,8 @@ ht-degree: 58%
 ## v0.12.0 (10 ottobre 2019)
 
 - Aggiornato `at.js` alla versione v2.2.
-- Sono state migliorate le prestazioni per le integrazioni tra la libreria Experience Cloud ID (ECID) v4.4 e `at.js` 2.2
-- In precedenza, la libreria ECID effettuava due chiamate di blocco prima `at.js` potrebbe recuperare le esperienze. Ora effettua una sola chiamata, migliorando notevolmente le prestazioni.
+- Migliorate le prestazioni per le integrazioni tra la libreria Experience Cloud ID (ECID) v4.4 e `at.js` 2.2.
+- In precedenza, la libreria ECID effettuava due chiamate di blocco prima di `at.js` potrebbero recuperare le esperienze. Ora effettua una sola chiamata, migliorando notevolmente le prestazioni.
 
 >[!NOTE]
 >Aggiorna l’estensione tag ECID alla versione 4.4.1 per approfittare di questo miglioramento delle prestazioni.
@@ -130,4 +130,4 @@ ht-degree: 58%
 
 ## v0.11.0 (3 giugno 2019)
 
-- Nuova estensione tag da supportare `at.js` 2,1
+- Nuova estensione tag per il supporto `at.js` 2.1

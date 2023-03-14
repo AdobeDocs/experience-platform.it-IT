@@ -1,5 +1,5 @@
 ---
-title: Visualizzazioni nelle estensioni web
+title: Visualizzazioni in estensioni Web
 description: Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione o tipo di elemento dati può offrire una vista mediante la quale l’utente potrà specificare alcune impostazioni. L’estensione può anche avere una [vista di livello superiore per la configurazione dell’estensione](../configuration.md), mediante la quale gli utenti possono specificare impostazioni globali per tutta l’estensione. Il processo di creazione è identico per tutti i tipi di vista.
 
@@ -172,7 +172,7 @@ Per indicare dove può essere utile per l’utente utilizzare gli elementi dati 
 
 >[!NOTE]
 >
->Per scaricare l&#39;icona appropriata, vai alla [pagina delle icone di Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e cerca &quot;[!DNL Data]&quot;.
+>Per scaricare l’icona appropriata, passa alla [pagina delle icone sull&#39;Adobe Spettro](https://spectrum.adobe.com/page/icons/) e cerca &quot;[!DNL Data]&quot;.
 
 Quando un utente fa clic sul pulsante accanto al campo di testo, richiama `window.extensionBridge.openDataElementSelector` come [indicato sopra](#open-data-element). L’utente potrà quindi scegliere uno degli elementi dati elencati, anziché dover ricordare il nome e immetterlo tra simboli di percentuale. Una volta selezionato un elemento dati, riceverai il nome di tale elemento dati racchiuso tra simboli di percentuale (a meno che l’opzione `tokenize` non sia stata impostata su `false`). È quindi consigliabile compilare il campo di testo con il risultato.
 
