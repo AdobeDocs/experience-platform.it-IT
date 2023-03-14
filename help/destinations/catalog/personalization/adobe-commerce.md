@@ -1,54 +1,34 @@
 ---
-title: Connettore di destinazione di Adobe Commerce (Beta)
-description: Scopri come i commercianti di Adobe Commerce e Real-Time CDP possono personalizzare l’esperienza di acquisto distribuendo contenuti e promozioni del sito altamente pertinenti, personalizzati per segmenti di clienti creati e gestiti all’interno di Real-Time CDP.
+title: Connettore di destinazione Adobe Commerce
+description: Scopri come i commercianti di Adobe Commerce e Real-Time CDP possono personalizzare l’esperienza di acquisto distribuendo contenuti e promozioni del sito altamente pertinenti, personalizzati per il pubblico dei clienti e creati e gestiti in Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
+source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '720'
 ht-degree: 1%
 
 ---
 
-# Connessione Adobe Commerce (Beta) {#adobe-commerce}
+# Connessione Adobe Commerce {#adobe-commerce}
 
 ## Panoramica {#overview}
 
->[!IMPORTANT]
-> 
->Il **[!UICONTROL Adobe Commerce]** il connettore è in versione beta ed è disponibile solo per un numero selezionato di clienti.
-
-Il [!DNL Adobe Commerce] il connettore di destinazione consente di selezionare uno o più segmenti Real-Time CDP da attivare nel [!DNL Adobe Commerce] per offrire agli acquirenti un&#39;esperienza dinamica e personalizzata. Entro [!DNL Adobe Commerce], puoi quindi selezionare i segmenti Real-Time CDP per personalizzare offerte univoche nel carrello, ad esempio &quot;acquista 2 ottieni 1 gratis&quot;. Puoi anche visualizzare hero banner e modificare il prezzo dei prodotti attraverso offerte promozionali, tutte personalizzate per i segmenti Adobe Real-Time CDP.
-
-<!--## Use cases {#use-cases}
-
-To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Use case #1 {#use-case-1}
-
-*For mobile messaging platforms:*
-
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
-
-### Use case #2 {#use-case-2}
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*-->
+Il [!DNL Adobe Commerce] il connettore di destinazione consente di selezionare uno o più tipi di pubblico di Real-Time CDP da attivare nel [!DNL Adobe Commerce] per offrire agli acquirenti un&#39;esperienza dinamica e personalizzata. Entro [!DNL Adobe Commerce], puoi quindi selezionare i tipi di pubblico di Real-Time CDP per personalizzare offerte univoche nel carrello, ad esempio &quot;acquista 2 ottieni 1 gratis&quot;. Puoi anche visualizzare hero banner e modificare il prezzo dei prodotti attraverso offerte promozionali, tutte personalizzate per il pubblico di Adobe Real-Time CDP.
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo delle destinazioni per alcuni clienti beta che hanno acquistato Real-Time CDP Prime o Ultimate e Adobe Commerce.
+Questo connettore è disponibile nel catalogo delle destinazioni per i clienti che hanno acquistato Real-Time CDP Prime o Ultimate e Adobe Commerce.
 
-I clienti beta devono avere accesso a:
+Per utilizzare questa connessione di destinazione, assicurati di avere accesso a:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con l’accesso alla console per sviluppatori, puoi visualizzare le informazioni sull’account del servizio e sulle credenziali necessarie per [completare la configurazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) dell’estensione in Adobe Commerce.
 - [Adobe Commerce Cloud versione 2.4.4 o successiva](https://business.adobe.com/products/magento/magento-commerce.html)
 
 Ad Experience Platform, crea quanto segue:
 
 - [Schema](../../../xdm/schema/composition.md). Lo schema creato rappresenta i dati che intendi acquisire da Adobe Commerce. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) informazioni su come creare uno schema contenente gruppi di campi specifici di Commerce.
-- [Set di dati](../../../catalog/datasets/user-guide.md#create). Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati. Devi creare questo set di dati dallo schema creato in precedenza.
+- [Set di dati](../../../catalog/datasets/user-guide.md#create). Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati. Crea questo set di dati dallo schema creato in precedenza.
 - [Datastream](../../../edge/datastreams/overview.md#create). ID che consente il flusso di dati da Adobe Experience Platform ad altri prodotti Adobe DX. Questo ID deve essere associato a un sito web specifico all’interno della tua istanza Adobe Commerce specifica. Quando crei questo flusso di dati, specifica lo schema XDM creato in precedenza.
 
 Dopo aver completato i prerequisiti, connettiti a [!DNL Commerce] destinazione.
@@ -73,7 +53,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 - **[!UICONTROL Nome]**: inserisci il nome preferito per questa destinazione.
 - **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
 - **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experience Platform come nome di oggetto JSON.
-- **[!UICONTROL ID flusso di dati]**: questo determina in quale flusso di dati di Raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati per i quali è abilitata la configurazione di destinazione. Consulta [Configurazione di uno stream di dati](../../../edge/datastreams/overview.md) per ulteriori dettagli.
+- **[!UICONTROL ID flusso di dati]**: questo determina quale flusso di dati di Raccolta dati contiene i tipi di pubblico inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati per i quali è abilitata la configurazione di destinazione. Consulta [Configurazione di uno stream di dati](../../../edge/datastreams/overview.md) per ulteriori dettagli.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -81,23 +61,23 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in [!DNL Commerce] destinazione {#activate}
+## Attiva i tipi di pubblico in [!DNL Commerce] destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni delle richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in [!DNL Commerce] destinazione.
+Letto [Attivare profili e segmenti nelle destinazioni delle richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico [!DNL Commerce] destinazione.
 
 ## Passaggi successivi in [!DNL Adobe Commerce]
 
-Ora che hai configurato [!DNL Commerce] all&#39;interno di Experience Platform, è necessario configurare il [!DNL Commerce Admin] per importare i segmenti Real-Time CDP creati. Consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) per ulteriori informazioni.
+Ora che hai configurato [!DNL Commerce] all&#39;interno di Experience Platform, è necessario installare [!DNL Audience Activation] estensione in [!DNL Commerce] e configurare [!DNL Commerce Admin] per importare i tipi di pubblico di Real-Time CDP creati. Consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) per ulteriori informazioni.
 
 ## Convalidare l’attivazione del pubblico in Commerce {#exported-data}
 
-Dopo aver attivato i segmenti di Real-Time CDP nel [!DNL Adobe Commerce] , i segmenti saranno disponibili nel [!DNL Admin] quando crei una regola prezzo carrello:
+Dopo aver attivato i tipi di pubblico di Real-Time CDP sul tuo [!DNL Adobe Commerce] dell&#39;account, tali tipi di pubblico saranno disponibili quando si passa al _Amministratore_ barra laterale, quindi vai a **[!UICONTROL Clienti]** > **[!UICONTROL Pubblico di Real-time CDP]**.
 
-![Amministratore Adobe Commerce](../../assets/catalog/personalization/adobe-commerce/rtcdp-in-admin.png)
+![Dashboard di Real-Time CDP Audiences](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
