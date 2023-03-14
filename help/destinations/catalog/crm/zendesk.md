@@ -1,0 +1,168 @@
+---
+title: Connessione Zendesk
+description: La destinazione Zendesk ti consente di esportare i dati del tuo account e di attivarli all'interno di Zendesk per le tue esigenze aziendali.
+source-git-commit: 6a54926e47fb2364475dbf71593de97b642163d5
+workflow-type: tm+mt
+source-wordcount: '1340'
+ht-degree: 1%
+
+---
+
+# [!DNL Zendesk] connessione
+
+[[!DNL Zendesk]](https://www.zendesk.com) è una soluzione di assistenza clienti e uno strumento di vendita.
+
+Questo [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Zendesk] API Contatti](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), per creare e aggiornare identità all’interno di un segmento come contatti all’interno di [!DNL Zendesk].
+
+[!DNL Zendesk] utilizza token Bearer come meccanismo di autenticazione per comunicare con [!DNL Zendesk] API dei contatti. Istruzioni per l’autenticazione [!DNL Zendesk] sono riportati di seguito, nella [Autentica nella destinazione](#authenticate) sezione.
+
+## Casi d’uso {#use-cases}
+
+In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai tuoi utenti, in base agli attributi dei loro profili Adobe Experience Platform. Puoi creare segmenti dai dati offline e inviarli a [!DNL Zendesk], per essere visualizzato nei feed degli utenti non appena segmenti e profili vengono aggiornati in Adobe Experience Platform.
+
+## Prerequisiti {#prerequisites}
+
+### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
+
+Prima di attivare i dati in [!DNL Zendesk] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creato in [!DNL Experience Platform].
+
+Consulta la documentazione di Experience Platform per [Gruppo di campi schema Dettagli appartenenza segmento](/help/xdm/field-groups/profile/segmentation.md) se hai bisogno di informazioni sugli stati dei segmenti.
+
+### [!DNL Zendesk] prerequisiti {#prerequisites-destination}
+
+Per esportare i dati da Platform al tuo [!DNL Zendesk] account necessario disporre di [!DNL Zendesk] account.
+
+#### Raccogli [!DNL Zendesk] credenziali {#gather-credentials}
+
+Annota gli elementi riportati di seguito prima di eseguire l’autenticazione in [!DNL Zendesk] destinazione:
+
+| Credenziali | Descrizione | Esempio |
+| --- | --- | --- |
+| `Bearer token` | Il token di accesso generato nel [!DNL Zendesk] account. <br> Segui la documentazione per [generare un [!DNL Zendesk] token di accesso](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) se non ne hai uno. | `a0b1c2d3e4...v20w21x22y23z` |
+
+## Guardrail {#guardrails}
+
+Il [Prezzi e limiti di tasso](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) dettagli pagina [!DNL Zendesk] Limiti API associati al tuo account. Assicurati che i dati e il payload rientrino in questi vincoli.
+
+## Identità supportate {#supported-identities}
+
+[!DNL Zendesk] supporta l’aggiornamento delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+
+| Identità di destinazione | Esempio | Descrizione | Obbligatorio |
+|---|---|---|---|
+| `email` | `test@test.com` | Indirizzo e-mail del contatto. | Sì |
+
+## Tipo e frequenza di esportazione {#export-type-frequency}
+
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
+
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Ogni stato del segmento in [!DNL Zendesk] viene aggiornato con lo stato del segmento corrispondente da Platform, in base al **[!UICONTROL ID mappatura]** valore fornito durante il [programmazione dei segmenti](#schedule-segment-export-example) passaggio.</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+
+{style="table-layout:auto"}
+
+## Connetti alla destinazione {#connect}
+
+>[!IMPORTANT]
+>
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+
+Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+
+Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** cerca [!DNL Zendesk]. In alternativa, è possibile posizionarlo sotto il **[!UICONTROL CRM]** categoria.
+
+### Autentica nella destinazione {#authenticate}
+
+Compila i campi obbligatori di seguito. Consulta la sezione [Raccogli [!DNL Zendesk] credenziali](#gather-credentials) sezione per eventuali indicazioni.
+* **[!UICONTROL Token Bearer]**: il token di accesso generato nel [!DNL Zendesk] account.
+
+Per eseguire l’autenticazione nella destinazione, seleziona **[!UICONTROL Connetti alla destinazione]**.
+![Schermata dell’interfaccia utente di Platform che mostra come eseguire l’autenticazione.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+
+Se i dettagli forniti sono validi, nell’interfaccia utente viene visualizzato un **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
+
+### Inserisci i dettagli della destinazione {#destination-details}
+
+Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
+![Schermata dell’interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/crm/zendesk/destination-details.png)
+
+* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
+
+### Abilita avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+
+Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+
+## Attiva i segmenti in questa destinazione {#activate}
+
+>[!IMPORTANT]
+>
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+
+Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+
+### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
+
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform a [!DNL Zendesk] destinazione, devi passare attraverso il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione.
+
+Attributi specificati in **[!UICONTROL Campo di destinazione]** devono essere denominati esattamente come descritto nella tabella delle mappature degli attributi, in quanto questi attributi formeranno il corpo della richiesta.
+
+Attributi specificati in **[!UICONTROL Campo di origine]** non seguire tali restrizioni. Puoi mapparlo in base alle tue esigenze, ma se il formato dei dati non è corretto quando viene inviato a [!DNL Zendesk] si verificherà un errore.
+
+Per mappare correttamente i campi XDM su [!DNL Zendesk] campi di destinazione, effettua le seguenti operazioni:
+
+1. In **[!UICONTROL Mappatura]** passaggio, seleziona **[!UICONTROL Aggiungi nuova mappatura]**. Viene visualizzata una nuova riga di mappatura.
+1. In **[!UICONTROL Seleziona campo di origine]** finestra, scegli la **[!UICONTROL Seleziona attributi]** e selezionare l&#39;attributo XDM o scegliere il **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità.
+1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli la **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità o scegli **[!UICONTROL Seleziona attributi personalizzati]** e selezionare un attributo in base alle esigenze.
+   * Ripeti questi passaggi per aggiungere le seguenti mappature tra lo schema di profilo XDM e il [!DNL Zendesk] istanza: Campo di origine|Campo di destinazione| obbligatorio| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>o `Attribute: name`| Sì | |`IdentityMap: Email`|`Identity: email`| Sì |
+
+   * Di seguito è riportato un esempio che utilizza queste mappature:
+      ![Esempio di schermata dell’interfaccia utente di Platform con mappature di attributi.](../../assets/catalog/crm/zendesk/mappings.png)
+
+      >[!IMPORTANT]
+      >
+      >Entrambi i mapping dei campi di destinazione sono obbligatori e obbligatori per [!DNL Zendesk] al lavoro.
+      >
+      >Mappatura per *Cognome* o *Nome* è richiesto altrimenti il [!DNL Zendesk] L’API non risponde con alcun errore e qualsiasi valore di attributo passato viene ignorato.
+
+Una volta completate le mappature per la connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+
+### Esempio di esportazione di segmenti programmati {#schedule-segment-export-example}
+
+In [[!UICONTROL Pianificare l’esportazione di segmenti]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) passaggio del flusso di lavoro di attivazione, è necessario mappare manualmente i segmenti di Platform all’attributo del campo personalizzato in [!DNL Zendesk].
+
+A questo scopo, seleziona ogni segmento, quindi inserisci l’attributo del campo personalizzato corrispondente da [!DNL Zendesk] nel **[!UICONTROL ID mappatura]** campo.
+
+Di seguito è riportato un esempio:
+![Schermata dell’interfaccia utente di Platform che mostra l’esportazione del segmento di pianificazione.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+
+## Convalidare l’esportazione dei dati {#exported-data}
+
+Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
+
+1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e passa all’elenco delle destinazioni.
+1. Quindi, seleziona la destinazione e passa al **[!UICONTROL Dati di attivazione]** , quindi seleziona un nome di segmento.
+   ![Esempio di schermata dell’interfaccia utente di Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+
+1. Monitora il riepilogo dei segmenti e assicurati che il conteggio dei profili corrisponda al conteggio all’interno del segmento.
+   ![Esempio di schermata dell’interfaccia utente di Platform che mostra il segmento.](../../assets/catalog/crm/zendesk/segment.png)
+
+1. Accedi a [!DNL Zendesk] , quindi passare al **[!UICONTROL Contatti]** per verificare se i profili del segmento sono stati aggiunti. Questo elenco può essere configurato per visualizzare le colonne per i campi aggiuntivi creati con il segmento **[!UICONTROL ID mappatura]** e gli stati dei segmenti.
+   ![Schermata dell’interfaccia utente di Zendesk che mostra la pagina Contatti con i campi aggiuntivi creati con il nome del segmento.](../../assets/catalog/crm/zendesk/contacts.png)
+
+1. In alternativa, puoi eseguire un drill-down in un singolo **[!UICONTROL Persona]** e controllare la **[!UICONTROL Campi aggiuntivi]** sezione che visualizza il nome e gli stati del segmento.
+   ![Schermata dell’interfaccia utente di Zendesk che mostra la pagina Persona con la sezione dei campi aggiuntivi che mostra il nome del segmento e gli stati del segmento.](../../assets/catalog/crm/zendesk/contact.png)
+
+## Utilizzo dei dati e governance {#data-usage-governance}
+
+Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta la sezione [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+
+## Risorse aggiuntive {#additional-resources}
+
+Ulteriori informazioni utili da [!DNL Zendesk] la documentazione è riportata di seguito:
+* [Effettuare la prima chiamata](https://developer.zendesk.com/documentation/sales-crm/first-call/)
+* [Campi personalizzati](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
