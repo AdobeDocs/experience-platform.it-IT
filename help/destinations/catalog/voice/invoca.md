@@ -1,7 +1,7 @@
 ---
 keywords: Invoca;invoca
-title: Estensione Invoca Tags
-description: L’estensione Invoca Tags è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
+title: Estensione tag Invoca
+description: L’estensione Invoca Tags è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: f66a2e74-8d94-4b3a-9627-083ca875fad7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,50 +14,50 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[!DNL Invoca] porta informazioni sui dati e sulla voce delle chiamate nel percorso di clienti digitali. Con la piattaforma di intelligence delle chiamate [!DNL Invoca’s], gli esperti di marketing possono finalmente disporre di analisi per misurare i risultati delle chiamate e legare le conversioni offline alla spesa digitale.
+[!DNL Invoca] porta i dati delle chiamate e gli approfondimenti vocali nel percorso dei clienti digitali. Con [!DNL Invoca’s] call intelligence platform, gli esperti di marketing dispongono finalmente di analytics per misurare i risultati delle chiamate e collegare nuovamente le conversioni offline alla spesa digitale.
 
-[!DNL Invoca Tags] è una voce dell’estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+[!DNL Invoca Tags] è una voce dell’estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la pagina dell&#39;estensione in [Scambio Adobe](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
-Questa destinazione è un&#39;estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta la [panoramica sulle estensioni dei tag](../launch-extensions/overview.md).
+Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Platform, consulta [panoramica delle estensioni tag](../launch-extensions/overview.md).
 
 ![Estensione Invoca](../../assets/catalog/voice/invoca/catalog.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedi loro di concederti l’autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere ai tag e chiedere loro di concederti il **[!UICONTROL manage_properties]** in modo da poter installare estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l&#39;estensione [!DNL Invoca Tags]:
+Per installare [!DNL Invoca Tags] estensione:
 
-Nell’ [Interfaccia piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+In [Interfaccia della piattaforma](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
-Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Configura]** nella barra a destra. Se il controllo **[!UICONTROL Configura]** è disabilitato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Consulta [Prerequisiti](#prerequisites).
+Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Configura]** nella barra a destra. Se il **[!UICONTROL Configura]** il controllo è disattivato, manca il **[!UICONTROL manage_properties]** autorizzazione. Consulta [Prerequisiti](#prerequisites).
 
-Seleziona la proprietà in cui desideri installare l&#39;estensione. Puoi anche creare una nuova proprietà. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà nella sezione [Proprietà della pagina](../../../tags/ui/administration/companies-and-properties.md#properties-page) nella documentazione sui tag.
+Seleziona la proprietà in cui desideri installare l’estensione. Puoi anche creare una nuova proprietà. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Scopri le proprietà in [Sezione pagina delle proprietà](../../../tags/ui/administration/companies-and-properties.md#properties-page) di nella documentazione dei tag.
 
-Il flusso di lavoro descrive i passaggi necessari per completare l’installazione.
+Il flusso di lavoro illustra i passaggi necessari per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consulta la pagina [Invoca Tags in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+Per informazioni sulle opzioni di configurazione dell’estensione e sul supporto per l’installazione, consulta [Pagina Etichette di richiamo in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
-Puoi anche installare l’estensione direttamente nell’ [Interfaccia di raccolta dati](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
 
-## Come utilizzare l&#39;estensione {#how-to-use}
+## Come utilizzare l’estensione {#how-to-use}
 
-Dopo aver installato l&#39;estensione, puoi avviare l&#39;impostazione delle regole.
+Dopo aver installato l&#39;estensione, puoi avviare la configurazione delle regole.
 
-Puoi impostare regole per le estensioni installate per inviare dati evento alla destinazione dell&#39;estensione solo in determinate situazioni. Per ulteriori informazioni sull&#39;impostazione delle regole per le estensioni, consulta la documentazione [tags](../../../tags/ui/managing-resources/rules.md).
+Puoi impostare regole per le estensioni installate in modo da inviare dati evento alla destinazione dell&#39;estensione solo in determinate situazioni. Per ulteriori informazioni sulla configurazione delle regole per le estensioni, vedi [documentazione sui tag](../../../tags/ui/managing-resources/rules.md).
 
-## Configurare, aggiornare ed eliminare l&#39;estensione {#configure-upgrade-delete}
+## Configurare, aggiornare ed eliminare l’estensione {#configure-upgrade-delete}
 
-Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utente Raccolta dati.
+Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utente di Data Collection.
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata su una delle tue proprietà, l&#39;interfaccia utente di Platform visualizza ancora **[!UICONTROL Install]** per l&#39;estensione. Per configurare o eliminare l&#39;estensione, fai clic sul flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) .
+>Se l’estensione è già installata in una delle tue proprietà, viene comunque visualizzata l’interfaccia utente di Platform **[!UICONTROL Installa]** per l’estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l’estensione.
 
-Per aggiornare l&#39;estensione, consulta la guida al [processo di aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione sui tag.
+Per aggiornare l’estensione, consulta la guida sulla [processo di aggiornamento delle estensioni](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione sui tag.

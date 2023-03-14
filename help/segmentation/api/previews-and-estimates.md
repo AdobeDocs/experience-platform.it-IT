@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;anteprime;stime;anteprime e stime;stime e anteprime;api;API;
+keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;anteprime;stime;anteprime e stime;stime e anteprime;api;API;
 solution: Experience Platform
-title: Anteprime e stime degli endpoint API
-description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima all’interno di Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo per assicurarti di isolare il pubblico previsto.
+title: Endpoint API per anteprime e stime
+description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima disponibili in Adobe Experience Platform per visualizzare informazioni di riepilogo utili a isolare il pubblico previsto.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,32 +11,32 @@ ht-degree: 2%
 
 ---
 
-# Anteprime e stime degli endpoint
+# Anteprime ed endpoint di stima
 
-Quando si sviluppa una definizione di segmento, è possibile utilizzare gli strumenti di stima e anteprima all’interno di Adobe Experience Platform per visualizzare informazioni a livello di riepilogo per assicurarsi di isolare il pubblico previsto.
+Quando sviluppi una definizione di segmento, puoi utilizzare gli strumenti di stima e anteprima in Adobe Experience Platform per visualizzare informazioni di riepilogo per accertarti di isolare il pubblico previsto.
 
-* **Anteprime** fornisce elenchi impaginati di profili qualificati per una definizione di segmento, che consentono di confrontare i risultati rispetto alle aspettative.
+* **Anteprime** fornisce elenchi impaginati di profili idonei per la definizione di un segmento, che consentono di confrontare i risultati con quelli previsti.
 
-* **Stime** fornisce informazioni statistiche su una definizione di segmento, ad esempio la dimensione del pubblico, l’intervallo di affidabilità e la deviazione standard dell’errore proiettati.
+* **Stime** fornisci informazioni statistiche sulla definizione di un segmento, ad esempio le dimensioni del pubblico previste, l’intervallo di affidabilità e la deviazione standard dell’errore.
 
 >[!NOTE]
 >
->Per accedere a metriche simili correlate ai dati del Profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e profili uniti in spazi dei nomi specifici o nell’archivio dati del profilo nel suo complesso, consulta [guida all’anteprima del profilo (stato dell’esempio di anteprima) dell’endpoint](../../profile/api/preview-sample-status.md), parte della guida per gli sviluppatori dell’API di profilo.
+>Per accedere a metriche simili relative ai dati del Profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e profili uniti all’interno di spazi dei nomi specifici o dell’archivio dati profilo nel suo complesso, consulta la [guida dell’endpoint &quot;profile preview&quot; (anteprima stato del campione)](../../profile/api/preview-sample-status.md), parte della guida per gli sviluppatori API per profili.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
 
-## Generazione delle stime
+## Come vengono generate le stime
 
 Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui viene attivato il campionamento dei dati dipende dal metodo di acquisizione:
 
-* **Acquisizione batch:** Per l’acquisizione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio.
-* **Acquisizione in streaming:** Per i flussi di lavoro con dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio.
+* **Acquisizione in batch:** Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o di riduzione del 5%, viene eseguito un processo per aggiornare il conteggio.
+* **Acquisizione in streaming:** Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio.
 
-La dimensione del campione della scansione dipende dal numero complessivo di entità nell’archivio dei profili. Le dimensioni dei campioni sono rappresentate nella tabella seguente:
+La dimensione del campione della scansione dipende dal numero complessivo di entità nell’archivio profili. Queste dimensioni di esempio sono rappresentate nella tabella seguente:
 
-| Entità nell’archivio profili | Dimensione del campione |
+| Entità nell’archivio profili | Dimensione campione |
 | ------------------------- | ----------- |
 | Meno di 1 milione | Set di dati completo |
 | Da 1 a 20 milioni | 1 milione |
@@ -44,15 +44,15 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 
 >[!NOTE]
 >
->Le stime richiedono generalmente dai 10 ai 15 secondi per essere eseguite, a partire da una stima approssimativa e affinando man mano che vengono letti più record.
+>L’esecuzione delle stime richiede generalmente dai 10 ai 15 secondi, a partire da una stima approssimativa e con la lettura di più record.
 
-## Creare una nuova anteprima {#create-preview}
+## Crea una nuova anteprima {#create-preview}
 
-Puoi creare una nuova anteprima effettuando una richiesta di POST al `/preview` punto finale.
+Per creare una nuova anteprima, devi effettuare una richiesta POST al `/preview` endpoint.
 
 >[!NOTE]
 >
->Un processo di stima viene creato automaticamente quando viene creato un processo di anteprima. Questi due processi condivideranno lo stesso ID.
+>Quando si crea un processo di anteprima, viene creato automaticamente un processo di stima. Questi due processi condivideranno lo stesso ID.
 
 **Formato API**
 
@@ -80,14 +80,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `predicateExpression` | Espressione PQL per eseguire una query dei dati. |
-| `predicateType` | Il tipo di predicato per l&#39;espressione di query in `predicateExpression`. Attualmente, l&#39;unico valore accettato per questa proprietà è `pql/text`. |
-| `predicateModel` | Nome della [!DNL Experience Data Model] (XDM) classe schema su cui si basano i dati del profilo. |
-| `graphType` | Il tipo di grafico da cui si desidera ottenere il cluster. I valori supportati sono `none` (non esegue alcuna unione di identità) e `pdg` (esegue le unione delle identità in base al grafico di identità privata). |
+| `predicateExpression` | L’espressione PQL in base alla quale eseguire la query dei dati. |
+| `predicateType` | Tipo di predicato per l’espressione di query in `predicateExpression`. Attualmente, l’unico valore accettato per questa proprietà è `pql/text`. |
+| `predicateModel` | Il nome del [!DNL Experience Data Model] (XDM) classe di schema su cui si basano i dati del profilo. |
+| `graphType` | Tipo di grafico da cui ottenere il cluster. I valori supportati sono `none` (non esegue alcuna unione di identità) e `pdg` (esegue l’unione delle identità in base al grafico delle identità private). |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) con i dettagli della nuova anteprima creata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) con i dettagli della nuova anteprima creata.
 
 ```json
 {
@@ -101,12 +101,12 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) con i dettagli dell
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `state` | Lo stato corrente del processo di anteprima. Quando viene creato inizialmente, lo stato sarà &quot;NEW&quot;. Successivamente, sarà in stato &quot;RUNNING&quot; fino al completamento dell&#39;elaborazione, al punto in cui diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
+| `state` | Stato corrente del processo di anteprima. Al momento della creazione, lo stato sarà &quot;NUOVO&quot;. Successivamente, sarà nello stato &quot;RUNNING&quot; (IN ESECUZIONE) fino al completamento dell’elaborazione, che diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
 | `previewId` | ID del processo di anteprima, da utilizzare a scopo di ricerca quando si visualizza una stima o un’anteprima, come descritto nella sezione successiva. |
 
-## Recupera i risultati di un’anteprima specifica {#get-preview}
+## Recuperare i risultati di un’anteprima specifica {#get-preview}
 
-Puoi recuperare informazioni dettagliate su un&#39;anteprima specifica effettuando una richiesta di GET al `/preview` e fornisce l&#39;ID di anteprima nel percorso della richiesta.
+Per recuperare informazioni dettagliate su un’anteprima specifica, effettua una richiesta GET al `/preview` e fornendo l’ID di anteprima nel percorso della richiesta.
 
 **Formato API**
 
@@ -116,7 +116,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | La `previewId` valore dell&#39;anteprima da recuperare. |
+| `{PREVIEW_ID}` | Il `previewId` valore dell’anteprima da recuperare. |
 
 **Richiesta**
 
@@ -130,7 +130,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sull&#39;anteprima specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sull’anteprima specificata.
 
 ```json
 {
@@ -179,11 +179,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Elenco degli ID entità e delle relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando [endpoint API di accesso profilo](../../profile/api/entities.md). |
+| `results` | Un elenco di ID entità, insieme alle relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate utilizzando [endpoint API di accesso al profilo](../../profile/api/entities.md). |
 
-## Recupera i risultati di un processo di stima specifico {#get-estimate}
+## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
-Dopo aver creato un processo di anteprima, puoi utilizzare la relativa `previewId` nel percorso di una richiesta di GET al `/estimate` per visualizzare informazioni statistiche sulla definizione del segmento, tra cui dimensioni del pubblico proiettate, intervallo di affidabilità e deviazione standard di errore.
+Dopo aver creato un processo di anteprima, puoi utilizzarne `previewId` nel percorso di una richiesta GET al `/estimate` endpoint per visualizzare informazioni statistiche sulla definizione del segmento, tra cui la dimensione del pubblico prevista, l’intervallo di affidabilità e la deviazione standard dell’errore.
 
 **Formato API**
 
@@ -193,7 +193,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Un processo di stima viene attivato solo quando viene creato un processo di anteprima e i due lavori condividono lo stesso valore ID a scopo di ricerca. In particolare, questa è la `previewId` restituito quando è stato creato il processo di anteprima. |
+| `{PREVIEW_ID}` | Un processo di stima viene attivato solo quando viene creato un processo di anteprima e i due processi condividono lo stesso valore ID a scopo di ricerca. In particolare, questo è il `previewId` valore restituito al momento della creazione del processo di anteprima. |
 
 **Richiesta**
 
@@ -209,7 +209,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo di stima.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del processo di stima.
 
 ```json
 {
@@ -243,10 +243,10 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Matrice di oggetti che mostra il numero di profili all’interno del segmento suddivisi per namespace di identità. Il numero totale di profili per namespace (aggiunta insieme dei valori mostrati per ogni namespace) può essere maggiore della metrica di conteggio dei profili, perché un profilo può essere associato a più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace. |
-| `state` | Lo stato corrente del processo di anteprima. Lo stato sarà &quot;IN ESECUZIONE&quot; fino al completamento dell&#39;elaborazione, al punto in cui diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
-| `_links.preview` | Quando il `state` è &quot;RESULT_READY&quot;, questo campo fornisce un URL per visualizzare la stima. |
+| `estimatedNamespaceDistribution` | Array di oggetti che mostrano il numero di profili all’interno del segmento suddivisi per spazio dei nomi dell’identità. Il numero totale di profili per spazio dei nomi (sommando i valori mostrati per ciascuno spazio dei nomi) può essere maggiore della metrica del conteggio dei profili, perché un profilo può essere associato a più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi. |
+| `state` | Stato corrente del processo di anteprima. Lo stato sarà &quot;RUNNING&quot; (IN ESECUZIONE) fino al completamento dell’elaborazione, che diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
+| `_links.preview` | Quando `state` è &quot;RESULT_READY&quot;, questo campo fornisce un URL per visualizzare la stima. |
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida dovresti avere una migliore comprensione di come lavorare con le anteprime e le stime utilizzando l’API di segmentazione. Per informazioni su come accedere alle metriche correlate ai dati del Profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e profili uniti in spazi dei nomi specifici o nell’archivio dati del profilo nel suo complesso, visita il [anteprima profilo (`/previewsamplestatus`a) guida endpoint](../../profile/api/preview-sample-status.md).
+Dopo aver letto questa guida sarai in grado di comprendere meglio come utilizzare le anteprime e le stime utilizzando l’API di segmentazione. Per informazioni su come accedere alle metriche relative ai dati Profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e profili uniti all’interno di spazi dei nomi specifici o all’archivio dati profilo nel suo complesso, visita il [anteprima profilo (`/previewsamplestatus`) guida dell&#39;endpoint](../../profile/api/preview-sample-status.md).

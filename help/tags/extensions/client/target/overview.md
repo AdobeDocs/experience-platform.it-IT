@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -37,7 +37,7 @@ Sono disponibili le seguenti configurazioni:
 
 #### Codice client
 
-Il codice client è l&#39;identificatore account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito.
+Il codice client è l’identificatore dell’account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito.
 
 Può essere modificato tramite elementi di dati.
 
@@ -141,7 +141,7 @@ Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza l
    * Quando è stata ricevuta la risposta mbox globale
    * Quando la richiesta mbox globale scade
    * Quando lo stesso frammento scade
-* L’azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L&#39;azione &quot;Fire Global Mbox&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

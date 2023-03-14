@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiornare account
+keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiornare gli account
 solution: Experience Platform
-title: Aggiornare gli account utilizzando l’API del servizio di flusso
+title: Aggiornare gli account utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per aggiornare i dettagli e le credenziali di un account utilizzando l’API del servizio di flusso.
+description: Questo tutorial illustra i passaggi necessari per aggiornare i dettagli e le credenziali di un account tramite l’API del servizio Flow.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,28 +12,28 @@ ht-degree: 3%
 
 ---
 
-# Aggiornare gli account utilizzando l’API del servizio di flusso
+# Aggiornare gli account utilizzando l’API del servizio Flusso
 
-In alcuni casi, potrebbe essere necessario aggiornare i dettagli di una connessione sorgente esistente. [!DNL Flow Service] consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o in streaming esistente, compresi nome, descrizione e credenziali.
+In alcuni casi, potrebbe essere necessario aggiornare i dettagli di una connessione sorgente esistente. [!DNL Flow Service] consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o streaming esistente, inclusi nome, descrizione e credenziali.
 
-Questa esercitazione descrive i passaggi per aggiornare i dettagli e le credenziali di una connessione utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per aggiornare i dettagli e le credenziali di una connessione tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa esercitazione richiede una connessione esistente e un ID di connessione valido. Se non disponi di una connessione esistente, seleziona l&#39;origine scelta dalla [panoramica di origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questo tutorial richiede una connessione esistente e un ID connessione valido. Se non si dispone di una connessione esistente, selezionare l&#39;origine desiderata tra [panoramica sulle origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
-Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
 
 ## Cerca dettagli di connessione
 
-Il primo passo per aggiornare la connessione consiste nel recuperare i relativi dettagli utilizzando l’ID di connessione. Per recuperare i dettagli correnti della connessione, invia una richiesta di GET al [!DNL Flow Service] mentre fornisci l’ID di connessione della connessione che desideri aggiornare.
+Il primo passaggio nell’aggiornamento della connessione consiste nel recuperarne i dettagli utilizzando il tuo ID connessione. Per recuperare i dettagli correnti della connessione, effettua una richiesta GET al [!DNL Flow Service] fornendo l’ID della connessione della connessione da aggiornare.
 
 **Formato API**
 
@@ -43,11 +43,11 @@ GET /connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | L&#39;unico `id` valore della connessione che si desidera recuperare. |
+| `{CONNECTION_ID}` | L&#39;unico `id` valore per la connessione che si desidera recuperare. |
 
 **Richiesta**
 
-La seguente richiesta recupera informazioni relative alla connessione.
+La richiesta seguente recupera informazioni relative alla connessione.
 
 ```shell
 curl -X GET \
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli correnti della connessione, incluse le relative credenziali, l&#39;identificatore univoco (`id`) e versione . Il valore di versione è necessario per aggiornare la connessione.
+In caso di esito positivo, la risposta restituisce i dettagli correnti della connessione, incluse le credenziali, l’identificatore univoco (`id`) e versione. Per aggiornare la connessione è necessario il valore della versione.
 
 ```json
 {
@@ -98,11 +98,11 @@ Una risposta corretta restituisce i dettagli correnti della connessione, incluse
 
 ## Aggiorna connessione
 
-Per aggiornare il nome, la descrizione e le credenziali della tua connessione, esegui una richiesta PATCH al [!DNL Flow Service] , fornendo al tempo stesso il tuo ID connessione, la versione e le nuove informazioni che desideri utilizzare.
+Per aggiornare il nome, la descrizione e le credenziali della connessione, esegui una richiesta PATCH al [!DNL Flow Service] fornendo l’ID della connessione, la versione e le nuove informazioni che desideri utilizzare.
 
 >[!IMPORTANT]
 >
->La `If-Match` l’intestazione è necessaria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che si desidera aggiornare.
+>Il `If-Match` L’intestazione è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che desideri aggiornare.
 
 **Formato API**
 
@@ -112,7 +112,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | L&#39;unico `id` valore della connessione che si desidera aggiornare. |
+| `{CONNECTION_ID}` | L&#39;unico `id` valore per la connessione da aggiornare. |
 
 **Richiesta**
 
@@ -151,13 +151,13 @@ curl -X PATCH \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `op` | Chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare la connessione. Le operazioni includono: `add`, `replace`e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare la connessione. Le operazioni includono: `add`, `replace`, e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
-| `value` | Il nuovo valore con cui si desidera aggiornare il parametro. |
+| `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID di connessione e un tag aggiornato. Puoi verificare l’aggiornamento effettuando una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l&#39;ID di connessione.
+In caso di esito positivo, la risposta restituisce l’ID di connessione e un tag aggiornato. Per verificare l’aggiornamento, effettua una richiesta GET al [!DNL Flow Service] e fornire l&#39;ID di connessione.
 
 ```json
 {
@@ -168,4 +168,4 @@ Una risposta corretta restituisce l&#39;ID di connessione e un tag aggiornato. P
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai aggiornato le credenziali e le informazioni associate alla tua connessione utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sull’utilizzo dei connettori sorgente, consulta la sezione [panoramica di origini](../../home.md).
+Seguendo questa esercitazione, hai aggiornato le credenziali e le informazioni associate alla connessione utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sull&#39;utilizzo dei connettori di origine, vedere [panoramica sulle origini](../../home.md).

@@ -13,7 +13,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le estensioni, le regole e gli elementi di dati sono blocchi predefiniti. Quando desideri eseguire un&#39;operazione con l&#39;applicazione, questi blocchi predefiniti vengono aggiunti alle librerie e quindi la libreria viene &quot;creata&quot; in una build. Queste build vengono distribuite in una posizione ospitata.
 
@@ -26,4 +26,4 @@ Per informazioni dettagliate su ciascun tipo di host, utilizza i collegamenti ri
 
 Lo stesso host può essere utilizzato per più ambienti all&#39;interno di una proprietà.
 
-Per ulteriori informazioni per aiutarti a decidere tra hosting autonomo e gestione dell&#39;hosting da parte di Adobe, leggi la [guida all’hosting autonomo](./self-hosting-libraries.md).
+Per ulteriori informazioni sulla scelta tra hosting autonomo e hosting gestito da Adobe, consulta la sezione [guida all’hosting autonomo](./self-hosting-libraries.md).

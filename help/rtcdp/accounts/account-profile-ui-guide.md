@@ -1,7 +1,7 @@
 ---
-keywords: profilo rtcdp;profili rtcdp;identità rtcdp;criteri di unione rtcdp;profilo cliente in tempo reale
-title: Guida all’interfaccia utente del profilo account
-description: Utilizzando i profili dell’account, Adobe Real-time Customer Data Platform B2B Edition consente di unificare le informazioni dell’account da più sorgenti. Questa guida fornisce dettagli sull’interazione con i profili account nell’interfaccia utente di Adobe Experience Platform.
+keywords: profilo rtcdp;profili rtcdp;rtcdp identità;criteri di unione rtcdp;real-time customer profile
+title: Guida dell’interfaccia utente del profilo account
+description: Tramite l’utilizzo dei profili di account, Adobe Real-time Customer Data Platform B2B Edition consente di unificare le informazioni sull’account da più origini. Questa guida fornisce dettagli per interagire con i profili dell’account nell’interfaccia utente di Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,150 +10,150 @@ ht-degree: 0%
 
 ---
 
-# Guida all’interfaccia utente del profilo account
+# Guida dell’interfaccia utente del profilo account
 
 >[!NOTE]
 >
->I profili account sono disponibili solo per i clienti Real-time Customer Data Platform B2B Edition. Per ulteriori informazioni su Real-Time CDP, tra cui le funzioni e le funzionalità disponibili per ogni tipo di licenza, si prega di iniziare leggendo il [Panoramica di Real-Time CDP](../overview.md).
+>I profili account sono disponibili solo per i clienti di Real-time Customer Data Platform B2B Edition. Per ulteriori informazioni su Real-Time CDP, incluse le funzionalità disponibili per ogni tipo di licenza, leggere la [Panoramica di Real-Time CDP](../overview.md).
 
-I profili account ti consentono di unificare le informazioni dell’account da più sorgenti. Questa visualizzazione unificata di un account riunisce dati provenienti da diversi canali di marketing e dai diversi sistemi che la tua organizzazione sta attualmente utilizzando per memorizzare le informazioni sull’account del cliente. Questo documento fornisce una guida all’interazione con i profili account tramite le funzionalità Real-Time CDP B2B Edition disponibili nell’interfaccia utente di Adobe Experience Platform.
+I profili account consentono di unificare le informazioni sull&#39;account provenienti da più origini. Questa visualizzazione unificata di un account riunisce i dati provenienti dai diversi canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per archiviare le informazioni sull’account del cliente. Questo documento fornisce una guida all’interazione con i profili dell’account utilizzando le funzionalità di Real-Time CDP, B2B Edition disponibili nell’interfaccia utente di Adobe Experience Platform.
 
-Per ulteriori informazioni sulla modalità di creazione dei profili account nell’ambito del flusso di lavoro B2B, consulta la sezione [esercitazione end-to-end](../b2b-tutorial.md).
+Per ulteriori informazioni sulla modalità di creazione dei profili account come parte del flusso di lavoro B2B, vedi [tutorial end-to-end](../b2b-tutorial.md).
 
 ## Panoramica dei profili account {#account-profiles-overview}
 
-Seleziona **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra per visualizzare la panoramica dei profili account. Sotto la [!UICONTROL Panoramica] il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
+Seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nella barra di navigazione a sinistra per visualizzare la panoramica dei profili dell’account. Sotto [!UICONTROL Panoramica] , il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
 
-![Scheda Panoramica che mostra i widget](images/b2b-account-profile-overview.png)
+![Scheda Panoramica con i widget](images/b2b-account-profile-overview.png)
 
-Consulta la documentazione sul [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni.
+Consulta la documentazione su [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni.
 
-## Configurare la corrispondenza lead per account {#configure-lead-to-account-matching}
+## Configurare la corrispondenza lead-account {#configure-lead-to-account-matching}
 
 >[!IMPORTANT]
 >
-> Solo gli amministratori di AI B2B possono abilitare, disabilitare e configurare il servizio di corrispondenza dei lead a account. Dopo aver disabilitato il servizio, i risultati corrispondenti verranno eliminati entro 24 ore.
+> Solo gli amministratori di IA B2B possono abilitare, disabilitare e configurare il lead per il servizio di corrispondenza account. Dopo aver disabilitato il servizio, i risultati corrispondenti verranno eliminati entro 24 ore.
 
-Per configurare la corrispondenza tra lead e account, seleziona **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra. Sulla **[!UICONTROL Panoramica]** scheda , seleziona **[!UICONTROL Impostazioni]** in alto a destra.
+Per configurare la corrispondenza lead-account, seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nel menu di navigazione a sinistra. Il giorno **[!UICONTROL Panoramica]** , seleziona **[!UICONTROL Impostazioni]** in alto a destra.
 
 ![Seleziona impostazioni](images/b2b-configuring-accounts-profile.png)
 
-La **[!UICONTROL Impostazioni account]** viene visualizzata la finestra di dialogo . Da qui seleziona la **[!UICONTROL Abilita corrispondenza lead-to-account]** attiva/disattiva la funzione. Utilizza il menu a discesa per selezionare **[!UICONTROL Giornaliero]** per **[!UICONTROL Corrispondenza cadenza]** impostazione. Infine, seleziona il **[!UICONTROL Criteri corrispondenti]** opzioni seguite da **[!UICONTROL Salva]** per confermare le impostazioni e tornare al **[!UICONTROL Profili account]** schermo.
+Il **[!UICONTROL Impostazioni account]** viene visualizzata una finestra di dialogo. Da qui, seleziona la **[!UICONTROL Abilita corrispondenza lead-account]** per abilitare la funzione. Utilizza il menu a discesa per selezionare **[!UICONTROL Giornaliero]** per **[!UICONTROL Cadenza corrispondente]** impostazione. Infine, seleziona la **[!UICONTROL Criteri di corrispondenza]** opzioni seguite da **[!UICONTROL Salva]** per confermare le impostazioni e tornare al **[!UICONTROL Profili account]** schermo.
 
 >[!NOTE]
 >
-> Impossibile utilizzare l&#39;indirizzo come unico criterio corrispondente. È necessario selezionare uno o più degli altri criteri di corrispondenza.
+> L&#39;indirizzo non può essere utilizzato come unico criterio di corrispondenza. È necessario selezionare uno o più degli altri criteri di corrispondenza.
 
 ![Configurare le impostazioni account](images/b2b-configuring-account-settings.png)
 
-Per ulteriori informazioni sulla corrispondenza del lead al conto, consulta [Panoramica sulla corrispondenza degli account lead in Real-Time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Per ulteriori informazioni sulla corrispondenza tra lead e account, consulta [Panoramica sulla corrispondenza dei lead con l’account in Real-Time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-## Sfoglia profili account {#browse-account-profiles}
+## Sfogliare i profili account {#browse-account-profiles}
 
-Per sfogliare i profili di account, inizia selezionando **[!UICONTROL Profili]** sotto [!UICONTROL Account] nella navigazione a sinistra.
+Per sfogliare i profili dell’account, inizia selezionando **[!UICONTROL Profili]** in [!UICONTROL Account] nel menu di navigazione a sinistra.
 
-Sulla **[!UICONTROL Sfoglia]** è possibile esplorare i profili account utilizzando un ID account proveniente da un’origine enterprise connessa o immettendo direttamente i dettagli sorgente.
+Il giorno **[!UICONTROL Sfoglia]** , è possibile esplorare i profili dell&#39;account utilizzando un ID account da un&#39;origine enterprise connessa oppure immettendo direttamente i dettagli dell&#39;origine.
 
-![Utilizzare l’ID account per esplorare i profili](images/b2b-account-browse-by.png)
+![Utilizza l’ID account per esplorare i profili](images/b2b-account-browse-by.png)
 
 ### Sfoglia per [!UICONTROL Origine enterprise connessa] {#browse-by-connected-enterprise-source}
 
-Per sfogliare i profili account in base a un&#39;origine enterprise connessa, selezionare **[!UICONTROL Origine enterprise connessa]** dal **[!UICONTROL Sfoglia per]** a discesa, quindi scegli un’origine connessa utilizzando il pulsante di selezione accanto a **[!UICONTROL Origine]** campo .
+Per sfogliare i profili di account in base a un&#39;origine aziendale connessa, selezionare **[!UICONTROL Origine enterprise connessa]** dal **[!UICONTROL Sfoglia per]** , quindi scegliere un&#39;origine connessa utilizzando il pulsante di selezione accanto al **[!UICONTROL Sorgente]** campo.
 
-![Sfoglia profili account per origine enterprise connessa](images/b2b-account-browse.png)
+![Sfogliare i profili account per origine aziendale connessa](images/b2b-account-browse.png)
 
-Viene aperta la **[!UICONTROL Seleziona origine]** , che consente di selezionare un&#39;origine in base alle connessioni stabilite dall&#39;organizzazione.
-
->[!NOTE]
->
->L&#39;organizzazione può disporre di più origini configurate per lo stesso provider di servizi (ad esempio, Marketo), pertanto è importante rivedere il nome della connessione, il sistema di origine e l&#39;istanza del sistema di origine per assicurarsi che la ricerca venga eseguita dall&#39;istanza di origine corretta.
-
-Per ulteriori informazioni sulla connessione delle origini aziendali, consulta [panoramica di origini](../sources/sources-overview.md).
-
-È possibile scegliere un&#39;origine selezionando il pulsante di scelta accanto al nome della connessione, quindi utilizzare **[!UICONTROL Seleziona]** per tornare al [!UICONTROL Sfoglia] scheda .
-
-![Selezionare il flusso di lavoro sorgente](images/b2b-account-select-source.png)
-
-Con un&#39;origine selezionata, è ora necessario immettere un **[!UICONTROL ID account]** relativo all&#39;origine. Ad esempio, la selezione di un’origine Salesforce richiede l’inserimento di un ID account dall’istanza Salesforce per visualizzare il profilo account associato a tale ID.
+Verrà aperto il **[!UICONTROL Seleziona origine]** , in cui è possibile selezionare un&#39;origine in base alle connessioni stabilite dall&#39;organizzazione.
 
 >[!NOTE]
 >
->Per gli ID account Marketo, è possibile fare riferimento a due possibili tabelle account, pertanto devi utilizzare una sintassi specifica per assicurarti di visualizzare l’account corretto.
+>È possibile che nell&#39;organizzazione siano configurate più origini per lo stesso provider di servizi (ad esempio, Marketo), pertanto è importante esaminare il nome della connessione, il sistema di origine e l&#39;istanza del sistema di origine per assicurarsi che la ricerca venga eseguita in base all&#39;istanza di origine corretta.
+
+Per ulteriori informazioni sulla connessione delle origini aziendali, fare riferimento a [panoramica sulle origini](../sources/sources-overview.md).
+
+È possibile scegliere un&#39;origine selezionando il pulsante di opzione accanto al nome della connessione e quindi utilizzare **[!UICONTROL Seleziona]** per tornare al [!UICONTROL Sfoglia] scheda.
+
+![Seleziona flusso di lavoro sorgente](images/b2b-account-select-source.png)
+
+Dopo aver selezionato un&#39;origine, è necessario immettere un **[!UICONTROL ID account]** relativo all’origine. Ad esempio, la selezione di un’origine Salesforce richiede l’immissione di un ID account dall’istanza Salesforce per visualizzare il profilo account associato a tale ID.
+
+>[!NOTE]
 >
->La sintassi standard più comune è l&#39;ID account Marketo aggiunto da `.mkto_org` (ad esempio, `1234567.mkto_org`). I clienti Marketo Account-Based Marketing possono avere valori aggiuntivi che possono essere trovati utilizzando l’ID account Marketo aggiunto da `.mkto_account`. Se non sai con certezza quale sintassi utilizzare, rivolgiti al tuo amministratore Marketo.
+>Per gli ID account Marketo, è possibile fare riferimento a due tabelle di account, pertanto è necessario utilizzare una sintassi specifica per assicurarsi di visualizzare l’account corretto.
+>
+>La sintassi standard più comune è l’ID account Marketo aggiunto da `.mkto_org` (ad esempio, `1234567.mkto_org`). I clienti Marketo Account-Based Marketing potrebbero disporre di valori aggiuntivi che possono essere trovati utilizzando l’ID account Marketo aggiunto da `.mkto_account`. Se non sai con certezza quale sintassi utilizzare, rivolgiti al tuo amministratore Marketo.
 
 ![Selezione ID account](images/b2b-account-browse-id.png)
 
 ### Sfoglia per [!UICONTROL Altro] {#browse-by-others}
 
-Real-Time CDP, B2B Edition supporta la possibilità di eseguire una ricerca diretta consentendo di immettere un **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza sorgente]** e **[!UICONTROL ID account]** per un account da visualizzare. Inserendo direttamente il nome e l’istanza di origine, fornisci il contesto necessario per consentire ad Experience Platform la ricerca e la visualizzazione dei dati di profilo account corretti.
+Real-Time CDP, B2B Edition consente di eseguire una ricerca diretta consentendo l&#39;immissione di **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza sorgente]**, e **[!UICONTROL ID account]** per un account che desideri visualizzare. Immettendo direttamente il nome e l’istanza di origine, è possibile fornire il contesto necessario, ad Experience Platform per cercare e visualizzare i dati corretti del profilo dell’account.
 
-La capacità di eseguire una ricerca diretta è utile in circostanze in cui non è possibile una connessione sorgente diretta ai dati. Ad esempio, se la tua organizzazione dispone di criteri di governance dei dati che impediscono la connessione diretta a un sistema di gestione delle relazioni con i clienti, puoi esportare tali dati in un sistema di archiviazione cloud e quindi trasferirli in Experience Platform.
+La capacità di eseguire una ricerca diretta è utile in circostanze in cui non è possibile una connessione sorgente diretta ai dati. Ad esempio, se nell’organizzazione sono in vigore criteri di governance dei dati che impediscono la connessione diretta a un sistema di gestione delle relazioni con i clienti, puoi esportare i dati in un sistema di archiviazione cloud e quindi acquisirli in Experience Platform.
 
-Un altro esempio potrebbe essere la trasformazione dei dati che si sta effettuando tra il momento in cui lascia un sistema ed entra in Platform. Puoi utilizzare la funzionalità di ricerca diretta per fornire contesto per i dati (ad esempio per specificare che si tratta di dati Marketo, nonostante provengano, ad esempio, da un bucket Amazon S3) in modo che il sistema sappia dove cercare e come eseguire correttamente il rendering dei dati.
+Un altro esempio potrebbe essere che stai eseguendo una trasformazione sui dati tra il momento in cui esce da un sistema ed entra in Platform. Puoi utilizzare la funzionalità di ricerca diretta per fornire contesto per i dati (ad esempio per specificare che si tratta di dati di Marketo, nonostante il fatto che provengano da un bucket Amazon S3, ad esempio) in modo che il sistema sappia dove cercare i dati e come eseguirne correttamente il rendering.
 
-Per iniziare una ricerca diretta, seleziona **[!UICONTROL Altro]** dal **[!UICONTROL Sfoglia per]** a discesa, quindi immetti un **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza sorgente]** e **[!UICONTROL ID account]** per l’account che desideri visualizzare.
+Per avviare una ricerca diretta, selezionare **[!UICONTROL Altro]** dal **[!UICONTROL Sfoglia per]** a discesa, quindi inserisci un **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza sorgente]**, e **[!UICONTROL ID account]** per l’account che desideri visualizzare.
 
 ![Sfoglia per altri](images/b2b-account-browse-adhoc.png)
 
 ## Visualizza dettagli profilo account {#view-account-profile-details}
 
-Dopo aver utilizzato **[!UICONTROL Sfoglia]** per individuare un profilo di account, seleziona la scheda **[!UICONTROL ID profilo]** apre **[!UICONTROL Dettaglio]** per il profilo dell’account. Le informazioni di profilo visualizzate nel **[!UICONTROL Dettaglio]** è stata unita una scheda da più frammenti di profilo per formare una singola vista del singolo account. Ciò include dettagli dell&#39;account come attributi di base e dati sui social media.
+Dopo aver utilizzato il **[!UICONTROL Sfoglia]** per individuare un profilo di account, selezionando la scheda **[!UICONTROL ID profilo]** apre il **[!UICONTROL Dettaglio]** per il profilo dell’account. Le informazioni di profilo visualizzate sul **[!UICONTROL Dettaglio]** La scheda è stata unita da più frammenti di profilo per formare un’unica vista del singolo account. Ciò include i dettagli dell’account come attributi di base e dati dei social media.
 
-I campi predefiniti visualizzati possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo dell’account preferiti.
+I campi predefiniti visualizzati possono anche essere modificati a livello di organizzazione per visualizzare gli attributi di profilo dell’account preferiti.
 
 >[!NOTE]
 >
->Funzionalità simili sono disponibili per i profili dei clienti e è stata creata una guida dettagliata con istruzioni per aggiungere e rimuovere attributi, ridimensionare pannelli e così via. Per piacere, leggi le [guida alla personalizzazione dei dettagli del profilo](../../profile/ui/profile-customization.md) per saperne di più.
+>Funzionalità simili sono disponibili per i profili dei clienti ed è stata creata una guida dettagliata con istruzioni per l’aggiunta e la rimozione di attributi, il ridimensionamento di pannelli, ecc. Leggi le [guida alla personalizzazione dei dettagli del profilo](../../profile/ui/profile-customization.md) per ulteriori informazioni.
 
 ![Visualizza dettagli profilo account](images/b2b-account-details.png)
 
-Puoi visualizzare ulteriori dettagli relativi all’account selezionando un’altra delle schede disponibili. Queste schede includono attributi, persone e la scheda opportunità che mostra opportunità aperte e chiuse correlate all’account nei sistemi aziendali. Per ulteriori informazioni su ciascuna scheda, consulta le sezioni seguenti.
+Puoi visualizzare ulteriori dettagli relativi all’account selezionando un’altra delle schede disponibili. Queste schede includono attributi, persone e la scheda opportunità che mostra le opportunità aperte e chiuse relative all’account nei sistemi aziendali. Per ulteriori informazioni su ciascuna scheda, consulta le sezioni seguenti.
 
 ## Scheda Attributi {#attributes-tab}
 
-La **[!UICONTROL Attributi]** nella scheda vengono elencate tutte le informazioni record relative all&#39;account. Ciò include i dati attributo provenienti da più origini che sono stati uniti per formare una singola vista dell’account.
+Il **[!UICONTROL Attributi]** Questa scheda elenca tutte le informazioni sui record correlate all&#39;account. Ciò include dati di attributi provenienti da più origini che sono state unite per formare un’unica vista dell’account.
 
-Oltre a poter visualizzare i dati in un elenco, puoi utilizzare la barra di ricerca per cercare attributi specifici o visualizzare i dati del record come JSON.
+Oltre a poter visualizzare i dati in un elenco, è possibile utilizzare la barra di ricerca per cercare attributi specifici o visualizzare i dati del record come JSON.
 
 ![Scheda Attributi](images/b2b-account-attributes.png)
 
 ## Scheda Persone {#people-tab}
 
-La **[!UICONTROL Persone]** fornisce un elenco di singole persone associate all’account. Queste persone possono essere contatti e lead da diversi sistemi aziendali gestiti da diversi team all’interno della tua organizzazione, ma in Real-Time CDP, B2B Edition sono presentate insieme come un unico elenco che consente di visualizzare una visualizzazione più olistica dei contatti del tuo account.
+Il **[!UICONTROL Persone]** La scheda fornisce un elenco di singole persone associate all’account. Queste persone possono essere contatti e lead di diversi sistemi aziendali gestiti da diversi team all’interno della tua organizzazione, ma in Real-Time CDP, B2B Edition vengono presentate insieme come un unico elenco che ti consente di visualizzare una visione più olistica dei contatti del tuo account.
 
 >[!NOTE]
 >
->La [!UICONTROL Persone] visualizza un elenco di fino a 25 persone associate all’account. Per account con più di 25 persone associate, il sistema mostra un campionamento casuale di 25 record.
+>Il [!UICONTROL Persone] Questa scheda mostra un elenco di un massimo di 25 persone associate all’account. Per gli account con più di 25 persone associate, il sistema mostra un campionamento casuale di 25 record.
 
-Oltre a mostrare un&#39;istantanea delle informazioni per il contatto, ogni persona elencata include anche un **[!UICONTROL ID profilo]**, collegamento selezionabile che consente di esplorare il Profilo del cliente in tempo reale per tale utente. Per ulteriori informazioni sulla visualizzazione dei profili dei singoli clienti relativi ai tuoi account, visita la guida per [profili di navigazione in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Oltre a mostrare un&#39;istantanea delle informazioni per il contatto, ogni persona elencata include anche un **[!UICONTROL ID profilo]**, che è un collegamento cliccabile che ti consente di esplorare il Profilo cliente in tempo reale per quella persona. Per ulteriori informazioni sulla visualizzazione dei profili dei singoli clienti relativi ai tuoi account, consulta la guida per [esplorazione dei profili in Real-Time CDP, edizione B2B](../profile/profile-browse.md).
 
 ![Scheda Persone](images/b2b-account-people.png)
 
 ## Scheda Opportunità {#opportunities-tab}
 
-La **[!UICONTROL Opportunità]** tab fornisce informazioni sulle opportunità aperte e chiuse relative all’account. Queste opportunità possono essere acquisite in Experienci Platform da più sorgenti, tuttavia Real-Time CDP, B2B Edition rende facile per gli esperti di marketing vedere tutte queste opportunità insieme in un’unica posizione.
+Il **[!UICONTROL Opportunità]** fornisce informazioni per le opportunità aperte e chiuse relative all’account. Queste opportunità possono essere acquisite in Experience Platform da più origini, tuttavia Real-Time CDP, B2B Edition consente agli esperti di marketing di vedere tutte queste opportunità insieme in un’unica posizione.
 
 >[!NOTE]
 >
->La [!UICONTROL Opportunità] visualizza un elenco di fino a 25 opportunità associate all’account. Per account con più di 25 opportunità associate, il sistema mostra un campionamento casuale di 25 record.
+>Il [!UICONTROL Opportunità] Questa scheda mostra un elenco di un massimo di 25 opportunità associate all’account. Per gli account con più di 25 opportunità associate, il sistema mostra un campionamento casuale di 25 record.
 
-Ogni opportunità include informazioni quali il nome dell’opportunità, la sua quantità, lo stadio e se l’opportunità è aperta, chiusa, vinta o persa.
+Ogni opportunità include informazioni quali il nome, l&#39;importo, la fase e se l&#39;opportunità è aperta, chiusa, vinta o persa.
 
-![Scheda opportunità account](images/b2b-account-opportunities.png)
+![Scheda Opportunità account](images/b2b-account-opportunities.png)
 
 ## Scheda Account correlati {#related-accounts-tab}
 
-La **[!UICONTROL Account correlati]** scheda fornisce informazioni su altri account che possono essere correlati all’account che stai navigando. Per informazioni approfondite sulla funzionalità, consulta la sezione [panoramica dei conti correlati](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+Il **[!UICONTROL Account correlati]** Questa scheda fornisce informazioni su altri account che possono essere correlati all&#39;account che stai esplorando. Per informazioni approfondite sulla funzionalità, leggi [panoramica account correlati](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
->* Un gruppo di account correlati può avere al massimo 30 profili di account. Se sono stati trovati più di 30 profili di account correlati, questi vengono arbitrariamente suddivisi in più gruppi, ognuno dei quali non ha più di 30 membri. Il gruppo Account correlati di un profilo di account si include sempre.
->* La [!UICONTROL Account correlati] attualmente nella scheda viene visualizzato un elenco di fino a 25 account correlati associati all’account che si sta navigando. Si tratta di una limitazione che verrà affrontata in un aggiornamento futuro. Nonostante questa limitazione dell’interfaccia utente, quando utilizzi account correlati nelle definizioni dei segmenti, per gruppi di 30 profili account correlati tutti i profili vengono utilizzati per il targeting.
+>* Un gruppo di account correlati può avere un massimo di 30 profili di account. Se sono stati trovati più di 30 profili di account correlati, questi vengono arbitrariamente suddivisi in più gruppi, ciascuno dei quali non ha più di 30 membri. Il gruppo Account correlati di un profilo di account include sempre se stesso.
+>* Il [!UICONTROL Account correlati] La scheda visualizza attualmente un elenco di un massimo di 25 account correlati associati all’account che stai esplorando. Si tratta di una limitazione che sarà affrontata in un aggiornamento futuro. Nonostante questo limite dell’interfaccia utente, quando utilizzi account correlati nelle definizioni dei segmenti, per gruppi di 30 profili di account correlati tutti i profili vengono utilizzati per il targeting.
 
 
-Ogni account correlato include informazioni quali l’ID e il nome del profilo dell’account, la chiave dell’origine dell’account e ulteriori informazioni relative alla home page, all’indirizzo, all’account padre, al telefono, all’industria e ai ricavi annuali.
+Ogni account correlato include informazioni quali l’ID e il nome del profilo dell’account, la chiave di origine dell’account e ulteriori informazioni relative a home page, indirizzo, account principale, telefono, settore e ricavi annuali.
 
 ![Scheda Account correlati](images/b2b-account-related-accounts.png)
 
-Puoi utilizzare gli account correlati in questo elenco a scopo di segmentazione. Vedi [esempio di segmentazione](/help/rtcdp/segmentation/b2b.md#related-account) per comprendere come utilizzare account correlati per espandere la portata nelle definizioni dei segmenti.
+Puoi utilizzare gli account correlati in questo elenco a scopo di segmentazione. Vedi un [esempio di segmentazione](/help/rtcdp/segmentation/b2b.md#related-account) per scoprire come utilizzare gli account correlati per espandere la portata nelle definizioni dei segmenti.

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti comuni;Microsoft SQL;microsoft sql;
 solution: Experience Platform
 title: Creare una connessione di base di SQL Server utilizzando l'API del servizio di flusso
 type: Tutorial
-description: Scopri come collegare Adobe Experience Platform a un SQL Server Microsoft utilizzando l’API del servizio di flusso.
+description: Scopri come connettere Adobe Experience Platform a Microsoft SQL Server utilizzando l’API del servizio Flusso.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -12,41 +12,41 @@ ht-degree: 2%
 
 ---
 
-# Crea un [!DNL Microsoft] Connessione di base di SQL Server tramite [!DNL Flow Service] API
+# Creare un [!DNL Microsoft] Connessione di base di SQL Server tramite [!DNL Flow Service] API
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Microsoft SQL Server] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per creare una connessione di base per [!DNL Microsoft SQL Server] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Microsoft SQL Server] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Microsoft SQL Server] utilizzando [!DNL Flow Service] API.
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
 Per connettersi a [!DNL Microsoft SQL Server], è necessario fornire la seguente proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | La stringa di connessione associata alla [!DNL Microsoft SQL Server] conto. La [!DNL Microsoft SQL Server] pattern di stringa di connessione: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionString` | La stringa di connessione associata al tuo [!DNL Microsoft SQL Server] account. Il [!DNL Microsoft SQL Server] modello di stringa di connessione: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Microsoft SQL Server] è `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
-Per ulteriori informazioni su come ottenere una stringa di connessione, consulta questo [[!DNL Microsoft SQL Server] documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+Per ulteriori informazioni su come ottenere una stringa di connessione, consulta questa [[!DNL Microsoft SQL Server] documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
-Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
+Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Microsoft SQL Server] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Microsoft SQL Server] credenziali di autenticazione come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | La stringa di connessione associata alla [!DNL Microsoft SQL Server] conto. La [!DNL Microsoft SQL Server] pattern di stringa di connessione: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
-| `connectionSpec.id` | La [!DNL Microsoft SQL Server] ID della specifica di connessione: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `auth.params.connectionString` | La stringa di connessione associata al tuo [!DNL Microsoft SQL Server] account. Il [!DNL Microsoft SQL Server] modello di stringa di connessione: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | Il [!DNL Microsoft SQL Server] ID specifica di connessione: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il database nell’esercitazione successiva.
+In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il database nell’esercitazione successiva.
 
 ```json
 {
@@ -99,7 +99,7 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un [!DNL Microsoft SQL Server] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+Seguendo questa esercitazione, hai creato un’ [!DNL Microsoft SQL Server] connessione di base tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
-* [Creare un flusso di dati per trasferire i dati di database a Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database su Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)

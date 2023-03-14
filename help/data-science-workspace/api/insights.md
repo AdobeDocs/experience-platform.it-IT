@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;informazioni;api di apprendimento automatico sensei
+keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;approfondimenti;sensei machine learning api
 solution: Experience Platform
-title: Endpoint API Insights
-description: Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali visualizzando le metriche di valutazione pertinenti.
+title: Endpoint API di Insights
+description: Gli insights contengono metriche utilizzate per consentire a un data scientist di valutare e scegliere modelli ML ottimali visualizzando metriche di valutazione rilevanti.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Endpoint Insights
 
-Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali visualizzando le metriche di valutazione pertinenti.
+Gli insights contengono metriche utilizzate per consentire a un data scientist di valutare e scegliere modelli ML ottimali visualizzando metriche di valutazione rilevanti.
 
-## Recupera un elenco di informazioni approfondite
+## Recuperare un elenco di approfondimenti
 
-Puoi recuperare un elenco di informazioni approfondite eseguendo una singola richiesta di GET all’endpoint di insights.  Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per recuperare un elenco di approfondimenti, esegui una singola richiesta di GET all’endpoint &quot;insights&quot;.  Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -38,7 +38,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include un elenco di approfondimenti e ogni insight ha un identificatore univoco ( `id` ). Inoltre riceverai `context` che contiene gli identificatori univoci associati a tali informazioni specifiche a seguito dei dati relativi agli eventi e alle metriche Approfondimenti .
+In caso di esito positivo, la risposta restituisce un payload che include un elenco di approfondimenti e ogni approfondimento ha un identificatore univoco ( `id` ). Inoltre, riceverai `context` che contiene gli identificatori univoci associati a quella particolare informazione successiva ai dati degli eventi e delle metriche di Insights.
 
 ```json
 {
@@ -102,12 +102,12 @@ Una risposta corretta restituisce un payload che include un elenco di approfondi
 | --- | --- |
 | `id` | L’ID corrispondente a Insight. |
 | `experimentId` | Un ID esperimento valido. |
-| `experimentRunId` | Un ID esecuzione esperimento valido. |
+| `experimentRunId` | Un ID di esecuzione esperimento valido. |
 | `modelId` | Un ID modello valido. |
 
-## Recuperare un Insight specifico
+## Recuperare un approfondimento specifico
 
-Per cercare una particolare informazione, effettuare una richiesta GET e fornire una valida `{INSIGHT_ID}` nel percorso della richiesta. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per cercare una particolare informazione, effettua una richiesta di GET e fornisci una `{INSIGHT_ID}` nel percorso della richiesta. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -117,7 +117,7 @@ GET /insights/{INSIGHT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{INSIGHT_ID}` | Identificatore univoco di un insight Sensei. |
+| `{INSIGHT_ID}` | Identificatore univoco di un approfondimento di Sensei. |
 
 **Richiesta**
 
@@ -132,7 +132,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include l’identificatore univoco delle informazioni (`id`). Inoltre riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono i dati relativi agli eventi e alle metriche Approfondimenti .
+In caso di esito positivo, la risposta restituisce un payload che include l’identificatore univoco di insights (`id`). Inoltre, riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono i dati relativi agli eventi e alle metriche di Insights.
 
 ```json
 {
@@ -165,12 +165,12 @@ Una risposta corretta restituisce un payload che include l’identificatore univ
 | --- | --- |
 | `id` | L’ID corrispondente a Insight. |
 | `experimentId` | Un ID esperimento valido. |
-| `experimentRunId` | Un ID esecuzione esperimento valido. |
+| `experimentRunId` | Un ID di esecuzione esperimento valido. |
 | `modelId` | Un ID modello valido. |
 
-## Aggiungere una nuova intuizione del modello
+## Aggiungi una nuova informazione sul modello
 
-È possibile creare una nuova intuizione del modello eseguendo una richiesta di POST e un payload che forniscono contesto, eventi e metriche per la nuova intuizione del modello. Il campo di contesto utilizzato per creare una nuova intuizione modello non è necessario che vi siano servizi esistenti collegati, ma puoi scegliere di creare la nuova intuizione modello con i servizi esistenti fornendo uno o più ID corrispondenti:
+Per creare una nuova informazione sul modello, devi eseguire una richiesta POST e un payload che fornisca contesto, eventi e metriche per la nuova informazione sul modello. Il campo di contesto utilizzato per creare una nuova informazione sul modello non richiede che siano associati servizi esistenti, ma puoi scegliere di creare la nuova informazione sul modello con servizi esistenti fornendo uno o più degli ID corrispondenti:
 
 ```json
 "context": {
@@ -228,7 +228,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` e tutti i parametri forniti nella richiesta iniziale.
+In caso di esito positivo, la risposta restituisce un payload con `{INSIGHT_ID}` ed eventuali parametri forniti nella richiesta iniziale.
 
 ```json
 {
@@ -259,11 +259,11 @@ Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` e tutti i par
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `insightId` | L’ID univoco creato per questa informazione quando viene effettuata una richiesta POST corretta. |
+| `insightId` | ID univoco creato per questa informazione specifica quando viene effettuata una richiesta POST corretta. |
 
-## Recupera un elenco di metriche predefinite per gli algoritmi
+## Recuperare un elenco di metriche predefinite per gli algoritmi
 
-Puoi recuperare un elenco di tutte le metriche dell’algoritmo e predefinite eseguendo una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta di GET e fornire una valida `{ALGORITHM}` nel percorso della richiesta.
+Per recuperare un elenco di tutte le metriche predefinite e dell’algoritmo, esegui una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettua una richiesta GET e fornisci una `{ALGORITHM}` nel percorso della richiesta.
 
 **Formato API**
 
@@ -291,7 +291,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include `algorithm` identificatore univoco e array di metriche predefinite.
+In caso di esito positivo, la risposta restituisce un payload che include `algorithm` un identificatore univoco e un array di metriche predefinite.
 
 ```json
 {

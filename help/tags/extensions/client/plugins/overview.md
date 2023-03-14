@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo articolo contiene informazioni su come configurare l’estensione Common Analytics Plugins e sulle opzioni disponibili quando si usa questa estensione per potenziare l’estensione [!DNL Adobe Analytics].
 
@@ -58,7 +58,7 @@ Queste azioni inizializzano il plug-in specifico che intendi utilizzare singolar
 
 ## Elementi dati dell’estensione Common Analytics Plugins
 
-I seguenti elementi dati sono disponibili nell’estensione Common Analytics Plugins, che sfrutta le funzionalità dei tag per configurare e configurare i plug-in corrispondenti in Analytics:
+Nell’estensione Common Analytics Plugins sono disponibili i seguenti elementi dati che sfruttano le funzionalità tag per impostare e configurare i plug-in corrispondenti in Analytics:
 
 * `getGeoCoordinates`
 * `getNewRepeat`
@@ -71,4 +71,4 @@ I seguenti elementi dati sono disponibili nell’estensione Common Analytics Plu
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui plugin di cui sopra, si prega di consultare il [Documentazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).
+>Per ulteriori informazioni sui plug-in di cui sopra, consulta la [Documentazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).

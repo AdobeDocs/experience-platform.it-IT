@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;api;controllo degli accessi basato su attributi;controllo degli accessi basato su attributi
+keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
-title: Endpoint API per i prodotti
-description: L'endpoint /products nell'API di controllo accessi basato su attributi consente di gestire i prodotti in Adobe Experience Platform a livello di programmazione.
+title: Endpoint API prodotti
+description: L’endpoint /products nell’API di controllo dell’accesso basato su attributi consente di gestire in modo programmatico i prodotti in Adobe Experience Platform.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -15,17 +15,17 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
+>Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-La `/products` l’endpoint nell’API di controllo accessi basato su attributi consente di gestire in modo programmatico i prodotti, nonché le categorie di autorizzazioni e i set di autorizzazioni associati ai prodotti dell’organizzazione.
+Il `/products` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico prodotti, categorie di autorizzazioni e set di autorizzazioni associati ai prodotti dell’organizzazione.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo accessi basata sugli attributi. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-## Recupera un elenco di prodotti autorizzati {#list}
+## Recuperare un elenco di prodotti autorizzati {#list}
 
-È possibile recuperare un elenco di prodotti autorizzati effettuando una richiesta di GET al `/products` punto finale.
+Per recuperare un elenco di prodotti autorizzati, devi effettuare una richiesta GET al `/products` endpoint.
 
 **Formato API**
 
@@ -35,7 +35,7 @@ GET /products/
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di prodotti autorizzati appartenenti all’organizzazione.
+La richiesta seguente recupera un elenco di prodotti autorizzati appartenenti alla tua organizzazione.
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di prodotti autorizzati appartenenti all’organizzazione.
+In caso di esito positivo, la risposta restituisce un elenco di prodotti autorizzati appartenenti alla tua organizzazione.
 
 ```json
 {
@@ -63,13 +63,13 @@ Una risposta corretta restituisce un elenco di prodotti autorizzati appartenenti
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID corrispondente del prodotto interrogato. |
-| `name` | Nome del prodotto interrogato. |
-| `serviceCode` | Il codice di servizio corrispondente del prodotto interrogato. |
+| `id` | ID corrispondente del prodotto oggetto di query. |
+| `name` | Nome del prodotto oggetto della query. |
+| `serviceCode` | Il codice del servizio corrispondente del prodotto oggetto della query. |
 
-## Cerca categorie di autorizzazioni per ID prodotto
+## Cercare categorie di autorizzazioni per ID prodotto
 
-Puoi cercare le categorie di autorizzazioni per un dato prodotto, effettuando una richiesta di GET al `/products/{PRODUCT_ID}/categories` endpoint durante la specifica dell&#39;ID prodotto.
+Per cercare le categorie di autorizzazione per un determinato prodotto, devi effettuare una richiesta GET al `/products/{PRODUCT_ID}/categories` endpoint durante la specifica dell&#39;ID prodotto.
 
 **Formato API**
 
@@ -83,7 +83,7 @@ GET /products/{PRODUCT_ID}/categories
 
 **Richiesta**
 
-La richiesta seguente recupera le categorie di autorizzazioni associate a `{PRODUCT_ID}`.
+La richiesta seguente recupera le categorie di autorizzazione associate a `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce le categorie di autorizzazioni associate all&#39;ID prodotto interrogato.
+In caso di esito positivo, la risposta restituisce le categorie di autorizzazione associate all’ID prodotto oggetto della query.
 
 ```json
 {
@@ -139,12 +139,12 @@ Una risposta corretta restituisce le categorie di autorizzazioni associate all&#
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `category` | Le categorie di autorizzazioni disponibili all&#39;interno dell&#39;ID prodotto interrogato. |
+| `category` | Le categorie di autorizzazione disponibili all’interno dell’ID prodotto oggetto della query. |
 | `name` | Nome della categoria di autorizzazioni. |
 
-## Cerca i set di autorizzazioni per ID prodotto
+## Cercare i set di autorizzazioni per ID prodotto
 
-Puoi cercare i set di autorizzazioni per un dato prodotto, effettuando una richiesta di GET al `/products/{PRODUCT_ID}/permission-sets` endpoint durante la specifica dell&#39;ID prodotto.
+Per cercare i set di autorizzazioni per un determinato prodotto, devi effettuare una richiesta GET al `/products/{PRODUCT_ID}/permission-sets` endpoint durante la specifica dell&#39;ID prodotto.
 
 **Formato API**
 
@@ -154,7 +154,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 | Parametro | Descrizione |
 | --- | --- |
-| {PRODUCT_ID} | ID del prodotto associato ai set di autorizzazioni da cercare. |
+| {PRODUCT_ID} | ID del prodotto associato ai set di autorizzazioni che desideri cercare. |
 
 **Richiesta**
 
@@ -170,7 +170,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i set di autorizzazioni associati all’ID prodotto interrogato.
+In caso di esito positivo, la risposta restituisce i set di autorizzazioni associati all’ID prodotto oggetto della query.
 
 ```json
 {
@@ -235,10 +235,10 @@ Una risposta corretta restituisce i set di autorizzazioni associati all’ID pro
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `permission-sets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `id` | L&#39;ID corrispondente del set di autorizzazioni interrogato. |
-| `name` | Nome corrispondente del set di autorizzazioni interrogato. |
+| `permission-sets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `id` | ID corrispondente del set di autorizzazioni sottoposto a query. |
+| `name` | Nome corrispondente del set di autorizzazioni sottoposto a query. |
 | `category` | La categoria di autorizzazioni disponibile. |
-| `permissions` | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione dei set di dati. |
-| `permissions.resource` | Risorsa o oggetto a cui un soggetto può o non può accedere. Le risorse possono essere file, applicazioni, server o anche API. |
-| `permissions.actions` | Azione consentita a un oggetto in relazione a una risorsa interrogata. I valori possibili sono: `view`, `read`, `create`, `edit`e `delete` |
+| `permissions` | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati. |
+| `permissions.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere file, applicazioni, server o anche API. |
+| `permissions.actions` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `view`, `read`, `create`, `edit`, e `delete` |

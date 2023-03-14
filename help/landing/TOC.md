@@ -6,14 +6,14 @@ user-guide-description: Scopri come Experience Platform consente di offrire ai c
 source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
 
 # Panoramica di Adobe Experience Platform {#landing}
 
-* [Panoramica di Platform](home.md)
+* [Panoramica della piattaforma](home.md)
 * [Panoramica della piattaforma (video)](video/platform-overview.md)
 * [Tutorial su Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
 * [Un’esperienza del cliente basata su Platform (video)](video/customer-experience.md)
@@ -26,49 +26,49 @@ ht-degree: 26%
    * [Ruoli e fasi del progetto (video)](video/roles-project-phases.md)
 * Interfaccia utente Experience Platform {#platform-ui}
    * [Guida all’interfaccia utente di Platform](ui-guide.md)
-   * [Presentazione dell’interfaccia utente della piattaforma (video)](video/platform-ui.md)
-   * [Guida all’interfaccia utente dei flussi di lavoro](workflows.md)
+   * [Presentazione dell’interfaccia utente di Platform (video)](video/platform-ui.md)
+   * [Guida all’interfaccia utente Flussi di lavoro](workflows.md)
    * [Supporto di browser e lingue](browser-language-support.md)
-* API di Experience Platform {#platform-apis}
+* API EXPERIENCE PLATFORM {#platform-apis}
    * [Guida introduttiva alle API di Platform](api-guide.md)
    * [Autenticazione e accesso alle API di Platform](api-authentication.md)
    * [Nozioni di base sulle API](api-fundamentals.md)
    * [Utilizzo di Postman con le API di Platform](postman.md)
    * [Documenti di riferimento API](https://www.adobe.com/go/platform-api-reference-en)
-* Documentazione di Platform {#documentation}
+* Documentazione della piattaforma {#documentation}
    * [Panoramica](documentation/overview.md)
    * [Supporto linguistico](documentation/language-support.md)
 * Servizi applicativi basati su Platform {#ecosystem}
    * [Panoramica](application-services.md)
    * [Adobe Real-time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
-   * [Applicazione e servizi intelligenti (video)](video/application-intelligent-services.md)
+   * [Applicazione e Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [Integrazioni con Experience Cloud (video)](video/experience-cloud-integrations.md)
+   * [Integrazioni di Platform con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
    * [Panoramica](./governance-privacy-security/overview.md)
    * Gestione del consenso {#consent}
-      * Adobe standard {#adobe}
+      * Standard Adobe {#adobe}
          * [Panoramica](./governance-privacy-security/consent/adobe/overview.md)
-         * [Configurare un set di dati per acquisire dati di consenso e preferenza](./governance-privacy-security/consent/adobe/dataset.md)
+         * [Configurare un set di dati per acquisire dati su consenso e preferenze](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
          * [Panoramica](./governance-privacy-security/consent/iab/overview.md)
-         * [Configurare un set di dati per acquisire dati di consenso e preferenza](./governance-privacy-security/consent/iab/dataset.md)
-      * [Integrare Platform Web SDK per elaborare i dati di consenso e preferenza](./governance-privacy-security/consent/sdk.md)
+         * [Configurare un set di dati per acquisire dati su consenso e preferenze](./governance-privacy-security/consent/iab/dataset.md)
+      * [Integrare Platform Web SDK per elaborare i dati di consenso e preferenze](./governance-privacy-security/consent/sdk.md)
    * Registri di controllo {#audit-logs}
       * [Panoramica](./governance-privacy-security/audit-logs/overview.md)
-      * API query di controllo {#audit-api}
+      * API di query di controllo {#audit-api}
          * [Panoramica](./governance-privacy-security/audit-logs/api/overview.md)
          * [Introduzione](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Eventi](./governance-privacy-security/audit-logs/api/events.md)
          * [Esporta](./governance-privacy-security/audit-logs/api/export.md)
    * [Crittografia dei dati](./governance-privacy-security/encryption.md)
    * [Chiavi gestite dal cliente](./governance-privacy-security/customer-managed-keys.md)
-* Utilizzo della licenza e protezioni {#license}
-   * [Best practice per l’abilitazione alla licenza di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Dashboard di utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)
+* Utilizzo delle licenze e guardrail {#license}
+   * [Best practice per l’adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Dashboard utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
-* [Migrazione Gen2 data lago](adls2-gen2-migration.md)
+* [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
-* [Note sulla versione](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

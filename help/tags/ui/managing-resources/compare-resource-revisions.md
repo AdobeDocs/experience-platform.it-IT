@@ -1,10 +1,11 @@
 ---
 title: Confrontare le revisioni delle risorse
-description: Scopri come visualizzare la cronologia delle revisioni per una risorsa di tag in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come visualizzare la cronologia delle revisioni per una risorsa tag in Adobe Experience Platform.
+exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Confronta le revisioni di risorse per visualizzare la cronologia di una singola risorsa. Puoi confrontare lo stato corrente della risorsa con le versioni precedenti, oppure la versione pubblicata di una risorsa con quella più recente salvata.
 

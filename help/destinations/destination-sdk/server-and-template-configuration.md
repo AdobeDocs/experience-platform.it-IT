@@ -1,51 +1,51 @@
 ---
-description: Le specifiche del server e del modello possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint comune `/authoring/destination-servers`.
-title: Opzioni di configurazione per le specifiche del server e del modello nella Destination SDK
+description: Le specifiche del server e del modello possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint comune "/authoring/destination-servers".
+title: Opzioni di configurazione per le specifiche del server e del modello in Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 8%
 
 ---
 
-# Opzioni di configurazione per server di destinazioni in streaming e specifiche di modello
+# Opzioni di configurazione per le specifiche del server e del modello delle destinazioni di streaming
 
 ## Panoramica {#overview}
 
-Le specifiche del server e del modello possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint comune `/authoring/destination-servers`. Leggi [Operazioni degli endpoint API delle destinazioni](./destination-server-api.md) per un elenco completo delle operazioni eseguibili sull&#39;endpoint.
+Le specifiche del server e del modello possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint comune `/authoring/destination-servers`. Letto [Operazioni degli endpoint API per le destinazioni](./destination-server-api.md) per un elenco completo delle operazioni che è possibile eseguire sull&#39;endpoint.
 
 ## Specifiche del server {#server-specs}
 
-![Configurazione del server evidenziata](./assets/server-configuration.png)
+![Configurazione server evidenziata](./assets/server-configuration.png)
 
-I clienti potranno attivare i dati da Adobe Experience Platform alla tua destinazione tramite esportazioni HTTP. La configurazione del server contiene informazioni sul server che riceve i messaggi (il server sul tuo lato).
+I clienti potranno attivare i dati da Adobe Experience Platform alla destinazione tramite esportazioni HTTP. La configurazione del server contiene informazioni sul server che riceve i messaggi (il server sul lato dell’utente).
 
-Questo processo distribuisce i dati utente sotto forma di serie di messaggi HTTP alla piattaforma di destinazione. I parametri seguenti formano il modello delle specifiche del server HTTP.
+Questo processo distribuisce i dati utente come una serie di messaggi HTTP alla piattaforma di destinazione. I parametri seguenti costituiscono il modello delle specifiche del server HTTP.
 
 | Parametro | Tipo | Descrizione |
 |---|---|---|
-| `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo ad Adobe. Questo nome non è visibile ai partner o clienti. Esempio `Moviestar destination server`. |
+| `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo agli Adobi. Questo nome non è visibile ai partner o ai clienti. Esempio `Moviestar destination server`. |
 | `destinationServerType` | Stringa | *Obbligatorio.* Imposta su `URL_BASED` per le destinazioni di streaming. |
-| `templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzo `PEBBLE_V1` se si utilizza una macro invece di un valore fisso nel `value` campo . Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilizzo `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui Experience Platform deve connettersi. |
+| `templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzare `PEBBLE_V1` se si utilizza una macro invece di un valore fisso nel `value` campo. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui l’Experience Platform deve connettersi. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Specifiche dei modelli {#template-specs}
+## Specifiche modello {#template-specs}
 
-![Configurazione del modello evidenziata](./assets/template-configuration.png)
+![Configurazione modello evidenziata](./assets/template-configuration.png)
 
-La specifica del modello ti consente di configurare la modalità di formattazione del messaggio esportato verso la destinazione. Adobe utilizza un linguaggio modello simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla destinazione. Per ulteriori informazioni sulla trasformazione, visita i collegamenti seguenti:
+La specifica del modello consente di configurare la modalità di formattazione del messaggio esportato nella destinazione. L’Adobe utilizza un linguaggio per modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla destinazione. Per ulteriori informazioni sulla trasformazione, consulta i collegamenti seguenti:
 
 * [Formato del messaggio](./message-format.md)
-* [Utilizzo di un linguaggio di template per le trasformazioni di identità, attributi e appartenenza ai segmenti ](./message-format.md#using-templating)
+* [Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenze a segmenti ](./message-format.md#using-templating)
 
 >[!TIP]
 >
->L’Adobe offre un [strumento per sviluppatori](./create-template.md) che consente di creare e testare un modello di trasformazione del messaggio.
+>L’Adobe offre una [strumento per sviluppatori](./create-template.md) consente di creare e testare un modello di trasformazione dei messaggi.
 
-## Configurazione di esempio di destinazione in streaming  {#example-configuration}
+## Esempio di configurazione della destinazione di streaming  {#example-configuration}
 
 ```json
 {
@@ -72,7 +72,7 @@ La specifica del modello ti consente di configurare la modalità di formattazion
 |---|---|---|
 | `httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Le opzioni sono `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `value` | Stringa | *Obbligatorio.* Questa stringa è la versione con sequenza di caratteri che trasforma i dati dei clienti Platform nel formato previsto dal servizio. <br> Per informazioni su come scrivere il modello, leggere il [Utilizzo della sezione di template](./message-format.md#using-templating). <br> Per ulteriori informazioni sull&#39;escape dei caratteri, consulta la [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). <br> Per un esempio di trasformazione semplice, consulta la sezione [Attributi del profilo](./message-format.md#attributes) trasformazione. |
-| `contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è più probabile `application/json`. |
+| `value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape di carattere che trasforma i dati dei clienti di Platform nel formato previsto dal servizio. <br> Per informazioni su come scrivere il modello, leggere [Sezione Utilizzo dei modelli](./message-format.md#using-templating). <br> Per ulteriori informazioni sull’escape di caratteri, consulta [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). <br> Per un esempio di semplice trasformazione, fai riferimento a [Attributi del profilo](./message-format.md#attributes) trasformazione. |
+| `contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è molto probabile `application/json`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

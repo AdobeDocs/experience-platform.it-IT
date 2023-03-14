@@ -17,7 +17,7 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 >[!NOTE]
 >
->Note aggiornate sulla versione per altre [!DNL Experience Platform] servizi disponibili [qui](../release-notes/latest/latest.md).
+>Note aggiornate sulla versione per altri [!DNL Experience Platform] servizi disponibili [qui](../release-notes/latest/latest.md).
 
 ## 9 settembre 2020
 
@@ -25,7 +25,7 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per LGPD (Brasile) | In Brasile è ora possibile creare posti di lavoro nel settore della privacy [!DNL Lei Geral de Proteção de Dados] Regolamento (LGPD). Questi posti di lavoro sono monitorati dal codice di regolamentazione `lgpd_bra`. |
+| Sostegno alla LGPD (Brasile) | I lavori sulla privacy possono ora essere creati con il [!DNL Lei Geral de Proteção de Dados] (LGPD). Questi lavori vengono tracciati in base al codice del regolamento `lgpd_bra`. |
 
 ## 8 aprile 2020
 
@@ -33,8 +33,8 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto PDPA | [!DNL Privacy] Le richieste possono ora essere create e monitorate in base al Personal Data Protection Act (PDPA) in Thailandia. Quando esegui richieste di privacy nell’API, la `regulation` array accetta il valore &quot;pdpa_tha&quot;. |
-| Tipi di namespace nell’interfaccia utente | Ora puoi specificare diversi tipi di namespace nel Generatore di richieste nel [!DNL Privacy Service] Interfaccia utente. Consulta la sezione [guida utente](ui/user-guide.md) per ulteriori informazioni. |
+| Supporto PDPA | [!DNL Privacy] Ora è possibile creare e tenere traccia delle richieste ai sensi della legge sulla protezione dei dati personali (PDPA) in Thailandia. Quando effettui richieste di accesso a dati personali nell’API, il `regulation` l’array accetta il valore &quot;pdpa_tha&quot;. |
+| Tipi di spazio dei nomi nell’interfaccia utente | Ora puoi specificare diversi tipi di spazio dei nomi nel Generatore di richieste in [!DNL Privacy Service] UI. Consulta la [guida utente](ui/user-guide.md) per ulteriori informazioni. |
 | Obsolescenza endpoint precedente | Il vecchio endpoint API (`data/privacy/gdpr`) è stato dichiarato obsoleto. |
 
 ## 14 gennaio 2020
@@ -43,15 +43,15 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!DNL Privacy Service] rebranding | Il nome precedentemente denominato &quot;Servizio RGPD&quot; è stato rinominato in [!DNL Privacy Service] poiché il servizio è cresciuto per supportare altre normative oltre al RGPD. |
+| [!DNL Privacy Service] rebranding | Il servizio precedentemente denominato &quot;GDPR Service&quot; è stato rinominato in [!DNL Privacy Service] in quanto il servizio è cresciuto fino a supportare altre normative oltre al RGPD. |
 | Nuovi endpoint API | Percorso di base per [!DNL Privacy Service] L’API è stata aggiornata da `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
-| Nuovo obbligatorio `regulation` property | Durante la creazione di nuovi lavori nel [!DNL Privacy Service] API `regulation` la proprietà deve essere fornita nel payload della richiesta per indicare quale regola monitorare il processo in. I valori accettati sono `gdpr` e `ccpa`. Visualizza il documento in [lavori sulla privacy](api/privacy-jobs.md) in [!DNL Privacy Service] Guida all’API per ulteriori informazioni. |
-| Supporto per l’autenticazione Adobe Primetime | [!DNL Privacy Service] ora accetta le richieste di accesso/cancellazione dall’autenticazione di Adobe Primetime, utilizzando `primetimeAuthentication` come valore del prodotto. Consulta la sezione [Documentazione di Primetime Authentication](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) per ulteriori informazioni. |
+| Nuovo obbligatorio `regulation` proprietà | Quando si creano nuovi processi in [!DNL Privacy Service] API, a `regulation` La proprietà deve essere fornita nel payload della richiesta per indicare in quale regolamento tracciare il processo. I valori accettati sono `gdpr` e `ccpa`. Vedi il documento su [processi di privacy](api/privacy-jobs.md) nel [!DNL Privacy Service] Guida API di per ulteriori informazioni. |
+| Supporto per l’autenticazione di Adobe Primetime | [!DNL Privacy Service] ora accetta le richieste di accesso/eliminazione dall’autenticazione di Adobe Primetime, utilizzando `primetimeAuthentication` come valore del prodotto. Consulta la [Documentazione sull’autenticazione di Primetime](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) per ulteriori informazioni. |
 
 ### Miglioramenti
 
 * [!DNL Privacy Service] Miglioramenti all’interfaccia utente:
-   * Pagine separate per il tracciamento dei processi per i regolamenti RGPD e CCPA.
+   * Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA.
    * Nuovo *Tipo di regolamento* menu a discesa per passare dai dati di tracciamento per RGPD e CCPA.
 
 ## 25 luglio 2019
@@ -60,43 +60,43 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 | Funzione | Descrizione |
 | --- | --- |
-| Dashboard delle metriche di richiesta | Il nuovo dashboard delle metriche nel [!DNL Privacy Service] L’interfaccia utente offre visibilità alle richieste RGPD inviate, errate e completate. |
-| Request Builder | Per le organizzazioni con utenti tecnici e non che inviano richieste RGPD, è stata aggiunta all’interfaccia utente una funzionalità &quot;Crea richiesta&quot;. La funzionalità di invio dei file JSON è ancora disponibile nella sezione [!DNL Privacy Service] Interfaccia utente per le organizzazioni che preferiscono continuare a utilizzarla. |
-| Notifiche degli eventi di lavoro RGPD | Le notifiche degli eventi sugli stati dei processi RGPD sono un elemento critico per molti flussi di lavoro. Sebbene le notifiche siano state in precedenza servite utilizzando singoli avvisi e-mail, le notifiche degli eventi RGPD sono messaggi che sfruttano gli eventi di Adobe I/O, che vengono inviati a un webhook configurato che facilita l’automazione della richiesta dei processi. [!DNL Privacy Service] Gli utenti dell’interfaccia utente possono iscriversi ad Adobi I/O eventi RGPD per ricevere aggiornamenti al completamento di un prodotto o di un lavoro RGPD. |
+| Dashboard delle metriche delle richieste | La nuova dashboard delle metriche in [!DNL Privacy Service] L’interfaccia utente fornisce visibilità sulle richieste RGPD inviate, errate e completate. |
+| Request Builder | Per assistere le organizzazioni con utenti tecnici e non tecnici che inviano richieste RGPD, è stata aggiunta una funzionalità &quot;Crea richiesta&quot; all’interfaccia utente di. La funzionalità di invio file JSON è ancora disponibile nel [!DNL Privacy Service] Interfaccia utente per le organizzazioni che preferiscono continuare a utilizzarla. |
+| Notifiche eventi processo RGPD | Le notifiche degli eventi relativi agli stati dei processi RGPD sono un elemento fondamentale per molti flussi di lavoro. Mentre le notifiche venivano servite in precedenza utilizzando singoli avvisi e-mail, le notifiche degli eventi RGPD sono messaggi che sfruttano gli eventi di Adobe I/O, che vengono inviati a un webhook configurato per facilitare l’automazione delle richieste di lavoro. [!DNL Privacy Service] Gli utenti dell’interfaccia utente possono iscriversi agli eventi RGPD di Adobe I/O per ricevere aggiornamenti al completamento di un prodotto o del processo RGPD. |
 
 ## 18 aprile 2019
 
 ### Miglioramenti
 
-* Intervallo predefinito per la tabella di stato nel [!DNL Privacy Service] Interfaccia utente modificata in un intervallo di 7 giorni.
-* Migliore gestione delle eccezioni interne.
-* Sono state migliorate le prestazioni introducendo la memorizzazione in cache per chiamate interne comuni con tassi di variazione dei dati bassi.
+* Intervallo predefinito per la tabella di stato in [!DNL Privacy Service] Interfaccia utente modificata in un intervallo di 7 giorni.
+* Migliore gestione interna delle eccezioni.
+* Sono state migliorate le prestazioni introducendo il caching per le chiamate interne comuni con basse percentuali di modifica dei dati.
 
 ### Correzioni di bug
 
-* Aggiunte informazioni di registrazione mancanti per le query filtrate per la `GET /` punto finale [!DNL Privacy Service] API.
+* Sono state aggiunte informazioni di registrazione mancanti per le query filtrate per `GET /` endpoint nella [!DNL Privacy Service] API.
 
 ## 11 aprile 2019
 
 ### Miglioramenti
 
-* Interfaccia aggiornata per supportare nuove funzionalità per i clienti beta
-* Nuove API metriche per supportare le funzionalità di interfaccia utente 2.0 in versione beta
+* Interfaccia utente aggiornata per supportare nuove funzionalità per i clienti beta
+* Nuove API per le metriche per supportare le funzioni dell’interfaccia utente 2.0 in versione beta
 
 ## 9 aprile 2019
 
 ### Miglioramenti
 
-* Tutte le chiamate API di ricerca (GET) sono state aggiornate per impostazione predefinita a un intervallo di lookback di 30 giorni.
-* Utilizzo API limitato per un intervallo di lookback massimo di 45 giorni
+* Tutte le chiamate API di ricerca (GET) sono state aggiornate all’intervallo di lookback predefinito di 30 giorni
+* L’utilizzo API è limitato a un intervallo di lookback massimo di 45 giorni
 
 ## 14 febbraio 2019
 
 ### Miglioramenti
 
-* Applica `include` in ogni invio POST.
-* Applica `include` campo durante il caricamento di JSON.
+* Imponi `include` in ogni invio POST.
+* Imponi `include` durante il caricamento di JSON.
 
 ### Correzioni di bug
 
-* È stato risolto un problema che impediva ai clienti di caricare il [!DNL Privacy Service] Interfaccia utente.
+* È stato risolto un problema che impediva ai clienti di caricare il [!DNL Privacy Service] UI.

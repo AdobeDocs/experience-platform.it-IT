@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;nome completo;xdm:fullName;nome persona;nome;tipo di dati;tipo di dati;tipo di dati;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;fullName;xdm:fullName;nome persona;nome;tipo dati;tipo dati;tipo dati;
 solution: Experience Platform
-title: Tipo di dati Nome persona
+title: Tipo di dati nome persona
 description: Questo documento fornisce una panoramica del tipo di dati XDM Nome persona.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 # [!UICONTROL Nome della persona] tipo di dati
 
-[!UICONTROL Nome della persona] è un tipo di dati XDM standard che descrive il nome completo di una persona. Poiché le convenzioni per le strutture dei nomi differiscono notevolmente tra lingue e culture, i nomi devono sempre essere modellati utilizzando questo tipo di dati.
+[!UICONTROL Nome della persona] è un tipo di dati XDM standard che descrive il nome completo di una persona. Poiché le convenzioni per le strutture dei nomi differiscono ampiamente tra le lingue e le culture, i nomi devono sempre essere modellati utilizzando questo tipo di dati.
 
 Inoltre, il tipo di dati fornisce una serie di proprietà facoltative che possono essere utilizzate in situazioni che richiedono l’utilizzo di un solo frammento del nome completo, ad esempio la creazione di un saluto formale o informale.
 
@@ -21,16 +21,16 @@ Inoltre, il tipo di dati fornisce una serie di proprietà facoltative che posson
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `courtesyTitle` | Abbreviazione del titolo, dell&#39;onorifico o della formula di saluto di una persona `Mr.`, `Miss.`oppure `Dr.`). |
+| `courtesyTitle` | Un’abbreviazione del titolo, titolo onorifico o formula introduttiva di una persona (ad esempio `Mr.`, `Miss.`, o `Dr.`). |
 | `firstName` | Il primo segmento del nome nell’ordine di scrittura più comunemente accettato nella lingua del nome. |
-| `fullName` | Nome completo della persona, nell&#39;ordine scritto più comunemente accettato nella lingua del nome. |
-| `lastName` | Ultimo segmento del nome nell’ordine di scrittura più comunemente accettato nella lingua del nome. |
-| `middleName` | Nomi intermedi, alternativi o aggiuntivi forniti tra il nome e il cognome. |
-| `suffix` | Un gruppo di lettere fornito dopo il nome di una persona per fornire informazioni aggiuntive (ad esempio `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`e così via). |
+| `fullName` | Il nome completo della persona, nell’ordine di scrittura più comunemente accettato nella lingua del nome. |
+| `lastName` | L’ultimo segmento del nome nell’ordine di scrittura più comunemente accettato nella lingua del nome. |
+| `middleName` | Secondi nomi, nomi alternativi o aggiuntivi forniti tra nome e cognome. |
+| `suffix` | Gruppo di lettere dopo il nome di una persona per fornire informazioni aggiuntive (ad esempio `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`e così via). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul tipo di dati del nome della persona, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

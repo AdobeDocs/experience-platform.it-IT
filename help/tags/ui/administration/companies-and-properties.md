@@ -1,10 +1,11 @@
 ---
 title: Proprietà
-description: Scopri come le estensioni, gli ambienti e le librerie vengono organizzati e raggruppati per la tua organizzazione in Adobe Experience Platform.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+description: Scopri come Adobe Experience Platform organizza e raggruppa le estensioni, gli ambienti e le librerie per la tua organizzazione.
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1178'
-ht-degree: 67%
+ht-degree: 98%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Proprietà web
 
-Una proprietà web è una raccolta di regole, elementi dati, estensioni configurate, ambienti e librerie. Ogni proprietà web ha un proprio set di codici di incorporamento e può essere distribuita su qualsiasi numero di siti web distinti (domini diversi).
+Una proprietà web è una raccolta di regole, elementi dati, estensioni configurate, ambienti e librerie. Ogni proprietà web ha un proprio set di codici da incorporare e può essere distribuita su qualsiasi numero di siti web distinti (con domini diversi).
 
 ## Proprietà mobili
 
@@ -24,7 +25,7 @@ Un tipo di proprietà mobile può contenere più applicazioni. Ad esempio, in un
 
 ## Best practice per la pianificazione delle proprietà {#best-practices-for-planning-properties}
 
-Ogni implementazione di tag in Adobe Experience Platform può essere molto diversa. Hanno un&#39;ampia varietà di esigenze di raccolta dati, utilizzo delle variabili, estensioni, tag di terze parti, altri sistemi e tecnologie, persone, team, aree geografiche e così via. È necessario strutturare le proprietà in modo che corrispondano al flusso di lavoro e ai processi dell’organizzazione IMS.
+Ogni implementazione di tag in Adobe Experience Platform può essere molto diversa. Possiedono un’ampia varietà di esigenze di raccolta dati, utilizzo delle variabili, estensioni, tag di terze parti, altri sistemi e tecnologie, persone, team, aree geografiche e così via. È consigliabile strutturare le proprietà in modo che soddisfino il flusso di lavoro e i processi dell’organizzazione IMS.
 
 Considera quanto segue durante la pianificazione delle proprietà:
 
@@ -44,7 +45,7 @@ I dati che raccoglierai in tutti i tuoi siti Web e applicazioni sono molto simil
 
 Se i dati da raccogliere sono simili, potrebbe essere meglio raggruppare tali siti o applicazioni in una proprietà per evitare di duplicare le regole o copiarle da una proprietà all&#39;altra.
 
-Se le tue esigenze di raccolta dati sono univoche per ogni sito o applicazione, potrebbe essere utile separarle nelle proprie proprietà. Questo metodo ti consente di controllare la raccolta dei dati in modo più specifico, senza utilizzare grandi quantità di logica condizionale negli script personalizzati.
+Se invece ogni sito o applicazione ha esigenze di raccolta dati diverse, potrebbe essere preferibile usare proprietà distinte. Questo metodo ti consente di controllare la raccolta dei dati in modo più specifico, senza utilizzare grandi quantità di logica condizionale negli script personalizzati.
 
 ### Variabili
 
@@ -54,9 +55,9 @@ Ad esempio, se utilizzi eVar27 per lo stesso valore di origine in tutti i siti W
 
 ### Estensioni, tag e sistemi
 
-Le estensioni, i tag e i sistemi che stai per distribuire sono molto simili, simili o univoci?
+Le estensioni, i tag e i sistemi che stai per implementare sono molto simili, in parte simili o univoci?
 
-Se le estensioni, i tag e i sistemi che stai per distribuire sono molto simili nei vari siti o applicazioni, puoi includerli nella stessa proprietà.
+Se le estensioni, i tag e i sistemi che stai per implementare sono molto simili nei vari siti o applicazioni, puoi includerli nella stessa proprietà.
 
 Se distribuisci [!DNL Adobe Analytics] in un solo sito o in un&#39;applicazione e anche gli altri tag ed estensioni sono univoci, puoi creare proprietà separate per avere un maggiore controllo.
 
@@ -64,13 +65,13 @@ Ad esempio, se distribuisci [!DNL Adobe Analytics], [!DNL Target] e le stesse es
 
 ### Persone
 
-Per gli utenti, i team e le organizzazioni che lavorano in Adobe Experience Platform, avranno bisogno dell&#39;accesso a tutti i tuoi siti web e applicazioni, ad alcuni di essi o solo a uno?
+I singoli utenti, i team e le organizzazioni che lavorano in Adobe Experience Platform avranno bisogno dell’accesso a tutti i tuoi siti web e applicazioni, ad alcuni di essi o solo a uno?
 
-Le funzioni di User Management ti consentono di assegnare ruoli diversi a utenti diversi per tutte le proprietà o in base alle proprietà. Se un utente dispone di diritti sufficienti può eseguire azioni amministrative in tutte le proprietà dell’organizzazione Platform IMS. Tutti gli altri ruoli possono essere assegnati in base alla singola proprietà. Puoi anche nascondere una proprietà per determinati utenti (non amministratori) non assegnando loro alcun ruolo nella proprietà.
+Le funzioni di User Management ti consentono di assegnare ruoli diversi a utenti diversi per tutte le proprietà o in base alle proprietà. Se un utente dispone di diritti sufficienti può eseguire azioni amministrative in tutte le proprietà di tale organizzazione IMS Platform. Tutti gli altri ruoli possono essere assegnati in base alla singola proprietà. Puoi anche nascondere una proprietà per determinati utenti (non amministratori) non assegnando loro alcun ruolo nella proprietà.
 
 ## Pagina Proprietà
 
-Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Per il web, esiste un solo codice di incorporamento di pubblicazione per ogni proprietà. Per i dispositivi mobili, esiste un ID app di configurazione per proprietà.
+Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Per il web esiste un solo codice di incorporamento di pubblicazione per ogni proprietà. Per i dispositivi mobili esiste un ID app di configurazione per proprietà.
 
 Una proprietà può essere un raggruppamento di uno o più domini e sottodomini. Puoi gestire e tenere traccia di queste risorse in modo simile. Ad esempio, supponi di disporre di più siti Web basati su un modello e di voler tenere traccia delle stesse risorse su tutti. Puoi applicare una proprietà a più domini.
 
@@ -122,7 +123,7 @@ Segui le istruzioni per creare una proprietà mobile.
 1. Compila i campi:
 
    * **Name:** nome della proprietà.
-   * **Privacy:** per impostazione predefinita, l&#39;impostazione relativa alla privacy è impostata su Opted In (Consenti), ovvero che desideri che l&#39;SDK raccolga e invii dati alle soluzioni. Se selezioni Opted Out (Nega), per impostazione predefinita l&#39;SDK NON invierà dati alle soluzioni. Se selezioni Unknown as the setting (Sconosciuta come impostazione), l&#39;SDK richiederà che l&#39;applicazione chieda prima all&#39;utente di consentire la raccolta e la condivisione dei dati.
+   * **Privacy:** per impostazione predefinita, l&#39;impostazione relativa alla privacy è impostata su Opted In (Consenti), ovvero che desideri che l&#39;SDK raccolga e invii dati alle soluzioni. Se selezioni Opted Out (Nega), per impostazione predefinita l&#39;SDK NON invierà dati alle soluzioni. Se selezioni l’impostazione Unknown (Sconosciuto), l’SDK farà in modo che l’applicazione chieda prima l’autorizzazione all’utente per la raccolta e la condivisione dei dati.
 
       >[!NOTE]
       >

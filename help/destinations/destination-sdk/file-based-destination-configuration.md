@@ -1,27 +1,27 @@
 ---
-description: Questa configurazione ti consente di indicare informazioni essenziali per la destinazione basata su file, come nome di destinazione, categoria, descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
-title: Opzioni di configurazione della destinazione basate su file per la Destination SDK
+description: Questa configurazione consente di indicare informazioni essenziali per la destinazione basata su file, come il nome della destinazione, la categoria, la descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche il modo in cui gli utenti Experienci Platform si autenticano nella destinazione, il modo in cui viene visualizzata nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione.
+title: Opzioni di configurazione delle destinazioni basate su file per Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
-source-wordcount: '3012'
-ht-degree: 5%
+source-wordcount: '2982'
+ht-degree: 4%
 
 ---
 
-# Configurazione della destinazione basata su file {#destination-configuration}
+# Configurazione di destinazione basata su file {#destination-configuration}
 
 ## Panoramica {#overview}
 
-Questa configurazione ti consente di indicare informazioni essenziali per la destinazione basata su file, come nome di destinazione, categoria, descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche come gli utenti di Experience Platform si autenticano nella destinazione, come vengono visualizzati nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione. È inoltre possibile utilizzare questa configurazione per visualizzare le opzioni relative al tipo di file, al formato di file o alle impostazioni di compressione dei file esportati.
+Questa configurazione consente di indicare informazioni essenziali per la destinazione basata su file, come il nome della destinazione, la categoria, la descrizione e altro ancora. Le impostazioni di questa configurazione determinano anche il modo in cui gli utenti Experienci Platform si autenticano nella destinazione, il modo in cui viene visualizzata nell’interfaccia utente di Experience Platform e le identità che possono essere esportate nella destinazione. È inoltre possibile utilizzare questa configurazione per visualizzare le opzioni relative al tipo di file, al formato di file o alle impostazioni di compressione dei file esportati.
 
-Questa configurazione collega anche le altre configurazioni necessarie per la tua destinazione al lavoro - server di destinazione e metadati del pubblico - a questa. Scopri come fare riferimento alle due configurazioni in una [sezione successiva](./file-based-destination-configuration.md#connecting-all-configurations).
+Questa configurazione collega a questa anche le altre configurazioni necessarie per il funzionamento della destinazione (metadati del server di destinazione e del pubblico). Scopri come fare riferimento alle due configurazioni in una [sezione più avanti](./file-based-destination-configuration.md#connecting-all-configurations).
 
-Puoi configurare la funzionalità descritta in questo documento utilizzando `/authoring/destinations` Endpoint API. Leggi [Operazioni degli endpoint API delle destinazioni](./destination-configuration-api.md) per un elenco completo delle operazioni eseguibili sull&#39;endpoint.
+È possibile configurare la funzionalità descritta in questo documento utilizzando `/authoring/destinations` Endpoint API Letto [Operazioni degli endpoint API per le destinazioni](./destination-configuration-api.md) per un elenco completo delle operazioni che è possibile eseguire sull&#39;endpoint.
 
 ## Esempio di configurazione della destinazione Amazon S3 {#batch-example-configuration}
 
-Di seguito è riportato un esempio di destinazione Amazon S3 personalizzata privata creata tramite `/destinations` endpoint di configurazione.
+Di seguito è riportato un esempio di destinazione privata personalizzata di Amazon S3 creata tramite `/destinations` endpoint di configurazione.
 
 ```json
 {
@@ -317,17 +317,17 @@ Di seguito è riportato un esempio di destinazione Amazon S3 personalizzata priv
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `name` | Stringa | Indica il titolo della destinazione nel catalogo Experience Platform. |
-| `description` | Stringa | Immetti una descrizione della scheda di destinazione nel catalogo delle destinazioni Experience Platform. Mirare a non più di 4-5 frasi. |
-| `status` | Stringa | Indica lo stato del ciclo di vita della scheda di destinazione. I valori accettati sono `TEST`, `PUBLISHED` e `DELETED`. Utilizzo `TEST` la prima volta che configuri la destinazione. |
+| `name` | Stringa | Indica il titolo della destinazione nel catalogo di Experienci Platform. |
+| `description` | Stringa | Fornisci una descrizione della scheda di destinazione nel catalogo delle destinazioni di Experience Platform. Puntare a non più di 4-5 frasi. |
+| `status` | Stringa | Indica lo stato del ciclo di vita della scheda di destinazione. I valori accettati sono `TEST`, `PUBLISHED` e `DELETED`. Utilizzare `TEST` la prima volta che configuri la destinazione. |
 | `maxProfileAttributes` | Stringa | Indica il numero massimo di attributi di profilo che i clienti possono esportare nella destinazione. Il valore predefinito è `2000`. |
 | `maxIdentityAttributes` | Stringa | Indica il numero massimo di spazi dei nomi di identità che i clienti possono esportare nella destinazione. Il valore predefinito è `10`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Configurazioni di autenticazione dei clienti {#customer-authentication-configurations}
+## Configurazioni di autenticazione del cliente {#customer-authentication-configurations}
 
-Questa sezione nella configurazione delle destinazioni genera il [Configurare una nuova destinazione](/help/destinations/ui/connect-destination.md) nell’interfaccia utente di Experience Platform, in cui gli utenti collegano Experience Platform agli account che hanno con la tua destinazione.
+Questa sezione nella configurazione delle destinazioni genera il [Configurare una nuova destinazione](/help/destinations/ui/connect-destination.md) nell’interfaccia utente di Experience Platform, in cui gli utenti connettono Experience Platform agli account che hanno con la tua destinazione.
 
 ```json
 "customerAuthenticationConfigurations": [
@@ -337,11 +337,11 @@ Questa sezione nella configurazione delle destinazioni genera il [Configurare un
     ],
 ```
 
-A seconda di quale [opzione di autenticazione](authentication-configuration.md##supported-authentication-types) indica nella `authType` la pagina dell’Experience Platform viene generata per gli utenti come segue:
+A seconda di quale [opzione di autenticazione](authentication-configuration.md##supported-authentication-types) indichi nella `authType` , la pagina di Experience Platform viene generata come segue per gli utenti:
 
 ### Autenticazione Amazon S3 {#s3}
 
-Quando si configura il tipo di autenticazione Amazon S3, gli utenti devono immettere le credenziali S3.
+Quando configuri il tipo di autenticazione Amazon S3, gli utenti devono immettere le credenziali S3.
 
 ![Rendering dell’interfaccia utente con autenticazione S3](assets/s3-authentication-ui.png)
 
@@ -353,23 +353,23 @@ Quando configuri il tipo di autenticazione BLOB di Azure, gli utenti devono imme
 
 ### SFTP con autenticazione tramite password
 
-Quando configuri l’SFTP con il tipo di autenticazione tramite password, gli utenti devono immettere il nome utente e la password SFTP, nonché il dominio e la porta SFTP (la porta predefinita è 22).
+Quando configuri SFTP con il tipo di autenticazione tramite password, gli utenti devono immettere il nome utente e la password SFTP, nonché il dominio e la porta SFTP (la porta predefinita è 22).
 
 ![Rendering dell’interfaccia utente con SFTP con autenticazione tramite password](assets/sftp-password-authentication-ui.png)
 
-### SFTP con autenticazione a chiave SSH
+### SFTP con autenticazione della chiave SSH
 
-Quando configuri l’SFTP con il tipo di autenticazione chiave SSH, gli utenti devono inserire il nome utente SFTP e la chiave SSH, nonché il dominio e la porta SFTP (la porta predefinita è 22).
+Quando configuri SFTP con il tipo di autenticazione della chiave SSH, gli utenti devono immettere il nome utente SFTP e la chiave SSH, nonché il dominio SFTP e la porta (la porta predefinita è 22).
 
-![Rendering dell’interfaccia utente con SFTP con autenticazione a chiave SSH](assets/sftp-key-authentication-ui.png)
+![Rendering dell’interfaccia utente con SFTP con autenticazione tramite chiave SSH](assets/sftp-key-authentication-ui.png)
 
 ## Campi dati cliente {#customer-data-fields}
 
-Usa questa sezione per chiedere agli utenti di compilare campi personalizzati, specifici per la tua destinazione, quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform.
+Utilizza questa sezione per chiedere agli utenti di compilare campi personalizzati, specifici per la tua destinazione, durante la connessione alla destinazione nell’interfaccia utente di Experience Platform.
 
-Nell’esempio seguente: `customerDataFields` richiede agli utenti di immettere un nome per la loro destinazione e di fornire un [!DNL Amazon S3] nome del bucket e percorso della cartella, nonché un tipo di compressione, un formato di file e diverse altre opzioni di formattazione dei file.
+Nell’esempio seguente, `customerDataFields` richiede agli utenti di immettere un nome per la loro destinazione e di fornire un [!DNL Amazon S3] nome del bucket e percorso della cartella, nonché tipo di compressione, formato del file e diverse altre opzioni di formattazione del file.
 
-È possibile accedere e utilizzare gli input dei clienti dai campi dei dati dei clienti nella modellazione. Utilizzare la macro `{{customerData.exampleName}}`. Ad esempio, se chiedi agli utenti di inserire un campo bucket Amazon S3 con il nome `bucket`, è possibile accedervi in modalità temporanea utilizzando la macro `{{customerData.bucket}}`. Visualizzare un esempio di utilizzo del campo dati cliente nel [configurazione del server di destinazione](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+Puoi accedere e utilizzare gli input dei clienti dai campi dati dei clienti nei modelli. Utilizzare la macro `{{customerData.exampleName}}`. Ad esempio, se chiedi agli utenti di inserire un campo bucket Amazon S3, con il nome `bucket`, è possibile accedervi nei modelli utilizzando la macro `{{customerData.bucket}}`. Visualizza un esempio dell&#39;utilizzo di un campo dati cliente in [configurazione del server di destinazione](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -559,22 +559,22 @@ Nell’esempio seguente: `customerDataFields` richiede agli utenti di immettere 
 
 >[!TIP]
 >
->Tutte le configurazioni di formattazione del file elencate nell&#39;esempio precedente sono descritte in modo approfondito nella sezione [configurazione della formattazione dei file](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) sezione .
+>Tutte le configurazioni di formattazione dei file elencate nell&#39;esempio precedente sono descritte in modo dettagliato nel [configurazione formattazione file](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) sezione.
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `name` | Stringa | Specifica un nome per il campo personalizzato che stai introducendo. |
-| `title` | Stringa | Indica il nome del campo, come visualizzato dai clienti nell’interfaccia utente di Experience Platform. |
-| `description` | Stringa | Immetti una descrizione del campo personalizzato. |
+| `name` | Stringa | Immetti un nome per il campo personalizzato che stai presentando. |
+| `title` | Stringa | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Experience Platform. |
+| `description` | Stringa | Fornisci una descrizione per il campo personalizzato. |
 | `type` | Stringa | Indica il tipo di campo personalizzato che si sta introducendo. I valori accettati sono `string`, `object`, `integer`. |
 | `isRequired` | Booleano | Indica se questo campo è obbligatorio nel flusso di lavoro di configurazione della destinazione. |
-| `pattern` | Stringa | Applica un pattern per il campo personalizzato, se necessario. Utilizzare espressioni regolari per applicare un pattern. Ad esempio, se gli ID cliente non includono numeri o caratteri di sottolineatura, immetti `^[A-Za-z]+$` in questo campo. |
-| `enum` | Stringa | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l’utente. |
+| `pattern` | Stringa | Se necessario, applica un pattern per il campo personalizzato. Utilizza espressioni regolari per applicare un pattern. Ad esempio, se gli ID cliente non includono numeri o trattini bassi, immetti `^[A-Za-z]+$` in questo campo. |
+| `enum` | Stringa | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
 | `default` | Stringa | Definisce il valore predefinito da un `enum` elenco. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Attributi dell&#39;interfaccia utente {#ui-attributes}
+## Attributi dell’interfaccia utente {#ui-attributes}
 
 Questa sezione fa riferimento agli elementi dell’interfaccia utente nella configurazione precedente che l’Adobe deve utilizzare per la destinazione nell’interfaccia utente di Adobe Experience Platform.
 
@@ -592,21 +592,21 @@ Questa sezione fa riferimento agli elementi dell’interfaccia utente nella conf
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `documentationLink` | Stringa | Si riferisce alla pagina della documentazione nel [Catalogo delle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) per la tua destinazione. Utilizzo `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione denominata Moviestar, puoi utilizzare `http://www.adobe.com/go/destinations-moviestar-en`. Questo collegamento funziona solo dopo che Adobe ha impostato la destinazione in tempo reale e la documentazione è stata pubblicata. |
-| `category` | Stringa | Si riferisce alla categoria assegnata alla destinazione in Adobe Experience Platform. Per ulteriori informazioni, leggere [Categorie di destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilizzare uno dei seguenti valori: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | Stringa | URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni. Per le integrazioni personalizzate private, questo non è necessario. Per le configurazioni prodotte, è necessario condividere un’icona con il team di Adobe quando si [sottomettere la destinazione per la revisione](/help/destinations/destination-sdk/submit-destination.md#logo). |
+| `documentationLink` | Stringa | Fa riferimento alla pagina della documentazione in [Catalogo delle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) per la tua destinazione. Utilizzare `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione chiamata Moviestar, puoi utilizzare `http://www.adobe.com/go/destinations-moviestar-en`. Tieni presente che questo collegamento funziona solo dopo che Adobe ha impostato la destinazione live e che la documentazione è stata pubblicata. |
+| `category` | Stringa | Fa riferimento alla categoria assegnata alla destinazione in Adobe Experience Platform. Per ulteriori informazioni, consulta [Categorie di destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Utilizza uno dei seguenti valori: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `iconUrl` | Stringa | L’URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni. Per le integrazioni personalizzate private, questo non è richiesto. Per le configurazioni prodotte, è necessario condividere un’icona con il team di Adobi quando [invia la destinazione per la revisione](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | Stringa | Il tipo di connessione, a seconda della destinazione. Valori supportati: <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
-| `flowRunsSupported` | Booleano | Indica se la connessione di destinazione è inclusa nel [interfaccia utente di flow](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). Quando si imposta questa opzione su `true`: <ul><li>La **[!UICONTROL Data ultima esecuzione del flusso di dati]** e **[!UICONTROL Stato dell&#39;ultima esecuzione del flusso di dati]** vengono visualizzati nella pagina di ricerca di destinazione.</li><li>La **[!UICONTROL Corse del flusso di dati]** e **[!UICONTROL Dati di attivazione]** le schede vengono visualizzate nella pagina di visualizzazione di destinazione.</li></ul> |
-| `monitoringSupported` | Booleano | Indica se la connessione di destinazione è inclusa nel [interfaccia utente di monitoraggio](../ui/destinations-workspace.md#browse). Quando si imposta questa opzione su `true`, **[!UICONTROL Visualizza nel monitoraggio]** nella pagina di ricerca di destinazione viene visualizzata l’opzione . |
-| `frequency` | Stringa | Si riferisce al tipo di esportazione di dati supportato dalla destinazione. Imposta su `Batch` per le destinazioni basate su file. |
+| `flowRunsSupported` | Booleano | Indica se la connessione di destinazione è inclusa nel [flusso esegue l’interfaccia utente](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). Quando si imposta questa opzione su `true`: <ul><li>Il **[!UICONTROL Data ultima esecuzione del flusso di dati]** e **[!UICONTROL Stato ultima esecuzione del flusso di dati]** vengono visualizzati nella pagina di navigazione di destinazione.</li><li>Il **[!UICONTROL Il flusso di dati viene eseguito]** e **[!UICONTROL Dati di attivazione]** nella pagina di visualizzazione della destinazione vengono visualizzate le schede.</li></ul> |
+| `monitoringSupported` | Booleano | Indica se la connessione di destinazione è inclusa nel [interfaccia utente di monitoraggio](../ui/destinations-workspace.md#browse). Quando si imposta questa opzione su `true`, il **[!UICONTROL Visualizza nel monitoraggio]** nella pagina di navigazione di destinazione. |
+| `frequency` | Stringa | Si riferisce al tipo di esportazione dei dati supportato dalla destinazione. Imposta su `Batch` per destinazioni basate su file. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Consegna delle destinazioni {#destination-delivery}
+## Consegna della destinazione {#destination-delivery}
 
-La sezione relativa alla consegna di destinazione indica dove esattamente vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui i dati verranno inviati. È necessario specificare uno o più `destinationServerId`s dove verranno consegnati i dati e e la regola di autenticazione. Nella maggior parte dei casi, la regola di autenticazione da utilizzare è `CUSTOMER_AUTHENTICATION`.
+La sezione di consegna della destinazione indica esattamente dove vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui verranno recapitati i dati. È necessario specificare uno o più `destinationServerId`s dove verranno consegnati i dati e e regola di autenticazione. Nella maggior parte dei casi, la regola di autenticazione da utilizzare è `CUSTOMER_AUTHENTICATION`.
 
-La `deliveryMatchers` la sezione è facoltativa e può essere utilizzata se si specificano più `destinationServerId`s. In tal caso, la `deliveryMatchers` la sezione indica come i dati esportati devono essere suddivisi tra i vari server di destinazione.
+Il `deliveryMatchers` è facoltativa e può essere utilizzata se si specificano più `destinationServerId`s. In caso affermativo, la `deliveryMatchers` indica come i dati esportati devono essere suddivisi tra i vari server di destinazione.
 
 ```json
  "destinationDelivery":[
@@ -627,16 +627,16 @@ La `deliveryMatchers` la sezione è facoltativa e può essere utilizzata se si s
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `authenticationRule` | Stringa | Indica come [!DNL Platform] i clienti si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzo `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al sistema tramite uno dei seguenti metodi: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilizzo `PLATFORM_AUTHENTICATION` se esiste un sistema di autenticazione globale tra l’Adobe e la destinazione e [!DNL Platform] il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso è necessario creare un oggetto credenziali utilizzando [Credenziali](./credentials-configuration-api.md) configurazione. </li><li>Utilizzo `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
-| `destinationServerId` | Stringa | La `instanceId` del [configurazione del server di destinazione](./server-and-file-configuration.md) che tu [creato](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) per questa destinazione. |
+| `authenticationRule` | Stringa | Indica come [!DNL Platform] i clienti si connettono alla tua destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzare `CUSTOMER_AUTHENTICATION` se i clienti Platform effettuano l’accesso al sistema tramite uno dei seguenti metodi: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la tua destinazione e il [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare un oggetto credenziali utilizzando [Credenziali](./credentials-configuration-api.md) configurazione. </li><li>Utilizzare `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
+| `destinationServerId` | Stringa | Il `instanceId` del [configurazione del server di destinazione](./server-and-file-configuration.md) che tu [creato](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) per questa destinazione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Configurazione della mappatura dei segmenti {#segment-mapping}
 
-Questa sezione della configurazione di destinazione si riferisce al modo in cui i metadati del segmento come i nomi dei segmenti o gli ID devono essere condivisi tra l’Experience Platform e la destinazione.
+Questa sezione della configurazione di destinazione fa riferimento al modo in cui i metadati del segmento come i nomi di segmento o gli ID devono essere condivisi tra Experience Platform e la destinazione.
 
-Attraverso il `audienceTemplateId`, questa sezione collega anche questa configurazione con [configurazione dei metadati del pubblico](./audience-metadata-management.md).
+Attraverso il `audienceTemplateId`, anche questa sezione unisce questa configurazione con [configurazione dei metadati del pubblico](./audience-metadata-management.md).
 
 ```json
    "segmentMappingConfig":{
@@ -649,22 +649,22 @@ Attraverso il `audienceTemplateId`, questa sezione collega anche questa configur
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Controlla se l&#39;ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è il nome del segmento di Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booleano | Controlla se l&#39;ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è l&#39;ID del segmento di Experience Platform. |
-| `mapUserInput` | Booleano | Controlla se l&#39;ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione viene immesso dall&#39;utente. |
-| `audienceTemplateId` | Booleano | La `instanceId` del [modello di metadati del pubblico](./audience-metadata-management.md) utilizzato per questa destinazione. Per impostare un modello di metadati del pubblico, leggi la sezione [riferimento API per metadati del pubblico](./audience-metadata-api.md). |
+| `mapExperiencePlatformSegmentName` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è il nome del segmento di Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è l’ID del segmento di Experience Platform. |
+| `mapUserInput` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione viene immesso dall’utente. |
+| `audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](./audience-metadata-management.md) utilizzato per questa destinazione. Per impostare un modello di metadati per il pubblico, leggi [riferimento API per i metadati del pubblico](./audience-metadata-api.md). |
 
-## Configurazione dello schema nella fase di mappatura {#schema-configuration}
+## Configurazione dello schema nel passaggio di mappatura {#schema-configuration}
 
-Adobe Experience Platform Destination SDK supporta schemi definiti da partner. Uno schema definito da un partner consente agli utenti di mappare attributi e identità di profilo a schemi personalizzati definiti dai partner di destinazione, in modo simile al [destinazioni di streaming](destination-configuration.md#schema-configuration) workflow.
+Adobe Experience Platform Destination SDK supporta gli schemi definiti dai partner. Uno schema definito dal partner consente agli utenti di mappare gli attributi e le identità del profilo agli schemi personalizzati definiti dai partner di destinazione, in modo simile al [destinazioni di streaming](destination-configuration.md#schema-configuration) flusso di lavoro.
 
-Utilizza i parametri in `schemaConfig` per abilitare il passaggio di mappatura del flusso di lavoro di attivazione della destinazione. Utilizzando i parametri descritti di seguito, puoi determinare se gli utenti di Experience Platform possono mappare gli attributi e/o le identità del profilo sulla destinazione basata su file.
+Utilizzare i parametri in `schemaConfig` per abilitare il passaggio di mappatura del flusso di lavoro di attivazione della destinazione. Utilizzando i parametri descritti di seguito, puoi determinare se gli utenti Experienci Platform possono mappare gli attributi e/o le identità del profilo alla destinazione basata su file.
 
-È possibile creare campi di schema statici e codificati oppure specificare uno schema dinamico a cui Experience Platform deve connettersi per recuperare e compilare in modo dinamico i campi nello schema di destinazione del flusso di lavoro di mappatura. Lo schema di destinazione viene mostrato nella schermata seguente.
+Puoi creare campi di schema statici e hardcoded oppure specificare uno schema dinamico a cui Experience Platform deve connettersi per recuperare e popolare dinamicamente i campi nello schema di destinazione del flusso di lavoro di mappatura. Lo schema di destinazione è mostrato nella schermata seguente.
 
 ![Schermata che evidenzia i campi dello schema di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione.](/help/destinations/destination-sdk/assets/target-schema-fields.png)
 
-### Configurazione del campo dello schema hardcoded statico
+### Configurazione campo schema statico codificato
 
 ```json
 "schemaConfig":{
@@ -687,16 +687,16 @@ Utilizza i parametri in `schemaConfig` per abilitare il passaggio di mappatura d
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `profileFields` | Array | Quando si aggiungono predefiniti `profileFields`, gli utenti di Experience Platform possono mappare gli attributi di Platform agli attributi predefiniti nella destinazione. |
-| `profileRequired` | Booleano | Utilizzo `true` se gli utenti devono essere in grado di mappare gli attributi di profilo dall’Experience Platform agli attributi personalizzati sul lato della destinazione, come illustrato nella configurazione di esempio precedente. |
+| `profileFields` | Array | Quando si aggiungono impostazioni predefinite `profileFields`, ad Experience Platform, gli utenti possono effettuare il mapping degli attributi di Platform agli attributi predefiniti nella destinazione. |
+| `profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |
 | `segmentRequired` | Booleano | Usa sempre `segmentRequired:true`. |
-| `identityRequired` | Booleano | Utilizzo `true` se gli utenti devono essere in grado di mappare i namespace di identità dall&#39;Experience Platform allo schema desiderato. |
+| `identityRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli spazi dei nomi delle identità dall’Experience Platform allo schema desiderato. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Configurazione dello schema dinamico nel passaggio di mappatura {#dynamic-schema-configuration}
 
-Utilizza i parametri in  `dynamicSchemaConfig` per recuperare in modo dinamico il proprio schema a cui è possibile mappare gli attributi e/o le identità del profilo di Platform.
+Utilizzare i parametri in  `dynamicSchemaConfig` per recuperare in modo dinamico il tuo schema su cui è possibile mappare gli attributi e/o le identità del profilo di Platform.
 
 ```json
 "schemaConfig":{
@@ -716,19 +716,19 @@ Utilizza i parametri in  `dynamicSchemaConfig` per recuperare in modo dinamico i
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `profileRequired` | Booleano | Utilizzo `true` se gli utenti devono essere in grado di mappare gli attributi di profilo dall’Experience Platform agli attributi personalizzati sul lato della destinazione, come illustrato nella configurazione di esempio precedente. |
+| `profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |
 | `segmentRequired` | Booleano | Usa sempre `segmentRequired:true`. |
-| `identityRequired` | Booleano | Utilizzo `true` se gli utenti devono essere in grado di mappare i namespace di identità dall&#39;Experience Platform allo schema desiderato. |
-| `destinationServerId` | Stringa | La `instanceId` del [configurazione del server di destinazione](./destination-server-api.md) creato per lo schema dinamico. Questo server di destinazione include l&#39;endpoint HTTP che Experience Platform chiamerà per recuperare lo schema dinamico utilizzato per compilare i campi di destinazione. |
-| `authenticationRule` | Stringa | Indica come [!DNL Platform] i clienti si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzo `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al sistema tramite uno dei seguenti metodi: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilizzo `PLATFORM_AUTHENTICATION` se esiste un sistema di autenticazione globale tra l’Adobe e la destinazione e [!DNL Platform] il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso è necessario creare un oggetto credenziali utilizzando [Credenziali](./credentials-configuration-api.md) configurazione. </li><li>Utilizzo `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
-| `value` | Stringa | Nome dello schema da visualizzare nell’interfaccia utente di Experience Platform, nel passaggio di mappatura. |
+| `identityRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli spazi dei nomi delle identità dall’Experience Platform allo schema desiderato. |
+| `destinationServerId` | Stringa | Il `instanceId` del [configurazione del server di destinazione](./destination-server-api.md) creato per lo schema dinamico. Questo server di destinazione include l’endpoint HTTP che Experience Platform chiamerà per recuperare lo schema dinamico utilizzato per popolare i campi di destinazione. |
+| `authenticationRule` | Stringa | Indica come [!DNL Platform] i clienti si connettono alla tua destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzare `CUSTOMER_AUTHENTICATION` se i clienti Platform effettuano l’accesso al sistema tramite uno dei seguenti metodi: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la tua destinazione e il [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare un oggetto credenziali utilizzando [Credenziali](./credentials-configuration-api.md) configurazione. </li><li>Utilizzare `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
+| `value` | Stringa | Il nome dello schema da visualizzare nell’interfaccia utente di Experience Platform, nel passaggio di mappatura. |
 | `responseFormat` | Stringa | Sempre impostato su `SCHEMA` durante la definizione di uno schema personalizzato. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Mappature richieste {#required-mappings}
 
-All’interno della configurazione dello schema, puoi aggiungere mappature obbligatorie (o predefinite). Si tratta di mappature che gli utenti possono visualizzare ma non modificare quando impostano una connessione alla destinazione. Ad esempio, puoi applicare il campo dell’indirizzo e-mail affinché venga sempre inviato alla destinazione nei file esportati. Di seguito sono riportati due esempi di una configurazione dello schema con le mappature richieste e di come si presentano nel passaggio di mappatura [attiva i dati nel flusso di lavoro destinazioni batch](/help/destinations/ui/activate-batch-profile-destinations.md).
+All’interno della configurazione dello schema, puoi aggiungere mappature richieste (o predefinite). Si tratta di mappature che gli utenti possono visualizzare ma non modificare quando impostano una connessione alla destinazione. Ad esempio, puoi applicare che il campo dell’indirizzo e-mail venga sempre inviato alla destinazione nei file esportati. Di seguito sono riportati due esempi di configurazione di schema con mappature richieste e del loro aspetto nel passaggio di mappatura della [flusso di lavoro per l&#39;attivazione dei dati nelle destinazioni batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ```json
     "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
@@ -758,28 +758,28 @@ All’interno della configurazione dello schema, puoi aggiungere mappature obbli
 
 >[!NOTE]
 >
->Le combinazioni attualmente supportate delle mappature richieste sono:
->* È possibile configurare un campo di origine obbligatorio e un campo di destinazione obbligatorio. In questo caso, gli utenti non possono modificare o selezionare nessuno dei due campi e possono solo visualizzare la selezione.
->* È possibile configurare solo un campo di destinazione obbligatorio. In questo caso, gli utenti potranno selezionare un campo di origine da mappare alla destinazione.
+>Le combinazioni attualmente supportate di mappature richieste sono:
+>* Puoi configurare un campo di origine e un campo di destinazione obbligatori. In questo caso, gli utenti non possono modificare o selezionare nessuno dei due campi e possono solo visualizzare la selezione.
+>* Puoi configurare solo un campo di destinazione richiesto. In questo caso, gli utenti saranno autorizzati a selezionare un campo di origine da mappare alla destinazione.
 >
-> La configurazione di un solo campo di origine richiesto è attualmente *not* supportato.
+> La configurazione di un solo campo di origine obbligatorio è attualmente *non* supportati.
 
-Utilizza i parametri descritti nella tabella seguente se desideri aggiungere le mappature richieste nel flusso di lavoro di attivazione per la destinazione.
+Se desideri aggiungere le mappature richieste nel flusso di lavoro di attivazione per la destinazione, utilizza i parametri descritti nella tabella seguente.
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `requiredMappingsOnly` | Booleano | Indica se gli utenti possono mappare altri attributi e identità nel flusso di attivazione, *a parte* le mappature richieste definite dall’utente. |
-| `requiredMappings.mandatoryRequired` | Booleano | Imposta su true se questo campo deve essere un attributo obbligatorio che deve essere sempre presente nelle esportazioni di file verso la destinazione. Ulteriori informazioni [attributi obbligatori](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-| `requiredMappings.primaryKeyRequired` | Booleano | Imposta su true se questo campo deve essere utilizzato come chiave di deduplicazione nelle esportazioni dei file nella destinazione. Ulteriori informazioni [chiavi di deduplicazione](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `requiredMappings.sourceType` | Stringa | Utilizzato quando si configura un campo sorgente come necessario. Utilizzo `"text/x.schema-path"`, che indica che il campo di origine è un attributo XDM predefinito |
-| `requiredMappings.source` | Stringa | Indica il campo di origine richiesto. |
-| `requiredMappings.destination` | Stringa | Indica il campo di destinazione richiesto. |
+| `requiredMappingsOnly` | Booleano | Indica se gli utenti possono mappare altri attributi e identità nel flusso di attivazione, *oltre a* le mappature richieste che definisci. |
+| `requiredMappings.mandatoryRequired` | Booleano | Imposta su true se questo campo deve essere un attributo obbligatorio, che deve sempre essere presente nelle esportazioni di file nella destinazione. Ulteriori informazioni su [attributi obbligatori](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | Booleano | Impostato su true se questo campo deve essere utilizzato come chiave di deduplicazione nelle esportazioni di file nella destinazione. Ulteriori informazioni su [chiavi di deduplicazione](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | Stringa | Utilizzato quando configuri un campo sorgente come richiesto. Utilizzare `"text/x.schema-path"`, che indica che il campo di origine è un attributo XDM predefinito |
+| `requiredMappings.source` | Stringa | Indica quale deve essere il campo sorgente richiesto. |
+| `requiredMappings.destination` | Stringa | Indica quale deve essere il campo di destinazione richiesto. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identità e attributi {#identities-and-attributes}
 
-I parametri di questa sezione determinano le identità accettate dalla destinazione. Questa configurazione popola anche le identità e gli attributi di destinazione nel [fase di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) dell’interfaccia utente di Experience Platform, in cui gli utenti mappano identità e attributi dai loro schemi XDM allo schema di destinazione.
+I parametri di questa sezione determinano le identità accettate dalla destinazione. Questa configurazione popola anche le identità e gli attributi di destinazione in [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) dell’interfaccia utente di Experience Platform, in cui gli utenti mappano identità e attributi dai loro schemi XDM allo schema nella destinazione.
 
 
 ```json
@@ -795,17 +795,17 @@ I parametri di questa sezione determinano le identità accettate dalla destinazi
     },
 ```
 
-Indica quale [!DNL Platform] i clienti di identità possono esportare nella tua destinazione. Alcuni esempi [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi delle identità che i clienti possono mappare a spazi dei nomi delle identità dalla destinazione. Puoi anche indicare se i clienti possono mappare i namespace personalizzati alle identità supportate dalla tua destinazione (`acceptsCustomNamespaces: true`) e se i clienti possono mappare gli attributi XDM standard alle identità supportate dalla tua destinazione (`acceptsAttributes: true`).
+Indicare quale [!DNL Platform] identità che i clienti possono esportare nella tua destinazione. Alcuni esempi sono [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi di identità che i clienti possono mappare su spazi dei nomi di identità dalla tua destinazione. Puoi anche indicare se i clienti possono mappare spazi dei nomi personalizzati alle identità supportate dalla destinazione (`acceptsCustomNamespaces: true`) e se i clienti possono mappare gli attributi XDM standard sulle identità supportate dalla destinazione (`acceptsAttributes: true`).
 
-Gli spazi dei nomi di identità non richiedono una corrispondenza 1-to-1 tra [!DNL Platform] e la destinazione.
-Ad esempio, i clienti possono mappare un [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL IDFA] spazio dei nomi dalla destinazione, oppure possono mappare lo stesso [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL Customer ID] spazio dei nomi nella destinazione.
+Gli spazi dei nomi delle identità non richiedono una corrispondenza da 1 a 1 tra [!DNL Platform] e la tua destinazione.
+Ad esempio, i clienti possono mappare una [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL IDFA] dalla destinazione, oppure possono mappare lo stesso [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL Customer ID] dello spazio dei nomi nella destinazione.
 
-Ulteriori informazioni sulle identità in [Panoramica dello spazio dei nomi identità](/help/identity-service/namespaces.md).
+Ulteriori informazioni sulle identità in [Panoramica sullo spazio dei nomi delle identità](/help/identity-service/namespaces.md).
 
 
-## Configurazione batch - Denominazione dei file e programmazione delle esportazioni {#batch-configuration}
+## Configurazione batch - Denominazione dei file e pianificazione delle esportazioni {#batch-configuration}
 
-Questa sezione fa riferimento alle impostazioni di denominazione ed esportazione dei file che verranno visualizzate per la destinazione nell&#39;interfaccia utente di Adobe Experience Platform. I valori impostati vengono visualizzati nella variabile [Esportazione di segmenti programmata](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) passaggio del flusso di lavoro di attivazione delle destinazioni basate su file .
+Questa sezione fa riferimento alle impostazioni di denominazione ed esportazione dei file che verranno visualizzate per la destinazione nell&#39;interfaccia utente di Adobe Experience Platform. I valori impostati qui vengono visualizzati in [Pianificare l’esportazione di segmenti](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) passaggio del flusso di lavoro di attivazione delle destinazioni basate su file.
 
 ```json
 "batchConfig":{
@@ -846,46 +846,46 @@ Questa sezione fa riferimento alle impostazioni di denominazione ed esportazione
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `allowMandatoryFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare quali attributi di profilo sono obbligatori. Il valore predefinito è `false`. Vedi [Attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes) per ulteriori informazioni. |
-| `allowDedupeKeyFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare le chiavi di deduplicazione. Il valore predefinito è `false`.  Vedi [Chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#deduplication-keys) per ulteriori informazioni. |
-| `defaultExportMode` | Enum | Definisce la modalità di esportazione predefinita dei file. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Il valore predefinito è `DAILY_FULL_EXPORT`. Consulta la sezione [documentazione di attivazione batch](../ui/activate-batch-profile-destinations.md#scheduling) per informazioni sulla pianificazione delle esportazioni dei file. |
+| `allowMandatoryFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare quali attributi di profilo sono obbligatori. Il valore predefinito è `false`. Consulta [Attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes) per ulteriori informazioni. |
+| `allowDedupeKeyFieldSelection` | Booleano | Imposta su `true` per consentire ai clienti di specificare le chiavi di deduplicazione. Il valore predefinito è `false`.  Consulta [Chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#deduplication-keys) per ulteriori informazioni. |
+| `defaultExportMode` | Enum | Definisce la modalità di esportazione predefinita del file. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Il valore predefinito è `DAILY_FULL_EXPORT`. Consulta la [documentazione sull’attivazione batch](../ui/activate-batch-profile-destinations.md#scheduling) per informazioni dettagliate sulla pianificazione delle esportazioni di file. |
 | `allowedExportModes` | Elenco | Definisce le modalità di esportazione dei file disponibili per i clienti. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
-| `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione del file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | Enum | Definisce la frequenza di esportazione predefinita del file.Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
-| `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file 24 ore su 24. Il valore predefinito è &quot;00:00&quot;. |
-| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro dei nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi di file esportati (ID segmento, nome organizzazione, data e ora dell’esportazione e altri). Quando si imposta `defaultFilename`, evitare di duplicare le macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall’ordine in cui vengono definite le macro, l’interfaccia utente Experience Platform le visualizza sempre nell’ordine indicato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` L&#39;elenco deve contenere almeno una macro. |
-| `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro con nome file predefinito preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
-| `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi file predefiniti per i file esportati. Questi non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` viene aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
+| `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione dei file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
+| `defaultFrequency` | Enum | Definisce la frequenza di esportazione predefinita dei file. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
+| `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file a 24 ore. Il valore predefinito è &quot;00:00&quot;. |
+| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID segmento, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall&#39;ordine in cui si definiscono le macro, l&#39;interfaccia utente di Experience Platform le visualizzerà sempre nell&#39;ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` l&#39;elenco deve contenere almeno una macro. |
+| `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro dei nomi di file predefiniti preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi di file predefiniti per i file esportati. Non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` verrà aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Configurazione del nome file {#file-name-configuration}
 
-Utilizzare le macro di configurazione del nome file per definire i nomi di file esportati da includere. Le macro nella tabella seguente descrivono gli elementi presenti nell’interfaccia utente di [configurazione del nome file](../ui/activate-batch-profile-destinations.md#file-names) schermo.
+Utilizzare le macro di configurazione dei nomi di file per definire i nomi di file esportati da includere. Le macro nella tabella seguente descrivono gli elementi presenti nell’interfaccia utente di [configurazione del nome file](../ui/activate-batch-profile-destinations.md#file-names) schermo.
 
 
 >[!TIP]
 > 
->Come best practice, includi sempre `SEGMENT_ID` nei nomi dei file esportati. Gli ID dei segmenti sono univoci, pertanto includerli nel nome del file è il modo migliore per garantire che anche i nomi dei file siano univoci.
+>Come best practice, devi sempre includere `SEGMENT_ID` nei nomi dei file esportati. Poiché gli ID segmento sono univoci, includerli nel nome file è il modo migliore per garantire che anche i nomi dei file siano univoci.
 
-| Macro | Etichetta dell’interfaccia utente | Descrizione | Esempio |
+| Macro | Etichetta interfaccia utente | Descrizione | Esempio |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destinazione] | Nome della destinazione nell’interfaccia utente. | Amazon S3 |
 | `SEGMENT_ID` | [!UICONTROL ID segmento] | ID segmento univoco generato dalla piattaforma | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nome segmento] | Nome del segmento definito dall’utente | Sottoscrittore VIP |
+| `SEGMENT_NAME` | [!UICONTROL Nome segmento] | Nome segmento definito dall&#39;utente | Abbonato VIP |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL ID destinazione] | ID univoco generato dalla piattaforma dell’istanza di destinazione | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nome destinazione] | Nome definito dall&#39;utente dell&#39;istanza di destinazione. | La mia destinazione pubblicitaria 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Nome organizzazione] | Nome dell&#39;organizzazione del cliente in Adobe Experience Platform. | Nome organizzazione |
-| `SANDBOX_NAME` | [!UICONTROL Nome sandbox] | Nome della sandbox utilizzata dal cliente. | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Data e ora] | `DATETIME` e `TIMESTAMP` entrambi definiscono quando è stato generato il file, ma in formati diversi. <br><br><ul><li>`DATETIME` utilizza il formato seguente: YYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilizza il formato Unix a 10 cifre. </li></ul> `DATETIME` e `TIMESTAMP` si escludono a vicenda e non possono essere utilizzati contemporaneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL Testo personalizzato] | Testo personalizzato definito dall’utente da includere nel nome del file. Non può essere utilizzato in `defaultFilename`. | Testo_Personalizzato |
+| `ORGANIZATION_NAME` | [!UICONTROL Nome organizzazione] | Nome dell’organizzazione del cliente in Adobe Experience Platform. | Nome organizzazione |
+| `SANDBOX_NAME` | [!UICONTROL Nome sandbox] | Nome della sandbox utilizzato dal cliente. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Data e ora] | `DATETIME` e `TIMESTAMP` entrambi definiscono quando il file è stato generato, ma in formati diversi. <br><br><ul><li>`DATETIME` utilizza il seguente formato: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilizza il formato Unix a 10 cifre. </li></ul> `DATETIME` e `TIMESTAMP` si escludono a vicenda e non possono essere utilizzate simultaneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Testo personalizzato] | Testo personalizzato definito dall&#39;utente da includere nel nome del file. Non può essere utilizzato in `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Data e ora] | Timestamp a 10 cifre dell’ora in cui è stato generato il file, in formato Unix. | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-![Immagine dell’interfaccia utente che mostra la schermata di configurazione del nome file con macro preselezionate](assets/file-name-configuration.png)
+![Immagine dell&#39;interfaccia utente che mostra la schermata di configurazione del nome file con le macro preselezionate](assets/file-name-configuration.png)
 
-L&#39;esempio mostrato nell&#39;immagine precedente utilizza la seguente configurazione di macro del nome file:
+Nell&#39;esempio riportato nell&#39;immagine precedente viene utilizzata la seguente configurazione di macro per il nome di file:
 
 ```json
 "filenameConfig":{
@@ -903,9 +903,9 @@ L&#39;esempio mostrato nell&#39;immagine precedente utilizza la seguente configu
 ```
 
 
-## Qualifiche di profilo storiche {#profile-backfill}
+## Qualifiche del profilo storico {#profile-backfill}
 
-È possibile utilizzare `backfillHistoricalProfileData` nella configurazione delle destinazioni per determinare se le qualifiche di profilo storico devono essere esportate nella destinazione.
+È possibile utilizzare `backfillHistoricalProfileData` nella configurazione delle destinazioni per determinare se le qualifiche storiche del profilo devono essere esportate nella destinazione.
 
 ```json
    "backfillHistoricalProfileData":true
@@ -913,13 +913,13 @@ L&#39;esempio mostrato nell&#39;immagine precedente utilizza la seguente configu
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. <br> <ul><li> `true`: [!DNL Platform] invia i profili utente storici qualificati per il segmento prima che il segmento venga attivato. </li><li> `false`: [!DNL Platform] include solo i profili utente qualificati per il segmento dopo l’attivazione del segmento. </li></ul> |
+| `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. <br> <ul><li> `true`: [!DNL Platform] invia i profili utente storici qualificati per il segmento prima che il segmento venga attivato. </li><li> `false`: [!DNL Platform] include solo i profili utente idonei per il segmento dopo l’attivazione del segmento. </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Come questa configurazione connette tutte le informazioni necessarie per la destinazione {#connecting-all-configurations}
+## Come questa configurazione collega tutte le informazioni necessarie per la destinazione {#connecting-all-configurations}
 
-Alcune delle impostazioni di destinazione devono essere configurate tramite il [server di destinazione](./server-and-file-configuration.md) o [configurazione dei metadati del pubblico](./audience-metadata-management.md) endpoint. La configurazione di destinazione qui descritta connette tutte queste impostazioni facendo riferimento alle altre due configurazioni come segue:
+Alcune delle impostazioni di destinazione devono essere configurate tramite [server di destinazione](./server-and-file-configuration.md) o [configurazione dei metadati del pubblico](./audience-metadata-management.md) endpoint. La configurazione di destinazione qui descritta collega tutte queste impostazioni facendo riferimento alle altre due configurazioni come segue:
 
-* Utilizza la `destinationServerId` per fare riferimento alla configurazione del server di destinazione e del modello di file configurato per la destinazione.
-* Utilizza la `audienceMetadataId` per fare riferimento alla configurazione dei metadati del pubblico impostata per la destinazione.
+* Utilizza il `destinationServerId` per fare riferimento alla configurazione del server di destinazione e del modello di file impostata per la destinazione.
+* Utilizza il `audienceMetadataId` per fare riferimento alla configurazione dei metadati del pubblico impostata per la destinazione.

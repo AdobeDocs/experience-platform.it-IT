@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;motori;API di apprendimento automatico sensei
+keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;motori;sensei machine learning api
 solution: Experience Platform
-title: Endpoint API per motori
-description: I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l'ingegneria delle funzioni o entrambe.
+title: Endpoint API per i motori
+description: I motori sono le basi dei modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzioni per eseguire attività di progettazione delle funzioni o entrambi.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 3%
 
 ---
 
-# Endpoint motori
+# Endpoint &quot;engines&quot;
 
-I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l&#39;ingegneria delle funzioni o entrambe.
+I motori sono le basi dei modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzioni per eseguire attività di progettazione delle funzioni o entrambi.
 
-## Cerca il tuo registro di sistema Docker
+## Cercare il registro Docker
 
 >[!TIP]
 >
->Se non disponi di un URL Docker, visita il [Creare pacchetti di file sorgente in una ricetta](../models-recipes/package-source-files-recipe.md) esercitazione dettagliata sulla creazione di un URL host Docker.
+>Se non disponi di un URL Docker, visita il [Creare pacchetti di file di origine in una ricetta](../models-recipes/package-source-files-recipe.md) tutorial per una procedura dettagliata sulla creazione di un URL host Docker.
 
-Le credenziali del Registro di sistema Docker sono necessarie per caricare un file Recipe in pacchetto, inclusi l&#39;URL host Docker, il nome utente e la password. Puoi cercare queste informazioni eseguendo la seguente richiesta GET:
+Le credenziali del Registro di sistema Docker sono necessarie per caricare un pacchetto di file di composizione, inclusi l’URL host Docker, il nome utente e la password. Per cercare queste informazioni, effettua la seguente richiesta GET:
 
 **Formato API**
 
@@ -41,11 +41,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema Docker, incluso l’URL Docker (`host`), nome utente (`username`) e password (`password`).
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del registro Docker, incluso l’URL Docker (`host`), nome utente (`username`) e password (`password`).
 
 >[!NOTE]
 >
->La password del Docker cambia ogni volta che il tuo `{ACCESS_TOKEN}` è aggiornato.
+>La password Docker cambia ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
 
 ```json
 {
@@ -57,7 +57,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del Registro 
 
 ## Creare un motore utilizzando gli URL Docker {#docker-image}
 
-È possibile creare un motore eseguendo una richiesta di POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker in più moduli.
+Per creare un motore, devi eseguire una richiesta POST fornendo i relativi metadati e un URL Docker che faccia riferimento a un’immagine Docker in moduli multipart.
 
 **Formato API**
 
@@ -65,7 +65,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del Registro 
 POST /engines
 ```
 
-**Richiesta Python/R**
+**Richiedi Python/R**
 
 ```shell
 curl -X POST \
@@ -94,16 +94,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome desiderato per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come nome della composizione. |
-| `description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come descrizione della composizione. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
-| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker e può essere &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
-| `algorithm` | Una stringa che specifica il tipo di algoritmo di apprendimento automatico. I tipi di algoritmo supportati includono &quot;Classification&quot;, &quot;Regression&quot; o &quot;Custom&quot;. |
-| `artifacts.default.image.location` | Posizione dell’immagine Docker collegata a da un URL Docker. |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker e può essere &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
+| `name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
+| `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
+| `type` | Tipo di esecuzione del motore. Questo valore corrisponde al linguaggio su cui è basata l’immagine Docker e può essere &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
+| `algorithm` | Stringa che specifica il tipo di algoritmo di apprendimento automatico. I tipi di algoritmo supportati includono &quot;Classification&quot;, &quot;Regressione&quot; o &quot;Custom&quot;. |
+| `artifacts.default.image.location` | Posizione dell’immagine Docker collegata da un URL Docker. |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde al linguaggio su cui è basata l’immagine Docker e può essere &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
 
 **Richiedi PySpark/Scala**
 
-Quando effettui una richiesta per le ricette PySpark, la `executionType` e `type` è &quot;PySpark&quot;. Quando si effettua una richiesta di ricette Scala, la `executionType` e `type` è &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala viene utilizzato Spark:
+Quando si effettua una richiesta per le ricette PySpark, il `executionType` e `type` è &quot;PySpark&quot;. Quando si effettua una richiesta per le ricette Scala, il `executionType` e `type` è &quot;Spark&quot;. L’esempio di ricetta Scala che segue utilizza Spark:
 
 ```shell
 curl -X POST \
@@ -133,16 +133,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome desiderato per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come nome della composizione. |
-| `description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come descrizione della composizione. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
-| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `mlLibrary` | Campo necessario per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
-| `artifacts.default.image.location` | Posizione dell’immagine Docker. È supportato solo Azure ACR o Public (non autenticato) Dockerhub. |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
+| `name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
+| `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
+| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
+| `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
+| `artifacts.default.image.location` | Percorso dell’immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso l’identificatore univoco (`id`). L&#39;esempio di risposta seguente è per un motore Python. Tutte le risposte del motore seguono questo formato:
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore appena creato, compreso il relativo identificatore univoco (`id`). L’esempio di risposta che segue è per un motore Python. Tutte le risposte del motore seguono questo formato:
 
 ```json
 {
@@ -169,9 +169,9 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-## Creare un motore di pipeline di funzioni utilizzando gli URL Docker {#feature-pipeline-docker}
+## Creare un motore di pipeline delle funzioni utilizzando gli URL Docker {#feature-pipeline-docker}
 
-È possibile creare un motore di pipeline delle funzioni eseguendo una richiesta POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker.
+Per creare un motore di pipeline di funzioni, devi eseguire una richiesta POST mentre fornisci i relativi metadati e un URL Docker che fa riferimento a un’immagine Docker.
 
 **Formato API**
 
@@ -212,19 +212,19 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `algorithm` | Imposta questo valore su `fp` (pipeline di funzioni). |
-| `name` | Nome desiderato per il motore di pipeline della funzione. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come nome della composizione. |
-| `description` | Una descrizione facoltativa per il motore. La composizione corrispondente a questo motore erediterà questo valore da visualizzare nell’interfaccia utente come descrizione della composizione. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
-| `mlLibrary` | Campo necessario per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
-| `artifacts.default.image.location` | Posizione dell’immagine Docker. È supportato solo Azure ACR o Public (non autenticato) Dockerhub. |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
-| `artifacts.default.image.packagingType` | Tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Le `pipeline.json` parametri del file di configurazione. |
+| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
+| `algorithm` | L’algoritmo utilizzato, imposta questo valore su `fp` (tubazione di feature). |
+| `name` | Il nome desiderato per il motore della pipeline di funzioni. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
+| `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
+| `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
+| `artifacts.default.image.location` | Percorso dell’immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
+| `artifacts.default.image.packagingType` | Il tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Il tuo `pipeline.json` parametri del file di configurazione. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del nuovo motore di pipeline delle funzioni creato, incluso l’identificatore univoco (`id`). L’esempio di risposta seguente è per un motore di pipeline con funzionalità PySpark.
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore di pipeline delle funzioni appena creato, compreso il relativo identificatore univoco (`id`). La risposta di esempio seguente è per un motore di pipeline di funzioni PySpark.
 
 ```json
 {
@@ -251,9 +251,9 @@ Una risposta corretta restituisce un payload contenente i dettagli del nuovo mot
 }
 ```
 
-## Recupera un elenco di motori
+## Recuperare un elenco di motori
 
-È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fare riferimento alla sezione dell&#39;appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -276,7 +276,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di motori e relativi dettagli.
+In caso di esito positivo, la risposta restituisce un elenco di motori e dei relativi dettagli.
 
 ```json
 {
@@ -326,9 +326,9 @@ Una risposta corretta restituisce un elenco di motori e relativi dettagli.
 }
 ```
 
-### Recupera un motore specifico {#retrieve-specific}
+### Recuperare un motore specifico {#retrieve-specific}
 
-Puoi recuperare i dettagli di un motore specifico eseguendo una richiesta di GET che include l’ID del motore desiderato nel percorso della richiesta.
+Per recuperare i dettagli di un motore specifico, esegui una richiesta di GET che includa l’ID del motore desiderato nel percorso della richiesta.
 
 **Formato API**
 
@@ -353,7 +353,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del motore desiderato.
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore desiderato.
 
 ```json
 {
@@ -382,13 +382,13 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore de
 
 ## Aggiornare un motore
 
-Puoi modificare e aggiornare un motore esistente sovrascrivendo le sue proprietà tramite una richiesta PUT che include l’ID del motore di destinazione nel percorso della richiesta e fornendo un payload JSON contenente proprietà aggiornate.
+Puoi modificare e aggiornare un motore esistente sovrascrivendo le relative proprietà tramite una richiesta PUT che include l’ID del motore di destinazione nel percorso della richiesta e fornendo un payload JSON contenente le proprietà aggiornate.
 
 >[!NOTE]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET a [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET a [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
-La seguente chiamata API di esempio aggiornerà il nome e la descrizione di un motore quando queste proprietà sono inizialmente disponibili:
+La seguente chiamata API di esempio aggiornerà il nome e la descrizione di un motore mentre inizialmente disponi di queste proprietà:
 
 ```json
 {
@@ -445,7 +445,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli aggiornati del motore.
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli aggiornati del motore.
 
 ```json
 {
@@ -473,7 +473,7 @@ Una risposta corretta restituisce un payload contenente i dettagli aggiornati de
 
 ## Eliminare un motore
 
-È possibile eliminare un motore eseguendo una richiesta di DELETE specificando l’ID del motore di destinazione nel percorso della richiesta. L&#39;eliminazione di un motore comporta l&#39;eliminazione in cascata di tutte le istanze MLI che fanno riferimento a tale motore, compresi gli esperimenti e gli esperimenti eseguiti appartenenti a tali istanze MLI.
+Puoi eliminare un motore eseguendo una richiesta DELETE mentre specifichi l’ID del motore di destinazione nel percorso della richiesta. L’eliminazione di un motore comporta l’eliminazione a catena di tutte le istanze MLI che fanno riferimento a tale motore, incluse le esecuzioni di esperimenti ed esperimenti appartenenti a tali istanze MLI.
 
 **Formato API**
 

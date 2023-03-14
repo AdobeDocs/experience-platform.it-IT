@@ -1,6 +1,6 @@
 ---
 description: Scopri come utilizzare la scheda Registri in Adobe Experience Platform Debugger.
-keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;registri
+keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;logs
 seo-description: Experience Platform Debugger Logs screen
 seo-title: Logs
 title: Scheda Registri
@@ -15,25 +15,25 @@ ht-degree: 26%
 
 # Scheda Registri
 
-La **Registri** Questa scheda fornisce informazioni specifiche sui tag e sulle implementazioni dell’SDK per web di Adobe Experience Platform. Puoi filtrare in base alle soluzioni implementate tramite gli strumenti associati.
+Il **Registri** fornisce informazioni specifiche sui tag e sulle implementazioni Adobe Experience Platform Web SDK. Puoi filtrare in base alle soluzioni implementate tramite gli strumenti associati.
 
 ![](images/logs.jpg)
 
 La scheda Registri mostra le informazioni in quattro colonne:
 
-**[!UICONTROL Soluzioni]:** Visualizza icone per la soluzione di Experience Cloud interessata dall’elemento registrato. Posiziona il puntatore sull’icona per leggere la descrizione.
+**[!UICONTROL Soluzioni]:** Visualizza icone per la soluzione di Experience Cloud interessata dall&#39;elemento registrato. Posiziona il puntatore sull’icona per leggere la descrizione.
 
-**[!UICONTROL Si è verificato in]:** Mostra quando si è verificato il problema registrato durante la sessione.
+**[!UICONTROL Si è verificato il]:** Mostra quando si è verificato il problema registrato durante la sessione.
 
-**[!UICONTROL Livello di log]:** Mostra la gravità del problema. La gravità è indicata da uno dei seguenti livelli:
+**[!UICONTROL Livello di registro]:** Mostra la gravità del problema. La gravità è indicata da uno dei seguenti livelli:
 
 * Registro
 * Info
 * Avvisi
 * Errori
 
-**[!UICONTROL Messaggio di log]:** Descrive il problema.
+**[!UICONTROL Messaggio di registro]:** Descrive il problema.
 
-Alcuni messaggi di registro includono l’opzione Mostra codice. Seleziona **[!UICONTROL Mostra codice]** per visualizzare il codice condizionale che determina se attivare o meno una regola.
+Alcuni messaggi di registro includono l’opzione Mostra codice. Seleziona **[!UICONTROL Mostra codice]** per visualizzare il codice condizionale che determina se attivare una regola.
 
 Per cancellare il registro, seleziona **[!UICONTROL Rimuovi registri]**.

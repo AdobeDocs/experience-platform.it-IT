@@ -2,7 +2,7 @@
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Come configurare un campo attributo calcolato
 type: Documentation
-description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. È possibile creare il campo utilizzando un gruppo di campi dello schema per aggiungere il campo a uno schema esistente oppure selezionando un campo già definito in uno schema.
+description: Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando un gruppo di campi schema per aggiungere il campo a uno schema esistente oppure selezionando un campo già definito all’interno di uno schema.
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '859'
@@ -11,76 +11,76 @@ ht-degree: 1%
 ---
 
 
-# (Alfa) Configura un campo attributo calcolato nell’interfaccia utente
+# (Alfa) Configurare un campo attributo calcolato nell’interfaccia utente di
 
 >[!IMPORTANT]
 >
->La funzionalità dell&#39;attributo calcolato è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+>La funzionalità degli attributi calcolati è attualmente in formato alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. È possibile creare il campo utilizzando un gruppo di campi dello schema per aggiungere il campo a uno schema esistente oppure selezionando un campo già definito in uno schema.
+Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando un gruppo di campi schema per aggiungere il campo a uno schema esistente oppure selezionando un campo già definito all’interno di uno schema.
 
 >[!NOTE]
 >
->Gli attributi calcolati non possono essere aggiunti ai campi all’interno di gruppi di campi definiti da Adobe. Il campo deve trovarsi all’interno della `tenant` spazio dei nomi, ovvero deve essere un campo definito e aggiunto a uno schema.
+>Non è possibile aggiungere attributi calcolati a campi all’interno di gruppi di campi definiti da Adobe. Il campo deve trovarsi all’interno del `tenant` spazio dei nomi, ovvero deve essere un campo definito e aggiunto a uno schema.
 
-Per definire correttamente un campo attributo calcolato, è necessario abilitare lo schema per [!DNL Profile] e vengono visualizzati come parte dello schema di unione per la classe su cui è basato lo schema. Per ulteriori informazioni su [!DNL Profile]- schemi e sindacati abilitati, si prega di rivedere la sezione del [!DNL Schema Registry] sezione guida per sviluppatori su [abilitazione di uno schema per il profilo e visualizzazione degli schemi di unione](../../xdm/api/getting-started.md). Si consiglia inoltre di rivedere il [sezione sui sindacati](../../xdm/schema/composition.md) nella documentazione di base sulla composizione dello schema.
+Per definire correttamente un campo attributo calcolato, lo schema deve essere abilitato per [!DNL Profile] e vengono visualizzati come parte dello schema di unione per la classe su cui si basa lo schema. Per ulteriori informazioni su [!DNL Profile]- abilitati, consulta la sezione della sezione [!DNL Schema Registry] sezione della guida per sviluppatori su [abilitazione di uno schema per il profilo e visualizzazione degli schemi di unione](../../xdm/api/getting-started.md). Si consiglia inoltre di rivedere [sezione sulle unioni](../../xdm/schema/composition.md) nella documentazione di base sulla composizione dello schema.
 
-Il flusso di lavoro in questa esercitazione utilizza un [!DNL Profile]schema abilitato e segue i passaggi necessari per definire un nuovo gruppo di campi contenente il campo dell&#39;attributo calcolato e assicurarsi che lo spazio dei nomi sia corretto. Se disponi già di un campo nello spazio dei nomi corretto all’interno di uno schema abilitato per il profilo, puoi procedere direttamente al passaggio per [creazione di un attributo calcolato](#create-a-computed-attribute).
+Il flusso di lavoro di questa esercitazione utilizza [!DNL Profile]dello schema abilitato e segue i passaggi per definire un nuovo gruppo di campi contenente il campo attributo calcolato e per verificare che sia lo spazio dei nomi corretto. Se disponi già di un campo nello spazio dei nomi corretto all’interno di uno schema abilitato per il profilo, puoi procedere direttamente al passaggio per [creazione di un attributo calcolato](#create-a-computed-attribute).
 
 ## Visualizzare uno schema
 
-I passaggi seguenti utilizzano l’interfaccia utente di Adobe Experience Platform per individuare uno schema, aggiungere un gruppo di campi e definire un campo. Se preferisci utilizzare il [!DNL Schema Registry] API, fai riferimento al [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md) per i passaggi relativi alla creazione di un gruppo di campi, aggiungere un gruppo di campi a uno schema e abilitare uno schema da utilizzare con [!DNL Real-Time Customer Profile].
+I passaggi seguenti utilizzano l’interfaccia utente di Adobe Experience Platform per individuare uno schema, aggiungere un gruppo di campi e definire un campo. Se preferisce utilizzare il [!DNL Schema Registry] API, fare riferimento al [Guida per gli sviluppatori del registro dello schema](../../xdm/api/getting-started.md) per i passaggi su come creare un gruppo di campi, aggiungi un gruppo di campi a uno schema e abilita uno schema da utilizzare con [!DNL Real-Time Customer Profile].
 
-Nell’interfaccia utente, fai clic su **[!UICONTROL Schemi]** nella barra a sinistra e utilizza la barra di ricerca nella barra **[!UICONTROL Sfoglia]** per trovare rapidamente lo schema da aggiornare.
+Nell’interfaccia utente di, fai clic su **[!UICONTROL Schemi]** nella barra a sinistra e utilizza la barra di ricerca nella **[!UICONTROL Sfoglia]** per trovare rapidamente lo schema da aggiornare.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Una volta individuato lo schema, fai clic sul suo nome per aprire [!DNL Schema Editor] in cui è possibile apportare modifiche allo schema.
+Dopo aver individuato lo schema, fai clic sul nome per aprire [!DNL Schema Editor] dove è possibile apportare modifiche allo schema.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ## Creare un gruppo di campi
 
-Per creare un nuovo gruppo di campi, fai clic su **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]** in **[!UICONTROL Composizione]** a sinistra dell’editor. Viene aperta la **[!UICONTROL Aggiungi gruppo di campi]** in cui è possibile visualizzare i gruppi di campi esistenti. Fai clic sul pulsante di scelta per **[!UICONTROL Crea nuovo gruppo di campi]** per definire il nuovo gruppo di campi.
+Per creare un nuovo gruppo di campi, fare clic su **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]** nel **[!UICONTROL Composizione]** a sinistra dell’editor. Verrà aperto il **[!UICONTROL Aggiungi gruppo di campi]** in cui è possibile visualizzare i gruppi di campi esistenti. Fai clic sul pulsante di opzione per **[!UICONTROL Crea nuovo gruppo di campi]** per definire il nuovo gruppo di campi.
 
-Assegna un nome e una descrizione al gruppo di campi e fai clic su **[!UICONTROL Aggiungi gruppo di campi]** una volta completato.
+Assegna un nome e una descrizione al gruppo di campi, quindi fai clic su **[!UICONTROL Aggiungi gruppo di campi]** al termine.
 
 ![](../images/computed-attributes/Add-field-group.png)
 
-## Aggiungi un campo attributo calcolato allo schema
+## Aggiungere un campo attributo calcolato allo schema
 
-Il nuovo gruppo di campi dovrebbe ora essere visualizzato in &quot;[!UICONTROL Gruppi di campi]&quot; sezione sotto &quot;[!UICONTROL Composizione]&quot;. Fai clic sul nome del gruppo di campi e su più **[!UICONTROL Aggiungi campo]** nella **[!UICONTROL Struttura]** dell’editor.
+Il nuovo gruppo di campi deve ora essere visualizzato in &quot;[!UICONTROL Gruppi di campi]&quot; sezione in &quot;[!UICONTROL Composizione]&quot;. Fai clic sul nome del gruppo di campi e su più **[!UICONTROL Aggiungi campo]** verranno visualizzati nel **[!UICONTROL Struttura]** sezione dell’editor.
 
-Seleziona **[!UICONTROL Aggiungi campo]** accanto al nome dello schema per aggiungere un campo di livello superiore, oppure puoi aggiungere il campo in un punto qualsiasi all’interno dello schema desiderato.
+Seleziona **[!UICONTROL Aggiungi campo]** accanto al nome dello schema per aggiungere un campo di livello principale, oppure puoi selezionare di aggiungere il campo in qualsiasi punto dello schema desiderato.
 
-Dopo aver fatto clic su **[!UICONTROL Aggiungi campo]** viene aperto un nuovo oggetto, denominato ID tenant, che mostra che il campo si trova nello spazio dei nomi corretto. All&#39;interno di tale oggetto, un **[!UICONTROL Nuovo campo]** appare. Questo se il campo in cui verrà definito l&#39;attributo calcolato.
+Dopo aver fatto clic su **[!UICONTROL Aggiungi campo]** viene aperto un nuovo oggetto, denominato in base all’ID tenant, che indica che il campo si trova nello spazio dei nomi corretto. All’interno di tale oggetto, un **[!UICONTROL Nuovo campo]** viene visualizzato. Ciò si verifica se il campo in cui viene definito l’attributo calcolato.
 
 ![](../images/computed-attributes/New-field.png)
 
-## Configura il campo
+## Configurare il campo
 
-Utilizzo della **[!UICONTROL Proprietà campo]** nella sezione a destra dell’editor, fornisci le informazioni necessarie per il nuovo campo, compreso il nome, il nome visualizzato e il tipo.
+Utilizzo di **[!UICONTROL Proprietà campo]** sul lato destro dell’editor, fornisci le informazioni necessarie per il nuovo campo, tra cui nome, nome visualizzato e tipo.
 
 >[!NOTE]
 >
->Il tipo del campo deve essere lo stesso tipo del valore dell&#39;attributo calcolato. Ad esempio, se il valore dell’attributo calcolato è una stringa, il campo definito nello schema deve essere una stringa.
+>Il tipo del campo deve corrispondere al valore dell&#39;attributo calcolato. Ad esempio, se il valore dell’attributo calcolato è una stringa, il campo definito nello schema deve essere una stringa.
 
-Al termine, fai clic su **[!UICONTROL Applica]** e il nome del campo, nonché il relativo tipo, verranno visualizzati nella **[!UICONTROL Struttura]** dell’editor.
+Al termine, fai clic su **[!UICONTROL Applica]** e il nome del campo, così come il relativo tipo, verranno visualizzati nel **[!UICONTROL Struttura]** sezione dell’editor.
 
 ![](../images/computed-attributes/Apply.png)
 
 ## Abilita schema per [!DNL Profile]
 
-Prima di continuare, assicurati che lo schema sia stato abilitato per [!DNL Profile]. Fai clic sul nome dello schema nel **[!UICONTROL Struttura]** della sezione dell&#39;editor in modo che **[!UICONTROL Proprietà schema]** viene visualizzata la scheda . Se la **[!UICONTROL Profilo]** il cursore è blu, lo schema è stato abilitato per [!DNL Profile].
+Prima di continuare, assicurati che lo schema sia stato abilitato per [!DNL Profile]. Fai clic sul nome dello schema in **[!UICONTROL Struttura]** dell&#39;editor in modo che il **[!UICONTROL Proprietà schema]** viene visualizzata la scheda. Se il **[!UICONTROL Profilo]** il cursore è blu, lo schema è stato abilitato per [!DNL Profile].
 
 >[!NOTE]
 >
->Abilitazione di uno schema per [!DNL Profile] non può essere annullata, quindi se fai clic sul cursore una volta abilitato, non devi rischiare di disattivarlo.
+>Abilitazione di uno schema per [!DNL Profile] non può essere annullato, quindi se si fa clic sul dispositivo di scorrimento una volta attivato, non è necessario rischiare di disabilitarlo.
 
 ![](../images/computed-attributes/Profile.png)
 
-Ora puoi fare clic su **[!UICONTROL Salva]** per salvare lo schema aggiornato e continuare con il resto dell’esercitazione utilizzando l’API .
+Ora puoi fare clic su **[!UICONTROL Salva]** per salvare lo schema aggiornato e continuare con il resto dell’esercitazione utilizzando l’API.
 
 ## Passaggi successivi
 
-Ora che hai creato un campo in cui verrà memorizzato il valore dell&#39;attributo calcolato, puoi creare l&#39;attributo calcolato utilizzando `/computedattributes` Endpoint API. Per passaggi dettagliati per la creazione di un attributo calcolato nell’API, segui i passaggi forniti nella [guida all’endpoint API degli attributi calcolati](ca-api.md).
+Dopo aver creato un campo in cui memorizzare il valore dell&#39;attributo calcolato, è possibile creare l&#39;attributo calcolato utilizzando `/computedattributes` Endpoint API Per i passaggi dettagliati della creazione di un attributo calcolato nell’API, segui i passaggi descritti in [guida dell’endpoint API per attributi calcolati](ca-api.md).

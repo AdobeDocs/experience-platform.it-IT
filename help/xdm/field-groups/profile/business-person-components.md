@@ -1,53 +1,53 @@
 ---
-title: Gruppo di campi di schema dei componenti per Business Person XDM
-description: In questo documento viene fornita una panoramica del gruppo di campi dello schema dei componenti Business Person XDM.
+title: Gruppo di campi dello schema dei componenti della persona aziendale XDM
+description: Questo documento fornisce una panoramica del gruppo di campi dello schema XDM Business Person Components.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 3%
+source-wordcount: '549'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Componenti per Business Person XDM] gruppo di campi schema
+# [!UICONTROL Componenti della persona aziendale XDM] gruppo di campi schema
 
-[!UICONTROL Componenti per Business Person XDM] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md) che acquisisce più record sorgente per una persona e altri attributi necessari per la segmentazione di una persona.
+[!UICONTROL Componenti della persona aziendale XDM] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce più record di origine per una persona e altri attributi necessari per la segmentazione della persona.
 
-Quando viene creato un profilo per una persona attraverso [Profilo cliente in tempo reale](../../../profile/home.md) nell’edizione B2B di Real-Time CDP, le informazioni utilizzate per creare tale profilo possono provenire potenzialmente da molti record sorgente. Ad esempio, se una persona lavora per due società diverse, molti sistemi CRM creano una copia intenzionalmente duplicata di quella persona in modo che una copia sia collegata alla società A, mentre l&#39;altra è collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un&#39;unica rappresentazione.
+Quando viene creato un profilo per una persona tramite [Profilo cliente in tempo reale](../../../profile/home.md) nell’edizione B2B di Real-Time CDP, le informazioni utilizzate per creare tale profilo potrebbero potenzialmente provenire da molti record di origine. Ad esempio, se una persona lavora per due aziende diverse, molti sistemi di gestione delle relazioni con i clienti creano una copia intenzionalmente duplicata di tale persona in modo che una copia sia collegata alla società A, mentre l’altra sia collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un’unica rappresentazione.
 
-Il gruppo di campi fornisce un livello principale `personComponents` campo, che è una matrice di oggetti. Ogni oggetto dell&#39;array rappresenta un record sorgente diverso.
+Il gruppo di campi fornisce un livello principale `personComponents` , che è un array di oggetti. Ogni oggetto nell&#39;array rappresenta un record di origine diverso.
 
 >[!IMPORTANT]
 >
->Devi seguire i pattern di acquisizione descritti nella sezione [documentazione di base](../../../rtcdp/sources/b2b.md). Non è garantito il funzionamento di altri metodi di mappatura dei campi.
+>Devi seguire i pattern di acquisizione descritti in [documentazione delle sorgenti](../../../rtcdp/sources/b2b.md). Non è garantito il funzionamento di altri metodi di mappatura dei campi.
 >
->Ad esempio, ogni oggetto del `personComponents` l’array viene inviato singolarmente durante i pattern di acquisizione standard e quindi aggiunto all’array da Platform. L’aggiunta manuale di un array di oggetti al componente Persona aziendale restituisce un errore.
->È necessario utilizzare l&#39;utilità di generazione automatica quando si creano schemi per i dati B2B. Consulta la documentazione per le istruzioni sull’utilizzo del [Utility di generazione automatica dello spazio dei nomi B2B e dello schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Se non utilizzi l&#39;utilità di generazione automatica e intendi mappare manualmente il modello dati, assicurati di leggere la documentazione sul [Classi XDM di Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/schemas/b2b.md) prima di mappare i dati.
+>Ad esempio, ogni oggetto del `personComponents` L’array viene inviato singolarmente durante i pattern di acquisizione standard e quindi aggiunto all’array da Platform. L’aggiunta manuale di un array di oggetti al componente Persona aziendale restituisce un errore.
+>Utilizza l’utilità di generazione automatica quando crei schemi per i dati B2B. Per istruzioni su come utilizzare il [Utilità di generazione automatica dello spazio dei nomi B2B e dello schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Se non utilizzi l’utility di generazione automatica e intendi mappare manualmente il modello dati, assicurati di leggere la documentazione sul [Classi XDM per Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/schemas/b2b.md) prima della mappatura dei dati.
 >
->Consulta la sezione [esercitazione end-to-end](../../../rtcdp/b2b-tutorial.md) per informazioni sui flussi di lavoro consigliati per i dati B2B.
+>Consulta la [tutorial end-to-end](../../../rtcdp/b2b-tutorial.md) per informazioni sui flussi di lavoro consigliati per i dati B2B.
 
 ![](../../images/field-groups/business-person-components.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per l&#39;account associato alla persona. |
+| `sourceAccountKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Un identificatore composito dell’account associato alla persona. |
 | `sourceConvertedContactKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per il contatto correlato se il lead è stato convertito. |
-| `sourceExternalKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito per il sistema di origine da cui provengono i dati della persona. |
+| `sourceExternalKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito del sistema di origine da cui provengono i dati della persona. |
 | `sourcePersonKey` | [[!UICONTROL Origine B2B]](../../data-types/b2b-source.md) | Identificatore composito della persona. |
 | `workEmail` | [[!UICONTROL Indirizzo e-mail]](../../data-types/b2b-source.md) | ID e-mail aziendale della persona. |
-| `personGroupID` | Stringa | Identificatore di gruppo per la persona. |
-| `personScore` | Stringa | Punteggio generato per la persona da un sistema CRM. |
-| `personSource` | Stringa | Identificatore univoco basato su stringa per il sistema di origine da cui provengono i dati della persona. |
-| `personStatus` | Stringa | Lo stato attuale di marketing o vendite della persona. |
+| `personGroupID` | Stringa | Un identificatore di gruppo della persona. |
+| `personScore` | Stringa | Un punteggio generato per la persona da un sistema di gestione delle relazioni con i clienti. |
+| `personSource` | Stringa | Un identificatore univoco basato su stringhe per il sistema di origine da cui provengono i dati della persona. |
+| `personStatus` | Stringa | Lo stato attuale di marketing o di vendita della persona. |
 | `personType` | Stringa | Il tipo di persona in un contesto B2B. |
-| `sourceAccountID` | Stringa | Identificatore univoco basato su stringa per l&#39;account nel sistema di origine associato alla persona. Questo campo viene utilizzato come chiave straniera dal sistema per cercare le diverse aziende per cui questa persona lavora. |
-| `sourceConvertedContactID` | Stringa | Identificatore univoco basato su stringa per il contatto correlato, se il lead è stato convertito. |
-| `sourceExternalID` | Stringa | Identificatore univoco basato su stringa per il sistema di origine da cui provengono i dati della persona. |
-| `sourcePersonID` | Stringa | Identificatore univoco basato su stringa per la persona. |
+| `sourceAccountID` | Stringa | Un identificatore univoco basato su stringhe per l’account nel sistema di origine associato alla persona. Questo campo viene utilizzato come chiave esterna dal sistema per cercare le diverse aziende per cui questa persona lavora. |
+| `sourceConvertedContactID` | Stringa | Identificatore univoco basato su stringa per il contatto correlato se il lead è stato convertito. |
+| `sourceExternalID` | Stringa | Un identificatore univoco basato su stringhe per il sistema di origine da cui provengono i dati della persona. |
+| `sourcePersonID` | Stringa | Un identificatore univoco basato su stringhe per la persona. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.schema.json)

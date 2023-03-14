@@ -1,8 +1,8 @@
 ---
-title: Identificazione dei visitatori tramite FPID
-description: Scopri come identificare in modo coerente i visitatori tramite l’API server, utilizzando il FPID
+title: Identificazione del visitatore tramite FPID
+description: Scopri come identificare in modo coerente i visitatori tramite l’API server utilizzando l’FPID
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-keywords: rete perimetrale;gateway;api;visitatore;identificazione;fpid
+keywords: rete edge;gateway;api;visitatore;identificazione;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 ---
 
-# Identificazione dei visitatori tramite FPID
+# Identificazione del visitatore tramite FPID
 
-[!DNL First-party IDs] (`FPIDs`) sono ID dispositivo generati, gestiti e memorizzati dai clienti. Questo offre ai clienti il controllo sull&#39;identificazione dei dispositivi utente. Tramite invio `FPIDs`, la rete Edge non genera un nuovo brand `ECID` per una richiesta che non ne contiene una.
+[!DNL First-party IDs] (`FPIDs`) sono ID dispositivo generati, gestiti e memorizzati dai clienti. Questo offre ai clienti il controllo necessario per identificare i dispositivi degli utenti. Inviando `FPIDs`, la rete Edge non genera un nuovo marchio `ECID` per una richiesta che non ne contiene una.
 
-La `FPID` può essere incluso nel corpo della richiesta API come parte del `identityMap` oppure può essere inviato come cookie.
+Il `FPID` può essere incluso nel corpo della richiesta API come parte del `identityMap` oppure può essere inviato come cookie.
 
-Un `FPID` può essere tradotto in modo deterministico in un `ECID` da Edge Network, quindi `FPID` Le identità sono completamente compatibili con le soluzioni Experience Cloud. Ottenimento di un `ECID` da uno specifico `FPID` restituisce sempre lo stesso risultato, in modo che gli utenti abbiano un’esperienza coerente.
+Un `FPID` può essere convertito in modo deterministico in un `ECID` dalla rete Edge, quindi `FPID` Le identità di sono completamente compatibili con le soluzioni Experience Cloud. Ottenimento di un `ECID` da uno specifico `FPID` produce sempre lo stesso risultato, in modo che gli utenti abbiano un’esperienza coerente.
 
-La `ECID` ottenuto in questo modo può essere recuperato tramite un `identity.fetch` query:
+Il `ECID` ottenuto in questo modo può essere recuperato tramite un `identity.fetch` query:
 
 ```json
 {
@@ -33,15 +33,15 @@ La `ECID` ottenuto in questo modo può essere recuperato tramite un `identity.fe
 }
 ```
 
-Per le richieste che contengono sia un `FPID` e `ECID`, `ECID` già presente nella richiesta avrà la precedenza su quella che potrebbe essere generata dal `FPID`. In altre parole, la rete Edge utilizza il `ECID` già fornito e `FPID` viene ignorato. Nuovo `ECID` viene generato solo quando un `FPID` è fornito da solo.
+Per le richieste che contengono sia `FPID` e un `ECID`, il `ECID` già presente nella richiesta avrà la precedenza su quella che potrebbe essere generata dal `FPID`. In altre parole, la rete Edge utilizza `ECID` già fornite e il `FPID` viene ignorato. Una nuova `ECID` viene generato solo quando un `FPID` viene fornito da solo.
 
-In termini di ID dispositivo, la `server` i datastreams devono utilizzare `FPID` come ID dispositivo. Altre identità `EMAIL`) può essere fornito anche all’interno del corpo della richiesta, ma la rete Edge richiede che venga fornita esplicitamente un’identità primaria. L’identità principale è l’identità di base in cui verranno memorizzati i dati del profilo.
+In termini di ID dispositivo, il `server` gli stream di dati devono utilizzare `FPID` come ID dispositivo. Altre identità (ad esempio `EMAIL`) può essere fornito anche all’interno del corpo della richiesta, ma la rete Edge richiede che sia fornita esplicitamente un’identità primaria. L’identità primaria è l’identità di base in cui verranno memorizzati i dati del profilo.
 
 >[!NOTE]
 >
->Le richieste prive di identità, rispettivamente nessuna identità principale impostata esplicitamente nel corpo della richiesta, non avranno esito positivo.
+>Le richieste prive di identità o senza identità primaria impostata in modo esplicito nel corpo della richiesta non avranno esito negativo.
 
-I seguenti `identityMap` formato corretto per un gruppo di campi `server` richiesta datastream:
+I seguenti elementi `identityMap` il gruppo di campi è formato correttamente per un `server` richiesta dello stream di dati:
 
 ```json
 {
@@ -63,7 +63,7 @@ I seguenti `identityMap` formato corretto per un gruppo di campi `server` richie
 }
 ```
 
-I seguenti `identityMap` un gruppo di campi genera una risposta di errore quando viene impostato su un `server` richiesta datastream:
+I seguenti elementi `identityMap` gruppo di campi restituirà una risposta di errore se impostato su `server` richiesta dello stream di dati:
 
 ```json
 {
@@ -100,9 +100,9 @@ La risposta di errore restituita da Edge Network in questo caso è simile alla s
 }
 ```
 
-## Identificazione del visitatore con `FPID`
+## Identificazione dei visitatori con `FPID`
 
-Per identificare gli utenti tramite `FPID`, assicura che `FPID` il cookie è stato inviato prima di effettuare richieste alla rete Edge. La `FPID` può essere passato in un cookie o come parte del `identityMap` nel corpo della richiesta.
+Per identificare gli utenti tramite `FPID`, assicurano che `FPID` Il cookie è stato inviato prima di effettuare qualsiasi richiesta a Edge Network. Il `FPID` può essere passato in un cookie o come parte del `identityMap` nel corpo della richiesta.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Richiesta con `FPID` passato come `identityMap` field
+## Richiedi con `FPID` passato come `identityMap` campo
 
-L&#39;esempio che segue trasmette [!DNL FPID] come `identityMap` parametro .
+L’esempio seguente trasmette il [!DNL FPID] come `identityMap` parametro.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

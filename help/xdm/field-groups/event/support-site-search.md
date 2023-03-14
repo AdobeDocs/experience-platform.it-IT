@@ -1,16 +1,17 @@
 ---
 title: Gruppo di campi dello schema di ricerca del sito di supporto
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema di ricerca del sito di supporto.
-source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
+description: Questo documento fornisce una panoramica del gruppo di campi Schema per la ricerca del sito di supporto.
+exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 8%
+source-wordcount: '91'
+ht-degree: 7%
 
 ---
 
 # [!UICONTROL Ricerca nel sito di supporto] gruppo di campi schema
 
-[!UICONTROL Ricerca nel sito di supporto] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md). Fornisce un singolo `siteKnowledge.supportSiteSearch` a uno schema che acquisisce informazioni su una ricerca del sito di supporto.
+[!UICONTROL Ricerca nel sito di supporto] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Fornisce un singolo `siteKnowledge.supportSiteSearch` a uno schema che acquisisce informazioni su una ricerca del sito di assistenza.
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -18,6 +19,6 @@ ht-degree: 8%
 | --- | --- | --- |
 | `supportSiteSearch` | [[!UICONTROL Ricerca sito interna]](../../data-types/internal-site-search.md) | Acquisisce i dettagli sull’evento di ricerca. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta la [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

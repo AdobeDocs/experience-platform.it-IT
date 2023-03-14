@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;etl;ETL;trasformazioni etl;trasformazioni ETL;trasformazioni ETL
+keywords: Experience Platform;home;argomenti popolari;etl;ETL;trasformazioni etl;trasformazioni etl;trasformazioni ETL
 solution: Experience Platform
-title: Trasformazioni ETL di esempio
-description: Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
+title: Esempio di trasformazioni ETL
+description: Questo articolo illustra le seguenti trasformazioni di esempio che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 1%
 
 ---
 
-# Trasformazioni ETL di esempio
+# Esempio di trasformazioni ETL
 
-Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
+Questo articolo illustra le seguenti trasformazioni di esempio che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
 
-## CSV piatto a gerarchia
+## File CSV flat nella gerarchia
 
 ### File di esempio
 
-I file CSV e JSON di esempio sono disponibili nella pagina di riferimento ETL pubblica [!DNL GitHub] repo mantenuto per Adobe:
+I file CSV e JSON di esempio sono disponibili dal riferimento ETL pubblico [!DNL GitHub] operazione pronti contro termine gestita da Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,35 +42,35 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mappatura
 
 I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e includono le seguenti trasformazioni:
-- Identità delle colonne su `identityMap` proprietà
-- Data di nascita (DOB) - Anno e mese-giorno
-- Stringhe a Matrimoniali o Interi Brevi.
+- Colonne di identità da `identityMap` proprietà
+- Data di nascita (Data di nascita) a anno e mese-giorno
+- Stringhe a valori doppi o interi brevi.
 
 | Colonna CSV | Percorso XDM | Formattazione dati |
 | ---------- | -------- | --------------- |
 | TITOLO | person.name.courtesyTitle | Copia come stringa |
-| F_NAME | person.name.firstName | Copia come stringa |
+| NOME_F | person.name.firstName | Copia come stringa |
 | L_NAME | person.name.lastName | Copia come stringa |
-| GENERE | person.gender | Trasforma il genere come corrispondente persona.genere valore enum |
-| DOB | person.nascitaDayAndMonth: &quot;MM-GG&quot;<br/>person.datadina: &quot;AAAA-MM-GG&quot;<br/>persona.nascitaAnno: YYYY | Trasforma nascitaDayAndMonth come stringa<br/>Trasforma data di nascita come stringa<br/>Trasforma nascitaAnno come valore int breve |
-| E-MAIL | personalEmail.address | Copia come stringa |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copia come stringa nell&#39;array CRMID in identityMap e imposta Primary come false |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, principale: false}] | Copia come stringa nella prima voce dell&#39;array ECID in identityMap e imposta Primary come false |
-| LOYALTIID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copia come stringa nell&#39;array LOYALTYID in identityMap e imposta Primary come true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copia come stringa nella seconda voce dell&#39;array ECID in identityMap e imposta Primary su false |
+| GENERE | person.gender | Trasforma il genere come valore enum corrispondente person.gender |
+| DOB | person.bornDayAndMonth: &quot;MM-DD&quot;<br/>person.bornDate: &quot;YYYY-MM-DD&quot;<br/>person.bornYear: YYYY | Trasforma bornDayAndMonth come stringa<br/>Trasforma bornDate come stringa<br/>Trasforma l’anno di nascita in int breve |
+| EMAIL | personalEmail.address | Copia come stringa |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primario:false}] | Copia come stringa nell’array CRMID in identityMap e imposta Primary come false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primario: false}] | Copia come stringa nella prima voce nell’array ECID in identityMap e imposta Primary come false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primario:true}] | Copia come stringa nell’array LOYALTYID in identityMap e imposta Primary come true |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primario:false}] | Copia come stringa in una seconda voce nell’array ECID in identityMap e imposta Primary su false |
 | TELEFONO | homePhone.number | Copia come stringa |
-| STRADA | homeAddress.street1 | Copia come stringa |
+| VIA | homeAddress.street1 | Copia come stringa |
 | CITTÀ | homeAddress.city | Copia come stringa |
 | STATO | homeAddress.stateProvince | Copia come stringa |
 | PAESE | homeAddress.country | Copia come stringa |
 | ZIP | homeAddress.postalCode | Copia come stringa |
 | LAT | homeAddress.latitude | Converti in doppio |
-| LUNGO | homeAddress.longitude | Converti in doppio |
+| LONG | homeAddress.longitude | Converti in doppio |
 
 
-### Output XDM
+### XDM di output
 
-L’esempio seguente mostra le prime due righe del CSV trasformato in XDM, come mostrato in `CRM_profiles.json`:
+L’esempio seguente mostra le prime due righe del file CSV trasformato in XDM, come mostrato nella `CRM_profiles.json`:
 
 ```json
 {
@@ -170,13 +170,13 @@ L’esempio seguente mostra le prime due righe del CSV trasformato in XDM, come 
 }
 ```
 
-## Dataframe a schema XDM
+## Fotogramma dati per schema XDM
 
 La gerarchia di un dataframe (ad esempio un file Parquet) deve corrispondere a quella dello schema XDM in cui viene caricato.
 
 ### Esempio di dataframe
 
-La struttura del seguente dataframe di esempio è stata mappata a uno schema che implementa il [!DNL XDM Individual Profile] e contiene i campi più comuni associati agli schemi di quel tipo.
+La struttura del seguente dataframe di esempio è stata mappata su uno schema che implementa [!DNL XDM Individual Profile] e contiene i campi più comuni associati a schemi di quel tipo.
 
 ```python
 [
@@ -249,11 +249,11 @@ La struttura del seguente dataframe di esempio è stata mappata a uno schema che
 ]
 ```
 
-Quando si crea un dataframe da utilizzare in Adobe Experience Platform, è importante assicurarsi che la sua struttura gerarchica corrisponda esattamente a quella di uno schema XDM esistente, in modo che i campi vengano mappati correttamente.
+Durante la costruzione di un dataframe da utilizzare in Adobe Experience Platform, è importante assicurarsi che la struttura gerarchica corrisponda esattamente a quella di uno schema XDM esistente per consentire la corretta mappatura dei campi.
 
-## Identità della mappa di identità
+## Identità in mappa identità
 
-### Matrice di identità
+### Array di identità
 
 ```json
 [
@@ -282,15 +282,15 @@ Quando si crea un dataframe da utilizzare in Adobe Experience Platform, è impor
 
 I requisiti di mappatura per l’array di identità sono descritti nella tabella seguente:
 
-| Campo identità | campo identityMap | Tipo di dati |
+| Campo identità | Campo identityMap | Tipo di dati |
 | -------------- | ----------------- | --------- |
 | identità[0].id | identityMap[E-mail][{"id"}] | copia come stringa |
 | identità[1].id | identityMap[CRMID][{"id"}] | copia come stringa |
-| identità[2].id | identityMap[LOYALTIID][{"id"}] | copia come stringa |
+| identità[2].id | identityMap[LOYALTYID][{"id"}] | copia come stringa |
 
-### Output XDM
+### XDM di output
 
-Di seguito è riportato l&#39;array di identità trasformate in XDM:
+Di seguito è riportato l’array di identità trasformate in XDM:
 
 ```JSON
 "identityMap": {

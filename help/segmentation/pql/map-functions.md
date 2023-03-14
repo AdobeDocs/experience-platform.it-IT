@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni mappa;mappa;
+keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;map functions;map;
 solution: Experience Platform
-title: Funzioni Mappa PQL
-description: Il Profile Query Language (PQL) offre funzioni per facilitare l’interazione con le mappe.
+title: Funzioni mappa PQL
+description: PQL (Profile Query Language) offre funzioni per semplificare l’interazione con le mappe.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 # Mappare le funzioni
 
-[!DNL Profile Query Language] (PQL) offre funzioni che facilitano l’interazione con le mappe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
+[!DNL Profile Query Language] (PQL) offre funzioni per semplificare l’interazione con le mappe. Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Ottenere
 
-La `get` viene utilizzata per recuperare il valore di una mappa per una determinata chiave.
+Il `get` La funzione viene utilizzata per recuperare il valore di una mappa per una determinata chiave.
 
 **Formato**
 
@@ -35,7 +35,7 @@ identityMap.get("example@example.com")
 
 ## Chiavi
 
-La `keys` viene utilizzata per recuperare tutte le chiavi di una determinata mappa.
+Il `keys` La funzione viene utilizzata per recuperare tutte le chiavi per una data mappa.
 
 **Formato**
 
@@ -53,7 +53,7 @@ identityMap.keys()
 
 ## Valori
 
-La `values` viene utilizzata per recuperare tutti i valori di una data mappa.
+Il `values` Questa funzione viene utilizzata per recuperare tutti i valori di una data mappa.
 
 **Formato**
 
@@ -71,4 +71,4 @@ identityMap.values()
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni della mappa, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).
+Ora che hai imparato le funzioni mappa, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).

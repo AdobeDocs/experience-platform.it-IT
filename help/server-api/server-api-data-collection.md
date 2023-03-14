@@ -1,6 +1,6 @@
 ---
 title: Raccolta dati
-description: Scopri come l’API di Adobe Experience Platform Edge Network Server struttura i dati raccolti.
+description: Scopri come l’API del server di rete Edge di Adobe Experience Platform struttura i dati raccolti.
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '131'
@@ -11,14 +11,14 @@ ht-degree: 8%
 
 # Raccolta dati
 
-La [!DNL Server API] offre due tipi di endpoint di raccolta dati:
+Il [!DNL Server API] offre due tipi di endpoint di raccolta dati:
 
-* [Endpoint di raccolta dati interattivi](interactive-data-collection.md), utilizzato quando il client prevede che una risposta venga restituita dal server. Questi endpoint possono anche restituire contenuto da altri servizi di rete Edge, durante l’esecuzione della raccolta dati.
-* [Raccolta di dati evento non interattivi](non-interactive-data-collection.md), utilizzato quando non è prevista alcuna risposta dal server. Questi endpoint vengono utilizzati solo per la raccolta dati.
+* [Endpoint di raccolta dati interattivi](interactive-data-collection.md), utilizzato quando il client prevede che venga restituita una risposta dal server. Questi endpoint possono inoltre restituire contenuto da altri servizi di rete Edge, durante l’esecuzione della raccolta dati.
+* [Raccolta dati di eventi non interattivi](non-interactive-data-collection.md), utilizzato quando non è prevista alcuna risposta dal server. Questi endpoint vengono utilizzati solo per la raccolta di dati.
 
 ## `Event` oggetto {#event-object}
 
-Dati raccolti dal [!DNL Server API] è strutturato in `Event` oggetto. La struttura dell&#39;oggetto è descritta di seguito.
+Dati raccolti dal [!DNL Server API] è strutturato in `Event` oggetto. La struttura di questo oggetto è descritta di seguito.
 
 ```json
 {
@@ -57,5 +57,5 @@ Dati raccolti dal [!DNL Server API] è strutturato in `Event` oggetto. La strutt
 | Attributo | Tipo | Descrizione |
 | --- | --- | --- |
 | `xdm` | Oggetto | *Obbligatorio*. Oggetto JSON contenente dati in formato XDM, corrispondente allo schema del set di dati. |
-| `data` | Oggetto | *Facoltativo*. Oggetto JSON contenente dati in formato libero che possono essere mappati su XDM da Edge Network. |
+| `data` | Oggetto | *Facoltativo*. Oggetto JSON contenente dati in formato libero, che può essere mappato a XDM dalla rete Edge. |
 

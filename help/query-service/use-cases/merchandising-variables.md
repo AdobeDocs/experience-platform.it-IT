@@ -1,6 +1,6 @@
 ---
-title: Restituire e utilizzare le variabili merchandising dai dati di analisi
-description: Scopri come fornire campi XDM e query di esempio per accedere alle variabili merchandising nei set di dati di Analytics.
+title: Restituire e utilizzare le variabili di merchandising dai dati di analisi
+description: Scopri come fornire campi XDM e query di esempio per accedere alle variabili di merchandising nei set di dati di Analytics.
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1112'
@@ -8,26 +8,26 @@ ht-degree: 4%
 
 ---
 
-# Restituire e utilizzare le variabili merchandising dai dati di analytics
+# Restituire e utilizzare le variabili di merchandising dai dati di Analytics
 
-Utilizza Query Service per gestire i dati acquisiti da Adobe Analytics in Adobe Experience Platform come set di dati. Le sezioni seguenti forniscono query di esempio che puoi utilizzare per accedere alle variabili di merchandising nei set di dati di Analytics. Per ulteriori informazioni, consulta la documentazione . [come acquisire e mappare i dati di Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=it) tramite la sorgente di Analytics
+Utilizza Query Service per gestire i dati acquisiti da Adobe Analytics in Adobe Experience Platform come set di dati. Le sezioni seguenti forniscono query di esempio che puoi utilizzare per accedere alle variabili di merchandising nei set di dati di Analytics. Consulta la documentazione per ulteriori informazioni su [come acquisire e mappare i dati di Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=it) tramite l’origine Analytics
 
 ## Variabili merchandising {#merchandising-variables}
 
 Le variabili di merchandising possono seguire una delle due sintassi seguenti:
 
-* **Sintassi prodotto**: Associa il valore eVar a un prodotto. 
-* **Sintassi della variabile di conversione**: Associa l’eVar a un prodotto solo se si verifica un evento di binding. È possibile selezionare gli eventi che fungono da eventi di binding.
+* **Sintassi prodotto**: associa il valore eVar a un prodotto. 
+* **Sintassi per variabile di conversione**: associa l’eVar a un prodotto solo se si verifica un evento di binding. È possibile selezionare gli eventi che fungono da eventi di binding.
 
 ## Sintassi del prodotto {#product-syntax}
 
-In Adobe Analytics, i dati personalizzati a livello di prodotto possono essere raccolti attraverso variabili appositamente configurate denominate variabili merchandising. Sono basati su eventi eVar o personalizzati. La differenza tra queste variabili e il loro uso tipico è che rappresentano un valore separato per ogni prodotto trovato sull&#39;hit, anziché un solo valore per l&#39;hit.
+In Adobe Analytics, i dati personalizzati a livello di prodotto possono essere raccolti tramite variabili appositamente configurate, denominate variabili di merchandising. Questi sono basati su un evento eVar o personalizzato. La differenza tra queste variabili e il loro utilizzo tipico è che rappresentano un valore separato per ogni prodotto trovato sull’hit, anziché un solo valore per l’hit.
 
-Queste variabili sono denominate variabili di merchandising con sintassi di prodotto. Ciò consente la raccolta di informazioni, ad esempio un &quot;importo dello sconto&quot; per prodotto o informazioni sulla &quot;posizione sulla pagina&quot; del prodotto nei risultati di ricerca del cliente.
+Queste variabili sono denominate variabili di merchandising della sintassi di prodotto. Ciò consente la raccolta di informazioni, ad esempio un &quot;importo di sconto&quot; per prodotto o informazioni sulla &quot;posizione nella pagina&quot; del prodotto nei risultati di ricerca del cliente.
 
-Per ulteriori informazioni sull’utilizzo della sintassi del prodotto, consulta la documentazione di Adobe Analytics in [implementazione di eVar utilizzando la sintassi del prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Per ulteriori informazioni sull’utilizzo della sintassi di prodotto, consulta la documentazione di Adobe Analytics su [implementazione di eVar utilizzando la sintassi di prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
-Le sezioni seguenti descrivono i campi XDM necessari per accedere alle variabili di merchandising nel tuo [!DNL Analytics] set di dati:
+Le sezioni seguenti descrivono i campi XDM necessari per accedere alle variabili di merchandising nel [!DNL Analytics] set di dati:
 
 ### eVar
 
@@ -35,8 +35,8 @@ Le sezioni seguenti descrivono i campi XDM necessari per accedere alle variabili
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-* `#`: Indice della matrice a cui si accede.
-* `evar#`: Variabile eVar specifica a cui si accede.
+* `#`: indice dell’array a cui si sta effettuando l’accesso.
+* `evar#`: variabile eVar specifica a cui stai effettuando l’accesso.
 
 ### Eventi personalizzati
 
@@ -44,16 +44,16 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-* `#`: Indice della matrice a cui si accede.
-* `event#`: La variabile evento personalizzata specifica a cui si accede.
+* `#`: indice dell’array a cui si sta effettuando l’accesso.
+* `event#`: variabile evento personalizzata specifica a cui stai effettuando l’accesso.
 
-## Casi d’uso della sintassi del prodotto {#product-use-cases}
+## Casi di utilizzo della sintassi di prodotto {#product-use-cases}
 
-I seguenti casi d’uso si concentrano sulla restituzione di un eVar di merchandising dal `productListItems` array che utilizza SQL.
+I seguenti casi d’uso si concentrano sulla restituzione di un eVar di merchandising dal `productListItems` array utilizzando SQL.
 
 ### Restituire un eVar e un evento di merchandising
 
-La query seguente restituisce un eVar di merchandising e un evento per il primo prodotto trovato nella `productListItems` array.
+La query seguente restituisce un eVar e un evento di merchandising per il primo prodotto trovato in `productListItems` array.
 
 ```sql
 SELECT
@@ -67,9 +67,9 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-### Esplodi la matrice productListItems e restituisce l&#39;eVar e l&#39;evento merchandising per ogni prodotto.
+### Esplodi l’array productListItems e restituisce l’eVar e l’evento di merchandising per ciascun prodotto.
 
-Questa successiva query esplode la `productListItems` e restituisce ogni eVar e evento di merchandising per prodotto. La `_id` Il campo è incluso per mostrare la relazione con l’hit originale. La `_id` value è una chiave primaria univoca per il set di dati.
+Questa query successiva esplode `productListItems` e restituisce ogni eVar e evento di merchandising per prodotto. Il `_id` Questo campo è incluso per mostrare la relazione con l’hit originale. Il `_id` value è una chiave primaria univoca per il set di dati.
 
 >[!NOTE]
 >
@@ -95,41 +95,41 @@ LIMIT 20
 
 >[!NOTE]
 >
-> Se tenti di recuperare un campo che non esiste nel set di dati corrente, si verifica l’errore &quot;Nessun campo di struttura&quot;. Valutare il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiornare la query ed eseguirla nuovamente.
+> Se tenti di recuperare un campo che non esiste nel set di dati corrente, si verifica l’errore &quot;Nessun campo struct simile&quot;. Valuta il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiorna la query ed eseguila di nuovo.
 >
 >
 ```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
-### Sintassi della variabile di conversione {#conversion-variable-syntax}
+### Sintassi per variabile di conversione {#conversion-variable-syntax}
 
-Un altro tipo di variabile di merchandising trovato in Adobe Analytics è la sintassi della variabile di conversione. La sintassi della variabile di conversione viene utilizzata quando il valore eVar non è disponibile per essere impostato nella variabile products . Generalmente, questo scenario indica che la pagina non contiene nessun contesto del canale di merchandising o del metodo di ricerca. In questi casi, è necessario impostare la variabile merchandising prima che l’utente arrivi alla pagina del prodotto, e il valore persiste finché non si verifica l’evento di binding.
+Un altro tipo di variabile di merchandising che si trova in Adobe Analytics è la sintassi per variabile di conversione. La sintassi per le variabili di conversione viene utilizzata quando il valore eVar non è disponibile per essere impostato nella variabile prodotti. Generalmente, questo scenario indica che la pagina non contiene nessun contesto del canale di merchandising o del metodo di ricerca. In questi casi, è necessario impostare la variabile merchandising prima che l’utente arrivi alla pagina del prodotto e il valore persiste finché non si verifica l’evento di binding.
 
-Ad esempio, lo scenario di ricerca dei prodotti seguente illustra come i dati richiesti possono essere presenti in una pagina prima che si verifichi la conversione o l’evento relativo al prodotto.
+Ad esempio, lo scenario di ricerca dei prodotti riportato di seguito illustra come i dati richiesti possono essere presenti in una pagina prima che si verifichi la conversione o l’evento correlato al prodotto.
 
-1. Un utente esegue una ricerca interna per &quot;cappello invernale&quot; che imposta la sintassi di conversione abilitata merchandising eVar6 su &quot;ricerca interna:cappello invernale&quot;.
-2. L&#39;utente clicca su &quot;waffle beanie&quot; e arriva sulla pagina dei dettagli del prodotto.\
-   a) L&#39;atterraggio qui si attiva via un `Product View` evento per il &quot;waffle beanie&quot; per $12.99.\
-   b) Da `Product View` è configurato come evento di binding, il prodotto &quot;waffle beanie&quot; è ora associato al valore eVar6 di &quot;internal search:Winter hat&quot;. Ogni volta che il prodotto &quot;waffle beanie&quot; viene raccolto, è associato a &quot;ricerca interna: cappello invernale&quot;. Ciò si verifica fino al raggiungimento dell’impostazione di scadenza eVar oppure quando viene impostato un nuovo valore eVar6 e l’evento di binding si verifica nuovamente con quel prodotto.
-3. L’utente aggiunge il prodotto al carrello attivando la `Cart Add` evento.
-4. L&#39;utente esegue un&#39;altra ricerca interna per &quot;Summer shirt&quot; che imposta la sintassi di conversione abilitata merchandising eVar6 su &quot;internal search:Summer shirt&quot;.
-5. L&#39;utente seleziona &quot;sportivo t-shirt&quot; e atterra sulla pagina dei dettagli del prodotto.\
-   a) L&#39;atterraggio qui si attiva via un `Product View` evento per &quot;t-shirt sportiva per $19.99.\
-   b) Come `Product View` evento è l&#39;evento di associazione, il prodotto &quot;t-shirt sportiva&quot; è ora legato al valore eVar6 di &quot;ricerca interna:camicia estiva&quot;. Il prodotto precedente &quot;waffle beanie&quot; è ancora legato a un valore eVar6 di &quot;ricerca interna:waffle beanie&quot;.
-6. L’utente aggiunge il prodotto al carrello attivando la `Cart Add` evento.
-7. L’utente esegue il check-out con entrambi i prodotti.
+1. Un utente esegue una ricerca interna di &quot;cappello invernale&quot; che imposta la sintassi di conversione abilitata per merchandising eVar6 su &quot;internal search:winter hat&quot; (ricerca interna:cappello invernale).
+2. L’utente fa clic su &quot;waffle beanie&quot; e arriva alla pagina dei dettagli del prodotto.\
+   a. L’atterraggio qui viene attivato da un `Product View` evento per il &quot;waffle beanie&quot; per $ 12,99.\
+   b. Dal `Product View` è configurato come evento di binding, il prodotto &quot;waffle beanie&quot; è ora associato al valore eVar6 &quot;internal search:winter hat&quot;. Ogni volta che il prodotto &quot;waffle beanie&quot; viene raccolto, è associato a &quot;ricerca interna:cappello invernale&quot;. Questo accade finché non viene raggiunta l’impostazione di scadenza eVar oppure finché non viene impostato un nuovo valore eVar6 e l’evento di binding si verifica di nuovo con quel prodotto.
+3. L’utente aggiunge il prodotto al carrello, attivando `Cart Add` evento.
+4. L’utente esegue un’altra ricerca interna di &quot;camicia estiva&quot; che imposta la sintassi di conversione abilitata per merchandising eVar6 su &quot;internal search:summer shirt&quot; (ricerca interna:camicia estiva).
+5. L’utente seleziona la &quot;t-shirt sportiva&quot; e arriva alla pagina dei dettagli del prodotto.\
+   a. L’atterraggio qui viene attivato da un `Product View` evento per &quot;sporty t-shirt per $19.99.\
+   b. In quanto `Product View` evento è l&#39;evento di binding, il prodotto &quot;sporty t-shirt&quot; è ora associato al valore eVar6 di &quot;internal search:summer shirt&quot;. Il prodotto precedente &quot;waffle beanie&quot; è ancora associato a un valore eVar6 &quot;internal search:waffle beanie&quot;.
+6. L’utente aggiunge il prodotto al carrello, attivando `Cart Add` evento.
+7. L’utente estrae con entrambi i prodotti.
 
-Nel reporting, gli ordini, le entrate, le visualizzazioni dei prodotti e gli importi del carrello vengono riportati rispetto ad eVar6 e allineati all’attività del prodotto associato.
+Nella generazione rapporti, gli ordini, i ricavi, le visualizzazioni dei prodotti e le aggiunte al carrello sono soggetti a reporting a fronte di eVar6 e sono allineati all’attività del prodotto associato.
 
-| eVar6 (metodo di ricerca dei prodotti) | ricavi | ordini | visualizzazioni di prodotto | aggiunta carrello |
+| eVar6 (metodo di ricerca del prodotto) | ricavi | ordini | visualizzazioni prodotto | aggiunte al carrello |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | ricerca interna:camicia estiva | 19,99 | 1 | 1 | 1 |
 | ricerca interna:cappello invernale | 12.99 | 1 | 1 | 1 |
 
-Per ulteriori informazioni sull’utilizzo della sintassi della variabile di conversione, consulta la documentazione di Adobe Analytics in [implementazione di eVar utilizzando la sintassi della variabile di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Per ulteriori informazioni sull’utilizzo della sintassi per le variabili di conversione, consulta la documentazione di Adobe Analytics su [implementazione delle eVar tramite la sintassi per le variabili di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
-Di seguito sono riportati i campi XDM per produrre la sintassi della variabile di conversione nel tuo [!DNL Analytics] set di dati:
+Di seguito sono riportati i campi XDM per produrre la sintassi della variabile di conversione nel [!DNL Analytics] set di dati:
 
 #### eVar
 
@@ -137,7 +137,7 @@ Di seguito sono riportati i campi XDM per produrre la sintassi della variabile d
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-* `evar#`: Variabile eVar specifica a cui si accede.
+* `evar#`: variabile eVar specifica a cui stai effettuando l’accesso.
 
 #### Prodotto
 
@@ -145,15 +145,15 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-* `#`: Indice della matrice a cui si accede.
+* `#`: indice dell’array a cui si sta effettuando l’accesso.
 
-## Casi di utilizzo delle variabili di conversione {#conversion-variable-use-cases}
+## Casi di utilizzo della variabile di conversione {#conversion-variable-use-cases}
 
-I casi d’uso riportati di seguito riflettono scenari che richiedono la sintassi della variabile di conversione.
+I casi d’uso riportati di seguito riflettono scenari che richiedono una sintassi per le variabili di conversione.
 
-### Eseguire un binding del valore per la coppia di prodotti ed eventi specifica
+### Associa il valore alla coppia di prodotti ed eventi specifica
 
-La query seguente vincola il valore alla coppia di prodotti ed eventi specifica. In questo esempio, il valore è associato all’evento di visualizzazione del prodotto.
+La query seguente associa il valore alla coppia di prodotti ed eventi specifica. In questo esempio, il valore è associato all’evento di visualizzazione prodotto.
 
 ```sql
 SELECT
@@ -174,7 +174,7 @@ LIMIT 100
 
 ### Mantenere il valore associato alle occorrenze successive del rispettivo prodotto
 
-La query di esempio seguente persiste il valore associato alle occorrenze successive del rispettivo prodotto. La sottoquery più bassa stabilisce la relazione del valore con il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l’attribuzione di tale valore associato nelle interazioni successive con il rispettivo prodotto. L&#39;opzione SELECT di livello superiore aggrega i risultati per produrre il reporting.
+La query di esempio seguente mantiene il valore associato alle occorrenze successive del rispettivo prodotto. La sottoquery più bassa stabilisce la relazione del valore con il prodotto nell’evento di binding dichiarato. La sottoquery successiva esegue l’attribuzione di tale valore associato nelle interazioni successive con il rispettivo prodotto. Il livello superiore SELECT aggrega i risultati per produrre il reporting.
 
 ```sql
 SELECT
@@ -218,6 +218,6 @@ LIMIT 100
 
 ## Passaggi successivi
 
-Leggendo questo documento, dovresti avere una migliore comprensione di come restituire un eVar di merchandising utilizzando la sintassi del prodotto e associare un valore a un prodotto specifico con la sintassi della variabile di conversione.
+Una volta letto questo documento, sarai in grado di capire meglio come restituire un eVar di merchandising utilizzando la sintassi del prodotto e associare un valore a un prodotto specifico con la sintassi della variabile di conversione.
 
-Se non lo hai già fatto, devi leggere il [Documentazione sulle informazioni di Analytics per le interazioni web e mobile](./analytics-insights.md) successivo. Fornisce casi d’uso comuni e illustra come utilizzare Query Service per creare informazioni fruibili dai dati Adobe Analytics web e mobili.
+Se non lo hai già fatto, leggi la sezione [Documentazione di Analytics Insights for web and mobile interactions](./analytics-insights.md) avanti. Vengono forniti casi d’uso comuni e viene illustrato come utilizzare Query Service per creare informazioni fruibili dai dati di Adobe Analytics per web e dispositivi mobili.

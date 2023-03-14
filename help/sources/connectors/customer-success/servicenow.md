@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # [!DNL ServiceNow] connettore
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[!DNL Experience Platform] fornisce il supporto per l’acquisizione di dati da un sistema di successo cliente di terze parti. Il supporto per i fornitori di successo dei clienti include: [!DNL ServiceNow].
+[!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da un sistema di customer success di terze parti. Il supporto per i provider di successo dei clienti include [!DNL ServiceNow].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Consulta la [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
 
-La documentazione seguente fornisce informazioni su come connettersi [!DNL ServiceNow] a [!DNL Platform] utilizzando le API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL ServiceNow] a [!DNL Platform] utilizzando le API o l’interfaccia utente:
 
 ## Connetti [!DNL ServiceNow] a [!DNL Platform] utilizzo delle API
 
-- [Creare una connessione di base ServiceNow utilizzando l’API del servizio di flusso](../../tutorials/api/create/customer-success/servicenow.md)
-- [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
-- [Creare un flusso di dati per un’origine di successo del cliente utilizzando l’API del servizio di flusso](../../tutorials/api/collect/customer-success.md)
+- [Creare una connessione di base ServiceNow utilizzando l&#39;API del servizio Flow](../../tutorials/api/create/customer-success/servicenow.md)
+- [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
+- [Creare un flusso di dati per un’origine di successo del cliente utilizzando l’API del servizio Flusso](../../tutorials/api/collect/customer-success.md)
 
-## Connetti [!DNL ServiceNow] a [!DNL Platform] utilizzo dell’interfaccia
+## Connetti [!DNL ServiceNow] a [!DNL Platform] utilizzo dell’interfaccia utente
 
-- [Creare una connessione sorgente ServiceNow nell&#39;interfaccia utente](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Creazione di un flusso di dati per una connessione sorgente con successo cliente nell’interfaccia utente](../../tutorials/ui/dataflow/customer-success.md)
+- [Creare una connessione sorgente ServiceNow nell’interfaccia utente](../../tutorials/ui/create/customer-success/servicenow.md)
+- [Creare un flusso di dati per una connessione sorgente di successo del cliente nell’interfaccia utente](../../tutorials/ui/dataflow/customer-success.md)

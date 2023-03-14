@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /search nell’API d
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 97%
 
 ---
@@ -46,7 +46,7 @@ L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https:/
 
 ## Eseguire una ricerca {#perform}
 
-È possibile eseguire una ricerca effettuando una richiesta di POST.
+Per eseguire una ricerca, devi eseguire una richiesta POST.
 
 **Formato API**
 
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | Matrice di oggetti che indica l’ordine in cui elencare i risultati. Ogni oggetto deve contenere una singola proprietà: la chiave rappresenta il percorso del campo in base al quale eseguire l’ordinamento; il valore rappresenta l’ordinamento (`asc` per crescente, `desc` per decrescente). |
 | `resource_types` | Matrice di stringhe che indica i tipi di risorse specifici da cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 

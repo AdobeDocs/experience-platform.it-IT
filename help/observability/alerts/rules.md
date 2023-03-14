@@ -1,107 +1,107 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;intervallo di date
+keywords: Experience Platform;home;argomenti popolari;intervallo date
 title: Regole di avviso standard
-description: Il presente documento illustra le regole di avviso predefinite fornite dall'Experience Platform.
+description: Questo documento descrive le regole di avviso predefinite fornite dall’Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
 # Regole di avviso standard
 
-Adobe Experience Platform fornisce diverse regole di avviso predefinite che è possibile abilitare per la propria organizzazione. Il presente documento illustra i dettagli di queste regole di avviso fornite in Adobe. Per informazioni più generali sugli avvisi in Experience Platform, consulta la sezione [panoramica degli avvisi](./overview.md).
+Adobe Experience Platform fornisce diverse regole di avviso predefinite che è possibile abilitare per l’organizzazione. Il presente documento descrive i dettagli di queste regole di avviso fornite dagli Adobi. Per informazioni più generali sugli avvisi in Experience Platform, consulta la sezione [panoramica degli avvisi](./overview.md).
 
-Quando [visualizzazione delle regole di avviso nell’interfaccia utente di Platform](./ui.md), puoi abbonarti a ogni regola singolarmente. Durante l’abbonamento agli avvisi tramite [Notifiche evento I/O](./subscribe.md)Tuttavia, le regole di avviso sono organizzate in diversi pacchetti di abbonamento. Nelle tabelle seguenti, ogni regola viene visualizzata con il nome di sottoscrizione dell’evento I/O corrispondente.
+Quando [visualizzazione delle regole di avviso nell’interfaccia utente di Platform](./ui.md), puoi abbonarti a ogni regola singolarmente. Quando si sottoscrivono avvisi tramite [Notifiche di eventi di I/O](./subscribe.md)Tuttavia, le regole di avviso sono organizzate in pacchetti di abbonamento diversi. Nelle tabelle seguenti, ogni regola viene visualizzata con il nome dell’abbonamento all’evento di I/O corrispondente.
 
 ## Acquisizione dei dati
 
-Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../ingestion/home.md) e  [origini](../../sources/home.md):
+Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../ingestion/home.md) e  [sorgenti](../../sources/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni sull’esecuzione del flusso di origine | Avvio esecuzione flusso origini | Questo avviso viene attivato quando una connessione sorgente avvia l&#39;elaborazione dei dati. |
-| Informazioni sull’esecuzione del flusso di origine | Esecuzione flusso origini completata | Questo avviso viene attivato quando i dati vengono acquisiti correttamente da una connessione sorgente. |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di esecuzione del flusso di origini | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati da una connessione sorgente. |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Ritardo di acquisizione | Questo avviso viene attivato quando l’elaborazione di un flusso di acquisizione batch richiede più di 150 minuti. |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Errore di acquisizione | Questo avviso si attiva quando il rapporto tra record non riusciti e tutti i record supera la soglia dello 0,5%. |
+| Informazioni esecuzione flusso di origine | Inizio esecuzione flusso origini | Questo avviso viene attivato quando una connessione di origine inizia a elaborare i dati. |
+| Informazioni esecuzione flusso di origine | Esecuzione del flusso di origini completata | Questo avviso viene attivato quando i dati vengono acquisiti correttamente da una connessione di origine. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di origine | Errore di esecuzione del flusso origini | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati da una connessione di origine. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di origine | Ritardo acquisizione | Questo avviso viene attivato quando l’elaborazione di un flusso di acquisizione batch richiede più di 150 minuti. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di origine | Acquisizione non riuscita | Questo avviso viene attivato quando il rapporto tra i record non riusciti e tutti i record supera la soglia dello 0,5%. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Se in precedenza hai effettuato la sottoscrizione al seguente tipo di avviso, non riceverai più avvisi in quanto questo avviso è stato dichiarato obsoleto:
+Se in precedenza è stato eseguito l&#39;abbonamento al tipo di avviso seguente, non verranno più ricevuti avvisi in quanto l&#39;avviso è diventato obsoleto:
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Ritardi, errori ed errori di esecuzione del flusso di origine | Mancanza di ingestione | Questo avviso invia un messaggio se l’acquisizione viene ritardata di più di sette ore e non vengono acquisiti dati in Platform. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di origine | Mancanza di acquisizione | Questo avviso ti invia un messaggio se l’acquisizione subisce un ritardo di oltre sette ore e nessun dato viene acquisito in Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Servizio Identity
 
 Le seguenti regole di avviso sono specifiche per [Servizio identità](../../identity-service/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni sull’acquisizione di identità | Avvio dell’esecuzione del flusso del servizio Identity | Questo avviso viene attivato quando un’esecuzione di un flusso del servizio Identity avvia l’elaborazione dei dati. In altre parole, i dati acquisiti vengono caricati dal Data Lake nel servizio Identity. |
-| Informazioni sull’acquisizione di identità | Esecuzione del flusso del servizio Identity completata | Questo avviso viene attivato quando i dati vengono caricati correttamente dal Data Lake nel servizio Identity. |
-| Ritardi, errori ed errori di acquisizione delle identità | Ritardo nell’esecuzione del flusso del servizio Identity | Questo avviso viene attivato quando l’elaborazione di un flusso del servizio Identity richiede più di 150 minuti. |
-| Ritardi, errori ed errori di acquisizione delle identità | Errore di esecuzione del flusso del servizio Identity | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati nel servizio Identity. |
+| Info acquisizione identità | Inizio esecuzione flusso servizio Identity | Questo avviso viene attivato quando un flusso del servizio Identity avvia l’elaborazione dei dati. In altre parole, i dati acquisiti vengono caricati dal Data Lake al servizio Identity. |
+| Info acquisizione identità | Esecuzione del flusso del servizio Identity completata | Questo avviso viene attivato quando i dati vengono caricati correttamente dal Data Lake nel servizio Identity. |
+| Ritardi, errori ed errori nell’acquisizione dell’identità | Ritardo esecuzione flusso servizio identità | Questo avviso viene attivato quando l’elaborazione di un flusso del servizio Identity richiede più di 150 minuti. |
+| Ritardi, errori ed errori nell’acquisizione dell’identità | Errore di esecuzione del flusso del servizio Identity | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati in Identity Service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Profilo cliente in tempo reale
 
 Le seguenti regole di avviso sono specifiche per [Profilo cliente in tempo reale](../../profile/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni sull’acquisizione del profilo | Inizio esecuzione flusso profilo | Questo avviso viene attivato quando un’esecuzione di flusso di profilo avvia l’elaborazione dei dati. |
-| Informazioni sull’acquisizione del profilo | Flusso di profilo eseguito correttamente | Questo avviso si attiva quando i dati vengono caricati correttamente in Profilo dal Data Lake. |
-| Ritardi, errori ed errori di acquisizione del profilo | Ritardo esecuzione flusso profilo | Questo avviso viene attivato quando il caricamento dei dati dal Data Lake nel profilo richiede più di 150 minuti per l’elaborazione. |
-| Ritardi, errori ed errori di acquisizione del profilo | Errore di esecuzione del flusso di profilo | Questo avviso si attiva quando si verifica un errore durante l’acquisizione dei dati in Profilo. |
+| Informazioni sull’acquisizione del profilo | Inizio esecuzione flusso profilo | Questo avviso viene attivato quando un flusso di profilo inizia l’elaborazione dei dati. |
+| Informazioni sull’acquisizione del profilo | Esecuzione del flusso di profilo completata | Questo avviso viene attivato quando i dati vengono caricati correttamente nel profilo dal Data Lake. |
+| Ritardi, errori ed errori nell’acquisizione del profilo | Ritardo esecuzione flusso profilo | Questo avviso viene attivato quando l’elaborazione del caricamento dei dati dal Data Lake al profilo richiede più di 150 minuti. |
+| Ritardi, errori ed errori nell’acquisizione del profilo | Errore di esecuzione del flusso di profilo | Questo avviso viene attivato quando si verifica un errore durante l’acquisizione dei dati nel profilo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmentazione
 
 Le seguenti regole di avviso sono specifiche per [Servizio di segmentazione](../../segmentation/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni sul processo di valutazione del segmento | Avvio processo segmento | Questo avviso viene attivato quando un processo di valutazione dei segmenti avvia l’elaborazione dei dati. |
-| Informazioni sul processo di valutazione del segmento | Processo del segmento riuscito | Questo avviso viene attivato quando un processo di valutazione dei segmenti viene completato correttamente. |
-| Ritardi, errori ed errori del processo di valutazione del segmento | Ritardo processo segmento | Questo avviso viene attivato quando il completamento di un processo di valutazione dei segmenti richiede più di 150 minuti. <br> Verrà visualizzato uno dei seguenti stati: <br>- ATTIVAZIONE - È stata soddisfatta la condizione per il guasto o il ritardo (considerarla in uno stato ATTIVO). <br>- INATTIVO - La condizione non è stata soddisfatta o non è stata risolta (Considerala in uno stato RISOLTO). |
-| Ritardi, errori ed errori del processo di valutazione del segmento | Errore del processo del segmento | Questo avviso si attiva quando un processo di valutazione del segmento genera un errore. |
-| Ritardi, errori ed errori del processo di valutazione del segmento | Definizione del segmento disabilitata | Questo avviso si attiva quando una definizione di segmento è disabilitata a causa di un errore interno. Questo attiva automaticamente una stanza di guerra per un team di ingegneri Adobe per indagare il problema. Questo avviso è inteso solo come informativo e non richiede alcuna azione da parte tua. |
+| Informazioni processo valutazione segmento | Inizio processo segmento | Questo avviso viene attivato quando un processo di valutazione del segmento inizia a elaborare i dati. |
+| Informazioni processo valutazione segmento | Segment Job Success | Questo avviso viene attivato quando un processo di valutazione del segmento viene completato correttamente. |
+| Ritardi, errori ed errori del processo di valutazione del segmento | Ritardo processo segmento | Questo avviso viene attivato quando il completamento di un processo di valutazione di un segmento richiede più di 150 minuti. <br> Verrà visualizzato uno dei seguenti stati: <br>- ATTIVAZIONE - La condizione per il guasto o il ritardo è stata soddisfatta (considerarla in uno stato ATTIVO). <br>- INATTIVO - La condizione non è stata soddisfatta o non è stata risolta (considerarla nello stato RISOLTO). |
+| Ritardi, errori ed errori del processo di valutazione del segmento | Errore processo segmento | Questo avviso viene attivato quando un processo di valutazione del segmento genera un errore. |
+| Ritardi, errori ed errori del processo di valutazione del segmento | Definizione segmento disabilitata | Questo avviso viene attivato quando la definizione di un segmento è disabilitata a causa di un errore interno. Questo attiva automaticamente una sala da guerra per un team di ingegneri Adobi per indagare sul problema. Questo avviso ha solo scopo informativo e non richiede alcuna azione da parte dell&#39;utente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Destinazioni
 
 Le seguenti regole di avviso sono specifiche per [destinazioni](../../destinations/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni sull’esecuzione del flusso di destinazione | Inizio esecuzione flusso di destinazione | Questo avviso viene attivato quando un’esecuzione di un flusso di destinazione avvia l’attivazione di un segmento. |
-| Informazioni sull’esecuzione del flusso di destinazione | Esecuzione flusso di destinazione completata | Questo avviso viene attivato quando un segmento viene attivato correttamente in una destinazione. |
-| Ritardi, errori ed errori di esecuzione del flusso di destinazione | Ritardo esecuzione flusso di destinazione | Questo avviso viene attivato quando un’esecuzione del flusso di destinazione richiede più di 150 minuti per attivare un segmento. |
-| Ritardi, errori ed errori di esecuzione del flusso di destinazione | Errore di esecuzione del flusso di destinazione | Questo avviso si attiva quando si verifica un errore durante l&#39;attivazione di un segmento a una destinazione. |
-| Ritardi, errori ed errori di esecuzione del flusso di destinazione | Il tasso di Skippage supera la soglia | Questo avviso si attiva quando il rapporto tra ID ignorati e ID totali supera una soglia. |
+| Informazioni sull&#39;esecuzione del flusso di destinazione | Inizio esecuzione flusso di destinazione | Questo avviso viene attivato quando l’esecuzione di un flusso di destinazione inizia ad attivare un segmento. |
+| Informazioni sull&#39;esecuzione del flusso di destinazione | Esecuzione del flusso di destinazione completata | Questo avviso viene attivato quando un segmento viene attivato correttamente in una destinazione. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di destinazione | Ritardo esecuzione flusso di destinazione | Questo avviso viene attivato quando l’esecuzione di un flusso di destinazione richiede più di 150 minuti per attivare un segmento. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di destinazione | Errore di esecuzione del flusso di destinazione | Questo avviso viene attivato quando si verifica un errore durante l’attivazione di un segmento in una destinazione. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di destinazione | La frequenza di salto supera la soglia | Questo avviso viene attivato quando il rapporto tra gli ID saltati e gli ID totali supera una soglia. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Servizio query
 
 Le seguenti regole di avviso sono specifiche per [Servizio query](../../query-service/home.md):
 
-| Abbonamento evento I/O | Regola di avviso | Descrizione |
+| Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Informazioni query pianificate del servizio query | Avvio query pianificato del servizio query | Questo avviso viene attivato quando inizia l&#39;esecuzione di una query pianificata. |
-| Informazioni query pianificate del servizio query | Query pianificata dal servizio query riuscita | Questo avviso viene attivato quando un processo di query pianificato viene completato correttamente. |
-| Ritardi, errori ed errori pianificati della query del servizio query | errore di query pianificata del servizio query | Questo avviso viene attivato quando un processo di query pianificato non riesce. |
+| Informazioni query pianificate da Query Service | Avvio query pianificato di Query Service | Questo avviso viene attivato all&#39;avvio di una query pianificata. |
+| Informazioni query pianificate da Query Service | Query Service: query pianificata completata | Questo avviso viene attivato quando un processo di query pianificato viene completato correttamente. |
+| Query Service ha pianificato ritardi, errori ed errori nelle query | errore di query pianificata del servizio query | Questo avviso viene attivato quando un processo di query pianificato non riesce. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |

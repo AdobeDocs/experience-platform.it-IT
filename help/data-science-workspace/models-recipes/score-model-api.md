@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;Punteggio di un modello;Data Science Workspace;argomenti popolari;api di apprendimento automatico sensei
+keywords: Experience Platform;valutare un modello;Data Science Workspace;argomenti popolari;sensei machine learning api
 solution: Experience Platform
 title: Punteggio di un modello utilizzando l’API di apprendimento automatico di Sensei
 type: Tutorial
-description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico di Sensei per creare un esperimento e un’esecuzione di un esperimento.
+description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico di Sensei per creare un’esecuzione di un esperimento e di un esperimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Punteggio di un modello utilizzando [!DNL Sensei Machine Learning API]
 
-Questa esercitazione ti mostrerà come sfruttare le API per creare un esperimento e un’esecuzione di un esperimento. Per un elenco di tutti gli endpoint nell&#39;API di apprendimento automatico di Sensei, fai riferimento a [presente documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Questa esercitazione ti mostrerà come sfruttare le API per creare un’esecuzione di un esperimento e di un esperimento. Per un elenco di tutti gli endpoint nell’API di apprendimento automatico di Sensei, consulta [questo documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Creare un esperimento pianificato per il punteggio
 
-Simile agli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene eseguita anche includendo un `template` al parametro body. Inoltre, la `name` campo sotto `tasks` nel corpo è impostato come `score`.
+Analogamente agli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene eseguita anche includendo una `template` al parametro body. Inoltre, il `name` campo in `tasks` nel corpo è impostato come `score`.
 
-Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e funzionerà fino a `endTime`.
+Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e verrà eseguito fino al `endTime`.
 
 **Richiesta**
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
-`{JSON_PAYLOAD}`: Oggetto Experience Run da inviare. L’esempio che utilizziamo nel nostro tutorial è mostrato qui:
+`{ORG_ID}`: le credenziali dell’organizzazione IMS sono state trovate nell’integrazione univoca di Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: valore del token Bearer specifico fornito dopo l’autenticazione.\
+`{API_KEY}`: valore chiave API specifico trovato nell’integrazione univoca di Adobe Experience Platform.\
+`{JSON_PAYLOAD}`: oggetto esecuzione esperimento da inviare. L’esempio utilizzato nel nostro tutorial è mostrato qui:
 
 ```JSON
 {
@@ -67,7 +67,7 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: L&#39;ID che rappresenta l&#39;istanza MLI.\
+`{INSTANCE_ID}`: ID che rappresenta l’istanza MLI.\
 `{MODEL_ID}`: ID che rappresenta il modello addestrato.
 
 Di seguito è riportata la risposta dopo la creazione dell’esperimento pianificato.
@@ -102,13 +102,13 @@ Di seguito è riportata la risposta dopo la creazione dell’esperimento pianifi
 }
 ```
 
-`{EXPERIMENT_ID}`: L&#39;ID che rappresenta l&#39;esperimento.\
-`{INSTANCE_ID}`: L&#39;ID che rappresenta l&#39;istanza MLI.
+`{EXPERIMENT_ID}`: ID che rappresenta l’esperimento.\
+`{INSTANCE_ID}`: ID che rappresenta l’istanza MLI.
 
 
-### Creare un’esecuzione di un esperimento per il punteggio
+### Creare un’esecuzione dell’esperimento per il punteggio
 
-Ora, con il modello addestrato, possiamo creare un Experience Run per il punteggio. Il valore del `modelId` è il parametro `id` parametro restituito nella richiesta del modello di GET precedente.
+Ora con il modello addestrato, possiamo creare un’esecuzione di esperimento per il punteggio. Il valore della proprietà `modelId` il parametro è il `id` parametro restituito nella richiesta del modello di GET precedente.
 
 **Richiesta**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{API_KEY}`: Il valore chiave API specifico si trova nell’integrazione Adobe Experience Platform univoca.\
-`{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento di cui desideri eseguire il targeting. Questo si trova nella risposta durante la creazione del tuo esperimento.\
-`{JSON_PAYLOAD}`: Dati da registrare. L’esempio che utilizziamo nel nostro tutorial è il seguente:
+`{ORG_ID}`: le credenziali dell’organizzazione IMS sono state trovate nell’integrazione univoca di Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: valore del token Bearer specifico fornito dopo l’autenticazione.\
+`{API_KEY}`: valore chiave API specifico trovato nell’integrazione univoca di Adobe Experience Platform.\
+`{EXPERIMENT_ID}`: ID corrispondente all’esperimento di cui desideri eseguire il targeting. Questo si trova nella risposta durante la creazione dell’esperimento.\
+`{JSON_PAYLOAD}`: dati da pubblicare. L’esempio utilizzato nel nostro tutorial è il seguente:
 
 ```JSON
 {
@@ -145,7 +145,7 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: L&#39;ID corrispondente al modello.
+`{MODEL_ID}`: ID corrispondente al modello.
 
 La risposta dalla creazione dell’esecuzione dell’esperimento è mostrata di seguito:
 
@@ -168,13 +168,13 @@ La risposta dalla creazione dell’esecuzione dell’esperimento è mostrata di 
 }
 ```
 
-`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento in cui si trova l&#39;esecuzione.\
-`{EXPERIMENT_RUN_ID}`: L&#39;ID corrispondente all&#39;esecuzione dell&#39;esperimento appena creato.
+`{EXPERIMENT_ID}`: ID corrispondente all’esperimento in cui si trova l’esecuzione.\
+`{EXPERIMENT_RUN_ID}`: ID corrispondente all’esecuzione dell’esperimento appena creata.
 
 
-### Recupera lo stato di esecuzione di un esperimento per l&#39;esecuzione programmata di un esperimento
+### Recuperare lo stato di esecuzione di un esperimento per l’esecuzione pianificata dell’esperimento
 
-Per ottenere le esecuzioni di esperimenti per gli esperimenti pianificati, la query è mostrata di seguito:
+Per eseguire un esperimento per gli esperimenti pianificati, la query è mostrata di seguito:
 
 **Richiesta**
 
@@ -185,11 +185,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento in cui si trova l&#39;esecuzione.\
-`{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+`{EXPERIMENT_ID}`: ID corrispondente all’esperimento in cui si trova l’esecuzione.\
+`{ACCESS_TOKEN}`: valore del token Bearer specifico fornito dopo l’autenticazione.\
+`{ORG_ID}`: le credenziali dell’organizzazione IMS sono state trovate nell’integrazione univoca di Adobe Experience Platform.
 
-Poiché sono presenti più esecuzioni di esperimenti per un esperimento specifico, la risposta restituita avrà una matrice di ID di esecuzione.
+Poiché esistono più esecuzioni di esperimenti per un esperimento specifico, la risposta restituita avrà una matrice di ID di esecuzione.
 
 **Risposta**
 
@@ -212,12 +212,12 @@ Poiché sono presenti più esecuzioni di esperimenti per un esperimento specific
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: L&#39;ID corrispondente all&#39;esecuzione dell&#39;esperimento.\
-`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento in cui si trova l&#39;esecuzione.
+`{EXPERIMENT_RUN_ID}`: ID corrispondente all’esecuzione dell’esperimento.\
+`{EXPERIMENT_ID}`: ID corrispondente all’esperimento in cui si trova l’esecuzione.
 
-### Arrestare ed eliminare un esperimento pianificato
+### Interrompere ed eliminare un esperimento pianificato
 
-Se desideri interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, può essere eseguito eseguendo una query su una richiesta di DELETE al `{EXPERIMENT_ID}`
+Se desideri interrompere l’esecuzione di un esperimento pianificato prima del relativo `endTime`, è possibile eseguire una query su una richiesta DELETE al `{EXPERIMENT_ID}`
 
 **Richiesta**
 
@@ -228,15 +228,15 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento.\
-`{ACCESS_TOKEN}`: Il valore specifico del token portatore fornito dopo l’autenticazione.\
-`{ORG_ID}`: Le credenziali dell’organizzazione IMS sono state trovate nell’integrazione unica di Adobe Experience Platform.
+`{EXPERIMENT_ID}`: ID corrispondente all’esperimento.\
+`{ACCESS_TOKEN}`: valore del token Bearer specifico fornito dopo l’autenticazione.\
+`{ORG_ID}`: le credenziali dell’organizzazione IMS sono state trovate nell’integrazione univoca di Adobe Experience Platform.
 
 >[!NOTE]
 >
->La chiamata API disattiverà la creazione di nuove esecuzioni di Esperimenti. Tuttavia, non interromperà l&#39;esecuzione di esecuzioni di esperimenti già in esecuzione.
+>La chiamata API disabiliterà la creazione di nuove esecuzioni dell’esperimento. Tuttavia, non interrompe l’esecuzione di esecuzioni di esperimenti già in esecuzione.
 
-Di seguito è riportata la notifica della cancellazione dell’esperimento.
+Di seguito è riportata la risposta con la quale si notifica che l’esperimento è stato eliminato correttamente.
 
 **Risposta**
 

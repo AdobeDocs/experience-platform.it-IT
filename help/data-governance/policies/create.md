@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;governance dei dati;criteri di utilizzo dei dati
+keywords: Experience Platform;home;argomenti popolari;governance dei dati;criteri di utilizzo dei dati
 solution: Experience Platform
 title: Creare un criterio di governance dei dati nell’API
 type: Tutorial
@@ -14,41 +14,41 @@ ht-degree: 3%
 
 # Creare un criterio di governance dei dati nell’API
 
-La [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di creare e gestire criteri di governance dei dati per determinare quali azioni di marketing possono essere intraprese rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
+Il [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di creare e gestire criteri di governance dei dati per determinare quali azioni di marketing possono essere eseguite sui dati che contengono determinate etichette di utilizzo dei dati.
 
-Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio di governance utilizzando [!DNL Policy Service] API.
+Questo documento fornisce un tutorial dettagliato per la creazione di un criterio di governance utilizzando [!DNL Policy Service] API.
 
 >[!NOTE]
 >
->Per i passaggi su come creare un criterio di controllo degli accessi, consulta `/policies` guida dell&#39;endpoint per [API di controllo accessi](../../access-control/abac/api/policies.md). Per informazioni su come creare un criterio per il consenso, consulta [guida all’interfaccia utente dei criteri](./user-guide.md#consent-policy).
+>Per informazioni su come creare un criterio di controllo degli accessi, vedere `/policies` guida dell’endpoint per [API di controllo degli accessi](../../access-control/abac/api/policies.md). Per informazioni su come creare un criterio di consenso, consulta la [guida all’interfaccia utente dei criteri](./user-guide.md#consent-policy).
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione dei criteri:
+Questo tutorial richiede una buona conoscenza dei seguenti concetti chiave coinvolti nella creazione e nella valutazione delle policy:
 
-* [Governance dei dati di Adobe Experience Platform](../home.md): Il quadro [!DNL Platform] applica la conformità per l’utilizzo dei dati.
-   * [Etichette di utilizzo dati](../labels/overview.md): Le etichette per l’utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni per l’accesso a tali dati.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il quadro standardizzato [!DNL Platform] organizza i dati sulla customer experience.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Governance dei dati Adobe Experience Platform](../home.md): framework tramite il quale [!DNL Platform] applica la conformità all’utilizzo dei dati.
+   * [Etichette di utilizzo dati](../labels/overview.md): le etichette di utilizzo dei dati vengono applicate ai campi dati XDM, specificando restrizioni sulla modalità di accesso ai dati.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Prima di avviare questa esercitazione, controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare correttamente le chiamate al [!DNL Policy Service] API, incluse le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di iniziare questo tutorial, controlla [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate al [!DNL Policy Service] API, incluse le intestazioni richieste e la modalità di lettura delle chiamate API di esempio.
 
 ## Definire un’azione di marketing {#define-action}
 
-Nel framework per la governance dei dati, un’azione di marketing è un’azione che [!DNL Experience Platform] prende i dati del consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Nel framework per la governance dei dati, un’azione di marketing è un’azione che [!DNL Experience Platform] dati richiesti dal consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Il primo passaggio nella creazione di un criterio di utilizzo dei dati consiste nel determinare quale azione di marketing verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
+Il primo passaggio nella creazione di un criterio di utilizzo dei dati consiste nel determinare l’azione di marketing che verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
 
-* [Cerca un’azione di marketing esistente](#look-up)
-* [Crea una nuova azione di marketing](#create-new)
+* [Cercare un’azione di marketing esistente](#look-up)
+* [Creare una nuova azione di marketing](#create-new)
 
-### Cerca un’azione di marketing esistente {#look-up}
+### Cercare un’azione di marketing esistente {#look-up}
 
-Puoi cercare le azioni di marketing esistenti da valutare in base al criterio effettuando una richiesta di GET a uno dei `/marketingActions` endpoint.
+Per cercare le azioni di marketing esistenti da valutare in base ai criteri, devi effettuare una richiesta GET a una delle `/marketingActions` endpoint.
 
 **Formato API**
 
-A seconda che tu stia cercando un’azione di marketing fornita da [!DNL Experience Platform] o un&#39;azione di marketing personalizzata creata dalla tua organizzazione, utilizza `marketingActions/core` o `marketingActions/custom` endpoint, rispettivamente.
+A seconda che tu stia cercando un’azione di marketing fornita da [!DNL Experience Platform] o un’azione di marketing personalizzata creata dalla tua organizzazione, utilizza `marketingActions/core` o `marketingActions/custom` endpoint, rispettivamente.
 
 ```http
 GET /marketingActions/core
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **Richiesta**
 
-La richiesta seguente utilizza il `marketingActions/custom` endpoint , che recupera un elenco di tutte le azioni di marketing definite dall’organizzazione IMS.
+La richiesta seguente utilizza `marketingActions/custom` endpoint, che recupera un elenco di tutte le azioni di marketing definite dall’organizzazione IMS.
 
 ```shell
 curl -X GET \
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce il numero totale di azioni di marketing trovate (`count`) ed elenca i dettagli delle azioni di marketing stesse all’interno della `children` array.
+In caso di esito positivo, la risposta restituisce il numero totale di azioni di marketing trovate (`count`) ed elenca i dettagli delle azioni di marketing stesse all’interno del `children` array.
 
 ```json
 {
@@ -123,13 +123,13 @@ Una risposta corretta restituisce il numero totale di azioni di marketing trovat
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `_links.self.href` | Ogni elemento all&#39;interno della `children` contiene un ID URI per l’azione di marketing elencata. |
+| `_links.self.href` | Ogni elemento all&#39;interno del `children` l’array contiene un ID URI per l’azione di marketing elencata. |
 
-Quando trovi l’azione di marketing da utilizzare, registra il valore della relativa `href` proprietà. Questo valore viene utilizzato durante il passaggio successivo di [creazione di un criterio](#create-policy).
+Quando trovi l’azione di marketing da utilizzare, registra il valore dei relativi `href` proprietà. Questo valore viene utilizzato durante il passaggio successivo di [creazione di una policy](#create-policy).
 
-### Crea una nuova azione di marketing {#create-new}
+### Creare una nuova azione di marketing {#create-new}
 
-Puoi creare una nuova azione di marketing effettuando una richiesta di PUT al `/marketingActions/custom/` e fornendo un nome per l’azione di marketing alla fine del percorso della richiesta.
+Per creare una nuova azione di marketing, devi effettuare una richiesta PUT al `/marketingActions/custom/` e fornendo un nome per l’azione di marketing alla fine del percorso della richiesta.
 
 **Formato API**
 
@@ -139,11 +139,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome della nuova azione di marketing che desideri creare. Questo nome agisce come identificatore principale dell’azione di marketing e deve quindi essere univoco. Si consiglia di assegnare all’azione di marketing un nome descrittivo ma conciso. |
+| `{MARKETING_ACTION_NAME}` | Nome della nuova azione di marketing da creare. Questo nome funge da identificatore principale dell’azione di marketing e deve quindi essere univoco. Si consiglia di assegnare all’azione di marketing un nome descrittivo ma conciso. |
 
 **Richiesta**
 
-La richiesta seguente crea una nuova azione di marketing personalizzata denominata &quot;exportToThirdParty&quot;. Tieni presente che `name` nel payload della richiesta è lo stesso nome fornito nel percorso della richiesta.
+La richiesta seguente crea una nuova azione di marketing personalizzata denominata &quot;exportToThirdParty&quot;. Tieni presente che `name` nel payload della richiesta corrisponde al nome fornito nel percorso della richiesta.
 
 ```shell
 curl -X PUT \  
@@ -161,12 +161,12 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome dell’azione di marketing che desideri creare. Questo nome deve corrispondere al nome fornito nel percorso della richiesta, altrimenti si verificherà un errore 400 (Richiesta non valida). |
-| `description` | Descrizione dell’azione di marketing leggibile dall’utente. |
+| `name` | Nome dell’azione di marketing da creare. Questo nome deve corrispondere al nome fornito nel percorso della richiesta, altrimenti si verificherà un errore 400 (Richiesta non valida). |
+| `description` | Una descrizione leggibile dell’azione di marketing. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli dell’azione di marketing appena creata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e i dettagli dell’azione di marketing appena creata.
 
 ```json
 {
@@ -191,13 +191,13 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli dell�
 | --- | --- |
 | `_links.self.href` | ID URI dell’azione di marketing. |
 
-Registra l&#39;ID URI dell&#39;azione di marketing appena creata, in modo che venga utilizzato nel passaggio successivo della creazione di un criterio.
+Registra l’ID URI dell’azione di marketing appena creata, in quanto verrà utilizzata nel passaggio successivo della creazione di un criterio.
 
 ## Creare un criterio {#create-policy}
 
-La creazione di un nuovo criterio richiede di fornire l’ID URI di un’azione di marketing con un’espressione delle etichette di utilizzo che ne vietano l’azione di marketing.
+Per creare un nuovo criterio è necessario fornire all’ID URI di un’azione di marketing un’espressione delle etichette di utilizzo che impediscono tale azione di marketing.
 
-Questa espressione è denominata espressione di criterio e è un oggetto contenente (A) un&#39;etichetta o (B) un operatore e operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto espressione di criterio. Ad esempio, una politica relativa all’esportazione di dati verso terzi potrebbe essere vietata se `C1 OR (C3 AND C7)` le etichette sono presenti. Questa espressione viene specificata come:
+Questa espressione viene definita espressione di criteri ed è un oggetto contenente (A) un&#39;etichetta oppure (B) un operatore e operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto espressione di criteri. Ad esempio, una politica relativa all’esportazione di dati a terzi potrebbe essere vietata se `C1 OR (C3 AND C7)` sono presenti etichette. Questa espressione viene specificata come:
 
 ```json
 "deny": {
@@ -223,9 +223,9 @@ Questa espressione è denominata espressione di criterio e è un oggetto contene
 
 >[!NOTE]
 >
->Sono supportati solo gli operatori OR e AND .
+>Sono supportati solo gli operatori OR e AND.
 
-Dopo aver configurato l’espressione del criterio, puoi creare un nuovo criterio effettuando una richiesta di POST al `/policies/custom` punto finale.
+Dopo aver configurato l’espressione dei criteri, puoi creare un nuovo criterio effettuando una richiesta POST al `/policies/custom` endpoint.
 
 **Formato API**
 
@@ -235,7 +235,7 @@ POST /policies/custom
 
 **Richiesta**
 
-La seguente richiesta crea un criterio denominato &quot;Esporta dati a terze parti&quot; fornendo un’azione di marketing e un’espressione di policy nel payload della richiesta.
+La richiesta seguente crea un criterio denominato &quot;Export Data to Third Party&quot; (Esporta dati a terze parti) fornendo un’azione di marketing e un’espressione di criterio nel payload della richiesta.
 
 ```shell
 curl -X POST \
@@ -270,12 +270,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `marketingActionRefs` | Una matrice contenente `href` valore di un’azione di marketing, ottenuta [passaggio precedente](#define-action). Anche se nell’esempio precedente è elencata una sola azione di marketing, è possibile fornire più azioni. |
-| `deny` | L&#39;oggetto espressione policy. Definisce le etichette di utilizzo e le condizioni che causerebbero il rifiuto dell&#39;azione di marketing a cui si fa riferimento in `marketingActionRefs`. |
+| `marketingActionRefs` | Un array contenente `href` valore di un’azione di marketing, ottenuto nel [passaggio precedente](#define-action). Nell’esempio precedente è elencata una sola azione di marketing, ma è possibile specificare anche più azioni. |
+| `deny` | L’oggetto espressione criterio. Definisce le etichette e le condizioni di utilizzo che causerebbero il rifiuto da parte del criterio dell’azione di marketing a cui si fa riferimento in `marketingActionRefs`. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del criterio appena creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e i dettagli del criterio appena creato.
 
 ```json
 {
@@ -322,17 +322,17 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del cr
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | Valore generato dal sistema di sola lettura che identifica il criterio in modo univoco. |
+| `id` | Valore di sola lettura generato dal sistema che identifica in modo univoco il criterio. |
 
-Registra l&#39;ID URI del criterio appena creato, in modo che venga utilizzato nel passaggio successivo per abilitare il criterio.
+Registra l’ID URI del criterio appena creato, in quanto viene utilizzato nel passaggio successivo per abilitare il criterio.
 
-## Abilitare il criterio
+## Abilita il criterio
 
 >[!NOTE]
 >
->Anche se questo passaggio è facoltativo se desideri lasciare il criterio in `DRAFT` stato: per impostazione predefinita, lo stato di un criterio deve essere impostato su `ENABLED` per partecipare alla valutazione. Consulta la guida su [applicazione delle norme](../enforcement/api-enforcement.md) per informazioni su come fare eccezioni per i criteri in `DRAFT` stato.
+>Questo passaggio è facoltativo se desideri lasciare i criteri in `DRAFT` per impostazione predefinita, lo stato di un criterio deve essere impostato su `ENABLED` per partecipare alla valutazione. Consulta la guida su [applicazione dei criteri](../enforcement/api-enforcement.md) per informazioni su come creare eccezioni per i criteri in `DRAFT` stato.
 
-Per impostazione predefinita, i criteri con le relative `status` proprietà impostata su `DRAFT` non partecipare alla valutazione. Puoi abilitare il criterio per la valutazione effettuando una richiesta PATCH al `/policies/custom/` e fornisce l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
+Per impostazione predefinita, i criteri con `status` proprietà impostata su `DRAFT` non partecipano alla valutazione. Per abilitare il criterio per la valutazione, devi effettuare una richiesta PATCH al `/policies/custom/` e fornendo l’identificatore univoco per il criterio alla fine del percorso della richiesta.
 
 **Formato API**
 
@@ -342,11 +342,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{POLICY_ID}` | La `id` valore del criterio che si desidera abilitare. |
+| `{POLICY_ID}` | Il `id` valore del criterio che si desidera abilitare. |
 
 **Richiesta**
 
-La seguente richiesta esegue un’operazione PATCH sul `status` proprietà del criterio, modifica del valore da `DRAFT` a `ENABLED`.
+La richiesta seguente esegue un’operazione PATCH sul `status` della policy, modificandone il valore da `DRAFT` a `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -368,12 +368,12 @@ curl -X PATCH \
 | Proprietà | Descrizione |
 | --- | --- |
 | `op` | Tipo di operazione PATCH da eseguire. Questa richiesta esegue un&#39;operazione di &quot;sostituzione&quot;. |
-| `path` | Percorso del campo da aggiornare. Quando si abilita un criterio, il valore deve essere impostato su &quot;/status&quot;. |
-| `value` | Il nuovo valore da assegnare alla proprietà specificata in `path`. Questa richiesta imposta il `status` su &quot;ENABLED&quot;. |
+| `path` | Percorso del campo da aggiornare. Quando si abilita una policy, il valore deve essere impostato su &quot;/status&quot;. |
+| `value` | Il nuovo valore da assegnare alla proprietà specificata in `path`. Questa richiesta imposta i `status` su &quot;ENABLED&quot;. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) e i dettagli del criterio aggiornato, con i relativi `status` ora impostato su `ENABLED`.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e i dettagli del criterio aggiornato, con i relativi `status` ora impostato su `ENABLED`.
 
 ```json
 {
@@ -420,8 +420,8 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e i dettagli del criter
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un criterio di utilizzo dei dati per un’azione di marketing. Ora puoi continuare l’esercitazione su [applicazione dei criteri di utilizzo dei dati](../enforcement/api-enforcement.md) per scoprire come verificare le violazioni dei criteri e gestirle nell&#39;applicazione di esperienza.
+Seguendo questa esercitazione, hai creato correttamente un criterio di utilizzo dei dati per un’azione di marketing. Ora puoi continuare l’esercitazione su [applicazione dei criteri di utilizzo dei dati](../enforcement/api-enforcement.md) per scoprire come verificare la presenza di violazioni dei criteri e gestirle nell’applicazione experience.
 
-Per ulteriori informazioni sulle diverse operazioni disponibili nella [!DNL Policy Service] API, vedi [Guida per gli sviluppatori di Policy Service](../api/getting-started.md). Per informazioni su come applicare i criteri per [!DNL Real-Time Customer Profile] data, consulta l’esercitazione su [applicazione della conformità in materia di utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md).
+Per ulteriori informazioni sulle diverse operazioni disponibili nella sezione [!DNL Policy Service] API, consulta [Guida per gli sviluppatori di Policy Service](../api/getting-started.md). Per informazioni su come applicare i criteri per [!DNL Real-Time Customer Profile] dati, consulta l’esercitazione su [applicazione della conformità all’utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md).
 
-Per scoprire come gestire i criteri di utilizzo in [!DNL Experience Platform] interfaccia utente, vedi [guida utente di policy](user-guide.md).
+Per informazioni su come gestire i criteri di utilizzo in [!DNL Experience Platform] interfaccia utente, consulta [guida utente dei criteri](user-guide.md).

@@ -1,27 +1,27 @@
 ---
-description: Le specifiche di configurazione del server e del file per le destinazioni basate su file possono essere configurate in Adobe Experience Platform Destination SDK tramite l'endpoint /destination-server.
-title: Opzioni di configurazione per specifiche del server di destinazione basate su file
+description: Le specifiche di configurazione del server e dei file per le destinazioni basate su file possono essere configurate in Adobe Experience Platform Destination SDK tramite l’endpoint /destination-servers.
+title: Opzioni di configurazione per le specifiche del server di destinazione basato su file
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 9%
+source-wordcount: '1227'
+ht-degree: 8%
 
 ---
 
-# Configurazione del server e dei file per specifiche del server di destinazione basate su file
+# Configurazione del server e dei file per le specifiche del server di destinazione basato su file
 
 ## Panoramica {#overview}
 
-Questa pagina descrive tutte le opzioni di configurazione del server per i server di destinazione basati su file e mostra come impostare varie opzioni di configurazione dei file per gli utenti che esportano i file dall’Experience Platform alla destinazione.
+Questa pagina descrive tutte le opzioni di configurazione del server per i server di destinazione basati su file e mostra come impostare varie opzioni di configurazione dei file per gli utenti che esportano file da Experience Platform alla destinazione.
 
-Le specifiche di configurazione del server e del file per le destinazioni basate su file possono essere configurate in Adobe Experience Platform Destination SDK tramite il `/destination-servers` punto finale. Leggi [Operazioni endpoint API del server di destinazione](./destination-server-api.md) per un elenco completo delle operazioni eseguibili sull&#39;endpoint.
+Le specifiche di configurazione del server e dei file per le destinazioni basate su file possono essere configurate in Adobe Experience Platform Destination SDK tramite `/destination-servers` endpoint. Letto [Operazioni endpoint API server di destinazione](./destination-server-api.md) per un elenco completo delle operazioni che è possibile eseguire sull&#39;endpoint.
 
-Le sezioni seguenti includono le specifiche del server di destinazione specifiche per ciascun tipo di destinazione batch supportato nella Destination SDK.
+Le sezioni seguenti includono le specifiche del server di destinazione specifiche per ciascun tipo di destinazione batch supportato in Destination SDK.
 
-## Specifiche del server di destinazione Amazon S3 basate su file {#s3-example}
+## Specifiche del server di destinazione Amazon S3 basato su file {#s3-example}
 
-L&#39;esempio seguente mostra una configurazione corretta del server di destinazione per una destinazione Amazon S3.
+L’esempio seguente mostra una configurazione corretta del server di destinazione per una destinazione Amazon S3.
 
 ```json
 {
@@ -46,14 +46,14 @@ L&#39;esempio seguente mostra una configurazione corretta del server di destinaz
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Amazon S3]imposta su `FILE_BASED_S3`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Amazon S3], imposta su `FILE_BASED_S3`. |
 | `fileBasedS3Destination.bucket.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedS3Destination.bucket.value` | Stringa | Nome della [!DNL Amazon S3] bucket utilizzato da questa destinazione. |
+| `fileBasedS3Destination.bucket.value` | Stringa | Il nome del [!DNL Amazon S3] bucket da utilizzare per questa destinazione. |
 | `fileBasedS3Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Specifiche del server di destinazione SFTP basato su file {#sftp-example}
 
@@ -84,20 +84,20 @@ L’esempio seguente mostra una configurazione corretta del server di destinazio
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL SFTP] destinazioni, imposta su `FILE_BASED_SFTP`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL SFTP] destinazioni, impostalo su `FILE_BASED_SFTP`. |
 | `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Stringa | Directory principale dell&#39;archivio di destinazione. |
+| `fileBasedSftpDestination.rootDirectory.value` | Stringa | La directory radice dell&#39;archiviazione di destinazione. |
 | `fileBasedSftpDestination.hostName.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Stringa | Nome host dell&#39;archivio di destinazione. |
-| `port` | Intero | La porta del file server SFTP. |
-| `encryptionMode` | Stringa | Indica se utilizzare la crittografia dei file. Valori supportati: <ul><li>PGP</li><li>Nessuna</li></ul> |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileBasedSftpDestination.hostName.value` | Stringa | Nome host dell&#39;archiviazione di destinazione. |
+| `port` | Intero | Porta del file server SFTP. |
+| `encryptionMode` | Stringa | Indica se utilizzare la crittografia file. Valori supportati: <ul><li>PGP</li><li>Nessuna</li></ul> |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Basato su file [!DNL Azure Data Lake Storage] ([!DNL ADLS]) specifica del server di destinazione {#adls-example}
 
-L&#39;esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Azure Data Lake Storage] destinazione.
+L’esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Azure Data Lake Storage] destinazione.
 
 ```json
 {
@@ -118,16 +118,16 @@ L&#39;esempio seguente mostra una configurazione corretta del server di destinaz
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Data Lake Storage] destinazioni, imposta su `FILE_BASED_ADLS_GEN2`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Data Lake Storage] destinazioni, impostalo su `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Basato su file [!DNL Azure Blob Storage] specifica del server di destinazione {#blob-example}
 
-L&#39;esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Azure Blob Storage] destinazione.
+L’esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Azure Blob Storage] destinazione.
 
 ```json
 {
@@ -152,18 +152,18 @@ L&#39;esempio seguente mostra una configurazione corretta del server di destinaz
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Blob Storage] destinazioni, imposta su `FILE_BASED_AZURE_BLOB`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Blob Storage] destinazioni, impostalo su `FILE_BASED_AZURE_BLOB`. |
 | `fileBasedAzureBlobDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.container.value` | Stringa | Nome della [!DNL Azure Blob Storage] contenitore utilizzato da questa destinazione. |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileBasedAzureBlobDestination.container.value` | Stringa | Il nome del [!DNL Azure Blob Storage] contenitore utilizzato da questa destinazione. |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Basato su file [!DNL Data Landing Zone] ([!DNL DLZ]) specifica del server di destinazione {#dlz-example}
 
-L&#39;esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Data Landing Zone] ([!DNL DLZ]).
+L’esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Data Landing Zone] ([!DNL DLZ]) destinazione.
 
 ```json
 {
@@ -185,16 +185,16 @@ L&#39;esempio seguente mostra una configurazione corretta del server di destinaz
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Data Landing Zone] destinazioni, imposta su `FILE_BASED_DLZ`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Data Landing Zone] destinazioni, impostalo su `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Stringa | *Obbligatorio.*  Seleziona `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Basato su file [!DNL Google Cloud Storage] specifica del server di destinazione {#gcs-example}
 
-L&#39;esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Google Cloud Storage] destinazione.
+L’esempio seguente mostra una configurazione corretta del server di destinazione per un [!DNL Google Cloud Storage] destinazione.
 
 ```json
 {
@@ -219,26 +219,26 @@ L&#39;esempio seguente mostra una configurazione corretta del server di destinaz
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Google Cloud Storage] destinazioni, imposta su `FILE_BASED_GOOGLE_CLOUD`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Google Cloud Storage] destinazioni, impostalo su `FILE_BASED_GOOGLE_CLOUD`. |
 | `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Stringa | *Obbligatorio.*  Seleziona `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | Stringa | Nome della [!DNL Google Cloud Storage] bucket utilizzato da questa destinazione. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | Stringa | Il nome del [!DNL Google Cloud Storage] bucket da utilizzare per questa destinazione. |
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | Oggetto | Vedi [configurazione della formattazione dei file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
+| `fileConfigurations` | Oggetto | Consulta [configurazione formattazione file](#file-configuration) per spiegazioni dettagliate su questa sezione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Configurazione della formattazione dei file {#file-configuration}
+## Configurazione formattazione file {#file-configuration}
 
-Questa sezione descrive le impostazioni di formattazione del file per l&#39;esportazione `CSV` file. È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul proprio lato, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
+Questa sezione descrive le impostazioni di formattazione del file per il file esportato `CSV` file. È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul proprio lato, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
 
 >[!NOTE]
 >
->Le opzioni CSV sono supportate solo durante l’esportazione di file CSV. La `fileConfigurations` La sezione non è obbligatoria quando si imposta un nuovo server di destinazione. Se non trasmetti alcun valore nella chiamata API per le opzioni CSV, quelli predefiniti dalla [tabella di riferimento successiva](#file-formatting-reference-and-example) verrà utilizzato.
+>Le opzioni CSV sono supportate solo quando si esportano file CSV. Il `fileConfigurations` questa sezione non è obbligatoria durante la configurazione di un nuovo server di destinazione. Se nella chiamata API non trasmetti alcun valore per le opzioni CSV, i valori predefiniti verranno recuperati da [tabella di riferimento più avanti](#file-formatting-reference-and-example) verrà utilizzato.
 
-### Configurazioni di file con le opzioni CSV e `templatingStrategy` impostato su `NONE` {#file-configuration-templating-none}
+### Configurazioni dei file con opzioni CSV e `templatingStrategy` imposta su `NONE` {#file-configuration-templating-none}
 
-Nell’esempio di configurazione seguente, tutte le opzioni CSV sono fisse. Le impostazioni di esportazione definite in ciascuna delle `csvOptions` i parametri sono finali e gli utenti non possono modificarli.
+Nell’esempio di configurazione seguente, tutte le opzioni CSV sono fisse. Le impostazioni di esportazione definite in ciascuna `csvOptions` I parametri sono finali e gli utenti non possono modificarli.
 
 ```json
 "fileConfigurations": {
@@ -304,9 +304,9 @@ Nell’esempio di configurazione seguente, tutte le opzioni CSV sono fisse. Le i
     }
 ```
 
-### Configurazioni di file con le opzioni CSV e `templatingStrategy` impostato su `PEBBLE_V1` {#file-configuration-templating-pebble}
+### Configurazioni dei file con opzioni CSV e `templatingStrategy` imposta su `PEBBLE_V1` {#file-configuration-templating-pebble}
 
-Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è fissa. La `value` in ciascuno degli `csvOptions` è configurato in un campo dati cliente corrispondente tramite `/destinations` endpoint (ad esempio `customerData.quote` per `quote` opzione di formattazione dei file) e gli utenti possono utilizzare l&#39;interfaccia utente di Experience Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente.
+Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è fissa. Il `value` in ciascuno dei `csvOptions` parametri è configurato in un campo corrispondente dei dati del cliente tramite `/destinations` endpoint (ad esempio `customerData.quote` per `quote` file (opzione di formattazione del file) e gli utenti possono utilizzare l’interfaccia utente di Experience Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente.
 
 ```json
   "fileConfigurations": {
@@ -343,31 +343,31 @@ Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è fissa. L
   }
 ```
 
-### Riferimento completo ed esempi delle opzioni di formattazione supportate {#file-formatting-reference-and-example}
+### Riferimento completo ed esempi per le opzioni di formattazione dei file supportate {#file-formatting-reference-and-example}
 
 >[!TIP]
 >
->Le opzioni di formattazione del file CSV descritte di seguito sono documentate anche in [Guida di Apache Spark per file CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Le descrizioni utilizzate di seguito sono tratti dalla guida Apache Spark.
+>Le opzioni di formattazione del file CSV descritte di seguito sono documentate anche nel [Guida di Apache Spark per file CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Le descrizioni utilizzate di seguito sono tratte dalla guida di Apache Spark.
 
-Di seguito è riportato un riferimento completo di tutte le opzioni di formattazione disponibili nella Destination SDK, insieme ad esempi di output per ogni opzione.
+Di seguito è riportato un riferimento completo di tutte le opzioni di formattazione dei file disponibili in Destination SDK, insieme a esempi di output per ogni opzione.
 
 | Campo | Obbligatorio/facoltativo | Descrizione | Valore predefinito | Esempio di output 1 | Esempio di output 2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | Obbligatorio | Per ogni opzione di formattazione del file configurata, è necessario aggiungere il parametro `templatingStrategy`, che può avere due valori: <br><ul><li>`NONE`: utilizza questo valore se non intendi consentire agli utenti di scegliere tra valori diversi per una configurazione. Vedi [questa configurazione](#file-configuration-templating-none) per un esempio in cui le opzioni di formattazione dei file sono fisse.</li><li>`PEBBLE_V1`: utilizza questo valore se desideri consentire agli utenti di selezionare tra valori diversi per una configurazione. In questo caso, devi anche impostare un campo dati cliente corrispondente nel `/destination` configurazione dell’endpoint, per presentare le varie opzioni agli utenti nell’interfaccia utente. Vedi [questa configurazione](#file-configuration-templating-pebble) per un esempio in cui gli utenti possono scegliere tra diversi valori per le opzioni di formattazione dei file.</li></ul> | - | - | - |
-| `compression.value` | Facoltativo | Codec di compressione da utilizzare per il salvataggio dei dati su file. Valori supportati: `none`, `bzip2`, `gzip`, `lz4`e `snappy`. | `none` | - | - |
-| `fileType.value` | Facoltativo | Specifica il formato del file di output. Valori supportati: `csv`, `parquet`e `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette in cui il separatore può far parte del valore. | `null` | - | - |
-| `csvOptions.quoteAll.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tutti i valori devono sempre essere racchiusi tra virgolette. L&#39;impostazione predefinita prevede l&#39;escape solo di valori contenenti virgolette. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
-| `csvOptions.delimiter.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un separatore per ciascun campo e valore. Questo separatore può essere composto da uno o più caratteri. | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
-| `csvOptions.escape.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato. | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
-| `csvOptions.escapeQuotes.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se i valori contenenti virgolette devono sempre essere racchiusi tra virgolette. L&#39;impostazione predefinita prevede l&#39;escape di tutti i valori contenenti un carattere di virgolette. | `true` | - | - |
+| `templatingStrategy` | Obbligatorio | Per ogni opzione di formattazione del file configurata, è necessario aggiungere il parametro `templatingStrategy`, che può avere due valori: <br><ul><li>`NONE`: utilizza questo valore se non intendi consentire agli utenti di selezionare tra valori diversi per una configurazione. Consulta [questa configurazione](#file-configuration-templating-none) ad esempio, in cui le opzioni di formattazione del file sono fisse.</li><li>`PEBBLE_V1`: utilizza questo valore se desideri consentire agli utenti di selezionare tra valori diversi per una configurazione. In questo caso, devi anche impostare un campo dati cliente corrispondente nel `/destination` configurazione dell’endpoint, per rendere note le varie opzioni agli utenti nell’interfaccia utente. Consulta [questa configurazione](#file-configuration-templating-pebble) ad esempio, in cui gli utenti possono selezionare tra diversi valori per le opzioni di formattazione del file.</li></ul> | - | - | - |
+| `compression.value` | Facoltativo | Codec di compressione da utilizzare per il salvataggio dei dati nel file. Valori supportati: `none`, `bzip2`, `gzip`, `lz4`, e `snappy`. | `none` | - | - |
+| `fileType.value` | Facoltativo | Specifica il formato del file di output. Valori supportati: `csv`, `parquet`, e `json`. | `csv` | - | - |
+| `csvOptions.quote.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette, in cui il separatore può far parte del valore. | `null` | - | - |
+| `csvOptions.quoteAll.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tutti i valori devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede solo l&#39;escape di valori contenenti virgolette. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
+| `csvOptions.delimiter.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un separatore per ogni campo e valore. Il separatore può essere costituito da uno o più caratteri. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
+| `csvOptions.escape.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.escapeQuotes.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se i valori contenenti virgolette devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede l&#39;escape di tutti i valori contenenti una virgoletta. | `true` | - | - |
 | `csvOptions.header.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se scrivere i nomi delle colonne come prima riga nel file esportato. | `true` | - | - |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tagliare i valori degli spazi vuoti iniziali. | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tagliare gli spazi vuoti finali dai valori. | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
-| `csvOptions.nullValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione stringa di un valore null. | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
-| `csvOptions.dateFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica il formato della data. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
-| `csvOptions.timestampFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la stringa che indica un formato di marca temporale. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
-| `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere di escape del virgolette. | `\` quando i caratteri di escape e virgolette sono diversi. `\0` quando il carattere di escape e virgolette sono gli stessi. | - | - |
-| `csvOptions.emptyValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione stringa di un valore vuoto. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se eliminare gli spazi bianchi iniziali dai valori. | `true` | `ignoreLeadingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se rifilare gli spazi vuoti finali dai valori. | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore null. | `""` | `nullvalue`:`""` --> `male,"",TestLastName` | `nullvalue`:`"NULL"` --> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica il formato della data. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` --> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` --> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.timestampFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la stringa che indica un formato timestamp. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
+| `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere virgolette. | `\` quando i caratteri escape e le virgolette sono diversi. `\0` quando il carattere di escape e le virgolette sono uguali. | - | - |
+| `csvOptions.emptyValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore vuoto. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

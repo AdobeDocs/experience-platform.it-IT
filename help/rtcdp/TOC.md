@@ -7,7 +7,7 @@ user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgent
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 29%
+ht-degree: 31%
 
 ---
 
@@ -15,29 +15,29 @@ ht-degree: 29%
 # Guida di Real-time Customer Data Platform {#rtcdp}
 
 * [Panoramica di Real-Time CDP](overview.md)
-* [Panoramica di Real-Time CDP B2B Edition](b2b-overview.md)
+* [Panoramica dell’edizione B2B di Real-Time CDP](b2b-overview.md)
 * Introduzione {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Introduzione a Real-Time CDP](get-started.md)
       * [Panoramica delle metriche](home-page-dashboards.md)
    * Edizione B2B di Real-Time CDP {#rtcdpb2b-intro}
-      * [Esempio di caso d’uso](./b2b-use-case.md)
-      * [Esercitazione end-to-end](./b2b-tutorial.md)
-      * [Garanzie Real-Time CDP B2B Edition](b2b-guardrails.md)
+      * [Caso d’uso di esempio](./b2b-use-case.md)
+      * [Tutorial end-to-end](./b2b-tutorial.md)
+      * [Guardrail Real-Time CDP B2B Edition](b2b-guardrails.md)
 * Profili account {#account}
    * [Panoramica del profilo account](accounts/account-profile-overview.md)
-   * [Guida all’interfaccia utente del profilo account](accounts/account-profile-ui-guide.md)
+   * [Guida dell’interfaccia utente del profilo account](accounts/account-profile-ui-guide.md)
 * Amministrazione {#admin}
    * [Panoramica sull’amministrazione](administration/admin-overview.md)
 * Set di dati {#datasets}
    * [Set di dati](datasets/dataset.md)
-   * [Qualità dei dati su Platform](datasets/data-quality.md)
+   * [Qualità dei dati sulla piattaforma](datasets/data-quality.md)
 * Destinazioni {#destinations}
    * [Panoramica sulle destinazioni](destinations/overview.md)
    * [Destinazioni in Real-Time CDP B2B Edition](destinations/b2b.md)
 * Identità {#identity}
    * [Identità e spazi dei nomi delle identità](profile/identities-overview.md)
-* Unisci criteri {#merge-policies}
+* Criteri di unione {#merge-policies}
    * [Panoramica sui criteri di unione](profile/merge-policies.md)
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
@@ -45,22 +45,22 @@ ht-degree: 29%
 * Profili {#profile}
    * [Panoramica del profilo](profile/profile-overview.md)
    * [Sfoglia profilo](profile/profile-browse.md)
-* Servizi AI/ML di Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
+* Servizi di IA/ML dell’edizione B2B di Real-Time CDP {#b2b-cdp-ai-ml}
    * [Account correlati](b2b-ai-ml-services/related-accounts.md)
-   * [Corrispondenza lead a conto](b2b-ai-ml-services/lead-to-account-matching.md)
+   * [Lead per corrispondenza account](b2b-ai-ml-services/lead-to-account-matching.md)
    * Punteggio predittivo di lead e account {#predictive-lead-and-account-scoring-intro}
-      * [Panoramica del punteggio predittivo per lead e account](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [Gestire il punteggio predittivo per lead e account](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+      * [Panoramica del punteggio predittivo di lead e account](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Gestire il punteggio predittivo di lead e account](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemi {#schemas}
    * [Panoramica sugli schemi](schemas/overview.md)
    * [Schemi in Real-Time CDP B2B Edition](schemas/b2b.md)
 * Segmenti {#segmentation}
    * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
-   * [Guida al generatore di segmenti](segmentation/segment-builder-guide.md)
+   * [Guida al Generatore di segmenti](segmentation/segment-builder-guide.md)
    * [Segmentazione in Real-Time CDP B2B Edition](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
+   * [IA per l’analisi dei clienti](segmentation/customer-ai.md)
 * Origini {#sources}
-   * [Panoramica delle origini](sources/sources-overview.md)
-   * [Fonti in Real-Time CDP B2B Edition](sources/b2b.md)
-* [Note sulla versione di Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+   * [Panoramica sulle origini](sources/sources-overview.md)
+   * [Origini in Real-Time CDP B2B Edition](sources/b2b.md)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
 * [Glossario di Experience Platform](https://www.adobe.com/go/platform-glossary-en)

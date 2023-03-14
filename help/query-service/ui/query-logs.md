@@ -1,6 +1,6 @@
 ---
-title: Registri delle query
-description: I registri di query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di servizio query dell’interfaccia utente.
+title: Registri query
+description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
 source-wordcount: '585'
@@ -8,62 +8,62 @@ ht-degree: 0%
 
 ---
 
-# Registro delle query
+# Registri query
 
 >[!IMPORTANT]
 >
->Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti. L’interfaccia utente potrebbe essere leggermente diversa senza un’icona di modifica. Inoltre, il processo di selezione di un nome di query può passare all’editor delle query anziché al [!UICONTROL Dettagli del registro query] visualizza.
+>Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti. L’interfaccia utente potrebbe apparire leggermente diversa senza un’icona di modifica. Inoltre, il processo di selezione di un nome di query potrebbe richiedere lo spostamento all’Editor query invece che al [!UICONTROL Dettagli registro query] visualizzazione.
 
-Adobe Experience Platform gestisce un registro di tutti gli eventi di query che si verificano tramite sia l’API che l’interfaccia utente. Queste informazioni sono disponibili nell’interfaccia utente del servizio query nel [!UICONTROL Registri] scheda .
+Adobe Experience Platform mantiene un registro di tutti gli eventi di query che si verificano sia tramite l’API che tramite l’interfaccia utente. Queste informazioni sono disponibili nell’interfaccia utente di Query Service da [!UICONTROL Registri] scheda.
 
-I file di registro vengono generati automaticamente da qualsiasi evento di query e contengono informazioni quali l&#39;SQL utilizzato, lo stato della query, il tempo necessario e l&#39;ultima esecuzione. È possibile utilizzare i dati del registro delle query come potente strumento per la risoluzione dei problemi di query inefficienti o di problemi. Le informazioni di registro più complete vengono conservate come parte della funzione di registro di controllo e sono disponibili nella sezione [documentazione del registro di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
+I file di registro vengono generati automaticamente da qualsiasi evento di query e contengono informazioni quali l&#39;istruzione SQL utilizzata, lo stato della query, il tempo impiegato e l&#39;ultima esecuzione. È possibile utilizzare i dati di registro delle query come strumento potente per la risoluzione di problemi inefficienti o di query con problemi. Informazioni di registro più complete sono conservate come parte della funzione di registro di audit e sono disponibili nella sezione [documentazione del registro di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Controlla i log delle query
+## Controllare i registri query
 
-Per controllare i registri di query, seleziona [!UICONTROL Query] per passare all’area di lavoro Servizio query e selezionare [!UICONTROL Registro] dalle opzioni disponibili.
+Per controllare i registri delle query, seleziona [!UICONTROL Query] per passare all’area di lavoro del servizio query e selezionare [!UICONTROL Log] dalle opzioni disponibili.
 
-![Interfaccia utente della piattaforma con query e registro evidenziati.](../images/ui/query-log/logs.png)
+![Interfaccia utente di Platform con Query e Registro evidenziati.](../images/ui/query-log/logs.png)
 
-## Personalizzare e cercare {#customize-and-search}
+## Personalizza ed esegui ricerche {#customize-and-search}
 
-I registri del servizio query vengono presentati in un formato tabella personalizzabile. Per personalizzare le colonne della tabella, seleziona l’icona delle impostazioni (![Icona delle impostazioni.](../images/ui/query-log/settings-icon.png)) a destra dello schermo. A [!UICONTROL Personalizza tabella] viene visualizzata una finestra di dialogo in cui è possibile deselezionare ogni colonna.
+I registri di Query Service vengono presentati in un formato di tabella personalizzabile. Per personalizzare le colonne della tabella, selezionare l&#39;icona delle impostazioni (![Un&#39;icona delle impostazioni.](../images/ui/query-log/settings-icon.png)) a destra dello schermo. A [!UICONTROL Personalizza tabella] viene visualizzata una finestra di dialogo in cui è possibile deselezionare ogni colonna.
 
-È inoltre possibile cercare i registri relativi a specifici modelli di query digitando il nome del modello nel campo di ricerca.
+Puoi anche cercare i registri relativi a modelli di query specifici digitando il nome del modello nel campo di ricerca.
 
-![Area di lavoro Registro query con il menu a discesa della tabella delle colonne e della barra di ricerca evidenziato.](../images/ui/query-log/customize-logs.png)
+![L’area di lavoro Registro query con la barra di ricerca e l’elenco a discesa Gestisci tabella colonne sono evidenziati.](../images/ui/query-log/customize-logs.png)
 
-A [descrizione per ciascuna colonna della tabella di registro](./overview.md#log) Si trova nella sezione Registro della panoramica del servizio query.
+A [descrizione per ciascuna colonna della tabella di registro](./overview.md#log) sono disponibili nella sezione Log della panoramica di Query Service.
 
-## Scopri i dati del registro
+## Esplorare i dati di registro
 
-Ciascuna riga rappresenta i dati di registro per un’esecuzione di query associata a un modello di query. Seleziona una riga dalla tabella per compilare la barra laterale destra con i dati di registro per l’esecuzione.
+Ogni riga rappresenta i dati di registro per un&#39;esecuzione di query associata a un modello di query. Seleziona una riga della tabella per inserire nella barra laterale a destra i dati di registro per l’esecuzione.
 
-![Area di lavoro Registro query con una riga selezionata e i dati di registro nella barra laterale destra evidenziati.](../images/ui/query-log/log-details.png)
+![L’area di lavoro Registro query con una riga selezionata ed evidenziati i dati di registro nella barra laterale a destra.](../images/ui/query-log/log-details.png)
 
-Nel pannello dei dettagli del registro, è possibile selezionare un nuovo set di dati di output e visualizzare o copiare l&#39;intera query SQL utilizzata nell&#39;esecuzione.
+Nel pannello dei dettagli del registro, puoi selezionare un nuovo set di dati di output e visualizzare o copiare la query SQL completa utilizzata nell’esecuzione.
 
-![Area di lavoro Registro query con una riga selezionata e set di dati di output e query SQL evidenziate.](../images/ui/query-log/edit-output-dataset.png)
+![L’area di lavoro Registro query con una riga selezionata ed evidenziati il set di dati di output e la query SQL.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
 >Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti.
 
-Puoi anche selezionare un nome di modello di query dal [!UICONTROL Nome] per passare direttamente alla colonna [!UICONTROL Dettagli del registro query] visualizza.
+È inoltre possibile selezionare il nome di un modello di query dall&#39; [!UICONTROL Nome] per passare direttamente al [!UICONTROL Dettagli registro query] visualizzazione.
 
 >[!NOTE]
 >
->Se la query è stata creata utilizzando l&#39;API e non è stato fornito alcun nome di modello durante l&#39;inizializzazione, vengono invece visualizzati i primi dodici caratteri della query SQL.
+>Se la query è stata creata utilizzando l’API e non è stato fornito alcun nome di modello durante l’inizializzazione, vengono invece visualizzati i primi decine di caratteri della query SQL.
 
 ![Visualizzazione dei dettagli del registro query.](../images/ui/query-log/query-log-details.png)
 
-Accanto al nome del modello di ogni riga o al frammento SQL è presente un&#39;icona a forma di matita (![Icona a forma di matita.](../images/ui/query-log/edit-icon.png)) che è possibile utilizzare per passare all’Editor query. La query viene quindi precompilata nell’editor per la modifica.
+Accanto al nome del modello di ogni riga o al frammento SQL è presente l&#39;icona a forma di matita (![Un’icona a forma di matita.](../images/ui/query-log/edit-icon.png)) che è possibile utilizzare per passare all’editor delle query. La query viene quindi precompilata nell’editor per la modifica.
 
-![Area di lavoro Registro query con icona a forma di matita evidenziata.](../images/ui/query-log/edit-query.png)
+![Nell’area di lavoro Registro query è evidenziata un’icona a forma di matita.](../images/ui/query-log/edit-query.png)
 
 ## Passaggi successivi
 
-Leggendo questo documento, è ora possibile comprendere meglio come si accedono e si utilizzano i registri di query nell’interfaccia utente di Query Service.
+La lettura di questo documento consente di comprendere meglio come i registri delle query vengono utilizzati e accessibili nell’interfaccia utente di Query Service.
 
-Consulta la sezione [Panoramica dell’interfaccia utente](./overview.md)o [Guida all’API del servizio query](../api/getting-started.md) per ulteriori informazioni sulle funzionalità di Query Service.
+Consulta la [Panoramica dell’interfaccia utente](./overview.md)o [Guida API di Query Service](../api/getting-started.md) per ulteriori informazioni sulle funzionalità di Query Service.
 
-Consulta la sezione [documento di monitoraggio delle query](./monitor-queries.md) per scoprire in che modo Query Service migliora la visibilità delle esecuzioni di query pianificate.
+Consulta la [monitorare il documento delle query](./monitor-queries.md) per scoprire come Query Service migliora la visibilità delle esecuzioni pianificate delle query.

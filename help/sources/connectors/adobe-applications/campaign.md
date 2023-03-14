@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Adobe Campaign Managed Cloud Services;campagna;servizi gestiti per campagne
+keywords: Experience Platform;home;argomenti popolari;Adobe Campaign Managed Cloud Services;campagna;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: Scopri come collegare Cloud Services gestiti di Campaign a Platform utilizzando l’interfaccia utente di
+description: Scopri come collegare Cloud Services gestiti di Campaign a Platform utilizzando l’interfaccia utente
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -12,66 +12,66 @@ ht-degree: 0%
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Adobe Campaign Managed Cloud Services fornisce una piattaforma Managed Services per la progettazione di esperienze cliente cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. Visita il [Documentazione di Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) per ulteriori informazioni.
+Adobe Campaign Managed Cloud Services fornisce una piattaforma Managed Services per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. Visita il [Documentazione di Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) per ulteriori informazioni.
 
-La sorgente Adobe Campaign Managed Cloud Services ti consente di portare i registri di consegna Adobe Campaign v8 e i dati dei registri di tracciamento in Adobe Experience Platform.
+Il codice sorgente di Adobe Campaign Managed Cloud Services consente di portare i registri di consegna e i dati dei registri di tracciamento di Adobe Campaign v8 a Adobe Experience Platform.
 
 ## Prerequisiti
 
-Prima di poter creare una connessione sorgente per dare Experience Platform alla tua Campaign v8, devi prima completare i seguenti prerequisiti:
+Prima di poter creare una connessione sorgente per l’Experience Platform di Campaign v8, è necessario soddisfare i seguenti prerequisiti:
 
-* [Imposta l’importazione del registro eventi utilizzando la console client di Adobe Campaign](#view-delivery-and-tracking-log-data)
-* [Creare uno schema ExperienceEvent XDM](#create-a-schema)
+* [Configurare l’importazione del registro eventi utilizzando la console client di Adobe Campaign](#view-delivery-and-tracking-log-data)
+* [Creare uno schema XDM ExperienceEvent](#create-a-schema)
 * [Creare un set di dati](#create-a-dataset)
 
-### Visualizzare i dati del registro di consegna e di tracciamento {#view-delivery-and-tracking-log-data}
+### Visualizzare i dati di registro di consegna e tracciamento {#view-delivery-and-tracking-log-data}
 
 >[!IMPORTANT]
 >
->Per visualizzare i dati di registro in Campaign, devi disporre dell’accesso alla console client Adobe Campaign v8 . Visita il [Documentazione di Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) per informazioni su come scaricare e installare la console client.
+>Per visualizzare i dati di registro in Campaign, devi avere accesso alla console client di Adobe Campaign v8. Visita il [Documentazione di Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) per informazioni su come scaricare e installare la console client.
 
-Accedi all’istanza Campaign v8 tramite la console client. Sotto la [!DNL Explorer] scheda , seleziona [!DNL Administration] quindi seleziona [!DNL Configuration]. Quindi, seleziona [!DNL Data schemas] e quindi applicare il `broadLog` filtro per nome o etichetta. Nell’elenco visualizzato, seleziona lo schema di origine dei registri di consegna destinatari con il nome `broadLogRcp`.
+Accedi all’istanza di Campaign v8 tramite la console client. Sotto [!DNL Explorer] , seleziona [!DNL Administration] e quindi seleziona [!DNL Configuration]. Quindi, seleziona [!DNL Data schemas] e quindi applica il `broadLog` filtro per nome o etichetta. Nell’elenco visualizzato, seleziona lo schema di origine dei registri di consegna del destinatario con il nome `broadLogRcp`.
 
-![La console client Adobe Campaign v8 con la scheda Explorer selezionata, i nodi Amministrazione, Configurazione e Schema dati si sono espansi e filtrano impostati su &quot;ampio&quot;.](./images/campaign/explorer.png)
+![La console client di Adobe Campaign v8 con la scheda Explorer selezionata, i nodi Administration, Configuration e Data schemas espansi e il filtro impostato su &quot;broad&quot; (Ampia).](./images/campaign/explorer.png)
 
-Quindi, seleziona la **Dati** scheda .
+Quindi, seleziona la **Dati** scheda.
 
-![Console client Adobe Campaign v8 con la scheda dati selezionata.](./images/campaign/data.png)
+![La console client di Adobe Campaign v8 con la scheda dati selezionata.](./images/campaign/data.png)
 
-Fai clic con il pulsante destro del mouse o premi il tasto nel pannello dati per aprire il menu contestuale. Da qui, seleziona **Configura elenco...**
+Fate clic con il pulsante destro del mouse o premete un tasto nel pannello dati per aprire il menu contestuale. Da qui, seleziona **Configura elenco...**
 
-![Console client Adobe Campaign v8 con menu contestuale aperto e opzione Configura elenco selezionata.](./images/campaign/configure.png)
+![Viene aperta la console client di Adobe Campaign v8 con il menu contestuale e l’opzione Configura elenco selezionata.](./images/campaign/configure.png)
 
-Viene visualizzata la finestra di configurazione dell’elenco, che fornisce un’interfaccia in cui è possibile aggiungere all’elenco preesistente tutti i campi desiderati per visualizzare i dati nel pannello dati.
+Viene visualizzata la finestra di configurazione dell’elenco, che fornisce un’interfaccia in cui è possibile aggiungere eventuali campi desiderati all’elenco preesistente per visualizzare i dati nel pannello dati.
 
-![Elenco di configurazioni per i registri di consegna dei destinatari che possono essere aggiunte per la visualizzazione.](./images/campaign/list-configuration.png)
+![Un elenco di configurazioni per i registri di consegna dei destinatari che possono essere aggiunte per la visualizzazione.](./images/campaign/list-configuration.png)
 
 Ora puoi visualizzare i registri di consegna dei destinatari, inclusi i campi di configurazione aggiunti nel passaggio precedente.
 
 >[!TIP]
 >
->È possibile ripetere gli stessi passaggi, ma filtrare per `tracking` per visualizzare i dati del registro di tracciamento.
+>Puoi ripetere gli stessi passaggi, ma filtrare per `tracking` per visualizzare i dati del registro di tracciamento.
 
-![I registri di consegna dei destinatari visualizzati con informazioni sul nome modificato, il canale di consegna, il nome di consegna interno e l’etichetta.](./images/campaign/recipient-delivery-logs.png)
+![Vengono visualizzati i registri di consegna del destinatario con le informazioni relative all’ultima modifica del nome, del canale di consegna, del nome di consegna interno e dell’etichetta.](./images/campaign/recipient-delivery-logs.png)
 
 ### Creare uno schema {#create-a-schema}
 
-Quindi, crea uno schema ExperienceEvent XDM per i registri di consegna e di tracciamento. Devi applicare il gruppo di campi Registri di consegna Campaign allo schema dei registri di consegna e il gruppo di campi Registri di tracciamento campagna allo schema dei registri di tracciamento. È inoltre necessario definire le `externalID` come identità principale dello schema.
+Quindi, crea uno schema XDM ExperienceEvent per i registri di consegna e di tracciamento. Devi applicare il gruppo di campi Registri di consegna campagna allo schema dei registri di consegna e il gruppo di campi Registri di tracciamento campagna allo schema dei registri di tracciamento. È inoltre necessario definire `externalID` come identità primaria dello schema.
 
 >[!NOTE]
 >
->Lo schema ExperienceEvent XDM deve essere abilitato per il profilo per acquisire i dati Campaign in [!DNL Real-Time Customer Profile].
+>Per acquisire i dati di Campaign in, lo schema XDM ExperienceEvent deve essere abilitato per il profilo [!DNL Real-Time Customer Profile].
 
-Per istruzioni dettagliate su come creare uno schema, consulta la guida in [creazione di uno schema XDM nell’interfaccia utente](../../../xdm/tutorials/create-schema-ui.md).
+Per istruzioni dettagliate su come creare uno schema, consulta la guida su [creazione di uno schema XDM nell’interfaccia utente](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Creare un set di dati {#create-a-dataset}
 
-Infine, devi creare un set di dati per i tuoi schemi. Per istruzioni dettagliate su come creare un set di dati, consulta la guida su [creazione di un set di dati nell’interfaccia utente](../../../catalog/datasets/user-guide.md).
+Infine, devi creare un set di dati per gli schemi. Per istruzioni dettagliate su come creare un set di dati, consulta la guida su [creazione di un set di dati nell’interfaccia utente](../../../catalog/datasets/user-guide.md).
 
-## Creare una connessione sorgente Adobe Campaign Managed Cloud Services tramite l’interfaccia utente di Platform
+## Creare una connessione sorgente Adobe Campaign Managed Cloud Services utilizzando l’interfaccia utente di Platform
 
-Ora che hai effettuato l’accesso ai registri dati nella console del client Campaign, hai creato uno schema e un set di dati, puoi procedere alla creazione di una connessione sorgente per trasferire i dati di Campaign Managed Services a Platform.
+Dopo aver effettuato l’accesso ai registri dati nella console client di Campaign, creato uno schema e un set di dati, ora puoi procedere con la creazione di una connessione di origine per portare i dati di Campaign Managed Services su Platform.
 
-Per istruzioni dettagliate su come portare i registri di consegna v8 di Campaign e i dati dei registri di tracciamento in Experience Platform, consulta la guida su [creazione di una connessione sorgente Managed Services Campaign nell’interfaccia utente](../../tutorials/ui/create/adobe-applications/campaign.md).
+Per istruzioni dettagliate su come trasferire i dati dei registri di consegna e di tracciamento di Campaign v8 in Experience Platform, consulta la guida su [creazione di una connessione sorgente di Campaign Managed Services nell’interfaccia utente](../../tutorials/ui/create/adobe-applications/campaign.md).

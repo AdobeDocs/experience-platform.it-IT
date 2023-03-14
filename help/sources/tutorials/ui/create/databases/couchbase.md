@@ -12,59 +12,59 @@ ht-degree: 1%
 
 ---
 
-# Crea un [!DNL Couchbase] connessione sorgente nell’interfaccia utente
+# Creare un [!DNL Couchbase] connessione sorgente nell’interfaccia utente
 
 >[!NOTE]
 >
-> La [!DNL Couchbase] connettore in versione beta. Consulta la sezione [Panoramica delle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo dei connettori con etichetta beta.
+> Il [!DNL Couchbase] connettore in versione beta. Consulta la [Panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di connettori con etichetta beta.
 
-Connettori sorgente in [!DNL Adobe Experience Platform] consente di acquisire dati provenienti dall’esterno su base programmata. Questa esercitazione descrive i passaggi necessari per creare un [!DNL Couchbase] connettore di origine con [!DNL Platform] interfaccia utente.
+Connettori sorgente in [!DNL Adobe Experience Platform] consente di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per creare [!DNL Couchbase] connettore di origine che utilizza [!DNL Platform] dell&#39;utente.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione dei seguenti componenti di [!DNL Platform]:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
-   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-   * [Esercitazione sull’Editor di schema](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
+   * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponi già di una [!DNL Couchbase] è possibile ignorare il resto del documento e passare all&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/databases.md).
+Se disponi già di un [!DNL Couchbase] connessione, è possibile saltare il resto del documento e passare all&#39;esercitazione [configurazione di un flusso di dati](../../dataflow/databases.md).
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
-Per autenticare il [!DNL Couchbase] connettore di origine, è necessario specificare i valori per la seguente proprietà di connessione:
+Per autenticare il tuo [!DNL Couchbase] connettore di origine, è necessario fornire i valori per la seguente proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per la connessione al [!DNL Couchbase] istanza. Pattern di stringa di connessione per [!DNL Couchbase] è `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Per ulteriori informazioni sull’acquisizione di una stringa di connessione, consulta la documentazione su [[!DNL Couchbase] connection](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionString` | Stringa di connessione utilizzata per la connessione al [!DNL Couchbase] dell&#39;istanza. Schema della stringa di connessione per [!DNL Couchbase] è `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Per ulteriori informazioni sull’acquisizione di una stringa di connessione, consulta la documentazione su [[!DNL Couchbase] connessione](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
 
-## Collega il tuo [!DNL Couchbase] account
+## Connetti [!DNL Couchbase] account
 
-Una volta raccolte le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo [!DNL Couchbase] account a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Couchbase] account a [!DNL Platform].
 
-Accedi a [Adobe Experience Platform](https://platform.adobe.com) quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al **[!UICONTROL Origini]** workspace. La **[!UICONTROL Catalogo]** in questa schermata vengono visualizzate diverse sorgenti per le quali è possibile creare un account.
+Accedi a [Adobe Experience Platform](https://platform.adobe.com) e quindi seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al **[!UICONTROL Sorgenti]** Workspace. Il **[!UICONTROL Catalogo]** Nella schermata vengono visualizzate diverse origini per le quali è possibile creare un account con.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto la **[!UICONTROL Database]** categoria, seleziona **[!UICONTROL Couchbase]**. Se questa è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, seleziona **[!UICONTROL Aggiungi dati]** per creare una nuova [!DNL Couchbase] connettore.
+Sotto **[!UICONTROL Database]** categoria, seleziona **[!UICONTROL Couchbase]**. Se è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, seleziona **[!UICONTROL Aggiungi dati]** per creare un nuovo [!DNL Couchbase] connettore.
 
 ![catalogo](../../../../images/tutorials/create/couchbase/catalog.png)
 
-La **[!UICONTROL Connetti a Couchbase]** viene visualizzata la pagina . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
+Il **[!UICONTROL Connetti a Couchbase]** viene visualizzata. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL Nuovo account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e il [!DNL Couchbase] credenziali. Al termine, seleziona **[!UICONTROL Connetti alla sorgente]** e quindi lasciare un po&#39; di tempo per stabilire la nuova connessione.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL Nuovo account]**. Nel modulo di input visualizzato, fornisci un nome, una descrizione facoltativa e il [!DNL Couchbase] credenziali. Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e quindi lascia un po’ di tempo per stabilire la nuova connessione.
 
-![connect](../../../../images/tutorials/create/couchbase/new.png)
+![connetti](../../../../images/tutorials/create/couchbase/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, seleziona la [!DNL Couchbase] account con cui desideri connetterti, quindi seleziona **[!UICONTROL Successivo]** nell&#39;angolo in alto a destra per proseguire.
+Per collegare un account esistente, seleziona la [!DNL Couchbase] account con cui desideri connetterti, quindi seleziona **[!UICONTROL Successivo]** nell’angolo in alto a destra per procedere.
 
 ![esistente](../../../../images/tutorials/create/couchbase/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo [!DNL Couchbase] conto. Ora puoi passare all’esercitazione successiva e [configurare un flusso di dati per l’immissione di dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, hai stabilito una connessione con il tuo [!DNL Couchbase] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/databases.md).

@@ -1,10 +1,11 @@
 ---
 title: Supporto di Subresource Integrity (SRI)
 description: Scopri come Subresource Integrity (SRI) è supportato in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 78%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In questo documento viene illustrato il supporto di Subresource Integrity (SRI) in Adobe Experience Platform.
 
@@ -33,11 +34,11 @@ Il processo di convalida dell’SRI può essere riassunto come segue:
 
 ## Limitazioni nei sistemi di gestione dei tag
 
-In qualità di sistema di gestione dei tag (TMS), i tag in Adobe Experience Platform forniscono una build della libreria JavaScript compilata da caricare sulle pagine con un singolo elemento `<script>` (codice di incorporamento). La funzionalità dinamica offerta dal TMS si ottiene sostituendo i contenuti di tale script in modo dinamico, senza che sia necessario apportare ulteriori modifiche.
+In qualità di sistema di gestione dei tag (TMS), i tag in Adobe Experience Platform forniscono una build della libreria JavaScript compilata da caricare sulle pagine con un singolo elemento `<script>` (codice da incorporare). La funzionalità dinamica offerta dal TMS si ottiene sostituendo i contenuti di tale script in modo dinamico, senza che sia necessario apportare ulteriori modifiche.
 
 Tuttavia, quando i contenuti dello script cambiano, cambia anche l’hash di crittografia dei contenuti. Pertanto, l’unico modo per far funzionare l’SRI con un TMS è aggiornare il codice di incorporamento nello stesso momento in cui si pubblica una nuova build. Per molti, questo è in contraddizione con lo scopo principale dell’utilizzo di un TMS.
 
-L’alternativa migliore per la sicurezza dei tag è l’implementazione di Criteri di sicurezza del contenuto. Per ulteriori informazioni, consulta la guida sui [CSP e i tag](./content-security-policy.md).
+L’alternativa migliore per la sicurezza dei tag consiste nell’implementare un criterio di sicurezza del contenuto (CSP, Content Security Policy). Per ulteriori informazioni, consulta la guida su [CSP e tag](./content-security-policy.md).
 
 ## Integrazione dell’SRI nella distribuzione di build
 
@@ -55,4 +56,4 @@ L’automazione del processo di aggiornamento del codice di incorporamento varia
 
 ## Passaggi successivi
 
-In questo documento sono state trattate le limitazioni dell’utilizzo dell’SRI con i tag e i passaggi necessari per integrarlo nelle distribuzioni di build delle librerie nonostante tali limitazioni. Se non lo hai già fatto, ti consigliamo vivamente di leggere la guida sui [CSP e i tag](./content-security-policy.md) per un’opzione di sicurezza alternativa.
+In questo documento sono state trattate le limitazioni dell’utilizzo dell’SRI con i tag e i passaggi necessari per integrarla nelle distribuzioni di build delle librerie nonostante tali limitazioni. Se non lo hai già fatto, ti consigliamo vivamente di leggere la guida su [CSP e tag](./content-security-policy.md) per scoprire un’opzione di sicurezza alternativa.

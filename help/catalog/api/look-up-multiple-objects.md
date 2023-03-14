@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;catalogo;ricerca di più oggetti;api
+keywords: Experience Platform;home;argomenti popolari;catalogo;ricerca oggetti multipli;api
 solution: Experience Platform
-title: Ricerca di più oggetti catalogo
-description: Se si desidera visualizzare più oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. È possibile utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgole.
+title: Cerca più oggetti catalogo
+description: Se desideri visualizzare diversi oggetti specifici, invece di effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 ---
 
-# Cercare più oggetti Catalogo
+# Cercare più oggetti catalogo
 
-Se si desidera visualizzare più oggetti specifici, anziché effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una scelta rapida semplice per richiedere più oggetti dello stesso tipo. È possibile utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgole.
+Se desideri visualizzare più oggetti specifici, invece di effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
 
 >[!NOTE]
 >
->Anche quando si richiedono specifiche [!DNL Catalog] oggetti, è comunque buona prassi `properties` per restituire solo le proprietà necessarie.
+>Anche quando si richiedono [!DNL Catalog] oggetti, è comunque consigliabile `properties` parametro di query per restituire solo le proprietà necessarie.
 
 **Formato API**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Identificatore di uno degli oggetti specifici che si desidera recuperare. |
 
 **Richiesta**
 
-La richiesta seguente include un elenco di ID di set di dati separati da virgole e un elenco di proprietà separate da virgola da restituire per ogni set di dati.
+La seguente richiesta include un elenco separato da virgole di ID set di dati e un elenco separato da virgole di proprietà da restituire per ogni set di dati.
 
 ```shell
 curl -X GET \
@@ -46,11 +46,11 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco dei set di dati specificati, contenente solo le proprietà richieste (`name`, `description`e `files`) per ciascuno di essi.
+In caso di esito positivo, la risposta restituisce un elenco dei set di dati specificati, contenenti solo le proprietà richieste (`name`, `description`, e `files`) per ciascuno di essi.
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** sotto.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dal `properties` , la risposta restituisce solo le proprietà richieste che include, come mostrato nella ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
 
 ```json
 {

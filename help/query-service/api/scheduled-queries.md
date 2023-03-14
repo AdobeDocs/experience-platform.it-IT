@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query pianificate;query pianificate;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query pianificate;query pianificate;query pianificate;
 solution: Experience Platform
-title: Endpoint programmi
-description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per query pianificate con l’API del servizio query.
+title: Endpoint Schedules
+description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# Endpoint di pianificazione
+# Endpoint Schedules
 
 ## Chiamate API di esempio
 
-Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettuare chiamate a [!DNL Query Service] API. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che sai quali intestazioni utilizzare, puoi iniziare a effettuare chiamate al [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-### Recupera un elenco di query pianificate
+### Recuperare un elenco di query pianificate
 
-Puoi recuperare un elenco di tutte le query pianificate per la tua organizzazione IMS effettuando una richiesta di GET al `/schedules` punto finale.
+Per recuperare un elenco di tutte le query pianificate per la tua organizzazione IMS, devi effettuare una richiesta GET al `/schedules` endpoint.
 
 **Formato API**
 
@@ -30,18 +30,18 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito. |
+| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
 **Parametri query**
 
-Di seguito è riportato un elenco dei parametri di query disponibili per l’elenco delle query pianificate. Tutti questi parametri sono facoltativi. Effettuare una chiamata a questo endpoint senza parametri recupererà tutte le query pianificate disponibili per la tua organizzazione.
+Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query pianificate. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query pianificate disponibili per la tua organizzazione.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `templateId`e `userId`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e `==` (uguale a). Ad esempio: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query pianificate in cui l’ID utente è specificato. |
+| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `templateId`, e `userId`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e `==` (uguale a) Ad esempio: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query pianificate in cui l’ID utente corrisponde a quello specificato. |
 
 **Richiesta**
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query pianificate per l&#39;organizzazione IMS specificata. La risposta seguente restituisce l’ultima query pianificata creata per l’organizzazione IMS.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di query pianificate per l’organizzazione IMS specificata. La risposta seguente restituisce l’ultima query pianificata creata per l’organizzazione IMS.
 
 ```json
 {
@@ -123,7 +123,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query piani
 
 ### Crea una nuova query pianificata
 
-Puoi creare una nuova query pianificata effettuando una richiesta di POST al `/schedules` punto finale. Quando crei una query pianificata nell’API, puoi visualizzarla anche nell’editor delle query. Per ulteriori informazioni sulle query pianificate nell’interfaccia utente, consulta la [Documentazione dell’editor delle query](../ui/user-guide.md#scheduled-queries).
+Per creare una nuova query pianificata, devi eseguire una richiesta POST al `/schedules` endpoint. Quando crei una query pianificata nell’API, questa viene visualizzata anche nell’editor delle query. Per ulteriori informazioni sulle query pianificate nell’interfaccia utente, leggi [Documentazione di Query Editor](../ui/user-guide.md#scheduled-queries).
 
 **Formato API**
 
@@ -157,15 +157,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `query.dbName` | Nome del database per cui si sta creando una query pianificata. |
-| `query.sql` | Query SQL da creare. |
+| `query.dbName` | Nome del database per il quale si sta creando una query pianificata. |
+| `query.sql` | La query SQL da creare. |
 | `query.name` | Nome della query pianificata. |
-| `schedule.schedule` | La pianificazione cron per la query. Per ulteriori informazioni sugli orari dei cron, si prega di leggere il [formato di espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione. In questo esempio, &quot;30 * * * * *&quot; significa che la query verrà eseguita ogni ora alla soglia dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: La query viene eseguita una sola volta.</li><li>`@hourly`: La query viene eseguita ogni ora all’inizio dell’ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: La query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: La query viene eseguita una volta alla settimana, domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: La query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: La query viene eseguita una volta all’anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `1 0 0 1 1 *`. |
-| `schedule.startDate` | La data di inizio della query pianificata, scritta come timestamp UTC. |
+| `schedule.schedule` | Pianificazione cron per la query. Per ulteriori informazioni sulle pianificazioni cron, leggere la [formato espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione. In questo esempio, &quot;30 * * *&quot; significa che la query verrà eseguita ogni ora al segno dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: la query viene eseguita una sola volta.</li><li>`@hourly`: la query viene eseguita ogni ora all’inizio dell’ora. Equivale all’espressione cron `0 * * * *`.</li><li>`@daily`: la query viene eseguita una volta al giorno a mezzanotte. Equivale all’espressione cron `0 0 * * *`.</li><li>`@weekly`: la query viene eseguita una volta alla settimana, la domenica, a mezzanotte. Equivale all’espressione cron `0 0 * * 0`.</li><li>`@monthly`: la query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all’espressione cron `0 0 1 * *`.</li><li>`@yearly`: la query viene eseguita una volta all’anno, il 1° gennaio, a mezzanotte. Equivale all’espressione cron `1 0 0 1 1 *`. |
+| `schedule.startDate` | Data di inizio per la query pianificata, scritta come timestamp UTC. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli della query pianificata appena creata. Al termine dell’attivazione della query pianificata, la `state` cambia da `REGISTERING` a `ENABLED`.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con i dettagli della query pianificata appena creata. Al termine dell’attivazione della query pianificata, il `state` cambierà da `REGISTERING` a `ENABLED`.
 
 ```json
 {
@@ -220,9 +220,9 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 >
 >Puoi utilizzare il valore di `_links.delete` a [elimina la query pianificata creata](#delete-a-specified-scheduled-query).
 
-### Richiedi i dettagli di una query pianificata specificata
+### Dettagli richiesta di una query pianificata specificata
 
-È possibile recuperare informazioni per una query pianificata specifica effettuando una richiesta di GET al `/schedules` e fornendo il relativo ID nel percorso della richiesta.
+Per recuperare informazioni per una query pianificata specifica, effettua una richiesta GET al `/schedules` e fornendo il relativo ID nel percorso della richiesta.
 
 **Formato API**
 
@@ -232,7 +232,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata che si desidera recuperare. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata da recuperare. |
 
 **Richiesta**
 
@@ -246,7 +246,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della query pianificata specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della query pianificata specificata.
 
 ```json
 {
@@ -305,13 +305,13 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della query p
 
 ### Aggiorna i dettagli di una query pianificata specificata
 
-Puoi aggiornare i dettagli di una query pianificata specificata effettuando una richiesta di PATCH al `/schedules` e fornendo il relativo ID nel percorso della richiesta.
+Per aggiornare i dettagli di una query pianificata specificata, effettua una richiesta PATCH al `/schedules` e fornendo il relativo ID nel percorso della richiesta.
 
-La richiesta di PATCH supporta due percorsi diversi: `/state` e `/schedule/schedule`.
+La richiesta PATCH supporta due percorsi diversi: `/state` e `/schedule/schedule`.
 
-### Aggiorna stato query pianificato
+### Aggiorna stato query pianificata
 
-È possibile aggiornare lo stato della query pianificata selezionata impostando il `path` proprietà di `/state` e `value` proprietà `enable` o `disable`.
+È possibile aggiornare lo stato della query pianificata selezionata impostando `path` proprietà a `/state` e `value` proprietà come `enable` o `disable`.
 
 **Formato API**
 
@@ -321,12 +321,12 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata che si desidera inserire in PATCH. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera eseguire il PATCH. |
 
 
 **Richiesta**
 
-Questa richiesta API utilizza la sintassi della patch JSON per il relativo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento di base API .
+Questa richiesta API utilizza la sintassi Patch JSON per il suo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento API Fundals.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -348,12 +348,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `op` | Operazione da eseguire sulla pianificazione della query. Il valore accettato è `replace`. |
-| `path` | Percorso del valore a cui si desidera applicare la patch. In questo caso, poiché si aggiorna lo stato della query pianificata, è necessario impostare il valore di `path` a `/state`. |
-| `value` | Il valore aggiornato del `/state`. Questo valore può essere impostato come `enable` o `disable` per abilitare o disabilitare la query pianificata. |
+| `path` | Percorso del valore a cui applicare la patch. In questo caso, poiché si sta aggiornando lo stato della query pianificata, è necessario impostare il valore `path` a `/state`. |
+| `value` | Il valore aggiornato del `/state`. Questo valore può essere impostato come `enable` o `disable` per attivare o disattivare la query pianificata. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {
@@ -364,7 +364,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Aggiorna pianificazione query pianificata
 
-È possibile aggiornare la pianificazione cron della query pianificata impostando la `path` proprietà di `/schedule/schedule` nel corpo della richiesta. Per ulteriori informazioni sugli orari dei cron, si prega di leggere il [formato di espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione.
+È possibile aggiornare la pianificazione cron della query pianificata impostando `path` proprietà a `/schedule/schedule` nel corpo della richiesta. Per ulteriori informazioni sulle pianificazioni cron, leggere la [formato espressione cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentazione.
 
 **Formato API**
 
@@ -374,11 +374,11 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata che si desidera inserire in PATCH. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera eseguire il PATCH. |
 
 **Richiesta**
 
-Questa richiesta API utilizza la sintassi della patch JSON per il relativo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento di base API .
+Questa richiesta API utilizza la sintassi Patch JSON per il suo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento API Fundals.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -400,12 +400,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `op` | Operazione da eseguire sulla pianificazione della query. Il valore accettato è `replace`. |
-| `path` | Percorso del valore a cui si desidera applicare la patch. In questo caso, poiché si aggiorna la pianificazione della query pianificata, è necessario impostare il valore di `path` a `/schedule/schedule`. |
-| `value` | Il valore aggiornato del `/schedule`. Questo valore deve essere sotto forma di programma cron. In questo esempio, la query pianificata verrà eseguita ogni ora alla soglia di 45 minuti. |
+| `path` | Percorso del valore a cui applicare la patch. In questo caso, poiché stai aggiornando la pianificazione della query pianificata, devi impostare il valore di `path` a `/schedule/schedule`. |
+| `value` | Il valore aggiornato del `/schedule`. Questo valore deve essere sotto forma di una pianificazione cron. In questo esempio, la query pianificata verrà eseguita ogni ora al minuto 45. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {
@@ -416,11 +416,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Elimina una query pianificata specificata
 
-È possibile eliminare una query pianificata specificata effettuando una richiesta di DELETE al `/schedules` e fornisce l’ID della query pianificata da eliminare nel percorso della richiesta.
+Per eliminare una query pianificata specificata, devi eseguire una richiesta DELETE al `/schedules` e fornendo l’ID della query pianificata da eliminare nel percorso della richiesta.
 
 >[!NOTE]
 >
->Il programma **deve** prima di essere eliminato.
+>La pianificazione **deve** prima di essere eliminato.
 
 **Formato API**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata che si desidera inserire in DELETE. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera eseguire il DELETE. |
 
 **Richiesta**
 
@@ -444,7 +444,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {

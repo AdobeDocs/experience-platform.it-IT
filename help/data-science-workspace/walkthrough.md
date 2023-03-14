@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;procedura dettagliata;Data Science Workspace;argomenti comuni;corso di scienza dei dati;corso;dsw
+keywords: Experience Platform;procedura dettagliata;Data Science Workspace;argomenti popolari;corso di data science;corso;dsw
 solution: Experience Platform
 title: Corso su Data Science Workspace
 description: Questo documento fornisce un collegamento e una descrizione per il corso Adobe Experience Platform Data Science Workspace.
@@ -14,30 +14,30 @@ ht-degree: 1%
 
 # [!DNL Data Science Workspace] corso
 
-Questo documento fornisce una descrizione dei risultati dell’apprendimento previsti nel corso Adobe Experience Platform Data Science Workspace. Per visualizzare il corso, devi accedere ad Experience League utilizzando il tuo Adobe ID.
+Questo documento fornisce una descrizione dei risultati di apprendimento previsti nel corso Adobe Experience Platform Data Science Workspace. Per visualizzare il corso, devi accedere ad Experience League utilizzando il tuo Adobe ID.
 
-La [guida introduttiva di Data Science Workspace per il corso Data Scientists](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) è progettato per gli esperti di dati che desiderano imparare a utilizzare i notebook JupyterLab per ricavare informazioni ed eseguire query sui dati, creare set di dati abilitati per i profili, pubblicare modelli di apprendimento automatico automatizzati e attivare informazioni acquisite da computer sia per le applicazioni di Adobe che per quelle non di Adobe.
+Il [guida introduttiva di Data Science Workspace per Data Scientist corso](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) è progettato per i data scientist che desiderano imparare a utilizzare JupyterLab Notebooks per ricavare informazioni approfondite ed eseguire query sui dati, creare set di dati abilitati per il profilo, pubblicare modelli automatizzati di apprendimento automatico e attivare informazioni acquisite da computer sia per le applicazioni Adobi che per quelle non Adobi.
 
-## Prerequisiti per il corso
+## Prerequisiti del corso
 
 - Un account Adobe ID registrato.
    - L’account Adobe ID deve essere stato aggiunto a un’organizzazione con accesso a Adobe Experience Platform e [!DNL Data Science Workspace].
 - Una sandbox non di produzione.
 
-### Risultati di apprendimento attesi
+### Risultati di apprendimento previsti
 
-I seguenti risultati di apprendimento sono trattati nel corso Data Science Workspace . Inoltre, puoi scegliere di seguire durante la creazione e la pubblicazione di un modello di propensione fornito per il corso.
+I seguenti risultati di apprendimento sono trattati nel corso Data Science Workspace. Inoltre, puoi scegliere di seguire durante la creazione e la pubblicazione di un modello di propensione fornito per il corso.
 
 - Architettura di Data Science Workspace
-- Come utilizzare JupyterLab
-- Come accedere ai dati e ai dati delle query in Data Science Workspace
-- Analisi dei dati esplorativi
+- Come usare JupyterLab
+- Come accedere ai dati e eseguire query sui dati in Data Science Workspace
+- Analisi esplorativa dei dati
 - Come creare una ricetta e un modello
 - Metodi utilizzati per addestrare e valutare un modello
-- Il ruolo degli iper-parametri nello sviluppo del modello
-- Come pubblicare modelli addestrati come servizio
+- Il ruolo degli iperparametri nello sviluppo dei modelli
+- Come pubblicare modelli formati come servizio
 - Come utilizzare Data Science Workspace per arricchire i dati del profilo cliente in tempo reale
-- Come creare un segmento in streaming con l&#39;output del modello
+- Come creare un segmento di streaming con l’output del modello
 
 ## Lezioni
 
@@ -45,15 +45,15 @@ Il corso Data Science Workspace è suddiviso in cinque lezioni.
 
 ### Lezione 1
 
-**Introduzione (19 minuti):** Scopri il corso e ottieni una panoramica di alto livello di Data Science Workspace che include le risorse necessarie per il corso.
+**Introduzione (19 minuti)** Scopri il corso e ottieni una panoramica di alto livello di Data Science Workspace che include le risorse del corso richieste.
 
 ### Lezione 2
 
-**Carica, esegui query ed esplora i dati in JupyterLab (24 minuti):** Scopri come JupyterLab su Experience Platform consente di semplificare e semplificare i flussi di lavoro chiave per uno scienziato dei dati, come la raccolta di dati, la pulizia dei dati, la visualizzazione dei dati e la scoperta di informazioni.
+**Caricare, eseguire query ed esplorare dati in JupyterLab (24 minuti):** Scopri in che modo JupyterLab su Experience Platform consente di semplificare e facilitare i flussi di lavoro chiave per un data scientist, ad esempio la raccolta di dati, la pulizia dei dati, la visualizzazione dei dati e la scoperta di informazioni.
 
 ### Lezione 3
 
-**Crea un modello in JupyterLab (26 minuti):** Scopri come iniziare a creare modelli in Data Science Workspace.
+**Creare un modello in JupyterLab (26 minuti):** Scopri come iniziare a creare modelli in Data Science Workspace.
 
 ### Lezione 4
 
@@ -61,11 +61,11 @@ Il corso Data Science Workspace è suddiviso in cinque lezioni.
 
 ### Lezione 5
 
-**Registri di scienza dei dati (11 minuti):** Scopri come gli output del modello Data Science Workspace possono essere utilizzati nel Profilo cliente in tempo reale per fornire esperienze personalizzate con applicazioni e servizi di Adobe.
+**Utilizza e fornisci Data Science Insights (11 minuti):** Scopri come gli output del modello di Data Science Workspace possono essere utilizzati nel profilo cliente in tempo reale per fornire esperienze personalizzate con applicazioni e servizi Adobi.
 
 ## Passaggi successivi
 
-Dopo aver completato il corso Data Science Workspace, visita il [Guide all&#39;API di apprendimento automatico di Sensei](./api/getting-started.md) per scoprire come utilizzare le API RESTful per fare tutto ciò che hai appena imparato e molto altro.
+Dopo aver completato il corso Data Science Workspace, visita il [Guide API di apprendimento automatico di Sensei](./api/getting-started.md) per scoprire come utilizzare le API RESTful per eseguire tutte le operazioni che hai appena appreso e altro ancora.
 
 
 

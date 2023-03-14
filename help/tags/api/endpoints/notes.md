@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /notes nell’API di
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '515'
 ht-degree: 98%
 
 ---
@@ -58,7 +58,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Tipo di risorsa di cui si devono recuperare le note. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | `id` della risorsa specifica di cui desideri elencare le note. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -133,7 +133,7 @@ GET /notes/{NOTE_ID}
 | --- | --- |
 | `NOTE_ID` | `id` della nota da cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -200,7 +200,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | `RESOURCE_TYPE` | Tipo di risorsa per cui si sta creando una nota. Deve essere uno dei seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | `id` della risorsa specifica per la quale desideri creare una nota. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `type` | **(Obbligatorio)** Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `notes`. |
 | `attributes.text` | **(Obbligatorio)** Testo della nota. Ogni nota può contenere un massimo di 512 caratteri Unicode. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 

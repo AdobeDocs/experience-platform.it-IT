@@ -1,7 +1,7 @@
 ---
 title: Sincronizzazione dei profili in tempo reale per mbox3rdPartyId
 description: Scopri come utilizzare mbox3rdPartyId con Adobe Experience Platform Web SDK.
-keywords: personalizzazione;target;adobe target;renderdecisions;sendEvent;mbox3rdPartyId;
+keywords: personalizzazione;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
@@ -14,21 +14,21 @@ ht-degree: 9%
 
 L’ID mbox3rdPartyId in Adobe Target è l’ID visitatore della tua azienda, ad esempio l’ID di iscrizione al programma fedeltà.
 
-Quando un visitatore accede al sito di un’azienda, in genere l’azienda crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per tale azienda. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+Quando un visitatore accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
 
 
-## Come utilizzare `mbox3rdPartyId` con l’SDK per web
+## Come usare `mbox3rdPartyId` con Web SDK
 
-### Passaggio 1: Configura le `Target Third Party ID Namespace`
+### Passaggio 1: configurare `Target Third Party ID Namespace`
 
-Configura le `Target Third Party ID Namespace` nel tuo [Datastream](../../datastreams/overview.md), utilizzando lo spazio dei nomi ID che si desidera utilizzare come ID di terze parti mbox.
-[Ulteriori informazioni sui namespace ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it)
+Configurare `Target Third Party ID Namespace` nel tuo [Datastream](../../datastreams/overview.md), utilizzando l’ID Namespace che desideri utilizzare come ID di terze parti mbox.
+[Ulteriori informazioni sugli spazi dei nomi ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it)
 
 ![](assets/mbox3rdpartyid.png)
 
-### Passaggio 2: Invia `mbox3rdpartyId` a Target
+### Passaggio 2: inviare `mbox3rdpartyId` a Target
 
-Invia `mbox3rdpartyId` a Target nel `sendEvent` utilizzando lo spazio dei nomi ID configurato nel passaggio 1.
+Invia il `mbox3rdpartyId` a Target in `sendEvent` , utilizzando lo spazio dei nomi ID configurato nel passaggio 1.
 [Ulteriori informazioni sull’invio degli ID](../../identity/overview.md#syncing-identities)
 
 ```javascript

@@ -13,43 +13,43 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Uno degli obiettivi principali dei tag in Adobe Experience Platform è quello di creare un ecosistema aperto in cui gli ingegneri al di fuori di Adobe possono esporre funzionalità aggiuntive sui loro siti web e applicazioni mobili. Questa operazione viene eseguita tramite le estensioni di tag. Una volta installata un&#39;estensione su una proprietà tag, la relativa funzionalità diventa disponibile per l&#39;uso da parte di tutti gli utenti della proprietà.
+Uno degli obiettivi principali dei tag in Adobe Experience Platform è la creazione di un ecosistema aperto che consenta anche ai tecnici che non fanno parte di Adobe di pubblicare funzionalità aggiuntive sui loro siti web e sulle loro applicazioni mobili. Questa operazione viene eseguita tramite le estensioni tag. Una volta installata un’estensione su una proprietà tag, la relativa funzionalità diventa disponibile per tutti gli utenti della proprietà.
 
-Questo documento illustra i componenti principali di un&#39;estensione e fornisce collegamenti a ulteriori documentazione per aiutarti nel processo di sviluppo dell&#39;estensione.
+Questo documento illustra i componenti principali di un’estensione e fornisce i collegamenti a ulteriore documentazione per aiutarti a fornire una guida nel processo di sviluppo.
 
 ## Struttura delle estensioni
 
-Un’estensione è costituita da una directory di file. In particolare, un&#39;estensione consiste in un file manifesto, moduli libreria e visualizzazioni.
+Un’estensione è costituita da una directory di file. In particolare, un’estensione è costituita da un file manifesto, moduli libreria e viste.
 
 ### File manifesto
 
-Un file manifesto ([`extension.json`](./manifest.md)) deve esistere nella directory principale della directory. Questo file descrive la composizione dell&#39;estensione e dove alcuni file si trovano all&#39;interno della directory. Il manifesto funziona in modo simile a un [`package.json`](https://docs.npmjs.com/files/package.json) in un [npm](https://www.npmjs.com/) progetto.
+Un file manifesto ([`extension.json`](./manifest.md)) deve esistere nella directory principale. Questo file descrive la composizione dell’estensione e la posizione in cui si trovano alcuni file all’interno della directory. Il manifesto funziona in modo simile a un [`package.json`](https://docs.npmjs.com/files/package.json) file in un [npm](https://www.npmjs.com/) progetto.
 
 ### Moduli libreria
 
-I moduli libreria sono i file che descrivono i diversi [componenti](#components) che un&#39;estensione fornisce (in altre parole, la logica da emettere all&#39;interno della libreria di runtime di tag). Il contenuto di ciascun file del modulo libreria deve seguire le [Standard del modulo CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules).
+I moduli libreria sono i file che descrivono i diversi [componenti](#components) che un’estensione fornisce (in altre parole, la logica da emettere all’interno della libreria runtime dei tag). Il contenuto di ciascun file del modulo libreria deve seguire il [Modulo CommonJS standard](https://nodejs.org/api/modules.html#modules-commonjs-modules).
 
-Ad esempio, se stai creando un tipo di azione denominato &quot;invia beacon&quot;, devi disporre di un file contenente la logica che invia il beacon. Se si utilizza JavaScript, il file potrebbe essere chiamato `sendBeacon.js`. Il contenuto di questo file verrà emesso nella libreria runtime dei tag.
+Ad esempio, se stai creando un tipo di azione denominato &quot;send beacon&quot;, devi disporre di un file contenente la logica che invia il beacon. Se utilizzi JavaScript, il file potrebbe essere chiamato `sendBeacon.js`. Il contenuto di questo file verrà emesso nella libreria runtime dei tag.
 
-Puoi inserire i file dei moduli libreria in qualsiasi punto ti piaccia all&#39;interno della directory dell&#39;estensione, purché ne descriva le posizioni in `extension.json`.
+Puoi inserire i file del modulo libreria in qualsiasi punto della directory dell’estensione, purché ne descriva la posizione in `extension.json`.
 
 ### Viste
 
-Una visualizzazione è un file HTML in grado di essere caricato in un [`iframe` elemento](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all’interno dell’applicazione tag, in particolare tramite l’interfaccia utente di Platform e l’interfaccia utente di raccolta dati. Per comunicare con l’applicazione, la visualizzazione deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
+Una vista è un file HTML che può essere caricato in un [`iframe` elemento](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all’interno dell’applicazione dei tag, in particolare tramite l’interfaccia utente di Platform e l’interfaccia utente di Data Collection. Per poter comunicare con l’applicazione, la vista deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
 
-Il file di visualizzazione più importante per qualsiasi estensione è la sua configurazione. Vedi la sezione su [configurazioni di estensione](#configuration) per ulteriori informazioni.
+La configurazione è il file di visualizzazione più importante per qualsiasi estensione. Consulta la sezione su [configurazioni delle estensioni](#configuration) per ulteriori informazioni.
 
-Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, è possibile utilizzare jQuery, Sottolineatura, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di fare in modo che l&#39;estensione abbia un aspetto e un aspetto simili all&#39;interfaccia utente.
+Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, è possibile utilizzare jQuery, Underscore, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di conferire all’estensione un aspetto simile a quello dell’interfaccia utente.
 
-Si consiglia di inserire tutti i file relativi alla vista (HTML, CSS, JavaScript) in una singola sottodirectory, isolata dai file del modulo libreria. In `extension.json`, è possibile descrivere la posizione della sottodirectory della visualizzazione. Platform metterà a disposizione questa sottodirectory (e solo questa sottodirectory) dai propri server web.
+Si consiglia di inserire tutti i file relativi alla vista (HTML, CSS, JavaScript) in una singola sottodirectory, isolata dai file del modulo libreria. In entrata `extension.json`, è possibile descrivere la posizione di questa sottodirectory della visualizzazione. Platform metterà a disposizione questa sottodirectory (e solo questa sottodirectory) dai propri server web.
 
-## Componenti della libreria {#components}
+## Componenti libreria {#components}
 
-Ciascuna estensione definisce un set di funzionalità. Queste funzionalità vengono implementate includendo in un [libreria](../ui/publishing/libraries.md) che viene distribuito sul sito web o sull’app. Le librerie sono una raccolta di singoli componenti, tra cui condizioni, azioni, elementi dati e altro ancora. Ogni componente libreria è un pezzo di codice riutilizzabile (fornito da un&#39;estensione) emesso all&#39;interno del runtime di tag.
+Ogni estensione definisce un set di funzionalità. Queste funzionalità sono implementate includendo in una [libreria](../ui/publishing/libraries.md) che viene distribuito sul sito web o sull’app. Le librerie sono una raccolta di singoli componenti, tra cui condizioni, azioni, elementi dati e altro ancora. Ogni componente della libreria è un codice riutilizzabile (fornito da un’estensione) emesso all’interno del runtime dei tag.
 
-A seconda che stiate sviluppando un’estensione Web o un’estensione Edge, i tipi di componenti disponibili e i relativi casi d’uso differiscono. Per una panoramica dei componenti disponibili per ciascun tipo di estensione, fai riferimento alle sottosezioni seguenti.
+A seconda che tu stia sviluppando un’estensione web o un’estensione edge, i tipi di componenti disponibili e i relativi casi d’uso variano. Per una panoramica dei componenti disponibili per ciascun tipo di estensione, fai riferimento alle sottosezioni seguenti.
 
 ### Componenti per estensioni web {#web}
 
@@ -65,13 +65,13 @@ Oltre al [moduli core](./web/core.md) fornito da Adobe, puoi definire i seguenti
 
 >[!NOTE]
 >
->Per informazioni dettagliate sul formato richiesto per l&#39;implementazione dei componenti libreria nelle estensioni web, consulta la sezione [panoramica del formato del modulo](./web/format.md).
+>Per informazioni dettagliate sul formato richiesto per l’implementazione dei componenti libreria nelle estensioni web, consulta [panoramica del formato del modulo](./web/format.md).
 
-### Componenti per estensioni edge {#edge}
+### Componenti per estensioni Edge {#edge}
 
-Nelle estensioni Edge, le regole vengono attivate tramite controlli di condizione che, se vengono superati, eseguono azioni specifiche. Vedi la panoramica sul [flusso di estensioni edge](./edge/flow.md) per ulteriori informazioni.
+Nelle estensioni Edge, le regole vengono attivate tramite controlli di condizione che, se vengono superati, eseguono azioni specifiche. Consulta la panoramica su [flusso di estensione edge](./edge/flow.md) per ulteriori informazioni.
 
-Nelle estensioni edge di puoi definire i seguenti componenti della libreria:
+Nelle estensioni Edge è possibile definire i seguenti componenti libreria:
 
 * [Condizioni](./edge/condition-types.md)
 * [Azioni](./edge/action-types.md)
@@ -83,14 +83,14 @@ Nelle estensioni edge di puoi definire i seguenti componenti della libreria:
 
 ## Configurazione dell&#39;estensione {#configuration}
 
-Per configurazione di un’estensione si intende il modo in cui essa raccoglie le impostazioni globali da un utente. La configurazione è costituita da un componente vista che esporta ed emette le impostazioni all’interno della libreria di runtime di tag come oggetto normale.
+Per configurazione di un’estensione si intende il modo in cui essa raccoglie le impostazioni globali da un utente. La configurazione è costituita da un componente vista che esporta ed emette le impostazioni all’interno della libreria runtime dei tag come oggetto semplice.
 
-Ad esempio, considera un&#39;estensione che consente all&#39;utente di inviare un beacon utilizzando un&#39;azione &quot;Invia beacon&quot; e il beacon deve sempre contenere un ID account. Invece di richiedere agli utenti un ID account ogni volta che configurano un&#39;azione &quot;Invia beacon&quot;, l&#39;estensione deve richiedere l&#39;ID account una volta dalla vista di configurazione dell&#39;estensione. Ogni volta che un beacon viene inviato, l’azione &quot;Invia beacon&quot; può estrarre l’ID account dalla configurazione dell’estensione e aggiungerlo al beacon.
+Ad esempio, considera un’estensione che consente all’utente di inviare un beacon utilizzando un’azione &quot;Invia beacon&quot; e che il beacon debba sempre contenere un ID account. Invece di richiedere agli utenti un ID account ogni volta che configurano un’azione &quot;Invia beacon&quot;, l’estensione deve richiedere l’ID account una volta dalla vista di configurazione dell’estensione. Ogni volta che un beacon viene inviato, l&#39;azione &quot;Invia beacon&quot; può richiamare l&#39;ID account dalla configurazione dell&#39;estensione e aggiungerlo al beacon.
 
-Quando gli utenti installano un&#39;estensione a una proprietà nell&#39;interfaccia utente, visualizzano la vista di configurazione dell&#39;estensione, che devono completare per completare l&#39;installazione.
+Quando un utente installa un’estensione su una proprietà nell’interfaccia utente di, viene visualizzata la vista per la configurazione dell’estensione, che deve essere completata per completare l’installazione.
 
-Per ulteriori informazioni, consulta la guida su [configurazioni di estensione](./configuration.md).
+Per ulteriori informazioni, consulta la guida su [configurazioni delle estensioni](./configuration.md).
 
 ## Invio di estensioni
 
-Una volta completata la creazione dell’estensione, puoi inviarla per essere elencata nel catalogo delle estensioni in Platform. Consulta la sezione [panoramica del processo di invio dell&#39;estensione](./submit/overview.md) per ulteriori informazioni.
+Una volta completata la creazione dell’estensione, puoi inviarla per essere elencata nel catalogo delle estensioni in Platform. Consulta la [panoramica del processo di invio delle estensioni](./submit/overview.md) per ulteriori informazioni.

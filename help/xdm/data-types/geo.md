@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;geo;tipo di dati;tipo di dati;tipo di dati;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;geo;datatype;data-type;data type;data type;
 solution: Experience Platform
-title: Tipo di dati geo
+title: Tipo di dati geografici
 description: Questo documento fornisce una panoramica del tipo di dati Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 6%
+source-wordcount: '199'
+ht-degree: 5%
 
 ---
 
@@ -23,14 +23,14 @@ ht-degree: 6%
 | `_id` | Stringa | ID univoco generato dal sistema per le coordinate. |
 | `city` | Stringa | Il nome della città. |
 | `countryCode` | Stringa | I due caratteri <a href="https://datahub.io/core/country-list">ISO 3166-1 alfa-2</a> codice del paese. |
-| `dmaID` | Intero | La ricerca sui media Nielsen ha designato un&#39;area di mercato. |
-| `msaID` | Intero | L&#39;area statistica metropolitana negli Stati Uniti dove si è verificata l&#39;osservazione. |
-| `postalCode` | Stringa | Codice postale della posizione. I codici postali non sono disponibili per tutti i paesi. In alcuni paesi ciò conterrà solo una parte del codice postale. |
-| `stateProvince` | Stringa | La parte dello stato o della provincia dell&#39;osservazione. Il formato segue le [ISO 3166-2 (paese e sottodivisione)](https://www.unece.org/cefact/locode/subdivisions.html) standard. |
+| `dmaID` | Intero | L&#39;area di mercato designata da Nielsen Media Research. |
+| `msaID` | Intero | L’area statistica metropolitana degli Stati Uniti in cui è avvenuta l’osservazione. |
+| `postalCode` | Stringa | Il codice postale della località. I codici postali non sono disponibili per tutti i paesi. In alcuni paesi, questa conterrà solo una parte del codice postale. |
+| `stateProvince` | Stringa | La porzione di stato o provincia dell’osservazione. Il formato segue il [ISO 3166-2 (paese e suddivisione)](https://www.unece.org/cefact/locode/subdivisions.html) standard. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

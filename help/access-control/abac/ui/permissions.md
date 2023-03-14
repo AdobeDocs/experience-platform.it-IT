@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo accessi;controllo accessi basato su attributi;ABAC
-title: Autorizzazioni per la gestione dei ruoli per il controllo degli accessi basato su attributi
-description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni di Adobe Experience Cloud
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
+description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
@@ -14,96 +14,96 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Il controllo di accesso utilizza l&#39;ID utente (un ID univoco interno assegnato a un utente) per concedere le autorizzazioni. Quando un&#39;organizzazione viene migrata da Adobe ID a Business ID, tutte le autorizzazioni impostate per i suoi utenti andranno perse perché l&#39;ID utente cambia e il controllo degli accessi utilizza l&#39;ID utente appena generato. Se la tua organizzazione viene migrata a Business ID, contatta il tuo rappresentante di Adobe per migrare il tuo ID utente da Adobe ID a Business ID.
+>Per la concessione delle autorizzazioni, il controllo degli accessi utilizza l’ID utente (un ID univoco interno assegnato a un utente). Quando un’organizzazione viene migrata da Adobe ID a Business ID, tutte le autorizzazioni impostate per i relativi utenti andranno perse perché l’ID utente viene modificato e il controllo degli accessi utilizzerà l’ID utente appena generato. Se la tua organizzazione è stata migrata al Business ID, contatta il rappresentante del tuo Adobe per migrare il tuo ID utente da Adobe ID al Business ID.
 
-Le autorizzazioni sono l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
 Mediante le Autorizzazioni di , , puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
-Immediatamente dopo [creazione di un nuovo ruolo](#create-a-new-role), viene restituita la **[!UICONTROL Ruoli]** scheda . Se stai modificando le autorizzazioni per un ruolo esistente, seleziona il ruolo dal **[!UICONTROL Ruoli]** scheda . In alternativa, utilizza l’opzione filtro per filtrare i risultati e trovare un ruolo.
+Immediatamente dopo [creazione di un nuovo ruolo](#create-a-new-role), si ritorna al **[!UICONTROL Ruoli]** scheda. Se si stanno modificando le autorizzazioni per un ruolo esistente, selezionare il ruolo dall&#39; **[!UICONTROL Ruoli]** scheda. In alternativa, utilizza l’opzione di filtro per filtrare i risultati e trovare un ruolo.
 
-## Filtrare i ruoli
+## Filtra ruoli
 
-Seleziona l’icona funnel (![Icona Filtro](../../images/icon.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
+Seleziona l’icona funnel (![Icona Filtro](../../images/icon.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 
-I seguenti filtri sono disponibili per i ruoli nell’interfaccia utente di :
+Nell’interfaccia utente sono disponibili i seguenti filtri per i ruoli:
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Creato tra] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
-| [!UICONTROL Creato da] | Filtrare per creatore di ruoli selezionando un utente dal menu a discesa. |
-| [!UICONTROL Modificato tra] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in cui filtrare i risultati. |
-| [!UICONTROL Modificato da] | Filtrare per modificatore di ruolo selezionando un utente dal menu a discesa. |
+| [!UICONTROL Creato tra] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. |
+| [!UICONTROL Creato da] | Filtra per creatore di ruoli selezionando un utente dal menu a discesa. |
+| [!UICONTROL Modificato tra] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. |
+| [!UICONTROL Modificato da] | Filtra per modificatore di ruolo selezionando un utente dal menu a discesa. |
 
-Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione o seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
+Per rimuovere un filtro, seleziona la &quot;X&quot; sull’icona della pillola per il filtro in questione, oppure seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
 
 ![flac-clear-filters](../../images/flac-ui/flac-clear-filters.png)
 
-## Dettagli del ruolo
+## Dettagli ruolo
 
-Seleziona il ruolo dal **[!UICONTROL Ruoli]** , che aprirà la pagina dei dettagli del ruolo.
+Seleziona il ruolo dal **[!UICONTROL Ruoli]** , che apre la pagina dei dettagli del ruolo.
 
-![flac-details](../../images/flac-ui/flac-details.png)
+![dettagli flac](../../images/flac-ui/flac-details.png)
 
-La scheda dei dettagli fornisce una panoramica del ruolo. Nella panoramica vengono visualizzati il nome del ruolo, la descrizione del ruolo, il nome dell’utente che ha creato e modificato il ruolo, quando il ruolo è stato creato e modificato e le autorizzazioni associate al ruolo. Se necessario, è possibile modificare il nome del ruolo e la descrizione del ruolo.
+La scheda dei dettagli fornisce una panoramica del ruolo. Nella panoramica vengono visualizzati il nome del ruolo, la descrizione del ruolo, il nome dell&#39;utente che ha creato e modificato il ruolo, la data di creazione e modifica del ruolo e le autorizzazioni associate al ruolo. Se necessario, è possibile modificare il nome e la descrizione del ruolo.
 
-## Gestione delle etichette per un ruolo
+## Gestire le etichette per un ruolo
 
 Seleziona la **[!UICONTROL Etichette]** per aprire la pagina delle etichette dei ruoli, quindi selezionare **[!UICONTROL Aggiungi etichette]** per assegnare etichette al ruolo.
 
-![etichette](../../images/flac-ui/flac-labels.png)
+![flac-labels](../../images/flac-ui/flac-labels.png)
 
-Le etichette sono elencate in questa pagina. Nell’elenco sono visualizzati il nome dell’etichetta, il nome descrittivo, la categoria e la relativa descrizione.
+Le etichette sono elencate in questa pagina. Nell&#39;elenco vengono visualizzati il nome dell&#39;etichetta, il nome descrittivo, la categoria e la relativa descrizione.
 
-Seleziona le etichette dall’elenco da aggiungere al ruolo, quindi seleziona **[!UICONTROL Salva]**
+Seleziona le etichette dall’elenco che desideri aggiungere al ruolo, quindi seleziona **[!UICONTROL Salva]**
 
-![flac-add-label](../../images/flac-ui/flac-add-labels.png)
+![flac-add-labels](../../images/flac-ui/flac-add-labels.png)
 
-Le etichette aggiunte vengono visualizzate in **[!UICONTROL Etichette]** scheda .
+Le etichette aggiunte vengono visualizzate in **[!UICONTROL Etichette]** scheda.
 
-![etichette a scomparsa](../../images/flac-ui/flac-added-labels.png)
+![flac-add-labels](../../images/flac-ui/flac-added-labels.png)
 
-Per rimuovere un’etichetta da un ruolo, seleziona la **X** accanto al nome delle etichette.
+Per rimuovere un&#39;etichetta da un ruolo, selezionare **X** accanto al nome delle etichette.
 
-![flac-delete-label](../../images/flac-ui/flac-delete-labels.png)
+![flac-delete-labels](../../images/flac-ui/flac-delete-labels.png)
 
 ## Gestione delle sandbox per il ruolo
 
-Seleziona la **[!UICONTROL Sandbox]** per aprire la pagina sandbox dei ruoli . Qui puoi vedere un elenco delle sandbox che sono state aggiunte al ruolo .
+Seleziona la **[!UICONTROL Sandbox]** per aprire la pagina sandbox ruoli. Qui puoi vedere un elenco di sandbox che sono state aggiunte al ruolo.
 
-![sandbox](../../images/flac-ui/flac-sandboxes.png)
+![flac-sandbox](../../images/flac-ui/flac-sandboxes.png)
 
-Per aggiungere più sandbox a un ruolo seleziona **[!UICONTROL Modifica]**.
+Per aggiungere più sandbox a un ruolo, seleziona **[!UICONTROL Modifica]**.
 
-![sandbox flac-add](../../images/flac-ui/flac-add-sandboxes.png)
+![flac-add-sandboxes](../../images/flac-ui/flac-add-sandboxes.png)
 
-Nella schermata successiva viene richiesto di scegliere le autorizzazioni di risorse esistenti nelle sandbox da includere nel ruolo utilizzando il menu a discesa . Al termine, seleziona **[!UICONTROL Salva e chiudi]**.
+Nella schermata successiva viene richiesto di scegliere le autorizzazioni per le risorse esistenti nelle sandbox da includere nel ruolo utilizzando il menu a discesa. Al termine, seleziona **[!UICONTROL Salva ed esci]**.
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
 ## Gestione degli utenti per il ruolo
 
-Seleziona la **[!UICONTROL Utenti]** per aprire la pagina ruoli utenti , quindi seleziona **[!UICONTROL Aggiungi utenti]** per assegnare gli utenti al ruolo.
+Seleziona la **[!UICONTROL Utenti]** per aprire la pagina ruoli utenti, quindi selezionare **[!UICONTROL Aggiungi utenti]** per assegnare utenti al ruolo.
 
-![flac users](../../images/flac-ui/flac-users.png)
+![flac-users](../../images/flac-ui/flac-users.png)
 
-Seleziona gli utenti dall’elenco da aggiungere al ruolo. In alternativa, utilizza la barra di ricerca per cercare l’utente inserendo il proprio nome o indirizzo e-mail, quindi seleziona **[!UICONTROL Salva]**
+Selezionare gli utenti dall&#39;elenco che si desidera aggiungere al ruolo. In alternativa, utilizza la barra di ricerca per cercare l’utente immettendo il suo nome o indirizzo e-mail, quindi seleziona **[!UICONTROL Salva]**
 
 ![flac-add-users](../../images/flac-ui/flac-add-users.png)
 
-Gli utenti aggiunti vengono visualizzati in **[!UICONTROL Utenti]** scheda .
+Gli utenti aggiunti vengono visualizzati in **[!UICONTROL Utenti]** scheda.
 
-![utenti &quot;flac&quot;](../../images/flac-ui/flac-added-users.png)
+![flac-add-users](../../images/flac-ui/flac-added-users.png)
 
-Per rimuovere un utente da un ruolo, seleziona la **X** accanto al nome utente.
+Per rimuovere un utente da un ruolo, selezionare **X** accanto al nome dell’utente.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
 ## Gestione delle credenziali API per il ruolo
 
-Seleziona la **[!UICONTROL Credenziali API]** per aprire la pagina delle credenziali API dei ruoli, quindi seleziona **[!UICONTROL Aggiungi credenziali API]** per assegnare le credenziali API al ruolo.
+Seleziona la **[!UICONTROL Credenziali API]** per aprire la pagina ruoli: Credenziali API, quindi seleziona **[!UICONTROL Aggiungi credenziali API]** per assegnare le credenziali API al ruolo.
 
 ![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
 
@@ -111,45 +111,45 @@ Seleziona le credenziali API dall’elenco che desideri aggiungere al ruolo, qui
 
 ![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
 
-Le credenziali API aggiunte vengono visualizzate in **[!UICONTROL Credenziali API]** scheda .
+Le credenziali API aggiunte vengono visualizzate in **[!UICONTROL Credenziali API]** scheda.
 
-![credenziali flac-added-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
+![flac-add-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
 
-Per rimuovere le credenziali API da un ruolo, seleziona la **X** accanto al nome della credenziale API.
+Per rimuovere le credenziali API da un ruolo, seleziona la **X** accanto al nome delle credenziali API.
 
 ![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
 
-La **[!UICONTROL Rimuovere le credenziali API]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’eliminazione.
+Il **[!UICONTROL Rimuovi credenziali API]** viene visualizzata una finestra di dialogo che richiede di confermare l’eliminazione.
 
 ![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
-Verrà restituito al **[!UICONTROL Credenziali API]** scheda .
+Verrai reindirizzato al **[!UICONTROL Credenziali API]** scheda.
 
 ## Gestione dei gruppi di utenti per i ruoli
 
-I gruppi di utenti sono più utenti che sono stati raggruppati insieme e hanno l&#39;accesso per eseguire le stesse funzioni.
+I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno l’accesso per eseguire le stesse funzioni.
 
-Seleziona la **[!UICONTROL Gruppi di utenti]** per aprire la pagina gruppi utente ruoli , quindi selezionare **[!UICONTROL Aggiungi gruppi]** per assegnare gruppi di utenti al ruolo.
+Seleziona la **[!UICONTROL Gruppi di utenti]** per aprire la pagina gruppi di utenti ruoli, quindi selezionare **[!UICONTROL Aggiungi gruppi]** per assegnare gruppi di utenti al ruolo.
 
 ![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
 
-Seleziona i gruppi di utenti dall’elenco da aggiungere al ruolo. In alternativa, utilizza la barra di ricerca per cercare il gruppo di utenti immettendo il nome del gruppo, quindi seleziona **[!UICONTROL Salva]**
+Selezionare i gruppi di utenti dall&#39;elenco che si desidera aggiungere al ruolo. In alternativa, utilizza la barra di ricerca per cercare il gruppo di utenti immettendo il nome del gruppo, quindi seleziona **[!UICONTROL Salva]**
 
 ![flac-add-user-groups](../../images/flac-ui/flac-add-user-groups.png)
 
-Il gruppo di utenti aggiunto viene visualizzato in **[!UICONTROL Gruppi di utenti]** scheda .
+Il gruppo di utenti aggiunto viene visualizzato in **[!UICONTROL Gruppi di utenti]** scheda.
 
 ![flac-add-user-groups](../../images/flac-ui/flac-added-user-groups.png)
 
-Per rimuovere un gruppo di utenti da un ruolo, seleziona la **X** accanto al nome del gruppo di utenti.
+Per rimuovere un gruppo di utenti da un ruolo, selezionare **X** accanto al nome del gruppo di utenti.
 
 ![flac-remove-user-groups](../../images/flac-ui/flac-remove-user-groups.png)
 
-La **[!UICONTROL Rimuovi gruppo utenti]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare l’eliminazione.
+Il **[!UICONTROL Rimuovi gruppo utenti]** viene visualizzata una finestra di dialogo che richiede di confermare l’eliminazione.
 
 ![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
-Verrà restituito al **[!UICONTROL Gruppi di utenti]** scheda .
+Verrai reindirizzato al **[!UICONTROL Gruppi di utenti]** scheda.
 
 ## Aggiunta di utenti all’Experience Platform tramite un profilo di prodotto
 
@@ -157,12 +157,12 @@ Per aggiungere un utente a un profilo di prodotto, accedi all’Admin Console e 
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
-La **[!UICONTROL Aggiungi utenti al tuo team]** viene visualizzata la finestra di dialogo . Immetti l’indirizzo e-mail, il nome (facoltativo) e il cognome degli utenti (facoltativo).
+Il **[!UICONTROL Aggiungere utenti al team]** viene visualizzata. Immetti l’indirizzo e-mail degli utenti, il nome (facoltativo) e il cognome (facoltativo).
 
-Seleziona l’icona a forma di matita per selezionare prodotti e gruppi di utenti, seleziona **[!UICONTROL Adobe Experience Platform]**, quindi seleziona **[!UICONTROL AEP-Default-All-Users]**, quindi seleziona  **[!UICONTROL Salva]**.
+Seleziona l’icona a forma di matita per selezionare prodotti e gruppi di utenti, seleziona **[!UICONTROL Adobe di Experience Platform]**, quindi seleziona **[!UICONTROL AEP-Default-All-Users]**, quindi seleziona  **[!UICONTROL Salva]**.
 
-![profilo di prodotto](../../images/flac-ui/product-profile.png)
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## Passaggi successivi
 
-Con le autorizzazioni stabilite, puoi procedere al passaggio successivo a [gestire gli utenti](users.md).
+Una volta stabilite le autorizzazioni, puoi procedere al passaggio successivo a [gestire gli utenti](users.md).

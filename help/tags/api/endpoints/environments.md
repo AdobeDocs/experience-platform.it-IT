@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /environments nell�
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1002'
 ht-degree: 99%
 
 ---
@@ -26,7 +26,7 @@ Gli ambienti sono disponibili in tre tipi (o stadi), ognuno con un limite totale
 | Staging | Uno |
 | Produzione | Uno |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Questi tipi di ambiente hanno un comportamento simile, ma vengono utilizzati in diverse fasi del [flusso di lavoro di pubblicazione dei tag](../../ui/publishing/publishing-flow.md).
 
@@ -52,7 +52,7 @@ GET /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | `id` della proprietà a cui appartengono gli ambienti. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ GET /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | `id` dell’ambiente da cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -285,7 +285,7 @@ POST /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo l’ambiente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `id` | `id` dell’ambiente da aggiornare. Deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | `id` dell’ambiente da aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -457,7 +457,7 @@ curl -X PATCH \
 | `id` | `id` dell’ambiente da aggiornare. Deve corrispondere al valore `{ENVIRONMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -554,7 +554,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | `id` dell’ambiente da eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -590,7 +590,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 | --- | --- |
 | `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri elencare le build. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -707,7 +707,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 | --- | --- |
 | `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare l’host. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -774,7 +774,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 | --- | --- |
 | `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare la libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -889,7 +889,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 | --- | --- |
 | `{ENVIRONMENT_ID}` | `id` dell’ambiente di cui desideri cercare la proprietà. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

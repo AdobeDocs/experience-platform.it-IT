@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /libraries nell’AP
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 99%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | `id` della proprietà a cui appartengono le librerie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | `id` della libreria che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo la libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **(Obbligatorio)** Nome leggibile della libreria. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | ID della libreria a cui desideri aggiungere risorse. |
 | `{RESOURCE_TYPE}` | Tipo di risorsa che si sta aggiungendo alla libreria. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | ID della risorsa che stai aggiungendo alla libreria. |
 | `type` | Tipo di risorsa che si sta aggiungendo alla libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | ID della libreria di cui desideri sostituire le relazioni. |
 | `{RESOURCE_TYPE}` | Tipo di risorsa da sostituire. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | ID della risorsa che stai aggiungendo alla libreria. |
 | `type` | Tipo di risorsa che si sta aggiungendo alla libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | ID della libreria da cui desideri rimuovere le risorse. |
 | `{RESOURCE_TYPE}` | Tipo di risorsa da rimuovere. Sono accettati i seguenti valori: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | ID della risorsa da rimuovere dalla libreria. |
 | `type` | Tipo di risorsa da rimuovere dalla libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | ID della libreria da assegnare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | ID dell’ambiente a cui assegnare la libreria. |
 | `type` | Deve essere impostato su `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | `id` della libreria di cui cambiare lo stato. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | `id` della libreria da aggiornare. Questo deve corrispondere al valore `{LIBRARY_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | `id` della libreria da pubblicare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare gli elementi dati. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare le estensioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri elencare le regole. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare l’ambiente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare la proprietà. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | `id` della libreria di cui desideri cercare la libreria a monte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /extensions nell’A
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '941'
 ht-degree: 99%
 
 ---
@@ -33,7 +33,7 @@ GET properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare le estensioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ GET /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | `id` dell’estensione che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -292,7 +292,7 @@ POST /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `PROPERTY_ID` | `id` della proprietà in cui desideri installare l’estensione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `attributes.enabled` | Valore booleano che indica se l’estensione è abilitata. |
 | `attributes.settings` | Oggetto JSON delle impostazioni rappresentato come stringa. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -438,7 +438,7 @@ PATCH /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | `id` dell’estensione che desideri rivedere. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -470,7 +470,7 @@ curl -X PATCH \
 | `attributes` | Attributi che desideri rivedere. Per le estensioni, puoi rivedere gli attributi `delegate_descriptor_id`, `enabled` e `settings`. |
 | `meta.action` | Durante la creazione della revisione, occorre includere un valore `revise`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -578,7 +578,7 @@ DELETE /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | `id` dell’estensione che desideri eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -618,7 +618,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 | --- | --- |
 | `{EXTENSION_ID}` | `id` dell’estensione di cui desideri elencare le librerie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -740,7 +740,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 | --- | --- |
 | `{EXTENSION_ID}` | `id` dell’estensione di cui desideri elencare le revisioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -954,7 +954,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 | --- | --- |
 | `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare l’estensione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1189,7 +1189,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 | --- | --- |
 | `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare l’origine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1309,7 +1309,7 @@ GET  /extensions/{EXTENSION_ID}/property
 | --- | --- |
 | `{EXTENSION_ID}` | `id` dell’estensione di cui desideri cercare la proprietà. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

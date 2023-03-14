@@ -13,31 +13,31 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Con l’aiuto di [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+L’API del server di rete Edge può distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target, con l’aiuto del [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
 
 >[!IMPORTANT]
 >
->Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) non sono completamente supportati dall&#39;API server. L&#39;API del server può **retrieve** attività create dal Compositore esperienza visivo, ma l’API del server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create dal Compositore esperienza visivo, implementa [personalizzazione ibrida](../edge/personalization/hybrid-personalization.md) mediante l’SDK per web e l’API del server di rete Edge.
+>Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../edge/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
 
-## Configurare il datastream {#configure-your-datastream}
+## Configurare lo stream di dati {#configure-your-datastream}
 
-Prima di poter utilizzare l&#39;API server insieme ad Adobe Target, devi abilitare la personalizzazione Adobe Target nella configurazione del datastream.
+Prima di poter utilizzare l’API server in combinazione con Adobe Target, devi abilitare la personalizzazione Adobe Target nella configurazione dello stream di dati.
 
-Consulta la sezione [guida sull’aggiunta di servizi a un datastream](../edge/datastreams/overview.md#adobe-target-settings), per informazioni dettagliate su come abilitare Adobe Target.
+Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../edge/datastreams/overview.md#adobe-target-settings), per informazioni dettagliate su come abilitare Adobe Target.
 
-Durante la configurazione del datastream, puoi (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID]e [!DNL Target Third Party ID Namespace].
+Durante la configurazione dello stream di dati, puoi (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID], e [!DNL Target Third Party ID Namespace].
 
-![Immagine dell&#39;interfaccia utente che mostra la schermata di configurazione del servizio datastream, con Adobe Target selezionato](assets/target-datastream.png)
+![Immagine dell’interfaccia utente che mostra la schermata di configurazione del servizio stream di dati, con Adobe Target selezionato](assets/target-datastream.png)
 
 
 ## Parametri personalizzati {#custom-parameters}
 
-La maggior parte dei campi [!DNL XDM] parte di ogni richiesta viene serializzata in notazione del punto e quindi inviata a Target come personalizzata o [!DNL mbox] Parametri.
+La maggior parte dei campi nel [!DNL XDM] una parte di ogni richiesta viene serializzata in notazione col punto e quindi inviata a Target come personalizzata o [!DNL mbox] parametri.
 
 
 ### Esempio {#custom-parameters-example}
 
-Dato il seguente campione XDM:
+Dato il seguente esempio XDM:
 
 ```json
 "xdm":{
@@ -49,15 +49,15 @@ Dato il seguente campione XDM:
 }
 ```
 
-Quando crei un pubblico in Target, i seguenti valori saranno disponibili come parametri personalizzati:
+Durante la creazione di tipi di pubblico in Target, i seguenti valori saranno disponibili come parametri personalizzati:
 
 * `xdm.marketing.campaignGroup`
 * `xdm.marketing.campaignName`
 * `xdm.marketing.trackingCode`
 
-## Aggiornamenti dei profili di Target {#profile-update}
+## Aggiornamenti del profilo di Target {#profile-update}
 
-La [!DNL Server API] consente aggiornamenti al profilo di Target. Per aggiornare un profilo Target, assicurati che i dati del profilo siano trasmessi nella `data` parte della richiesta nel seguente formato:
+Il [!DNL Server API] consente aggiornamenti al profilo Target. Per aggiornare un profilo Target, assicurati che i dati del profilo vengano passati nel `data` porzione della richiesta nel seguente formato:
 
 ```json
 "data":  {
@@ -72,9 +72,9 @@ La [!DNL Server API] consente aggiornamenti al profilo di Target. Per aggiornare
 
 ### Schemi {#schemas}
 
-La parte query della richiesta determina quale contenuto viene restituito da Target. Sotto la `personalization` oggetto, `schemas` determina il tipo di contenuto che Target deve restituire.
+La porzione della richiesta relativa alla query determina il contenuto restituito da Target. Sotto `personalization` oggetto, `schemas` determina il tipo di contenuto che Target deve restituire.
 
-In situazioni in cui non sei sicuro del tipo di offerte che recupererai, dovresti includere tutti e quattro gli schemi nella query di personalizzazione su Edge Network:
+In situazioni in cui non sei sicuro del tipo di offerte che recupererai, devi includere tutti e quattro gli schemi nella query di personalizzazione per Edge Network:
 
 * **Offerte basate su HTML:**
 https://ns.adobe.com/personalization/html-content-item
@@ -82,12 +82,12 @@ https://ns.adobe.com/personalization/html-content-item
 https://ns.adobe.com/personalization/json-content-item
 * **Offerte di reindirizzamento di Target**
 https://ns.adobe.com/personalization/redirect-item
-* **Offerte di manipolazione DOM di Target**
+* **Targeting delle offerte di manipolazione DOM**
 https://ns.adobe.com/personalization/dom-action
 
 ### Ambiti decisionali {#decision-scopes}
 
-Adobe Target [!DNL mbox] i nomi devono essere inclusi nella `decisionScopes` per restituire il contenuto appropriato.
+Adobe Target [!DNL mbox] i nomi devono essere inclusi nel `decisionScopes` per restituire il contenuto appropriato.
 
 #### Esempio {#decision-scopes-example}
 
@@ -119,7 +119,7 @@ POST /ee/v2/interact
 
 ### Richiesta {#request}
 
-Di seguito è descritta una richiesta completa che include un oggetto XDM completo, parametri di profilo, insieme alla query Target appropriata.
+Di seguito è descritta una richiesta completa che include un oggetto XDM completo, parametri di profilo e la query di destinazione appropriata.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -271,20 +271,20 @@ La rete Edge restituirà una risposta simile a quella riportata di seguito.
 }
 ```
 
-Se il visitatore è idoneo per un’attività di personalizzazione basata sui dati inviati ad Adobe Target, il contenuto dell’attività rilevante si troverà nella sezione `handle` oggetto, dove è il tipo `personalization:decisions`.
+Se il visitatore è idoneo per un’attività di personalizzazione basata sui dati inviati ad Adobe Target, il contenuto dell’attività pertinente si troverà in `handle` oggetto, dove il tipo è `personalization:decisions`.
 
-Talvolta viene restituito altro contenuto in `handle` anche. Altri tipi di contenuto non sono rilevanti per la personalizzazione Target. Se il visitatore è idoneo per più attività, ogni attività sarà una separata `personalization` nell&#39;array.
+A volte vengono restituiti altri contenuti in `handle` anche. Altri tipi di contenuto non sono rilevanti per la personalizzazione Target. Se il visitatore è idoneo per più attività, ogni attività sarà una separata `personalization` nell&#39;array.
 
 La tabella seguente spiega gli elementi chiave di quella parte della risposta.
 
 | Proprietà | Descrizione | Esempio |
 |---|---|---|
-| `scope` | Nome della mbox di Target risultante nelle offerte proposte. | `"scope": "serverapimbox"` |
-| `items[].schema` | Schema del contenuto associato all’offerta proposta. Questo sarà correlato al tipo di attività selezionata al momento della creazione dell’attività di personalizzazione. | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
-| `items[].meta.activity.id` | ID univoco dell’attività di offerta. Di solito un numero a 6 cifre. | `"activity.id": "140281"` |
-| `items[].meta.activity.name` | Nome dell’attività di offerta specificata dall’utente. Questo viene fornito durante il passaggio di creazione dell’attività. | `"activity.name": "Server API Form"` |
+| `scope` | Il nome mbox di Target che ha generato le offerte proposte. | `"scope": "serverapimbox"` |
+| `items[].schema` | Schema del contenuto associato all’offerta proposta. Sarà correlato al tipo di attività selezionato durante la creazione dell’attività di personalizzazione. | `"schema": "https://ns.adobe.com/personalization/json-content-item",` |
+| `items[].meta.activity.id` | ID univoco dell’attività di offerta. In genere è un numero di 6 cifre. | `"activity.id": "140281"` |
+| `items[].meta.activity.name` | Nome dell&#39;attività di offerta specificata dall&#39;utente. Questo viene fornito durante il passaggio di creazione dell’attività. | `"activity.name": "Server API Form"` |
 | `items[].meta.experience.id` | ID univoco dell’esperienza di personalizzazione. | `"experience.id": "0"` |
 | `items[].meta.experience.name` | Nome univoco dell’esperienza di personalizzazione. | `"experience.name": "Experience A"` |
 | `items[].data.id` | ID dell’offerta proposta. | `"id": "282484"` |
-| `items[].data.format` | Formato del contenuto associato all’offerta proposta. | `"format: "application/json` |
+| `items[].data.format` | Il formato del contenuto associato all’offerta proposta. | `"format: "application/json` |
 | `items[].data.content` | Contenuto associato all’offerta proposta. Verrà utilizzato per la personalizzazione del contenuto dell’applicazione chiamante. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |

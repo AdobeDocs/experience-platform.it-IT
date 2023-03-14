@@ -1,25 +1,26 @@
 ---
-title: Classe di farmaco
-description: Questo documento fornisce una panoramica della classe Medicina in Experience Data Model (XDM).
-source-git-commit: cf39f943e27cd11b0eabbc344774fa12482a8f92
+title: Classe medicinale
+description: Questo documento fornisce una panoramica della classe Farmaco in Experience Data Model (XDM).
+exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Medicina] Classe
+# [!UICONTROL Medicinale] classe
 
-In Experience Data Model (XDM), l’ [!UICONTROL Medicina] la classe acquisisce il set minimo di proprietà che definiscono una sostanza utilizzata per il trattamento medico, in particolare un farmaco o.
+In Experience Data Model (XDM), la [!UICONTROL Medicinale] La classe acquisisce il set minimo di proprietà che definiscono una sostanza utilizzata per il trattamento medico, in particolare un medicinale o un farmaco.
 
-![Struttura della classe](../images/classes/medication.png)
+![Struttura delle classi](../images/classes/medication.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `_id` | [!UICONTROL Stringa] | Identificatore stringa univoco generato dal sistema per il record. Questo campo viene utilizzato per tenere traccia dell&#39;univocità di un singolo record, evitare la duplicazione dei dati e per cercare tale record nei servizi a valle.<br><br>Poiché questo campo è generato dal sistema, non viene fornito un valore esplicito durante l’inserimento dei dati. Tuttavia, se lo desideri, puoi comunque scegliere di fornire i tuoi valori ID univoci. |
-| `medicationId` | [!UICONTROL Stringa] | Identificatore univoco del farmaco. |
-| `medicationName` | [!UICONTROL Stringa] | Il nome del farmaco. |
+| `_id` | [!UICONTROL Stringa] | Identificatore di stringa univoco generato dal sistema per il record. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo record, evitare la duplicazione dei dati e cercare tale record nei servizi a valle.<br><br>Poiché questo campo è generato dal sistema, durante l’inserimento dei dati non viene fornito un valore esplicito. Tuttavia, se lo desideri, puoi comunque fornire valori ID univoci. |
+| `medicationId` | [!UICONTROL Stringa] | Identificatore univoco del medicinale. |
+| `medicationName` | [!UICONTROL Stringa] | Nome del medicinale. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-La classe può essere estesa con [[!UICONTROL Medicina sanitaria] gruppo di campi](../field-groups/medication/healthcare-medication.md) per descrivere ulteriori dettagli sul farmaco o farmaco.
+La classe può essere estesa con [[!UICONTROL Medicinale sanitario] gruppo di campi](../field-groups/medication/healthcare-medication.md) per descrivere ulteriori dettagli sul medicinale o sul medicinale.

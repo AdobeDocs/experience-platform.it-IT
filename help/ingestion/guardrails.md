@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;risoluzione dei problemi;protezioni;linee guida;
+keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
-description: Questo documento fornisce indicazioni sulle protezioni per l’inserimento dei dati in Adobe Experience Platform
+description: Questo documento fornisce indicazioni sui guardrail per l’acquisizione dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -12,33 +12,33 @@ ht-degree: 1%
 
 # Guardrail per l’acquisizione dei dati
 
-Le guardrail sono soglie che forniscono indicazioni sull’utilizzo dei dati e del sistema, sull’ottimizzazione delle prestazioni e sull’eliminazione di errori o risultati imprevisti in Adobe Experience Platform. I guardrail possono fare riferimento all&#39;uso o al consumo di dati e al trattamento in relazione alle autorizzazioni per le licenze.
+I guardrail sono soglie che forniscono indicazioni per l’utilizzo dei dati e del sistema, l’ottimizzazione delle prestazioni e la prevenzione di errori o risultati imprevisti in Adobe Experience Platform. I guardrail possono fare riferimento all’utilizzo o al consumo di dati e all’elaborazione in relazione alle licenze concesse.
 
-Questo documento fornisce indicazioni sulle protezioni per l’inserimento dei dati in Adobe Experience Platform.
+Questo documento fornisce indicazioni sui guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 
 ## Guardrail per l’acquisizione batch
 
-Nella tabella seguente sono illustrate le protezioni da considerare quando si utilizza il [API di acquisizione batch](./batch-ingestion/overview.md) o fonti:
+La tabella seguente illustra i guardrail da considerare quando si utilizza [API di acquisizione batch](./batch-ingestion/overview.md) o origini:
 
-| Tipo di ingestione | Linee guida | Note |
+| Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
-| Acquisizione da data lake tramite l’API di acquisizione batch | <ul><li>Puoi acquisire fino a 20 GB di dati all’ora in un data lake utilizzando l’API di acquisizione batch.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione massima del batch è 100 GB.</li><li>Il numero massimo di proprietà o campi per riga è 10000.</li><li>Il numero massimo di batch al minuto per utente è 138.</li></ul> |
-| Assimilazione di data lake utilizzando origini batch | <ul><li>È possibile acquisire fino a 200 GB di dati all’ora in un data lake utilizzando origini di acquisizione batch come [!DNL Azure Blob], [!DNL Amazon S3]e [!DNL SFTP].</li><li>Le dimensioni di un batch devono essere comprese tra 256 MB e 100 GB.</li><li>Il numero massimo di file per batch è 1500.</li></ul> | Consulta la sezione [panoramica di origini](../sources/home.md) per un catalogo di origini da utilizzare per l’inserimento dei dati. |
-| Acquisizione batch nel profilo | <ul><li>È possibile acquisire fino a 120 GB di dati all’ora.</li><li>La dimensione massima di una classe di record è 100 KB (soft).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (soft).</li><li>La dimensione massima di un singolo record è 1 MB.</li></ul> |
-| Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di Profile ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L’inserimento di batch aggiuntivi influisce sulle prestazioni del sistema. | Questo è un limite morbido. È possibile superare un limite soft, tuttavia, i limiti soft forniscono una linea guida consigliata per le prestazioni del sistema. |
+| Acquisizione del data lake tramite l’API di acquisizione batch | <ul><li>Puoi acquisire fino a 20 GB di dati all’ora nel data lake utilizzando l’API di acquisizione batch.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione massima del batch è di 100 GB.</li><li>È 10000 il numero massimo di proprietà o campi per riga.</li><li>Il numero massimo di batch al minuto per utente è 138.</li></ul> |
+| Acquisizione del data lake tramite origini batch | <ul><li>Puoi acquisire fino a 200 GB di dati all’ora nel data lake utilizzando origini di acquisizione batch come [!DNL Azure Blob], [!DNL Amazon S3], e [!DNL SFTP].</li><li>La dimensione del batch deve essere compresa tra 256 MB e 100 GB.</li><li>Il numero massimo di file per batch è 1500.</li></ul> | Consulta la [panoramica sulle origini](../sources/home.md) per un catalogo di origini che puoi utilizzare per l’acquisizione dei dati. |
+| Acquisizione in batch nel profilo | <ul><li>È possibile acquisire fino a 120 GB di dati all’ora.</li><li>La dimensione massima di una classe di record è 100 KB (soft).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (soft).</li><li>La dimensione massima di un singolo record è 1 MB.</li></ul> |
+| Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato di batch di profili ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L&#39;acquisizione di batch aggiuntivi influisce sulle prestazioni del sistema. | Si tratta di un limite non vincolante. È possibile superare un limite non superabile, tuttavia, i limiti non superabili forniscono una linea guida consigliata per le prestazioni del sistema. |
 
-## Guardrail per l’acquisizione in streaming
+## Guardrail per acquisizione in streaming
 
-Nella tabella seguente sono illustrate le protezioni da considerare quando si utilizza il [streaming ingestion API](./streaming-ingestion/overview.md) o sorgenti di streaming:
+La tabella seguente illustra i guardrail da considerare quando si utilizza [API di acquisizione in streaming](./streaming-ingestion/overview.md) o origini di streaming:
 
-| Tipo di ingestione | Linee guida | Note |
+| Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
-| Acquisizione in streaming | <ul><li>La dimensione massima del record è di 1 MB, con la dimensione consigliata pari a 10 KB.</li><li>Puoi elaborare 20000 richieste al secondo su Profilo in meno di un minuto.</li><li>Puoi elaborare fino a 20000 richieste al secondo per Data Lake in meno di 15 minuti.</li></ul> | Utilizza l’API di acquisizione batch se hai bisogno di un throughput di dati più elevato. |
-| Sorgenti di streaming | <ul><li>La dimensione massima del record è di 1 MB, con la dimensione consigliata pari a 10 KB.</li><li>Le origini in streaming supportano da 4000 a 5000 richieste al secondo al momento della creazione di una nuova connessione sorgente. **Nota**: Possono trascorrere fino a 30 minuti prima che i dati in streaming vengano elaborati completamente sul data lake.</li><li>Puoi elaborare da 4000 a 5000 richieste al secondo a data lake. **Nota**: Possono trascorrere fino a 30 minuti prima che i dati in streaming vengano elaborati completamente sul data lake.</li></ul> | Sorgenti di streaming come [!DNL Kafka], [!DNL Azure Event Hubs]e [!DNL Amazon Kinesis] non utilizzare [!DNL Data Collection Core Service] (DCCS) instradare e può avere limiti di throughput diversi. Consulta la sezione [panoramica di origini](../sources/home.md) per un catalogo di origini da utilizzare per l’inserimento dei dati. |
+| Acquisizione in streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Puoi elaborare 20000 richieste al secondo in Profilo in meno di un minuto.</li><li>Puoi elaborare fino a 20000 richieste al secondo al data lake in meno di 15 minuti.</li></ul> | Utilizza l’API di acquisizione batch se hai bisogno di una velocità effettiva di dati più elevata. |
+| Origini di streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Le origini di streaming supportano tra 4000 e 5000 richieste al secondo al momento della creazione di una nuova connessione sorgente. **Nota**: possono essere necessari fino a 30 minuti affinché i dati in streaming vengano completamente elaborati nel data lake.</li><li>Puoi elaborare tra 4000 e 5000 richieste al secondo nel data lake. **Nota**: possono essere necessari fino a 30 minuti affinché i dati in streaming vengano completamente elaborati nel data lake.</li></ul> | Origini di streaming come [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] non utilizzare il [!DNL Data Collection Core Service] (DCCS) e possono avere diversi limiti di velocità effettiva. Consulta la [panoramica sulle origini](../sources/home.md) per un catalogo di origini che puoi utilizzare per l’acquisizione dei dati. |
 
 ## Passaggi successivi
 
-Vedi la seguente documentazione per maggiori informazioni sulle protezioni dei dati e del trattamento in Experience Platform:
+Per ulteriori informazioni sui guardrail di dati ed elaborazione, consulta la seguente documentazione in Experience Platform:
 
-* [Guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md)
+* [Guardrail per i dati Real-Time Customer Profile](../profile/guardrails.md)
 * [Guardrail per i dati del servizio Identity](../identity-service/guardrails.md)

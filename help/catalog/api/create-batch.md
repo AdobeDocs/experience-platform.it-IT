@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;creare batch;servizio catalogo;api
 solution: Experience Platform
 title: Creare un batch nell’API
-description: Puoi creare un batch effettuando una richiesta POST all’endpoint /batch nell’API del catalogo.
+description: Per creare un batch, devi eseguire una richiesta POST all’endpoint /batches nell’API Catalog.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 # Creare un batch
 
-Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzo della `id` valore di un set di dati esistente, puoi creare un batch effettuando una richiesta di POST al `/batches` punto finale [!DNL Catalog] API.
+Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzo di `id` di un set di dati esistente, è possibile creare un batch effettuando una richiesta POST al `/batches` endpoint nella [!DNL Catalog] API.
 
 **Formato API**
 
@@ -38,11 +38,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `datasetId` | La `id` del set di dati a cui sarà associato il batch. |
+| `datasetId` | Il `id` del set di dati a cui sarà associato il batch. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, incluso il relativo `id`, una stringa generata dal sistema di sola lettura.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, inclusi i relativi `id`, una stringa generata dal sistema di sola lettura.
 
 ```JSON
 {

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;filtro;filtrare;filtrare dati;filtrare dati;intervallo di date
+keywords: Experience Platform;home;argomenti popolari;filtro;filtrare;filtrare dati;filtrare dati;intervallo date
 solution: Experience Platform
-title: Filtrare i dati del catalogo utilizzando i parametri della query
-description: L’API del servizio catalogo consente di filtrare i dati di risposta utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
+title: Filtrare i dati del catalogo utilizzando i parametri di query
+description: L’API Catalog Service consente di filtrare i dati di risposta tramite l’utilizzo di parametri di query di richiesta. Una parte delle best practice per il catalogo consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,20 +11,20 @@ ht-degree: 2%
 
 ---
 
-# Filtro [!DNL Catalog] dati utilizzando i parametri di query
+# Filtro [!DNL Catalog] dati tramite parametri di query
 
-La [!DNL Catalog Service] L’API consente di filtrare i dati di risposta utilizzando i parametri di query della richiesta. Parte delle best practice per [!DNL Catalog] utilizza i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
+Il [!DNL Catalog Service] API consente di filtrare i dati di risposta tramite l’utilizzo di parametri di query di richiesta. Parte delle best practice per [!DNL Catalog] utilizza i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 
-Questo documento illustra i metodi più comuni per il filtraggio [!DNL Catalog] nell’API. Si consiglia di fare riferimento a questo documento durante la lettura del [Guida per gli sviluppatori del catalogo](getting-started.md) per ulteriori informazioni su come interagire con il [!DNL Catalog] API. Per informazioni più generali su [!DNL Catalog Service], vedi [[!DNL Catalog] panoramica](../home.md).
+Questo documento illustra i metodi più comuni per filtrare [!DNL Catalog] nell&#39;API. È consigliabile fare riferimento a questo documento durante la lettura del [Guida per gli sviluppatori di cataloghi](getting-started.md) per ulteriori informazioni su come interagire con [!DNL Catalog] API. Per informazioni più generali su [!DNL Catalog Service], vedere [[!DNL Catalog] panoramica](../home.md).
 
-## Limitare gli oggetti restituiti
+## Limita oggetti restituiti
 
-La `limit` il parametro query vincola il numero di oggetti restituiti in una risposta. [!DNL Catalog] le risposte vengono misurate automaticamente in base ai limiti configurati:
+Il `limit` il parametro query limita il numero di oggetti restituiti in una risposta. [!DNL Catalog] le risposte vengono misurate automaticamente in base ai limiti configurati:
 
-* Se `limit` parametro non specificato. Il numero massimo di oggetti per payload di risposta è 20.
-* Per le query di set di dati, se `observableSchema` è richiesto utilizzando `properties` parametro query, il numero massimo di set di dati restituiti è 20.
-* Il limite globale per tutte le altre query del catalogo è di 100 oggetti.
-* Non valido `limit` parametri (compresi `limit=0`) genera risposte di errore a 400 livelli che delineano intervalli corretti.
+* Se un `limit` parametro non specificato, il numero massimo di oggetti per payload di risposta è 20.
+* Per le query di set di dati, se `observableSchema` è richiesto utilizzando `properties` parametro di query, il numero massimo di set di dati restituiti è 20.
+* Il limite globale per tutte le altre query Catalog è 100 oggetti.
+* Non valido `limit` parametri (inclusi `limit=0`) genera risposte di errore a 400 livelli che descrivono intervalli corretti.
 * I limiti o gli offset passati come parametri di query hanno la precedenza su quelli passati come intestazioni.
 
 **Formato API**
@@ -35,8 +35,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{LIMIT}` | Un numero intero che indica il numero di oggetti da restituire, compreso tra 1 e 100. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{LIMIT}` | Numero intero che indica il numero di oggetti da restituire, compreso tra 1 e 100. |
 
 **Richiesta**
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di set di dati, limitati al numero indicato dalla `limit` parametro query.
+In caso di esito positivo, la risposta restituisce un elenco di set di dati, limitati al numero indicato dalla `limit` parametro di query.
 
 ```json
 {
@@ -75,11 +75,11 @@ Una risposta corretta restituisce un elenco di set di dati, limitati al numero i
 
 ## Limita proprietà visualizzate
 
-Anche quando si filtra il numero di oggetti restituiti utilizzando il `limit` Gli oggetti restituiti possono spesso contenere più informazioni di quelle effettivamente necessarie. Per ridurre ulteriormente il carico sul sistema, è consigliabile filtrare le risposte in modo da includere solo le proprietà necessarie.
+Anche quando si filtra il numero di oggetti restituiti utilizzando `limit` , gli oggetti restituiti possono spesso contenere più informazioni di quelle effettivamente necessarie. Per ridurre ulteriormente il carico sul sistema, è consigliabile filtrare le risposte in modo da includere solo le proprietà necessarie.
 
-La `properties` filtra gli oggetti risposta per restituire solo un set di proprietà specificate. Il parametro può essere impostato per restituire una o più proprietà.
+Il `properties` Il parametro filtra gli oggetti di risposta in modo da restituire solo un set di proprietà specificate. Il parametro può essere impostato per restituire una o più proprietà.
 
-La `properties` accetta solo proprietà dell&#39;oggetto di livello principale, il che significa che per il seguente oggetto di esempio è possibile applicare filtri per `name`, `description`e `subItem`, ma NON per `sampleKey`.
+Il `properties` il parametro accetta solo proprietà dell’oggetto di livello superiore, il che significa che per il seguente oggetto di esempio è possibile applicare filtri per `name`, `description`, e `subItem`, ma NON per `sampleKey`.
 
 ```json
 {
@@ -103,13 +103,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Nome di un attributo da includere nel corpo della risposta. |
-| `{OBJECT_ID}` | Identificatore univoco di uno specifico [!DNL Catalog] oggetto da recuperare. |
+| `{OBJECT_ID}` | L’identificatore univoco di uno specifico [!DNL Catalog] oggetto da recuperare. |
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di set di dati. L&#39;elenco separato da virgole dei nomi di proprietà forniti sotto il `properties` parameter indica le proprietà da restituire nella risposta. A `limit` è incluso anche il parametro , che limita il numero di set di dati restituiti. Se la richiesta non include un `limit` La risposta conterrebbe un massimo di 20 oggetti.
+La richiesta seguente recupera un elenco di set di dati. L’elenco separato da virgole dei nomi di proprietà forniti sotto il `properties` Il parametro indica le proprietà da restituire nella risposta. A `limit` È incluso anche il parametro, che limita il numero di set di dati restituiti. Se la richiesta non includeva `limit` , la risposta conterrebbe un massimo di 20 oggetti.
 
 ```shell
 curl -X GET \
@@ -122,7 +122,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di [!DNL Catalog] vengono visualizzati solo gli oggetti con le proprietà richieste.
+In caso di esito positivo, la risposta restituisce un elenco di [!DNL Catalog] oggetti con solo le proprietà richieste visualizzate.
 
 ```json
 {
@@ -147,22 +147,22 @@ Una risposta corretta restituisce un elenco di [!DNL Catalog] vengono visualizza
 }
 ```
 
-Sulla base della risposta di cui sopra, si può dedurre quanto segue:
+In base alla risposta precedente, si può dedurre quanto segue:
 
-* Se a un oggetto mancano le proprietà richieste, verranno mostrate solo le proprietà richieste che include. (`Dataset1`)
-* Se un oggetto non include alcuna delle proprietà richieste, verrà visualizzato come un oggetto vuoto. (`Dataset2`)
-* Un set di dati può restituire una proprietà richiesta come oggetto vuoto se contiene la proprietà ma non è presente alcun valore. (`Dataset3`)
-* In caso contrario, il set di dati visualizzerà il valore completo di tutte le proprietà richieste. (`Dataset4`)
+* Se a un oggetto mancano le proprietà richieste, verranno visualizzate solo le proprietà richieste incluse. (`Dataset1`)
+* Se un oggetto non include le proprietà richieste, verrà visualizzato come un oggetto vuoto. (`Dataset2`)
+* Un set di dati può restituire una proprietà richiesta come oggetto vuoto se contiene la proprietà ma non esiste alcun valore. (`Dataset3`)
+* In caso contrario, nel set di dati verrà visualizzato il valore completo di tutte le proprietà richieste. (`Dataset4`)
 
 >[!NOTE]
 >
->In `schemaRef` per ogni set di dati, il numero di versione indica la versione minore più recente dello schema. Vedi la sezione su [versione dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM per ulteriori informazioni.
+>In `schemaRef` per ogni set di dati, il numero di versione indica la versione secondaria più recente dello schema. Consulta la sezione su [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) per ulteriori informazioni, consulta la guida dell’API XDM.
 
-## Offset indice iniziale dell&#39;elenco di risposte
+## Indice di offset iniziale dell&#39;elenco di risposte
 
-La `start` il parametro query consente di spostare l&#39;elenco di risposte in avanti di un numero specificato, utilizzando la numerazione basata su zero. Ad esempio: `start=2` compensa la risposta per iniziare sul terzo oggetto elencato.
+Il `start` il parametro query sposta l’elenco di risposte in avanti di un numero specificato, utilizzando la numerazione basata su zero. Ad esempio: `start=2` determina l’offset della risposta per iniziare dal terzo oggetto elencato.
 
-Se la `start` non è associato a un `limit` Il numero massimo di oggetti restituiti è 20.
+Se il `start` il parametro non è associato a un `limit` , il numero massimo di oggetti restituiti è 20.
 
 **Formato API**
 
@@ -173,11 +173,11 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 | Parametro | Descrizione |
 | --- | --- |
 | `{OBJECT_TYPE}` | Tipo di oggetto Catalog da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OFFSET}` | Un numero intero che indica il numero di oggetti per cui eseguire l&#39;offset della risposta. |
+| `{OFFSET}` | Numero intero che indica il numero di oggetti in base ai quali eseguire l&#39;offset della risposta. |
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di set di dati, eseguendo l&#39;offset al quinto oggetto (`start=4`) e limitazione della risposta a due set di dati restituiti (`limit=2`).
+La richiesta seguente recupera un elenco di set di dati, effettuando l’offset rispetto al quinto oggetto (`start=4`) e limitazione della risposta a due set di dati restituiti (`limit=2`).
 
 ```shell
 curl -X GET \
@@ -190,7 +190,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include un oggetto JSON contenente due elementi di primo livello (`limit=2`), una per ogni set di dati e i relativi dettagli (i dettagli sono stati condensati nell’esempio). La risposta viene spostata di quattro (`start=4`), ovvero i set di dati mostrati sono i numeri cinque e sei cronologicamente.
+La risposta include un oggetto JSON contenente due elementi di livello principale (`limit=2`), uno per ogni set di dati e i relativi dettagli (i dettagli sono stati sintetizzati nell’esempio). La risposta viene spostata di quattro (`start=4`), il che significa che i set di dati mostrati sono numero cinque e sei in ordine cronologico.
 
 ```json
 {
@@ -199,20 +199,20 @@ La risposta include un oggetto JSON contenente due elementi di primo livello (`l
 }
 ```
 
-## Filtrare per tag
+## Filtra per tag
 
-Alcuni oggetti Catalog supportano l’utilizzo di un `tags` attributo. I tag possono allegare informazioni a un oggetto e quindi essere utilizzati in un secondo momento per recuperare tale oggetto. La scelta dei tag da utilizzare e di come applicarli dipende dai processi organizzativi in uso.
+Alcuni oggetti Catalog supportano l&#39;utilizzo di `tags` attributo. I tag possono allegare informazioni a un oggetto e quindi essere utilizzati in un secondo momento per recuperarlo. La scelta dei tag da utilizzare e la relativa modalità di applicazione dipendono dai processi organizzativi.
 
-Ci sono alcune limitazioni da considerare quando si utilizzano i tag:
+Esistono alcune limitazioni da considerare quando si utilizzano i tag:
 
 * Gli unici oggetti Catalog che attualmente supportano i tag sono set di dati, batch e connessioni.
 * I nomi dei tag sono univoci per la tua organizzazione IMS.
-* I processi di Adobe possono sfruttare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, evita questa convenzione quando si dichiarano i nomi dei tag.
-* I seguenti nomi di tag sono riservati per l’uso in [!DNL Experience Platform], e quindi non può essere dichiarato come nome di tag per la tua organizzazione:
-   * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da acquisire [[!DNL Real-Time Customer Profile]](../../profile/home.md).
-   * `unifiedIdentity`: Questo nome di tag è riservato ai set di dati da acquisire [[!DNL Identity Service]](../../identity-service/home.md).
+* I processi Adobe possono sfruttare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è necessario evitare questa convenzione quando si dichiarano i nomi dei tag.
+* I seguenti nomi di tag sono riservati per l’utilizzo in [!DNL Experience Platform], e pertanto non può essere dichiarato come nome tag per la tua organizzazione:
+   * `unifiedProfile`: questo nome di tag è riservato per i set di dati da acquisire tramite [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`: questo nome di tag è riservato per i set di dati da acquisire tramite [[!DNL Identity Service]](../../identity-service/home.md).
 
-Di seguito è riportato un esempio di set di dati che contiene un `tags` proprietà. I tag all&#39;interno di tale proprietà si presentano sotto forma di coppie chiave-valore, con ogni valore di tag che viene visualizzato come una matrice contenente una singola stringa:
+Di seguito è riportato un esempio di set di dati che contiene `tags` proprietà. I tag all’interno di tale proprietà assumono la forma di coppie chiave-valore, con ogni valore di tag visualizzato come un array contenente una singola stringa:
 
 ```json
 {
@@ -251,9 +251,9 @@ Di seguito è riportato un esempio di set di dati che contiene un `tags` proprie
 
 **Formato API**
 
-Valori per `tags` prendere la forma di coppie chiave-valore, utilizzando il formato `{TAG_NAME}:{TAG_VALUE}`. È possibile fornire più coppie chiave-valore sotto forma di elenco separato da virgole. Quando vengono forniti più tag, si presume una relazione AND.
+Valori per `tags` il parametro assume la forma di coppie chiave-valore, utilizzando il formato `{TAG_NAME}:{TAG_VALUE}`. È possibile fornire più coppie chiave-valore sotto forma di elenco separato da virgole. Quando vengono forniti più tag, si presume una relazione AND.
 
-Il parametro supporta i caratteri jolly (`*`) per i valori dei tag. Ad esempio, una stringa di ricerca di `test*` restituisce qualsiasi oggetto in cui il valore del tag inizia con &quot;test&quot;. È possibile utilizzare una stringa di ricerca costituita esclusivamente da un carattere jolly per filtrare gli oggetti in base al fatto che contengano o meno un tag specifico, indipendentemente dal relativo valore.
+Il parametro supporta i caratteri jolly (`*`) per i valori dei tag. Ad esempio, una stringa di ricerca di `test*` restituisce qualsiasi oggetto in cui il valore del tag inizia con &quot;test&quot;. Una stringa di ricerca costituita esclusivamente da un carattere jolly può essere utilizzata per filtrare gli oggetti in base al fatto che contengano o meno un tag specifico, indipendentemente dal relativo valore.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -264,13 +264,13 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
-| `{TAG_NAME}` | Nome del tag da filtrare. |
-| `{TAG_VALUE}` | Il valore del tag per cui filtrare. Supporta i caratteri jolly (`*`). |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{TAG_NAME}` | Nome del tag in base al quale filtrare. |
+| `{TAG_VALUE}` | Valore del tag in base al quale filtrare. Supporta caratteri jolly (`*`). |
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di set di dati, filtrando per un tag con un valore specifico E il secondo tag presente.
+La seguente richiesta recupera un elenco di set di dati, filtrando per un tag con un valore specifico E con il secondo tag presente.
 
 ```shell
 curl -X GET \
@@ -283,7 +283,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di set di dati che contengono `sampleTag` con un valore di &quot;123456&quot;, E `secondTag` con qualsiasi valore. A meno che non venga specificato un limite, la risposta contiene un massimo di 20 oggetti.
+In caso di esito positivo, la risposta restituisce un elenco di set di dati contenenti `sampleTag` con valore &quot;123456&quot;, E `secondTag` con qualsiasi valore. A meno che non venga specificato anche un limite, la risposta contiene un massimo di 20 oggetti.
 
 ```json
 {
@@ -335,7 +335,7 @@ Una risposta corretta restituisce un elenco di set di dati che contengono `sampl
 
 ## Filtra per intervallo di date
 
-Alcuni punti finali nel [!DNL Catalog] L’API dispone di parametri di query che consentono query con intervalli, più spesso nel caso di date.
+Alcuni endpoint nella [!DNL Catalog] Le API dispongono di parametri di query che consentono query con intervallo, il più delle volte nel caso di date.
 
 **Formato API**
 
@@ -345,7 +345,7 @@ GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TIMESTAMP }` | Un numero intero datetime in tempo Unix Epoch. |
+| `{TIMESTAMP }` | Un numero intero datetime in tempo epoca Unix. |
 
 **Richiesta**
 
@@ -362,7 +362,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti che rientrano nell’intervallo di date specificato. A meno che non venga specificato un limite, la risposta contiene un massimo di 20 oggetti.
+Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti che rientrano nell&#39;intervallo di date specificato. A meno che non venga specificato anche un limite, la risposta contiene un massimo di 20 oggetti.
 
 ```json
 {
@@ -395,11 +395,11 @@ Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti che rientrano
 
 ## Ordina per proprietà
 
-La `orderBy` il parametro query ti consente di ordinare i dati di risposta (ordine) in base a un valore di proprietà specificato. Questo parametro richiede una &quot;direzione&quot; (`asc` per crescente o `desc` discendente), seguita da due punti (`:`) e quindi una proprietà per ordinare i risultati in base a. Se non viene specificata una direzione, la direzione predefinita è crescente.
+Il `orderBy` il parametro query consente di ordinare (ordinare) i dati di risposta in base a un valore di proprietà specificato. Questo parametro richiede una &quot;direzione&quot; (`asc` per crescente o `desc` per decrescente), seguito da due punti (`:`) e quindi una proprietà in base alla quale ordinare i risultati. Se non viene specificata una direzione, la direzione predefinita è crescente.
 
-È possibile fornire più proprietà di ordinamento in un elenco separato da virgole. Se la prima proprietà di ordinamento produce più oggetti che contengono lo stesso valore per tale proprietà, la seconda proprietà di ordinamento viene quindi utilizzata per ordinare ulteriormente gli oggetti corrispondenti.
+È possibile specificare più proprietà di ordinamento in un elenco separato da virgole. Se la prima proprietà di ordinamento produce più oggetti che contengono lo stesso valore per tale proprietà, la seconda proprietà di ordinamento viene quindi utilizzata per ordinare ulteriormente gli oggetti corrispondenti.
 
-Ad esempio, considera la seguente query: `orderBy=name,desc:created`. I risultati vengono ordinati in ordine crescente in base alla prima proprietà di ordinamento, `name`. Nei casi in cui più record condividono gli stessi `name` tali record corrispondenti vengono quindi ordinati in base alla seconda proprietà di ordinamento, `created`. Se nessun record restituito condivide lo stesso `name`, `created` la proprietà non determina l&#39;ordinamento.
+Ad esempio, considera la seguente query: `orderBy=name,desc:created`. I risultati vengono ordinati in ordine crescente in base alla prima proprietà di ordinamento, `name`. Nei casi in cui più record condividono lo stesso `name` questi record corrispondenti vengono quindi ordinati in base alla seconda proprietà di ordinamento, `created`. Se nessun record restituito condivide lo stesso `name`, il `created` La proprietà non viene considerata nell’ordinamento.
 
 
 **Formato API**
@@ -413,11 +413,11 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 | Parametro | Descrizione |
 | --- | --- |
 | `{OBJECT_TYPE}` | Tipo di oggetto Catalog da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{PROPERTY_NAME}` | Nome di una proprietà per cui ordinare i risultati. |
+| `{PROPERTY_NAME}` | Nome di una proprietà in base alla quale ordinare i risultati. |
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di set di dati ordinati in base ai relativi `name` proprietà. Se un set di dati condivide lo stesso `name`, tali set di dati verranno a loro volta ordinati dalle rispettive `updated` in ordine decrescente.
+La richiesta seguente recupera un elenco di set di dati ordinati in base ai `name` proprietà. Se uno qualsiasi dei set di dati condivide lo stesso `name`, questi set di dati saranno a loro volta ordinati in base al loro `updated` proprietà in ordine decrescente.
 
 ```shell
 curl -X GET \
@@ -430,7 +430,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti ordinati in base al `orderBy` parametro . A meno che non venga specificato un limite, la risposta contiene un massimo di 20 oggetti.
+Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti ordinati in base al `orderBy` parametro. A meno che non venga specificato anche un limite, la risposta contiene un massimo di 20 oggetti.
 
 ```json
 {
@@ -475,18 +475,18 @@ Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti ordinati in b
 
 ## Filtra per proprietà
 
-[!DNL Catalog] fornisce due metodi di filtraggio per proprietà, descritti più avanti nelle sezioni seguenti:
+[!DNL Catalog] In sono disponibili due metodi per filtrare in base alla proprietà, descritti in dettaglio nelle sezioni seguenti:
 
-* [Utilizzo di filtri semplici](#using-simple-filters): Filtra per stabilire se una proprietà specifica corrisponde a un valore specifico.
-* [Utilizzo del parametro della proprietà](#using-the-property-parameter): Utilizza le espressioni condizionali per filtrare in base all&#39;esistenza di una proprietà o se il valore di una proprietà corrisponde, si avvicina o si confronta con un altro valore o un&#39;espressione regolare specificata.
+* [Utilizzo di filtri semplici](#using-simple-filters): filtra in base alla corrispondenza tra una proprietà specifica e un valore specifico.
+* [Utilizzo del parametro proprietà](#using-the-property-parameter): utilizza espressioni condizionali per filtrare in base all’esistenza di una proprietà o se il valore di una proprietà corrisponde, si avvicina o si confronta con un altro valore o espressione regolare specificato.
 
 ### Utilizzo di filtri semplici {#using-simple-filters}
 
-I filtri semplici consentono di filtrare le risposte in base a valori di proprietà specifici. Un filtro semplice assume la forma di `{PROPERTY_NAME}={VALUE}`.
+I filtri semplici ti consentono di filtrare le risposte in base a valori di proprietà specifici. Un filtro semplice assume la forma di `{PROPERTY_NAME}={VALUE}`.
 
-Ad esempio, la query `name=exampleName` restituisce solo oggetti di cui `name` La proprietà contiene un valore di &quot;exampleName&quot;. Al contrario, la query `name=!exampleName` restituisce solo oggetti di cui `name` è **not** &quot;exampleName&quot;
+Ad esempio, la query `name=exampleName` restituisce solo oggetti con `name` contiene un valore &quot;exampleName&quot;. Al contrario, la query `name=!exampleName` restituisce solo oggetti con `name` la proprietà è **non** &quot;exampleName&quot;.
 
-Inoltre, i filtri semplici supportano la possibilità di eseguire query per più valori per una singola proprietà. Quando vengono forniti più valori, la risposta restituisce oggetti la cui proprietà corrisponde a **qualsiasi** dei valori nell&#39;elenco fornito. Puoi invertire una query con più valori prefissando un `!` all&#39;elenco, restituendo solo oggetti il cui valore di proprietà è **not** nell’elenco fornito (ad esempio, `name=!exampleName,anotherName`).
+Inoltre, i filtri semplici supportano la possibilità di eseguire query per più valori per una singola proprietà. Quando vengono forniti più valori, la risposta restituisce oggetti le cui proprietà corrispondono a **qualsiasi** dei valori nell’elenco fornito. È possibile invertire una query con più valori inserendo un prefisso `!` nell&#39;elenco, restituendo solo gli oggetti il cui valore di proprietà è **non** nell’elenco fornito (ad esempio, `name=!exampleName,anotherName`).
 
 **Formato API**
 
@@ -499,13 +499,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{PROPERTY_NAME}` | Nome della proprietà per la quale si desidera filtrare il valore. |
-| `{VALUE}` | Un valore di proprietà che determina i risultati da includere (o escludere, a seconda della query). |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{PROPERTY_NAME}` | Nome della proprietà di cui si desidera filtrare il valore. |
+| `{VALUE}` | Valore di proprietà che determina quali risultati includere (o escludere, a seconda della query). |
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di set di dati filtrati per includere solo i set di dati di cui `name` La proprietà ha un valore di &quot;exampleName&quot; o &quot;otherName&quot;.
+La seguente richiesta recupera un elenco di set di dati, filtrati per includere solo i set di dati con `name` ha un valore &quot;exampleName&quot; o &quot;otherName&quot;.
 
 ```shell
 curl -X GET \
@@ -518,7 +518,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta contiene un elenco di set di dati, esclusi i set di dati di cui `name` è &quot;exampleName&quot; o &quot;otherName&quot;. A meno che non venga specificato un limite, la risposta contiene un massimo di 20 oggetti.
+Una risposta corretta contiene un elenco di set di dati, escludendo tutti i set di dati il cui `name` è &quot;exampleName&quot; o &quot;otherName&quot;. A meno che non venga specificato anche un limite, la risposta contiene un massimo di 20 oggetti.
 
 ```json
 {
@@ -549,11 +549,11 @@ Una risposta corretta contiene un elenco di set di dati, esclusi i set di dati d
 }
 ```
 
-### Utilizzo della `property` parameter {#using-the-property-parameter}
+### Utilizzo di `property` parametro {#using-the-property-parameter}
 
-La `property` il parametro query offre maggiore flessibilità per il filtro basato sulle proprietà rispetto ai filtri semplici. Oltre a filtrare in base al fatto che una proprietà abbia un valore specifico, il `property` può utilizzare altri operatori di confronto (ad esempio &quot;more-than&quot; (`>`) e &quot;less-than&quot; (`<`)) ed espressioni regolari per filtrare in base ai valori delle proprietà. Può anche filtrare in base all&#39;esistenza o meno di una proprietà, indipendentemente dal suo valore.
+Il `property` Il parametro query offre maggiore flessibilità per il filtro basato su proprietà rispetto ai filtri semplici. Oltre a filtrare in base al valore specifico di una proprietà, il `property` Il parametro può utilizzare altri operatori di confronto, ad esempio &quot;more-than&quot; (`>`) e &quot;less-than&quot; (`<`) ed espressioni regolari per filtrare in base ai valori delle proprietà. Può anche filtrare in base all’esistenza o meno di una proprietà, indipendentemente dal suo valore.
 
-La `property` accetta solo proprietà dell&#39;oggetto di livello principale, il che significa che per il seguente oggetto di esempio è possibile filtrare per proprietà per `name`, `description`e `subItem`, ma NON per `sampleKey`.
+Il `property` il parametro accetta solo proprietà dell&#39;oggetto di primo livello, il che significa che per l&#39;oggetto di esempio seguente è possibile filtrare in base alla proprietà per `name`, `description`, e `subItem`, ma NON per `sampleKey`.
 
 ```json
 {
@@ -575,26 +575,26 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{CONDITION}` | Un&#39;espressione condizionale che indica la proprietà da richiedere e la modalità di valutazione del relativo valore. Di seguito sono riportati alcuni esempi. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{CONDITION}` | Espressione condizionale che indica la proprietà per la quale eseguire la query e come deve essere valutato il relativo valore. Di seguito sono riportati alcuni esempi. |
 
-Il valore del `property` Il parametro supporta diversi tipi di espressioni condizionali. La tabella seguente illustra la sintassi di base per le espressioni supportate:
+Il valore della proprietà `property` Il parametro supporta diversi tipi di espressioni condizionali. La tabella seguente illustra la sintassi di base delle espressioni supportate:
 
 | Simbolo/i | Descrizione | Esempio |
 | --- | --- | --- |
-| (Nessuna) | Se si imposta il nome della proprietà senza alcun operatore, vengono restituiti solo gli oggetti in cui esiste la proprietà, indipendentemente dal relativo valore. | `property=name` |
-| ! | Prefisso di &quot;`!`&quot; al valore di un `property` restituisce solo oggetti in cui la proprietà **not** esistono. | `property=!name` |
-| ~ | Restituisce solo oggetti i cui valori di proprietà (stringa) corrispondono a un&#39;espressione regolare fornita dopo il tilde (`~`). | `property=name~^example` |
-| == | Restituisce solo oggetti i cui valori di proprietà corrispondono esattamente alla stringa fornita dopo il simbolo doppio uguale a (`==`). | `property=name==exampleName` |
-| != | Restituisce solo gli oggetti i cui valori di proprietà **not** stringa di corrispondenza fornita dopo il simbolo non uguale a (`!=`). | `property=name!=exampleName` |
-| &lt; | Restituisce solo oggetti i cui valori di proprietà sono inferiori (ma non uguali) a un valore specificato. | `property=version<1.0.0` |
-| &lt;= | Restituisce solo oggetti i cui valori di proprietà sono inferiori o uguali a un valore specificato. | `property=version<=1.0.0` |
-| > | Restituisce solo oggetti i cui valori di proprietà sono maggiori di (ma non uguali) un valore specificato. | `property=version>1.0.0` |
-| >= | Restituisce solo oggetti i cui valori di proprietà sono maggiori di (o uguali a) un valore specificato. | `property=version>=1.0.0` |
+| (Nessuna) | Se si imposta il nome della proprietà senza operatore, verranno restituiti solo gli oggetti in cui la proprietà esiste, indipendentemente dal relativo valore. | `property=name` |
+| ! | Prefisso di &quot;`!`&quot; al valore di un `property` Il parametro restituisce solo oggetti in cui la proprietà **non** esiste. | `property=!name` |
+| ~ | Restituisce solo oggetti i cui valori di proprietà (stringa) corrispondono a un&#39;espressione regolare fornita dopo la tilde (`~`). | `property=name~^example` |
+| == | Restituisce solo oggetti i cui valori di proprietà corrispondono esattamente alla stringa fornita dopo il simbolo di uguale a doppio (`==`). | `property=name==exampleName` |
+| != | Restituisce solo gli oggetti i cui valori di proprietà eseguono **non** stringa di corrispondenza fornita dopo il simbolo non è uguale a (`!=`). | `property=name!=exampleName` |
+| &lt; | Restituisce solo oggetti i cui valori di proprietà sono inferiori (ma non uguali) a una quantità dichiarata. | `property=version<1.0.0` |
+| &lt;= | Restituisce solo oggetti i cui valori di proprietà sono inferiori o uguali a una quantità specificata. | `property=version<=1.0.0` |
+| > | Restituisce solo oggetti i cui valori di proprietà sono maggiori (ma non uguali) di una quantità dichiarata. | `property=version>1.0.0` |
+| >= | Restituisce solo oggetti i cui valori di proprietà sono maggiori o uguali a una quantità specificata. | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
->La `name` supporta l&#39;utilizzo di un carattere jolly `*`, come stringa di ricerca intera o come parte di essa. I caratteri jolly corrispondono a caratteri vuoti, in modo tale che la stringa di ricerca `te*st` corrisponde al valore &quot;test&quot;. Gli asterischi vengono evasi raddoppiandoli (`**`). Un doppio asterisco in una stringa di ricerca rappresenta un singolo asterisco come stringa letterale.
+>Il `name` supporta l&#39;utilizzo di un carattere jolly `*`, come stringa di ricerca intera o come parte di essa. I caratteri jolly corrispondono a caratteri vuoti, in modo che la stringa di ricerca `te*st` corrisponderà al valore &quot;test&quot;. Gli asterischi vengono evitati raddoppiandoli (`**`). Un doppio asterisco in una stringa di ricerca rappresenta un singolo asterisco come stringa letterale.
 
 **Richiesta**
 
@@ -611,7 +611,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta contiene un elenco di set di dati con numeri di versione superiori a 1.0.3. A meno che non venga specificato un limite, la risposta contiene un massimo di 20 oggetti.
+Una risposta corretta contiene un elenco di set di dati i cui numeri di versione sono maggiori di 1.0.3. A meno che non venga specificato anche un limite, la risposta contiene un massimo di 20 oggetti.
 
 ```json
 {

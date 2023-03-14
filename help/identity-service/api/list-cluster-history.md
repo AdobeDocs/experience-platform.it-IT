@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;identità;cronologia cluster
 solution: Experience Platform
-title: Recupero della cronologia cluster di un'identità
-description: Le identità possono spostare i cluster nel corso di varie esecuzioni di grafici dei dispositivi. Il servizio Identity fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
+title: Recupera cronologia cluster di un'identità
+description: Le identità possono spostare i cluster nel corso di varie esecuzioni del grafico dei dispositivi. Identity Service fornisce visibilità nel tempo alle associazioni cluster di una determinata identità.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -11,16 +11,16 @@ ht-degree: 3%
 
 ---
 
-# Recupero della cronologia cluster di un&#39;identità
+# Ottenere la cronologia cluster di un&#39;identità
 
-Le identità possono spostare i cluster nel corso di varie esecuzioni di grafici dei dispositivi. [!DNL Identity Service] fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
+Le identità possono spostare i cluster nel corso di varie esecuzioni del grafico dei dispositivi. [!DNL Identity Service] fornisce visibilità nel tempo sulle associazioni cluster di una determinata identità.
 
-Usa facoltativo `graph-type` per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
+Usa facoltativo `graph-type` parametro per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
 
 - `None` - Non eseguire alcuna unione di identità.
-- `Private Graph` - Eseguire unione delle identità in base al grafico di identità privata. Se no `graph-type` è fornito, è l’impostazione predefinita.
+- `Private Graph` : esegui l’unione delle identità in base al grafico delle identità private. In caso negativo `graph-type` , è l&#39;impostazione predefinita.
 
-## Acquisire la cronologia del cluster di una singola identità
+## Ottenere la cronologia cluster di una singola identità
 
 **Formato API**
 
@@ -30,7 +30,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Richiesta**
 
-Opzione 1: Fornisci l’identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -41,7 +41,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: Fornisci l’identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -52,7 +52,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Fornisci l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere un XID di un&#39;identità, consulta la sezione di questo documento che tratta [ottenimento di un XID per un&#39;identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -63,13 +63,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## Ottenere la cronologia cluster di una molteplicità di identità
+## Ottenere la cronologia cluster di più identità
 
-Utilizza la `POST` come equivalente del lotto `GET` metodo descritto in precedenza per restituire la cronologia cluster di più identità.
+Utilizza il `POST` metodo come equivalente batch del `GET` metodo descritto in precedenza per restituire le cronologie cluster di più identità.
 
 >[!NOTE]
 >
->La richiesta non deve indicare più di un massimo di 1000 identità. Le richieste che superano 1000 identità risulteranno in un codice di stato 400.
+>La richiesta non deve indicare più di 1000 identità. Le richieste che superano le 1000 identità restituiranno il codice di stato 400.
 
 **Formato API**
 
@@ -79,7 +79,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Corpo della richiesta**
 
-Opzione 1: Fornire un elenco di XID per i quali recuperare i membri del cluster.
+Opzione 1: specificare un elenco di XID per i quali recuperare i membri del cluster.
 
 ```shell
 {
@@ -88,7 +88,7 @@ Opzione 1: Fornire un elenco di XID per i quali recuperare i membri del cluster.
 }
 ```
 
-Opzione 2: Fornisci un elenco di identità come ID compositi, in cui ognuno dei nomi dei valori ID e dello spazio dei nomi in base al codice dello spazio dei nomi.
+Opzione 2: fornire un elenco di identità come ID compositi, dove ciascuna di esse nomina il valore ID e lo spazio dei nomi in base al codice dello spazio dei nomi.
 
 ```shell
 {
@@ -108,7 +108,7 @@ Opzione 2: Fornisci un elenco di identità come ID compositi, in cui ognuno dei 
 
 **Richiesta stub**
 
-Utilizzo di `x-uis-cst-ctx: stub` l’intestazione restituirà una risposta con stub. Si tratta di una soluzione temporanea per agevolare lo sviluppo dell&#39;integrazione in tempi brevi, mentre i servizi sono in fase di completamento. Questa opzione diventerà obsoleta se non più necessaria.
+Utilizzo di `x-uis-cst-ctx: stub` L’intestazione restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
 
 ```shell
 curl -X POST \
@@ -165,7 +165,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Risposta**
+**Rispondi**
 
 ```json
 {
@@ -213,8 +213,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->La risposta avrà sempre una voce per ogni XID fornito nella richiesta, indipendentemente dal fatto che gli XID di una richiesta appartengano allo stesso cluster o se uno o più hanno un cluster associato affatto.
+>La risposta avrà sempre una voce per ogni XID fornito nella richiesta, indipendentemente dal fatto che gli XID di una richiesta appartengano allo stesso cluster o che a uno o più di essi sia associato un cluster.
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva su [elenco mappature identità](./list-identity-mappings.md)
+Procedi all’esercitazione successiva per [elencare mappature identità](./list-identity-mappings.md)

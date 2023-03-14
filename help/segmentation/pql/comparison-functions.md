@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni di confronto;confronto;
+keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;comparison functions;comparison functions;
 solution: Experience Platform
 title: Funzioni di confronto PQL
-description: Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi e restituiscono di conseguenza "true" o "false".
+description: Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi, restituendo di conseguenza "true" o "false".
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 9%
 
 # Funzioni di confronto
 
-Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi e restituiscono `true` o `false` di conseguenza. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi, restituendo `true` o `false` di conseguenza. Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## È uguale a
 
-La `=` (equals) controlla se un valore o un&#39;espressione è uguale a un altro valore o espressione.
+Il `=` (uguale a) controlla se un valore o un&#39;espressione è uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -27,7 +27,7 @@ La `=` (equals) controlla se un valore o un&#39;espressione è uguale a un altro
 
 **Esempio**
 
-La seguente query PQL controlla se il paese dell&#39;indirizzo di origine è in Canada.
+La query PQL seguente verifica se il paese dell’indirizzo principale si trova in Canada.
 
 ```sql
 homeAddress.countryISO = "CA"
@@ -35,7 +35,7 @@ homeAddress.countryISO = "CA"
 
 ## Non uguale
 
-La `!=` (diverso da uguale) controlla se un valore o un&#39;espressione è **not** uguale a un altro valore o espressione.
+Il `!=` (diverso da) controlla se un valore o un’espressione è **non** uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -45,7 +45,7 @@ La `!=` (diverso da uguale) controlla se un valore o un&#39;espressione è **not
 
 **Esempio**
 
-La seguente query PQL controlla se il paese dell&#39;indirizzo di origine non è in Canada.
+La query PQL seguente verifica se il paese dell’indirizzo dell’abitazione non si trova in Canada.
 
 ```sql
 homeAddress.countryISO != "CA"
@@ -53,7 +53,7 @@ homeAddress.countryISO != "CA"
 
 ## Maggiore di
 
-La `>` (maggiore di) viene utilizzato per verificare se il primo valore è maggiore del secondo valore.
+Il `>` (maggiore di) per verificare se il primo valore è maggiore del secondo valore.
 
 **Formato**
 
@@ -63,7 +63,7 @@ La `>` (maggiore di) viene utilizzato per verificare se il primo valore è maggi
 
 **Esempio**
 
-La seguente query PQL definisce le persone i cui compleanni non rientrano in gennaio o febbraio.
+La seguente query PQL definisce le persone il cui compleanno non cade in gennaio o febbraio.
 
 ```sql
 person.birthMonth > 2
@@ -71,7 +71,7 @@ person.birthMonth > 2
 
 ## Maggiore o uguale a
 
-La `>=` (maggiore o uguale a) viene utilizzato per verificare se il primo valore è maggiore o uguale al secondo valore.
+Il `>=` (maggiore o uguale a) per verificare se il primo valore è maggiore o uguale al secondo valore.
 
 **Formato**
 
@@ -81,7 +81,7 @@ La `>=` (maggiore o uguale a) viene utilizzato per verificare se il primo valore
 
 **Esempio**
 
-La seguente query PQL definisce le persone i cui compleanni non rientrano in gennaio o febbraio.
+La seguente query PQL definisce le persone il cui compleanno non cade in gennaio o febbraio.
 
 ```sql
 person.birthMonth >= 3
@@ -89,7 +89,7 @@ person.birthMonth >= 3
 
 ## Minore di
 
-La `<` (minore di) la funzione di confronto viene utilizzata per verificare se il primo valore è minore del secondo valore.
+Il `<` La funzione di confronto (minore di) viene utilizzata per verificare se il primo valore è minore del secondo valore.
 
 **Formato**
 
@@ -99,7 +99,7 @@ La `<` (minore di) la funzione di confronto viene utilizzata per verificare se i
 
 **Esempio**
 
-La seguente query PQL definisce le persone il cui compleanno è a gennaio.
+La seguente query PQL definisce le persone il cui compleanno è in gennaio.
 
 ```sql
 person.birthMonth < 2
@@ -107,7 +107,7 @@ person.birthMonth < 2
 
 ## Minore o uguale a
 
-La `<=` (minore o uguale a) la funzione di confronto viene utilizzata per verificare se il primo valore è minore o uguale al secondo valore.
+Il `<=` (minore o uguale a) per verificare se il primo valore è minore o uguale al secondo valore.
 
 **Formato**
 
@@ -125,4 +125,4 @@ person.birthMonth <= 2
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni di confronto, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).
+Ora che hai imparato le funzioni di confronto, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).

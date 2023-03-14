@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;elenco identità;elenco cluster
 solution: Experience Platform
 title: Elencare tutte le identità in un cluster
-description: Le identità correlate in un grafico di identità, indipendentemente dallo spazio dei nomi, sono considerate parte dello stesso "cluster" in quel grafico di identità. Le opzioni seguenti forniscono i mezzi per accedere a tutti i membri del cluster.
+description: Le identità correlate in un grafico delle identità, indipendentemente dallo spazio dei nomi, sono considerate parte dello stesso "cluster" in tale grafico delle identità. Le opzioni seguenti consentono di accedere a tutti i membri del cluster.
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
@@ -11,18 +11,18 @@ ht-degree: 3%
 
 ---
 
-# Elencare tutte le identità in un cluster
+# Elenca tutte le identità in un cluster
 
-Le identità correlate in un grafico di identità, indipendentemente dallo spazio dei nomi, sono considerate parte dello stesso &quot;cluster&quot; in quel grafico di identità. Le opzioni seguenti forniscono i mezzi per accedere a tutti i membri del cluster.
+Le identità correlate in un grafico delle identità, indipendentemente dallo spazio dei nomi, sono considerate parte dello stesso &quot;cluster&quot; in tale grafico delle identità. Le opzioni seguenti consentono di accedere a tutti i membri del cluster.
 
 ## Ottenere identità associate per una singola identità
 
-Recupera tutti i membri del cluster per una singola identità.
+Recuperare tutti i membri del cluster per una singola identità.
 
-È possibile utilizzare l&#39;opzione `graph-type` per indicare il grafico delle identità da cui ottenere il cluster. Le opzioni sono:
+È possibile utilizzare l’ `graph-type` parametro per indicare il grafo delle identità da cui ottenere il cluster. Le opzioni sono:
 
-- Nessuno - Non eseguire alcuna unione di identità.
-- Private Graph (Grafico privato): consente di unire le identità in base al grafico di identità privato. Se no `graph-type` è fornito, è l’impostazione predefinita.
+- Nessuno: non eseguire alcuna unione di identità.
+- Private Graph (Grafico privato): esegue l’unione delle identità in base al grafico delle identità private. In caso negativo `graph-type` , è l&#39;impostazione predefinita.
 
 **Formato API**
 
@@ -32,7 +32,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Richiesta**
 
-Opzione 1: Fornisci l’identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: Fornisci l’identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Fornisci l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere un XID di un&#39;identità, consulta la sezione di questo documento che tratta [ottenimento di un XID per un&#39;identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -65,13 +65,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## Ottenere identità associate per più identità
+## Ottieni identità associate per più identità
 
-Utilizzo `POST` come equivalente batch del `GET` metodo descritto sopra per restituire le identità nei cluster di più identità.
+Utilizzare `POST` come equivalente batch del `GET` metodo descritto sopra per restituire le identità nei cluster di identità multiple.
 
 >[!NOTE]
 >
->La richiesta non deve indicare più di un massimo di 1000 identità. Le richieste che superano 1000 identità risulteranno in un codice di stato 400.
+>La richiesta non deve indicare più di 1000 identità. Le richieste che superano le 1000 identità restituiranno il codice di stato 400.
 
 **Formato API**
 
@@ -81,11 +81,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **Richiesta**
 
-La richiesta seguente illustra la fornitura di un elenco di XID per i quali recuperare i membri del cluster.
+Nella richiesta seguente viene illustrato come specificare un elenco di XID per i quali recuperare i membri del cluster.
 
 **Richiesta stub**
 
-Utilizzo di `x-uis-cst-ctx: stub` l’intestazione restituirà una risposta con stub. Si tratta di una soluzione temporanea per agevolare lo sviluppo dell&#39;integrazione in tempi brevi, mentre i servizi sono in fase di completamento. Questa opzione diventerà obsoleta se non più necessaria.
+Utilizzo di `x-uis-cst-ctx: stub` L’intestazione restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
 
 ```shell
 curl -X POST \
@@ -101,7 +101,7 @@ curl -X POST \
 }'
 ```
 
-**Chiamata tramite XID**
+**Chiamata tramite XIDs**
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ curl -X POST \
 
 **Risposta**
 
-**Risposta &quot;Stubbed&quot;**
+**Risposta &#39;Stubbed&#39;**
 
 ```json
 {
@@ -237,8 +237,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->La risposta avrà sempre una voce per ogni XID fornito nella richiesta, indipendentemente dal fatto che gli XID di una richiesta appartengano allo stesso cluster o se uno o più hanno un cluster associato affatto.
+>La risposta avrà sempre una voce per ogni XID fornito nella richiesta, indipendentemente dal fatto che gli XID di una richiesta appartengano allo stesso cluster o che a uno o più di essi sia associato un cluster.
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva su [elenco della cronologia cluster di un&#39;identità](./list-cluster-history.md)
+Procedi all’esercitazione successiva per [elencare la cronologia cluster di un&#39;identità](./list-cluster-history.md)

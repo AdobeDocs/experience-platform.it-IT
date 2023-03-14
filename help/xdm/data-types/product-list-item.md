@@ -1,42 +1,42 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;indirizzo;xdm:address;tipo di dati;tipo di dati;tipo di dati;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;indirizzo;xdm:address;datatype;data-type;data type;data type;
 solution: Experience Platform
-title: Tipo di dati elemento dell’elenco prodotti
-description: Questo documento fornisce una panoramica del tipo di dati XDM dell'elemento dell'elenco dei prodotti.
+title: Tipo di dati elemento elenco prodotti
+description: Questo documento fornisce una panoramica del tipo di dati XDM per la voce dell’elenco dei prodotti.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 4%
+source-wordcount: '367'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Voce dell’elenco dei prodotti] tipo di dati
+# [!UICONTROL Elemento dell’elenco prodotti] tipo di dati
 
-[!UICONTROL Voce dell’elenco dei prodotti] è un tipo di dati XDM standard che descrive un prodotto selezionato da un cliente con opzioni, prezzi e contesto di utilizzo specifici per un determinato punto di tempo.
+[!UICONTROL Elemento dell’elenco prodotti] è un tipo di dati XDM standard che descrive un prodotto selezionato da un cliente con opzioni, prezzi e contesto di utilizzo specifici per un momento specifico.
 
-I valori acquisiti in questo tipo di dati possono essere diversi dal record del prodotto. Ad esempio, il record del prodotto contiene i dettagli del sistema di informazioni sul prodotto che sono coerenti per tutti i clienti, dove l&#39;articolo dell&#39;elenco di prodotti ha il prezzo effettivo offerto al cliente al momento dell&#39;acquisto, che può variare a causa di campagne di vendita o prezzi stagionali.
+I valori acquisiti in questo tipo di dati possono differire dal record del prodotto. Ad esempio, il record del prodotto contiene dettagli del sistema di informazioni sul prodotto coerenti per tutti i clienti, in cui l’elemento dell’elenco prodotti presenta il prezzo effettivo offerto al cliente al momento dell’acquisto, che può variare a causa di campagne di vendita o prezzi stagionali.
 
 ![](../images/data-types/product-list-item.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `selectedOptions` | Array di oggetti | Contiene opzioni personalizzate selezionate per un prodotto configurabile. Ogni voce di elenco è un oggetto con le seguenti proprietà:<ul><li>`attribute`: Un nome per l&#39;attributo configurabile.</li><li>`value`: Il valore dell&#39;attributo.</li></ul> |
-| `SKU` | [!UICONTROL Stringa] | Unità di conservazione delle scorte (SKU), l&#39;identificativo univoco di un prodotto definito dal fornitore. |
-| `_id` | [!UICONTROL Stringa] | Identificatore della riga per la voce di prodotto. Il prodotto stesso è identificato tramite `product`. |
-| `currencyCode` | [!UICONTROL Stringa] | La [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) codice valuta alfabetico utilizzato per determinare il prezzo del prodotto. |
-| `discountAmount` | [!UICONTROL Doppio] | Se il prodotto viene scontato, ciò rappresenta la differenza tra il prezzo normale e il prezzo speciale del prodotto. |
-| `name` | [!UICONTROL Stringa] | Nome visualizzato del prodotto presentato all’utente per la visualizzazione del prodotto. |
-| `priceTotal` | [!UICONTROL Doppio] | Prezzo totale per l&#39;articolo della linea di prodotti. |
+| `selectedOptions` | Array di oggetti | Contiene le opzioni personalizzate scelte per un prodotto configurabile. Ogni voce di elenco è un oggetto con le seguenti proprietà:<ul><li>`attribute`: nome per l’attributo configurabile.</li><li>`value`: valore dell’attributo.</li></ul> |
+| `SKU` | [!UICONTROL Stringa] | Stock Keeping Unit (SKU), l’identificatore univoco di un prodotto definito dal fornitore. |
+| `_id` | [!UICONTROL Stringa] | L’identificatore di riga per questa voce di prodotto. Il prodotto stesso è identificato tramite `product`. |
+| `currencyCode` | [!UICONTROL Stringa] | Il [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) codice valuta alfabetico utilizzato per la determinazione del prezzo del prodotto. |
+| `discountAmount` | [!UICONTROL Doppio] | Se il prodotto è scontato, ciò rappresenta la differenza tra il prezzo regolare e il prezzo speciale del prodotto. |
+| `name` | [!UICONTROL Stringa] | Il nome visualizzato del prodotto presentato all’utente per questa visualizzazione prodotto. |
+| `priceTotal` | [!UICONTROL Doppio] | Il prezzo totale per la voce di prodotto. |
 | `product` | [!UICONTROL Stringa] (URI) | URI `$id` dello schema XDM che acquisisce il prodotto stesso. |
-| `productAddMethod` | [!UICONTROL Stringa] | Il metodo utilizzato dal visitatore per aggiungere un elemento prodotto all’elenco. |
+| `productAddMethod` | [!UICONTROL Stringa] | Il metodo utilizzato dal visitatore per aggiungere un elemento di prodotto all’elenco. |
 | `productImageUrl` | [!UICONTROL Stringa] | Un URL per l’immagine principale del prodotto. |
-| `quantity` | [!UICONTROL Intero] | Il numero di unità che il cliente ha indicato di aver bisogno del prodotto. |
-| `unitOfMeasureCode` | [!UICONTROL Stringa] | Lo standard [codice unità di misura](https://ucum.org/ucum) per il prodotto in relazione al `quantity` proprietà. |
+| `quantity` | [!UICONTROL Intero] | Il numero di unità del prodotto che il cliente ha indicato di richiedere. |
+| `unitOfMeasureCode` | [!UICONTROL Stringa] | Lo standard [codice dell’unità di misura](https://ucum.org/ucum) per il prodotto in relazione al `quantity` proprietà. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul tipo di dati dell’indirizzo postale, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json)

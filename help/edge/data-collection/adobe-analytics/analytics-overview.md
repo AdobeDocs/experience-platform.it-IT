@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di Adobe Analytics con Platform Web SDK
 description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
-keywords: adobe analytics;analytics;dati mappati;variabili mappate;
+keywords: adobe analytics;dati mappati;variabili mappate;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
@@ -16,19 +16,19 @@ Adobe Experience Platform [!DNL Web SDK] può inviare dati ad Adobe Analytics. Q
 
 ## Configurazione
 
-Se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione cliente, Adobe Analytics raccoglie automaticamente i dati che stai inviando. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
+Adobe Analytics raccoglie automaticamente i dati che invii se disponi di una suite di rapporti mappata nell’interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti per una determinata configurazione. Dopo aver mappato una suite di rapporti, i dati iniziano automaticamente a scorrere.
 
 ## Gruppo di campi XDM
 
-Per facilitare l’acquisizione delle metriche Adobe Analytics più comuni, forniamo un gruppo di campi Analytics da utilizzare. Per ulteriori dettagli su questo schema, consulta la documentazione per [Gruppo di campi dello schema dell’estensione completa Adobe Analytics ExperienceEvent](../../../xdm/field-groups/event/analytics-full-extension.md)
+Per acquisire più facilmente le metriche di Adobe Analytics più comuni, forniamo un gruppo di campi di Analytics che puoi utilizzare. Per ulteriori dettagli su questo schema, consulta la documentazione del [Gruppo di campi schema Estensione completa Adobe Analytics ExperienceEvent](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Dati mappati automaticamente
 
-Adobe Experience Platform [!DNL Edge Network] mappa automaticamente molte variabili XDM. L&#39;elenco completo di queste variabili è elencato [qui](automatically-mapped-vars.md).
+Adobe Experience Platform [!DNL Edge Network] mappa automaticamente molte variabili XDM. È elencato l’elenco completo di tali variabili [qui](automatically-mapped-vars.md).
 
 ## Dati mappati manualmente
 
-Qualsiasi dato non mappato automaticamente dal [!DNL Edge Network] è accessibile tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
+Qualsiasi dato che non viene mappato automaticamente da [!DNL Edge Network] accessibile tramite regole di elaborazione. I dati vengono appiattiti utilizzando la notazione del punto e sono disponibili come contextData.
 
 Se avevi uno schema simile a questo.
 
@@ -55,7 +55,7 @@ Se avevi uno schema simile a questo.
 }
 ```
 
-Queste sarebbero le chiavi dei dati contestuali a tua disposizione.
+Saranno quindi disponibili le chiavi di dati contestuali.
 
 ```javascript
 a.x.key //value
@@ -68,10 +68,10 @@ a.x.arrayofobjects.0.obj1key //objval0
 a.x.arrayofobjects.1.obj2key //objval1
 ```
 
-Ecco un esempio di regola di elaborazione che utilizzerebbe questi dati.
+Di seguito è riportato un esempio di regola di elaborazione che utilizzerebbe questi dati.
 
 ![Interfaccia delle regole di elaborazione](./assets/edge_analytics_processing_rules.png)
 
 >[!NOTE]
 >
->Con la raccolta Experience Edge, tutti gli eventi vengono inviati ad Analytics e a qualsiasi altro servizio configurato per il tuo datastream. Ad esempio, se hai configurato Analytics e Target come servizi e effettui chiamate separate per la personalizzazione e per Analytics, entrambi gli eventi verranno inviati ad Analytics e a Target. Questi eventi verranno registrati nel reporting di Analytics e possono influenzare metriche come il tasso di mancato recapito.
+>Con la raccolta Experience Edge, tutti gli eventi vengono inviati ad Analytics e a qualsiasi altro servizio configurato per lo stream di dati. Ad esempio, se hai sia Analytics che Target configurati come servizi e effettui chiamate separate per la personalizzazione e per Analytics, entrambi gli eventi verranno inviati ad Analytics e a Target. Questi eventi verranno registrati nei rapporti di Analytics e possono influenzare metriche quali il tasso di mancato recapito.

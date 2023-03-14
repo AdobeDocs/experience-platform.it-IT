@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;api;controllo degli accessi basato su attributi;controllo degli accessi basato su attributi
+keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
-title: Endpoint API ruoli
-description: L'endpoint /ruoli nell'API di controllo accessi basato su attributi consente di gestire i ruoli in modo programmatico in Adobe Experience Platform.
+title: Endpoint API per i ruoli
+description: L’endpoint /roles nell’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli in Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 4%
 
 ---
 
-# Endpoint ruoli
+# Endpoint &quot;Roles&quot;
 
 >[!NOTE]
 >
->Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
+>Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-I ruoli definiscono l’accesso che un amministratore, uno specialista o un utente finale ha alle risorse dell’organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente viene raggruppato attraverso responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno.
 
-La `/roles` l’endpoint nell’API di controllo accessi basata sugli attributi ti consente di gestire i ruoli in modo programmatico all’interno dell’organizzazione.
+Il `/roles` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico i ruoli all’interno dell’organizzazione.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo accessi basata sugli attributi. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-## Recupera un elenco di ruoli {#list}
+## Recuperare un elenco di ruoli {#list}
 
-Puoi elencare tutti i ruoli esistenti appartenenti all’organizzazione effettuando una richiesta di GET al `/roles` punto finale.
+Puoi elencare tutti i ruoli esistenti appartenenti alla tua organizzazione effettuando una richiesta GET al `/roles` endpoint.
 
 **Formato API**
 
@@ -37,7 +37,7 @@ GET /roles/
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di ruoli appartenenti all’organizzazione.
+La richiesta seguente recupera un elenco di ruoli appartenenti alla tua organizzazione.
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di ruoli nell’organizzazione, incluse informazioni sul rispettivo tipo di ruolo, set di autorizzazioni e attributi dell’oggetto.
+In caso di esito positivo, la risposta restituisce un elenco di ruoli dell’organizzazione, incluse informazioni sul rispettivo tipo di ruolo, sui set di autorizzazioni e sugli attributi dell’oggetto.
 
 ```json
 {
@@ -101,18 +101,18 @@ Una risposta corretta restituisce un elenco di ruoli nell’organizzazione, incl
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID che corrisponde al ruolo . Questo ID viene generato automaticamente. |
-| `name` | Nome del ruolo. |
-| `description` | La proprietà description fornisce ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
-| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `sandboxes` | Questa proprietà visualizza le sandbox all&#39;interno dell&#39;organizzazione per le quali è stato eseguito il provisioning per un particolare ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un oggetto e le risorse di Platform a cui hanno accesso. |
-| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo interrogato. |
+| `id` | ID corrispondente al ruolo. Questo ID viene generato automaticamente. |
+| `name` | Il nome del ruolo. |
+| `description` | La proprietà description fornisce informazioni aggiuntive sul ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Cercare un ruolo {#lookup}
 
-Puoi cercare un singolo ruolo effettuando una richiesta di GET che include il corrispondente `roleId` nel percorso della richiesta.
+Per cercare un singolo ruolo, devi eseguire una richiesta GET che includa il `roleId` nel percorso della richiesta.
 
 **Formato API**
 
@@ -122,11 +122,11 @@ GET /roles/{ROLE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| {ROLE_ID} | ID del ruolo da cercare. |
+| {ROLE_ID} | ID del ruolo che si desidera cercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera le informazioni per `{ROLE_ID}`.
+La richiesta seguente recupera informazioni per `{ROLE_ID}`.
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’ID ruolo interrogato, incluse informazioni sul tipo di ruolo, i set di autorizzazioni e gli attributi oggetto.
+In caso di esito positivo, la risposta restituisce i dettagli per l’ID ruolo interrogato, incluse informazioni sul tipo di ruolo, sui set di autorizzazioni e sugli attributi dell’oggetto.
 
 ```json
 {
@@ -168,18 +168,18 @@ Una risposta corretta restituisce i dettagli dell’ID ruolo interrogato, inclus
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID che corrisponde al ruolo . Questo ID viene generato automaticamente. |
-| `name` | Nome del ruolo. |
-| `description` | La proprietà description fornisce ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
-| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `sandboxes` | Questa proprietà visualizza le sandbox all&#39;interno dell&#39;organizzazione per le quali è stato eseguito il provisioning per un particolare ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un oggetto e le risorse di Platform a cui hanno accesso. |
-| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo interrogato. |
+| `id` | ID corrispondente al ruolo. Questo ID viene generato automaticamente. |
+| `name` | Il nome del ruolo. |
+| `description` | La proprietà description fornisce informazioni aggiuntive sul ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
-## Cercare i soggetti per ID ruolo
+## Cerca soggetti per ID ruolo
 
-È inoltre possibile recuperare i soggetti effettuando una richiesta di GET al `/roles` endpoint durante la fornitura di un {ROLE_ID}.
+Puoi anche recuperare gli oggetti effettuando una richiesta GET al `/roles` mentre forniva un {ROLE_ID}.
 
 **Formato API**
 
@@ -189,11 +189,11 @@ GET /roles/{ROLE_ID}/subjects
 
 | Parametro | Descrizione |
 | --- | --- |
-| {ROLE_ID} | ID del ruolo associato ai soggetti da cercare. |
+| {ROLE_ID} | ID del ruolo associato ai soggetti che si desidera cercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera gli argomenti associati a `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La richiesta seguente recupera gli oggetti associati a `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X GET \
@@ -205,7 +205,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i soggetti associati all’ID ruolo interrogato, inclusi l’ID oggetto e il tipo di oggetto corrispondenti.
+In caso di esito positivo, la risposta restituisce i soggetti associati all’ID ruolo richiesto, inclusi l’ID soggetto e il tipo di oggetto corrispondenti.
 
 ```json
 {
@@ -249,13 +249,13 @@ Una risposta corretta restituisce i soggetti associati all’ID ruolo interrogat
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `roleId` | L&#39;ID del ruolo associato all&#39;oggetto interrogato. |
-| `subjectType` | Tipo dell&#39;oggetto interrogato. |
-| `subjectId` | L&#39;ID che corrisponde all&#39;oggetto interrogato. |
+| `roleId` | ID ruolo associato all&#39;oggetto della query. |
+| `subjectType` | Tipo dell&#39;oggetto della query. |
+| `subjectId` | ID corrispondente all&#39;oggetto della query. |
 
 ## Creare un ruolo {#create}
 
-Per creare un nuovo ruolo, invia una richiesta POST al gruppo `/roles` endpoint fornendo i valori per il nome, la descrizione e il tipo di ruolo del ruolo.
+Per creare un nuovo ruolo, effettua una richiesta POST al `/roles` mentre forniscono valori per il nome, la descrizione e il tipo di ruolo del ruolo.
 
 **Formato API**
 
@@ -280,13 +280,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome del ruolo. Assicurati che il nome del tuo ruolo sia descrittivo in quanto puoi usarlo per cercare informazioni sul tuo ruolo. |
-| `description` | (Facoltativo) Un valore descrittivo che può essere incluso per fornire ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `name` | Il nome del ruolo. Assicurati che il nome del ruolo sia descrittivo, in quanto può essere utilizzato per cercare informazioni sul ruolo. |
+| `description` | (Facoltativo) Un valore descrittivo che puoi includere per fornire ulteriori informazioni sul tuo ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 
 **Risposta**
 
-Una risposta corretta restituisce il ruolo appena creato, con l’ID del ruolo corrispondente, nonché informazioni sul tipo di ruolo, i set di autorizzazioni e gli attributi dell’oggetto.
+In caso di esito positivo, la risposta restituisce il ruolo appena creato, con il relativo ID ruolo corrispondente, nonché informazioni sul tipo di ruolo, sui set di autorizzazioni e sugli attributi dell’oggetto.
 
 ```json
 {
@@ -316,18 +316,18 @@ Una risposta corretta restituisce il ruolo appena creato, con l’ID del ruolo c
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID che corrisponde al ruolo . Questo ID viene generato automaticamente. |
-| `name` | Nome del ruolo. |
-| `description` | La proprietà description fornisce ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
-| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `sandboxes` | Questa proprietà visualizza le sandbox all&#39;interno dell&#39;organizzazione per le quali è stato eseguito il provisioning per un particolare ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un oggetto e le risorse di Platform a cui hanno accesso. |
-| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo interrogato. |
+| `id` | ID corrispondente al ruolo. Questo ID viene generato automaticamente. |
+| `name` | Il nome del ruolo. |
+| `description` | La proprietà description fornisce informazioni aggiuntive sul ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiornare un ruolo {#patch}
 
-Puoi aggiornare le proprietà di un ruolo effettuando una richiesta di PATCH al `/roles` durante la fornitura dell&#39;ID ruolo e dei valori corrispondenti per le operazioni che si desidera applicare.
+È possibile aggiornare le proprietà di un ruolo effettuando una richiesta PATCH al `/roles` fornendo l’ID del ruolo e i valori corrispondenti per le operazioni che desideri applicare.
 
 **Formato API**
 
@@ -360,13 +360,13 @@ curl -X PATCH \
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | La chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
-| `value` | Il nuovo valore con cui si desidera aggiornare il parametro. |
+| `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
 **Risposta**
 
-Una risposta corretta restituisce il ruolo aggiornato, inclusi nuovi valori per le proprietà che hai scelto di aggiornare.
+In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi i nuovi valori per le proprietà che hai scelto di aggiornare.
 
 ```json
 {
@@ -396,18 +396,18 @@ Una risposta corretta restituisce il ruolo aggiornato, inclusi nuovi valori per 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID che corrisponde al ruolo . Questo ID viene generato automaticamente. |
-| `name` | Nome del ruolo. |
-| `description` | La proprietà description fornisce ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
-| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `sandboxes` | Questa proprietà visualizza le sandbox all&#39;interno dell&#39;organizzazione per le quali è stato eseguito il provisioning per un particolare ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un oggetto e le risorse di Platform a cui hanno accesso. |
-| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo interrogato. |
+| `id` | ID corrispondente al ruolo. Questo ID viene generato automaticamente. |
+| `name` | Il nome del ruolo. |
+| `description` | La proprietà description fornisce informazioni aggiuntive sul ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiornare un ruolo per ID ruolo {#put}
 
-È possibile aggiornare un ruolo effettuando una richiesta di PUT al `/roles` e specifica l&#39;ID ruolo corrispondente al ruolo da aggiornare.
+Per aggiornare un ruolo, devi effettuare una richiesta PUT al `/roles` e specificando l’ID del ruolo che corrisponde al ruolo da aggiornare.
 
 **Formato API**
 
@@ -417,7 +417,7 @@ PUT /roles/{ROLE_ID}
 
 **Richiesta**
 
-La seguente richiesta aggiorna nome, descrizione e tipo di ruolo per l’ID ruolo: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La richiesta seguente aggiorna il nome, la descrizione e il tipo di ruolo per l’ID ruolo: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
@@ -436,11 +436,11 @@ curl -X PUT \
 | --- | --- |
 | `name` | Nome aggiornato di un ruolo. |
 | `description` | Descrizione aggiornata di un ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 
 **Risposta**
 
-Se il ruolo viene aggiornato correttamente, vengono restituiti nuovi valori per nome, descrizione e tipo di ruolo.
+In caso di esito positivo, viene restituito il ruolo aggiornato, inclusi i nuovi valori per il nome, la descrizione e il tipo di ruolo.
 
 ```json
 {
@@ -470,18 +470,18 @@ Se il ruolo viene aggiornato correttamente, vengono restituiti nuovi valori per 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | L&#39;ID che corrisponde al ruolo . Questo ID viene generato automaticamente. |
-| `name` | Nome del ruolo. |
-| `description` | La proprietà description fornisce ulteriori informazioni sul ruolo. |
-| `roleType` | Tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
-| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può assegnare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, anziché assegnare singole autorizzazioni. Ciò ti consente di creare ruoli personalizzati da un ruolo predefinito che contiene un gruppo di autorizzazioni. |
-| `sandboxes` | Questa proprietà visualizza le sandbox all&#39;interno dell&#39;organizzazione per le quali è stato eseguito il provisioning per un particolare ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un oggetto e le risorse di Platform a cui hanno accesso. |
-| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo interrogato. |
+| `id` | ID corrispondente al ruolo. Questo ID viene generato automaticamente. |
+| `name` | Il nome del ruolo. |
+| `description` | La proprietà description fornisce informazioni aggiuntive sul ruolo. |
+| `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
+| `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
+| `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiorna oggetto per ID ruolo
 
-Per aggiornare gli argomenti associati a un ruolo, invia una richiesta PATCH al `/roles` endpoint durante la fornitura dell&#39;ID ruolo dei soggetti che si desidera aggiornare.
+Per aggiornare gli oggetti associati a un ruolo, effettua una richiesta PATCH al `/roles` fornendo l’ID del ruolo dei soggetti da aggiornare.
 
 **Formato API**
 
@@ -495,7 +495,7 @@ PATCH /roles/{ROLE_ID}
 
 **Richiesta**
 
-La seguente richiesta aggiorna gli argomenti associati a `{ROLE_ID}`.
+La richiesta seguente aggiorna gli argomenti associati a `{ROLE_ID}`.
 
 ```shell
 curl -X PATCH \
@@ -516,13 +516,13 @@ curl -X PATCH \
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | La chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
-| `value` | Il nuovo valore con cui si desidera aggiornare il parametro. |
+| `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
 **Risposta**
 
-Una risposta corretta restituisce i soggetti aggiornati associati all’ID ruolo interrogato.
+In caso di esito positivo, la risposta restituisce gli oggetti aggiornati associati all’ID ruolo richiesto.
 
 ```json
 {
@@ -551,12 +551,12 @@ Una risposta corretta restituisce i soggetti aggiornati associati all’ID ruolo
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `subjectId` | ID di un oggetto. |
-| `subjectType` | Il tipo di oggetto. |
+| `subjectId` | ID di un soggetto. |
+| `subjectType` | Tipo di oggetto. |
 
-## Eliminare un ruolo {#delete}
+## Eliminare una mansione {#delete}
 
-Per eliminare un ruolo, invia una richiesta DELETE al `/roles` endpoint durante la specificazione dell&#39;ID del ruolo da eliminare.
+Per eliminare un ruolo, effettua una richiesta DELETE al `/roles` endpoint durante la specifica dell&#39;ID del ruolo da eliminare.
 
 **Formato API**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| {ROLE_ID} | ID del ruolo da eliminare. |
+| {ROLE_ID} | ID del ruolo che si desidera eliminare. |
 
 **Richiesta**
 
@@ -582,6 +582,6 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
 
-Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) al ruolo . Riceverai uno stato HTTP 404 (Non trovato) perché il ruolo è stato rimosso dall’amministrazione.
+Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) al ruolo. Riceverai lo stato HTTP 404 (Non trovato) perché il ruolo è stato rimosso dall’amministrazione.

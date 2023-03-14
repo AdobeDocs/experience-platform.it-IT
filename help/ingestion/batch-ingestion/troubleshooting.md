@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;dati acquisiti;risoluzione dei problemi;FAQ;acquisizione;inserimento batch;acquisizione batch;
+keywords: Experience Platform;home;argomenti popolari;dati acquisiti;risoluzione dei problemi;faq;acquisizione;inserimento batch;inserimento batch;
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in batch
-description: Questa documentazione risponderà alle domande frequenti relative alle API di acquisizione di dati in batch di Adobe Experience Platform.
+description: Questa documentazione sarà utile per rispondere alle domande frequenti sulle API di acquisizione dati in batch di Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -11,37 +11,37 @@ ht-degree: 1%
 
 ---
 
-# Guida alla risoluzione dei problemi di inserimento in batch
+# Guida alla risoluzione dei problemi di acquisizione in batch
 
-Questa documentazione è utile per rispondere alle domande frequenti su Adobe Experience Platform [!DNL Batch Data Ingestion] API.
+Questa documentazione ti aiuterà a rispondere alle domande più frequenti su Adobe Experience Platform [!DNL Batch Data Ingestion] API.
 
-## Chiamate API in batch
+## Chiamate API batch
 
-### I batch sono attivi immediatamente dopo aver ricevuto un OK HTTP 200 dall’API CompleteBatch?
+### I batch sono immediatamente attivi dopo aver ricevuto un OK HTTP 200 dall’API CompleteBatch?
 
-La `200 OK` la risposta dell’API indica che il batch è stato accettato per l’elaborazione e non è attivo fino al passaggio al suo stato finale, ad esempio Attivo o Errore.
+Il `200 OK` la risposta dell’API indica che il batch è stato accettato per l’elaborazione; non è attivo finché non passa al suo stato finale, ad esempio Attivo o Non riuscito.
 
-### È sicuro riprovare la chiamata API CompleteBatch dopo l&#39;errore?
+### È sicuro riprovare la chiamata API CompleteBatch dopo l’errore?
 
-Sì: puoi riprovare la chiamata API. Nonostante il guasto, è possibile che l&#39;operazione sia riuscita effettivamente e il batch è stato accettato con successo. Tuttavia, i client devono disporre di meccanismi per l’esecuzione di nuovi tentativi in caso di errore dell’API e, di fatto, devono riprovare. Se l’operazione ha avuto successo, l’API restituisce il successo, anche dopo un nuovo tentativo.
+Sì, è possibile riprovare la chiamata API. Nonostante l’errore, è possibile che l’operazione sia riuscita e che il batch sia stato accettato correttamente. Tuttavia, i client devono disporre di meccanismi di esecuzione di nuovi tentativi in caso di errore API e sono, di fatto, incoraggiati a riprovare. Se l’operazione è riuscita, l’API restituirà il successo anche dopo un nuovo tentativo.
 
 ### Quando deve essere utilizzata l’API di caricamento file di grandi dimensioni?
 
-La dimensione file consigliata per l’utilizzo dell’API per il caricamento di file di grandi dimensioni è pari o superiore a 256 MB. Per ulteriori informazioni sull’utilizzo dell’API di caricamento file di grandi dimensioni, consulta [qui](./api-overview.md#ingest-large-parquet-files).
+La dimensione del file consigliata per l’utilizzo dell’API di caricamento file di grandi dimensioni è pari o superiore a 256 MB. Ulteriori informazioni su come utilizzare l’API di caricamento di file di grandi dimensioni sono disponibili [qui](./api-overview.md#ingest-large-parquet-files).
 
 ### Perché la chiamata API Large File Complete non riesce?
 
-Se vengono trovati blocchi di un file di grandi dimensioni sovrapposti o mancanti, il server risponde con una richiesta HTTP 400 Bad. Questo può verificarsi perché è possibile caricare blocchi sovrapposti, poiché le convalide degli intervalli vengono eseguite al momento del completamento del file, quando i blocchi di file sono uniti.
+Se vengono trovati blocchi di un file di grandi dimensioni sovrapposti o mancanti, il server risponde con una richiesta HTTP 400 non valida. Ciò può verificarsi perché è possibile caricare blocchi sovrapposti, poiché le convalide degli intervalli vengono eseguite al momento del completamento del file, quando i blocchi di file vengono uniti tra loro.
 
-## Supporto per l’acquisizione
+## Supporto acquisizione
 
 ### Quali sono i formati di acquisizione supportati?
 
-Attualmente, sono supportati sia Parquet che JSON. Il CSV è supportato su base legacy; i dati verranno promossi a master e verranno eseguiti controlli preliminari; non saranno supportate funzioni moderne, ad esempio conversione, partizionamento o convalida delle righe.
+Attualmente, sono supportati sia Parquet che JSON. Il file CSV è supportato da versioni precedenti: anche se i dati verranno promossi a master e verranno eseguiti controlli preliminari, non saranno supportate funzioni moderne come la conversione, il partizionamento o la convalida delle righe.
 
-### Dove specificare il formato di input batch?
+### Specificare il formato di input batch
 
-Il formato di input deve essere specificato al momento della creazione del batch all&#39;interno del payload. Di seguito è riportato un esempio di come specificare il formato di input batch:
+Il formato di input deve essere specificato al momento della creazione del batch all’interno del payload. Di seguito è riportato un esempio di come specificare il formato di input batch:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -59,7 +59,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Perché i dati caricati non vengono visualizzati nel set di dati?
 
-Affinché i dati vengano visualizzati nel set di dati, il batch deve essere contrassegnato come completo. Tutti i file da acquisire devono essere caricati prima di contrassegnare il batch come completo. Di seguito è riportato un esempio di marcatura completa di un batch:
+Affinché i dati vengano visualizzati nel set di dati, il batch deve essere contrassegnato come completo. Tutti i file che desideri acquisire devono essere caricati prima di contrassegnare il batch come completato. Di seguito è riportato un esempio di contrassegno di completamento di un batch:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -69,9 +69,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### Come viene acquisito JSON multi-riga?
+### Come viene acquisito il JSON su più righe?
 
-Per acquisire JSON con più righe, l’ `isMultiLineJson` Il flag deve essere impostato al momento della creazione del batch. Di seguito è riportato un esempio:
+Per acquisire JSON su più righe, `isMultiLineJson` Il flag deve essere impostato al momento della creazione del batch. Di seguito è riportato un esempio:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -88,9 +88,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
       }'
 ```
 
-### Qual è la differenza tra le righe JSON (JSON a riga singola) e JSON a riga singola?
+### Qual è la differenza tra righe JSON (JSON a riga singola) e JSON su più righe?
 
-Per le righe JSON esiste un oggetto JSON per riga. Ad esempio:
+Per le righe JSON, esiste un oggetto JSON per riga. Ad esempio:
 
 ```json
 {"string":"string1","int":1,"array":[1,2,3],"dict": {"key": "value1"}}
@@ -98,7 +98,7 @@ Per le righe JSON esiste un oggetto JSON per riga. Ad esempio:
 {"string":"string3","int":3,"array":[3,6,9],"dict": {"key": "value3", "extra_key": "extra_value3"}}
 ```
 
-Per JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Ad esempio:
+Per il JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Ad esempio:
 
 ```json
 [
@@ -120,29 +120,29 @@ Per JSON su più righe, un oggetto può occupare più righe, mentre tutti gli og
 ]
 ```
 
-Per impostazione predefinita, [!DNL Batch Data Ingestion] utilizza JSON a riga singola.
+Per impostazione predefinita, [!DNL Batch Data Ingestion] utilizza JSON su riga singola.
 
 ### L’acquisizione CSV è supportata?
 
-L’acquisizione CSV è supportata solo per gli schemi piatti. Al momento, l’acquisizione di dati gerarchici in CSV non è supportata.
+L’acquisizione CSV è supportata solo per gli schemi flat. Attualmente, l’acquisizione di dati gerarchici in CSV non è supportata.
 
 Per ottenere tutte le funzioni di acquisizione dei dati, è necessario utilizzare i formati JSON o Parquet.
 
 ### Quali tipi di convalida vengono eseguiti sui dati?
 
-I dati vengono convalidati in tre livelli:
+Esistono tre livelli di convalida eseguiti sui dati:
 
-- Schema: l’acquisizione in batch assicura che lo schema dei dati acquisiti corrisponda allo schema del set di dati.
-- Tipo di dati : l’acquisizione in batch assicura che il tipo per ciascun campo acquisito corrisponda al tipo definito nello schema del set di dati.
-- Vincoli: l’acquisizione in batch assicura che i vincoli, come &quot;Obbligatorio&quot;, &quot;enum&quot; e &quot;formato&quot;, siano definiti correttamente nella definizione dello schema.
+- Schema: l’acquisizione in batch garantisce che lo schema del dei dati acquisiti corrisponda allo schema del set di dati.
+- Tipo di dati: l’acquisizione in batch assicura che il tipo di ogni campo acquisito corrisponda al tipo definito nello schema del set di dati.
+- Vincoli: l’acquisizione in batch garantisce che i vincoli, come &quot;Obbligatorio&quot;, &quot;enum&quot; e &quot;formato&quot;, siano definiti correttamente nella definizione dello schema.
 
 ### Come può essere sostituito un batch già acquisito?
 
-È possibile sostituire un batch già acquisito utilizzando la funzione Riproduzione batch. Ulteriori informazioni sulla riproduzione in batch sono disponibili [qui](./api-overview.md#replay-a-batch).
+Un batch già acquisito può essere sostituito utilizzando la funzione Ripetizione batch. Ulteriori informazioni sulla ripetizione in batch sono disponibili [qui](./api-overview.md#replay-a-batch).
 
 ### Come viene monitorata l’acquisizione batch?
 
-Una volta che un batch è stato segnalato per la promozione batch, l&#39;avanzamento dell&#39;acquisizione batch può essere monitorato con la seguente richiesta:
+Una volta segnalato un batch per la promozione batch, l’avanzamento dell’acquisizione batch può essere monitorato con la seguente richiesta:
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
@@ -151,7 +151,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ```
 
-Con questa richiesta riceverai una risposta simile a questa:
+Con questa richiesta, riceverai una risposta simile alla seguente:
 
 ```http
 200 OK
@@ -175,48 +175,48 @@ Con questa richiesta riceverai una risposta simile a questa:
 
 ## Stati batch
 
-### Quali sono i possibili stati batch?
+### Quali sono i possibili stati del batch?
 
-Un batch può, nel suo ciclo di vita, superare i seguenti stati:
+Un batch può, nel suo ciclo di vita, passare attraverso i seguenti stati:
 
-| Stato | Dati scritti sul master | Descrizione |
+| Stato | Dati scritti nel master | Descrizione |
 | ------ | ---------------------- | ----------- |
-| Abbandonato |  | Il client non è riuscito a completare il batch nell&#39;intervallo di tempo previsto. |
-| Interrotto |  | Il client ha esplicitamente chiamato tramite il [!DNL Batch Data Ingestion] API, un’operazione di interruzione per il batch specificato. Una volta che un batch è nello stato caricato, il batch non può essere interrotto. |
-| Attivo/Completato | x | Il batch è stato promosso con successo da stage a master ed è ora disponibile per il consumo a valle. **Nota:** Le opzioni Attivo e Successo vengono utilizzate in modo intercambiabile. |
-| Archiviato |  | Il lotto è stato archiviato in deposito frigorifero. |
-| Non riuscito/Errore |  | Stato terminale che risulta da una configurazione errata e/o da dati non validi. Viene registrato un errore actionable insieme al batch, per consentire ai client di correggere e reinviare i dati. **Nota:** Con errore e con errore vengono utilizzati in modo intercambiabile. |
-| Inattivo | x | La promozione del batch è stata completata, ma è stata ripristinata o è scaduta. Il batch non sarà più disponibile per il consumo a valle, ma i dati sottostanti rimarranno in Master fino a quando non sarà stato conservato, archiviato o eliminato in altro modo. |
-| Caricamento |  | Il client sta attualmente scrivendo dati per il batch. Il batch è **not** pronto per la promozione, a questo punto. |
+| Abbandonato |  | Il client non è riuscito a completare il batch nel periodo di tempo previsto. |
+| Interrotto |  | Il client ha chiamato esplicitamente tramite [!DNL Batch Data Ingestion] API, un’operazione di interruzione per il batch specificato. Una volta che un batch è nello stato Loaded, non può essere interrotto. |
+| Attivo/Completato | x | Il batch è stato promosso correttamente dall’ambiente di staging a quello principale ed è ora disponibile per il consumo a valle. **Nota:** Attivo e di successo vengono utilizzati in modo intercambiabile. |
+| Archiviato |  | Il batch è stato archiviato in un magazzino frigorifero. |
+| Non riuscito/non riuscito |  | Stato del terminale causato da configurazione e/o dati non validi. Viene registrato un errore actionable, insieme al batch, per consentire ai client di correggere e inviare nuovamente i dati. **Nota:** Le opzioni Non riuscito (Failed) e Non riuscito (Failure) sono utilizzate in modo intercambiabile. |
+| Inattivo | x | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non sarà più disponibile per il consumo a valle, ma i dati sottostanti rimarranno nell&#39;elemento Principale finché non saranno stati conservati, archiviati o altrimenti eliminati. |
+| Caricamento |  | Il client sta scrivendo dati per il batch. Il batch è **non** pronto per la promozione, a questo punto. |
 | Caricato |  | Il client ha completato la scrittura dei dati per il batch. Il batch è pronto per la promozione. |
-| Mantenuti |  | I dati sono stati estratti da Master e in un archivio designato in Adobe Data Lake. |
-| Staging |  | Il client ha segnalato il batch per la promozione e i dati sono in fase di staging per il consumo a valle. |
-| Nuovo |  | Il client ha segnalato il batch per la promozione, ma a causa di un errore, il batch viene ritentato da un servizio di monitoraggio batch. Questo stato può essere utilizzato per informare i clienti che potrebbe esserci un ritardo nell’acquisizione dei dati. |
-| In stallo |  | Il cliente ha segnalato il batch per la promozione, ma dopo `n` tentativi da parte di un servizio di monitoraggio batch, la promozione batch è stata bloccata. |
+| Mantenuto |  | I dati sono stati estratti dal Master e in un archivio designato nel Data Lake Adobe. |
+| Staging |  | Il client ha segnalato correttamente il batch per la promozione e i dati vengono posizionati nell&#39;area intermedia per il consumo a valle. |
+| Nuovo tentativo |  | Il client ha segnalato il batch per la promozione, ma a causa di un errore il batch viene ritentato da un servizio di monitoraggio batch. Questo stato può essere utilizzato per informare i client che potrebbe verificarsi un ritardo nell’acquisizione dei dati. |
+| In stallo |  | Il client ha segnalato il batch per la promozione, ma dopo `n` nuovi tentativi da parte di un servizio di monitoraggio batch, la promozione batch è stata arrestata. |
 
-### Cosa significa &quot;staging&quot; per i batch?
+### Cosa significa &quot;Staging&quot; per i batch?
 
-Quando un batch si trova in &quot;Staging&quot;, significa che il batch è stato segnalato con successo per la promozione e che i dati sono in fase di staging per il consumo a valle.
+Quando un batch si trova in &quot;Staging&quot;, significa che il batch è stato segnalato correttamente per la promozione e che i dati vengono posizionati nell’area intermedia per il consumo a valle.
 
-### Cosa significa quando un batch è &quot;Nuovo tentativo&quot;?
+### Che cosa significa quando un batch è &quot;Nuovo tentativo&quot;?
 
-Quando un batch si trova in &quot;Nuovo tentativo&quot;, significa che l&#39;inserimento dei dati del batch è stato temporaneamente interrotto a causa di problemi intermittenti. In questo caso, non richiede alcun intervento da parte del cliente.
+Quando un batch è in &quot;Nuovo tentativo&quot;, significa che l’acquisizione dei dati del batch è stata temporaneamente interrotta a causa di problemi intermittenti. Quando ciò accade, non richiede l’intervento del cliente.
 
 ### Cosa significa quando un batch è &quot;Bloccato&quot;?
 
-Quando un batch si trova in &quot;Bloccato&quot;, significa che [!DNL Data Ingestion Services] sta riscontrando difficoltà nell&#39;acquisizione del batch e tutti i tentativi sono stati esauriti.
+Quando un batch si trova in &quot;Stalled&quot;, significa che [!DNL Data Ingestion Services] sta riscontrando difficoltà nell’acquisizione del batch e tutti i tentativi sono stati esauriti.
 
-### Cosa significa se un batch è ancora &quot;Caricamento&quot;?
+### Cosa significa se un batch è ancora in fase di &quot;caricamento&quot;?
 
-Quando un batch è in &quot;Caricamento&quot;, significa che l&#39;API CompleteBatch non è stata chiamata per promuovere il batch.
+Quando un batch si trova in &quot;Caricamento&quot;, significa che l’API CompleteBatch non è stata chiamata per promuovere il batch.
 
 ### Esiste un modo per sapere se un batch è stato acquisito correttamente?
 
-Una volta che lo stato del batch è &quot;Attivo&quot;, il batch è stato acquisito correttamente. Per scoprire lo stato del batch, segui i passaggi dettagliati [precedente](#how-is-batch-ingestion-monitored).
+Una volta che lo stato del batch è &quot;Attivo&quot;, il batch è stato correttamente acquisito. Per conoscere lo stato del batch, seguire i passaggi dettagliati [precedente](#how-is-batch-ingestion-monitored).
 
-### Cosa succede dopo un errore di un batch?
+### Cosa succede in caso di errore di un batch?
 
-Quando un batch non riesce, il motivo per cui non riesce può essere identificato nel `errors` sezione del payload. Di seguito sono riportati alcuni esempi di errori:
+Quando un batch ha esito negativo, il motivo del fallimento può essere identificato in `errors` del payload. Di seguito sono riportati alcuni esempi di errori:
 
 ```json
     "errors":[
@@ -239,28 +239,28 @@ Una volta corretti gli errori, il batch può essere ricaricato.
 
 ### Come eliminare i batch?
 
-Invece di eliminare direttamente da [!DNL Catalog], i batch devono essere rimossi con uno dei metodi seguenti:
+Invece di eliminare direttamente da [!DNL Catalog], i lotti devono essere rimossi utilizzando uno dei metodi indicati di seguito:
 
-1. Se il batch è in corso, il batch deve essere interrotto.
-2. Se il batch viene gestito correttamente, il batch deve essere ripristinato.
+1. Se il batch è in corso, deve essere interrotto.
+2. Se la masterizzazione del batch è riuscita, il batch deve essere ripristinato.
 
 ### Quali metriche a livello di batch sono disponibili?
 
-Le seguenti metriche a livello di batch sono disponibili per i batch nello stato Attivo/Successo:
+Per i batch in stato Attivo/Completato sono disponibili le seguenti metriche a livello di batch:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| inputByteSize | Numero totale di byte per cui è stato eseguito lo staging [!DNL Data Ingestion Services] da elaborare. |
-| inputRecordSize | Numero totale di righe per le quali è stata eseguita la staging [!DNL Data Ingestion Services] da elaborare. |
-| outputByteSize | Numero totale di byte generati da [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
+| inputByteSize | Numero totale di byte nella gestione temporanea per [!DNL Data Ingestion Services] da elaborare. |
+| inputRecordSize | Numero totale di righe posizionate nell&#39;area intermedia per [!DNL Data Ingestion Services] da elaborare. |
+| outputByteSize | Numero totale di byte restituiti da [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
 | outputRecordSize | Numero totale di righe generate da [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
 | partitionCount | Numero totale di partizioni scritte in [!DNL Data Lake]. |
 
-### Perché le metriche non sono disponibili su alcuni batch?
+### Perché le metriche non sono disponibili in alcuni batch?
 
 Esistono due motivi per cui le metriche potrebbero non essere disponibili nel batch:
 
-1. Il batch non è mai stato eseguito correttamente nello stato Attivo/Successo.
+1. Il batch non è mai stato portato allo stato Attivo/Completato.
 2. Il batch è stato promosso utilizzando un percorso di promozione legacy, ad esempio l’acquisizione CSV.
 
 ### Cosa significano i diversi codici di stato?
@@ -269,7 +269,7 @@ Esistono due motivi per cui le metriche potrebbero non essere disponibili nel ba
 | ----------- | ----------- |
 | 106 | Il file del set di dati è vuoto. |
 | 118 | Il file CSV contiene una riga di intestazione vuota. |
-| 200 | Il batch è stato accettato per l&#39;elaborazione e passerà a uno stato finale, ad esempio Attivo o Errore. Una volta inviato, il batch può essere monitorato utilizzando `GetBatch` punto finale. |
-| 400 | Richiesta errata. Restituito se sono presenti blocchi mancanti o sovrapposti in un batch. |
+| 200 | Il batch è stato accettato per l’elaborazione e passerà a uno stato finale, ad esempio Attivo o Non riuscito. Una volta inviato, il batch può essere monitorato utilizzando `GetBatch` endpoint. |
+| 400 | Richiesta errata. Restituito se in un batch sono presenti blocchi mancanti o sovrapposti. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;enum;campo;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;enum;field;
 solution: Experience Platform
-title: Definire i campi enumerati e i valori consigliati nell’interfaccia utente
-description: Scopri come definire enum e valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
+title: Definire i campi enum e i valori suggeriti nell’interfaccia utente
+description: Scopri come definire le enumerazioni e i valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -11,36 +11,36 @@ ht-degree: 0%
 
 ---
 
-# Definire enum e valori consigliati nell’interfaccia utente {#enums-and-suggested-values}
+# Definire enum e valori suggeriti nell’interfaccia utente {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Enum e valori consigliati"
->abstract="Un **Enum** vincola un campo stringa affinché consenta l’acquisizione solo dei dati che corrispondono a un set predefinito di valori. A ogni vincolo enum può essere assegnato un **Nome visualizzato** popola i menu a discesa degli attributi nell’interfaccia utente Segmentazione. **Valori consigliati** per un campo non limitare l’acquisizione e determinare solo i nomi visualizzati visualizzati in Segmentazione. Se si dispone di più schemi che condividono un campo appartenente a una classe o a un gruppo di campi comune e si definiscono enum o valori consigliati diversi per quel campo tra ogni schema, tali valori vengono uniti e aggiunti nello schema di unione."
+>title="Enumerazioni e valori suggeriti"
+>abstract="Un **Enum** vincola un campo stringa per consentire l’acquisizione solo dei dati che corrispondono a un set di valori predefinito. A ogni vincolo enum può essere assegnato un **Nome visualizzato** che compila i menu a discesa degli attributi nell’interfaccia utente di segmentazione. **Valori consigliati** per un campo non limitano l’acquisizione e determinano solo i nomi visualizzati visualizzati visualizzati visualizzati in Segmentazione. Se disponi di più schemi che condividono un campo appartenente a una classe o a un gruppo di campi comune e definisci enumerazioni o valori suggeriti diversi per quel campo tra ciascun schema, tali valori vengono uniti e aggiunti allo schema di unione."
 
-In Experience Data Model (XDM), è possibile assegnare a un campo stringa un set predefinito di valori accettati o consigliati per controllare meglio quali valori vengono acquisiti in quel campo o come si comporterà nella segmentazione.
+In Experience Data Model (XDM), a un campo stringa può essere assegnato un set predefinito di valori accettati o suggeriti per controllare meglio quali valori vengono acquisiti in tale campo o come si comporterà nella segmentazione.
 
-**[!UICONTROL Enum]** vincolare i valori che possono essere acquisiti per un campo stringa a un set predefinito. Se tenti di acquisire dati in un campo enum e il valore non corrisponde a nessuno di quelli definiti nella relativa configurazione, l’acquisizione verrà negata.
+**[!UICONTROL Enumerazioni]** vincola i valori che possono essere acquisiti per un campo stringa a un set predefinito. Se tenti di acquisire dati in un campo enum e il valore non corrisponde a nessuno di quelli definiti nella relativa configurazione, l’acquisizione verrà negata.
 
-A differenza degli enum, il **[!UICONTROL Valori consigliati]** consente di indicare un set di valori consigliati per un campo stringa che non vincola i valori che è possibile acquisire. Al contrario, i valori suggeriti influenzano i valori predefiniti disponibili nel [Interfaccia utente di segmentazione](../../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
+A differenza delle enumerazioni, **[!UICONTROL Valori consigliati]** L’opzione consente a di denotare un insieme di valori consigliati per un campo stringa che non vincolano i valori che può acquisire. I valori suggeriti influiscono invece sui valori predefiniti disponibili nel [Interfaccia utente di segmentazione](../../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
 
-Quando [definizione di un nuovo campo](./overview.md#define) nell’interfaccia utente di Adobe Experience Platform e l’impostazione del tipo su [!UICONTROL Stringa], ti viene offerta l’opzione di definire un [enum](#enum) o [valori consigliati](#suggested-values) per quel campo.
+Quando [definizione di un nuovo campo](./overview.md#define) nell’interfaccia utente di Adobe Experience Platform e impostando il tipo su [!UICONTROL Stringa], è possibile definire un’ [enum](#enum) o [valori suggeriti](#suggested-values) per quel campo.
 
-![Immagine che mostra l’opzione Enum &amp; Suggested Values abilitata per un campo stringa nell’interfaccia utente](../../images/ui/fields/enum/enum-options-selected.png)
+![Immagine che mostra l’opzione Enum e valori suggeriti abilitata per un campo stringa nell’interfaccia utente](../../images/ui/fields/enum/enum-options-selected.png)
 
-Questo documento illustra come definire enum e valori suggeriti nel [!UICONTROL Schemi] Area di lavoro dell’interfaccia utente. Per una rapida panoramica degli enum e dei valori suggeriti, tra cui come configurarli nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
+Questo documento illustra come definire le enumerazioni e i valori suggeriti nella [!UICONTROL Schemi] Workspace dell’interfaccia utente. Per una rapida panoramica sulle enumerazioni e sui valori suggeriti, tra cui come configurarle nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
-## Definire un enum {#enum}
+## Definire un&#39;enumerazione {#enum}
 
-Seleziona **[!UICONTROL Enum e valori consigliati]**, quindi seleziona **[!UICONTROL Enum]**. Vengono visualizzati altri controlli che consentono di specificare i vincoli di valore per l’enum. Per aggiungere un vincolo, seleziona **[!UICONTROL Aggiungi riga]**.
+Seleziona **[!UICONTROL Enumerazioni e valori suggeriti]**, quindi seleziona **[!UICONTROL Enumerazioni]**. Vengono visualizzati controlli aggiuntivi che consentono di specificare i vincoli di valore per l&#39;enum. Per aggiungere un vincolo, selezionate **[!UICONTROL Aggiungi riga]**.
 
-![Immagine che mostra l’opzione Enums selezionata nell’interfaccia utente](../../images/ui/fields/enum/enum-add-row.png)
+![Immagine che mostra l’opzione Enumerazioni selezionata nell’interfaccia utente](../../images/ui/fields/enum/enum-add-row.png)
 
-Sotto la **[!UICONTROL Valore]** È necessario specificare il valore esatto a cui si desidera vincolare il campo. Facoltativamente, puoi fornire un **[!UICONTROL Nome visualizzato]** anche per il vincolo, che influisce sul modo in cui il valore verrà rappresentato nella segmentazione.
+Sotto **[!UICONTROL Valore]** , è necessario fornire il valore esatto al quale si desidera vincolare il campo. Facoltativamente, puoi fornire una soluzione **[!UICONTROL Nome visualizzato]** anche per il vincolo, che influisce su come il valore verrà rappresentato nella segmentazione.
 
-Continua a utilizzare **[!UICONTROL Aggiungi riga]** per aggiungere i vincoli desiderati e le etichette facoltative all’enum, oppure seleziona l’icona Elimina (![Immagine dell’icona Elimina](../../images/ui/fields/enum/remove-icon.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo schema.
+Continua a utilizzare **[!UICONTROL Aggiungi riga]** per aggiungere i vincoli desiderati e le etichette facoltative all&#39;enum, oppure selezionare l&#39;icona elimina (![Immagine dell’icona Elimina](../../images/ui/fields/enum/remove-icon.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo schema.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -48,11 +48,11 @@ L’area di lavoro viene aggiornata per riflettere le modifiche. Quando esplori 
 
 ## Definire i valori suggeriti {#suggested-values}
 
-Seleziona **[!UICONTROL Enum e valori consigliati]**, quindi seleziona **[!UICONTROL Valori consigliati]** per visualizzare controlli aggiuntivi. Da qui, seleziona **[!UICONTROL Aggiungi riga]** per iniziare ad aggiungere valori consigliati.
+Seleziona **[!UICONTROL Enumerazioni e valori suggeriti]**, quindi seleziona **[!UICONTROL Valori consigliati]** per visualizzare controlli aggiuntivi. Da qui, seleziona **[!UICONTROL Aggiungi riga]** per iniziare ad aggiungere i valori suggeriti.
 
-![Immagine che mostra l’opzione Valori suggeriti selezionata nell’interfaccia utente](../../images/ui/fields/enum/suggested-add-row.png)
+![Immagine che mostra l’opzione Valori consigliati selezionata nell’interfaccia utente](../../images/ui/fields/enum/suggested-add-row.png)
 
-Sotto la **[!UICONTROL Nome visualizzato]** fornisci un nome descrittivo per il valore come desideri che appaia nell’interfaccia utente Segmentazione. Per aggiungere altri valori consigliati, seleziona **[!UICONTROL Aggiungi riga]** e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, seleziona ![l’icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
+Sotto **[!UICONTROL Nome visualizzato]** , fornisci un nome descrittivo per il valore da visualizzare nell’interfaccia utente Segmentazione. Per aggiungere altri valori suggeriti, seleziona **[!UICONTROL Aggiungi riga]** e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, seleziona ![l’icona elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
 
 Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo schema.
 
@@ -60,15 +60,15 @@ Al termine, seleziona **[!UICONTROL Applica]** per applicare le modifiche allo s
 
 >[!NOTE]
 >
->Si verifica un ritardo di circa cinque minuti perché i valori consigliati aggiornati di un campo si riflettano nell’interfaccia utente Segmentazione.
+>Nell’interfaccia utente di segmentazione viene rilevato un ritardo di circa cinque minuti rispetto ai valori consigliati aggiornati di un campo.
 
-### Gestione dei valori consigliati per i campi standard
+### Gestisci valori suggeriti per campi standard
 
-Alcuni campi dei componenti XDM standard contengono i valori consigliati, ad esempio `eventType` dal [[!UICONTROL ExperienceEvent XDM] Classe](../../classes/experienceevent.md). Mentre è possibile creare valori aggiuntivi consigliati per un campo standard, non è possibile modificare o rimuovere i valori suggeriti non definiti dall’organizzazione. Quando visualizzi un campo standard nell’interfaccia utente, i valori suggeriti vengono visualizzati ma sono di sola lettura.
+Alcuni campi dei componenti XDM standard contengono i propri valori consigliati, ad esempio `eventType` dal [[!UICONTROL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Sebbene sia possibile creare ulteriori valori suggeriti per un campo standard, non è possibile modificare o rimuovere i valori suggeriti non definiti dall&#39;organizzazione. Quando si visualizza un campo standard nell’interfaccia utente, i relativi valori consigliati vengono visualizzati ma sono di sola lettura.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/suggested-standard.png)
 
-Per aggiungere nuovi valori consigliati per un campo standard, selezionare **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall’organizzazione, seleziona ![l’icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
+Per aggiungere nuovi valori suggeriti per un campo standard, seleziona **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall’organizzazione, seleziona ![l’icona elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell’interfaccia utente](../../images/ui/fields/enum/suggested-standard-add.png)
 
@@ -84,44 +84,44 @@ In this example, the display name "[!UICONTROL Non-specific]" is now disabled fr
 
 See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
-## Regole di evoluzione per gli enum e i valori consigliati {#evolution}
+## Regole di evoluzione per enum e valori suggeriti {#evolution}
 
-Dopo aver utilizzato uno schema con un campo enum per acquisire dati in Platform, qualsiasi ulteriore modifica apportata alla definizione dello schema deve essere conforme ai dati già presenti nel sistema. In generale, le modifiche apportate a un campo esistente possono solo rendere tale campo **less** restrittivo. Un campo non può essere reso più restrittivo di quanto non sia già.
+Dopo aver utilizzato uno schema con un campo enum per acquisire i dati in Platform, eventuali ulteriori modifiche apportate alla definizione dello schema devono essere conformi ai dati già presenti nel sistema. In generale, le modifiche apportate a un campo esistente possono solo creare tale campo **meno** restrittivo. Un campo non può essere reso più restrittivo di quanto non lo sia già.
 
-Quando si tratta di enum e valori suggeriti, le seguenti regole si applicano dopo l’acquisizione:
+Per quanto riguarda le enumerazioni e i valori suggeriti, dopo l’acquisizione si applicano le seguenti regole:
 
-* You **PUÒ** aggiungi valori consigliati per i campi standard e personalizzati con valori consigliati esistenti.
-* You **PUÒ** rimuovi i valori consigliati dai campi personalizzati con valori consigliati esistenti.
-* You **PUÒ** aggiungi nuovi valori enum per un campo enum personalizzato esistente.
-* You **PUÒ** cambia i valori enum di un campo personalizzato solo in valori consigliati o li converte in una stringa senza enum o valori consigliati. **Questa opzione non può essere annullata dopo l&#39;applicazione.**
-* You **IMPOSSIBILE** rimuovi enum o valori consigliati dai campi standard.
-* You **IMPOSSIBILE** aggiungi valori enum a un campo senza enum esistente.
-* You **IMPOSSIBILE** rimuovi meno di tutti i valori enum esistenti per un campo personalizzato.
-* You **IMPOSSIBILE** passa da valori consigliati a un enum.
+* Tu **CAN** aggiungi i valori consigliati per i campi standard e personalizzati con i valori suggeriti esistenti.
+* Tu **CAN** rimuovi i valori suggeriti dai campi personalizzati con i valori suggeriti esistenti.
+* Tu **CAN** aggiungere nuovi valori enum per un campo enum personalizzato esistente.
+* Tu **CAN** modifica i valori enum di un campo personalizzato in valori consigliati o convertiscili in una stringa senza enum o valori suggeriti. **Questa opzione non può essere annullata una volta applicata.**
+* Tu **NON PUÒ** rimuovere le enumerazioni o i valori suggeriti dai campi standard.
+* Tu **NON PUÒ** aggiungere valori enum a un campo senza enum esistente.
+* Tu **NON PUÒ** rimuovere meno di tutti i valori enum esistenti per un campo personalizzato.
+* Tu **NON PUÒ** passa dai valori suggeriti a un&#39;enumerazione.
 
-## Unione di regole per enum e valori consigliati {#merging}
+## Unione di regole per enum e valori suggeriti {#merging}
 
-Se più schemi utilizzano lo stesso campo enum con diverse configurazioni e tali schemi sono inclusi in un’unione, alcune regole si applicano quando si tratta di riconciliare le differenze enum. Le regole esatte dipendono dal fatto che gli schemi facciano riferimento allo stesso campo standard (come `eventType`) o se fanno riferimento allo stesso percorso di campo personalizzato in gruppi di campi diversi.
+Se più schemi utilizzano lo stesso campo enum con configurazioni diverse e tali schemi sono inclusi in un&#39;unione, si applicano determinate regole per riconciliare le differenze enum. Le regole esatte dipendono dallo schema che fa riferimento allo stesso campo standard (come `eventType`) o se fanno riferimento allo stesso percorso di campo personalizzato in gruppi di campi diversi.
 
 Se si fa riferimento allo stesso campo standard:
 
-* Eventuali valori suggeriti aggiuntivi sono **AGGIUNTO** nell&#39;unione.
-* Gli aggiornamenti apportati ai valori suggeriti per la stessa chiave enum sono **AGGIORNATO** nell&#39;unione.
+* Eventuali altri valori suggeriti sono **AGGIUNTO** nell&#39;unione.
+* Gli aggiornamenti apportati ai valori suggeriti per la stessa chiave enumerazione sono **AGGIORNATO** nell&#39;unione.
 
-Se si fa riferimento allo stesso percorso di campo personalizzato in diversi gruppi di campi:
+Se si fa riferimento allo stesso percorso di campo personalizzato in gruppi di campi diversi:
 
-* Eventuali valori suggeriti aggiuntivi sono **AGGIUNTO** nell&#39;unione.
-* Se lo stesso valore suggerito aggiuntivo è definito in più schemi, questi valori sono **UNITO** nell&#39;unione. In altre parole, lo stesso valore suggerito non verrà visualizzato due volte dopo l’unione.
+* Eventuali altri valori suggeriti sono **AGGIUNTO** nell&#39;unione.
+* Se lo stesso valore aggiuntivo suggerito è definito in più schemi, tali valori sono **UNITO** nell&#39;unione. In altre parole, lo stesso valore suggerito non verrà visualizzato due volte dopo l’unione.
 
-## Limiti di convalida
+## Limitazioni della convalida
 
-A causa delle attuali limitazioni del sistema, ci sono due casi in cui un enum non viene convalidato dal sistema durante l&#39;acquisizione:
+A causa delle attuali limitazioni del sistema, ci sono due casi in cui un’enumerazione non viene convalidata dal sistema durante l’acquisizione:
 
-1. L&#39;enum è definito su un [campo matrice](./array.md).
-1. L&#39;enum è definito a più livelli nella gerarchia dello schema.
+1. L&#39;enumerazione è definita su un [campo array](./array.md).
+1. L&#39;enum è definita a più di un livello di profondità nella gerarchia dello schema.
 
 ## Passaggi successivi
 
-Questa guida illustra come definire enum e valori consigliati per i campi stringa nell’interfaccia utente di . Per informazioni su come gestire gli enum e i valori consigliati utilizzando l’API del Registro di sistema dello schema, consulta quanto segue [tutorial](../../tutorials/suggested-values.md).
+Questa guida illustra come definire le enumerazioni e i valori consigliati per i campi stringa nell’interfaccia utente. Per informazioni su come gestire le enumerazioni e i valori suggeriti utilizzando l’API Schema Registry, consulta quanto segue [esercitazione](../../tutorials/suggested-values.md).
 
-Per scoprire come definire altri tipi di campi XDM nel [!DNL Schema Editor], consulta la panoramica su [definizione dei campi nell’interfaccia utente](./overview.md#special).
+Per scoprire come definire altri tipi di campi XDM in [!DNL Schema Editor], consulta la panoramica su [definizione dei campi nell’interfaccia utente](./overview.md#special).

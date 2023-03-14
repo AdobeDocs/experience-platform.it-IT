@@ -1,10 +1,11 @@
 ---
 title: Contesto nei moduli di estensione Edge
-description: Scopri l’oggetto contestuale e il ruolo che svolge nell’interazione con i moduli della libreria nelle estensioni dei tag delle proprietà edge.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri l’oggetto di contesto e il ruolo che svolge nell’interazione con i moduli libreria nelle estensioni tag di proprietà edge.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+> Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 A tutti i moduli libreria nelle estensioni edge viene fornito un oggetto `context` quando vengono eseguiti. Questo documento descrive le proprietà fornite dall&#39;oggetto `context` e il ruolo che svolgono nei moduli libreria.
 
@@ -95,15 +96,15 @@ La prima volta che questa azione viene eseguita, `ruleStash` inizia come `undefi
 
 >[!NOTE]
 >
->Quando utilizzi questa strategia, fai attenzione a restituire sempre lo stash della regola di estensione completa. Se invece viene restituito solo un valore, verranno sovrascritte tutte le altre proprietà eventualmente impostate.
+>Quando si utilizza questa strategia, è necessario fare attenzione a restituire sempre lo stash della regola di estensione completa. Se invece si restituisce solo un valore, questo sovrascriverà tutte le altre proprietà eventualmente impostate.
 
 ## Utilità
 
-La proprietà `utils` rappresenta un oggetto che fornisce utilità specifiche per il runtime di tag.
+La proprietà `utils` rappresenta un oggetto che fornisce utility specifiche per il runtime tag.
 
 ### [!DNL logger]
 
-L&#39; `logger` utility consente di registrare i messaggi che verranno visualizzati durante le sessioni di debug quando si utilizza [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+L’utility `logger` consente di registrare i messaggi che verranno visualizzati durante le sessioni di debug con [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -130,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-Questa utility restituisce un oggetto contenente informazioni sulla build della libreria runtime di tag corrente.
+Questa utility restituisce un oggetto contenente informazioni sulla build della libreria runtime corrente di tag.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

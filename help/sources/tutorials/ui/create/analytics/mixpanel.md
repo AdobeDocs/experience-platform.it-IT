@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: (Beta) Creare una connessione sorgente a più pannelli nell’interfaccia utente
-description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente Adobe Experience Platform.
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+title: (Beta )Creare una connessione sorgente Mixpanel nell’interfaccia utente
+description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,127 +10,127 @@ ht-degree: 2%
 
 ---
 
-# (Beta) Crea un [!DNL Mixpanel] connessione sorgente nell’interfaccia utente
+# (Beta) Creare un [!DNL Mixpanel] connessione sorgente nell’interfaccia utente
 
 >[!NOTE]
 >
->La [!DNL Mixpanel] la sorgente è in versione beta. Consulta la sezione [panoramica di origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di origini con etichetta beta.
+>Il [!DNL Mixpanel] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-Questa esercitazione fornisce i passaggi per la creazione di un [!DNL Mixpanel] connessione sorgente tramite l’interfaccia utente di Adobe Experience Platform Platform.
+Questo tutorial descrive i passaggi necessari per creare [!DNL Mixpanel] connessione di origine tramite l’interfaccia utente di Adobe Experience Platform Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei seguenti componenti dell&#39;Experience Platform:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
-   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-   * [Esercitazione sull’Editor di schema](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
+   * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
-Per connettersi [!DNL Mixpanel] in Platform, devi fornire valori per le seguenti proprietà di connessione:
+Per connettersi [!DNL Mixpanel] In Platform, è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Nome utente | Il nome utente dell&#39;account del servizio che corrisponde al tuo [!DNL Mixpanel] conto. Consulta la sezione [[!DNL Mixpanel] documentazione degli account di servizio](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) per ulteriori informazioni. | `Test8.6d4ee7.mp-service-account` |
-| Password | La password dell&#39;account di servizio che corrisponde alla tua [!DNL Mixpanel] conto. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| ID progetto | Le [!DNL Mixpanel] ID progetto. Questo ID è necessario per creare una connessione sorgente. Consulta la sezione [[!DNL Mixpanel] documentazione sulle impostazioni del progetto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e [[!DNL Mixpanel] guida alla creazione e alla gestione dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) per ulteriori informazioni. | `2384945` |
-| Fuso orario | Il fuso orario corrispondente al tuo [!DNL Mixpanel] progetto. Il fuso orario è necessario per creare una connessione sorgente. Consulta la sezione [Documentazione sulle impostazioni del progetto per pannelli misti](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) per ulteriori informazioni. | `Pacific Standard Time` |
+| Nome utente | Il nome utente dell’account di servizio che corrisponde al [!DNL Mixpanel] account. Consulta la [[!DNL Mixpanel] documentazione degli account di servizio](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) per ulteriori informazioni. | `Test8.6d4ee7.mp-service-account` |
+| Password | La password dell&#39;account di servizio che corrisponde al [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| ID Progetto | Il tuo [!DNL Mixpanel] ID progetto. Questo ID è necessario per creare una connessione sorgente. Consulta la [[!DNL Mixpanel] documentazione sulle impostazioni del progetto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e [[!DNL Mixpanel] guida alla creazione e alla gestione dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) per ulteriori informazioni. | `2384945` |
+| Fuso orario | Fuso orario corrispondente al [!DNL Mixpanel] progetto. Per creare una connessione di origine è necessario specificare il fuso orario. Consulta la [Documentazione sulle impostazioni dei progetti Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) per ulteriori informazioni. | `Pacific Standard Time` |
 
-Per ulteriori informazioni sull&#39;autenticazione della [!DNL Mixpanel] sorgente, vedi [[!DNL Mixpanel] panoramica di origine](../../../../connectors/analytics/mixpanel.md).
+Per ulteriori informazioni sull’autenticazione di [!DNL Mixpanel] sorgente, consulta [[!DNL Mixpanel] panoramica dell’origine](../../../../connectors/analytics/mixpanel.md).
 
-## Collega il tuo [!DNL Mixpanel] account
+## Connetti [!DNL Mixpanel] account
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in viene visualizzata una varietà di sorgenti con cui è possibile creare un account.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Il [!UICONTROL Catalogo] Nella schermata vengono visualizzate diverse origini con cui è possibile creare un account.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto la *Analytics* categoria, seleziona [!DNL Mixpanel], quindi seleziona **[!UICONTROL Aggiungi dati]**.
+Sotto *Analytics* categoria, seleziona [!DNL Mixpanel], quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![catalogo](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-La **[!UICONTROL Collega account Mixpanel]** viene visualizzata la pagina . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
+Il **[!UICONTROL Connetti account Mixpanel]** viene visualizzata. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Account esistente
 
-Per utilizzare un account esistente, seleziona la [!DNL Mixpanel] account con cui si desidera creare un nuovo flusso di dati, quindi selezionare **[!UICONTROL Successivo]** per procedere.
+Per utilizzare un account esistente, seleziona la [!DNL Mixpanel] account con cui vuoi creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Successivo]** per procedere.
 
 ![esistente](../../../../images/tutorials/create/mixpanel-export-events/existing.png)
 
 ### Nuovo account
 
-Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, seleziona **[!UICONTROL Connetti alla sorgente]** e quindi lasciare un po&#39; di tempo per stabilire la nuova connessione.
+Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e quindi lascia un po’ di tempo per stabilire la nuova connessione.
 
 ![nuovo](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
-## Seleziona l’ID e il fuso orario del progetto {#project-id-and-timezone}
+## Seleziona l’ID del progetto e il fuso orario {#project-id-and-timezone}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Imposta un fuso orario per l’acquisizione da pannello multiplo"
->abstract="Il fuso orario deve essere lo stesso dell’impostazione del fuso orario del profilo Mixpanel, perché Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Il pannello misto regolerà il relativo fuso orario in modo da coordinarsi con il fuso orario del progetto prima di registrare l’evento in un archivio dati Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Ulteriori informazioni nella documentazione"
+>title="Impostare un fuso orario per l’acquisizione di Mixpanel"
+>abstract="Il fuso orario deve essere uguale a quello del profilo Mixpanel, in quanto Platform utilizza il fuso orario del progetto per acquisire i dati rilevanti da Mixpanel. Mixpanel regolerà il proprio fuso orario in modo da coordinarlo con quello del progetto prima di registrare l&#39;evento in un archivio dati Mixpanel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Ulteriori informazioni sono disponibili nella documentazione di"
 
-Dopo l’autenticazione della sorgente, specifica l’ID e il fuso orario del progetto, quindi seleziona **[!UICONTROL Seleziona]**.
+Una volta autenticata l’origine, fornisci l’ID progetto e il fuso orario, quindi seleziona **[!UICONTROL Seleziona]**.
 
-Il fuso orario designato prima di acquisire il [!DNL Mixpanel] i dati in Platform devono essere gli stessi del tuo [!DNL Mixpanel] impostazione del fuso orario del profilo. Eventuali modifiche al fuso orario dei dati verranno applicate solo ai nuovi eventi e i vecchi eventi rimarranno nel fuso orario precedentemente designato. [!DNL Mixpanel] gestisce l’ora legale e regolerà il timestamp di acquisizione in modo appropriato. Per ulteriori informazioni sull’effetto dei blocchi temporali sui dati, consulta la sezione [!DNL Mixpanel] guida [gestione dei timestamp per i progetti](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+Il fuso orario designato prima dell’acquisizione del [!DNL Mixpanel] i dati da a Platform devono essere uguali ai [!DNL Mixpanel] impostazione del fuso orario del profilo. Eventuali modifiche al fuso orario dei dati verranno applicate solo ai nuovi eventi e i vecchi eventi rimarranno nel fuso orario precedentemente designato. [!DNL Mixpanel] consente di usare l’ora legale e di regolare in modo appropriato la marca temporale di acquisizione. Per ulteriori informazioni sull’effetto dei fusi orari sui dati, consulta [!DNL Mixpanel] guida su [gestione dei fusi orari dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
-Dopo alcuni istanti, l’interfaccia corretta si aggiorna a un pannello di anteprima, consentendoti di controllare lo schema prima di creare un flusso di dati. Al termine, seleziona **[!UICONTROL Successivo]**.
+Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di anteprima, che consente di esaminare lo schema prima di creare un flusso di dati. Al termine, seleziona **[!UICONTROL Successivo]**.
 
 ![configurazione](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo [!DNL Mixpanel] conto. Ora puoi passare all’esercitazione successiva e [configurare un flusso di dati per inserire i dati di analisi in Platform](../../dataflow/analytics.md).
+Seguendo questa esercitazione, hai stabilito una connessione con il tuo [!DNL Mixpanel] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per inserire i dati di analytics in Platform](../../dataflow/analytics.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Le sezioni seguenti forniscono risorse aggiuntive a cui puoi fare riferimento quando utilizzi il [!DNL Mixpanel] sorgente.
+Le sezioni seguenti forniscono ulteriori risorse a cui puoi fare riferimento quando utilizzi il [!DNL Mixpanel] sorgente.
 
 ### Convalida {#validation}
 
-Di seguito sono descritti i passaggi che puoi eseguire per verificare di aver connesso correttamente il tuo [!DNL Mixpanel] la fonte e [!DNL Mixpanel] gli eventi vengono acquisiti in Platform.
+Di seguito sono riportati i passaggi che è possibile eseguire per verificare che la connessione sia stata eseguita correttamente [!DNL Mixpanel] sorgente e che [!DNL Mixpanel] Gli eventi vengono acquisiti in Platform.
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Set di dati] workspace. La [!UICONTROL Attività set di dati] visualizza i dettagli delle esecuzioni.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Set di dati] Workspace. Il [!UICONTROL Attività set di dati] mostra i dettagli delle esecuzioni.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
-Quindi, seleziona l’ID di esecuzione del flusso di dati che desideri visualizzare per visualizzare dettagli specifici sull’esecuzione del flusso di dati.
+Quindi, seleziona l’ID di esecuzione del flusso di dati che desideri visualizzare per visualizzare dettagli specifici su tale esecuzione.
 
-![monitoraggio del flusso di dati](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
+![monitoraggio dei flussi di dati](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
 Infine, seleziona **[!UICONTROL Anteprima set di dati]** per visualizzare i dati acquisiti.
 
-![preview-set di dati](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
+![preview-dataset](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 
-Puoi verificare questi dati rispetto ai dati nella [!DNL Mixpanel] > [!DNL Events] pagina. Consulta la sezione [[!DNL Mixpanel] documento sugli eventi](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) per ulteriori informazioni.
+Puoi verificare questi dati in base ai dati presenti sul [!DNL Mixpanel] > [!DNL Events] pagina. Consulta la [[!DNL Mixpanel] documento sugli eventi](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) per ulteriori informazioni.
 
-![eventi mixpanel](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
+![mixpanel-events](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
 
-### Schema del pannello multiplo
+### Schema Mixpanel
 
-Nella tabella seguente sono elencate le mappature supportate da impostare per [!DNL Mixpanel].
+La tabella seguente elenca le mappature supportate che devono essere impostate per [!DNL Mixpanel].
 
 >[!TIP]
 >
->Vedi [API di esportazione eventi > Download](https://developer.mixpanel.com/reference/raw-event-export) per ulteriori informazioni sull’API.
+>Consulta [API esportazione evento > Scarica](https://developer.mixpanel.com/reference/raw-event-export) per ulteriori informazioni sull’API.
 
 
 | Origine | Tipo |
 |---|---|
-| `distinct_id` | stringa |
-| `event_name` | stringa |
+| `distinct_id` | string |
+| `event_name` | string |
 | `import` | booleano |
-| `insert_id` | stringa |
-| `item_id` | stringa |
-| `item_name` | stringa |
-| `item_price` | stringa |
-| `mp_api_endpoint` | stringa |
+| `insert_id` | string |
+| `item_id` | string |
+| `item_name` | string |
+| `item_price` | string |
+| `mp_api_endpoint` | string |
 | `mp_api_timestamp_ms` | numero intero |
 | `mp_processing_time_ms` | numero intero |
 | `time` | numero intero |
 
 ### Limiti {#limits}
 
-* È disponibile un massimo di 100 query simultanee e 60 query all’ora come indicato in [Esportare i limiti di velocità API](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).
+* Hai un massimo di 100 query simultanee e 60 query all’ora come indicato in [Esporta limiti di velocità API](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;sistema di automazione del marketing;Raccogliere dati di automazione del marketing
+keywords: Experience Platform;home;argomenti popolari;marketing automation system;raccogliere dati di automazione marketing
 solution: Experience Platform
-title: Creare un flusso di dati per le origini di automazione marketing utilizzando l’API del servizio di flusso
+title: Creare un flusso di dati per le origini di automazione marketing utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di automazione del marketing e inserirli in Adobe Experience Platform utilizzando i connettori sorgente e le API.
+description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un sistema di automazione marketing e inserirli in Adobe Experience Platform utilizzando connettori e API di origine.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,44 +12,44 @@ ht-degree: 3%
 
 ---
 
-# Crea un flusso di dati per le origini di automazione del marketing utilizzando [!DNL Flow Service] API
+# Creare un flusso di dati per le origini di automazione marketing utilizzando [!DNL Flow Service] API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un’origine di automazione del marketing e portarli a Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi per recuperare i dati da un’origine di automazione marketing e portarli a Platform tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Per creare un flusso di dati, devi già disporre di un ID di connessione di base valido con un’origine di automazione di marketing. Se non disponi di questo ID, consulta la sezione [panoramica di origini](../../../home.md#marketing-automation) per un elenco delle origini di automazione marketing con cui è possibile creare una connessione di base.
+>Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di automazione marketing. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#marketing-automation) per un elenco di origini di automazione marketing con cui è possibile creare una connessione di base.
 
 ## Introduzione
 
-Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
-   * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-   * [Guida per gli sviluppatori del Registro di sistema dello schema](../../../../xdm/api/getting-started.md): Include informazioni importanti da conoscere per eseguire correttamente le chiamate all’API del Registro di sistema dello schema. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
+   * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L’API di acquisizione in batch consente di inserire dati in Experience Platform come file batch.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experience Platform come file batch.
+* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../landing/api-guide.md).
 
-## Creazione di una connessione sorgente {#source}
+## Creare una connessione sorgente {#source}
 
-È possibile creare una connessione sorgente effettuando una richiesta di POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
+Puoi creare una connessione sorgente effettuando una richiesta POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
-Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
+Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo formato dati.
 
 Utilizza i seguenti valori enum per i connettori basati su file:
 
-| Formato dati | Valore Enum |
+| Formato dati | Valore enum |
 | ----------- | ---------- |
 | Delimitato | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Per tutti i connettori basati su tabella, imposta il valore su `tabular`.
+Per tutti i connettori basati su tabella, impostare il valore su `tabular`.
 
 **Formato API**
 
@@ -86,13 +86,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `baseConnectionId` | ID di connessione univoco del sistema di automazione di marketing di terze parti a cui accedi. |
-| `params.path` | Percorso del file di origine a cui si accede. |
-| `connectionSpec.id` | ID della specifica di connessione del sistema di automazione di marketing. |
+| `baseConnectionId` | ID di connessione univoco del sistema di automazione marketing di terze parti a cui stai effettuando l’accesso. |
+| `params.path` | Percorso del file di origine a cui si sta effettuando l&#39;accesso. |
+| `connectionSpec.id` | ID della specifica di connessione del sistema di automazione marketing. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuova connessione sorgente creata. Memorizza questo valore come richiesto nei passaggi successivi per la creazione di una connessione di destinazione.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione sorgente appena creata. Memorizza questo valore come richiesto nei passaggi successivi per la creazione di una connessione di destinazione.
 
 ```json
 {
@@ -103,23 +103,23 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
-Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](../../../../xdm/api/schemas.md).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](../../../../xdm/api/schemas.md).
 
 ## Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite API](../../../../catalog/api/create-dataset.md).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](../../../../catalog/api/create-dataset.md).
 
 ## Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti arrivano. Per creare una connessione di destinazione, devi fornire l’ID di specifica di connessione fisso associato al Data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui arrivano i dati acquisiti. Per creare una connessione di destinazione, devi fornire l’ID della specifica di connessione fissa associato al Data Lake. L&#39;ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID delle specifiche di connessione di un data lake. Utilizzo della [!DNL Flow Service] API, puoi creare una connessione di destinazione specificando questi identificatori insieme al set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al data lake. Utilizzo di [!DNL Flow Service] API, puoi creare una connessione di destinazione specificando questi identificatori insieme al set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -158,10 +158,10 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.schema.id` | La `$id` dello schema XDM di destinazione. |
+| `data.schema.id` | Il `$id` dello schema XDM di destinazione. |
 | `data.schema.version` | Versione dello schema. Questo valore deve essere impostato `application/vnd.adobe.xed-full+json;version=1`, che restituisce la versione secondaria più recente dello schema. |
 | `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | ID delle specifiche di connessione utilizzato per connettersi al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -172,9 +172,9 @@ curl -X POST \
 
 ## Creare una mappatura {#mapping}
 
-Affinché i dati di origine possano essere acquisiti in un set di dati di destinazione, devono prima essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione.
+Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce.
 
-Per creare un set di mappatura, invia una richiesta POST al gruppo `mappingSets` punto finale [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) fornendo lo schema XDM di destinazione `$id` e i dettagli dei set di mappatura che desideri creare.
+Per creare un set di mappatura, effettua una richiesta POST al `mappingSets` endpoint del [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) mentre fornisci lo schema XDM di destinazione `$id` e i dettagli dei set di mappatura da creare.
 
 **Formato API**
 
@@ -232,7 +232,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Memorizza questo valore come necessario in un passaggio successivo per la creazione di un flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, compreso l’identificatore univoco (`id`). Memorizza questo valore come richiesto nel passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -245,9 +245,9 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 }
 ```
 
-## Specifiche del flusso di dati di ricerca {#specs}
+## Cerca specifiche del flusso di dati {#specs}
 
-Un flusso di dati è responsabile della raccolta dei dati da origini e del loro inserimento in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati responsabili della raccolta dei dati di automazione del marketing.
+Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro introduzione in Platform. Per creare un flusso di dati, devi innanzitutto ottenere le specifiche del flusso di dati responsabili della raccolta dei dati di automazione del marketing.
 
 **Formato API**
 
@@ -267,11 +267,11 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della specifica del flusso di dati responsabile dell’inserimento dei dati dall’origine in Platform. La risposta include le specifiche di flusso univoche `id` necessario per creare un nuovo flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della specifica del flusso di dati responsabili dell’importazione di dati dall’origine in Platform. La risposta include le specifiche di flusso univoche `id` necessario per creare un nuovo flusso di dati.
 
 >[!NOTE]
 >
->Il payload di risposta JSON riportato di seguito è nascosto per brevità. Seleziona &quot;payload&quot; per visualizzare il payload della risposta.
+>Il payload di risposta JSON seguente è nascosto per brevità. Seleziona &quot;payload&quot; per visualizzare il payload di risposta.
 
 +++ Visualizza payload
 
@@ -560,16 +560,16 @@ Una risposta corretta restituisce i dettagli della specifica del flusso di dati 
 
 ## Creare un flusso di dati
 
-L’ultimo passo verso la raccolta dei dati di automazione del marketing è quello di creare un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
+L’ultimo passaggio per la raccolta dei dati di automazione del marketing è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione di origine](#source)
+* [ID connessione sorgente](#source)
 * [ID connessione di destinazione](#target)
 * [ID mappatura](#mapping)
-* [ID specifica del flusso di dati](#specs)
+* [ID specifica flusso di dati](#specs)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 
-Per pianificare un’acquisizione, è innanzitutto necessario impostare il valore dell’ora di inizio in modo che l’ora di inizio sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`oppure `week`. Il valore dell’intervallo indica il periodo tra due acquisizioni consecutive e la creazione di un’acquisizione una tantum non richiede l’impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni seguenti: `once`, `minute`, `hour`, `day`, o `week`. Il valore di intervallo indica il periodo tra due acquisizioni consecutive e la creazione di un’acquisizione una tantum non richiede l’impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
 
 **Formato API**
 
@@ -628,19 +628,19 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `flowSpec.id` | La [ID delle specifiche di flusso](#specs) recuperato nel passaggio precedente. |
-| `sourceConnectionIds` | La [ID connessione di origine](#source) recuperato in un passaggio precedente. |
-| `targetConnectionIds` | La [ID connessione di destinazione](#target-connection) recuperato in un passaggio precedente. |
-| `transformations.params.mappingId` | La [ID mappatura](#mapping) recuperato in un passaggio precedente. |
-| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base al timestamp della colonna selezionata. Il formato della data supportato per `deltaColumn` è `yyyy-MM-dd HH:mm:ss`. |
+| `flowSpec.id` | Il [ID specifica di flusso](#specs) recuperato nel passaggio precedente. |
+| `sourceConnectionIds` | Il [ID connessione sorgente](#source) recuperato in un passaggio precedente. |
+| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) recuperato in un passaggio precedente. |
+| `transformations.params.mappingId` | Il [ID mappatura](#mapping) recuperato in un passaggio precedente. |
+| `transformations.params.deltaColum` | La colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. Il formato data supportato per `deltaColumn` è `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | ID di mappatura associato al database. |
-| `scheduleParams.startTime` | Ora di inizio del flusso di dati in epoch time. |
-| `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`oppure `week`. |
-| `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è necessario quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+| `scheduleParams.startTime` | L’ora di inizio del flusso di dati in tempo epoca. |
+| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
+| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena creato.
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato.
 
 ```json
 {
@@ -651,11 +651,11 @@ Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena crea
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, lo stato di completamento e gli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API ](../monitor.md)
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API ](../monitor.md)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati da un sistema di automazione di marketing su base pianificata. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati da un sistema di automazione marketing su base pianificata. I dati in arrivo possono ora essere utilizzati da servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 * [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)

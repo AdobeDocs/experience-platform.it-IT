@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;dati di esempio;dati di esempio;rpc;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;data model;sampledata;sample data;rpc;
 solution: Experience Platform
-title: Endpoint API per i dati di esempio
-description: L’endpoint /sampledata nell’API del Registro di sistema dello schema consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
+title: Endpoint API dati di esempio
+description: L’endpoint /sampledata nell’API Schema Registry consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '315'
 ht-degree: 6%
 
 ---
 
-# Endpoint dati di esempio
+# Endpoint di dati di esempio
 
-Per acquisire i dati in Adobe Experience Platform, il formato e la struttura dei dati devono essere conformi a uno schema Experience Data Model (XDM) esistente. A seconda della complessità dello schema per un particolare set di dati, può essere difficile determinare la forma esatta dei dati che il set di dati si aspetta al momento dell’acquisizione.
+Per acquisire i dati in Adobe Experience Platform, il formato e la struttura dei dati devono essere conformi a uno schema Experience Data Model (XDM) esistente. A seconda della complessità dello schema per un particolare set di dati, può essere difficile determinare la forma esatta dei dati prevista dal set di dati al momento dell’acquisizione.
 
-Utilizzo della `/sampledata` punto finale [!DNL Schema Registry] API, puoi generare un oggetto di acquisizione di esempio per qualsiasi schema creato in precedenza.
+Utilizzo di `/sampledata` endpoint nella [!DNL Schema Registry] API, puoi generare un esempio di oggetto di acquisizione per qualsiasi schema creato in precedenza.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-L&#39;endpoint dati di esempio fa parte delle chiamate di routine remote supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nella chiamata API riportata di seguito.
+L&#39;endpoint dei dati di esempio fa parte delle chiamate di procedura remota (RPC) supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`, e non utilizzare un `CONTAINER_ID`. Devono invece utilizzare il `/rpc` dello spazio dei nomi, come dimostrato nella chiamata API di seguito.
 
-## Recupera dati di esempio per uno schema
+## Recuperare i dati di esempio per uno schema
 
-È possibile recuperare dati di esempio per qualsiasi schema all’interno della Libreria schema specificando l’ID dello schema nel percorso di una richiesta di GET all’endpoint.
+È possibile recuperare dati di esempio per qualsiasi schema all’interno della Libreria schemi specificando l’ID dello schema nel percorso di una richiesta GET all’endpoint.
 
 **Formato API**
 
@@ -35,9 +35,9 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | La `meta:altId` o con codifica URL `$id` dello schema per cui si desidera generare i dati di esempio. |
+| `{SCHEMA_ID}` | Il `meta:altId` o con codifica URL `$id` dello schema per cui desideri generare i dati di esempio. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un oggetto dati di esempio per lo schema specificato.
+In caso di esito positivo, la risposta restituisce un oggetto dati di esempio per lo schema specificato.
 
 ```json
 {

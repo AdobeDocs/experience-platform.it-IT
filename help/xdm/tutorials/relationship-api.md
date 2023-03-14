@@ -1,50 +1,50 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro schema;schema;schema;schemi;schemi;schemi;relazione;relazione;descrittore di relazione;descrittore di relazione;identità di riferimento;identità di riferimento;
-title: Definire una relazione tra due schemi utilizzando l’API del Registro di sistema dello schema
-description: Questo documento fornisce un'esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall'organizzazione utilizzando l'API del Registro di sistema dello schema.
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;modello dati;modello dati;modello dati;registro schema;registro schema;schema;schema;schemi;schemi;relazione;relazione;descrittore relazione;descrittore relazione;descrittore relazione;identità riferimento;identità riferimento;
+title: Definire una relazione tra due schemi utilizzando l’API Schema Registry
+description: Questo documento fornisce un tutorial per definire una relazione uno-a-uno tra due schemi definiti dalla tua organizzazione utilizzando l’API Schema Registry.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 3%
+source-wordcount: '1383'
+ht-degree: 2%
 
 ---
 
 # Definire una relazione tra due schemi utilizzando [!DNL Schema Registry] API
 
-La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all’interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) ti consentono di ottenere informazioni complesse sui dati dei clienti.
+La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il brand attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all&#39;interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) consentono di ottenere informazioni complesse sui dati dei clienti.
 
-Mentre le relazioni dello schema possono essere dedotte mediante l&#39;uso dello schema dell&#39;unione e [!DNL Real-Time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a un **schema di origine**, che indica l&#39;identità di un **schema di riferimento**.
+Anche se le relazioni tra schemi possono essere dedotte tramite l’utilizzo dello schema di unione e [!DNL Real-Time Customer Profile], applicabile solo agli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo relazione dedicato a **schema di origine**, che indica l&#39;identità di un **schema di riferimento**.
 
 >[!NOTE]
 >
->L’API del Registro di sistema dello schema fa riferimento agli schemi di riferimento come &quot;schemi di destinazione&quot;. Non devono essere confusi con gli schemi di destinazione in [Set di mappature della preparazione dei dati](../../data-prep/mapping-set.md) o schemi per [connessioni di destinazione](../../destinations/home.md).
+>L’API Schema Registry si riferisce agli schemi di riferimento come &quot;schemi di destinazione&quot;. Non vanno confusi con gli schemi di destinazione in [Set di mappatura della preparazione dati](../../data-prep/mapping-set.md) o schemi per [connessioni di destinazione](../../destinations/home.md).
 
-Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione utilizzando [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Questo documento fornisce un tutorial per definire una relazione uno-a-uno tra due schemi definiti dalla tua organizzazione utilizzando [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei [!DNL Experience Data Model] (XDM) e [!DNL XDM System]. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
+Questo tutorial richiede una buona conoscenza di [!DNL Experience Data Model] (XDM) [!DNL XDM System]. Prima di iniziare questo tutorial, consulta la seguente documentazione:
 
-* [Sistema XDM in Experience Platform](../home.md): Panoramica di XDM e della sua implementazione in [!DNL Experience Platform].
-   * [Nozioni di base sulla composizione dello schema](../schema/composition.md): Introduzione dei blocchi costitutivi degli schemi XDM.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sistema XDM in Experience Platform](../home.md): panoramica di XDM e della relativa implementazione in [!DNL Experience Platform].
+   * [Nozioni di base sulla composizione dello schema](../schema/composition.md): introduzione dei blocchi predefiniti degli schemi XDM.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Prima di avviare questa esercitazione, controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare correttamente le chiamate al [!DNL Schema Registry] API. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione al [!DNL Accept] e i suoi possibili valori).
+Prima di iniziare questo tutorial, controlla [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate al [!DNL Schema Registry] API. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione al [!DNL Accept] e i possibili valori).
 
 ## Definire uno schema di origine e di riferimento {#define-schemas}
 
-È previsto che siano già stati creati i due schemi che verranno definiti nella relazione. Questa esercitazione crea una relazione tra i membri del programma fedeltà corrente di un&#39;organizzazione (definito in &quot;[!DNL Loyalty Members]&quot; schema) e i loro alberghi preferiti (definiti in un &quot;[!DNL Hotels]&quot; schema).
+È previsto che tu abbia già creato i due schemi che verranno definiti nella relazione. Questa esercitazione crea una relazione tra i membri del programma fedeltà corrente di un’organizzazione (definito in un’ &quot;[!DNL Loyalty Members]&quot;) e i loro hotel preferiti (definiti in una &quot;[!DNL Hotels]&quot;).
 
-Le relazioni dello schema sono rappresentate da un **schema di origine** con un campo che fa riferimento a un altro campo all&#39;interno di un **schema di riferimento**. Nei passi successivi, &quot;[!DNL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!DNL Hotels]&quot; fungerà da schema di riferimento.
+Le relazioni tra schemi sono rappresentate da un **schema di origine** con un campo che fa riferimento a un altro campo all’interno di un **schema di riferimento**. Nei passaggi successivi, &quot;[!DNL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!DNL Hotels]&quot; fungerà da schema di riferimento.
 
 >[!IMPORTANT]
 >
->Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite e devono essere abilitati per [!DNL Real-Time Customer Profile]. Vedi la sezione su [abilitazione di uno schema da utilizzare nel profilo](./create-schema-api.md#profile) nell’esercitazione sulla creazione dello schema, se hai bisogno di indicazioni su come configurare gli schemi di conseguenza.
+>Per stabilire una relazione, entrambi gli schemi devono avere identità primarie definite ed essere abilitati per [!DNL Real-Time Customer Profile]. Consulta la sezione su [abilitazione di uno schema da utilizzare nel profilo](./create-schema-api.md#profile) nell’esercitazione sulla creazione di schemi se hai bisogno di istruzioni su come configurare di conseguenza gli schemi.
 
-Per definire una relazione tra due schemi, è innanzitutto necessario acquisire il `$id` per entrambi gli schemi. Se si conoscono i nomi visualizzati (`title`) degli schemi, è possibile trovare i relativi `$id` effettuando una richiesta di GET al `/tenant/schemas` punto finale [!DNL Schema Registry] API.
+Per definire una relazione tra due schemi, devi prima acquisire il `$id` per entrambi gli schemi. Se si conoscono i nomi visualizzati (`title`) degli schemi, puoi trovare le loro `$id` effettuando una richiesta GET al `/tenant/schemas` endpoint nella [!DNL Schema Registry] API.
 
 **Formato API**
 
@@ -66,11 +66,11 @@ curl -X GET \
 
 >[!NOTE]
 >
->La [!DNL Accept] header `application/vnd.adobe.xed-id+json` restituisce solo i titoli, gli ID e le versioni degli schemi risultanti.
+>Il [!DNL Accept] intestazione `application/vnd.adobe.xed-id+json` restituisce solo i titoli, gli ID e le versioni degli schemi risultanti.
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di schemi definiti dall’organizzazione, inclusi i relativi `name`, `$id`, `meta:altId`e `version`.
+In caso di esito positivo, la risposta restituisce un elenco di schemi definiti dall’organizzazione, inclusi `name`, `$id`, `meta:altId`, e `version`.
 
 ```json
 {
@@ -108,25 +108,25 @@ Una risposta corretta restituisce un elenco di schemi definiti dall’organizzaz
 }
 ```
 
-Registrare `$id` i valori dei due schemi tra cui si desidera definire una relazione. Questi valori verranno utilizzati nei passaggi successivi.
+Registra il `$id` valori dei due schemi tra cui si desidera definire una relazione. Questi valori verranno utilizzati nei passaggi successivi.
 
-## Definire un campo di riferimento per lo schema di origine
+## Definisci un campo di riferimento per lo schema di origine
 
-All&#39;interno di [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo di identità principale di uno schema di riferimento. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un gruppo di campi dello schema con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un `type` valore `string`.
+All&#39;interno del [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle del database relazionale: un campo nello schema di origine funge da riferimento al campo di identità primaria di uno schema di riferimento. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un gruppo di campi schema con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere `type` valore di `string`.
 
 >[!IMPORTANT]
 >
 >Lo schema di origine non può utilizzare la propria identità primaria come campo di riferimento.
 
-In questa esercitazione, lo schema di riferimento &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo che funge da identità principale dello schema. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non ha un campo dedicato da utilizzare come riferimento a `hotelId`, quindi è necessario creare un gruppo di campi personalizzato per aggiungere un nuovo campo allo schema: `favoriteHotel`.
+In questa esercitazione, lo schema di riferimento &quot;[!DNL Hotels]&quot; contiene un `hotelId` che funge da identità primaria dello schema. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento a `hotelId`, pertanto è necessario creare un gruppo di campi personalizzato per aggiungere un nuovo campo allo schema: `favoriteHotel`.
 
 >[!NOTE]
 >
->Se lo schema di origine dispone già di un campo dedicato che si prevede di utilizzare come campo di riferimento, è possibile passare al passaggio [creazione di un descrittore di riferimento](#reference-identity).
+>Se lo schema di origine dispone già di un campo dedicato che intendi utilizzare come campo di riferimento, puoi procedere con il passaggio [creazione di un descrittore di riferimento](#reference-identity).
 
 ### Crea un nuovo gruppo di campi
 
-Per aggiungere un nuovo campo a uno schema, è innanzitutto necessario definirlo in un gruppo di campi. È possibile creare un nuovo gruppo di campi effettuando una richiesta di POST al `/tenant/fieldgroups` punto finale.
+Per aggiungere un nuovo campo a uno schema, è necessario innanzitutto definirlo in un gruppo di campi. È possibile creare un nuovo gruppo di campi effettuando una richiesta POST al `/tenant/fieldgroups` endpoint.
 
 **Formato API**
 
@@ -136,7 +136,7 @@ POST /tenant/fieldgroups
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo gruppo di campi che aggiunge un `favoriteHotel` campo `_{TENANT_ID}` spazio dei nomi di qualsiasi schema a cui viene aggiunto.
+La richiesta seguente crea un nuovo gruppo di campi che aggiunge `favoriteHotel` campo sotto `_{TENANT_ID}` dello spazio dei nomi di qualsiasi schema a cui viene aggiunto.
 
 ```shell
 curl -X POST\
@@ -177,7 +177,7 @@ curl -X POST\
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del gruppo di campi appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli del gruppo di campi appena creato.
 
 ```json
 {
@@ -230,15 +230,15 @@ Una risposta corretta restituisce i dettagli del gruppo di campi appena creato.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `$id` | Identificatore univoco del nuovo gruppo di campi generato dal sistema di sola lettura. Si presenta sotto forma di URI. |
+| `$id` | Identificatore univoco del nuovo gruppo di campi generato dal sistema e di sola lettura. Si presenta sotto forma di URI. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Registrare `$id` URI del gruppo di campi, da utilizzare nel passaggio successivo dell’aggiunta del gruppo di campi allo schema di origine.
+Registra il `$id` URI del gruppo di campi, da utilizzare nel passaggio successivo per aggiungere il gruppo di campi allo schema di origine.
 
-### Aggiungi il gruppo di campi allo schema di origine
+### Aggiungere il gruppo di campi allo schema di origine
 
-Dopo aver creato un gruppo di campi, è possibile aggiungerlo allo schema di origine effettuando una richiesta di PATCH al gruppo `/tenant/schemas/{SCHEMA_ID}` punto finale.
+Dopo aver creato un gruppo di campi, puoi aggiungerlo allo schema di origine effettuando una richiesta PATCH al `/tenant/schemas/{SCHEMA_ID}` endpoint.
 
 **Formato API**
 
@@ -248,13 +248,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | L’URL è codificato `$id` URI o `meta:altId` dello schema di origine. |
+| `{SCHEMA_ID}` | Codifica URL `$id` URI o `meta:altId` dello schema di origine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La seguente richiesta aggiunge il &quot;[!DNL Favorite Hotel]&quot; gruppo di campi in &quot;[!DNL Loyalty Members]&quot; schema.
+La richiesta seguente aggiunge &quot;[!DNL Favorite Hotel]&quot; al gruppo di campi &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X PATCH \
@@ -277,15 +277,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `op` | Operazione PATCH da eseguire. Questa richiesta utilizza `add` funzionamento. |
+| `op` | Operazione PATCH da eseguire. Questa richiesta utilizza `add` operazione. |
 | `path` | Percorso del campo schema in cui verrà aggiunta la nuova risorsa. Quando si aggiungono gruppi di campi agli schemi, il valore deve essere &quot;/allOf/-&quot;. |
-| `value.$ref` | La `$id` del gruppo di campi da aggiungere. |
+| `value.$ref` | Il `$id` del gruppo di campi da aggiungere. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora include il `$ref` valore del gruppo di campi aggiunti sotto la `allOf` array.
+In caso di esito positivo, la risposta restituisce i dettagli dello schema aggiornato, che ora include il `$ref` valore del gruppo di campi aggiunto sotto i relativi `allOf` array.
 
 ```json
 {
@@ -346,9 +346,9 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Creare un descrittore di identità di riferimento {#reference-identity}
 
-Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se vengono utilizzati come riferimento a un altro schema in una relazione. Dal momento che `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; si riferisce al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve essere fornito un descrittore di identità di riferimento.
+Ai campi schema deve essere applicato un descrittore di identità di riferimento se vengono utilizzati come riferimento a un altro schema in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve essere fornito un descrittore di identità di riferimento.
 
-Crea un descrittore di riferimento per lo schema di origine effettuando una richiesta di POST al `/tenant/descriptors` punto finale.
+Creare un descrittore di riferimento per lo schema di origine effettuando una richiesta POST al `/tenant/descriptors` endpoint.
 
 **Formato API**
 
@@ -358,7 +358,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La seguente richiesta crea un descrittore di riferimento per il `favoriteHotel` nello schema di origine &quot;[!DNL Loyalty Members]&quot;.
+La richiesta seguente crea un descrittore di riferimento per `favoriteHotel` campo nello schema di origine &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -379,17 +379,17 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da definire. Per i descrittori di riferimento il valore deve essere `xdm:descriptorReferenceIdentity`. |
-| `xdm:sourceSchema` | La `$id` URL dello schema di origine. |
+| `@type` | Tipo di descrittore da definire. Per i descrittori di riferimento il valore deve essere `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | Il `$id` URL dello schema di origine. |
 | `xdm:sourceVersion` | Numero di versione dello schema di origine. |
 | `sourceProperty` | Percorso del campo nello schema di origine che verrà utilizzato per fare riferimento all&#39;identità primaria dello schema di riferimento. |
-| `xdm:identityNamespace` | Spazio dei nomi identità del campo di riferimento. Deve essere lo stesso spazio dei nomi dell&#39;identità principale dello schema di riferimento. Consulta la sezione [panoramica dello spazio dei nomi identità](../../identity-service/home.md) per ulteriori informazioni. |
+| `xdm:identityNamespace` | Lo spazio dei nomi dell’identità del campo di riferimento. Deve corrispondere allo stesso spazio dei nomi dell’identità primaria dello schema di riferimento. Consulta la [panoramica dello spazio dei nomi delle identità](../../identity-service/home.md) per ulteriori informazioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del nuovo descrittore di riferimento creato per il campo di origine.
+In caso di esito positivo, la risposta restituisce i dettagli del descrittore di riferimento appena creato per il campo sorgente.
 
 ```json
 {
@@ -405,7 +405,7 @@ Una risposta corretta restituisce i dettagli del nuovo descrittore di riferiment
 
 ## Creare un descrittore di relazione {#create-descriptor}
 
-I descrittori di relazione stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di riferimento. Una volta definito un descrittore di identità di riferimento per il campo appropriato nello schema di origine, è possibile creare un nuovo descrittore di relazione effettuando una richiesta POST al `/tenant/descriptors` punto finale.
+I descrittori di relazione stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di riferimento. Dopo aver definito un descrittore di identità di riferimento per il campo appropriato nello schema di origine, puoi creare un nuovo descrittore di relazione effettuando una richiesta POST al `/tenant/descriptors` endpoint.
 
 **Formato API**
 
@@ -415,7 +415,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo descrittore di relazione, con &quot;[!DNL Loyalty Members]&quot; come schema di origine e &quot;[!DNL Hotels]&quot; come schema di riferimento.
+La richiesta seguente crea un nuovo descrittore di relazione, con &quot;[!DNL Loyalty Members]&quot; come schema di origine e &quot;[!DNL Hotels]&quot; come schema di riferimento.
 
 ```shell
 curl -X POST \
@@ -438,19 +438,19 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --- | --- |
-| `@type` | Il tipo di descrittore da creare. La `@type` il valore per i descrittori di relazione è `xdm:descriptorOneToOne`. |
-| `xdm:sourceSchema` | La `$id` URL dello schema di origine. |
+| `@type` | Tipo di descrittore da creare. Il `@type` il valore per i descrittori di relazione è `xdm:descriptorOneToOne`. |
+| `xdm:sourceSchema` | Il `$id` URL dello schema di origine. |
 | `xdm:sourceVersion` | Numero di versione dello schema di origine. |
 | `xdm:sourceProperty` | Percorso del campo di riferimento nello schema di origine. |
-| `xdm:destinationSchema` | La `$id` URL dello schema di riferimento. |
+| `xdm:destinationSchema` | Il `$id` URL dello schema di riferimento. |
 | `xdm:destinationVersion` | Numero di versione dello schema di riferimento. |
-| `xdm:destinationProperty` | Percorso del campo di identità principale nello schema di riferimento. |
+| `xdm:destinationProperty` | Percorso del campo dell’identità primaria nello schema di riferimento. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Risposta
 
-Una risposta corretta restituisce i dettagli del descrittore di relazione appena creato.
+In caso di esito positivo, la risposta restituisce i dettagli del descrittore di relazione appena creato.
 
 ```json
 {
@@ -468,4 +468,4 @@ Una risposta corretta restituisce i dettagli del descrittore di relazione appena
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata una relazione uno-a-uno tra due schemi. Per ulteriori informazioni sull’utilizzo dei descrittori con il comando [!DNL Schema Registry] API, vedi [Guida per gli sviluppatori del Registro di sistema dello schema](../api/descriptors.md). Per i passaggi su come definire le relazioni tra schemi nell’interfaccia utente, consulta l’esercitazione su [definizione delle relazioni dello schema tramite l’Editor di schema](relationship-ui.md).
+Seguendo questa esercitazione, hai creato correttamente una relazione uno-a-uno tra due schemi. Per ulteriori informazioni sull&#39;utilizzo dei descrittori tramite [!DNL Schema Registry] API, consulta [Guida per gli sviluppatori del registro dello schema](../api/descriptors.md). Per informazioni su come definire le relazioni tra schemi nell’interfaccia utente, consulta l’esercitazione su [definizione delle relazioni tra schemi tramite l’Editor di schema](relationship-ui.md).

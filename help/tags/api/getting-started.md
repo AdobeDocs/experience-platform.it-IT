@@ -4,7 +4,7 @@ description: Scopri come iniziare a utilizzare l’API di Reactor, compresi i pa
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1057'
 ht-degree: 97%
 
 ---
@@ -149,7 +149,7 @@ In caso di esito positivo, la risposta restituisce un nuovo token di accesso, ol
 | `access_token` | Valore del token di accesso appena generato. Questo valore viene utilizzato per l’intestazione `Authorization` richiesta e deve essere fornito nel formato `Bearer {ACCESS_TOKEN}`. |
 | `expires_in` | Tempo rimanente alla scadenza del token, in millisecondi. Una volta scaduto il token, è necessario generarne uno nuovo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Passaggi successivi
 

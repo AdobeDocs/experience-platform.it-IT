@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 A volte è utile creare una nuova risorsa utilizzando le impostazioni di una risorsa esistente. In questi casi, puoi fare una copia.
 
@@ -35,7 +35,7 @@ Se copi una regola o un elemento dati, nella finestra di dialogo di copia puoi u
 
 >[!NOTE]
 >
->Non è possibile copiare le risorse in un&#39;altra proprietà se una di queste è configurata per lo sviluppo dell&#39;estensione e l&#39;altra non lo è.
+>Non è possibile copiare le risorse in un’altra proprietà se una di queste è configurata per lo sviluppo dell’estensione e l’altra non lo è.
 
 Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Copia]**.
 

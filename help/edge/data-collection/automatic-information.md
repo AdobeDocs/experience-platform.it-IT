@@ -1,7 +1,7 @@
 ---
-title: Raccolta automatica di informazioni nell’SDK per web di Adobe Experience Platform
-description: Panoramica di ogni informazione che l’SDK di Adobe Experience Platform raccoglie automaticamente.
-keywords: raccogliere informazioni;contesto;configurare;dispositivo;altezza schermo;altezza schermo;orientamento dello schermo;orientamento dello schermo;larghezza dello schermo;larghezza dello schermo;ambiente;finestraAltezza;altezza;altezza del riquadro di visualizzazione;larghezza del riquadro di visualizzazione;larghezza del riquadro di visualizzazione;dettagli del browser;dettagli dell'implementazione;dettagli di implementazione;nome;versione;contesto;ora locale;ora locale;ora locale;fuso orarioOffset;fuso orario locale;offset;timestamp;web;url;webPageDetails;dettagli pagina web;webReferrer;web Referrer;orizzontale;verticale;
+title: Informazioni raccolte automaticamente in Adobe Experience Platform Web SDK
+description: Panoramica di ogni informazione raccolta automaticamente dall’SDK di Adobe Experience Platform.
+keywords: raccogliere informazioni;contesto;configurare;dispositivo;screenHeight;screenHeight;screenOrientation;screenWidth;screen Width;screen Width;ambiente;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;dettagli browser;implementazioneDetails;dettagli implementazione;nome;versione;placeContext;localTime;localTimezoneOffset;local Timezone;Offset fuso orario locale;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;orizzontale;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 6%
 
 # Informazioni raccolte automaticamente
 
-Adobe Experience Platform Web SDK raccoglie automaticamente una serie di informazioni senza alcuna configurazione speciale. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39;opzione `context` nel comando `configure`. [Consulta Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
+Adobe Experience Platform Web SDK raccoglie automaticamente una serie di informazioni senza alcuna configurazione speciale. Tuttavia, se necessario, queste informazioni possono essere disattivate utilizzando `context` opzione in `configure` comando. [Consulta Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
 
 ## Dispositivo (`device`)
 
-Informazioni sul dispositivo. Ciò non include i dati che possono essere cercati lato server dalla stringa dell&#39;agente utente.
+Informazioni sul dispositivo. Ciò non include i dati che possono essere cercati lato server dalla stringa dell’agente utente.
 
 ### Altezza schermo
 
@@ -26,15 +26,15 @@ Informazioni sul dispositivo. Ciò non include i dati che possono essere cercati
 
 Altezza dello schermo (in pixel).
 
-### Orientamento dello schermo
+### Orientamento schermo
 
 | **Percorso nel payload:** | **Valori possibili:** |
 | --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` oppure `portrait` |
+| `events[].xdm.device.screenOrientation` | `landscape` o `portrait` |
 
 Orientamento dello schermo.
 
-### Larghezza dello schermo
+### Larghezza schermo
 
 | **Percorso nel payload:** | **Esempio:** |
 | --------------------------------- | ------------ |
@@ -54,7 +54,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Il tipo di ambiente attraverso cui è emersa l’esperienza. L’SDK per web Adobe Experience Platform imposta sempre questo valore su `browser`.
+Il tipo di ambiente attraverso il quale è emersa l’esperienza. Adobe Experience Platform Web SDK imposta sempre questo valore su `browser`.
 
 ### Altezza del riquadro di visualizzazione
 
@@ -62,15 +62,15 @@ Il tipo di ambiente attraverso cui è emersa l’esperienza. L’SDK per web Ado
 | -------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
 
-Altezza dell’area contenuto del browser (in pixel).
+Altezza dell&#39;area contenuto del browser (in pixel).
 
-### Larghezza visualizzazione
+### Larghezza del riquadro di visualizzazione
 
 | **Percorso nel payload:** | **Esempio:** |
 | ------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
 
-Larghezza dell’area contenuto del browser (in pixel).
+Larghezza (in pixel) dell’area del contenuto del browser.
 
 ## Dettagli di implementazione
 
@@ -82,7 +82,7 @@ Informazioni sull’SDK utilizzato per raccogliere l’evento.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, il valore è `https://ns.adobe.com/experience/alloy+reactor`.
+Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell’estensione tag, il valore è `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Versione
 
@@ -90,7 +90,7 @@ Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Quando si utilizza la libreria autonoma, il valore è semplicemente la versione della libreria. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, si tratta della versione della libreria e della versione dell&#39;estensione tag unita a un &quot;+&quot;. Ad esempio, se la versione della libreria fosse 2.1.0 e la versione dell&#39;estensione del tag fosse 2.1.3, il valore sarebbe `2.1.0+2.1.3`.
+Quando si utilizza la libreria indipendente, il valore è semplicemente la versione della libreria. Quando la libreria viene utilizzata come parte dell’estensione tag, si tratta della versione della libreria e dell’estensione tag unite con un segno &quot;+&quot;. Ad esempio, se la versione della libreria è 2.1.0 e la versione dell’estensione tag è 2.1.3, il valore sarà `2.1.0+2.1.3`.
 
 ### Ambiente
 
@@ -98,9 +98,9 @@ Quando si utilizza la libreria autonoma, il valore è semplicemente la versione 
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-Ambiente in cui sono stati raccolti i dati. È sempre impostato su `browser`.
+Ambiente in cui sono stati raccolti i dati. Questo è sempre impostato su `browser`.
 
-## Posiziona contesto (`placeContext`)
+## Contesto del luogo (`placeContext`)
 
 Informazioni sulla posizione dell’utente finale.
 
@@ -110,7 +110,7 @@ Informazioni sulla posizione dell’utente finale.
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-Timestamp locale per l&#39;utente finale in formato ISO semplificato esteso [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
+Timestamp locale per l’utente finale in formato ISO esteso semplificato [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ### Offset fuso orario locale
 
@@ -118,19 +118,19 @@ Timestamp locale per l&#39;utente finale in formato ISO semplificato esteso [ISO
 | ----------------------------------------------- | ------------ |
 | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
 
-Numero di minuti in cui l’utente viene offset da GMT.
+Numero di minuti di offset dell&#39;utente da GMT.
 
-## Timestamp
+## Marca temporale
 
 | **Percorso nel payload:** | **Esempio:** |
 | ------------------------ | -------------------------- |
 | `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
-La marca temporale dell’evento.  Impossibile rimuovere questa parte del contesto.
+Il timestamp dell’evento.  Questa parte del contesto non può essere rimossa.
 
-marca temporale UTC per l&#39;utente finale in formato ISO esteso semplificato [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
+Timestamp UTC per l’utente finale in formato ISO esteso semplificato [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
-## Dettagli Web (`web`)
+## Dettagli web (`web`)
 
 Dettagli sulla pagina su cui si trova l’utente.
 
@@ -142,7 +142,7 @@ Dettagli sulla pagina su cui si trova l’utente.
 
 URL della pagina corrente.
 
-### URL di riferimento
+### URL referrer
 
 | **Percorso nel payload:** | **Esempio:** |
 | ---------------------------------- | ----------------------------------------- |

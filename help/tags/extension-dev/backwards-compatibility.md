@@ -1,10 +1,11 @@
 ---
 title: Standard di compatibilità con le versioni precedenti
 description: Scopri lo standard di compatibilità con le versioni precedenti di Adobe Experience Platform che garantisce la compatibilità delle versioni aggiornate delle estensioni dei tag con le versioni precedenti.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 84%
+ht-degree: 97%
 
 ---
 
@@ -12,13 +13,13 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli aggiornamenti a un’estensione tag in Adobe Experience Platform devono essere compatibili con le versioni precedenti dell’estensione. Ciò significa che:
 
 * Qualsiasi modifica ai componenti primari delle estensioni deve essere compatibile con le versioni precedenti. Ciò include la configurazione dell’estensione, i tipi di evento, i tipi di condizione, i tipi di azione, i tipi di elemento dati e i moduli condivisi.
 * I componenti creati da un utente con la versione precedente dell’estensione devono poter superare la convalida rispetto agli schemi forniti nella nuova versione.
-* Un utente Adobe Experience Platform deve essere in grado di installare una versione aggiornata dell&#39;estensione e deve avere tutto ciò che ha fatto continuare a funzionare esattamente come è fino a quando non apporta modifiche intenzionali.
+* Un utente di Adobe Experience Platform deve essere in grado di installare una versione aggiornata dell’estensione e tutto ciò che ha già fatto deve continuare a funzionare nello stesso modo, fino a quando non apporterà modifiche intenzionali.
 
 ## Modifiche consentite
 
@@ -56,7 +57,7 @@ Potrebbero verificarsi situazioni in cui si ha una ragione di business valida e 
 1. Per rendere obbligatorio un campo facoltativo => Creare un nuovo componente che richieda il campo desiderato e rendere obsoleto il precedente
 1. Per modificare l’API di un modulo condiviso => Creare un nuovo modulo condiviso e rendere obsoleto il precedente
 
-Come vedi, le alternative seguono uno schema comune. Bene. Quando deprechi un vecchio componente, notifica agli utenti che l’estensione è stata dichiarata obsoleta e che deve passare a una nuova.  Alcuni suggerimenti sulla comunicazione con gli utenti:
+Come vedi, le alternative seguono uno schema comune. Bene. Quando dichiari obsoleto un componente, avvisa gli utenti che l’estensione è ora obsoleta e che è necessario passare a una nuova.  Alcuni suggerimenti sulla comunicazione con gli utenti:
 
 * Aggiorna il nome visualizzato del vecchio componente, aggiungendo “(Obsoleto)”.
 * Aggiungi alla vista del vecchio componente un testo di avviso rosso e ben visibile, che informi l’utente del fatto che il componente è diventato obsoleto e che si deve passare al nuovo componente.

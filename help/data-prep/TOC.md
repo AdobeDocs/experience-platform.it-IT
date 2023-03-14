@@ -6,24 +6,24 @@ feature: Data Prep
 source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 38%
+ht-degree: 46%
 
 ---
 
 
 # Preparazione dei dati {#data-prep}
 
-- [Panoramica sulla preparazione dei dati](home.md)
-- [Funzioni di preparazione dei dati](functions.md)
+- [Panoramica sulla preparazione dati](home.md)
+- [Funzioni di preparazione dati](functions.md)
 - API del servizio di mappatura {#api}
    - [Panoramica](./api/overview.md)
    - [Introduzione](./api/getting-started.md)
    - [Funzioni](./api/functions.md)
-   - [Set di mappature](./api/mapping-set.md)
+   - [Set di mappatura](./api/mapping-set.md)
 - Interfaccia utente {#ui}
-   - [Guida all’interfaccia utente della preparazione dei dati](./ui/mapping.md)
-- [Gestione dei formati di dati](./data-handling.md)
-- [Set di mappature](mapping-set.md)
-- [Server di streaming](upserts.md)
+   - [Guida dell’interfaccia utente per la preparazione dati](./ui/mapping.md)
+- [Gestione dei formati dei dati](./data-handling.md)
+- [Set di mappatura](mapping-set.md)
+- [Upsert di flusso](upserts.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

@@ -1,7 +1,7 @@
 ---
 title: Scheda Riepilogo
 description: Scopri come utilizzare la scheda Riepilogo in Adobe Experience Platform Debugger.
-keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;riepilogo;cancellare;richieste;schermata di riepilogo;soluzione;informazioni;analytics;target;dtm;audience manager;launch;servizio id
+keywords: debugger;estensione debugger di Experience Platform;chrome;estensione;riepilogo;cancellare;richieste;schermata di riepilogo;soluzione;informazioni;analytics;target;dtm;audience manager;launch;servizio id
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
@@ -15,7 +15,7 @@ ht-degree: 73%
 
 # Scheda Riepilogo
 
-Per eseguire Adobe Experience Platform Debugger, apri la pagina da esaminare nel browser, quindi seleziona l’icona (![](images/start-icon.jpg)) nella barra del browser. L&#39;estensione si apre nella **Riepilogo** scheda .
+Per eseguire Adobe Experience Platform Debugger, apri la pagina da esaminare nel browser, quindi seleziona l’icona (![](images/start-icon.jpg)) sulla barra del browser. L’estensione si apre su **Riepilogo** scheda.
 
 ![](images/summary.jpg)
 
@@ -77,7 +77,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nome </p> </td> 
-   <td colname="col2"> <p>Nome del tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> property</a> </p> </td> 
+   <td colname="col2"> <p>Nome del tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> proprietà</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
-   <td colname="col2"> <p>La <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> utilizzato dalla libreria tag </p> </td> 
+   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> utilizzato dalla libreria di tag </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Estensioni </p> </td> 
@@ -112,7 +112,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID proprietà </p> </td> 
-   <td colname="col2"> <p>Nome della proprietà tag specificata nell'estensione </p> </td> 
+   <td colname="col2"> <p>Nome della proprietà tag specificata nell’estensione </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Dominio Edge </p> </td> 
@@ -139,7 +139,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
-   <td colname="col2"> <p>Versione della libreria<a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> ID visitatore</a>. </p> </td> 
+   <td colname="col2"> <p>Versione della libreria<a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=it" format="html" scope="external"> ID visitatore</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>

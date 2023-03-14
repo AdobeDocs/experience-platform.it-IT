@@ -1,123 +1,123 @@
 ---
-keywords: pubblicità; critico;
-title: Connessione del criterio
-description: Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
+keywords: pubblicità; criteri;
+title: Connessione critica
+description: Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# (Beta) Connessione dei criteri
+# Connessione (Beta) Criteo
 
 ## Panoramica {#overview}
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da Criteo. Attualmente si tratta di un prodotto beta e la funzionalità è soggetta a modifiche. Per qualsiasi domanda o richiesta di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
+>Questa pagina della documentazione è stata creata da Criteo. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per qualsiasi domanda o richiesta di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
 
-Criteo potenzia una pubblicità affidabile e di impatto per portare esperienze più ricche a ogni consumatore attraverso l&#39;internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale di livello superiore, Criteo assicura che ogni punto di contatto all’interno del percorso acquisti sia personalizzato per raggiungere i clienti con l’annuncio giusto al momento giusto.
+Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l&#39;internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 
 ## Prerequisiti {#prerequisites}
 
-* È necessario disporre di un account utente amministratore su [Centro di gestione dei criteri](https://marketing.criteo.com).
-* Avrai bisogno del tuo ID inserzionista Criteo (chiedi al tuo contatto Criteo se non hai questo ID).
-* Dovrai fornire [!DNL GUM caller ID], nel caso in cui desideri utilizzare [!DNL GUM ID] come identificatore.
+* È necessario disporre di un account utente amministratore per [Centro gestione criteri](https://marketing.criteo.com).
+* Avrai bisogno del tuo ID Criteo Advertiser (chiedi al tuo contatto Criteo se non hai questo ID).
+* Dovrai fornire [!DNL GUM caller ID], nel caso in cui si desideri utilizzare [!DNL GUM ID] come identificatore.
 
 ## Limitazioni  {#limitations}
 
-* Solo i criteri accettano [!DNL SHA-256]e-mail con hash e di testo normale (da trasformare in [!DNL SHA-256] prima dell’invio). Non inviare alcun PII (Dati personali identificabili, quali nomi di persone o numeri di telefono).
-* Criteo richiede che almeno un identificatore sia fornito dal client. Assegna la priorità [!DNL GUM ID] come identificatore su e-mail con hash in quanto contribuisce a una migliore percentuale di corrispondenza.
+* Il criterio accetta solo [!DNL SHA-256]e-mail con hash e testo normale (da trasformare in [!DNL SHA-256] prima dell’invio). Non inviare dati PII (informazioni personali identificabili, come nomi o numeri di telefono di persone).
+* Il criterio richiede almeno un identificatore che deve essere fornito dal client. Assegna priorità [!DNL GUM ID] come identificatore nell’e-mail con hash, in quanto contribuisce a migliorare il tasso di corrispondenza.
 
 ![Prerequisiti](../../assets/catalog/advertising/criteo/prerequisites.png)
 
 ## Identità supportate {#supported-identities}
 
-Criteo supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |
-| `email_sha256` | Indirizzi e-mail con hash con l’algoritmo SHA-256 | Gli indirizzi e-mail con hash a testo normale e SHA-256 sono supportati da Adobe Experience Platform. Quando il campo di origine contiene attributi senza hash, seleziona la [!UICONTROL Applica trasformazione] affinché Platform esegua automaticamente l’hash dei dati all’attivazione. |
-| `gum_id` | Criteo [!DNL GUM] identificatore cookie | [!DNL GUM IDs] consentire ai clienti di mantenere una corrispondenza tra il loro sistema di identificazione utente e l’identificazione utente di Criteo ([!DNL UID]). Se il tipo di identificatore è `gum_id`, un parametro aggiuntivo, il [!DNL GUM Caller ID], deve essere incluso anche . Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] o per ottenere ulteriori informazioni [!DNL GUM ID] sincronizzazione, se necessario. |
+| `email_sha256` | Indirizzi e-mail con hash con algoritmo SHA-256 | Gli indirizzi e-mail con hash SHA-256 e testo normale sono supportati da Adobe Experience Platform. Quando il campo sorgente contiene attributi senza hash, seleziona la [!UICONTROL Applica trasformazione] per fare in modo che Platform esegua automaticamente l’hash dei dati all’attivazione. |
+| `gum_id` | Criteo [!DNL GUM] identificatore cookie | [!DNL GUM IDs] consentire ai clienti di mantenere una corrispondenza tra il proprio sistema di identificazione degli utenti e l’identificazione degli utenti di Criteo ([!DNL UID]). Se il tipo di identificatore è `gum_id`, un parametro aggiuntivo, il [!DNL GUM Caller ID], deve essere incluso anche. Rivolgiti al team del tuo account Criteo per ricevere il [!DNL GUM Caller ID] o per ottenere ulteriori informazioni [!DNL GUM ID] se necessario, eseguire la sincronizzazione. |
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 | --- | --- | --- |
-| Tipo di esportazione | Esportazione del segmento | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nel [!DNL Criteo] destinazione. |
-| Frequenza delle esportazioni | Streaming | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](../../destination-types.md#streaming-destinations). |
+| Tipo di esportazione | Esportazione del segmento | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Criteo] destinazione. |
+| Frequenza di esportazione | Streaming | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](../../destination-types.md#streaming-destinations). |
 
 ## Casi d’uso {#use-cases}
 
 Per aiutarti a capire meglio come utilizzare il [!DNL Criteo] destinazione, ecco alcuni obiettivi che i clienti Adobe Experience Platform possono raggiungere con [!DNL Criteo]:
 
-### Caso d’uso 1 : Ottieni traffico
+### Caso d&#39;uso 1: recupero del traffico
 
-Presenta la tua azienda con offerte di prodotti rilevanti e creativi flessibili. Con i consigli di prodotto intelligenti, i tuoi annunci presenteranno automaticamente i prodotti che più probabilmente attiveranno visite e coinvolgimento. Il targeting flessibile ti consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti CDP di Adobe.
+Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile ti consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti CDP di Adobe.
 
-### Caso d’uso 2 : Aumenta le conversioni di siti web
+### Caso d’uso 2: aumentare le conversioni dei siti web
 
-Quando i visitatori abbandonano il tuo sito web, ricorda loro cosa si stanno perdendo con gli annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano. Collega il tuo segmento CDP Adobe per coinvolgere nuovamente i clienti esistenti o target di consumatori simili ai tuoi acquirenti più fedeli.
+Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il segmento Adobe CDP per coinvolgere nuovamente i clienti esistenti o rivolgerti ai consumatori in modo simile ai tuoi acquirenti più fedeli.
 
-## Connetti a Criteo {#connect}
+## Connetti a criterio {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Autentica secondo criterio
+### Autentica su criterio
 
-I passaggi per connettersi sono i seguenti:
+I passaggi per la connessione sono i seguenti:
 
-1. Accedi a Adobe Experience Platform e collegati alla destinazione Criteo.
+1. Accedi a Adobe Experience Platform e connettiti alla destinazione critica.
 
    ![Accesso](../../assets/catalog/advertising/criteo/connect-destination.png)
 
-1. Verrai reindirizzato a Criteo per autorizzare la connessione. Potrebbe essere necessario prima accedere con le credenziali Criteo:
+1. Verrai reindirizzato a Criteo per autorizzare la connessione. Potrebbe essere necessario accedere prima con le credenziali Criteo:
 
-   ![Accesso ai criteri](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![Accesso al criterio](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![Accesso ai criteri](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![Accesso al criterio](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![Accesso ai criteri](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![Accesso al criterio](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Parametri di connessione {#connection-parameters}
 
-Dopo l&#39;autenticazione alla destinazione, compila i seguenti parametri di connessione.
+Dopo l’autenticazione nella destinazione, compila i seguenti parametri di connessione.
 
 ![Parametri di connessione](../../assets/catalog/advertising/criteo/connection-parameters.png)
 
 | Campo | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| Nome | Un nome che ti aiuterà a riconoscere questa destinazione in futuro. Il nome scelto sarà il [!DNL Audience] nome in Criteo Management Center e non può essere modificato in una fase successiva. | Sì |
+| Nome | Un nome per aiutarti a riconoscere questa destinazione in futuro. Il nome scelto sarà [!DNL Audience] in Criteo Management Center e non può essere modificato in una fase successiva. | Sì |
 | Descrizione | Una descrizione per identificare questa destinazione in futuro. | No |
-| ID inserzionista | ID inserzionista criterio della tua organizzazione. Per ottenere queste informazioni, contatta il tuo account manager Criteo. | Sì |
-| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] della tua organizzazione. Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] o per ottenere ulteriori informazioni [!DNL GUM] sincronizzazione, se necessario. | Sì, ogni volta [!DNL GUM ID] è fornito come identificatore |
+| ID inserzionista | ID inserzionista del criterio dell’organizzazione. Per maggiori informazioni, contatta il tuo account manager Criteo. | Sì |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] della tua organizzazione. Rivolgiti al team del tuo account Criteo per ricevere il [!DNL GUM Caller ID] o per ottenere ulteriori informazioni [!DNL GUM] se necessario, eseguire la sincronizzazione. | Sì, ogni volta [!DNL GUM ID] viene fornito come identificatore |
 
-### Abilitare gli avvisi {#enable-alerts}
+### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
-Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate-segments}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 
-Puoi visualizzare i segmenti esportati nella sezione [Centro di gestione dei criteri](https://marketing.criteo.com/audience-manager/dashboard).
+Puoi visualizzare i segmenti esportati in [Centro di gestione dei criteri](https://marketing.criteo.com/audience-manager/dashboard).
 
 Il corpo della richiesta di aggiunta di un profilo utente ricevuto da [!DNL Criteo] la connessione è simile alla seguente:
 
@@ -147,7 +147,7 @@ Il corpo della richiesta di aggiunta di un profilo utente ricevuto da [!DNL Crit
 }
 ```
 
-Il corpo della richiesta di rimozione del profilo utente ricevuto da [!DNL Criteo] la connessione è simile alla seguente:
+Corpo della richiesta di rimozione del profilo utente ricevuto da [!DNL Criteo] la connessione è simile alla seguente:
 
 ```json
 {
@@ -175,11 +175,11 @@ Il corpo della richiesta di rimozione del profilo utente ricevuto da [!DNL Crite
 }
 ```
 
-## Utilizzo e governance dei dati {#data-usage}
+## Utilizzo dei dati e governance {#data-usage}
 
-Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la sezione [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, leggi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
 
 ## Risorse aggiuntive
 
-* [Centro assistenza per i criteri](https://help.criteo.com/kb/en)
-* [Criterio Developer Portal](https://developers.criteo.com)
+* [Centro assistenza Criteo](https://help.criteo.com/kb/en)
+* [Portale per sviluppatori di criteri](https://developers.criteo.com)

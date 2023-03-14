@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;mappa identità;mappa identità;mappa identità;schema schema;mappa schema;mappa;schema unione;unione
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;identityMap;mappa identità;mappa identità;mappa identità;progettazione schema;mappa;mappa;schema;unione;home;popular topic;schema;schema;XDM;individual profile;fields;schemas;schemas;identityMap;identity map;Identity map;schema map;schema;schema;map;map;map;map;union
 title: Gruppo di campi dello schema IdentityMap
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL IdentityMap] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa, contenente un set di identità utente determinate dallo spazio dei nomi.
+[!UICONTROL IdentityMap] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che contiene un set di identità utente basate sullo spazio dei nomi.
 
 <img src="../../images/field-groups/identitymap.png" width="600" /><br />
 
-Vedi la sezione sulle mappe di identità nel [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul loro caso d&#39;uso, compresi i relativi vantaggi e svantaggi.
+Consulta la sezione sulle mappe di identità in [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul loro caso d’uso, compresi i vantaggi e gli svantaggi.

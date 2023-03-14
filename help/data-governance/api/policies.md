@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;applicazione basata su API;governance dei dati
+keywords: Experience Platform;home;argomenti popolari;Applicazione delle policy;applicazione basata su API;governance dei dati
 solution: Experience Platform
 title: Endpoint API per i criteri di governance dei dati
-description: I criteri di governance dei dati sono regole adottate dalla tua organizzazione che descrivono il tipo di azioni di marketing che ti è permesso o da cui ti sono limitati nell’eseguire sui dati all’interno di un Experience Platform. L’endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
+description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati di Experience Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 3%
 
 ---
 
-# Endpoint per criteri di governance dei dati
+# Endpoint &quot;data governance policies&quot;
 
-I criteri di governance dei dati sono regole che descrivono i tipi di azioni di marketing che ti sono consentite o a cui ti è consentito eseguire sui dati all’interno di [!DNL Experience Platform]. La `/policies` punto finale [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di governance dei dati per la tua organizzazione.
+I criteri di governance dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform]. Il `/policies` endpoint nella [!DNL Policy Service API] consente di gestire in modo programmatico i criteri di governance dei dati per la tua organizzazione.
 
 >[!IMPORTANT]
 >
->I criteri di governance non devono essere confusi con i criteri di controllo degli accessi, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Platform nella tua organizzazione. Fai riferimento a `/policies` guida dell&#39;endpoint per [API di controllo accessi](../../access-control/abac/api/policies.md) per informazioni su come gestire in modo programmatico i criteri di controllo accessi.
+>I criteri di governance non devono essere confusi con i criteri di controllo dell’accesso, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Platform nella tua organizzazione. Consulta la sezione `/policies` guida dell’endpoint per [API di controllo degli accessi](../../access-control/abac/api/policies.md) per informazioni dettagliate su come gestire in modo programmatico i criteri di controllo degli accessi.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, controlla [guida introduttiva](getting-started.md) per collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a [!DNL Experience Platform] API.
 
-## Recupera un elenco di criteri {#list}
+## Recuperare un elenco di criteri {#list}
 
-È possibile elencare tutti `core` o `custom` , richiedendo la GET a `/policies/core` o `/policies/custom`, rispettivamente.
+Puoi elencare tutti `core` o `custom` criteri effettuando una richiesta GET a `/policies/core` o `/policies/custom`, rispettivamente.
 
 **Formato API**
 
@@ -36,7 +36,7 @@ GET /policies/custom
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di criteri personalizzati definiti dall&#39;organizzazione.
+La richiesta seguente recupera un elenco di criteri personalizzati definiti dall’organizzazione.
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta include un `children` array in cui sono elencati i dettagli di ciascun criterio recuperato, inclusi i relativi `id` valori. È possibile utilizzare `id` campo di una particolare politica da eseguire [ricerca](#lookup), [update](#update)e [delete](#delete) richieste di tale politica.
+Una risposta corretta include `children` array che elenca i dettagli di ogni criterio recuperato, inclusi i relativi `id` valori. È possibile utilizzare `id` campo di una particolare policy da eseguire [ricerca](#lookup), [aggiorna](#update), e [eliminare](#delete) richieste per tale criterio.
 
 ```JSON
 {
@@ -144,14 +144,14 @@ Una risposta corretta include un `children` array in cui sono elencati i dettagl
 | --- | --- |
 | `_page.count` | Numero totale di criteri recuperati. |
 | `name` | Nome visualizzato di un criterio. |
-| `status` | Lo stato corrente di un criterio. Sono disponibili tre stati possibili: `DRAFT`, `ENABLED`oppure `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Vedi la panoramica su [valutazione politica](../enforcement/overview.md) per ulteriori informazioni. |
-| `marketingActionRefs` | Matrice che elenca gli URI di tutte le azioni di marketing applicabili per un criterio. |
-| `description` | Una descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
-| `deny` | Un oggetto che descrive le etichette di utilizzo dati specifiche per le quali è stata limitata l&#39;esecuzione dell&#39;azione di marketing associata a un criterio. Vedi la sezione su [creazione di un criterio](#create-policy) per ulteriori informazioni su questa proprietà. |
+| `status` | Stato corrente di un criterio. Esistono tre stati possibili: `DRAFT`, `ENABLED`, o `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Consulta la panoramica su [valutazione dei criteri](../enforcement/overview.md) per ulteriori informazioni. |
+| `marketingActionRefs` | Array che elenca gli URI di tutte le azioni di marketing applicabili a un criterio. |
+| `description` | Descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
+| `deny` | Oggetto che descrive le etichette di utilizzo dei dati specifiche su cui l’azione di marketing associata a un criterio non può essere eseguita. Consulta la sezione su [creazione di una policy](#create-policy) per ulteriori informazioni su questa proprietà. |
 
-## Cercare una politica {#look-up}
+## Cercare un criterio {#look-up}
 
-Puoi cercare una politica specifica includendo quella `id` nel percorso di una richiesta GET.
+Per cercare un criterio specifico, includi i `id` nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -162,7 +162,7 @@ GET /policies/custom/{POLICY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{POLICY_ID}` | La `id` della politica che si desidera cercare. |
+| `{POLICY_ID}` | Il `id` della policy che desideri cercare. |
 
 **Richiesta**
 
@@ -177,7 +177,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del criterio.
+In caso di esito positivo, la risposta restituisce i dettagli del criterio.
 
 ```JSON
 {
@@ -225,21 +225,21 @@ Una risposta corretta restituisce i dettagli del criterio.
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome visualizzato del criterio. |
-| `status` | Stato corrente del criterio. Sono disponibili tre stati possibili: `DRAFT`, `ENABLED`oppure `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Vedi la panoramica su [valutazione politica](../enforcement/overview.md) per ulteriori informazioni. |
-| `marketingActionRefs` | Matrice che elenca gli URI di tutte le azioni di marketing applicabili al criterio. |
-| `description` | Una descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
-| `deny` | Un oggetto che descrive le etichette di utilizzo dei dati specifiche sulle quali l&#39;azione di marketing associata al criterio non viene eseguita. Vedi la sezione su [creazione di un criterio](#create-policy) per ulteriori informazioni su questa proprietà. |
+| `status` | Stato corrente del criterio. Esistono tre stati possibili: `DRAFT`, `ENABLED`, o `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Consulta la panoramica su [valutazione dei criteri](../enforcement/overview.md) per ulteriori informazioni. |
+| `marketingActionRefs` | Array che elenca gli URI di tutte le azioni di marketing applicabili per il criterio. |
+| `description` | Descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
+| `deny` | Oggetto che descrive le etichette di utilizzo dei dati specifiche su cui l’azione di marketing associata al criterio non può essere eseguita. Consulta la sezione su [creazione di una policy](#create-policy) per ulteriori informazioni su questa proprietà. |
 
 ## Creare un criterio personalizzato {#create-policy}
 
 In [!DNL Policy Service] API, un criterio è definito dai seguenti elementi:
 
 * Riferimento a una specifica azione di marketing
-* Un&#39;espressione che descrive le etichette di utilizzo dei dati su cui è limitata l&#39;esecuzione dell&#39;azione di marketing
+* Espressione che descrive le etichette di utilizzo dei dati per le quali l’azione di marketing non può essere eseguita
 
-Per soddisfare quest’ultimo requisito, le definizioni dei criteri devono includere un’espressione booleana relativa alla presenza di etichette di utilizzo dei dati. Questa espressione è denominata espressione di criterio.
+Per soddisfare quest’ultimo requisito, le definizioni dei criteri devono includere un’espressione booleana relativa alla presenza di etichette di utilizzo dei dati. Questa espressione viene definita espressione di criteri.
 
-Le espressioni di criterio vengono fornite sotto forma di `deny` all&#39;interno di ogni definizione di criterio. Esempio di un semplice `deny` un oggetto che controlla solo la presenza di una singola etichetta avrà un aspetto simile al seguente:
+Le espressioni dei criteri sono fornite sotto forma di `deny` all&#39;interno di ogni definizione di criterio. Un esempio di semplice `deny` l&#39;oggetto che controlla solo la presenza di una singola etichetta sarà simile al seguente:
 
 ```json
 "deny": {
@@ -247,9 +247,9 @@ Le espressioni di criterio vengono fornite sotto forma di `deny` all&#39;interno
 }
 ```
 
-Tuttavia, molti criteri specificano condizioni più complesse relative alla presenza di etichette per l’utilizzo dei dati. Per supportare questi casi d’uso, puoi anche includere le operazioni booleane per descrivere le espressioni dei criteri. L&#39;oggetto espressione policy deve contenere un&#39;etichetta o un operatore e operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto espressione di criterio.
+Tuttavia, molti criteri specificano condizioni più complesse per quanto riguarda la presenza di etichette di utilizzo dei dati. Per supportare questi casi d’uso, puoi anche includere operazioni booleane per descrivere le espressioni dei criteri. L’oggetto espressione dei criteri deve contenere un’etichetta o un operatore e operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto espressione di criteri.
 
-Ad esempio, per definire un criterio che vieta l’esecuzione di un’azione di marketing sui dati in cui `C1 OR (C3 AND C7)` le etichette sono presenti, le `deny` viene specificata come:
+Ad esempio, per definire un criterio che vieta l’esecuzione di un’azione di marketing su dati in cui `C1 OR (C3 AND C7)` sono presenti le etichette, le `deny` la proprietà viene specificata come:
 
 ```JSON
 "deny": {
@@ -269,11 +269,11 @@ Ad esempio, per definire un criterio che vieta l’esecuzione di un’azione di 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `operator` | Indica la relazione condizionale tra le etichette fornite nel pari livello `operands` array. I valori accettati sono: <ul><li>`OR`: L&#39;espressione restituisce true se una delle etichette nel campo `operands` sono presenti array.</li><li>`AND`: L&#39;espressione viene risolta in true solo se tutte le etichette nel `operands` sono presenti array.</li></ul> |
-| `operands` | Matrice di oggetti, con ogni oggetto che rappresenta una singola etichetta o una coppia aggiuntiva `operator` e `operands` proprietà. Presenza delle etichette e/o delle operazioni in un `operands` viene risolto in true o false in base al valore del relativo elemento di pari livello `operator` proprietà. |
-| `label` | Nome di un&#39;etichetta di utilizzo dati singola applicata al criterio. |
+| `operator` | Indica la relazione condizionale tra le etichette fornite nel pari livello `operands` array. I valori accettati sono: <ul><li>`OR`: l’espressione restituisce true se una qualsiasi delle etichette in `operands` sono presenti.</li><li>`AND`: l’espressione restituisce true solo se tutte le etichette in `operands` sono presenti.</li></ul> |
+| `operands` | Matrice di oggetti, in cui ogni oggetto rappresenta una singola etichetta o una coppia aggiuntiva di `operator` e `operands` proprietà. La presenza delle etichette e/o delle operazioni in un `operands` l’array viene risolto in true o false in base al valore del relativo pari livello `operator` proprietà. |
+| `label` | Nome di una singola etichetta di utilizzo dati che si applica al criterio. |
 
-Puoi creare un nuovo criterio personalizzato effettuando una richiesta di POST al `/policies/custom` punto finale.
+Per creare un nuovo criterio personalizzato, devi effettuare una richiesta POST al `/policies/custom` endpoint.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ POST /policies/custom
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo criterio che limita l’azione di marketing `exportToThirdParty` da eseguire su dati contenenti etichette `C1 OR (C3 AND C7)`.
+La richiesta seguente crea un nuovo criterio che limita l’azione di marketing `exportToThirdParty` da eseguire sui dati contenenti etichette `C1 OR (C3 AND C7)`.
 
 ```shell
 curl -X POST \
@@ -319,14 +319,14 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome visualizzato del criterio. |
-| `status` | Stato corrente del criterio. Sono disponibili tre stati possibili: `DRAFT`, `ENABLED`oppure `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Vedi la panoramica su [valutazione politica](../enforcement/overview.md) per ulteriori informazioni. |
-| `marketingActionRefs` | Matrice che elenca gli URI di tutte le azioni di marketing applicabili al criterio. L’URI per un’azione di marketing viene fornito in `_links.self.href` nella risposta per [ricerca di un’azione di marketing](./marketing-actions.md#look-up). |
-| `description` | Una descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
-| `deny` | L&#39;espressione di criterio che descrive le etichette di utilizzo dati specifiche per le azioni di marketing associate al criterio non viene eseguita. |
+| `status` | Stato corrente del criterio. Esistono tre stati possibili: `DRAFT`, `ENABLED`, o `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Consulta la panoramica su [valutazione dei criteri](../enforcement/overview.md) per ulteriori informazioni. |
+| `marketingActionRefs` | Array che elenca gli URI di tutte le azioni di marketing applicabili per il criterio. L’URI per un’azione di marketing viene fornito in `_links.self.href` nella risposta per [ricerca di un’azione di marketing](./marketing-actions.md#look-up). |
+| `description` | Descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
+| `deny` | L’espressione dei criteri che descrive le etichette di utilizzo dei dati specifiche per le quali l’azione di marketing associata al criterio non può essere eseguita. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del criterio appena creato, incluso il relativo `id`. Questo valore è di sola lettura e viene assegnato automaticamente alla creazione del criterio.
+In caso di esito positivo, la risposta restituisce i dettagli del criterio appena creato, inclusi i relativi `id`. Questo valore è di sola lettura e viene assegnato automaticamente al momento della creazione del criterio.
 
 ```JSON
 {
@@ -375,13 +375,13 @@ Una risposta corretta restituisce i dettagli del criterio appena creato, incluso
 
 >[!IMPORTANT]
 >
->È possibile aggiornare solo i criteri personalizzati. Per abilitare o disabilitare i criteri di base, consulta la sezione [aggiornamento dell&#39;elenco dei criteri di base abilitati](#update-enabled-core).
+>Puoi aggiornare solo i criteri personalizzati. Se desideri abilitare o disabilitare i criteri di base, consulta la sezione su [aggiornamento dell’elenco dei criteri di base abilitati](#update-enabled-core).
 
-Puoi aggiornare un criterio personalizzato esistente fornendo il relativo ID nel percorso di una richiesta di PUT con un payload che include la versione aggiornata del criterio nella sua interezza. In altre parole, la richiesta di PUT sostanzialmente riscrive il criterio.
+Per aggiornare un criterio personalizzato esistente, devi fornire il relativo ID nel percorso di una richiesta PUT con un payload che includa l’intero modulo aggiornato del criterio. In altre parole, la richiesta PUT riscrive essenzialmente il criterio.
 
 >[!NOTE]
 >
->Vedi la sezione su [aggiornamento di una parte di un criterio personalizzato](#patch) se si desidera aggiornare solo uno o più campi per un criterio, anziché sovrascriverlo.
+>Consulta la sezione su [aggiornamento di una parte di una policy personalizzata](#patch) se desideri solo aggiornare uno o più campi per un criterio, anziché sovrascriverlo.
 
 **Formato API**
 
@@ -391,13 +391,13 @@ PUT /policies/custom/{POLICY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{POLICY_ID}` | La `id` del criterio da aggiornare. |
+| `{POLICY_ID}` | Il `id` del criterio che desideri aggiornare. |
 
 **Richiesta**
 
-In questo esempio, le condizioni per l’esportazione di dati in una terza parte sono cambiate e ora è necessario richiedere il criterio creato per negare questa azione di marketing se `C1 AND C5` sono presenti etichette per i dati.
+In questo esempio, le condizioni per l’esportazione di dati a terze parti sono cambiate e ora è necessario utilizzare il criterio creato per rifiutare questa azione di marketing se `C1 AND C5` le etichette dati sono presenti.
 
-La richiesta seguente aggiorna il criterio esistente in modo da includere la nuova espressione di criterio. Tieni presente che, poiché questa richiesta essenzialmente riscrive il criterio, tutti i campi devono essere inclusi nel payload, anche se alcuni dei relativi valori non vengono aggiornati.
+La richiesta seguente aggiorna il criterio esistente in modo da includere la nuova espressione del criterio. Poiché questa richiesta riscrive essenzialmente il criterio, tutti i campi devono essere inclusi nel payload, anche se alcuni dei loro valori non vengono aggiornati.
 
 ```shell
 curl -X PUT \
@@ -427,14 +427,14 @@ curl -X PUT \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome visualizzato del criterio. |
-| `status` | Stato corrente del criterio. Sono disponibili tre stati possibili: `DRAFT`, `ENABLED`oppure `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Vedi la panoramica su [valutazione politica](../enforcement/overview.md) per ulteriori informazioni. |
-| `marketingActionRefs` | Matrice che elenca gli URI di tutte le azioni di marketing applicabili al criterio. L’URI per un’azione di marketing viene fornito in `_links.self.href` nella risposta per [ricerca di un’azione di marketing](./marketing-actions.md#look-up). |
-| `description` | Una descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
-| `deny` | L&#39;espressione di criterio che descrive le etichette di utilizzo dati specifiche per le azioni di marketing associate al criterio non viene eseguita. Vedi la sezione su [creazione di un criterio](#create-policy) per ulteriori informazioni su questa proprietà. |
+| `status` | Stato corrente del criterio. Esistono tre stati possibili: `DRAFT`, `ENABLED`, o `DISABLED`. Per impostazione predefinita, solo `ENABLED` Le politiche partecipano alla valutazione. Consulta la panoramica su [valutazione dei criteri](../enforcement/overview.md) per ulteriori informazioni. |
+| `marketingActionRefs` | Array che elenca gli URI di tutte le azioni di marketing applicabili per il criterio. L’URI per un’azione di marketing viene fornito in `_links.self.href` nella risposta per [ricerca di un’azione di marketing](./marketing-actions.md#look-up). |
+| `description` | Descrizione facoltativa che fornisce ulteriore contesto al caso d’uso del criterio. |
+| `deny` | L’espressione dei criteri che descrive le etichette di utilizzo dei dati specifiche per le quali l’azione di marketing associata al criterio non può essere eseguita. Consulta la sezione su [creazione di una policy](#create-policy) per ulteriori informazioni su questa proprietà. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del criterio aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli del criterio aggiornato.
 
 ```JSON
 {
@@ -475,15 +475,15 @@ Una risposta corretta restituisce i dettagli del criterio aggiornato.
 
 >[!IMPORTANT]
 >
->È possibile aggiornare solo i criteri personalizzati. Per abilitare o disabilitare i criteri di base, consulta la sezione [aggiornamento dell&#39;elenco dei criteri di base abilitati](#update-enabled-core).
+>Puoi aggiornare solo i criteri personalizzati. Se desideri abilitare o disabilitare i criteri di base, consulta la sezione su [aggiornamento dell’elenco dei criteri di base abilitati](#update-enabled-core).
 
-Una parte specifica di un criterio può essere aggiornata utilizzando una richiesta di PATCH. A differenza delle richieste PUT che riscrivono il criterio, le richieste PATCH aggiornano solo le proprietà specificate nel corpo della richiesta. Questa opzione è particolarmente utile quando desideri abilitare o disabilitare un criterio, in quanto devi fornire solo il percorso della proprietà appropriata (`/status`) e il relativo valore (`ENABLED` o `DISABLED`).
+È possibile aggiornare una parte specifica di un criterio utilizzando una richiesta PATCH. A differenza delle richieste PUT che riscrivono il criterio, le richieste PATCH aggiornano solo le proprietà specificate nel corpo della richiesta. Questa funzione è particolarmente utile quando si desidera abilitare o disabilitare una policy, in quanto è necessario fornire solo il percorso della proprietà appropriata (`/status`) e il relativo valore (`ENABLED` o `DISABLED`).
 
 >[!NOTE]
 >
->I payload per le richieste PATCH seguono la formattazione della patch JSON. Consulta la sezione [Guida di base sulle API](../../landing/api-fundamentals.md) per ulteriori informazioni sulla sintassi accettata.
+>I payload per le richieste PATCH seguono la formattazione Patch JSON. Consulta la [Guida di base sulle API](../../landing/api-fundamentals.md) per ulteriori informazioni sulla sintassi accettata.
 
-La [!DNL Policy Service] API supporta le operazioni di patch JSON `add`, `remove`e `replace`, e ti consente di combinare diversi aggiornamenti insieme in una singola chiamata, come mostrato nell’esempio di seguito.
+Il [!DNL Policy Service] API supporta le operazioni Patch JSON `add`, `remove`, e `replace`, e consente di combinare diversi aggiornamenti in una singola chiamata, come mostrato nell’esempio seguente.
 
 **Formato API**
 
@@ -493,11 +493,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{POLICY_ID}` | La `id` del criterio di cui si desidera aggiornare le proprietà. |
+| `{POLICY_ID}` | Il `id` del criterio di cui desideri aggiornare le proprietà. |
 
 **Richiesta**
 
-La richiesta seguente utilizza due `replace` operazioni per modificare lo stato del criterio da `DRAFT` a `ENABLED`e per aggiornare `description` campo con una nuova descrizione.
+La richiesta seguente utilizza due `replace` operazioni da cui modificare lo stato dei criteri `DRAFT` a `ENABLED`, e per aggiornare `description` con una nuova descrizione.
 
 >[!IMPORTANT]
 >
@@ -527,7 +527,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del criterio aggiornato.
+In caso di esito positivo, la risposta restituisce i dettagli del criterio aggiornato.
 
 
 ```JSON
@@ -575,11 +575,11 @@ Una risposta corretta restituisce i dettagli del criterio aggiornato.
 
 ## Eliminare un criterio personalizzato {#delete}
 
-È possibile eliminare un criterio personalizzato includendo i relativi `id` nel percorso di una richiesta DELETE.
+Per eliminare un criterio personalizzato, devi includere `id` nel percorso di una richiesta DELETE.
 
 >[!WARNING]
 >
->Una volta eliminate, le politiche non possono essere recuperate. Si consiglia di [eseguire una richiesta di ricerca (GET)](#lookup) per visualizzare il criterio e confermare che si tratta del criterio corretto da rimuovere.
+>Una volta eliminati, i criteri non possono essere recuperati. Si consiglia di [eseguire una richiesta di ricerca (GET)](#lookup) per prima cosa, visualizzare il criterio e confermarne la correttezza.
 
 **Formato API**
 
@@ -589,7 +589,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{POLICY_ID}` | ID del criterio da eliminare. |
+| `{POLICY_ID}` | ID del criterio che desideri eliminare. |
 
 **Richiesta**
 
@@ -604,13 +604,13 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) con un corpo vuoto.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) con un corpo vuoto.
 
-Puoi confermare l’eliminazione tentando di cercare nuovamente (GET) il criterio. Se il criterio è stato eliminato correttamente, riceverai un errore HTTP 404 (Non trovato).
+Per confermare l’eliminazione, prova a cercare (GET) nuovamente il criterio. Se il criterio è stato eliminato correttamente, dovrebbe essere visualizzato un errore HTTP 404 (Non trovato).
 
-## Recupera un elenco dei criteri di base abilitati {#list-enabled-core}
+## Recuperare un elenco di criteri di base abilitati {#list-enabled-core}
 
-Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Puoi recuperare un elenco dei criteri di base attualmente abilitati dalla tua organizzazione effettuando una richiesta di GET al `/enabledCorePolicies` punto finale.
+Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Per recuperare un elenco dei criteri di base attualmente abilitati dalla tua organizzazione, effettua una richiesta GET al `/enabledCorePolicies` endpoint.
 
 **Formato API**
 
@@ -631,7 +631,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;elenco dei criteri di base abilitati in un `policyIds` array.
+In caso di esito positivo, la risposta restituisce l’elenco dei criteri di base abilitati in una `policyIds` array.
 
 ```json
 {
@@ -660,13 +660,13 @@ Una risposta corretta restituisce l&#39;elenco dei criteri di base abilitati in 
 }
 ```
 
-## Aggiornare l’elenco dei criteri di base abilitati {#update-enabled-core}
+## Aggiorna l’elenco dei criteri di base abilitati {#update-enabled-core}
 
-Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Effettuando una richiesta PUT al `/enabledCorePolicies` endpoint, puoi aggiornare l’elenco dei criteri di base abilitati per l’organizzazione utilizzando una singola chiamata .
+Per impostazione predefinita, solo i criteri di governance dei dati abilitati partecipano alla valutazione. Effettuando una richiesta PUT al `/enabledCorePolicies` endpoint, puoi aggiornare l’elenco dei criteri di base abilitati per la tua organizzazione utilizzando una singola chiamata.
 
 >[!NOTE]
 >
->Solo i criteri principali possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, consulta la sezione [aggiornamento di una parte di un criterio](#patch).
+>Solo i criteri di base possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, consulta la sezione su [aggiornamento di una parte di una policy](#patch).
 
 **Formato API**
 
@@ -697,11 +697,11 @@ curl -X GET \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `policyIds` | Elenco degli ID dei criteri di base da abilitare. I criteri di base non inclusi sono impostati su `DISABLED` status e non parteciperà alla valutazione. |
+| `policyIds` | Elenco degli ID dei criteri di base da abilitare. Tutti i criteri di base non inclusi sono impostati su `DISABLED` e non parteciperà alla valutazione. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;elenco aggiornato dei criteri di base abilitati in un `policyIds` array.
+In caso di esito positivo, la risposta restituisce l’elenco aggiornato dei criteri di base abilitati in una `policyIds` array.
 
 ```json
 {
@@ -728,4 +728,4 @@ Una risposta corretta restituisce l&#39;elenco aggiornato dei criteri di base ab
 
 ## Passaggi successivi
 
-Una volta definiti nuovi criteri o aggiornati quelli esistenti, puoi utilizzare [!DNL Policy Service] API per testare le azioni di marketing rispetto a specifiche etichette o set di dati e vedere se le tue politiche stanno generando violazioni come previsto. Consulta la guida [endpoint per la valutazione delle politiche](./evaluation.md) per ulteriori informazioni.
+Dopo aver definito nuovi criteri o aggiornato quelli esistenti, puoi utilizzare [!DNL Policy Service] API per testare le azioni di marketing rispetto a etichette o set di dati specifici e per verificare se i criteri generano violazioni come previsto. Consulta la guida sulla [endpoint di valutazione dei criteri](./evaluation.md) per ulteriori informazioni.

@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un’estensione è un set di codice che estende le funzionalità fornite dai tag o dall’inoltro di eventi.
 
@@ -27,7 +27,7 @@ Le estensioni determinano gli elementi disponibili per la creazione di propriet�
 
 Utilizza i collegamenti nella parte superiore dell&#39;elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
 
-Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione.
+Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione,
 
 >[!IMPORTANT]
 >

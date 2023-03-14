@@ -1,10 +1,11 @@
 ---
 title: Guida introduttiva allo sviluppo delle estensioni
-description: Inizia a sviluppare estensioni di tag personalizzate in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Introduzione allo sviluppo di estensioni tag in Adobe Experience Platform.
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 90%
+ht-degree: 95%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per imparare a creare estensioni, utilizzeremo lo strumento di scaffolding open source, fornito da ingegneri Adobe per creare i file e la struttura di file necessari per il pacchetto di estensione. Non ti resterà quindi che occuparti della parte importante: scrivere di fatto il codice.
 

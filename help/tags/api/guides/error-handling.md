@@ -4,7 +4,7 @@ description: Scopri come vengono gestiti gli errori nell’API di Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 99%
 
 ---
@@ -49,7 +49,7 @@ Le risposte di errore mirano a conformarsi alle [specifiche degli errori JSON:AP
 | `source` | Oggetto contenente riferimenti all’origine dell’errore, facoltativamente con uno o più dei seguenti membri:<ul><li>`pointer`: una stringa [JSON Pointer (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) che fa riferimento all’entità associata nel documento della richiesta (ad esempio `/data` per un oggetto dati principale o `/data/attributes/title` per un attributo specifico).</li></ul> |
 | `meta` | Oggetto contenente metadati non standard sull’errore. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Descrizione degli errori
 
@@ -86,7 +86,7 @@ Nella tabella seguente sono elencati i diversi errori che l’API può restituir
 | `invalid-rule` | Impossibile aggiungere una regola non valida a una libreria. |
 | `invalid-settings-syntax` | Errore di sintassi durante l’analisi delle impostazioni JSON. |
 | `library-file-not-found` | Impossibile trovare un file necessario definito in extension.json all’interno del pacchetto zip. |
-| `minification-error` | Impossibile compilare il codice a causa di codice non valido. |
+| `minification-error` | Impossibile compilare il codice. Codice non valido. |
 | `multiple-revisions` | È possibile includere in una libreria una sola revisione di ogni risorsa. |
 | `no-available-orgs` | Questo account utente non appartiene a un profilo di prodotto con accesso ai tag. Utilizza Admin Console per aggiungere questo utente a un profilo di prodotto con diritti di tag. |
 | `not-authorized` | Questo account utente non dispone delle autorizzazioni necessarie per eseguire questa azione. |
@@ -107,4 +107,4 @@ Nella tabella seguente sono elencati i diversi errori che l’API può restituir
 | `upgraded-extension-required` | Dopo aver installato un aggiornamento dell’estensione, devi includerlo in tutte le librerie fino a quando l’aggiornamento non arriva a Produzione. L’unica eccezione è se l’estensione non è ancora stata pubblicata. |
 | `upstream-build-required` | È necessaria una build corretta per la libreria a monte prima di poterla generare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

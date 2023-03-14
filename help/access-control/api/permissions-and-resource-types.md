@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;autorizzazioni di controllo accessi;tipi di risorse di controllo accessi;api di controllo accessi
+keywords: Experience Platform;home;argomenti popolari;autorizzazioni di controllo di accesso;tipi di risorse di controllo di accesso;api di controllo di accesso
 solution: Experience Platform
 title: Endpoint API di riferimento
-description: L'endpoint di riferimento nell'API di controllo accessi consente di visualizzare i nomi delle autorizzazioni e dei tipi di risorse disponibili, che possono quindi essere utilizzati per visualizzare criteri di controllo accessi efficaci per l'utente corrente.
+description: L’endpoint di riferimento nell’API di controllo degli accessi consente di visualizzare i nomi delle autorizzazioni e dei tipi di risorse disponibili, che possono quindi essere utilizzati per visualizzare criteri di controllo degli accessi efficaci per l’utente corrente.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Se viene passato un token utente, l’utente del token deve avere un ruolo di amministratore organizzazione per l’organizzazione richiesta.
+>Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-È possibile elencare i nomi di tutte le autorizzazioni e i tipi di risorse effettuando una richiesta GET al `/acl/reference` punto finale. Questi nomi possono quindi essere utilizzati nelle chiamate API a [visualizzare le politiche di controllo degli accessi efficaci](./effective-policies.md) per l&#39;utente corrente.
+Per elencare i nomi di tutte le autorizzazioni e di tutti i tipi di risorse, devi effettuare una richiesta GET al `/acl/reference` endpoint. Questi nomi possono quindi essere utilizzati nelle chiamate API a [visualizzare criteri di controllo dell&#39;accesso effettivi](./effective-policies.md) per l&#39;utente corrente.
 
-Un&#39;autorizzazione è un criterio gestito tramite Adobe Admin Console e viene mappata a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorsa (ad esempio set di dati o schemi).
+Un’autorizzazione è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorse (come set di dati o schemi).
 
 **Formato API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un `permissions` oggetto e `resource-types` oggetto , ciascuno contenente un elenco completo di nomi per le autorizzazioni di accesso o i tipi di risorse, rispettivamente.
+Una risposta corretta restituisce un `permissions` oggetto e un `resource-types` oggetto, ciascuno contenente un elenco completo di nomi rispettivamente per le autorizzazioni di accesso o per i tipi di risorse.
 
 ```json
 {

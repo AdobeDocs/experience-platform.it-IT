@@ -1,10 +1,11 @@
 ---
 title: Note
-description: Scopri come aggiungere annotazioni testuali a determinate risorse di tag in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come aggiungere annotazioni testuali a determinate risorse tag in Adobe Experience Platform.
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 73%
+ht-degree: 94%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Le note sono annotazioni testuali che possono essere aggiunte ad alcune risorse di tag in Adobe Experience Platform. Le note possono essere aggiunte alle seguenti risorse:
+Le note sono annotazioni testuali che possono essere aggiunte ad alcune risorse tag in Adobe Experience Platform. Le note possono essere aggiunte alle seguenti risorse:
 
 * Estensioni
 * Elementi dati
@@ -42,6 +43,6 @@ Seleziona **[!UICONTROL Note]** per espandere la barra a destra e visualizzare l
 
 ## Altro
 
-* Le note sulle risorse dei tag corrispondono al comportamento delle note in DTM, in quanto non possono essere modificate o eliminate.
+* Le note sulle risorse tag si comportano come le note in DTM: non possono essere modificate né eliminate.
 * Visualizzando precedenti revisioni di una risorsa, vengono visualizzate solo le note create prima della data di revisione `created_at`.
 * Quando elimini una risorsa, vengono anche eliminate tutte le note associate.

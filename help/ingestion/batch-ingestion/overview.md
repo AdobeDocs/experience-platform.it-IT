@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;inserimento dati;batch;abilita set di dati;panoramica acquisizione batch;panoramica;panoramica acquisizione batch;
+keywords: Experience Platform;home;argomenti comuni;inserimento dati;batch;abilitare set di dati;panoramica acquisizione batch;panoramica acquisizione batch;panoramica acquisizione batch;home;popular topic;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Panoramica API di acquisizione in batch
-description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo di un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema noto nel registro Experience Data Model (XDM).
+title: Panoramica dell’API per l’acquisizione in batch
+description: L’API di acquisizione dati di Adobe Experience Platform consente di acquisire i dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo provenienti da un file flat in un sistema di gestione delle relazioni con i clienti (ad esempio un file Parquet) o i dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 6%
 
 ---
 
-# Panoramica API per l’acquisizione in batch
+# Panoramica dell’API per l’acquisizione in batch
 
-L’API di acquisizione dati di Adobe Experience Platform consente di acquisire dati in Platform come file batch. I dati da acquisire possono essere dati di profilo provenienti da un file flat (ad esempio un file Parquet) o dati conformi a uno schema noto nel [!DNL Experience Data Model] (XDM).
+L’API di acquisizione dati di Adobe Experience Platform consente di acquisire i dati in Platform come file batch. I dati da acquisire possono essere dati di profilo da un file flat (ad esempio un file Parquet) o dati conformi a uno schema noto in [!DNL Experience Data Model] (XDM).
 
-La [Riferimento API per l’acquisizione dei dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fornisce informazioni aggiuntive su queste chiamate API.
+Il [Riferimento API per l’acquisizione dei dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) fornisce informazioni aggiuntive su queste chiamate API.
 
 Il diagramma seguente illustra il processo di acquisizione batch:
 
@@ -23,53 +23,53 @@ Il diagramma seguente illustra il processo di acquisizione batch:
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione dati](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Prima di continuare, controlla [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ### [!DNL Data Ingestion] prerequisiti
 
 - I dati da caricare devono essere in formato Parquet o JSON.
 - Un set di dati creato in [[!DNL Catalog services]](../../catalog/home.md).
 - Il contenuto del file Parquet deve corrispondere a un sottoinsieme dello schema del set di dati in cui viene caricato.
-- Richiedi il token di accesso univoco dopo l’autenticazione.
+- Disporre di un token di accesso univoco dopo l’autenticazione.
 
 ### Best practice per l’acquisizione in batch
 
-- La dimensione consigliata del batch è compresa tra 256 MB e 100 GB.
-- Ogni batch deve contenere al massimo 1500 file.
+- La dimensione del batch consigliata è compresa tra 256 MB e 100 GB.
+- Ogni batch può contenere al massimo 1500 file.
 
-### Vincoli di inserimento in batch
+### Vincoli di acquisizione in batch
 
-L’inserimento dei dati in batch presenta alcuni vincoli:
+L’acquisizione di dati batch presenta alcuni vincoli:
 
 - Numero massimo di file per batch: 1500
-- Dimensione massima del batch: 100 GB
+- Dimensione massima batch: 100 GB
 - Numero massimo di proprietà o campi per riga: 10000
 - Numero massimo di batch al minuto per utente: 138
 
 >[!NOTE]
 >
->Per caricare un file di dimensioni superiori a 512 MB, è necessario suddividerlo in blocchi più piccoli. Le istruzioni per caricare un file di grandi dimensioni si trovano nella sezione [sezione caricamento file di grandi dimensioni del documento](#large-file-upload---create-file).
+>Per caricare un file di dimensioni superiori a 512 MB, è necessario suddividerlo in blocchi più piccoli. Le istruzioni per caricare un file di grandi dimensioni sono disponibili nella sezione [sezione caricamento file di grandi dimensioni di questo documento](#large-file-upload---create-file).
 
 ### Tipi
 
-Durante l’acquisizione dei dati, è importante comprendere come [!DNL Experience Data Model] Gli schemi (XDM) funzionano. Per ulteriori informazioni sulla mappatura dei tipi di campo XDM su formati diversi, consulta la sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md).
+Durante l’acquisizione dei dati, è importante comprendere in che modo [!DNL Experience Data Model] Gli schemi (XDM) funzionano. Per ulteriori informazioni su come i tipi di campo XDM si associano a formati diversi, consulta [Guida per gli sviluppatori del registro dello schema](../../xdm/api/getting-started.md).
 
-È possibile acquisire i dati in modo flessibile: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
+È disponibile una certa flessibilità durante l’acquisizione dei dati: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch avrà esito negativo con un `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un `date` o `date-time` digitare. Di conseguenza, questi valori vengono espressi utilizzando [Stringhe formattate ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tempo Unix formattato in millisecondi (1531263959000) e convertito al momento dell’acquisizione nel tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un `date` o `date-time` tipo. Di conseguenza, questi valori sono espressi utilizzando [Stringhe formattate ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o il tempo Unix formattato in millisecondi (1531263959000) e vengono convertiti al momento dell’acquisizione nel tipo XDM di destinazione.
 
 La tabella seguente mostra le conversioni supportate durante l’acquisizione dei dati.
 
-| In entrata (riga) rispetto a Target (col) | Stringa | Byte | Breve | Intero | Lunga | Doppio | Data | Data e ora | Oggetto | Mappa |
+| In entrata (riga) e Target (colonna) | Stringa | Byte | Breve | Intero | Lungo | Doppio | Data | Data-ora | Oggetto | Mappa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Stringa | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
 | Breve | X | X | X | X | X | X |  |  |  |  |
 | Intero | X | X | X | X | X | X |  |  |  |  |
-| Lunga | X | X | X | X | X | X | X | X |  |  |
+| Lungo | X | X | X | X | X | X | X | X |  |  |
 | Doppio | X | X | X | X | X | X |  |  |  |  |
 | Data |  |  |  |  |  |  | X |  |  |  |
-| Data e ora |  |  |  |  |  |  |  | X |  |  |
+| Data-ora |  |  |  |  |  |  |  | X |  |  |
 | Oggetto |  |  |  |  |  |  |  |  | X | X |
 | Mappa |  |  |  |  |  |  |  |  | X | X |
 
@@ -79,15 +79,15 @@ La tabella seguente mostra le conversioni supportate durante l’acquisizione de
 
 ## Mediante l’API
 
-La [!DNL Data Ingestion] L’API ti consente di acquisire i dati come batch (un’unità di dati costituita da uno o più file da acquisire come una singola unità) in [!DNL Experience Platform] in tre fasi di base:
+Il [!DNL Data Ingestion] API consente di acquisire i dati come batch (un’unità di dati costituita da uno o più file da acquisire come una singola unità) in [!DNL Experience Platform] in tre passaggi fondamentali:
 
 1. Crea un nuovo batch.
-2. Carica i file in un set di dati specifico che corrisponde allo schema XDM dei dati.
+2. Carica i file in un set di dati specificato che corrisponde allo schema XDM dei dati.
 3. Segnala la fine del batch.
 
 ## Creare un batch
 
-Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
+Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch, che in seguito verrà caricato in un set di dati specificato.
 
 ```http
 POST /batches
@@ -138,19 +138,19 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | `id` | ID del batch appena creato (utilizzato nelle richieste successive). |
 | `relatedObjects.id` | ID del set di dati in cui caricare i file. |
 
-## Caricamento file
+## Caricamento di file
 
-Dopo aver creato correttamente un nuovo batch per il caricamento, i file possono quindi essere caricati in un set di dati specifico.
+Dopo aver creato correttamente un nuovo batch per il caricamento, i file possono essere caricati in un set di dati specifico.
 
-Puoi caricare i file utilizzando l’API di caricamento file di piccole dimensioni. Tuttavia, se i file sono troppo grandi e il limite del gateway viene superato (ad esempio timeout estesi, richieste di dimensioni del corpo superate e altre restrizioni), puoi passare all’API di caricamento file di grandi dimensioni. Questa API carica il file in blocchi e unisce i dati utilizzando la chiamata API di caricamento file di grandi dimensioni Complete.
+Puoi caricare i file utilizzando l’API Caricamento file di piccole dimensioni. Tuttavia, se i file sono troppo grandi e il limite del gateway viene superato (ad esempio timeout estesi, richieste di dimensioni del corpo superate e altre limitazioni), puoi passare all’API di caricamento file di grandi dimensioni. Questa API carica il file in blocchi e unisce i dati utilizzando la chiamata API Caricamento di file di grandi dimensioni completato.
 
 >[!NOTE]
 >
->L’acquisizione in batch può essere utilizzata per aggiornare gradualmente i dati nell’archivio profili. Per ulteriori informazioni, consulta la sezione su [aggiornamento di un batch](#patch-a-batch) in [guida per gli sviluppatori di batch ingestion](api-overview.md).
+>L’acquisizione batch può essere utilizzata per aggiornare in modo incrementale i dati nell’archivio profili. Per ulteriori informazioni, consulta la sezione su [aggiornamento di un batch](#patch-a-batch) nel [guida per gli sviluppatori sull’acquisizione batch](api-overview.md).
 
 >[!INFO]
 >
->Gli esempi seguenti utilizzano il [Parquet Apache](https://parquet.apache.org/docs/) formato di file. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](api-overview.md).
+>Gli esempi seguenti utilizzano [Apache Parquet](https://parquet.apache.org/docs/) formato file. Un esempio che utilizza il formato di file JSON si trova in [guida per gli sviluppatori sull’acquisizione batch](api-overview.md).
 
 ### Caricamento di file di piccole dimensioni
 
@@ -164,7 +164,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | -------- | ----------- |
 | `{BATCH_ID}` | ID del batch. |
 | `{DATASET_ID}` | ID del set di dati per caricare i file. |
-| `{FILE_NAME}` | Il nome del file come verrà visualizzato nel set di dati. |
+| `{FILE_NAME}` | Nome del file come verrà visualizzato nel set di dati. |
 
 **Richiesta**
 
@@ -180,7 +180,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Il percorso e il nome del file da caricare nel set di dati. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome del file da caricare nel set di dati. |
 
 **Risposta**
 
@@ -188,9 +188,9 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 #Status 200 OK, with empty response body
 ```
 
-### Caricamento di file di grandi dimensioni - crea file
+### Caricamento di file di grandi dimensioni - Crea file
 
-Per caricare un file di grandi dimensioni, è necessario suddividerlo in blocchi più piccoli e caricarlo uno alla volta.
+Per caricare un file di grandi dimensioni, il file deve essere diviso in blocchi più piccoli e caricato uno alla volta.
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initialize
@@ -200,7 +200,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 | -------- | ----------- |
 | `{BATCH_ID}` | ID del batch. |
 | `{DATASET_ID}` | ID del set di dati che acquisisce i file. |
-| `{FILE_NAME}` | Il nome del file come verrà visualizzato nel set di dati. |
+| `{FILE_NAME}` | Nome del file come verrà visualizzato nel set di dati. |
 
 **Richiesta**
 
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Caricamento di file di grandi dimensioni - caricamento di parti successive
 
-Dopo la creazione del file, è possibile caricare tutti i blocchi successivi effettuando richieste PATCH ripetute, una per ogni sezione del file.
+Dopo la creazione del file, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste PATCH, una per ogni sezione del file.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -230,7 +230,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | -------- | ----------- |
 | `{BATCH_ID}` | ID del batch. |
 | `{DATASET_ID}` | ID del set di dati in cui caricare i file. |
-| `{FILE_NAME}` | Nome del file come verrà visualizzato nel set di dati. |
+| `{FILE_NAME}` | Nome del file che verrà visualizzato nel set di dati. |
 
 **Richiesta**
 
@@ -247,7 +247,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Il percorso e il nome del file da caricare nel set di dati. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome del file da caricare nel set di dati. |
 
 **Risposta**
 
@@ -255,9 +255,9 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 #Status 200 OK, with empty response
 ```
 
-## Completamento batch del segnale
+## Completamento batch segnale
 
-Dopo che tutti i file sono stati caricati nel batch, il batch può essere segnalato per il completamento. Facendo questo, il [!DNL Catalog] Le voci DataSetFile vengono create per i file completati e associate al batch generato in precedenza. La [!DNL Catalog] batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per acquisire i dati disponibili.
+Dopo che tutti i file sono stati caricati nel batch, il batch può essere segnalato per il completamento. In questo modo, il [!DNL Catalog] Le voci DataSetFile vengono create per i file completati e associate al batch generato in precedenza. Il [!DNL Catalog] Il batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per acquisire i dati disponibili.
 
 **Richiesta**
 
@@ -285,7 +285,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Verifica stato batch
 
-In attesa del caricamento dei file nel batch, è possibile controllare lo stato del batch per verificarne l&#39;avanzamento.
+In attesa che i file vengano caricati nel batch, è possibile controllare lo stato del batch per verificarne l’avanzamento.
 
 **Formato API**
 
@@ -399,23 +399,23 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{USER_ID}` | ID dell&#39;utente che ha creato o aggiornato il batch. |
+| `{USER_ID}` | ID dell’utente che ha creato o aggiornato il batch. |
 
-La `"status"` Il campo indica lo stato corrente del batch richiesto. I batch possono avere uno dei seguenti stati:
+Il `"status"` campo che mostra lo stato corrente del batch richiesto. I batch possono avere uno dei seguenti stati:
 
-## Stati di inserimento batch
+## Stati di acquisizione in batch
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| Abbandonato | Il batch non è stato completato nell&#39;intervallo di tempo previsto. |
-| Interrotto | Operazione di interruzione **esplicitamente** è stato chiamato (tramite l’API di acquisizione batch) per il batch specificato. Una volta che il batch è in stato &quot;Caricato&quot;, non può essere interrotto. |
-| Attivo | Il batch è stato promosso con successo ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot;. |
-| Eliminato | I dati per il batch sono stati rimossi completamente. |
-| Non riuscito | Stato terminale che risulta da una configurazione errata e/o da dati non validi. I dati per un batch con errore **not** si faccia vivo. Questo stato può essere utilizzato in modo intercambiabile con &quot;Failure&quot; (Errore). |
-| Inattivo | La promozione del batch è stata completata, ma è stata ripristinata o è scaduta. Il batch non è più disponibile per il consumo a valle. |
+| Abbandonato | Il batch non è stato completato entro il periodo di tempo previsto. |
+| Interrotto | Un&#39;operazione di interruzione ha **esplicitamente** chiamato (tramite API Batch Ingest) per il batch specificato. Una volta che il batch è in uno stato &quot;Loaded&quot; (Caricato), non può essere interrotto. |
+| Attivo | Il batch è stato promosso correttamente ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot; (Completato). |
+| Eliminato | I dati per il batch sono stati completamente rimossi. |
+| Non riuscito | Stato del terminale causato da configurazione e/o dati non validi. I dati per un batch non riuscito **non** vieni a trovarti. Questo stato può essere utilizzato in modo intercambiabile con &quot;Errore&quot;. |
+| Inattivo | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
-| Caricamento | I dati per questo batch vengono caricati e il batch è attualmente **not** pronti per essere promossi. |
-| Nuovo | I dati per questo batch sono in fase di elaborazione. Tuttavia, a causa di un errore di sistema o temporaneo, il batch non è riuscito - di conseguenza, questo batch viene riprovato. |
-| Staging | La fase di staging del processo di promozione per un batch è completata e il processo di acquisizione è stato eseguito. |
-| Staging | Elaborazione dei dati per il batch in corso. |
-| In stallo | Elaborazione dei dati per il batch in corso. Tuttavia, la promozione batch si è arrestata dopo diversi tentativi. |
+| Caricamento | I dati per questo batch sono in fase di caricamento e il batch è attualmente **non** pronto per essere promosso. |
+| Nuovo tentativo | Elaborazione dei dati per questo batch in corso. Tuttavia, a causa di un errore di sistema o transitorio, il batch non è riuscito. Di conseguenza, si sta tentando di nuovo di eseguire il batch. |
+| In staging | La fase di staging del processo di promozione per un batch è stata completata e il processo di acquisizione è stato eseguito. |
+| Staging | Dati per il batch in fase di elaborazione. |
+| In stallo | I dati per il batch sono in fase di elaborazione. Tuttavia, la promozione batch si è bloccata dopo una serie di tentativi. |

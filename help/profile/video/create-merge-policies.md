@@ -1,6 +1,6 @@
 ---
 title: Creare un criterio di unione in Adobe Experience Platform
-description: Questo video fornisce informazioni di base sui criteri di unione in Adobe Experience Platform e illustra come definire i criteri di unione utilizzando l’interfaccia utente di Platform.
+description: Questo video offre informazioni di base sui criteri di unione in Adobe Experience Platform e illustra come definire i criteri di unione utilizzando l’interfaccia utente di Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Creare un criterio di unione nell’interfaccia utente di Experience Platform
 
-Questo video fornisce una comprensione di base dei criteri di unione all’interno di Adobe Experience Platform e illustra come definire i criteri di unione utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](../merge-policies/overview.md).
+Questo video offre informazioni di base sui criteri di unione in Adobe Experience Platform e illustra come definire i criteri di unione utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sui criteri di unione, consulta la sezione [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 >[!NOTE]
 >
->L&#39;interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta la [guida all&#39;interfaccia utente dei criteri di unione](../merge-policies/ui-guide.md) .
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [guida dell’interfaccia utente per i criteri di unione](../merge-policies/ui-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

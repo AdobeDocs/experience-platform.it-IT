@@ -1,6 +1,6 @@
 ---
 title: Determinare Un Punteggio Di Propensione Utilizzando Un Modello Predittivo Generato Dall’Apprendimento Automatico
-description: Scopri come utilizzare Query Service per applicare il modello predittivo ai dati di Platform. Questo documento illustra come utilizzare i dati di Platform per prevedere la propensione di un cliente all’acquisto in ogni visita.
+description: Scopri come utilizzare Query Service per applicare il modello predittivo ai dati di Platform. Questo documento illustra come utilizzare i dati di Platform per prevedere la propensione di un cliente all’acquisto per ogni visita.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 0%
 
 ---
 
-# Determinare un punteggio di propensione utilizzando un modello predittivo generato da machine-learning
+# Determinare un punteggio di tendenza utilizzando un modello predittivo generato dall’apprendimento automatico
 
-Utilizzando Query Service è possibile sfruttare modelli predittivi, come i punteggi di propensione, generati sulla piattaforma di apprendimento automatico per analizzare i dati di Experience Platform.
+Query Service consente di sfruttare modelli predittivi, come i punteggi di propensione, basati sulla piattaforma di apprendimento automatico per analizzare i dati di Experience Platform.
 
-Questa guida spiega come utilizzare Query Service per inviare dati alla piattaforma di apprendimento automatico al fine di addestrare un modello in un blocco appunti computazionale. Il modello addestrato può essere applicato ai dati utilizzando SQL per prevedere la propensione di un cliente all&#39;acquisto per ogni visita.
+Questa guida spiega come utilizzare Query Service per inviare dati alla piattaforma di machine learning per addestrare un modello in un blocco appunti computazionale. Il modello addestrato può essere applicato ai dati utilizzando SQL per prevedere la propensione di un cliente ad acquistare per ogni visita.
 
 ## Introduzione
 
-Come parte di questo processo richiede la formazione di un modello di apprendimento automatico, in questo documento si presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
+Poiché parte di questo processo richiede la formazione di un modello di apprendimento automatico, il presente documento presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
 
-Questo esempio utilizza [!DNL Jupyter Notebook] come ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato perché si tratta di un&#39;applicazione web open-source con requisiti di elaborazione ridotti. Può essere [scaricato dal sito ufficiale](https://jupyter.org/).
+Questo esempio utilizza [!DNL Jupyter Notebook] come ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliata in quanto si tratta di un&#39;applicazione web open-source con requisiti di calcolo ridotti. Può essere [scaricato dal sito ufficiale](https://jupyter.org/).
 
-Se non lo hai già fatto, segui i passaggi per [connect [!DNL Jupyter Notebook] con Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) prima di continuare con questa guida.
+Se non lo hai già fatto, segui i passaggi per [connetti [!DNL Jupyter Notebook] con Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) prima di continuare con questa guida.
 
 Le librerie utilizzate in questo esempio includono:
 
@@ -37,17 +37,17 @@ tqdm
 
 ## Importare tabelle di analisi da Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Per generare un modello di punteggio tendenza, è necessario importare una proiezione dei dati di analisi memorizzati in Platform in [!DNL Jupyter Notebook]. Da un [!DNL Python] 3 [!DNL Jupyter Notebook] collegato a Query Service, i seguenti comandi importano un set di dati sul comportamento del cliente da Luma, un negozio di abbigliamento fittizio. Poiché i dati di Platform vengono memorizzati utilizzando il formato Experience Data Model (XDM), è necessario generare un oggetto JSON di esempio conforme alla struttura dello schema. Consulta la documentazione per le istruzioni su come [generare l’oggetto JSON di esempio](../../xdm/ui/sample.md).
+Per generare un modello di punteggio tendenza, è necessario importare in una proiezione dei dati di analisi memorizzati in Platform [!DNL Jupyter Notebook]. Da un [!DNL Python] 3 [!DNL Jupyter Notebook] connessi a Query Service, i seguenti comandi importano un set di dati sul comportamento del cliente da Luma, un negozio di abbigliamento fittizio. Poiché i dati di Platform vengono memorizzati utilizzando il formato Experience Data Model (XDM), è necessario generare un oggetto JSON di esempio conforme alla struttura dello schema. Consulta la documentazione per istruzioni su come [genera l’oggetto JSON campione](../../xdm/ui/sample.md).
 
-![La [!DNL Jupyter Notebook] dashboard con diversi comandi evidenziati.](../images/use-cases/jupyter-commands.png)
+![Il [!DNL Jupyter Notebook] dashboard con diversi comandi evidenziati.](../images/use-cases/jupyter-commands.png)
 
-L’output visualizza una visualizzazione tabularizzata di tutte le colonne del set di dati comportamentali di Luma all’interno del [!DNL Jupyter Notebook] dashboard.
+L’output mostra una vista in forma di tabella di tutte le colonne del set di dati comportamentali di Luma all’interno del [!DNL Jupyter Notebook] dashboard.
 
-![Output tabularizzato del set di dati sul comportamento dei clienti importato da Luma all’interno di [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![L’output tabularizzato del set di dati del comportamento del cliente importato di Luma in [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
-## Preparare i dati per l’apprendimento automatico {#prepare-data-for-machine-learning}
+## Prepara i dati per l’apprendimento automatico {#prepare-data-for-machine-learning}
 
-Per formare un modello di apprendimento automatico è necessario identificare una colonna bersaglio. Poiché la propensione all’acquisto è l’obiettivo per questo caso d’uso, la `analytic_action` come colonna di destinazione dai risultati Luma. Il valore `productPurchase` è l&#39;indicatore di un acquisto da parte del cliente. La `purchase_value` e `purchase_num` vengono rimosse anche in quanto sono direttamente correlate all’azione di acquisto del prodotto.
+Per addestrare un modello di apprendimento automatico è necessario identificare una colonna target. Poiché la propensione all’acquisto è l’obiettivo per questo caso d’uso, il `analytic_action` viene scelta come colonna di destinazione dai risultati Luma. Il valore `productPurchase` è l’indicatore di un acquisto di un cliente. Il `purchase_value` e `purchase_num` Le colonne vengono rimosse anche in quanto sono direttamente correlate all’azione di acquisto del prodotto.
 
 I comandi per eseguire queste azioni sono i seguenti:
 
@@ -60,7 +60,7 @@ df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 
 Successivamente, i dati del set di dati Luma devono essere trasformati in rappresentazioni appropriate. Sono necessari due passaggi:
 
-1. Trasforma le colonne che rappresentano i numeri in colonne numeriche. A tal fine, convertire esplicitamente il tipo di dati nel `dataframe`.
+1. Trasforma le colonne che rappresentano i numeri in colonne numeriche. Per eseguire questa operazione, convertire esplicitamente il tipo di dati in `dataframe`.
 1. Trasforma anche le colonne categoriche in colonne numeriche.
 
 ```python
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-Una tecnica denominata *una codifica a caldo* viene utilizzato per convertire le variabili di dati categoriche da utilizzare con gli algoritmi di machine e deep learning. Ciò a sua volta migliora le previsioni e la precisione di classificazione di un modello. Utilizza la `Sklearn` per rappresentare ogni valore categorico in una colonna separata.
+Una tecnica denominata *una codifica a caldo* viene utilizzato per convertire le variabili di dati per categoria da utilizzare con algoritmi di apprendimento automatico e profondo. Ciò a sua volta migliora le previsioni e la precisione di classificazione di un modello. Utilizza il `Sklearn` per rappresentare ogni valore di categoria in una colonna separata.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-I dati definiti come `X` è tabularizzato e compare come segue:
+I dati definiti come `X` è tabulato e compare come segue:
 
-![Uscita tabularizzata di X [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![L’output tabularizzato di X in [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-Ora che i dati necessari per l&#39;apprendimento automatico sono disponibili, può adattarsi ai modelli di apprendimento automatico preconfigurati in [!DNL Python]s `sklearn` libreria. [!DNL Logistics Regression] viene utilizzato per addestrare il modello di propensione e consente di vedere la precisione dei dati del test. In questo caso, l’85% circa.
+Ora che i dati necessari per l’apprendimento automatico sono disponibili, può adattarsi ai modelli di apprendimento automatico preconfigurati in [!DNL Python]di `sklearn` libreria. [!DNL Logistics Regression] viene utilizzato per addestrare il modello di propensione e consente di visualizzare l’accuratezza dei dati di test. In questo caso, è di circa l&#39;85%.
 
-La [!DNL Logistic Regression] l&#39;algoritmo e il metodo di suddivisione del test del treno, utilizzato per stimare le prestazioni degli algoritmi di apprendimento automatico, vengono importati nel blocco di codice seguente:
+Il [!DNL Logistic Regression] l’algoritmo e il metodo di suddivisione della prova del treno, utilizzati per stimare le prestazioni degli algoritmi di apprendimento automatico, sono importati nel blocco di codice seguente:
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -121,7 +121,7 @@ print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 
 La precisione dei dati di prova è 0,8518518518518519.
 
-Utilizzando la Regressione Logistica, puoi visualizzare le ragioni di un acquisto e ordinare le caratteristiche che determinano la propensione in base alla loro importanza classificata negli ordini discendenti. Le prime colonne indicano una causa maggiore che porta al comportamento di acquisto. Le ultime colonne indicano i fattori che non portano al comportamento di acquisto.
+Utilizzando la regressione logistica, puoi visualizzare i motivi di un acquisto e ordinare le funzioni che determinano la propensione in base alla loro importanza classificata in ordine decrescente. Le prime colonne denotano una causalità più elevata che determina il comportamento di acquisto. Queste ultime colonne indicano fattori che non determinano un comportamento di acquisto.
 
 Il codice per visualizzare i risultati come due grafici a barre è il seguente:
 
@@ -153,19 +153,19 @@ ax2.set_title("Top 10 features to define \n a propensity to NOT purchase")
 plt.show()
 ```
 
-Di seguito è riportata una visualizzazione grafico a barre verticale dei risultati:
+Di seguito è riportata una visualizzazione con grafico a barre verticale dei risultati:
 
-![La visualizzazione delle 10 caratteristiche principali che definiscono una propensione ad acquistare o a non comprare.](../images/use-cases/visualized-results.png)
+![La visualizzazione delle 10 funzioni principali che definiscono la propensione all’acquisto o a non acquistare.](../images/use-cases/visualized-results.png)
 
-È possibile distinguere diversi pattern dal grafico a barre. Gli argomenti relativi ai punti vendita (POS) e alle chiamate come rimborso sono i fattori più importanti che determinano il comportamento di acquisto. Mentre gli argomenti della chiamata come reclami e fatture sono ruoli importanti per definire il comportamento di non acquisto. Si tratta di informazioni quantificabili e fruibili che gli addetti al marketing possono sfruttare per condurre campagne di marketing per affrontare la propensione all’acquisto di questi clienti.
+Dal grafico a barre è possibile individuare diversi pattern. Gli argomenti POS (Point of Sale) e Call del canale come rimborso sono i fattori più importanti che determinano un comportamento di acquisto. Mentre gli argomenti della chiamata come reclami e fatture sono ruoli importanti per definire il comportamento di non acquisto. Si tratta di informazioni quantificabili e actionable che gli esperti di marketing possono sfruttare per condurre campagne di marketing volte a gestire la propensione all’acquisto di questi clienti.
 
 ## Utilizzare Query Service per applicare il modello addestrato {#use-query-service-to-apply-trained-model}
 
-Una volta creato, il modello addestrato deve essere applicato ai dati contenuti nell&#39;Experience Platform. A questo scopo, la logica della pipeline di apprendimento automatico deve essere convertita in SQL. I due elementi chiave di questa transizione sono i seguenti:
+Dopo la creazione del modello addestrato, questo deve essere applicato ai dati contenuti in Experience Platform. A questo scopo, la logica della pipeline di machine learning deve essere convertita in SQL. I due componenti chiave di questa transizione sono i seguenti:
 
-- In primo luogo, SQL deve sostituire [!DNL Logistics Regression] modulo per ottenere la probabilità di un&#39;etichetta di previsione. Il modello creato da Regressione logistica ha prodotto il modello di regressione `y = wX + c`  dove pesi `w` e intercettare `c` sono l&#39;output del modello. Le funzionalità SQL possono essere utilizzate per moltiplicare i pesi per ottenere una probabilità.
+- Innanzitutto, SQL deve sostituire [!DNL Logistics Regression] modulo per ottenere la probabilità di un’etichetta di previsione. Il modello creato dalla regressione logistica ha prodotto il modello di regressione `y = wX + c`  dove pesi `w` e intercetta `c` sono l’output del modello. Le funzionalità SQL possono essere utilizzate per moltiplicare i pesi per ottenere una probabilità.
 
-- In secondo luogo, il processo di ingegneria realizzato [!DNL Python] con una codifica a caldo deve essere incorporato anche in SQL. Per esempio, nel database originale, abbiamo `geo_county` per memorizzare la contea, ma la colonna viene convertita in `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. L&#39;istruzione SQL seguente esegue la stessa trasformazione, dove `w1`, `w2`e `w3` possono essere sostituiti con i pesi tratti dal modello in [!DNL Python]:
+- In secondo luogo, il processo di progettazione [!DNL Python] con una codifica a caldo deve essere incorporata anche in SQL. Ad esempio, nel database originale sono presenti `geo_county` colonna in cui memorizzare la provincia ma in cui viene convertita la colonna `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. L&#39;istruzione SQL seguente esegue la stessa trasformazione, dove `w1`, `w2`, e `w3` possono essere sostituiti con i pesi appresi dal modello in [!DNL Python]:
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -173,13 +173,13 @@ SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
         CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
 ```
 
-Per le funzioni numeriche, è possibile moltiplicare direttamente le colonne con i pesi, come illustrato nell&#39;istruzione SQL riportata di seguito.
+Per le funzionalità numeriche, è possibile moltiplicare direttamente le colonne con i pesi, come illustrato nell&#39;istruzione SQL riportata di seguito.
 
 ```sql
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-Una volta ottenuti i numeri, è possibile portarli a una funzione sigmoide in cui l&#39;algoritmo di regressione logistica produce le previsioni finali. Nell&#39;istruzione seguente, `intercept` è il numero dell&#39;intersezione nella regressione.
+Una volta ottenuti i numeri, possono essere portati a una funzione sigmoidea in cui l&#39;algoritmo di regressione logistica produce le previsioni finali. Nella dichiarazione seguente, `intercept` è il numero dell&#39;intercetta nella regressione.
         
 
 ```sql
@@ -188,7 +188,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### Un esempio end-to-end
 
-In una situazione in cui sono presenti due colonne (`c1` e `c2`), se `c1` ha due categorie, [!DNL Logistic Regression] viene addestrato con la seguente funzione:
+In una situazione in cui sono presenti due colonne (`c1` e `c2`), se `c1` dispone di due categorie, [!DNL Logistic Regression] l’algoritmo viene addestrato con la seguente funzione:
  
 
 ```python
@@ -210,7 +210,7 @@ FROM
   )
 ```
  
-La [!DNL Python] codice per automatizzare il processo di traduzione:
+Il [!DNL Python] il codice per automatizzare il processo di traduzione è il seguente:
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -235,7 +235,7 @@ def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
     return final_sql
 ```
 
-Quando si utilizza SQL per dedurre il database, l&#39;output è il seguente:
+Quando SQL viene utilizzato per dedurre il database, l&#39;output è il seguente:
 
 ```python
 sql = generate_lr_inference_sql(ohc_columns, num_cols, clf, "fdu_luma_raw")
@@ -245,13 +245,13 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-I risultati tabularizzati mostrano la propensione ad acquistare per ogni sessione del cliente con `0` che significa nessuna propensione all&#39;acquisto e `1` che significa una propensione confermata all&#39;acquisto.
+I risultati tabulari mostrano la propensione all’acquisto per ogni sessione del cliente con `0` che significa nessuna propensione ad acquistare e `1` il che significa una confermata propensione all&#39;acquisto.
 
-![Risultati tabularizzati dell&#39;inferenza del database utilizzando SQL.](../images/use-cases/inference-results.png)
+![I risultati tabulari dell’inferenza del database utilizzando SQL.](../images/use-cases/inference-results.png)
 
-## Lavorare sui dati campionati: Bootstrap {#working-on-sampled-data}
+## Lavori sui dati campionati: Bootstrapping {#working-on-sampled-data}
 
-Nel caso in cui le dimensioni dei dati siano troppo grandi per consentire al computer locale di memorizzare i dati per la formazione sul modello, è possibile prelevare campioni invece dei dati completi da Query Service. Per sapere quanti dati sono necessari per il campionamento da Query Service, puoi applicare una tecnica chiamata bootstrapping. A questo proposito, per &quot;bootstrapping&quot; si intende che il modello viene addestrato più volte con diversi campioni e viene esaminata la varianza delle precisioni del modello tra i diversi campioni. Per regolare l&#39;esempio di modello di propensione riportato sopra, prima di tutto, incapsulare l&#39;intero flusso di lavoro di apprendimento automatico in una funzione. Il codice è il seguente:
+Nel caso in cui le dimensioni dei dati siano troppo grandi per consentire al computer locale di memorizzare i dati per l’apprendimento dei modelli, puoi prelevare campioni invece dei dati completi da Query Service. Per sapere quanti dati sono necessari per campionare da Query Service, puoi applicare una tecnica denominata bootstrapping. A questo proposito, l&#39;avvio comporta l&#39;addestramento del modello più volte con vari campioni e l&#39;ispezione della varianza delle accuratezze del modello tra i diversi campioni. Per regolare l’esempio del modello di propensione riportato sopra, in primo luogo, incapsula l’intero flusso di lavoro di apprendimento automatico in una funzione. Il codice è il seguente:
 
 ```python
 def end_to_end_pipeline(df):
@@ -295,7 +295,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-Questa funzione può quindi essere eseguita più volte in un ciclo, ad esempio 10 volte. La differenza rispetto al codice precedente è che il campione ora non viene prelevato dall’intera tabella, ma solo da un campione di righe. Ad esempio, il codice di esempio sottostante richiede solo 1000 righe. È possibile memorizzare le precisioni di ogni iterazione.
+Questa funzione può quindi essere eseguita più volte in un ciclo, ad esempio 10 volte. La differenza rispetto al codice precedente è che ora il campione non viene estratto dall&#39;intera tabella, ma solo da un campione di righe. Ad esempio, il codice di esempio seguente accetta solo 1000 righe. È possibile memorizzare le accuratezze di ogni iterazione.
 
 ```python
 from tqdm import tqdm
@@ -320,8 +320,8 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-Vengono quindi ordinate le precisioni del modello di bootstrapped. Dopo di che, il decimo e il novantesimo quantile della precisione del modello diventa un intervallo di affidabilità del 95% per le precisioni del modello con la dimensione del campione specificata.
+Le precisioni del modello avviato vengono quindi ordinate. Dopo di che, il decimo e il novantesimo quantile della precisione del modello diventano un intervallo di affidabilità del 95% per la precisione del modello con la dimensione del campione specificata.
 
-![Comando di stampa per visualizzare l&#39;intervallo di affidabilità del punteggio di propensione.](../images/use-cases/confidence-interval.png)
+![Il comando print per visualizzare l’intervallo di affidabilità del punteggio tendenza.](../images/use-cases/confidence-interval.png)
 
-La figura precedente indica che se si impiegano solo 1000 righe per addestrare i modelli, è possibile prevedere che le precisioni scendano tra l’84% e l’88% circa. È possibile regolare le `LIMIT` nelle query Query Service in base alle tue esigenze per garantire le prestazioni dei modelli.
+La figura precedente indica che se si utilizzano solo 1000 righe per addestrare i modelli, è possibile prevedere che la precisione diminuirà tra circa l’84% e l’88%. È possibile regolare `LIMIT` clausola nelle query di Query Service in base alle esigenze per garantire le prestazioni dei modelli.

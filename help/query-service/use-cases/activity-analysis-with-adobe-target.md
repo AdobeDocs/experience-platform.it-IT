@@ -1,7 +1,8 @@
 ---
 title: Analisi Delle Attività Con Adobe Target
-description: Questo documento spiega come utilizzare Query Service per creare informazioni fruibili dai set di dati creati con i dati Adobe Target.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+description: Questo documento spiega come utilizzare Query Service per creare informazioni actionable dai set di dati creati con i dati di Adobe Target.
+exl-id: a5181ee2-1e1c-405d-8dfe-5a32c28ac9f1
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 3%
@@ -10,17 +11,17 @@ ht-degree: 3%
 
 # Analisi delle attività con Adobe Target
 
-Adobe Experience Platform consente di acquisire dati da Adobe Target utilizzando i campi Experience Data Model (XDM) per creare set di dati da utilizzare con Query Service. Poiché Adobe Target è progettato per personalizzare il contenuto e personalizzare le esperienze utente, le query eseguite su questi set di dati consentono informazioni altamente personalizzate e mirate analizzando l’attività utente tramite SQL.
+Adobe Experience Platform consente di acquisire dati da Adobe Target utilizzando i campi Experience Data Model (XDM) per creare set di dati da utilizzare con Query Service. Poiché Adobe Target è progettato per personalizzare i contenuti e personalizzare le esperienze utente, le query eseguite su questi set di dati consentono di ottenere informazioni altamente personalizzate e mirate analizzando le attività utente tramite SQL.
 
-Questo documento fornisce una serie di query SQL di esempio che mostrano casi d&#39;uso comuni in base ai comportamenti e alle caratteristiche dei clienti.
+Questo documento fornisce una serie di query SQL di esempio che illustrano casi d’uso comuni in base ai comportamenti e alle caratteristiche dei clienti.
 
 ## Introduzione
 
-Per ciascuno dei seguenti casi d&#39;uso, viene fornito un esempio di query SQL con parametri come modello da personalizzare. Fornisci parametri ovunque vedi `{ }` negli esempi SQL che si desidera valutare.
+Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornisci i parametri ovunque ti trovi `{ }` negli esempi SQL che si desidera valutare.
 
-## Mappatura del campo XDM parziale di alto livello
+## Mappatura di campi XDM parziali di alto livello
 
-Nella tabella seguente sono elencati i campi di Target comuni e i campi XDM corrispondenti a cui sono mappati.
+Nella tabella seguente sono elencati i campi di Target comuni e i campi XDM corrispondenti a cui vengono mappati.
 
 >[!NOTE]
 >
@@ -32,7 +33,7 @@ Nella tabella seguente sono elencati i campi di Target comuni e i campi XDM corr
 | Attività ID | `_experience.target.activities.activityID` | N/D |
 | ID esperienza | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` | N/D |
 | ID segmento | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | N/D |
-| Ambito evento | `_experience.target.activities[].activityEvents[].eventScope` | Questo campo traccia i nuovi visitatori e visite. |
+| Ambito evento | `_experience.target.activities[].activityEvents[].eventScope` | Questo campo tiene traccia dei nuovi visitatori e delle nuove visite. |
 | ID passaggio | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Questo campo è un ID passaggio personalizzato per Adobe Campaign. |
 | Totale prezzo | commerce.order.priceTotal | N/D |
 
@@ -42,15 +43,15 @@ Nella tabella seguente sono elencati i campi di Target comuni e i campi XDM corr
 
 ## Obiettivi
 
-Analizzando le attività degli utenti, puoi personalizzare il contenuto per un pubblico specifico e testare versioni diverse del contenuto per una singola entità. Inoltre, analizzando un&#39;attività specifica in un determinato periodo di tempo o per i singoli utenti, le prestazioni di ogni singola attività possono essere meglio comprese. I risultati di questa analisi combinata possono essere utilizzati per comprendere le prestazioni di ogni singola attività.
+Analizzando le attività degli utenti, puoi personalizzare il contenuto per un pubblico specifico e testarne diverse versioni per una singola entità. Inoltre, analizzando una specifica attività in un determinato periodo di tempo o per singoli utenti, le prestazioni di ciascuna attività possono essere comprese più chiaramente. I risultati di questa analisi combinata possono essere utilizzati per comprendere le prestazioni di ogni singola attività.
 
-I seguenti casi di utilizzo per la personalizzazione vengono creati utilizzando i dati di Adobe Target e si concentrano sulle attività degli utenti per creare informazioni utili sul comportamento dei clienti rispetto alle applicazioni aziendali.
+I seguenti casi di utilizzo di personalizzazione vengono creati utilizzando i dati di Adobe Target e si concentrano sulle attività degli utenti per ottenere informazioni preziose sul comportamento dei clienti rispetto alle applicazioni aziendali.
 
 Questa guida illustra i seguenti concetti chiave attraverso gli esempi di casi d’uso:
 
 * Comprendere le prestazioni di un ID attività per un dato giorno, ad esempio conteggio, dettagli e ID esperienza associati.
-* Per determinare l’ambito del visitatore e dell’evento per un’attività.
-* Per raccogliere il conteggio dei visitatori, le visite e le informazioni sulle impression per Experience ID, Segment ID e Activity ID.
+* Per determinare l’ambito di un visitatore e di un evento per un’attività.
+* Raccogliere il conteggio di visitatori, visite e informazioni sulle impression per Experience ID, ID segmento e ID attività.
 
 ### Genera il conteggio delle attività orarie per un dato giorno
 
@@ -73,7 +74,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-### Genera dettagli orari per un particolare specifico
+### Genera dettagli orari per un particolare
 
 ```sql
 SELECT
@@ -90,7 +91,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-### Determinare l’elenco degli ID esperienza per una specifica attività per un dato giorno
+### Determinare l’elenco degli ID esperienza per un’attività specifica per un dato giorno
 
 ```sql
 SELECT
@@ -121,7 +122,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### Restituisce un elenco degli ambiti evento (visitatore, visita, impression) per istanze per ID attività per un dato giorno
+### Restituisce un elenco di ambiti evento (visitatore, visita, impression) per istanze per ID attività per un dato giorno
 
 ```sql
 SELECT
@@ -183,7 +184,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### Determinare visitatori, visite e impression per Experience ID, Segment ID e EventScope per un dato giorno
+### Determinare visitatori, visite e impression per Experience ID, Segment ID ed EventScope per un dato giorno
 
 ```sql
 SELECT
@@ -228,7 +229,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-### Restituisce i nomi delle mbox e il conteggio dei record per un dato giorno
+### Restituire i nomi mbox e il numero di record per un dato giorno
 
 ```sql
 SELECT

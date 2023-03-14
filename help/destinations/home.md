@@ -1,20 +1,20 @@
 ---
 keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinazioni;attivare dati;attivare;
 title: Panoramica sulle destinazioni
-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
 
 # Panoramica di [!DNL Destinations] {#overview}
 
-![Banner di panoramica sulle destinazioni](./assets/overview/destinations-overview-banner.png)
+![Banner panoramica sulle destinazioni](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+**[!DNL Destinations]** sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -23,67 +23,67 @@ ht-degree: 0%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Destinazioni e fonti {#destinations-and-sources}
+## Destinazioni e origini {#destinations-and-sources}
 
-Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le tue esigenze aziendali. Utilizzo [origini](../sources/home.md) per acquisire dati in Platform e destinazioni per esportare dati da Platform.
+Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le esigenze aziendali. Utilizzare [sorgenti](../sources/home.md) per acquisire dati in Platform e nelle destinazioni per esportare dati da Platform.
 
-## Passaggi per le destinazioni {#steps}
+## Passaggi delle destinazioni {#steps}
 
-* Scegli tra [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Platform.
-* Utilizza le destinazioni per inviare profili o segmenti alle piattaforme di automazione del marketing, alle piattaforme di pubblicità digitale e altro ancora.
-* Pianifica le esportazioni di dati nelle destinazioni preferite in orari regolari.
+* Scegli da un [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Platform.
+* Utilizza le destinazioni per inviare profili o segmenti a piattaforme di automazione marketing, piattaforme di pubblicità digitale e altro ancora.
+* Pianifica le esportazioni di dati nelle destinazioni preferite a intervalli regolari.
 
 ## Controlli {#controls}
 
-I controlli [area di lavoro delle destinazioni](./ui/destinations-workspace.md) consente di:
+I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) consente di:
 
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
-* Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
-* Crea un account in una posizione di archiviazione o collega Platform all’account nella piattaforma di destinazione;
-* Seleziona quali segmenti devono essere attivati nelle destinazioni;
-* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano i segmenti nelle destinazioni di marketing via e-mail.
+* Creare, modificare, attivare e disattivare flussi di dati per le destinazioni nel catalogo;
+* Creare un account in un percorso di archiviazione o collegare Platform all’account nella piattaforma di destinazione;
+* Seleziona i segmenti da attivare sulle destinazioni;
+* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano i segmenti nelle destinazioni di e-mail marketing.
 
-## Tipi di destinazione e categorie {#types-and-categories}
+## Tipi e categorie di destinazione {#types-and-categories}
 
-Ad Experience Platform, puoi attivare i dati in vari tipi di destinazioni per soddisfare i tuoi casi d’uso di attivazione. Le destinazioni variano dalle integrazioni basate su API alle integrazioni con i sistemi di ricezione dei file, dalle destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, consulta la sezione [panoramica dei tipi e delle categorie di destinazione](./destination-types.md).
+Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, vedi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
-La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, puoi visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, consulta [Controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
+La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo degli accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, è possibile visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, consulta [Controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
 
-La tabella seguente illustra le combinazioni di autorizzazioni e autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni:
+La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni:
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
-| **[!UICONTROL Gestire le destinazioni]** | Per connetterti alle destinazioni, devi disporre delle **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** | Per attivare i segmenti sulle destinazioni, è necessario disporre delle **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]** | Per connettersi alle destinazioni, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i segmenti nelle destinazioni, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori informazioni sui controlli di accesso, consulta la sezione [Guida utente al controllo degli accessi](../access-control/ui/overview.md).
+Per ulteriori informazioni sui controlli di accesso, vedere [Guida utente al controllo degli accessi](../access-control/ui/overview.md).
 
-### Controllo dell&#39;accesso basato su attributi per le destinazioni {#attribute-based-access}
+### Controllo degli accessi basato su attributi per le destinazioni {#attribute-based-access}
 
-Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l&#39;accesso a oggetti e/o funzionalità specifici in base agli attributi.
+Il controllo dell’accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi.
 
-Con il controllo dell&#39;accesso basato sugli attributi, puoi applicare configurazioni di mappatura ai campi a cui disponi delle autorizzazioni. Inoltre, non puoi esportare i dati in una destinazione se non hai accesso a tutti i campi del set di dati.
+Con il controllo degli accessi basato su attributi, puoi applicare configurazioni di mappatura ai campi per i quali disponi delle autorizzazioni di. Inoltre, non è possibile esportare i dati in una destinazione se non si dispone dell’accesso a tutti i campi del set di dati.
 
-Per ulteriori informazioni sul funzionamento delle destinazioni con controlli di accesso basati sugli attributi, consulta la sezione [panoramica sul controllo dell&#39;accesso basato sugli attributi](../access-control/abac/overview.md#destinations).
+Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli di accesso basati su attributi, vedi [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md#destinations).
 
-## Monitoraggio delle destinazioni {#destinations-monitoring}
+## Controllo delle destinazioni {#destinations-monitoring}
 
-Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni dei dati nel sistema di ricezione. Leggi la sezione [guida al monitoraggio dei flussi di dati verso le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
+Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Leggi le [guida sul monitoraggio dei flussi di dati per le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
 
-Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo hanno un *Convalida sezione esportazione dati*, che indica come è possibile verificare nella piattaforma di destinazione che i dati vengano immessi correttamente da Experience Platform.
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experience Platform.
 
-## Restrizioni sulla governance dei dati sull’attivazione dei dati alle destinazioni {#data-governance}
+## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 
 La governance dei dati viene applicata alle destinazioni Platform tramite:
 
 * *Azioni di marketing* che puoi selezionare nel flusso di lavoro crea destinazioni;
-* *Criteri di utilizzo dei dati* che impedisce l’attivazione di dati contenenti determinate etichette di utilizzo a destinazioni con determinate azioni di marketing.
+* *Criteri di utilizzo dati* che impediscono l’attivazione di dati contenenti determinate etichette di utilizzo in destinazioni con determinate azioni di marketing.
 
-Per ulteriori informazioni, consulta Governance dei dati nella documentazione di Platform . [azioni di marketing](../data-governance/policies/overview.md) e [risoluzione delle violazioni dei criteri dei dati](../data-governance/enforcement/auto-enforcement.md).
+Per ulteriori informazioni su, consulta Governance dei dati nella documentazione di Platform. [azioni di marketing](../data-governance/policies/overview.md) e [risoluzione delle violazioni dei criteri per i dati](../data-governance/enforcement/auto-enforcement.md).
 
 Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Platform:
 
@@ -91,11 +91,11 @@ Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso 
 * [Destinazioni pubblicitarie - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinazioni pubblicitarie - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [Destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
-* [Destinazioni di marketing e-mail](./catalog/email-marketing/overview.md)
+* [Destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione dei segmenti, consulta la sezione **[!UICONTROL Revisione]** segui le seguenti guide:
+Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione dei segmenti, vedi **[!UICONTROL Revisione]** nelle seguenti guide:
 
-* [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](./ui/activate-segment-streaming-destinations.md#review)
-* [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](./ui/activate-streaming-profile-destinations.md#review)
+* [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](./ui/activate-segment-streaming-destinations.md#review)
+* [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md#review)

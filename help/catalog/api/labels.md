@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;etichette di utilizzo dei dati;servizio catalogo
+keywords: Experience Platform;home;argomenti popolari;etichette utilizzo dati;servizio catalogo;home;popular topic;data usage labels;catalog service
 solution: Experience Platform
-title: Etichette per l’utilizzo dei dati nell’API del servizio Dataset
-description: L’API del servizio DataSet fornisce endpoint per la gestione delle etichette di utilizzo dei dati per i set di dati.
+title: Etichette di utilizzo dei dati nell’API del servizio Set di dati
+description: L’API Servizio set di dati fornisce endpoint per gestire le etichette di utilizzo dei dati per i set di dati.
 exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,6 +11,6 @@ ht-degree: 0%
 
 ---
 
-# Etichette di utilizzo dei dati nell’API del servizio Dataset
+# Etichette di utilizzo dei dati nell’API del servizio Set di dati
 
-Separati dall’API del servizio catalogo, il [!DNL Dataset Service] API fornisce endpoint per la gestione delle etichette di utilizzo dei dati per i set di dati. Per informazioni su come effettuare chiamate a questi endpoint, consulta la guida su [gestione delle etichette di utilizzo dei dati tramite API](../../data-governance/labels/dataset-api.md) nella documentazione sulla governance dei dati di Adobe Experience Platform.
+A parte l’API Catalog Service, il [!DNL Dataset Service] L’API fornisce endpoint per la gestione delle etichette di utilizzo dei dati per i set di dati. Per i passaggi su come effettuare chiamate a questi endpoint, consulta la guida su [gestione delle etichette di utilizzo dei dati tramite l’API](../../data-governance/labels/dataset-api.md) nella documentazione sulla governance dei dati di Adobe Experience Platform.

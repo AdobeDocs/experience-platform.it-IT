@@ -14,15 +14,15 @@ ht-degree: 50%
 
 # Igiene dei dati {#hygiene}
 
-* [Panoramica sull&#39;igiene dei dati](./home.md)
-* Interfaccia utente di Data Hygiene {#ui}
+* [Panoramica sull’igiene dei dati](./home.md)
+* Interfaccia utente di igiene dei dati {#ui}
    * [Panoramica](./ui/overview.md)
-   * [Sfoglia gli ordini di lavoro esistenti](./ui/browse.md)
+   * [Sfoglia ordini di lavoro esistenti](./ui/browse.md)
    * [Gestire le scadenze dei set di dati](./ui/dataset-expiration.md)
    * [Elimina record](./ui/record-delete.md)
 * API di igiene dei dati {#api}
    * [Panoramica](./api/overview.md)
-   * [Scadenza set di dati](./api/dataset-expiration.md)
-   * [Elimina record](./api/jobs.md)
-   * [Elimina record](./api/workorder.md)
+   * [Scadenze set di dati](./api/dataset-expiration.md)
+   * [Eliminazioni record](./api/jobs.md)
+   * [Eliminazioni record](./api/workorder.md)
    * [Quota](./api/quota.md)

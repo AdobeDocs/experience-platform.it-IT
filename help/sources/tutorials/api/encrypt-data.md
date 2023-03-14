@@ -174,7 +174,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `flowSpec.id` | ID della specifica di flusso che corrisponde alle origini dell’archiviazione cloud. |
-| `sourceConnectionIds` | ID della connessione sorgente. Questo ID rappresenta il trasferimento di dati dall’origine a Platform. |
+| `sourceConnectionIds` | ID della connessione di origine. Questo ID rappresenta il trasferimento di dati dall’origine a Platform. |
 | `targetConnectionIds` | ID della connessione di destinazione. Questo ID rappresenta dove arrivano i dati una volta trasferiti a Platform. |
 | `transformations[x].params.mappingId` | ID di mappatura. |
 | `transformations.name` | Quando si acquisiscono file crittografati, è necessario fornire `Encryption` come parametro di trasformazione aggiuntivo per il flusso di dati. |

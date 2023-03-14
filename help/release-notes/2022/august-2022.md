@@ -4,8 +4,8 @@ description: Note sulla versione di agosto 2022 per Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 7%
+source-wordcount: '2082'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +26,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-I servizi AI/ML consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi d’uso della customer experience. Questo consente agli analisti di marketing di impostare modelli specifici per le esigenze aziendali utilizzando configurazioni a livello di business senza la necessità di disporre di competenze scientifiche in materia di dati.
+I servizi di intelligenza artificiale e machine learning consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi di utilizzo dell’esperienza del cliente. Questo consente agli analisti di marketing di impostare modelli specifici per le esigenze di un’azienda utilizzando configurazioni a livello aziendale senza la necessità di competenze in materia di data science.
 
 ### IA per l’attribuzione
 
@@ -36,41 +36,41 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <ul><li> Attribution AI supporta ora la definizione dei ruoli utente e dei criteri di accesso per la gestione [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette.Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i brand devono utilizzare Platform Privacy Service per inviare le richieste di accesso e cancellazione dei consumatori al fine di rimuovere i dati dal lago di dati, dal servizio Identity e dal profilo cliente in tempo reale.  </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Supporto per la privacy | <ul><li> Attribution AI ora supporta la definizione dei ruoli utente e dei criteri di accesso da gestire [autorizzazioni](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Da a [controllo degli accessi basato su attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l&#39;accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette. Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici che corrispondono a tali campi.</li><li>Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale.  </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. Platform Data Encryption si applica ai dati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione di [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Nota**: Le Attribution AI non saranno disponibili con i clienti esistenti di Healthcare Shield fino a nuovo avviso.
+**Nota**: l’Attribution AI non sarà disponibile con i clienti esistenti di Healthcare Shield fino a nuovo avviso.
 
-Per ulteriori informazioni sulle Attribution AI, consulta la sezione [Attribution AI](../../intelligent-services/attribution-ai/overview.md) panoramica.
+Per ulteriori informazioni sull&#39;Attribution AI, vedere [Attribution AI](../../intelligent-services/attribution-ai/overview.md) panoramica.
 
-### Customer AI
+### IA per l’analisi dei clienti
 
-Customer AI disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su scala.
+IA per l’analisi dei clienti disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su larga scala.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <ul><li> Customer AI supporta ora la definizione di ruoli utente e di criteri di accesso da gestire [permissions](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Attraverso [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio le etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici corrispondenti a tali campi.</li><li>Customer AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un marchio può ricevere, i brand devono utilizzare Platform Privacy Service per inviare le richieste di accesso e cancellazione dei consumatori al fine di rimuovere i dati dal lago di dati, dal servizio Identity e dal profilo cliente in tempo reale. </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. La crittografia dei dati della piattaforma si applica ai dati a riposo e in transito. Per ulteriori informazioni, consulta la documentazione . [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Supporto per la privacy | <ul><li> IA per l’analisi dei clienti ora supporta la definizione dei ruoli utente e dei criteri di accesso da gestire [autorizzazioni](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Da a [controllo degli accessi basato su attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l’accesso a oggetti e/o funzionalità specifici in base a determinati attributi. Questi attributi possono essere metadati aggiunti a un oggetto, ad esempio le etichette. Gli amministratori possono inoltre definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.</li><li>IA per l’analisi dei clienti sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale. </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. Platform Data Encryption si applica ai dati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione di [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Nota**: Customer AI non sarà disponibile con i clienti esistenti Healthcare Shield fino a nuovo avviso.
+**Nota**: IA per l’analisi dei clienti non sarà disponibile con i clienti esistenti di Healthcare Shield fino a nuovo avviso.
 
-Per ulteriori informazioni su Customer AI, consulta la sezione [Customer AI](../../intelligent-services/customer-ai/overview.md) panoramica.
+Per ulteriori informazioni su Customer AI, consulta la sezione [IA per l’analisi dei clienti](../../intelligent-services/customer-ai/overview.md) panoramica.
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fornisce più [!DNL dashboards] attraverso cui puoi visualizzare informazioni importanti sui dati dell’organizzazione, come acquisiti durante le istantanee giornaliere.
+Adobe Experience Platform offre più [!DNL dashboards] attraverso cui è possibile visualizzare informazioni importanti sui dati dell&#39;organizzazione, acquisite durante le istantanee giornaliere.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Widget attivazioni pianificate | La [!UICONTROL Attivazioni pianificate] widget fornisce una visualizzazione tabularizzata delle destinazioni attivate più di recente. Per ogni segmento, include il nome, la piattaforma di destinazione e la data di inizio e di fine dell’attivazione. Questo widget consente di scoprire subito dove e quando il pubblico viene attivato e rende più trasparenti le attivazioni duplicate o non necessarie. Queste informazioni accumulate evidenziano anche dove sono state escluse eventuali attivazioni. |
+| Widget attivazioni pianificate | Il [!UICONTROL Attivazioni pianificate] Il widget fornisce una vista in forma di tabella delle destinazioni attivate più di recente. Per ogni segmento, include il nome, la piattaforma di destinazione e la data di inizio e di fine dell’attivazione. Questo widget consente di scoprire subito dove e quando il pubblico viene attivato e rende più trasparenti le attivazioni duplicate o non necessarie. Queste informazioni accumulate evidenziano anche dove sono state escluse eventuali attivazioni. |
 
-Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoramica](../../dashboards/home.md).
+Per ulteriori informazioni su [!DNL Dashboards], consultare il [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -80,105 +80,105 @@ Per ulteriori informazioni su [!DNL Dashboards], vedi [[!DNL Dashboards] panoram
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per l’acquisizione di record con avvisi | In Preparazione dati gli avvisi (errori non critici) verranno localizzati nei campi e il resto della riga potrà essere acquisito. Tutti gli errori di trasformazione della mappatura vengono ora segnalati come avvisi e le righe parzialmente ingerite vengono considerate di successo, con un avviso.  Il monitoraggio è supportato anche nei record con avvisi e dettagli diagnostici. L’acquisizione parziale di record con avvisi è attualmente disponibile solo per i dati in streaming. Consulta la documentazione su [acquisizione di record con avvisi](../../sources/tutorials/ui/monitor-streaming.md) per ulteriori informazioni. |
+| Supporto per l’acquisizione di record con avvisi | La preparazione dati localizza ora gli avvisi (errori non critici) nei campi e consente di acquisire il resto della riga. Tutti gli errori di trasformazione dei mapper ora vengono segnalati come avvisi e le righe parzialmente acquisite vengono considerate riuscite, con un avviso.  Il monitoraggio è supportato anche nei record con avvertenze e dettagli di diagnostica. L’acquisizione parziale di record con avvertenze è attualmente disponibile solo per i dati in streaming. Consulta la documentazione su [acquisizione di record con avvisi](../../sources/tutorials/ui/monitor-streaming.md) per ulteriori informazioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori informazioni [!DNL Data Prep], vedi [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+Per ulteriori informazioni su [!DNL Data Prep], vedere [[!DNL Data Prep] panoramica](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| (Beta) Supporto della personalizzazione basato su attributi per le destinazioni di personalizzazione | Con il rilascio beta della personalizzazione basata sugli attributi, vedrai due nuove schede nel [catalogo di destinazione](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda Adobe Target V1, il connettore Target V2 aggiunge un [fase di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi di profilo in Adobe Target, abilitando la personalizzazione basata sugli attributi nella stessa pagina e nella pagina successiva.</li><li>**[!UICONTROL Personalizzazione Personalizzata Con Attributi]**: Questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla **[!UICONTROL Personalizzazione personalizzata]**, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore aggiunge un [fase di mappatura](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi di profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione basata su attributi per la stessa pagina e la pagina successiva.</li></ul> <br> Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** per la destinazione è necessario utilizzare [API server di rete Edge](../../server-api/overview.md) per la raccolta dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md). |
+| (Beta) Supporto della personalizzazione basata su attributi per le destinazioni di personalizzazione | Con la versione beta della personalizzazione basata su attributi, vedrai due nuove schede in [catalogo di destinazione](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: questo connettore è attualmente in versione beta e disponibile solo per un determinato numero di clienti. Oltre alle funzionalità fornite dalla scheda Adobe Target V1, il connettore Target V2 aggiunge una [passaggio di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li><li>**[!UICONTROL Personalizzazione Personalizzata Con Attributi]**: questo connettore è attualmente in versione beta e disponibile solo per un determinato numero di clienti. Oltre alle funzionalità fornite dal **[!UICONTROL Personalizzazione personalizzata]**, il **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore aggiunge un [passaggio di mappatura](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li></ul> <br> Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** La destinazione richiede l&#39;utilizzo di [API server di rete Edge](../../server-api/overview.md) per la raccolta di dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Nuove destinazioni**
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) è una piattaforma di esecuzione delle vendite con i dati di interazione tra buyer e venditori B2B più diffusi al mondo e importanti investimenti in tecnologie di intelligenza artificiale proprietaria per tradurre i dati di vendita in informazioni. [!DNL Outreach] consente alle organizzazioni di automatizzare l&#39;impegno di vendita e di agire sulla base dell&#39;intelligenza dei ricavi per migliorare l&#39;efficienza, la prevedibilità e la crescita. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) è una piattaforma di esecuzione delle vendite con i dati di interazione tra acquirenti e venditori B2B più diffusi al mondo e investimenti significativi in tecnologie di intelligenza artificiale proprietarie per tradurre i dati di vendita in informazioni. [!DNL Outreach] consente alle organizzazioni di automatizzare il coinvolgimento nelle vendite e di agire sulla base delle informazioni sui ricavi per migliorare l&#39;efficienza, la prevedibilità e la crescita. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
 
 **Nuovi componenti XDM**
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Classe di entità AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Classe basata su record per la creazione di schemi di ricerca per Adobe Journey Optimizer. |
-| Gruppo di campi | [[!UICONTROL Oggetti di lavoro Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Gruppo di campi wrapper che fa riferimento a tutti i gruppi di campi specifici dell’oggetto di livello inferiore per Adobe Workfront. |
+| Classe | [[!UICONTROL Classe entità AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Classe basata su record per la creazione di schemi di ricerca per Adobe Journey Optimizer. |
+| Gruppo di campi | [[!UICONTROL Oggetti di lavoro Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Un gruppo di campi wrapper che fa riferimento a tutti i gruppi di campi specifici dell’oggetto di livello inferiore per Adobe Workfront. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Componenti XDM aggiornati**
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Gruppo di campi | [[!UICONTROL Campi comuni evento evento passaggio Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
-| Gruppo di campi | [[!UICONTROL Dettagli di appartenenza al segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL Profilo individuale XDM], questo gruppo di campi può ora essere utilizzato anche negli schemi in base alla classe Business Account XDM. |
-| Gruppo di campi | (Multipli) | Diversi gruppi di campi relativi alle attività Marketo B2B sono stati aggiornati allo stato stabile. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1593/files) per i dettagli. |
-| Gruppo di campi | (Multipli) | Sono stati aggiornati diversi gruppi di campi correlati al meteo per correggere gli errori che si verificavano per `uvIndex` e `sunsetTime`. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1602/files) per i dettagli. |
-| Tipo di dati | [[!UICONTROL Voce dell’elenco dei prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Una nuova proprietà `productImageUrl` è stato aggiunto. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati QE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nuova proprietà `framesPerSecond` è stato aggiunto. |
-| Tipo di dati | [[!UICONTROL Informazioni sulla sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. `meta:enum` e `description` Sono stati inoltre aggiornati i campi . |
-| Tipi di dati e gruppi di campi | (Multipli) | Diversi tipi di dati multimediali e gruppi di campi dispongono di nuovi campi e descrizioni aggiornate. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1582/files) per i dettagli. |
-| (Tutto) | (Multipli) | Tutti gli oggetti dello schema che contengono un `enum` contiene ora anche un `meta:enum` campo per indicare i valori di visualizzazione per ciascun vincolo. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) per i dettagli. |
+| Gruppo di campi | [[!UICONTROL Campi comuni evento passaggio Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
+| Gruppo di campi | [[!UICONTROL Dettagli sull’iscrizione al segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL Profilo individuale XDM], questo gruppo di campi ora può essere utilizzato anche in schemi basati sulla classe XDM Business Account. |
+| Gruppo di campi | (Multiplo) | Diversi gruppi di campi relativi alle attività B2B di Marketo sono stati aggiornati a uno stato stabile. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1593/files) per i dettagli. |
+| Gruppo di campi | (Multiplo) | Diversi gruppi di campi correlati al meteo sono stati aggiornati per correggere gli errori che si verificavano per `uvIndex` e `sunsetTime`. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1602/files) per i dettagli. |
+| Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Una nuova proprietà `productImageUrl` è stato aggiunto. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati Qoe]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nuova proprietà `framesPerSecond` è stato aggiunto. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli della sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. `meta:enum` e `description` Anche i campi di sono stati aggiornati. |
+| Tipi di dati e gruppi di campi | (Multiplo) | Diversi tipi di dati multimediali e gruppi di campi dispongono di nuovi campi e descrizioni aggiornate. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1582/files) per i dettagli. |
+| (Tutto) | (Multiplo) | Tutti gli oggetti dello schema che contengono un `enum` ora contiene anche un `meta:enum` per indicare i valori visualizzati per ciascun vincolo. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) per i dettagli. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
+Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Limite rigido dei criteri di unione | Platform applicherà ora un limite rigido di **cinque** unione di criteri per sandbox. Se la sandbox dispone attualmente di più di cinque criteri di unione, verrà **not** è possibile creare nuovi criteri di unione fino a quando la sandbox non dispone di meno di cinque criteri di unione. |
-| Pulizia attributo edge del profilo orfano | Per tutte le organizzazioni, il servizio di profilo ora rimuove quotidianamente gli attributi edge rimanenti dell’area di attività dell’utente per fornire una rappresentazione più accurata dei profili nel sistema. Questa pulizia si verifica dopo l’eliminazione di tutti i frammenti di profilo per un determinato profilo e dovrebbe influenzare i profili che vengono uniti dai set di dati in cui `com_adobe_aep_profile_region_dataset` è contrassegnato come `true`. Questo può mostrare un calo nella metrica &quot;Pubblico di riferimento&quot; nel dashboard dell’utilizzo della licenza e può mostrare un calo nella metrica &quot;Conteggio profili&quot; nel dashboard del profilo, poiché queste metriche includevano frammenti di attributi di margine residuo prima di questa versione. |
+| Limite rigido dei criteri di unione | Platform ora applica un limite massimo di **cinque** criteri di unione per sandbox. Se la sandbox dispone attualmente di più di cinque criteri di unione, **non** essere in grado di creare nuovi criteri di unione fino a quando la sandbox non avrà meno di cinque criteri di unione. |
+| Pulizia attributi edge profilo orfano | Per tutte le organizzazioni, il servizio Profilo ora rimuove gli attributi edge rimanenti dell’area di attività dell’utente su base giornaliera per fornire una rappresentazione più accurata dei profili nel sistema. Questa pulizia si verifica dopo che tutti i frammenti di profilo per un determinato profilo sono stati eliminati e dovrebbe interessare i profili uniti da set di dati in cui `com_adobe_aep_profile_region_dataset` è contrassegnato come `true`. Questo potrebbe mostrare un calo della metrica &quot;Pubblico indirizzabile&quot; nel dashboard di utilizzo della licenza e un calo della metrica &quot;Conteggio profili&quot; nel dashboard Profilo, poiché queste metriche includevano frammenti di attributi edge rimasti prima di questa versione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori informazioni sul Profilo del cliente in tempo reale, compresi tutorial e best practice per l’utilizzo dei dati del profilo, consulta la sezione [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l’utilizzo dei dati del profilo, leggi [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo commerciabile di persone all’interno della tua base clienti. I segmenti possono essere basati su dati record (ad esempio informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per 4000 segmenti | Tutte le organizzazioni con Platform ora possono supportare fino a 4000 definizioni di segmenti. Per ulteriori informazioni su come questa modifica influisce sulle API dei processi di segmento, consulta la sezione [guida all’endpoint del processo del segmento](../../segmentation/api/segment-jobs.md) |
+| Supporto per 4000 segmenti | Tutte le organizzazioni con Platform possono ora supportare fino a 4000 definizioni di segmenti. Per ulteriori informazioni su come questa modifica influisce sulle API dei processi di segmentazione, leggi [guida dell’endpoint del processo di segmento](../../segmentation/api/segment-jobs.md) |
 
-Per ulteriori informazioni su [!DNL Segmentation Service], vedi [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni su [!DNL Segmentation Service], consultare il [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Disponibilità generale delle origini self-service (SDK batch) | Sviluppa, testa e integra la tua origine dati basata su API REST per acquisire dati batch in Experience Platform utilizzando specifiche sorgente facili da configurare. Con l&#39;SDK di Origini puoi: <ul><li>Configura una nuova origine per il catalogo di Experience Platform.</li><li>Definisci le specifiche dell’origine, incluse le informazioni relative ai tipi di autenticazione supportati, alla pianificazione e al modo in cui vengono recuperati i dati delle risorse.</li><li>Crea la documentazione rivolta all’utente per la nuova sorgente.</li></ul> Per ulteriori informazioni, consulta la documentazione su [Sorgenti self-service (SDK batch)](../../sources/sources-sdk/overview.md). |
-| Disponibilità generale [!DNL Google BigQuery] source | Utilizza la [!DNL Google BigQuery] sorgente per acquisire i dati dal [!DNL Google BigQuery] data warehouse ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] sorgente (Beta) | Utilizza la [!DNL Teradata Vantage] da origine a acquisizione di dati da ambienti multi-cloud ibridi ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
-| Supporto tra aree geografiche per l’origine Adobe Analytics | È ora possibile acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore). Le suite di rapporti devono essere mappate nella stessa organizzazione dell’istanza Sandbox di Experience Platform in cui viene creata la connessione sorgente. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Adobe Analytics nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Disponibilità generale di origini self-service (SDK batch) | Sviluppa, testa e integra l’origine dati REST basata su API per acquisire i dati batch in Experience Platform utilizzando specifiche di origine facili da configurare. Con l’SDK Sources puoi: <ul><li>Configura una nuova origine nel catalogo Experience Platform.</li><li>Definisci le specifiche per l’origine, incluse le informazioni relative ai tipi di autenticazione supportati, alla pianificazione e al modo in cui vengono recuperati i dati delle risorse.</li><li>Crea una documentazione rivolta all’utente per la nuova sorgente.</li></ul> Per ulteriori informazioni, consulta la documentazione su [Origini self-service (SDK batch)](../../sources/sources-sdk/overview.md). |
+| Disponibilità generale di [!DNL Google BigQuery] sorgente | Utilizza il [!DNL Google BigQuery] origine per acquisire dati dal [!DNL Google BigQuery] data warehouse da Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Google BigQuery] sorgente](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage] sorgente (Beta) | Utilizza il [!DNL Teradata Vantage] origine per acquisire i dati da ambienti ibridi multi-cloud ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Teradata Vantage] sorgente](../../sources/connectors/databases/teradata-vantage.md). |
+| Supporto per aree geografiche diverse per origine Adobe Analytics | È ora possibile acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore). Le suite di rapporti devono essere mappate sulla stessa organizzazione dell’istanza Sandbox di Experience Platform in cui viene creata la connessione di origine. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Adobe Analytics nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori informazioni sulle sorgenti, consulta la sezione [panoramica di origini](../../sources/home.md).
+Per ulteriori informazioni sulle origini, consulta [panoramica sulle origini](../../sources/home.md).

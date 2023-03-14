@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;monitorare account;monitorare flussi di dati;flussi di dati
-description: I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per visualizzare i flussi di dati esistenti dall'area di lavoro Origini.
+keywords: Experience Platform;home;argomenti popolari;monitorare gli account;monitorare i flussi di dati;dataflows;dataflows
+description: I connettori di origini in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questa esercitazione fornisce i passaggi per visualizzare i flussi di dati esistenti dall’area di lavoro Origini.
 solution: Experience Platform
 title: Monitorare i flussi di dati nell’interfaccia utente
 type: Tutorial
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Monitorare i flussi di dati nell’interfaccia utente
 
-I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata.
+I connettori di origini in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione.
 
 Per ulteriori informazioni sul monitoraggio dei flussi di dati per i connettori sorgente, consulta la sezione [monitoraggio dei flussi di dati nelle origini](../../../dataflows/ui/monitor-sources.md) esercitazione.

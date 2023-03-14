@@ -7,17 +7,17 @@ feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 43%
+ht-degree: 50%
 
 ---
 
 
 # Sandbox {#sandbox}
 
-* [Panoramica delle sandbox](home.md)
+* [Panoramica sulle sandbox](home.md)
 * Interfaccia utente sandbox {#ui}
-   * [Panoramica dell’interfaccia utente sandbox](ui/overview.md)
-   * [Guida utente sandbox](ui/user-guide.md)
+   * [Panoramica dell’interfaccia utente Sandbox](ui/overview.md)
+   * [Guida utente sulle sandbox](ui/user-guide.md)
 * API sandbox {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
@@ -27,4 +27,4 @@ ht-degree: 43%
    * [Appendice](api/appendix.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

@@ -1,61 +1,61 @@
 ---
-title: Endpoint API per conversione da modello CSV a schema
-description: L’endpoint /rpc/csv2schema nell’API del Registro di sistema dello schema consente di utilizzare modelli CSV per creare automaticamente schemi Experience Data Model (XDM).
+title: Endpoint API di conversione da modello CSV a schema
+description: L’endpoint /rpc/csv2schema nell’API Schema Registry consente di utilizzare i modelli CSV per creare automaticamente gli schemi Experience Data Model (XDM).
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '854'
 ht-degree: 6%
 
 ---
 
-# Modello CSV per endpoint API di conversione dello schema
+# Endpoint API di conversione da modello CSV a schema
 
-La `/rpc/csv2schema` punto finale [!DNL Schema Registry] L’API ti consente di creare automaticamente uno schema Experience Data Model (XDM) utilizzando un file CSV come modello. Utilizzando questo endpoint, puoi creare modelli per importare in massa campi dello schema e ridurre le operazioni manuali di API o interfaccia utente.
+Il `/rpc/csv2schema` endpoint nella [!DNL Schema Registry] API consente di creare automaticamente uno schema Experience Data Model (XDM) utilizzando un file CSV come modello. Utilizzando questo endpoint, puoi creare modelli per importare in blocco i campi dello schema e ridurre il lavoro manuale dell’API o dell’interfaccia utente.
 
 ## Introduzione
 
-La `/rpc/csv2schema` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API Adobe Experience Platform.
+Il `/rpc/csv2schema` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API Adobe Experience Platform.
 
-La `/rpc/csv2schema` l&#39;endpoint fa parte delle chiamate di routine remote (RPC) supportate dal [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nelle chiamate API riportate di seguito.
+Il `/rpc/csv2schema` l&#39;endpoint fa parte delle chiamate di procedura remota (RPC) supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`, e non utilizzare un `CONTAINER_ID`. Devono invece utilizzare il `/rpc` dello spazio dei nomi, come dimostrato nelle chiamate API di seguito.
 
 ## Requisiti del file CSV
 
-Per utilizzare questo endpoint, devi innanzitutto creare un file CSV con intestazioni di colonna appropriate e i valori corrispondenti. Alcune colonne sono obbligatorie, mentre le altre sono facoltative. La tabella seguente descrive queste colonne e il loro ruolo nella costruzione dello schema.
+Per utilizzare questo endpoint, devi innanzitutto creare un file CSV con le intestazioni di colonna appropriate e i valori corrispondenti. Alcune colonne sono obbligatorie, mentre le altre sono facoltative. La tabella seguente descrive queste colonne e il loro ruolo nella costruzione dello schema.
 
 | Posizione intestazione CSV | Nome intestazione CSV | Obbligatorio/facoltativo | Descrizione |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | Facoltativo | Quando incluso e impostato su `true`, indica che il campo non è pronto per il caricamento dell’API e deve essere ignorato. |
-| 2 | `isCustom` | Obbligatorio | Indica se il campo è un campo personalizzato o meno. |
-| 3 | `fieldGroupId` | Facoltativo | L’ID del gruppo di campi a cui deve essere associato un campo personalizzato. |
-| 4 | `fieldGroupName` | (Vedere descrizione) | Nome del gruppo di campi a cui associare il campo.<br><br>Facoltativo per campi personalizzati che non estendono campi standard esistenti. Se lasciato vuoto, il sistema assegna automaticamente il nome.<br><br>Obbligatorio per campi standard o campi personalizzati che estendono gruppi di campi standard, utilizzato per eseguire query sul campo `fieldGroupId`. |
-| 5 | `fieldPath` | Obbligatorio | Percorso di notazione del punto XED completo per il campo. Per includere tutti i campi di un gruppo di campi standard (come indicato in `fieldGroupName`), imposta il valore su `ALL`. |
-| 6 | `displayName` | Facoltativo | Titolo o nome visualizzato descrittivo per il campo. Può anche essere un alias per il titolo, se presente. |
-| 7 | `fieldDescription` | Facoltativo | Descrizione del campo. Può anche essere un alias della descrizione, se presente. |
-| 8 | `dataType` | (Vedere descrizione) | Indica la [tipo di dati di base](../schema/field-constraints.md#basic-types) per il campo . Obbligatorio per tutti i campi personalizzati.<br><br>Se `dataType` è impostato su `object`o `properties` o `$ref` deve essere definito anche per la stessa riga, ma non per entrambe. |
-| 9 | `isRequired` | Facoltativo | Indica se il campo è obbligatorio per l’inserimento dei dati. |
-| 10 | `isArray` | Facoltativo | Indica se il campo è una matrice dei relativi `dataType`. |
+| 1 | `isIgnored` | Facoltativo | Se incluso e impostato su `true`, indica che il campo non è pronto per il caricamento API e deve essere ignorato. |
+| 2 | `isCustom` | Obbligatorio | Indica se il campo è personalizzato o meno. |
+| 3 | `fieldGroupId` | Facoltativo | ID del gruppo di campi a cui deve essere associato un campo personalizzato. |
+| 4 | `fieldGroupName` | (Vedi descrizione) | Nome del gruppo di campi a cui associare il campo.<br><br>Facoltativo per i campi personalizzati che non estendono i campi standard esistenti. Se non specificato, il sistema assegnerà automaticamente il nome.<br><br>Obbligatorio per i campi standard o personalizzati che estendono gruppi di campi standard, utilizzati per eseguire query sulla proprietà `fieldGroupId`. |
+| 5 | `fieldPath` | Obbligatorio | Percorso completo di notazione con punti XED per il campo. Per includere tutti i campi di un gruppo di campi standard (come indicato in `fieldGroupName`), imposta il valore su `ALL`. |
+| 6 | `displayName` | Facoltativo | Titolo o nome visualizzato descrittivo del campo. Può anche essere un alias per il titolo, se presente. |
+| 7 | `fieldDescription` | Facoltativo | Descrizione del campo. Può anche essere un alias per la descrizione, se presente. |
+| 8 | `dataType` | (Vedi descrizione) | Indica il [tipo di dati di base](../schema/field-constraints.md#basic-types) per il campo. Obbligatorio per tutti i campi personalizzati.<br><br>Se `dataType` è impostato su `object`, sia `properties` o `$ref` deve essere definito anche per la stessa riga, ma non per entrambe. |
+| 9 | `isRequired` | Facoltativo | Indica se il campo è obbligatorio per l’acquisizione dei dati. |
+| 10 | `isArray` | Facoltativo | Indica se il campo è una matrice dei campi indicati `dataType`. |
 | 11 | `isIdentity` | Facoltativo | Indica se il campo è un campo di identità. |
-| 12 | `identityNamespace` | Obbligatorio se `isIdentity` è vero | La [spazio dei nomi identità](../../identity-service/namespaces.md) per il campo identity. |
-| 13 | `isPrimaryIdentity` | Facoltativo | Indica se il campo è l&#39;identità principale dello schema. |
-| 14 | `minimum` | Facoltativo | (Solo per i campi numerici) Il valore minimo del campo. |
-| 15 | `maximum` | Facoltativo | (Solo per i campi numerici) Il valore massimo del campo. |
-| 16 | `enum` | Facoltativo | Elenco dei valori enum per il campo, espressi come matrice (ad esempio `[value1,value2,value3]`). |
-| 17 | `stringPattern` | Facoltativo | (Solo per i campi stringa) Pattern regex a cui deve corrispondere il valore stringa per poter passare la convalida durante l’inserimento dei dati. |
+| 12 | `identityNamespace` | Obbligatorio se `isIdentity` è true | Il [spazio dei nomi delle identità](../../identity-service/namespaces.md) per il campo di identità. |
+| 13 | `isPrimaryIdentity` | Facoltativo | Indica se il campo è l’identità primaria dello schema. |
+| 14 | `minimum` | Facoltativo | (Solo per campi numerici) Il valore minimo per il campo. |
+| 15 | `maximum` | Facoltativo | (Solo per campi numerici) Il valore massimo per il campo. |
+| 16 | `enum` | Facoltativo | Un elenco di valori enum per il campo, espressi come matrice (ad es. `[value1,value2,value3]`). |
+| 17 | `stringPattern` | Facoltativo | (Solo per i campi stringa) Pattern regex che il valore stringa deve corrispondere per passare la convalida durante l’acquisizione dei dati. |
 | 18 | `format` | Facoltativo | (Solo per i campi stringa) Il formato del campo stringa. |
 | 19 | `minLength` | Facoltativo | (Solo per i campi stringa) La lunghezza minima del campo stringa. |
 | 20 | `maxLength` | Facoltativo | (Solo per i campi stringa) La lunghezza massima del campo stringa. |
-| 21 | `properties` | (Vedere descrizione) | Obbligatorio se `dataType` è impostato su `object` e `$ref` non è definito. Definisce il corpo dell’oggetto come una stringa JSON (ad es. `{"myField": {"type": "string"}}`). |
-| 22 | `$ref` | (Vedere descrizione) | Obbligatorio se `dataType` è impostato su `object` e `properties` non è definito. Definisce la `$id` dell&#39;oggetto a cui si fa riferimento per il tipo di oggetto (ad esempio `https://ns.adobe.com/xdm/context/person`). |
+| 21 | `properties` | (Vedi descrizione) | Obbligatorio se `dataType` è impostato su `object` e `$ref` non è definito. Definisce il corpo dell’oggetto come stringa JSON (ad esempio `{"myField": {"type": "string"}}`). |
+| 22 | `$ref` | (Vedi descrizione) | Obbligatorio se `dataType` è impostato su `object` e `properties` non è definito. Questo definisce il `$id` dell&#39;oggetto di riferimento per il tipo di oggetto (ad esempio `https://ns.adobe.com/xdm/context/person`). |
 | 23 | `comment` | Facoltativo | Quando `isIgnored` è impostato su `true`, questa colonna viene utilizzata per fornire le informazioni di intestazione dello schema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Consulta quanto segue [Modello CSV](../assets/sample-csv-template.csv) per determinare come deve essere formattato il file CSV.
+Fai riferimento a quanto segue [Modello CSV](../assets/sample-csv-template.csv) per determinare come formattare il file CSV.
 
 ## Creare un payload di esportazione da un file CSV
 
-Una volta configurato il modello CSV, puoi inviare il file al `/rpc/csv2schema` e convertirlo in un payload di esportazione.
+Dopo aver configurato il modello CSV, puoi inviare il file al `/rpc/csv2schema` e convertirlo in un payload di esportazione.
 
 **Formato API**
 
@@ -65,7 +65,7 @@ POST /rpc/csv2schema
 
 **Richiesta**
 
-Il payload della richiesta deve utilizzare i dati del modulo come formato. I campi modulo richiesti sono visualizzati di seguito.
+Il payload della richiesta deve utilizzare i dati del modulo come formato. I campi modulo richiesti sono mostrati di seguito.
 
 ```shell
 curl -X POST \
@@ -83,15 +83,15 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `csv-file` | Percorso del modello CSV memorizzato nel computer locale. |
-| `schema-class-id` | La `$id` dell&#39;XDM [Classe](../schema/composition.md#class) che lo schema verrà utilizzato. |
+| `schema-class-id` | Il `$id` del modello XDM [classe](../schema/composition.md#class) che questo schema utilizzerà. |
 | `schema-name` | Un nome visualizzato per lo schema. |
-| `schema-description` | Una descrizione dello schema. |
+| `schema-description` | Descrizione dello schema. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload di esportazione generato dal file CSV. Il payload si presenta come una matrice e ogni elemento array è un oggetto che rappresenta un componente XDM dipendente per lo schema. Seleziona la sezione seguente per visualizzare un esempio completo di payload di esportazione generato da un file CSV.
+In caso di esito positivo, la risposta restituisce un payload di esportazione generato dal file CSV. Il payload assume la forma di un array e ogni elemento dell’array è un oggetto che rappresenta un componente XDM dipendente per lo schema. Seleziona la sezione seguente per visualizzare un esempio completo di payload di esportazione generato da un file CSV.
 
-+++ Payload di risposta di esempio
++++ Esempio di payload di risposta
 
 ```json
 [
@@ -360,6 +360,6 @@ Una risposta corretta restituisce un payload di esportazione generato dal file C
 
 ## Importare il payload dello schema
 
-Dopo aver generato il payload di esportazione dal file CSV, puoi inviare tale payload al `/rpc/import` per generare lo schema.
+Dopo aver generato il payload di esportazione dal file CSV, puoi inviarlo al `/rpc/import` per generare lo schema.
 
-Consulta la sezione [guida all’importazione di endpoint](./import.md) per informazioni dettagliate su come generare schemi dai payload di esportazione.
+Consulta la [importa guida dell’endpoint](./import.md) per informazioni dettagliate su come generare schemi dai payload di esportazione.

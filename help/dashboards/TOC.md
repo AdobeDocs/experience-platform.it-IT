@@ -7,7 +7,7 @@ feature: Dashboards
 source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 33%
+ht-degree: 38%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 33%
 
 * [Panoramica delle dashboard](home.md)
 * [Autorizzazioni di accesso al dashboard](permissions.md)
-* [Inventario delle dashboard](inventory.md)
+* [Inventario dei dashboard](inventory.md)
 * [Dashboard definiti dall&#39;utente](user-defined-dashboards.md)
-* [Download di dashboard in PDF](download.md)
+* [Scarica dashboard in PDF](download.md)
 * Dashboard disponibili {#guides}
    * [Profili](guides/profiles.md)
    * [Profili account](guides/account-profiles.md)
@@ -34,6 +34,6 @@ ht-degree: 33%
    * [Modifica di uno schema](customize/edit-schema.md)
 * Integrazioni di applicazioni {#integrations}
    * [Power BI](integrations/power-bi.md)
-* [Set di dati del dashboard query](query.md)
+* [Eseguire query sui set di dati del dashboard](query.md)
 * [Modello dati di Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

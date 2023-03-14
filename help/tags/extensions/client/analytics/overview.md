@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulla configurazione dell&#39;estensione Adobe Analytics e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -293,7 +293,7 @@ Importante: l&#39;utilizzo di un&#39;azione &quot;Imposta variabili&quot; non in
 
 #### eVar
 
-Imposta una o più [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html).
+Imposta una o più [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=it).
 
 1. Seleziona una eVar dal menu a discesa.
 1. Specifica se impostare la eVar come valore (Set As) o copia (Duplicate From) di un&#39;altra eVar.
@@ -330,13 +330,13 @@ Se lo desideri, configura gerarchie aggiuntive.
 
 #### Nome pagina
 
-Questo valore si riferisce al nome di una determinata pagina e corrisponde al [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+Questo valore fa riferimento al nome di una determinata pagina e corrisponde al [`pageName` variabile](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
 
 >[!IMPORTANT]
 >
->Nelle implementazioni di Adobe Experience Manager, questa variabile indica AEM dove memorizzare il rapporto di Analytics recuperato. Per garantire la corretta persistenza dei rapporti, la stringa del nome della pagina deve essere formattata come percorso del sito separato da due punti.
+>Nelle implementazioni di Adobe Experience Manager, questa variabile indica all’AEM dove memorizzare il rapporto Analytics recuperato. Per garantire la corretta persistenza dei rapporti, la stringa del nome della pagina deve essere formattata come un percorso del sito separato da due punti.
 >
->Ad esempio, una pagina web in `content/we-retail/language-masters/en/men.html` deve avere il valore del nome della pagina `content:we-retail:language-masters:en:men`.
+>Ad esempio, una pagina web in `content/we-retail/language-masters/en/men.html` deve avere il valore nome pagina pari a `content:we-retail:language-masters:en:men`.
 
 #### Altre informazioni
 

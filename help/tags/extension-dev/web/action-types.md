@@ -13,24 +13,24 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Nel contesto dei tag di raccolta dati, un&#39;azione è qualcosa che viene eseguita dopo un evento di regola e tutte le condizioni hanno superato la valutazione.
+Nel contesto dei tag di raccolta dati, un’azione viene eseguita dopo che si è verificato un evento di regola e tutte le condizioni hanno superato la valutazione.
 
 Ad esempio, un’estensione potrebbe fornire un tipo di azione “show support chat” che potrebbe mostrare una finestra di dialogo con la chat di supporto per aiutare gli utenti che riscontrano difficoltà nel concludere un acquisto.
 
-Questo documento illustra come definire i tipi di azioni per un&#39;estensione Web in Adobe Experience Platform.
+Questo documento illustra come definire i tipi di azione per un’estensione web in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Questo documento descrive i tipi di azione per le estensioni web. Se stai sviluppando un’estensione Edge, consulta invece la guida sui [tipi di azione per le estensioni Edge](../edge/action-types.md).
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con la loro integrazione nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
-I tipi di azione in genere consistono nei seguenti elementi:
+I tipi di azione sono in genere i seguenti:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’azione.
-2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni ed eseguire un&#39;azione.
+1. A [visualizza](./views.md) sono mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’azione.
+2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni ed eseguire un’azione.
 
 ```js
 module.exports = function(settings) {

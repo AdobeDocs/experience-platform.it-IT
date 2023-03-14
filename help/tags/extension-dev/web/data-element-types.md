@@ -9,28 +9,28 @@ ht-degree: 70%
 
 ---
 
-# Tipi di elementi dati per estensioni web
+# Tipi di elementi dati per le estensioni web
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Nei tag di raccolta dati, gli elementi dati sono essenzialmente alias a parti di dati su una pagina. Questi dati si trovano nei parametri della stringa di query, nei cookie, negli elementi DOM o in altre posizioni. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati.
+Nei tag di raccolta dati, gli elementi dati sono essenzialmente alias per parti di dati su una pagina. Questi dati si trovano in parametri di stringhe di query, cookie, elementi DOM o altre posizioni. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati.
 
-I tipi di elementi dati sono forniti da estensioni e consentono agli utenti di configurare elementi dati per accedere a parti di dati in un particolare modo. Ad esempio, un’estensione potrebbe fornire un tipo di elemento dati “elemento di archiviazione locale” in cui l’utente di può specificare il nome di un elemento specifico. Quando una regola fa riferimento all’elemento dati, l’estensione sarà in grado di cercare il valore dell’elemento nell’archiazione locale utilizzando il nome fornito dall’utente durante la configurazione dell’elemento dati.
+I tipi di elementi dati vengono forniti dalle estensioni e consentono agli utenti di configurare elementi dati per accedere a parti di dati in un modo particolare. Ad esempio, un’estensione potrebbe fornire un tipo di elemento dati “elemento di archiviazione locale” in cui l’utente di può specificare il nome di un elemento specifico. Quando una regola fa riferimento all’elemento dati, l’estensione sarà in grado di cercare il valore dell’elemento nell’archiazione locale utilizzando il nome fornito dall’utente durante la configurazione dell’elemento dati.
 
-Questo documento illustra come definire i tipi di elementi dati per un&#39;estensione Web in Adobe Experience Platform.
+Questo documento illustra come definire i tipi di elementi dati per un’estensione web in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Se stai sviluppando un’estensione Edge, consulta la guida in [tipi di elementi dati per estensioni edge](../edge/data-element-types.md) invece.
+>Se stai sviluppando un’estensione Edge, consulta la guida su [tipi di elementi dati per le estensioni edge](../edge/data-element-types.md) invece.
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con la loro integrazione nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni per l’elemento dati.
-2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e recuperare parti di dati.
+1. A [visualizza](./views.md) mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’elemento dati.
+2. Modulo libreria emesso all’interno della libreria runtime di tag per interpretare le impostazioni e recuperare i dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:
 

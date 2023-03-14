@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /data_elements nell�
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1369'
 ht-degree: 99%
 
 ---
@@ -37,7 +37,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | `id` della proprietà a cui appartengono gli elementi dati. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo l’elemento dati. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -364,7 +364,7 @@ curl -X POST \
 | `attributes.clean_text` | Valore booleano che indica se gli spazi vuoti iniziali e finali devono essere rimossi dal valore dell’elemento dati prima di essere memorizzati. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -482,7 +482,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -512,7 +512,7 @@ curl -X PATCH \
 | `id` | `id` dell’elemento dati che desideri aggiornare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -632,7 +632,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | `id` dell’elemento dati che desideri modificare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -664,7 +664,7 @@ curl -X PATCH \
 | `id` | `id` dell’elemento dati che desideri modificare. Questo deve corrispondere al valore `{DATA_ELEMENT_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da revisionare. Per questo endpoint, il valore deve essere `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -782,7 +782,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 | --- | --- |
 | `DATA_ELEMENT_ID` | `id` dell’elemento dati da eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -822,7 +822,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri elencare le librerie. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -944,7 +944,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri elencare le revisioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1178,7 +1178,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare l’estensione. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1298,7 +1298,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare l’origine. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1428,7 +1428,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 | --- | --- |
 | `{DATA_ELEMENT_ID}` | `id` dell’elemento dati di cui desideri cercare la proprietà. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

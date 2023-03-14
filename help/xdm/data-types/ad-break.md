@@ -1,28 +1,29 @@
 ---
-title: Tipo di dati di interruzione annuncio
-description: Questo documento fornisce una panoramica del tipo di dati XDM (Ad break Experience Data Model).
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+title: Tipo di dati interruzione annuncio
+description: Questo documento fornisce una panoramica del tipo di dati Experience Data Model (XDM) dell’interruzione pubblicitaria.
+exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 6%
+source-wordcount: '125'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Pausa annunci] tipo di dati
+# [!UICONTROL Interruzione pubblicitaria] tipo di dati
 
-[!UICONTROL Pausa annunci] è un tipo di dati XDM (Experience Data Model) standard che descrive il modo in cui un annuncio temporizzato viene inserito in un elemento multimediale temporizzato.
+[!UICONTROL Interruzione pubblicitaria] è un tipo di dati Experience Data Model (XDM) standard che descrive come un annuncio a tempo viene inserito in un elemento multimediale a tempo.
 
 ![Struttura del tipo di dati](../images/data-types/ad-break.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `_dc.title` | Stringa | Un nome descrittivo per la pausa pubblicitaria. |
-| `_id` | Stringa | Identificatore univoco per l&#39;interruzione pubblicitaria. |
-| `offset` | Intero | L’offset, in secondi, dell’interruzione dell’annuncio dall’inizio del contenuto principale. |
+| `_dc.title` | Stringa | Un nome descrittivo per l’interruzione pubblicitaria. |
+| `_id` | Stringa | Identificatore univoco dell’interruzione pubblicitaria. |
+| `offset` | Intero | Lo scostamento, in secondi, dell’interruzione pubblicitaria dall’inizio del contenuto principale. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.schema.json)

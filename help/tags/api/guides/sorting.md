@@ -1,34 +1,35 @@
 ---
-title: Ordinamento delle risposte nell’API del reattore
-description: Scopri come filtrare i risultati quando inserisci le risorse nell’API di Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+title: Ordinamento delle risposte nell’API di Reactor
+description: Scopri come filtrare i risultati quando elenchi le risorse nell’API di Reactor.
+exl-id: 49dcf0b6-4ce8-41d9-9e3a-e44f5c0ff905
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Ordinamento delle risposte nell’API di Reactor
 
-L’elenco degli endpoint nell’API di Reactor ti consente di ordinare le risorse restituite in base agli attributi specificati. Puoi configurare l’ordinamento della risposta fornendo un parametro `sort` nel percorso della richiesta.
+Gli endpoint per elenchi nell’API di Reactor consentono di ordinare le risorse restituite in base agli attributi specificati. Per configurare l’ordinamento della risposta, specifica un parametro `sort` nel percorso della richiesta.
 
 ## Ordinamento crescente
 
 Le risorse possono essere ordinate in base a un attributo in ordine crescente specificando
-attributo con cui ordinare e prefissarlo con un `+`:
+l’attributo in questione con il prefisso `+`:
 
 `GET /companies/:company_id/properties?sort=+name`
 
 ## Ordinamento decrescente
 
 Le risorse possono essere ordinate in base a un attributo in ordine decrescente specificando
-attributo con cui ordinare e prefissarlo con un `-`:
+l’attributo in questione con il prefisso `-`:
 
 `GET /companies/:company_id/properties?sort=-name`
 
-## Tipi multipli
+## Ordinare in base a più valori
 
-Per ordinare in base a più valori, fornisci le direttive di ordinamento come separate da virgola
-elenco:
+Per ordinare in base a più valori, fornisci le direttive di ordinamento come un elenco separato da virgole:
+
 
 `GET /companies/:company_id/properties?sort=+name,-org_id`

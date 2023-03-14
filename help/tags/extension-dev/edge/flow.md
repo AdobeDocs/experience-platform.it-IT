@@ -1,10 +1,11 @@
 ---
 title: Flusso per estensioni Edge
 description: Scopri in che modo i componenti di un’estensione edge in Adobe Experience Platform interagiscono tra loro in fase di runtime.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 60%
+ht-degree: 93%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nelle estensioni edge, ogni condizione, azione e tipo di elemento dati dispone di una vista mediante la quale gli utenti possono modificare le impostazioni e di un modulo libreria che agisce in base alle impostazioni definite dall&#39;utente.
 
-Come mostra il diagramma di alto livello riportato di seguito, la vista del tipo di evento dell&#39;estensione verrà visualizzata all&#39;interno di un iframe nell&#39;applicazione integrata con Adobe Experience Platform. La visualizzazione viene quindi utilizzata per modificare le impostazioni che vengono quindi salvate in Platform. Quando la libreria di runtime di tag viene generata, sia il modulo della libreria dei tipi di azione dell’estensione che le impostazioni definite dall’utente verranno inclusi nella libreria di runtime che viene distribuita al nodo edge. Le impostazioni definite dall’utente da Platform vengono inserite nel modulo libreria in fase di esecuzione.
+Come mostra il diagramma di alto livello riportato di seguito, la vista del tipo di evento dell&#39;estensione verrà visualizzata all&#39;interno di un iframe nell&#39;applicazione integrata con Adobe Experience Platform. La visualizzazione viene quindi utilizzata per modificare le impostazioni che vengono salvate in Platform. Quando viene generata la libreria runtime di tag, sia il modulo libreria dei tipi di azioni dell’estensione che le impostazioni definite dall’utente vengono inclusi nella libreria di runtime che viene distribuita al nodo edge. Le impostazioni definite dall’utente da Platform vengono inserite nel modulo libreria in fase di esecuzione.
 
 ![diagramma del flusso per le estensioni](../images/flow/edge/event-processing-flow.png)
 

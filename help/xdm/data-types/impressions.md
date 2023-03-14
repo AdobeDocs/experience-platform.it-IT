@@ -1,29 +1,30 @@
 ---
-title: Tipo di dati Impression
+title: Tipo di dati impression
 description: Questo documento fornisce una panoramica del tipo di dati XDM Impression.
-source-git-commit: 7fc16546176d196582a3cdfcee51f799eeef9788
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 6%
+source-wordcount: '138'
+ht-degree: 5%
 
 ---
 
-#  Impressionsdata
+# [!UICONTROL Impression] tipo di dati
 
- Impression è un tipo di dati XDM standard che descrive un’impression di marketing, ovvero una metrica utilizzata per quantificare il numero di visualizzazioni digitali o di coinvolgimenti per un contenuto, ad esempio un annuncio, un post digitale o una pagina web.
+[!UICONTROL Impression] è un tipo di dati XDM standard che descrive un’impression di marketing, ovvero una metrica utilizzata per quantificare il numero di visualizzazioni o impegni digitali per un contenuto come un annuncio pubblicitario, un post digitale o una pagina web.
 
 ![](../images/data-types/impressions.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `ID` | Stringa | Un ID univoco per l&#39;impression. |
-| `displays` | Intero | Il numero di volte in cui l’elemento impression è stato visualizzato a un cliente. |
-| `selected` | Intero | Il numero di volte in cui l’elemento di impression è stato selezionato o su cui è stato fatto clic. |
-| `type` | Stringa | Tipo di impression. |
+| `ID` | Stringa | Un ID univoco per l’impression. |
+| `displays` | Intero | Il numero di volte in cui l&#39;elemento di impression è stato visualizzato a un cliente. |
+| `selected` | Intero | Il numero di volte in cui l’elemento di impression è stato selezionato o cliccato. |
+| `type` | Stringa | Il tipo di impression. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

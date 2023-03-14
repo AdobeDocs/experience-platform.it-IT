@@ -15,11 +15,11 @@ ht-degree: 50%
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Panoramica di Privacy Service](./home.md)
-* [Gestione delle autorizzazioni per Privacy Service](./permissions.md)
+* [Gestire le autorizzazioni per Privacy Service](./permissions.md)
 * [Applicazioni Privacy Service e Experience Cloud](./experience-cloud-apps.md)
-* [Dati di identità per richieste di privacy](./identity-data.md)
-* [Panoramica sulla libreria JS per la privacy](./js-library.md)
-* API Privacy Service {#api}
+* [Dati di identità per le richieste di privacy](./identity-data.md)
+* [Panoramica della libreria JS per la privacy](./js-library.md)
+* API PRIVACY SERVICE {#api}
    * [Panoramica](./api/overview.md)
    * [Introduzione](./api/getting-started.md)
    * [Lavori sulla privacy](./api/privacy-jobs.md)
@@ -27,7 +27,7 @@ ht-degree: 50%
    * [Appendice](./api/appendix.md)
 * Interfaccia utente di Privacy Service {#ui}
    * [Panoramica](./ui/overview.md)
-   * [Gestire i processi di privacy](./ui/user-guide.md)
+   * [Gestire i processi relativi alla privacy](./ui/user-guide.md)
 * [Iscriviti agli eventi sulla privacy](./privacy-events.md)
 * Normative sulla privacy {#regulations}
    * [Panoramica](./regulations/overview.md)

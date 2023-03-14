@@ -13,7 +13,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione tag Core è l’estensione predefinita rilasciata con Adobe Experience Platform.
 
@@ -88,7 +88,7 @@ L’evento si attiva se il volume viene alzato o abbassato. Per ulteriori inform
 
 #### Orientation Change
 
-L&#39;evento si attiva se l&#39;orientamento del dispositivo cambia. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
+L’evento si attiva se cambia l’orientamento del dispositivo. Per attivare l’evento è necessario specificare la durata di modifica dell’orientamento. Non sono disponibili impostazioni per questo tipo di evento.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Se l’elemento è un tag di ancoraggio (`<a>`) per collegare il contenuto, puoi
 
 Quando utilizzi il ritardo dei collegamenti, Platform impedisce al browser di spostarsi fuori dalla pagina. Successivamente, esegue un reindirizzamento JavaScript alla destinazione originale dopo il timeout specificato. Ciò è particolarmente pericoloso se il markup della pagina contiene tag `<a>` la cui funzionalità prevista non fa uscire l’utente dalla pagina. Se non è possibile risolvere il problema in altro modo, è necessario essere estremamente precisi nella definizione del selettore, in modo che questo evento venga attivato esattamente dove necessario e in nessun altro punto.
 
-Il valore predefinito del ritardo del collegamento è 100 millisecondi. Tieni presente che i tag attendono sempre il periodo di tempo specificato e non sono in alcun modo collegati all’esecuzione delle azioni della regola. È possibile che il ritardo induca l’utente ad attendere più tempo del necessario e che anche il ritardo non sia abbastanza lungo per il completamento corretto di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l’esecuzione delle regole, ma peggiorano anche l’esperienza utente.
+Il valore predefinito del ritardo del collegamento è 100 millisecondi. Tieni presente che i tag attenderanno sempre il tempo specificato e non sarà in alcun modo collegato all’esecuzione delle azioni della regola. È possibile che il ritardo obblighi l’utente ad aspettare più tempo del necessario e che il ritardo non sia sufficiente per il completamento di tutte le azioni della regola. I ritardi più lunghi forniscono più tempo per l’esecuzione delle regole, ma peggiorano anche l’esperienza utente.
 
 Per attivare il ritardo è necessario fornire sia l’elemento selezionato che attiva l’evento, sia la quantità specifica di tempo prima che l’evento venga attivato.
 
@@ -126,15 +126,15 @@ L’evento si attiva se si verifica un tipo di evento personalizzato. Le funzion
 
 #### Data Element Changed
 
-L’evento si attiva se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. È possibile selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
+L’evento si attiva se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. Puoi selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
 
 #### Direct Call {#direct-call-event}
 
 Un evento di chiamata diretta bypassa i sistemi di rilevamento degli eventi e di ricerca. Le regole di chiamata diretta sono ideali per le situazioni in cui desideri comunicare al sistema esattamente ciò che sta accadendo. Inoltre, sono ideali quando il sistema non è in grado di rilevare un evento nel DOM.
 
-Quando definisci un evento di chiamata diretta, devi specificare una stringa che agirà come identificatore di questo evento. Se [attiva l&#39;azione di chiamata diretta](#direct-call-action) contenente lo stesso identificatore viene attivato, verranno eseguite tutte le regole dell&#39;evento di chiamata diretta in ascolto di tale identificatore.
+Quando definisci un evento di chiamata diretta, devi specificare una stringa che fungerà da identificatore dell’evento. Se un [attiva azione di chiamata diretta](#direct-call-action) contenente lo stesso identificatore viene attivato, verranno eseguite tutte le regole di evento di chiamata diretta in ascolto di tale identificatore.
 
-![Schermata di un evento di chiamata diretta nell’interfaccia utente di raccolta dati](../../../images/extensions/client/core/direct-call-event.png)
+![Schermata di un evento Direct Call nell’interfaccia utente di Data Collection](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -227,7 +227,7 @@ Specifica un codice personalizzato che deve esistere come condizione dell&#39;ev
 
 >[!NOTE]
 >
->ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
+>JavaScript ES6+ è ora supportato nel codice personalizzato. Alcuni browser meno recenti non supportano ES6+. Per comprendere l’impatto dell’utilizzo delle funzioni ES6+, esegui il test su tutti i browser web che dovrebbero essere supportati.
 
 Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato:
 
@@ -524,7 +524,7 @@ Specifica un intervallo di date. Scegli la data e l&#39;ora in cui si verifica l
 Specifica il numero massimo di volte che la condizione restituisce true. Puoi scegliere una delle opzioni seguenti:
 
 * Page view
-* Sessioni
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -544,11 +544,11 @@ Specifica la percentuale di tempo restituita dalla condizione.
 
 In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estensione core.
 
-### Codice personalizzato
+### Custom Code
 
 >[!NOTE]
 >
->ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
+>JavaScript ES6+ è ora supportato nel codice personalizzato. Alcuni browser meno recenti non supportano ES6+. Per comprendere l’impatto dell’utilizzo delle funzioni ES6+, esegui il test su tutti i browser web che dovrebbero essere supportati.
 
 Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate.
 
@@ -630,13 +630,13 @@ setTimeout(function() {
 </script>
 ```
 
-### Trigger Direct Call {#direct-call-action}
+### Attiva chiamata diretta {#direct-call-action}
 
-Questa azione attiva tutte le regole che utilizzano un [evento di chiamata diretta](#direct-call-event). Durante la configurazione dell’azione, devi fornire la stringa di identificazione per l’evento di chiamata diretta che desideri attivare. Facoltativamente, puoi anche trasmettere dati all’evento di chiamata diretta tramite un `detail` oggetto , che può contenere un set personalizzato di coppie chiave-valore.
+Questa azione attiva tutte le regole che utilizzano un [evento di chiamata diretta](#direct-call-event). Durante la configurazione dell’azione, devi fornire la stringa di identificazione per l’evento di chiamata diretta che desideri attivare. Facoltativamente, puoi anche trasmettere i dati all’evento di chiamata diretta tramite una `detail` oggetto, che può contenere un set personalizzato di coppie chiave-valore.
 
-![Schermata di un’azione Trigger Direct Call nell’interfaccia utente di Raccolta dati](../../../images/extensions/client/core/direct-call-action.png)
+![Schermata di un’azione Trigger Direct Call nell’interfaccia utente di Data Collection](../../../images/extensions/client/core/direct-call-action.png)
 
-L&#39;azione viene mappata direttamente sul [`track` metodo](../../../ui/client-side/satellite-object.md?lang=en#track) in `satellite` oggetto , accessibile dal codice lato client.
+L’azione viene mappata direttamente su [`track` metodo](../../../ui/client-side/satellite-object.md?lang=en#track) nel `satellite` , accessibile tramite codice lato client.
 
 ## Tipi di elementi di dati dell’estensione Core
 
@@ -664,7 +664,7 @@ Qualsiasi valore di stringa costante a cui è possibile fare riferimento in azio
 
 >[!NOTE]
 >
->ES6+ JavaScript è ora supportato nel codice personalizzato. Tieni presente che alcuni browser meno recenti non supportano ES6+. Per comprendere l&#39;impatto dell&#39;utilizzo delle funzioni ES6+, effettua il test rispetto a tutti i browser web che devono essere supportati.
+>JavaScript ES6+ è ora supportato nel codice personalizzato. Alcuni browser meno recenti non supportano ES6+. Per comprendere l’impatto dell’utilizzo delle funzioni ES6+, esegui il test su tutti i browser web che dovrebbero essere supportati.
 
 JavaScript personalizzato può essere inserito nell&#39;interfaccia utente facendo clic su Open Editor e inserendo il codice nella finestra dell’editor.
 
@@ -708,7 +708,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all’interno di estensioni o regole personalizzate mediante riferimento agli elementi dati dei tag. Se l&#39;origine dei dati cambia, è necessario aggiornare solo il riferimento all&#39;origine.
+Gli elementi dati di tag possono essere utilizzati per acquisire le variabili JavaScript di markup o le proprietà degli oggetti. Questi valori possono quindi essere utilizzati all’interno di estensioni o regole personalizzate mediante riferimento agli elementi dati dei tag. Se l’origine dei dati cambia, è necessario solo aggiornare il riferimento all’origine.
 
 Nell’esempio seguente, il markup contiene una variabile JavaScript denominata `Page_Name`.
 
@@ -721,7 +721,7 @@ Nell’esempio seguente, il markup contiene una variabile JavaScript denominata 
 
 Quando crei l&#39;elemento dati , fornisci semplicemente il percorso di tale variabile.
 
-Se utilizzi un oggetto raccolta dati come parte del livello dati, utilizza la notazione del punto nel percorso per fare riferimento all’oggetto e alla proprietà che desideri acquisire nell’elemento dati, come `_myData.pageName`oppure `digitalData.pageName`e così via.
+Se utilizzi un oggetto raccolta dati come parte del livello dati, utilizza la notazione del punto nel percorso per fare riferimento all&#39;oggetto e alla proprietà che desideri acquisire nell&#39;elemento dati, come `_myData.pageName`, o `digitalData.pageName`e così via.
 
 #### Esempio:
 
@@ -737,9 +737,9 @@ Utilizza il campo fornito per specificare il valore creato per un elemento di ar
 
 ### Oggetti uniti
 
-Seleziona più elementi di dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto. Gli oggetti di origine non verranno modificati. Se una proprietà si trova nella stessa posizione in più oggetti di origine, verrà utilizzato il valore di quest&#39;ultimo oggetto. Se il valore della proprietà di origine è `undefined`, non sovrascriverà un valore da un oggetto sorgente precedente. Se gli array si trovano nella stessa posizione in più oggetti di origine, gli array verranno concatenati.
+Seleziona più elementi dati che forniranno ciascuno un oggetto. Questi oggetti verranno uniti in profondità (in modo ricorsivo) per produrre un nuovo oggetto. Gli oggetti di origine non verranno modificati. Se una proprietà viene trovata nella stessa posizione su più oggetti sorgente, verrà utilizzato il valore di quest&#39;ultimo oggetto. Se il valore di una proprietà di origine è `undefined`, non sostituisce un valore di un oggetto sorgente precedente. Se si trovano array nella stessa posizione su più oggetti sorgente, gli array vengono concatenati.
 
-Ad esempio, si supponga di selezionare un elemento dati che fornisce il seguente oggetto:
+Ad esempio, supponiamo di selezionare un elemento dati che fornisce il seguente oggetto:
 
 ```
 {
@@ -754,7 +754,7 @@ Ad esempio, si supponga di selezionare un elemento dati che fornisce il seguente
 }
 ```
 
-Supponiamo anche di selezionare un altro elemento dati che fornisce il seguente oggetto:
+Supponiamo di selezionare anche un altro elemento dati che fornisce il seguente oggetto:
 
 ```
 {
@@ -771,7 +771,7 @@ Supponiamo anche di selezionare un altro elemento dati che fornisce il seguente 
 }
 ```
 
-Il risultato dell&#39;elemento dati Oggetti uniti sarebbe il seguente oggetto:
+Il risultato dell&#39;elemento dati Oggetti uniti è il seguente oggetto:
 
 ```
 {
@@ -799,7 +799,7 @@ Puoi selezionare uno dei seguenti attributi di pagina da utilizzare nell&#39;ele
 * URL
 * Hostname
 * Pathname
-* Protocollo
+* Protocol
 * Referrer
 * Title
 
@@ -859,33 +859,33 @@ Alcuni casi d&#39;uso comuni includono:
 
 ### Valore condizionale
 
-Un wrapper per il [Value Comparison](#value-comparison-value-comparison) condizione. In base al risultato del confronto, restituirà uno dei due valori disponibili nel modulo. Può quindi gestire &quot;Se... Allora... Altro...&quot; scenari senza la necessità di regole aggiuntive.
+Un wrapper per [Value Comparison](#value-comparison-value-comparison) condizione. In base al risultato del confronto, restituirà uno dei due valori disponibili nel modulo. Può quindi gestire &quot;If... Allora... Altrimenti...&quot; senza la necessità di ulteriori regole.
 
-### Ambiente runtime
+### Ambiente di runtime
 
 Consente di selezionare una delle seguenti variabili:
 
-* Fase dell&#39;ambiente - Resi `_satellite.environment.stage` per distinguere tra ambienti di sviluppo/staging/produzione.
-* Data build della libreria - Restituisce `turbine.buildInfo.buildDate` che contiene lo stesso valore `_satellite.buildInfo.buildDate`.
+* Fase dell’ambiente - Restituisce `_satellite.environment.stage` differenziare gli ambienti di sviluppo/staging/produzione.
+* Data build libreria - Restituisce `turbine.buildInfo.buildDate` che contiene lo stesso valore come `_satellite.buildInfo.buildDate`.
 * Nome proprietà - Restituisce `_satellite.property.name` per ottenere il nome della proprietà Launch.
 * ID proprietà - Restituisce `_satellite.property.id` per ottenere l’ID della proprietà Launch
 * Nome regola - Restituisce `event.$rule.name` contenente il nome della regola eseguita.
-* ID regola - Restituisce `event.$rule.id` contenente l&#39;ID della regola eseguita.
+* ID regola - Restituisce `event.$rule.id` contenente l’ID della regola eseguita.
 * Tipo evento - Restituisce `event.$type` contenente il tipo di evento che ha attivato la regola.
-* Payload dei dettagli dell&#39;evento - Restituisce `event.detail` contenente il payload di un evento personalizzato o una regola di chiamata diretta.
-* Identificatore di chiamata diretta - Restituisce `event.identifier` contenente l&#39;identificatore di una regola di chiamata diretta.
+* Payload dei dettagli dell’evento - Restituisce `event.detail` contenente il payload di un evento personalizzato o di una regola di chiamata diretta.
+* Identificatore di chiamata diretta - Restituisce `event.identifier` contenente l’identificatore di una regola di chiamata diretta.
 
-### Attributi del dispositivo
+### Attributi dispositivo
 
 Restituisce uno dei seguenti attributi del dispositivo visitatore:
 
-* Dimensioni della finestra del browser
+* Dimensioni finestra browser
 * Dimensioni dello schermo
 
 ### Strumenti JavaScript
 
-È un wrapper per le operazioni JavaScript comuni. Riceve un elemento dati come input. Restituisce il risultato di una delle seguenti trasformazioni del valore dell&#39;elemento dati:
+È un wrapper per le operazioni JavaScript più comuni. Riceve un elemento dati come input. Restituisce il risultato di una delle seguenti trasformazioni del valore dell’elemento dati:
 
-* Manipolazione stringa di base (sostituzione, sottostringa, corrispondenza regex, primo e ultimo indice, divisione, sezione)
-* Operazioni di base dell&#39;array (slice, join, pop, shift)
+* Manipolazione di base delle stringhe (replace, substring, regex match, first and last index, split, slice)
+* Operazioni di base sull&#39;array (slice, join, pop, shift)
 * Operazioni universali di base (sezione, lunghezza)

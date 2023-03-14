@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;eliminare un oggetto;servizio catalogo;api
+keywords: Experience Platform;home;argomenti popolari;eliminare un oggetto;servizio catalogo;api;home;popular topic;delete an object;catalog service;api
 solution: Experience Platform
 title: Eliminare un oggetto nell’API
-description: È possibile eliminare un oggetto Catalog fornendo il relativo ID nel percorso di una richiesta DELETE.
+description: Per eliminare un oggetto Catalog, devi fornire il relativo ID nel percorso di una richiesta DELETE.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->Presta particolare attenzione durante l’eliminazione degli oggetti, poiché questa operazione non può essere annullata e può produrre modifiche di interruzione altrove in [!DNL Experience Platform].
+>Presta particolare attenzione durante l’eliminazione di oggetti, poiché questa operazione non può essere annullata e può causare modifiche che interrompono altrove in [!DNL Experience Platform].
 
 **Formato API**
 
@@ -27,16 +27,16 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->La `DELETE /batches/{ID}` l&#39;endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare il [API di acquisizione in batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Il `DELETE /batches/{ID}` l&#39;endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare [API di acquisizione in batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera aggiornare. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta elimina un set di dati il cui ID è specificato nel percorso della richiesta.
+La richiesta seguente elimina un set di dati il cui ID è specificato nel percorso della richiesta.
 
 ```shell
 curl -X DELETE \
@@ -49,7 +49,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenente l&#39;ID del set di dati eliminato. Questo ID deve corrispondere a quello inviato nella richiesta di DELETE. L&#39;esecuzione di una richiesta di GET sull&#39;oggetto eliminato restituisce lo stato HTTP 404 (Non trovato), confermando che il set di dati è stato eliminato correttamente.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e un array contenente l’ID del set di dati eliminato. Questo ID deve corrispondere a quello inviato nella richiesta DELETE. L’esecuzione di una richiesta GET sull’oggetto eliminato restituisce lo stato HTTP 404 (Non trovato), confermando che il set di dati è stato eliminato correttamente.
 
 ```json
 [
@@ -59,4 +59,4 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenent
 
 >[!NOTE]
 >
->Se no [!DNL Catalog] Gli oggetti corrispondono all’ID fornito nella richiesta. È comunque possibile che venga ricevuto un codice di stato HTTP 200, ma l’array di risposta sarà vuoto.
+>In caso negativo [!DNL Catalog] Gli oggetti corrispondono all&#39;ID fornito nella richiesta. È possibile che venga comunque visualizzato il codice di stato HTTP 200, ma l&#39;array di risposta sarà vuoto.

@@ -1,25 +1,25 @@
 ---
-title: Endpoint API per gli eventi di controllo
-description: Scopri come recuperare gli eventi di controllo in Experience Platform utilizzando l’API Audit Query.
+title: Endpoint API per eventi di controllo
+description: Scopri come recuperare gli eventi di audit in Experience Platform utilizzando l’API di query di audit.
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 10%
+source-wordcount: '474'
+ht-degree: 9%
 
 ---
 
 # Endpoint “audit_events”
 
-I registri di controllo vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita ed eventuali attributi aggiuntivi relativi al tipo di azione. La `/audit/events` punto finale [!DNL Audit Query] L’API ti consente di recuperare in modo programmatico i dati evento per l’attività dell’organizzazione in [!DNL Platform].
+I registri di audit vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita ed eventuali attributi aggiuntivi relativi al tipo di azione. Il `/audit/events` endpoint nella [!DNL Audit Query] API consente di recuperare in modo programmatico i dati evento per l’attività dell’organizzazione in [!DNL Platform].
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a [!DNL Experience Platform] API.
 
-## Elencare eventi di controllo
+## Elencare eventi di audit
 
-Puoi recuperare i dati degli eventi effettuando una richiesta GET al `/audit/events` endpoint, specificando gli eventi da recuperare nel payload.
+Per recuperare i dati degli eventi, devi effettuare una richiesta GET al `/audit/events` endpoint, specificando gli eventi da recuperare nel payload.
 
 **Formato API**
 
@@ -27,13 +27,13 @@ Puoi recuperare i dati degli eventi effettuando una richiesta GET al `/audit/eve
 GET /audit/events
 ```
 
-La [!DNL Audit Query] L’API supporta l’utilizzo di parametri di query per la pagina e filtrare i risultati durante l’elenco degli eventi.
+Il [!DNL Audit Query] L’API supporta l’utilizzo di parametri di query per visualizzare e filtrare i risultati quando si elencano gli eventi.
 
 | Parametro | Descrizione |
 | --- | --- |
-| `limit` | Il numero massimo di record da restituire nella risposta. Il valore predefinito `limit` è 50. |
-| `start` | Puntatore al primo elemento per i risultati di ricerca restituiti. Per accedere alla pagina successiva dei risultati, questo parametro deve incrementare della stessa quantità indicata dal limite. Esempio: Per accedere alla pagina successiva di risultati per una richiesta con limit=50, utilizza il parametro start=50, quindi start=100 per la pagina successiva e così via. |
-| `queryId` | Quando si effettua una query sull&#39;endpoint /audit/events, la risposta include una proprietà della stringa queryId. Per eseguire la stessa query in una chiamata separata, puoi includere il valore ID come parametro di query singolo invece di configurare nuovamente manualmente i parametri di ricerca. |
+| `limit` | Numero massimo di record da restituire nella risposta. Il valore predefinito `limit` è 50. |
+| `start` | Puntatore al primo elemento per i risultati di ricerca restituiti. Per accedere alla pagina successiva dei risultati, questo parametro deve essere incrementato della stessa quantità indicata da un limite. Esempio: per accedere alla pagina successiva dei risultati per una richiesta con limite=50, utilizza il parametro start=50, quindi start=100 per la pagina successiva e così via. |
+| `queryId` | Quando si esegue una query sull’endpoint /audit/events, la risposta include una proprietà stringa queryId. Per eseguire la stessa query in una chiamata separata, puoi includere il valore Id come un singolo parametro di query invece di configurare manualmente di nuovo i parametri di ricerca. |
 
 **Richiesta**
 
@@ -49,7 +49,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i punti dati risultanti per le metriche e i filtri specificati nella richiesta.
+In caso di esito positivo, la risposta restituisce i punti dati risultanti per le metriche e i filtri specificati nella richiesta.
 
 ```json
 {
@@ -144,16 +144,16 @@ Una risposta corretta restituisce i punti dati risultanti per le metriche e i fi
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `customerAuditLogList` | Matrice i cui oggetti rappresentano ciascuno degli eventi specificati nella richiesta. Ogni oggetto contiene informazioni sulla configurazione del filtro e sui dati dell&#39;evento restituiti. |
-| `userEmail` | L’e-mail dell’utente che ha eseguito l’evento. |
+| `customerAuditLogList` | Matrice i cui oggetti rappresentano ciascuno degli eventi specificati nella richiesta. Ogni oggetto contiene informazioni sulla configurazione del filtro e sui dati evento restituiti. |
+| `userEmail` | Indirizzo e-mail dell’utente che ha eseguito l’evento. |
 | `eventType` | Il tipo di evento. I tipi di eventi includono `Core` e `Enhanced`. |
-| `imsOrgId` | L&#39;ID dell&#39;organizzazione in cui si è verificato l&#39;evento. |
-| `permissionResource` | Il prodotto o la funzionalità che ha fornito l&#39;autorizzazione esegue l&#39;azione. Una risorsa può essere una delle seguenti: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
-| `permissionType` | Il tipo di autorizzazione coinvolto nell&#39;azione. |
-| `assetType` | Il tipo di risorsa Platform su cui è stata eseguita l’azione. |
-| `assetId` | Identificatore univoco per la risorsa Platform su cui è stata eseguita l&#39;azione. |
+| `imsOrgId` | ID dell’organizzazione in cui si è verificato l’evento. |
+| `permissionResource` | Il prodotto o la funzionalità che ha fornito l’autorizzazione eseguono l’azione. Una risorsa può essere una qualsiasi delle seguenti: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
+| `permissionType` | Tipo di autorizzazione coinvolto nell’azione. |
+| `assetType` | Tipo di risorsa Platform su cui è stata eseguita l’azione. |
+| `assetId` | Identificatore univoco della risorsa Platform su cui è stata eseguita l’azione. |
 | `assetName` | Nome della risorsa Platform su cui è stata eseguita l’azione. |
-| `action` | Il tipo di azione registrata per l&#39;evento. Un’azione può essere una delle seguenti: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
-| `status` | Lo stato dell’azione. Uno stato può essere uno dei seguenti: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
+| `action` | Tipo di azione registrata per l’evento. Un’azione può essere una qualsiasi delle seguenti: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
+| `status` | Stato dell’azione. Uno stato può essere uno dei seguenti: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

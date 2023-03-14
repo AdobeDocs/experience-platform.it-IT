@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;eseguire query pianificate;eseguire query pianificate;servizio query;query pianificate;query pianificate;
+keywords: Experience Platform;home;argomenti popolari;servizio query;eseguire query pianificate;eseguire query pianificate;servizio query;query pianificate;query pianificate;query pianificate;home;popular topic;query service;run scheduled queries;run scheduled query;Query service;Scheduled queries;scheduled query;
 solution: Experience Platform
-title: Endpoint API per l'esecuzione della query pianificata
-description: Nelle sezioni seguenti sono illustrate le varie chiamate API che è possibile effettuare per l’esecuzione di query pianificate con l’API del servizio query.
+title: La query pianificata esegue l’endpoint API
+description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per eseguire query pianificate con l’API di Query Service.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# Endpoint di esecuzione della query pianificata
+# La query pianificata esegue l’endpoint
 
 ## Chiamate API di esempio
 
-Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettuare chiamate a [!DNL Query Service] API. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che sai quali intestazioni utilizzare, puoi iniziare a effettuare chiamate al [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-### Recupera un elenco di tutte le esecuzioni per una query pianificata specificata
+### Recuperare un elenco di tutte le esecuzioni per una query pianificata specificata
 
-È possibile recuperare un elenco di tutte le esecuzioni per una query pianificata specifica, indipendentemente dal fatto che siano attualmente in esecuzione o già completate. A tal fine, invia una richiesta GET al `/schedules/{SCHEDULE_ID}/runs` punto finale, dove `{SCHEDULE_ID}` è `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
+È possibile recuperare un elenco di tutte le esecuzioni per una query pianificata specifica, indipendentemente dal fatto che siano attualmente in esecuzione o già completate. A tale scopo, invia una richiesta GET al `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
 
 **Formato API**
 
@@ -30,23 +30,23 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata che si desidera recuperare. |
-| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata da recuperare. |
+| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
 **Parametri query**
 
-Di seguito è riportato un elenco dei parametri di query disponibili per le esecuzioni di elenchi per una query pianificata specificata. Tutti questi parametri sono facoltativi. Effettuare una chiamata a questo endpoint senza parametri recupererà tutte le esecuzioni disponibili per la query pianificata specificata.
+Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle esecuzioni per una query pianificata specificata. Tutti questi parametri sono facoltativi. Se si effettua una chiamata a questo endpoint senza parametri, verranno recuperate tutte le esecuzioni disponibili per la query pianificata specificata.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state`e `externalTrigger`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e  `==` (uguale a), e `!=` (diverso da). Ad esempio: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create, completate e create manualmente dopo il 20 aprile 2019. |
+| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state`, e `externalTrigger`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e  `==` (uguale a), e `!=` (diverso da). Ad esempio: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create, riuscite e create manualmente dopo il 20 aprile 2019. |
 
 **Richiesta**
 
-La richiesta seguente recupera gli ultimi quattro esecuzioni per la query pianificata specificata.
+La richiesta seguente recupera le ultime quattro esecuzioni per la query pianificata specificata.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di esecuzioni per la query pianificata specificata come JSON. La risposta seguente restituisce gli ultimi quattro esecuzioni per la query pianificata specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di esecuzioni per la query pianificata specificata come JSON. La risposta seguente restituisce le ultime quattro esecuzioni per la query pianificata specificata.
 
 ```json
 {
@@ -148,11 +148,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di esecuzioni 
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [interrompe un&#39;esecuzione per una query pianificata specificata](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Puoi utilizzare il valore di `_links.cancel` a [interrompere un&#39;esecuzione per una query pianificata specificata](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Attiva immediatamente un&#39;esecuzione per una query pianificata specifica
 
-È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata effettuando una richiesta di POST al `/schedules/{SCHEDULE_ID}/runs` punto finale, dove `{SCHEDULE_ID}` è `id` valore della query pianificata di cui si desidera attivare l&#39;esecuzione.
+Puoi attivare immediatamente un’esecuzione per una query pianificata specificata effettuando una richiesta POST al `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui desideri attivare l’esecuzione.
 
 **Formato API**
 
@@ -172,7 +172,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {
@@ -181,9 +181,9 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 }
 ```
 
-### Recupera i dettagli di un&#39;esecuzione per una query pianificata specifica
+### Recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica
 
-È possibile recuperare i dettagli relativi a un&#39;esecuzione per una query pianificata specifica effettuando una richiesta di GET al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornisce sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
+Per recuperare i dettagli di un’esecuzione per una query pianificata specifica, effettua una richiesta GET al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -193,8 +193,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata di cui si desidera recuperare i dettagli nell&#39;esecuzione. |
-| `{RUN_ID}` | La `id` valore dell&#39;esecuzione che si desidera recuperare. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui desideri recuperare i dettagli dell’esecuzione. |
+| `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
 
 **Richiesta**
 
@@ -208,7 +208,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dell&#39;esecuzione specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli dell’esecuzione specificata.
 
 ```json
 {
@@ -242,9 +242,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dell&#39;esec
 }
 ```
 
-### Interrompere immediatamente un&#39;esecuzione per una query pianificata specifica
+### Interrompere immediatamente l&#39;esecuzione di una query pianificata specifica
 
-È possibile interrompere immediatamente un&#39;esecuzione per una query pianificata specifica effettuando una richiesta di PATCH al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornisce sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
+Per interrompere immediatamente l’esecuzione di una query pianificata specifica, invia una richiesta PATCH al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -254,12 +254,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | La `id` valore della query pianificata di cui si desidera recuperare i dettagli nell&#39;esecuzione. |
-| `{RUN_ID}` | La `id` valore dell&#39;esecuzione che si desidera recuperare. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui desideri recuperare i dettagli dell’esecuzione. |
+| `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
 
 **Richiesta**
 
-Questa richiesta API utilizza la sintassi della patch JSON per il relativo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento di base API .
+Questa richiesta API utilizza la sintassi Patch JSON per il suo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento API Fundals.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {

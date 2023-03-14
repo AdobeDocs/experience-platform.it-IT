@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione di inoltro degli eventi Cloud Connector consente di creare richieste HTTP personalizzate per l’invio di dati a una destinazione o il recupero di dati da una destinazione. L’estensione Cloud Connector è simile a Postman su Adobe Experience Platform Edge Network e può essere utilizzata per inviare dati a un endpoint che non ha ancora un’estensione dedicata.
 
@@ -64,12 +64,12 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 | Header | Descrizione |
 |---|---|
 | [A-IM](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Trasmesso da un agente utente, indica la volontà di accedere a uno stato passato di una risorsa originale. A tal fine, l’intestazione `Accept-Datetime` viene trasmessa in una richiesta HTTP eseguita su TimeGate per una risorsa originale e il suo valore indica il datetime dello stato precedente desiderato per la risorsa originale. |
-| Access-Control-Request-Headers | Utilizzato dai browser durante l’emissione di una [richiesta di verifica preliminare](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), per comunicare al server le [intestazioni HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) che il client potrebbe inviare quando viene effettuata la richiesta effettiva. |
+| [Accept-Datetime](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) | Trasmesso da un agente utente, indica la volontà di accedere a uno stato passato di una risorsa originale. A tal fine, l’intestazione `Accept-Datetime` viene trasmessa in una richiesta HTTP eseguita su TimeGate per una risorsa originale e il suo valore indica il datetime dello stato precedente desiderato per la risorsa originale. |
+| Access-Control-Request-Headers | Utilizzato dai browser durante l’emissione di una [richiesta di verifica preliminare](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), per comunicare al server le [intestazioni HTTP](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers) che il client potrebbe inviare quando viene effettuata la richiesta effettiva. |
 | Access-Control-Request-Method | Utilizzato dai browser quando viene rilasciata una [richiesta di verifica preliminare](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), per comunicare al server il [metodo HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) che verrà utilizzato quando viene effettuata la richiesta effettiva. Questa intestazione è necessaria perché la richiesta di verifica preliminare è sempre un metodo [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) e non utilizza lo stesso metodo della richiesta effettiva. |
 | Authorization | Contiene le credenziali per l’autenticazione di un agente utente con un server. |
 | [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) | Direttive per meccanismi di caching sia nelle richieste che nelle risposte. |

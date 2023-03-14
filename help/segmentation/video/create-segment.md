@@ -1,6 +1,6 @@
 ---
 title: Creare un segmento in Adobe Experience Platform
-description: Questo video fornisce informazioni di base sulla creazione di un segmento mediante l’interfaccia utente della piattaforma.
+description: Questo video offre informazioni di base sulla creazione di un segmento utilizzando l’interfaccia utente di Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+exl-id: cf67c3ae-abe3-45c6-9c6a-4a946b33e762
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
+# Creare un segmento nell’interfaccia utente di Experience Platform
 
-# Creare un segmento nell’interfaccia utente del Experience Platform 
+Il video seguente ha lo scopo di aiutarti a comprendere la creazione dei segmenti. Mostra un esempio di esperienza del cliente seguita da una breve presentazione delle funzioni chiave nella [!DNL Platform] di rete. Per ulteriori informazioni sulla segmentazione e su come creare segmenti nell’interfaccia utente, leggi [Guida al Generatore di segmenti](../ui/segment-builder.md).
 
-Il seguente video è pensato per aiutarti a capire come creare segmenti. Mostra un esempio di esperienza del cliente seguito da una breve presentazione delle funzioni chiave nell&#39;interfaccia [!DNL Platform]. Per ulteriori informazioni sulla segmentazione e su come creare segmenti nell&#39;interfaccia utente, consulta la guida [Generatore di segmenti](../ui/segment-builder.md).
-
-Se sei interessato a creare un segmento utilizzando l&#39;API di segmentazione, leggi la [guida alla creazione di un segmento API](../tutorials/create-a-segment.md).
+Se ti interessa creare un segmento utilizzando l’API di segmentazione, leggi [creare una guida API per segmenti](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->L’interfaccia utente del Experience Platform  viene aggiornata di frequente e può essere cambiata dopo la registrazione del video. Per le informazioni più aggiornate, fare riferimento alla guida [Segment Builder guide](../ui/segment-builder.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [Guida al Generatore di segmenti](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)

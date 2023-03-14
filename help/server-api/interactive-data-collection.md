@@ -1,6 +1,6 @@
 ---
-title: Raccolta dati interattiva
-description: Scopri in che modo l’API di Adobe Experience Platform Edge Network Server esegue la raccolta di dati interattivi.
+title: Raccolta interattiva di dati
+description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta interattiva dei dati.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 7%
 
 ---
 
-# Raccolta dati interattiva
+# Raccolta interattiva di dati
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che una risposta venga restituita dal server di rete Adobe Experience Platform Edge. Questi endpoint possono anche restituire contenuto da altri servizi Experience Edge durante l’esecuzione della raccolta dati.
+Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che venga restituita una risposta dal server di rete Edge di Adobe Experience Platform. Questi endpoint possono inoltre restituire contenuti da altri servizi Experience Edge, durante l’esecuzione della raccolta dati.
 
-La risposta del server include uno o più `Handle` come illustrato di seguito.
+La risposta del server include uno o più `Handle` come mostrato di seguito.
 
 ## Esempio di chiamata API
 
@@ -62,12 +62,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sì. | ID Datastream. |
-| `requestId` | `String` | No | Fornisci un ID casuale client per le richieste server interne correlate. Se non ne viene fornito nessuno, la rete Edge ne genererà uno e lo restituirà nella risposta. |
+| `dataStreamId` | `String` | Sì. | ID dello stream di dati. |
+| `requestId` | `String` | No | Fornisci un ID casuale client per correlare le richieste interne del server. Se non ne viene fornito alcuno, la rete Edge ne genererà uno e lo restituirà nella risposta. |
 
 ### Risposta {#response}
 
-Una risposta corretta restituisce lo stato HTTP `200 OK`, con uno o più `Handle` a seconda dei servizi edge in tempo reale abilitati nella configurazione del datastream.
+Una risposta corretta restituisce lo stato HTTP `200 OK`, con uno o più `Handle` a seconda dei servizi edge in tempo reale abilitati nella configurazione dello stream di dati.
 
 ```json
 {

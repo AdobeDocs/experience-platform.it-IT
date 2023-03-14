@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /audit_events nell�
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '259'
 ht-degree: 98%
 
 ---
@@ -172,7 +172,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 | --- | --- |
 | `AUDIT_EVENT_ID` | `id` dell’evento di audit che si desidera cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

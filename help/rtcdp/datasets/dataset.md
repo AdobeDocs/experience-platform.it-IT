@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # Set di dati in Real-time Customer Data Platform
 
-Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare e gestire tutti i set di dati creati dalla tua organizzazione IMS e crearne di nuovi. Per sfogliare i set di dati nell’interfaccia utente, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra. La **[!UICONTROL Sfoglia]** La scheda contiene un elenco di set di dati, tra cui colonne che mostrano nome, data e ora create, origine, schema e stato dell’ultimo batch, nonché la data e l’ora dell’ultimo aggiornamento del set di dati.
+Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e gestire tutti i set di dati creati dalla tua organizzazione IMS e crearne di nuovi. Per sfogliare i set di dati nell’interfaccia utente, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra. Il **[!UICONTROL Sfoglia]** La scheda contiene un elenco di set di dati, incluse le colonne con nome, data e ora di creazione, origine, schema e ultimo stato batch, nonché la data e l’ora dell’ultimo aggiornamento del set di dati.
 
-Per informazioni sui set di dati in [!DNL Experience Platform], inizia leggendo il [Panoramica dei set di dati](../../catalog/datasets/overview.md).
+Per informazioni sui set di dati in [!DNL Experience Platform], iniziare leggendo il [Panoramica sui set di dati](../../catalog/datasets/overview.md).

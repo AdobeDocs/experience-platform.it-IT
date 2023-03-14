@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag in Adobe Experience Platform seguono un sistema basato su regole. Cercano le interazione degli utenti e i relativi dati. Quando i criteri descritti nelle tue regole vengono soddisfatti, la regola attiva l&#39;estensione, lo script o il codice lato client identificato.
 
@@ -121,18 +121,18 @@ Quando crei o modifichi regole, puoi salvarle e distribuirle nella [libreria att
 
 ## Ordine regole {#rule-ordering}
 
-L&#39;ordinamento delle regole consente di controllare l&#39;ordine di esecuzione per le regole che condividono un evento. Ogni regola contiene un numero intero che determina la sua priorità dell&#39;ordine (il valore predefinito è 50). Le regole che contengono valori più bassi per il loro ordine vengono eseguite prima di quelle con valori più alti.
+L&#39;ordinamento delle regole consente di controllare l&#39;ordine di esecuzione per le regole che condividono un evento. Ogni regola contiene un numero intero che determina la priorità dell’ordine (il valore predefinito è 50). Le regole che contengono valori più bassi per il loro ordine vengono eseguite prima di quelle con valori più alti.
 
-Considera un set di cinque regole che condividono tutti un evento e hanno priorità predefinita:
+Considera un set di cinque regole che condividono tutte un evento e hanno tutte la priorità predefinita:
 
-* Se esiste una regola che desideri eseguire per ultima, puoi modificare quel componente della regola e assegnargli un numero maggiore di 50 (ad esempio, 60).
-* Se vuoi eseguire prima una regola, puoi modificarla e assegnargli un numero inferiore a 50 (ad esempio, 40).
+* Se è presente una regola che desideri eseguire per ultima, puoi modificarla e assegnarle un numero maggiore di 50 (ad esempio, 60).
+* Se esiste una regola che desideri eseguire per prima, puoi modificarla e assegnarle un numero inferiore a 50 (ad esempio, 40).
 
 >[!NOTE]
 >
->In ultima analisi, la responsabilità dell’esecuzione delle azioni è dello sviluppatore dell’estensione del tipo di evento utilizzato. Gli sviluppatori di estensioni Adobe assicurano che le loro estensioni funzionino come previsto. Adobe fornisce indicazioni agli sviluppatori di estensioni di terze parti per eseguire correttamente questa operazione, ma non può garantire il modo in cui vengono seguite queste linee guida.
+>In ultima analisi, la responsabilità di eseguire azioni in ordine è dello sviluppatore di estensioni del tipo di evento in uso. Gli sviluppatori di estensioni Adobe assicurano che le loro estensioni funzionino come previsto. Adobe fornisce indicazioni agli sviluppatori di estensioni di terze parti per farlo correttamente, ma non può garantire come vengono seguite queste linee guida.
 
-Si consiglia vivamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). Poiché l&#39;ordine delle regole deve essere mantenuto manualmente, è consigliabile mantenere lo schema di ordinazione il più semplice possibile. In presenza di casi edge in cui questa restrizione è troppo limitativa, i tag supportano i numeri di ordine delle regole tra +/- 2.147.483.648.
+Si consiglia vivamente di ordinare le regole con numeri positivi compresi tra 1 e 100 (il valore predefinito è 50). Poiché l’ordine delle regole deve essere mantenuto manualmente, è consigliabile mantenere il sistema di ordinamento il più semplice possibile. Se ci sono casi limite in cui questa restrizione è troppo limitativa, i tag supportano numeri di ordine delle regole compresi tra +/- 2.147.483.648.
 
 ### Gestione delle regole lato client
 
@@ -142,7 +142,7 @@ Puoi utilizzare `document.write` tra gli script personalizzati indipendentemente
 
 Puoi ordinare diversi tipi di codici personalizzati tra loro. Ad esempio, puoi utilizzare un&#39;azione codice personalizzato JavaScript, poi un&#39;azione codice personalizzato HTML, quindi un&#39;azione codice personalizzato JavaScript. I tag assicurano che vengano eseguite in tale ordine.
 
-## Raggruppamento di regole
+## Raggruppamento regole
 
 Gli eventi e le condizioni delle regole sono sempre raggruppati nella libreria principale di tag. Le azioni possono essere raggruppate nella libreria principale o caricate in ritardo come risorse secondarie, a seconda delle necessità. Il fatto che le azioni siano raggruppate o meno è determinato dal tipo di evento della regola.
 
@@ -167,13 +167,13 @@ Il comportamento dell’ambiente runtime dei dipende dall’abilitazione o meno 
 
 >[!IMPORTANT]
 >
->Questa impostazione determina solo il modo in cui le condizioni e le azioni vengono valutate all&#39;interno di ogni regola e non influisce sulla sequenza in cui le regole stesse vengono eseguite sulla proprietà. Fai riferimento alla sezione precedente su [ordinamento delle regole](#rule-ordering) per ulteriori informazioni su come determinare l’ordine di esecuzione per più regole.
+>Questa impostazione determina solo il modo in cui le condizioni e le azioni vengono valutate all’interno di ogni regola e non influisce sulla sequenza in cui le regole stesse vengono eseguite sulla proprietà. Consulta la sezione precedente su [ordine regole](#rule-ordering) per ulteriori informazioni su come determinare l’ordine di esecuzione per più regole.
 >
->In [inoltro eventi](../event-forwarding/overview.md) , le azioni delle regole vengono sempre eseguite in sequenza e questa impostazione non è disponibile. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
+>In entrata [inoltro eventi](../event-forwarding/overview.md) Le proprietà, le azioni delle regole vengono sempre eseguite in sequenza e questa impostazione non è disponibile. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
 
 ### Abilitata
 
-Se l’impostazione è abilitata quando un evento viene attivato in fase di runtime, le condizioni e le azioni della regola vengono aggiunte a una coda di elaborazione (in base all’ordine definito) ed elaborate una alla volta in base al criterio FIFO (first in, first out). La regola attende il completamento del componente prima di passare a quello successivo.
+Se l’impostazione è abilitata quando un evento viene attivato in fase di runtime, le condizioni e le azioni della regola vengono aggiunte a una coda di elaborazione (in base all’ordine definito) ed elaborate una alla volta in base al criterio &quot;first in, first out&quot; (FIFO). La regola attende il completamento del componente prima di passare a quello successivo.
 
 Se una condizione risulta false o raggiunge il timeout definito, le condizioni e le azioni successive della regola vengono rimosse dalla coda.
 

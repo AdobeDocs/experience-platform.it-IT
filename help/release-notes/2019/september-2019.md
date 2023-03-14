@@ -1,6 +1,6 @@
 ---
-title: Note sulla versione di Adobe Experience Platform - Settembre 2019
-description: Le note sulla versione di settembre 2019 per Adobe Experience Platform.
+title: Note sulla versione di Adobe Experience Platform di settembre 2019
+description: Note sulla versione di settembre 2019 per Adobe Experience Platform.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
@@ -24,49 +24,49 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] fornisce diverse alternative per l’acquisizione dei dati, tra cui API Batch, API Streaming, connettori di Adobe nativi, partner di integrazione dei dati o l’interfaccia utente Adobe Experience Platform.
+Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] fornisce diverse alternative per l’acquisizione dei dati, tra cui API Batch, API Streaming, connettori Adobi nativi, partner di integrazione dei dati o interfaccia utente di Adobe Experience Platform.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ----------- | ---------- |
-| Nuovo dominio per l’acquisizione in streaming | La `dcs.data.adobe.net` il dominio è stato spostato nel nuovo dominio di raccolta dati comune `dcs.adobedc.net`. Gli utenti devono aggiornare le proprie implementazioni in base alla documentazione rivista relativa all’acquisizione in streaming di Adobe Experience Platform. Tutta la documentazione relativa all’acquisizione in streaming di Adobe Experience Platform è stata aggiornata per utilizzare il nuovo dominio. |
+| Nuovo dominio per acquisizione in streaming | Il `dcs.data.adobe.net` è stato spostato nel nuovo dominio di raccolta dati comune `dcs.adobedc.net`. Gli utenti devono aggiornare le proprie implementazioni in base alla versione rivista della documentazione di acquisizione in streaming di Adobe Experience Platform. Tutta la documentazione relativa all’acquisizione in streaming di Adobe Experience Platform è stata aggiornata per l’utilizzo del nuovo dominio. |
 
-Per ulteriori informazioni, visita il [Documentazione sull’acquisizione dei dati](../../ingestion/home.md).
+Per ulteriori informazioni, visitare il [Documentazione sull’acquisizione dei dati](../../ingestion/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] è un servizio completamente gestito in [!DNL Experience Platform] che consente agli scienziati dei dati di generare facilmente informazioni dai dati e dai contenuti tra soluzioni Adobe e sistemi di terze parti creando e operando modelli di apprendimento automatico. [!DNL Data Science Workspace] è strettamente integrato con [!DNL Platform] e potenzia il ciclo di vita completo della scienza dei dati, inclusa l&#39;esplorazione e la preparazione dei dati XDM, seguiti dallo sviluppo e dall&#39;operazionalizzazione dei modelli per arricchire automaticamente [!DNL Real-Time Customer Profile] con informazioni sull&#39;apprendimento automatico.
+Adobe Experience Platform [!DNL Data Science Workspace] è un servizio completamente gestito all’interno di [!DNL Experience Platform] che consente ai data scientist di generare senza interruzioni informazioni da dati e contenuti tra soluzioni Adobe e sistemi di terze parti tramite la creazione e l’operazionalizzazione di modelli di apprendimento automatico. [!DNL Data Science Workspace] è strettamente integrato con [!DNL Platform] e potenzia il ciclo di vita della data science end-to-end, inclusa l&#39;esplorazione e la preparazione dei dati XDM, seguita dallo sviluppo e dall&#39;operazionalizzazione di modelli per l&#39;arricchimento automatico [!DNL Real-Time Customer Profile] con Approfondimenti apprendimento automatico.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | -----------| ---------- |
-| Pianificazione dei servizi tramite l’interfaccia utente | Integrato con [!DNL Platform] Servizio di orchestrazione per automatizzare l&#39;addestramento e il punteggio del modello con pianificazioni definite dall&#39;utente tramite l&#39;interfaccia utente. |
-| [!DNL Service Gallery] | Sfogliare, monitorare e accedere ai servizi di apprendimento automatico con la possibilità di pianificare processi di formazione e valutazione automatizzati, il tutto all&#39;interno della riprogettazione [!DNL Service Gallery]. |
+| Pianificazione dei servizi tramite l’interfaccia utente | Integrato con [!DNL Platform] Servizio di orchestrazione per automatizzare l’apprendimento e il punteggio dei modelli con pianificazioni definite dall’utente tramite l’interfaccia utente. |
+| [!DNL Service Gallery] | Sfoglia, monitora e accedi ai servizi di apprendimento automatico con la possibilità di pianificare processi di formazione automatizzati e di valutazione, il tutto all’interno del [!DNL Service Gallery]. |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] Miglioramenti all’interfaccia utente. |
 
 **Problemi noti**
 
-* Attualmente non esiste un modo accessibile nel [!DNL Service Gallery] per eliminare un servizio esistente. Nel frattempo, si prega di fare riferimento al [Riferimento API di apprendimento automatico per Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per eliminare un servizio esistente tramite chiamate API.
-* La [!DNL Service Gallery] non dispone del supporto per l’impaginazione per filtrare le esecuzioni di formazione e valutazione di un servizio.
-* Durante la configurazione di corsi di formazione o di valutazione pianificati viene eseguito il [!DNL Service Gallery], l’impostazione della frequenza su ogni ora impedisce l’applicazione della pianificazione.
+* Al momento non è disponibile alcuna modalità accessibile in [!DNL Service Gallery] per eliminare un servizio esistente. Nel frattempo, si prega di fare riferimento al [Riferimento API di apprendimento automatico di Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per eliminare un servizio esistente tramite chiamate API.
+* Il [!DNL Service Gallery] non dispone del supporto per l’impaginazione per filtrare le esecuzioni di apprendimento e punteggio di un servizio.
+* Durante la configurazione dell’apprendimento o del punteggio pianificato viene eseguito [!DNL Service Gallery], l&#39;impostazione della frequenza su oraria impedisce l&#39;applicazione della pianificazione.
 
-Per ulteriori informazioni, visita il [Panoramica di Data Science Workspace](../../data-science-workspace/home.md).
+Per ulteriori informazioni, visitare il [Panoramica di Data Science Workspace](../../data-science-workspace/home.md).
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform per supportare diversi casi di utilizzo di analisi e gestione dei dati. È uno strumento senza server che ti consente di unire i set di dati dalla [!DNL Data Lake] e acquisisce i risultati della query come nuovo set di dati da utilizzare nel reporting, [!DNL Data Science Workspace]o per l&#39;acquisizione in [!DNL Real-Time Customer Profile].
+[!DNL Query Service] consente di utilizzare istruzioni SQL standard per eseguire query sui dati in Adobe Experience Platform per supportare diversi casi di utilizzo di analisi e gestione dei dati. Si tratta di uno strumento serverless che consente di unire set di dati da [!DNL Data Lake] e acquisiscono i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, [!DNL Data Science Workspace], o per l’acquisizione in [!DNL Real-Time Customer Profile].
 
-È possibile utilizzare [!DNL Query Service] creare ecosistemi di analisi dei dati, creando un&#39;immagine dei clienti attraverso i loro diversi canali di interazione. Questi canali possono includere sistemi di punti vendita, web, dispositivi mobili o sistemi CRM.
+È possibile utilizzare [!DNL Query Service] creare ecosistemi di analisi dei dati, creando un quadro dei clienti attraverso i loro vari canali di interazione. Questi canali possono includere sistemi POS, web, mobili o sistemi CRM.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | -----------| ---------- |
-| Miglioramenti apportati a [!DNL Query Editor] | È stata aggiunta una funzione di salvataggio che consente di salvare una query e lavorarci in un secondo momento. È stata aggiunta una scheda &quot;Sfoglia&quot; al [!DNL Query Service] interfaccia utente su Adobe Experience Platform che mostra le query salvate dagli utenti dell’organizzazione. Implementato un pannello &quot;Dettagli query&quot; che visualizza metadati utili sulla query visualizzata. |
+| Miglioramenti a [!DNL Query Editor] | È stata aggiunta una funzione di salvataggio che consente di salvare una query e lavorarci in un secondo momento. È stata aggiunta una scheda &quot;Sfoglia&quot; al [!DNL Query Service] interfaccia utente di Adobe Experience Platform che mostra le query salvate dagli utenti dell’organizzazione. È stato implementato un pannello &quot;Dettagli query&quot; che visualizza metadati utili sulla query visualizzata. |
 | Nuove funzioni di attribuzione | Funzioni definite dall&#39;Adobe in [!DNL Query Service] per eseguire una query per l’attribuzione del canale con parametri di scadenza. |
-| Miglioramenti alla sintassi SQL | Supporto della sintassi iLike. |
+| Miglioramenti alla sintassi SQL | Supporto per la sintassi iLike. |
 | Generare set di dati con uno schema XDM definito | È stata aggiunta una nuova clausola nelle query Create Table as Select (CTAS) che consente di specificare uno schema di destinazione. |
 
-Per ulteriori informazioni, consulta la [Documentazione del servizio query](../../query-service/home.md).
+Per ulteriori informazioni, consulta [Documentazione di Query Service](../../query-service/home.md).

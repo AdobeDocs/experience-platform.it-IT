@@ -1,26 +1,27 @@
 ---
 title: Esporta endpoint API
-description: L’endpoint /export nell’API del Registro di sistema dello schema ti consente di condividere risorse XDM tra le sandbox.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+description: L’endpoint /export nell’API Schema Registry consente di condividere risorse XDM tra sandbox.
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 2%
+source-wordcount: '411'
+ht-degree: 1%
 
 ---
 
-# Endpoint di esportazione
+# Esporta endpoint
 
-Tutte le risorse all&#39;interno della [!DNL Schema Library] sono contenuti in una sandbox specifica in Adobe Experience Platform. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra sandbox e organizzazioni. La `/rpc/export` punto finale [!DNL Schema Registry] L’API ti consente di generare un payload di esportazione per qualsiasi schema, gruppo di campi di schema o tipo di dati nel [!DNL Schema Library], quindi utilizza tale payload per importare la risorsa (e tutte le risorse dipendenti) in una sandbox e in un&#39;organizzazione target tramite [`/rpc/import` endpoint](./import.md).
+Tutte le risorse all&#39;interno di [!DNL Schema Library] sono contenute in una sandbox specifica in Adobe Experience Platform. In alcuni casi, potrebbe essere utile condividere risorse Experience Data Model (XDM) tra sandbox e organizzazioni. Il `/rpc/export` endpoint nella [!DNL Schema Registry] API consente di generare un payload di esportazione per qualsiasi schema, gruppo di campi di schema o tipo di dati in [!DNL Schema Library], quindi utilizzare il payload per importare tale risorsa (e tutte le risorse dipendenti) in una sandbox e in un’organizzazione di destinazione tramite [`/rpc/import` endpoint](./import.md).
 
 ## Introduzione
 
-La `/rpc/export` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Il `/rpc/export` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-La `/rpc/export` l&#39;endpoint fa parte delle chiamate di routine remote (RPC) supportate dal [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nelle chiamate API riportate di seguito.
+Il `/rpc/export` l&#39;endpoint fa parte delle chiamate di procedura remota (RPC) supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`, e non utilizzare un `CONTAINER_ID`. Devono invece utilizzare il `/rpc` dello spazio dei nomi, come dimostrato nelle chiamate API di seguito.
 
 ## Generare un payload di esportazione per una risorsa {#export}
 
-Per qualsiasi schema, gruppo di campi o tipo di dati esistente nel [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta GET al `/export` endpoint , fornendo l&#39;ID della risorsa nel percorso.
+Per qualsiasi schema, gruppo di campi o tipo di dati esistente in [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta GET al `/export` endpoint, fornendo l’ID della risorsa nel percorso.
 
 **Formato API**
 
@@ -30,13 +31,13 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_ID}` | La `meta:altId` o con codifica URL `$id` della risorsa XDM da esportare. |
+| `{RESOURCE_ID}` | Il `meta:altId` o con codifica URL `$id` della risorsa XDM da esportare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La seguente richiesta recupera un payload di esportazione per un `Restaurant` gruppo di campi.
+La richiesta seguente recupera un payload di esportazione per un `Restaurant` gruppo di campi.
 
 ```shell
 curl -X GET \
@@ -50,9 +51,9 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di oggetti che rappresentano la risorsa XDM di destinazione e tutte le relative risorse dipendenti. In questo esempio, il primo oggetto dell&#39;array è un oggetto creato dal tenant `Property` tipo di dati che `Restaurant` il gruppo di campi utilizza, mentre il secondo oggetto è il `Restaurant` gruppo di campi. Questo payload può quindi essere utilizzato per [importare la risorsa](#import) in una sandbox o un’organizzazione IMS diversa.
+In caso di esito positivo, la risposta restituisce un array di oggetti, che rappresentano la risorsa XDM di destinazione e tutte le relative risorse dipendenti. In questo esempio, il primo oggetto nell’array è un tenant-created `Property` tipo di dati che `Restaurant` il gruppo di campi impiega, mentre il secondo oggetto è `Restaurant` stesso gruppo di campi. Questo payload può quindi essere utilizzato per [importa la risorsa](#import) in una sandbox o un’organizzazione IMS diversa.
 
-Tieni presente che tutte le istanze dell’ID tenant della risorsa vengono sostituite con `<XDM_TENANTID_PLACEHOLDER>`. Questo consente al Registro di sistema dello schema di applicare automaticamente l’ID tenant corretto alle risorse a seconda della posizione in cui vengono inviate nella successiva chiamata di importazione.
+Tutte le istanze dell’ID tenant della risorsa vengono sostituite con `<XDM_TENANTID_PLACEHOLDER>`. Questo consente al registro dello schema di applicare automaticamente l’ID tenant corretto alle risorse in base alla posizione in cui vengono inviate nella chiamata di importazione successiva.
 
 ```json
 [
@@ -194,6 +195,6 @@ Tieni presente che tutte le istanze dell’ID tenant della risorsa vengono sosti
 
 ## Importa la risorsa {#import}
 
-Dopo aver generato il payload di esportazione dal file CSV, puoi inviare tale payload al `/rpc/import` per generare lo schema.
+Dopo aver generato il payload di esportazione dal file CSV, puoi inviarlo al `/rpc/import` per generare lo schema.
 
-Consulta la sezione [guida all’importazione di endpoint](./import.md) per informazioni dettagliate su come generare schemi dai payload di esportazione.
+Consulta la [importa guida dell’endpoint](./import.md) per informazioni dettagliate su come generare schemi dai payload di esportazione.

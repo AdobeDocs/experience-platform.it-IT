@@ -1,6 +1,6 @@
 ---
-title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di destinazione
-description: Le istruzioni riportate in questa pagina mostrano come utilizzare un editor di testo per lavorare nell’ambiente locale per creare una pagina di documentazione per la destinazione dell’Experience Platform e inviarla per la revisione.
+title: Utilizza un editor di testo nell’ambiente locale per creare una pagina della documentazione di destinazione
+description: Le istruzioni in questa pagina mostrano come utilizzare un editor di testo per lavorare nel tuo ambiente locale per creare una pagina di documentazione per la tua destinazione di Experience Platform e inviarla per la revisione.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
 source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 2%
 
 ---
 
-# Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di destinazione {#local-authoring}
+# Utilizza un editor di testo nell’ambiente locale per creare una pagina della documentazione di destinazione {#local-authoring}
 
-Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di testo per lavorare nel proprio ambiente locale per creare la documentazione e inviare una richiesta di pull (PR). Prima di eseguire i passaggi qui indicati, leggi [Documentare la destinazione in Adobe Experience Platform Destinations](./documentation-instructions.md).
+Le istruzioni in questa pagina mostrano come utilizzare un editor di testo per lavorare nell’ambiente locale per creare la documentazione e inviare una richiesta di pull (PR). Prima di eseguire i passaggi qui indicati, assicurati di leggere [Documentare la destinazione in Destinazioni Adobe Experience Platform](./documentation-instructions.md).
 
 >[!TIP]
 >
@@ -21,65 +21,65 @@ Le istruzioni presenti in questa pagina mostrano come utilizzare un editor di te
 >* [Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
 
 
-## Connettersi a GitHub e configurare l’ambiente di authoring locale {#set-up-environment}
+## Connessione a GitHub e configurazione dell’ambiente di authoring locale {#set-up-environment}
 
 1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`
-2. Per [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) l&#39;archivio, fai clic su **Fork** come mostrato di seguito. In questo modo viene creata una copia dell’archivio Experience Platform nel tuo account GitHub.
+2. A [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) nell’archivio, fai clic su **Fork** come mostrato di seguito. In questo modo viene creata una copia dell’archivio di Experienci Platform nel tuo account GitHub.
 
-   ![Archivio della documentazione di Adobe fork](./assets/ssd-fork-repository.gif)
+   ![Archivio della documentazione di Fork Adobe](./assets/ssd-fork-repository.gif)
 
-3. Clonare l’archivio sul computer locale. Seleziona **Codice > HTTPS > Apri con GitHub Desktop**, come mostrato di seguito. Assicurati di aver installato [GitHub Desktop](https://desktop.github.com/). Per ulteriori riferimenti, consulta [Creare un clone locale dell’archivio](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) nella guida per i collaboratori di Adobe .
+3. Clonare l’archivio sul computer locale. Seleziona **Codice > HTTPS > Apri con desktop GitHub**, come illustrato di seguito. Assicurati di avere [Desktop GitHub](https://desktop.github.com/) installato. Per ulteriori informazioni, leggere [Creare un clone locale dell’archivio](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) nella guida per i collaboratori Adobe.
 
-   ![Clona l’archivio della documentazione di Adobe in ambiente locale](./assets/clone-local.png)
+   ![Clona l’archivio della documentazione di Adobe nell’ambiente locale](./assets/clone-local.png)
 
-4. Nella struttura del file locale, passa a `experience-platform.en/help/destinations/catalog/[...]`, dove `[...]` è la categoria desiderata per la destinazione. Ad Experience Platform, se aggiungi una destinazione di personalizzazione, seleziona la cartella `personalization` .
+4. Nella struttura del file locale, passa a `experience-platform.en/help/destinations/catalog/[...]`, dove `[...]` è la categoria desiderata per la destinazione. Ad Experience Platform, se stai aggiungendo una destinazione di personalizzazione a, seleziona la `personalization` cartella.
 
 ## Creare la pagina della documentazione per la destinazione {#author-documentation}
 
-1. La pagina della documentazione si basa sul [modello di destinazione self-service](./self-service-template.md). Scarica il [modello di destinazione](assets/yourdestination-template.zip). Decomprimetela ed estraete il file `yourdestination-template.md` nella directory indicata al punto 4.  Rinomina il file `YOURDESTINATION.md`, dove YOURDESTINATION è il nome della destinazione in Adobe Experience Platform. Ad esempio, se l’azienda si chiama Moviestar, devi assegnare un nome al file `moviestar.md`.
-2. Apri il nuovo file nell&#39; [editor di testo selezionato](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). Adobe consiglia di utilizzare [Codice di Visual Studio](https://code.visualstudio.com/) e installare l&#39;estensione Adobe Markdown Authoring. Per installare l&#39;estensione, apri Codice di Visual Studio, seleziona la scheda **[!DNL Extensions]** a sinistra dello schermo e cerca `adobe markdown authoring`. Seleziona l’estensione e fai clic su **[!DNL Install]**.
+1. La pagina della documentazione si basa su [modello di destinazione self-service](./self-service-template.md). Scarica il file [modello di destinazione](assets/yourdestination-template.zip). Decomprimi ed estrai il file `yourdestination-template.md` nella directory indicata al punto 4.  Rinomina il file `YOURDESTINATION.md`, dove YOURDESTINATION è il nome della destinazione in Adobe Experience Platform. Ad esempio, se la tua società si chiama Moviestar, dovrai denominare il file `moviestar.md`.
+2. Apri il nuovo file nel tuo [editor di testo preferito](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). L’Adobe consiglia di utilizzare [Codice di Visual Studio](https://code.visualstudio.com/) e installa l’estensione Adobe Markdown Authoring. Per installare l&#39;estensione, aprire Visual Studio Code, selezionare **[!DNL Extensions]** sulla sinistra dello schermo e cerca `adobe markdown authoring`. Seleziona l’estensione e fai clic su **[!DNL Install]**.
    ![Installare l’estensione Adobe Markdown Authoring](./assets/install-adobe-markdown-extension.gif)
-3. Modifica il modello con le informazioni rilevanti per la destinazione. Segui le istruzioni contenute nel modello .
-4. Per tutte le schermate o immagini che intendi aggiungere alla documentazione, passa a `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la destinazione. Ad Experience Platform, se aggiungi una destinazione di personalizzazione, seleziona la cartella `personalization` . Crea una nuova cartella per la tua destinazione e salva le immagini qui. Devi effettuare un collegamento a tali elementi dalla pagina che stai creando. Consulta [istruzioni su come collegare immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
-5. Quando sei pronto, salva il file su cui stai lavorando.
+3. Modifica il modello con le informazioni rilevanti per la destinazione. Segui le istruzioni nel modello.
+4. Per le schermate o le immagini da aggiungere alla documentazione, vai a `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la destinazione. Ad Experience Platform, se stai aggiungendo una destinazione di personalizzazione a, seleziona la `personalization` cartella. Crea una nuova cartella per la destinazione e salva qui le immagini. Devi creare un collegamento a tali elementi dalla pagina in cui vengono creati. Consulta [istruzioni su come collegare le immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+5. Quando si è pronti, salvare il file su cui si sta lavorando.
 
-## Invia la documentazione per la revisione {#submit-review}
+## Inviare la documentazione per la revisione {#submit-review}
 
 >[!TIP]
 >
->Notate che non c&#39;è niente che potete rompere qui. Seguendo le istruzioni contenute in questa sezione, ti consigliamo semplicemente un aggiornamento della documentazione. L’aggiornamento consigliato verrà approvato o modificato dal team di documentazione di Adobe Experience Platform.
+>Tieni presente che qui non è possibile interrompere nulla. Attenendoti alle istruzioni riportate in questa sezione, ti basta suggerire un aggiornamento della documentazione. L’aggiornamento suggerito verrà approvato o modificato dal team di documentazione di Adobe Experience Platform.
 
-1. In GitHub Desktop, crea un ramo di lavoro per gli aggiornamenti e seleziona **Pubblica ramo** per pubblicare il ramo in GitHub.
+1. In GitHub Desktop, crea un ramo di lavoro per gli aggiornamenti e seleziona **Pubblica ramo** per pubblicare il ramo su GitHub.
 
 ![Nuovo ramo locale](./assets/new-branch-local.gif)
 
-1. In GitHub Desktop, [esegui il commit](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit) del tuo lavoro, come mostrato di seguito.
+1. Nel desktop GitHub, [commit](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#commit) il tuo lavoro, come illustrato di seguito.
 
    ![Conferma locale](./assets/commit-local.png)
 
-1. In GitHub Desktop, [invia](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) il lavoro al ramo [remoto](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote), come mostrato di seguito.
+1. Nel desktop GitHub, [push](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) il tuo lavoro per [remoto](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) come mostrato di seguito.
 
-   ![Spingi il tuo commit](./assets/push-local-to-remote.png)
+   ![Effettua push del commit](./assets/push-local-to-remote.png)
 
-1. Nell’interfaccia web GitHub, apri una richiesta di pull (PR) per unire il ramo di lavoro al ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Contribute > Apri richiesta di pull**.
+1. Nell’interfaccia web GitHub, apri una richiesta di pull (PR) per unire il ramo di lavoro nel ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Contribute > Apri richiesta pull**.
 
    ![Creare una richiesta di pull](./assets/ssd-create-pull-request-1.gif)
 
-1. Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, e seleziona **Crea richiesta di pull**. Viene aperto un PR per unire il ramo di lavoro del fork nel ramo principale dell’archivio Adobe.
+1. Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l’aggiornamento, e seleziona **Creare una richiesta di pull**. Viene aperto un PR per unire il ramo di lavoro del fork nel ramo principale dell’archivio di Adobi.
    >[!TIP]
    >
-   >Lascia selezionata la casella di controllo **Consenti modifiche da parte dei manutentori** in modo che il team della documentazione di Adobe possa apportare modifiche alla PR.
+   >Lascia **Consenti modifiche da parte dei gestori** è stata selezionata una casella di controllo che consente al team della documentazione di Adobe di apportare modifiche alla PR.
 
-   ![Creare una richiesta di pull all’archivio della documentazione di Adobe](./assets/ssd-create-pull-request-2.png)
+   ![Creazione di una richiesta di pull nell’archivio della documentazione Adobe](./assets/ssd-create-pull-request-2.png)
 
-1. A questo punto, viene visualizzata una notifica che richiede la firma del contratto di licenza da collaboratore (CLA) Adobe. Si tratta di un passaggio obbligatorio. Dopo aver firmato il Contratto di licenza da collaboratore, aggiorna la pagina PR e invia la richiesta di pull.
+1. A questo punto, viene visualizzata una notifica che richiede di firmare il Contratto di licenza da collaboratore (CLA) di Adobe. Questo è un passaggio obbligatorio. Dopo aver firmato il contratto di licenza, aggiorna la pagina PR e invia la richiesta di pull.
 
-1. Puoi confermare che la richiesta di pull è stata inviata controllando la scheda **Richieste di pull** in `https://github.com/AdobeDocs/experience-platform.en`.
+1. Puoi confermare che la richiesta di pull è stata inviata esaminando **Richieste pull** scheda in `https://github.com/AdobeDocs/experience-platform.en`.
 
 ![PR riuscito](./assets/ssd-pr-successful.png)
 
-1. Grazie. Il team di documentazione di Adobe contatterà la PR nel caso siano necessarie modifiche e per informarti quando verrà pubblicata la documentazione.
+1. Grazie. Il team di documentazione di Adobe si rivolgerà al PR nel caso siano necessarie modifiche e ti informerà di quando la documentazione verrà pubblicata.
 
 >[!TIP]
 >
->Per aggiungere immagini e collegamenti alla documentazione e per qualsiasi altra domanda su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) nella guida collaborativa alla scrittura di Adobe.
+>Per aggiungere immagini e collegamenti alla documentazione e per eventuali altre domande su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) nella guida alla scrittura collaborativa di Adobe.

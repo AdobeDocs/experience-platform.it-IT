@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
-title: Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+title: Aggiornare una specifica di connessione utilizzando l’API del servizio Flusso
 description: È possibile aggiornare le proprietà di una specifica di connessione tramite un'operazione PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -10,9 +10,9 @@ ht-degree: 3%
 
 ---
 
-# Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
+# Aggiornare una specifica di connessione utilizzando l’API del servizio Flusso
 
-È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta di PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta di POST.
+È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta POST.
 
 **Formato API**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Richiesta**
 
-La seguente richiesta aggiorna il `name` del [!DNL MailChimp] origine creata nel passaggio precedente.
+La richiesta seguente aggiorna il `name` del [!DNL MailChimp] origine creata nel passaggio precedente.
 
 ```shell
 PUT -X GET \
@@ -205,7 +205,7 @@ PUT -X GET \
 
 **Risposta**
 
-Una chiamata corretta restituisce i dettagli della specifica di connessione aggiornati, compreso il nome aggiornato.
+In caso di esito positivo, la chiamata restituisce i dettagli aggiornati della specifica di connessione, compreso il nome aggiornato.
 
 ```json
 {

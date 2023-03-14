@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;misure;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;misura;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
-title: Tipo di dati misura
-description: Questo documento fornisce una panoramica del tipo di dati XDM (Measure Experience Data Model).
+title: Misura tipo di dati
+description: Questo documento fornisce una panoramica del tipo di dati Misura Experience Data Model (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 3%
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 # [!UICONTROL Misura] tipo di dati
 
-[!UICONTROL Misura] è un tipo di dati XDM (Experience Data Model) standard che contiene un punto dati quantificabile concreto di una particolare metrica. Una misura è composta da un identificatore univoco e da un valore.
+[!UICONTROL Misura] è un tipo di dati standard Experience Data Model (XDM) che contiene un punto dati quantificabile concreto di una particolare metrica. Una misura è composta da un identificatore univoco e da un valore.
 
 <img src="../images/data-types/measure.PNG" width="500" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `id` | Stringa | Identificatore univoco della misura. Nei casi di raccolta di dati che utilizzano canali di comunicazione con perdita di dati, come applicazioni mobili o siti web con funzionalità offline in cui non è possibile garantire la trasmissione delle misure, questa proprietà contiene un ID univoco generato dal cliente della misura adottata. È buona prassi farlo abbastanza a lungo per garantire una casualità sufficiente. <br><br> Se nella generazione di `id`, il risultato dovrebbe essere hash. Questo assicura che nessun PII sia codificato nel valore, in quanto l&#39;obiettivo non è quello di identificare un utente o un dispositivo, ma la misura specifica nel tempo. |
-| `value` | Doppio | Valore quantificabile della misura. |
+| `id` | Stringa | L’identificatore univoco di questa misura. Nei casi in cui la raccolta dei dati utilizzi canali di comunicazione con perdita di dati, come app mobili o siti web con funzionalità offline in cui non è possibile garantire la trasmissione delle misure, questa proprietà contiene un ID univoco generato dal cliente della misura adottata. È buona prassi prolungare tale periodo in modo da garantire una sufficiente casualità. <br><br> Se informazioni quali marca temporale, ID dispositivo, IP, indirizzo MAC o altri valori potenzialmente identificativi dell’utente sono inclusi nella generazione di `id`, il risultato deve essere sottoposto a hashing. In questo modo, nel valore non viene codificata alcuna PII, in quanto l’obiettivo non è quello di identificare un utente o un dispositivo, ma la misura specifica nel tempo. |
+| `value` | Doppio | Il valore quantificabile di questa misura. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)

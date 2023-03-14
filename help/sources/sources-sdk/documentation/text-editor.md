@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;sorgenti;connettori;connettori sorgente;origini sdk;sdk;SDK
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
 solution: Experience Platform
-title: Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione sulle sorgenti
-description: Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione relativa all’origine e inviare una richiesta di pull (PR).
+title: Utilizzare un editor di testo nell’ambiente locale per creare una pagina della documentazione di Sources
+description: Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione per la tua origine e inviare una richiesta di pull (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 3%
 
 ---
 
-# Utilizza un editor di testo nel tuo ambiente locale per creare una pagina di documentazione di origini
+# Utilizza un editor di testo nell’ambiente locale per creare una pagina della documentazione delle sorgenti
 
-Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione relativa all’origine e inviare una richiesta di pull (PR).
+Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione per la tua origine e inviare una richiesta di pull (PR).
 
 >[!TIP]
 >
->Per supportare ulteriormente il processo di documentazione, puoi utilizzare i seguenti documenti della guida al contributo di Adobe: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configurare localmente l’archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>I seguenti documenti della guida introduttiva di Adobe possono essere utilizzati per supportare ulteriormente la procedura di documentazione: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configurare localmente l’archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
 
 ## Prerequisiti
 
-L’esercitazione seguente richiede l’installazione di GitHub Desktop nel computer locale. Se non disponi di GitHub Desktop, puoi scaricare l’applicazione [qui](https://desktop.github.com/).
+Il seguente tutorial richiede che GitHub Desktop sia installato sul computer locale. Se non disponi di GitHub Desktop, puoi scaricare l’applicazione [qui](https://desktop.github.com/).
 
-## Connettersi a GitHub e configurare l’ambiente di authoring locale
+## Connessione a GitHub e configurazione dell’ambiente di authoring locale
 
 Il primo passaggio nella configurazione dell’ambiente di authoring locale consiste nel passare alla [Archivio GitHub Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
 
-![piattaforma-repo](../assets/platform-repo.png)
+![platform-repo](../assets/platform-repo.png)
 
-Nella pagina principale dell’archivio Platform GitHub, seleziona **Fork**.
+Nella pagina principale dell’archivio GitHub di Platform, seleziona **Fork**.
 
 ![fork](../assets/fork.png)
 
-Per duplicare l&#39;archivio nel computer locale, seleziona **Codice**. Dal menu a discesa visualizzato, seleziona **HTTPS** quindi seleziona **Apri con GitHub Desktop**.
+Per clonare l’archivio sul computer locale, seleziona **Codice**. Dal menu a discesa visualizzato, seleziona **HTTPS** quindi, seleziona **Apri con GitHub Desktop**.
 
 >[!TIP]
 >
@@ -41,27 +41,27 @@ Per duplicare l&#39;archivio nel computer locale, seleziona **Codice**. Dal menu
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Ora consenti a GitHub Desktop di duplicare il `experience-platform.en` archivio.
+Quindi, attendi alcuni istanti prima che GitHub Desktop cloni il `experience-platform.en` archivio.
 
 ![clonazione](../assets/cloning.png)
 
-Una volta completato il processo di clonazione, passa a GitHub Desktop per creare un nuovo ramo. Seleziona **Master** dalla navigazione in alto, quindi seleziona **Nuovo ramo**
+Una volta completato il processo di clonazione, passa a GitHub Desktop per creare un nuovo ramo. Seleziona **Principale** dalla navigazione in alto, quindi seleziona **Nuovo ramo**
 
-![nuovo ramo](../assets/new-branch.png)
+![new-branch](../assets/new-branch.png)
 
-Nel pannello di selezione visualizzato, immettete un nome descrittivo per il ramo, quindi selezionate **Crea ramo**.
+Nel pannello a comparsa visualizzato, immetti un nome descrittivo per il ramo, quindi seleziona **Crea ramo**.
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
 Quindi, seleziona **Pubblica ramo**.
 
-![ramo di pubblicazione](../assets/publish-branch.png)
+![publish-branch](../assets/publish-branch.png)
 
-## Creare la pagina della documentazione della sorgente
+## Creare la pagina della documentazione per la sorgente
 
-Con l’archivio clonato nel computer locale e creato un nuovo ramo, ora puoi iniziare a creare la pagina di documentazione per la nuova sorgente tramite [editor di testo desiderato](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+Dopo aver clonato l’archivio nel computer locale e creato un nuovo ramo, puoi iniziare a creare la pagina della documentazione per la nuova origine tramite [editor di testo desiderato](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
 
-Adobe consiglia di utilizzare [Codice di Visual Studio](https://code.visualstudio.com/) e di installare l’estensione Adobe Markdown Authoring . Per installare l&#39;estensione, avviare Visual Studio Code e quindi selezionare la **Estensioni** da navigazione a sinistra.
+L’Adobe consiglia di utilizzare [Codice di Visual Studio](https://code.visualstudio.com/) e installare l’estensione Adobe Markdown Authoring. Per installare l&#39;estensione, avviare Visual Studio Code, quindi selezionare **Estensioni** dal menu di navigazione a sinistra.
 
 ![ Estensione](../assets/extension.png)
 
@@ -69,34 +69,34 @@ Quindi, immetti `Adobe Markdown Authoring` nella barra di ricerca, quindi selezi
 
 ![installare](../assets/install.png)
 
-Con il computer locale pronto, scarica il [modello di documentazione di origini](../assets/api-template.zip) ed estrarre il file in `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] rappresenta la categoria scelta. Ad esempio, se si sta creando un&#39;origine di database, selezionare la cartella di database.
+Quando il computer locale è pronto, scarica il [modello di documentazione delle sorgenti](../assets/api-template.zip) ed estrarre il file in `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] rappresenta la categoria scelta. Se ad esempio si sta creando un&#39;origine di database, selezionare la cartella del database.
 
-Infine, segui le istruzioni descritte nel modello e modifica il modello con le informazioni rilevanti relative alla tua origine.
+Infine, segui le istruzioni descritte nel modello e modifica il modello con le informazioni pertinenti relative alla tua origine.
 
 ![edit-template](../assets/edit-template.png)
 
-## Invia la documentazione per la revisione
+## Inviare la documentazione per la revisione
 
-Per creare una richiesta di pull (PR) e inviare la documentazione per la revisione, salva prima il tuo lavoro in [!DNL Visual Studio Code] (o l&#39;editor di testo scelto). Successivamente, utilizzando GitHub Desktop, immetti un messaggio di commit e seleziona **Impegno a creare-sorgente-documentazione**.
+Per creare una richiesta di pull (PR) e inviare la documentazione per la revisione, salva il lavoro in [!DNL Visual Studio Code] (o l’editor di testo scelto). Quindi, utilizzando GitHub Desktop, immetti un messaggio di commit e seleziona **Conferma creazione-origine-documentazione**.
 
 ![commit-vs](../assets/commit-vs.png)
 
-Quindi, seleziona **Origine push** per caricare il lavoro sul ramo remoto.
+Quindi, seleziona **Origine push** per caricare il lavoro nel ramo remoto.
 
-![origine push](../assets/push-origin.png)
+![push-origin](../assets/push-origin.png)
 
 Per creare una richiesta di pull, seleziona **Crea richiesta di pull**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota al PR, descrivendo l&#39;aggiornamento, quindi seleziona **Creare una richiesta di pull**. Viene aperto un PR per unire il ramo di lavoro del lavoro nel ramo principale dell’archivio Adobe.
+Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l’aggiornamento, quindi seleziona **Creare una richiesta di pull**. Verrà aperta una PR per unire il ramo di lavoro nel ramo principale dell’archivio di Adobi.
 
 >[!TIP]
 >
->Lascia la **Consenti modifiche da parte dei manutentori** seleziona questa casella di controllo per assicurarti che il team della documentazione di Adobe possa apportare modifiche al PR.
+>Lascia **Consenti modifiche da parte dei gestori** è stata selezionata una casella di controllo per garantire che il team della documentazione Adobe possa apportare modifiche alla PR.
 
 ![create-pr](../assets/create-pr.png)
 
-Puoi confermare che la richiesta di pull è stata inviata controllando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.en.
+Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)

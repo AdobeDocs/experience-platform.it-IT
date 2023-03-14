@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;schemi;
 title: Endpoint API per funzioni
-description: Puoi utilizzare l'endpoint `/function` nell'API di preparazione dati per convalidare le espressioni di mappatura e elencare le funzioni disponibili per i set di mappature.
+description: Puoi utilizzare l’endpoint "/functions" nell’API della preparazione dati per convalidare le espressioni di mappatura ed elencare le funzioni del set di mappatura disponibili.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
@@ -10,13 +10,13 @@ ht-degree: 5%
 
 ---
 
-# Endpoint delle funzioni
+# Endpoint funzioni
 
-Le funzioni del set di mappature consentono di trasformare i dati tra schemi di origine e di destinazione. È possibile utilizzare `/languages/el` per convalidare le espressioni e ottenere un elenco di tutte le funzioni disponibili per il set di mappature.
+Le funzioni di mappatura consentono di trasformare i dati tra gli schemi di origine e di destinazione. È possibile utilizzare `/languages/el` endpoint per convalidare le espressioni e ottenere un elenco di tutte le funzioni del set di mappatura disponibili.
 
 ## Convalidare espressioni
 
-Puoi verificare se l’espressione corrente è valida effettuando una richiesta POST al `/languages/el/validate` punto finale.
+Per verificare se l’espressione corrente è valida, effettua una richiesta POST al `/languages/el/validate` endpoint.
 
 **Formato API**
 
@@ -41,7 +41,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con lo stato di convalida dell&#39;espressione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con lo stato di convalida dell’espressione.
 
 ```json
 {
@@ -50,9 +50,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con lo stato di convalida de
 }
 ```
 
-## Funzioni set di mappatura elenco
+## Elencare le funzioni del set di mappatura
 
-È possibile recuperare un elenco di tutte le funzioni del set di mappature disponibili effettuando una richiesta di GET al `/languages/el/functions` punto finale.
+Per recuperare un elenco di tutte le funzioni del set di mappatura disponibili, devi effettuare una richiesta GET al `/languages/el/functions` endpoint.
 
 **Formato API**
 
@@ -72,11 +72,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di tutte le funzioni disponibili per il set di mappature.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di tutte le funzioni del set di mappatura disponibili.
 
 >[!NOTE]
 >
->Questa risposta è stata troncata per lo spazio.
+>La risposta è stata troncata per motivi di spazio.
 
 ```json
 [
@@ -115,9 +115,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di tutte le fu
 ]
 ```
 
-## Elenca operatori set di mappature
+## Elenca gli operatori del set di mappatura
 
-Puoi recuperare un elenco di tutti gli operatori del set di mappature disponibili effettuando una richiesta di GET al `/languages/el/operators` punto finale.
+Per recuperare un elenco di tutti gli operatori del set di mappatura disponibili, devi effettuare una richiesta GET al `/languages/el/operators` endpoint.
 
 **Formato API**
 
@@ -137,11 +137,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di tutti gli operatori di set di mappature disponibili.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di tutti gli operatori del set di mappatura disponibili.
 
 >[!NOTE]
 >
->Questa risposta è stata troncata per lo spazio.
+>La risposta è stata troncata per motivi di spazio.
 
 ```json
 [

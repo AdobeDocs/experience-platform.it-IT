@@ -1,16 +1,17 @@
 ---
 title: Impaginazione delle risposte nell’API di Reactor
-description: Scopri come impaginare i risultati quando inserisci le risorse nell’API di Reactor.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+description: Scopri come impaginare i risultati quando generi un elenco di risorse nell’API di Reactor.
+exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Impaginazione delle risposte nell’API di Reactor
 
-Le risposte restituite dall’API di Reactor sono impaginate. La dimensione predefinita della pagina è di 25 elementi. I dettagli sull’impaginazione sono riportati nella sezione `meta.pagination `dell’oggetto di risposta API:
+Le risposte restituite dall’API di Reactor sono impaginate. La dimensione predefinita della pagina prevede 25 elementi. I dettagli sull’impaginazione sono riportati nella sezione `meta.pagination `dell’oggetto di risposta API:
 
 ```json
 "meta": {
@@ -24,9 +25,9 @@ Le risposte restituite dall’API di Reactor sono impaginate. La dimensione pred
 }
 ```
 
-È possibile ottenere una pagina specifica e modificare le dimensioni di una pagina includendo un parametro di query `page` nel percorso della richiesta.
+Per ottenere una pagina specifica e modificare le dimensioni di una pagina, includi un parametro di query `page` nel percorso della richiesta.
 
-## Recupera una pagina specifica
+## Recuperare una pagina specifica
 
 Per ottenere una pagina specifica:
 

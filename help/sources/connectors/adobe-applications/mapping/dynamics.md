@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mappatura campo;mappatura campo;mappatura;marketo;B2B;b2b
-title: Campi di mappatura di Microsoft Dynamics
-description: Le tabelle seguenti contengono le mappature tra i campi di origine di Microsoft Dynamics e i campi XDM corrispondenti.
+keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce;mappatura campi;mappatura campi;mappatura;marketo;B2B;b2b
+title: Campi mappatura Microsoft Dynamics
+description: Le tabelle seguenti contengono le mappature tra i campi di origine di Microsoft Dynamics e i corrispondenti campi XDM.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 7%
+source-wordcount: '541'
+ht-degree: 6%
 
 ---
 
-# [!DNL Microsoft Dynamics] mappature dei campi
+# [!DNL Microsoft Dynamics] mappature campi
 
-Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i campi di origine e i campi corrispondenti di Experience Data Model (XDM).
+Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] campi di origine e i corrispondenti campi Experience Data Model (XDM).
 
 ## Contatti {#contacts}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -34,9 +34,9 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `birthdate` | `person.birthDate` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `contactid` | `b2b.personKey.sourceID` |
-| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `department` | `extendedWorkDetails.departments` |
 | `fullname` | `person.name.fullName` |
@@ -57,11 +57,11 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `salutation` | `person.name.courtesyTitle` |
 | `telephone1` | `workPhone.number` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Lead {#leads}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -87,24 +87,24 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `lastname` | `person.name.lastName` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `leadid` | `b2b.personKey.sourceID` |
-| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `iif(leadid != null && leadid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", leadid, "sourceKey", concat(leadid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `salutation` | `person.name.courtesyTitle` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Account {#accounts}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
-| `accountid` | `accountKey.sourceID` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
+| `accountid` | `accountKey.sourceID` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `accountnumber` | `accountNumber` |
 | `accountratingcode` | `accountOrganization.rating` |
 | `address1_addressid` | `accountPhysicalAddress._id` |
@@ -133,15 +133,15 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `websiteurl` | `accountOrganization.website` |
 | `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunità {#opportunities}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `iif(parentaccountid != null && parentaccountid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", parentaccountid, "sourceKey", concat(parentaccountid, "@${CRM_ORG_ID}.Dynamics")), null)` | `accountKey` |
 | `actualclosedate` | `actualCloseDate` |
 | `actualvalue` | `opportunityAmount.amount` |
@@ -153,39 +153,39 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `estimatedvalue` | `expectedRevenue.amount` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `opportunityid` | `opportunityKey.sourceID` |
-| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ruoli di contatto opportunità {#opportunity-contact-roles}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `connectionid` | `opportunityPersonKey.sourceID` |
-| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Un gruppo di campi personalizzato deve essere definito come schema di destinazione.* Vedi la sezione dell&#39;appendice per i passi su [come mappare un campo di origine del tipo di elenco a discesa a uno schema XDM di destinazione](#picklist-type-fields) per ulteriori informazioni. | Per un elenco delle possibilità e dei valori e delle etichette per `record1objecttypecode` campo di origine [[!DNL Microsoft Dynamics] documento di riferimento entità connessione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Un gruppo di campi personalizzato deve essere definito come schema di destinazione.* Vedi la sezione dell&#39;appendice per i passi su [come mappare un campo di origine del tipo di elenco a discesa a uno schema XDM di destinazione](#picklist-type-fields) per ulteriori informazioni. | Per un elenco delle possibilità e dei valori e delle etichette per `record2objecttypecode` campo di origine [[!DNL Microsoft Dynamics] documento di riferimento entità connessione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Un gruppo di campi personalizzato deve essere definito come schema di destinazione.* Vedere la sezione dell&#39;appendice per i passaggi relativi a [mappare un campo di origine di tipo elenco a discesa a uno schema XDM di destinazione](#picklist-type-fields) per ulteriori informazioni. | Per un elenco dei valori e delle etichette possibili per `record1objecttypecode` campo di origine, vedere [[!DNL Microsoft Dynamics] documento di riferimento entità di connessione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Un gruppo di campi personalizzato deve essere definito come schema di destinazione.* Vedere la sezione dell&#39;appendice per i passaggi relativi a [mappare un campo di origine di tipo elenco a discesa a uno schema XDM di destinazione](#picklist-type-fields) per ulteriori informazioni. | Per un elenco dei valori e delle etichette possibili per `record2objecttypecode` campo di origine, vedere [[!DNL Microsoft Dynamics] documento di riferimento entità di connessione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campagne {#campaigns}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
-| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
+| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `"Dynamics"` | `campaignKey.sourceType` |
-| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | La `extSourceSystemAudit.externalKey` è l&#39;identità secondaria. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Il `extSourceSystemAudit.externalKey` è l’identità secondaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedby` | `extSourceSystemAudit.lastUpdatedBy` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -200,44 +200,44 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] i camp
 | `utcconversiontimezonecode` | `timeZone` |
 | `utcconversiontimezonecode` | `timezoneName` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Elenco marketing {#marketing-list}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `description` | `marketingListDescription` |
 | `listname` | `marketingListName` |
 | `listid` | `marketingListKey.sourceID` |
-| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Membri dell’elenco di marketing {#marketing-list-members}
+## Membri di elenco marketing {#marketing-list-members}
 
-| Campo di origine | Campo XDM di Target | Note |
+| Campo di origine | Campo XDM di destinazione | Note |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `listmemberid` | `marketingListMemberKey.sourceID` |
-| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identità principale. Valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
+| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà automaticamente sostituito. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Appendice
 
-Le sezioni seguenti forniscono informazioni aggiuntive da utilizzare per configurare le mappature B2B per le [!DNL Microsoft] Origine Dynamics.
+Le sezioni seguenti forniscono informazioni aggiuntive che puoi utilizzare durante la configurazione delle mappature B2B per [!DNL Microsoft] Origine Dynamics.
 
-### Campi di tipo elenco puntato {#picklist-type-fields}
+### Campi di tipo elenco a discesa {#picklist-type-fields}
 
-È possibile utilizzare [campi calcolati](../../../../data-prep/ui/mapping.md#calculated-fields) per mappare un campo di origine del tipo di elenco a discesa da [!DNL Microsoft Dynamics] a un campo XDM di destinazione.
+È possibile utilizzare [campi calcolati](../../../../data-prep/ui/mapping.md#calculated-fields) per mappare un campo di origine di tipo elenco a discesa da [!DNL Microsoft Dynamics] in un campo XDM di destinazione.
 
 Ad esempio, il `genderCode` Il campo include due opzioni:
 
@@ -246,24 +246,24 @@ Ad esempio, il `genderCode` Il campo include due opzioni:
 | 1 | `male` |
 | 2 | `female` |
 
-Puoi utilizzare le seguenti opzioni per mappare il `genderCode` campo di origine a `person.gender` campo target:
+Per mappare il `genderCode` campo di origine a `person.gender` campo di destinazione:
 
 #### Utilizzare un operatore logico
 
-| Campo di origine | Campo XDM di Target |
+| Campo di origine | Campo XDM di destinazione |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-In questo scenario, il valore corrisponde alla chiave, se la chiave si trova in options, o `default`, se `default` è presente e la chiave non è trovata. Il valore corrisponde a `null` se le opzioni sono `null` o non esiste `default` e la chiave non è trovata.
+In questo caso, il valore corrisponde alla chiave, se la chiave si trova in opzioni, oppure `default`, se `default` è presente e la chiave non è stata trovata. Il valore corrisponde a `null` se opzioni è `null` o non esiste `default` e la chiave non è stata trovata.
 
 #### Utilizzare un campo calcolato
 
-| Campo di origine | Campo XDM di Target |
+| Campo di origine | Campo XDM di destinazione |
 | --- | --- |
 | `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 
 >[!TIP]
 >
->Un&#39;iterazione nidificata dell&#39;operazione precedente sarebbe simile a: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>Un’iterazione nidificata dell’operazione precedente è simile a: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Per ulteriori informazioni, consulta la sezione [documento sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Per ulteriori informazioni, consulta [documento sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

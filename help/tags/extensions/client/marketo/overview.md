@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza l&#39;estensione per integrare il codice di tracciamento [!DNL Marketo Munchkin] JavaScript con la tua proprietà. [!DNL Marketo Munchkin] JavaScript consente di tracciare le visite degli utenti finali e di navigare sulle pagine di destinazione e sulle pagine web esterne Marketo.
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;filtro;filtrare;filtrare dati;filtrare dati
+keywords: Experience Platform;home;argomenti popolari;filtrare;filtrare;filtrare dati;Filtrare dati
 solution: Experience Platform
-title: Elenco oggetti catalogo
-description: È possibile recuperare un elenco di tutti gli oggetti disponibili di un tipo specifico tramite una singola chiamata API, in cui la best practice prevede l’inclusione di filtri che limitano la dimensione della risposta.
+title: Elenca oggetti catalogo
+description: È possibile recuperare un elenco di tutti gli oggetti disponibili di un tipo specifico tramite una singola chiamata API; la best practice prevede l’inclusione di filtri che limitano la dimensione della risposta.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# Elenco oggetti del catalogo
+# Elenca oggetti catalogo
 
-È possibile recuperare un elenco di tutti gli oggetti disponibili di un tipo specifico tramite una singola chiamata API, in cui la best practice prevede l’inclusione di filtri che limitano la dimensione della risposta.
+È possibile recuperare un elenco di tutti gli oggetti disponibili di un tipo specifico tramite una singola chiamata API; la best practice prevede l’inclusione di filtri che limitano la dimensione della risposta.
 
 **Formato API**
 
@@ -24,12 +24,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da elencare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri sono separati da una e commerciale (`&`). Consulta la guida su [filtraggio dei dati del catalogo](filter-data.md) per ulteriori informazioni. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da elencare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri separati da e commerciali (`&`). Consulta la guida su [filtraggio dei dati catalogo](filter-data.md) per ulteriori informazioni. |
 
 **Richiesta**
 
-La richiesta di esempio seguente recupera un elenco di set di dati con un `limit` filtrare la risposta in base a cinque risultati, e `properties` filtro che limita le proprietà visualizzate per ogni set di dati.
+La richiesta di esempio seguente recupera un elenco di set di dati con `limit` filtro che riduce la risposta a cinque risultati, e una `properties` filtro che limita le proprietà visualizzate per ogni set di dati.
 
 ```shell
 curl -X GET \
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di [!DNL Catalog] oggetti sotto forma di coppie chiave-valore, filtrati dai parametri di query forniti nella richiesta. Per ogni coppia chiave-valore, la chiave rappresenta un identificatore univoco per [!DNL Catalog] oggetto in questione, che può quindi essere utilizzato in un&#39;altra chiamata a [visualizza l&#39;oggetto specifico](look-up-object.md) per ulteriori dettagli.
+In caso di esito positivo, la risposta restituisce un elenco di [!DNL Catalog] oggetti sotto forma di coppie chiave-valore, filtrati in base ai parametri di query forniti nella richiesta. Per ogni coppia chiave-valore, la chiave rappresenta un identificatore univoco per [!DNL Catalog] oggetto in questione, che può quindi essere utilizzato in un&#39;altra chiamata a [visualizzare l&#39;oggetto specifico](look-up-object.md) per ulteriori dettagli.
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** sotto.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dal `properties` , la risposta restituisce solo le proprietà richieste che include, come mostrato nella ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
 
 ```json
 {

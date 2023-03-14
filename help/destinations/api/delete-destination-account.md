@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio di flusso;eliminare account di destinazione;eliminare;api
+keywords: Experience Platform;home;argomenti popolari;servizio di flusso;eliminare account di destinazione;eliminare;api;home;popular topic;flow service;delete destination accounts;delete;api
 solution: Experience Platform
-title: Eliminare un account di destinazione utilizzando l’API del servizio di flusso
+title: Eliminare un account di destinazione utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio di flusso.
+description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio Flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
@@ -12,65 +12,65 @@ ht-degree: 1%
 
 ---
 
-# Eliminare un account di destinazione utilizzando l’API del servizio di flusso
+# Eliminare un account di destinazione utilizzando l’API del servizio Flusso
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-Prima di attivare i dati, è necessario connettersi alla destinazione impostando prima un account di destinazione. Questa esercitazione descrive i passaggi per eliminare gli account di destinazione che non sono più necessari utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Prima di attivare i dati, devi connetterti alla destinazione impostando prima un account di destinazione. Questa esercitazione descrive i passaggi per eliminare gli account di destinazione che non sono più necessari utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->L’eliminazione degli account di destinazione è attualmente supportata solo nell’API del servizio di flusso. Gli account di destinazione non possono essere eliminati utilizzando l&#39;interfaccia utente di Experience Platform.
+>L’eliminazione degli account di destinazione è attualmente supportata solo dall’API del servizio Flusso. Gli account di destinazione non possono essere eliminati utilizzando l’interfaccia utente di Experience Platform.
 
 ## Introduzione {#get-started}
 
-Questa esercitazione richiede un ID di connessione valido. L&#39;ID di connessione rappresenta la connessione dell&#39;account alla destinazione. Se non disponi di un ID di connessione valido, seleziona la destinazione scelta dalla [catalogo delle destinazioni](../catalog/overview.md) e seguire i passi descritti in [connettersi alla destinazione](../ui/connect-destination.md) prima di provare questa esercitazione.
+Questo tutorial richiede un ID di connessione valido. L’ID di connessione rappresenta la connessione dell’account alla destinazione. Se non disponi di un ID di connessione valido, seleziona la destinazione desiderata tra [catalogo delle destinazioni](../catalog/overview.md) e segui i passaggi descritti per [connettersi alla destinazione](../ui/connect-destination.md) prima di provare questa esercitazione.
 
-Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eliminare correttamente un account di destinazione utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per eliminare correttamente un account di destinazione utilizzando [!DNL Flow Service] API.
 
-### Lettura di chiamate API di esempio {#reading-sample-api-calls}
+### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori delle intestazioni richieste {#gather-values-for-required-headers}
+### Raccogli i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti a [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Se la `x-sandbox-name` intestazione non specificata, le richieste vengono risolte sotto `prod` sandbox.
+>Se il `x-sandbox-name` non è specificata, le richieste vengono risolte in `prod` sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * `Content-Type: application/json`
 
-## Trova l&#39;ID di connessione dell&#39;account di destinazione che desideri eliminare {#find-connection-id}
+## Trova l’ID di connessione dell’account di destinazione da eliminare {#find-connection-id}
 
 >[!NOTE]
->Questa esercitazione utilizza la funzione [Destinazione dell&#39;aeromobile](../catalog/mobile-engagement/airship-attributes.md) ad esempio, ma i passaggi descritti si applicano a uno qualsiasi dei [destinazioni disponibili](../catalog/overview.md).
+>Questa esercitazione utilizza [Destinazione dirigibile](../catalog/mobile-engagement/airship-attributes.md) ad esempio, ma i passaggi descritti si applicano a qualsiasi [destinazioni disponibili](../catalog/overview.md).
 
-Il primo passaggio nell&#39;eliminazione di un account di destinazione consiste nell&#39;individuare l&#39;ID di connessione corrispondente all&#39;account di destinazione che si desidera eliminare.
+Il primo passaggio nell’eliminazione di un account di destinazione consiste nell’individuare l’ID di connessione corrispondente all’account di destinazione che desideri eliminare.
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]** e seleziona l&#39;account da eliminare selezionando il numero nel **[!UICONTROL Destinazioni]** colonna.
+Nell’interfaccia utente di Experience Platform, passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]** e selezionare l&#39;account che si desidera eliminare selezionando il numero nel **[!UICONTROL Destinazioni]** colonna.
 
-![Selezionare l&#39;account di destinazione da eliminare](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
+![Seleziona account di destinazione da eliminare](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
 Successivamente, puoi recuperare l’ID di connessione dell’account di destinazione dall’URL nel browser.
 
-![Recupera ID connessione dall&#39;URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
+![Recupera ID connessione da URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
 
 <!--
 
@@ -146,13 +146,13 @@ A successful response returns the current details of your connection including i
 
 >[!IMPORTANT]
 >
->Prima di eliminare l&#39;account di destinazione, è necessario eliminare tutti i flussi di dati esistenti nell&#39;account di destinazione.
->Per eliminare i flussi di dati esistenti, fai riferimento alle pagine seguenti:
+>Prima di eliminare l’account di destinazione, devi eliminare tutti i flussi di dati esistenti dall’account di destinazione.
+>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
 >* [Utilizzare l’interfaccia utente di Experience Platform](../ui/delete-destinations.md) eliminare i flussi di dati esistenti;
->* [Utilizzare l’API del servizio di flusso](delete-destination-dataflow.md) per eliminare i flussi di dati esistenti.
+>* [Utilizzare l’API del servizio Flusso](delete-destination-dataflow.md) per eliminare i flussi di dati esistenti.
 
 
-Una volta ottenuto un ID di connessione e verificato che non siano presenti flussi di dati per l’account di destinazione, esegui una richiesta DELETE al [!DNL Flow Service] API.
+Dopo aver ottenuto un ID di connessione e aver verificato che non vi siano flussi di dati per l’account di destinazione, esegui una richiesta DELETE a [!DNL Flow Service] API.
 
 **Formato API**
 
@@ -162,7 +162,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | L&#39;unico `id` valore della connessione che si desidera eliminare. |
+| `{CONNECTION_ID}` | L&#39;unico `id` valore per la connessione che si desidera eliminare. |
 
 **Richiesta**
 
@@ -177,7 +177,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto. Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) alla connessione. L’API restituirà un errore HTTP 404 (Non trovato) che indica che l’account di destinazione è stato eliminato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto. Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) alla connessione. L’API restituirà un errore HTTP 404 (Non trovato), che indica che l’account di destinazione è stato eliminato.
 
 ## Gestione degli errori API {#api-error-handling}
 

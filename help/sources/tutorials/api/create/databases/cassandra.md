@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;casa;argomenti popolari;Apache Cassandra;apache cassandra;Cassandra;Cassandra;Cassandra
+keywords: Experience Platform;home;argomenti popolari;Apache Cassandra;apache cassandra;Cassandra;cassandra
 solution: Experience Platform
-title: Creare una connessione sorgente Apache Cassandra utilizzando l’API del servizio di flusso
+title: Creare una connessione sorgente Apache Cassandra utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Scopri come collegare Apache Cassandra a Adobe Experience Platform utilizzando l’API del servizio di flusso.
+description: Scopri come collegare Apache Cassandra a Adobe Experience Platform utilizzando l’API del servizio Flow.
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
@@ -12,48 +12,48 @@ ht-degree: 2%
 ---
 
 
-# Crea un [!DNL Apache Cassandra] connessione di origine tramite [!DNL Flow Service] API
+# Creare un [!DNL Apache Cassandra] connessione sorgente tramite [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le sorgenti supportate sono collegabili.
 
-Questa esercitazione utilizza la funzione [!DNL Flow Service] API per seguire i passaggi necessari per la connessione [!DNL Apache Cassandra] (in seguito denominata &quot;Cassandra&quot;) [!DNL Experience Platform].
+Questa esercitazione utilizza [!DNL Flow Service] API per illustrare i passaggi per la connessione [!DNL Apache Cassandra] (in seguito denominata &quot;Cassandra&quot;) [!DNL Experience Platform].
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi con successo a Cassandra utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a Cassandra utilizzando [!DNL Flow Service] API.
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
-Per [!DNL Flow Service] per connettersi con [!DNL Cassandra], è necessario fornire valori per le seguenti proprietà di connessione:
+Per ottenere [!DNL Flow Service] per connettersi con [!DNL Cassandra], è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `host` | Indirizzo IP o nome host del [!DNL Cassandra] server. |
-| `port` | La porta TCP che [!DNL Cassandra] il server utilizza per ascoltare le connessioni client. La porta predefinita è `9042`. |
+| `port` | La porta TCP che [!DNL Cassandra] il server utilizza per l&#39;ascolto delle connessioni client. La porta predefinita è `9042`. |
 | `username` | Il nome utente utilizzato per connettersi al [!DNL Cassandra] server per l&#39;autenticazione. |
 | `password` | Password per la connessione al [!DNL Cassandra] server per l&#39;autenticazione. |
-| `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. ID della specifica di connessione per [!DNL Cassandra] è `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
+| `connectionSpec.id` | L’identificatore univoco necessario per creare una connessione. ID della specifica di connessione per [!DNL Cassandra] è `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
-Per ulteriori informazioni su come iniziare, consulta [documento Cassandra](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
+Per ulteriori informazioni su come iniziare, consulta [questo documento Cassandra](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
 
-### Lettura di chiamate API di esempio
+### Lettura delle chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori delle intestazioni richieste
+### Raccogli i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
+* Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -63,7 +63,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessario un solo connettore per [!DNL Cassandra] può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È richiesto un solo connettore per ogni [!DNL Cassandra] in quanto può essere utilizzato per creare più connettori di origine per l’inserimento di dati diversi.
 
 **Formato API**
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare un [!DNL Cassandra] connection, il suo ID univoco della specifica di connessione deve essere fornito come parte della richiesta POST. ID della specifica di connessione per [!DNL Cassandra] è `a8f4d393-1a6b-43f3-931f-91a16ed857f4`.
+Per creare un [!DNL Cassandra] connessione, l’ID univoco della specifica di connessione deve essere fornito come parte della richiesta POST. ID della specifica di connessione per [!DNL Cassandra] è `a8f4d393-1a6b-43f3-931f-91a16ed857f4`.
 
 ```shell
 curl -X POST \
@@ -105,14 +105,14 @@ curl -X POST \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `auth.params.host` | Indirizzo IP o nome host del [!DNL Cassandra] server. |
-| `auth.params.port` | La porta TCP che [!DNL Cassandra] il server utilizza per ascoltare le connessioni client. La porta predefinita è `9042`. |
+| `auth.params.port` | La porta TCP che [!DNL Cassandra] il server utilizza per l&#39;ascolto delle connessioni client. La porta predefinita è `9042`. |
 | `auth.params.username` | Il nome utente utilizzato per connettersi al [!DNL Cassandra] server per l&#39;autenticazione. |
 | `auth.params.password` | Password per la connessione al [!DNL Cassandra] server per l&#39;autenticazione. |
-| `connectionSpec.id` | La [!DNL Cassandra] ID delle specifiche di connessione: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
+| `connectionSpec.id` | Il [!DNL Cassandra] ID specifica di connessione: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
+In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
 
 ```json
 {
@@ -123,4 +123,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un [!DNL Cassandra] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID nell&#39;esercitazione successiva per scoprire come [esplorare i database utilizzando l’API del servizio di flusso](../../explore/database-nosql.md).
+Seguendo questa esercitazione, hai creato una [!DNL Cassandra] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nel prossimo tutorial mentre apprendi come [esplorare i database utilizzando l’API del servizio Flow](../../explore/database-nosql.md).

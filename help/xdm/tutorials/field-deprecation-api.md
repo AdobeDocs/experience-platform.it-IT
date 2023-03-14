@@ -1,6 +1,6 @@
 ---
-title: Un campo XDM nell’API è diventato obsoleto
-description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) nell’API del Registro di sistema dello schema.
+title: Dichiarare obsoleto un campo XDM nell’API
+description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) nell’API Schema Registry.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 6%
 
 ---
 
-# Un campo XDM nell’API è diventato obsoleto
+# Deprecare un campo XDM nell’API
 
-In Experience Data Model (XDM), puoi rendere obsoleto un campo all’interno di uno schema o di una risorsa personalizzata utilizzando l’ [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Se un campo viene deprecato, viene nascosto dalle interfacce utente downstream, ad esempio [!UICONTROL Profili] area di lavoro e Customer Journey Analytics, ma in caso contrario si tratta di una modifica non interrompere e non influisce negativamente sui flussi di dati esistenti.
+In Experience Data Model (XDM), puoi rendere obsoleto un campo all’interno di uno schema o di una risorsa personalizzata utilizzando [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Se un campo viene deprecato, viene nascosto nelle interfacce utente a valle, ad esempio [!UICONTROL Profili] area di lavoro e Customer Journey Analytics, ma si tratta comunque di una modifica che non comporta interruzioni e non influisce negativamente sui flussi di dati esistenti.
 
-Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM. Per i passaggi sulla deprecazione di un campo XDM tramite l’Editor di schema nell’interfaccia utente di Experience Platform, consulta l’esercitazione su [deprecazione di un campo XDM nell’interfaccia utente](./field-deprecation-ui.md).
+Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM. Per i passaggi relativi alla rimozione di un campo XDM dall’Editor di schema nell’interfaccia utente di un Experience Platform, consulta l’esercitazione su [deprecazione di un campo XDM nell’interfaccia utente](./field-deprecation-ui.md).
 
 ## Introduzione
 
-Questa esercitazione richiede l&#39;esecuzione di chiamate all&#39;API del Registro di sistema dello schema. Controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare queste chiamate API. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione al `Accept` e i suoi possibili valori).
+Questo tutorial richiede l’esecuzione di chiamate all’API Schema Registry. Rivedi il [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare queste chiamate API. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione al `Accept` e i possibili valori).
 
-## Rimozione di un campo personalizzato {#custom}
+## Dichiarare obsoleto un campo personalizzato {#custom}
 
-Per rendere obsoleto un campo di una classe, un gruppo di campi o un tipo di dati personalizzato, aggiorna la risorsa personalizzata tramite una richiesta di PUT o PATCH e aggiungi l’attributo `meta:status: deprecated` al settore in questione.
+Per rendere obsoleto un campo in una classe, un gruppo di campi o un tipo di dati personalizzato, aggiorna la risorsa personalizzata tramite una richiesta PUT o PATCH e aggiungi l’attributo `meta:status: deprecated` al campo in questione.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Per rendere obsoleto un campo di una classe, un gruppo di campi o un tipo di dat
 >* [Aggiornare un tipo di dati](../api/data-types.md#patch)
 
 
-La chiamata API di esempio sotto rende obsoleto un campo di un tipo di dati personalizzato.
+La chiamata API di esempio seguente depreca un campo in un tipo di dati personalizzato.
 
 **Formato API**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Richiesta**
 
-La seguente richiesta rende obsoleta la `expansionArea` campo per un tipo di dati che descrive una proprietà immobiliare.
+La seguente richiesta depreca il `expansionArea` campo per un tipo di dati che descrive una proprietà immobiliare.
 
 ```shell
 curl -X PATCH \
@@ -63,7 +63,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli di aggiornamento della risorsa personalizzata, con il campo obsoleto contenente un `meta:status` valore `deprecated`. La risposta di esempio seguente è stata troncata per motivi di spazio.
+In caso di esito positivo, la risposta restituisce i dettagli di aggiornamento della risorsa personalizzata, con il campo obsoleto contenente un `meta:status` valore di `deprecated`. La risposta di esempio seguente è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -163,13 +163,13 @@ Una risposta corretta restituisce i dettagli di aggiornamento della risorsa pers
 }
 ```
 
-## Rimozione di un campo standard in uno schema {#standard}
+## Deprecare un campo standard in uno schema {#standard}
 
-I campi appartenenti a classi, gruppi di campi e tipi di dati standard non possono essere dichiarati obsoleti direttamente. È invece possibile disattivarne l’uso nei singoli schemi che utilizzano queste risorse standard utilizzando un descrittore.
+I campi di classi standard, gruppi di campi e tipi di dati non possono essere deprecati direttamente. È invece possibile renderlo obsoleto nei singoli schemi che utilizzano queste risorse standard utilizzando un descrittore.
 
-### Creare un descrittore di deprecazione del campo {#create-descriptor}
+### Creare un descrittore di campo obsoleto {#create-descriptor}
 
-Per creare un descrittore per i campi dello schema che si desidera rendere obsoleti, invia una richiesta POST al `/tenant/descriptors` punto finale.
+Per creare un descrittore per i campi dello schema che desideri rendere obsoleti, invia una richiesta POST al `/tenant/descriptors` endpoint.
 
 **Formato API**
 
@@ -197,10 +197,10 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@type` | Tipo di descrittore. Per un descrittore di deprecazione del campo, è necessario impostare questo valore su `xdm:descriptorDeprecated`. |
-| `xdm:sourceSchema` | URI `$id` dello schema a cui si applica il descrittore. |
-| `xdm:sourceVersion` | Versione dello schema a cui si applica il descrittore. Deve essere impostato su `1`. |
-| `xdm:sourceProperty` | Percorso della proprietà all&#39;interno dello schema a cui si applica il descrittore. Se si desidera applicare il descrittore a più proprietà, è possibile fornire un elenco di percorsi sotto forma di array (ad esempio, `["/firstName", "/lastName"]`). |
+| `@type` | Tipo di descrittore. Per un descrittore di campo obsoleto, questo valore deve essere impostato su `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` dello schema a cui si sta applicando il descrittore. |
+| `xdm:sourceVersion` | Versione dello schema a cui si sta applicando il descrittore. Deve essere impostato su `1`. |
+| `xdm:sourceProperty` | Percorso della proprietà all’interno dello schema a cui si sta applicando il descrittore. Se desideri applicare il descrittore a più proprietà, puoi fornire un elenco di percorsi sotto forma di array (ad esempio, `["/firstName", "/lastName"]`). |
 
 **Risposta**
 
@@ -221,11 +221,11 @@ curl -X POST \
 
 ### Verifica il campo obsoleto {#verify-deprecation}
 
-Dopo aver applicato il descrittore, puoi verificare se il campo è stato dichiarato obsoleto controllando lo schema in questione utilizzando l&#39;appropriato `Accept` intestazione.
+Dopo l’applicazione del descrittore, puoi verificare se il campo è stato dichiarato obsoleto, cercando lo schema in questione e utilizzando l’appropriato `Accept` intestazione.
 
 >[!NOTE]
 >
->La visualizzazione di campi obsoleti quando l’elenco degli schemi non è attualmente supportato.
+>La visualizzazione di campi obsoleti quando si elencano gli schemi non è al momento supportata.
 
 **Formato API**
 
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **Richiesta**
 
-Per includere informazioni sui campi obsoleti nella risposta API, devi impostare la `Accept` intestazione `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Per includere informazioni sui campi obsoleti nella risposta API, è necessario impostare `Accept` intestazione a `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -249,7 +249,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dello schema, con il campo obsoleto contenente un `meta:status` valore `deprecated`. La risposta di esempio seguente è stata troncata per motivi di spazio.
+In caso di esito positivo, la risposta restituisce i dettagli dello schema, con il campo obsoleto contenente un `meta:status` valore di `deprecated`. La risposta di esempio seguente è stata troncata per motivi di spazio.
 
 ```json
 "faxPhone": {
@@ -266,4 +266,4 @@ Una risposta corretta restituisce i dettagli dello schema, con il campo obsoleto
 
 ## Passaggi successivi
 
-In questo documento viene illustrato come rendere obsoleti i campi XDM utilizzando l’API del Registro di sistema dello schema. Per ulteriori informazioni sulla configurazione dei campi per le risorse personalizzate, consulta la guida su [definizione dei campi XDM nell’API](./custom-fields-api.md). Per ulteriori informazioni sulla gestione dei descrittori, consulta la sezione [guida all&#39;endpoint dei descrittori](../api/descriptors.md).
+Questo documento illustra come rendere obsoleti i campi XDM utilizzando l’API Schema Registry. Per ulteriori informazioni sulla configurazione dei campi per le risorse personalizzate, consulta la guida su [definizione dei campi XDM nell’API](./custom-fields-api.md). Per ulteriori informazioni sulla gestione dei descrittori, consulta [guida dell’endpoint &quot;descriptors&quot;](../api/descriptors.md).

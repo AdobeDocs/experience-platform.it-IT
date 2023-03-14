@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 La variabile `products` traccia il modo in cui gli utenti interagiscono con i prodotti sul sito. Ad esempio, la variabile `products` può tracciare il numero di volte in cui un prodotto viene visualizzato, aggiunto al carrello, estratto e acquistato. Può anche tracciare l’efficacia delle categorie di merchandising sul sito.
 

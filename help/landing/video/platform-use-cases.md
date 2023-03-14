@@ -1,6 +1,6 @@
 ---
-title: Experienci Platform principali
-description: Questo video offre una panoramica dei quattro casi d’uso chiave di Adobe Experience Platform&mdash;piattaforma dati cliente in tempo reale, informazioni sui percorsi dei clienti, esperienza di consegna e cross-channel e sviluppo delle applicazioni di customer experience.
+title: Casi d’uso principali di Experience Platform
+description: Questo video offre una panoramica dei quattro casi d'uso principali di Adobe Experience Platform&mdash;real-time customer data platform, informazioni sul percorso dei clienti, distribuzione ed esperienza cross-channel, nonché sviluppo di applicazioni per la customer experience.
 kt: 4337
 audience: all
 doc-type: video
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 ---
 
-# Experienci Platform principali
+# Casi d’uso principali di Experience Platform
 
-Questo video fornisce una panoramica di quattro casi d’uso chiave, ad Experience Platform:
+Questo video offre una panoramica di quattro casi d’uso principali, ad Experience Platform:
 
 * Adobe Real-time Customer Data Platform
-* Informazioni sul percorso dei clienti
+* Informazioni sul percorso di clienti
 * Distribuzione ed esperienza cross-channel
-* Sviluppo di applicazioni di esperienza cliente
+* Sviluppo di applicazioni di Customer Experience
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)

@@ -17,7 +17,7 @@ La configurazione di autenticazione selezionata determina il modo in cui Experie
 
 Adobe Experience Platform Destination SDK supporta diversi tipi di autenticazione:
 
-* [Autenticazione portatore](#bearer)
+* [Autenticazione Bearer](#bearer)
 * [Autenticazione di base](#basic)
 * [[!DNL Amazon S3] autenticazione](#s3)
 * [[!DNL Azure Blob] Archiviazione](#blob)
@@ -26,23 +26,23 @@ Adobe Experience Platform Destination SDK supporta diversi tipi di autenticazion
 * [SFTP con chiave SSH](#sftp-ssh)
 * [SFTP con password](#sftp-password)
 * [OAuth 2 con codice di autorizzazione](#oauth2)
-* [OUAth 2 con password](#oauth2)
-* [Assegnazione di credenziali client a OAuth 2](#oauth2)
+* [OAUth 2 con concessione password](#oauth2)
+* [OAuth 2 con concessione di credenziali client](#oauth2)
 
-Puoi configurare le informazioni di autenticazione per la tua destinazione tramite `customerAuthenticationConfigurations` dei parametri `/destinations` punto finale.
+È possibile configurare le informazioni di autenticazione per la destinazione tramite `customerAuthenticationConfigurations` parametri di `/destinations` endpoint.
 
-Per informazioni dettagliate sulla configurazione dell&#39;autenticazione per ciascun tipo di destinazione, fare riferimento alle sezioni seguenti:
+Per informazioni dettagliate sulla configurazione dell’autenticazione per ciascun tipo di destinazione, consulta le sezioni seguenti:
 
 * [Configurazioni di autenticazione per le destinazioni di streaming](destination-configuration.md#customer-authentication-configurations)
 * [Configurazioni di autenticazione per destinazioni basate su file](file-based-destination-configuration.md#customer-authentication-configurations)
 
 ## Autenticazione di base {#basic}
 
-L’autenticazione di base è supportata ad Experience Platform per le destinazioni di streaming.
+L’autenticazione di base è supportata per le destinazioni di streaming in Experience Platform.
 
-Quando configuri il tipo di autenticazione di base, gli utenti devono immettere un nome utente e una password per connettersi alla tua destinazione.
+Quando si configura il tipo di autenticazione di base, gli utenti devono immettere un nome utente e una password per connettersi alla destinazione.
 
-Per impostare l’autenticazione di base per la destinazione, configura la `customerAuthenticationConfigurations` tramite `/destinations` punto finale come mostrato di seguito:
+Per impostare l’autenticazione di base per la destinazione, configura `customerAuthenticationConfigurations` sezione tramite `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -52,11 +52,11 @@ Per impostare l’autenticazione di base per la destinazione, configura la `cust
 ]
 ```
 
-## Autenticazione portatore {#bearer}
+## Autenticazione Bearer {#bearer}
 
-Ad Experience Platform, l’autenticazione al portatore è supportata per le destinazioni di streaming.
+L’autenticazione Bearer è supportata per le destinazioni di streaming in Experience Platform.
 
-Per impostare l’autenticazione del tipo di portatore per la destinazione, configura la `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare l&#39;autenticazione di tipo Bearer per la destinazione, configurare `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -68,9 +68,9 @@ Per impostare l’autenticazione del tipo di portatore per la destinazione, conf
 
 ## [!DNL Amazon S3] autenticazione {#s3}
 
-[!DNL Amazon S3] l’autenticazione è supportata, ad Experience Platform, per le destinazioni basate su file.
+[!DNL Amazon S3] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
 
-Configurazione [!DNL Amazon S3] autenticazione per la destinazione, configura `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare [!DNL Amazon S3] per la destinazione, configura il `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -82,9 +82,9 @@ Configurazione [!DNL Amazon S3] autenticazione per la destinazione, configura `c
 
 ## [!DNL Azure Blob Storage] {#blob}
 
-[!DNL Azure Blob Storage] l’autenticazione è supportata, ad Experience Platform, per le destinazioni basate su file.
+[!DNL Azure Blob Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
 
-Configurazione [!DNL Azure Blob] autenticazione per la destinazione, configura `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare [!DNL Azure Blob] per la destinazione, configura il `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -96,9 +96,9 @@ Configurazione [!DNL Azure Blob] autenticazione per la destinazione, configura `
 
 ## [!DNL Azure Data Lake Storage] {#adls}
 
-[!DNL Azure Data Lake Storage] l’autenticazione è supportata, ad Experience Platform, per le destinazioni basate su file.
+[!DNL Azure Data Lake Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
 
-Configurazione [!DNL Azure Data Lake Storage] (ADLS) autenticazione per la destinazione, configura il `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare [!DNL Azure Data Lake Storage] (ADLS) per la destinazione, configura il `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -110,7 +110,7 @@ Configurazione [!DNL Azure Data Lake Storage] (ADLS) autenticazione per la desti
 
 ## [!DNL Google Cloud Storage] {#gcs}
 
-[!DNL Google Cloud Storage] l’autenticazione è supportata, ad Experience Platform, per le destinazioni basate su file.
+[!DNL Google Cloud Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -121,11 +121,11 @@ Configurazione [!DNL Azure Data Lake Storage] (ADLS) autenticazione per la desti
 ```
 
 
-## [!DNL SFTP] autenticazione con [!DNL SSH] key {#sftp-ssh}
+## [!DNL SFTP] autenticazione con [!DNL SSH] chiave {#sftp-ssh}
 
-[!DNL SFTP] autenticazione con [!DNL SSH] key è supportato per le destinazioni basate su file in Experience Platform.
+[!DNL SFTP] autenticazione con [!DNL SSH] La chiave è supportata per le destinazioni basate su file in Experience Platform.
 
-Per impostare l’autenticazione SFTP con la chiave SSH per la destinazione, configura la `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare l’autenticazione SFTP con chiave SSH per la destinazione, configura la `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -137,9 +137,9 @@ Per impostare l’autenticazione SFTP con la chiave SSH per la destinazione, con
 
 ## [!DNL SFTP] autenticazione con password {#sftp-password}
 
-[!DNL SFTP] l’autenticazione con password è supportata, ad Experience Platform, per le destinazioni basate su file.
+[!DNL SFTP] l’autenticazione con password è supportata per le destinazioni basate su file in Experience Platform.
 
-Per impostare l’autenticazione SFTP con password per la destinazione, configura la `customerAuthenticationConfigurations` nel `/destinations` punto finale come mostrato di seguito:
+Per impostare l’autenticazione SFTP con password per la destinazione, configura la `customerAuthenticationConfigurations` parametro in `/destinations` endpoint come mostrato di seguito:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -153,15 +153,15 @@ Per impostare l’autenticazione SFTP con password per la destinazione, configur
 
 [!DNL OAuth 2] l’autenticazione è supportata per le destinazioni di streaming in Experience Platform.
 
-Per informazioni su come impostare i vari [!DNL OAuth 2] flussi, nonché per [!DNL OAuth 2] supporto, leggi la documentazione Destination SDK su [[!DNL OAuth 2] autenticazione](./oauth2-authentication.md).
+Per informazioni su come impostare i vari [!DNL OAuth 2] flussi, nonché per [!DNL OAuth 2] , leggi la documentazione Destination SDK su [[!DNL OAuth 2] autenticazione](./oauth2-authentication.md).
 
 
 ## Quando utilizzare il `/credentials` Endpoint API {#when-to-use}
 
 >[!IMPORTANT]
 >
->Nella maggior parte dei casi, *non* devono utilizzare `/credentials` Endpoint API. È invece possibile configurare le informazioni di autenticazione per la destinazione tramite la `customerAuthenticationConfigurations` dei parametri `/destinations` punto finale.
+>Nella maggior parte dei casi, *non* devono utilizzare `/credentials` Endpoint API È invece possibile configurare le informazioni di autenticazione per la destinazione tramite `customerAuthenticationConfigurations` parametri di `/destinations` endpoint.
 
-La `/credentials` L’endpoint API viene fornito agli sviluppatori di destinazione nei casi in cui è presente un sistema di autenticazione globale tra Adobe e la destinazione e [!DNL Platform] I clienti non devono fornire credenziali di autenticazione per connettersi alla destinazione.
+Il `/credentials` L’endpoint API viene fornito agli sviluppatori di destinazione nei casi in cui è presente un sistema di autenticazione globale tra Adobe e la destinazione e [!DNL Platform] I clienti non devono fornire credenziali di autenticazione per connettersi alla destinazione.
 
-In questo caso, è necessario creare un oggetto credenziali utilizzando il `/credentials` Endpoint API. È inoltre necessario selezionare `PLATFORM_AUTHENTICATION` in [configurazione di destinazione](./destination-configuration.md#destination-delivery). Leggi [Operazioni endpoint API per le credenziali](./credentials-configuration-api.md) per un elenco completo delle operazioni eseguibili nella `/credentials` punto finale.
+In questo caso, è necessario creare un oggetto credenziali utilizzando `/credentials` Endpoint API Devi anche selezionare `PLATFORM_AUTHENTICATION` nel [configurazione di destinazione](./destination-configuration.md#destination-delivery). Letto [Operazioni dell’endpoint API delle credenziali](./credentials-configuration-api.md) per un elenco completo delle operazioni che è possibile eseguire `/credentials` endpoint.

@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;xdm;modello dati esperienza;spazio dei nomi;spazi dei nomi;modalità compatibilità;fisso;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;xdm;experience data model;namespace;namespace;modalità compatibilità;xed;
 solution: Experience Platform
 title: Namespace in Experience Data Model (XDM)
-description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) ti consente di estendere gli schemi e impedire conflitti di campo quando diversi componenti dello schema vengono riuniti.
+description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) consente di estendere gli schemi e prevenire conflitti di campi quando diversi componenti dello schema vengono uniti.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 1%
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
 # Namespace in Experience Data Model (XDM)
 
-A tutti i campi negli schemi Experience Data Model (XDM) è associato un namespace. Questi namespace ti consentono di estendere gli schemi ed evitare conflitti di campi man mano che diversi componenti dello schema vengono riuniti. Questo documento fornisce una panoramica dei namespace in XDM e del modo in cui vengono rappresentati in [API del Registro di sistema dello schema](../api/overview.md).
+A tutti i campi degli schemi Experience Data Model (XDM) è associato uno spazio dei nomi. Questi spazi dei nomi ti consentono di estendere gli schemi ed evitare conflitti di campi in quanto diversi componenti dello schema vengono uniti. Questo documento fornisce una panoramica degli spazi dei nomi in XDM e di come sono rappresentati in [API del registro dello schema](../api/overview.md).
 
-Lo spazio dei nomi consente di definire un campo in un namespace come qualcosa di diverso dallo stesso campo in un namespace diverso. In pratica, lo spazio dei nomi di un campo indica chi ha creato il campo (ad Adobe XDM standard), un fornitore o l’organizzazione).
+Lo spazio dei nomi consente di definire un campo in uno spazio dei nomi con un significato diverso rispetto allo stesso campo in uno spazio dei nomi diverso. In pratica, lo spazio dei nomi di un campo indica chi ha creato il campo, ad esempio XDM standard (Adobe), un fornitore o la tua organizzazione.
 
-Ad esempio, considera uno schema XDM che utilizza il [[!UICONTROL Dati di contatto personali] gruppo di campi](../field-groups/profile/demographic-details.md), che ha una `mobilePhone` del campo presente nel `xdm` spazio dei nomi. Nello stesso schema, puoi anche creare un `mobilePhone` in un altro spazio dei nomi (il tuo [ID tenant](../api/getting-started.md#know-your-tenant_id)). Entrambi questi campi possono coesistere e avere significati o vincoli sottostanti diversi.
+Ad esempio, considera uno schema XDM che utilizza [[!UICONTROL Dettagli di contatto personali] gruppo di campi](../field-groups/profile/demographic-details.md), che ha uno standard `mobilePhone` campo esistente in `xdm` spazio dei nomi. Nello stesso schema, è anche possibile creare un `mobilePhone` in uno spazio dei nomi diverso (il tuo [ID tenant](../api/getting-started.md#know-your-tenant_id)). Entrambi questi campi possono coesistere pur avendo significati o vincoli sottostanti diversi.
 
-## Sintassi di namespace
+## Sintassi namespace
 
 Le sezioni seguenti mostrano come gli spazi dei nomi vengono assegnati nella sintassi XDM.
 
 ### XDM standard {#standard}
 
-La sintassi XDM standard fornisce informazioni approfondite sulla rappresentazione dei namespace negli schemi (tra cui [come vengono tradotte in Adobe Experience Platform](#compatibility)).
+La sintassi XDM standard fornisce informazioni approfondite sul modo in cui gli spazi dei nomi vengono rappresentati negli schemi (tra cui [come vengono tradotti in Adobe Experience Platform](#compatibility)).
 
-Utilizzo standard di XDM [JSON LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintassi per assegnare spazi dei nomi ai campi. Questo spazio dei nomi si presenta sotto forma di URI (ad esempio `https://ns.adobe.com/xdm` per `xdm` namespace) o come prefisso abbreviato configurato nel `@context` attributo di uno schema.
+XDM standard utilizza [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) sintassi per assegnare spazi dei nomi ai campi. Questo spazio dei nomi ha la forma di un URI (ad esempio `https://ns.adobe.com/xdm` per `xdm` o come prefisso abbreviato configurato nel `@context` di uno schema.
 
-Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM standard. Ad eccezione di `@id` (l&#39;identificatore univoco definito dalla specifica JSON-LD), ogni campo in `properties` inizia con uno spazio dei nomi e termina con il nome del campo. Se si utilizza un prefisso abbreviato definito in `@context`, lo spazio dei nomi e il nome del campo sono separati da due punti (`:`). Se non si utilizza un prefisso , lo spazio dei nomi e il nome del campo sono separati da una barra (`/`).
+Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM standard. Ad eccezione di `@id` (l’identificatore univoco come definito dalle specifiche JSON-LD), ogni campo in `properties` inizia con uno spazio dei nomi e termina con il nome del campo. Se si utilizza un prefisso abbreviato definito in `@context`, lo spazio dei nomi e il nome del campo sono separati da due punti (`:`). Se non utilizzi un prefisso, lo spazio dei nomi e il nome del campo sono separati da una barra (`/`).
 
 ```json
 {
@@ -74,20 +74,20 @@ Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM s
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `@context` | Un oggetto che definisce i prefissi abbreviati che possono essere utilizzati al posto di un URI dello spazio dei nomi completo in `properties`. |
-| `@id` | Un identificatore univoco per il record definito dalla [Specifiche JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
-| `xdm:sku` | Esempio di campo che utilizza un prefisso abbreviato per indicare uno spazio dei nomi. In questo caso, `xdm` è lo spazio dei nomi (`https://ns.adobe.com/xdm`) e `sku` è il nome del campo. |
-| `https://ns.adobe.com/xdm/channels/application` | Esempio di campo che utilizza l’URI dello spazio dei nomi completo. In questo caso, `https://ns.adobe.com/xdm/channels` è lo spazio dei nomi e `application` è il nome del campo. |
+| `@context` | Oggetto che definisce i prefissi abbreviati che possono essere utilizzati al posto dell’URI completo dello spazio dei nomi in `properties`. |
+| `@id` | Un identificatore univoco per il record come definito dal [Specifiche JSON-LD](https://www.w3.org/TR/json-ld11/#node-identifiers). |
+| `xdm:sku` | Esempio di un campo che utilizza un prefisso abbreviato per indicare uno spazio dei nomi. In questo caso, `xdm` è lo spazio dei nomi (`https://ns.adobe.com/xdm`), e `sku` è il nome del campo. |
+| `https://ns.adobe.com/xdm/channels/application` | Esempio di campo che utilizza l’URI completo dello spazio dei nomi. In questo caso, `https://ns.adobe.com/xdm/channels` è lo spazio dei nomi, e `application` è il nome del campo. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | I campi forniti dalle risorse fornitore utilizzano spazi dei nomi univoci. In questo esempio, `https://ns.adobe.com/vendorA/product` è lo spazio dei nomi del fornitore e `stockNumber` è il nome del campo. |
-| `tenantId:internalSku` | I campi definiti dall’organizzazione utilizzano l’ID tenant univoco come namespace. In questo esempio, `tenantId` è lo spazio dei nomi del tenant (`https://ns.adobe.com/tenantId`) e `internalSku` è il nome del campo. |
+| `tenantId:internalSku` | I campi definiti dalla tua organizzazione utilizzano l’ID tenant univoco come spazio dei nomi. In questo esempio, `tenantId` è lo spazio dei nomi del tenant (`https://ns.adobe.com/tenantId`), e `internalSku` è il nome del campo. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Modalità di compatibilità {#compatibility}
 
-In Adobe Experience Platform, gli schemi XDM sono rappresentati in [Modalità di compatibilità](../api/appendix.md#compatibility) sintassi che non utilizza la sintassi JSON-LD per rappresentare i namespace. Platform converte invece lo spazio dei nomi in un campo principale (a partire da un trattino basso) e nidifica i campi al suo interno.
+In Adobe Experience Platform, gli schemi XDM sono rappresentati in [Modalità di compatibilità](../api/appendix.md#compatibility) che non utilizza la sintassi JSON-LD per rappresentare gli spazi dei nomi. Piattaforma converte invece lo spazio dei nomi in un campo principale (partendo da un carattere di sottolineatura) e nidifica i campi al di sotto di esso.
 
-Ad esempio, XDM standard `repo:createdDate` viene convertito in `_repo.createdDate` e appariranno nella seguente struttura in Modalità compatibilità:
+Ad esempio, l’XDM standard `repo:createdDate` viene convertito in `_repo.createdDate` e viene visualizzato nella seguente struttura in Modalità di compatibilità:
 
 ```json
 "_repo": {
@@ -101,9 +101,9 @@ Ad esempio, XDM standard `repo:createdDate` viene convertito in `_repo.createdDa
 }
 ```
 
-Campi che utilizzano `xdm` lo spazio dei nomi viene visualizzato come campi principali in `properties` e rilascia la `xdm:` prefisso che apparirà in [sintassi XDM standard](#standard). Ad esempio: `xdm:sku` è semplicemente elencato come `sku` invece.
+Campi che utilizzano `xdm` spazio dei nomi viene visualizzato come campi radice in `properties` e rilascia la `xdm:` prefisso che apparirà in [sintassi XDM standard](#standard). Ad esempio: `xdm:sku` è semplicemente elencato come `sku` invece.
 
-Il seguente JSON rappresenta il modo in cui l’esempio di sintassi XDM standard mostrato sopra viene convertito in Modalità compatibilità.
+Il seguente codice JSON rappresenta il modo in cui la sintassi XDM standard mostrata sopra viene tradotta in modalità di compatibilità.
 
 ```json
 {
@@ -172,4 +172,4 @@ Il seguente JSON rappresenta il modo in cui l’esempio di sintassi XDM standard
 
 ## Passaggi successivi
 
-Questa guida fornisce una panoramica dei namespace XDM e del modo in cui vengono rappresentati in JSON. Per ulteriori informazioni su come configurare gli schemi XDM utilizzando l’API, consulta la sezione [Guida all’API del registro dello schema](../api/overview.md).
+Questa guida fornisce una panoramica degli spazi dei nomi XDM e del modo in cui vengono rappresentati in JSON. Per ulteriori informazioni su come configurare gli schemi XDM utilizzando l’API, consulta la [Guida API del registro dello schema](../api/overview.md).

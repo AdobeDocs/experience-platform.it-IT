@@ -1,6 +1,6 @@
 ---
 description: Scopri come utilizzare la scheda Eventi in Adobe Experience Platform Debugger.
-keywords: debugger;estensione experience platform debugger;chrome;estensione;eventi;dtm;target
+keywords: debugger;estensione debugger di experience platform;chrome;estensione;eventi;dtm;target
 seo-description: Experience Platform Debugger Events Screen
 seo-title: Events
 title: Scheda Eventi
@@ -14,11 +14,11 @@ ht-degree: 42%
 
 # Scheda Eventi
 
-La **Eventi** La scheda fornisce una visualizzazione grafica degli eventi che si verificano, visualizzati su una timeline.
+Il **Eventi** fornisce una visualizzazione grafica degli eventi che si verificano, visualizzati su una timeline.
 
 ![](images/events.jpg)
 
-Per ogni evento, nella sequenza temporale viene visualizzata un’icona per la soluzione applicabile. Le icone mostrano anche le modifiche apportate al livello dati (se attivato). Passa il puntatore del mouse sopra un’icona per visualizzare un riepilogo dell’evento. Seleziona l’evento per ulteriori dettagli. Per visualizzare più eventi, puoi fare clic su Maiusc-Seleziona o Ctrl-Seleziona .
+Per ogni evento, nella sequenza temporale viene visualizzata un’icona per la soluzione applicabile. Le icone mostrano anche le modifiche apportate al livello dati (se attivato). Passa il puntatore del mouse sopra un’icona per visualizzare un riepilogo dell’evento. Seleziona l’evento per ulteriori dettagli. Per visualizzare più eventi, premi Maiusc-Seleziona o Ctrl-Seleziona.
 
 ![](images/events-details.jpg)
 
@@ -37,8 +37,8 @@ Per abilitare il tracciamento delle modifiche al livello dei dati nella sequenza
 
 1. Seleziona **[!UICONTROL Salva]**.
 
-I dettagli delle modifiche mostrano tutti gli elementi che sono stati eliminati o aggiunti al livello dati. È possibile selezionare **{}** per approfondire il livello dati.
+I dettagli delle modifiche mostrano tutti gli elementi che sono stati eliminati o aggiunti al livello dati. Puoi selezionare **{}** per avere più informazioni sul livello dati.
 
 ## Scarica le informazioni sull’evento
 
-Seleziona **[!UICONTROL Scarica]** per scaricare un file Excel con informazioni sulle chiamate effettuate da una pagina.
+Seleziona **[!UICONTROL Scarica]** per scaricare un file Excel con le informazioni sulle chiamate effettuate da una pagina.

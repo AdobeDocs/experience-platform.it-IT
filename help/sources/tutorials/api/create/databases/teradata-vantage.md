@@ -1,53 +1,54 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Teradata Vantage
-title: Creare una connessione di base Vantage Teradata utilizzando l’API del servizio di flusso
-description: Scopri come collegare Adobe Experience Platform a Teradata Vantage utilizzando l’API del servizio di flusso.
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+title: Creare una connessione di base Teradata Vantage utilizzando l’API del servizio Flow
+description: Scopri come collegare Adobe Experience Platform a Teradata Vantage utilizzando l’API del servizio Flow.
+exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
-# (Beta) Crea un [!DNL Teradata Vantage] connessione di base utilizzando [!DNL Flow Service] API
+# (Beta) Creare un [!DNL Teradata Vantage] connessione di base tramite [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La [!DNL Teradata Vantage] la sorgente è in versione beta. Consulta la sezione [Panoramica delle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di origini con etichetta beta.
+>Il [!DNL Teradata Vantage] sorgente in versione beta. Consulta la [Panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Teradata Vantage] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per creare una connessione di base per [!DNL Teradata Vantage] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-La sezione seguente fornisce informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Teradata Vantage] utilizzando [!DNL Flow Service] API.
+La sezione seguente fornisce informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Teradata Vantage] utilizzando [!DNL Flow Service] API.
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
-Per [!DNL Flow Service] per connettersi con [!DNL Teradata Vantage], è necessario fornire le seguenti proprietà di connessione:
+Per ottenere [!DNL Flow Service] per connettersi con [!DNL Teradata Vantage], è necessario fornire le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `connectionString` | Una stringa di connessione è una stringa che fornisce informazioni su un&#39;origine dati e su come connettersi ad essa. Pattern di stringa di connessione per [!DNL Teradata Vantage] è `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| `connectionString` | Una stringa di connessione è una stringa che fornisce informazioni su un&#39;origine dati e su come è possibile connettersi a essa. Schema della stringa di connessione per [!DNL Teradata Vantage] è `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Teradata Vantage] è: `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
 
-Per ulteriori informazioni su come iniziare, consulta questo articolo [[!DNL Teradata Vantage] documento](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+Per ulteriori informazioni su come iniziare, consulta questa [[!DNL Teradata Vantage] documento](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
 ## Creare una connessione di base
 
-Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
+Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Teradata Vantage] credenziali di autenticazione come parte del corpo della richiesta.
+Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Teradata Vantage] credenziali di autenticazione come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -85,12 +86,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione utilizzata per la connessione al [!DNL Teradata Vantage] istanza. Pattern di stringa di connessione per [!DNL Teradata Vantage] è `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | La [!DNL Teradata Vantage] ID specifica di connessione: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `auth.params.connectionString` | Stringa di connessione utilizzata per la connessione al [!DNL Teradata Vantage] dell&#39;istanza. Schema della stringa di connessione per [!DNL Teradata Vantage] è `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| `connectionSpec.id` | Il [!DNL Teradata Vantage] ID specifica di connessione: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione appena creata, incluso il relativo identificatore di connessione univoco (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
+In caso di esito positivo, la risposta restituisce la connessione appena creata, incluso il relativo identificatore univoco di connessione (`id`). Questo ID è necessario per esplorare i dati nell’esercitazione successiva.
 
 ```json
 {
@@ -99,7 +100,7 @@ Una risposta corretta restituisce la nuova connessione appena creata, incluso il
 }
 ```
 
-Seguendo questa esercitazione, hai creato un [!DNL Teradata Vantage] connessione di base utilizzando [!DNL Flow Service] API. Puoi usare questo ID di connessione di base nelle seguenti esercitazioni:
+Seguendo questa esercitazione, hai creato una [!DNL Teradata Vantage] connessione di base tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplorare la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
-* [Creare un flusso di dati per trasferire i dati di database a Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database su Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)

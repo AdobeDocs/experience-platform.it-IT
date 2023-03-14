@@ -1,7 +1,7 @@
 ---
-title: Lead per corrispondenza account in Real-Time CDP B2B
+title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza del lead to account nell’Experience Platform CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
@@ -10,55 +10,55 @@ ht-degree: 3%
 
 ---
 
-# Lead per corrispondenza account in Real-Time CDP B2B
+# Lead per la corrispondenza dell’account in Real-Time CDP B2B
 
 ## Panoramica {#overview}
 
-Il marketing basato sugli account è una strategia sempre più importante per il marketing B2B. Il marketing basato su account offre i seguenti vantaggi chiave per acquisire clienti specifici di alto valore:
+Il marketing basato sull’account è una strategia sempre più importante per il marketing B2B. Il marketing basato su account offre i seguenti vantaggi chiave per acquisire clienti specifici di alto valore:
 
-- Clear ROI
+- Cancella ROI
 - Allineamento vendite e marketing
 - Un approccio personalizzato
-- Meno risorse sprecate
+- Riduzione dello spreco di risorse
 - Un ciclo di vendita più breve
 
-Il marketing basato su account consente di collegare persone conosciute e visitatori web anonimi agli account di vendita. Questo consente ai team di marketing di interagire con potenziali lead dagli account di destinazione all’inizio del percorso di clienti per aumentare le possibilità di conversione. Un record di persona nota include in genere una parte o tutte le informazioni seguenti:
+Il marketing basato su account consente di collegare ad account di vendita persone note e visitatori Web anonimi. Questo consente ai team di marketing di interagire con potenziali lead provenienti dagli account di destinazione nelle prime fasi del percorso del cliente per aumentare le possibilità di conversione. Un record di persona noto include in genere una parte o tutte le seguenti informazioni:
 
 - Nome della persona
 - Indirizzo e-mail
 - Numero di contatto
 - Nome dell’azienda
-- Sito web dell&#39;azienda
-- Titolo del processo
+- Sito Web della società
+- Qualifica
 - Posizione
 
-La corrispondenza dei lead con account consente di unire profili di persone noti ai profili di account. Puoi quindi segmentare ed eseguire il targeting dei dati in un contesto B2B come account, opportunità e così via. I profili personali possono essere classificati nelle tre categorie seguenti:
+La corrispondenza lead-account consente di unire profili di persone noti a profili di account. Puoi quindi segmentare ed eseguire il targeting dei dati in un contesto B2B, ad esempio account, opportunità e così via. I profili di persona possono essere classificati nelle tre categorie seguenti:
 
-- **Profilo della persona dell’account:** Il profilo persona è già associato ad almeno un profilo account attraverso la relazione da un’origine dati. Ciò implica che esiste almeno un frammento di contatto.
-
->[!NOTE]
->
-> I profili della persona dell’account non vengono confrontati quando si eseguono processi di corrispondenza lead a account.
-
-- **Profilo persona nota:** Il profilo di persona NON è associato ad alcun profilo di account e almeno uno dei seguenti attributi di profilo di persona ha un valore:
-
-   - Indirizzo e-mail
-   - Nome dell’azienda
-   - Sito web dell&#39;azienda
-
-- **Profilo utente anonimo:** Il profilo di persona NON è associato ad alcun profilo di account e nessuno dei seguenti attributi di profilo di persona ha un valore:
-
-   - Indirizzo e-mail
-   - Nome dell’azienda
-   - Sito web dell&#39;azienda
+- **Profilo della persona dell’account:** Il profilo persona è già associato ad almeno un profilo account tramite la relazione da un’origine dati. Ciò implica che è presente almeno un frammento di contatto.
 
 >[!NOTE]
 >
-> Un profilo persona può essere correlato a più profili account. Tuttavia, il processo di corrispondenza lead to account corrisponderà solo alla migliore corrispondenza. Se è necessario un set di corrispondenze più ampio, associa il lead alla corrispondenza del conto con la funzione account correlata.
+> I profili della persona dell’account non corrispondono quando si eseguono processi di corrispondenza lead-account.
+
+- **Profilo persona nota:** Il profilo persona NON è associato ad alcun profilo account e almeno uno dei seguenti attributi di profilo persona ha un valore:
+
+   - Indirizzo e-mail
+   - Nome dell’azienda
+   - Sito Web della società
+
+- **Profilo persona anonima:** Il profilo persona NON è associato ad alcun profilo account e nessuno dei seguenti attributi di profilo persona ha un valore:
+
+   - Indirizzo e-mail
+   - Nome dell’azienda
+   - Sito Web della società
+
+>[!NOTE]
+>
+> Un profilo persona può essere correlato a più profili account. Tuttavia, il processo di corrispondenza lead-account corrisponderà solo alla corrispondenza migliore. Se è necessario un set più ampio di corrispondenze, associare il lead alla corrispondenza del conto con la funzione conti correlati.
 
 ## Come funziona {#how-it-works}
 
-I lavori eseguiti quotidianamente utilizzano fattori deterministici e probabilistici per abbinare i profili di lead noti senza le associazioni di account esistenti. I profili lead noti avranno a disposizione uno dei seguenti attributi:
+I processi eseguiti quotidianamente utilizzano fattori deterministici e probabilistici per abbinare profili lead noti senza associazioni di account esistenti. I profili lead noti avranno a disposizione uno dei seguenti attributi:
 
 - b2b.companyName
 - b2b.companyWebsite
@@ -66,34 +66,34 @@ I lavori eseguiti quotidianamente utilizzano fattori deterministici e probabilis
 
 >[!NOTE]
 >
-> L&#39;attributo b2b.personKey.sourceKey deve esistere.
+> L’attributo b2b.personKey.sourceKey deve esistere.
 
-Gli attributi b2b.companyName, b2b.companyWebsite e b2b.personKey.sourceKey possono essere situati nel gruppo di campi b2b nello schema persona B2B.
+Gli attributi b2b.companyName, b2b.companyWebsite e b2b.personKey.sourceKey possono essere posizionati nel gruppo di campi b2b nello schema persona B2B.
 
-![Schema della persona B2B che mostra gli attributi](/help/rtcdp/accounts/images/b2b-person-schema.png)
+![Schema persona B2B con attributi](/help/rtcdp/accounts/images/b2b-person-schema.png)
 
-L&#39;attributo workEmail può essere trovato come gruppo di campi di primo livello nello schema persona B2B.
+L’attributo workEmail si trova come gruppo di campi di livello superiore nello schema persona B2B.
 
-![Schema delle persone B2B che mostra workEmail](/help/rtcdp/accounts/images/b2b-person-workemail.png)
+![Schema persona B2B che mostra workEmail](/help/rtcdp/accounts/images/b2b-person-workemail.png)
 
-La migliore corrispondenza tra i profili è possibile solo se il punteggio di corrispondenza supera una soglia di affidabilità interna. I risultati vengono salvati in un nuovo set di dati di sistema della relazione XDM della persona dell’account esistente.
+I profili avranno una corrispondenza migliore solo se il punteggio di corrispondenza supera la soglia di affidabilità interna. I risultati vengono salvati in un nuovo set di dati di sistema dell’XDM di relazione account-persona esistente.
 
-Il servizio di corrispondenza lead to account viene eseguito quando diventa disponibile un nuovo snapshot del profilo persona, che è una volta ogni 24 ore. Consulta la documentazione per ulteriori informazioni sul [configurazione della corrispondenza tra lead e account](/help/rtcdp/accounts/account-profile-ui-guide.md).
+Il servizio di corrispondenza lead-account viene eseguito quando diventa disponibile una nuova istantanea del profilo persona, che viene eseguita ogni 24 ore. Consulta la documentazione per ulteriori informazioni su [configurazione della corrispondenza lead-account](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
-## Come visualizzare l&#39;output corrispondente del lead a conto {#how-to-view}
+## Come visualizzare l’output di corrispondenza lead-account {#how-to-view}
 
-Dopo l&#39;esecuzione del processo, i risultati vengono salvati in un nuovo set di dati della relazione XDM della persona dell&#39;account esistente.
+Dopo l’esecuzione del processo, i risultati vengono salvati in un nuovo set di dati dell’XDM di relazione account-persona esistente.
 
 Per visualizzare in anteprima il set di dati, seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra.
 
 ![Nuovo set di dati](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. La **[!UICONTROL Origine relazione]** Il campo indica se proviene dal processo di corrispondenza lead to account.
+Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. Il **[!UICONTROL Origine relazione]** indica se proviene dal processo di corrispondenza lead-account.
 
-![Anteprima dei punteggi e dell’output di affidabilità del set di dati](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
+![Anteprima dei punteggi e dell’output di affidabilità dei set di dati](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
-## Monitoraggio dei processi di corrispondenza dei lead all’account {#monitoring-jobs}
+## Monitoraggio dei processi di corrispondenza lead-account {#monitoring-jobs}
 
-Puoi monitorare lo stato del processo e le metriche associate per tutti i processi di corrispondenza dei lead a account tramite il dashboard.
+Puoi monitorare lo stato del processo e le metriche associate per qualsiasi lead in corrispondenza dell’account attraverso il dashboard.
 
-Consulta la documentazione per ulteriori informazioni sul [monitoraggio dei processi per la corrispondenza dei lead con account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulta la documentazione per ulteriori informazioni su [monitoraggio dei processi per la corrispondenza lead-account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

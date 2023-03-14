@@ -1,6 +1,6 @@
 ---
 title: Configurazione dell'estensione
-description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia utente di Adobe Experience Platform o nell’interfaccia utente di raccolta dati.
+description: Scopri come configurare un’estensione tag per raccogliere le impostazioni globali da un utente nell’interfaccia utente di Adobe Experience Platform o di Data Collection.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Con la configurazione dell’estensione si definisce il modo in cui un’estensione raccoglie le impostazioni globali da un utente. Ad esempio, considera un’estensione che consente all’utente di inviare un beacon tramite un’azione Invia beacon, e che tale beacon debba sempre contenere un ID account. Vogliamo evitare che agli utenti venga richiesto di immettere l’ID account ogni volta che devono configurare un’azione Invia beacon. L’estensione dovrà quindi richiedere l’ID account una sola volta, dalla vista di configurazione dell’estensione. Ogni volta che un beacon viene inviato, il modulo libreria dell’azione Invia beacon può richiamare l’ID account dalla configurazione dell’estensione e aggiungerlo al beacon.
 

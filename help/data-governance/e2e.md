@@ -1,6 +1,6 @@
 ---
-title: Guida completa alla governance dei dati
-description: Segui la procedura completa per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
+title: Guida end-to-end alla governance dei dati
+description: Segui il processo completo per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
@@ -9,145 +9,145 @@ ht-degree: 0%
 
 ---
 
-# Guida completa alla governance dei dati
+# Guida end-to-end alla governance dei dati
 
-Per controllare quali azioni di marketing possono essere eseguite su determinati set di dati e campi in Adobe Experience Platform, devi impostare quanto segue:
+Per controllare quali azioni di marketing possono essere eseguite su determinati set di dati e campi in Adobe Experience Platform, è necessario impostare quanto segue:
 
-1. [Applicare etichette](#labels) ai set di dati e ai campi di cui si desidera limitare l’utilizzo.
-1. [Configurare e abilitare i criteri di governance dei dati](#policy) che determinano quali tipi di dati etichettati possono essere utilizzati per determinate azioni di marketing.
-1. [Applicare azioni di marketing alle tue destinazioni](#destinations) per indicare quali criteri si applicano ai dati inviati a tali destinazioni.
+1. [Applica etichette](#labels) ai set di dati e ai campi di cui desideri limitare l’utilizzo.
+1. [Configurare e abilitare i criteri di governance dei dati](#policy) che determinano quali tipi di dati con etichetta possono essere utilizzati per determinate azioni di marketing.
+1. [Applicare azioni di marketing alle destinazioni](#destinations) per indicare quali criteri si applicano ai dati inviati a tali destinazioni.
 
-Una volta completata la configurazione delle etichette, dei criteri di governance e delle azioni di marketing, puoi [verifica dell&#39;applicazione dei criteri](#test) per garantire che funzioni come previsto.
+Dopo aver completato la configurazione delle etichette, dei criteri di governance e delle azioni di marketing, puoi [verifica l’applicazione dei criteri](#test) per garantire che funzioni come previsto.
 
-Questa guida descrive il processo completo per la configurazione e l’applicazione di criteri di governance dei dati nell’interfaccia utente di Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
+Questa guida illustra l’intero processo di configurazione e applicazione di un criterio di governance dei dati nell’interfaccia utente di Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
 
-* [Governance dei dati di Adobe Experience Platform](./home.md)
+* [Governance dei dati Adobe Experience Platform](./home.md)
 * [Etichette di utilizzo dati](./labels/overview.md)
 * [Criteri di utilizzo dei dati](./policies/overview.md)
-* [Applicazione delle politiche](./enforcement/overview.md)
+* [Applicazione dei criteri](./enforcement/overview.md)
 
 >[!NOTE]
 >
->Questa guida si concentra su come impostare e applicare criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai cercando di limitare **accesso** per i dati stessi per alcuni utenti di Platform all’interno della tua organizzazione, consulta la guida end-to-end su [controllo dell&#39;accesso basato sugli attributi](../access-control/abac/end-to-end-guide.md) invece. Il controllo dell&#39;accesso basato su attributi utilizza anche etichette e criteri, ma per un caso d&#39;uso diverso rispetto alla governance dei dati.
+>Questa guida illustra come impostare e applicare i criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai cercando di limitare **accesso** ai dati stessi per alcuni utenti di Platform all’interno della tua organizzazione, consulta la guida end-to-end su [controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md) invece. Anche il controllo dell’accesso basato su attributi utilizza etichette e criteri, ma per un caso d’uso diverso dalla governance dei dati.
 
-## Applicare etichette {#labels}
+## Applica etichette {#labels}
 
-Se esiste un set di dati specifico su cui desideri applicare vincoli di utilizzo dei dati, puoi [applica etichette direttamente a quel set di dati](#dataset-labels) o campi specifici all’interno di tale set di dati.
+Se è presente un set di dati specifico su cui desideri applicare vincoli di utilizzo dei dati, puoi [applica le etichette direttamente a tale set di dati](#dataset-labels) o campi specifici all’interno di tale set di dati.
 
-In alternativa, è possibile [applicare etichette a uno schema](#schema-labels) in modo che tutti i set di dati basati su tale schema ereditino le stesse etichette.
+In alternativa, è possibile: [applicare etichette a uno schema](#schema-labels) in modo che tutti i set di dati basati su tale schema ereditino le stesse etichette.
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle diverse etichette di utilizzo dei dati e sull’uso previsto, consulta [riferimento alle etichette di utilizzo dati](./labels/reference.md). Se le etichette di base disponibili non coprono tutti i casi d’uso desiderati, puoi [definire etichette personalizzate](./labels/user-guide.md#manage-custom-labels) anche.
+>Per ulteriori informazioni sulle diverse etichette di utilizzo dei dati e sul loro utilizzo previsto, vedi [riferimento etichette utilizzo dati](./labels/reference.md). Se le etichette core disponibili non coprono tutti i casi d’uso desiderati, puoi [definire etichette personalizzate](./labels/user-guide.md#manage-custom-labels) anche.
 
 ### Applicare etichette a un set di dati {#dataset-labels}
 
-Seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, seleziona il nome del set di dati a cui desideri applicare le etichette. Facoltativamente, puoi utilizzare il campo di ricerca per limitare l’elenco dei set di dati visualizzati.
+Seleziona **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra, seleziona il nome del set di dati a cui desideri applicare le etichette. Facoltativamente, puoi utilizzare il campo di ricerca per limitare l’elenco dei set di dati visualizzati.
 
 ![Immagine che mostra un set di dati selezionato nell’interfaccia utente di Platform](./images/e2e/select-dataset.png)
 
-Viene visualizzata la visualizzazione dei dettagli del set di dati. Seleziona la **[!UICONTROL Governance dei dati]** per visualizzare un elenco dei campi del set di dati ed eventuali etichette già applicate. Selezionare le caselle accanto ai campi a cui si desidera aggiungere le etichette, quindi selezionare **[!UICONTROL Modifica delle etichette di governance]** nella barra a destra.
+Viene visualizzata la vista dei dettagli per il set di dati. Seleziona la **[!UICONTROL Governance dei dati]** per visualizzare un elenco dei campi del set di dati ed eventuali etichette già applicate. Seleziona le caselle di controllo accanto ai campi a cui desideri aggiungere le etichette, quindi seleziona **[!UICONTROL Modifica etichette di governance]** nella barra a destra.
 
 ![Immagine che mostra diversi campi del set di dati selezionati per l’etichettatura](./images/e2e/dataset-field-label.png)
 
 >[!NOTE]
 >
->Per aggiungere etichette all’intero set di dati, seleziona la casella di controllo accanto a **[!UICONTROL Nome campo]** per evidenziare tutti i campi prima di selezionare **[!UICONTROL Modifica delle etichette di governance]**.
+>Se desideri aggiungere etichette all’intero set di dati, seleziona la casella di controllo accanto a **[!UICONTROL Nome campo]** per evidenziare tutti i campi prima di selezionare **[!UICONTROL Modifica etichette di governance]**.
 >
 >![Immagine che mostra tutti i campi evidenziati per un set di dati](./images/e2e/label-whole-dataset.png)
 
-Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi del set di dati selezionati in precedenza. Al termine, seleziona **[!UICONTROL Salva modifiche]**.
+Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi del set di dati scelti in precedenza. Al termine, seleziona **[!UICONTROL Salva modifiche]**.
 
 ![Immagine che mostra tutti i campi evidenziati per un set di dati](./images/e2e/save-dataset-labels.png)
 
-Continua a seguire i passaggi precedenti per applicare le etichette a campi diversi (o a set di dati diversi) in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione delle politiche di governance dei dati](#policy).
+Continua a seguire i passaggi precedenti per applicare etichette a campi diversi (o set di dati diversi), in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione dei criteri di governance dei dati](#policy).
 
-### Applicare etichette a uno schema {#schema-labels}
+### Applicare le etichette a uno schema {#schema-labels}
 
 Seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra, seleziona lo schema a cui desideri aggiungere le etichette dall’elenco.
 
 >[!TIP]
 >
->Se non sei sicuro dello schema da applicare a un particolare set di dati, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, quindi seleziona il collegamento sotto il **[!UICONTROL Schema]** per il set di dati desiderato. Selezionare il nome dello schema nel percorso visualizzato per aprire lo schema nell&#39;Editor di schema.
+>Se non sai quale schema si applica a un particolare set di dati, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, seleziona quindi il collegamento sotto al **[!UICONTROL Schema]** per il set di dati desiderato. Selezionare il nome dello schema nel popover visualizzato per aprire lo schema nell&#39;Editor schema.
 >
 >![Immagine che mostra un collegamento allo schema di un set di dati](./images/e2e/schema-from-dataset.png)
 
-La struttura dello schema viene visualizzata nell&#39;Editor di schema. Da qui, seleziona la **[!UICONTROL Etichette]** per visualizzare una visualizzazione a elenco dei campi dello schema e delle etichette già applicate. Selezionare le caselle accanto ai campi a cui si desidera aggiungere le etichette, quindi selezionare **[!UICONTROL Modifica delle etichette di governance]** nella barra a destra.
+La struttura dello schema viene visualizzata nell&#39;Editor di schema. Da qui, seleziona la **[!UICONTROL Etichette]** per visualizzare una vista a elenco dei campi dello schema e delle etichette già applicate. Seleziona le caselle di controllo accanto ai campi a cui desideri aggiungere le etichette, quindi seleziona **[!UICONTROL Modifica etichette di governance]** nella barra a destra.
 
-![Immagine che mostra un singolo campo di schema selezionato per le etichette di governance](./images/e2e/schema-field-label.png)
+![Immagine che mostra un singolo campo schema selezionato per le etichette di governance](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
 >Se desideri aggiungere etichette a tutti i campi dello schema, seleziona l’icona a forma di matita nella riga superiore.
 >
->![Immagine che mostra l&#39;icona a forma di matita selezionata dalla vista delle etichette dello schema](./images/e2e/label-whole-schema.png)
+>![Immagine che mostra l’icona della matita selezionata dalla vista etichette schema](./images/e2e/label-whole-schema.png)
 
-Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi dello schema selezionati in precedenza. Al termine, seleziona **[!UICONTROL Salva]**.
+Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi schema selezionati in precedenza. Al termine, seleziona **[!UICONTROL Salva]**.
 
 ![Immagine che mostra più etichette aggiunte a un campo schema](./images/e2e/save-schema-labels.png)
 
-Continua a seguire i passaggi precedenti per applicare le etichette a campi diversi (o schemi diversi) in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione delle politiche di governance dei dati](#policy).
+Continua a seguire i passaggi precedenti per applicare le etichette a campi diversi (o a schemi diversi), in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione dei criteri di governance dei dati](#policy).
 
-## Abilita criteri di governance dei dati {#policy}
+## Abilitare i criteri di governance dei dati {#policy}
 
 Dopo aver applicato le etichette agli schemi e/o ai set di dati, puoi creare criteri di governance dei dati che limitano le azioni di marketing per le quali è possibile utilizzare determinate etichette.
 
-Seleziona **[!UICONTROL Criteri]** nel menu di navigazione a sinistra per visualizzare un elenco dei criteri di base definiti da Adobe, nonché i criteri personalizzati creati in precedenza dall’organizzazione.
+Seleziona **[!UICONTROL Criteri]** nella barra di navigazione a sinistra puoi visualizzare un elenco dei criteri di base definiti da Adobe, nonché di tutti i criteri personalizzati creati in precedenza dall’organizzazione.
 
-A ogni etichetta principale è associato un criterio di base che, se attivato, impone i vincoli di attivazione appropriati a tutti i dati che contengono tale etichetta. Per abilitare un criterio di base, selezionalo dall’elenco, quindi seleziona il **[!UICONTROL Stato dei criteri]** passa a **[!UICONTROL Abilitato]**.
+A ogni etichetta core è associato un criterio core che, se attivato, applica i vincoli di attivazione appropriati ai dati che la contengono. Per abilitare un criterio principale, selezionalo dall’elenco, quindi seleziona il **[!UICONTROL Stato criterio]** passa a **[!UICONTROL Abilitato]**.
 
-![Immagine che mostra un criterio di base abilitato nell’interfaccia utente](./images/e2e/enable-core-policy.png)
+![Immagine che mostra un criterio principale attivato nell’interfaccia utente di](./images/e2e/enable-core-policy.png)
 
-Se i criteri di base disponibili non coprono tutti i casi d’uso (ad esempio quando si utilizzano etichette personalizzate definite nell’organizzazione), è possibile definire un criterio personalizzato. Da **[!UICONTROL Criteri]** area di lavoro, seleziona **[!UICONTROL Crea criterio]**.
+Se i criteri di base disponibili non coprono tutti i casi d’uso (ad esempio quando utilizzi etichette personalizzate definite nell’organizzazione), puoi definire un criterio personalizzato. Dalla sezione **[!UICONTROL Criteri]** workspace, seleziona **[!UICONTROL Crea criterio]**.
 
 ![Immagine che mostra [!UICONTROL Crea criterio] pulsante selezionato nell’interfaccia utente](./images/e2e/create-policy.png)
 
-Viene visualizzato un puntatore che richiede di selezionare il tipo di criterio da creare. Seleziona **[!UICONTROL Criteri di governance dei dati]**, quindi seleziona **[!UICONTROL Continua]**.
+Viene visualizzato un messaggio che richiede di selezionare il tipo di criterio che si desidera creare. Seleziona **[!UICONTROL Criteri di governance dei dati]**, quindi seleziona **[!UICONTROL Continua]**.
 
 ![Immagine che mostra [!UICONTROL Criteri di governance dei dati] opzione selezionata](./images/e2e/governance-policy.png)
 
-Nella schermata successiva, fornisci un **[!UICONTROL Nome]** e opzionale **[!UICONTROL Descrizione]** per la politica. Nella tabella seguente, selezionare le etichette che si desidera controllare. In altre parole, si tratta delle etichette che il criterio impedirà di utilizzare per le azioni di marketing specificate nel passaggio successivo.
+Nella schermata successiva, fornisci **[!UICONTROL Nome]** e opzionale **[!UICONTROL Descrizione]** per la politica. Nella tabella seguente, seleziona le etichette che desideri che vengano controllate da questo criterio. In altre parole, si tratta delle etichette che il criterio impedirà di utilizzare per le azioni di marketing specificate nel passaggio successivo.
 
-Se selezioni più etichette, puoi utilizzare le opzioni nella barra a destra per determinare se tutte le etichette devono essere presenti per consentire al criterio di applicare restrizioni di utilizzo o se è necessario che sia presente solo una delle etichette. Al termine, seleziona **[!UICONTROL Successivo]**.
+Se selezioni più etichette, puoi utilizzare le opzioni nella barra a destra per determinare se tutte le etichette devono essere presenti affinché il criterio possa applicare restrizioni d’uso, o se solo una delle etichette deve essere presente. Al termine, seleziona **[!UICONTROL Successivo]**.
 
 ![Immagine che mostra la configurazione di base del criterio completata nell’interfaccia utente](./images/e2e/configure-policy.png)
 
-Nella schermata successiva, seleziona le azioni di marketing per le quali questo criterio impedirà l’utilizzo delle etichette selezionate in precedenza. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
+Nella schermata successiva, seleziona le azioni di marketing per le quali questo criterio limiterà l’utilizzo delle etichette selezionate in precedenza. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
 
-![Immagine che mostra un’azione di marketing da assegnare a un criterio nell’interfaccia utente](./images/e2e/select-marketing-action.png)
+![Immagine che mostra l’azione di marketing assegnata a un criterio nell’interfaccia utente](./images/e2e/select-marketing-action.png)
 
-Nella schermata finale viene visualizzato un riepilogo dei dettagli del criterio e delle azioni per le quali verranno limitate le etichette. Seleziona **[!UICONTROL Fine]** per creare il criterio.
+La schermata finale mostra un riepilogo dei dettagli del criterio e le azioni che limiterà per quali etichette. Seleziona **[!UICONTROL Fine]** per creare il criterio.
 
-![Immagine che mostra la configurazione dei criteri confermata nell’interfaccia utente](./images/e2e/confirm-policy.png)
+![Immagine che mostra la configurazione dei criteri da confermare nell’interfaccia utente](./images/e2e/confirm-policy.png)
 
-Il criterio viene creato, ma è impostato su [!UICONTROL Disabilitato] per impostazione predefinita. Seleziona il criterio dall’elenco e imposta la **[!UICONTROL Stato dei criteri]** passa a **[!UICONTROL Abilitato]** per abilitare il criterio.
+Il criterio viene creato, ma è impostato su [!UICONTROL Disabilitato] per impostazione predefinita. Selezionare il criterio dall&#39;elenco e impostare **[!UICONTROL Stato criterio]** passa a **[!UICONTROL Abilitato]** per abilitare il criterio.
 
 ![Immagine che mostra il criterio creato abilitato nell’interfaccia utente](./images/e2e/enable-created-policy.png)
 
-Procedi seguendo i passaggi precedenti per creare e abilitare i criteri necessari prima di passare al passaggio successivo.
+Continua a seguire i passaggi precedenti per creare e abilitare i criteri richiesti prima di passare al passaggio successivo.
 
-## Gestione delle azioni di marketing per le destinazioni {#destinations}
+## Gestire le azioni di marketing per le destinazioni {#destinations}
 
-Affinché i criteri abilitati possano determinare con precisione quali dati possono essere attivati in una destinazione, devi assegnare azioni di marketing specifiche a tale destinazione.
+Affinché i criteri abilitati possano determinare con precisione quali dati possono essere attivati su una destinazione, devi assegnare a tale destinazione specifiche azioni di marketing.
 
-Ad esempio, considera un criterio abilitato che impedisca l&#39;utilizzo di dati contenenti un `C2` dall&#39;utilizzo dell&#39;etichetta per l&#39;azione di marketing &quot;[!UICONTROL Esportazione verso terzi]&quot;. Quando si attivano i dati in una destinazione, il criterio controlla quali azioni di marketing sono presenti nella destinazione. Se &quot;[!UICONTROL Esportazione verso terzi]&quot; è presente, tentativo di attivare dati con un `C2` l&#39;etichetta determina una violazione dei criteri. Se &quot;[!UICONTROL Esportazione verso terzi]&quot; non è presente, il criterio non viene applicato per la destinazione e i dati con `C2` Le etichette possono essere attivate liberamente.
+Si consideri, ad esempio, un criterio abilitato che impedisca qualsiasi dato contenente un `C2` L’etichetta non può essere utilizzata per l’azione di marketing &quot;[!UICONTROL Esporta a terze parti]&quot;. Quando si attivano i dati in una destinazione, il criterio controlla quali azioni di marketing sono presenti nella destinazione. Se &quot;[!UICONTROL Esporta a terze parti]&quot;, tentativo di attivazione dei dati con un `C2` l’etichetta genera una violazione dei criteri. Se &quot;[!UICONTROL Esporta a terze parti]&quot; non è presente, il criterio non viene applicato per la destinazione e i dati con `C2` le etichette possono essere attivate liberamente.
 
-Quando [connessione di una destinazione nell’interfaccia utente](../destinations/ui/connect-destination.md), **[!UICONTROL Governance]** il passaggio nel flusso di lavoro ti consente di selezionare le azioni di marketing applicabili a questa destinazione, che in ultima analisi determinano quali criteri di governance dei dati vengono applicati alla destinazione.
+Quando [connessione di una destinazione nell’interfaccia utente](../destinations/ui/connect-destination.md), il **[!UICONTROL Governance]** Questo passaggio nel flusso di lavoro consente di selezionare le azioni di marketing applicabili a questa destinazione, che alla fine determinano quali criteri di governance dei dati vengono applicati alla destinazione.
 
 ![Immagine che mostra le azioni di marketing selezionate per una destinazione](./images/e2e/destination-marketing-actions.png)
 
-## Applicazione dei criteri di test {#test}
+## Verifica applicazione dei criteri {#test}
 
-Dopo aver etichettato i dati, abilitato i criteri di governance dei dati e assegnato le azioni di marketing alle destinazioni, puoi verificare se i criteri vengono applicati come previsto.
+Dopo aver assegnato i dati con l’etichetta, abilitato i criteri di governance dei dati e le azioni di marketing alle destinazioni, puoi verificare se i criteri vengono applicati come previsto.
 
-Se si impostano correttamente le impostazioni, quando si tenta di attivare dati soggetti a restrizioni da parte dei criteri, l&#39;attivazione viene automaticamente negata e viene visualizzato un messaggio di violazione dei criteri, in cui sono riportate informazioni dettagliate sulla derivazione dei dati relative alle cause della violazione.
+Se si impostano correttamente le impostazioni, quando si tenta di attivare dati limitati dai criteri, l&#39;attivazione viene automaticamente negata e viene visualizzato un messaggio di violazione dei criteri, in cui vengono descritte informazioni dettagliate sulla derivazione dei dati relative alla causa della violazione.
 
-Visualizza il documento in [applicazione automatica delle politiche](./enforcement/auto-enforcement.md) per informazioni su come interpretare i messaggi di violazione dei criteri.
+Vedi il documento su [applicazione automatica delle policy](./enforcement/auto-enforcement.md) per informazioni dettagliate su come interpretare i messaggi di violazione dei criteri.
 
 ## Passaggi successivi
 
-Questa guida descrive i passaggi necessari per configurare e applicare i criteri di governance dei dati nei flussi di lavoro di attivazione. Per informazioni più dettagliate sui componenti per la governance dei dati coinvolti in questa guida, consulta la seguente documentazione:
+Questa guida descrive i passaggi necessari per configurare e applicare i criteri di governance dei dati nei flussi di lavoro di attivazione. Per informazioni più dettagliate sui componenti Governance dei dati coinvolti in questa guida, consulta la seguente documentazione:
 
 * [Etichette di utilizzo dati](./labels/overview.md)
 * [Criteri di utilizzo dei dati](./policies/overview.md)
-* [Applicazione delle politiche](./enforcement/overview.md)
+* [Applicazione dei criteri](./enforcement/overview.md)

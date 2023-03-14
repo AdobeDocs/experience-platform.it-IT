@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;PSQL;psqlconnect a query service;Query service;query service;
+keywords: Experience Platform;home;argomenti popolari;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
-title: Collegare PSQL al servizio query
-description: PSQL è un'interfaccia a riga di comando che viene quando si installa PostgreSQL sul computer. È possibile installarlo seguendo queste istruzioni.
+title: Connetti PSQL a Query Service
+description: PSQL è un'interfaccia della riga di comando disponibile quando si installa PostgreSQL nel computer. È possibile installarlo seguendo queste istruzioni.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 ---
 
-# Collegare PSQL al servizio query
+# Connetti PSQL a Query Service
 
-PSQL è un&#39;interfaccia della riga di comando che viene installata quando si installa [!DNL PostgreSQL] sulla tua macchina. Questo documento descrive i passaggi per la connessione di PSQL con Adobe Experience Platform [!DNL Query Service].
+PSQL è un&#39;interfaccia della riga di comando installata durante l&#39;installazione [!DNL PostgreSQL] sul tuo computer. Questo documento descrive i passaggi per la connessione di PSQL con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Questa guida presuppone che tu abbia già accesso a [!DNL PSQL] e sono a conoscenza di come usarlo. Ulteriori informazioni [!DNL PSQL] si trova nella [ufficiale [!DNL PSQL] documentazione](https://www.postgresql.org/docs/current/app-psql.html).
+> Questa guida presuppone che tu abbia già accesso a [!DNL PSQL] e hanno familiarità con le modalità di utilizzo. Ulteriori informazioni su [!DNL PSQL] si trova nella sezione [ufficiale [!DNL PSQL] documentazione](https://www.postgresql.org/docs/current/app-psql.html).
 
-Dopo aver installato PSQL sul computer, è possibile collegare PSQL con Query Service. Torna a [!DNL Platform] Interfaccia utente, quindi seleziona **[!UICONTROL Query]**, seguita da **[!UICONTROL Credenziali]**.
+Dopo aver installato PSQL nel computer, è possibile connettersi a PSQL con Query Service. Torna a [!DNL Platform] UI, quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
 
-Sotto la **[!UICONTROL Comando PSQL]** seleziona la sezione **[!UICONTROL Copia negli Appunti]** icona (![Icona Copia](../images/clients/psql/copy-icon.png)) per copiare la stringa di comando.
+Sotto **[!UICONTROL Comando PSQL]** , seleziona la sezione **[!UICONTROL Copia negli Appunti]** icona (![Copia icona](../images/clients/psql/copy-icon.png)) per copiare la stringa di comando.
 
-![La scheda Credenziali dashboard Query con l&#39;icona di copia evidenziata.](../images/clients/psql/connect-bi.png)
+![La scheda Credenziali del dashboard delle query con l’icona Copia evidenziata.](../images/clients/psql/connect-bi.png)
 
-Incolla la stringa di comando in una finestra del terminale o della riga di comando e premi **Invio** sulla tastiera.
+Incollare la stringa di comando in un terminale o in una finestra della riga di comando e premere **Invio** sulla tastiera.
 
 >[!IMPORTANT]
 >
->Se ti trovi su un PC, utilizza un editor di testo per rimuovere le interruzioni di riga nella stringa di comando, quindi copia la stringa. Se utilizzi la versione 12.0 o successiva, dovrai aggiungere `PGGSSENCMODE=disable` alla stringa di connessione. Inoltre, se utilizzi credenziali non in scadenza, assicurati di sostituire il campo password con la password delle credenziali non in scadenza. Per ulteriori informazioni sulle credenziali non in scadenza, leggere il [guida alle credenziali](../ui/credentials.md).
+>Se utilizzi un PC, utilizza un editor di testo per rimuovere le interruzioni di riga nella stringa di comando, quindi copia la stringa. Se utilizzi la versione 12.0 o successiva, dovrai aggiungere `PGGSSENCMODE=disable` alla stringa di connessione. Inoltre, se si utilizzano credenziali senza scadenza, assicurarsi di sostituire il campo password con la password delle credenziali senza scadenza. Per ulteriori informazioni sulle credenziali senza scadenza, leggere [guida alle credenziali](../ui/credentials.md).
 
 Dovresti vedere un risultato come questo:
 
@@ -40,8 +40,8 @@ Type "help" for help.
 all=>
 ```
 
-Se non trovi almeno la versione 10.5, devi scaricare quella versione o quella successiva.
+Se non vedi almeno la versione 10.5, devi scaricare tale versione o successiva.
 
 ## Passaggi successivi
 
-Ora che ti sei connesso [!DNL Query Service], è possibile utilizzare PSQL per scrivere le query. Per ulteriori informazioni su come scrivere ed eseguire le query, leggere la guida in [query in esecuzione](../best-practices/writing-queries.md).
+Ora che hai stabilito una connessione con [!DNL Query Service], è possibile utilizzare PSQL per scrivere query. Per ulteriori informazioni su come scrivere ed eseguire query, consulta la guida su [esecuzione di query](../best-practices/writing-queries.md).

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
-user-guide-description: Crea segmenti e genera tipi di pubblico dai dati del profilo cliente in tempo reale.
+user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 21%
+ht-degree: 30%
 
 ---
 
@@ -20,41 +20,41 @@ ht-degree: 21%
    - [Panoramica](api/overview.md)
    - [Introduzione](api/getting-started.md)
    - [Tipi di pubblico](api/audiences.md)
-   - [Segmentazione degli spigoli](api/edge-segmentation.md)
-   - [Esportare i processi](api/export-jobs.md)
+   - [Segmentazione Edge](api/edge-segmentation.md)
+   - [Processi di esportazione](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
-   - [Pianificazioni](api/schedules.md)
+   - [Schedules](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
-   - [Processi dei segmenti](api/segment-jobs.md)
+   - [Processi segmento](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
-   - [Segmentazione streaming](api/streaming-segmentation.md)
+   - [Segmentazione in streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
    - [Panoramica](ui/overview.md)
    - [Audience Builder](ui/audience-builder.md)
    - [Dashboard dei segmenti](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
-   - [Segmentazione degli spigoli](ui/edge-segmentation.md)
-   - [Segmentazione streaming](ui/streaming-segmentation.md)
-   - [Segmentazione streaming (video)](video/streaming-segmentation-overview.md)
-   - [Refactoring dei vincoli di tempo](ui/segment-refactoring.md)
+   - [Segmentazione Edge](ui/edge-segmentation.md)
+   - [Segmentazione in streaming](ui/streaming-segmentation.md)
+   - [Segmentazione in streaming (video)](video/streaming-segmentation-overview.md)
+   - [Refactoring di vincoli temporali](ui/segment-refactoring.md)
    - Corrispondenza segmento {#segment-match}
-      - [Panoramica sulla corrispondenza dei segmenti](ui/segment-match/overview.md)
+      - [Panoramica di Segment Match](ui/segment-match/overview.md)
       - [Risoluzione dei problemi](ui/segment-match/troubleshooting.md)
-- [Approvazione](consents.md)
-- [Segmentazione su più entità](multi-entity-segmentation.md)
-- Lingua della query del profilo {#pql}
+- [Rispetto del consenso](consents.md)
+- [Segmentazione di più entità](multi-entity-segmentation.md)
+- Lingua query profilo {#pql}
    - [Panoramica](pql/overview.md)
    - [Funzioni booleane](pql/boolean-functions.md)
    - [Funzioni di confronto](pql/comparison-functions.md)
-   - [Funzioni Array, list e set](pql/array-functions.md)
+   - [Funzioni array, list e set](pql/array-functions.md)
    - [Mappare le funzioni](pql/map-functions.md)
    - [Funzioni stringa](pql/string-functions.md)
    - [Funzioni oggetto](pql/object-functions.md)
    - [Funzioni aritmetiche](pql/arithmetic-functions.md)
    - [Funzioni di aggregazione](pql/aggregation-functions.md)
-   - [Funzioni di data e ora](pql/datetime-functions.md)
+   - [Funzioni data e ora](pql/datetime-functions.md)
    - [Funzioni filtro](pql/filter-functions.md)
-   - [quantificatori logici](pql/logical-quantifiers.md)
+   - [Quantificatori logici](pql/logical-quantifiers.md)
    - [Funzioni varie](pql/misc-functions.md)
 - Tutorial {#tutorials}
    - [Crea un segmento](tutorials/create-a-segment.md)
@@ -64,6 +64,6 @@ ht-degree: 21%
    - [Valutare un segmento](tutorials/evaluate-a-segment.md)
    - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
    - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
-   - [Applicare la conformità per l’utilizzo dei dati per i segmenti](tutorials/governance.md)
+   - [Applicazione della conformità all’utilizzo dei dati per i segmenti](tutorials/governance.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

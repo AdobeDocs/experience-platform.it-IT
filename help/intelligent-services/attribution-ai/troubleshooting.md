@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;guida introduttiva;ai di attribuzione;argomenti comuni;input di ai di attribuzione;output di ai di attribuzione;risoluzione dei problemi di attribuzione;errori di ai di attribuzione
+keywords: Experience Platform;guida introduttiva;ia attribuzione;argomenti popolari;input ia attribuzione;output ia attribuzione;risoluzione dei problemi ia attribuzione;errori ia attribuzione
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Attribution AI
-title: Risoluzione dei problemi relativi agli errori di Attribution AI
-description: Trova le risposte agli errori comuni nelle Attribution AI.
+title: Risoluzione dei problemi di errore di Attribution AI
+description: Trova le risposte agli errori più comuni in Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 ---
 
-# Risoluzione dei problemi relativi agli errori di Attribution AI
+# Risoluzione dei problemi di errore di Attribution AI
 
-Questo documento fornisce le risposte alle domande più frequenti sulle Attribution AI.
+Questo documento fornisce le risposte alle domande più frequenti su Attribution AI.
 
-## Impossibile accedere a Attribution AI in Chrome in incognito
+## Impossibile accedere alle Attribution AI in incognito Chrome
 
-Gli errori di caricamento nella modalità in incognito di Google Chrome sono presenti a causa degli aggiornamenti nelle impostazioni di sicurezza in modalità in incognito di Google Chrome. Il problema è in fase di elaborazione con Chrome per rendere experience.adobe.com un dominio fidato.
+Gli errori di caricamento nella modalità in incognito di Google Chrome sono presenti a causa di aggiornamenti nelle impostazioni di sicurezza della modalità in incognito di Google Chrome. Il problema è attivamente in fase di elaborazione con Chrome per rendere experience.adobe.com un dominio fidato.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Correzione consigliata
 
-Per risolvere questo problema è necessario aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie. Inizia passando a **chrome://settings/cookies**. Quindi, scorri verso il basso fino a **Comportamenti personalizzati** seguita dalla selezione della **Aggiungi** accanto a &quot;siti che possono sempre utilizzare i cookie&quot;. Nel pover che appare, copia e incolla `[*.]experience.adobe.com` quindi seleziona la **Inclusione di cookie di terze parti** in questa casella di controllo del sito. Al termine, seleziona **Aggiungi** e ricaricare le Attribution AI in incognito.
+Per risolvere questo problema è necessario aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie. Per iniziare, passa a **chrome://settings/cookies**. Quindi, scorri verso il basso fino a **Comportamenti personalizzati** seguito dalla selezione della sezione **Aggiungi** accanto a &quot;siti che possono sempre utilizzare i cookie&quot;. Nel popover visualizzato, copiare e incollare `[*.]experience.adobe.com` quindi seleziona la **Inclusione di cookie di terze parti** in questo sito. Al termine, seleziona **Aggiungi** e ricaricare le Attribution AI in incognito.
 
 ![correzione consigliata](./images/faq/cookies2.gif)

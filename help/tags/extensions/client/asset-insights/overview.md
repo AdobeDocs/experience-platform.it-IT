@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questa estensione è pensata per essere utilizzata insieme a [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it). In particolare, sostituisce il processo “pageTracker” e il codice da incorporare. Una volta configurata, questa estensione invia ad Adobe Analytics le metriche *Impressioni* e *Clic* delle risorse, che verranno poi importate nei rapporti di AEM Asset Insights. È quindi possibile generare rapporti sulle metriche delle risorse utilizzando AEM Asset Insights o Adobe Analytics Project Workspaces.
 
@@ -37,7 +37,7 @@ L’estensione tag “*Adobe Analytics*” per Adobe Experience Platform deve es
 
 ### Adobe Experience Manager (AEM)
 
-1. Abilita [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). In AEM, seleziona **[!UICONTROL Strumenti > Risorse]**, quindi apri il pannello **[!UICONTROL Configurazione approfondimenti]**.
+1. Abilita [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it). In AEM, seleziona **[!UICONTROL Strumenti > Risorse]**, quindi apri il pannello **[!UICONTROL Configurazione approfondimenti]**.
 
 1. Disabilita tracciamento UUID.
 
@@ -61,7 +61,7 @@ L’integrazione consigliata di [Platform](https://experienceleague.adobe.com/do
 
 ### Abilitare Asset Insight in AEM
 
-Per istruzioni su come abilitare Asset Insights, consulta la [guida utente di Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Per istruzioni su come abilitare Asset Insights, consulta la [guida utente di Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it).
 
 ### Abilitare il tracciamento UUID per le risorse
 
@@ -132,7 +132,7 @@ Configura tre regole come descritto qui sopra:
 
    * Nell’area di visualizzazione del browser non era presente alcuna risorsa.
 
-   * Sulla pagina non era presente alcuna risorsa per la quale, in AEM, era stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+   * Sulla pagina non era presente alcuna risorsa per la quale, in AEM, era stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it).
 
 **Clic**
 
@@ -142,7 +142,7 @@ Configura tre regole come descritto qui sopra:
 
 Nella richiesta immagine di Analytics risultante (dalla pagina successiva), se `a.assets.idlist` presenta gli ID risorsa della pagina di destinazione e `a.assets.clickedid` presenta l&#39;ID risorsa della risorsa selezionata sulla pagina di origine, la regola funziona correttamente.
 
-Se la richiesta di immagine non contiene `a.assets.clickedid` è probabile che in AEM non sia stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) per la risorsa selezionata.
+Se la richiesta di immagine non contiene `a.assets.clickedid` è probabile che in AEM non sia stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it) per la risorsa selezionata.
 
 **Clic senza destinazione**
 
@@ -152,4 +152,4 @@ Se la richiesta di immagine non contiene `a.assets.clickedid` è probabile che i
 
 Nella richiesta immagine di Analytics risultante, se `a.assets.clickedid` presenta l’ID risorsa significa che la regola funziona correttamente.
 
-Se la richiesta di immagine non contiene `a.assets.clickedid` è probabile che in AEM non sia stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) per la risorsa selezionata.
+Se la richiesta di immagine non contiene `a.assets.clickedid` è probabile che in AEM non sia stato abilitato [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it) per la risorsa selezionata.

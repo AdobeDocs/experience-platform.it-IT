@@ -1,6 +1,6 @@
 ---
 title: Modello dati di Real-time Customer Data Platform Insights
-description: Scopri come utilizzare le query SQL con i modelli di dati di Real-time Customer Data Platform Insights per personalizzare i tuoi report Real-Time CDP per i tuoi casi d’uso di marketing e KPI.
+description: Scopri come utilizzare le query SQL con i modelli dati di Real-time Customer Data Platform Insights per personalizzare i rapporti Real-Time CDP per i casi d’uso di marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -11,39 +11,39 @@ ht-degree: 0%
 
 # Modello dati di Real-time Customer Data Platform Insights
 
-La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che forniscono informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i tuoi casi d’uso di marketing e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato query . [come creare un modello di dati insights per la generazione di rapporti tramite Query Service per l’utilizzo con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori di prestazioni chiave (KPI, Key Performance Indicator) e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la documentazione sulle informazioni di reporting per archivi accelerati delle query. [come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisiti
 
-Questa guida richiede una buona comprensione del [funzione dashboard definita dall&#39;utente](./user-defined-dashboards.md). Prima di continuare con questa guida, leggi la documentazione .
+Questa guida richiede una buona conoscenza del [funzione delle dashboard definite dall&#39;utente](./user-defined-dashboards.md). Leggi la documentazione prima di continuare con questa guida.
 
-## Rapporti approfonditi e casi d’uso di Real-Time CDP
+## Rapporti di approfondimento su Real-Time CDP e casi d’uso
 
-Il reporting di Real-Time CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con segmenti e destinazioni. Sono stati sviluppati diversi modelli di schema a stella per rispondere a diversi casi d’uso comuni di marketing e ogni modello di dati può supportare diversi casi d’uso.
+Il reporting di Real-Time CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con segmenti e destinazioni. Sono stati sviluppati diversi modelli di schema a stella per rispondere a una serie di casi d’uso comuni di marketing e ogni modello di dati può supportare diversi casi d’uso.
 
 >[!IMPORTANT]
 >
->I dati utilizzati per la generazione di rapporti di Real-Time CDP sono accurati per un criterio di unione scelto e per lo snapshot giornaliero più recente.
+>I dati utilizzati per i rapporti di Real-Time CDP sono accurati per un criterio di unione scelto e per lo snapshot giornaliero più recente.
 
 ### Modello di profilo {#profile-model}
 
-Il modello di profilo è composto da tre set di dati:
+Il modello di profilo è costituito da tre set di dati:
 
 - `adwh_dim_date`
 - `adwh_fact_profile`
 - `adwh_dim_merge_policies`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD del modello di profilo.](./images/cdp-insights/profile-model.png)
+![ERD del modello di profilo.](./images/cdp-insights/profile-model.png)
 
 #### Caso di utilizzo del conteggio dei profili
 
-La logica utilizzata per il widget di conteggio dei profili restituisce il numero totale di profili uniti all’interno dell’archivio profili al momento dell’acquisizione dello snapshot. Consulta la sezione [[!UICONTROL Numero di profili] documentazione del widget](./guides/profiles.md#profile-count) per ulteriori informazioni.
+La logica utilizzata per il widget del conteggio dei profili restituisce il numero totale di profili uniti nell’archivio profili al momento dello snapshot. Consulta la [[!UICONTROL Conteggio profili] documentazione widget](./guides/profiles.md#profile-count) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Numero di profili] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Conteggio profili] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -57,13 +57,13 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 +++
 
-#### Caso di utilizzo dei profili di identità singoli
+#### Caso di utilizzo: profili di identità singoli
 
-La logica utilizzata per [!UICONTROL Profili di identità singoli] widget fornisce un conteggio dei profili della tua organizzazione con un solo tipo di ID che ne crea l&#39;identità. Consulta la sezione[[!UICONTROL Profili di identità singoli] documentazione del widget](./guides/profiles.md#single-identity-profiles) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Profili di identità singole] Il widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che crea la loro identità. Consulta la[[!UICONTROL Profili di identità singole] documentazione widget](./guides/profiles.md#single-identity-profiles) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Profili di identità singoli] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Profili di identità singole] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -79,24 +79,24 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 ### Modello dello spazio dei nomi {#namespace-model}
 
-Il modello dello spazio dei nomi è composto dai seguenti set di dati:
+Il modello dello spazio dei nomi è costituito dai seguenti set di dati:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD del modello dello spazio dei nomi.](./images/cdp-insights/namespace-model.png)
+![ERD del modello di spazio dei nomi.](./images/cdp-insights/namespace-model.png)
 
-#### Profili per caso d’uso dell’identità
+#### Profili per caso di utilizzo dell’identità
 
-La [!UICONTROL Profili per identità] Il widget visualizza la suddivisione delle identità in tutti i profili uniti nel tuo archivio profili. Consulta la sezione [[!UICONTROL Profili per identità] documentazione del widget](./guides/profiles.md#profiles-by-identity) per ulteriori informazioni.
+Il [!UICONTROL Profili per identità] Il widget mostra il raggruppamento delle identità in tutti i profili uniti nel tuo archivio profili. Consulta la [[!UICONTROL Profili per identità] documentazione widget](./guides/profiles.md#profiles-by-identity) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Profili per identità] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Profili per identità] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -115,13 +115,13 @@ LIMIT 5;
 
 +++
 
-#### Singoli profili di identità per caso di utilizzo dell’identità
+#### Profili di identità singoli per caso di utilizzo dell’identità
 
-La logica utilizzata per [!UICONTROL Singoli profili di identità per identità] widget illustra il numero totale di profili identificati con un solo identificatore univoco. Consulta la sezione [Documentazione relativa ai singoli profili di identità per widget di identità](./guides/profiles.md#single-identity-profiles-by-identity) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Profili di identità singola per identità] Il widget mostra il numero totale di profili identificati con un solo identificatore univoco. Consulta la [Documentazione dei profili di identità singola per widget identità](./guides/profiles.md#single-identity-profiles-by-identity) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Singoli profili di identità per identità] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Profili di identità singola per identità] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Modello di segmento {#segment-model}
+### Modello del segmento {#segment-model}
 
-Il modello di segmento è composto dai seguenti set di dati:
+Il modello di segmento è costituito dai seguenti set di dati:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -156,17 +156,17 @@ Il modello di segmento è composto dai seguenti set di dati:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD del modello di segmento.](./images/cdp-insights/segment-model.png)
+![ERD del modello di segmento.](./images/cdp-insights/segment-model.png)
 
 #### Caso di utilizzo: dimensione del pubblico
 
-La logica utilizzata per [!UICONTROL Dimensione del pubblico] widget restituisce il numero totale di profili uniti all’interno del segmento selezionato al momento dell’istantanea più recente. Consulta la sezione [[!UICONTROL Dimensione del pubblico] documentazione del widget](./guides/segments.md#audience-size) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Dimensione pubblico] widget restituisce il numero totale di profili uniti all’interno del segmento selezionato al momento dello snapshot più recente. Consulta la [[!UICONTROL Dimensione pubblico] documentazione widget](./guides/segments.md#audience-size) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Dimensione del pubblico] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Dimensione pubblico] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT adwh_fact_profile_by_segment.date_key,
@@ -189,13 +189,13 @@ LIMIT 20;
 
 +++
 
-#### Caso di utilizzo della tendenza della modifica della dimensione del pubblico
+#### Caso di utilizzo: modifica della tendenza delle dimensioni del pubblico
 
-La logica utilizzata per [!UICONTROL Tendenza al cambiamento della dimensione del pubblico] widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili qualificati per un dato segmento tra le istantanee giornaliere più recenti. Consulta la sezione [[!UICONTROL Tendenza al cambiamento della dimensione del pubblico] documentazione del widget](./guides/segments.md#audience-size-change-trend) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Tendenza di modifica della dimensione del pubblico] Il widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili idonei per un dato segmento tra le istantanee giornaliere più recenti. Consulta la [[!UICONTROL Tendenza di modifica della dimensione del pubblico] documentazione widget](./guides/segments.md#audience-size-change-trend) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Tendenza al cambiamento della dimensione del pubblico] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Tendenza di modifica della dimensione del pubblico] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT DISTINCT cast(adwh_dim_segments.create_date AS Date) Date_key, adwh_dim_merge_policies.merge_policy_name,
@@ -210,13 +210,13 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 +++
 
-#### Caso d’uso delle destinazioni più utilizzate
+#### Caso di utilizzo: destinazioni più utilizzate
 
-La logica utilizzata nel [!UICONTROL Destinazioni più utilizzate] In widget sono elencate le destinazioni più utilizzate della tua organizzazione in base al numero di segmenti mappati su di esse. Questa classificazione fornisce informazioni sulle destinazioni che vengono utilizzate, mostrando al contempo quelle che potrebbero essere sottoutilizzate. Consulta la documentazione sul [[!UICONTROL Destinazioni più utilizzate] widget](./guides/destinations.md#most-used-destinations) per ulteriori informazioni.
+Logica utilizzata nel [!UICONTROL Destinazioni più utilizzate] widget elenca le destinazioni più utilizzate della tua organizzazione in base al numero di segmenti mappati a esse. Questa classificazione fornisce informazioni approfondite sulle destinazioni utilizzate, mostrando potenzialmente anche quelle che potrebbero essere sottoutilizzate. Consulta la documentazione su [[!UICONTROL Destinazioni più utilizzate] widget](./guides/destinations.md#most-used-destinations) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Destinazioni più utilizzate] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Destinazioni più utilizzate] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT
@@ -239,11 +239,11 @@ FROM
 
 #### Caso di utilizzo dei segmenti attivati di recente
 
-La logica per [!UICONTROL Segmenti attivati di recente] widget fornisce un elenco dei segmenti mappati più di recente a una destinazione. Questo elenco fornisce un’istantanea dei segmenti e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la sezione [[!UICONTROL Segmenti attivati di recente] documentazione del widget](./guides/destinations.md#recently-activated-segments) per ulteriori informazioni.
+La logica per [!UICONTROL Segmenti attivati di recente] Il widget fornisce un elenco degli ultimi segmenti mappati su una destinazione. Questo elenco fornisce un’istantanea dei segmenti e delle destinazioni che sono attivamente in uso nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la [[!UICONTROL Segmenti attivati di recente] documentazione widget](./guides/destinations.md#recently-activated-segments) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Segmenti attivati di recente] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Segmenti attivati di recente] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT segment_name, segment, destination_name, a.create_time create_time
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Modello del segmento dello spazio dei nomi
+### Modello spazio dei nomi-segmento
 
-Il modello namespace-segmento è composto dai seguenti set di dati:
+Il modello namespace-segmento è costituito dai seguenti set di dati:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -268,17 +268,17 @@ Il modello namespace-segmento è composto dai seguenti set di dati:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD del modello di segmento dello spazio dei nomi.](./images/cdp-insights/namespace-segment-model.png)
+![ERD del modello di segmento-spazio dei nomi.](./images/cdp-insights/namespace-segment-model.png)
 
-#### Profili per identità per caso d’uso di un segmento
+#### Caso di utilizzo: profili per identità per un segmento
 
-La logica utilizzata nel [!UICONTROL Profili per identità] widget fornisce un raggruppamento di identità in tutti i profili uniti nel tuo archivio profili per un dato segmento. Consulta la sezione [[!UICONTROL Profili per identità] documentazione del widget](./guides/segments.md#profiles-by-identity) per ulteriori informazioni.
+Logica utilizzata nel [!UICONTROL Profili per identità] Il widget fornisce un raggruppamento di identità in tutti i profili uniti nell’archivio profili per un dato segmento. Consulta la [[!UICONTROL Profili per identità] documentazione widget](./guides/segments.md#profiles-by-identity) per ulteriori informazioni.
 
-SQL che genera il [!UICONTROL Profili per identità] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Profili per identità] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -295,26 +295,26 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### Modello di spazio dei nomi di sovrapposizione
+### Modello di sovrapposizione dello spazio dei nomi
 
-Il modello dello spazio dei nomi di sovrapposizione è composto dai seguenti set di dati:
+Il modello dello spazio dei nomi di sovrapposizione è costituito dai seguenti set di dati:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD del modello dello spazio dei nomi di sovrapposizione.](./images/cdp-insights/overlap-namespace-model.png)
+![ERD del modello dello spazio dei nomi di sovrapposizione.](./images/cdp-insights/overlap-namespace-model.png)
 
-#### Caso d’uso di sovrapposizione identità (profili)
+#### Caso di utilizzo di sovrapposizione identità (profili)
 
-La logica utilizzata nel [!UICONTROL Sovrapposizione identità] Il widget visualizza la sovrapposizione dei profili nel tuo **Archivio profili** che contengono le due identità selezionate. Per ulteriori informazioni, consulta la sezione [[!UICONTROL Sovrapposizione identità] sezione widget del [!UICONTROL Profili] documentazione del dashboard](./guides/profiles.md#identity-overlap).
+Logica utilizzata nel [!UICONTROL Sovrapposizione identità] Il widget mostra la sovrapposizione dei profili nel **Archivio profili** che contengono le due identità selezionate. Per ulteriori informazioni, vedere [[!UICONTROL Sovrapposizione identità] sezione widget della [!UICONTROL Profili] documentazione del dashboard](./guides/profiles.md#identity-overlap).
 
-SQL che genera il [!UICONTROL Sovrapposizione identità] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Sovrapposizione identità] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Spazio dei nomi di sovrapposizione per modello di segmento
+### Sovrapposizione dello spazio dei nomi per modello di segmento
 
-Lo spazio dei nomi di sovrapposizione per modello di segmento è composto dai seguenti set di dati:
+Lo spazio dei nomi di sovrapposizione per modello di segmento è costituito dai seguenti set di dati:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -372,17 +372,17 @@ Lo spazio dei nomi di sovrapposizione per modello di segmento è composto dai se
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-L’immagine seguente contiene i campi dati pertinenti in ogni set di dati.
+L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
-![Un ERD dello spazio dei nomi di sovrapposizione per modello di segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![ERD dello spazio dei nomi di sovrapposizione per modello di segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
-#### Caso d’uso di sovrapposizione identità (segmenti)
+#### Caso di utilizzo di sovrapposizione identità (segmenti)
 
-La logica utilizzata nel [!UICONTROL Segmenti] dashboard [!UICONTROL Sovrapposizione identità] widget illustra la sovrapposizione di profili che contengono le due identità selezionate per un particolare segmento. Per ulteriori informazioni, consulta la sezione [[!UICONTROL Sovrapposizione identità] sezione widget del [!UICONTROL Segmentazione] documentazione del dashboard](./guides/segments.md#identity-overlap).
+Logica utilizzata nel [!UICONTROL Segmenti] dashboard [!UICONTROL Sovrapposizione identità] Il widget illustra la sovrapposizione di profili che contengono le due identità selezionate per un particolare segmento. Per ulteriori informazioni, vedere [[!UICONTROL Sovrapposizione identità] sezione widget della [!UICONTROL Segmentazione] documentazione del dashboard](./guides/segments.md#identity-overlap).
 
-SQL che genera il [!UICONTROL Sovrapposizione identità] widget è visto nella sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Sovrapposizione identità] Il widget è visibile nella sezione comprimibile sottostante.
 
-query +++SQL
+Query +++SQL
 
 ```sql
 SELECT

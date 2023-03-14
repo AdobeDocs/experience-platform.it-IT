@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag sono la tecnologia di nuova generazione di Adobe Experience Platform per la gestione dei tag. È stata creata per supportare un ecosistema aperto e sostenibile, in cui chiunque può creare integrazioni che i clienti Adobe possono distribuire ai propri siti. Si tratta di una prima applicazione API, in modo che tutto ciò che puoi fare tramite l&#39;interfaccia utente tu possa anche farlo a livello di programmazione tramite un&#39;API.
 
@@ -31,13 +31,13 @@ Flusso di lavoro di base dei tag:
 
 I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente sono gestite tramite Admin Console con altri prodotti e soluzioni Adobe da [!DNL Creative Cloud], [!DNL Document Cloud] ed Experience Cloud.
 
-I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione dispone dell’accesso alla raccolta dati, i singoli utenti non possono eseguire alcuna operazione finché un amministratore non concede loro esplicitamente alcuni diritti.
+I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione ha accesso a Raccolta dati, i singoli utenti non possono fare nulla finché non vengono espressamente concessi loro alcuni diritti da parte dell’amministratore.
 
-Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, consulta [guida alle autorizzazioni per la raccolta dati](../../collection/permissions.md).
+Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, vedi [guida alle autorizzazioni della raccolta dati](../../collection/permissions.md).
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti di tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o di raccolta dati. Per farlo, vai direttamente alla [Experience Cloud di schermata di accesso](https://experience.adobe.com/)e selezionando **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
+Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o all’interfaccia utente di Data Collection. Per eseguire questa operazione, vai direttamente al [Schermata di accesso Experience Cloud](https://experience.adobe.com/)e selezionando una delle seguenti opzioni **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >

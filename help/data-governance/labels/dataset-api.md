@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api set di dati;gestire l’utilizzo dei dati;api di utilizzo dati
+keywords: Experience Platform;home;argomenti popolari;dataset api;gestire l'utilizzo dei dati;api utilizzo dati
 solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
-description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
+description: L’API Servizio set di dati consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separata dall’API Catalog Service che gestisce i metadati dei set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 2%
 
 ---
 
-# Gestire le etichette di utilizzo dei dati per i set di dati tramite API
+# Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
 
-La [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dal [!DNL Catalog Service] API che gestisce i metadati del set di dati.
+Il [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separata dal [!DNL Catalog Service] API per la gestione dei metadati del set di dati.
 
 >[!IMPORTANT]
 >
->L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
+>L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se si desidera creare criteri di accesso per i dati, è necessario [applica etichette allo schema](../../xdm/tutorials/labels.md) su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
-Questo documento illustra come gestire le etichette per i set di dati e i campi utilizzando [!DNL Dataset Service API]. Per i passaggi su come gestire direttamente le etichette di utilizzo dei dati utilizzando le chiamate API, vedi [guida all’endpoint delle etichette](../api/labels.md) per [!DNL Policy Service API].
+Questo documento illustra come gestire le etichette per set di dati e campi utilizzando [!DNL Dataset Service API]. Per i passaggi su come gestire autonomamente le etichette di utilizzo dei dati utilizzando le chiamate API, consulta [guida dell’endpoint &quot;labels&quot;](../api/labels.md) per [!DNL Policy Service API].
 
 ## Introduzione
 
-Prima di leggere questa guida, segui i passaggi descritti in [sezione guida introduttiva](../../catalog/api/getting-started.md) nella guida per gli sviluppatori del catalogo per raccogliere le credenziali necessarie per effettuare chiamate a [!DNL Platform] API.
+Prima di leggere questa guida, segui i passaggi descritti in [sezione introduttiva](../../catalog/api/getting-started.md) nella guida per gli sviluppatori di Catalog per raccogliere le credenziali necessarie per effettuare chiamate a [!DNL Platform] API.
 
-Per effettuare chiamate agli endpoint descritti in questo documento, è necessario disporre di `id` per un set di dati specifico. Se non disponi di questo valore, consulta la guida su [elenco degli oggetti del catalogo](../../catalog/api/list-objects.md) per trovare gli ID dei set di dati esistenti.
+Per poter effettuare chiamate agli endpoint descritti in questo documento, è necessario disporre dell’univoco `id` per un set di dati specifico. In caso contrario, consulta la guida su [elenco degli oggetti catalogo](../../catalog/api/list-objects.md) per trovare gli ID dei set di dati esistenti.
 
 ## Cercare etichette per un set di dati {#look-up}
 
-Puoi cercare le etichette di utilizzo dei dati applicate a un set di dati esistente effettuando una richiesta di GET al [!DNL Dataset Service] API.
+Per cercare le etichette di utilizzo dei dati applicate a un set di dati esistente, devi effettuare una richiesta GET al [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | L&#39;unico `id` valore del set di dati di cui si desidera cercare le etichette. |
+| `{DATASET_ID}` | L&#39;unico `id` valore del set di dati di cui desideri cercare le etichette. |
 
 **Richiesta**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al set di dati.
+In caso di esito positivo, la risposta restituisce le etichette di utilizzo dei dati applicate al set di dati.
 
 ```json
 {
@@ -82,7 +82,7 @@ Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al
 
 ## Applicare etichette a un set di dati {#apply}
 
-Puoi creare un set di etichette per un set di dati fornendo loro nel payload di una richiesta di POST o PUT al [!DNL Dataset Service] API. L’utilizzo di uno di questi metodi sovrascrive le etichette esistenti e le sostituisce con quelle fornite nel payload.
+Puoi creare un set di etichette per un set di dati fornendole nel payload di una richiesta POST o PUT al [!DNL Dataset Service] API. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
 
 **Formato API**
 
@@ -93,19 +93,19 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | L&#39;unico `id` valore del set di dati per cui si creano le etichette. |
+| `{DATASET_ID}` | L&#39;unico `id` valore del set di dati per il quale si stanno creando le etichette. |
 
 **Richiesta**
 
-La richiesta PUT di esempio riportata di seguito aggiorna le etichette esistenti per un set di dati, nonché un campo specifico all’interno di tale set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta POST.
+La richiesta PUT di esempio seguente aggiorna le etichette esistenti per un set di dati, nonché un campo specifico all’interno di tale set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta POST.
 
-Quando effettui chiamate API che aggiornano le etichette esistenti di un set di dati (PUT), un `If-Match` deve essere inclusa l’intestazione che indica la versione corrente dell’entità di etichetta del set di dati nel Servizio set di dati. Per evitare conflitti tra dati, il servizio aggiorna l’entità set di dati solo se la `If-Match` La stringa corrisponde al tag di versione più recente generato dal sistema per quel set di dati.
+Quando si eseguono chiamate API che aggiornano le etichette esistenti di un set di dati (PUT), un’ `If-Match` deve essere inclusa l’intestazione che indica la versione corrente dell’entità etichetta set di dati in Dataset Service. Al fine di evitare conflitti di dati, il servizio aggiorna l’entità set di dati solo se il `If-Match` string corrisponde all’ultimo tag di versione generato dal sistema per tale set di dati.
 
 >[!NOTE]
 >
->Se non esistono attualmente etichette per il set di dati in questione, è possibile aggiungere nuove etichette solo tramite una richiesta POST, che non richiede un `If-Match` intestazione. Una volta aggiunte le etichette a un set di dati, un `etag` viene assegnato un valore che può essere utilizzato per aggiornare o rimuovere le etichette in un secondo momento.
+>Se attualmente non esistono etichette per il set di dati in questione, è possibile aggiungere nuove etichette solo tramite una richiesta POST, che non richiede un’ `If-Match` intestazione. Una volta aggiunte le etichette a un set di dati, viene `etag` viene assegnato un valore che può essere utilizzato per aggiornare o rimuovere le etichette in un secondo momento.
 
-Per recuperare la versione più recente dell’entità dataset-label, effettua una [richiesta GET](#look-up) al `/datasets/{DATASET_ID}/labels` punto finale. Il valore corrente viene restituito nella risposta in un `etag` intestazione. Quando si aggiornano le etichette dei set di dati esistenti, si consiglia di eseguire prima una richiesta di ricerca per il set di dati al fine di recuperare le ultime `etag` prima di utilizzare tale valore nel `If-Match` intestazione della richiesta PUT successiva.
+Per recuperare la versione più recente dell’entità etichetta del set di dati, esegui una [richiesta GET](#look-up) al `/datasets/{DATASET_ID}/labels` endpoint. Il valore corrente viene restituito nella risposta in un `etag` intestazione. Quando si aggiornano le etichette dei set di dati esistenti, si consiglia di eseguire prima una richiesta di ricerca per il set di dati per recuperarne l’ultima `etag` valore prima di utilizzare tale valore in `If-Match` dell’intestazione della richiesta PUT successiva.
 
 ```shell
 curl -X PUT \
@@ -133,12 +133,12 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `labels` | Elenco di etichette di utilizzo dei dati da aggiungere al set di dati. |
-| `optionalLabels` | Elenco di tutti i singoli campi all’interno del set di dati a cui si desidera aggiungere le etichette. Ogni elemento della matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene [!DNL Experience Data Model] Attributi (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: URI $id</code> valore dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Deve assumere la forma di uno dei <a href="../../xdm/api/getting-started.md#accept">Accetta intestazioni</a> per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo nello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+| `labels` | Elenco di etichette di utilizzo dei dati che desideri aggiungere al set di dati. |
+| `optionalLabels` | Elenco dei singoli campi all’interno del set di dati a cui desideri aggiungere etichette. Ogni elemento in questo array deve avere le seguenti proprietà: <br/><br/>`option`: oggetto che contiene [!DNL Experience Data Model] (XDM) attributi del campo. Sono necessarie le tre proprietà seguenti:<ul><li>id</code>: URI $id</code> valore dello schema associato al campo.</li><li>contentType</code>: tipo di contenuto e numero di versione dello schema. Deve assumere la forma di uno dei <a href="../../xdm/api/getting-started.md#accept">Accetta intestazioni</a> per una richiesta di ricerca XDM.</li><li>schemaPath</code>: percorso del campo nello schema del set di dati.</li></ul>`labels`: elenco di etichette di utilizzo dei dati che desideri aggiungere al campo. |
 
 **Risposta**
 
-Una risposta corretta restituisce il set aggiornato di etichette per il set di dati.
+In caso di esito positivo, la risposta restituisce il set aggiornato di etichette per il set di dati.
 
 ```json
 {
@@ -158,6 +158,6 @@ Una risposta corretta restituisce il set aggiornato di etichette per il set di d
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai imparato a gestire le etichette di utilizzo dei dati per i set di dati e i campi utilizzando [!DNL Dataset Service] API. Ora puoi definire [criteri di utilizzo dei dati](../policies/overview.md) e [criteri di controllo accessi](../../access-control/abac/ui/policies.md) in base alle etichette applicate.
+Dopo aver letto questo documento, hai imparato a gestire le etichette di utilizzo dei dati per set di dati e campi utilizzando [!DNL Dataset Service] API. Ora puoi definire [criteri di utilizzo dati](../policies/overview.md) e [criteri di controllo dell’accesso](../../access-control/abac/ui/policies.md) in base alle etichette applicate.
 
-Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedi [panoramica dei set di dati](../../catalog/datasets/overview.md).
+Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedere [panoramica dei set di dati](../../catalog/datasets/overview.md).

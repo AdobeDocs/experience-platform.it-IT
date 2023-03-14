@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /callbacks nell’AP
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 96%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | `id` della proprietà di cui desideri elencare i callback. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | `id` del callback che si desidera cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | `id` della [proprietà](./properties.md) in cui si sta definendo il callback. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | Destinazione URL del messaggio di callback. L’URL deve utilizzare l’estensione del protocollo HTTPS. |
 | `subscriptions` | Matrice di stringhe che indica i tipi di evento di audit che attiveranno il callback. Per un elenco dei possibili tipi di eventi, consulta la [guida dell’endpoint “audit_events”](./audit-events.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -263,7 +263,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del nuovo callback
 
 ## Aggiornare un callback
 
-Puoi aggiornare un callback includendo il relativo ID nel percorso di una richiesta PATCH.
+Per aggiornare un callback, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | `id` del callback che si desidera aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | `id` del callback che desideri aggiornare. Questo deve corrispondere al valore `{CALLBACK_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | `id` del callback che desideri eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

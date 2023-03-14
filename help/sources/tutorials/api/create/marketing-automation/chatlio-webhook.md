@@ -1,6 +1,6 @@
 ---
-title: Creare una connessione sorgente e un flusso di dati per Chatlio utilizzando l’API del servizio di flusso
-description: Scopri come collegare Adobe Experience Platform a Chatlio utilizzando l’API del servizio di flusso.
+title: Creare una connessione di origine e un flusso di dati per il catalogo utilizzando l’API del servizio Flusso
+description: Scopri come collegare Adobe Experience Platform a Chatlio utilizzando l’API del servizio Flow.
 badge: "Beta"
 source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 2%
 
 ---
 
-# Creare una connessione sorgente e un flusso di dati per [!DNL Chatlio] utilizzo dell’API del servizio di flusso
+# Creare una connessione di origine e un flusso di dati per [!DNL Chatlio] utilizzo dell’API del servizio Flusso
 
 >[!NOTE]
 >
->La [!DNL Chatlio] la sorgente è in versione beta. Per piacere, leggi le [panoramica di origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di origini con etichetta beta.
+>Il [!DNL Chatlio] sorgente in versione beta. Leggi le [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-L’esercitazione seguente illustra i passaggi necessari per creare una connessione sorgente e un flusso di dati per [[!DNL Chatlio]](https://chatlio.com/) dati evento a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati da portare [[!DNL Chatlio]](https://chatlio.com/) dati evento a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione {#getting-started}
 
-Questa guida richiede una buona comprensione dei seguenti componenti dell’Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente l’acquisizione di dati da varie sorgenti e allo stesso tempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../../../home.md): Experience Platform consente di acquisire dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Connetti [!DNL Chatlio] su Platform utilizzando [!DNL Flow Service] API {#connect-platform-to-flow-api}
+## Connetti [!DNL Chatlio] alla piattaforma utilizzando [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-Di seguito sono descritti i passaggi da eseguire per creare una connessione sorgente e un flusso di dati per eseguire il [!DNL Chatlio] dati degli eventi ad Experience Platform.
+Di seguito sono descritti i passaggi da eseguire per creare una connessione di origine e un flusso di dati per portare [!DNL Chatlio] dati degli eventi di cui eseguire l’Experience Platform.
 
-### Creazione di una connessione sorgente {#source-connection}
+### Creare una connessione sorgente {#source-connection}
 
-Creare una connessione sorgente effettuando una richiesta di POST al [!DNL Flow Service] API, fornendo allo stesso tempo l’ID della specifica di connessione dell’origine, dettagli quali nome e descrizione e il formato dei dati.
+Creare una connessione sorgente effettuando una richiesta POST al [!DNL Flow Service] API, fornendo l’ID della specifica di connessione della sorgente e dettagli come nome e descrizione e il formato dei dati.
 
 **Formato API**
 
@@ -40,7 +40,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di origine per [!DNL Chatlio]:
+La richiesta seguente crea una connessione sorgente per [!DNL Chatlio]:
 
 ```shell
 curl -X POST \
@@ -66,14 +66,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione sorgente. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sulla connessione sorgente. |
-| `connectionSpec.id` | ID della specifica di connessione corrispondente alla tua origine. |
-| `data.format` | Il formato del [!DNL Chatlio] dati da acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
+| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione sorgente. |
+| `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di origine. |
+| `connectionSpec.id` | ID della specifica di connessione corrispondente all&#39;origine. |
+| `data.format` | Il formato del [!DNL Chatlio] i dati che desideri acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuova connessione sorgente creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione sorgente appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -84,23 +84,23 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
 ### Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, è necessario fornire l’ID di specifica di connessione fissa corrispondente al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, devi fornire l’ID di specifica della connessione fissa che corrisponde al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID delle specifiche di connessione al data lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al data lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -110,7 +110,7 @@ POST /targetConnections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di destinazione per [!DNL Chatlio]:
+La richiesta seguente crea una connessione di destinazione per [!DNL Chatlio]:
 
 ```shell
 curl -X POST \
@@ -142,15 +142,15 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione di destinazione. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sulla connessione di destinazione. |
+| `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione di destinazione. |
+| `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente al data lake. Questo ID fisso è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato del [!DNL Chatlio] dati da acquisire. |
+| `data.format` | Il formato del [!DNL Chatlio] i dati che desideri acquisire. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è necessario nei passaggi successivi.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
 
 ```json
 {
@@ -161,7 +161,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco della nuova conne
 
 ### Creare una mappatura {#mapping}
 
-Affinché i dati di origine possano essere acquisiti in un set di dati di destinazione, devono prima essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. A tal fine, esegui una richiesta POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature dati definite all’interno del payload della richiesta.
+Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce. Ciò si ottiene eseguendo una richiesta POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature di dati definite nel payload della richiesta.
 
 **Formato API**
 
@@ -230,13 +230,13 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `outputSchema.schemaRef.id` | ID del [schema XDM di destinazione](#target-schema) generato in un passaggio precedente. |
-| `mappings.sourceType` | Tipo di attributo di origine da mappare. |
-| `mappings.source` | L&#39;attributo di origine che deve essere mappato su un percorso XDM di destinazione. |
-| `mappings.destination` | Percorso XDM di destinazione in cui viene eseguito il mapping dell&#39;attributo di origine. |
+| `mappings.sourceType` | Tipo di attributo di origine di cui viene eseguito il mapping. |
+| `mappings.source` | L’attributo di origine che deve essere mappato su un percorso XDM di destinazione. |
+| `mappings.destination` | Percorso XDM di destinazione in cui viene eseguito il mapping dell’attributo di origine. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, compreso l’identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -251,13 +251,13 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 
 ### Creare un flusso {#flow}
 
-Ultimo passo verso l&#39;inserimento dei dati [!DNL Chatlio] su Platform viene creato un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
+L’ultimo passaggio per importare dati da [!DNL Chatlio] In Platform è necessario creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione di origine](#source-connection)
+* [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
 * [ID mappatura](#mapping)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 
 **Formato API**
 
@@ -301,20 +301,20 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo in quanto puoi utilizzarlo per cercare informazioni sul flusso di dati. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sul flusso di dati. |
-| `flowSpec.id` | ID delle specifiche di flusso necessario per creare un flusso di dati. Questo ID fisso è: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
-| `flowSpec.version` | Versione corrispondente dell’ID della specifica di flusso. Questo valore predefinito è `1.0`. |
-| `sourceConnectionIds` | La [ID connessione di origine](#source-connection) generato in un passaggio precedente. |
-| `targetConnectionIds` | La [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni necessarie per essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
+| `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo, in quanto può essere utilizzato per cercare informazioni sul flusso di dati. |
+| `description` | Valore facoltativo che puoi includere per fornire ulteriori informazioni sul flusso di dati. |
+| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. Questo ID fisso è: `e77fde5a-22a8-11ed-861d-0242ac120002`. |
+| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Questo valore viene impostato automaticamente su `1.0`. |
+| `sourceConnectionIds` | Il [ID connessione sorgente](#source-connection) generato in un passaggio precedente. |
+| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
-| `transformations.params.mappingId` | La [ID mappatura](#mapping) generato in un passaggio precedente. |
-| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Questo valore predefinito è `0`. |
+| `transformations.params.mappingId` | Il [ID mappatura](#mapping) generato in un passaggio precedente. |
+| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Questo valore viene impostato automaticamente su `0`. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena creato. Puoi utilizzare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
 
 ```json
 {
@@ -323,11 +323,11 @@ Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena crea
 }
 ```
 
-### Ottieni l&#39;URL dell&#39;endpoint di streaming {#get-streaming-endpoint}
+### Ottieni l’URL dell’endpoint di streaming {#get-streaming-endpoint}
 
-Con il flusso di dati creato, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL dell’endpoint per abbonare la tua sorgente a un webhook, consentendo alla tua sorgente di comunicare con l’Experience Platform.
+Una volta creato il flusso di dati, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL endpoint per sottoscrivere l’origine a un webhook, consentendo alla tua origine di comunicare con Experience Platform.
 
-Per recuperare l’URL dell’endpoint di streaming, effettua una richiesta GET al `/flows` e fornisci l&#39;ID del flusso di dati.
+Per recuperare l’URL dell’endpoint di streaming, effettua una richiesta GET al `/flows` e fornire l’ID del flusso di dati.
 
 **Formato API**
 
@@ -348,7 +348,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce informazioni sul flusso di dati, incluso l’URL dell’endpoint, contrassegnato come `inletUrl`. Fai riferimento a [Imposta Webhook](../../../ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint-url) per ottenere il valore richiesto.
+In caso di esito positivo, la risposta restituisce informazioni sul flusso di dati, incluso l’URL dell’endpoint, contrassegnato come `inletUrl`. Consulta la sezione [Configura webhook](../../../ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint-url) per ottenere il valore richiesto.
 
 ```json
 {
@@ -428,24 +428,24 @@ Una risposta corretta restituisce informazioni sul flusso di dati, incluso l’U
 
 ## Appendice {#appendix}
 
-La sezione seguente fornisce informazioni sui passaggi necessari per monitorare, aggiornare ed eliminare il flusso di dati.
+La sezione seguente fornisce informazioni sui passaggi possibili per monitorare, aggiornare ed eliminare il flusso di dati.
 
 ### Monitorare il flusso di dati {#monitor-dataflow}
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, lo stato di completamento e gli errori. Per esempi completi sulle API, consulta la guida su [monitoraggio dei flussi di dati sorgente tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aggiornare il flusso di dati {#update-dataflow}
 
-Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappature associati effettuando una richiesta di PATCH al `/flows` punto finale [!DNL Flow Service] , fornendo al tempo stesso l’ID del flusso di dati. Quando effettui una richiesta di PATCH, devi fornire l’univoco del flusso di dati `etag` in `If-Match` intestazione. Per esempi completi sulle API, consulta la guida su [aggiornamento dei flussi di dati di origini tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappatura associati, effettuando una richiesta PATCH al `/flows` endpoint di [!DNL Flow Service] e fornire l’ID del flusso di dati. Quando effettui una richiesta PATCH, devi fornire il codice univoco del flusso di dati `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dei flussi di dati di origine tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
-### Aggiorna il tuo account {#update-account}
+### Aggiornare l’account {#update-account}
 
-Aggiorna il nome, la descrizione e le credenziali dell&#39;account di origine effettuando una richiesta PATCH al [!DNL Flow Service] API fornendo l&#39;ID di connessione di base come parametro di query. Quando effettui una richiesta di PATCH, devi fornire l’account sorgente univoco `etag` in `If-Match` intestazione. Per esempi completi sulle API, consulta la guida su [aggiornamento dell’account sorgente tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aggiorna il nome, la descrizione e le credenziali dell’account di origine eseguendo una richiesta PATCH al [!DNL Flow Service] fornendo l’ID connessione di base come parametro di query. Quando effettui una richiesta PATCH, devi fornire il codice univoco dell’account sorgente `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dell’account sorgente tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
-### Elimina il flusso di dati {#delete-dataflow}
+### Eliminare il flusso di dati {#delete-dataflow}
 
-Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] API fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi completi sulle API, consulta la guida su [eliminazione dei flussi di dati tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
-### Elimina l&#39;account {#delete-account}
+### Elimina l’account {#delete-account}
 
-Elimina il tuo account eseguendo una richiesta DELETE al [!DNL Flow Service] API fornendo l’ID di connessione di base dell’account da eliminare. Per esempi completi sulle API, consulta la guida su [eliminazione dell’account sorgente tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Elimina l’account eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID della connessione di base dell’account da eliminare. Per esempi API completi, consulta la guida su [eliminazione dell’account sorgente tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

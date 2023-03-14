@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le cinque librerie più recenti pubblicate nell&#39;ambiente di produzione su una proprietà Web sono disponibili per un recupero successivo. Questa funzione è utile quando si trova un bug nella libreria di produzione e occorre eseguire immediatamente il rollback allo stato valido.
 

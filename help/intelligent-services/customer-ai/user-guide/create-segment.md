@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;approfondimenti;customer ai;argomenti popolari;segmenti di customer ai
+keywords: Experience Platform;approfondimenti;customer ai;argomenti popolari;segmenti customer ai
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Creare segmenti di clienti con punteggi previsti
-description: Al termine di un'esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati dai profili. L’arricchimento dei profili con i punteggi di Customer AI consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di propensione. Questa sezione descrive i passaggi necessari per creare segmenti utilizzando il Generatore di segmenti.
+description: Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
@@ -14,30 +14,30 @@ ht-degree: 0%
 
 # Creare segmenti di clienti con punteggi previsti
 
-Al termine di un&#39;esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati dai profili. L’arricchimento dei profili con i punteggi di Customer AI consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di propensione. Questa sezione descrive i passaggi necessari per creare segmenti utilizzando il Generatore di segmenti. Per un’esercitazione più efficace sulla creazione dei segmenti, consulta la sezione [Guida utente di Segment Builder](../../../segmentation/ui/segment-builder.md).
+Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti. Per un tutorial più completo sulla creazione dei segmenti, consulta [Guida utente di Segment Builder](../../../segmentation/ui/segment-builder.md).
 
 >[!IMPORTANT]
 >
->Per utilizzare questo metodo, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
+>Per utilizzare questo metodo, è necessario abilitare Real-Time Customer Profile per il set di dati.
 
-Nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segmenti]** nella navigazione a sinistra, quindi fai clic su **[!UICONTROL Creare un segmento]**.
+Nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra, quindi fai clic su **[!UICONTROL Crea segmento]**.
 
 ![](../images/user-guide/segments.png)
 
-La **Generatore di segmenti** appare. Da sinistra **[!UICONTROL Campi]** e sotto **[!UICONTROL Attributi]** fare clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]** quindi fai clic sulla cartella con lo spazio dei nomi dell’organizzazione. La cartella denominata **[!UICONTROL Customer AI]** contiene i risultati delle esecuzioni delle previsioni e vengono denominati in base all’istanza a cui appartengono i punteggi. Fai clic su una cartella di istanza per accedere ai risultati dell’istanza desiderata.
+Il **Generatore di segmenti** viene visualizzato. Da sinistra **[!UICONTROL Campi]** e sotto **[!UICONTROL Attributi]** , fare clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]** quindi fai clic sulla cartella con il namespace della tua organizzazione. La cartella denominata **[!UICONTROL IA per l’analisi dei clienti]** contiene i risultati delle esecuzioni delle previsioni e sono denominati in base all’istanza a cui appartengono i punteggi. Fai clic su una cartella di istanze per accedere ai risultati dell’istanza desiderata.
 
 ![](../images/user-guide/results.png)
 
-Situato al centro del Generatore di segmenti, trascina e rilascia la **[!UICONTROL Punteggio]** attributo *area di lavoro del generatore di regole* per definire una regola.
+Situato al centro del Generatore di segmenti, trascina e rilascia il file **[!UICONTROL Punteggio]** attributo su *area di lavoro generatore regole* per definire una regola.
 
-Sotto la destra *Proprietà del segmento* Specifica un nome per il segmento.
+Sotto la mano destra *Proprietà segmento* , fornisci un nome per il segmento.
 
 ![](../images/user-guide/properties.png)
 
-Sopra la sinistra *Campi* fai clic sulla colonna **ingranaggio** e seleziona una *Criteri di unione* dal menu a discesa. Fai clic su **[!UICONTROL Salva]** per creare il segmento.
+Sopra la mano sinistra *Campi* , fare clic sul pulsante **ingranaggio** e seleziona un&#39;icona *Criterio di unione* dal menu a discesa. Clic **[!UICONTROL Salva]** per creare il segmento.
 
 ![](../images/user-guide/merge_policy.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai trovato correttamente i tipi di pubblico in base ai loro punteggi di propensione utilizzando il Generatore di segmenti. Ora puoi eseguire il targeting dei tuoi tipi di pubblico attivandoli nelle destinazioni. Consulta la sezione [panoramica sulle destinazioni](../../../destinations/home.md) per ulteriori informazioni.
+Seguendo questa esercitazione, hai trovato correttamente i tipi di pubblico in base ai loro punteggi di tendenza utilizzando il Generatore di segmenti. Ora puoi indirizzare il pubblico attivandolo nelle destinazioni. Consulta la [panoramica sulle destinazioni](../../../destinations/home.md) per ulteriori informazioni.

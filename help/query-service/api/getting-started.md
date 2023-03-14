@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;home;popular topic;query service;Query service;query service;query service;query
 solution: Experience Platform
-title: Guida all’API del servizio query
+title: Guida API di Query Service
 description: L’API Query Service consente agli sviluppatori di eseguire query sui dati Adobe Experience Platform utilizzando SQL standard. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
@@ -13,50 +13,50 @@ ht-degree: 6%
 
 # Guida dell’API di [!DNL Query Service]
 
-Questa guida per gli sviluppatori descrive i passaggi necessari per eseguire varie operazioni in Adobe Experience Platform [!DNL Query Service] API.
+Questa guida per sviluppatori descrive i passaggi da seguire per eseguire varie operazioni in Adobe Experience Platform [!DNL Query Service] API.
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei vari servizi Adobe Experience Platform che utilizzano [!DNL Query Service].
+Questa guida richiede una buona conoscenza dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di [!DNL Query Service].
 
-- [[!DNL Query Service]](../home.md): Consente di eseguire query sui set di dati e acquisire le query risultanti come nuovi set di dati in [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+- [[!DNL Query Service]](../home.md): consente di eseguire query sui set di dati e di acquisire le query risultanti come nuovi set di dati in [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per utilizzare correttamente [!DNL Query Service] utilizzando l’API .
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per utilizzare correttamente [!DNL Query Service] utilizzando l’API.
 
-### Lettura di chiamate API di esempio
+### Lettura delle chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate in questa documentazione per le chiamate API di esempio, consulta la sezione sulla [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate in questa documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori delle intestazioni richieste
+### Raccogli i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Experience Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Experience Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Platform] Chiamate API, come mostrato di seguito:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolati in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle operazioni con le sandbox in [!DNL Experience Platform], vedi [documentazione panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sull’utilizzo delle sandbox in [!DNL Experience Platform], vedere [documentazione panoramica sulle sandbox](../../sandboxes/home.md).
 
 ## Chiamate API di esempio
 
-Ora che capisci quali intestazioni utilizzare, sei pronto per iniziare a effettuare chiamate a [!DNL Query Service] API. Nei documenti seguenti vengono descritte le varie chiamate API che è possibile effettuare utilizzando [!DNL Query Service] API. Ogni chiamata di esempio include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che sai quali intestazioni utilizzare, puoi iniziare a effettuare chiamate al [!DNL Query Service] API. I seguenti documenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ogni chiamata di esempio include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 - [Query](queries.md)
 - [Parametri di connessione](connection-parameters.md)
 - [Query pianificate](scheduled-queries.md)
-- [Viene eseguito per query pianificate](runs-scheduled-queries.md)
+- [Viene eseguito per le query pianificate](runs-scheduled-queries.md)
 - [Modelli di query](query-templates.md)
 - [Query accelerate](./accelerated-queries.md)
-- [Abbonamenti agli avvisi](./alert-subscriptions.md)
+- [Sottoscrizioni avvisi](./alert-subscriptions.md)
 
 ## Passaggi successivi
 
-Ora che hai imparato a fare chiamate utilizzando il [!DNL Query Service] È possibile creare query non interattive personalizzate. Per ulteriori informazioni su come creare le query, leggere il [Guida di riferimento SQL](../sql/overview.md).
+Ora che hai imparato a effettuare chiamate utilizzando [!DNL Query Service] API, puoi creare query non interattive personalizzate. Per ulteriori informazioni su come creare le query, leggere [Guida di riferimento SQL](../sql/overview.md).

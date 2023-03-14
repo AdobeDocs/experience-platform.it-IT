@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni varie;varie;varie;
+keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;miscellaneous functions;misc;
 solution: Experience Platform
 title: Funzioni varie PQL
-description: La funzione seguente è una funzione diversa per Profile Query Language (PQL).
+description: La funzione seguente è una funzione varia per PQL (Profile Query Language).
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Funzioni varie
 
-La funzione seguente è una funzione vari per [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
+La funzione seguente è una funzione varia per [!DNL Profile Query Language] (PQL) Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## Lasciare
+## Let
 
-La `let` consente di memorizzare un&#39;espressione come variabile da utilizzare successivamente in una query.
+Il `let` consente di memorizzare un’espressione come variabile da utilizzare successivamente in una query.
 
 **Formato**
 
@@ -27,7 +27,7 @@ let {VARIABLE} = {EXPRESSION}
 
 **Esempio**
 
-La seguente query PQL ottiene tutte le somme dei totali di prodotto con la transazione in USD dove la somma è maggiore di $100 e inferiore a $1000.
+La seguente query PQL ottiene tutte le somme dei totali dei prodotti con la transazione in USD dove la somma è maggiore di 100 $ e minore di 1000 $.
 
 ```sql
 let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.order.currencyCode = "USD") in (S > 100 and S < 1000)
@@ -35,4 +35,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## Passaggi successivi
 
-Dopo aver appreso le varie funzioni, è possibile utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).
+Ora che hai imparato a utilizzare funzioni varie, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).

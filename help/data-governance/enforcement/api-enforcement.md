@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;applicazione automatica;applicazione basata su API;governance dei dati;test
+keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Imposizione automatica;Imposizione basata su API;governance dei dati;testing
 solution: Experience Platform
-title: Applicare i criteri di utilizzo dei dati utilizzando l’API del servizio criteri
+title: Imporre i criteri di utilizzo dei dati utilizzando l’API del servizio criteri
 type: Tutorial
-description: Dopo aver creato etichette di utilizzo dei dati per i dati e aver creato criteri di utilizzo per le azioni di marketing rispetto a tali etichette, puoi utilizzare l’API del servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisca una violazione dei criteri. Puoi quindi impostare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+description: Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing su tali etichette, è possibile utilizzare l’API Servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi configurare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -12,30 +12,30 @@ ht-degree: 2%
 
 ---
 
-# Applica i criteri di utilizzo dei dati utilizzando [!DNL Policy Service] API
+# Imponi criteri di utilizzo dati utilizzando [!DNL Policy Service] API
 
-Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing rispetto a tali etichette, puoi utilizzare la funzione [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi impostare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing su tali etichette, puoi utilizzare [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi configurare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 
 >[!NOTE]
 >
->Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` può partecipare alla valutazione. Consentire `DRAFT` Criteri per partecipare alla valutazione, è necessario includere il parametro query `includeDraft=true` nel percorso della richiesta.
+>Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` possono partecipare alla valutazione. Per consentire `DRAFT` criteri per partecipare alla valutazione, è necessario includere il parametro query `includeDraft=true` nel percorso della richiesta.
 
-In questo documento sono descritti i passaggi da seguire per utilizzare il [!DNL Policy Service] API per verificare la presenza di violazioni dei criteri in scenari diversi.
+Questo documento descrive come utilizzare [!DNL Policy Service] API per verificare la presenza di violazioni dei criteri in scenari diversi.
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei seguenti concetti chiave coinvolti nell&#39;applicazione dei criteri di utilizzo dei dati:
+Questo tutorial richiede una buona conoscenza dei seguenti concetti chiave coinvolti nell’applicazione dei criteri di utilizzo dei dati:
 
-* [Governance dei dati](../home.md): Il quadro [!DNL Platform] applica la conformità per l’utilizzo dei dati.
-   * [Etichette di utilizzo dati](../labels/overview.md): Le etichette di utilizzo dei dati vengono applicate ai set di dati (e/o ai singoli campi all’interno di tali set di dati), specificando le restrizioni relative alla modalità di utilizzo dei dati.
-   * [Criteri di utilizzo dei dati](../policies/overview.md): I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o limitate per determinati set di etichette di utilizzo dei dati.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Governance dei dati](../home.md): framework tramite il quale [!DNL Platform] applica la conformità all’utilizzo dei dati.
+   * [Etichette di utilizzo dati](../labels/overview.md): le etichette di utilizzo dei dati vengono applicate ai set di dati (e/o ai singoli campi all’interno di tali set di dati), specificando restrizioni per l’utilizzo di tali dati.
+   * [Criteri di utilizzo dati](../policies/overview.md): i criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o limitate per determinati set di etichette di utilizzo dei dati.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Prima di avviare questa esercitazione, controlla la [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere al fine di effettuare correttamente le chiamate al [!DNL Policy Service] API, incluse le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di iniziare questo tutorial, controlla [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate al [!DNL Policy Service] API, incluse le intestazioni richieste e la modalità di lettura delle chiamate API di esempio.
 
-## Valutare utilizzando le etichette e un’azione di marketing
+## Valutare utilizzando etichette e un’azione di marketing
 
-Puoi valutare un criterio testando un’azione di marketing rispetto a un set di etichette di utilizzo dei dati che sarebbero in teoria presenti all’interno di un set di dati. Questo viene fatto attraverso l&#39;uso del `duleLabels` parametro query, in cui le etichette vengono fornite come elenco di valori separati da virgole, come mostrato nell’esempio seguente.
+Puoi valutare un criterio testando un’azione di marketing rispetto a un set di etichette di utilizzo dei dati che sarebbe ipoteticamente presente all’interno di un set di dati. Ciò avviene mediante l&#39;utilizzo di `duleLabels` parametro query, in cui le etichette vengono fornite come elenco di valori separati da virgole, come illustrato nell’esempio seguente.
 
 **Formato API**
 
@@ -46,16 +46,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing associata al criterio di utilizzo dei dati che si sta valutando. |
-| `{LABEL_1}` | Un’etichetta di utilizzo dei dati su cui eseguire il test dell’azione di marketing. Deve essere fornita almeno un&#39;etichetta. Quando si forniscono più etichette, queste devono essere separate da virgole. |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing associata ai criteri di utilizzo dei dati che stai valutando. |
+| `{LABEL_1}` | Un’etichetta di utilizzo dei dati per testare l’azione di marketing su. È necessario fornire almeno un&#39;etichetta. Quando si forniscono più etichette, queste devono essere separate da virgole. |
 
 **Richiesta**
 
-La seguente richiesta verifica il `exportToThirdParty` azione di marketing contro le etichette `C1` e `C3`. Poiché il criterio di utilizzo dei dati creato in precedenza in questa esercitazione definisce il `C1` etichetta come una delle `deny` condizioni nella relativa espressione dei criteri, l&#39;azione di marketing deve attivare una violazione dei criteri.
+La richiesta seguente verifica `exportToThirdParty` azione di marketing contro le etichette `C1` e `C3`. Poiché i criteri di utilizzo dei dati creati in precedenza in questa esercitazione definiscono `C1` etichetta come una delle `deny` nelle relative espressioni di criteri, l’azione di marketing deve attivare una violazione di criteri.
 
 >[!NOTE]
 >
->Le etichette di utilizzo dei dati sono sensibili all’uso di maiuscole e minuscole. Le violazioni dei criteri si verificano solo quando le etichette definite nelle relative espressioni dei criteri corrispondono esattamente. In questo esempio, un `C1` l&#39;etichetta potrebbe causare una violazione, mentre un `c1` l&#39;etichetta non lo farebbe.
+>Le etichette di utilizzo dei dati fanno distinzione tra maiuscole e minuscole. Le violazioni dei criteri si verificano solo quando le etichette definite nelle relative espressioni dei criteri vengono associate esattamente. In questo esempio, un `C1` attiverebbe una violazione, mentre un `c1` L&#39;etichetta no.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce l’URL per l’azione di marketing, le etichette di utilizzo su cui è stata eseguita la verifica e un elenco di tutti i criteri violati a seguito della verifica dell’azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato in `violatedPolicies` array, che indica che l&#39;azione di marketing ha attivato la violazione dei criteri prevista.
+In caso di esito positivo, la risposta restituisce l’URL per l’azione di marketing, le etichette di utilizzo su cui è stata testata e un elenco di eventuali criteri violati a seguito del test dell’azione su tali etichette. In questo esempio, il criterio &quot;Export Data to Third Party&quot; (Esporta dati a terze parti) è illustrato nella `violatedPolicies` array, che indica che l’azione di marketing ha attivato la violazione dei criteri prevista.
 
 ```json
 {
@@ -128,11 +128,11 @@ Una risposta corretta restituisce l’URL per l’azione di marketing, le etiche
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `violatedPolicies` | Una matrice che elenca tutti i criteri violati testando l’azione di marketing (specificato in `marketingActionRef`) contro i `duleLabels`. |
+| `violatedPolicies` | Un array che elenca tutti i criteri violati durante il test dell’azione di marketing (specificata in `marketingActionRef`) rispetto al fornito `duleLabels`. |
 
-## Valutare utilizzando i set di dati
+## Valuta utilizzando i set di dati
 
-Puoi valutare un criterio di utilizzo dei dati testando un’azione di marketing rispetto a uno o più set di dati da cui è possibile raccogliere le etichette. A questo scopo, invia una richiesta POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornisce ID di set di dati all’interno del corpo della richiesta, come mostrato nell’esempio seguente.
+Puoi valutare un criterio di utilizzo dei dati testando un’azione di marketing rispetto a uno o più set di dati da cui è possibile raccogliere le etichette. A tale scopo, effettua una richiesta POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornendo ID di set di dati all’interno del corpo della richiesta, come mostrato nell’esempio di seguito.
 
 **Formato API**
 
@@ -143,11 +143,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing associata al criterio che si sta valutando. |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing associata al criterio che stai valutando. |
 
 **Richiesta**
 
-La seguente richiesta verifica il `exportToThirdParty` azione di marketing rispetto a tre set di dati diversi. Ai set di dati viene fatto riferimento per tipo e ID in una matrice fornita nel payload.
+La richiesta seguente verifica `exportToThirdParty` azione di marketing su tre set di dati diversi. Si fa riferimento ai set di dati per tipo e ID in un array fornito nel payload.
 
 ```shell
 curl -X POST \
@@ -181,13 +181,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `entityType` | Ogni elemento dell’array di payload deve indicare il tipo di entità da definire. Per questo caso d’uso, il valore sarà sempre &quot;dataSet&quot;. |
-| `entityId` | Ogni elemento dell’array di payload deve fornire l’ID univoco di un set di dati. |
-| `entityMeta.fields` | (Facoltativo) Matrice di [Puntatore JSON](../../landing/api-fundamentals.md#json-pointer) stringhe che fanno riferimento a campi specifici nello schema del set di dati. Se l’array è incluso, solo i campi contenuti nell’array partecipano alla valutazione. Eventuali campi dello schema non inclusi nell’array non parteciperanno alla valutazione.<br><br>Se questo campo non è incluso, tutti i campi all’interno dello schema del set di dati verranno inclusi nella valutazione. |
+| `entityType` | Ogni elemento nella matrice del payload deve indicare il tipo di entità da definire. Per questo caso d’uso, il valore sarà sempre &quot;dataSet&quot;. |
+| `entityId` | Ogni elemento nell’array di payload deve fornire l’ID univoco per un set di dati. |
+| `entityMeta.fields` | (Facoltativo) Array di [Puntatore JSON](../../landing/api-fundamentals.md#json-pointer) stringhe, con riferimento a campi specifici nello schema del set di dati. Se questo array è incluso, solo i campi contenuti nell’array partecipano alla valutazione. Eventuali campi dello schema non inclusi nell’array non parteciperanno alla valutazione.<br><br>Se questo campo non è incluso, nella valutazione verranno inclusi tutti i campi all’interno dello schema del set di dati. |
 
 **Risposta**
 
-Una risposta corretta restituisce l’URL per l’azione di marketing, le etichette di utilizzo raccolte dai set di dati forniti e un elenco di tutti i criteri violati a seguito del test dell’azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato in `violatedPolicies` array, che indica che l&#39;azione di marketing ha attivato la violazione dei criteri prevista.
+In caso di esito positivo, la risposta restituisce l’URL per l’azione di marketing, le etichette di utilizzo raccolte dai set di dati forniti e un elenco di eventuali criteri violati a seguito del test dell’azione su tali etichette. In questo esempio, il criterio &quot;Export Data to Third Party&quot; (Esporta dati a terze parti) è illustrato nella `violatedPolicies` array, che indica che l’azione di marketing ha attivato la violazione dei criteri prevista.
 
 ```json
 {
@@ -369,11 +369,11 @@ Una risposta corretta restituisce l’URL per l’azione di marketing, le etiche
 | Proprietà | Descrizione |
 | --- | --- |
 | `duleLabels` | Elenco di etichette di utilizzo dei dati estratte dai set di dati forniti nel payload della richiesta. |
-| `discoveredLabels` | Elenco dei set di dati forniti nel payload della richiesta, che mostrano le etichette a livello di set di dati e di campi presenti in ciascuno di essi. |
-| `violatedPolicies` | Una matrice che elenca tutti i criteri violati testando l’azione di marketing (specificato in `marketingActionRef`) contro i `duleLabels`. |
+| `discoveredLabels` | Elenco dei set di dati forniti nel payload della richiesta, con le etichette a livello di set di dati e di campo presenti in ognuno di essi. |
+| `violatedPolicies` | Un array che elenca tutti i criteri violati durante il test dell’azione di marketing (specificata in `marketingActionRef`) rispetto al fornito `duleLabels`. |
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai verificato con successo la presenza di violazioni dei criteri durante l’esecuzione di un’azione di marketing su un set di dati o su un set di etichette di utilizzo dei dati. Utilizzando i dati restituiti nelle risposte API, puoi impostare protocolli all’interno dell’applicazione di esperienza per applicare in modo appropriato le violazioni dei criteri quando si verificano.
+Dopo aver letto questo documento, hai verificato la presenza di violazioni dei criteri durante l’esecuzione di un’azione di marketing su un set di dati o su un set di etichette di utilizzo dei dati. Utilizzando i dati restituiti nelle risposte API, puoi impostare i protocolli all’interno dell’applicazione Experience per applicare in modo appropriato le violazioni dei criteri quando si verificano.
 
-Per informazioni su come Platform fornisce automaticamente l’applicazione dei criteri per i segmenti attivati, consulta la guida su [applicazione automatica](./auto-enforcement.md).
+Per informazioni sul modo in cui Platform fornisce automaticamente l’applicazione dei criteri per i segmenti attivati, consulta la guida su [applicazione automatica](./auto-enforcement.md).

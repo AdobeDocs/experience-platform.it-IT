@@ -117,7 +117,7 @@ L’endpoint `/search` fpermette di trovare le risorse che corrispondono a un da
 
 ## Segreti
 
-Un segreto contiene credenziali che consentono l&#39;inoltro degli eventi per l&#39;autenticazione in un altro sistema per lo scambio sicuro dei dati. Consulta la sezione [guida ai segreti](./guides/secrets.md) per una panoramica del funzionamento dei segreti nell&#39;inoltro degli eventi e [guida all’endpoint segreti](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
+Un segreto contiene credenziali che consentono l&#39;autenticazione dell&#39;inoltro eventi in un altro sistema per lo scambio sicuro dei dati. Consulta la [guida ai segreti](./guides/secrets.md) per una panoramica sul funzionamento dei segreti nell’inoltro degli eventi e [guida dell’endpoint &quot;secrets&quot;](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
 
 ## Passaggi successivi
 

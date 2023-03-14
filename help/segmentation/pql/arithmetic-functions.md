@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni aritmetiche;aritmetica;
+keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;aritmetic functions;aritmetic;
 solution: Experience Platform
-title: Funzioni aritmetiche PAL
-description: Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in Profile Query Language (PQL).
+title: PAL Funzioni aritmetiche
+description: Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in PQL (Profile Query Language).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 # Funzioni aritmetiche
 
-Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella sezione [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in [!DNL Profile Query Language] (PQL) Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Add
 
-La `+` (aggiunta) viene utilizzata per trovare la somma di due espressioni di argomento.
+Il `+` (addizione) viene utilizzata per trovare la somma di due espressioni di argomento.
 
 **Formato**
 
@@ -27,7 +27,7 @@ La `+` (aggiunta) viene utilizzata per trovare la somma di due espressioni di ar
 
 **Esempio**
 
-La seguente query PQL somma il prezzo di due prodotti diversi.
+La query PQL seguente somma il prezzo di due prodotti diversi.
 
 ```sql
 product1.price + product2.price
@@ -35,7 +35,7 @@ product1.price + product2.price
 
 ## Moltiplica
 
-La `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento.
+Il `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento.
 
 **Formato**
 
@@ -45,7 +45,7 @@ La `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espress
 
 **Esempio**
 
-La seguente query PQL individua il prodotto dell&#39;inventario e il prezzo di un prodotto per trovare il valore lordo del prodotto.
+La query PQL seguente individua il prodotto dell&#39;inventario e il prezzo di un prodotto per trovare il valore lordo del prodotto.
 
 ```sql
 product.inventory * product.price
@@ -53,7 +53,7 @@ product.inventory * product.price
 
 ## Sottrai
 
-La `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressioni di argomento.
+Il `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressioni di argomento.
 
 **Formato**
 
@@ -63,7 +63,7 @@ La `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressi
 
 **Esempio**
 
-La seguente query PQL trova la differenza di prezzo tra due prodotti diversi.
+La seguente query PQL rileva la differenza di prezzo tra due prodotti diversi.
 
 ```sql
 product1.price - product2.price
@@ -71,7 +71,7 @@ product1.price - product2.price
 
 ## Dividi
 
-La `/` (divisione) viene utilizzato per trovare il quoziente di due espressioni di argomento.
+Il `/` (divisione) viene utilizzata per trovare il quoziente di due espressioni di argomento.
 
 **Formato**
 
@@ -81,15 +81,15 @@ La `/` (divisione) viene utilizzato per trovare il quoziente di due espressioni 
 
 **Esempio**
 
-La seguente query PQL trova il quoziente tra il totale dei prodotti venduti e il totale del denaro guadagnato per vedere il costo medio per articolo.
+La seguente query PQL trova il quoziente tra il totale dei prodotti venduti e il totale del denaro guadagnato per visualizzare il costo medio per articolo.
 
 ```sql
 totalProduct.price / totalProduct.sold
 ```
 
-## Resto
+## Rimanente
 
-La `%` (modulo/rest) viene utilizzato per trovare il resto dopo aver diviso le due espressioni di argomento.
+Il `%` (modulo/resto) viene utilizzata per trovare il resto dopo aver diviso le due espressioni di argomento.
 
 **Formato**
 
@@ -99,7 +99,7 @@ La `%` (modulo/rest) viene utilizzato per trovare il resto dopo aver diviso le d
 
 **Esempio**
 
-La seguente query PQL controlla se l&#39;età della persona è divisibile per cinque anni.
+La seguente query PQL verifica se l’età della persona è divisibile di cinque.
 
 ```sql
 person.age % 5 = 0
@@ -107,4 +107,4 @@ person.age % 5 = 0
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni aritmetiche, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere il [Panoramica della lingua della query del profilo](./overview.md).
+Ora che hai imparato le funzioni aritmetiche, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).

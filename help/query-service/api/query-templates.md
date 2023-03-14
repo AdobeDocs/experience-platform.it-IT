@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;modelli di query;guida api;modelli;servizio query;
+keywords: Experience Platform;home;argomenti popolari;servizio query;modelli query;guida api;modelli;servizio query;
 solution: Experience Platform
-title: Endpoint API per i modelli di query
-description: Questa guida descrive le varie chiamate API del modello di query che puoi effettuare utilizzando l’API del servizio query.
+title: Endpoint API per modelli di query
+description: Questa guida descrive le varie chiamate API dei modelli di query che puoi effettuare utilizzando l’API di Query Service.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 4%
 
 ---
 
-# Endpoint dei modelli di query
+# Endpoint &quot;query templates&quot;
 
 ## Chiamate API di esempio
 
-Le sezioni seguenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-Consulta la sezione [Documentazione sui modelli di query dell’interfaccia utente](../ui/query-templates.md) per informazioni sulla creazione di modelli tramite l’interfaccia utente di Experience Platform.
+Consulta la [Documentazione dei modelli di query dell’interfaccia utente](../ui/query-templates.md) per informazioni sulla creazione di modelli tramite l’interfaccia utente di Experience Platform.
 
-### Recupera un elenco di modelli di query
+### Recuperare un elenco di modelli di query
 
-Puoi recuperare un elenco di tutti i modelli di query per la tua organizzazione IMS effettuando una richiesta di GET al `/query-templates` punto finale.
+Per recuperare un elenco di tutti i modelli di query per l’organizzazione IMS, effettua una richiesta GET al `/query-templates` endpoint.
 
 **Formato API**
 
@@ -32,22 +32,22 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito. |
+| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
 **Parametri query**
 
-Di seguito è riportato un elenco dei parametri di query disponibili per elencare i modelli di query. Tutti questi parametri sono facoltativi. Effettuare una chiamata a questo endpoint senza parametri recupererà tutti i modelli di query disponibili per la tua organizzazione.
+Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco dei modelli di query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i modelli di query disponibili per la tua organizzazione.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L’unico operatore supportato è `==` (uguale a). Ad esempio: `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
+| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L’unico operatore supportato è `==` (uguale a) Ad esempio: `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
 
 **Richiesta**
 
-La richiesta seguente recupera l’ultimo modello di query creato per la tua organizzazione IMS.
+La richiesta seguente recupera il modello di query più recente creato per l’organizzazione IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di query per l&#39;organizzazione IMS specificata. La risposta seguente restituisce l’ultimo modello di query creato per la tua organizzazione IMS.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di modelli di query per l’organizzazione IMS specificata. La risposta seguente restituisce l’ultimo modello di query creato per l’organizzazione IMS.
 
 ```json
 {
@@ -108,11 +108,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Creare un modello di query
 
-È possibile creare un modello di query effettuando una richiesta POST al `/query-templates` punto finale.
+Per creare un modello di query, devi effettuare una richiesta POST al `/query-templates` endpoint.
 
 **Formato API**
 
@@ -139,13 +139,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | Query SQL da creare. È possibile utilizzare SQL standard o una sostituzione di parametri. Per utilizzare una sostituzione di parametri nell&#39;SQL è necessario anteporre la chiave di parametro a un `$`. Ad esempio: `$key`e fornire i parametri utilizzati nelle coppie di valori chiave SQL come JSON nella `queryParameters` campo . I valori passati qui saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta di POST. |
+| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare la sostituzione di un parametro nel codice SQL, è necessario anteporre alla chiave del parametro una `$`. Ad esempio: `$key`e forniscono i parametri utilizzati nelle coppie di valori chiave SQL come JSON nel `queryParameters` campo. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
 | `name` | Nome del modello di query. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli del modello di query appena creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accettato) con i dettagli del modello di query appena creato.
 
 ```json
 {
@@ -175,11 +175,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
 
-### Recupera un modello di query specificato
+### Recuperare un modello di query specificato
 
-È possibile recuperare un modello di query specifico effettuando una richiesta di GET al `/query-templates/{TEMPLATE_ID}` e fornisce l’ID del modello di query nel percorso della richiesta.
+Per recuperare un modello di query specifico, effettua una richiesta GET al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
 
 **Richiesta**
 
@@ -203,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello di query specificato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del modello di query specificato.
 
 ```json
 {
@@ -233,11 +233,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Aggiornare un modello di query specificato
 
-È possibile aggiornare un modello di query specifico effettuando una richiesta PUT al `/query-templates/{TEMPLATE_ID}` e fornisce l’ID del modello di query nel percorso della richiesta.
+Per aggiornare un modello di query specifico, devi eseguire una richiesta PUT al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -247,13 +247,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
 
 **Richiesta**
 
 >[!NOTE]
 >
->La richiesta di PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrivere** il contenuto corrente di tale modello di query.
+>La richiesta PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrivi** il contenuto corrente del modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -272,13 +272,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | Query SQL da creare. È possibile utilizzare SQL standard o una sostituzione di parametri. Per utilizzare una sostituzione di parametri nell&#39;SQL è necessario anteporre la chiave di parametro a un `$`. Ad esempio: `$key`e fornire i parametri utilizzati nelle coppie di valori chiave SQL come JSON nella `queryParameters` campo . I valori passati qui saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta di POST. |
+| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare la sostituzione di un parametro nel codice SQL, è necessario anteporre alla chiave del parametro una `$`. Ad esempio: `$key`e forniscono i parametri utilizzati nelle coppie di valori chiave SQL come JSON nel `queryParameters` campo. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
 | `name` | Nome del modello di query. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (accettato) con le informazioni aggiornate per il modello di query specificato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con le informazioni aggiornate per il modello di query specificato.
 
 ```json
 {
@@ -309,11 +309,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con le informazi
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [elimina il modello di query](#delete-a-specified-query-template).
+>Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
 
-### Elimina un modello di query specificato
+### Eliminare un modello di query specificato
 
-È possibile eliminare un modello di query specifico effettuando una richiesta di DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+Per eliminare un modello di query specifico, devi effettuare una richiesta DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -323,7 +323,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | La `id` del modello di query che si desidera recuperare. |
+| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
 
 **Richiesta**
 
@@ -337,7 +337,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio.
 
 ```json
 {

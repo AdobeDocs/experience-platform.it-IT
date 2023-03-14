@@ -13,9 +13,9 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Platform o l’interfaccia utente di raccolta dati per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e build.
+Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Platform o di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e di una build.
 
 Questo documento illustra come implementare test end-to-end per l’estensione.
 
@@ -82,7 +82,7 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 
 ## Creare una proprietà di sviluppo {#property}
 
-Dopo aver effettuato l’accesso all’interfaccia utente e aver selezionato **[!UICONTROL Tag]** nella navigazione a sinistra, il [!UICONTROL Proprietà] viene visualizzata la schermata . Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
+Dopo aver effettuato l’accesso all’interfaccia utente e aver selezionato **[!UICONTROL Tag]** nel menu di navigazione a sinistra, [!UICONTROL Proprietà] viene visualizzata la schermata. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -200,7 +200,7 @@ Le istruzioni di installazione sono disponibili nella scheda Ambienti. Questa pa
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-La **Istruzioni di installazione web** viene visualizzata la finestra di dialogo per l&#39;ambiente di sviluppo. Seleziona l’icona Copia per copiare l’intero tag `<script>`.
+Il **Istruzioni di installazione Web** viene visualizzata la finestra di dialogo per l’ambiente di sviluppo. Seleziona l’icona Copia per copiare l’intero tag `<script>`.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 

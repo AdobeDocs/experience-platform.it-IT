@@ -13,7 +13,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nella directory di base dell’estensione è necessario creare un file denominato `extension.json`. Contiene informazioni critiche sull’estensione che consentono a Adobe Experience Platform di utilizzarla correttamente. Alcuni contenuti sono creati secondo le regole [npm per `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -134,7 +134,20 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
       <td><code>schema</code></td>
       <td>Oggetto con <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto impostazioni valido che può essere salvato dall’utente. Le impostazioni vengono generalmente configurate e salvate da un utente che utilizza l’interfaccia di Data Collection. In questi casi, la vista dell’estensione può eseguire i passaggi necessari per convalidare le impostazioni fornite dall’utente. Alcuni utenti preferiscono invece utilizzare direttamente le API dei tag senza l’ausilio di alcuna interfaccia utente. Lo scopo di questo schema è consentire a Platform di convalidare correttamente che gli oggetti impostazioni salvati dagli utenti siano in un formato compatibile con il modulo libreria che agirà in base all’oggetto impostazioni stesso in fase di esecuzione, indipendentemente dall’utilizzo o meno di un'interfaccia utente.<br><br>Esempio di oggetto schema:<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": { "delay": { "type": "number", "minimum": 1 } }, "required": [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       È consigliabile utilizzare uno strumento come <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> per verificare manualmente lo schema.</td>
     </tr>

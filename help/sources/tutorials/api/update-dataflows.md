@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiornare i flussi di dati
+keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiorna flussi di dati
 solution: Experience Platform
-title: Aggiornare i flussi di dati utilizzando l’API del servizio di flusso
+title: Aggiornare i flussi di dati utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per l’aggiornamento di un flusso di dati, inclusi nome, descrizione e pianificazione, tramite l’API del servizio di flusso.
+description: Questo tutorial illustra i passaggi necessari per aggiornare un flusso di dati, compreso il nome, la descrizione e la pianificazione, mediante l’API del servizio Flusso.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,26 +12,26 @@ ht-degree: 3%
 
 ---
 
-# Aggiornare i flussi di dati utilizzando l’API del servizio di flusso
+# Aggiornare i flussi di dati utilizzando l’API del servizio Flusso
 
-Questa esercitazione descrive i passaggi per aggiornare un flusso di dati, incluse le informazioni di base, la pianificazione e i set di mappature che utilizzano [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione illustra i passaggi necessari per aggiornare un flusso di dati, incluse le informazioni di base, la pianificazione e i set di mappatura mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa esercitazione richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore di scelta dal [panoramica di origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore desiderato da [panoramica sulle origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
-Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
 
-## Ricerca dei dettagli del flusso di dati
+## Cerca dettagli flusso di dati
 
-Il primo passo per aggiornare il flusso di dati è quello di recuperare i dettagli del flusso di dati utilizzando il tuo ID di flusso. Puoi visualizzare i dettagli correnti di un flusso di dati esistente effettuando una richiesta di GET al `/flows` punto finale.
+Il primo passaggio nell’aggiornamento del flusso di dati consiste nel recuperare i dettagli del flusso di dati utilizzando il tuo ID flusso. Per visualizzare i dettagli correnti di un flusso di dati esistente, effettua una richiesta GET al `/flows` endpoint.
 
 **Formato API**
 
@@ -41,11 +41,11 @@ GET /flows/{FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | L&#39;unico `id` per il flusso di dati da recuperare. |
+| `{FLOW_ID}` | L&#39;unico `id` valore per il flusso di dati che desideri recuperare. |
 
 **Richiesta**
 
-La seguente richiesta recupera le informazioni aggiornate relative all&#39;ID di flusso.
+La richiesta seguente recupera informazioni aggiornate relative all’ID flusso.
 
 ```shell
 curl -X GET \
@@ -58,7 +58,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli correnti del flusso di dati, inclusa la relativa versione, pianificazione e identificatore univoco (`id`).
+In caso di esito positivo, la risposta restituisce i dettagli correnti del flusso di dati, inclusa la versione, la pianificazione e l’identificatore univoco (`id`).
 
 ```json
 {
@@ -170,13 +170,13 @@ Una risposta corretta restituisce i dettagli correnti del flusso di dati, inclus
 }
 ```
 
-## Aggiornamento del flusso di dati
+## Aggiorna flusso di dati
 
-Per aggiornare la pianificazione, il nome e la descrizione dell’esecuzione del flusso di dati, esegui una richiesta PATCH al [!DNL Flow Service] API fornendo al tempo stesso il tuo ID flusso, la versione e la nuova pianificazione che desideri utilizzare.
+Per aggiornare la pianificazione di esecuzione, il nome e la descrizione del flusso di dati, esegui una richiesta PATCH al [!DNL Flow Service] fornendo l’ID di flusso, la versione e la nuova pianificazione che desideri utilizzare.
 
 >[!IMPORTANT]
 >
->La `If-Match` l’intestazione è necessaria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che si desidera aggiornare. Il valore etag viene aggiornato con ogni aggiornamento corretto di un flusso di dati.
+>Il `If-Match` L’intestazione è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati.
 
 **Formato API**
 
@@ -217,13 +217,13 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `op` | La chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. |
-| `value` | Il nuovo valore con cui si desidera aggiornare il parametro. |
+| `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
 **Risposta**
 
-Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi verificare l’aggiornamento effettuando una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso il tuo ID flusso.
+In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. Per verificare l’aggiornamento, effettua una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l&#39;ID di flusso.
 
 ```json
 {
@@ -232,9 +232,9 @@ Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi ver
 }
 ```
 
-## Aggiornamento della mappatura
+## Aggiorna mappatura
 
-È possibile aggiornare il set di mappatura di un flusso di dati esistente effettuando una richiesta di PATCH al [!DNL Flow Service] API e fornitura di valori aggiornati per la `mappingId` e `mappingVersion`.
+Per aggiornare il set di mappatura di un flusso di dati esistente, devi effettuare una richiesta PATCH al [!DNL Flow Service] API e fornendo valori aggiornati per le `mappingId` e `mappingVersion`.
 
 **Formato API**
 
@@ -271,15 +271,15 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `op` | La chiamata dell’operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`e `remove`. |
-| `path` | Definisce la parte del flusso da aggiornare. In questo esempio, `transformations` è in corso l&#39;aggiornamento. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `path` | Definisce la parte del flusso da aggiornare. In questo esempio, `transformations` è in fase di aggiornamento. |
 | `value.name` | Nome della proprietà da aggiornare. |
 | `value.params.mappingId` | Il nuovo ID di mappatura da utilizzare per aggiornare il set di mappatura del flusso di dati. |
-| `value.params.mappingVersion` | La nuova versione di mappatura associata all&#39;ID di mappatura aggiornato. |
+| `value.params.mappingVersion` | La nuova versione di mappatura associata all’ID di mappatura aggiornato. |
 
 **Risposta**
 
-Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi verificare l’aggiornamento effettuando una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso il tuo ID flusso.
+In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. Per verificare l’aggiornamento, effettua una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l&#39;ID di flusso.
 
 ```json
 {
@@ -290,4 +290,4 @@ Una risposta corretta restituisce il tuo ID flusso e un tag aggiornato. Puoi ver
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai aggiornato le informazioni di base, la pianificazione e i set di mappatura del flusso di dati utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sull’utilizzo dei connettori sorgente, consulta la sezione [panoramica di origini](../../home.md).
+Seguendo questa esercitazione, hai aggiornato le informazioni di base, la pianificazione e i set di mappatura del flusso di dati utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sull&#39;utilizzo dei connettori di origine, vedere [panoramica sulle origini](../../home.md).

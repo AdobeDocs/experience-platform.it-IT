@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;progettazione schema;gruppo di campi;gruppo di campi;iab;tcf;consenso;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;iab;tcf;consent;
 solution: Experience Platform
-title: Gruppo di campi di consenso IAB TCF 2.0 per gli schemi di eventi
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema di consenso IAB TCF 2.0 per la classe ExperienceEvent XDM.
+title: Gruppo di campi per il consenso IAB TCF 2.0 per gli schemi evento
+description: Questo documento fornisce una panoramica del gruppo di campi Schema di consenso IAB TCF 2.0 per la classe XDM ExperienceEvent.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '250'
+ht-degree: 1%
 
 ---
 
@@ -15,23 +15,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Il presente documento riguarda [!UICONTROL Consenso IAB TCF 2.0] gruppo di campi dello schema per la classe ExperienceEvent XDM. Utilizzare questo gruppo di campi solo se si intende tenere traccia degli eventi di modifica del consenso nel tempo.
+>Questo documento descrive [!UICONTROL Consenso IAB TCF 2.0] gruppo di campi dello schema per la classe ExperienceEvent XDM. Questo gruppo di campi deve essere utilizzato solo se desideri tenere traccia degli eventi di modifica del consenso nel tempo.
 >
->I valori di consenso registrati nei dati dell’evento non vengono rispettati nei flussi di lavoro di implementazione automatica. Affinché l’applicazione automatica avvenga, i valori di consenso devono essere acquisiti nella classe Profilo individuale XDM e attivati per il profilo cliente in tempo reale.
+>Tieni presente che i valori del consenso registrati nei dati dell’evento non vengono rispettati nei flussi di lavoro di applicazione automatica. Affinché l’applicazione automatica possa avvenire, i valori del consenso devono essere acquisiti nella classe Profilo individuale XDM e abilitati per Profilo cliente in tempo reale.
 >
->Per il gruppo di campi destinato alla classe Profilo individuale XDM, consulta quanto segue [documento](../profile/iab.md) invece.
+>Per il gruppo di campi previsto per la classe Profilo individuale XDM, fai riferimento a quanto segue [documento](../profile/iab.md) invece.
 
-[!UICONTROL Consenso IAB TCF 2.0] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] Classe](../../classes/experienceevent.md) utilizzato per acquisire le stringhe di consenso IAB di una serie con marca temporale, al fine di tenere traccia dei pattern di modifica del consenso nel tempo.
+[!UICONTROL Consenso IAB TCF 2.0] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzato per acquisire una serie con marca temporale di stringhe di consenso IAB, al fine di monitorare i modelli di modifica del consenso nel tempo.
 
 ![](../../images/field-groups/iab-event.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `consentStrings` | Array di [Stringhe di consenso](../../data-types/consent-string.md) | Matrice di valori stringa di consenso associati all&#39;evento. |
+| `consentStrings` | Array di [Stringhe di consenso](../../data-types/consent-string.md) | Array di valori stringa di consenso associati all’evento. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Consulta la guida su [Supporto IAB TCF 2.0 in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) per ulteriori informazioni sul caso d’uso di questo gruppo di campi. Per ulteriori dettagli sul gruppo di campi stesso, consulta l’archivio XDM pubblico:
 
-* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
+* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

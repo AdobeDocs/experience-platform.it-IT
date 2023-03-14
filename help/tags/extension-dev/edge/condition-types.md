@@ -13,24 +13,24 @@ ht-degree: 68%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+> Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-In una regola di tag, una condizione viene valutata dopo che si è verificato un evento. Tutte le condizioni devono restituire true affinché la regola possa continuare l’elaborazione. I tipi di condizione vengono forniti dalle estensioni e valutano se qualcosa è vero o falso e restituisce un valore booleano.
+In una regola di tag, una condizione viene valutata dopo che si è verificato un evento. Tutte le condizioni devono restituire true affinché la regola possa continuare l’elaborazione. I tipi di condizione vengono forniti dalle estensioni e valutano se qualcosa è vero o falso, restituendo un valore booleano.
 
 Ad esempio, un’estensione potrebbe fornire un tipo di condizione “viewport contains” in cui l’utente di potrebbe specificare un selettore CSS. Quando la condizione viene valutata sul sito web del client, l’estensione sarà in grado di trovare elementi che corrispondono al selettore CSS e restituire se uno di essi è contenuto nella finestra dell’utente.
 
-Questo documento illustra come definire i tipi di condizioni per un&#39;estensione Edge in Adobe Experience Platform.
+Questo documento illustra come definire i tipi di condizioni per un’estensione Edge in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
 >Se stai sviluppando un&#39;estensione web, consulta la guida sui [tipi di condizioni per le estensioni web](../web/condition-types.md).
 >
->Questo documento presuppone anche che tu abbia familiarità con i moduli di libreria e con il modo in cui sono integrati nelle estensioni edge. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
+>In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni Edge. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
-I tipi di condizione sono in genere costituiti dai seguenti elementi:
+I tipi di condizione sono in genere i seguenti:
 
-1. Visualizzazione nell’interfaccia utente Experience Platform e nell’interfaccia utente di raccolta dati che consente agli utenti di modificare le impostazioni della condizione.
-2. Un modulo libreria emesso all&#39;interno della libreria di runtime di tag per interpretare le impostazioni e valutare una condizione.
+1. Una vista mostrata nell’interfaccia utente di Experience Platform e nell’interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per la condizione.
+2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni e valutare una condizione.
 
 Ad esempio, per valutare se l’utente si trova sull’host `example.com`, il modulo potrebbe presentarsi così.
 

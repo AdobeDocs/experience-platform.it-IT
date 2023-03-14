@@ -1,10 +1,11 @@
 ---
 title: Moduli libreria Core per le estensioni Web
-description: Scopri i moduli della libreria principale che puoi utilizzare all’interno delle tue estensioni web.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri i moduli libreria di base che puoi utilizzare con le estensioni web.
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta il seguente[documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento fornisce un elenco dei moduli libreria Coredi che è possibile utilizzare nelle estensioni Web. Per accedere a questi moduli, utilizza `require('@adobe/{MODULE}')`, dove `{MODULE}` è il nome del modulo principale che desideri utilizzare.
 
@@ -66,7 +67,7 @@ Per questa utility sono disponibili i seguenti metodi:
 
 ### [!DNL reactor-load-script]
 
-`reactor-load-script` è una funzione che carica uno script quando viene fornito un URL. Un tag script verrà creato e posizionato all’interno del nodo `head` del documento. Verrà restituita una [promise](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) da utilizzare per determinare quando il caricamento dello script ha esito positivo o negativo.
+`reactor-load-script` è una funzione che carica uno script quando viene fornito un URL. Un tag script verrà creato e posizionato all’interno del nodo `head` del documento. Verrà restituita una [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) da utilizzare per determinare quando il caricamento dello script ha esito positivo o negativo.
 
 ```javascript
 var loadScript = require('@adobe/reactor-load-script');

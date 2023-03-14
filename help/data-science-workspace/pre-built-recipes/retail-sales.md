@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;ricetta vendite al dettaglio;Data Science Workspace;argomenti popolari;ricette;precostruire ricetta
+keywords: Experience Platform;vendita al dettaglio ricetta;Data Science Workspace;argomenti popolari;ricette;ricetta pre-build
 solution: Experience Platform
-title: Ricetta vendite al dettaglio
-description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi predefiniti per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare il rapporto tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
+title: Ricetta vendita al dettaglio
+description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi con seeding per un determinato periodo di tempo. Grazie a un accurato modello di previsione, il retailer è in grado di individuare la relazione tra la domanda e le politiche di prezzo e di ottimizzare le decisioni di prezzo per ottimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,28 +11,28 @@ ht-degree: 2%
 
 ---
 
-# Ricetta di vendita al dettaglio
+# Ricetta vendite al dettaglio
 
-La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi predefiniti per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare il rapporto tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
+La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi con seeding per un determinato periodo di tempo. Grazie a un accurato modello di previsione, il retailer è in grado di individuare la relazione tra la domanda e le politiche di prezzo e di ottimizzare le decisioni di prezzo per ottimizzare le vendite e i ricavi.
 
 Il seguente documento risponderà a domande quali:
 * Per chi è costruita questa ricetta?
-* Cosa fa questa ricetta?
-* Come inizio?
+* Che cosa fa questa ricetta?
+* Come si inizia?
 
 ## Per chi è costruita questa ricetta?
 
-Un retailer deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Il tuo marchio cerca di incrementare le vendite annuali per il tuo marchio retail, ma ci sono molte decisioni da prendere per ridurre al minimo i costi operativi. L&#39;eccesso di offerta aumenta i costi di inventario, mentre l&#39;offerta insufficiente aumenta il rischio di perdere clienti ad altri marchi. È necessario ordinare più forniture per i prossimi mesi? Come si decide il prezzo ottimale per i prodotti per mantenere gli obiettivi di vendita settimanali?
+Un retailer deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Il tuo marchio cerca di incrementare le vendite annuali per il tuo marchio retail, ma devi prendere diverse decisioni per ridurre al minimo i costi operativi. Un&#39;offerta eccessiva aumenta i costi di inventario, mentre un&#39;offerta insufficiente aumenta il rischio di perdere clienti verso altre marche. È necessario ordinare più forniture per i prossimi mesi? Come puoi decidere un prezzo ottimale per i tuoi prodotti per mantenere gli obiettivi di vendita settimanali?
 
-## Cosa fa questa ricetta?
+## Che cosa fa questa ricetta?
 
-La ricetta Retail Sales Forecasting utilizza l&#39;apprendimento automatico per prevedere le tendenze di vendita. La ricetta lo fa sfruttando la ricchezza di dati storici al dettaglio e l&#39;algoritmo di apprendimento automatico personalizzato che incrementa la regressione delle vendite per prevedere le vendite con una settimana di anticipo. Il modello utilizza la cronologia degli acquisti passati e utilizza per impostazione predefinita parametri di configurazione predefiniti determinati dai nostri data scientist per migliorare la precisione predittiva.
+La ricetta Retail Sales Forecasting utilizza l’apprendimento automatico per prevedere le tendenze di vendita. La ricetta fa questo sfruttando la ricchezza di dati storici al dettaglio e il gradiente personalizzato aumentando l&#39;algoritmo di apprendimento automatico del regressore per prevedere le vendite una settimana in anticipo. Il modello utilizza la cronologia degli acquisti passati e utilizza i parametri di configurazione predefiniti determinati dai nostri data scientist per migliorare l’accuratezza predittiva.
 
-## Come inizio?
+## Come si inizia?
 
-Per iniziare, segui questo [tutorial](../jupyterlab/create-a-model.md).
+Per iniziare, segui questa pagina [esercitazione](../jupyterlab/create-a-model.md).
 
-Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un blocco appunti Jupyter e all&#39;utilizzo del blocco appunti per creare il flusso di lavoro della ricetta in Adobe Experience Platform.
+Questo tutorial illustra come creare la ricetta per la vendita al dettaglio in un notebook Jupyter e come utilizzare il flusso di lavoro blocco appunti per la composizione per creare la ricetta in Adobe Experience Platform.
 
 ## Schema dati
 
@@ -46,7 +46,7 @@ Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per m
 | weeklySales | Numero |
 | storeSize | Intero |
 | temperatura | Numero |
-| RegionalFuelPrice | Numero |
+| regionalFuelPrice | Numero |
 | markdown | Numero |
 | cpi | Numero |
 | disoccupazione | Numero |
@@ -55,12 +55,12 @@ Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per m
 
 ## Algoritmo
 
-In primo luogo, il set di dati sulla formazione nel *DSWRetailSales* schema caricato. Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione di incremento della sfumatura](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il miglioramento della sfumatura utilizza l&#39;idea che gli studenti deboli (almeno leggermente meglio del caso casuale) possono formare una serie di studenti concentrati sul miglioramento delle debolezze dello studente precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
+In primo luogo, il set di dati di formazione nel *DSWRetailSales* schema caricato. Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione con potenziamento del gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il potenziamento con gradiente utilizza l’idea che gli Allievi deboli (almeno leggermente migliori del caso casuale) possano formare una successione di Allievi focalizzati sul miglioramento delle debolezze dell’Allievo precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
 
-Il processo comprende tre elementi: una funzione di perdita, uno studente debole e un modello additivo.
+Il processo prevede tre elementi: una funzione di perdita, un allievo debole e un modello additivo.
 
-La funzione di perdita si riferisce a una misura di quanto un modello di previsione fa bene in termini di essere in grado di prevedere il risultato previsto - la regressione dei minimi quadrati viene utilizzata in questa ricetta.
+La funzione di perdita si riferisce a una misura di quanto un modello predittivo faccia in termini di capacità di prevedere il risultato atteso; in questa ricetta viene utilizzata la regressione dei minimi quadrati.
 
-In aumento del gradiente, un albero decisionale viene utilizzato come studente debole. In genere, gli alberi con un numero limitato di livelli, nodi e suddivisioni vengono utilizzati per garantire che lo studente rimanga debole.
+Nel potenziamento del gradiente, come allievo debole viene utilizzato un albero decisionale. In genere, gli alberi con un numero limitato di livelli, nodi e divisioni vengono utilizzati per garantire che l’allievo rimanga debole.
 
-Infine, viene utilizzato un modello additivo. Dopo aver calcolato la perdita con la funzione di perdita, l&#39;albero che riduce la perdita viene scelto e ponderato per migliorare la modellazione delle osservazioni più difficili. L&#39;output dell&#39;albero ponderato viene quindi aggiunto alla sequenza esistente di alberi per migliorare la produzione finale del modello - quantità di vendite future.
+Infine, viene utilizzato un modello additivo. Dopo aver calcolato la perdita con la funzione di perdita, l&#39;albero che riduce la perdita viene scelto e ponderato per migliorare la modellazione delle osservazioni più difficili. L&#39;output dell&#39;albero ponderato viene quindi aggiunto alla sequenza esistente di alberi per migliorare la produzione finale del modello - quantità di vendite future .

@@ -3,7 +3,7 @@ title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2942'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 |---------|----------|
 | <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno qualsiasi dei segmenti mappati cambia stato (da nullo a realizzato o da realizzato/esistente a esistente) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni Enterprise, anche le modifiche apportate alle identità di un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come segmento mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` sono inclusi anche gli oggetti (Experience Platform attualmente non supporta il mapping delle identità nella destinazione enterprise).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 |---------|----------|
 | <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno qualsiasi dei segmenti mappati cambia stato (da nullo a realizzato o da realizzato/esistente a esistente) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un’esportazione di destinazione.</li><li>Una modifica nella mappa delle identità è definita come un’identità aggiunta/rimossa per [grafo delle identità](/help/identity-service/ui/identity-graph-viewer.md) del profilo, per gli spazi dei nomi di identità mappati per l’esportazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, per gli attributi mappati alla destinazione.</li></ul> | <ul><li>I segmenti mappati sulla destinazione e modificati verranno inclusi nel `segmentMembership` oggetto. In alcuni scenari potrebbero essere esportati utilizzando più chiamate. Inoltre, in alcuni scenari, alcuni segmenti che non sono stati modificati potrebbero essere inclusi nella chiamata. In ogni caso, verranno esportati solo i segmenti mappati.</li><li>Tutte le identità dagli spazi dei nomi mappati alla destinazione in `identityMap` sono inclusi anche gli oggetti.</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -175,7 +175,7 @@ La popolazione attiva completa del segmento viene esportata ogni giorno.
 |---------|----------|
 | <ul><li>La pianificazione dell’esportazione impostata nell’interfaccia utente o nell’API e l’azione dell’utente (selezione [Esporta subito il file](/help/destinations/ui/export-file-now.md) nell’interfaccia utente o utilizzando [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md)) determinano l&#39;inizio di un&#39;esportazione di destinazione.</li></ul> | Nelle esportazioni di file completi, l’intera popolazione di profili attivi di un segmento, in base alla valutazione del segmento più recente, viene inclusa in ogni esportazione di file. Come colonne in ciascun file vengono inclusi anche i valori più recenti di ciascun attributo XDM selezionato per l’esportazione. I profili in stato di uscita non vengono inclusi nell’esportazione del file. |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **Esportazioni file incrementali**
 
@@ -185,7 +185,7 @@ Nella prima esportazione di file dopo la configurazione del flusso di lavoro di 
 |---------|----------|
 | <ul><li>La pianificazione di esportazione impostata nell’interfaccia utente o nell’API determina l’inizio di un’esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un segmento di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali. Modifiche negli attributi o nelle mappe di identità per un profilo *non* qualificano un profilo da includere nelle esportazioni incrementali.</li></ul> | <p>I profili per i quali è stata modificata l’iscrizione al segmento, insieme alle informazioni più recenti per ogni attributo XDM selezionato per l’esportazione.</p><p>I profili con lo stato di uscita vengono inclusi nelle esportazioni di destinazione, se `segmentMembership.status` Il campo XDM viene selezionato nel passaggio di mappatura.</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

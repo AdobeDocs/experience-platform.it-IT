@@ -1,25 +1,24 @@
 ---
-title: Interagire con più proprietà nell’SDK per web di Adobe Experience Platform
-description: Scopri come interagire con più proprietà dell’SDK web di Experience Platform.
+title: Interagire con più proprietà in Adobe Experience Platform Web SDK
+description: Scopri come interagire con più proprietà di Experience Platform Web SDK.
 keywords: più proprietà;configurare;sendEvent;edgeConfigId;orgId;
-translation-type: tm+mt
-source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
+exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-
 # Interagire con più proprietà
 
-In alcuni casi può essere utile interagire con due proprietà diverse sulla stessa pagina. Questi casi includono:
+In alcuni casi potrebbe essere utile interagire con due proprietà diverse sulla stessa pagina. Tali casi includono:
 
-* Aziende che sono state acquisite e stanno lavorando per integrare i loro siti web insieme
+* Aziende che sono state acquisite e stanno lavorando all’integrazione dei loro siti web
 * Relazioni di condivisione dei dati tra più aziende
-* Clienti che testano nuove soluzioni Adobe e non desiderano interrompere l’implementazione esistente
+* Clienti che stanno testando nuove soluzioni Adobe e non desiderano interrompere l’implementazione esistente
 
-L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiungendo un altro nome all’array nel codice di base. L&#39;esempio seguente fornisce due nomi, `mycustomname1` e `mycustomname2`.
+L’SDK consente di creare un’istanza separata per ogni proprietà aggiungendo un altro nome all’array nel codice di base. Nell&#39;esempio seguente vengono forniti due nomi: `mycustomname1` e `mycustomname2`.
 
 ```markup
 <script>
@@ -31,11 +30,11 @@ L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiung
 <script src="alloy.js" async></script>
 ```
 
-Di conseguenza, lo script crea due istanze dell&#39;SDK. La funzione globale per l’interazione con la prima istanza è denominata `mycustomname1` e la funzione globale per l’interazione con la seconda istanza è denominata `mycustomname2`.
+Di conseguenza, lo script crea due istanze dell’SDK. La funzione globale per l’interazione con la prima istanza è denominata `mycustomname1` e la funzione globale per interagire con la seconda istanza è denominata `mycustomname2`.
 
-Creando due istanze separate, ciascuna può essere configurata per una proprietà diversa. Tutte le comunicazioni o la persistenza dei dati che si verificano a causa dell&#39;interazione con `mycustomname1` vengono tenute isolate da `mycustomname2`.
+Creando due istanze separate, ciascuna può essere configurata per una proprietà diversa. Qualsiasi comunicazione o persistenza dei dati che si verifica a causa dell’interazione con `mycustomname1` è tenuto isolato da `mycustomname2`.
 
-Seguendo l&#39;esempio precedente, è possibile eseguire comandi utilizzando ciascuna istanza, come segue:
+Seguendo l&#39;esempio precedente, è possibile eseguire comandi utilizzando ciascuna delle istanze, come indicato di seguito:
 
 ```javascript
 mycustomname1("configure", {
@@ -61,8 +60,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Assicurati di eseguire il comando `configure` per ogni istanza prima di eseguire altri comandi sulla stessa istanza.
+Assicurati di eseguire `configure` per ogni istanza prima di eseguire altri comandi sulla stessa istanza.
 
 ## Limitazioni 
 
-Per evitare conflitti con i cookie, solo un’istanza di Adobe Experience Platform [!DNL Web SDK] all’interno di una pagina può avere un `edgeConfigId` particolare. Allo stesso modo, solo una istanza di Adobe Experience Platform [!DNL Web SDK] può avere un particolare `orgId`.
+Per evitare conflitti con i cookie, è sufficiente una sola istanza di Adobe Experience Platform [!DNL Web SDK] all&#39;interno di una pagina può avere un particolare `edgeConfigId`. Analogamente, solo un’istanza di Adobe Experience Platform [!DNL Web SDK] può avere un particolare `orgId`.

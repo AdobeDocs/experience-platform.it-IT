@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;OneTrust
 solution: Experience Platform
-title: (Beta) Crea un flusso di dati per un’origine di integrazione OneTrust utilizzando l’API del servizio di flusso
-description: Scopri come collegare Adobe Experience Platform all’integrazione OneTrust utilizzando l’API del servizio di flusso.
+title: (Beta) Crea un flusso di dati per un'origine di integrazione OneTrust tramite l'API del servizio Flusso
+description: Scopri come collegare Adobe Experience Platform all’integrazione OneTrust utilizzando l’API del servizio Flow.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
@@ -11,37 +11,37 @@ ht-degree: 2%
 
 ---
 
-# (Beta) Crea un flusso di dati per un [!DNL OneTrust Integration] la sorgente che utilizza [!DNL Flow Service] API
+# (Beta) Creare un flusso di dati per un [!DNL OneTrust Integration] origine che utilizza [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La [!DNL OneTrust Integration] la sorgente è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche. Per informazioni sull’utilizzo delle sorgenti con etichetta beta, consulta la [panoramica di origini](../../../../home.md#terms-and-conditions).
+>Il [!DNL OneTrust Integration] sorgente in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche. Per informazioni sull&#39;utilizzo di fonti con etichetta beta, vedere [panoramica sulle origini](../../../../home.md#terms-and-conditions).
 
-L’esercitazione seguente illustra i passaggi necessari per creare una connessione sorgente e un flusso di dati per ottenere i dati di consenso sia storici che pianificati da [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati per acquisire dati di consenso storici e pianificati da [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisiti
 
 >[!IMPORTANT]
 >
->La [!DNL OneTrust Integration] il connettore di origine e la documentazione sono stati creati da [!DNL OneTrust Integration] squadra. Per qualsiasi richiesta di informazioni o aggiornamento, contatta il [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US) direttamente.
+>Il [!DNL OneTrust Integration] il connettore di origine e la documentazione sono stati creati da [!DNL OneTrust Integration] team. Per ulteriori informazioni o richieste di aggiornamento, contattare [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US) direttamente.
 
-Prima di poterti connettere [!DNL OneTrust Integration] su Platform, devi prima recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, consulta [[!DNL OneTrust Integration] Guida di OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Prima di connettersi [!DNL OneTrust Integration] in Platform, devi prima recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, vedi [[!DNL OneTrust Integration] Guida di OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-Il token di accesso non si aggiorna automaticamente dopo la scadenza perché i token di aggiornamento da sistema a sistema non sono supportati da [!DNL OneTrust]. Pertanto, è necessario assicurarsi che il token di accesso sia aggiornato nella connessione prima della scadenza. La durata massima configurabile per un token di accesso è di un anno. Per ulteriori informazioni sull’aggiornamento del token di accesso, consulta la [[!DNL OneTrust] documento sulla gestione delle credenziali client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
+Il token di accesso non viene aggiornato automaticamente dopo la scadenza perché i token di aggiornamento da sistema a sistema non sono supportati da [!DNL OneTrust]. Pertanto, è necessario assicurarsi che il token di accesso sia aggiornato nella connessione prima della scadenza. La durata massima configurabile per un token di accesso è di un anno. Per ulteriori informazioni sull’aggiornamento del token di accesso, consulta [[!DNL OneTrust] documento sulla gestione delle credenziali client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## Connetti [!DNL OneTrust Integration] su Platform utilizzando [!DNL Flow Service] API
+## Connetti [!DNL OneTrust Integration] alla piattaforma utilizzando [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La [!DNL OneTrust Integration] Le specifiche API vengono condivise con Adobe per l’inserimento dei dati.
+>Il [!DNL OneTrust Integration] Le specifiche API vengono condivise con Adobe per l’acquisizione dei dati.
 
-L’esercitazione seguente illustra i passaggi necessari per creare un [!DNL OneTrust Integration] connessione di origine e creazione di un flusso di dati per portare [!DNL OneTrust Integration] dati a Platform tramite [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare un [!DNL OneTrust Integration] connessione sorgente e crea un flusso di dati per portare [!DNL OneTrust Integration] dati a Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Creare una connessione di base {#base-connection}
 
-Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
+Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL OneTrust Integration] credenziali di autenticazione come parte del corpo della richiesta.
+Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL OneTrust Integration] credenziali di autenticazione come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -79,16 +79,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della connessione di base. Assicurati che il nome della connessione di base sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione di base. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sulla connessione di base. |
-| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione e l&#39;approvazione della sorgente tramite [!DNL Flow Service] API. |
-| `auth.specName` | Il tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
+| `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
+| `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
+| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite [!DNL Flow Service] API. |
+| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
 | `auth.params.` | Contiene le credenziali necessarie per autenticare l’origine, incluso il token di accesso per la connessione all’API. |
-| `auth.params.accessToken` | Il token di accesso che corrisponde al tuo [!DNL OneTrust Integration] conto. |
+| `auth.params.accessToken` | Il token di accesso corrispondente al [!DNL OneTrust Integration] account. |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione di base creata, incluso l&#39;identificatore di connessione univoco (`id`). Questo ID è necessario per esplorare la struttura file e il contenuto della tua sorgente nel passaggio successivo.
+In caso di esito positivo, la risposta restituisce la connessione di base appena creata, incluso il relativo identificatore univoco di connessione (`id`). Questo ID è necessario per esplorare la struttura e il contenuto del file sorgente nel passaggio successivo.
 
 ```json
 {
@@ -97,11 +97,11 @@ Una risposta corretta restituisce la nuova connessione di base creata, incluso l
 }
 ```
 
-### Esplorare la sorgente {#explore}
+### Esplora l’origine {#explore}
 
-Utilizzando l’ID di connessione di base generato nel passaggio precedente, puoi esplorare file e directory eseguendo richieste di GET.
+Utilizzando l’ID connessione di base generato nel passaggio precedente, puoi esplorare file e directory eseguendo richieste GET.
 
-Utilizza le seguenti chiamate per trovare il percorso del file in cui desideri inserire [!DNL Platform]:
+Utilizza le seguenti chiamate per trovare il percorso del file che desideri inserire in [!DNL Platform]:
 
 **Formato API**
 
@@ -109,15 +109,15 @@ Utilizza le seguenti chiamate per trovare il percorso del file in cui desideri i
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
 ```
 
-Quando si eseguono richieste di GET per esplorare la struttura e il contenuto del file di origine, è necessario includere i parametri di query elencati nella tabella seguente:
+Quando si eseguono richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, è necessario includere i parametri di query elencati nella tabella seguente:
 
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | ID connessione di base generato nel passaggio precedente. |
-| `objectType=rest` | Tipo di oggetto da esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
-| `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il suo valore rappresenta il percorso della directory che desideri esplorare. |
-| `fileType=json` | Il tipo di file da portare in Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
+| `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
+| `objectType=rest` | Tipo di oggetto che si desidera esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
+| `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. |
+| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l’unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
 
 **Richiesta**
@@ -133,11 +133,11 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce la struttura del file interrogato.
+In caso di esito positivo, la risposta restituisce la struttura del file su cui è stata eseguita la query.
 
 >[!NOTE]
 >
->Il payload di risposta JSON riportato di seguito è nascosto per brevità. Seleziona Fai clic su di me per visualizzare il payload della risposta.
+>Il payload di risposta JSON seguente è nascosto per brevità. Seleziona Fai clic su di me per visualizzare il payload di risposta.
 
 +++Fai clic qui
 
@@ -6733,9 +6733,9 @@ Una risposta corretta restituisce la struttura del file interrogato.
 
 +++
 
-### Creazione di una connessione sorgente {#source-connection}
+### Creare una connessione sorgente {#source-connection}
 
-È possibile creare una connessione sorgente effettuando una richiesta di POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
+Puoi creare una connessione sorgente effettuando una richiesta POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
 **Formato API**
 
@@ -6745,7 +6745,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di origine per [!DNL OneTrust Integration] :
+La richiesta seguente crea una connessione sorgente per [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -6772,15 +6772,15 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione sorgente. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sulla connessione sorgente. |
+| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione sorgente. |
+| `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di origine. |
 | `baseConnectionId` | ID connessione di base di [!DNL OneTrust Integration]. Questo ID è stato generato in un passaggio precedente. |
-| `connectionSpec.id` | ID della specifica di connessione corrispondente alla tua origine. |
-| `data.format` | Il formato del [!DNL OneTrust Integration] dati da acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
+| `connectionSpec.id` | ID della specifica di connessione corrispondente all&#39;origine. |
+| `data.format` | Il formato del [!DNL OneTrust Integration] i dati che desideri acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuova connessione sorgente creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione sorgente appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -6791,23 +6791,23 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione effettuando una richiesta POST al [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite API](../../../../../xdm/api/schemas.md).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](../../../../../xdm/api/schemas.md).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta di POST al [API del servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite API](../../../../../catalog/api/create-dataset.md).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](../../../../../catalog/api/create-dataset.md).
 
 ### Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, è necessario fornire l’ID di specifica di connessione fissa corrispondente al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, devi fornire l&#39;ID di specifica della connessione fissa che corrisponde al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci di uno schema di destinazione di un set di dati di destinazione e dell’ID della specifica di connessione di [!DNL Data Lake]. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al [!DNL Data Lake]. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -6817,7 +6817,7 @@ POST /targetConnections
 
 **Richiesta**
 
-La seguente richiesta crea una connessione di destinazione per [!DNL OneTrust Integration] :
+La richiesta seguente crea una connessione di destinazione per [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -6845,16 +6845,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione di destinazione. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sulla connessione di destinazione. |
-| `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Lake]. Questo ID fisso è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato del [!DNL OneTrust Integration] i dati che desideri inserire in Platform. |
+| `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione di destinazione. |
+| `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
+| `connectionSpec.id` | ID della specifica di connessione che corrisponde a [!DNL Data Lake]. Questo ID fisso è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Il formato del [!DNL OneTrust Integration] dati da inserire in Platform. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è necessario nei passaggi successivi.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
 
 ```json
 {
@@ -6865,7 +6865,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco della nuova conne
 
 ### Creare una mappatura {#mapping}
 
-Affinché i dati di origine possano essere acquisiti in un set di dati di destinazione, devono prima essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. A tal fine, esegui una richiesta POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature dati definite all’interno del payload della richiesta.
+Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce. Ciò si ottiene eseguendo una richiesta POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature di dati definite nel payload della richiesta.
 
 **Formato API**
 
@@ -6936,12 +6936,12 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `xdmSchema` | ID del [schema XDM di destinazione](#target-schema) generato in un passaggio precedente. |
-| `mappings.destinationXdmPath` | Percorso XDM di destinazione in cui viene eseguito il mapping dell&#39;attributo di origine. |
-| `mappings.sourceAttribute` | L&#39;attributo di origine che deve essere mappato su un percorso XDM di destinazione. |
+| `mappings.destinationXdmPath` | Percorso XDM di destinazione in cui viene eseguito il mapping dell’attributo di origine. |
+| `mappings.sourceAttribute` | L’attributo di origine che deve essere mappato su un percorso XDM di destinazione. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, compreso l’identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -6956,15 +6956,15 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 
 ### Creare un flusso {#flow}
 
-Ultimo passo verso l&#39;inserimento dei dati [!DNL OneTrust Integration] su Platform viene creato un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
+L’ultimo passaggio per importare dati da [!DNL OneTrust Integration] In Platform è necessario creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione di origine](#source-connection)
+* [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
 * [ID mappatura](#mapping)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 
-Per pianificare un’acquisizione, è innanzitutto necessario impostare il valore dell’ora di inizio in modo che l’ora di inizio sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`oppure `week`. Il valore dell’intervallo indica il periodo tra due acquisizioni consecutive, tuttavia la creazione di un’acquisizione una tantum non richiede l’impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni seguenti: `once`, `minute`, `hour`, `day`, o `week`. Il valore di intervallo indica il periodo tra due acquisizioni consecutive, tuttavia, la creazione di un’acquisizione una tantum non richiede l’impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
 
 **Formato API**
 
@@ -7013,23 +7013,23 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo in quanto puoi utilizzarlo per cercare informazioni sul flusso di dati. |
-| `description` | Un valore facoltativo che può essere incluso per fornire ulteriori informazioni sul flusso di dati. |
-| `flowSpec.id` | ID delle specifiche di flusso necessario per creare un flusso di dati. Questo ID fisso è: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Versione corrispondente dell’ID della specifica di flusso. Questo valore predefinito è `1.0`. |
-| `sourceConnectionIds` | La [ID connessione di origine](#source-connection) generato in un passaggio precedente. |
-| `targetConnectionIds` | La [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni necessarie per essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
+| `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo, in quanto può essere utilizzato per cercare informazioni sul flusso di dati. |
+| `description` | Valore facoltativo che puoi includere per fornire ulteriori informazioni sul flusso di dati. |
+| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. Questo ID fisso è: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Questo valore viene impostato automaticamente su `1.0`. |
+| `sourceConnectionIds` | Il [ID connessione sorgente](#source-connection) generato in un passaggio precedente. |
+| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
-| `transformations.params.mappingId` | La [ID mappatura](#mapping) generato in un passaggio precedente. |
-| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Questo valore predefinito è `0`. |
+| `transformations.params.mappingId` | Il [ID mappatura](#mapping) generato in un passaggio precedente. |
+| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Questo valore viene impostato automaticamente su `0`. |
 | `scheduleParams.startTime` | Questa proprietà contiene informazioni sulla pianificazione dell’acquisizione del flusso di dati. |
-| `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`oppure `week`. |
-| `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è necessario quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
+| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena creato. Puoi utilizzare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
 
 ```json
 {
@@ -7040,24 +7040,24 @@ Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena crea
 
 ## Appendice
 
-La sezione seguente fornisce informazioni sui passaggi necessari per monitorare, aggiornare ed eliminare il flusso di dati.
+La sezione seguente fornisce informazioni sui passaggi possibili per monitorare, aggiornare ed eliminare il flusso di dati.
 
 ### Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, lo stato di completamento e gli errori. Per esempi completi sulle API, consulta la guida su [monitoraggio dei flussi di dati sorgente tramite API](../../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite l’API](../../monitor.md).
 
 ### Aggiornare il flusso di dati
 
-Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappature associati effettuando una richiesta di PATCH al `/flows` punto finale [!DNL Flow Service] , fornendo al tempo stesso l’ID del flusso di dati. Quando effettui una richiesta di PATCH, devi fornire l’univoco del flusso di dati `etag` in `If-Match` intestazione. Per esempi completi sulle API, consulta la guida su [aggiornamento dei flussi di dati di origini tramite API](../../update-dataflows.md).
+Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappatura associati, effettuando una richiesta PATCH al `/flows` endpoint di [!DNL Flow Service] e fornire l’ID del flusso di dati. Quando effettui una richiesta PATCH, devi fornire il codice univoco del flusso di dati `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dei flussi di dati di origine tramite l’API](../../update-dataflows.md).
 
-### Aggiorna il tuo account
+### Aggiornare l’account
 
-Aggiorna il nome, la descrizione e le credenziali dell&#39;account di origine effettuando una richiesta PATCH al [!DNL Flow Service] API fornendo l&#39;ID di connessione di base come parametro di query. Quando effettui una richiesta di PATCH, devi fornire l’account sorgente univoco `etag` in `If-Match` intestazione. Per esempi completi sulle API, consulta la guida su [aggiornamento dell’account sorgente tramite API](../../update.md).
+Aggiorna il nome, la descrizione e le credenziali dell’account di origine eseguendo una richiesta PATCH al [!DNL Flow Service] fornendo l’ID connessione di base come parametro di query. Quando effettui una richiesta PATCH, devi fornire il codice univoco dell’account sorgente `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dell’account sorgente tramite l’API](../../update.md).
 
-### Elimina il flusso di dati
+### Eliminare il flusso di dati
 
-Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] API fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi completi sulle API, consulta la guida su [eliminazione dei flussi di dati tramite API](../../delete-dataflows.md).
+Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite API](../../delete-dataflows.md).
 
-### Elimina l&#39;account
+### Elimina l’account
 
-Elimina il tuo account eseguendo una richiesta DELETE al [!DNL Flow Service] API fornendo l’ID di connessione di base dell’account da eliminare. Per esempi completi sulle API, consulta la guida su [eliminazione dell’account sorgente tramite API](../../delete.md).
+Elimina l’account eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID della connessione di base dell’account da eliminare. Per esempi API completi, consulta la guida su [eliminazione dell’account sorgente tramite l’API](../../delete.md).

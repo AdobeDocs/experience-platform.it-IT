@@ -1,7 +1,7 @@
 ---
-title: Tracciare i collegamenti tramite l’SDK per web di Adobe Experience Platform
+title: Tracciare i collegamenti tramite Adobe Experience Platform Web SDK
 description: Scopri come inviare dati di collegamento ad Adobe Analytics con Experience Platform Web SDK
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;visualizzazioni di pagina;tracciamento collegamenti;collegamenti;tracciamento collegamenti;clickCollection;raccolta clic;
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web interaction;visualizzazioni di pagina;tracciamento dei collegamenti;link;tracciare i collegamenti;clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
 source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Tracciare i collegamenti
 
-I collegamenti possono essere impostati manualmente o tracciati [automaticamente](#automaticLinkTracking). Il tracciamento manuale viene effettuato aggiungendo i dettagli nella sezione `web.webInteraction` parte dello schema. Sono necessarie tre variabili:
+I collegamenti possono essere impostati manualmente o tracciati [automaticamente](#automaticLinkTracking). Il tracciamento manuale viene eseguito aggiungendo i dettagli sotto `web.webInteraction` parte dello schema. Sono necessarie tre variabili:
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -37,15 +37,15 @@ alloy("sendEvent", {
 
 Il tipo di collegamento può essere uno dei tre valori seguenti:
 
-* **`other`:** Collegamento personalizzato
-* **`download`:** Collegamento di download
-* **`exit`:** Collegamento di uscita
+* **`other`:** Un collegamento personalizzato
+* **`download`:** Un collegamento per il download
+* **`exit`:** Un collegamento di uscita
 
-Questi valori sono [mappatura automatica](adobe-analytics/automatically-mapped-vars.md) in Adobe Analytics se [configurato](adobe-analytics/analytics-overview.md) per farlo.
+Questi valori sono [mappato automaticamente](adobe-analytics/automatically-mapped-vars.md) in Adobe Analytics se [configurato](adobe-analytics/analytics-overview.md) per farlo.
 
 ## Tracciamento automatico dei collegamenti {#automaticLinkTracking}
 
-Per impostazione predefinita, l’SDK web acquisisce, etichetta e registra i clic sui tag di collegamento idonei. I clic vengono catturati con un [catturare](https://www.w3.org/TR/uievents/#capture-phase) fare clic sul listener di eventi associato al documento.
+Per impostazione predefinita, Web SDK acquisisce, etichetta e record e fa clic sui tag di collegamento qualificati. I clic vengono acquisiti con una [acquisire](https://www.w3.org/TR/uievents/#capture-phase) fare clic sul listener di eventi allegato al documento.
 
 Il tracciamento automatico dei collegamenti può essere disabilitato da [configurazione](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) SDK per web.
 
@@ -53,27 +53,27 @@ Il tracciamento automatico dei collegamenti può essere disabilitato da [configu
 clickCollectionEnabled: false
 ```
 
-### Quali tag sono qualificati per il tracciamento dei collegamenti?{#qualifyingLinks}
+### Quali tag sono idonei per il tracciamento dei collegamenti?{#qualifyingLinks}
 
-Il tracciamento automatico dei collegamenti viene eseguito per l’ancoraggio `A` e `AREA` tag. Tuttavia, questi tag non vengono considerati per il tracciamento dei collegamenti se hanno un allegato `onclick` handler.
+Tracciamento automatico dei collegamenti eseguito per l&#39;ancoraggio `A` e `AREA` tag. Tuttavia, questi tag non vengono considerati per il tracciamento dei collegamenti se dispongono di un allegato `onclick` handler.
 
 ### Come vengono etichettati i collegamenti?{#labelingLinks}
 
-I collegamenti sono etichettati come collegamento di download se il tag di ancoraggio include un attributo di download o se il collegamento termina con una comune estensione di file. Il qualificatore del collegamento di download può essere [configurato](../fundamentals/configuring-the-sdk.md) con espressione regolare:
+I collegamenti sono etichettati come collegamento di download se il tag di ancoraggio include un attributo di download o se il collegamento termina con un’estensione di file comune. Il qualificatore del collegamento di download può essere [configurato](../fundamentals/configuring-the-sdk.md) con un’espressione regolare:
 
 ```javascript
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-I collegamenti sono etichettati come link di uscita se il dominio di destinazione del collegamento è diverso da quello corrente `window.location.hostname`.
+I collegamenti sono etichettati come collegamento di uscita se il dominio di destinazione del collegamento è diverso dall’attuale `window.location.hostname`.
 
-I collegamenti non qualificati come collegamento di download o di uscita sono etichettati come &quot;altri&quot;.
+I collegamenti che non sono idonei come collegamento di download o di uscita sono etichettati come &quot;altro&quot;.
 
-### Come si possono filtrare i valori di tracciamento dei collegamenti?
+### Come possono essere filtrati i valori di tracciamento dei collegamenti?
 
-I dati raccolti con tracciamento automatico dei collegamenti possono essere ispezionati e filtrati fornendo un [funzione di callback onBeforeEventSend](../fundamentals/tracking-events.md#modifying-events-globally).
+I dati raccolti con il tracciamento automatico dei collegamenti possono essere ispezionati e filtrati fornendo un [funzione di callback onBeforeEventSend](../fundamentals/tracking-events.md#modifying-events-globally).
 
-Filtrare i dati di tracciamento dei collegamenti può essere utile quando si preparano i dati per il reporting di Analytics. Il tracciamento automatico dei collegamenti acquisisce sia il nome del collegamento che l’URL del collegamento. Nei rapporti di Analytics, il nome del collegamento ha priorità rispetto all’URL del collegamento. Se desideri segnalare l’URL del collegamento, devi rimuovere il nome del collegamento. L’esempio seguente mostra un `onBeforeEventSend` funzione che rimuove il nome del collegamento per i collegamenti di download:
+Il filtraggio dei dati di tracciamento dei collegamenti può essere utile durante la preparazione dei dati per i rapporti di Analytics. Il tracciamento automatico dei collegamenti acquisisce sia il nome del collegamento che l’URL del collegamento. Nei rapporti di Analytics, il nome del collegamento ha la priorità sull’URL del collegamento. Se desideri segnalare l’URL del collegamento, devi rimuovere il nome del collegamento. L’esempio seguente mostra un’ `onBeforeEventSend` funzione che rimuove il nome del collegamento per i collegamenti di download:
 
 ```javascript
 alloy("configure", {

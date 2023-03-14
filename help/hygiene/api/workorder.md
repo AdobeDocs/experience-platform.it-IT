@@ -1,34 +1,34 @@
 ---
 title: Endpoint API ordine di lavoro
-description: L’endpoint /workorder nell’API di igiene dati ti consente di gestire in modo programmatico le attività di eliminazione per le identità.
+description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 5%
+source-wordcount: '1011'
+ht-degree: 3%
 
 ---
 
 # Endpoint ordine di lavoro
 
-La `/workorder` L’endpoint nell’API di igiene dati ti consente di gestire in modo programmatico le richieste di cancellazione dei record in Adobe Experience Platform.
+Il `/workorder` L’endpoint nell’API di igiene dei dati consente di gestire in modo programmatico le richieste di eliminazione dei record in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Le richieste di eliminazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
+>Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe**.
 >
 >
->Le eliminazioni dei record sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
+>Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla la [panoramica](./overview.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla [panoramica](./overview.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-## Creare una richiesta di cancellazione del record {#create}
+## Creare una richiesta di eliminazione record {#create}
 
-Puoi eliminare una o più identità da un singolo set di dati o da tutti i set di dati effettuando una richiesta di POST al `/workorder` punto finale.
+Per eliminare una o più identità da un singolo set di dati o da tutti i set di dati, effettua una richiesta POST al `/workorder` endpoint.
 
 **Formato API**
 
@@ -78,17 +78,17 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `action` | L&#39;azione da eseguire. Il valore deve essere impostato su `delete_identity` per le cancellazioni di record. |
-| `datasetId` | Se esegui l’eliminazione da un singolo set di dati, questo valore deve essere l’ID del set di dati in questione. Se si esegue l&#39;eliminazione da tutti i set di dati, impostare il valore su `ALL`.<br><br>Se specifichi un singolo set di dati, lo schema Experience Data Model (XDM) associato al set di dati deve avere un&#39;identità primaria definita. |
-| `displayName` | Nome visualizzato della richiesta di eliminazione record. |
+| `action` | Azione da eseguire. Il valore deve essere impostato su `delete_identity` per le eliminazioni di record. |
+| `datasetId` | Se stai eliminando dati da un singolo set di dati, questo valore deve essere l’ID del set di dati in questione. Se stai eliminando da tutti i set di dati, imposta il valore su `ALL`.<br><br>Se specifichi un singolo set di dati, lo schema Experience Data Model (XDM) associato al set di dati deve avere un’identità primaria definita. |
+| `displayName` | Nome visualizzato per la richiesta di eliminazione del record. |
 | `description` | Descrizione della richiesta di eliminazione record. |
-| `identities` | Matrice contenente le identità di almeno un utente le cui informazioni si desidera eliminare. Ogni identità è composta da un [spazio dei nomi identità](../../identity-service/namespaces.md) e un valore:<ul><li>`namespace`: Contiene una singola proprietà stringa, `code`, che rappresenta lo spazio dei nomi Identity. </li><li>`id`: Il valore di identità.</ul>Se `datasetId` specifica un singolo set di dati, ogni entità in `identities` deve utilizzare lo stesso spazio dei nomi di identità dell&#39;identità principale dello schema.<br><br>Se `datasetId` è impostato su `ALL`, `identities` array non è vincolata ad alcun singolo spazio dei nomi, in quanto ogni set di dati potrebbe essere diverso. Tuttavia, le richieste sono ancora vincolate dai namespace disponibili per la tua organizzazione, come segnalato da [Servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Matrice contenente le identità di almeno un utente di cui desideri eliminare le informazioni. Ogni identità è composta da un [spazio dei nomi delle identità](../../identity-service/namespaces.md) e un valore:<ul><li>`namespace`: contiene una singola proprietà stringa, `code`, che rappresenta lo spazio dei nomi dell’identità. </li><li>`id`: valore di identità.</ul>Se `datasetId` specifica un singolo set di dati, ogni entità in `identities` deve utilizzare lo stesso spazio dei nomi dell’identità primaria dello schema.<br><br>Se `datasetId` è impostato su `ALL`, il `identities` l’array non è vincolato a un singolo spazio dei nomi poiché ogni set di dati potrebbe essere diverso. Tuttavia, le richieste di sono ancora vincolate agli spazi dei nomi disponibili per la tua organizzazione, come segnalato da [Servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;eliminazione del record.
+In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazione del record.
 
 ```json
 {
@@ -108,19 +108,19 @@ Una risposta corretta restituisce i dettagli dell&#39;eliminazione del record.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID dell&#39;ordine di eliminazione. Può essere utilizzato per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | L&#39;ID organizzazione. |
+| `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
-| `action` | L&#39;azione eseguita dall&#39;ordine di lavoro. Per le cancellazioni di record, il valore è `identity-delete`. |
-| `createdAt` | Una marca temporale di quando è stato creato l&#39;ordine di eliminazione. |
-| `updatedAt` | Timestamp dell&#39;ultimo aggiornamento dell&#39;ordine di eliminazione. |
-| `status` | Lo stato corrente dell&#39;ordine di eliminazione. |
+| `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
+| `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
+| `updatedAt` | Timestamp dell’ultimo aggiornamento dell’ordine di eliminazione. |
+| `status` | Stato corrente dell&#39;ordine di eliminazione. |
 | `createdBy` | Utente che ha creato l&#39;ordine di eliminazione. |
 | `datasetId` | ID del set di dati soggetto alla richiesta. Se la richiesta è per tutti i set di dati, il valore verrà impostato su `ALL`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Recuperare lo stato di eliminazione record (#lookup)
+## Recuperare lo stato di un&#39;eliminazione record (#lookup)
 
 Dopo [creazione di una richiesta di eliminazione record](#create), puoi controllarne lo stato utilizzando una richiesta GET.
 
@@ -132,9 +132,9 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La `workorderId` della cancellazione del record che si sta cercando. |
+| `{WORK_ORDER_ID}` | Il `workorderId` dell’eliminazione record che stai cercando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -149,7 +149,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’operazione di eliminazione, incluso lo stato corrente.
+In caso di esito positivo, la risposta restituisce i dettagli dell’operazione di eliminazione, compreso lo stato corrente.
 
 ```json
 {
@@ -186,20 +186,20 @@ Una risposta corretta restituisce i dettagli dell’operazione di eliminazione, 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID dell&#39;ordine di eliminazione. Può essere utilizzato per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | L&#39;ID organizzazione. |
+| `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
-| `action` | L&#39;azione eseguita dall&#39;ordine di lavoro. Per le cancellazioni di record, il valore è `identity-delete`. |
-| `createdAt` | Una marca temporale di quando è stato creato l&#39;ordine di eliminazione. |
-| `updatedAt` | Timestamp dell&#39;ultimo aggiornamento dell&#39;ordine di eliminazione. |
-| `status` | Lo stato corrente dell&#39;ordine di eliminazione. |
+| `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
+| `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
+| `updatedAt` | Timestamp dell’ultimo aggiornamento dell’ordine di eliminazione. |
+| `status` | Stato corrente dell&#39;ordine di eliminazione. |
 | `createdBy` | Utente che ha creato l&#39;ordine di eliminazione. |
 | `datasetId` | ID del set di dati soggetto alla richiesta. Se la richiesta è per tutti i set di dati, il valore verrà impostato su `ALL`. |
-| `productStatusDetails` | Matrice che elenca lo stato corrente dei processi a valle relativi alla richiesta. Ogni oggetto array contiene le seguenti proprietà:<ul><li>`productName`: Nome del servizio a valle.</li><li>`productStatus`: Lo stato attuale di elaborazione della richiesta del servizio a valle.</li><li>`createdAt`: Una marca temporale di quando il servizio ha pubblicato lo stato più recente.</li></ul> |
+| `productStatusDetails` | Array che elenca lo stato corrente dei processi a valle correlati alla richiesta. Ogni oggetto array contiene le seguenti proprietà:<ul><li>`productName`: nome del servizio downstream.</li><li>`productStatus`: stato di elaborazione corrente della richiesta dal servizio a valle.</li><li>`createdAt`: marca temporale di quando il servizio ha pubblicato lo stato più recente.</li></ul> |
 
-## Aggiornare una richiesta di cancellazione del record
+## Aggiornare una richiesta di eliminazione record
 
-È possibile aggiornare `displayName` e `description` per eliminare un record effettuando una richiesta di PUT.
+È possibile aggiornare `displayName` e `description` per eliminare un record effettuando una richiesta PUT.
 
 **Formato API**
 
@@ -209,9 +209,9 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La `workorderId` della cancellazione del record che si sta cercando. |
+| `{WORK_ORDER_ID}` | Il `workorderId` dell’eliminazione record che stai cercando. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -230,14 +230,14 @@ curl -X GET \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `displayName` | Nome visualizzato aggiornato per la richiesta di eliminazione record. |
-| `description` | Una descrizione aggiornata per la richiesta di eliminazione dei record. |
+| `displayName` | Nome visualizzato aggiornato per la richiesta di eliminazione del record. |
+| `description` | Descrizione aggiornata della richiesta di eliminazione record. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;eliminazione del record.
+In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazione del record.
 
 ```json
 {
@@ -274,15 +274,15 @@ Una risposta corretta restituisce i dettagli dell&#39;eliminazione del record.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID dell&#39;ordine di eliminazione. Può essere utilizzato per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | L&#39;ID organizzazione. |
+| `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
-| `action` | L&#39;azione eseguita dall&#39;ordine di lavoro. Per le cancellazioni di record, il valore è `identity-delete`. |
-| `createdAt` | Una marca temporale di quando è stato creato l&#39;ordine di eliminazione. |
-| `updatedAt` | Timestamp dell&#39;ultimo aggiornamento dell&#39;ordine di eliminazione. |
-| `status` | Lo stato corrente dell&#39;ordine di eliminazione. |
+| `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
+| `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
+| `updatedAt` | Timestamp dell’ultimo aggiornamento dell’ordine di eliminazione. |
+| `status` | Stato corrente dell&#39;ordine di eliminazione. |
 | `createdBy` | Utente che ha creato l&#39;ordine di eliminazione. |
 | `datasetId` | ID del set di dati soggetto alla richiesta. Se la richiesta è per tutti i set di dati, il valore verrà impostato su `ALL`. |
-| `productStatusDetails` | Matrice che elenca lo stato corrente dei processi a valle relativi alla richiesta. Ogni oggetto array contiene le seguenti proprietà:<ul><li>`productName`: Nome del servizio a valle.</li><li>`productStatus`: Lo stato attuale di elaborazione della richiesta del servizio a valle.</li><li>`createdAt`: Una marca temporale di quando il servizio ha pubblicato lo stato più recente.</li></ul> |
+| `productStatusDetails` | Array che elenca lo stato corrente dei processi a valle correlati alla richiesta. Ogni oggetto array contiene le seguenti proprietà:<ul><li>`productName`: nome del servizio downstream.</li><li>`productStatus`: stato di elaborazione corrente della richiesta dal servizio a valle.</li><li>`createdAt`: marca temporale di quando il servizio ha pubblicato lo stato più recente.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

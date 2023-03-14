@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;quadrato
+keywords: Experience Platform;home;argomenti popolari;square
 solution: Experience Platform
-title: Panoramica del connettore sorgente quadrato
+title: Panoramica del connettore di origine quadrato
 description: Scopri come collegare Square a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 # [!DNL Square] connettore
 
-Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce il supporto per l’acquisizione di dati da un’applicazione di pagamento di terze parti. Il supporto ai fornitori di pagamenti include: [!DNL Square].
+Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di pagamenti di terze parti. Il supporto per i fornitori di servizi di pagamento include [!DNL Square].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Consulta la sezione [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Consulta la [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
 
-La documentazione seguente fornisce informazioni su come connettersi [!DNL Square] su Platform utilizzando le API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL Square] in Platform tramite API o l’interfaccia utente:
 
-## Connetti [!DNL Square] su Platform tramite API
+## Connetti [!DNL Square] alla piattaforma utilizzando le API
 
-* [Creare una connessione di base quadrata utilizzando l’API del servizio di flusso](../../tutorials/api/create/payments/square.md)
-* [Esplorare le tabelle di dati utilizzando l’API del servizio di flusso](../../tutorials/api/explore/tabular.md)
-* [Creare un flusso di dati per un’origine dei pagamenti utilizzando l’API del servizio di flusso](../../tutorials/api/collect/payments.md)
+* [Creare una connessione di base quadrata utilizzando l’API del servizio Flow](../../tutorials/api/create/payments/square.md)
+* [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
+* [Creare un flusso di dati per un’origine di pagamenti utilizzando l’API del servizio Flusso](../../tutorials/api/collect/payments.md)
 
-## Connetti [!DNL Square] su Platform tramite l’interfaccia utente
+## Connetti [!DNL Square] a Platform tramite l’interfaccia utente
 
-* [Creare una connessione sorgente a quadrato nell’interfaccia utente](../../tutorials/ui/create/payments/square.md)
-* [Creare un flusso di dati per una connessione a un’origine pagamenti nell’interfaccia utente](../../tutorials/ui/dataflow/payments.md)
+* [Creare una connessione sorgente quadrata nell’interfaccia utente](../../tutorials/ui/create/payments/square.md)
+* [Creare un flusso di dati per una connessione all’origine dei pagamenti nell’interfaccia utente](../../tutorials/ui/dataflow/payments.md)

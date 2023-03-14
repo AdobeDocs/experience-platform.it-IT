@@ -1,145 +1,145 @@
 ---
-title: (Beta) La connessione Trade Desk - CRM
-description: Attiva i profili nel tuo account Trade Desk per il targeting del pubblico e la soppressione in base ai dati CRM.
+title: (Beta) Il Trade Desk - Connessione CRM
+description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 1%
+source-wordcount: '1078'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Trade Desk] - Connessione CRM
+# (Beta) Il [!DNL Trade Desk] - Connessione CRM
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk - CRM] la destinazione in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+>[!DNL The Trade Desk - CRM] La destinazione in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 >
->Con il rilascio di EUID (ID unificato europeo), ne vedrai due [!DNL The Trade Desk - CRM] destinazioni nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md).
->* Se si raccolgono dati nell&#39;UE, utilizzare il **[!DNL The Trade Desk - CRM (EU)]** destinazione.
->* Se si ottengono dati nelle aree APAC o NAMER, utilizzare il **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destinazione.
+>Con il rilascio di EUID (European Unified ID), ora ne vengono visualizzati due [!DNL The Trade Desk - CRM] destinazioni in [catalogo delle destinazioni](/help/destinations/catalog/overview.md).
+>* Se si trovano dati nell&#39;UE, utilizzare il **[!DNL The Trade Desk - CRM (EU)]** destinazione.
+>* Se i dati vengono originati nelle aree APAC o NAMER, utilizzare **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destinazione.
 >
->Entrambe le destinazioni in Experience Platform sono attualmente in versione beta. Questa pagina della documentazione è stata creata da *[!DNL Trade Desk]* squadra. Per qualsiasi richiesta di informazioni o aggiornamento, contatta il tuo [!DNL Trade Desk] , la documentazione e le funzionalità sono soggette a modifiche.
+>Entrambe le destinazioni in Experience Platform sono attualmente in versione beta. Questa pagina della documentazione è stata creata da *[!DNL Trade Desk]* team. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo [!DNL Trade Desk] rappresentativo, la documentazione e le funzionalità sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
-Questo documento è progettato per facilitare l’attivazione dei profili [!DNL Trade Desk] account per il targeting e la soppressione del pubblico in base ai dati CRM.
+Questo documento è stato progettato per aiutarti ad attivare i profili nel tuo [!DNL Trade Desk] account per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 
-[!DNL The Trade Desk(TTD)] non gestisce direttamente in qualsiasi momento il file di caricamento degli indirizzi e-mail né [!DNL The Trade Desk] archivia le e-mail non crittografate.
+[!DNL The Trade Desk(TTD)] non gestisce direttamente il file di caricamento degli indirizzi e-mail in alcun momento, né [!DNL The Trade Desk] archivia le e-mail non elaborate (senza hash).
 
 >[!TIP]
 >
->Utilizzo [!DNL The Trade Desk] Destinazioni CRM per la mappatura dei dati CRM, come e-mail o indirizzo e-mail con hash. Utilizza la [altra destinazione commerciale](/help/destinations/catalog/advertising/tradedesk.md) nel catalogo Adobe Experience Platform per i cookie e le mappature ID dispositivo.
+>Utilizzare [!DNL The Trade Desk] Destinazioni di gestione delle relazioni con i clienti per la mappatura dei dati di gestione delle relazioni con i clienti, come e-mail o indirizzo e-mail con hash. Utilizza il [altra destinazione Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) nel catalogo Adobe Experience Platform per i cookie e le mappature degli ID dispositivo.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di attivare i segmenti in [!DNL The Trade Desk], è necessario contattare [!DNL The Trade Desk] account manager per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] concederà quindi l&#39;autorizzazione e condividerà l&#39;ID inserzionista per configurare la destinazione.
+Prima di attivare i segmenti in [!DNL The Trade Desk], è necessario contattare il [!DNL The Trade Desk] Account Manager per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] concederà quindi l’autorizzazione e condividerà l’ID inserzionista per configurare la destinazione.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
-A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti. Per piacere, leggi le [Panoramica dello spazio dei nomi identità](/help/identity-service/namespaces.md) per ulteriori informazioni.
+A seconda del tipo di ID che acquisisci in Adobe Experience Platform, devi rispettare i requisiti corrispondenti. Leggi le [Panoramica sullo spazio dei nomi delle identità](/help/identity-service/namespaces.md) per ulteriori informazioni.
 
 ## Identità supportate {#supported-identities}
 
-[!DNL The Trade Desk] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni [identità](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
-Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione sui requisiti di corrispondenza ID e utilizza rispettivamente gli spazi dei nomi appropriati per gli indirizzi e-mail in testo normale e con hash.
+Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione sui requisiti di corrispondenza ID e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| E-mail | Indirizzi e-mail (testo cancellato) | Ingresso `email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo E-mail. |
-| Email_LC_SHA256 | È necessario eseguire l’hash degli indirizzi e-mail utilizzando SHA256 e le lettere minuscole. Assicurati di seguire qualsiasi [normalizzazione delle e-mail](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) regole richieste. Non potrai modificare questa impostazione in un secondo momento. | Ingresso `hashed_email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo Email_LC_SHA256. |
+| E-mail | Indirizzi e-mail (testo non crittografato) | Input `email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo e-mail. |
+| Email_LC_SHA256 | Gli indirizzi e-mail devono avere un hash utilizzando SHA256 e lettere minuscole. Assicurati di seguire qualsiasi [normalizzazione e-mail](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) regole richieste. Non potrai modificare questa impostazione in un secondo momento. | Input `hashed_email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo Email_LC_SHA256. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Requisiti di hash e-mail {#hashing-requirements}
+## Requisiti di hashing delle e-mail {#hashing-requirements}
 
-Puoi aggiungere hash agli indirizzi e-mail prima di acquisirli in Adobe Experience Platform o utilizzare indirizzi e-mail non elaborati.
+Puoi eseguire l’hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform o utilizzare indirizzi e-mail non elaborati.
 
-Per ulteriori informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la sezione [panoramica sull’acquisizione in batch](/help/ingestion/batch-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, leggi la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md).
 
-Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare i seguenti requisiti:
+Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i seguenti requisiti:
 
 * Rimuovere gli spazi iniziali e finali.
-* Converti tutti i caratteri ASCII in caratteri minuscoli.
-* In `gmail.com` indirizzi e-mail, rimuovi i seguenti caratteri dalla parte del nome utente dell’indirizzo e-mail:
-   * Il periodo (. (codice ASCII 46). Ad esempio, normalizza `jane.doe@gmail.com` a `janedoe@gmail.com`.
+* Converte tutti i caratteri ASCII in minuscolo.
+* In entrata `gmail.com` indirizzi e-mail, rimuovi i seguenti caratteri dalla parte del nome utente dell’indirizzo e-mail:
+   * Il punto (. (codice ASCII 46). Ad esempio, normalizza `jane.doe@gmail.com` a `janedoe@gmail.com`.
    * Il segno più (+ (codice ASCII 43)) e tutti i caratteri successivi. Ad esempio, normalizza `janedoe+home@gmail.com` a `janedoe@gmail.com`.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (e-mail o e-mail con hash) utilizzati nella destinazione Trade Desk. |
-| Frequenza delle esportazioni | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il profilo (identità) viene aggiornato una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni [esportazioni batch](/help/destinations/destination-types.md#file-based). |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, le identità del profilo vengono aggiornate una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [esportazioni batch](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Collegati alla destinazione {#connect}
+## Connetti alla destinazione {#connect}
 
-### Autentica a destinazione {#authenticate}
+### Autentica nella destinazione {#authenticate}
 
-[!DNL The Trade Desk] La destinazione CRM è un caricamento di file batch giornaliero e non richiede l&#39;autenticazione da parte dell&#39;utente.
+[!DNL The Trade Desk] La destinazione CRM è un caricamento di file batch giornaliero e non richiede l’autenticazione da parte dell’utente.
 
-### Compila i dettagli di destinazione {#fill-in-details}
+### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati del pubblico a una destinazione, è necessario impostare una connessione alla piattaforma di destinazione specifica. Quando [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) questa destinazione, devi fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Mentre [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) in questa destinazione, è necessario fornire le seguenti informazioni:
 
-* **[!UICONTROL Tipo di conto]**: Scegli la **[!UICONTROL Account esistente]** opzione .
-* **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID inserzionista]**: le [!DNL Trade Desk Advertiser ID], che può essere condiviso dal tuo [!DNL Trade Desk] Account Manager oppure [!DNL Advertiser Preferences] in [!DNL Trade Desk] Interfaccia utente.
+* **[!UICONTROL Tipo di account]**: scegli la **[!UICONTROL Account esistente]** opzione.
+* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ID inserzionista]**: il tuo [!DNL Trade Desk Advertiser ID], che può essere condiviso dal tuo [!DNL Trade Desk] Account Manager o in [!DNL Advertiser Preferences] nel [!DNL Trade Desk] UI.
 
-![Schermata dell’interfaccia utente della piattaforma che mostra come inserire i dettagli della destinazione.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Schermata dell’interfaccia utente di Platform che mostra come compilare i dettagli della destinazione.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Quando ci si connette alla destinazione, l&#39;impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l&#39;Experience Platform [panoramica sulla governance dei dati](/help/data-governance/policies/overview.md) per ulteriori dettagli.
+Quando ci si connette alla destinazione, l’impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l’Experience Platform [panoramica sulla governance dei dati](/help/data-governance/policies/overview.md) per ulteriori dettagli.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
-Leggi [attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico in una destinazione.
+Letto [attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione di segmenti di pubblico in una destinazione.
 
-In **[!UICONTROL Pianificazione]** È possibile configurare la pianificazione e i nomi dei file per ciascun segmento che si sta esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
+In **[!UICONTROL Pianificazione]** pagina, puoi configurare la pianificazione e i nomi dei file per ciascun segmento che stai esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
 
-![Schermata dell’interfaccia utente della piattaforma per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Tutti i segmenti attivati in [!DNL The Trade Desk] La destinazione CRM viene impostata automaticamente su una frequenza giornaliera e un’esportazione completa di file.
+>Tutti i segmenti attivati in [!DNL The Trade Desk] La destinazione CRM viene impostata automaticamente su una frequenza giornaliera e su un&#39;esportazione di file completa.
 
-![Schermata dell’interfaccia utente della piattaforma per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-In **[!UICONTROL Mappatura]** È necessario selezionare attributi o namespace di identità dalla colonna di origine ed eseguire il mapping alla colonna di destinazione.
+In **[!UICONTROL Mappatura]** , è necessario selezionare attributi o spazi dei nomi di identità dalla colonna di origine e mappare alla colonna di destinazione.
 
-![Schermata dell’interfaccia utente della piattaforma per mappare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Schermata dell’interfaccia utente di Platform per mappare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Di seguito è riportato un esempio di corretta mappatura dell’identità durante l’attivazione dei segmenti in [!DNL The Trade Desk] Destinazione CRM.
+Di seguito è riportato un esempio di corretta mappatura identità durante l’attivazione di segmenti in [!DNL The Trade Desk] Destinazione CRM.
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk] La destinazione di gestione delle relazioni con i clienti non accetta indirizzi e-mail non elaborati e con hash come identità nello stesso flusso di attivazione. Crea flussi di attivazione separati per indirizzi e-mail non elaborati e con hash.
+> [!DNL The Trade Desk] La destinazione CRM non accetta indirizzi e-mail non elaborati e con hash come identità nello stesso flusso di attivazione. Crea flussi di attivazione separati per gli indirizzi e-mail non elaborati e con hash.
 
 Selezione dei campi di origine:
 
-* Seleziona la `Email` spazio dei nomi o attributo come identità di origine se si utilizza l’indirizzo e-mail non elaborato durante l’inserimento dei dati.
-* Seleziona la `Email_LC_SHA256` spazio dei nomi o attributo come identità sorgente se hai hashing gli indirizzi e-mail dei clienti all’inserimento di dati in Platform.
+* Seleziona la `Email` spazio dei nomi o attributo come identità di origine se si utilizza l’indirizzo e-mail non elaborato al momento dell’acquisizione dei dati.
+* Seleziona la `Email_LC_SHA256` spazio dei nomi o attributo come identità di origine se esegui l’hashing degli indirizzi e-mail dei clienti al momento dell’inserimento dei dati in Platform.
 
 Selezione dei campi di destinazione:
 
-* Ingresso  `email` come identità di destinazione quando lo spazio dei nomi o l&#39;attributo di origine è `Email`.
-* Ingresso  `hashed_email` come identità di destinazione quando lo spazio dei nomi o l&#39;attributo di origine è `Email_LC_SHA256`.
+* Input  `email` come identità di destinazione quando lo spazio dei nomi o l’attributo di origine è `Email`.
+* Input  `hashed_email` come identità di destinazione quando lo spazio dei nomi o l’attributo di origine è `Email_LC_SHA256`.
 
 ## Convalida esportazione dati {#validate}
 
-Per convalidare tali dati viene esportato correttamente da Experience Platform e in [!DNL The Trade Desk], trova i segmenti sotto il riquadro dati 1PD Adobe in [!DNL The Trade Desk] Data Management Platform (DMP). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno della [!DNL Trade Desk] Interfaccia utente:
+Per verificare che i dati vengano esportati correttamente da Experience Platform e in [!DNL The Trade Desk], trova i segmenti nella sezione dati di Adobe 1PD in [!DNL The Trade Desk] Piattaforma di gestione dati (DMP, Data Management Platform). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno di [!DNL Trade Desk] Interfaccia utente:
 
-1. Per prima cosa, fai clic sul pulsante **[!UICONTROL Dati]** Scheda e revisione **[!UICONTROL Prime parti]**.
-2. Scorri verso il basso nella pagina, sotto **[!UICONTROL Dati importati]**, troverai la **[!UICONTROL Adobe 1PD Tile]**.
-3. Fai clic su**[!UICONTROL Adobe 1PD]** riquadro e elenca tutti i segmenti attivati [!DNL Trade Desk] destinazione per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
-4. L’ID segmento n. dall’Experience Platform verrà visualizzato come Nome segmento nella sezione [!DNL Trade Desk] Interfaccia utente.
+1. Innanzitutto, fai clic su **[!UICONTROL Dati]** Scheda e revisione **[!UICONTROL Prime parti]**.
+2. Scorri la pagina verso il basso, sotto **[!UICONTROL Dati importati]**, troverai il **[!UICONTROL Adobe 1PD Tile]**.
+3. Fai clic su**[!UICONTROL Adobe 1PD]** e elencherà tutti i segmenti attivati nel [!DNL Trade Desk] destinazione per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
+4. L’ID segmento # dell’Experience Platform verrà visualizzato come Nome segmento nel [!DNL Trade Desk] UI.
 
-## Utilizzo e governance dei dati {#data-usage-governance}
+## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta la sezione [Panoramica sulla governance dei dati](/help/data-governance/home.md).

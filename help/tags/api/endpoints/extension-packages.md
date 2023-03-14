@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /extension_packages 
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '939'
 ht-degree: 70%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 70%
 
 Un pacchetto di estensione rappresenta un’[estensione](./extensions.md) creata da uno sviluppatore di estensioni. Un pacchetto di estensione definisce funzionalità aggiuntive che possono essere rese disponibili agli utenti di tag. Nella maggior parte dei casi queste funzionalità si presentano sotto forma di [componenti regola](./rule-components.md) (eventi, condizioni e azioni) e di [elementi dati](./data-elements.md), ma possono anche includere moduli principali e moduli condivisi.
 
-I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di raccolta dati e nell’interfaccia utente di Adobe Experience Platform per consentire agli utenti di eseguire l’installazione. L’aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un’estensione con un collegamento al pacchetto di estensione.
+I pacchetti di estensione vengono visualizzati nel catalogo delle estensioni nell’interfaccia utente di Data Collection e nell’interfaccia utente di Adobe Experience Platform per consentire agli utenti di eseguire l’installazione. L’aggiunta di un pacchetto di estensione a una proprietà viene eseguita creando un’estensione con un collegamento al pacchetto di estensione.
 
 Un pacchetto di estensione appartiene all’[azienda](./companies.md) dello sviluppatore che lo ha creato.
 
@@ -25,31 +25,31 @@ Un pacchetto di estensione appartiene all’[azienda](./companies.md) dello svil
 
 L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-Oltre a capire come effettuare chiamate all&#39;API di Reactor, è importante anche capire come un pacchetto di estensione `status` e `availability` gli attributi influiscono sulle azioni che è possibile eseguire su di essi. Queste sono spiegate nelle sezioni seguenti.
+Oltre a capire come effettuare chiamate all’API di Reactor, è anche importante comprendere come viene `status` e `availability` gli attributi influiscono sulle azioni che è possibile eseguire su di esso. Queste sono spiegate nelle sezioni seguenti.
 
 ### Stato
 
-I pacchetti di estensione hanno tre stati potenziali: `pending`, `succeeded`e `failed`.
+I pacchetti di estensione hanno tre stati potenziali: `pending`, `succeeded`, e `failed`.
 
 | Stato | Descrizione |
 | --- | --- |
-| `pending` | Quando viene creato un pacchetto di estensione, il relativo `status` è impostato su `pending`. Indica che il sistema ha ricevuto le informazioni per il pacchetto di estensione e inizierà l&#39;elaborazione. Pacchetti di estensione con stato `pending` non sono disponibili per l&#39;uso. |
-| `succeeded` | Lo stato di un pacchetto di estensione si aggiorna a `succeeded` se l&#39;elaborazione viene completata correttamente. |
-| `failed` | Lo stato di un pacchetto di estensione si aggiorna a `failed` se l&#39;elaborazione viene completata senza successo. Un pacchetto di estensione con stato `failed` possono essere aggiornati fino al completamento dell’elaborazione. Pacchetti di estensione con stato `failed` non sono disponibili per l&#39;uso. |
+| `pending` | Quando viene creato un pacchetto di estensione, i relativi `status` è impostato su `pending`. Questo indica che il sistema ha ricevuto le informazioni per il pacchetto di estensione e che inizierà l’elaborazione. Pacchetti di estensione con lo stato `pending` non sono disponibili per l’uso. |
+| `succeeded` | Lo stato di un pacchetto di estensione si aggiorna su `succeeded` se l’elaborazione viene completata correttamente. |
+| `failed` | Lo stato di un pacchetto di estensione si aggiorna su `failed` se l’elaborazione non viene completata correttamente. Un pacchetto di estensione con lo stato `failed` può essere aggiornato fino a quando l’elaborazione non riesce. Pacchetti di estensione con lo stato `failed` non sono disponibili per l’uso. |
 
 ### Disponibilità
 
-Sono disponibili livelli di disponibilità per un pacchetto di estensione: `development`, `private`e `public`.
+Esistono livelli di disponibilità per un pacchetto di estensione: `development`, `private`, e `public`.
 
 | Disponibilità | Descrizione |
 | --- | --- |
-| `development` | Un pacchetto di estensione in `development` è visibile solo all’azienda proprietaria e disponibile all’interno di essa. Inoltre, può essere utilizzato solo sulle proprietà configurate per lo sviluppo dell&#39;estensione. |
-| `private` | A `private` il pacchetto di estensione è visibile solo all&#39;azienda proprietaria e può essere installato solo sulle proprietà di cui l&#39;azienda è proprietaria. |
-| `public` | A `public` il pacchetto di estensione è visibile e disponibile per tutte le aziende e le proprietà. |
+| `development` | Un pacchetto di estensione in `development` è visibile e disponibile solo per l’azienda che lo possiede. Inoltre, può essere utilizzato solo su proprietà configurate per lo sviluppo di estensioni. |
+| `private` | A `private` il pacchetto di estensione è visibile solo all’azienda che lo possiede e può essere installato solo sulle proprietà di cui è proprietaria l’azienda. |
+| `public` | A `public` il pacchetto di estensione è visibile e disponibile per tutte le società e proprietà. |
 
 >[!NOTE]
 >
->Quando viene creato un pacchetto di estensione, `availability` è impostato su `development`. Al termine del test, puoi effettuare la transizione del pacchetto di estensione a `private` o `public`.
+>Quando viene creato un pacchetto di estensione, `availability` è impostato su `development`. Al termine del test, puoi effettuare la transizione del pacchetto di estensione in `private` o `public`.
 
 ## Recuperare un elenco di pacchetti di estensione {#list}
 
@@ -249,7 +249,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -705,7 +705,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del pacchetto di e
 
 ## Aggiornare un pacchetto di estensione {#update}
 
-Puoi aggiornare un pacchetto di estensione includendo il relativo ID nel percorso di una richiesta PATCH.
+Per aggiornare un pacchetto di estensione, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -717,7 +717,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -956,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri rilasciare privatamente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione che desideri dismettere. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -1294,7 +1294,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | `id` del pacchetto di estensione di cui desideri elencare le versioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

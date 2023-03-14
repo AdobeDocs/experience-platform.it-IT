@@ -1,6 +1,6 @@
 ---
-description: Questa pagina fornisce tutte le informazioni necessarie per inviare per la revisione di una destinazione di prodotto creata utilizzando Destination SDK.
-title: Invia per la revisione di una destinazione prodotta creata in Destination SDK
+description: Questa pagina fornisce tutte le informazioni necessarie per inviare e rivedere una destinazione prodotta creata con Destination SDK.
+title: Invia per la revisione una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
@@ -9,59 +9,59 @@ ht-degree: 0%
 
 ---
 
-# Invia per la revisione di una destinazione prodotta creata in Destination SDK
+# Invia per la revisione una destinazione prodotta creata in Destination SDK
 
 ## Panoramica {#overview}
 
 >[!IMPORTANT]
 >
->* Il processo qui documentato è necessario solo per i partner che inviano destinazioni prodotte (pubbliche). Se crei una destinazione privata per tuo uso, non devi produrre e condividere questi materiali con Adobe.
+>* Il processo qui documentato è necessario solo per i partner che inviano destinazioni (pubbliche) prodotte. Se stai creando una destinazione privata per il tuo uso personale, non è necessario produrre e condividere questi materiali con Adobe.
 >
->* Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione di destinazione è di cinque giorni lavorativi.
+>* Il tempo di risposta standard di Adobe per esaminare le richieste di pubblicazione delle destinazioni è di cinque giorni lavorativi.
 >
->* Se il team di Adobe richiede di eseguire eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, è necessario inviare un’altra richiesta di pubblicazione di destinazione dopo aver effettuato gli aggiornamenti.
+>* Se il team di Adobi ti chiede di apportare eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, devi inviare un’altra richiesta di pubblicazione di destinazione dopo aver apportato gli aggiornamenti.
 >
->* Anche dopo che la destinazione è attiva nel catalogo di Experience Platform, se hai bisogno di apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione per far sì che gli aggiornamenti si riflettano nelle configurazioni.
+>* Anche dopo che la destinazione è live nel catalogo Experience Platform, se devi apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione affinché gli aggiornamenti vengano rispecchiati nelle configurazioni.
 
 
-Prima che la destinazione possa essere pubblicata nel [Catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), devi fornire ad Adobe alcune informazioni sulla destinazione e sui test eseguiti, per garantire agli utenti la migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
+Prima che la destinazione possa essere pubblicata su [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), è necessario fornire agli Adobi alcune informazioni sulla destinazione e sui test eseguiti, per garantire che gli utenti godano della migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
-In questa pagina sono elencate tutte le informazioni da fornire durante l’invio o l’aggiornamento di una destinazione creata con Adobe Experience Platform Destination SDK. Per inviare correttamente una destinazione in Adobe Experience Platform, invia un messaggio e-mail a <aepdestsdk@adobe.com> che include:
+In questa pagina sono elencate tutte le informazioni che è necessario fornire quando si invia o si aggiorna una destinazione creata con Adobe Experience Platform Destination SDK. Per inviare correttamente una destinazione in Adobe Experience Platform, invia un’e-mail a <aepdestsdk@adobe.com> che comprende:
 
-* Una descrizione dei casi di utilizzo risolti dalla destinazione. Questa opzione è necessaria solo se si invia una nuova configurazione di destinazione.
-* Una descrizione del motivo dell’invio della destinazione. Questa opzione è necessaria solo se si aggiorna una configurazione di destinazione esistente.
-* Verifica i risultati dopo aver utilizzato l’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe una chiamata API effettuata all’endpoint di destinazione e la risposta API ricevuta dall’endpoint di destinazione.
+* Una descrizione dei casi d’uso risolti dalla tua destinazione. Questa operazione è necessaria solo se si invia una nuova configurazione di destinazione.
+* Una descrizione del motivo dell’invio a destinazione. Questa opzione è necessaria solo se si sta aggiornando una configurazione di destinazione esistente.
+* Risultati del test dopo l’utilizzo dell’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe una chiamata API effettuata all’endpoint di destinazione e la risposta API ricevuta dall’endpoint di destinazione.
 * Requisiti aggiuntivi per le destinazioni basate su file:
-   * Condividi una richiesta e un esempio di risposta dopo aver utilizzato l’API di test per [verifica la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+   * Condividi un esempio di richiesta e risposta dopo aver utilizzato l’API di test per [testare la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
    * Allega un file di esempio generato dalla destinazione ed esportato nel percorso di archiviazione.
-   * Invia una forma di prova per verificare che il file esportato sia stato correttamente acquisito dal percorso di archiviazione nel sistema.
-* Prova di aver inviato una richiesta di pubblicazione di destinazione per la destinazione utilizzando [API di pubblicazione della destinazione](./destination-publish-api.md).
-* Una documentazione PR (richiesta di pull), seguendo le istruzioni descritte nel [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
-* Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni Experience Platform.
+   * Inviare una bozza che attesti che il file esportato è stato correttamente acquisito dal percorso di archiviazione nel sistema.
+* Prova di aver inviato una richiesta di pubblicazione di destinazione per la tua destinazione utilizzando [API di pubblicazione della destinazione](./destination-publish-api.md).
+* Una PR (richiesta pull) alla documentazione, seguendo le istruzioni descritte nella sezione [processo di documentazione self-service](./docs-framework/documentation-instructions.md).
+* Un file di immagine che verrà visualizzato come logo per la scheda di destinazione nel catalogo delle destinazioni di Experience Platform.
 
-Puoi trovare informazioni dettagliate su ogni elemento nelle sezioni seguenti:
+Puoi trovare informazioni dettagliate su ciascun elemento nelle sezioni seguenti:
 
 ## Descrizione del caso d’uso {#use-case-description}
 
-Fornisci una descrizione dei casi d’uso che la tua destinazione risolve per i clienti di Experience Platform. Le descrizioni possono essere simili ai casi d&#39;uso dei partner esistenti:
+Fornisci una descrizione dei casi d’uso risolti dalla tua destinazione, ad Experience Platform i clienti. Le descrizioni possono essere simili ai casi d’uso dei partner esistenti:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o da persone che hanno già interagito con i tuoi contenuti in Pinterest.
-* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): Le API DataX sono disponibili per gli inserzionisti che desiderano eseguire il targeting di un gruppo di pubblico specifico tenuto fuori dagli indirizzi e-mail in Verizon Media (VMG) possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l&#39;API in tempo quasi reale di VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o dalle persone che hanno già interagito con il tuo contenuto su Pinterest.
+* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): le API DataX sono disponibili per gli inserzionisti che desiderano indirizzare un gruppo di pubblico specifico ricavato dagli indirizzi e-mail in Verizon Media (VMG) e che possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l’API quasi in tempo reale di VMG.
 
-## Motivo dell&#39;aggiornamento {#reason-for-update}
+## Motivo dell’aggiornamento {#reason-for-update}
 
 >[!NOTE]
 >
->Questa sezione è necessaria solo quando aggiorni una configurazione esistente.
+>Questa sezione è necessaria solo quando si aggiorna una configurazione esistente.
 
-Fornire una breve descrizione del problema risolto dall’invio per la destinazione esistente. Ad esempio, l’invio potrebbe aggiornare il nome, la descrizione e il logo della destinazione quando si passa dalla versione beta alla disponibilità generale. Oppure, l’invio potrebbe correggere un bug rilevato nella configurazione di destinazione.
+Fornisci una breve descrizione del problema che l’invio risolve per la destinazione esistente. Ad esempio, l’invio potrebbe aggiornare il nome, la descrizione e il logo della destinazione nel passaggio dalla versione beta a quella di disponibilità generale. In alternativa, l’invio potrebbe correggere un bug rilevato nella configurazione di destinazione.
 
 ## Risultati del test dopo l’utilizzo dell’API di destinazione del test {#testing-api-response}
 
-Fornire i risultati dei test dopo l&#39;utilizzo del [API di destinazione del test](./test-destination.md) per eseguire una chiamata HTTP alla destinazione. Ciò include:
+Fornisci i risultati del test dopo aver utilizzato [API di destinazione di test](./test-destination.md) per eseguire una chiamata HTTP alla destinazione. Ciò include:
 
-* La richiesta API completa (intestazioni e corpo) effettuata sull&#39;endpoint di destinazione, utilizzando l&#39;API di test.
-* Risposta API ricevuta dall’endpoint di destinazione.
+* La richiesta API completa (intestazioni e corpo) effettuata all&#39;endpoint di destinazione, utilizzando l&#39;API di test.
+* Risposta API ricevuta dall&#39;endpoint di destinazione.
 
 Ad esempio, la richiesta e la risposta potrebbero essere simili agli esempi seguenti:
 
@@ -228,41 +228,41 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## Requisiti aggiuntivi per le destinazioni basate su file {#additional-file-based-destination-requirements}
 
-Per le destinazioni basate su file, è necessario fornire una prova aggiuntiva per verificare di aver configurato correttamente la destinazione. Assicurati di includere gli elementi seguenti:
+Per le destinazioni basate su file, devi fornire un’ulteriore prova della corretta configurazione della destinazione. Assicurati di includere gli elementi seguenti:
 
 ### Verifica della risposta API {#testing-api-response-file-based}
 
-Includi una richiesta e un esempio di risposta dopo aver utilizzato l’API di test per [verifica la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+Includi una richiesta e un esempio di risposta dopo aver utilizzato l’API di test per [testare la destinazione basata su file con profili di esempio](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
 
 ### Allega file esportato {#attach-exported-file}
 
-Nel tuo [email di invio](#download-sample-email), allega un file CSV esportato nel percorso di archiviazione in base alla destinazione impostata.
+Nel tuo [e-mail di invio](#download-sample-email), allega un file CSV esportato nel percorso di archiviazione dalla destinazione configurata.
 
-### Prova del successo dell’acquisizione {#proof-of-successful-ingestion}
+### Prova della corretta acquisizione {#proof-of-successful-ingestion}
 
-Infine, è necessario fornire una forma di prova del corretto inserimento dei dati nel sistema dopo l’esportazione nel percorso di archiviazione fornito. Fornisci uno dei seguenti elementi:
+Infine, devi fornire una prova che i dati siano stati correttamente acquisiti nel sistema dopo essere stati esportati nel percorso di archiviazione fornito. Fornisci uno dei seguenti elementi:
 
-* Schermate o un breve video di screencapture in cui si prende il file manualmente dal percorso di archiviazione e lo si inserisce nel sistema.
-* Screenshot o un breve video di screencapture in cui l&#39;interfaccia utente del sistema conferma che il nome file generato da Experience Platform è stato acquisito correttamente nel sistema.
-* Registra le righe del sistema che possono essere Adobi con il nome del file o con i dati generati da Experience Platform.
+* Screenshot o un breve video di cattura in cui il file viene prelevato manualmente dal percorso di archiviazione e caricato nel sistema.
+* Screenshot o un breve video di screencapture in cui l’interfaccia utente del sistema conferma che il nome del file generato da Experience Platform è stato correttamente acquisito nel sistema.
+* Registra le righe del sistema che Adobe può correlare con il nome del file o con i dati generati da Experience Platform.
 
-## Prova dell&#39;invio di una richiesta di pubblicazione di destinazione {#destination-publishing-request-proof}
+## Prova di aver inviato una richiesta di pubblicazione di destinazione {#destination-publishing-request-proof}
 
-Dopo aver verificato con successo la destinazione, devi utilizzare il [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la destinazione ad Adobe per la revisione e la pubblicazione.
+Dopo aver testato correttamente la destinazione, devi utilizzare [API di pubblicazione della destinazione](./destination-publish-api.md) per inviare la destinazione ad Adobe per la revisione e la pubblicazione.
 
-Fornisci l&#39;ID della richiesta di pubblicazione per la tua destinazione. Per informazioni su come recuperare l’ID richiesta di pubblicazione, leggi [Elenca richieste di pubblicazione di destinazione](./destination-publish-api.md#retrieve-list).
+Immetti l’ID della richiesta di pubblicazione per la destinazione. Per informazioni su come recuperare l’ID della richiesta di pubblicazione, leggi [Elencare richieste di pubblicazione di destinazione](./destination-publish-api.md#retrieve-list).
 
 ## Documentazione di destinazione PR (richiesta pull) per le integrazioni prodotte {#documentation-pr}
 
-Se sei un fornitore di software indipendente (ISV) o un integratore di sistema (SI) che crea un [integrazione di prodotti](./overview.md#productized-custom-integrations), è necessario utilizzare [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
+Se si è un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che crea un [integrazione di produzione](./overview.md#productized-custom-integrations), è necessario utilizzare [processo di documentazione self-service](./docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione. Come parte del processo di invio, fornisci la richiesta di pull (PR) per la documentazione di destinazione.
 
 ## Logo per la destinazione {#logo}
 
-Il catalogo delle destinazioni include un logo per ogni scheda di destinazione. Nel messaggio e-mail di invio, includi un’immagine con il logo della destinazione.
+Il catalogo delle destinazioni include un logo per ogni scheda di destinazione. Nell’e-mail inviata, includi un’immagine con il logo della tua destinazione.
 
-I requisiti delle immagini sono:
+I requisiti dell&#39;immagine sono:
 * **Formato**: `SVG`
-* **Dimensione**: inferiore a 2 MB
+* **Dimensione**: meno di 2 MB
 
 ## Scarica e-mail di esempio {#download-sample-email}
 

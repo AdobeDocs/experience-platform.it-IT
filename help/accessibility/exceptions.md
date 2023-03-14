@@ -12,4 +12,4 @@ ht-degree: 34%
 
 # Eccezioni di accessibilità e soluzioni alternative, ad Experience Platform
 
-Al momento non ci sono eccezioni note per le soluzioni alternative di Experience Platform.
+Al momento non ci sono eccezioni note con soluzioni alternative in Experience Platform.

@@ -1,34 +1,35 @@
 ---
-title: Gruppo di campi dello schema medico
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema del farmaco sanitario.
-source-git-commit: 3b0c85eb5184dd116b1013e617cf528080fa0656
+title: Gruppo di campi Schema per il medicinale sanitario
+description: Questo documento fornisce una panoramica del gruppo di campi Schema del farmaco sanitario.
+exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Medicina sanitaria] gruppo di campi schema
+# [!UICONTROL Medicinale sanitario] gruppo di campi schema
 
-[!UICONTROL Medicina sanitaria] è un gruppo di campi di schema standard per [[!UICONTROL Medicina] Classe](../../classes/medication.md). Fornisce un singolo campo di tipo oggetto `medication` che acquisisce dettagli quali nome del marchio, numero di lotto e quantità.
+[!UICONTROL Medicinale sanitario] è un gruppo di campi di schema standard per [[!UICONTROL Medicinale] classe](../../classes/medication.md). Fornisce un singolo campo di tipo oggetto `medication` che acquisisce dettagli quali il nome del marchio, il numero di lotto e la quantità.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `ingredients` | Array di oggetti | Elenca gli ingredienti presenti nel farmaco. Ogni oggetto include le seguenti proprietà: <ul><li>`isActive`: (Booleano) Indica se questo ingrediente è ancora utilizzato attivamente in questo farmaco.</li><li>`name`: (Stringa) Il nome dell&#39;ingrediente.</li><li>`quantity`: (Stringa) La quantità dell&#39;ingrediente presente nel farmaco.</li></ul> |
-| `brandName` | Stringa | Il marchio del farmaco. |
-| `codes` | Matrice di stringhe | Un elenco di codici che identificano questo farmaco. |
-| `dosageUnitNumber` | Doppio | Numero dell&#39;unità di dosaggio per il farmaco. |
-| `dosageUnitOfMeasurement` | Stringa | Unità di misura per il numero di dosaggio. |
-| `expiryDate` | DateTime | Data di scadenza del farmaco. |
+| `ingredients` | Array di oggetti | Elenca gli ingredienti presenti nel medicinale. Ogni oggetto include le seguenti proprietà: <ul><li>`isActive`: (booleano) indica se questo ingrediente è ancora utilizzato attivamente in questo medicinale.</li><li>`name`: (Stringa) nome dell’ingrediente.</li><li>`quantity`: (Stringa) la quantità dell’ingrediente presente nel medicinale.</li></ul> |
+| `brandName` | Stringa | Il nome commerciale del farmaco. |
+| `codes` | Array di stringhe | Un elenco di codici che identificano questo medicinale. |
+| `dosageUnitNumber` | Doppio | Numero dell’unità di dosaggio del medicinale. |
+| `dosageUnitOfMeasurement` | Stringa | Unità di misura per il numero del dosaggio. |
+| `expiryDate` | DateTime | Data di scadenza del medicinale. |
 | `genericName` | Stringa | Il nome generico del farmaco. |
-| `lotNumber` | Stringa | Identificatore univoco per il batch del farmaco. |
+| `lotNumber` | Stringa | L’identificatore univoco del batch del farmaco. |
 | `manufacturerName` | Stringa | Il nome del produttore del farmaco. |
-| `quantity` | Doppio | La quantità di droga nel pacchetto. |
+| `quantity` | Doppio | La quantità di farmaco nella confezione. |
 | `status` | Stringa | Uno stato generale che indica se il farmaco/farmaco è attivo o meno. |
 | `volume` | Doppio | Il volume del farmaco. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta la [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

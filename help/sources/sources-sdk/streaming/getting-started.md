@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva alle sorgenti self-service (SDK per streaming)
+title: Guida introduttiva alle origini self-service (Streaming SDK)
 description: Questo documento fornisce un’introduzione alle informazioni sui prerequisiti da conoscere prima di tentare di creare una nuova origine utilizzando Origini self-service (Streaming SDK).
 hide: true
 hidefromtoc: true
@@ -10,65 +10,65 @@ ht-degree: 0%
 
 ---
 
-# Guida introduttiva alle sorgenti self-service (SDK per streaming)
+# Guida introduttiva alle origini self-service (Streaming SDK)
 
-Origini self-service (Streaming SDK) consente di integrare la propria origine per trasferire i dati in streaming a Adobe Experience Platform. Questo documento fornisce un&#39;introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Origini self-service (Streaming SDK) consente di integrare la propria origine per portare i dati in streaming a Adobe Experience Platform. Questo documento fornisce un’introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate al [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Processo di alto livello
 
-Il processo dettagliato per configurare l’origine in Experience Platform è descritto di seguito:
+Di seguito è descritta la procedura dettagliata per configurare l’origine in Experience Platform:
 
 ### Integrazione
 
-* [Crea una nuova specifica di connessione per SDK Streaming](create.md).
-* [Aggiorna la specifica del flusso di flusso con il nuovo ID della specifica di connessione](update-flow-specs.md).
-* [Verifica e invia la tua origine streaming](submit.md).
+* [Creare una nuova specifica di connessione per Streaming SDK](create.md).
+* [Aggiorna la specifica del flusso di streaming con il nuovo ID della specifica di connessione](update-flow-specs.md).
+* [Testare e inviare l’origine di streaming](submit.md).
 
 ### Documentazione
 
-* Per iniziare a documentare la tua origine, leggi la sezione [panoramica sulla creazione della documentazione per Origini self-service](../documentation/doc-overview.md).
-* Leggi la guida su [utilizzo dell’interfaccia web GitHub](../documentation/github.md) per informazioni su come creare la documentazione utilizzando GitHub.
-* Leggi la guida su [utilizzo di un editor di testo](../documentation/text-editor.md) per informazioni su come creare la documentazione utilizzando il computer locale.
-* [Utilizza il modello di documentazione dell’API SDK per streaming per documentare la tua origine nell’API](streaming-template-api.md).
-* [Utilizza il modello di documentazione dell’interfaccia utente SDK per streaming per documentare la tua origine nell’interfaccia utente](streaming-template-ui.md).
+* Per iniziare a documentare la sorgente, leggi [panoramica sulla creazione di documentazione per le origini self-service](../documentation/doc-overview.md).
+* Leggi la guida su [utilizzo dell’interfaccia web GitHub](../documentation/github.md) per i passaggi su come creare la documentazione utilizzando GitHub.
+* Leggi la guida su [utilizzo di un editor di testo](../documentation/text-editor.md) per i passaggi su come creare la documentazione utilizzando il computer locale.
+* [Utilizza il modello di documentazione API Streaming SDK per documentare la tua origine nell’API](streaming-template-api.md).
+* [Utilizza il modello di documentazione dell’interfaccia utente Streaming SDK per documentare l’origine nell’interfaccia utente](streaming-template-ui.md).
 
-Puoi anche scaricare i modelli di documentazione seguenti:
+Puoi scaricare i modelli di documentazione riportati di seguito:
 
 * [Modello di documentazione API](../assets/streaming/streaming-template-api.zip)
-* [Modello di documentazione dell’interfaccia utente](../assets/streaming/streaming-template-ui.zip)
+* [Modello di documentazione per l’interfaccia utente](../assets/streaming/streaming-template-ui.zip)
 
 ## Prerequisiti
 
 >[!IMPORTANT]
 >
->Per inviare gli aggiornamenti, l’origine che si sta integrando con Experience Platform deve essere in grado di supportare un webhook a cui è possibile effettuare la sottoscrizione di un endpoint.
+>L’origine che stai integrando con Experience Platform deve essere in grado di supportare un webhook a cui un endpoint può essere abbonato per inviare aggiornamenti.
 
-Per utilizzare Origini self-service (Streaming SDK), devi assicurarti di avere accesso a un&#39;organizzazione sandbox con provisioning di Adobe Experience Platform Sources.
+Per utilizzare Origini self-service (Streaming SDK), è necessario assicurarsi di avere accesso a un’organizzazione sandbox con provisioning di Origini Adobe Experience Platform.
 
-Questa guida richiede anche una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Lettura di chiamate API di esempio
+## Lettura delle chiamate API di esempio
 
-Origini self-service (Streaming SDK) e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Sorgenti self-service (SDK di streaming) e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Raccogli i valori delle intestazioni richieste
+## Raccogli i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in Platform, comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consulta la sezione [documentazione sandbox](../../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in Platform, consulta [documentazione sandbox](../../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -76,4 +76,4 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Passaggi successivi
 
-Per iniziare a creare una nuova origine con Origini self-service (Streaming SDK), consulta l’esercitazione su [creazione di una nuova origine](./create.md).
+Per iniziare a creare una nuova origine con origini self-service (Streaming SDK), consulta l’esercitazione su [creazione di una nuova origine](./create.md).

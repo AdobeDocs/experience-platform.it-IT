@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /build nell’API di
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '803'
 ht-degree: 99%
 
 ---
@@ -41,7 +41,7 @@ GET /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | Il `id` della libreria di cui desideri elencare le build. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ GET /builds/{BUILD_ID}
 | --- | --- |
 | `BUILD_ID` | `id` della build da cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -260,7 +260,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | `id` della libreria in cui stai definendo la build. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -362,7 +362,7 @@ PATCH /builds/{BUILD_ID}
 | --- | --- |
 | `BUILD_ID` | `id` della build che desideri ripubblicare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -392,7 +392,7 @@ curl -X PATCH \
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `builds`. |
 | `meta.action` | Tipo di azione PATCH da eseguire. Deve essere impostata su `republish`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -489,7 +489,7 @@ GET  /builds/{BUILD_ID}/data_elements
 | --- | --- |
 | `{BUILD_ID}` | `id` della build di cui desideri elencare gli elementi dati. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -630,7 +630,7 @@ GET  /builds/{BUILD_ID}/extensions
 | --- | --- |
 | `{BUILD_ID}` | `id` della build di cui desideri elencare le estensioni. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -761,7 +761,7 @@ GET  /builds/{BUILD_ID}/rules
 | --- | --- |
 | `{BUILD_ID}` | `id` della build di cui desideri elencare le regole. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -874,7 +874,7 @@ GET  /builds/{BUILD_ID}/library
 | --- | --- |
 | `{BUILD_ID}` | `id` della build di cui desideri cercare la libreria. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -987,7 +987,7 @@ GET  /builds/{BUILD_ID}/environment
 | --- | --- |
 | `{BUILD_ID}` | `id` della build di cui desideri cercare l’ambiente. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

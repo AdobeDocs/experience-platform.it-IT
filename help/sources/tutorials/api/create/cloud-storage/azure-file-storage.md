@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Azure;Azure File Storage;Azure file storage
+keywords: Experience Platform;home;argomenti comuni;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
-title: Creare una connessione di base di archiviazione file di Azure utilizzando l’API del servizio di flusso
+title: Creare una connessione di base per l’archiviazione dei file di Azure utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Scopri come collegare Azure File Storage a Adobe Experience Platform utilizzando l’API del servizio di flusso.
+description: Scopri come collegare Azure File Storage a Adobe Experience Platform utilizzando l’API del servizio Flusso.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,43 +12,43 @@ ht-degree: 2%
 
 ---
 
-# Crea un [!DNL Azure File Storage] connessione di base utilizzando [!DNL Flow Service] API
+# Creare un [!DNL Azure File Storage] connessione di base tramite [!DNL Flow Service] API
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questa esercitazione descrive i passaggi necessari per creare una connessione di base per [!DNL Azure File Storage] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per creare una connessione di base per [!DNL Azure File Storage] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a [!DNL Azure File Storage] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Azure File Storage] utilizzando [!DNL Flow Service] API.
 
-### Raccogli credenziali richieste
+### Raccogli le credenziali richieste
 
-Per [!DNL Flow Service] per connettersi con [!DNL Azure File Storage], è necessario fornire valori per le seguenti proprietà di connessione:
+Per ottenere [!DNL Flow Service] per connettersi con [!DNL Azure File Storage], è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `host` | Il punto finale del [!DNL Azure File Storag]Istanza a cui si accede. |
-| `userId` | L&#39;utente con accesso sufficiente al [!DNL Azure File Storage] punto finale. |
-| `password` | La password [!DNL Azure File Storage] istanza |
+| `host` | Endpoint del [!DNL Azure File Storag]Istanza a cui si sta effettuando l&#39;accesso. |
+| `userId` | L’utente con un accesso sufficiente al [!DNL Azure File Storage] endpoint. |
+| `password` | La password per [!DNL Azure File Storage] istanza |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Azure File Storage] è: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento di archiviazione file di Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Per ulteriori informazioni su come iniziare, consulta [questo documento di Azure File Storage](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
-Una connessione di base conserva le informazioni tra l&#39;origine e la piattaforma, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID di connessione di base univoco. L’ID di connessione di base consente di esplorare e navigare tra i file di origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
+Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Azure File Storage] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Azure File Storage] credenziali di autenticazione come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -88,14 +88,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.host` | Il punto finale del [!DNL Azure File Storage] istanza a cui si accede. |
-| `auth.params.userId` | L&#39;utente con accesso sufficiente al [!DNL Azure File Storage] punto finale. |
-| `auth.params.password` | La [!DNL Azure File Storage] chiave di accesso. |
-| `connectionSpec.id` | La [!DNL Azure File Storage] ID specifica di connessione: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | Endpoint del [!DNL Azure File Storage] istanza a cui si sta effettuando l’accesso. |
+| `auth.params.userId` | L’utente con un accesso sufficiente al [!DNL Azure File Storage] endpoint. |
+| `auth.params.password` | Il [!DNL Azure File Storage] chiave di accesso. |
+| `connectionSpec.id` | Il [!DNL Azure File Storage] ID specifica di connessione: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova connessione di base creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario nel passaggio successivo per creare una connessione sorgente.
+In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario nel passaggio successivo per creare una connessione sorgente.
 
 ```json
 {
@@ -106,4 +106,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione di base cre
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un [!DNL Azure File Storage] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi usare questo ID nell&#39;esercitazione successiva per scoprire come [esplorare un archivio cloud di terze parti utilizzando l’API del servizio di flusso](../../explore/cloud-storage.md).
+Seguendo questa esercitazione, hai creato un’ [!DNL Azure File Storage] connessione tramite [!DNL Flow Service] e hanno ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nel prossimo tutorial mentre apprendi come [esplorare un’archiviazione cloud di terze parti utilizzando l’API del servizio Flow](../../explore/cloud-storage.md).

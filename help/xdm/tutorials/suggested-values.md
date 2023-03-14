@@ -1,6 +1,6 @@
 ---
-title: Gestire i valori consigliati nell’API
-description: Scopri come aggiungere valori consigliati a un campo stringa nell’API del Registro di sistema dello schema.
+title: Gestire i valori suggeriti nell’API
+description: Scopri come aggiungere valori suggeriti a un campo stringa nell’API del registro dello schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -13,26 +13,26 @@ ht-degree: 0%
 
 Per qualsiasi campo stringa in Experience Data Model (XDM), puoi definire un **enum** che vincola i valori che il campo può acquisire a un set predefinito. Se tenti di acquisire dati in un campo enum e il valore non corrisponde a nessuno di quelli definiti nella relativa configurazione, l’acquisizione verrà negata.
 
-A differenza degli enum, aggiunta **valori consigliati** in un campo stringa non vincola i valori che può acquisire. Al contrario, i valori suggeriti influenzano i valori predefiniti disponibili nel [Interfaccia utente di segmentazione](../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
+A differenza delle enumerazioni, aggiungere **valori suggeriti** in un campo stringa non vincola i valori che può acquisire. I valori suggeriti influiscono invece sui valori predefiniti disponibili nel [Interfaccia utente di segmentazione](../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
 
 >[!NOTE]
 >
->Si verifica un ritardo di circa cinque minuti perché i valori consigliati aggiornati di un campo si riflettano nell’interfaccia utente Segmentazione.
+>Nell’interfaccia utente di segmentazione viene rilevato un ritardo di circa cinque minuti rispetto ai valori consigliati aggiornati di un campo.
 
-Questa guida illustra come gestire i valori suggeriti utilizzando [API del Registro di sistema dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Per i passaggi da seguire nell’interfaccia utente di Adobe Experience Platform, consulta la sezione [Guida all’interfaccia utente per enum e valori consigliati](../ui/fields/enum.md).
+Questa guida illustra come gestire i valori suggeriti utilizzando [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Per informazioni su come eseguire questa operazione nell’interfaccia utente di Adobe Experience Platform, consulta [Guida dell’interfaccia utente su enum e valori suggeriti](../ui/fields/enum.md).
 
 ## Prerequisiti
 
-Questa guida presuppone che tu abbia familiarità con gli elementi della composizione dello schema in XDM e che sia in grado di utilizzare l’API del Registro di sistema dello schema per creare e modificare le risorse XDM. Per un’introduzione, fai riferimento alla seguente documentazione:
+Questa guida presuppone che tu abbia familiarità con gli elementi della composizione dello schema in XDM e su come utilizzare l’API Schema Registry per creare e modificare le risorse XDM. Se hai bisogno di un’introduzione, consulta la seguente documentazione:
 
 * [Nozioni di base sulla composizione dello schema](../schema/composition.md)
-* [Guida all’API del registro dello schema](../api/overview.md)
+* [Guida API del registro dello schema](../api/overview.md)
 
-Si consiglia inoltre vivamente di rivedere il [regole di evoluzione per enum e valori suggeriti](../ui/fields/enum.md#evolution) se stai aggiornando i campi esistenti. Se gestisci i valori suggeriti per gli schemi che partecipano a un&#39;unione, consulta la sezione [regole per l’unione di enum e valori consigliati](../ui/fields/enum.md#merging).
+Si consiglia inoltre vivamente di rivedere [regole di evoluzione per enum e valori suggeriti](../ui/fields/enum.md#evolution) se stai aggiornando campi esistenti. Se gestisci i valori suggeriti per gli schemi che partecipano a un’unione, consulta la sezione [regole per l&#39;unione di enumerazioni e valori suggeriti](../ui/fields/enum.md#merging).
 
 ## Composizione
 
-Nell’API, i valori vincolati per un **enum** i campi sono rappresentati da un `enum` mentre un `meta:enum` L&#39;oggetto fornisce nomi visualizzati descrittivi per tali valori:
+Nell’API, i valori vincolati per un’ **enum** sono rappresentati da un `enum` , mentre un `meta:enum` L&#39;oggetto fornisce nomi descrittivi per tali valori:
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ Nell’API, i valori vincolati per un **enum** i campi sono rappresentati da un 
 }
 ```
 
-Per i campi enum, il Registro di sistema dello schema non consente `meta:enum` da estendere oltre i valori di cui `enum`, poiché il tentativo di acquisire valori stringa al di fuori di tali vincoli non passerebbe la convalida.
+Per i campi enum, il registro dello schema non consente `meta:enum` da estendere oltre i valori di cui `enum`, poiché il tentativo di acquisire valori stringa al di fuori di tali vincoli non supererebbe la convalida.
 
-In alternativa, è possibile definire un campo stringa che non contiene un `enum` utilizza solo `meta:enum` oggetto da indicare **valori consigliati**:
+In alternativa, è possibile definire un campo stringa che non contiene un `enum` e utilizza solo il `meta:enum` oggetto da indicare **valori suggeriti**:
 
 ```json
 "exampleStringField": {
@@ -67,21 +67,21 @@ In alternativa, è possibile definire un campo stringa che non contiene un `enum
 }
 ```
 
-Poiché la stringa non ha un `enum` array per definire vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori.
+Poiché la stringa non ha un `enum` array per definire i vincoli, i relativi `meta:enum` può essere estesa per includere nuovi valori.
 
 <!-- ## Manage suggested values for standard fields
 
 For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-## Aggiungere valori consigliati a un campo standard {#add-suggested-standard}
+## Aggiungere valori suggeriti a un campo standard {#add-suggested-standard}
 
-Per estendere `meta:enum` di un campo stringa standard, è possibile creare un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per il campo in questione in uno schema specifico.
+Per estendere `meta:enum` di un campo stringa standard, puoi creare un [descrittore del nome descrittivo](../api/descriptors.md#friendly-name) per il campo in questione in uno schema specifico.
 
 >[!NOTE]
 >
->I valori consigliati per i campi stringa possono essere aggiunti solo a livello di schema. In altre parole, l&#39;estensione del `meta:enum` di un campo standard in uno schema non influisce sugli altri schemi che utilizzano lo stesso campo standard.
+>I valori suggeriti per i campi stringa possono essere aggiunti solo a livello di schema. In altre parole, estendere `meta:enum` di un campo standard in uno schema non influisce su altri schemi che utilizzano lo stesso campo standard.
 
-La seguente richiesta aggiunge valori consigliati allo standard `eventType` (fornito dal [Classe ExperienceEvent XDM](../classes/experienceevent.md)) per lo schema identificato in `sourceSchema`:
+La richiesta seguente aggiunge i valori suggeriti allo standard `eventType` campo (fornito da [Classe XDM ExperienceEvent](../classes/experienceevent.md)) per lo schema identificato in `sourceSchema`:
 
 ```curl
 curl -X POST \
@@ -112,7 +112,7 @@ curl -X POST \
       }'
 ```
 
-Dopo aver applicato il descrittore, il Registro di sistema dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per lo spazio):
+Dopo aver applicato il descrittore, il registro dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per motivi di spazio):
 
 ```json
 {
@@ -134,7 +134,7 @@ Dopo aver applicato il descrittore, il Registro di sistema dello schema risponde
 
 >[!NOTE]
 >
->Se il campo standard contiene già valori in `meta:enum`, i nuovi valori del descrittore non sovrascrivono i campi esistenti e vengono aggiunti al loro posto:
+>Se il campo standard contiene già valori in `meta:enum`, i nuovi valori del descrittore non sovrascrivono i campi esistenti e vengono aggiunti su:
 >
 >
 ```json
@@ -213,20 +213,20 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 }
 ``` -->
 
-## Gestione dei valori consigliati per un campo personalizzato {#suggested-custom}
+## Gestire i valori suggeriti per un campo personalizzato {#suggested-custom}
 
-Per gestire `meta:enum` di un campo personalizzato, è possibile aggiornare la classe principale, il gruppo di campi o il tipo di dati del campo tramite una richiesta PATCH.
+Per gestire `meta:enum` di un campo personalizzato, è possibile aggiornare la classe padre, il gruppo di campi o il tipo di dati del campo tramite una richiesta PATCH.
 
 >[!WARNING]
 >
->A differenza dei campi standard, l’ `meta:enum` di un campo personalizzato influisce su tutti gli altri schemi che utilizzano tale campo. Se non desideri che le modifiche si propaghino tra gli schemi, considera invece la creazione di una nuova risorsa personalizzata:
+>A differenza dei campi standard, l’aggiornamento `meta:enum` di un campo personalizzato influisce su tutti gli altri schemi che utilizzano tale campo. Se non desideri che le modifiche si propaghino tra schemi, puoi creare una nuova risorsa personalizzata:
 >
 >* [Creare una classe personalizzata](../api/classes.md#create)
 >* [Creare un gruppo di campi personalizzato](../api/field-groups.md#create)
 >* [Creare un tipo di dati personalizzato](../api/data-types.md#create)
 
 
-La seguente richiesta aggiorna il `meta:enum` di un campo &quot;livello fedeltà&quot; fornito da un tipo di dati personalizzato:
+La richiesta seguente aggiorna il `meta:enum` di un campo &quot;livello di fedeltà&quot; fornito da un tipo di dati personalizzato:
 
 ```curl
 curl -X PATCH \
@@ -251,7 +251,7 @@ curl -X PATCH \
       ]'
 ```
 
-Dopo aver applicato la modifica, il Registro di sistema dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per lo spazio):
+Dopo aver applicato la modifica, il registro dello schema risponde con quanto segue durante il recupero dello schema (risposta troncata per motivi di spazio):
 
 ```json
 {
@@ -276,4 +276,4 @@ Dopo aver applicato la modifica, il Registro di sistema dello schema risponde co
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire i valori consigliati per i campi stringa nell’API del Registro di sistema dello schema. Consulta la guida su [definizione di campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.
+Questa guida illustra come gestire i valori consigliati per i campi stringa nell’API Schema Registry. Consulta la guida su [definizione dei campi personalizzati nell’API](./custom-fields-api.md) per ulteriori informazioni su come creare diversi tipi di campi.

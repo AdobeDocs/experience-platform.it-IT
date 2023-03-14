@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;identità;identità
 solution: Experience Platform
-title: Elencare mappature identità
+title: Elenca mappature identità
 description: Una mappatura è una raccolta di tutte le identità in un cluster, per uno spazio dei nomi specificato.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
@@ -11,13 +11,13 @@ ht-degree: 4%
 
 ---
 
-# Elencare mappature di identità
+# Elencare mappature identità
 
 Una mappatura è una raccolta di tutte le identità in un cluster, per uno spazio dei nomi specificato.
 
-## Ottenere una mappatura di identità per una singola identità
+## Ottenere una mappatura identità per una singola identità
 
-Dato un&#39;identità, recupera tutte le identità correlate dallo stesso spazio dei nomi rappresentato dall&#39;identità nella richiesta.
+Considerata un’identità, recupera tutte le identità correlate dallo stesso spazio dei nomi rappresentato dall’identità nella richiesta.
 
 **Formato API**
 
@@ -27,7 +27,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Richiesta**
 
-Opzione 1: Fornisci l’identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -38,7 +38,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: Fornisci l’identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Fornisci l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere un XID di un&#39;identità, consulta la sezione di questo documento che tratta [ottenimento di un XID per un&#39;identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -60,13 +60,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### Ottieni mappature di identità per più identità
+### Ottenere mappature di identità per più identità
 
-Utilizza la `POST` come equivalente del lotto `GET` metodo descritto in precedenza per recuperare le mappature per più identità.
+Utilizza il `POST` metodo come equivalente batch del `GET` per recuperare mappature per più identità.
 
 >[!NOTE]
 >
->La richiesta non deve indicare più di un massimo di 1000 identità. Le richieste che superano 1000 identità risulteranno in un codice di stato 400.
+>La richiesta non deve indicare più di 1000 identità. Le richieste che superano le 1000 identità restituiranno il codice di stato 400.
 
 **Formato API**
 
@@ -76,7 +76,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **Corpo della richiesta**
 
-Opzione 1: Fornisci un elenco di XID per i quali recuperare le mappature.
+Opzione 1: fornire un elenco di XID per i quali recuperare le mappature.
 
 ```shell
 {
@@ -85,7 +85,7 @@ Opzione 1: Fornisci un elenco di XID per i quali recuperare le mappature.
 }
 ```
 
-Opzione 2: Fornisci un elenco di identità come ID compositi, in cui ognuno dei nomi dei valori ID e dello spazio dei nomi per ID dello spazio dei nomi. Questo esempio illustra l&#39;utilizzo di questo metodo durante la sovrascrittura dell&#39;impostazione predefinita `graph-type` di &quot;Private Graph&quot;.
+Opzione 2: fornisci un elenco di identità come ID compositi, in cui ciascuna di esse nomina il valore ID e lo spazio dei nomi in base all’ID dello spazio dei nomi. In questo esempio viene illustrato l&#39;utilizzo di questo metodo durante la sovrascrittura del valore predefinito `graph-type` di &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -144,7 +144,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se non è stata trovata alcuna identità correlata con l&#39;input fornito, un `HTTP 204` il codice di risposta viene restituito senza contenuto.
+Se non sono state trovate identità correlate con l’input fornito, viene `HTTP 204` il codice di risposta viene restituito senza contenuto.
 
 **Risposta**
 
@@ -182,9 +182,9 @@ Se non è stata trovata alcuna identità correlata con l&#39;input fornito, un `
 }
 ```
 
-- `lastAssociationTime`: La marca temporale all’ultima volta che l’identità di input è stata associata a questa identità.
-- `regions`: Fornisce la `regionId` e `lastAssociationTime` per dove è stata vista l&#39;identità.
+- `lastAssociationTime`: marca temporale dell’ultima associazione dell’identità di input a questa identità.
+- `regions`: fornisce `regionId` e `lastAssociationTime` per il punto in cui è stata visualizzata l’identità.
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva su [elenco dei namespace disponibili](./list-namespaces.md).
+Procedi all’esercitazione successiva per [elenca gli spazi dei nomi disponibili](./list-namespaces.md).

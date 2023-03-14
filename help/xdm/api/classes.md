@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro classi;registro schema;classe;classi;creare
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro classi;registro schemi;classe;classi;classi;creazione
 solution: Experience Platform
-title: Endpoint API per le classi
-description: L’endpoint /classes nell’API del Registro di sistema dello schema consente di gestire in modo programmatico le classi XDM all’interno dell’applicazione di esperienza.
+title: Endpoint API classi
+description: L’endpoint /classes nell’API Schema Registry consente di gestire in modo programmatico le classi XDM all’interno dell’applicazione Experience.
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 4%
+source-wordcount: '1508'
+ht-degree: 3%
 
 ---
 
-# Endpoint delle classi
+# Endpoint &quot;class&quot;
 
-Tutti gli schemi Experience Data Model (XDM) devono essere basati su una classe . Una classe determina la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe, nonché i gruppi di campi dello schema idonei all&#39;utilizzo in tali schemi. Inoltre, la classe di uno schema determina gli aspetti comportamentali dei dati contenuti in uno schema, di cui esistono due tipi:
+Tutti gli schemi Experience Data Model (XDM) devono essere basati su una classe. Una classe determina la struttura di base delle proprietà comuni che tutti gli schemi basati su tale classe devono contenere, nonché i gruppi di campi di schema idonei per l’utilizzo in tali schemi. Inoltre, la classe di uno schema determina gli aspetti comportamentali dei dati che uno schema conterrà, di cui esistono due tipi:
 
-* **[!UICONTROL Record]**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **[!UICONTROL Serie temporali]**: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
+* **[!UICONTROL Registra]**: fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
+* **[!UICONTROL Serie temporali]**: fornisce un’istantanea del sistema nel momento in cui un oggetto record ha eseguito un’azione, direttamente o indirettamente.
 
 >[!NOTE]
 >
->Per ulteriori classi di informazioni sui comportamenti dei dati in termini di come influiscono sulla composizione dello schema, consulta [nozioni di base sulla composizione dello schema](../schema/composition.md).
+>Per ulteriori informazioni sui comportamenti dei dati in termini di influenza sulla composizione dello schema, consulta [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
-La `/classes` punto finale [!DNL Schema Registry] L’API ti consente di gestire le classi a livello di programmazione all’interno dell’applicazione di esperienza.
+Il `/classes` endpoint nella [!DNL Schema Registry] API consente di gestire in modo programmatico le classi all’interno dell’applicazione Experience.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-## Recupera un elenco di classi {#list}
+## Recuperare un elenco di classi {#list}
 
-È possibile elencare tutte le classi nella sezione `global` o `tenant` effettuando una richiesta GET a `/global/classes` o `/tenant/classes`, rispettivamente.
+Puoi elencare tutte le classi sotto `global` o `tenant` mediante una richiesta GET a `/global/classes` o `/tenant/classes`, rispettivamente.
 
 >[!NOTE]
 >
->Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire le risorse oltre questo limite, è necessario utilizzare i parametri di paging. Si consiglia inoltre di utilizzare parametri di query aggiuntivi per filtrare i risultati e ridurre il numero di risorse restituite. Vedi la sezione su [parametri di query](./appendix.md#query) nel documento di appendice per ulteriori informazioni.
+>Quando si elencano le risorse, il registro dello schema limita il set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri di paging. È inoltre consigliabile utilizzare parametri di query aggiuntivi per filtrare i risultati e ridurre il numero di risorse restituite. Consulta la sezione su [parametri di query](./appendix.md#query) nel documento dell’appendice per ulteriori informazioni.
 
 **Formato API**
 
@@ -44,14 +44,14 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Il contenitore da cui si desidera recuperare le classi: `global` per classi create da Adobi o `tenant` per le classi di proprietà della tua organizzazione. |
-| `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Consulta la sezione [documento appendice](./appendix.md#query) per un elenco dei parametri disponibili. |
+| `{CONTAINER_ID}` | Il contenitore da cui desideri recuperare le classi: `global` per le classi create da Adobi o `tenant` per le classi di proprietà della tua organizzazione. |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la [documento dell&#39;appendice](./appendix.md#query) per un elenco dei parametri disponibili. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di classi dalla `tenant` contenitore, utilizzando un `orderby` parametro di query per ordinare le classi in base alle rispettive `title` attributo.
+La richiesta seguente recupera un elenco di classi da `tenant` contenitore, utilizzando un `orderby` parametro di query per ordinare le classi in base alla relativa `title` attributo.
 
 ```shell
 curl -X GET \
@@ -63,18 +63,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Il formato della risposta dipende dal `Accept` intestazione inviata nella richiesta. I seguenti `Accept` le intestazioni sono disponibili per le classi di elenco:
+Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. I seguenti elementi `Accept` le intestazioni sono disponibili per l&#39;elenco delle classi:
 
-| `Accept` header | Descrizione |
+| `Accept` intestazione | Descrizione |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
+| `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Questa è l’intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce la classe JSON completa per ogni risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-La richiesta di cui sopra ha utilizzato il `application/vnd.adobe.xed-id+json` `Accept` , quindi la risposta include solo l’ `title`, `$id`, `meta:altId`e `version` attributi per ogni classe. Utilizzo dell&#39;altro `Accept` header (`application/vnd.adobe.xed+json`) restituisce tutti gli attributi di ogni classe. Selezionare il `Accept` a seconda delle informazioni richieste nella risposta.
+La richiesta precedente utilizzava `application/vnd.adobe.xed-id+json` `Accept` , pertanto la risposta include solo il `title`, `$id`, `meta:altId`, e `version` attributi per ogni classe. Utilizzo dell&#39;altro `Accept` intestazione (`application/vnd.adobe.xed+json`) restituisce tutti gli attributi di ciascuna classe. Seleziona la scheda appropriata `Accept` a seconda delle informazioni richieste nella risposta.
 
 ```json
 {
@@ -112,9 +112,9 @@ La richiesta di cui sopra ha utilizzato il `application/vnd.adobe.xed-id+json` `
 }
 ```
 
-## Cerca una classe {#lookup}
+## Cercare una classe {#lookup}
 
-Puoi cercare una classe specifica includendo l’ID della classe nel percorso di una richiesta GET.
+Per cercare una classe specifica, devi includere l’ID della classe nel percorso di una richiesta GET.
 
 **Formato API**
 
@@ -124,14 +124,14 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Il contenitore che ospita la classe da recuperare: `global` per una classe creata da un Adobe o `tenant` per una classe di proprietà della tua organizzazione. |
-| `{CLASS_ID}` | La `meta:altId` o con codifica URL `$id` della classe che si desidera cercare. |
+| `{CONTAINER_ID}` | Il contenitore che ospita la classe che desideri recuperare: `global` per una classe creata da un Adobe oppure `tenant` per una classe di proprietà dell’organizzazione. |
+| `{CLASS_ID}` | Il `meta:altId` o con codifica URL `$id` della classe che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente recupera una classe dalla relativa `meta:altId` nel percorso.
+La richiesta seguente recupera una classe in base al suo `meta:altId` valore fornito nel percorso.
 
 ```shell
 curl -X GET \
@@ -143,21 +143,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Il formato della risposta dipende dal `Accept` intestazione inviata nella richiesta. Tutte le richieste di ricerca richiedono un `version` sono inclusi nella `Accept` intestazione. I seguenti `Accept` le intestazioni sono disponibili:
+Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. Tutte le richieste di ricerca richiedono un `version` essere inclusi nel `Accept` intestazione. I seguenti elementi `Accept` le intestazioni sono disponibili:
 
-| `Accept` header | Descrizione |
+| `Accept` intestazione | Descrizione |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Raw con `$ref` e `allOf`, include titoli e descrizioni. |
+| `application/vnd.adobe.xed+json; version=1` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` e `allOf` risolto, con titoli e descrizioni. |
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw con `$ref` e `allOf`, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e `allOf` risolto, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e `allOf` risolti, descrittori inclusi. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e `allOf` risolto, nessun titolo o descrizione. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e `allOf` risolto, inclusi i descrittori. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della classe. I campi restituiti dipendono dal `Accept` intestazione inviata nella richiesta. Esperimento con diversi `Accept` intestazioni per confrontare le risposte e determinare quale intestazione è migliore per il tuo caso d’uso.
+In caso di esito positivo, la risposta restituisce i dettagli della classe. I campi restituiti dipendono dal `Accept` intestazione inviata nella richiesta. Sperimenta con diversi `Accept` intestazioni per confrontare le risposte e determinare quale intestazione è più adatta al tuo caso d’uso.
 
 ```json
 {
@@ -248,13 +248,13 @@ Una risposta corretta restituisce i dettagli della classe. I campi restituiti di
 
 ## Creare una classe {#create}
 
-È possibile definire una classe personalizzata sotto la `tenant` effettuando una richiesta di POST.
+Puoi definire una classe personalizzata in `tenant` effettuando una richiesta POST.
 
 >[!IMPORTANT]
 >
->Quando si compone uno schema basato su una classe personalizzata definita dall&#39;utente, non è possibile utilizzare gruppi di campi standard. Ogni gruppo di campi definisce le classi con le quali è compatibile `meta:intendedToExtend` attributo. Una volta iniziato a definire gruppi di campi compatibili con la nuova classe, utilizzando `$id` della tua nuova classe `meta:intendedToExtend` campo del gruppo di campi), sarà possibile riutilizzare tali gruppi di campi ogni volta che si definisce uno schema che implementa la classe definita. Consulta le sezioni [creazione di gruppi di campi](./field-groups.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide dei punti finali per ulteriori informazioni.
+>Durante la composizione di uno schema basato su una classe personalizzata definita dall’utente, non è possibile utilizzare gruppi di campi standard. Ogni gruppo di campi definisce le classi con cui sono compatibili nei `meta:intendedToExtend` attributo. Una volta iniziata la definizione dei gruppi di campi compatibili con la nuova classe (utilizzando `$id` della nuova classe in `meta:intendedToExtend` del gruppo di campi), potrai riutilizzare tali gruppi di campi ogni volta che definisci uno schema che implementa la classe definita. Consulta le sezioni relative a [creazione di gruppi di campi](./field-groups.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide degli endpoint per ulteriori informazioni.
 >
->Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se si desidera includere uno schema di classe personalizzato nell&#39;unione per un&#39;altra classe come [!UICONTROL Profilo individuale XDM] o [!UICONTROL ExperienceEvent XDM], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Guarda l’esercitazione su [creazione di una relazione tra due schemi nell’API](../tutorials/relationship-api.md) per ulteriori informazioni.
+>Se prevedi di utilizzare schemi basati su classi personalizzate in Real-Time Customer Profile, è inoltre importante tenere presente che gli schemi di unione vengono costruiti solo in base a schemi che condividono la stessa classe. Se desideri includere uno schema di classe personalizzata nell’unione per un’altra classe come [!UICONTROL Profilo individuale XDM] o [!UICONTROL XDM ExperienceEvent], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Guarda il tutorial su [che stabilisce una relazione tra due schemi nell’API](../tutorials/relationship-api.md) per ulteriori informazioni.
 
 **Formato API**
 
@@ -264,9 +264,9 @@ POST /tenant/classes
 
 **Richiesta**
 
-La richiesta di creazione di una classe (POST) deve includere un `allOf` attributo contenente `$ref` a uno dei due valori seguenti: `https://ns.adobe.com/xdm/data/record` o `https://ns.adobe.com/xdm/data/time-series`. Questi valori rappresentano il comportamento su cui si basa la classe (record o serie temporali, rispettivamente). Per ulteriori informazioni sulle differenze tra i dati dei record e i dati delle serie temporali, consulta la sezione sui tipi di comportamento all&#39;interno della [nozioni di base sulla composizione dello schema](../schema/composition.md).
+La richiesta di creazione (POST) di una classe deve includere `allOf` attributo contenente un `$ref` a uno dei due valori seguenti: `https://ns.adobe.com/xdm/data/record` o `https://ns.adobe.com/xdm/data/time-series`. Questi valori rappresentano il comportamento su cui si basa la classe (rispettivamente record o serie temporali). Per ulteriori informazioni sulle differenze tra i dati dei record e i dati delle serie temporali, vedere la sezione relativa ai tipi di comportamento all&#39;interno del [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
-Quando si definisce una classe, è anche possibile includere gruppi di campi o campi personalizzati nella definizione della classe. In questo modo i gruppi di campi e i campi aggiunti verranno inclusi in tutti gli schemi che implementano la classe. La richiesta di esempio seguente definisce una classe denominata &quot;Property&quot;, che acquisisce informazioni relative a proprietà diverse possedute e gestite da un&#39;azienda. Include un `propertyId` campo da includere ogni volta che la classe viene utilizzata.
+Quando si definisce una classe, è possibile includere anche gruppi di campi o campi personalizzati all&#39;interno della definizione della classe. In questo modo, i gruppi di campi e i campi aggiunti verrebbero inclusi in tutti gli schemi che implementano la classe. L’esempio di richiesta seguente definisce una classe denominata &quot;Property&quot; (Proprietà), che acquisisce informazioni relative a diverse proprietà possedute e gestite da un’azienda. Include un `propertyId` da includere ogni volta che viene utilizzata la classe.
 
 ```SHELL
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `_{TENANT_ID}` | La `TENANT_ID` spazio dei nomi per la tua organizzazione. Tutte le risorse create dall&#39;organizzazione devono includere questa proprietà per evitare conflitti con altre risorse nel [!DNL Schema Registry]. |
-| `allOf` | Elenco di risorse le cui proprietà devono essere ereditate dalla nuova classe. Uno dei `$ref` gli oggetti all&#39;interno della matrice definiscono il comportamento della classe. In questo esempio, la classe eredita il comportamento &quot;record&quot;. |
+| `_{TENANT_ID}` | Il `TENANT_ID` dello spazio dei nomi per la tua organizzazione. Tutte le risorse create dall’organizzazione devono includere questa proprietà per evitare conflitti con altre risorse in [!DNL Schema Registry]. |
+| `allOf` | Elenco di risorse le cui proprietà devono essere ereditate dalla nuova classe. Uno dei `$ref` all&#39;interno dell&#39;array definisce il comportamento della classe. In questo esempio, la classe eredita il comportamento &quot;record&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli della nuova classe creata, tra cui `$id`, `meta:altId`e `version`. Questi tre valori sono di sola lettura e sono assegnati dal [!DNL Schema Registry].
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli della classe appena creata, tra cui `$id`, `meta:altId`, e `version`. Questi tre valori sono di sola lettura e sono assegnati dal [!DNL Schema Registry].
 
 ```JSON
 {
@@ -388,15 +388,15 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 }
 ```
 
-Esecuzione di una richiesta GET a [elenco tutte le classi](#list) in `tenant` Il contenitore ora include la classe Property . È inoltre possibile [eseguire una richiesta di ricerca (GET)](#lookup) utilizzando l’URL-encoded `$id` per visualizzare direttamente la nuova classe.
+Esecuzione di una richiesta di GET a [elenca tutte le classi](#list) nel `tenant` Il contenitore ora include la classe Property. È inoltre possibile [eseguire una richiesta di ricerca (GET)](#lookup) utilizzando la codifica URL `$id` per visualizzare direttamente la nuova classe.
 
 ## Aggiornare una classe {#put}
 
-È possibile sostituire un&#39;intera classe tramite un&#39;operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna una classe tramite una richiesta di PUT, il corpo deve includere tutti i campi necessari quando [creazione di una nuova classe](#create) in una richiesta POST.
+Puoi sostituire un’intera classe tramite un’operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna una classe tramite una richiesta PUT, il corpo deve includere tutti i campi necessari quando [creazione di una nuova classe](#create) in una richiesta POST.
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo parte di una classe anziché sostituirla completamente, vedere la sezione in [aggiornamento di una parte di una classe](#patch).
+>Se si desidera aggiornare solo una parte di una classe anziché sostituirla completamente, vedere la sezione relativa [aggiornamento di una parte di una classe](#patch).
 
 **Formato API**
 
@@ -406,13 +406,13 @@ PUT /tenant/classes/{CLASS_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CLASS_ID}` | La `meta:altId` o con codifica URL `$id` della classe che si desidera riscrivere. |
+| `{CLASS_ID}` | Il `meta:altId` o con codifica URL `$id` della classe che si desidera riscrivere. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La seguente richiesta riscrive una classe esistente, modificandone la relativa `description` e `title` di uno dei suoi campi.
+La richiesta seguente riscrive una classe esistente, modificandone la `description` e `title` di uno dei suoi campi.
 
 ```SHELL
 curl -X PUT \
@@ -463,7 +463,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della classe aggiornata.
+In caso di esito positivo, la risposta restituisce i dettagli della classe aggiornata.
 
 ```JSON
 {
@@ -529,11 +529,11 @@ Una risposta corretta restituisce i dettagli della classe aggiornata.
 
 ## Aggiornare una parte di una classe {#patch}
 
-È possibile aggiornare una parte di una classe utilizzando una richiesta PATCH. La [!DNL Schema Registry] supporta tutte le operazioni standard di patch JSON, tra cui `add`, `remove`e `replace`. Per ulteriori informazioni sulla patch JSON, consulta la sezione [Guida di base sulle API](../../landing/api-fundamentals.md#json-patch).
+È possibile aggiornare una parte di una classe utilizzando una richiesta PATCH. Il [!DNL Schema Registry] supporta tutte le operazioni Patch JSON standard, tra cui `add`, `remove`, e `replace`. Per ulteriori informazioni sulla patch JSON, vedi [Guida di base sulle API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Per sostituire un’intera risorsa con nuovi valori anziché aggiornare singoli campi, consulta la sezione [sostituzione di una classe utilizzando un’operazione PUT](#put).
+>Se desideri sostituire un’intera risorsa con nuovi valori invece di aggiornare singoli campi, consulta la sezione su [sostituzione di una classe mediante un&#39;operazione PUT](#put).
 
 **Formato API**
 
@@ -543,15 +543,15 @@ PATCH /tenant/class/{CLASS_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CLASS_ID}` | L’URL è codificato `$id` URI o `meta:altId` della classe da aggiornare. |
+| `{CLASS_ID}` | Codifica URL `$id` URI o `meta:altId` della classe che desideri aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta di esempio riportata di seguito aggiorna la `description` di una classe esistente e `title` di uno dei suoi campi.
+L’esempio di richiesta seguente aggiorna la `description` di una classe esistente e `title` di uno dei suoi campi.
 
-Il corpo della richiesta assume la forma di una matrice, con ogni oggetto elencato che rappresenta una modifica specifica a un singolo campo. Ogni oggetto include l&#39;operazione da eseguire (`op`), su quale campo deve essere eseguita l&#39;operazione (`path`) e quali informazioni dovrebbero essere incluse in tale operazione (`value`).
+Il corpo della richiesta è un array e ogni oggetto elencato rappresenta una modifica specifica di un singolo campo. Ogni oggetto include l&#39;operazione da eseguire (`op`), campo in cui deve essere eseguita l&#39;operazione (`path`) e quali informazioni devono essere incluse in tale operazione (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -569,7 +569,7 @@ curl -X PATCH \
 
 **Risposta**
 
-La risposta indica che entrambe le operazioni sono state eseguite correttamente. La `description` è stato aggiornato insieme al `title` del `propertyId` campo .
+La risposta mostra che entrambe le operazioni sono state eseguite correttamente. Il `description` è stato aggiornato, insieme al `title` del `propertyId` campo.
 
 ```JSON
 {
@@ -635,7 +635,7 @@ La risposta indica che entrambe le operazioni sono state eseguite correttamente.
 
 ## Eliminare una classe {#delete}
 
-Talvolta può essere necessario rimuovere una classe dal Registro di sistema dello schema. A tal fine, esegui una richiesta DELETE con l’ID classe fornito nel percorso .
+A volte può essere necessario rimuovere una classe dal registro degli schemi. Questa operazione viene eseguita eseguendo una richiesta DELETE con l’ID di classe fornito nel percorso.
 
 **Formato API**
 
@@ -645,9 +645,9 @@ DELETE /tenant/classes/{CLASS_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CLASS_ID}` | L’URL è codificato `$id` URI o `meta:altId` della classe da eliminare. |
+| `{CLASS_ID}` | Codifica URL `$id` URI o `meta:altId` della classe da eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -662,6 +662,6 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
 
-Puoi confermare l&#39;eliminazione tentando un [richiesta di ricerca (GET)](#lookup) per la classe. Sarà necessario includere un `Accept` intestazione nella richiesta, ma deve ricevere uno stato HTTP 404 (Non trovato) perché la classe è stata rimossa dal Registro di sistema dello schema.
+È possibile confermare l’eliminazione tentando un [richiesta di ricerca (GET)](#lookup) per la classe. Dovrai includere un `Accept` nella richiesta, ma dovrebbe ricevere lo stato HTTP 404 (Non trovato) perché la classe è stata rimossa dal registro degli schemi.

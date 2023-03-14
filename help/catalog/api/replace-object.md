@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;catalogo;api;sostituire un oggetto
 solution: Experience Platform
 title: Sostituire un oggetto catalogo
-description: Puoi sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta PUT, dove l’intera risorsa viene sostituita con il payload della richiesta.
+description: Puoi sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta PUT, in cui l’intera risorsa viene sostituita con il payload della richiesta.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Sostituire un oggetto Catalog
 
-Puoi sovrascrivere il contenuto di un [!DNL Catalog] oggetto utilizzando una richiesta PUT, in cui l’intera risorsa viene sostituita con il payload della richiesta.
+Puoi sovrascrivere il contenuto di una [!DNL Catalog] oggetto utilizzando una richiesta PUT, in cui l’intera risorsa viene sostituita con il payload della richiesta.
 
 >[!NOTE]
 >
->Se devi aggiornare solo alcuni campi specifici all’interno di un [!DNL Catalog] l&#39;utilizzo di una richiesta PATCH può essere più efficiente.
+>Se devi aggiornare solo alcuni campi specifici all’interno di una [!DNL Catalog] di un oggetto, l’utilizzo di una richiesta PATCH potrebbe essere più efficiente.
 
 **Formato API**
 
@@ -27,12 +27,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera aggiornare. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta sovrascrive un set di dati con i valori forniti nel payload.
+La richiesta seguente sovrascrive un set di dati con i valori forniti nel payload.
 
 ```shell
 curl -X PUT \
@@ -57,7 +57,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto sovrascritto. Questo ID deve corrispondere a quello inviato nella richiesta di PUT. L&#39;esecuzione di una richiesta GET per questo oggetto ora mostra che i relativi dettagli sono stati sostituiti con quelli forniti nel payload della richiesta PUT precedente.
+In caso di esito positivo, la risposta restituisce un array contenente l’ID dell’oggetto sovrascritto. Questo ID deve corrispondere a quello inviato nella richiesta PUT. L’esecuzione di una richiesta GET per questo oggetto ora mostra che i relativi dettagli sono stati sostituiti con quelli forniti nel payload della richiesta PUT precedente.
 
 ```json
 [

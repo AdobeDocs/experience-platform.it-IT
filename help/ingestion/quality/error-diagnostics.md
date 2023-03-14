@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;inserimento batch;inserimento batch;acquisizione parziale;acquisizione parziale;acquisizione parziale;acquisizione parziale;recupero di errori;recupero di errori;recupero di errori;errore;recupero di errori;inserimento parziale batch;parziale;acquisizione;acquisizione;acquisizione;diagnostica di errori;recupero di errori diagnostici;ottieni errori;ottieni errori;recupera errori;recupera errori; recupera errori;
+keywords: Experience Platform;home;argomenti popolari;inserimento batch;inserimento batch;inserimento parziale;inserimento parziale;inserimento parziale;recuperare errore;recuperare errore;inserimento batch parziale;inserimento batch parziale;inserimento parziale;inserimento;inserimento;diagnostica degli errori;recuperare diagnostica degli errori;ottenere diagnostica degli errori;ottenere errore;ottenere errori;recuperare errori;recuperare errori;
 solution: Experience Platform
-title: Diagnostica degli errori di acquisizione dei dati in recupero
-description: Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
+title: Recupero della diagnostica degli errori di acquisizione dati
+description: Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di acquisizione batch parziale e fornisce un riferimento per i tipi di acquisizione batch parziale.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
@@ -11,44 +11,44 @@ ht-degree: 3%
 
 ---
 
-# Recupero della diagnostica degli errori di acquisizione dei dati
+# Recupero diagnostica errori di acquisizione dati
 
-Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l’acquisizione batch, che consente di inserire dati utilizzando vari tipi di file (come i CSV), o l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
+Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. Puoi utilizzare l’acquisizione in batch, che consente di inserire dati utilizzando vari tipi di file (ad esempio CSV), oppure l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
 
-Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
+Questo documento fornisce informazioni sul monitoraggio dell’acquisizione batch, sulla gestione degli errori di acquisizione batch parziale e fornisce un riferimento per i tipi di acquisizione batch parziale.
 
 ## Introduzione
 
-Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati a [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): metodi tramite i quali i dati possono essere inviati a [!DNL Experience Platform].
 
-### Lettura di chiamate API di esempio
+### Lettura delle chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori delle intestazioni richieste
+### Raccogli i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Schema Registry], sono isolate in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedere [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
 
 ## Download della diagnostica degli errori {#download-diagnostics}
 
 Adobe Experience Platform consente agli utenti di scaricare la diagnostica degli errori dei file di input. La diagnostica verrà mantenuta in [!DNL Platform] fino a 30 giorni.
 
-### Elencare file di input {#list-files}
+### Elencare i file di input {#list-files}
 
 La richiesta seguente recupera un elenco di tutti i file forniti in un batch finalizzato.
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Risposta**
 
-Una risposta corretta restituirà gli oggetti JSON che specificano in dettaglio dove sono stati salvati i dati diagnostici.
+In caso di esito positivo, la risposta restituisce oggetti JSON che definiscono nei dettagli dove sono state salvate le attività di diagnostica.
 
 ```json
 {
@@ -107,7 +107,7 @@ Una risposta corretta restituirà gli oggetti JSON che specificano in dettaglio 
 
 ### Recupera diagnostica file di input {#retrieve-diagnostics}
 
-Una volta recuperato un elenco di tutti i diversi file di input, è possibile recuperare la diagnostica del singolo file utilizzando la seguente richiesta.
+Dopo aver recuperato un elenco di tutti i diversi file di input, puoi recuperare la diagnostica del singolo file utilizzando la seguente richiesta.
 
 **Formato API**
 
@@ -118,7 +118,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{BATCH_ID}` | ID del batch che stai cercando. |
-| `{FILE}` | Nome del file a cui si accede. |
+| `{FILE}` | Nome del file a cui si sta effettuando l&#39;accesso. |
 
 **Richiesta**
 
@@ -132,20 +132,20 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Risposta**
 
-Una risposta corretta restituirà oggetti JSON contenenti `path` oggetti in cui sono stati specificati i percorsi di salvataggio della diagnostica. La risposta restituirà il `path` oggetti in [Righe JSON](https://jsonlines.readthedocs.io/en/latest/) formato.
+In caso di esito positivo, la risposta restituirà oggetti JSON contenenti `path` oggetti che specificano dove sono state salvate le operazioni di diagnostica. La risposta restituirà il valore `path` oggetti in [Righe JSON](https://jsonlines.readthedocs.io/en/latest/) formato.
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Recupera errori di acquisizione batch {#retrieve-errors}
+## Recuperare gli errori di acquisizione batch {#retrieve-errors}
 
-Se i batch contengono errori, è necessario recuperare le informazioni di errore relative a tali errori in modo da poter riacquisire i dati.
+Se i batch contengono errori, è necessario recuperare le informazioni relative a tali errori in modo da poter riacquisire i dati.
 
-### Stato del controllo {#check-status}
+### Verifica stato {#check-status}
 
-Per controllare lo stato del batch acquisito, devi fornire l’ID del batch nel percorso di una richiesta GET. Per ulteriori informazioni sull’utilizzo di questa chiamata API, consulta la [guida agli endpoint di catalogo](../../catalog/api/list-objects.md).
+Per controllare lo stato del batch acquisito, devi fornire l’ID del batch nel percorso di una richiesta GET. Per ulteriori informazioni sull’utilizzo di questa chiamata API, leggi la sezione [guida dell’endpoint &quot;catalog&quot;](../../catalog/api/list-objects.md).
 
 **Formato API**
 
@@ -156,8 +156,8 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | La `id` valore del batch di cui si desidera controllare lo stato. |
-| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri sono separati da una e commerciale (`&`). Per ulteriori informazioni, consulta la guida su [filtraggio dei dati del catalogo](../../catalog/api/filter-data.md). |
+| `{BATCH_ID}` | Il `id` valore del batch di cui si desidera controllare lo stato. |
+| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri separati da e commerciali (`&`). Per ulteriori informazioni, consulta la guida su [filtraggio dei dati catalogo](../../catalog/api/filter-data.md). |
 
 **Richiesta**
 
@@ -171,7 +171,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 **Risposta senza errori**
 
-Viene restituita una risposta corretta con informazioni dettagliate sullo stato del batch.
+In caso di esito positivo, la risposta restituisce informazioni dettagliate sullo stato del batch.
 
 ```json
 {
@@ -214,11 +214,11 @@ Viene restituita una risposta corretta con informazioni dettagliate sullo stato 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Il numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo la `inputRecordCount` dal `outputRecordCount`. Questo valore viene generato su tutti i batch, indipendentemente dal fatto che `errorDiagnostics` è abilitato. |
+| `metrics.failedRecordCount` | Numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo il `inputRecordCount` dal `outputRecordCount`. Questo valore viene generato su tutti i batch, a prescindere se `errorDiagnostics` è abilitato. |
 
 **Risposta con errori**
 
-Se il batch ha uno o più errori e presenta la diagnostica degli errori abilitata, la risposta restituisce ulteriori informazioni sugli errori, sia all’interno del payload stesso che in un file di errore scaricabile. Lo stato di un batch contenente errori può ancora avere uno stato di successo.
+Se il batch presenta uno o più errori e la diagnostica degli errori è abilitata, la risposta restituisce ulteriori informazioni sugli errori, sia all’interno del payload stesso che in un file di errore scaricabile. Si noti che lo stato di un batch contenente errori può comunque avere uno stato di successo.
 
 ```json
 {
@@ -277,8 +277,8 @@ Se il batch ha uno o più errori e presenta la diagnostica degli errori abilitat
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Il numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo la `inputRecordCount` dal `outputRecordCount`. Questo valore viene generato su tutti i batch, indipendentemente dal fatto che `errorDiagnostics` è abilitato. |
-| `errors.recordCount` | Il numero di righe che non sono riuscite per il codice di errore specificato. Questo valore è **only** generato se `errorDiagnostics` è abilitato. |
+| `metrics.failedRecordCount` | Numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo il `inputRecordCount` dal `outputRecordCount`. Questo valore viene generato su tutti i batch, a prescindere se `errorDiagnostics` è abilitato. |
+| `errors.recordCount` | Numero di righe non riuscite per il codice di errore specificato. Questo valore è **solo** generato se `errorDiagnostics` è abilitato. |
 
 >[!NOTE]
 >
@@ -295,31 +295,31 @@ Se il batch ha uno o più errori e presenta la diagnostica degli errori abilitat
 
 ## Passaggi successivi {#next-steps}
 
-Questa esercitazione spiega come monitorare gli errori di inserimento batch parziale. Per ulteriori informazioni sull’acquisizione in batch, leggere il [guida per gli sviluppatori di batch ingestion](../batch-ingestion/api-overview.md).
+Questo tutorial illustra come monitorare gli errori di acquisizione in blocco parziale. Per ulteriori informazioni sull’acquisizione batch, consulta [guida per gli sviluppatori sull’acquisizione batch](../batch-ingestion/api-overview.md).
 
 ## Appendice {#appendix}
 
-Questa sezione fornisce informazioni supplementari sui tipi di errori di acquisizione.
+Questa sezione fornisce informazioni supplementari sui tipi di errore di acquisizione.
 
-### Tipi di errore di inserimento batch parziale {#partial-ingestion-types}
+### Tipi di errore per acquisizione batch parziale {#partial-ingestion-types}
 
-L’acquisizione parziale in batch presenta tre diversi tipi di errore durante l’acquisizione dei dati:
+L’acquisizione in blocco parziale presenta tre diversi tipi di errore durante l’acquisizione dei dati:
 
 - [File illeggibili](#unreadable)
 - [Schemi o intestazioni non validi](#schemas-headers)
-- [Righe non parsabili](#unparsable)
+- [Righe non analizzabili](#unparsable)
 
 ### File illeggibili {#unreadable}
 
-Se il batch acquisito dispone di file illeggibili, gli errori del batch verranno allegati al batch stesso. Ulteriori informazioni sul recupero del batch non riuscito sono disponibili nella [Guida al recupero dei batch non riusciti](../quality/retrieve-failed-batches.md).
+Se il batch acquisito contiene file illeggibili, gli errori del batch verranno allegati al batch stesso. Ulteriori informazioni sul recupero del batch non riuscito sono disponibili nella sezione [guida al recupero di batch non riusciti](../quality/retrieve-failed-batches.md).
 
 ### Schemi o intestazioni non validi {#schemas-headers}
 
-Se il batch acquisito dispone di uno schema non valido o di intestazioni non valide, gli errori del batch verranno collegati al batch stesso. Ulteriori informazioni sul recupero del batch non riuscito sono disponibili nella [Guida al recupero dei batch non riusciti](../quality/retrieve-failed-batches.md).
+Se il batch acquisito ha uno schema o intestazioni non validi, gli errori del batch verranno allegati al batch stesso. Ulteriori informazioni sul recupero del batch non riuscito sono disponibili nella sezione [guida al recupero di batch non riusciti](../quality/retrieve-failed-batches.md).
 
-### Righe non parsabili {#unparsable}
+### Righe non analizzabili {#unparsable}
 
-Se il batch che hai acquisito contiene righe non analizzabili, puoi utilizzare la seguente richiesta per visualizzare un elenco di file contenenti errori.
+Se il batch acquisito ha righe non analizzabili, puoi utilizzare la seguente richiesta per visualizzare un elenco di file che contengono errori.
 
 **Formato API**
 
@@ -329,7 +329,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | La `id` valore del batch da cui si recuperano le informazioni sull&#39;errore. |
+| `{BATCH_ID}` | Il `id` valore del batch da cui si stanno recuperando le informazioni sull&#39;errore. |
 
 **Richiesta**
 
@@ -343,7 +343,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco dei file con errori.
+In caso di esito positivo, la risposta restituisce un elenco dei file che presentano errori.
 
 ```json
 {
@@ -374,9 +374,9 @@ Una risposta corretta restituisce un elenco dei file con errori.
 }
 ```
 
-È quindi possibile recuperare informazioni dettagliate sugli errori utilizzando [endpoint di recupero diagnostico](#retrieve-diagnostics).
+È quindi possibile recuperare informazioni dettagliate sugli errori utilizzando [endpoint di recupero diagnostica](#retrieve-diagnostics).
 
-Di seguito è riportato un esempio di risposta al recupero del file di errore:
+Di seguito è riportato un esempio di risposta relativa al recupero del file di errore:
 
 ```json
 {

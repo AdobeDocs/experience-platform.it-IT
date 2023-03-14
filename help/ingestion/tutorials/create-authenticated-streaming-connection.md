@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;connessione streaming autenticata;connessione streaming;creare connessione streaming;creare connessione streaming autenticata;acquisizione streaming;acquisizione streaming;acquisizione;
+keywords: Experience Platform;home;argomenti popolari;connessione streaming autenticata;connessione streaming;creare una connessione streaming;creare una connessione streaming autenticata;acquisizione streaming;acquisizione;
 solution: Experience Platform
 title: Creare una connessione in streaming autenticata
 type: Tutorial
-description: La raccolta di dati autenticati consente ai servizi Adobe Experience Platform, ad esempio Profilo cliente in tempo reale e Identità, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili.
+description: Authenticated Data Collection consente ai servizi di Adobe Experience Platform, come Real-Time Customer Profile e Identity, di distinguere i record provenienti da fonti attendibili da quelli provenienti da fonti non attendibili.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
@@ -12,8 +12,8 @@ ht-degree: 0%
 
 ---
 
-# Creare una connessione in streaming autenticata
+# Creare una connessione streaming autenticata
 
-La raccolta dati autenticata consente i servizi Adobe Experience Platform, ad esempio [!DNL Real-Time Customer Profile] e [!DNL Identity], per distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I clienti che desiderano inviare informazioni personali (PII, Personally Identifiable Information) possono farlo inviando token di accesso come parte della richiesta di POST.
+La raccolta di dati autenticati consente di utilizzare i servizi di Adobe Experience Platform, ad esempio [!DNL Real-Time Customer Profile] e [!DNL Identity], per distinguere tra i record provenienti da fonti attendibili e quelli provenienti da fonti non attendibili. I clienti che desiderano inviare informazioni personali (PII, Personally Identifiable Information) possono farlo inviando token di accesso come parte della richiesta POST.
 
-Per informazioni su come creare una connessione in streaming autenticata, leggere il [Guida all’API sorgente HTTP API](../../sources/tutorials/api/create/streaming/http.md).
+Per informazioni su come creare una connessione in streaming autenticata, leggi [Guida API sorgente API HTTP](../../sources/tutorials/api/create/streaming/http.md).

@@ -1,10 +1,11 @@
 ---
 title: Librerie
-description: Scopri il concetto di librerie di tag e il loro funzionamento in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri il concetto di librerie di tag e come funzionano in Adobe Experience Platform.
+exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 76%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una libreria è un insieme di istruzioni su come estensioni, elementi dati e regole interagiscono tra loro dopo la distribuzione. Quando crei una libreria, specifichi le modifiche da apportare alla libreria. In fase di compilazione, queste modifiche vengono combinate con tutte le operazioni inviate, approvate o pubblicate nelle librerie precedenti.
 
@@ -55,19 +56,19 @@ Per creare una libreria, completa i passaggi seguenti.
 
 Una volta creata una libreria, utilizza il menu a discesa della libreria per selezionare una delle seguenti opzioni:
 
-* **Modifica**: Questa opzione consente di modificare la configurazione della libreria.
+* **Modifica**: questa opzione consente di modificare la configurazione della libreria.
 
-* **Generazione per sviluppo**: Questa opzione compila una build e la distribuisce nell’ambiente assegnato.
+* **Build per sviluppo**: questa opzione compila una build e la distribuisce nell’ambiente assegnato.
 
-* **Invia per approvazione**: Questa opzione rende la libreria disponibile per un Approvatore per spostarla al passaggio successivo nel processo di pubblicazione.
+* **Invia per approvazione**: questa opzione rende la libreria disponibile per un Approvatore che potrà farla passare alla fase successiva nel processo di pubblicazione.
 
-* **Elimina**: Questa opzione rimuove la libreria attualmente selezionata dal processo di pubblicazione.
+* **Elimina**: questa opzione rimuove la libreria attualmente selezionata dal processo di pubblicazione.
 
 ![](../../images/library-menu.png)
 
 ## Aggiungi a una libreria {#add-to-a-library}
 
-Per aggiungere a una libreria, completa i passaggi seguenti.
+Per aggiungere degli elementi a una libreria, completa i passaggi seguenti.
 
 1. Installa le [estensioni](../managing-resources/extensions/overview.md) che desideri aggiungere.
 1. Crea gli [elementi di dati](../managing-resources/data-elements.md) e le regole che desideri aggiungere.
@@ -105,7 +106,7 @@ Per modificare le opzioni della libreria, completa i passaggi seguenti.
 
    ![](../../images/library-contents-revision.jpg)
 
-1. Seleziona se visualizzare gli elementi **All** o **Changed**.
+1. Seleziona se mostrare **tutti** gli elementi o solo quelli **modificati**.
 1. Seleziona la revisione, quindi scegli **[!UICONTROL Seleziona revisione]**.
 1. Seleziona **[!UICONTROL Aggiungi una modifica]** o **[!UICONTROL Aggiungi tutte le risorse modificate]**.
 
@@ -113,9 +114,9 @@ Per modificare le opzioni della libreria, completa i passaggi seguenti.
 
 Le librerie racchiudono un insieme di modifiche da apportare al codice distribuito. Libreria attiva semplifica l&#39;operazione, permettendoti di eseguire rapidamente l&#39;iterazione delle modifiche e visualizzarne l&#39;impatto.
 
-È ora possibile salvare estensioni, regole ed elementi dati direttamente nella libreria su cui stai lavorando. Se necessario, è anche possibile creare una nuova build o anche una nuova libreria dal menu a discesa [!UICONTROL Libreria attiva] .
+È ora possibile salvare estensioni, regole ed elementi dati direttamente nella libreria su cui stai lavorando. Se necessario, è anche possibile creare una nuova build o una nuova libreria dal menu a discesa [!UICONTROL Libreria attiva].
 
-L&#39;elenco seguente fornisce ulteriori informazioni sulla gestione di una libreria attiva.
+L’elenco seguente fornisce ulteriori informazioni sulla gestione di una libreria attiva.
 
 1. [Creare una nuova libreria](libraries.md#create-a-library).
 1. Vai a [Regole](../managing-resources/rules.md), [Elementi dati](../managing-resources/data-elements.md) o [Estensioni](../managing-resources/extensions/overview.md).

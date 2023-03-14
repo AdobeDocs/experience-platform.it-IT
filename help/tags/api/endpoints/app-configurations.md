@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /app_configuration n
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '565'
 ht-degree: 96%
 
 ---
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | `id` dell’[azienda](./companies.md) proprietaria delle configurazioni di app. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri cercare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | `id` dell’[azienda](./companies.md) in cui stai definendo la configurazione di app. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | Rappresenta il protocollo supportato da un fornitore di servizi push e determina il formato dell’oggetto `push_credential`. Man mano che i protocolli si evolvono per i servizi di messaggistica, vengono creati nuovi valori `key_type` per supportare i protocolli aggiornati. |
 | `push_credential` | Valore effettivo delle credenziali, che a riposo è crittografato. Questo campo non viene normalmente decrittografato né incluso nelle risposte API. Solo alcuni servizi di Adobe possono ricevere una risposta contenente credenziali push decrittografate. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -258,7 +258,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova config
 
 ## Aggiornare una configurazione di app
 
-Puoi aggiornare una configurazione dell’app includendo il relativo ID nel percorso di una richiesta PATCH.
+Per aggiornare la configurazione di un’app, devi includere il relativo ID nel percorso di una richiesta PATCH.
 
 **Formato API**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri aggiornare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` |  `id` della configurazione di app che desideri aggiornare. Deve corrispondere al valore `{APP_CONFIGURATION_ID}` fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa da aggiornare. Per questo endpoint, il valore deve essere `app_configurations`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | `id` della configurazione di app che desideri eliminare. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

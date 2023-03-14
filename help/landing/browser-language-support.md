@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;CJA;analisi dei percorsi;analisi dei percorsi dei clienti;orchestrazione della campagna;orchestrazione;percorso cliente;percorso;orchestrazione percorso;funzionalità;area geografica
+keywords: Experience Platform;home;argomenti popolari;CJA;analisi percorso;analisi percorso clienti;orchestrazione campagna;orchestrazione;percorso clienti;percorso;orchestrazione percorso;capacità;area geografica
 solution: Experience Platform
-title: Supporto browser e lingua per l’interfaccia utente di Experience Platform
+title: Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
@@ -17,7 +17,7 @@ L’interfaccia utente di Adobe Experience Platform è progettata per supportare
 
 ## Supporto del browser
 
-L’interfaccia utente di Platform è progettata per funzionare in modo ottimale nel **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. È possibile che si verifichino problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
+L’interfaccia utente di Platform è progettata per funzionare in modo ottimale in **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potresti riscontrare dei problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
 
 | Sistema operativo | Browser supportati |
 |---|---|
@@ -40,16 +40,16 @@ L’interfaccia utente di Platform è attualmente disponibile nelle seguenti lin
 * Tedesco
 * Giapponese
 
-### Modificare la lingua predefinita
+### Cambia lingua predefinita
 
 La lingua predefinita dell’interfaccia utente è determinata dalla regione specificata nel profilo utente.
 
 Per cambiare lingua:
 
-1. Selezionare la lingua corrente nel piè di pagina della [!DNL Experience Platform] interfaccia utente.
+1. Seleziona la lingua corrente nel piè di pagina della [!DNL Experience Platform] dell&#39;utente.
 2. Nelle impostazioni del profilo, seleziona **[!UICONTROL Cambia area]**.
-3. Seleziona la tua area geografica.
+3. Seleziona la tua regione.
 
 >[!NOTE]
 >
-> Quando si seleziona una regione, viene impostata anche la lingua per il contenuto su Adobe.com.
+> La selezione di un’area imposta anche la lingua per il contenuto su Adobe.com.

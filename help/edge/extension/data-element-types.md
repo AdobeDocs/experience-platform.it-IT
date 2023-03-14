@@ -11,7 +11,7 @@ ht-degree: 19%
 
 # Tipi di elementi dati
 
-Dopo aver impostato i [tipi di azione](action-types.md) nell&#39; [estensione tag Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), configura i tipi di elementi dati.
+Dopo aver impostato [tipi di azioni](action-types.md) nel [Estensione tag Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), configura i tipi di elementi dati.
 
 Questa pagina descrive i tipi di elementi dati disponibili.
 
@@ -22,17 +22,17 @@ Quando viene utilizzato, questo elemento dati fornisce un ID unione evento. Per 
 
 ## Mappa delle identità
 
-Una mappa di identità consente di stabilire le identità per il visitatore della pagina web. Una mappa di identità è costituita da spazi dei nomi, come _phone_ o _email_, ciascuno dei quali contiene uno o più identificatori. Ad esempio, se l’utente sul sito web ha fornito due numeri di telefono, lo spazio dei nomi del telefono deve contenere due identificatori.
+Una mappa delle identità consente di stabilire le identità del visitatore della pagina web. Una mappa di identità è costituita da spazi dei nomi, come _telefono_ o _email_, in cui ogni spazio dei nomi contiene uno o più identificatori. Ad esempio, se l’utente sul sito web ha fornito due numeri di telefono, il namespace del telefono deve contenere due identificatori.
 
-Nell&#39;elemento dati [!UICONTROL Identity map] fornirai le seguenti informazioni per ogni identificatore:
+In [!UICONTROL Mappa identità] elemento dati, fornirai le seguenti informazioni per ciascun identificatore:
 
-* **[!UICONTROL ID]**: Il valore che identifica il visitatore. Ad esempio, se l’identificatore appartiene allo spazio dei nomi _phone_ , l’ [!UICONTROL ID] può essere _555-555-555_. Questo valore in genere deriva da una variabile JavaScript o da un altro elemento di dati sulla pagina, pertanto è meglio creare un elemento di dati che faccia riferimento ai dati della pagina, quindi fare riferimento all&#39;elemento di dati nel campo [!UICONTROL ID] all&#39;interno dell&#39;elemento di dati [!UICONTROL Identity map]. Se, durante l&#39;esecuzione sulla pagina, il valore ID è tutt&#39;altro che una stringa compilata, l&#39;identificatore verrà rimosso automaticamente dalla mappa di identità.
-* **[!UICONTROL Stato]** di autenticazione: Selezione che indica se il visitatore è autenticato.
-* **[!UICONTROL Principale]**: Selezione che indica se l’identificatore deve essere utilizzato come identificatore principale dell’individuo. Se nessun identificatore è contrassegnato come primario, l&#39;ECID verrà utilizzato come identificatore principale.
+* **[!UICONTROL ID]**: valore che identifica il visitatore. Ad esempio, se l’identificatore appartiene al _telefono_ namespace, il [!UICONTROL ID] può essere _555 555 555_. Questo valore in genere è derivato da una variabile JavaScript o da altri dati sulla pagina, quindi è meglio creare un elemento dati che faccia riferimento ai dati della pagina, quindi fare riferimento all’elemento dati nel [!UICONTROL ID] campo all&#39;interno del [!UICONTROL Mappa identità] elemento dati. Se, durante l’esecuzione sulla pagina, il valore ID è diverso da una stringa compilata, l’identificatore verrà rimosso automaticamente dalla mappa di identità.
+* **[!UICONTROL Stato autenticato]**: selezione che indica se il visitatore è autenticato.
+* **[!UICONTROL Principale]**: selezione che indica se l’identificatore deve essere utilizzato come identificatore principale dell’individuo. Se nessun identificatore è contrassegnato come primario, verrà utilizzato l’ECID come identificatore primario.
 
-Non devi fornire un ECID quando crei una mappa di identità. Quando utilizzi l’SDK, un ECID viene generato automaticamente sul server e incluso nella mappa di identità.
+Non devi fornire un ECID quando crei una mappa di identità. Quando utilizzi l’SDK, viene generato automaticamente un ECID sul server e incluso nella mappa di identità.
 
-L&#39;elemento dati della mappa di identità viene spesso utilizzato insieme all&#39; [[!UICONTROL oggetto XDM] tipo di elemento dati](#xdm-object) e al tipo di azione [[!UICONTROL Imposta consenso]](action-types.md#set-consent).
+L’elemento dati della mappa delle identità viene spesso utilizzato insieme all’elemento [[!UICONTROL Oggetto XDM] tipo di elemento dati](#xdm-object) e [[!UICONTROL Impostare il consenso] tipo di azione](action-types.md#set-consent).
 
 Ulteriori informazioni su [Servizio Adobe Experience Platform Identity](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=it).
 
@@ -40,12 +40,12 @@ Ulteriori informazioni su [Servizio Adobe Experience Platform Identity](https://
 
 ## Oggetto XDM {#xdm-object}
 
-Usa il formato XDM per inviare qualsiasi dato all&#39;SDK Web di Adobe Experience Platform. La formattazione dei dati è più semplice con l&#39;elemento dati dell&#39;oggetto XDM. La prima volta che apri questo elemento dati, seleziona la sandbox e lo schema di Adobe Experience Platform corretti. Dopo aver selezionato lo schema, viene visualizzata la struttura dello schema, che è possibile compilare facilmente.
+Utilizza il formato XDM per inviare qualsiasi dato a Adobe Experience Platform Web SDK. La formattazione dei dati è più semplice con l&#39;elemento dati dell&#39;oggetto XDM. La prima volta che apri questo elemento dati, seleziona la sandbox e lo schema di Adobe Experience Platform corretti. Dopo aver selezionato lo schema, puoi visualizzarne la struttura che potrai compilare facilmente.
 
 ![](./assets/XDM-object.png)
 
-Tieni presente che quando apri alcuni campi dello schema, ad esempio `web.webPageDetails.URL`, alcuni elementi vengono raccolti automaticamente. Anche se vengono raccolti automaticamente diversi elementi, puoi sovrascriverli, se necessario. Tutti i valori possono essere compilati manualmente o utilizzando altri elementi dati.
+Tieni presente che quando apri alcuni campi dello schema, ad esempio `web.webPageDetails.URL`, alcuni elementi vengono raccolti automaticamente. Anche se diversi elementi vengono raccolti automaticamente, puoi sovrascriverne alcuni, se necessario. Tutti i valori possono essere compilati manualmente o utilizzando altri elementi dati.
 
 >[!NOTE]
 >
->Riempi solo le informazioni che ti interessano. Tutto ciò che non viene compilato viene omesso quando i dati vengono inviati alle soluzioni.
+>Compila solo le informazioni che sei interessato a raccogliere. Tutto ciò che non viene compilato viene omesso quando i dati vengono inviati alle soluzioni.

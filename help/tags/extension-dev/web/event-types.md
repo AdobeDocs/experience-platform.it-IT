@@ -13,22 +13,22 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-In una regola di tag , un evento è un&#39;attività che deve verificarsi per attivare una regola. Ad esempio, un&#39;estensione web potrebbe fornire un tipo di evento &quot;gesture&quot; che controlla l&#39;esecuzione di un determinato movimento del mouse o del tocco. Quando si verifica il gesto, la logica dell’evento attiva la regola.
+In una regola di tag, un evento è un’attività che deve verificarsi affinché una regola venga attivata. Ad esempio, un’estensione web potrebbe fornire un tipo di evento &quot;gesture&quot; che controlla se si verifica un determinato movimento del mouse o del tocco. Quando si verifica il gesto, la logica dell’evento attiva la regola.
 
-Un modulo libreria di tipo evento è progettato per rilevare quando si verifica un’attività e quindi chiamare una funzione per attivare una regola associata. L’evento da rilevare può essere personalizzato. Ad esempio, potrebbe rilevare quando un utente compie un determinato gesto, lo scorre rapidamente o interagisce con qualcosa.
+Un modulo libreria di tipo evento è progettato per rilevare quando si verifica un’attività e quindi chiamare una funzione per attivare una regola associata. L’evento da rilevare può essere personalizzato. Ad esempio, può rilevare quando un utente compie un determinato gesto, scorre rapidamente o interagisce con qualcosa.
 
-Questo documento illustra come definire i tipi di evento per un&#39;estensione Web in Adobe Experience Platform.
+Questo documento illustra come definire i tipi di evento per un’estensione web in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Questo documento presuppone che tu abbia familiarità con i moduli di libreria e con il modo in cui sono integrati nelle estensioni web. Se necessario, consulta la panoramica sul [formato dei moduli libreria](./format.md) per un&#39;introduzione alla relativa implementazione prima di proseguire con questa guida.
+>In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni web. Se necessario, consulta la panoramica sul [formato dei moduli libreria](./format.md) per un&#39;introduzione alla relativa implementazione prima di proseguire con questa guida.
 
-I tipi di evento sono definiti da estensioni e in genere consistono nei seguenti elementi:
+I tipi di evento sono definiti dalle estensioni e in genere sono costituiti dai seguenti elementi:
 
-1. A [visualizzare](./views.md) nell’interfaccia utente di Experience Platform e nell’interfaccia utente di raccolta dati, che consente agli utenti di modificare le impostazioni dell’evento.
-2. Un modulo libreria emesso all’interno della libreria di runtime di tag per interpretare le impostazioni e controllare che si verifichi una determinata attività.
+1. A [visualizza](./views.md) mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’evento.
+2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni e controllare che si verifichi una determinata attività.
 
 `module.exports` accetta sia i parametri `settings` che quelli `trigger`. Questo consente di personalizzare il tipo evento.
 
@@ -105,9 +105,9 @@ trigger({
 
 ## Rispetto dell’ordine delle regole
 
-I tag consentono agli utenti di ordinare le regole. Ad esempio, un utente crea due regole che utilizzano entrambe il tipo di evento per la modifica dell’orientamento, e desidera personalizzare l’ordine in cui queste si attivano. Presupponendo che l&#39;utente Adobe Experience Platform specifichi un valore dell&#39;ordine di `2` per l&#39;evento di modifica dell&#39;orientamento nella regola A e un valore dell&#39;ordine di `1` per l&#39;evento di modifica dell&#39;orientamento nella regola B. Questo indica che quando l’orientamento cambia su un dispositivo mobile, la regola B deve attivarsi prima della regola A (regole con valori di ordine inferiore si attivano per prime).
+I tag consentono agli utenti di ordinare le regole. Ad esempio, un utente crea due regole che utilizzano entrambe il tipo di evento per la modifica dell’orientamento, e desidera personalizzare l’ordine in cui queste si attivano. Supponendo che l’utente di Adobe Experience Platform specifichi il valore dell’ordine `2` per l’evento di modifica dell’orientamento nella regola A e un valore dell’ordine pari a `1` per l’evento di modifica dell’orientamento nella regola B. Questo indica che quando l’orientamento cambia su un dispositivo mobile, la regola B deve essere attivata prima della regola A (le regole vengono attivate in ordine, dal valore più basso a quello più alto).
 
-Come già detto, la funzione esportata nel modulo dell’evento verrà chiamata una volta per ogni regola configurata per l’utilizzo di quel tipo di evento. Ogni volta che viene chiamata la funzione esportata, viene passata una funzione `trigger` univoca associata a una regola specifica. Nello scenario appena descritto, la nostra funzione esportata verrà chiamata una volta con un `trigger` funzione legata alla regola B e quindi di nuovo con un `trigger` funzione associata alla regola A. La regola B viene prima perché l&#39;utente gli ha dato un valore di ordine inferiore alla regola A. Quando il modulo libreria rileva una modifica di orientamento, è importante chiamare il `trigger` funzioni nello stesso ordine in cui sono state fornite al modulo libreria.
+Come già detto, la funzione esportata nel modulo dell’evento verrà chiamata una volta per ogni regola configurata per l’utilizzo di quel tipo di evento. Ogni volta che viene chiamata la funzione esportata, viene passata una funzione `trigger` univoca associata a una regola specifica. Nello scenario appena descritto, la funzione esportata verrà chiamata una volta con un `trigger` funzione associata alla regola B e quindi di nuovo con `trigger` funzione associata alla regola A. La regola B viene prima perché l’utente le ha assegnato un valore di ordine inferiore rispetto alla regola A. Quando il modulo libreria rileva una modifica di orientamento, è importante chiamare `trigger` nello stesso ordine in cui sono state fornite al modulo libreria.
 
 Nell’esempio di codice riportato di seguito, osserva che quando viene rilevata una modifica di orientamento, le funzioni di attivazione vengono chiamate nello stesso ordine in cui sono state fornite alla funzione esportata:
 

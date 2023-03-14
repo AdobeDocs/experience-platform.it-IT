@@ -6,7 +6,7 @@ feature: Observability
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 41%
+ht-degree: 49%
 
 ---
 
@@ -22,6 +22,6 @@ ht-degree: 41%
    * [Panoramica](./alerts/overview.md)
    * [Regole di avviso standard](./alerts/rules.md)
    * [Guida all’interfaccia utente](./alerts/ui.md)
-   * [Iscriviti alle notifiche degli eventi I/O](./alerts/subscribe.md)
+   * [Iscriviti alle notifiche di eventi di I/O](./alerts/subscribe.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

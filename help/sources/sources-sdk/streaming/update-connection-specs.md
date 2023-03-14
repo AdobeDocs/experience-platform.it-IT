@@ -1,6 +1,6 @@
 ---
-title: Aggiornare una specifica di connessione per l’SDK Streaming utilizzando l’API del servizio di flusso
-description: Il seguente documento descrive come specificare una connessione mediante l’API del servizio di flusso per le origini self-service (Streaming SDK).
+title: Aggiornare una specifica di connessione per Streaming SDK utilizzando l’API del servizio Flusso
+description: Il documento seguente descrive come specificare una connessione mediante l’API del servizio di flusso per le origini self-service (Streaming SDK).
 hide: true
 hidefromtoc: true
 source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
@@ -10,9 +10,9 @@ ht-degree: 4%
 
 ---
 
-# Aggiornare una specifica di connessione utilizzando l’API del servizio di flusso
+# Aggiornare una specifica di connessione utilizzando l’API del servizio Flusso
 
-È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta di PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta di POST.
+È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta POST.
 
 **Formato API**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Richiesta**
 
-La richiesta seguente aggiunge una descrizione alla specifica di connessione in streaming creata nell’esercitazione precedente.
+La richiesta seguente aggiunge una descrizione alla specifica della connessione in streaming creata nell’esercitazione precedente.
 
 ```shell
 PUT -X GET \
@@ -106,7 +106,7 @@ PUT -X GET \
 
 **Risposta**
 
-Una chiamata corretta restituisce i dettagli della specifica di connessione aggiornati, compreso il nome aggiornato.
+In caso di esito positivo, la chiamata restituisce i dettagli aggiornati della specifica di connessione, compreso il nome aggiornato.
 
 ```json
 {
@@ -192,4 +192,4 @@ Una chiamata corretta restituisce i dettagli della specifica di connessione aggi
 
 ## Passaggi successivi
 
-Una volta completati gli aggiornamenti alle specifiche di connessione, puoi ora procedere a [verifica e invia l&#39;origine per l&#39;integrazione](./submit.md).
+Una volta completati gli aggiornamenti alle specifiche di connessione, puoi procedere a [testare e inviare l’origine per l’integrazione](./submit.md).

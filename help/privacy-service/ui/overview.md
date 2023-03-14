@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Privacy Service
-description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di privacy in diverse applicazioni Experience Cloud.
+description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
@@ -15,20 +15,20 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="Richieste degli interessati"
->abstract="Questo widget mostra il numero di richieste di persone interessate inviate e completate elaborate da Privacy Service per un dato giorno. Per ulteriori informazioni sui processi Privacy Service, seleziona **Richieste** nella navigazione a sinistra."
+>title="Richieste dell’interessato"
+>abstract="Questo widget mostra il numero di richieste dei soggetti interessati inviate e completate elaborate da Privacy Service per un determinato giorno. Per ulteriori informazioni sui processi Privacy Service, seleziona **Richieste** nel menu di navigazione a sinistra."
 
-Interfaccia utente di Privacy Service [!DNL Privacy Service] consente di coordinare le richieste di privacy e conformità tra diverse applicazioni Adobe Experience Cloud.
+Interfaccia utente di Privacy Service [!DNL Privacy Service] consente di coordinare le richieste di privacy e conformità tra le varie applicazioni Adobe Experience Cloud.
 
 >[!NOTE]
 >
->Per informazioni sulla gestione programmatica delle richieste di conformità tramite l’API di Privacy Service, consulta la sezione [Guida all’API di Privacy Service](../api/overview.md).
+>Per informazioni sulla gestione delle richieste di conformità a livello di programmazione tramite l’API Privacy Service, consulta la [Guida all’API di Privacy Service](../api/overview.md).
 
-## Accedi a [!DNL Privacy Service] Interfaccia
+## Accedi a [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->È necessario disporre di un Adobe ID per l’autenticazione nel [!DNL Privacy Service] Interfaccia utente. Inoltre, è necessario disporre dei privilegi di amministratore di sistema all’interno dell’organizzazione IMS.
+>Per eseguire l&#39;autenticazione in è necessario disporre di un Adobe ID [!DNL Privacy Service] UI. Inoltre, è necessario disporre dei privilegi di amministratore di sistema all’interno dell’organizzazione IMS.
 
 Per accedere all’interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
 
@@ -42,4 +42,4 @@ Se hai accesso all’interfaccia utente di Adobe Experience Platform, puoi anche
 
 ## Passaggi successivi
 
-Dopo aver effettuato l&#39;accesso, fai riferimento al [guida utente](user-guide.md) per i passaggi su come eseguire varie operazioni utilizzando [!DNL Privacy Service] Interfaccia utente.
+Dopo aver effettuato l’accesso, consulta [guida utente](user-guide.md) per i passaggi su come eseguire varie operazioni utilizzando [!DNL Privacy Service] UI.

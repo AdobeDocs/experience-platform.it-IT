@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;catalogo;api;aggiornare un oggetto
 solution: Experience Platform
 title: Aggiornare un oggetto catalogo
-description: È possibile aggiornare parte di un oggetto Catalog includendo il relativo ID nel percorso di una richiesta PATCH. Questo documento tratta l’utilizzo dei campi e l’utilizzo della notazione Patch JSON per l’esecuzione di operazioni PATCH sugli oggetti Catalog.
+description: Per aggiornare parte di un oggetto Catalog, devi includere il relativo ID nel percorso di una richiesta PATCH. In questo documento viene descritto l’utilizzo dei campi e della notazione Patch JSON per l’esecuzione di operazioni PATCH sugli oggetti Catalog.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,18 +13,18 @@ ht-degree: 4%
 
 # Aggiornare un oggetto Catalog
 
-È possibile aggiornare parte di un [!DNL Catalog] includendone l’ID nel percorso di una richiesta PATCH. In questo documento vengono descritti i due metodi utilizzati per eseguire operazioni PATCH sugli oggetti Catalog:
+È possibile aggiornare parte di un [!DNL Catalog] includendo il relativo ID nel percorso di una richiesta PATCH. Questo documento descrive i due metodi per eseguire operazioni PATCH sugli oggetti Catalog:
 
-* Uso dei campi
+* Utilizzo dei campi
 * Utilizzo della notazione patch JSON
 
 >[!NOTE]
 >
->Le operazioni di PATCH su un oggetto non possono modificare i campi espandibili che rappresentano oggetti correlati. Le modifiche apportate agli oggetti correlati devono essere effettuate direttamente.
+>Le operazioni PATCH su un oggetto non possono modificare i relativi campi espandibili, che rappresentano oggetti intercorrelati. Le modifiche agli oggetti correlati devono essere effettuate direttamente.
 
-## Aggiornamento utilizzando i campi
+## Aggiorna utilizzando i campi
 
-L&#39;esempio di chiamata seguente illustra come aggiornare un oggetto utilizzando campi e valori.
+La chiamata di esempio seguente illustra come aggiornare un oggetto utilizzando campi e valori.
 
 **Formato API**
 
@@ -34,12 +34,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera aggiornare. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta aggiorna il `name` e `description` campi di un set di dati in base ai valori forniti nel payload. I campi oggetto da non aggiornare possono essere esclusi dal payload.
+La richiesta seguente aggiorna il `name` e `description` campi di un set di dati ai valori forniti nel payload. I campi oggetto che non devono essere aggiornati possono essere esclusi dal payload.
 
 ```shell
 curl -X PATCH \
@@ -57,7 +57,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. L&#39;esecuzione di una richiesta di GET per questo set di dati ora mostra che solo il `name` e `description` sono stati aggiornati mentre tutti gli altri valori rimangono invariati.
+In caso di esito positivo, la risposta restituisce un array contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. L’esecuzione di una richiesta di GET per questo set di dati ora mostra che solo il `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
 
 ```json
 [
@@ -65,9 +65,9 @@ Una risposta corretta restituisce un array contenente l’ID del set di dati agg
 ]
 ```
 
-## Aggiornamento tramite la notazione patch JSON
+## Aggiorna utilizzando la notazione patch JSON
 
-La chiamata di esempio seguente illustra come aggiornare un oggetto utilizzando la patch JSON, come descritto in [RFC-6902](https://tools.ietf.org/html/rfc6902).
+La chiamata di esempio seguente illustra come aggiornare un oggetto utilizzando Patch JSON, come descritto in [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -83,12 +83,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera aggiornare. |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta aggiorna il `name` e `description` campi di un set di dati in base ai valori forniti in ciascun oggetto Patch JSON. Quando utilizzi la patch JSON, devi anche impostare l’intestazione Content-Type su `application/json-patch+json`.
+La richiesta seguente aggiorna il `name` e `description` campi di un set di dati ai valori forniti in ciascun oggetto Patch JSON. Quando utilizzi la patch JSON, devi anche impostare l’intestazione Content-Type su `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -106,7 +106,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta di PATCH. L&#39;esecuzione di una richiesta di GET per questo oggetto ora mostra che solo il `name` e `description` sono stati aggiornati mentre tutti gli altri valori rimangono invariati.
+In caso di esito positivo, la risposta restituisce un array contenente l’ID dell’oggetto aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. Quando si esegue una richiesta di GET per questo oggetto, ora viene mostrato che solo `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
 
 ```json
 [

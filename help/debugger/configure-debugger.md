@@ -14,13 +14,13 @@ ht-degree: 45%
 
 # Configurare Platform Debugger
 
-Puoi configurare alcuni aspetti dell’aspetto e del funzionamento di Adobe Experience Platform Debugger.
+È possibile configurare alcuni aspetti dell’aspetto e del funzionamento di Adobe Experience Platform Debugger.
 
 ![](images/settings.jpg)
 
 ## Modalità chiara o scura
 
-Dopo l’apertura di Platform Debugger, puoi selezionare l’aspetto desiderato da **[!UICONTROL Impostazioni]** e selezionando **Modalità scura** (predefinito) o **Modalità chiara**.
+Una volta avviato Platform Debugger, puoi applicare l’aspetto desiderato da **[!UICONTROL Impostazioni]** e selezionando **Modalità scura** (impostazione predefinita) oppure **Modalità chiara**.
 
 ## Ripristino
 

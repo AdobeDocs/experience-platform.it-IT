@@ -1,6 +1,6 @@
 ---
-title: Raccolta dati non interattiva
-description: Scopri come l’API di Adobe Experience Platform Edge Network Server esegue la raccolta dati non interattiva.
+title: Raccolta di dati non interattivi
+description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta dati non interattiva.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 5%
 
 ---
 
-# Raccolta dati non interattiva
+# Raccolta di dati non interattivi
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati evento non interattivi vengono utilizzati per inviare più eventi a set di dati di Experience Platform o ad altri punti vendita.
+Gli endpoint di raccolta dati per eventi non interattivi vengono utilizzati per inviare più eventi a set di dati Experience Platform o ad altre prese.
 
-L’invio di eventi in batch è consigliato quando gli eventi dell’utente finale vengono messi in coda localmente per un breve periodo di tempo (ad esempio, in assenza di connessione di rete).
+L’invio di eventi in batch è consigliato quando gli eventi dell’utente finale vengono messi in coda localmente per un breve periodo di tempo (ad esempio quando non vi è alcuna connessione di rete).
 
-Gli eventi batch non devono necessariamente appartenere allo stesso utente finale, il che significa che gli eventi possono contenere identità diverse all’interno dei rispettivi `identityMap` oggetto.
+Gli eventi batch non devono necessariamente appartenere allo stesso utente finale, il che significa che possono contenere identità diverse all’interno del `identityMap` oggetto.
 
 ## Esempio di chiamata API non interattiva {#example}
 
@@ -89,18 +89,18 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sì | ID del datastream utilizzato dall&#39;endpoint di raccolta dati. |
-| `requestId` | `String` | No | Fornisci un ID di traccia della richiesta esterna. Se non ne viene fornito nessuno, la rete Edge ne genererà uno per te e lo restituirà nel corpo o nelle intestazioni di risposta. |
-| `silent` | `Boolean` | No | Parametro booleano facoltativo che indica se la rete Edge deve restituire un `204 No Content` con un payload vuoto o meno. Gli errori critici vengono segnalati utilizzando il codice di stato HTTP e il payload corrispondenti. |
+| `dataStreamId` | `String` | Sì | ID dello stream di dati utilizzato dall’endpoint di raccolta dati. |
+| `requestId` | `String` | No | Specifica un ID di traccia della richiesta esterno. Se non ne viene fornito alcuno, la rete Edge ne genererà uno per te e lo restituirà nel corpo/nelle intestazioni della risposta. |
+| `silent` | `Boolean` | No | Parametro booleano facoltativo che indica se la rete Edge deve restituire un `204 No Content` risposta con un payload vuoto o meno. Gli errori critici vengono segnalati utilizzando il codice di stato HTTP e il payload corrispondenti. |
 
 
 ### Risposta {#response}
 
-Una risposta corretta restituisce uno degli stati seguenti e un `requestID` se non ne è stato fornito nessuno nella richiesta.
+In caso di esito positivo, la risposta restituisce uno dei seguenti stati, e un `requestID` se nella richiesta non è stata fornita alcuna informazione.
 
-* `202 Accepted` quando la richiesta è stata elaborata con successo;
-* `204 No Content` quando la richiesta è stata elaborata correttamente e il `silent` è stato impostato su `true`;
-* `400 Bad Request` quando la richiesta non è stata formata correttamente (ad esempio, l’identità principale obbligatoria non è stata trovata).
+* `202 Accepted` quando la richiesta è stata elaborata correttamente;
+* `204 No Content` quando la richiesta è stata elaborata correttamente e il `silent` parametro impostato su `true`;
+* `400 Bad Request` quando la richiesta non era formata correttamente (ad esempio, non è stata trovata l’identità primaria obbligatoria).
 
 ```json
 {

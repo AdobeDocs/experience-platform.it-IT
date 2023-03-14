@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’impostazione predefinita per la distribuzione delle build delle librerie di tag in Adobe Experience Platform prevede l’utilizzo di host gestiti da Adobe. Quando si crea una nuova proprietà tramite l’interfaccia utente di Data Collection, viene creato automaticamente un host predefinito gestito da Adobe.
 
@@ -54,7 +54,7 @@ Una volta che la build è stata implementata nell&#39;host gestito da Adobe, la 
 >
 >Per gli host gestiti da Adobe, la prima libreria pubblicata in un nuovo ambiente può impiegare fino a cinque minuti per propagarsi nella rete CDN globale.
 
-Quando un nodo perimetrale riceve una richiesta per un file specifico (come la build della libreria), il nodo controlla prima il tempo di scadenza sul file. Se il tempo non è scaduto, il nodo perimetrale trasmette la versione cache. Se l’ora è scaduta, il nodo perimetrale richiede una nuova copia dall’origine più vicina, invia la copia aggiornata e quindi memorizza in cache la copia aggiornata con un nuovo tempo di scadenza.
+Quando un nodo perimetrale riceve una richiesta per un file specifico (ad esempio la build della libreria), viene innanzitutto verificato il tempo di scadenza del file. Se il tempo non è scaduto, il nodo perimetrale trasmette la versione cache. Se il tempo è scaduto, il nodo perimetrale richiede una nuova copia dall’origine più vicina, distribuisce la copia aggiornata e quindi memorizza nella cache la copia aggiornata con una nuova scadenza.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ I gruppi del server di origine hanno quindi il tempo necessario per replicare tr
 
 Le build delle librerie vengono anche memorizzate nella cache del browser tramite l’intestazione HTTP `cache-control`. Quando utilizzi gli host gestiti da Adobe, non puoi intervenire sulle intestazioni restituite nelle risposte API e vengono quindi utilizzate le impostazioni di cache predefinite di Adobe. In altre parole, non è possibile utilizzare intestazioni personalizzate per gli host gestiti da Adobe. Se hai l’esigenza di usare un’intestazione `cache-control` personalizzata, puoi ricorrere al [self-hosting](self-hosting-libraries.md).
 
-Il tempo di scadenza per la build della libreria memorizzata nella cache del browser (determinato dal `cache-control` ) varia a seconda dell’ambiente tag in uso:
+Il tempo di scadenza della build della libreria memorizzata nella cache del browser (determinato dalla `cache-control` ) varia a seconda dell’ambiente di tag in uso:
 
 | Ambiente | Valore `cache-control` |
 | --- | --- |
@@ -90,7 +90,7 @@ Le intestazioni per il controllo della cache sono applicabili solo alla build de
 
 ## Utilizzo dell’hosting gestito da Adobe nell’interfaccia di 
 
-Quando crei una proprietà nell’interfaccia utente di Platform o nell’interfaccia utente di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
+La prima volta che crei una proprietà nell’interfaccia utente di Platform o di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
 
 >[!NOTE]
 >

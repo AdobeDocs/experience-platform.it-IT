@@ -1,6 +1,6 @@
 ---
-title: Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni
-description: Scopri come viene gestita l’esportazione di identità nel flusso di lavoro di attivazione, a seconda del tipo di destinazione
+title: Gestione dell’identità nel flusso di lavoro di attivazione delle destinazioni
+description: Scopri come viene gestita l’esportazione delle identità nel flusso di lavoro di attivazione, a seconda del tipo di destinazione
 source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
 source-wordcount: '1186'
@@ -8,35 +8,35 @@ ht-degree: 1%
 
 ---
 
-# Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni
+# Gestione dell’identità nel flusso di lavoro di attivazione delle destinazioni
 
-Questa pagina descrive le particolarità di come le identità vengono esportate in diversi tipi di destinazione e illustra come individuare le identità disponibili per l’esportazione a seconda della destinazione.
+Questa pagina descrive le particolarità di come le identità vengono esportate in diversi tipi di destinazione e illustra come trovare le identità disponibili per l’esportazione in base alla destinazione.
 
 >[!TIP]
 >
-> Per informazioni approfondite sulle identità, i namespace delle identità e le definizioni dei termini relativi all&#39;identità, leggere il [panoramica del servizio identità](/help/identity-service/home.md).
+> Per informazioni complete su identità, spazi dei nomi delle identità e definizioni di termini relativi all’identità, leggi [panoramica del servizio identity](/help/identity-service/home.md).
 
-Ogni destinazione nel [catalogo](/help/destinations/catalog/overview.md) è leggermente diverso, quindi non esiste una configurazione adatta a tutte le destinazioni. Tuttavia, esistono alcuni pattern che guidano la configurazione delle destinazioni e i relativi requisiti di identità, come descritto nelle sezioni seguenti.
+Ogni destinazione in [catalogo](/help/destinations/catalog/overview.md) è leggermente diverso, quindi non esiste una configurazione unica per tutte le destinazioni. Tuttavia, esistono alcuni modelli che guidano la configurazione delle destinazioni e dei relativi requisiti di identità, come descritto nelle sezioni seguenti.
 
 ## Destinazioni basate su file {#file-based}
 
-Per [destinazioni basate su file](/help/destinations/destination-types.md#file-based) (ad esempio [!DNL Amazon S3], SFTP, la maggior parte delle destinazioni di e-mail marketing come [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), la configurazione dell’identità nella maggior parte delle destinazioni è aperta, il che significa che non è necessario selezionare alcuna identità nella [Seleziona attributi](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) passaggio del flusso di lavoro di attivazione batch.
+Per [destinazioni basate su file](/help/destinations/destination-types.md#file-based) (ad esempio [!DNL Amazon S3], SFTP, la maggior parte delle destinazioni del marketing e-mail come [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), l’impostazione dell’identità nella maggior parte di queste destinazioni è aperta, il che significa che non è necessario selezionare alcuna identità nella [Seleziona attributi](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) passaggio del flusso di lavoro di attivazione batch.
 
-Se scegli di aggiungere identità alle esportazioni dei file, tieni presente che solo una singola identità dalla [spazio dei nomi identità](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) può essere selezionato in un’esportazione. Quando selezioni un’identità per l’esportazione, questa viene automaticamente selezionata come [attributo obbligatorio](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) e [chiave di deduplicazione](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+Se scegli di aggiungere identità alle esportazioni di file, tieni presente che una sola identità dalla [spazio dei nomi delle identità](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) può essere selezionato in un’esportazione. Quando selezioni un’identità da esportare, questa viene selezionata automaticamente come [attributo obbligatorio](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) e [chiave di deduplicazione](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
-![Un&#39;identità selezionata come attributo obbligatorio e chiave di deduplicazione.](/help/destinations/assets/how-destinations-work/selected-identity.png)
+![Un’identità selezionata come attributo obbligatorio e chiave di deduplicazione.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
-Come soluzione alternativa, puoi aggiungere altre identità all’esportazione se queste sono state acquisite in Experience Platform come attributi. Di seguito è riportato un esempio in cui l’indirizzo e-mail dell’attributo XDM è stato selezionato per l’esportazione, oltre allo spazio dei nomi identità `Phone_E.164`.
+Come soluzione alternativa, puoi aggiungere più identità all’esportazione se sono state acquisite in Experience Platform come attributi. Di seguito è riportato un esempio in cui l’indirizzo e-mail dell’attributo XDM è stato selezionato per l’esportazione, oltre allo spazio dei nomi dell’identità `Phone_E.164`.
 
 ![Esempio di attributo dell’indirizzo e-mail selezionato per l’esportazione.](/help/destinations/assets/how-destinations-work/email-selected.png)
 
-## Esportazione di un&#39;identità da una mappa di identità o esportazione di un&#39;identità come attributo XDM - differenze {#identity-map-or-attribute}
+## Esportazione di un’identità da una mappa di identità rispetto all’esportazione di un’identità come attributo XDM: le differenze {#identity-map-or-attribute}
 
-Il numero di record esportati può variare a seconda che si selezioni per l’esportazione di identità dalla mappa di identità o di identità che sono state acquisite come attributi in Experience Platform. [Unisci criteri](/help/profile/merge-policies/overview.md) svolge inoltre un ruolo importante nel numero di record che vengono esportati quando selezioni le identità dalla mappa di identità.
+Il numero di record esportati può essere diverso a seconda che vengano selezionate identità di esportazione dalla mappa delle identità o che vengano acquisite come attributi in Experience Platform. [Criteri di unione](/help/profile/merge-policies/overview.md) svolge anche un ruolo importante nel numero di record che vengono esportati quando selezioni identità da identity map.
 
-Ad esempio, tieni presente che da due set di dati diversi sono disponibili i seguenti frammenti di profilo che verranno uniti in un singolo profilo cliente:
+Ad esempio, considera che da due set di dati diversi, sono presenti i seguenti frammenti di profilo che verranno uniti in un singolo profilo cliente:
 
-**Frammento di profilo uno**
+**Frammento di profilo 1**
 
 | Mappa identità | Nome | Cognome | Attributo e-mail |
 |---------|----------|---------|--------|
@@ -47,55 +47,55 @@ Ad esempio, tieni presente che da due set di dati diversi sono disponibili i seg
 
 | Mappa identità | Nome | Cognome | Attributo e-mail |
 |---------|----------|---------|--------|
-| email2, ID fedeltà1 | John | Doe | e-mail 2 |
+| e-mail2, ID fedeltà1 | John | Doe | e-mail 2 |
 
-Il profilo unito sarà simile al seguente:
+Il profilo unito si presenta come segue:
 
 | Mappa identità | Nome | Cognome | Attributo e-mail |
 |---------|----------|---------|--------|
-| e-mail 1, e-mail 2, ID fedeltà 1 | John | Doe | e-mail 2 |
+| email 1, email2, Loyalty ID1 | John | Doe | e-mail 2 |
 
-Il comportamento di esportazione varia a seconda che sia stata selezionata l’opzione `IdentityMap: Email` o `xdm: personalEmail.address` per l&#39;esportazione.
+Il comportamento di esportazione varia a seconda che sia selezionato o meno `IdentityMap: Email` o `xdm: personalEmail.address` per l&#39;esportazione.
 
-Se un cliente attiva `IdentityMap: Email`, nel file esportato saranno presenti due record, uno per e-mail1 e uno per e-mail2.
+Se un cliente si attiva `IdentityMap: Email`, nel file esportato saranno presenti due record, uno per e-mail1 e un altro per e-mail2.
 
-Tuttavia, se un cliente attiva `xdm: personalEmail.address`, nel record sarà presente solo email2 , poiché il campo dell’attributo e-mail include solo email2. Queste situazioni possono risolvere diversi casi d’uso in cui puoi attivare tutti gli indirizzi e-mail che hai su file per un cliente o solo l’indirizzo e-mail più recente che hai su file per il cliente.
+Tuttavia, se un cliente attiva `xdm: personalEmail.address`, nel record sarà presente solo e-mail2, poiché il campo dell’attributo e-mail include solo e-mail2. Queste situazioni possono riguardare diversi casi d’uso in cui potresti voler attivare tutti gli indirizzi e-mail che hai in archivio per un cliente, o solo l’indirizzo e-mail più recente che hai in archivio per il cliente.
 
-Il numero di record esportati dipende dai criteri di unione selezionati e dalla selezione di identità o attributi nell’esportazione.
+Il ritiro consiste nel fatto che il numero di record esportati dipende dai criteri di unione scelti e dall&#39;eventuale selezione di identità o attributi nell&#39;esportazione.
 
 ## Destinazioni di streaming basate su API {#streaming-destinations}
 
-[Destinazioni di streaming basate su API](/help/destinations/destination-types.md#streaming-destination) costruito con [Destination SDK](/help/destinations/destination-sdk/overview.md) (ad esempio [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze]e altri) supportano solo ID specifici per l&#39;esportazione. Per informazioni dettagliate sulle identità specifiche che possono essere esportate in ogni destinazione, consulta la sezione *identità supportate* in ogni pagina della documentazione di destinazione (ad esempio, consulta [sezione identità supportate](/help/destinations/catalog/advertising/pinterest.md) in [!DNL Pinterest] pagina di destinazione).
+[Destinazioni di streaming basate su API](/help/destinations/destination-types.md#streaming-destination) creato con [Destination SDK](/help/destinations/destination-sdk/overview.md) (ad esempio [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze]e altri) supportano solo ID specifici per l’esportazione. Per informazioni dettagliate sulle identità specifiche che possono essere esportate in ogni destinazione, leggi *identità supportate* in ogni pagina della documentazione di destinazione (ad esempio, consulta la sezione [sezione identità supportate](/help/destinations/catalog/advertising/pinterest.md) nel [!DNL Pinterest] destinazione).
 
-Tieni presente, tuttavia, che hai la flessibilità di utilizzare i dati da [grafici privati](/help/profile/merge-policies/overview.md#id-stitching) o da attributi come identità. Ciò significa che puoi mappare gli attributi XDM sul campo di identità richiesto dalla destinazione. Vedi sotto un esempio per [!DNL Pinterest] destinazione, dove attributo XDM `personalEmail.address` è mappato sul [!DNL Pinterest] identità `pinterest_audience`.
+Tuttavia, puoi utilizzare i dati di con la massima flessibilità [grafi privati](/help/profile/merge-policies/overview.md#id-stitching) o da attributi come identità. Ciò significa che puoi mappare gli attributi XDM al campo di identità richiesto dalla destinazione. Di seguito è riportato un esempio per [!DNL Pinterest] destinazione, in cui l’attributo XDM `personalEmail.address` è mappato al necessario [!DNL Pinterest] identità `pinterest_audience`.
 
 >[!TIP]
 >
->Quando il campo di origine contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** ad Experience Platform, aggiungi automaticamente hash ai dati all’attivazione. Ulteriori informazioni sulle **[!UICONTROL Applica trasformazione]** in [esercitazione sull&#39;attivazione delle destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** affinché Experience Platform esegua automaticamente l’hash dei dati all’attivazione. Ulteriori informazioni su **[!UICONTROL Applica trasformazione]** opzione in [tutorial sull’attivazione di destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
-![Esempio di attributo dell&#39;indirizzo e-mail mappato sul campo dell&#39;identità per la destinazione Pinterest.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
+![Esempio di attributo dell’indirizzo e-mail mappato al campo di identità per la destinazione Pinterest.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Destinazioni pubblicitarie basate su integrazioni di cookie di terze parti {#third-party-cookie-destinations}
 
-Destinazioni pubblicitarie basate su cookie di terze parti (ad esempio: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) non richiede ai clienti di selezionare gli ID nel flusso di lavoro di attivazione. Per queste destinazioni, quando imposti un flusso di lavoro di attivazione, Experience Platform cerca automaticamente la tabella di corrispondenza delle identità creata dalla [[!UICONTROL Servizio Experience Cloud ID]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) ed esporta tutte le identità disponibili per un profilo e supportate dalla destinazione.
+Destinazioni pubblicitarie che si basano su cookie di terze parti (ad esempio: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) non richiedono ai clienti di selezionare gli ID nel flusso di lavoro di attivazione. Per queste destinazioni, quando si imposta un flusso di lavoro di attivazione, Experience Platform cerca automaticamente la tabella di corrispondenza delle identità creata da [[!UICONTROL Servizio ID Experience Cloud]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) ed esporta tutte le identità disponibili per un profilo e supportate dalla destinazione.
 
-Queste destinazioni richiedono una sincronizzazione ID attraverso [!UICONTROL Servizio Experience Cloud ID] o attraverso [!UICONTROL Experience Platform Web SDK].
+Queste destinazioni richiedono una sincronizzazione ID tramite [!UICONTROL Servizio ID Experience Cloud] o attraverso [!UICONTROL Experience Platform Web SDK].
 
-Se utilizzi [!UICONTROL Experience Platform Web SDK] e l&#39;eredità [!UICONTROL Servizio Experience Cloud ID] non è implementato nella pagina, quindi devi assicurarti che il datastream per il sito web in questione sia abilitato per consentire la sincronizzazione ID di terze parti, come descritto in [configurare la documentazione di datastream](/help/edge/datastreams/configure.md#create).
+Se sta usando [!UICONTROL Experience Platform Web SDK] e le versioni precedenti [!UICONTROL Servizio ID Experience Cloud] non è implementato nella pagina, quindi devi assicurarti che lo stream di dati per il sito web in questione sia abilitato per consentire la sincronizzazione degli ID di terze parti, come descritto nella [configurare la documentazione dello stream di dati](/help/edge/datastreams/configure.md#create).
 
-Durante la configurazione di un datastream come descritto nella documentazione collegata sopra, è necessario assicurarsi che il **[!UICONTROL Sincronizzazione ID di terze parti]** il cursore è abilitato. La maggior parte dei clienti lascerebbe `container_id` campo vuoto (il valore predefinito è 0). È necessario modificare questo valore solo se l’implementazione legacy di Audience Manager utilizzava un ID contenitore specifico (nota, tuttavia, che si tratterebbe della grande minoranza di clienti).
+Quando configuri un flusso di dati come descritto nella documentazione collegata in precedenza, è necessario assicurarsi che il **[!UICONTROL Sincronizzazione ID di terze parti]** cursore attivato. La maggior parte dei clienti lascia il `container_id` campo vuoto (il valore predefinito è 0). Devi modificare questo valore solo se l’implementazione legacy dell’Audience Manager utilizza un ID contenitore specifico (tieni presente, tuttavia, che si tratterebbe della stragrande minoranza di clienti).
 
 >[!NOTE]
 >
->La maggior parte di queste destinazioni pubblicitarie è supportata in Audience Manager (questi tipi di destinazione sono noti, ad Audience Manager, come destinazioni basate su dispositivi. Vedi [elenco di tutte le destinazioni supportate basate su dispositivi nell’Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Solo alcuni sono elencati nell&#39;Experience Platform. Per informazioni sulla condivisione di dati tra Experience Platform e Audience Manager, consulta la sezione su [abilitazione della condivisione dei dati da Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Attualmente, non è previsto il supporto di più destinazioni di cookie di terze parti.
+>La maggior parte di queste destinazioni pubblicitarie sono supportate in Audience Manager (questi tipi di destinazione sono noti in Audience Manager come destinazioni basate su dispositivi. Vedi un [elenco di tutte le destinazioni basate su dispositivi supportate in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Solo alcuni sono elencati nell’Experience Platform. Per informazioni sulla condivisione dei dati tra Experience Platform e Audience Manager, consulta la sezione su [abilitazione della condivisione dei dati da Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Attualmente, non è previsto il supporto di più destinazioni di cookie di terze parti.
 
-## Destinazioni aziendali {#enterprise-destinations}
+## Destinazioni Enterprise {#enterprise-destinations}
 
-[Destinazioni aziendali](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) non richiede ID specifici nell’esportazione dei dati, in quanto sono progettati per i casi d’uso dell’integrazione Enterprise. Tuttavia, se lo desideri, puoi esportare le identità come attributi XDM o dalla mappa di identità. Visualizzare un [esempio di dati esportati nella destinazione HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), che include sia `personalEmail.address` Attributo XDM e identità `ECID` e `email_lc_sha256` (indirizzo e-mail con hash) dalla mappa di identità.
+[Destinazioni Enterprise](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) non richiedono ID specifici nell’esportazione dei dati, in quanto sono progettati per i casi di utilizzo di integrazione Enterprise. Tuttavia, se lo desideri, puoi esportare le identità come attributi XDM o dalla mappa delle identità. Visualizza un [esempio di dati esportati nella destinazione HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), che include sia `personalEmail.address` Attributo XDM e identità `ECID` e `email_lc_sha256` (indirizzo e-mail con hash) dalla mappa delle identità.
 
 ## Destinazioni di personalizzazione {#personalization-destinations}
 
-[Destinazioni di personalizzazione (o edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (ad esempio: Adobe Target, [!DNL Custom Personalization]) non richiede alcuna selezione di identità nel flusso di lavoro di attivazione, in quanto l’integrazione è una ricerca di profilo. Il client ([!DNL Target], [!DNL Web SDK]o altri) invia una query al [[!UICONTROL Bordo]](/help/collection/home.md#edge) e raccoglie le informazioni di profilo necessarie per la personalizzazione all’interno del sito.
+[Destinazioni di personalizzazione (o edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (ad esempio: Adobe Target, [!DNL Custom Personalization]) non richiedono alcuna selezione di identità nel flusso di lavoro di attivazione, in quanto l’integrazione è una ricerca di profilo. Il client ([!DNL Target], [!DNL Web SDK], o altri) esegue query su [[!UICONTROL Bordo]](/help/collection/home.md#edge) e richiama le informazioni di profilo necessarie per la personalizzazione nel sito.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
@@ -104,8 +104,8 @@ Durante la configurazione di un datastream come descritto nella documentazione c
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come scoprire quali identità sono supportate o necessarie per le singole destinazioni. Ora è anche possibile sapere come funziona la selezione dell’identità per ciascun tipo di destinazione.
+Dopo aver letto questo documento, ora sai come individuare le identità supportate o richieste per le singole destinazioni. Ora sai anche come funziona la selezione delle identità per ogni tipo di destinazione.
 
-Successivamente, puoi leggere quali [impostazioni di esportazione](/help/destinations/how-destinations-work/destinations-configurations.md) le destinazioni sono comuni tra i tipi di destinazione, che possono essere configurati a livello di destinazione individuale dagli sviluppatori e quali impostazioni possono essere modificate dagli utenti nel flusso di lavoro di attivazione.
+Quindi, puoi leggere quali [impostazioni di esportazione](/help/destinations/how-destinations-work/destinations-configurations.md) per le destinazioni, sono comuni tra i tipi di destinazione, che possono essere configurate a livello di singola destinazione dagli sviluppatori e quali impostazioni possono essere modificate dagli utenti nel flusso di lavoro di attivazione.
 
-Puoi anche controllare tutte le destinazioni disponibili nel [catalogo](/help/destinations/catalog/overview.md).
+Puoi anche consultare tutte le destinazioni disponibili in [catalogo](/help/destinations/catalog/overview.md).

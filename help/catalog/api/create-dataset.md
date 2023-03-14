@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;creare un set di dati;creare un set di dati;abilitare un set di dati
+keywords: Experience Platform;home;argomenti comuni;set di dati;set di dati;creare un set di dati;abilitare set di dati;home;popular topic;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Creare un set di dati nell’API
-description: Questo documento illustra come creare un oggetto set di dati nell’API del servizio catalogo.
+description: Questo documento illustra come creare un oggetto set di dati nell’API Catalog Service.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Creare un set di dati nell’API
 
-Per creare un set di dati utilizzando [!DNL Catalog] API, devi conoscere `$id` del valore [!DNL Experience Data Model] Schema (XDM) su cui verrà basato il set di dati. Una volta ottenuto l’ID schema, puoi creare un set di dati effettuando una richiesta di POST al gruppo `/datasets` punto finale [!DNL Catalog] API.
+Per creare un set di dati utilizzando [!DNL Catalog] API, è necessario conoscere `$id` valore del [!DNL Experience Data Model] Schema (XDM) su cui verrà basato il set di dati. Una volta ottenuto l’ID dello schema, puoi creare un set di dati effettuando una richiesta POST al `/datasets` endpoint nella [!DNL Catalog] API.
 
 >[!NOTE]
 >
->Questo documento illustra solo come creare un oggetto set di dati in [!DNL Catalog]. Per i passaggi completi su come creare, compilare e monitorare un set di dati, consulta quanto segue [tutorial](../datasets/create.md).
+>Questo documento illustra solo come creare un oggetto set di dati in [!DNL Catalog]. Per i passaggi completi su come creare, popolare e monitorare un set di dati, consulta i seguenti [esercitazione](../datasets/create.md).
 
 **Formato API**
 
@@ -49,16 +49,16 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
-| `schemaRef.id` | URI `$id` valore per lo schema XDM su cui verrà basato il set di dati. |
-| `schemaRef.contentType` | Indica il formato e la versione dello schema. Vedi la sezione su [versione dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM per ulteriori informazioni. |
+| `schemaRef.id` | URI `$id` valore per lo schema XDM su cui sarà basato il set di dati. |
+| `schemaRef.contentType` | Indica il formato e la versione dello schema. Consulta la sezione su [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) per ulteriori informazioni, consulta la guida dell’API XDM. |
 
 >[!NOTE]
 >
->In questo esempio viene utilizzato [Parquet Apache](https://parquet.apache.org/docs/) formato di file `containerFormat` proprietà. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di batch ingestion](../../ingestion/batch-ingestion/api-overview.md).
+>In questo esempio viene utilizzato [Apache Parquet](https://parquet.apache.org/docs/) formato file per i relativi `containerFormat` proprietà. Un esempio che utilizza il formato di file JSON si trova in [guida per gli sviluppatori sull’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md).
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta costituito da un array contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta costituito da un array contenente l’ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema e utilizzata per fare riferimento al set di dati nelle chiamate API.
 
 ```JSON
 [

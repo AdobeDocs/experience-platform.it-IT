@@ -12,7 +12,7 @@ ht-degree: 48%
 ---
 
 
-# Debugger Adobe Experience Platform {#debugger}
+# Adobe Experience Platform Debugger {#debugger}
 
 * [Panoramica di Platform Debugger](./home.md)
 * [Installare l’estensione](./install-debugger.md)
@@ -27,7 +27,7 @@ ht-degree: 48%
 * Scheda Auditor {#auditor}
    * [Panoramica](./auditor/overview.md)
    * [Test di coerenza dei tag](./auditor/tag-consistency.md)
-   * [Test di presenza tag](./auditor/tag-presence.md)
+   * [Test di presenza dei tag](./auditor/tag-presence.md)
    * [Test di configurazione](./auditor/configuration.md)
-   * [Prove di allarme](./auditor/alerts.md)
+   * [Test degli avvisi](./auditor/alerts.md)
 * [Note sulla versione](./release-notes.md)

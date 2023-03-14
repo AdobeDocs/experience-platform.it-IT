@@ -14,30 +14,30 @@ ht-degree: 0%
 
 # Panoramica delle dashboard {#dashboards}
 
-Adobe Experience Platform offre diverse dashboard attraverso le quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell&#39;organizzazione, acquisite durante le istantanee giornaliere.
 
 ## Introduzione alle dashboard
 
-Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro dell’addetto al marketing all’interno di Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e lo sforzo necessari per esportare ed elaborare i dati con una progettazione e un&#39;implementazione aggiuntive per il data warehouse.
+Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro degli addetti al marketing all’interno di Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e l’impegno altrimenti necessari per esportare ed elaborare i dati con una progettazione e un’implementazione aggiuntive di data warehousing.
 
 ## Guida introduttiva alle dashboard
 
 Per visualizzare e gestire le dashboard, passa a **[!UICONTROL Dashboard]** nell’interfaccia utente di Experience Platform e seleziona la **[!UICONTROL Sfoglia]** per accedere all’inventario del dashboard.
 
-È inoltre possibile accedere alle dashboard accedendo alla sezione appropriata dell’interfaccia utente del dashboard che si desidera visualizzare. Ad esempio, per visualizzare il dashboard relativo ai profili, passa alla **[!UICONTROL Profili]** e seleziona **[!UICONTROL Panoramica]** scheda .
+Puoi anche accedere alle dashboard passando alla sezione appropriata all’interno dell’interfaccia utente della dashboard che desideri visualizzare. Per visualizzare il dashboard dei profili, ad esempio, passa a **[!UICONTROL Profili]** e seleziona la **[!UICONTROL Panoramica]** scheda.
 
-I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un esempio dei dati e i dashboard non vengono aggiornati in tempo reale.
+I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e le dashboard non vengono aggiornate in tempo reale.
 
 >[!NOTE]
 >
->Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
+>Eventuali modifiche o aggiornamenti apportati ai dati dal momento in cui è stata acquisita l’istantanea non verranno riflessi nel dashboard fino all’acquisizione dell’istantanea successiva.
 
-## Inventario del dashboard
+## Inventario dashboard
 
-Per passaggi dettagliati su come utilizzare il **[!UICONTROL Dashboard]** area di lavoro per visualizzare tutte le dashboard disponibili, consulta [guida all’inventario del dashboard](./inventory.md).
+Per i passaggi dettagliati su come utilizzare il **[!UICONTROL Dashboard]** per visualizzare tutte le dashboard disponibili, consulta la sezione [guida all’inventario del dashboard](./inventory.md).
 
 ## Dashboard disponibili
 
-Al momento sono disponibili diverse dashboard all’interno di Experience Platform, ciascuna delle quali fornisce trasparenza ai dati dei clienti della tua organizzazione.
+In Experience Platform sono attualmente disponibili più dashboard, ciascuna delle quali fornisce trasparenza nei dati dei clienti della tua organizzazione.
 
-Per ulteriori informazioni su queste dashboard e sulle relative metriche, seleziona una dashboard dall’elenco delle dashboard disponibili nella navigazione della documentazione.
+Per ulteriori informazioni su queste dashboard e sulle relative metriche, seleziona una dashboard dall’elenco delle dashboard disponibili nella navigazione alla documentazione.

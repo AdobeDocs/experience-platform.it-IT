@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;accesso ai dati;scintilla sdk;api di accesso ai dati;ricetta di scintilla;scintilla di lettura;scintilla di scrittura
+keywords: Experience Platform;home;argomenti popolari;accesso ai dati;sdk di spark;api di accesso ai dati;ricetta di spark;spark di lettura;spark di scrittura
 solution: Experience Platform
 title: Accesso ai dati con Spark in Data Science Workspace
 type: Tutorial
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 ---
 
-# Accesso ai dati tramite Spark in Data Science Workspace
+# Accesso ai dati con Spark in Data Science Workspace
 
-Il seguente documento contiene esempi su come accedere ai dati utilizzando Spark per l’utilizzo in Data Science Workspace. Per informazioni sull&#39;accesso ai dati tramite i notebook JupyterLab, visita [Accesso ai dati dei notebook JupyterLab](../jupyterlab/access-notebook-data.md) documentazione.
+Il seguente documento contiene esempi su come accedere ai dati utilizzando Spark per l’utilizzo in Data Science Workspace. Per informazioni sull’accesso ai dati tramite i notebook JupyterLab, visita il [Accesso ai dati dei notebook JupyterLab](../jupyterlab/access-notebook-data.md) documentazione.
 
 ## Introduzione
 
-Utilizzo [!DNL Spark] richiede ottimizzazioni delle prestazioni che devono essere aggiunte al `SparkSession`. È inoltre possibile configurare `configProperties` per leggere e scrivere in un secondo momento nei set di dati.
+Utilizzo di [!DNL Spark] richiede ottimizzazioni delle prestazioni che devono essere aggiunte al `SparkSession`. Inoltre, puoi anche impostare `configProperties` per poter poi essere letti e scritti nei set di dati.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -47,11 +47,11 @@ Class Helper {
 
 ## Lettura di un set di dati
 
-Utilizzando Spark è possibile accedere a due modalità di lettura: interattivo e batch.
+Durante l’utilizzo di Spark è possibile accedere a due modalità di lettura: interattiva e batch.
 
-La modalità interattiva crea una connessione JDBC (Java Database Connectivity) a [!DNL Query Service] e ottiene risultati attraverso un normale JDBC `ResultSet` che viene automaticamente tradotto in un `DataFrame`. Questa modalità funziona in modo simile a quella incorporata [!DNL Spark] metodo `spark.read.jdbc()`. Questa modalità è destinata solo ai set di dati di piccole dimensioni. Se il set di dati supera i 5 milioni di righe, è consigliabile passare alla modalità batch.
+La modalità interattiva crea una connessione JDBC (Java Database Connectivity) a [!DNL Query Service] e ottiene risultati tramite un JDBC regolare `ResultSet` che viene tradotto automaticamente in una `DataFrame`. Questa modalità funziona in modo simile al [!DNL Spark] metodo `spark.read.jdbc()`. Questa modalità è destinata solo ai set di dati di piccole dimensioni. Se il set di dati supera i 5 milioni di righe, si consiglia di passare alla modalità batch.
 
-La modalità batch utilizza [!DNL Query Service]Comando COPY per generare set di risultati Parquet in una posizione condivisa. Questi file Parquet possono quindi essere ulteriormente elaborati.
+La modalità batch utilizza [!DNL Query Service]comando COPY di per generare set di risultati Parquet in una posizione condivisa. Questi file di Parquet possono quindi essere ulteriormente elaborati.
 
 Di seguito è riportato un esempio di lettura di un set di dati in modalità interattiva:
 
@@ -78,7 +78,7 @@ Di seguito è riportato un esempio di lettura di un set di dati in modalità int
   }
 ```
 
-Analogamente, un esempio di lettura di un set di dati in modalità batch può essere visto di seguito:
+Analogamente, di seguito è riportato un esempio di lettura di un set di dati in modalità batch:
 
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
@@ -99,11 +99,11 @@ val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
 df = df.select("column-a", "column-b").show()
 ```
 
-### clausola DISTINCT
+### Clausola DISTINCT
 
 La clausola DISTINCT consente di recuperare tutti i valori distinti a livello di riga/colonna, rimuovendo tutti i valori duplicati dalla risposta.
 
-Un esempio di utilizzo del `distinct()` funzionalità di seguito:
+Un esempio di utilizzo di `distinct()` di seguito:
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -111,7 +111,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### clausola WHERE
 
-La [!DNL Spark] L’SDK consente due metodi di filtraggio: Utilizzo di un&#39;espressione SQL o filtrando tra le condizioni.
+Il [!DNL Spark] SDK consente due metodi per filtrare: utilizzando un’espressione SQL o filtrando attraverso le condizioni.
 
 Di seguito è riportato un esempio di utilizzo di queste funzioni di filtro:
 
@@ -127,21 +127,21 @@ df.where("age > 15")
 df.where("age" > 15 || "name" = "Steve")
 ```
 
-### Clausola ORDER BY
+### clausola ORDER BY
 
-La clausola ORDER BY consente di ordinare i risultati ricevuti in base a una colonna specifica in un ordine specifico (crescente o decrescente). In [!DNL Spark] SDK, viene eseguito utilizzando `sort()` funzione .
+La clausola ORDER BY consente di ordinare i risultati ricevuti in base a una colonna specificata in un ordine specifico (crescente o decrescente). In [!DNL Spark] SDK, questo viene effettuato utilizzando `sort()` funzione.
 
-Un esempio di utilizzo del `sort()` funzionalità di seguito:
+Un esempio di utilizzo di `sort()` di seguito:
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
 ```
 
-### Clausola LIMIT
+### clausola LIMIT
 
-La clausola LIMIT ti consente di limitare il numero di record ricevuti dal set di dati.
+La clausola LIMIT consente di limitare il numero di record ricevuti dal set di dati.
 
-Un esempio di utilizzo del `limit()` funzionalità di seguito:
+Un esempio di utilizzo di `limit()` di seguito:
 
 ```scala
 df = df.limit(100)
@@ -149,7 +149,7 @@ df = df.limit(100)
 
 ## Scrittura in un set di dati
 
-Utilizzo della `configProperties` mappatura, puoi scrivere in un set di dati in Experience Platform utilizzando `QSOption`.
+Utilizzo di `configProperties` mappatura, puoi scrivere su un set di dati in Experience Platform utilizzando `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -169,4 +169,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Passaggi successivi
 
-Adobe Experience Platform Data Science Workspace fornisce un esempio di ricetta Scala (Spark) che utilizza gli esempi di codice riportati sopra per leggere e scrivere i dati. Per ulteriori informazioni su come utilizzare Spark per accedere ai dati, consulta la [Archivio GitHub Scala di Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
+Adobe Experience Platform Data Science Workspace fornisce un esempio di ricetta Scala (Spark) che utilizza gli esempi di codice precedenti per leggere e scrivere dati. Per ulteriori informazioni su come utilizzare Spark per accedere ai dati, consulta la sezione [Archivio GitHub Scala di Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).

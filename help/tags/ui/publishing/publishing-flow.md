@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Il flusso di pubblicazione dei tag in Adobe Experience Platform si riferisce al processo di creazione delle librerie, test delle build e approvazione per la produzione.
 
@@ -42,7 +42,7 @@ Per quanto riguarda il flusso di pubblicazione, sono disponibili quattro stati d
 * [[!UICONTROL Approvato]](#approved)
 * [[!UICONTROL Pubblicato]](#published)
 
-Questi quattro stati sono rappresentati come colonne all&#39;interno di **[!UICONTROL Flusso di pubblicazione]** scheda .
+Questi quattro stati sono rappresentati come colonne all&#39;interno del **[!UICONTROL Flusso di pubblicazione]** scheda.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -77,7 +77,7 @@ La tabella seguente illustra le azioni disponibili per una libreria nello stato 
 | [!UICONTROL Open] | Visualizza il contenuto della libreria. Non è possibile modificare le librerie che non rientrano nella colonna [!UICONTROL Sviluppo]. Se sono necessarie modifiche, la libreria deve essere rifiutata in modo da poter apportare modifiche nell’ambiente [!UICONTROL Sviluppo]. |
 | [!UICONTROL Generazione per staging] | Crea la libreria nell’ambiente di staging per l’implementazione. |
 | [!UICONTROL Approva per la Pubblicazione] | Sposta la libreria nella colonna [!UICONTROL Approvato] per consentire l’intervento di un utente con autorizzazioni di pubblicazione. |
-| [!UICONTROL Approvare e pubblicare in produzione] | Questa operazione può essere eseguita solo da un utente con autorizzazioni per approvazione e pubblicazione. Questa azione annulla l’assegnazione della libreria dall’ambiente di staging, la sposta nello stato [!UICONTROL Approvato] e la pubblica in produzione. Al termine della build di produzione, la libreria passerà allo stato [!UICONTROL Pubblicato]. Questa operazione può essere eseguita con o senza una build corretta nell’ambiente di staging. |
+| [!UICONTROL Approve &amp; Publish to Production] | Questa operazione può essere eseguita solo da un utente con autorizzazioni per approvazione e pubblicazione. Questa azione annulla l’assegnazione della libreria dall’ambiente di staging, la sposta nello stato [!UICONTROL Approvato] e la pubblica in produzione. Al termine della build di produzione, la libreria passerà allo stato [!UICONTROL Pubblicato]. Questa operazione può essere eseguita con o senza una build corretta nell’ambiente di staging. |
 | [!UICONTROL Rifiuta] | Per ulteriori modifiche, è necessario annullare l’assegnazione della libreria all’ambiente di staging e riportarla nella colonna [!UICONTROL Sviluppo]. |
 
 ### [!UICONTROL Approvato] {#approved}
@@ -88,7 +88,7 @@ La tabella seguente illustra le azioni disponibili per una libreria nello stato 
 
 | Azione | Descrizione |
 | --- | --- |
-| [!UICONTROL Apri] | Visualizza il contenuto della libreria. Non è possibile modificare le librerie che non rientrano nella colonna [!UICONTROL Sviluppo]. Se sono necessarie modifiche, la libreria deve essere rifiutata in modo da poter apportare modifiche in [!UICONTROL Sviluppo]. |
+| [!UICONTROL Open] | Visualizza il contenuto della libreria. Non è possibile modificare le librerie che non rientrano nella colonna [!UICONTROL Sviluppo]. Se sono necessarie modifiche, la libreria deve essere rifiutata in modo da poter apportare modifiche in [!UICONTROL Sviluppo]. |
 | [!UICONTROL Creare e pubblicare su Produzione] | Annulla l’assegnazione della libreria all’ambiente di staging, assegna la libreria all’ambiente di produzione e la implementa.<br><br>**Importante**: quando questa opzione è selezionata, la libreria diventa live nell’ambiente di produzione. Prima di selezionare questa opzione, verifica che la libreria contenga le modifiche desiderate. |
 | [!UICONTROL Rifiuta] | Annulla l’assegnazione della libreria all’ambiente di staging e spostala nella colonna [!UICONTROL Sviluppo] per ulteriori modifiche. |
 
@@ -98,7 +98,7 @@ La colonna [!UICONTROL Pubblicato] mostra quali librerie sono state pubblicate e
 
 | Azione | Descrizione |
 | --- | --- |
-| [!UICONTROL Apri] | Visualizza il contenuto della libreria. Non è possibile modificare le librerie che non rientrano nella colonna [!UICONTROL Sviluppo]. Se desideri modificare gli elementi presenti nell’ambiente di produzione, devi creare una nuova libreria e spostarla lungo l’intero processo di pubblicazione. |
+| [!UICONTROL Open] | Visualizza il contenuto della libreria. Non è possibile modificare le librerie che non rientrano nella colonna [!UICONTROL Sviluppo]. Se desideri modificare gli elementi presenti nell’ambiente di produzione, devi creare una nuova libreria e spostarla lungo l’intero processo di pubblicazione. |
 | [!UICONTROL Republish] | Questa azione è disponibile solo per le ultime cinque librerie pubblicate e solo se l’ambiente di produzione è (a) configurato con l’opzione Archivia disattivata e (b) utilizza un host [!UICONTROL Gestito da Adobe] al momento della compilazione. |
 | [!UICONTROL Scarica] | Questa azione è disponibile solo per le ultime cinque librerie pubblicate e solo se l’ambiente di produzione è (a) configurato con l’opzione Archivia attivata e (b) utilizza un host [!UICONTROL Gestito da Adobe] al momento della compilazione. |
 
@@ -112,7 +112,7 @@ Ciò che è incluso a monte dipende dalla fase corrente della libreria. Ad esemp
 
 ![](./images/approval-workflow/upstream.png)
 
-Quando modifichi una libreria nell’interfaccia utente, tutte le risorse ereditate da a monte sono rappresentate nel **[!UICONTROL Risorse a monte]** sezione . Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
+Quando si modifica una libreria nell’interfaccia utente di, tutte le risorse ereditate sono rappresentate nella **[!UICONTROL Risorse a monte]** sezione. Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

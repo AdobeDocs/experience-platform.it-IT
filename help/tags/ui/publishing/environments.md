@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli ambienti di tag definiscono diversi aspetti chiave delle build della libreria che distribuisci sul sito web o sull’app:
 
@@ -91,7 +91,7 @@ Seleziona **[!UICONTROL Host]** per scegliere dal menu a discesa un host preconf
 
 ![](./images/environments/select-host.png)
 
-Quando viene creata una build, questa viene consegnata alla posizione specificata per l’host assegnato. Per informazioni su come creare e configurare gli host dei tag, consulta [panoramica sugli host](./hosts/hosts-overview.md).
+Quando viene creata una build, questa viene consegnata alla posizione specificata per l’host assegnato. Per informazioni su come creare e configurare gli host tag, consulta [panoramica sugli host](./hosts/hosts-overview.md).
 
 ### Impostazione di archiviazione {#archive}
 

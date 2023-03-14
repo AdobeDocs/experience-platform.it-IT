@@ -1,31 +1,31 @@
 ---
-keywords: annunci Google;annunci google;parole adwords Google;Google AdWords;Google Adwords
+keywords: Google ads;Google ads;Google adwords;Google AdWords;Google Adwords
 title: Connessione Google Ads
-description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di effettuare pubblicità a pagamento per clic tra ricerche basate su testo, visualizzazioni grafiche, video YouTube e display mobili in-app.
+description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di pagare per clic su ricerche testuali, visualizzazioni grafiche, video YouTube e display mobili in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 3%
+source-wordcount: '939'
+ht-degree: 2%
 
 ---
 
-# [!DNL Google Ads] connection
+# [!DNL Google Ads] connessione
 
 ## Panoramica {#overview}
 
-[!DNL Google Ads], precedentemente noto come [!DNL Google AdWords], è un servizio pubblicitario online che consente alle aziende di effettuare pubblicità pay-per-click tra ricerche basate su testo, display grafici, [!DNL YouTube] video e visualizzazioni mobili in-app.
+[!DNL Google Ads], precedentemente noto come [!DNL Google AdWords], è un servizio di pubblicità online che consente alle aziende di pagare per clic su ricerche testuali e visualizzazioni grafiche, [!DNL YouTube] video e display mobili in-app.
 
-## Specifiche di destinazione {#specifics}
+## Specifiche della destinazione {#specifics}
 
-Tieni presente i seguenti dettagli specifici per [!DNL Google Ads] destinazioni:
+Tieni presente i seguenti dettagli specifici di [!DNL Google Ads] destinazioni:
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nel [!DNL Google] piattaforma.
-* [!DNL Platform] al momento non include una metrica di misurazione per convalidare l’attivazione. Consulta i conteggi del pubblico in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
+* [!DNL Platform] al momento non include una metrica di misurazione per convalidare la corretta attivazione. Fai riferimento ai conteggi dei tipi di pubblico in Google per convalidare l’integrazione e comprendere le dimensioni di targeting del pubblico.
 
 >[!IMPORTANT]
 >
->Se desideri creare la tua prima destinazione con [!DNL Google Ads] e non hanno attivato il [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in passato (con Audience Manager o altre applicazioni), contatta la Consulenza Adobe o l’Assistenza clienti per abilitare la sincronizzazione degli ID. Se in precedenza avevi impostato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevi configurato riportano a Platform.
+>Se desideri creare la prima destinazione con [!DNL Google Ads] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ## Identità supportate {#supported-identities}
 
@@ -33,26 +33,26 @@ Tieni presente i seguenti dettagli specifici per [!DNL Google Ads] destinazioni:
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
-| IDFA | [!DNL Apple ID for Advertisers] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico a 38 cifre associato a ciascun dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) per eseguire il targeting degli utenti in California e dell’ID cookie di Google per tutti gli altri utenti. |
-| [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per eseguire il targeting degli utenti al di fuori della California. |
+| GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
+| IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
+| [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
-| MAID | Microsoft Advertising ID. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
-| Amazon Fire TV ID | Questo ID identifica in modo univoco i Amazon Fire TV. |  |
+| DOMESTICA | ID Microsoft Advertising. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
+| ID Amazon Fire TV | Questo ID identifica in modo univoco i televisori Amazon Fire. |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) nella destinazione Google. |
-| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Prerequisiti {#prerequisites}
 
@@ -60,67 +60,67 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
-> [!DNL Google] ha dichiarato obsoleto il nuovo [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire i passaggi dell’elenco consentiti nella sezione successiva, devi disporre di un’integrazione esistente con [!DNL Google Ads]. Di conseguenza, si consiglia di utilizzare l&#39;approccio [!DNL Google Ads] sta configurando un [!DNL Google Customer Match] integrazione. Per ulteriori dettagli sulla creazione di un [!DNL Google Customer Match] integrazione, leggi l’esercitazione sulla creazione di un [[!DNL Google Customer Match]](./google-customer-match.md) connessione.
+> [!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire i passaggi di elenco consentiti nella sezione successiva, è necessario disporre di un’integrazione esistente con [!DNL Google Ads]. Di conseguenza, l’approccio consigliato per l’utilizzo di [!DNL Google Ads] sta impostando un [!DNL Google Customer Match] integrazione. Per ulteriori dettagli sulla creazione di un’ [!DNL Google Customer Match] integrazione, leggi il tutorial sulla creazione di un [[!DNL Google Customer Match]](./google-customer-match.md) connessione.
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
 >[!NOTE]
 >
->L’inserimento nell’elenco Consentiti è obbligatorio prima di configurare il primo [!DNL Google Ads] in Platform. Assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
->L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario rivedere il processo di inserimento nell’elenco Consentiti e procedere con i passaggi successivi.
+>L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Ads] in Platform. Verifica che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato entro [!DNL Google] prima di creare una destinazione.
+>L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
-Prima di creare il [!DNL Google Ads] in Platform, devi contattare [!DNL Google] ad Adobe da inserire nell’elenco dei provider di dati consentiti e da aggiungere all’elenco consentiti il tuo account. Contatto [!DNL Google] e fornire le seguenti informazioni:
+Prima di creare [!DNL Google Ads] destinazione in Platform, è necessario contattare [!DNL Google] ad Adobe da inserire nell’elenco dei fornitori di dati consentiti e per aggiungere il tuo account all’elenco consentiti. Contatto [!DNL Google] e fornisci le seguenti informazioni:
 
-* **ID account**: ID account di Adobe con Google. ID account: 87933855.
-* **ID cliente**: ID account cliente di Adobe con Google. ID cliente: 89690775.
+* **ID account**: ID account dell’Adobe con Google. ID account: 87933855.
+* **ID cliente**: ID account cliente di un Adobe con Google. ID cliente: 89690775.
 * Tipo di account: **AdWords**
-* **ID Google AdWords**: Questo è il tuo ID con [!DNL Google]. Il formato ID è tipicamente 123-456-7890.
+* **ID Google AdWords**: questo è il tuo ID con [!DNL Google]. Il formato ID è tipicamente 123-456-7890.
 
-## Collegati alla destinazione {#connect}
+## Connetti alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
 
-Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
+Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
-* **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
-* **[!UICONTROL Descrizione]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
-* **[!UICONTROL Tipo di conto]**: AdWords è l’unica opzione disponibile.
-* **[!UICONTROL ID account]**: Compila l&#39;ID del tuo account con [!DNL Google Ads]. Il formato ID è tipicamente 123-456-7890.
+* **[!UICONTROL Nome]**: inserisci il nome preferito per questa destinazione.
+* **[!UICONTROL Descrizione]**: facoltativo. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione.
+* **[!UICONTROL Tipo di account]**: AdWords è l’unica opzione disponibile.
+* **[!UICONTROL ID account]**: inserisci l’ID account con [!DNL Google Ads]. Il formato ID è tipicamente 123-456-7890.
 
-### Abilitare gli avvisi {#enable-alerts}
+### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
-Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
 
 ## Dati esportati
 
-Per verificare se i dati sono stati esportati correttamente in [!DNL Google Ads] destinazione, controlla il tuo [!DNL Google Ads] conto. Se l&#39;attivazione ha avuto successo, i tipi di pubblico vengono compilati nel tuo account.
+Per verificare se i dati sono stati esportati correttamente in [!DNL Google Ads] destinazione, controlla il tuo [!DNL Google Ads] account. Se l&#39;attivazione ha esito positivo, i tipi di pubblico vengono popolati nel tuo account.
 
 ## Risoluzione dei problemi {#troubleshooting}
 
 ### 400 Messaggio di errore di richiesta non valida {#bad-request}
 
-Durante la configurazione di questa destinazione, potresti ricevere il seguente errore:
+Durante la configurazione di questa destinazione, potrebbe venire visualizzato il seguente errore:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Questo errore si verifica quando gli account cliente non sono conformi alla [prerequisiti](#prerequisites) o quando i clienti tentano di configurare la destinazione senza un [!DNL Google Ads] conto.
+Questo errore si verifica quando gli account del cliente non sono conformi al [prerequisiti](#prerequisites) o quando i clienti tentano di configurare la destinazione senza un [!DNL Google Ads] account.
 
-[!DNL Google] ha dichiarato obsoleto il nuovo [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire la [elenco Consentiti](#allow-listing) passaggi, devi disporre di un’integrazione esistente con [!DNL Google Ads].
+[!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire [elenco Consentiti](#allow-listing) passaggi, è necessaria un’integrazione esistente con [!DNL Google Ads].
 
-Approccio consigliato per l&#39;utilizzo [!DNL Google Ads] sta configurando un [[!DNL Google Customer Match]](google-customer-match.md) integrazione.
+L’approccio consigliato per l’utilizzo di [!DNL Google Ads] sta impostando un [[!DNL Google Customer Match]](google-customer-match.md) integrazione.

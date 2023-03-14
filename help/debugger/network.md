@@ -1,7 +1,7 @@
 ---
 title: Scheda Rete
 description: Scopri come utilizzare la scheda Rete in Adobe Experience Platform Debugger.
-keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;rete;informazioni
+keywords: debugger;estensione Debugger di Experience Platform;chrome;estensione;rete;informazioni
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Scheda Rete
 
-La **Rete** tab aggrega tutte le chiamate della soluzione Adobe Experience Cloud effettuate sulla pagina e le visualizza in ordine da sinistra a destra. I parametri standard vengono etichettati automaticamente con nomi descrittivi e disposti per raggruppare parametri comuni sullo stesso ruolo.
+Il **Rete** La scheda aggrega tutte le chiamate della soluzione Adobe Experience Cloud effettuate sulla pagina e le visualizza in ordine da sinistra a destra. I parametri standard vengono etichettati automaticamente con nomi descrittivi e disposti per raggruppare parametri comuni sullo stesso ruolo.
 
 ![](images/network.jpg)
 
@@ -31,7 +31,7 @@ Per cambiare le informazioni in base alla soluzione, seleziona la soluzione da v
 
 Per visualizzare di nuovo tutte le soluzioni, seleziona **[!UICONTROL Rete]**
 
-Seleziona un elemento nella visualizzazione Rete per visualizzare una visualizzazione espansa. Dalla finestra di visualizzazione espansa, puoi copiare le informazioni visualizzate negli Appunti.
+Selezionare un elemento nella visualizzazione di rete per visualizzare una visualizzazione espansa. Dalla finestra di visualizzazione espansa, puoi copiare le informazioni visualizzate negli Appunti.
 
 ![](images/network-expand.jpg)
 

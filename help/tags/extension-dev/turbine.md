@@ -4,7 +4,7 @@ description: Scopri l’oggetto turbine, una variabile libera che fornisce infor
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '619'
 ht-degree: 86%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei moduli libreria dell’estensione. Fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform ed è sempre disponibile per i moduli libreria senza che sia necessario utilizzare `require()`.
 
@@ -39,7 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | La data di creazione della versione di [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilizzata all&#39;interno del contenitore in formato ISO 8601. |
 | `buildDate` | La data di creazione della libreria corrente in formato ISO 8601. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `environment`
 
@@ -47,7 +47,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 console.log(turbine.environment.stage);
 ```
 
-`turbine.environment` è un oggetto contenente informazioni sull&#39;ambiente in cui viene distribuita la libreria.
+`turbine.environment` è un oggetto che contiene informazioni sull’ambiente in cui viene distribuita la libreria.
 
 ```js
 {
@@ -58,14 +58,14 @@ console.log(turbine.environment.stage);
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID dell&#39;ambiente. |
-| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging` e `production`. |
+| `id` | ID dell’ambiente. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging`, e `production`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `debugEnabled`
 
-Un valore booleano che indica se il debug dei tag è attualmente abilitato.
+Valore booleano che indica se il debug dei tag è attualmente abilitato.
 
 Se intendi semplicemente registrare i messaggi, probabilmente non dovrai utilizzarlo. Piuttosto, per registrare i messaggi utilizza sempre `turbine.logger` per assicurarti che i messaggi vengano riportati nella console solo quando è abilitato il debug dei tag.
 
@@ -112,14 +112,14 @@ Recupera un modulo che è stato condiviso da un’altra estensione. Se non viene
 turbine.logger.error('Error!');
 ```
 
-Utility di registrazione utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Il modo consigliato per attivare il debug è quello di utilizzare il [debugger Adobe Experience Cloud](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, è possibile eseguire il comando `_satellite.setDebug(true)` seguente nella console di sviluppo del browser. Il logger dispone dei seguenti metodi:
+Utility di registrazione utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Per attivare il debug, si consiglia di utilizzare [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, è possibile eseguire il comando `_satellite.setDebug(true)` seguente nella console di sviluppo del browser. Il logger dispone dei seguenti metodi:
 
 * `logger.log(message: string)`: registra un messaggio nella console.
 * `logger.info(message: string)`: registra un messaggio informativo nella console.
 * `logger.warn(message: string)`: registra un messaggio di avvertenza nella console.
 * `logger.error(message: string)`: registra un messaggio di errore nella console.
 * `logger.debug(message: string)`: registra un messaggio di debug nella console. (Visibile solo se la registrazione `verbose` è abilitata nella console del browser.)
-* `logger.deprecation(message: string)`: Registra un messaggio di avviso nella console se l’utente ha abilitato o meno il debug dei tag.
+* `logger.deprecation(message: string)`: registra un messaggio di avviso nella console indipendentemente dal fatto che l’utente abbia abilitato o meno il debug dei tag.
 
 ## `onDebugChanged`
 

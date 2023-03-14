@@ -18,7 +18,7 @@ ht-degree: 66%
 - [Panoramica sulla raccolta dati](home.md)
 - [Panoramica completa](e2e.md)
 - [Gestione delle autorizzazioni](permissions.md)
-- [Gestione dello stato del client](client-state.md)
+- [Gestione stato client](client-state.md)
 - Identificazione visitatore {#visitor-identification}
    - [Panoramica](visitor-identification.md)
-   - [Identificazione dei visitatori tramite FPID](visitor-identification-fpid.md)
+   - [Identificazione del visitatore tramite FPID](visitor-identification-fpid.md)

@@ -1,35 +1,35 @@
 ---
-description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l'endpoint API `/authoring/testing/template/render`, per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
-title: Operazioni API per i modelli di rendering
+description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l’endpoint API "/authoring/testing/template/render" per eseguire il rendering dei dati esportati per la destinazione, in base al modello di trasformazione del messaggio.
+title: Operazioni API del modello di rendering
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '803'
 ht-degree: 1%
 
 ---
 
-# Operazioni API per i modelli di rendering {#render-template-api-operations}
+# Operazioni API del modello di rendering {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
 >**Endpoint API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando `/authoring/testing/template/render` Endpoint API, per eseguire il rendering dei profili esportati che corrispondono al formato previsto della destinazione, in base al [modello di trasformazione dei messaggi](./message-format.md#using-templating). Per una descrizione delle funzionalità supportate da questo endpoint, leggere [crea modello](./create-template.md).
+Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando `/authoring/testing/template/render` per eseguire il rendering dei profili esportati che corrispondono al formato previsto della destinazione, in base al [modello di trasformazione dei messaggi](./message-format.md#using-templating). Per una descrizione delle funzionalità supportate da questo endpoint, leggere [crea modello](./create-template.md).
 
 ## Guida introduttiva alle operazioni API dei modelli di rendering {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
-## Eseguire il rendering dei profili esportati in base al modello di trasformazione del messaggio {#render-exported-data}
+## Rendering dei profili esportati in base al modello di trasformazione del messaggio {#render-exported-data}
 
-Puoi eseguire il rendering dei profili esportati effettuando una richiesta POST al `authoring/testing/template/render` e fornisce l&#39;ID di destinazione della configurazione di destinazione e del modello creato utilizzando [endpoint API modello di esempio](./sample-template-api.md).
+Puoi eseguire il rendering dei profili esportati effettuando una richiesta POST al `authoring/testing/template/render` e fornendo l&#39;ID di destinazione della configurazione di destinazione e del modello creati utilizzando [endpoint API modello di esempio](./sample-template-api.md).
 
-Puoi iniziare utilizzando un modello semplice che esporta i profili non elaborati senza applicare alcuna trasformazione e quindi passare a un modello più complesso, che applica le trasformazioni ai profili. La sintassi per il modello semplice è la seguente: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+Puoi iniziare utilizzando un semplice modello che esporta i profili non elaborati senza applicare alcuna trasformazione e quindi passare a un modello più complesso, che applica le trasformazioni ai profili. La sintassi del modello semplice è la seguente: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* L&#39;ID di destinazione da utilizzare qui è la variabile `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando `/destinations` punto finale. Fai riferimento a [operazioni API di configurazione della destinazione](./destination-configuration-api.md#retrieve-list).
+>* L’ID di destinazione da utilizzare qui è il `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando `/destinations` endpoint. Consulta la sezione [operazioni API per la configurazione di destinazione](./destination-configuration-api.md#retrieve-list).
 
 
 **Formato API**
@@ -41,30 +41,30 @@ POST authoring/testing/template/render
 
 | Parametro di richiesta | Descrizione |
 | -------- | ----------- |
-| `destinationId` | L’ID della configurazione di destinazione per la quale esegui il rendering dei profili esportati. |
-| `template` | La versione con sequenza di caratteri del modello in base alla quale esegui il rendering dei profili esportati. |
-| `profiles` | *Facoltativo*. Puoi aggiungere profili al corpo della richiesta. Se non aggiungi profili, Experience Platform genererà automaticamente e aggiungerà profili alla richiesta. <br> Se desideri aggiungere profili al corpo della chiamata , puoi generarne alcuni utilizzando il [API di generazione di profili di esempio](./sample-profile-generation-api.md). |
+| `destinationId` | ID della configurazione di destinazione per la quale stai eseguendo il rendering dei profili esportati. |
+| `template` | Versione con escape di carattere del modello in base alla quale viene eseguito il rendering dei profili esportati. |
+| `profiles` | *Facoltativo*. Puoi aggiungere profili al corpo della richiesta. Se non aggiungi profili, Experience Platform genererà e aggiungerà automaticamente profili alla richiesta. <br> Se desideri aggiungere profili al corpo della chiamata, puoi generarne alcuni utilizzando [API di generazione del profilo di esempio](./sample-profile-generation-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-La risposta restituita dall’endpoint API del modello di rendering è diversa in base al criterio di aggregazione della destinazione. Se la destinazione dispone di un criterio di aggregazione configurabile, anche la chiave di aggregazione che determina il modo in cui i profili vengono aggregati viene restituita nella risposta. Ulteriori informazioni [criteri di aggregazione](./destination-configuration.md#aggregation) nel documento di configurazione di destinazione.
+La risposta restituita dall’endpoint API del modello di rendering varia in base al criterio di aggregazione della destinazione. Se la destinazione dispone di un criterio di aggregazione configurabile, nella risposta viene restituita anche la chiave di aggregazione che determina la modalità di aggregazione dei profili. Ulteriori informazioni su [criteri di aggregazione](./destination-configuration.md#aggregation) nel documento di configurazione di destinazione.
 
 | Parametro di risposta | Descrizione |
 | -------- | ----------- |
-| `aggregationKey` | Rappresenta il criterio in base al quale i profili vengono aggregati nelle esportazioni verso la destinazione. Questo parametro è facoltativo e sarà presente solo se il criterio di aggregazione della destinazione è impostato su `CONFIGURABLE_AGGREGATION`. |
-| `profiles` | Visualizza i profili forniti nella richiesta o i profili generati automaticamente se nella richiesta non è stato fornito alcun profilo. |
-| `output` | Profilo o profili di cui è stato effettuato il rendering, come stringa di escape, in base al modello di trasformazione del messaggio fornito |
+| `aggregationKey` | Rappresenta il criterio in base al quale i profili vengono aggregati nelle esportazioni verso la destinazione. Questo parametro è facoltativo e sarà presente solo se il criterio di aggregazione di destinazione è impostato su `CONFIGURABLE_AGGREGATION`. |
+| `profiles` | Visualizza i profili forniti nella richiesta o i profili generati automaticamente se non sono stati forniti profili nella richiesta. |
+| `output` | Profilo o profili sottoposti a rendering, come stringa con escape, in base al modello di trasformazione del messaggio fornito |
 
 Le sezioni seguenti forniscono richieste e risposte dettagliate per entrambi i casi descritti in precedenza.
 
-* [Aggregazione dello sforzo ottimale e un profilo incluso nel corpo della richiesta](#best-effort)
+* [Aggregazione della migliore sforzo e profilo incluso nel corpo della richiesta](#best-effort)
 * [Aggregazione configurabile e profili inclusi nel corpo della richiesta](#configurable-aggregation)
 
-### Eseguire il rendering dei profili esportati con la massima facilità di aggregazione e un singolo profilo incluso nel corpo della richiesta {#best-effort}
+### Eseguire il rendering dei profili esportati con l’aggregazione della massima fatica e un singolo profilo incluso nel corpo della richiesta {#best-effort}
 
 **Richiesta**
 
-Nella richiesta seguente viene eseguito il rendering di un profilo esportato che corrisponde al formato previsto dalla destinazione. In questo esempio, l’ID di destinazione corrisponde a una configurazione di destinazione con la migliore aggregazione possibile e un profilo di esempio è incluso nel corpo della richiesta.
+La richiesta seguente esegue il rendering di un profilo esportato che corrisponde al formato previsto dalla destinazione. In questo esempio, l’ID di destinazione corrisponde a una configurazione di destinazione con aggregazione della massima sforzo ed è incluso un profilo di esempio nel corpo della richiesta.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -126,7 +126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Risposta**
 
 La risposta restituisce il risultato del rendering del modello o eventuali errori rilevati.
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dei dati esportati. Trova il profilo esportato in `output` come stringa di escape.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli dei dati esportati. Trova il profilo esportato in `output` come stringa con escape.
 Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli errori rilevati.
 
 ```json
@@ -186,7 +186,7 @@ Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli
 **Richiesta**
 
 
-La richiesta seguente esegue il rendering di più profili esportati che corrispondono al formato previsto dalla destinazione. In questo esempio, l’ID di destinazione corrisponde a una configurazione di destinazione con aggregazione configurabile. Nel corpo della richiesta sono inclusi due profili, ciascuno con tre qualifiche di segmento e cinque identità. Puoi generare profili da inviare alla chiamata utilizzando il [API di generazione di profili di esempio](./sample-profile-generation-api.md).
+La richiesta seguente esegue il rendering di più profili esportati che corrispondono al formato previsto dalla destinazione. In questo esempio, l’ID di destinazione corrisponde a una configurazione di destinazione con aggregazione configurabile. Nel corpo della richiesta sono inclusi due profili, ciascuno con tre qualifiche di segmento e cinque identità. Puoi generare profili da inviare alla chiamata utilizzando [API di generazione del profilo di esempio](./sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Risposta**
 
 La risposta restituisce il risultato del rendering del modello o eventuali errori rilevati.
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dei dati esportati. Osserva nella risposta come i profili vengono aggregati in base all’appartenenza al segmento e alle identità. Trova i profili esportati in `output` come stringa di escape.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli dei dati esportati. Osserva nella risposta come i profili vengono aggregati in base all’iscrizione al segmento e alle identità. Trovare i profili esportati in `output` come stringa con escape.
 Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli errori rilevati.
 
 ```json
@@ -1070,4 +1070,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come utilizzare il modello di trasformazione dei messaggi per generare profili esportati che corrispondono al formato di dati previsto per la tua destinazione. Leggi [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come utilizzare il modello di trasformazione dei messaggi per generare profili esportati che corrispondono al formato di dati previsto della destinazione. Letto [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

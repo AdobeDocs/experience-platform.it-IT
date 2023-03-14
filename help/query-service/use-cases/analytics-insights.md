@@ -1,6 +1,6 @@
 ---
-title: Informazioni approfondite su Analytics per le interazioni web e mobile
-description: Questo documento spiega come utilizzare Query Service per creare informazioni fruibili dai dati Adobe Analytics acquisiti.
+title: Approfondimenti di Analytics per interazioni web e mobili
+description: Questo documento spiega come utilizzare Query Service per creare informazioni actionable dai dati Adobe Analytics acquisiti.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 1%
 
 ---
 
-# Informazioni di Analytics per le interazioni web e mobile
+# Approfondimenti di Analytics per le interazioni web e mobili
 
-Adobe Experience Platform consente di acquisire dati dalle suite di rapporti Adobe Analytics utilizzando i campi Experience Data Model (XDM) per compilare i set di dati. I dati di analisi vengono modificati per conformarsi alla [!DNL XDM ExperienceEvent] classe. Query Service può quindi utilizzare questi dati eseguendo query SQL per generare informazioni utili dal comportamento di un utente sulle piattaforme digitali.
+Adobe Experience Platform consente di acquisire dati dalle suite di rapporti di Adobe Analytics utilizzando i campi Experience Data Model (XDM) per compilare i set di dati. Questi dati di analisi vengono modificati per adeguarsi al [!DNL XDM ExperienceEvent] classe. Query Service può quindi utilizzare questi dati eseguendo query SQL per generare informazioni utili sul comportamento di un utente sulle piattaforme digitali.
 
-Questo documento fornisce una serie di query SQL di esempio che mostrano casi d&#39;uso comuni durante la creazione di informazioni dai dati di analisi web e mobili.
+Questo documento fornisce una serie di query SQL di esempio che illustrano casi d’uso comuni durante la creazione di informazioni dai dati di Analytics per web e dispositivi mobili.
 
-Consulta la sezione [Documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) per ulteriori informazioni sull’acquisizione e la mappatura dei dati analitici.
+Consulta la [Documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) per ulteriori informazioni sull’acquisizione e la mappatura dei dati di analisi.
 
 ## Introduzione
 
-Per ciascuno dei seguenti casi d&#39;uso, viene fornito un esempio di query SQL con parametri come modello da personalizzare. Fornisci parametri ovunque vedi `{ }` negli esempi SQL per il set di dati, l&#39;eVar, l&#39;evento o l&#39;intervallo di tempo che si desidera valutare.
+Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornisci i parametri ovunque ti trovi `{ }` negli esempi SQL per il set di dati, l’eVar, l’evento o l’intervallo di tempo che desideri valutare.
 
 ## Obiettivi
 
-Gli esempi seguenti mostrano le query SQL per i casi d&#39;uso comuni per analizzare i dati di Adobe Analytics.
+Gli esempi seguenti mostrano query SQL per casi d’uso comuni per analizzare i dati di Adobe Analytics.
 
 ### Genera il conteggio dei visitatori per ogni ora in un dato giorno
 
@@ -73,7 +73,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Identificare i 10 prodotti più visualizzati
+### Identifica i 10 prodotti più visualizzati
 
 ```sql
 SELECT Product_SKU,
@@ -88,7 +88,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### Identificare i 10 ricavi più elevati
+### Identifica i 10 ricavi più elevati dall&#39;ordine
 
 ```sql
 SELECT Purchase_ID,

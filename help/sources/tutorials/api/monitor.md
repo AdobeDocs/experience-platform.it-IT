@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;monitorare i flussi di dati;api del servizio di flusso;servizio di flusso
+keywords: Experience Platform;home;argomenti popolari;monitorare flussi di dati;servizio di flusso api;Flow Service
 solution: Experience Platform
-title: Monitorare i flussi di dati delle sorgenti utilizzando l’API del servizio di flusso
+title: Monitorare i flussi di dati delle origini utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando l’API del servizio di flusso.
+description: Questo tutorial illustra i passaggi necessari per monitorare i dati di esecuzione del flusso per verificarne la completezza, gli errori e le metriche tramite l’API del servizio Flusso.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,28 +12,28 @@ ht-degree: 2%
 
 ---
 
-# Monitorare i flussi di dati delle sorgenti utilizzando l’API del servizio di flusso
+# Monitorare i flussi di dati delle origini utilizzando l’API del servizio Flusso
 
-Questa esercitazione descrive i passaggi per il monitoraggio dei dati di esecuzione del flusso per la completezza, gli errori e le metriche utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi per monitorare i dati di esecuzione del flusso per completezza, errori e metriche utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID flusso di dati valido, seleziona il connettore di scelta dal [panoramica di origini](../../home.md) e segui i passaggi descritti per creare un flusso di dati prima di eseguire questa esercitazione.
+>Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID di flusso di dati valido, seleziona il connettore desiderato dall’elenco [panoramica sulle origini](../../home.md) e segui i passaggi descritti per creare un flusso di dati prima di provare questa esercitazione.
 
 ## Introduzione
 
-Questa esercitazione richiede anche di avere una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
 
 ## Monitorare i flussi di dati
 
-Per visualizzare lo stato del flusso di dati, invia una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l’ID di flusso corrispondente del flusso del flusso del flusso di dati.
+Per visualizzare lo stato del flusso di dati, effettua una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l’ID di flusso corrispondente del flusso di dati.
 
 **Formato API**
 
@@ -43,11 +43,11 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | L&#39;unico `id` per il flusso di dati da monitorare. |
+| `{FLOW_ID}` | L&#39;unico `id` valore per il flusso di dati che desideri monitorare. |
 
 **Richiesta**
 
-La richiesta seguente recupera le specifiche per un flusso di dati esistente.
+La richiesta seguente recupera le specifiche di un flusso di dati esistente.
 
 ```shell
 curl -X GET \
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli relativi all’esecuzione del flusso, incluse informazioni sulla data di creazione, sulle connessioni di origine e di destinazione, nonché l’identificatore univoco dell’esecuzione del flusso (`id`).
+In caso di esito positivo, la risposta restituisce dettagli relativi all’esecuzione del flusso, incluse informazioni sulla data di creazione, sulle connessioni di origine e di destinazione e sull’identificatore univoco dell’esecuzione del flusso (`id`).
 
 ```json
 {
@@ -224,15 +224,15 @@ Una risposta corretta restituisce i dettagli relativi all’esecuzione del fluss
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `items` | Contiene un singolo payload di metadati associati all’esecuzione di flusso specifica. |
-| `metrics` | Definisce le caratteristiche dei dati nell&#39;esecuzione del flusso. |
+| `items` | Contiene un singolo payload di metadati associati all’esecuzione del flusso specifica. |
+| `metrics` | Definisce le caratteristiche dei dati nell’esecuzione del flusso. |
 | `activities` | Definisce la modalità di trasformazione dei dati. |
-| `durationSummary` | Definisce l&#39;ora di inizio e di fine dell&#39;esecuzione del flusso. |
+| `durationSummary` | Definisce l’ora di inizio e di fine dell’esecuzione del flusso. |
 | `sizeSummary` | Definisce il volume dei dati in byte. |
 | `recordSummary` | Definisce il conteggio dei record dei dati. |
 | `fileSummary` | Definisce il conteggio dei file dei dati. |
-| `statusSummary` | Definisce se l&#39;esecuzione del flusso è un successo o un errore. |
+| `statusSummary` | Definisce se l’esecuzione del flusso è riuscita o meno. |
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai recuperato le metriche e le informazioni sugli errori nel flusso di dati utilizzando [!DNL Flow Service] API. Ora puoi continuare a monitorare il flusso di dati, a seconda della pianificazione dell’acquisizione, per monitorarne lo stato e le percentuali di acquisizione. Per informazioni su come eseguire le stesse attività utilizzando l’interfaccia utente, consulta l’esercitazione su [monitoraggio dei flussi di dati tramite l’interfaccia utente](../ui/monitor.md)
+Seguendo questa esercitazione, hai recuperato metriche e informazioni di errore sul flusso di dati utilizzando [!DNL Flow Service] API. Ora puoi continuare a monitorare il flusso di dati, a seconda della pianificazione di acquisizione, per monitorarne lo stato e i tassi di acquisizione. Per informazioni su come eseguire le stesse attività utilizzando l’interfaccia utente, consulta l’esercitazione su [monitoraggio dei flussi di dati tramite l’interfaccia utente](../ui/monitor.md)

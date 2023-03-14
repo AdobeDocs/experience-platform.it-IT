@@ -25,7 +25,7 @@ ht-degree: 93%
 
 #### Correzioni di bug
 
-* È stato corretto un problema a causa del quale getPercentPageViewed si interrompeva quando si utilizzavano caratteri speciali
+* È stato risolto un problema che causava l’interruzione di getPercentPageViewed durante l’utilizzo di caratteri speciali
 
 ## 20 maggio 2021
 

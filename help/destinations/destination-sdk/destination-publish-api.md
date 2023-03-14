@@ -1,42 +1,42 @@
 ---
-description: Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/destinations/publish`.
-title: Operazioni dell’endpoint API Publish Destinations
+description: Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando l’endpoint API "/authoring/destinations/publish".
+title: Operazioni endpoint API per la pubblicazione delle destinazioni
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '773'
 ht-degree: 4%
 
 ---
 
-# Operazioni API dell’endpoint Publish Destinations {#publish-destination}
+# Operazioni API per l’endpoint &quot;Destinations&quot; di pubblicazione {#publish-destination}
 
 >[!IMPORTANT]
 >
->È necessario utilizzare questo endpoint API solo se si invia una destinazione di prodotto (pubblico) da utilizzare per altri clienti Experience Platform. Se crei una destinazione privata per tuo uso, non devi inviare formalmente la destinazione utilizzando l’API di pubblicazione.
+>Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), che dovrà essere utilizzata da altri clienti Experience Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
 
 >[!IMPORTANT]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando `/authoring/destinations/publish` Endpoint API.
+Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando `/authoring/destinations/publish` Endpoint API
 
-Dopo aver configurato e verificato la destinazione, puoi inviarla ad Adobe per la revisione e la pubblicazione. Leggi [Invia per la revisione di una destinazione creata in Destination SDK](./submit-destination.md) per tutti gli altri passaggi è necessario eseguire questa operazione come parte del processo di invio della destinazione.
+Dopo aver configurato e testato la destinazione, puoi inviarla ad Adobe per la revisione e la pubblicazione. Letto [Invia per la revisione una destinazione creata in Destination SDK](./submit-destination.md) per tutte le altre operazioni da eseguire nell&#39;ambito del processo di invio della destinazione.
 
-Utilizza l’endpoint API delle destinazioni di pubblicazione per inviare una richiesta di pubblicazione quando:
+Utilizza l’endpoint API per la pubblicazione delle destinazioni per inviare una richiesta di pubblicazione quando:
 
-* In qualità di partner di Destination SDK, vuoi rendere disponibile la tua destinazione di prodotto in tutte le organizzazioni Experience Platform affinché tutti i clienti di Experience Platform possano utilizzarla;
-* Fai *qualsiasi aggiornamento* alle tue configurazioni. Gli aggiornamenti di configurazione si riflettono nella destinazione solo dopo aver inviato una nuova richiesta di pubblicazione, approvata dal team di Experience Platform.
+* In qualità di partner di Destination SDK, desideri rendere la tua destinazione prodotta disponibile in tutte le organizzazioni di Experienci Platform per tutti i clienti di Experienci Platform da utilizzare;
+* Fai *qualsiasi aggiornamento* alle configurazioni. Gli aggiornamenti della configurazione vengono rispecchiati nella destinazione solo dopo l’invio di una nuova richiesta di pubblicazione, approvata dal team di Experienci Platform.
 
 <!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
-## Guida introduttiva alle operazioni API di pubblicazione della destinazione {#get-started}
+## Guida introduttiva alle operazioni API di pubblicazione di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Invia una configurazione di destinazione per la pubblicazione {#create}
 
-Puoi inviare una configurazione di destinazione per la pubblicazione effettuando una richiesta di POST al `/authoring/destinations/publish` punto finale.
+Per inviare una configurazione di destinazione per la pubblicazione, devi effettuare una richiesta POST al `/authoring/destinations/publish` endpoint.
 
 **Formato API**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 **Richiesta**
 
-La seguente richiesta invia una destinazione per la pubblicazione, tra le organizzazioni configurate dai parametri forniti nel payload. Il payload seguente include tutti i parametri accettati dal `/authoring/destinations/publish` punto finale.
+La richiesta seguente invia una destinazione per la pubblicazione, tra le organizzazioni configurate dai parametri forniti nel payload. Il payload riportato di seguito include tutti i parametri accettati dal `/authoring/destinations/publish` endpoint.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,18 +64,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `destinationId` | Stringa | ID di destinazione della configurazione di destinazione che si sta inviando per la pubblicazione. Ottieni l&#39;ID di destinazione di una configurazione di destinazione utilizzando [riferimento API per la configurazione della destinazione](./destination-configuration-api.md#retrieve-list). |
-| `destinationAccess` | Stringa | Utilizzo `ALL` affinché la destinazione venga visualizzata nel catalogo per tutti i clienti di Experience Platform. |
+| `destinationId` | Stringa | ID di destinazione della configurazione di destinazione che si sta inviando per la pubblicazione. Ottieni l’ID di destinazione di una configurazione di destinazione utilizzando [riferimento API per la configurazione di destinazione](./destination-configuration-api.md#retrieve-list). |
+| `destinationAccess` | Stringa | Utilizzare `ALL` affinché la tua destinazione venga visualizzata nel catalogo per tutti i clienti di Experience Platform. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della richiesta di pubblicazione della destinazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i dettagli della richiesta di pubblicazione di destinazione.
 
-## Elenca richieste di pubblicazione di destinazione {#retrieve-list}
+## Elencare richieste di pubblicazione di destinazione {#retrieve-list}
 
-Puoi recuperare un elenco di tutte le destinazioni inviate per la pubblicazione per la tua organizzazione IMS effettuando una richiesta di GET al `/authoring/destinations/publish` punto finale.
+Per recuperare un elenco di tutte le destinazioni inviate per la pubblicazione per la tua organizzazione IMS, devi effettuare una richiesta GET al `/authoring/destinations/publish` endpoint.
 
 **Formato API**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **Richiesta**
 
-La seguente richiesta recupera l’elenco delle destinazioni inviate per la pubblicazione a cui hai accesso, in base alla configurazione dell’organizzazione IMS e della sandbox.
+La richiesta seguente recupera l’elenco delle destinazioni inviate per la pubblicazione a cui hai accesso, in base alla configurazione di sandbox e organizzazione IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Risposta**
 
-La risposta seguente restituisce lo stato HTTP 200 con un elenco di destinazioni inviate per la pubblicazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `configId` corrisponde alla richiesta di pubblicazione per una destinazione.
+La seguente risposta restituisce lo stato HTTP 200 con un elenco di destinazioni inviate per la pubblicazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `configId` corrisponde alla richiesta di pubblicazione per una destinazione.
 
 ```json
 {
@@ -119,17 +119,17 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di destinazioni
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `destinationId` | Stringa | ID di destinazione della configurazione di destinazione inviata per la pubblicazione. |
-| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione della destinazione per la destinazione inviata. |
-| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali la destinazione è disponibile. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni di Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l&#39;ID organizzazione dell&#39;organizzazione utilizzato per creare e testare la destinazione.</li></ul> |
-| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione della destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
-| `publishDetailsList.destinationType` | Stringa | Tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Pensa a queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
-| `publishDetailsList.publishedDate` | Stringa | Data in cui la destinazione è stata inviata per la pubblicazione, in epoch time. |
+| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione di destinazione per la destinazione inviata. |
+| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali è disponibile la destinazione. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l’ID organizzazione dell’organizzazione utilizzata per l’authoring e il test della destinazione.</li></ul> |
+| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione di destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
+| `publishDetailsList.destinationType` | Stringa | Il tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Considera queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
+| `publishDetailsList.publishedDate` | Stringa | La data in cui la destinazione è stata inviata per la pubblicazione, in tempo reale. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Ottenere lo stato di una specifica richiesta di pubblicazione di destinazione {#get}
+## Ottenere lo stato di una richiesta di pubblicazione di destinazione specifica {#get}
 
-Puoi recuperare informazioni dettagliate su una specifica richiesta di pubblicazione di destinazione effettuando una richiesta GET al `/authoring/destinations/publish` e fornisce l&#39;ID della destinazione per la quale desideri recuperare lo stato di pubblicazione.
+Per recuperare informazioni dettagliate su una specifica richiesta di pubblicazione di destinazione, effettua una richiesta GET al `/authoring/destinations/publish` e fornendo l’ID della destinazione per la quale desideri recuperare lo stato di pubblicazione.
 
 **Formato API**
 
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla richiesta di pubblicazione della destinazione specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla richiesta di pubblicazione di destinazione specificata.
 
 ```json
 {
@@ -195,4 +195,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come inviare una richiesta di pubblicazione per la tua destinazione. Il team Adobe Experience Platform esaminerà la tua richiesta di pubblicazione e ti risponderà entro cinque giorni lavorativi.
+Dopo aver letto questo documento, ora sai come inviare una richiesta di pubblicazione per la tua destinazione. Il team Adobe Experience Platform esaminerà la richiesta di pubblicazione e ti contatterà entro cinque giorni lavorativi.

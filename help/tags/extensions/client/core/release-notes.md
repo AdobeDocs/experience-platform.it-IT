@@ -13,35 +13,35 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 4 gennaio 2022
 
 v3.3.0
 
-* Modifica il [Azione Trigger Direct Call](./overview.md#direct-call-action) in modo da poter fornire informazioni sull’evento personalizzato da inviare alle regole di chiamata diretta.
+* Modifica il [Attiva azione chiamata diretta](./overview.md#direct-call-action) in modo da poter fornire informazioni evento personalizzate da inviare alle regole di chiamata diretta.
 
 ## 8 ottobre 2021
 
 v3.2.2
 
 * Correggi lo schema JSON dell’elemento dati del valore condizionale per tutti gli operatori disponibili.
-* Correzione https://github.com/adobe/reactor-extension-core/issues/64.
+* Correzione di https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 settembre 2021
 
 v3.2.1
 
-* È stato corretto un errore a causa del quale l’inizializzazione della visualizzazione dell’elemento dati del valore condizionale non funzionava correttamente quando i valori del campo erano 0.
+* È stato corretto un errore a causa del quale l’inizializzazione della visualizzazione dell’elemento dati con valore condizionale non funzionava correttamente quando i valori dei campi erano 0.
 
 ## 23 settembre 2021
 
 v3.2.0
 
-Nell’elemento dati Valore condizionale sono state introdotte le seguenti modifiche:
+Nell&#39;elemento dati Valore condizionale sono state introdotte le seguenti modifiche:
 
-* Aggiungi una casella di controllo per i valori condizionali e di fallback che consentono all’utente di scegliere se non definiti deve essere il valore restituito.
-* I valori numerici sono esposti come numeri nell&#39;oggetto settings.
+* Aggiungi una casella di controllo per i valori condizionali e di fallback che consente all’utente di scegliere se desidera che il valore restituito sia indefinito.
+* I valori numerici sono esposti come numeri nell’oggetto impostazioni.
 * Il valore condizionale non è più necessario in modo che possa comportarsi nello stesso modo del valore di fallback.
 
 ## 17 settembre 2021
@@ -56,21 +56,21 @@ v3.1.0
 
 Sono stati aggiunti nuovi elementi dati:
 
-* Oggetto unito: consente di selezionare più elementi dati che forniranno ciascuno un oggetto. Questi oggetti verranno profondamente (ricorsivamente) uniti per produrre un nuovo oggetto.
-* Valore condizionale - Restituisce uno dei due valori (condizionaleValue o fallbackValue) in base al risultato del confronto.
-* Ambiente runtime - Restituisce una delle seguenti variabili di ambiente Launch: stage dell&#39;ambiente, data build della libreria, nome della proprietà, ID della proprietà, nome della regola, id della regola, tipo di evento, payload dei dettagli dell&#39;evento, identificatore di chiamata diretta.
-* Strumenti JavaScript - Wrapper per operazioni JavaScript comuni: manipolazione di base delle stringhe (sostituzione, sottostringa, corrispondenza regex, primo e ultimo indice, divisione, sezione), operazioni di base array (sezione, join, pop, shift) e operazioni universali di base (sezione, lunghezza).
-* Attributi del dispositivo - Restituisce gli attributi del dispositivo come le dimensioni della finestra o dello schermo.
+* Oggetto unito: seleziona più elementi dati che forniranno ciascuno un oggetto. Questi oggetti verranno uniti in profondità (in modo ricorsivo) per produrre un nuovo oggetto.
+* Valore condizionale: restituisce uno dei due valori (conditionValue o fallbackValue) in base al risultato del confronto.
+* Ambiente di runtime: restituisce una delle seguenti variabili di ambiente di Launch: fase dell’ambiente, data di build della libreria, nome della proprietà, ID proprietà, nome della regola, ID regola, tipo di evento, payload dei dettagli dell’evento, identificatore della chiamata diretta.
+* Strumenti JavaScript: wrapper per le operazioni JavaScript più comuni: manipolazione di base delle stringhe (replace, substring, regex match, first and last index, split, slice), operazioni di base degli array (slice, join, pop, shift) e operazioni universali di base (slice, length).
+* Attributi del dispositivo: restituisce gli attributi del dispositivo come le dimensioni della finestra o dello schermo.
 
 ## 11 agosto 2021
 
 v3.0.0
 
-* PDCL-6153: Aggiunge il supporto per richiamare in modo affidabile l’URL completo per le azioni del codice personalizzato memorizzate nella cache.
+* PDCL-6153: offre supporto per richiamare in modo affidabile l&#39;URL completo per le azioni del codice personalizzato memorizzato nella cache.
 
-La versione 3.0.0 dell’estensione Core è associata a modifiche in [v27.2.0 del runtime web Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe se l&#39;azienda dell&#39;utente supporta la rete CDN Premium.
+La versione 3.0.0 dell&#39;estensione Core è associata a modifiche in [v27.2.0 di Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe, se l’azienda dell’utente supporta CDN Premium.
 
-Questo aggiornamento è facoltativo e retrocompatibile per gli utenti senza CDN Premium e obbligatorio per i clienti che hanno abilitato CDN Premium sulla propria azienda.
+Questo aggiornamento è facoltativo e compatibile con le versioni precedenti per gli utenti senza CDN Premium e obbligatorio per i clienti che hanno CDN Premium abilitato nella propria azienda.
 
 ## 20 maggio 2021
 
@@ -161,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce in modo che gli script di tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con un CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce, in modo che gli script tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 

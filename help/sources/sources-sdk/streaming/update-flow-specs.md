@@ -1,6 +1,6 @@
 ---
-title: Aggiornare le specifiche di flusso per l’SDK per streaming utilizzando l’API del servizio di flusso
-description: Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per le origini self-service (Streaming SDK).
+title: Aggiornare le specifiche di flusso per Streaming SDK utilizzando l’API del servizio di flusso
+description: Il documento seguente illustra i passaggi necessari per recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per le origini self-service (SDK di streaming).
 hide: true
 hidefromtoc: true
 source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
@@ -12,19 +12,19 @@ ht-degree: 2%
 
 # Aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API
 
-Dopo aver generato un nuovo ID di specifica di connessione, devi aggiungere questo ID a una specifica di flusso per creare un flusso di dati.
+Dopo aver generato un nuovo ID della specifica di connessione, devi aggiungerlo a una specifica di flusso per creare un flusso di dati.
 
-Le specifiche di flusso contengono informazioni che definiscono un flusso, inclusi gli ID di connessione di origine e di destinazione supportati, le specifiche di trasformazione necessarie per essere applicate ai dati e i parametri di pianificazione necessari per generare un flusso. È possibile modificare le specifiche di flusso utilizzando `/flowSpecs` punto finale.
+Le specifiche di flusso contengono informazioni che definiscono un flusso, inclusi gli ID di connessione di origine e di destinazione supportati, le specifiche di trasformazione da applicare ai dati e i parametri di programmazione necessari per generare un flusso. È possibile modificare le specifiche di flusso utilizzando `/flowSpecs` endpoint.
 
-Il seguente documento fornisce passaggi su come recuperare e aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API per le sorgenti self-service (Streaming SDK).
+Il documento seguente descrive come recuperare e aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API per origini self-service (Streaming SDK).
 
 ## Introduzione
 
-Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Cercare una specifica di flusso {#lookup}
 
-Origini create con `generic-streaming` tutti utilizzano `GenericStreamingAEP` specifica del flusso. Questa specifica di flusso può essere recuperata effettuando una richiesta di GET al `/flowSpecs/` e fornisce `flowSpec.id` di `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Origini create con `generic-streaming` tutti i modelli utilizzano `GenericStreamingAEP` specifica di flusso. Questa specifica di flusso può essere recuperata effettuando una richiesta di GET al `/flowSpecs/` e fornendo il `flowSpec.id` di `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **Formato API**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Richiesta**
 
-La seguente richiesta recupera il `e77fde5a-22a8-11ed-861d-0242ac120002` specifica del flusso.
+La seguente richiesta recupera `e77fde5a-22a8-11ed-861d-0242ac120002` specifica di flusso.
 
 ```shell
 curl -X GET \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della specifica di flusso interrogata.
+In caso di esito positivo, la risposta restituisce i dettagli della specifica di flusso sottoposta a query.
 
 ```json
 {
@@ -146,11 +146,11 @@ Una risposta corretta restituisce i dettagli della specifica di flusso interroga
 
 ## Aggiornare una specifica di flusso {#update}
 
-È possibile aggiornare i campi di una specifica di flusso tramite un’operazione PUT. Quando si aggiorna una specifica di flusso tramite una richiesta di PUT, il corpo deve includere tutti i campi che sarebbero necessari durante la creazione di una nuova specifica di flusso in una richiesta di POST.
+È possibile aggiornare i campi di una specifica di flusso tramite un&#39;operazione PUT. Quando si aggiorna una specifica di flusso tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di flusso in una richiesta POST.
 
 >[!IMPORTANT]
 >
->Quando crei una specifica di connessione per una nuova origine, devi aggiungerne l’ID specifico alla sezione `sourceConnectionSpecIds` array delle specifiche di flusso corrispondenti alla sorgente. In questo modo la nuova origine viene supportata da una specifica di flusso esistente, che consente di completare il processo di creazione del flusso di dati con la nuova origine.
+>Quando si crea una specifica di connessione per una nuova origine, è necessario aggiungerne l&#39;ID al `sourceConnectionSpecIds` array delle specifiche di flusso corrispondenti alla sorgente. In questo modo la nuova origine sarà supportata da una specifica di flusso esistente, consentendo di completare il processo di creazione del flusso di dati con la nuova origine.
 
 **Formato API**
 
@@ -160,7 +160,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Richiesta**
 
-La seguente richiesta aggiorna la specifica di flusso di `e77fde5a-22a8-11ed-861d-0242ac120002` per includere l’ID della specifica di connessione `bdb5b792-451b-42de-acf8-15f3195821de`.
+La richiesta seguente aggiorna la specifica di flusso di `e77fde5a-22a8-11ed-861d-0242ac120002` per includere l&#39;ID della specifica di connessione `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
@@ -262,7 +262,7 @@ PUT -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della specifica di flusso interrogata, incluso l’elenco aggiornato di `sourceConnectionSpecIds`.
+In caso di esito positivo, la risposta restituisce i dettagli della specifica di flusso sottoposta a query, incluso l’elenco aggiornato di `sourceConnectionSpecIds`.
 
 ```json
 {
@@ -364,4 +364,4 @@ Una risposta corretta restituisce i dettagli della specifica di flusso interroga
 
 ## Passaggi successivi
 
-Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, ora puoi procedere alla verifica e all&#39;invio della nuova origine. Consulta la guida su [verifica e invio di una nuova origine](./submit.md) per ulteriori informazioni.
+Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, è ora possibile procedere alla verifica e all&#39;invio della nuova origine. Consulta la guida su [verifica e invio di una nuova origine](./submit.md) per ulteriori informazioni.

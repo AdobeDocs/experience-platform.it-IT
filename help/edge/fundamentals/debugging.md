@@ -1,7 +1,7 @@
 ---
 title: Debug in Adobe Experience Platform Web SDK
-description: Scopri come attivare/disattivare le funzionalità di debug nell’SDK per web di Experience Platform.
-keywords: debugging sdk Web;debugging;configurare;comando di configurazione;comando di debug;edgeConfigId;setDebug;debugEnabled;debug;
+description: Scopri come attivare/disattivare le funzionalità di debug in Experience Platform Web SDK.
+keywords: debug web sdk;debugging;configurare;configurare comando;debug comando;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
@@ -12,20 +12,20 @@ ht-degree: 2%
 
 # Eseguire il debug di
 
-Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il comportamento dell’SDK.
+Quando è abilitato il debug, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e per comprendere il comportamento dell’SDK.
 
-Il debug è disattivato per impostazione predefinita, ma può essere attivato in quattro modi diversi:
+Il debug è disabilitato per impostazione predefinita, ma può essere attivato in quattro modi diversi:
 
-* `configure` command
-* `setDebug` command
-* parametro della stringa di query
-* Attivazione del debug in Adobe Experience Platform Debugger. Adobe Experience Platform è uno strumento potente che esamina le pagine web e ti aiuta a eseguire il debug dei problemi di implementazione con i prodotti Experience Cloud. Adobe Experience Platform Debugger è disponibile sia come [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) e [Firefox](https://addons.mozilla.org/it/firefox/addon/adobe-experience-platform-dbg/) estensione. Il debug può essere abilitato dalla scheda di configurazione della sezione AEP Web SDK .
+* `configure` comando
+* `setDebug` comando
+* parametro stringa query
+* Attivazione/disattivazione di Abilita debug in Adobe Experience Platform Debugger. Adobe Experience Platform è un potente strumento che esamina le pagine web e consente di eseguire il debug dei problemi di implementazione con i prodotti di Experience Cloud. Adobe Experience Platform Debugger è disponibile sia come [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) e [Firefox](https://addons.mozilla.org/it/firefox/addon/adobe-experience-platform-dbg/) estensione. Il debug può essere abilitato dalla scheda di configurazione della sezione AEP Web SDK.
 
 ![](../assets/enable-debugging.png)
 
-## Attivazione del debugging con il comando Configura
+## Attivazione/disattivazione del debug con il comando Configura
 
-Quando configuri l&#39;SDK utilizzando la variabile `configure` attiva il debug impostando il comando `debugEnabled` opzione per `true`.
+Quando si configura l’SDK utilizzando `configure` , abilitare il debug impostando il comando `debugEnabled` opzione per `true`.
 
 ```javascript
 alloy("configure", {
@@ -37,11 +37,11 @@ alloy("configure", {
 
 >[!TIP]
 >
->Questo consente il debug di tutti gli utenti della pagina web anziché solo del browser personale.
+>Questo consente il debug per tutti gli utenti della pagina Web anziché solo per il browser personale.
 
-## Attivazione del debugging con il comando Debug
+## Attivazione/disattivazione del debug con il comando Debug
 
-Attiva/disattiva il debug con un altro `debug` come segue:
+Attiva/disattiva il debug con un `debug` comando come segue:
 
 ```javascript
 alloy("setDebug", {
@@ -49,29 +49,29 @@ alloy("setDebug", {
 });
 ```
 
-Se preferisci non modificare il codice sulla pagina web o non desideri che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito web, questo è particolarmente utile perché puoi eseguire il `debug` nella console JavaScript del browser in qualsiasi momento.
+Se preferisci non modificare il codice nella pagina Web o non desideri che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, ciò è particolarmente utile perché puoi eseguire il comando `debug` nella console JavaScript del browser in qualsiasi momento.
 
-## Attivazione del debugging con un parametro della stringa di query
+## Attivazione/disattivazione del debug con un parametro di stringa query
 
-Attiva/disattiva il debug impostando un `alloy_debug` parametro della stringa di query a `true` o `false` come segue:
+Attiva/disattiva debug impostando un&#39; `alloy_debug` parametro stringa query su `true` o `false` come segue:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-Simile al `debug` , se preferisci non modificare il codice sulla pagina web o non desideri generare messaggi di registrazione per tutti gli utenti del sito web, questo è particolarmente utile perché puoi impostare il parametro della stringa query quando carichi la pagina web all&#39;interno del browser.
+Simile a `debug` , se si preferisce non modificare il codice nella pagina Web o non si desidera che i messaggi di registrazione vengano generati per tutti gli utenti del sito Web, ciò è particolarmente utile perché è possibile impostare il parametro della stringa query durante il caricamento della pagina Web nel browser.
 
 ## Priorità e durata
 
-Quando il debug viene impostato tramite la `debug` parametro della stringa di comando o di query sostituisce qualsiasi `debug` impostato in `configure` comando. In questi due casi, il debug rimane attivato anche per la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando di debug o il parametro della stringa di query, rimane abilitato fino a una delle seguenti operazioni:
+Quando il debug è impostato tramite `debug` parametro di stringa di comando o query, sostituisce qualsiasi `debug` opzione impostata in `configure` comando. In questi due casi, il debug rimane attivato anche per la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando debug o il parametro della stringa di query, il debug rimarrà attivato fino a quando non si verifica una delle seguenti condizioni:
 
 * Fine della sessione
-* Esegui il `debug` command
-* Impostare nuovamente il parametro della stringa query
+* Esegui il comando `debug` comando
+* È necessario impostare nuovamente il parametro della stringa di query
 
-## Recupero delle informazioni sulla libreria
+## Recupero delle informazioni della libreria
 
-Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito web. A questo scopo, esegui la `getLibraryInfo` come segue:
+Spesso è utile accedere ad alcuni dettagli della libreria caricata sul sito web. A questo scopo, esegui `getLibraryInfo` comando come segue:
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -81,8 +81,8 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-Attualmente, il `libraryInfo` l&#39;oggetto contiene le proprietà seguenti:
+Attualmente, il fornito `libraryInfo` L&#39;oggetto contiene le seguenti proprietà:
 
-* `version`: Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`. Quando la libreria viene eseguita all&#39;interno dell&#39;estensione tag (denominata &quot;AEP Web SDK&quot;), la versione è la versione della libreria e la versione dell&#39;estensione tag è unita con un segno &quot;+&quot;. Ad esempio, se la versione della libreria fosse 1.0.0 e l&#39;estensione tag fosse 1.2.0, il valore sarebbe `1.0.0+1.2.0`.
-* `commands`: Sono tutti i comandi disponibili supportati dalla libreria caricata.
-* `configs`: Sono tutte le configurazioni correnti nella libreria caricata.
+* `version`: versione della libreria caricata. Ad esempio, se la versione della libreria da caricare era 1.0.0, il valore sarebbe `1.0.0`. Quando la libreria viene eseguita all’interno dell’estensione tag (denominata &quot;AEP Web SDK&quot;), la versione è quella della libreria e quella dell’estensione tag è unita a un segno &quot;+&quot;. Ad esempio, se la versione della libreria è 1.0.0 e la versione dell’estensione tag è 1.2.0, il valore sarà `1.0.0+1.2.0`.
+* `commands`: questi sono tutti i comandi disponibili supportati dalla libreria caricata.
+* `configs`: tutte le configurazioni correnti nella libreria caricata.

@@ -17,4 +17,4 @@ ht-degree: 4%
 
 **Funzioni**
 
-* Estensione rilasciata con supporto per dodici plug-in
+* È stata rilasciata l’estensione con supporto per dodici plug-in.

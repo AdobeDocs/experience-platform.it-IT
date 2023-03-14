@@ -16,18 +16,18 @@ ht-degree: 52%
 # Documentazione API del server di rete Edge {#edge-network-server-api}
 
 
-* [Panoramica API server di rete Edge](overview.md)
-* [Garanzie delle prestazioni per API server di rete Edge](guardrails.md)
+* [Panoramica API del server di rete Edge](overview.md)
+* [Guardrail delle prestazioni per l’API del server di rete Edge](guardrails.md)
 * [Autenticazione](authentication.md)
 * Raccolta dati {#data-collection}
-   * [Raccolta dati a evento singolo](interactive-data-collection.md)
-   * [Raccolta dati evento batch](non-interactive-data-collection.md)
-* Interazione con altre soluzioni Adobe {#interacting-other-adobe-solutions}
+   * [Raccolta di dati per evento singolo](interactive-data-collection.md)
+   * [Raccolta dati di eventi batch](non-interactive-data-collection.md)
+* Interazione con altre soluzioni di Adobe {#interacting-other-adobe-solutions}
    * [Interazione con Adobe Analytics](interacting-adobe-analytics.md)
 * Personalizzazione {#personalization}
    * [Panoramica sulla personalizzazione](personalization-overview.md)
    * [Personalizzazione tramite Adobe Target](personalization-target.md)
-   * [Personalizzazione tramite Offer decisioning](personalization-offer-decisioning.md)
-* [Suggerimenti sulla posizione](location-hints.md)
+   * [Personalizzazione tramite Offer Decisioning](personalization-offer-decisioning.md)
+* [Hint posizione](location-hints.md)
 * [Gestione degli errori](error-handling.md)
 * [Risoluzione dei problemi](troubleshooting.md)

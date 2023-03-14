@@ -4,7 +4,7 @@ description: Scopri come filtrare i risultati quando elenchi le risorse nell’A
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | Operatore che determina come devono essere valutati i risultati rispetto al `{VALUE}` fornito. Gli operatori supportati sono elencati nell’[appendice](#supported-operators). |
 | `{VALUE}` | Valore in base al quale vengono confrontati i risultati restituiti. Quando si confronta per l’uguaglianza utilizzando l’operatore `EQ`, per poter essere incluso nella risposta il valore deve corrispondere esattamente, rispettando maiuscole e minuscole. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Richiesta**
 

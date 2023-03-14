@@ -1,6 +1,6 @@
 ---
-title: Riferimento agli oggetti satellite
-description: Scopri l’oggetto _satellite lato client e le varie funzioni che puoi eseguire con esso nei tag.
+title: Riferimento oggetto satellite
+description: Scopri l’oggetto _satellite lato client e le varie funzioni che consente di eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento funge da riferimento per l’oggetto `_satellite` lato client e le varie funzioni che è possibile eseguire con esso.
 
@@ -51,9 +51,9 @@ Nell’esempio fornito, se esiste un elemento dati con un nome corrispondente, v
 
 >[!NOTE]
 >
->Puoi utilizzare la percentuale (`%`) per fare riferimento a variabili per molti campi del modulo nell’implementazione dei tag, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, utilizzando `%product%` accede al valore dell’elemento dati prodotto o della variabile personalizzata.
+>È possibile utilizzare la percentuale (`%`) per fare riferimento alle variabili per molti campi del modulo nell’implementazione del tag, riducendo la necessità di chiamare `_satellite.getVar()`. Ad esempio, utilizzando `%product%` accederà al valore dell’elemento dati del prodotto o della variabile personalizzata.
 
-Quando un evento attiva una regola, puoi passare la regola corrispondente `event` oggetto in `_satellite.getVar()` così:
+Quando un evento attiva una regola, puoi trasmettere la regola corrispondente `event` oggetto in `_satellite.getVar()` così:
 
 ```javascript
 // event refers to the calling rule's event
@@ -142,9 +142,9 @@ Registra un avviso nella console del browser. Il messaggio viene visualizzato in
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. Questa è una copia esposta della libreria js-cookie di terze parti. Per informazioni sull&#39;utilizzo più avanzato di questa libreria, consulta la sezione [documentazione js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funzioni per la lettura e la scrittura di cookie. Questa è una copia esposta della libreria js-cookie di terze parti. Per informazioni sull’utilizzo più avanzato di questa libreria, consulta la sezione [documentazione di js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
-### Imposta un cookie {#cookie-set}
+### Impostare un cookie {#cookie-set}
 
 Per impostare un cookie, utilizza `_satellite.cookie.set()`.
 
@@ -156,17 +156,17 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Nel vecchio [`setCookie`](#setCookie) metodo di impostazione dei cookie, il terzo argomento (facoltativo) di questa chiamata della funzione era un numero intero che indicava il tempo di scadenza del cookie in giorni. In questo nuovo metodo, un oggetto &quot;attributes&quot; viene accettato come terzo argomento. Per impostare la scadenza di un cookie utilizzando il nuovo metodo, devi fornire un `expires` nell&#39;oggetto attributes e impostarlo sul valore desiderato. Questo è dimostrato nell&#39;esempio seguente.
+>Nel vecchio [`setCookie`](#setCookie) metodo di impostazione dei cookie, il terzo argomento (facoltativo) di questa chiamata di funzione era un numero intero che indicava il tempo di scadenza del cookie in giorni. In questo nuovo metodo, un oggetto &quot;attributes&quot; viene accettato come terzo argomento. Per impostare una scadenza per un cookie utilizzando il nuovo metodo, devi fornire un `expires` nell&#39;oggetto attributes e impostarla sul valore desiderato. Questo è dimostrato nell’esempio seguente.
 
 **Esempio**
 
-La seguente chiamata di funzione scrive un cookie che scade in una settimana.
+La seguente chiamata di funzione scrive un cookie che scade tra una settimana.
 
 ```javascript
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 ```
 
-### Recupera un cookie {#cookie-get}
+### Recuperare un cookie {#cookie-get}
 
 Per recuperare un cookie, utilizza `_satellite.cookie.get()`.
 
@@ -236,7 +236,7 @@ Questo esempio illustra i valori dell&#39;oggetto:
 
 ## `environment`
 
-Questo oggetto contiene informazioni sull&#39;ambiente in cui viene distribuita la libreria di runtime di tag corrente.
+Questo oggetto contiene informazioni sull’ambiente in cui è distribuita la libreria runtime corrente di tag.
 
 **Codice**
 
@@ -255,8 +255,8 @@ L&#39;oggetto contiene le proprietà seguenti:
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID dell&#39;ambiente. |
-| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging`e `production`. |
+| `id` | ID dell’ambiente. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging`, e `production`. |
 
 ## `notify`
 

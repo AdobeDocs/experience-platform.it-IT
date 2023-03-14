@@ -14,7 +14,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione Core per l’inoltro degli eventi fornisce gli eventi, le condizioni e i tipi di dati predefiniti per l’inoltro di eventi in Adobe Experience Platform.
 
@@ -153,7 +153,7 @@ Sono disponibili i seguenti operatori di confronto dei valori:
 
 In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estensione core.
 
-### Codice personalizzato
+### Custom Code
 
 Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L’inoltro degli eventi in Adobe Experience Platform supporta ES6.
 
@@ -167,7 +167,7 @@ Per accedere al valore di un elemento dati nel codice personalizzato, utilizza i
 getDataElementValue('productName') 
 ```
 
-Le azioni di inoltro eventi vengono eseguite in sequenza. È inoltre possibile che il codice personalizzato in un&#39;azione restituisca un valore che può essere utilizzato in un&#39;azione successiva. Il valore restituito può provenire dal codice all&#39;interno di tale azione, oppure dal corpo della risposta di una chiamata effettuata a una sorgente esterna. Per fare riferimento ai dati di un&#39;azione eseguita in precedenza all&#39;interno di una singola regola in cui viene utilizzata l’estensione Core, crea un elemento dati di tipo `Path` e utilizza il percorso seguente per fare riferimento al valore di una variabile denominata `productCategory` definita nel codice personalizzato all&#39;interno dell&#39;estensione Core:
+Le azioni di inoltro degli eventi vengono eseguite in sequenza. È inoltre possibile che il codice personalizzato in un&#39;azione restituisca un valore che può essere utilizzato in un&#39;azione successiva. Il valore restituito può provenire dal codice all&#39;interno di tale azione, oppure dal corpo della risposta di una chiamata effettuata a una sorgente esterna. Per fare riferimento ai dati di un&#39;azione eseguita in precedenza all&#39;interno di una singola regola in cui viene utilizzata l’estensione Core, crea un elemento dati di tipo `Path` e utilizza il percorso seguente per fare riferimento al valore di una variabile denominata `productCategory` definita nel codice personalizzato all&#39;interno dell&#39;estensione Core:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 

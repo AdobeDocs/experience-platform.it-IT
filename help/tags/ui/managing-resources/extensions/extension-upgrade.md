@@ -1,10 +1,11 @@
 ---
 title: Aggiornamenti delle estensioni
-description: Scopri come gli aggiornamenti dell'estensione vengono assemblati e rappresentati nel catalogo delle estensioni.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Scopri come gli aggiornamenti dell’estensione vengono assemblati e rappresentati nel catalogo delle estensioni.
+exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Gli sviluppatori di estensioni aggiungono continuamente nuove funzionalità e spesso ne correggono i bug. Questi aggiornamenti vengono assemblati in nuove versioni di un&#39;estensione e sono resi disponibili nel catalogo delle estensioni come aggiornamenti.
+Gli sviluppatori di estensioni aggiungono continuamente nuove funzionalità e spesso ne correggono i bug. Questi aggiornamenti vengono assemblati in nuove versioni di un’estensione e sono resi disponibili nel catalogo come aggiornamenti.
 
 ## Catalogo delle estensioni
 

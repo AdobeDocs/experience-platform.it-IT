@@ -1,23 +1,22 @@
 ---
-title: Invio di dati a  Adobe Analytics tramite Adobe Experience Platform Web SDK
-description: Scoprite come inviare dati ad  Adobe Analytics tramite Adobe Experience Platform Web SDK.
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;visualizzazioni di pagina;tracciamento dei collegamenti;collegamenti;track links;clickCollection;click collection;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Invio di dati ad Adobe Analytics tramite Adobe Experience Platform Web SDK
+description: Scopri come inviare dati ad Adobe Analytics utilizzando Adobe Experience Platform Web SDK.
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web interaction;visualizzazioni di pagina;tracciamento dei collegamenti;link;tracciare i collegamenti;clickCollection;click collection;
+exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
+# Invio di dati ad Adobe Analytics
 
-# Invio di dati a  Adobe Analytics
+Mentre in passato esistevano funzioni diverse per distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell’SDK per web è presente solo il `sendEvent` comando. I dati inviati con un evento determinano se deve essere una visualizzazione di pagina o un collegamento. [Ulteriori informazioni sul tracciamento dei collegamenti](../track-links.md).
 
-Mentre in passato esistevano funzioni diverse per distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell&#39;SDK Web è presente solo il comando `sendEvent`. I dati inviati con un evento determinano se si tratta di una visualizzazione di pagina o di un collegamento. [Ulteriori informazioni sul tracciamento dei collegamenti](../track-links.md).
+## Invio di una visualizzazione di pagina
 
-## Invio di una visualizzazione pagina
-
-È possibile specificare una visualizzazione di pagina impostando la variabile `web.webPageDetails.pageViews.value=1`.
+È possibile specificare una visualizzazione di pagina impostando la proprietà `web.webPageDetails.pageViews.value=1` variabile.
 
 ```javascript
 alloy("sendEvent", {
@@ -33,4 +32,4 @@ alloy("sendEvent", {
 });
 ```
 
-Sebbene Analytics registri tecnicamente una visualizzazione di pagina anche se questa variabile non è impostata, è comunque consigliabile impostare questa variabile ogni volta che si desidera registrare una visualizzazione di pagina in modo che sia esplicita nei dati e che sia provata in futuro l’implementazione.
+Anche se Analytics registra tecnicamente una visualizzazione di pagina anche se questa variabile non è impostata, è consigliabile impostare questa variabile ogni volta che desideri registrare una visualizzazione di pagina in modo che sia esplicita nei dati e che l’implementazione sia scalabile.

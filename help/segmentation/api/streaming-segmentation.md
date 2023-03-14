@@ -385,7 +385,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della pianificazio
 
 ### Abilitare una pianificazione
 
-Per impostazione predefinita, una pianificazione non è attiva al momento della creazione, a meno che `state` proprietà impostata su `active` nel corpo della richiesta create (POST). È possibile abilitare una pianificazione (impostare `state` a `active`) inoltrando una richiesta PATCH al `/config/schedules` e l’ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione non è attiva al momento della creazione, a meno che `state` proprietà impostata su `active` nel corpo della richiesta create (POST). È possibile abilitare una pianificazione (impostare `state` a `active`) inoltrando una richiesta PATCH al `/config/schedules` e l&#39;ID della pianificazione nel percorso.
 
 **Formato API**
 
