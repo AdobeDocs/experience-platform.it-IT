@@ -3,9 +3,9 @@ keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati al di fuori di Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2535'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Se si seleziona la **[!UICONTROL Credenziali client OAuth 2]** tipo di autentica
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Includi marche temporali segmento"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i segmenti sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i segmenti sono stati mappati alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione di dati con questa opzione selezionata."
+>abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i segmenti sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i segmenti sono stati mappati alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione di dati con questa opzione selezionata.<p>contenuto dal primo punto elenco</p><p>contenuto del secondo punto elenco</p><ul><li>Voce di elenco 1.</li><li>Voce di elenco 2.</li></ul> - Più righe di testo. - Altre righe di testo. Verifica della formattazione per verificare se è possibile: <br>Usa formattazione HTML</p><p>Oppure usate i tag paragrafo. Questa è la prima riga.</p><p>E altri tag di paragrafo, per la riga due.</p><p>Tutti i tag di paragrafo. Per la riga tre.</p>Infine, un test per includere collegamenti con markdown [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](collegamento assoluto) e HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=it">testo collegamento</a> syntax.Really, infine, un test per includere collegamenti con markdown [../overview.md](collegamenti relativi) e HTML <a href="../overview.md">testo collegamento relativo</a> sintassi."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
