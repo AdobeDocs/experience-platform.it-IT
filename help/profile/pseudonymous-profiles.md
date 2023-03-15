@@ -5,9 +5,9 @@ title: Scadenza dei dati del profilo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili Pseudonimi all’interno di Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ La scadenza dei dati del profilo pseudonimo non può essere configurata tramite 
 - Gli spazi dei nomi di identità da considerare per le eliminazioni di profili Pseudonimi.
    - Ad esempio: `ECID` solo `AAID` o una combinazione di `ECID` e `AAID`.
 - Tempo di attesa prima di eliminare un profilo pseudonimo. Il consiglio predefinito per i clienti è 14 giorni. Tuttavia, questo valore può variare a seconda del caso d’uso.
-- Il conteggio del profilo corrente confrontato al conteggio del profilo di licenza.
 
 ## Domande frequenti {#faq}
 
