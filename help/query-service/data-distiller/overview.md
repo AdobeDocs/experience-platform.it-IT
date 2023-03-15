@@ -1,44 +1,47 @@
 ---
 title: Panoramica di Data Distiller
-description: Riepilogo dei limiti di utilizzo di Data Distiller per i dati di Query Service in relazione ai diritti di licenza.
-source-git-commit: b3003cc62e8d3555b887a23f0614020bd2c5e81e
+description: Riepilogo dei limiti di utilizzo di Data Distiller per i dati di Query Service in relazione all’adesione alla licenza.
+source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 0%
+source-wordcount: '154'
+ht-degree: 1%
 
 ---
 
 # Panoramica di Data Distiller
 
-Data Distiller è un pacchetto che include un sottoinsieme delle funzionalità di Adobe Experience Platform. Con Data Distiller puoi eseguire la preparazione dei dati di post-acquisizione (ad esempio la pulizia, la modellazione e la manipolazione) per i casi d’uso analitici o di profilo cliente in tempo reale, eseguendo query batch in Query Service. L’utilizzo di Data Distiller dipende dalla licenza di per le applicazioni basate su Platform.
+Data Distiller è un pacchetto che include un sottoinsieme delle funzionalità di Adobe Experience Platform. Con Data Distiller è possibile eseguire la preparazione dei dati post-acquisizione (ad esempio la pulizia, la modellazione e la manipolazione) per casi d’uso in tempo reale del profilo del cliente o analitici eseguendo query batch in Query Service. L’utilizzo di Data Distiller dipende dall’adesione alle applicazioni basate su Platform.
 
 ## Utilizzo delle licenze {#license-usage}
 
-Il  [Dashboard utilizzo licenze di Data Distiller](./license-usage.md) è disponibile dopo l’acquisto delle ore di elaborazione di Data Distiller. La dashboard utilizzo licenze consente di monitorare il consumo delle ore di calcolo consentite. Consulta la [Documento sull’utilizzo delle licenze di Data Distiller](./license-usage.md) per visualizzare informazioni importanti sull’utilizzo delle licenze di Query Service da parte dell’organizzazione.
+La  [Dashboard dell&#39;utilizzo della licenza di Distiller dati](./license-usage.md) è disponibile dopo l’acquisto delle ore di elaborazione di Data Distiller. Il dashboard di utilizzo della licenza consente di monitorare il consumo di ore di calcolo autorizzate. Consulta la sezione [Documento sull&#39;utilizzo della licenza di Distiller dati](./license-usage.md) per visualizzare informazioni importanti sull’utilizzo della licenza Query Service della tua organizzazione.
 
-## Parametri di ambito {#scoping-parameters}
+<!-- Update these descriptions post 23.3 release
+## Scoping parameters {#scoping-parameters}
 
-I parametri di ambito sono limiti di utilizzo correlati all’ambito della configurazione richiesta e sono definiti in base alla capacità della licenza. Senza componenti aggiuntivi, i parametri di ambito di Data Distiller sono i seguenti:
+Scoping parameters are usage limits that relate to the scoping of your required set up, and are defined by your license capacity. Without add-ons, Data Distiller's scoping parameters are as follows: 
 
-* **Calcola ore**: puoi utilizzare PSQL o l’API Query Service per eseguire query batch eseguite in qualsiasi sandbox (pianificata o meno) per analizzare e scrivere dati. Questo utilizza le ore di calcolo assegnate all’anno come determinato nel processo di valutazione del contratto di licenza. Le ore totali calcolate vengono accumulate in tutte le sandbox.
-* **Dati acquisiti**: i dati acquisiti in Adobe Experience Platform che possono essere interrogati utilizzando Data Distiller sono soggetti alle limitazioni descritte nella licenza corrente di Adobe Real-time Customer Data Platform, Customer Journey Analytics e/o Adobe Journey Optimizer.
-* **Archiviazione Data Lake**: l’archiviazione del data lake fornita nella licenza corrente di Adobe Real-time Customer Data Platform, Customer Journey Analytics e/o Adobe Journey Optimizer può essere utilizzata anche con Data Distiller. Archiviazione Data Lake è una funzione condivisa.
-* **Utenti di Query Service**: con Data Distiller è possibile utilizzare anche il numero di utenti Query Service descritto nella licenza corrente di Adobe Real-time Customer Data Platform, Customer Journey Analytics e/o Adobe Journey Optimizer. Utenti di Query Service è una funzione condivisa.
+* **Compute Hours**: You can use PSQL or the Query Service API to run batch queries executed in any sandbox (scheduled or otherwise) to scan and write data. This uses your allotted Compute Hours per year as determined in the scoping process of your license agreement. Total Compute Hours is accumulated across all Sandboxes.
+* **Data Ingested**: The data ingested into Adobe Experience Platform which can be queried using Data Distiller is subject to the limitations described in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer.
+* **Data Lake Storage**: The data lake storage provided in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Data Lake Storage is a shared feature.
+* **Query Service Users**: The number of Query Service users detailed in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service Users is a shared feature. 
+-->
 
 ## Guardrail
 
-Consulta la [Guardrail di Query Service](../guardrails.md) documento relativo ai limiti di utilizzo predefiniti per i dati di Query Service in relazione al diritto di licenza.
+Consulta la sezione [Garanzie del servizio query](../guardrails.md) documento relativo ai limiti di utilizzo predefiniti per i dati del servizio query in relazione al diritto di licenza.
 
-## Limiti statici
+<!-- Update these descriptions post 23.3 release
+## Static limits
 
-Un limite statico è il limite di utilizzo relativo ai limiti funzionali di Attivazione Adobe Experience Platform. [Ulteriori informazioni su Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) sono disponibili nella guida di Adobe. Di seguito è riportato un riepilogo dei limiti statici di Data Distiller. Per informazioni più complete, consulta il documento del guardrail di Query Service.
+A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  
 
-* **Query batch**: le query batch pianificate scadono dopo 24 ore.
-* **Servizio query**: puoi utilizzare Query Service per i seguenti scopi:
-   * Eseguire query SQL per l’analisi dei dati e la preparazione dei dati di post-acquisizione (pulizia, modellazione e manipolazione).
-   * Eseguire query SQL per creare metriche di rollup da visualizzare direttamente in uno strumento BI.
-   * Esaminare rapidamente i dati in Adobe Experience Platform.
-   * Per generare informazioni significative dai dati.
-* **Chiamata API di reporting**: per garantire che le query vengano eseguite sui dati aggregati utilizzando l’API di reporting con risorse sufficienti per essere eseguite in modo efficiente. Sono incluse le query che migliorano i modelli di dati esistenti, come quelli forniti da Real-time Customer Data Platform. L’API di reporting tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ciascuna query. Sono disponibili contemporaneamente fino a 4 chiamate API per la generazione di rapporti. Se accedi all’API di reporting tramite uno strumento BI e richiedi più slot di concorrenza, è necessario un server BI.
-
+* **Batch Queries**: Scheduled batch queries time out after 24 hours.
+* **Query Service**: You can use Query Service for the following purposes: 
+    * To run SQL queries for data analysis and post ingestion data preparation (cleaning, shaping, and manipulation).
+    * To run SQL queries to create roll-up metrics to surface directly into a BI tool.
+    * To quickly inspect data within Adobe Experience Platform.
+    * To generate meaningful insights from your data.
+* **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
+-->
 
