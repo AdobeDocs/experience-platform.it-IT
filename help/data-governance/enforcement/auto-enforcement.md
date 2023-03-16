@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 30d8cc73128cff444ce06a8ab913aeb8fa816ed1
+source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Se [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quan
 
 #### Miglioramento della politica di consenso per i supporti a pagamento {#consent-policy-enhancement}
 
-È stato apportato un miglioramento all’applicazione dei criteri di consenso per le destinazioni in batch e streaming, comprese le attivazioni per i file multimediali a pagamento. Questo miglioramento è disponibile per i clienti di Privacy e Security Shield o Healthcare Shield e rimuove in modo proattivo i profili dalle destinazioni batch e in streaming quando lo stato del consenso cambia. Inoltre, assicura che le modifiche al consenso vengano propagate immediatamente in modo che il pubblico giusto sia sempre oggetto di targeting.
+Miglioramento dell’applicazione delle policy di consenso in [batch](../../destinations/destination-types.md#file-based) e [streaming](../../destinations/destination-types.md#streaming-destinations) sono state effettuate le destinazioni, comprese le attivazioni per i mezzi di comunicazione a pagamento. Questo miglioramento è disponibile per i clienti di Privacy e Security Shield o Healthcare Shield e rimuove in modo proattivo i profili dalle destinazioni batch e in streaming quando lo stato del consenso cambia. Inoltre, assicura che le modifiche al consenso vengano propagate immediatamente in modo che il pubblico giusto sia sempre oggetto di targeting.
 
 Questi miglioramenti consentono una maggiore fiducia nella strategia di marketing in quanto elimina la necessità per gli addetti al marketing di aggiungere manualmente gli attributi di consenso alla loro espressione di segmento. In questo modo, nessun profilo viene eseguito inavvertitamente il targeting per eventuali esperienze di marketing una volta che il consenso è stato ritirato o non è più qualificato per una politica di consenso. I criteri di consenso marketing che impostano le regole per la gestione dei dati di consenso o preferenza in diversi flussi di lavoro di marketing vengono ora applicati automaticamente nei flussi di lavoro di attivazione nelle soluzioni downstream.
 
