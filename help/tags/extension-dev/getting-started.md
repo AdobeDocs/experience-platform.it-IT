@@ -2,10 +2,10 @@
 title: Guida introduttiva allo sviluppo delle estensioni
 description: Introduzione allo sviluppo di estensioni tag in Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 95%
+source-wordcount: '451'
+ht-degree: 91%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per imparare a creare estensioni, utilizzeremo lo strumento di scaffolding open source, fornito da ingegneri Adobe per creare i file e la struttura di file necessari per il pacchetto di estensione. Non ti resterà quindi che occuparti della parte importante: scrivere di fatto il codice.
 
@@ -60,3 +60,7 @@ Lo strumento di scaffolding fornirà quindi le opzioni per la creazione della st
 >* È possibile aggiungere più eventi, condizioni e azioni.
 >* Può esistere una sola vista di configurazione.
 
+
+## Passaggi successivi
+
+* Segui [Panoramica del processo di invio](./submit/overview.md) e si preparano a [validate](./submit/upload-and-test.md#validate) e [caricare](./submit/upload-and-test.md#integration) l’estensione per il test all’interno dell’ecosistema di tag.

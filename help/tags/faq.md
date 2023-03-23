@@ -2,10 +2,10 @@
 title: Guida alla risoluzione dei problemi dei tag
 description: Risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 80%
+source-wordcount: '1044'
+ht-degree: 78%
 
 ---
 
@@ -45,6 +45,8 @@ I tag sono disponibili tramite un portale self-service, che può essere utilizza
 
 Anche molti nostri clienti scelgono di creare estensioni private da usare solo all’interno delle proprie aziende utilizzando gli stessi metodi di sviluppo delle estensioni.
 
+Per sviluppare un&#39;estensione, controlla il [Panoramica dello sviluppo dell&#39;estensione](./extension-dev/overview.md) pagina.
+
 ## I tag soddisfano gli standard di sicurezza della mia azienda?
 
 I tag sono predisposti per soddisfare SOC-2 e Gramm-Leach-Bliley Act. I tag offrono anche la possibilità di self-hosting. Le librerie JavaScript e le configurazioni mobili possono essere messe a disposizione dai server personali o dal CDN scelto. Per i team di I.T. e di sicurezza, questo offre la possibilità di eseguire test automatizzati, di controllare i file nel sistema di controllo della versione e di rispettare tutti i processi interni di migrazione della produzione, relativamente alla sicurezza o meno.
@@ -71,22 +73,7 @@ I tag sono progettati per distribuire ed eseguire tecnologie marketing e pubblic
 
 ## Quali browser supportano i tag?
 
-Supporto browser per i tag:
-
-- [!DNL Chrome] (più recente)
-- [!DNL Safari] (più recente)
-- [!DNL Firefox] (più recente)
-- [!DNL Microsoft Edge] (più recente)
-- [!DNL Internet Explorer] (10 e versioni successive)
-- [!DNL iOS Safari] (più recente)
-- [!DNL Android Chrome] (più recente)
-
-Browser supportati dall’interfaccia dell’applicazione per i tag:
-
-- [!DNL Chrome] (più recente)
-- [!DNL Safari] (più recente)
-- [!DNL Firefox] (più recente)
-- [!DNL Microsoft Edge] (più recente)
+Consulta i browser supportati [qui](./extension-dev/browsers.md).
 
 La maggior parte dei clienti Adobe sfrutta funzioni di piattaforme web più moderne nei browser attuali e crea esperienze utente migliori, inclusi applicazioni per pagina singola e siti web e pagine interattivi Ajax-heavy. Con sempre più clienti che adottano approcci più moderni per i loro siti, una soluzione come quella offerta dai tag supporta questa tendenza.
 

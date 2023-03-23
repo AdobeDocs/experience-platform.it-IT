@@ -2,9 +2,9 @@
 title: Rilasciare un’estensione
 description: Scopri come rilasciare un’estensione tag in Adobe Experience Platform in modo privato o pubblico.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 92%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una volta completati i test e la documentazione, l’estensione è pronta per il rilascio. Attualmente è possibile eseguire due tipi di rilascio:
 
@@ -30,7 +30,7 @@ Per poter rilasciare l’estensione pubblicamente, è necessario rilasciarla inn
 
 Il modo più semplice per rilasciare l’estensione a disponibilità privata è tramite lo strumento [Releaser per estensioni tag](https://www.npmjs.com/package/@adobe/reactor-releaser). Ulteriori istruzioni sono reperibili nella relativa documentazione.
 
-Se desideri rilasciare l’estensione a disponibilità privata utilizzando direttamente le API, consulta la chiamata di esempio per [rilasciare il pacchetto di un’estensione in forma privata](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/). nella documentazione delle API.
+Se desideri rilasciare l’estensione a disponibilità privata utilizzando direttamente le API, consulta la chiamata di esempio per [rilasciare il pacchetto di un’estensione in forma privata](../../api/endpoints/extension-packages.md/#private-release). nella documentazione delle API.
 
 ## Rilascio pubblico
 
