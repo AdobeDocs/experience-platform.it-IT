@@ -3,9 +3,9 @@ keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare dati di profilo a endpoint HTTP di terze parti per eseguire le tue analisi o eseguire altre operazioni necessarie sui dati di profilo esportati fuori Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '2648'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -158,12 +158,12 @@ Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Includi marche temporali del segmento"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata.**Monitorare le attività degli utenti in Platform**<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform sotto forma di registri di controllo. Questi registri formano un audit trail che registra <b>chi</b> eseguito <b>cosa</b> e <b>quando</b>. I registri di controllo possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p><h2>Istruzioni</h2><ul><li>Seleziona <b>Audit</b> nella navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: I registri di controllo vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se devi guardare indietro ai dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti della politica interna. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona funnel per visualizzare un elenco di controlli filtro per limitare i risultati. Vengono visualizzati solo gli ultimi 1000 record, indipendentemente dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di controllo, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di controllo</a> Experience League.</li></ul>"
+>abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
 
-[!CONTEXTUALHELP]
-id="platform_destinations_connect_http_queryparameters"
-title="Parametri query"
-abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Parametri query"
+>abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -186,7 +186,8 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
-Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
+> 
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
 Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo in streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
