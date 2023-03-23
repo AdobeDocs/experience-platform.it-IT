@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;guida utente sandbox;guida sandbox
 solution: Experience Platform
-title: Guida all’interfaccia utente Sandbox
-description: In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
+title: Guida all’interfaccia utente sandbox
+description: Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,83 +11,83 @@ ht-degree: 2%
 
 ---
 
-# Guida all’interfaccia utente Sandbox
+# Guida all’interfaccia utente sandbox
 
-In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
+Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 
-## Visualizza sandbox
+## Visualizzare le sandbox
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sandbox]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Sfoglia]** per aprire [!UICONTROL Sandbox] dashboard. Il dashboard elenca tutte le sandbox disponibili per la tua organizzazione, compresi i rispettivi tipi (produzione o sviluppo).
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sandbox]** nella navigazione a sinistra e seleziona **[!UICONTROL Sfoglia]** per aprire [!UICONTROL Sandbox] dashboard. Il dashboard elenca tutte le sandbox disponibili per la tua organizzazione, inclusi i rispettivi tipi (produzione o sviluppo).
 
-![view-sandbox](../images/ui/view-sandboxes.png)
+![sandbox di visualizzazione](../images/ui/view-sandboxes.png)
 
-## Passare da una sandbox all’altra
+## Passa da una sandbox all’altra
 
-L’indicatore della sandbox si trova nell’intestazione superiore dell’interfaccia utente di Platform e mostra il titolo, l’area e il tipo della sandbox in cui ti trovi attualmente.
+L’indicatore della sandbox si trova nell’intestazione superiore dell’interfaccia utente di Platform e visualizza il titolo della sandbox in uso, la sua area geografica e il relativo tipo.
 
-![indicatore-sandbox](../images/ui/sandbox-indicator.png)
+![indicatore sandbox](../images/ui/sandbox-indicator.png)
 
-Per passare da una sandbox all’altra, seleziona l’indicatore sandbox e seleziona la sandbox desiderata dall’elenco a discesa.
+Per passare da una sandbox all’altra, seleziona l’indicatore della sandbox e seleziona la sandbox desiderata dall’elenco a discesa.
 
-![interfaccia switcher](../images/ui/switcher-interface.png)
+![interfaccia commutatore](../images/ui/switcher-interface.png)
 
 Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla sandbox selezionata.
 
-![sandbox-switched](../images/ui/sandbox-switched.png)
+![a commutazione di sandbox](../images/ui/sandbox-switched.png)
 
-## Crea una nuova sandbox {#create}
+## Creare una nuova sandbox {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
 >title="Nome sandbox"
->abstract="Il nome della sandbox è il testo utilizzato nel back-end per creare un ID univoco per questa sandbox."
+>abstract="Il nome della sandbox è il testo utilizzato sul back-end per creare un ID univoco per questa sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="Titolo sandbox"
->abstract="Il titolo della sandbox è il nome visualizzato che rappresenterà la sandbox nei menu e nei menu a discesa in tutta l’interfaccia utente di Experience Platform."
+>abstract="Il titolo della sandbox è il nome visualizzato che rappresenta la sandbox nei menu e nei menu a discesa nell’interfaccia utente di Experience Platform."
 
 >[!NOTE]
 >
->Quando crei una nuova sandbox, devi prima aggiungerla al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di iniziare a utilizzare la nuova sandbox. Consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md) per informazioni su come effettuare il provisioning di una sandbox per un profilo di prodotto.
+>Quando crei una nuova sandbox, devi prima aggiungerla al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di iniziare a utilizzare la nuova sandbox. Consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md) per informazioni su come eseguire il provisioning di una sandbox a un profilo di prodotto.
 
-Il video seguente offre una rapida panoramica sull’utilizzo delle Sandbox in Experience Platform.
+Utilizza il seguente video per una rapida panoramica sull’utilizzo delle sandbox in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Per creare una nuova sandbox, seleziona **[!UICONTROL Crea sandbox]** nell&#39;angolo superiore destro dello schermo.
+Per creare una nuova sandbox, seleziona **[!UICONTROL Creare una sandbox]** nell’angolo in alto a destra dello schermo.
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-Il **[!UICONTROL Crea sandbox]** viene visualizzata. Se stai creando una sandbox di sviluppo, seleziona **[!UICONTROL Sviluppo]** nel pannello a discesa. Per creare una nuova sandbox di produzione, seleziona **[!UICONTROL Produzione]**.
+La **[!UICONTROL Creare una sandbox]** viene visualizzata la finestra di dialogo. Se stai creando una sandbox di sviluppo, seleziona **[!UICONTROL Sviluppo]** nel pannello a discesa . Per creare una nuova sandbox di produzione, seleziona **[!UICONTROL Produzione]**.
 
 ![tipo sandbox](../images/ui/sandbox-type.png)
 
-Dopo aver selezionato il tipo, assegna alla sandbox un nome e un titolo. Il titolo deve essere leggibile e sufficientemente descrittivo da essere facilmente identificabile. Il nome della sandbox è un identificatore tutto minuscolo da utilizzare nelle chiamate API e deve quindi essere univoco e conciso. Il nome della sandbox deve iniziare con una lettera, contenere un massimo di 256 caratteri e contenere solo caratteri alfanumerici e trattini (-).
+Dopo aver selezionato il tipo, fornisci alla sandbox un nome e un titolo. Il titolo deve essere leggibile dall’uomo e deve essere sufficientemente descrittivo da essere facilmente identificabile. Il nome della sandbox è un identificatore in minuscolo da utilizzare nelle chiamate API e dovrebbe pertanto essere univoco e conciso. Il nome della sandbox deve iniziare con una lettera, contenere un massimo di 256 caratteri e contenere solo caratteri alfanumerici e trattini (-).
 
 Al termine, seleziona **[!UICONTROL Crea]**.
 
 ![sandbox-info](../images/ui/sandbox-info.png)
 
-Una volta completata la creazione della sandbox, aggiorna la pagina e la nuova sandbox viene visualizzata nel **[!UICONTROL Sandbox]** dashboard con stato &quot;[!UICONTROL Creazione]&quot;. Il provisioning di nuove sandbox richiede circa 30 secondi dal sistema, dopo di che il loro stato cambia in &quot;[!UICONTROL Attivo]&quot;.
+Una volta completata la creazione della sandbox, aggiorna la pagina e la nuova sandbox viene visualizzata nella **[!UICONTROL Sandbox]** dashboard con stato &quot;[!UICONTROL Creazione]&quot;. Il provisioning delle nuove sandbox richiede circa 30 secondi dal sistema, dopodiché il loro stato cambia in &quot;[!UICONTROL Attivo]&quot;.
 
-![new-sandbox](../images/ui/new-sandbox.png)
+![nuovo sandbox](../images/ui/new-sandbox.png)
 
-## Ripristinare una sandbox
+## Reimpostare una sandbox
 
 >[!WARNING]
 >
->Di seguito è riportato un elenco di eccezioni che possono impedire la reimpostazione della sandbox di produzione predefinita o di una sandbox di produzione creata dall&#39;utente: <ul><li>Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Analytics per il [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.</li><li>Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Audience Manager per il [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).</li><li>Non è possibile ripristinare la sandbox di produzione predefinita se contiene dati per entrambe le funzioni CDA e PBD.</li><li>Una sandbox di produzione creata dall’utente e utilizzata per la condivisione bidirezionale dei segmenti con Adobe Audience Manager o Audience Core Service può essere reimpostata dopo un messaggio di avviso.</li></ul>
+>Di seguito è riportato un elenco di eccezioni che possono impedire il ripristino della sandbox di produzione predefinita o di una sandbox di produzione creata dall’utente: <ul><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Analytics per la [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.</li><li>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico delle identità ospitato nella sandbox viene utilizzato anche da Adobe Audience Manager per la [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).</li><li>La sandbox di produzione predefinita non può essere reimpostata se contiene dati per le funzioni CDA e PBD.</li><li>Una sandbox di produzione creata dall’utente e utilizzata per la condivisione di segmenti bidirezionali con Adobe Audience Manager o con il servizio di base Audience può essere reimpostata dopo un messaggio di avviso.</li></ul>
 
-Se si ripristina una sandbox di produzione o di sviluppo, vengono eliminate anche tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le autorizzazioni associate. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
+Se si reimposta una sandbox di produzione o sviluppo, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
 
 Seleziona la sandbox da reimpostare dall’elenco delle sandbox. Nel pannello di navigazione a destra visualizzato, seleziona **[!UICONTROL Ripristino della sandbox]**.
 
-![ripristina](../images/ui/reset.png)
+![reset](../images/ui/reset.png)
 
-Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la scelta. Seleziona **[!UICONTROL Continua]** per procedere.
+Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Seleziona **[!UICONTROL Continua]** per procedere.
 
-![reset-warning](../images/ui/reset-warning.png)
+![avviso di reset](../images/ui/reset-warning.png)
 
 Nella finestra di conferma finale, immetti il nome della sandbox nella finestra di dialogo e seleziona **[!UICONTROL Reimposta]**.
 
@@ -97,17 +97,17 @@ Nella finestra di conferma finale, immetti il nome della sandbox nella finestra 
 
 >[!WARNING]
 >
->Non è possibile eliminare la sandbox di produzione predefinita. Tuttavia, qualsiasi sandbox di produzione creata dall’utente e utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service] può essere eliminato dopo un messaggio di avviso.
+>Non è possibile eliminare la sandbox di produzione predefinita. Tuttavia, qualsiasi sandbox di produzione creata dall’utente utilizzato per la condivisione di segmenti bidirezionale con [!DNL Audience Manager] o [!DNL Audience Core Service] può essere eliminato dopo un messaggio di avviso.
 
-L’eliminazione di una sandbox di produzione o di sviluppo comporta la rimozione definitiva di tutte le risorse associate a tale sandbox, incluse le autorizzazioni.
+L’eliminazione di una sandbox di produzione o di sviluppo comporta la rimozione definitiva di tutte le risorse associate a tale sandbox, comprese le autorizzazioni.
 
 Seleziona la sandbox da eliminare dall’elenco delle sandbox. Nel pannello di navigazione a destra visualizzato, seleziona **[!UICONTROL Elimina]**.
 
-![eliminare](../images/ui/delete.png)
+![delete](../images/ui/delete.png)
 
-Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la scelta. Seleziona **[!UICONTROL Continua]** per procedere.
+Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Seleziona **[!UICONTROL Continua]** per procedere.
 
-![delete-warning](../images/ui/delete-warning.png)
+![avviso di cancellazione](../images/ui/delete-warning.png)
 
 Nella finestra di conferma finale, immetti il nome della sandbox nella finestra di dialogo e seleziona  **[!UICONTROL Continua]**.
 
@@ -115,4 +115,4 @@ Nella finestra di conferma finale, immetti il nome della sandbox nella finestra 
 
 ## Passaggi successivi
 
-Questo documento illustra come gestire le sandbox nell’interfaccia utente di Experience Platform. Per informazioni su come gestire le sandbox utilizzando l’API Sandbox, consulta [guida per gli sviluppatori sulle sandbox](../api/getting-started.md).
+Questo documento illustra come gestire le sandbox all’interno dell’interfaccia utente di Experience Platform. Per informazioni su come gestire le sandbox utilizzando l’API Sandbox, consulta la sezione [guida per sviluppatori di sandbox](../api/getting-started.md).

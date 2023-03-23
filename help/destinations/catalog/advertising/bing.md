@@ -1,7 +1,7 @@
 ---
 keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
-description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in Microsoft Display Advertising.
+description: Con la destinazione di connessione Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
@@ -10,38 +10,38 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Microsoft Bing] connessione {#bing-destination}
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Panoramica {#overview}
 
-Il [!DNL Microsoft Bing] destination ti consente di inviare i dati del profilo a [!DNL Microsoft Display Advertising].
+La [!DNL Microsoft Bing] La destinazione consente di inviare i dati del profilo a [!DNL Microsoft Display Advertising].
 
-Per inviare i dati del profilo a [!DNL Microsoft Bing], devi prima connetterti alla destinazione.
+Per inviare i dati del profilo a [!DNL Microsoft Bing], è innanzitutto necessario connettersi alla destinazione.
 
 ## Casi d’uso {#use-cases}
 
-In qualità di addetto al marketing, voglio poter utilizzare segmenti creati da [!DNL Microsoft Advertising IDs] per eseguire il targeting degli utenti tramite display advertising in [!DNL Microsoft Advertising] canali.
+In qualità di addetto al marketing, voglio essere in grado di utilizzare segmenti generati da [!DNL Microsoft Advertising IDs] per indirizzare gli utenti tramite display advertising attraverso [!DNL Microsoft Advertising] canali.
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Microsoft Bing] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni [identità](/help/identity-service/namespaces.md).
 
 | Identità di destinazione | Descrizione |
 |---|---|
-| DOMESTICA | Microsoft Advertising ID |
+| MAID | Microsoft Advertising ID |
 
 {style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**[!DNL Segment Export]** : stai esportando tutti i membri di un segmento (pubblico) in [!DNL Microsoft Bing] destinazione.
+**[!DNL Segment Export]** - stai esportando tutti i membri di un segmento (pubblico) nel [!DNL Microsoft Bing] destinazione.
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) in [!DNL Microsoft Bing] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) nel [!DNL Microsoft Bing] destinazione. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -49,51 +49,51 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se desideri creare la prima destinazione con [!DNL Microsoft Bing] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Microsoft Bing] le integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+>Se desideri creare la tua prima destinazione con [!DNL Microsoft Bing] e non hanno attivato il [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in passato (con Adobe Audience Manager o altre applicazioni), contatta la Consulenza Adobe o l’Assistenza clienti per abilitare la sincronizzazione degli ID. Se hai già configurato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID impostate riportano su Platform.
 
 Durante la configurazione della destinazione, devi fornire le seguenti informazioni:
 
-* [!UICONTROL ID account]: questo è il tuo [!DNL Bing Ads CID], in formato numero intero.
+* [!UICONTROL ID account]: questo è il tuo [!DNL Bing Ads CID], in formato intero.
 
-## Connetti alla destinazione {#connect}
+## Collegati alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Parametri di connessione {#parameters}
 
-Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configurazione](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
-* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: il tuo [!DNL Bing Ads Customer ID] (CID) Il tuo CID è un numero intero, trovato nell&#39;URL quando accedi a [!DNL Microsoft Advertising].
+* **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ID account]**: Le [!DNL Bing Ads Customer ID] (CID). Il tuo CID è un numero intero, che si trova nell&#39;URL al momento dell&#39;accesso [!DNL Microsoft Advertising].
 
-### Abilita avvisi {#enable-alerts}
+### Abilitare gli avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID mappatura"
->abstract="Immetti l’ID numerico del segmento Bing al quale vuoi mappare il segmento selezionato. Se il valore specificato [!UICONTROL ID mappatura] non corrisponde a un ID segmento nella destinazione Bing, non visualizzerai i dati del pubblico previsto nel tuo account Bing."
+>abstract="Immetti l’ID del segmento Bing numerico a cui desideri mappare il segmento selezionato. Se il [!UICONTROL ID mappatura] non corrisponde a un ID segmento nella destinazione Bing, i dati del pubblico previsti non verranno visualizzati nel tuo account Bing."
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Vedi [Attivare i dati del pubblico nelle destinazioni di esportazione dei segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
-In [Pianificazione del segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , devi mappare manualmente il nome del segmento nel [!UICONTROL ID mappatura] campo. In questo modo i metadati del segmento vengono trasmessi correttamente a [!DNL Bing].
+In [Pianificazione del segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) devi mappare manualmente il nome del segmento nel [!UICONTROL ID mappatura] campo . In questo modo i metadati del segmento vengono correttamente trasmessi a [!DNL Bing].
 
-![Immagine dell’interfaccia utente che mostra la schermata di pianificazione dei segmenti con un esempio di come mappare il nome del segmento all’ID di mappatura Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Immagine dell’interfaccia utente che mostra la schermata di pianificazione del segmento con un esempio di come mappare il nome del segmento sull’ID di mappatura Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Dati esportati {#exported-data}
 
-Per verificare se i dati sono stati esportati correttamente in [!DNL Microsoft Bing] destinazione, controlla il tuo [!DNL Microsoft Bing Ads] account. Se l&#39;attivazione ha esito positivo, i tipi di pubblico vengono popolati nel tuo account.
+Per verificare se i dati sono stati esportati correttamente in [!DNL Microsoft Bing] destinazione, controlla il tuo [!DNL Microsoft Bing Ads] conto. Se l&#39;attivazione ha avuto successo, i tipi di pubblico vengono compilati nel tuo account.
