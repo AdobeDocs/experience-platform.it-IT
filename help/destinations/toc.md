@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,14 @@ ht-degree: 6%
    * [Comportamento dell’esportazione del profilo per diversi tipi di destinazione](./how-destinations-work/profile-export-behavior.md)
    * [Gestione delle identità nel flusso di lavoro di attivazione delle destinazioni](./how-destinations-work/identity-handling.md)
 * Esercitazioni API {#api}
+   * [Guida alla migrazione API per le destinazioni di archiviazione cloud](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti all’archiviazione cloud batch e alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/connect-activate-batch-destinations.md)
    * [(Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
    * [Aggiornare i flussi di dati di destinazione](./api/update-destination-dataflows.md)
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
+   * [(Beta) Attiva i dati nelle destinazioni basate su file utilizzando l’API del servizio di flusso](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta) Esportare i set di dati](/help/destinations/api/export-datasets.md)
 * Guide dell&#39;interfaccia {#ui}
    * [Area di lavoro Destinazioni](./ui/destinations-workspace.md)
