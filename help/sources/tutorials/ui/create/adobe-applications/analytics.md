@@ -5,9 +5,9 @@ title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2390'
 ht-degree: 2%
 
 ---
@@ -159,7 +159,7 @@ La seguente documentazione fornisce ulteriori risorse sulla preparazione dei dat
 * [Funzioni di mappatura della preparazione dei dati](../../../../../data-prep/functions.md)
 * [Aggiungi campi calcolati](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtro per [!DNL Profile Service] (Beta) {#filtering-for-profile}
+### Filtro per profilo cliente in tempo reale (Beta) {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -170,7 +170,7 @@ La seguente documentazione fornisce ulteriori risorse sulla preparazione dei dat
 >
 >Supporto per il filtro [!DNL Analytics] i dati sono attualmente in versione beta e non sono disponibili per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Una volta completate le mappature per [!DNL Analytics] dati della suite di rapporti, puoi applicare regole e condizioni di filtro per includere o escludere in modo selettivo i dati dall’acquisizione al [!DNL Profile Service]. Il supporto per il filtro è disponibile solo per [!DNL Analytics] i dati e i dati vengono filtrati solo prima dell&#39;immissione [!DNL Profile.] Tutti i dati vengono acquisiti nel lago dati.
+Una volta completate le mappature per [!DNL Analytics] dati della suite di rapporti, puoi applicare regole e condizioni di filtro per includere o escludere in modo selettivo i dati dall’acquisizione al Profilo del cliente in tempo reale. Il supporto per il filtro è disponibile solo per [!DNL Analytics] i dati e i dati vengono filtrati solo prima dell&#39;immissione [!DNL Profile.] Tutti i dati vengono acquisiti nel lago dati.
 
 #### Filtro a livello di riga
 
