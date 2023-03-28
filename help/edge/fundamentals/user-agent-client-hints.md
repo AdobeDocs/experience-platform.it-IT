@@ -1,26 +1,26 @@
 ---
-title: User-Agent Client Hints
-description: Scopri come funzionano gli User-Agent Client Hints in Web SDK
-keywords: user-agent;client hints; string; user-agent string; bassa entropia; alta entropia
+title: Suggerimenti client utente-agente
+description: Scopri come funzionano i suggerimenti client User-Agent nell’SDK per web. I suggerimenti client consentono ai proprietari del sito web di accedere a gran parte delle stesse informazioni disponibili nella stringa Utente-Agente, ma in un modo più rispettoso della privacy.
+keywords: user-agent;suggerimenti client; stringa; stringa agente utente; entropia bassa; entropia elevata
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
+source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1155'
 ht-degree: 6%
 
 ---
 
-# User-Agent Client Hints
+# Suggerimenti client utente-agente
 
 ## Panoramica {#overview}
 
-Ogni volta che un browser web invia una richiesta a un server web, l’intestazione della richiesta include informazioni sul browser e sull’ambiente in cui viene eseguito il browser. Tutti questi dati sono aggregati in una stringa, denominata [!DNL User-Agent] stringa.
+Ogni volta che un browser Web effettua una richiesta a un server web, l’intestazione della richiesta include informazioni sul browser e sull’ambiente in cui il browser è in esecuzione. Tutti questi dati vengono aggregati in una stringa, denominata [!DNL User-Agent] stringa.
 
-Di seguito è riportato un esempio di [!DNL User-Agent] stringa simile a una richiesta proveniente da un browser Chrome in esecuzione su un [!DNL Mac OS] dispositivo.
+Ecco un esempio di un [!DNL User-Agent] la stringa è simile a una richiesta proveniente da un browser Chrome in esecuzione su un [!DNL Mac OS] dispositivo.
 
 >[!NOTE]
 >
->Nel corso degli anni, la quantità di informazioni sul browser e sul dispositivo incluse [!DNL User-Agent] la stringa è cresciuta e modificata più volte. L’esempio seguente mostra una selezione dei più comuni [!DNL User-Agent] informazioni.
+>Nel corso degli anni, la quantità di informazioni sul browser e sul dispositivo incluse nella [!DNL User-Agent] la stringa è cresciuta e modificata più volte. L’esempio seguente mostra una selezione dei più comuni [!DNL User-Agent] informazioni.
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
@@ -35,38 +35,38 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Versione del motore di layout | 537.36 |
 | Sistema operativo | Mac OS X |
 | Versione del sistema operativo | 10.15.7 |
-| Dispositivo | Mac OS X 10_15_7 |
+| Dispositivo | Intel Mac OS X 10_15_7 |
 
 ## Casi d’uso {#use-cases}
 
-[!DNL User-Agent] Le stringhe sono state a lungo utilizzate per fornire ai team di marketing e sviluppo informazioni importanti sul modo in cui i browser, i sistemi operativi e i dispositivi visualizzano i contenuti del sito e sul modo in cui gli utenti interagiscono con i siti web.
+[!DNL User-Agent] Le stringhe sono state a lungo utilizzate per fornire ai team di marketing e sviluppo informazioni importanti sul modo in cui i browser, i sistemi operativi e i dispositivi visualizzano il contenuto del sito, nonché sul modo in cui gli utenti interagiscono con i siti web.
 
-[!DNL User-Agent] Le stringhe vengono inoltre utilizzate per bloccare lo spam e filtrare i bot che esaminano i siti per diversi scopi aggiuntivi.
+[!DNL User-Agent] Le stringhe vengono inoltre utilizzate per bloccare lo spam e filtrare i bot che eseguono ricerche per indicizzazione dei siti per diversi scopi aggiuntivi.
 
 ## [!DNL User-Agent] stringhe in Adobe Experience Cloud {#user-agent-in-adobe}
 
-Le soluzioni Adobe Experience Cloud utilizzano [!DNL User-Agent] in vari modi.
+Le soluzioni Adobe Experience Cloud utilizzano [!DNL User-Agent] stringhe in vari modi.
 
-* Adobe Analytics utilizza [!DNL User-Agent] stringa per aggiungere e derivare informazioni aggiuntive relative a sistemi operativi, browser e dispositivi utilizzati per visitare un sito Web.
-* Adobe Audience Manager e Adobe Target qualificano gli utenti finali per le campagne di segmentazione e personalizzazione, in base alle informazioni fornite dal [!DNL User-Agent] stringa.
+* Adobe Analytics utilizza [!DNL User-Agent] stringa per potenziare e derivare informazioni aggiuntive relative a sistemi operativi, browser e dispositivi utilizzati per visitare un sito web.
+* Adobe Audience Manager e Adobe Target qualificano gli utenti finali per le campagne di segmentazione e personalizzazione, in base alle informazioni fornite dalla [!DNL User-Agent] stringa.
 
-## Introduzione agli User-Agent Client Hints {#ua-ch}
+## Introduzione agli hint client User-Agent {#ua-ch}
 
-Negli ultimi anni, proprietari di siti e fornitori di marketing hanno utilizzato [!DNL User-Agent] insieme ad altre informazioni incluse nelle intestazioni della richiesta per creare impronte digitali. Queste impronte digitali possono essere utilizzate come mezzo per identificare gli utenti all&#39;insaputa di questi ultimi.
+Negli ultimi anni, i proprietari dei siti e i venditori di marketing hanno utilizzato [!DNL User-Agent] stringhe insieme ad altre informazioni incluse nelle intestazioni di richiesta per creare impronte digitali. Queste impronte digitali possono essere utilizzate come mezzo per identificare gli utenti senza che ne siano a conoscenza.
 
-Nonostante l&#39;importante scopo che [!DNL User-Agent] le stringhe vengono utilizzate dai proprietari dei siti; gli sviluppatori dei browser hanno deciso di modificare le modalità [!DNL User-Agent] Le stringhe funzionano per limitare potenziali problemi di privacy per gli utenti finali.
+Nonostante l&#39;importante scopo che [!DNL User-Agent] le stringhe servono ai proprietari del sito, gli sviluppatori del browser hanno deciso di modificare il modo in cui [!DNL User-Agent] Le stringhe funzionano per limitare potenziali problemi di privacy per gli utenti finali.
 
-La soluzione che hanno sviluppato si chiama [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ancora ai siti web di raccogliere le informazioni necessarie su browser, sistema operativo e dispositivo, fornendo al tempo stesso una maggiore protezione contro i metodi di tracciamento nascosti, come la impronta digitale.
+La soluzione che hanno sviluppato si chiama [Suggerimenti client utente-agente](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). I suggerimenti dei clienti consentono ancora ai siti web di raccogliere le informazioni necessarie sul browser, il sistema operativo e il dispositivo, fornendo al contempo una maggiore protezione contro i metodi di tracciamento nascosti, come la impronte digitali.
 
-Gli hint client consentono ai proprietari di siti web di accedere a gran parte delle stesse informazioni disponibili in [!DNL User-Agent] stringa, ma in modo più rispettoso della privacy.
+I suggerimenti client consentono ai proprietari del sito web di accedere a molte delle stesse informazioni disponibili nel [!DNL User-Agent] Stringa, ma in un modo più rispettoso della privacy.
 
-Quando i browser moderni inviano un utente a un server web, l’intero [!DNL User-Agent] stringa viene inviata a ogni richiesta, indipendentemente dal fatto che sia necessaria. Gli hint client, invece, impongono un modello in cui il server deve chiedere al browser le informazioni aggiuntive che desidera conoscere sul client. Dopo aver ricevuto questa richiesta, il browser può applicare i propri criteri o la propria configurazione utente per determinare quali dati vengono restituiti. Invece di esporre l&#39;intero [!DNL User-Agent] per impostazione predefinita, in tutte le richieste l’accesso viene ora gestito in modo esplicito e verificabile.
+Quando i browser moderni inviano un utente a un server web, l&#39;intero [!DNL User-Agent] viene inviata a ogni richiesta, indipendentemente dal fatto che sia obbligatoria. I suggerimenti client, invece, impongono un modello in cui il server deve chiedere al browser le informazioni aggiuntive che desidera sapere sul client. Dopo aver ricevuto questa richiesta, il browser può applicare i propri criteri o la propria configurazione utente per determinare quali dati vengono restituiti. Invece di esporre l&#39;intero [!DNL User-Agent] Per impostazione predefinita, in tutte le richieste, l&#39;accesso viene ora gestito in modo esplicito e verificabile.
 
 ## Supporto browser {#browser-support}
 
-[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) sono stati introdotti con [!DNL Google Chrome ]versione 89.
+[Suggerimenti client utente-agente](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) sono stati introdotti con [!DNL Google Chrome ]versione 89.
 
-Altri browser basati su Chromium supportano l’API dei Client Hints, ad esempio:
+I browser aggiuntivi basati su Chromium supportano l’API dei suggerimenti client, ad esempio:
 
 * [!DNL Microsoft Edge]
 * [!DNL Opera]
@@ -77,28 +77,28 @@ Altri browser basati su Chromium supportano l’API dei Client Hints, ad esempio
 
 ## Categorie {#categories}
 
-Esistono due categorie di User-Agent Client Hints:
+Esistono due categorie di suggerimenti client utente-agente:
 
-* [Hint client a bassa entropia](#low-entropy)
-* [Hint client ad alta entropia](#high-entropy)
+* [Suggerimenti client entropici ridotti](#low-entropy)
+* [Suggerimenti del client entropico elevati](#high-entropy)
 
-### Hint client a bassa entropia {#low-entropy}
+### Suggerimenti client entropici ridotti {#low-entropy}
 
-Gli hint client a bassa entropia includono informazioni di base che non possono essere utilizzate per gli utenti di impronte digitali. Informazioni quali il marchio del browser, la piattaforma e se la richiesta proviene da un dispositivo mobile.
+I suggerimenti per i client entropici bassi includono informazioni di base che non possono essere utilizzate per gli utenti di impronte digitali. Informazioni quali il marchio del browser, la piattaforma e se la richiesta proviene da un dispositivo mobile.
 
-Gli hint client a bassa entropia sono abilitati per impostazione predefinita in Web SDK e vengono trasmessi a ogni richiesta.
+I suggerimenti per client entropici bassi sono abilitati per impostazione predefinita in SDK per web e vengono trasmessi a ogni richiesta.
 
-| Intestazione HTTP | JavaScript | Incluso in User-Agent per impostazione predefinita | Incluso negli hint client per impostazione predefinita |
+| Intestazione HTTP | JavaScript | Incluso in User-Agent per impostazione predefinita | Incluso nei suggerimenti client per impostazione predefinita |
 |---|---|---|---|
 | `Sec-CH-UA` | `brands` | Sì | Sì |
 | `Sec-CH-UA-Platform` | `platform` | Sì | Sì |
 | `Sec-CH-UA-Mobile` | `mobile` | Sì | Sì |
 
-### Hint client ad alta entropia {#high-entropy}
+### Suggerimenti del client entropico elevati {#high-entropy}
 
-Gli hint client ad alta entropia sono informazioni più dettagliate sul dispositivo client, come la versione della piattaforma, l&#39;architettura, il modello, il bit (piattaforme a 64 bit o a 32 bit) o la versione completa del sistema operativo. Queste informazioni potrebbero essere potenzialmente utilizzate per il rilevamento delle impronte digitali.
+Gli hint client ad alta entropia sono informazioni più dettagliate sul dispositivo client, come la versione della piattaforma, l&#39;architettura, il modello, il bit (piattaforme a 64 bit o a 32 bit) o la versione completa del sistema operativo. Tali informazioni potrebbero essere potenzialmente utilizzate per la creazione di impronte digitali.
 
-| Intestazione HTTP | JavaScript | Incluso in User-Agent per impostazione predefinita | Incluso negli Client Hints per impostazione predefinita |
+| Intestazione HTTP | JavaScript | Incluso in User-Agent per impostazione predefinita | Incluso negli hint client per impostazione predefinita |
 |---|---|---|---|
 | `Sec-CH-UA-Platform-Version` | `platformVersion` | Sì | No |
 | `Sec-CH-UA-Arc` | `architecture` | Sì | No |
@@ -106,35 +106,35 @@ Gli hint client ad alta entropia sono informazioni più dettagliate sul disposit
 | `Sec-CH-UA-Bitness` | `Bitness` | Sì | No |
 | `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Sì | No |
 
-Gli hint client ad alta entropia sono disabilitati per impostazione predefinita in Web SDK. Per abilitarli, devi configurare manualmente Web SDK per richiedere hint client ad alta entropia.
+Gli hint client entropy elevati sono disabilitati per impostazione predefinita in SDK per web. Per abilitarli devi configurare manualmente l’SDK per web per richiedere hint client ad alta entropia.
 
-## Gli hint client ad alta entropia influiscono sulle soluzioni Experience Cloud {#impact-in-experience-cloud-solutions}
+## L&#39;impatto dei suggerimenti sul client entropici elevati sulle soluzioni Experience Cloud {#impact-in-experience-cloud-solutions}
 
-Alcune soluzioni Adobe Experience Cloud si basano sulle informazioni incluse negli hint client ad alta entropia durante la generazione dei rapporti.
+Alcune soluzioni Adobe Experience Cloud si basano sulle informazioni incluse in suggerimenti client entropici elevati durante la generazione dei rapporti.
 
-Se non abiliti gli hint client ad alta entropia nell’ambiente, i rapporti e le caratteristiche di Adobe Analytics e Audience Manager descritti di seguito non funzioneranno.
+Se nell’ambiente non si abilitano hint client entropici elevati, i rapporti e le caratteristiche di Adobe Analytics e Audience Manager descritti di seguito non funzioneranno.
 
-### Adobe Analytics segnala che si basa su hint client ad alta entropia {#analytics}
+### Rapporti di Adobe Analytics basati su suggerimenti client entropici elevati {#analytics}
 
-Il [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) la dimensione include la versione del sistema operativo memorizzata come hint client ad alta entropia. Se gli hint client ad alta entropia non sono abilitati, la versione del sistema operativo potrebbe non essere accurata per gli hit raccolti dai browser Chromium.
+La [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) include la versione del sistema operativo memorizzata come hint client entropy elevato. Se i suggerimenti per i client entropici elevati non sono abilitati, la versione del sistema operativo potrebbe essere imprecisa per i risultati raccolti dai browser Chromium.
 
-### caratteristiche Audienci Manager basate su hint client ad alta entropia {#aam}
+### Caratteristiche di Audience Manager basate su suggerimenti client entropici elevati {#aam}
 
-[!DNL Google] ha aggiornato il [!DNL Chrome] funzionalità del browser per ridurre al minimo le informazioni raccolte tramite `User-Agent` intestazione. Di conseguenza, Audience Manager i clienti che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) non riceverà più informazioni affidabili sulle caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=it).
+[!DNL Google] ha aggiornato il [!DNL Chrome] funzionalità del browser per ridurre al minimo le informazioni raccolte tramite il `User-Agent` intestazione. Di conseguenza, i clienti di Audience Manager che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) non riceverà più informazioni affidabili per le caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=it).
 
-Audience Manager i clienti che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=it) invece di [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en), e abilita [Client Hints ad alta entropia](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
+Ad Audience Manager, i clienti che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=it) anziché [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)e abilita [Hint client ad alta entropia](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
 
-## Abilitazione degli hint client ad alta entropia {#enabling-high-entropy-client-hints}
+## Abilitazione di hint client entropy elevati {#enabling-high-entropy-client-hints}
 
-Per abilitare gli hint client ad alta entropia nella distribuzione Web SDK, devi includere gli hint aggiuntivi `highEntropyUserAgentHints` come descritto nella sezione [documentazione di configurazione](configuring-the-sdk.md#context), insieme alla configurazione esistente.
+Per abilitare hint client entropy elevati nella distribuzione SDK per web, devi includere `highEntropyUserAgentHints` opzione di contesto, come descritto in [documentazione di configurazione](configuring-the-sdk.md#context), insieme alla configurazione esistente.
 
-Ad esempio, per recuperare gli hint client ad alta entropia dalle proprietà web, la configurazione sarà simile alla seguente:
+Ad esempio, per recuperare suggerimenti client entropici elevati dalle proprietà web, la configurazione sarà simile alla seguente:
 
 `context: ["highEntropyUserAgentHints", "web"]`
 
 ## Esempio {#example}
 
-Gli hint client contenuti nelle intestazioni della prima richiesta effettuata dal browser a un server web conterranno il marchio del browser, la versione principale del browser e un indicatore che indica se il client è un dispositivo mobile. Ogni elemento di dati avrà un proprio valore di intestazione anziché essere raggruppato in un singolo [!DNL User-Agent] come mostrato di seguito:
+I suggerimenti client contenuti nelle intestazioni della prima richiesta effettuata dal browser a un server web conterranno il marchio del browser, la versione principale del browser e un indicatore che indichi se il client è un dispositivo mobile. Ogni elemento dati avrà un proprio valore di intestazione anziché essere raggruppato in un singolo [!DNL User-Agent] come illustrato di seguito:
 
 ```shell
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99"
@@ -144,17 +144,17 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS
 ```
 
-Equivalente [!DNL User-Agent] l’intestazione per lo stesso browser sarà simile alla seguente:
+Equivalente [!DNL User-Agent] intestazione per lo stesso browser, simile a questa:
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
 ```
 
-Sebbene le informazioni siano simili, la prima richiesta al server contiene suggerimenti client. Questi includono solo un sottoinsieme di ciò che è disponibile in [!DNL User-Agent] stringa. Mancano nella richiesta l’architettura del sistema operativo, la versione completa del sistema operativo, il nome del motore di layout, la versione del motore di layout e la versione completa del browser.
+Sebbene le informazioni siano simili, la prima richiesta al server contiene suggerimenti client. Includono solo un sottoinsieme di ciò che è disponibile nel [!DNL User-Agent] stringa. Mancano nella richiesta l&#39;architettura del sistema operativo, la versione completa del sistema operativo, il nome del motore di layout, la versione del motore di layout e la versione completa del browser.
 
-Tuttavia, su richieste successive, [!DNL Client Hints API] consente ai server web di richiedere ulteriori dettagli sul dispositivo. Quando questi valori vengono richiesti, a seconda della policy del browser o delle impostazioni utente, la risposta del browser può includere tali informazioni.
+Tuttavia, nelle richieste successive, il [!DNL Client Hints API] consente ai server web di richiedere ulteriori dettagli sul dispositivo. Quando questi valori vengono richiesti, a seconda dei criteri del browser o delle impostazioni utente, la risposta del browser potrebbe includere tali informazioni.
 
-Di seguito è riportato un esempio dell’oggetto JSON restituito da [!DNL Client Hints API] quando sono richiesti valori entropici elevati:
+Di seguito è riportato un esempio dell’oggetto JSON restituito dal [!DNL Client Hints API] quando sono richiesti valori entropici elevati:
 
 
 ```json
