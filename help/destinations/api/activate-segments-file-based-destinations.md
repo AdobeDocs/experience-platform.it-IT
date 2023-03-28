@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Attiva i segmenti nelle destinazioni basate su file utilizzando l’API del servizio di flusso
 description: Scopri come utilizzare l’API del servizio di flusso per esportare file con profili qualificati nelle destinazioni di archiviazione cloud.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3645,6 +3645,8 @@ L’ID nella risposta rappresenta l’identificatore univoco dello schema di inp
 
 Successivamente, è necessario impostare lo schema di output per l&#39;esportazione. Innanzitutto, devi trovare ed esaminare lo schema del partner esistente.
 
+>[!BEGINSHADEBOX]
+
 **Richiesta**
 
 +++Richiesta per ottenere lo schema partner per lo schema di output
@@ -3957,7 +3959,7 @@ Successivamente, devi creare uno schema di output. Copia la risposta JSON preced
 
 **Richiesta**
 
-+++ Creare uno schema di output - Richiedi
++++Crea uno schema di output - Richiedi
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Risposta**
 
-+++ Creare lo schema di output - Risposta
++++Crea schema di output - Risposta
 
 ```json
 {
@@ -4287,7 +4289,7 @@ L’ID nella risposta rappresenta l’identificatore univoco dello schema di inp
 
 >[!ENDSHADEBOX]
 
-### Creare set di mappatura
+### Crea set di mappatura {#create-mapping-set}
 
 Quindi, utilizza [API di preparazione dati](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) per creare il set di mappatura utilizzando l’ID dello schema di input, l’ID dello schema di output e le mappature dei campi desiderate.
 
@@ -4295,7 +4297,7 @@ Quindi, utilizza [API di preparazione dati](https://developer.adobe.com/experien
 
 **Richiesta**
 
-+++ Crea set di mappatura - Richiesta
++++Crea set di mappatura - Richiesta
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ Quindi, utilizza [API di preparazione dati](https://developer.adobe.com/experien
 >* Tieni presente che anche se la configurazione di esempio riportata di seguito include `Email` e `Phone_E.164`, puoi esportare un solo attributo di identità per flusso di dati.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
