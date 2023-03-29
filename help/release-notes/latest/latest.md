@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di marzo 2023 per Adobe Experience Platform.
-source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
+source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1057'
 ht-degree: 4%
 
 ---
@@ -42,6 +42,7 @@ Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati
 
 | Funzione | Descrizione |
 | --- | --- |
+| Disponibilità generale del filtro per i dati Adobe Analytics | È ora possibile utilizzare le funzionalità di preparazione dei dati per applicare regole e condizioni per filtrare i dati di Analytics prima di acquisirli in Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [filtraggio dei dati di Analytics per l’acquisizione del profilo](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
 | Nuove funzioni per la codifica e la decodifica delle stringhe URL | <ul><li>La `get_url_encoded` prende un URL come input e sostituisce o codifica caratteri speciali con caratteri ASCII.</li><li>La `get_url_decoded` prende un URL come input e decodifica i caratteri ASCII in caratteri speciali.</li></ul> Per ulteriori informazioni, consulta la sezione [Guida alle funzioni di preparazione dei dati](../../data-prep/functions.md). Per un elenco completo dei caratteri riservati e dei corrispondenti caratteri codificati, consulta la guida in [caratteri speciali](../../data-prep/functions.md#special-characters). |
 
 Per ulteriori informazioni su Data Prep, consulta la sezione [Panoramica sulla preparazione dei dati](../../data-prep/home.md).
