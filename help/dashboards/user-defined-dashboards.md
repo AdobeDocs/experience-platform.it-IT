@@ -2,9 +2,9 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,17 @@ Le dashboard di Adobe Experience Platform consentono di accelerare le informazio
 
 To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
-## Creare dashboard personalizzati
+## Creare un dashboard personalizzato
 
 Per creare un dashboard personalizzato, prima di tutto, accedi all’inventario del dashboard. Seleziona **[!UICONTROL Dashboard]** dalla navigazione a sinistra dell’interfaccia utente di Platform, seguita da **[!UICONTROL Crea dashboard]**.
 
 ![Inventario del dashboard con dashboard nella navigazione a sinistra e &quot;Crea dashboard&quot; evidenziato.](./images/user-defined-dashboards/create-dashboard.png)
 
 Prima di aggiungere una dashboard personalizzata, l’inventario delle dashboard è vuoto e visualizza un messaggio &quot;Nessun dashboard trovato&quot;. messaggio. Una volta create, tutte le dashboard definite dall’utente sono elencate nell’inventario del dashboard.
+
+>[!NOTE]
+>
+>Per modificare un dashboard esistente, seleziona il nome del dashboard dall’elenco Inventario seguito dall’icona a forma di matita (![Icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png))
 
 La [!UICONTROL Crea dashboard] viene visualizzata la finestra di dialogo . Inserisci un nome descrittivo e descrittivo per la raccolta di widget che intendi creare e seleziona **[!UICONTROL Salva]**.
 
@@ -54,13 +58,15 @@ Viene visualizzata l&#39;area di lavoro del compositore widget. Quindi, selezion
 
 ![Area di lavoro del compositore widget.](./images/user-defined-dashboards/widget-composer.png)
 
-La [!UICONTROL Seleziona dati] viene visualizzata la finestra di dialogo . Selezionare un modello dati dalla colonna a sinistra per visualizzare un elenco di anteprima di tutte le tabelle disponibili.
+#### Seleziona il modello dati {#select-data-model}
 
->[!NOTE]
+La [!UICONTROL Seleziona il modello dati] viene visualizzata la finestra di dialogo . Selezionare un modello dati dalla colonna a sinistra per visualizzare un elenco di anteprima di tutte le tabelle disponibili. Il modello dati preconfigurato per Real-time Customer Data Platform è denominato [!UICONTROL CDPInsights].
+
+>[!TIP]
 >
->Le dashboard definite dall&#39;utente supportano attualmente solo il modello dati di profilo. Saranno supportate più opzioni.
+>Seleziona l’icona delle informazioni (![Icona di informazioni.](./images/user-defined-dashboards/info-icon.png)) per visualizzare il nome completo del modello dati, se la visualizzazione nella barra dei dati è troppo lunga.
 
-![Finestra di dialogo Seleziona dati .](./images/user-defined-dashboards/select-data-dialog.png)
+![Finestra di dialogo Seleziona dati .](./images/user-defined-dashboards/select-data-model-dialog.png)
 
 L’elenco di anteprima fornisce dettagli sulle tabelle contenute nel modello dati. La tabella seguente fornisce una descrizione dei campi colonna e dei relativi valori potenziali.
 
@@ -68,49 +74,61 @@ L’elenco di anteprima fornisce dettagli sulle tabelle contenute nel modello da
 |---|---|
 | [!UICONTROL Titolo] | Nome della tabella. |
 | [!UICONTROL Tipo di tabella] | Tipo di tabella. I tipi potenziali includono: `fact`, `dimension`e `none`. |
+| [!UICONTROL Record] | Numero di record associati alla tabella selezionata. |
 | [!UICONTROL Ricerche] | Numero di tabelle unite alla tabella selezionata. |
+| [!UICONTROL Attributi] | Numero di attributi per la tabella selezionata. |
 
 Seleziona **[!UICONTROL Successivo]** per confermare la scelta del modello dati. Nella vista successiva viene visualizzato un elenco delle tabelle disponibili nella barra a sinistra. Selezionare una tabella per visualizzare un raggruppamento completo dei dati contenuti nella tabella selezionata.
 
+### Widget Popolamento {#populate-widget}
+
 La [!UICONTROL Anteprima] il pannello contiene schede per [!UICONTROL Record di esempio] e [!UICONTROL Attributi]. La [!UICONTROL Record di esempio] In una vista tabulata, la scheda fornisce un sottoinsieme dei record della tabella selezionata. La [!UICONTROL Attributi] scheda fornisce il nome dell’attributo, il tipo di dati e la tabella di origine per ogni attributo associato alla tabella selezionata.
 
-Seleziona una tabella dall’elenco disponibile nella barra a sinistra per fornire i dati del widget e seleziona **[!UICONTROL Seleziona]** per tornare al compositore widget.
+Seleziona una tabella dall’elenco disponibile nella barra a sinistra per fornire i dati del widget, quindi seleziona **[!UICONTROL Seleziona]** per tornare al compositore widget.
 
 ![Finestra di dialogo Seleziona dati con selezione evidenziata.](./images/user-defined-dashboards/select-a-table.png)
 
 Il compositore di widget ora viene compilato con i dati della tabella selezionata.
 
-Il modello dati e la tabella attualmente selezionata vengono visualizzati nella parte superiore della barra a sinistra e gli attributi disponibili per la creazione del widget sono elencati nella colonna attributi.
+Il modello dati e la tabella attualmente selezionata vengono visualizzati nella parte superiore della barra a sinistra e gli attributi disponibili per creare il widget sono elencati nella sezione [!UICONTROL Attributi] colonna. Puoi usare la barra di ricerca per cercare gli attributi invece di scorrere l’elenco, oppure modificare il modello dati selezionato selezionando l’icona a forma di matita (![Icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png)) nella barra a sinistra.
 
 ![Un widget popolato con dati all&#39;interno del compositore di widget.](./images/user-defined-dashboards/populated-widget-composer.png)
 
+#### Aggiungere e filtrare gli attributi {#add-and-filter-attributes}
+
+Seleziona l’icona Aggiungi (![Icona Aggiungi.](./images/user-defined-dashboards/add-icon.png)) accanto al nome di un attributo per aggiungere un attributo al widget. Il menu a discesa visualizzato consente di aggiungere un attributo come asse X, asse Y, colore o filtro per il widget. La [!UICONTROL Colore] L’attributo ti consente di differenziare i risultati dei segni degli assi X e Y in base al colore. Lo fa suddividendo i risultati in diversi colori in base alla loro composizione di un terzo attributo.
+
 >[!TIP]
 >
->Per modificare il modello dati selezionato, seleziona l’icona a forma di matita (![Icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png)) nella barra a sinistra.
+>Per capovolgere la disposizione degli assi X e Y, selezionate l&#39;icona freccia su e freccia giù (![Icona freccia Su e freccia Giù.](./images/user-defined-dashboards/switch-axis-icon.png)) per cambiare la loro disposizione.
 
-Seleziona l’icona Aggiungi (./images/user-defined-dashboards/add-icon.png) accanto al nome di un attributo per aggiungere un attributo all&#39;asse X o Y.
+![Il compositore di widget con il menu a discesa dell&#39;icona del componente aggiuntivo evidenziato.](./images/user-defined-dashboards/attributes-dropdown.png)
 
-![Il compositore di widget con il menu a discesa Aggiungi icona evidenziato per aggiungere attributi a un asse di widget.](./images/user-defined-dashboards/attributes-dropdown.png)
+Per modificare il tipo di grafico o grafico del widget, seleziona la [!UICONTROL Indicatori] e scegli tra le opzioni disponibili. Le opzioni disponibili sono barre, punti, zecche, linee o area. Una volta selezionata, viene generata una visualizzazione in anteprima delle impostazioni correnti del widget.
 
-Quindi, seleziona il tipo di grafico o grafico dal [!UICONTROL Indicatori] menu a discesa per generare una visualizzazione di anteprima delle impostazioni correnti del widget. In [!UICONTROL Proprietà] nella barra a destra dello schermo, immetti un nome per il widget nel [!UICONTROL Titolo del widget] campo di testo.
+![Il compositore di widget con il menu a discesa Marchi evidenziato.](./images/user-defined-dashboards/marks-dropdown.png)
 
-![Il compositore di widget con il campo di testo del titolo del widget e del menu a discesa Marchi evidenziati.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
+Aggiungendo un attributo come filtro, puoi selezionare i valori da includere o escludere dal widget. Dopo aver aggiunto un filtro dall’elenco degli attributi, il [!UICONTROL Filtro] viene visualizzata una finestra di dialogo in cui è possibile selezionare o deselezionare i valori utilizzando la relativa casella di controllo.
 
-Quando sei soddisfatto del widget seleziona **[!UICONTROL Salva]**. Un&#39;icona di spunta sotto il nome del widget indica che il widget è stato salvato.
+![Finestra di dialogo del filtro per filtrare i valori dal widget.](./images/user-defined-dashboards/filter-dialog.png)
 
->[!NOTE]
->
->Il salvataggio nel compositore widget consente di salvare il widget localmente nel dashboard. Se esci dall’editor del dashboard senza salvare il dashboard, il widget non verrà salvato nel dashboard.
+### Proprietà dei widget
+
+Seleziona l’icona delle proprietà (![Icona delle proprietà.](./images/user-defined-dashboards/properties-icon.png)) nella barra a destra per aprire il pannello proprietà. In [!UICONTROL Proprietà] , immetti un nome per il widget nel [!UICONTROL Titolo del widget] campo di testo.
+
+![Il pannello delle proprietà con l’icona delle proprietà e il campo del titolo del widget evidenziati.](./images/user-defined-dashboards/properties-panel.png)
+
+Dal pannello delle proprietà del widget, puoi modificare diversi aspetti del widget. Hai il controllo completo per modificare la posizione della legenda del widget. Per spostare la legenda, seleziona la [!UICONTROL Posizionamento della legenda] e scegli la posizione desiderata dall’elenco delle opzioni disponibili. È inoltre possibile rinominare l’etichetta associata alla legenda e l’asse X o Y immettendo un nuovo nome nel [!UICONTROL Titolo legenda] campo di testo, oppure [!UICONTROL Etichetta asse] campo di testo rispettivamente.
+
+#### Salva il widget {#save-widget}
+
+Il salvataggio nel compositore widget consente di salvare il widget localmente nel dashboard. Se desideri salvare il tuo lavoro e riprendere in un secondo momento, seleziona **[!UICONTROL Salva]**. Un&#39;icona di spunta sotto il nome del widget indica che il widget è stato salvato. In alternativa, quando sei soddisfatto del widget, seleziona **[!UICONTROL Salva e chiudi]** per rendere il widget disponibile a tutti gli altri utenti con accesso al dashboard. Seleziona **[!UICONTROL Annulla]** per abbandonare il lavoro e tornare al dashboard personalizzato.
 
 ![Conferma del salvataggio di un nuovo widget.](./images/user-defined-dashboards/save-confirmation.png)
 
-Seleziona **[!UICONTROL Annulla]** per tornare al dashboard personalizzato.
-
-![Il compositore di widget con un widget di esempio creato.](./images/user-defined-dashboards/composed-widget.png)
-
 >[!TIP]
 >
->Seleziona l’icona di impostazione accanto al nome del dashboard per visualizzare i dettagli relativi alla creazione. Potete modificare il nome del dashboard nella finestra di dialogo visualizzata.
+>Seleziona l’icona delle proprietà (![Icona delle proprietà.](./images/user-defined-dashboards/properties-icon.png)) accanto al nome del dashboard per visualizzare i dettagli relativi alla creazione. Potete modificare il nome del dashboard nella finestra di dialogo visualizzata.
 
 I widget possono essere riorganizzati e ridimensionati in questa area di lavoro. Seleziona **[!UICONTROL Salva]** per mantenere il nome del dashboard e il layout configurato.
 
