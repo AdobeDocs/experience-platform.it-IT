@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API per le metaconversioni
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
+source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
 workflow-type: tm+mt
-source-wordcount: '2261'
+source-wordcount: '2256'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Questa funzione installa e configura automaticamente sia l’API Meta Conversion
 
 Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 
->[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+>[!VIDEO](https://video.tv.adobe.com/v/3416939?quality=12&learn=on)
 
 ### Installazione della funzione di avvio rapido
 
