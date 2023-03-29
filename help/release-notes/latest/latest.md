@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di marzo 2023 per Adobe Experience Platform.
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '663'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Per ulteriori informazioni su Data Prep, consulta la sezione [Panoramica sulla p
 
 | Funzione | Descrizione |
 | --- | --- |
-| Metriche del profilo | Per ottenere una rappresentazione più accurata delle metriche di profilo, la suddivisione dei membri e le metriche di abbandono vengono combinate e ora vengono calcolate in un periodo di 24 ore. Ulteriori informazioni disponibili in [Guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md) |
+| Metriche del profilo | Per ottenere una rappresentazione più accurata delle metriche di profilo, la suddivisione dei membri e le metriche di abbandono vengono combinate e ora vengono calcolate in un periodo di 24 ore. Ulteriori informazioni sono disponibili nella sezione [Guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
