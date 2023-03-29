@@ -2,14 +2,27 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
+source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 5%
+source-wordcount: '679'
+ht-degree: 4%
 
 ---
 
 # Note sulla versione per tag e inoltro eventi
+
+## 29 marzo 2023
+
+**Flussi di lavoro rapidi (beta)**
+
+Accedi ai nuovi flussi di lavoro di avvio rapido in &quot;Guida introduttiva&quot; dalla schermata iniziale Raccolta dati. I seguenti flussi di lavoro sono ora disponibili per i clienti come versione beta pubblica.
+* **[API per le metaconversioni](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: I clienti di Event Forwarding possono raccogliere e inoltrare rapidamente i dati degli eventi, lato server a Meta per le conversioni di annunci in pochi semplici passaggi.
+* **[SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/)**: I clienti possono implementare rapidamente l’SDK di Mobile e convalidare gli eventi mobile di base in pochi semplici passaggi.
+
+Sono state rilasciate nuove estensioni:
+
+* **[!DNL Braze]estensione di inoltro eventi**: La [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’estensione di inoltro eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [!DNL Braze] API di tracciamento utente.
+* **[!DNL Mixpanel]estensione di inoltro eventi**: La [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’estensione ti consente di sfruttare l’inoltro eventi per acquisire informazioni sull’evento in Adobe Experience Platform Edge Network e di inviarle a Mixpanel utilizzando l’API Track Events.
 
 ## 25 gennaio 2023
 
