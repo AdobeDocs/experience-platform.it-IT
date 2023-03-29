@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Marzo 2023
 description: Note sulla versione di marzo 2023 per Adobe Experience Platform.
-source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
+source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 5%
+source-wordcount: '1065'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Raccolta dati](#data-collection)
 - [Preparazione dei dati](#data-prep)
+- [Destinazioni](#destinations)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
@@ -45,6 +46,41 @@ Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati
 | Nuove funzioni per la codifica e la decodifica delle stringhe URL | <ul><li>La `get_url_encoded` prende un URL come input e sostituisce o codifica caratteri speciali con caratteri ASCII.</li><li>La `get_url_decoded` prende un URL come input e decodifica i caratteri ASCII in caratteri speciali.</li></ul> Per ulteriori informazioni, consulta la sezione [Guida alle funzioni di preparazione dei dati](../../data-prep/functions.md). Per un elenco completo dei caratteri riservati e dei corrispondenti caratteri codificati, consulta la guida in [caratteri speciali](../../data-prep/functions.md#special-characters). |
 
 Per ulteriori informazioni su Data Prep, consulta la sezione [Panoramica sulla preparazione dei dati](../../data-prep/home.md).
+
+## Destinazioni {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per le campagne di marketing cross-channel, le campagne e-mail, la pubblicità mirata e molti altri casi d’uso.
+
+**Nuove destinazioni** {#new-destinations}
+
+| Destinazione | Descrizione |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] connessione GA](../../destinations/catalog/personalization/adobe-commerce.md) | La [!DNL Adobe Commerce] il connettore di destinazione (ora disponibile in genere) consente di selezionare uno o più tipi di pubblico Real-Time CDP da attivare nel [!DNL Adobe Commerce] per offrire un’esperienza personalizzata dinamica ai tuoi acquirenti. |
+| [[!DNL Snap Inc] connessione GA](../../destinations/catalog/advertising/snap-inc.md) | La [!DNL Snap Inc] il connettore di destinazione (ora generalmente disponibile) consente agli addetti al marketing di importare i segmenti utente creati in Experience Platform in [!DNL Snapchat Ads] e utilizzarli per eseguire il targeting dei loro annunci. |
+| [(API) Oracle di connessione Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilizzare la connessione basata su API per [!DNL Oracle Eloqua] pianificare ed eseguire campagne offrendo al tempo stesso un&#39;esperienza cliente personalizzata per i loro potenziali clienti in [!DNL Oracle Eloqua]. |
+| [(Beta) [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | La [!DNL Amazon Ads] l&#39;integrazione con Adobe Experience Platform fornisce un&#39;integrazione chiavi in mano a [!DNL Amazon Ads] i prodotti, compresi i [!DNL Amazon DSP (ADSP)]. Utilizzo della [!DNL Amazon Ads] in Adobe Experience Platform, gli utenti possono definire il pubblico dell’inserzionista per il targeting e l’attivazione sul [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] connection](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (precedentemente Bizible) offre agli esperti di marketing informazioni sulle attività di marketing più efficaci per incrementare le entrate e massimizzare il ritorno sull’investimento per la loro azienda. La destinazione consente il flusso di dati business-to-business (B2B) da Adobe Experience Platform a [!DNL Marketo Measure]. La scheda è disponibile solo per [!DNL Marketo Measure Ultimate] clienti. |
+| [Connessione TikTok](../../destinations/catalog/social/tiktok.md) | Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le tue campagne pubblicitarie. |
+| [Connessione Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilizza questa destinazione per creare e aggiornare le identità all’interno di un segmento come contatti all’interno di [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+
+| Funzionalità | Descrizione |
+| ----------- | ----------- |
+| Nuova autorizzazione di controllo accessi per le destinazioni: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | La nuova autorizzazione consente agli utenti di attivare i segmenti sulle destinazioni esistenti, senza visualizzare il [fase di mappatura](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Gli utenti possono aggiungere e rimuovere segmenti nei flussi di lavoro di attivazione, ma non possono aggiungere o rimuovere attributi o identità mappati. |
+
+{style="table-layout:auto"}
+
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
+
+Stiamo rilasciando una correzione di bug per la crittografia PGP/GPG nelle destinazioni basate su file per Real-time CDP. Con questa modifica, le destinazioni basate su file esistenti che utilizzano attualmente la crittografia genereranno un nome di file con un’estensione diversa da quella precedente.
+
+- Estensione corrente quando si utilizza la crittografia: `filename.csv`
+- Estensione futura quando utilizzi la crittografia: `filename.csv.gpg`
+
+Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
