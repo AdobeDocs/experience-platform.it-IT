@@ -2,9 +2,9 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1156'
 ht-degree: 28%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 28%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Monitorare le attività degli utenti in Platform"
->abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform sotto forma di registri di controllo. Questi registri formano un audit trail che registra <b>chi</b> eseguito <b>cosa</b> e <b>quando</b>. I registri di controllo possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p><h2>Istruzioni</h2><ul><li>Seleziona <b>Audit</b> nella navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: I registri di controllo vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se devi guardare indietro ai dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti della politica interna. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona funnel per visualizzare un elenco di controlli filtro per limitare i risultati. Vengono visualizzati solo gli ultimi 1000 record, indipendentemente dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di controllo, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di controllo</a> Experience League.</li></ul>"
+>abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform sotto forma di registri di controllo. Questi registri formano un audit trail che registra <b>chi</b> eseguito <b>cosa</b> e <b>quando</b>. I registri di controllo possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p>"
 
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare l’attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di controllo&quot;. Questi registri formano un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare efficacemente le politiche di gestione dei dati aziendali e i requisiti normativi.
 
@@ -72,10 +72,10 @@ Per visualizzare ed esportare i registri di controllo, è necessario disporre de
 
 ## Gestione dei registri di controllo nell’interfaccia utente {#managing-audit-logs-in-the-ui}
 
-[!CONTEXTUALHELP]
-id="platform_privacyConsole_audits_instructions"
-title="Istruzioni"
-abstract=""
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="Istruzioni"
+>abstract="<ul><li>Seleziona <b>Audit</b> nella navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: I registri di controllo vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se devi guardare indietro ai dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti della politica interna. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona funnel per visualizzare un elenco di controlli filtro per limitare i risultati. Vengono visualizzati solo gli ultimi 1000 record, indipendentemente dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di controllo, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di controllo</a> Experience League.</li></ul>"
 
 Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform all’interno di **[!UICONTROL Audit]** nell’interfaccia utente di Platform. L&#39;area di lavoro mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.
 

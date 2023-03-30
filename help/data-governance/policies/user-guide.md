@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 description: La governance dei dati di Adobe Experience Platform offre un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell'area di lavoro Criteri nell'interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1618'
 ht-degree: 7%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Descrizione"
->abstract=""
+>title="Integrare e applicare il consenso dei clienti nei dati del tuo profilo"
+>abstract="<h2>Descrizione</h2><p>Platform consente di integrare i dati di consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se questi dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
 
 Questo documento illustra come utilizzare il **[!UICONTROL Criteri]** nell’interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
 
@@ -92,7 +92,7 @@ La **[!UICONTROL Sfoglia]** viene visualizzata nuovamente la scheda , che ora el
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Istruzioni"
->abstract=""
+>abstract="<ul><li>Assicurati di acquisire i dati delle preferenze negli schemi di unione tramite il connettore di origine OneTrust o lo schema XDM standard per il consenso.</li><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nel menu di navigazione a sinistra, seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Crea criterio</a>.</li><li>Sotto la <b>Se</b> descrive le condizioni o le azioni che attiveranno il controllo dei criteri.</li><li>Sotto la <b>Then</b> , immetti gli attributi di consenso che devono essere presenti affinché un profilo sia incluso nell’azione che ha attivato il criterio.</li><li>Seleziona <b>Salva</b> per creare il criterio. Per abilitare il criterio, seleziona la <b>Stato</b> attiva la barra a destra.</li><li>Experience Platform applica automaticamente i criteri di consenso abilitati quando attivi i segmenti sulle destinazioni e fornisce dettagli su come ogni criterio influisce sulle dimensioni del pubblico.</li><li>Per ulteriori informazioni su questa funzione, consulta la guida su <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">creazione di criteri di consenso</a> Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >

@@ -2,9 +2,9 @@
 title: Gestire le scadenze del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Descrizione"
->abstract=""
+>title="Elimina record e set di dati cliente indesiderati o scaduti"
+>abstract="<h2>Descrizione</h2><p>Per gestire il ciclo di vita dei dati di Experience Platform non correlati alla conformità alle normative, puoi eliminare i record dei consumatori e pianificare le date di scadenza dei set di dati. Per creare o gestire le richieste dell’interessato, consulta il blocco del caso d’uso &quot;Rispetta le richieste di privacy dell’interessato&quot;.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Questo documento illustra come pianificare e gestire le scadenze dei set di dati
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Istruzioni"
->abstract=""
+>abstract="<ul><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Igiene dei dati</a> nel menu di navigazione a sinistra, seleziona <b>Crea richiesta</b>.</li><li>Per eliminare i record:</li>   <li>Seleziona <b>Record</b>.</li>   <li>Seleziona un set di dati specifico da cui eliminare i record oppure scegli l’opzione per eliminarli da tutti i set di dati.</li>   <li>Fornire le identità dei consumatori i cui record devono essere cancellati. Seleziona <b>Aggiungi identità</b> per fornire le identità una alla volta o seleziona <b>Scegliere i file</b> per caricare un file JSON di identità .</li>   <li>Se necessario, seleziona <b>Modello</b> per visualizzare il formato previsto del file JSON.</li><li>Per istruzioni, consulta la documentazione . <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">pianificazione delle date di scadenza dei set di dati</a>.</li></ul>"
 
 Per creare una nuova richiesta, seleziona **[!UICONTROL Crea richiesta]** dalla pagina principale nell’area di lavoro.
 
@@ -54,8 +54,7 @@ Successivamente, sotto **[!UICONTROL Dettagli set di dati]**, seleziona l’icon
 ![Immagine che mostra un set di dati selezionato](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Vengono visualizzati solo i set di dati appartenenti alla sandbox corrente.
+Vengono visualizzati solo i set di dati appartenenti alla sandbox corrente.
 
 ### Invia la richiesta
 
@@ -68,8 +67,7 @@ Viene richiesto di confermare la data in cui il set di dati verrà eliminato. Se
 Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro e viene visualizzato nella scheda principale [!UICONTROL Igiene dei dati] workspace. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
 
 >[!NOTE]
->
->Consulta la sezione panoramica su [Tempistiche e trasparenza](../home.md#dataset-expiration-transparency) per informazioni dettagliate sull’elaborazione delle scadenze dei set di dati una volta eseguite.
+Consulta la sezione panoramica su [Tempistiche e trasparenza](../home.md#dataset-expiration-transparency) per informazioni dettagliate sull’elaborazione delle scadenze dei set di dati una volta eseguite.
 
 ## Modificare o annullare la scadenza di un set di dati
 
