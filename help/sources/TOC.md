@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '963'
 ht-degree: 10%
 
 ---
@@ -352,6 +352,9 @@ ht-degree: 10%
       - [Documentare la sorgente (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
       - [Modello di streaming API self-service della documentazione](sources-sdk/streaming/streaming-template-api.md)
       - [Modello di streaming dell’interfaccia utente self-service della documentazione](sources-sdk/streaming/streaming-template-ui.md)
+- Messaggi di errore {#errors}
+   - [Messaggi di errore nelle origini](./errors/sources-errors.md)
+   - [Messaggi di errore nel servizio di flusso](./errors/flow-service-errors.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
