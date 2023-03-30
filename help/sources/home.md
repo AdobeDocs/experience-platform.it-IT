@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori di origine
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
@@ -189,7 +189,7 @@ Il controllo dell&#39;accesso basato su attributi in Adobe Experience Platform c
 
 Con il controllo dell&#39;accesso basato sugli attributi, puoi applicare configurazioni di mappatura ai campi a cui disponi delle autorizzazioni. Inoltre, non puoi inserire dati in un set di dati se non hai accesso a tutti i campi del set di dati.
 
-#### Supporto per il controllo dell&#39;accesso basato sugli attributi nelle origini [!BADGE Nuova funzionalità]
+#### Supporto per il controllo dell&#39;accesso basato sugli attributi nelle origini
 
 >[!TIP]
 >
