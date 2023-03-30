@@ -1,26 +1,26 @@
 ---
 title: Corrispondenza fuzzy nel servizio query
 description: Scopri come eseguire una corrispondenza sui dati di Platform che combina i risultati di più set di dati facendo corrispondere approssimativamente una stringa di tua scelta.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Corrispondenza fuzzy
+# Corrispondenza fuzzy nel servizio query
 
-Utilizza una corrispondenza &quot;sfocata&quot; sui dati della piattaforma per restituire le corrispondenze più probabili e approssimative senza la necessità di cercare stringhe con caratteri identici. Ciò consente una ricerca dei dati molto più flessibile e rende i dati più accessibili risparmiando tempo e fatica.
+Utilizza una corrispondenza &quot;sfocata&quot; sui dati Adobe Experience Platform per restituire le corrispondenze più probabili e approssimative senza la necessità di cercare stringhe con caratteri identici. Ciò consente una ricerca dei dati molto più flessibile e rende i dati più accessibili risparmiando tempo e fatica.
 
-Invece di cercare di riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [!DNL FuzzyWuzzy] è consigliato per questo processo in quanto le sue funzioni sono più adatte per aiutare a far corrispondere stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
+Invece di cercare di riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) è consigliato per questo processo in quanto le sue funzioni sono più adatte per aiutare a far corrispondere stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
 
-L&#39;esempio fornito in questo caso d&#39;uso si concentra sulla corrispondenza di attributi simili da una ricerca in una camera d&#39;albergo tra due diversi set di dati dell&#39;agenzia di viaggio. Il documento illustra come associare le stringhe in base al loro grado di somiglianza rispetto a grandi origini dati separate. In questo esempio, la corrispondenza fuzzy confronta i risultati della ricerca per le caratteristiche di una stanza dalle agenzie di viaggio Luma e Acme.
+L&#39;esempio fornito in questo caso d&#39;uso si concentra sulla corrispondenza di attributi simili da una ricerca in una stanza d&#39;albergo tra due diversi set di dati dell&#39;agenzia di viaggio. Il documento illustra come associare le stringhe in base al loro grado di somiglianza rispetto a grandi origini dati separate. In questo esempio, la corrispondenza fuzzy confronta i risultati della ricerca per le caratteristiche di una stanza dalle agenzie di viaggio Luma e Acme.
 
 ## Introduzione {#getting-started}
 
 Come parte di questo processo richiede la formazione di un modello di apprendimento automatico, in questo documento si presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
 
-Questo esempio utilizza [!DNL Python] e [!DNL Jupyter Notebook] ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato perché si tratta di un&#39;applicazione web open-source con requisiti di elaborazione ridotti. Può essere [scaricato dal sito ufficiale di Jupyter](https://jupyter.org/).
+Questo esempio utilizza [!DNL Python] e [!DNL Jupyter Notebook] ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato perché si tratta di un&#39;applicazione web open-source con requisiti di elaborazione ridotti. Può essere scaricato da [il sito ufficiale di Jupyter](https://jupyter.org/).
 
 Prima di iniziare, è necessario importare le librerie necessarie. [!DNL FuzzyWuzzy] è un [!DNL Python] libreria basata su [!DNL difflib] e utilizzato per far corrispondere le stringhe. Usa [!DNL Levenshtein Distance] per calcolare le differenze tra sequenze e pattern. [!DNL FuzzyWuzzy] presenta i seguenti requisiti:
 
@@ -43,7 +43,7 @@ Ulteriori informazioni tecniche su [!DNL Fuzzywuzzy] si trova nella [documentazi
 
 ### Connessione al servizio query
 
-È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile specificare sia le credenziali in scadenza che quelle non in scadenza. Vedi la [guida alle credenziali](../ui/credentials.md) per ulteriori informazioni su come acquisire le credenziali necessarie. Se utilizzi [!DNL Jupyter Notebook], consulta la guida completa su [come connettersi al servizio query](../clients/jupyter-notebook.md).
+È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile specificare sia le credenziali in scadenza che quelle non in scadenza. Vedi la [guida alle credenziali](../ui/credentials.md) per ulteriori informazioni su come acquisire le credenziali necessarie. Se utilizzi [!DNL Jupyter Notebook], leggi la guida completa su [come connettersi al servizio query](../clients/jupyter-notebook.md).
 
 Inoltre, assicurati di importare il [!DNL numpy] inserisci nel pacchetto [!DNL Python] per abilitare l&#39;algebra lineare.
 
