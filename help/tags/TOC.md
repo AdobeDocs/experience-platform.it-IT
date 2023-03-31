@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
+source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 38%
+source-wordcount: '970'
+ht-degree: 37%
 
 ---
 
@@ -216,6 +216,7 @@ ht-degree: 38%
       * [Connettore cloud per Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Core {#core}
          * [Panoramica](./extensions/server/core/overview.md)
+      * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversioni ottimizzate di Google Ads {#google-ads-enhanced-conversions}
          * [Panoramica](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
