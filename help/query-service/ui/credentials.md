@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alle credenziali del servizio query
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e accedere alle query salvate dagli utenti all’interno dell’organizzazione IMS.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
+source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 1%
@@ -129,7 +129,7 @@ La tabella seguente delinea i parametri generalmente necessari per la connession
 | **Porta** | La porta del server/host a cui ti stai connettendo. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e si trova in **[!UICONTROL Porta]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</ul></li> | `80` |
 | **Database** | Database a cui ci si connette. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle non in scadenza e viene trovato in **[!UICONTROL Database]** in [!UICONTROL CREDENZIALI IN SCADENZA] sezione . </ul></li> | `prod:all` |
 | **Nome utente** | Nome utente per l’utente che si connette al client esterno. <ul><li>Questo valore viene utilizzato sia per le credenziali in scadenza che per quelle in scadenza. Si presenta sotto forma di una stringa alfanumerica prima `@AdobeOrg`. Questo valore si trova in **[!UICONTROL Nome utente]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Password** | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Una password per le credenziali in scadenza è composta da più di mille caratteri di stringa alfanumerica. Non verrà dato alcun esempio.</li><li>Una password per le credenziali non in scadenza è la seguente:`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Password** | Password per l&#39;utente che si connette al client esterno. <ul><li>Se utilizzi credenziali in scadenza, puoi trovarlo in **[!UICONTROL Password]** all&#39;interno del [!UICONTROL CREDENZIALI IN SCADENZA] sezione .</li><li>Se utilizzi credenziali non in scadenza, questo valore è costituito dagli argomenti concatenati di technicalAccountID e dalla credenziale prelevata dal file JSON di configurazione. Il valore della password assume la forma di: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Una password per le credenziali in scadenza è composta da più di mille caratteri di stringa alfanumerica. Non verrà dato alcun esempio.</li><li>Una password per le credenziali non in scadenza è la seguente:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
