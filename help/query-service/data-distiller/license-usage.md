@@ -1,42 +1,45 @@
 ---
-title: Monitorare l’utilizzo delle licenze per query batch
-description: L’interfaccia utente di Adobe Experience Platform fornisce una dashboard tramite la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze di Data Distiller da parte della tua organizzazione.
+title: Monitoraggio utilizzo licenza query batch
+description: L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo della licenza di Data Distiller dell’organizzazione.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a1c5b687108a9fc8729008e2b0e39ec6b1842f54
+hide: true
+hidefromtoc: true
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
-# (Alfa) Monitorare l’utilizzo delle licenze per query batch {#monitor-license-usage}
+# (Alpha) Monitorare l’utilizzo della licenza di query batch {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->La possibilità di monitorare l’utilizzo delle licenze per query batch tramite l’interfaccia utente non è ancora disponibile per tutti gli utenti. Questa funzione è in formato alfa ed è ancora in fase di test. Questo documento è soggetto a modifiche.
+>La possibilità di monitorare l’utilizzo della licenza di query batch tramite l’interfaccia utente non è ancora disponibile per tutti gli utenti. Questa funzione è in alfa e viene ancora testata. Questo documento è soggetto a modifiche.
 
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze di Query Service da parte dell’organizzazione.
+L’interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sull’utilizzo della licenza di Query Service della propria organizzazione.
 
-Per istruzioni dettagliate su come accedere e interagire con la dashboard Utilizzo licenze nell’interfaccia utente, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita [guida del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md).
+Per istruzioni dettagliate su come accedere e interagire con il dashboard dell’utilizzo delle licenze nell’interfaccia utente e per ulteriori informazioni sulle metriche disponibili visualizzate nel dashboard, visita il [guida all&#39;utilizzo della licenza](../../dashboards/guides/license-usage.md).
 
-Leggi le [panoramica delle dashboard](../../dashboards/home.md) per un riepilogo di tutte le funzionalità del dashboard in Experience Platform.
+Per piacere, leggi le [panoramica delle dashboard](../../dashboards/home.md) per un riepilogo di tutte le funzioni del dashboard in Experience Platform.
 
 ## Widget {#widgets}
 
-Il dashboard utilizzo licenze è composto da widget che visualizzano metriche di sola lettura contenenti informazioni importanti sull’utilizzo delle licenze da parte dell’organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione.
+Il dashboard per l&#39;utilizzo delle licenze è composto da widget che visualizzano metriche di sola lettura che forniscono informazioni importanti sull&#39;utilizzo delle licenze dell&#39;organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione.
 
-Seleziona un pulsante di scelta per scegliere una sandbox per l’analisi e utilizza il menu a discesa per selezionare un periodo di tempo per l’analisi. Le opzioni disponibili sono un periodo di 30 giorni, 90 giorni, 12 mesi, l’ultimo anno, l’intero periodo contrattuale o una data personalizzata.
+Seleziona un pulsante di scelta per scegliere una sandbox da analizzare e utilizza il menu a discesa per selezionare un periodo di tempo per l’analisi. Le opzioni disponibili sono un periodo di 30 giorni, 90 giorni, 12 mesi, l’ultimo anno, l’intero periodo di contratto o una data personalizzata.
 
-## Calcola ore {#compute-hours}
+## Orari di calcolo {#compute-hours}
 
-Il [!UICONTROL Calcola ore] il widget utilizza un grafico a linee per visualizzare ogni giorno il tempo di elaborazione delle query batch dell’organizzazione. Il widget mostra tre metriche indicate da un numero in alto a sinistra. Sono
+La [!UICONTROL Orari di calcolo] widget utilizza un grafico a linee per visualizzare ogni giorno il tempo di elaborazione delle query batch dell&#39;organizzazione. Il widget visualizza tre metriche indicate da un numero in alto a sinistra nel widget. Sono
 
-- [!UICONTROL Effettivo]: numero totale di ore di calcolo per il periodo di tempo scelto nel menu a discesa Panoramica. Questa metrica è indicata anche nel grafico da una linea continua.
-- [!UICONTROL Concesso in licenza]: il numero totale di ore di calcolo consentite dal contratto di licenza della tua organizzazione. Anche questa metrica è indicata sul grafico da una linea tratteggiata.
-- [!UICONTROL Utilizzo]: questa è la percentuale di utilizzo relativa al numero massimo di ore di calcolo concordato dalla licenza.
+- [!UICONTROL Effettivo]: Numero totale di ore di calcolo per il periodo di tempo scelto nel menu a discesa della panoramica. Questa metrica è indicata anche sul grafico da una linea continua.
+- [!UICONTROL Concesso in licenza]: Numero totale di ore di calcolo consentite dal contratto di licenza dell&#39;organizzazione. Questa metrica è indicata anche sul grafico da una linea tratteggiata.
+- [!UICONTROL Utilizzo]: Questa è la percentuale dell&#39;utilizzo rispetto alle ore di calcolo massime concordate dalla licenza.
 
 >[!IMPORTANT]
 >
->Il [!UICONTROL Calcola ore] Il widget è applicabile solo ai clienti con la licenza Data Distiller per le query batch.
+>La [!UICONTROL Orari di calcolo] widget è applicabile solo ai clienti con la licenza Data Distiller per le query batch.
 
-![Dashboard di utilizzo della licenza con widget ore di calcolo evidenziato.](../images/data-distiller/compute-hours.png)
+![Dashboard di utilizzo della licenza con il widget ore di calcolo evidenziato.](../images/data-distiller/compute-hours.png)
+
