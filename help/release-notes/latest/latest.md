@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di marzo 2023 per Adobe Experience Platform.
-source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
+source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -51,6 +51,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | Funzione | Descrizione |
 | --- | --- |
 | Nuovo flusso di lavoro di avvio rapido per l’API Meta Conversioni (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido in &quot;Guida introduttiva&quot; dalla schermata iniziale Raccolta dati. La [flusso di lavoro di avvio rapido per l’API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) consente ai clienti di raccogliere e inoltrare rapidamente i dati evento, lato server a Meta per le conversioni di annunci in pochi semplici passaggi. |
+| Nuovo flusso di lavoro di avvio rapido per Mobile SDK (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido in &quot;Guida introduttiva&quot; dalla schermata iniziale Raccolta dati. La [flusso di lavoro di avvio rapido per Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) consente di implementare rapidamente l’SDK di Mobile e convalidare gli eventi mobile di base in pochi semplici passaggi. |
 | [!DNL Braze] estensione di inoltro eventi | La [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’estensione di inoltro eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [!DNL Braze] API di tracciamento utente. |
 | [!DNL Epsilon] estensione di inoltro eventi | La [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) l’estensione ti consente di sfruttare l’inoltro eventi per acquisire informazioni sull’evento in Adobe Experience Platform Edge Network e inviarle a [!DNL Epsilon] utilizzando [!DNL Epsilon] API evento. |
 | [!DNL Mixpanel] estensione di inoltro eventi | La [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) L’estensione consente ai clienti di sfruttare l’inoltro eventi per acquisire informazioni sull’evento in Adobe Experience Platform Edge Network e inviarle a Mixpanel utilizzando l’API Track Events. |
