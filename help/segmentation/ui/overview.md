@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente del servizio di segmentazione
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2650'
 ht-degree: 1%
 
 ---
@@ -69,12 +69,11 @@ Questa visualizzazione elenca informazioni sulla definizione del segmento, tra c
 
 Puoi aggiungere altri campi a questa visualizzazione selezionando ![l’icona dell’attributo del filtro](../images/ui/overview/filter-attribute.png). Questi campi aggiuntivi includono suddivisione, metodo di valutazione e ID processo.
 
-Se è selezionata l’opzione di suddivisione, la visualizzazione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato], [!UICONTROL Esistente]e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella sezione [!UICONTROL Sfoglia] è la suddivisione più accurata dello stato del segmento. Se questo numero è diverso da quello indicato nella [!UICONTROL Panoramica] è necessario utilizzare i numeri nella scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, dal momento che [!UICONTROL Panoramica] i numeri di scheda vengono aggiornati solo una volta al giorno.
+Se è selezionata l’opzione di suddivisione, la visualizzazione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato] e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella sezione [!UICONTROL Sfoglia] è la suddivisione più accurata dello stato del segmento. Se questo numero è diverso da quello indicato nella [!UICONTROL Panoramica] è necessario utilizzare i numeri nella scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, dal momento che [!UICONTROL Panoramica] i numeri di scheda vengono aggiornati solo una volta al giorno.
 
 | Stato | Descrizione |
 | ------ | ----------- |
 | Realizzato | Il conteggio dei profili idonei per il segmento nelle ultime 24 ore. Quindi, il numero di profili idonei per il segmento dall’ultima esecuzione del processo del segmento batch. |
-| Esistente | Il numero di profili che sono rimasti qualificati per il segmento nelle ultime 24 ore. Quindi, il numero di profili che sono rimasti qualificati per il segmento dall’ultima volta che il processo del segmento batch è stato eseguito. |
 | Uscita | Numero di profili usciti dal segmento nelle ultime 24 ore. Pertanto, il numero di profili che non si qualificano più per il segmento dall&#39;ultima esecuzione del processo del segmento batch. |
 
 Il metodo di valutazione può essere in streaming, batch o edge. I segmenti in streaming vengono valutati costantemente man mano che i dati entrano nel sistema. I segmenti batch vengono valutati in base a una pianificazione impostata. I segmenti Edge vengono valutati in tempo reale, consentendo gli stessi casi di utilizzo per la personalizzazione della pagina e di quella successiva.

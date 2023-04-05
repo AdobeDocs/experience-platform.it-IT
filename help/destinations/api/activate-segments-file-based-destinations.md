@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Attiva i segmenti nelle destinazioni basate su file utilizzando l’API del servizio di flusso
 description: Scopri come utilizzare l’API del servizio di flusso per esportare file con profili qualificati nelle destinazioni di archiviazione cloud.
 type: Tutorial
-source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3750,7 +3750,6 @@ Inspect la risposta che ottieni quando esegui la chiamata di cui sopra. Per trov
                "properties":{
                   "status":{
                      "enum":[
-                        "existing",
                         "realized",
                         "exited"
                      ],
@@ -3759,7 +3758,6 @@ Inspect la risposta che ottieni quando esegui la chiamata di cui sopra. Per trov
                      "default":"realized",
                      "meta:enum":{
                         "exited":"Entity is exiting the segment.",
-                        "existing":"Entity continues to be in the segment.",
                         "realized":"Entity is entering the segment."
                      },
                      "description":"Is the segment participation realized as part of the current request.",
@@ -4066,11 +4064,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 "meta:xdmType": "string",
                                 "meta:enum": {
                                     "exited": "Entity is exiting the segment.",
-                                    "realized": "Entity is entering the segment.",
-                                    "existing": "Entity continues to be in the segment."
+                                    "realized": "Entity is entering the segment."
                                 },
                                 "enum": [
-                                    "existing",
                                     "realized",
                                     "exited"
                                 ],

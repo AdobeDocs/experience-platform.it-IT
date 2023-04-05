@@ -4,7 +4,7 @@ title: Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 type: Tutorial
 description: Scopri come attivare i dati del pubblico in Adobe Experience Platform inviando segmenti a destinazioni basate su profili in streaming.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Esportazione [!DNL Experience Platform] i dati arrivano nella destinazione in fo
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

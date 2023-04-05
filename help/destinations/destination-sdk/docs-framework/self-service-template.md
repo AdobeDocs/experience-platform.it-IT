@@ -1,154 +1,154 @@
 ---
-title: Modello self-service // Sostituisci con il nome della tua destinazione
-description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
+title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
+description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
 
 ---
 
-# Connessione destinazione {#your-destination}
+# Connessione YourDestination {#your-destination}
 
-*Durante l&#39;analisi di questo modello, sostituire o eliminare tutti i paragrafi in corsivo, a partire da questo.*
+*Passando al modello, sostituisci o elimina tutti i paragrafi in corsivo (a partire da questo).*
 
-*Inizia aggiornando i metadati (titolo e descrizione) nella parte superiore della pagina. Ignora tutte le istanze di UICONTROL in questa pagina. Questo tag aiuta i nostri processi di traduzione automatica a tradurre correttamente la pagina nelle diverse lingue supportate. Dopo l’invio, aggiungeremo dei tag alla documentazione.*
+*Per iniziare, aggiorna i metadati (titolo e descrizione) nella parte superiore della pagina. Ignora tutte le istanze di UICONTROL in questa pagina. Questo è un tag che aiuta i nostri processi di traduzione automatica a tradurre correttamente la pagina nelle diverse lingue supportate. Dopo l’invio verranno aggiunti dei tag alla documentazione.*
 
 >[!IMPORTANT]
 >
->* Compila tutte le sezioni di questo modello nell&#39;ordine in cui sono descritte nel modello.
->* Questo modello viene aggiornato raramente in base al feedback ricevuto dai partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato [versione più recente del modello](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Compila tutte le sezioni di questo modello, nell&#39;ordine in cui sono descritte nel modello.
+>* Questo modello viene aggiornato raramente, in base al feedback del partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato il [versione più recente del modello](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
 
 
 ## Panoramica {#overview}
 
-*Fornisci una breve panoramica della tua azienda, compreso il valore che offre ai clienti. Includi un collegamento alla pagina Home della documentazione del prodotto, per ulteriori informazioni.*
+*Fornisci una breve panoramica della tua azienda, compreso il valore che fornisce ai clienti. Includi un collegamento alla pagina principale della documentazione del prodotto per ulteriori informazioni.*
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *Destinazione* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per aggiornamenti, ad esempio `support@YourDestination.com`.*
+>Questa pagina della documentazione è stata creata da *YourDestination* squadra. Per qualsiasi richiesta di informazioni o di aggiornamento, contattali direttamente all&#39;indirizzo *Inserire un collegamento o un indirizzo e-mail dove è possibile ottenere gli aggiornamenti, ad esempio `support@YourDestination.com`.*
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare il *Destinazione* destinazione: di seguito sono riportati alcuni casi di utilizzo esemplificativi che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la *YourDestination* destinazione : di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### #1 del caso d’uso {#use-case-1}
+### Caso d&#39;uso n. 1 {#use-case-1}
 
 *Per le piattaforme di messaggistica mobile:*
 
-*Una piattaforma di noleggio e vendita a domicilio vuole inviare notifiche mobili ai dispositivi Android e iOS dei clienti per far sapere che ci sono 100 inserzioni aggiornate nella zona in cui prima hanno cercato un noleggio.*
+*Una piattaforma di noleggio e vendita di casa vuole inviare notifiche mobili ai dispositivi Android e iOS dei clienti per far sapere che ci sono 100 annunci aggiornati nell&#39;area in cui hanno precedentemente cercato un noleggio.*
 
-### #2 del caso d’uso {#use-case-2}
+### Caso d&#39;uso n. 2 {#use-case-2}
 
 *Per le piattaforme di social network:*
 
-*Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare segmenti dai propri dati offline e inviare questi segmenti a YourDestination, per visualizzare annunci nei feed di social media dei propri clienti.*
+*Un marchio di abbigliamento atletico vuole raggiungere i clienti esistenti attraverso i loro account social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM a Adobe Experience Platform, creare segmenti dai propri dati offline e inviare tali segmenti a YourDestination, per visualizzare annunci nei feed di social media dei propri clienti.*
 
 ## Prerequisiti {#prerequisites}
 
-*In questa sezione aggiungi informazioni su tutto ciò di cui i clienti devono essere a conoscenza prima di iniziare a impostare la destinazione nell’interfaccia utente di Adobe Experience Platform. Informazioni su:*
+*Aggiungi in questa sezione informazioni su qualsiasi cosa i clienti devono sapere prima di iniziare a configurare la destinazione nell’interfaccia utente di Adobe Experience Platform. Può trattarsi di:*
 
-* *necessità di aggiunta a un elenco consentiti*
-* *requisiti per l’hashing delle e-mail*
-* *qualsiasi specifica dell’account a tuo favore*
+* *aggiunta a un elenco consentiti*
+* *requisiti per l’hash delle e-mail*
+* *tutte le specifiche dell&#39;account sul tuo lato*
 * *come ottenere una chiave API per connettersi alla piattaforma*
 
-*Puoi creare un collegamento alla documentazione rilevante, se utile per i clienti.*
+*Se utile per i clienti, puoi collegarti alla documentazione pertinente.*
 
 ## Identità supportate {#supported-identities}
 
-*Aggiungi informazioni in questa sezione sulle identità supportate dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Elimina i valori non applicabili alla destinazione e tutti i valori non precompilati.*
+*Aggiungi in questa sezione informazioni sulle identità supportate dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Elimina i valori che non si applicano alla destinazione e quelli che non sono precompilati.*
 
-*Destinazione* supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+*YourDestination* supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni [identità](/help/identity-service/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | Google Advertising ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
-| IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Leggi il seguente documento su [ECID](/help/identity-service/ecid.md) per ulteriori informazioni. |
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
-| extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
+| GAID | Google Advertising ID | Selezionare l&#39;identità di destinazione GAID quando l&#39;identità di origine è uno spazio dei nomi GAID. |
+| IDFA | Apple ID per gli inserzionisti | Seleziona l’identità di destinazione IDFA quando l’identità di origine è uno spazio dei nomi IDFA. |
+| ECID | Experience Cloud ID | Spazio dei nomi che rappresenta ECID. Questo namespace può essere indicato anche dai seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Leggi il seguente documento su [ECID](/help/identity-service/ecid.md) per ulteriori informazioni. |
+| phone_sha256 | Hash dei numeri di telefono con l&#39;algoritmo SHA256 | Sia il testo normale che i numeri di telefono con hash SHA256 sono supportati da Adobe Experience Platform. Quando il campo di origine contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Quando il campo di origine contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi personalizzato. |
 
 {style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-*Nella tabella, conserva solo le righe corrispondenti alla destinazione. Dovresti avere una riga per il tipo di esportazione e una riga per la frequenza di esportazione. Elimina i valori che non si applicano alla destinazione.*
+*Nella tabella, conservare solo le righe corrispondenti alla destinazione. È necessario disporre di una riga per il tipo di esportazione e di una riga per la frequenza di esportazione. Elimina i valori che non si applicano alla destinazione.*
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
+Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in *Destinazione* destinazione. |
+| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nel *YourDestination* destinazione. |
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Tipo di esportazione | **[!UICONTROL Esportazione set di dati]** | Stai esportando set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
-| Frequenza di esportazione | **[!UICONTROL Batch]** | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
+| Tipo di esportazione | **[!UICONTROL Esportazione set di dati]** | Stai esportando set di dati non elaborati, che non sono raggruppati o strutturati in base a interessi o qualifiche di pubblico. |
+| Frequenza delle esportazioni | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza delle esportazioni | **[!UICONTROL Batch]** | Le destinazioni batch esportano file su piattaforme downstream con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni [destinazioni batch basate su file](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Collegati alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione , compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autentica a destinazione {#authenticate}
 
-*Aggiungi i campi che i clienti devono compilare per l’autenticazione nella destinazione. Questi campi sono specifici per la destinazione e dipendono dalla configurazione in Destination SDK. I campi della destinazione potrebbero non essere gli stessi elencati di seguito. Includi anche una schermata simile a quella di esempio mostrata di seguito.*
+*Aggiungi i campi che i clienti devono compilare al momento dell’autenticazione nella destinazione. Questi campi sono specifici per la destinazione e dipendono dalla configurazione in Destination SDK. I campi della destinazione potrebbero non corrispondere a quelli elencati di seguito. Includi anche uno screenshot simile a quello mostrato di seguito.*
 
-Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
 ![Schermata di esempio che mostra come eseguire l’autenticazione nella destinazione](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
-* **[!UICONTROL Token Bearer]**: inserisci il token Bearer per l’autenticazione nella destinazione.
+* **[!UICONTROL Token portatore]**: Compila il token portatore per l’autenticazione alla destinazione.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Compila i dettagli della destinazione {#destination-details}
 
-*Aggiungi i campi che i clienti devono compilare durante la configurazione di una nuova destinazione. Questi campi sono specifici per la destinazione e dipendono dalla configurazione in Destination SDK. I campi della destinazione potrebbero non essere gli stessi elencati di seguito. Includi anche una schermata simile a quella di esempio mostrata di seguito.*
+*Aggiungi i campi che i clienti devono compilare al momento della configurazione di una nuova destinazione. Questi campi sono specifici per la destinazione e dipendono dalla configurazione in Destination SDK. I campi della destinazione potrebbero non corrispondere a quelli elencati di seguito. Includi anche uno screenshot simile a quello mostrato di seguito.*
 
-Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
+Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata di esempio che mostra come compilare i dettagli per la destinazione](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Schermata di esempio che mostra come inserire i dettagli della destinazione](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
-* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: il tuo *Destinazione* ID account.
+* **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ID account]**: Le *YourDestination* ID account.
 
-### Abilita avvisi {#enable-alerts}
+### Abilitare gli avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati nella tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere le notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [iscrizione agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Una volta completati i dettagli della connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizzare i segmenti]** [autorizzazioni di controllo accessi](/help/access-control/home.md#permissions). Leggi la sezione [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni richieste.
 
-*Elimina in base alle esigenze: se stai documentando una nuova destinazione di streaming, tieni il primo paragrafo seguente. Se stai documentando una nuova destinazione basata su file, mantieni il secondo paragrafo. Se stai documentando una destinazione che esporta set di dati, mantieni il terzo paragrafo.*
+*Elimina come appropriato: se stai documentando una nuova destinazione di streaming, mantieni il primo paragrafo qui sotto. Se stai documentando una nuova destinazione basata su file, mantieni il secondo paragrafo. Se si documenta una destinazione che esporta i set di dati, mantenere il terzo paragrafo.*
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
-Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni su come attivare i segmenti di pubblico a questa destinazione.
 
-Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
+Leggi [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) per istruzioni dettagliate sull&#39;esportazione dei set di dati in questa destinazione.
 
 ### Mappare attributi e identità {#map}
 
-*Aggiungi informazioni sulle mappature supportate tra i campi di origine e di destinazione nel passaggio Mappatura del flusso di lavoro di attivazione. La destinazione potrebbe supportare l’esportazione di attributi di profilo, spazi dei nomi delle identità o entrambi. Alcuni campi potrebbero essere obbligatori. Gli attributi di destinazione possono essere predefiniti o personalizzati. Richiama le avvertenze importanti e utilizza esempi, preferibilmente con schermate. Due esempi di pagine di destinazione che è possibile utilizzare come riferimento sono:*
+*Aggiungi informazioni sulle mappature supportate tra i campi di origine e di destinazione nel passaggio Mappatura del flusso di lavoro di attivazione. La destinazione potrebbe supportare l’esportazione di attributi di profilo, spazi dei nomi di identità o entrambi. Alcuni campi potrebbero essere obbligatori. Gli attributi di destinazione possono essere predefiniti o personalizzati. Richiama le avvertenze importanti e utilizza esempi, preferibilmente con screenshot. Di seguito sono riportati due esempi di pagine di destinazione utilizzabili come riferimento:*
 
 * *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
 * *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
-## Dati esportati / Convalida esportazione dati {#exported-data}
+## Esportazione di dati / Convalida esportazione dati {#exported-data}
 
-*Aggiungi un paragrafo sulla modalità di esportazione dei dati nella destinazione. In questo modo il cliente può essere certo di essersi integrato correttamente con la destinazione. Ad esempio, puoi fornire un codice JSON di esempio simile a quello riportato di seguito. In alternativa, puoi fornire schermate e informazioni dall’interfaccia della destinazione che mostrano come i clienti dovrebbero aspettarsi che i segmenti si popolino nella piattaforma di destinazione.*
+*Aggiungi un paragrafo sulla modalità di esportazione dei dati nella destinazione. In questo modo, il cliente potrà assicurarsi che si sia correttamente integrato con la destinazione. Ad esempio, puoi fornire un esempio JSON come quello sottostante. Oppure, puoi fornire schermate e informazioni dall’interfaccia della tua destinazione che mostrano in che modo i clienti si aspettano che i segmenti si popolino nella piattaforma di destinazione.*
 
 ```
 {
@@ -163,7 +163,7 @@ Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md)
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -188,10 +188,10 @@ Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md)
 }
 ```
 
-## Utilizzo dei dati e governance {#data-usage-governance}
+## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutto [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] impone la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
-*Puoi fornire ulteriori collegamenti alla documentazione del prodotto o a qualsiasi altra risorsa ritenuta importante per il successo del cliente.*
+*Puoi fornire ulteriori collegamenti alla documentazione del prodotto o altre risorse che ritieni importanti per il successo del cliente.*

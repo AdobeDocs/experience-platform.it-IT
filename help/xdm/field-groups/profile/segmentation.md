@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmento;segmentMembership;appartenenza a un segmento;schema design;mappa;mappa;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmenti;appartenenza segmento;appartenenza segmento;struttura schema;mappa;mappa;
 solution: Experience Platform
-title: Gruppo di campi dello schema dei dettagli dell’iscrizione al segmento
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli appartenenza al segmento.
+title: Gruppo di campi schema Dettagli appartenenza segmento
+description: Questo documento fornisce una panoramica del gruppo di campi di schema Dettagli appartenenza segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '440'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Dettagli sull’iscrizione al segmento] gruppo di campi schema
+# [!UICONTROL Dettagli di appartenenza al segmento] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>Sono stati modificati i nomi di diversi gruppi di campi dello schema. Visualizza il documento in [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) per ulteriori informazioni.
 
-[!UICONTROL Dettagli sull’iscrizione al segmento] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che acquisisce informazioni relative all’iscrizione al segmento, tra cui i segmenti a cui appartiene l’individuo, la data dell’ultima qualifica e fino a quando l’iscrizione è valida.
+[!UICONTROL Dettagli di appartenenza al segmento] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] Classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che acquisisce informazioni relative all’appartenenza al segmento, compresi i segmenti a cui appartiene l’individuo, l’ultima volta di qualificazione e quando l’iscrizione è valida fino a quando.
 
 >[!WARNING]
 >
->Mentre il `segmentMembership` deve essere aggiunto manualmente allo schema del profilo utilizzando questo gruppo di campi, non tentare di compilare o aggiornare manualmente questo campo. Il sistema aggiorna automaticamente `segmentMembership` mappa ciascun profilo durante l’esecuzione dei processi di segmentazione.
+>Mentre il `segmentMembership` Il campo deve essere aggiunto manualmente allo schema del profilo utilizzando questo gruppo di campi. Non tentare di compilare o aggiornare manualmente questo campo. Il sistema aggiorna automaticamente la `segmentMembership` mappa per ogni profilo durante l’esecuzione dei processi di segmentazione.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `segmentMembership` | Mappa | Oggetto mappa che descrive le appartenenze del singolo segmento. La struttura di questo oggetto è descritta in dettaglio di seguito. |
+| `segmentMembership` | Mappa | Un oggetto map che descrive le appartenenze al segmento del singolo utente. La struttura dell&#39;oggetto è descritta in dettaglio di seguito. |
 
 {style="table-layout:auto"}
 
-Di seguito è riportato un esempio `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Le appartenenze ai segmenti sono ordinate per spazio dei nomi, come indicato dalle chiavi a livello di radice dell’oggetto. A sua volta, le singole chiavi sotto ogni spazio dei nomi rappresentano gli ID dei segmenti di cui il profilo è membro. Ogni oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull’appartenenza:
+Esempio `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Le appartenenze ai segmenti sono ordinate per namespace, come indicato dalle chiavi a livello principale dell’oggetto. A sua volta, le singole chiavi sotto ogni namespace rappresentano gli ID dei segmenti di cui il profilo è membro. Ogni oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull’appartenenza:
 
 ```json
 {
@@ -42,7 +42,7 @@ Di seguito è riportato un esempio `segmentMembership` mappa che il sistema ha p
         "xdm:version": "15",
         "xdm:lastQualificationTime": "2018-04-26T15:52:25+00:00",
         "xdm:validUntil": "2019-04-26T15:52:25+00:00",
-        "xdm:status": "existing",
+        "xdm:status": "realized",
         "xdm:payload": {
           "xdm:payloadBooleanValue": true,
           "xdm:payloadType": "boolean"
@@ -73,19 +73,19 @@ Di seguito è riportato un esempio `segmentMembership` mappa che il sistema ha p
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `xdm:version` | Versione del segmento per il quale il profilo è qualificato. |
-| `xdm:lastQualificationTime` | Un timestamp dell’ultima volta che questo profilo si è qualificato per il segmento. |
-| `xdm:validUntil` | Un timestamp indicante quando l’appartenenza al segmento non deve più essere considerata valida. Per i tipi di pubblico esterni, se questo campo non è impostato, l’iscrizione al segmento verrà mantenuta solo per 30 giorni dalla `lastQualificationTime`. |
-| `xdm:status` | Campo stringa che indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: il profilo faceva già parte del segmento prima della richiesta e continua a mantenerne l’appartenenza.</li><li>`realized`: il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
-| `xdm:payload` | Alcune appartenenze a segmenti includono un payload che descrive valori aggiuntivi direttamente correlati all’appartenenza. Per ogni appartenenza è possibile fornire un solo payload di un determinato tipo. `xdm:payloadType` indica il tipo di payload (`boolean`, `number`, `propensity`, o `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
+| `xdm:version` | Versione del segmento per cui si è qualificato questo profilo. |
+| `xdm:lastQualificationTime` | Una marca temporale dell’ultima volta che il profilo è qualificato per il segmento. |
+| `xdm:validUntil` | Una marca temporale di quando non si deve più presumere che l’appartenenza al segmento sia valida. Per i tipi di pubblico esterni, se questo campo non è impostato, l’appartenenza al segmento verrà mantenuta solo per 30 giorni dalla `lastQualificationTime`. |
+| `xdm:status` | Campo stringa che indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: Il profilo è idoneo per il segmento.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
+| `xdm:payload` | Alcune appartenenze a segmenti includono un payload che descrive i valori aggiuntivi direttamente correlati all’appartenenza. È possibile fornire un solo payload di un determinato tipo per ogni appartenenza. `xdm:payloadType` indica il tipo di payload (`boolean`, `number`, `propensity`oppure `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Qualsiasi appartenenza a un segmento presente in `exited` per più di 30 giorni, in base al `lastQualificationTime`, sarà soggetto a cancellazione.
+>Qualsiasi appartenenza al segmento presente nella `exited` stato per più di 30 giorni, in base alla `lastQualificationTime`, sarà soggetto a cancellazione.
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
