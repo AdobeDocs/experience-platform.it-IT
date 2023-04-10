@@ -2,7 +2,7 @@
 title: Panoramica dell’estensione API per le metaconversioni
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2256'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Quindi seleziona il menu a discesa accanto a **[!UICONTROL Salva nella libreria]
 
 Ripeti questi passaggi per qualsiasi altro evento di conversione metadati che desideri configurare.
 
-#### Configurazione livello dati
+#### Configurazione livello dati {#configuration}
 
 >[!IMPORTANT]
 >
