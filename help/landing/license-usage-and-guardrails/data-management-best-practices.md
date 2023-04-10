@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licen
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,7 @@ La tabella seguente illustra l’elenco delle funzionalità attualmente disponib
 | Funzione | Descrizione |
 | --- | --- |
 | [Attivare/disattivare i set di dati per il profilo](../../catalog/datasets/user-guide.md) | Abilita o disabilita l’acquisizione dei set di dati nel profilo cliente in tempo reale. |
-| [Scadenza eventi esperienza](../../profile/event-expirations.md) | Applica un tempo di scadenza per tutti gli eventi acquisiti in un set di dati abilitato per il profilo. Per abilitare questa funzione, contatta il tuo rappresentante di supporto Adobe. |
+| [Scadenza eventi esperienza](../../profile/event-expirations.md) | Applica un tempo di scadenza per tutti gli eventi acquisiti in un set di dati abilitato per il profilo. Per abilitare questa funzione, contatta il team del tuo account Adobe o l’Assistenza clienti. |
 | [Filtri di preparazione dei dati di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Applica [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione |
 | [Filtri del connettore sorgente Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Applicare filtri di connessione all’origine di Audience Manager per escludere i dati non necessari dall’acquisizione |
 | [Filtri dati Alloy SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Applicare filtri di lega per escludere i dati non necessari dall’acquisizione |

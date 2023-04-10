@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
@@ -56,7 +56,7 @@ L’elenco dei namespace supportati è il seguente:
 
 Il controllo del consenso opt-in e opt-out determina se è possibile operare con il consenso per condividere i dati utente per impostazione predefinita. Se l’impostazione predefinita per la configurazione del consenso è impostata su `opt-out`, i dati utente possono essere condivisi, a meno che un utente non rinunci esplicitamente. Se il valore predefinito è impostato su `opt-in`, i dati utente non possono essere condivisi, a meno che un utente non acconsenta esplicitamente.
 
-Configurazione del consenso predefinito per [!DNL Segment Match] è impostato su `opt-out`. Per applicare un modello di consenso per i tuoi dati, invia una richiesta e-mail al tuo Adobe Account Manager.
+Configurazione del consenso predefinito per [!DNL Segment Match] è impostato su `opt-out`. Per applicare un modello di consenso per i tuoi dati, invia una richiesta e-mail al team del tuo account Adobe.
 
 Per ulteriori informazioni sulla `share` attributo utilizzato per impostare il valore del consenso per la condivisione dei dati, consulta la seguente documentazione su [gruppo di campi privacy e consenso](../../../xdm/field-groups/profile/consents.md). Per informazioni sul gruppo di campi specifico utilizzato per acquisire il consenso dei consumatori per la raccolta e l’utilizzo dei dati relativi alla privacy, alla personalizzazione e alle preferenze di marketing, consulta quanto segue [Esempio di GitHub per privacy, personalizzazione e preferenze di marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

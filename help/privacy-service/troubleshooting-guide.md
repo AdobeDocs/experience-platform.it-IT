@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Privacy Service
 description: Questo documento fornisce le risposte alle domande frequenti su Privacy Service e informazioni sugli errori più comuni nell’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Adobe non supporta l&#39;utilizzo di [!DNL Privacy Service] per la cancellazione
 
 Le richieste di privacy sono soggette a scadenza e sono completate in relazione alla legge sulla privacy applicabile. l’invio di richieste che non sono richieste di accesso o di cancellazione dell’interessato/consumatore ha un impatto su tutte le [!DNL Privacy Service] e la capacità [!DNL Privacy Service] sostenere le scadenze giuridiche appropriate. È ora disponibile un limite di caricamento giornaliero per evitare abusi del servizio.
 
-Contatta il tuo account manager (CDM) per coordinarti e sforzarti di rimuovere eventuali PII o problemi di dati.
+Contatta il team dell’account di Adobe per coordinarti e sforzarti di rimuovere eventuali problemi PII o dati.
 
 ## Come posso ottenere informazioni sullo stato della mia richiesta di privacy o del mio lavoro?
 

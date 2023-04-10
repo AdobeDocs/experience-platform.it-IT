@@ -2,9 +2,9 @@
 title: (Beta) Tipi di pubblico di Experience Cloud
 description: Scopri come condividere segmenti da Experience Platform a diverse soluzioni Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### Per i clienti che utilizzano la soluzione legacy di condivisione dei segmenti
 
-Se stai già condividendo segmenti da Experience Platform ad Audience Manager e altre soluzioni di Experience Cloud tramite [integrazione della condivisione dei segmenti legacy](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam), per disabilitare l’integrazione legacy devi contattare l’Assistenza clienti o il Customer Success Manager. Per disabilitare l’integrazione, i team di assistenza clienti e di gestione dell’assistenza clienti devono creare un ticket Jira (consulta il ticket modello AAM-52354).
+Se stai già condividendo segmenti da Experience Platform ad Audience Manager e altre soluzioni di Experience Cloud tramite [integrazione della condivisione dei segmenti legacy](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), devi contattare l’Assistenza clienti o il team dell’account di Adobe per disabilitare l’integrazione legacy. Per disabilitare l’integrazione, i team dell’Assistenza clienti e dell’account di Adobe devono creare un ticket Jira (consulta il ticket modello AAM-52354).
 
 Il tempo di consegna per risolvere il ticket di deprovisioning per i clienti beta è di sei giorni lavorativi o meno. Dopo aver disabilitato l&#39;integrazione legacy esistente, puoi procedere a [creazione di una connessione](#connect) tramite la scheda di destinazione self-service.
 
