@@ -2,9 +2,9 @@
 keywords: estensione dell'inoltro eventi;braze;estensione dell'inoltro eventi di branding
 title: Estensione di inoltro evento di Braze
 description: Questa estensione di inoltro eventi Adobe Experience Platform invia gli eventi di Adobe Experience Edge Network a Braze.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1863'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 - Esegui il targeting di utenti specifici per campagne di marketing e promozionali per aumentare il numero di clienti ripetuti.
 - Studia il comportamento e i pattern degli utenti per eseguire il targeting di tipi di pubblico specifici con messaggi personalizzati, che potrebbero contribuire ad aumentare i ricavi.
 
-La [!DNL Braze Track Events API] [inoltro eventi](../../../ui/event-forwarding/overview.md) l’estensione ti consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) e [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+La [!DNL Braze Track Events API] [inoltro eventi](../../../ui/event-forwarding/overview.md) l’estensione ti consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 Questo documento illustra i casi d&#39;uso dell&#39;estensione, come installarla nelle librerie di inoltro degli eventi e come utilizzarne le funzionalità in un inoltro degli eventi [regola](../../../ui/managing-resources/rules.md).
 
