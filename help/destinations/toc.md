@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: aa915c24dc6d73a5bdd3345cfb0fb7049bdd2679
+source-git-commit: 12bae2f5b3dd04eaf72e736cb1ddca4bdd0a9d52
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1072'
 ht-degree: 6%
 
 ---
@@ -81,6 +81,7 @@ ht-degree: 6%
       * [Connessione Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Estensione tag Google](./catalog/advertising/gtag-advertising.md)
       * [Estensione linkedIn Insight Tag](./catalog/advertising/linkedin.md)
+      * [(Alpha) LiveRamp - Connessione SFTP](./catalog/advertising/liveramp.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connessione all’elenco dei clienti pinterest](./catalog/advertising/pinterest.md)
