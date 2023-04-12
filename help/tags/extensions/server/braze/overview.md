@@ -2,7 +2,8 @@
 keywords: estensione dell'inoltro eventi;braze;estensione dell'inoltro eventi di branding
 title: Estensione di inoltro evento di Braze
 description: Questa estensione di inoltro eventi Adobe Experience Platform invia gli eventi di Adobe Experience Edge Network a Braze.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 3%
@@ -132,7 +133,7 @@ Gli attributi utente possono essere un oggetto JSON contenente campi che creano 
 | [!UICONTROL Paese] | Paese come stringa in [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Lingua] | Lingua come stringa in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data di nascita] | Stringa nel formato &quot;AAAA-MM-GG&quot; (ad esempio, 1980-12-21). |
-| [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio ’America/New_York’ o ’Eastern Time (USA e Canada)’). |
+| [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio, &quot;America/New_York&quot; o &quot;Ora orientale (Stati Uniti e Canada)&quot;). |
 | [!UICONTROL Facebook] | Hash contenente un qualsiasi ID (stringa), mi piace (matrice di stringhe), num_Friends (numero intero). |
 | [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), nome_schermata (stringa, handle Twitter), conteggio_followers (numero intero), conteggio_amici (numero intero), stato_count(numero intero). |
 
@@ -191,7 +192,7 @@ Gli attributi utente possono essere un oggetto JSON contenente campi che creano 
 | [!UICONTROL Paese] | Paese come stringa in [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formato. |
 | [!UICONTROL Lingua] | Lingua come stringa in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) formato. |
 | [!UICONTROL Data di nascita] | Stringa nel formato &quot;AAAA-MM-GG&quot; (ad esempio, 1980-12-21). |
-| [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio ’America/New_York’ o ’Eastern Time (USA e Canada)’). |
+| [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio, &quot;America/New_York&quot; o &quot;Ora orientale (Stati Uniti e Canada)&quot;). |
 | [!UICONTROL Facebook] | Hash contenente un qualsiasi ID (stringa), mi piace (matrice di stringhe), num_Friends (numero intero). |
 | [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), nome_schermata (stringa, handle Twitter), conteggio_followers (numero intero), conteggio_amici (numero intero), stato_count(numero intero). |
 
